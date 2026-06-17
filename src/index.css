@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #1e3a5f;
+  --color-brand-light: #2c5282;
+  --color-accent: #e67e22;
+  --color-accent-light: #f39c12;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #1a202c;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  --font-sans: "Inter", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Quiz option styles */
+.option-btn {
+  @apply w-full text-left p-4 rounded-lg border-2 transition-all duration-200;
+  @apply border-border bg-surface hover:border-brand-light hover:bg-blue-50;
+}
+
+.option-btn.selected {
+  @apply border-brand bg-blue-50;
+}
+
+.option-btn.correct {
+  @apply border-success bg-green-50;
+}
+
+.option-btn.incorrect {
+  @apply border-error bg-red-50;
+}
+
+/* PDF print styles */
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  body { background: white; }
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
