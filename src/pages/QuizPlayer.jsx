@@ -146,7 +146,7 @@ function QuizPlayer() {
 
             {/* 题目文本 */}
             <h3 className="text-lg font-medium text-text mb-4 leading-relaxed">
-              {currentQuestion.question_text}
+              {currentQuestion.text}
             </h3>
 
             {/* 图像 */}
