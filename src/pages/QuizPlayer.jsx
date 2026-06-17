@@ -11,6 +11,7 @@ function QuizPlayer() {
   const [score, setScore] = useState(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [config, setConfig] = useState({})
+  const [showReview, setShowReview] = useState(false)
 
   useEffect(() => {
     const stored = sessionStorage.getItem('currentQuiz')
@@ -28,7 +29,11 @@ function QuizPlayer() {
     setAnswers(prev => ({ ...prev, [questionId]: option }))
   }
 
+  const allAnswered = quiz.length > 0 && quiz.every(q => answers[q.question_id])
+  const answeredCount = quiz.filter(q => answers[q.question_id]).length
+
   const submitQuiz = () => {
+    if (!allAnswered) return
     let correct = 0
     quiz.forEach(q => {
       if (answers[q.question_id] === q.answer) correct++
@@ -83,14 +88,14 @@ function QuizPlayer() {
       <div className="mb-4">
         <div className="flex justify-between text-sm text-text-muted mb-1">
           <span>第 {currentIndex + 1} / {quiz.length} 题</span>
-          <span>{Math.round(progress)}%</span>
+          <span>{answeredCount}/{quiz.length} 已答</span>
         </div>
         <div className="w-full bg-border rounded-full h-2">
           <div className="bg-brand h-2 rounded-full transition-all" style={{ width: `${progress}%` }} />
         </div>
       </div>
 
-      {/* 提交后显示成绩 */}
+      {/* 提交后成绩面板 */}
       {submitted && score !== null && (
         <div className={`mb-6 p-4 rounded-lg text-center ${score / quiz.length >= 0.7 ? 'bg-green-50 border border-success' : score / quiz.length >= 0.5 ? 'bg-yellow-50 border border-warning' : 'bg-red-50 border border-error'}`}>
           <div className="text-2xl font-bold">
@@ -134,7 +139,7 @@ function QuizPlayer() {
               </span>
               {currentQuestion.has_graph && (
                 <span className="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded">
-                  含图像
+                  含图表
                 </span>
               )}
               {currentQuestion.pure_unit && (
@@ -145,7 +150,7 @@ function QuizPlayer() {
             </div>
 
             {/* 题目文本 */}
-            <h3 className="text-lg font-medium text-text mb-4 leading-relaxed">
+            <h3 className="text-lg font-medium text-text mb-4 leading-relaxed whitespace-pre-line">
               {currentQuestion.text}
             </h3>
 
@@ -188,11 +193,14 @@ function QuizPlayer() {
               })}
             </div>
 
-            {/* 提交后显示解析 */}
+            {/* 提交后解析 */}
             {submitted && (
               <div className="mt-4 p-4 bg-bg rounded-lg border border-border">
                 <div className="font-semibold text-brand mb-1">答案：{currentQuestion.answer}</div>
                 <div className="text-sm text-text-muted">
+                  你的答案：{answers[currentQuestion.question_id] || '未作答'}
+                </div>
+                <div className="text-sm text-text-muted mt-1">
                   技能：{currentQuestion.skills?.join(', ') || 'N/A'}
                 </div>
                 <div className="text-sm text-text-muted">
@@ -207,7 +215,7 @@ function QuizPlayer() {
         )}
       </div>
 
-      {/* 导航按钮 */}
+      {/* 底部导航 + 提交按钮 */}
       <div className="flex justify-between mt-6 no-print">
         <button
           onClick={() => setCurrentIndex(Math.max(0, currentIndex - 1))}
@@ -220,9 +228,14 @@ function QuizPlayer() {
         {!submitted ? (
           <button
             onClick={submitQuiz}
-            className="px-6 py-2 bg-accent text-white rounded-lg font-semibold"
+            disabled={!allAnswered}
+            className={`px-6 py-2 rounded-lg font-semibold transition-colors ${
+              allAnswered
+                ? 'bg-accent hover:bg-accent-light text-white'
+                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+            }`}
           >
-            提交答案
+            {allAnswered ? '提交全部答案' : `还有 ${quiz.length - answeredCount} 题未答`}
           </button>
         ) : (
           <button
@@ -236,29 +249,42 @@ function QuizPlayer() {
       </div>
 
       {/* 题目导航网格 */}
-      <div className="mt-6 grid grid-cols-10 gap-1 no-print">
-        {quiz.map((q, i) => {
-          const answered = answers[q.question_id]
-          const isCurrent = i === currentIndex
-          const isCorrect = submitted && answers[q.question_id] === q.answer
-          const isWrong = submitted && answers[q.question_id] && answers[q.question_id] !== q.answer
+      <div className="mt-6 no-print">
+        <div className="text-sm text-text-muted mb-2">
+          {submitted ? '点击题号跳转查看解析' : '点击题号跳转做题'}
+        </div>
+        <div className="grid grid-cols-10 gap-1">
+          {quiz.map((q, i) => {
+            const answered = answers[q.question_id]
+            const isCurrent = i === currentIndex
+            const isCorrect = submitted && answers[q.question_id] === q.answer
+            const isWrong = submitted && answers[q.question_id] && answers[q.question_id] !== q.answer
 
-          return (
-            <button
-              key={q.question_id}
-              onClick={() => setCurrentIndex(i)}
-              className={`aspect-square rounded text-xs font-medium flex items-center justify-center ${
-                isCurrent ? 'bg-brand text-white' :
-                isCorrect ? 'bg-success text-white' :
-                isWrong ? 'bg-error text-white' :
-                answered ? 'bg-accent text-white' :
-                'bg-bg border border-border text-text-muted'
-              }`}
-            >
-              {i + 1}
-            </button>
-          )
-        })}
+            return (
+              <button
+                key={q.question_id}
+                onClick={() => setCurrentIndex(i)}
+                className={`aspect-square rounded text-xs font-medium flex items-center justify-center transition-colors ${
+                  isCurrent ? 'bg-brand text-white ring-2 ring-brand-light' :
+                  isCorrect ? 'bg-success text-white' :
+                  isWrong ? 'bg-error text-white' :
+                  answered ? 'bg-accent text-white' :
+                  'bg-bg border border-border text-text-muted'
+                }`}
+                title={q.question_id}
+              >
+                {i + 1}
+              </button>
+            )
+          })}
+        </div>
+        {/* 图例 */}
+        <div className="flex gap-4 mt-2 text-xs text-text-muted">
+          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-accent inline-block"></span>已答</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-success inline-block"></span>正确</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-error inline-block"></span>错误</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded border border-border inline-block"></span>未答</span>
+        </div>
       </div>
     </div>
   )
