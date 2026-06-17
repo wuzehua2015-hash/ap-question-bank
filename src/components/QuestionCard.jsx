@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 
+const BASE_URL = import.meta.env.BASE_URL || '/'
+
 function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -9,12 +11,17 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
 
   const isSubmitted = phase === 'submitted'
 
+  // 确保图像路径带BASE_URL前缀
+  const imagePaths = (question.image_paths || []).map(p => 
+    p.startsWith('/') ? `${BASE_URL}${p.slice(1)}` : p
+  )
+
   return (
     <div className="bg-surface rounded-xl p-6 shadow-sm border border-border">
       {/* 题目标签 */}
       <div className="flex flex-wrap gap-2 mb-3">
         <span className="bg-brand text-white text-xs px-2 py-1 rounded">{question.primary_unit}</span>
-        {question.has_graph && (
+        {imagePaths.length > 0 && (
           <span className="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded">含图表</span>
         )}
       </div>
@@ -25,7 +32,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
       </h3>
 
       {/* 图像 */}
-      {question.image_paths?.map((path, i) => (
+      {imagePaths.map((path, i) => (
         <img
           key={i}
           src={path}
