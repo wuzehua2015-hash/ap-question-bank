@@ -15,6 +15,7 @@ function QuizGenerator() {
     diverseSources: true,
   })
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
   const handleSkillToggle = (skill) => {
     setConfig(prev => ({
@@ -27,14 +28,22 @@ function QuizGenerator() {
 
   const generate = async () => {
     setLoading(true)
-    const questions = await loadMCQBank()
-    const quiz = generateQuiz(questions, config)
-    setLoading(false)
-    
-    // 将quiz存入sessionStorage，跳转到做题页面
-    sessionStorage.setItem('currentQuiz', JSON.stringify(quiz))
-    sessionStorage.setItem('quizConfig', JSON.stringify(config))
-    navigate('/quiz/play')
+    setError(null)
+    try {
+      const questions = await loadMCQBank()
+      const quiz = generateQuiz(questions, config)
+      if (quiz.length === 0) {
+        setError('没有符合条件的题目，请调整筛选条件')
+        setLoading(false)
+        return
+      }
+      sessionStorage.setItem('currentQuiz', JSON.stringify(quiz))
+      sessionStorage.setItem('quizConfig', JSON.stringify(config))
+      navigate('/quiz/play')
+    } catch (err) {
+      setError('加载题库失败: ' + (err.message || '请检查网络连接'))
+      setLoading(false)
+    }
   }
 
   return (
@@ -136,6 +145,13 @@ function QuizGenerator() {
             <span className="text-sm">仅纯单元题（无跨单元）</span>
           </label>
         </div>
+
+        {/* 错误提示 */}
+        {error && (
+          <div className="p-3 bg-red-50 border border-error rounded-lg text-error text-sm">
+            {error}
+          </div>
+        )}
 
         {/* 生成按钮 */}
         <button

@@ -2,16 +2,20 @@
 let mcqCache = null;
 let frqCache = null;
 
+const BASE_URL = import.meta.env.BASE_URL || '/';
+
 export async function loadMCQBank() {
   if (mcqCache) return mcqCache;
-  const res = await fetch('/data/macro_question_bank_v4.json');
+  const res = await fetch(`${BASE_URL}data/macro_question_bank_v4.json`);
+  if (!res.ok) throw new Error(`Failed to load MCQ bank: ${res.status}`);
   mcqCache = await res.json();
   return mcqCache;
 }
 
 export async function loadFRQBank() {
   if (frqCache) return frqCache;
-  const res = await fetch('/data/macro_frq_bank.json');
+  const res = await fetch(`${BASE_URL}data/macro_frq_bank.json`);
+  if (!res.ok) throw new Error(`Failed to load FRQ bank: ${res.status}`);
   frqCache = await res.json();
   return frqCache;
 }
