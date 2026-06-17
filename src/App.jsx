@@ -2,7 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
-import QuizGenerator from './pages/QuizGenerator'
+import QuizSetup from './pages/QuizSetup'
+import ExamSetup from './pages/ExamSetup'
 import QuizPlayer from './pages/QuizPlayer'
 
 function App() {
@@ -12,8 +13,9 @@ function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/quiz" element={<QuizGenerator />} />
-          <Route path="/quiz/play" element={<QuizPlayer />} />
+          <Route path="/quiz" element={<QuizSetup />} />
+          <Route path="/exam" element={<ExamSetup />} />
+          <Route path="/play" element={<QuizPlayer />} />
         </Routes>
       </main>
       <Footer />

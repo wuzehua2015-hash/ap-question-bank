@@ -22,7 +22,6 @@ body {
   color: var(--color-text);
 }
 
-/* Quiz option styles */
 .option-btn {
   @apply w-full text-left p-4 rounded-lg border-2 transition-all duration-200;
   @apply border-border bg-surface hover:border-brand-light hover:bg-blue-50;
@@ -40,17 +39,14 @@ body {
   @apply border-error bg-red-50;
 }
 
-/* PDF print styles */
 @media print {
   .no-print { display: none !important; }
   .print-only { display: block !important; }
   body { background: white; }
 }
 
-/* Smooth scroll */
 html { scroll-behavior: smooth; }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
 ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
