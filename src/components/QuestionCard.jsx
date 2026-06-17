@@ -11,10 +11,8 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
 
   const isSubmitted = phase === 'submitted'
 
-  // 确保图像路径带BASE_URL前缀
-  const imagePaths = (question.image_paths || []).map(p => 
-    p.startsWith('/') ? `${BASE_URL}${p.slice(1)}` : p
-  )
+  // 图片路径直接使用JSON中定义的路径
+  const imagePaths = question.image_paths || []
 
   return (
     <div className="bg-surface rounded-xl p-6 shadow-sm border border-border">
