@@ -116,7 +116,24 @@ function QuizPlayer() {
         />
       )}
 
-      {/* 底部导航 */}
+      {/* 提交按钮（playing阶段） */}
+      {phase === 'playing' && (
+        <div className="mt-4 flex justify-center no-print">
+          <button
+            onClick={submitQuiz}
+            disabled={!allAnswered}
+            className={`px-8 py-3 rounded-lg font-semibold transition-colors ${
+              allAnswered
+                ? 'bg-accent hover:bg-accent-light text-white'
+                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+            }`}
+          >
+            {allAnswered ? '提交全部答案' : `还有 ${quiz.length - answeredCount} 题未答`}
+          </button>
+        </div>
+      )}
+
+      {/* 底部导航：上一题 / 下一题 */}
       <div className="flex justify-between mt-6 no-print">
         <button
           onClick={() => setCurrentIndex(Math.max(0, currentIndex - 1))}
@@ -125,28 +142,13 @@ function QuizPlayer() {
         >
           上一题
         </button>
-
-        {phase === 'playing' ? (
-          <button
-            onClick={submitQuiz}
-            disabled={!allAnswered}
-            className={`px-6 py-2 rounded-lg font-semibold transition-colors ${
-              allAnswered
-                ? 'bg-accent hover:bg-accent-light text-white'
-                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-            }`}
-          >
-            {allAnswered ? '提交全部答案' : `还有 ${quiz.length - answeredCount} 题未答`}
-          </button>
-        ) : (
-          <button
-            onClick={() => setCurrentIndex(Math.min(quiz.length - 1, currentIndex + 1))}
-            disabled={currentIndex === quiz.length - 1}
-            className="px-4 py-2 rounded-lg border border-border bg-surface disabled:opacity-30"
-          >
-            下一题
-          </button>
-        )}
+        <button
+          onClick={() => setCurrentIndex(Math.min(quiz.length - 1, currentIndex + 1))}
+          disabled={currentIndex === quiz.length - 1}
+          className="px-4 py-2 rounded-lg border border-border bg-surface disabled:opacity-30"
+        >
+          下一题
+        </button>
       </div>
 
       {/* 题号导航 */}
