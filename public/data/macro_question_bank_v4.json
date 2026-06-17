@@ -6521,7 +6521,7 @@
   {
     "question_id": "2016_Q20",
     "year": "2016",
-    "text": "Brazil and Peru produce both coffee and wheat\nusing labor as the only input. The table below\nshows the labor hours required to produce a unit\nof coffee and a unit of wheat in each country.\nLabor Hours per\nUnit of Coffee\nLabor Hours per\nUnit of Wheat\nBrazil 12 4\nPeru 6 4\nBased on the information in the table above,\nwhich of the following is true?",
+    "text": "Brazil and Peru produce both coffee and wheat using labor as the only input. The table below shows the labor hours required to produce a unit of coffee and a unit of wheat in each country. Based on the information in the table above, which of the following is true?",
     "options": {
       "A": "Peru has a comparative advantage in producing wheat.",
       "B": "Peru has an absolute advantage in producing wheat.",
@@ -6537,8 +6537,10 @@
       "absolute advantage"
     ],
     "difficulty": "Medium",
-    "has_graph": false,
-    "image_paths": [],
+    "has_graph": true,
+    "image_paths": [
+      "/images/2016/2016_q20_table.png"
+    ],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": true,
     "classification_reasoning": "Primary: U1 (score=8.0), Matched: ['comparative advantage', 'absolute advantage']",
