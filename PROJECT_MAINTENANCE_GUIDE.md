@@ -432,7 +432,52 @@ for (const q of data) {
 
 ---
 
-### 4.2 .gitignore 导致文件遗漏
+### 4.4 Git 提交遗漏（本次核心bug）
+
+**问题描述**:
+- 修复了 JSON 数据（添加 image_paths、表格选项、清理文本污染）
+- 修改了前端代码（BASE_URL 拼接、表格渲染）
+- 但忘记 `git commit` 和 `git push`
+- Vercel 从 GitHub 拉取的是旧版本代码
+- 导致线上部署仍然是旧数据，图片不显示、表格选项不渲染、文本污染仍存在
+
+**本次遗漏的文件**:
+- `public/data/macro_question_bank_v4.json`（1188行新增，包含 image_paths、option_table_data、文本清理）
+- `src/components/QuestionCard.jsx`（BASE_URL 拼接修复、表格选项渲染）
+- `PROJECT_MAINTENANCE_GUIDE.md`（维护文档更新）
+
+**根本原因**:
+- 修复了数据但没有提交到 Git
+- Git 状态显示 `M`（修改未提交）
+- Vercel 自动构建基于 GitHub 上的代码，不是本地文件
+
+**正确做法**:
+每次修改数据后必须执行：
+```bash
+git add public/data/macro_question_bank_v4.json src/components/QuestionCard.jsx
+git commit -m "fix: add image_paths and table options"
+git push
+```
+
+**检查清单**:
+- [ ] 修改 JSON 后执行 `git status` 确认文件被标记为修改
+- [ ] `git add` 所有修改的文件（包括 JSON、JSX、CSS）
+- [ ] `git commit` 提交修改
+- [ ] `git push` 推送到 GitHub
+- [ ] 在 GitHub 仓库确认最新提交包含修改
+- [ ] 等待 Vercel 自动构建完成（1-3分钟）
+- [ ] 部署后测试验证
+
+**验证命令**:
+```bash
+git status              # 查看未提交修改
+git diff --stat         # 查看修改了多少行
+git log --oneline -5    # 查看最近5次提交
+```
+
+---
+
+### 4.5 .gitignore 导致文件遗漏
 
 **问题描述**:
 - `.gitignore` 中排除了 `dist/`，但图片也放在 `dist/` 导致不提交
@@ -604,17 +649,15 @@ for (const q of data) {
 - [ ] 添加图片加载错误日志（开发时）
 - [ ] **确认无硬编码学科名称**（见第7节）
 
-### 第四阶段：部署验证
-- [ ] 本地构建 `npm run build` 检查无错误
-- [ ] 检查 `dist/index.html` 中资源路径是否正确
-- [ ] 推送到GitHub
-- [ ] 等待Vercel构建完成（2-3分钟）
-- [ ] 在浏览器 DevTools → Network 中检查无404
-- [ ] 检查图片题是否正常显示
-- [ ] 检查表格题是否文字不重复
-- [ ] 检查做题提交后成绩是否正确
-- [ ] 检查所有链接和按钮可用
-- [ ] **检查Footer/HomePage无硬编码学科名称**
+### 第四阶段：部署验证（每次提交后必须执行）
+- [ ] 在 Vercel Dashboard 确认构建成功（无红色错误）
+- [ ] 部署后等待 2-3 分钟再测试
+- [ ] 在浏览器 DevTools → Network 中检查无 404
+- [ ] **检查图片题**：打开任意有图片的题目，确认 "含图表" 标签显示且图片正确显示
+- [ ] **检查表格选项题**：打开任意表格选项题，确认选项渲染为带表头的表格
+- [ ] **检查文本污染**：检查题干末尾是否有多余空行/考试说明文字
+- [ ] **检查答案**：提交一套 quiz，确认答案正确、成绩计算正确
+- [ ] 检查 Footer/HomePage 无硬编码学科名称
 
 ---
 
