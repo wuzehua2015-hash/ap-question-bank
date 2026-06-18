@@ -31,9 +31,9 @@ export const UNITS = [
 export function generateQuiz(questions, config) {
   let pool = [...questions]
   
-  // 按单元筛选
+  // 按单元筛选 — 只按 primary_unit，不混入 secondary_units
   if (config.unit && config.unit !== 'all') {
-    pool = pool.filter(q => q.primary_unit === config.unit || q.secondary_units?.includes(config.unit))
+    pool = pool.filter(q => q.primary_unit === config.unit)
   }
   
   // 排除已做
@@ -52,13 +52,12 @@ export function generateQuiz(questions, config) {
     })
   }
   
-  // 如果数量不足，逐步放宽限制
+  // 放宽：取消同来源限制重试
   let count = config.count || 10
   if (pool.length < count) {
-    // 先取消同来源限制重试
     pool = [...questions]
     if (config.unit && config.unit !== 'all') {
-      pool = pool.filter(q => q.primary_unit === config.unit || q.secondary_units?.includes(config.unit))
+      pool = pool.filter(q => q.primary_unit === config.unit)
     }
     if (config.excludeDone) {
       pool = pool.filter(q => !doneIds.has(q.question_id))
@@ -66,10 +65,10 @@ export function generateQuiz(questions, config) {
   }
   
   if (pool.length < count) {
-    // 再取消排除已做
+    // 再放宽：取消排除已做
     pool = [...questions]
     if (config.unit && config.unit !== 'all') {
-      pool = pool.filter(q => q.primary_unit === config.unit || q.secondary_units?.includes(config.unit))
+      pool = pool.filter(q => q.primary_unit === config.unit)
     }
   }
   
