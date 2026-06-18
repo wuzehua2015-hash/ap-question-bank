@@ -566,7 +566,7 @@
       "B": "Increase No change",
       "C": "No change Decrease",
       "D": "Decrease Increase",
-      "E": "Decrease Decrease . BANK A Assets Liabilities Actual reserves $1,000 Demand deposits $5,000 Loans $4,000 BANK B Assets Liabilities Actual reserves $ 100 Demand deposits $ 600 Loans $ 500 BANK C Assets Liabilities Actual reserves $ 10 Loans $ 90 Demand deposits $ 100"
+      "E": "Decrease Decrease"
     },
     "answer": "C",
     "primary_unit": "U4",
@@ -696,11 +696,11 @@
     "year": "2012",
     "text": "Which of the following are the most likely short-run effects of an increase in government expenditures?\nUnemployment Rate Inflation Rate Real Gross Domestic Product",
     "options": {
-      "A": "Increase Increase Increase",
-      "B": "Increase Increase Decrease",
-      "C": "Decrease Increase Increase",
-      "D": "Decrease Decrease Increase",
-      "E": "No change Decrease Increase"
+      "A": "Increase | Increase | Increase",
+      "B": "Increase | Increase | Decrease",
+      "C": "Decrease | Increase | Increase",
+      "D": "Decrease | Decrease | Increase",
+      "E": "No change | Decrease | Increase"
     },
     "answer": "C",
     "primary_unit": "U2",
@@ -724,18 +724,57 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Unemployment Rate",
+      "Inflation Rate",
+      "Real GDP"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Unemployment Rate",
+        "Inflation Rate",
+        "Real GDP"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Increase",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "No change",
+          "Decrease",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q23",
     "year": "2012",
     "text": "In the short run, an expansionary monetary policy\nwould most likely result in which of the following\nchanges in the price level and real gross domestic\nproduct (GDP) ?\nPrice Level Real GDP",
     "options": {
-      "A": "Decrease Increase",
-      "B": "No change Decrease",
-      "C": "Increase No change",
-      "D": "Increase Decrease",
-      "E": "Increase Increase"
+      "A": "Decrease | Increase",
+      "B": "No change | Decrease",
+      "C": "Increase | No change",
+      "D": "Increase | Decrease",
+      "E": "Increase | Increase"
     },
     "answer": "E",
     "primary_unit": "U2",
@@ -758,7 +797,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Price Level",
+      "Real GDP"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Price Level",
+        "Real GDP"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Increase"
+        ],
+        "B": [
+          "No change",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "No change"
+        ],
+        "D": [
+          "Increase",
+          "Decrease"
+        ],
+        "E": [
+          "Increase",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q24",
@@ -1406,11 +1477,11 @@
     "year": "2012",
     "text": "In the short run, which of the following would\noccur to bond prices and interest rates if a central\nbank bought bonds through open-market\noperations?\nBond Prices\nInterest Rates",
     "options": {
-      "A": "No change Increase",
-      "B": "Increase Increase",
-      "C": "Increase Decrease",
-      "D": "Decrease Increase",
-      "E": "Decrease Decrease"
+      "A": "No change | Increase",
+      "B": "Increase | Increase",
+      "C": "Increase | Decrease",
+      "D": "Decrease | Increase",
+      "E": "Decrease | Decrease"
     },
     "answer": "C",
     "primary_unit": "U4",
@@ -1432,7 +1503,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Bond Prices",
+      "Interest Rates"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Bond Prices",
+        "Interest Rates"
+      ],
+      "rows": {
+        "A": [
+          "No change",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Increase"
+        ],
+        "C": [
+          "Increase",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q44",
@@ -1872,11 +1975,11 @@
     "year": "2012",
     "text": "For which of the following sets of unemployment\nand inflation rates will a central bank be most\nreluctant to increase the rate of growth in the\nmoney supply?\nUnemployment Rate\nInflation Rate",
     "options": {
-      "A": "10% 2%",
-      "B": "10% 5%",
-      "C": "10% 10%",
-      "D": "5% 5%",
-      "E": "5% 10%"
+      "A": "10% | 2%",
+      "B": "10% | 5%",
+      "C": "10% | 10%",
+      "D": "5% | 5%",
+      "E": "5% | 10%"
     },
     "answer": "E",
     "primary_unit": "U2",
@@ -1899,7 +2002,39 @@
       "analyze",
       "evaluate"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Unemployment Rate",
+      "Inflation Rate"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Unemployment Rate",
+        "Inflation Rate"
+      ],
+      "rows": {
+        "A": [
+          "10%",
+          "2%"
+        ],
+        "B": [
+          "10%",
+          "5%"
+        ],
+        "C": [
+          "10%",
+          "10%"
+        ],
+        "D": [
+          "5%",
+          "5%"
+        ],
+        "E": [
+          "5%",
+          "10%"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q58",
@@ -1973,7 +2108,7 @@
       "B": "There will be no trade-off between inflation and unemployment.",
       "C": "The unemployment rate will be less than the natural rate of unemployment.",
       "D": "The unemployment rate will be greater than the natural rate of unemployment.",
-      "E": "Changes in the money supply will not lead to changes in the price level. END OF IF YOU FINISH BEFORE TIME IS CALLED, YOU MAY CHECK YOUR WORK ON THIS SECTION. DO NOT GO ON TO UNTIL YOU ARE TOLD TO DO SO. MAKE SURE YOU HAVE DONE THE FOLLOWING. • PLACED YOUR AP NUMBER LABEL ON YOUR ANSWER SHEET • WRITTEN AND GRIDDED YOUR AP NUMBER CORRECTLY ON YOUR ANSWER SHEET • TAKEN THE AP EXAM LABEL FROM THE FRONT OF THIS BOOKLET AND PLACED IT ON YOUR ANSWER SHEET"
+      "E": "No change No change"
     },
     "answer": "B",
     "primary_unit": "U2",
@@ -2296,11 +2431,11 @@
     "year": "2014",
     "text": "An increase in government spending will affectthe demand for money and nominal interest ratesin which of the following ways?\nDemand for Money\nNominal\nInterest Rates",
     "options": {
-      "A": "Increase Increase",
-      "B": "Increase Decrease",
-      "C": "Increase Indeterminate",
-      "D": "Decrease Increase",
-      "E": "Decrease Decrease"
+      "A": "Increase | Increase",
+      "B": "Increase | Decrease",
+      "C": "Increase | Indeterminate",
+      "D": "Decrease | Increase",
+      "E": "Decrease | Decrease"
     },
     "answer": "A",
     "primary_unit": "U4",
@@ -2320,7 +2455,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Demand for Money",
+      "Nominal Interest Rates"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Demand for Money",
+        "Nominal Interest Rates"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "Indeterminate"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q11",
@@ -3158,11 +3325,11 @@
     "year": "2014",
     "text": "Assume that the aggregate supply curve is upward\nsloping. If both aggregate supply and aggregate\ndemand increase, what will happen to the\nequilibrium output and price level?\nOutput Price Level",
     "options": {
-      "A": "Decrease Decrease",
-      "B": "Decrease Increase",
-      "C": "Indeterminate Increase",
-      "D": "Increase Indeterminate",
-      "E": "Increase Increase"
+      "A": "Decrease | Decrease",
+      "B": "Decrease | Increase",
+      "C": "Indeterminate | Increase",
+      "D": "Increase | Indeterminate",
+      "E": "Increase | Increase"
     },
     "answer": "D",
     "primary_unit": "U3",
@@ -3185,7 +3352,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Output",
+      "Price Level"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Output",
+        "Price Level"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Decrease"
+        ],
+        "B": [
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Indeterminate",
+          "Increase"
+        ],
+        "D": [
+          "Increase",
+          "Indeterminate"
+        ],
+        "E": [
+          "Increase",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q37",
@@ -3295,11 +3494,11 @@
     "year": "2014",
     "text": "If the central bank raises the required reserve\nratio, the money multiplier and the money supply\nwill change in which of the following ways?\nMoney Multiplier Money Supply",
     "options": {
-      "A": "Increase Increase",
-      "B": "Increase Decrease",
-      "C": "Increase No change",
-      "D": "Decrease No change",
-      "E": "Decrease Decrease"
+      "A": "Increase | Increase",
+      "B": "Increase | Decrease",
+      "C": "Increase | No change",
+      "D": "Decrease | No change",
+      "E": "Decrease | Decrease"
     },
     "answer": "E",
     "primary_unit": "U4",
@@ -3320,7 +3519,39 @@
       "predict",
       "calculate"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Money Multiplier",
+      "Money Supply"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Money Multiplier",
+        "Money Supply"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "No change"
+        ],
+        "D": [
+          "Decrease",
+          "No change"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q41",
@@ -3758,11 +3989,11 @@
     "year": "2014",
     "text": "If unemployed workers become discouraged and\ngive up trying to find work, the number of\nworkers employed and the unemployment rate\nwould change in which of the following ways?\nNumber of\nWorkers Employed\nUnemployment\nRate",
     "options": {
-      "A": "Decrease Decrease",
-      "B": "Decrease Increase",
-      "C": "Decrease No change",
-      "D": "No change Decrease",
-      "E": "No change Increase"
+      "A": "Decrease | Decrease",
+      "B": "Decrease | Increase",
+      "C": "Decrease | No change",
+      "D": "No change | Decrease",
+      "E": "No change | Increase"
     },
     "answer": "D",
     "primary_unit": "U2",
@@ -3783,7 +4014,39 @@
       "analyze",
       "predict"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Number of Workers Employed",
+      "Unemployment Rate"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Number of Workers Employed",
+        "Unemployment Rate"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Decrease"
+        ],
+        "B": [
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Decrease",
+          "No change"
+        ],
+        "D": [
+          "No change",
+          "Decrease"
+        ],
+        "E": [
+          "No change",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q56",
@@ -3858,11 +4121,11 @@
     "year": "2014",
     "text": "If wages and prices are perfectly flexible and\ninflation is correctly anticipated, then an expan-\nsionary monetary policy will affect the real output\nand price level in which of the following ways?\nReal Output Price Level",
     "options": {
-      "A": "Increase Increase",
-      "B": "Increase Decrease",
-      "C": "Increase Not change",
-      "D": "Not change Increase",
-      "E": "Not change Not change"
+      "A": "Increase | Increase",
+      "B": "Increase | Decrease",
+      "C": "Increase | No change",
+      "D": "No change | Increase",
+      "E": "No change | No change"
     },
     "answer": "D",
     "primary_unit": "U4",
@@ -3886,7 +4149,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Real Output",
+      "Price Level"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Real Output",
+        "Price Level"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "No change"
+        ],
+        "D": [
+          "No change",
+          "Increase"
+        ],
+        "E": [
+          "No change",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q59",
@@ -4361,11 +4656,11 @@
     "year": "2015",
     "text": "Suppose that the central bank buys $100 worth\nof bonds on the open market. Assume that the\nrequired reserve ratio is 10 percent, banks keep no\nexcess reserves, and there are no cash leakages.\nAfter banks have made all adjustments, reserves,\ndemand deposits, and loans will increase by\nwhich of the following?\nReserves\nDemand\nDeposits Loans",
     "options": {
-      "A": "$1,000 $1,000 $1,000",
-      "B": "$1,000 $900 $1,000",
-      "C": "$900 $1,000 $900",
-      "D": "$100 $1,000 $1,000",
-      "E": "$100 $1,000 $900"
+      "A": "$1,000 | $1,000 | $1,000",
+      "B": "$1,000 | $900 | $1,000",
+      "C": "$900 | $1,000 | $900",
+      "D": "$100 | $1,000 | $1,000",
+      "E": "$100 | $1,000 | $900"
     },
     "answer": "E",
     "primary_unit": "U4",
@@ -4387,18 +4682,57 @@
     "skills": [
       "calculate"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Reserves",
+      "Demand Deposits",
+      "Loans"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Reserves",
+        "Demand Deposits",
+        "Loans"
+      ],
+      "rows": {
+        "A": [
+          "$1,000",
+          "$1,000",
+          "$1,000"
+        ],
+        "B": [
+          "$1,000",
+          "$900",
+          "$1,000"
+        ],
+        "C": [
+          "$900",
+          "$1,000",
+          "$900"
+        ],
+        "D": [
+          "$100",
+          "$1,000",
+          "$1,000"
+        ],
+        "E": [
+          "$100",
+          "$1,000",
+          "$900"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q14",
     "year": "2015",
     "text": "A simultaneous increase in both the demand for\nand the supply of a good in a market will lead to\nwhich of the following changes in the equilibrium\nprice and quantity of the good?\nPrice Quantity",
     "options": {
-      "A": "Increase Increase",
-      "B": "Indeterminate Decrease",
-      "C": "Indeterminate Increase",
-      "D": "Increase Indeterminate",
-      "E": "Decrease Increase"
+      "A": "Increase | Increase",
+      "B": "Indeterminate | Decrease",
+      "C": "Indeterminate | Increase",
+      "D": "Increase | Indeterminate",
+      "E": "Decrease | Increase"
     },
     "answer": "C",
     "primary_unit": "U3",
@@ -4418,7 +4752,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Price",
+      "Quantity"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Quantity"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Indeterminate",
+          "Decrease"
+        ],
+        "C": [
+          "Indeterminate",
+          "Increase"
+        ],
+        "D": [
+          "Increase",
+          "Indeterminate"
+        ],
+        "E": [
+          "Decrease",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q15",
@@ -4595,11 +4961,11 @@
     "year": "2015",
     "text": "In the long run, a decrease in the money supply\nwill affect the price level and the level of output\nin which of the following ways?\nPrice Level Output",
     "options": {
-      "A": "Increase Increase",
-      "B": "Increase No change",
-      "C": "Decrease Increase",
-      "D": "Decrease Decrease",
-      "E": "Decrease No change ."
+      "A": "Increase | Increase",
+      "B": "Increase | No change",
+      "C": "Decrease | Increase",
+      "D": "Decrease | Decrease",
+      "E": "Decrease | No change"
     },
     "answer": "E",
     "primary_unit": "U4",
@@ -4619,18 +4985,50 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Price Level",
+      "Output"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Price Level",
+        "Output"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "No change"
+        ],
+        "C": [
+          "Decrease",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "Decrease",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q21",
     "year": "2015",
     "text": "If fiscal policy is used to correct a recessionarygap, which of the following would most likelyoccur in the absence of crowding out in theshort run?\nReal Output Unemployment",
     "options": {
-      "A": "Increase Decrease",
-      "B": "Increase Increase",
-      "C": "Decrease Decrease",
-      "D": "Decrease Increase",
-      "E": "Decrease No change Item 22 was not scored."
+      "A": "Increase / Decrease",
+      "B": "Increase / Increase",
+      "C": "Decrease / Decrease",
+      "D": "Decrease / Increase",
+      "E": "Decrease / No change"
     },
     "answer": "A",
     "primary_unit": "U3",
@@ -4653,7 +5051,39 @@
       "predict",
       "recommend_policy"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Real Output",
+        "Unemployment"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Increase",
+          "Increase"
+        ],
+        "C": [
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "No change"
+        ]
+      }
+    },
+    "option_headers": [
+      "Real Output",
+      "Unemployment"
+    ]
   },
   {
     "question_id": "2015_Q23",
@@ -4863,11 +5293,11 @@
     "year": "2015",
     "text": "When Country X’s central bank engages in\nmonetary policy actions that lead to a decrease in\ninterest rates, the international value of Country\nX’s currency and Country X’s exports and\nimports will most likely change in which of the\nfollowing ways?\nValue of\nthe Currency Exports Imports",
     "options": {
-      "A": "Increase Increase Increase",
-      "B": "Increase Increase Decrease",
-      "C": "Increase Decrease Decrease",
-      "D": "Decrease Increase Decrease",
-      "E": "Decrease Increase Increase"
+      "A": "Increase | Increase | Increase",
+      "B": "Increase | Increase | Decrease",
+      "C": "Increase | Decrease | Decrease",
+      "D": "Decrease | Increase | Decrease",
+      "E": "Decrease | Increase | Increase"
     },
     "answer": "D",
     "primary_unit": "U6",
@@ -4892,7 +5322,46 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Value of Currency",
+      "Exports",
+      "Imports"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Value of Currency",
+        "Exports",
+        "Imports"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Increase",
+          "Decrease"
+        ],
+        "E": [
+          "Decrease",
+          "Increase",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q30",
@@ -4931,11 +5400,11 @@
     "year": "2015",
     "text": "If a change in aggregate demand results in a\nrecession, the price level and real output will\nchange in which of the following ways in the\nshort run?\nPrice Level Real Output",
     "options": {
-      "A": "No change Increase",
-      "B": "Increase No change",
-      "C": "Increase Decrease",
-      "D": "Decrease No change",
-      "E": "Decrease Decrease ."
+      "A": "No change | Increase",
+      "B": "Increase | No change",
+      "C": "Increase | Decrease",
+      "D": "Decrease | No change",
+      "E": "Decrease | Decrease"
     },
     "answer": "E",
     "primary_unit": "U3",
@@ -4958,7 +5427,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Price Level",
+      "Real Output"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Price Level",
+        "Real Output"
+      ],
+      "rows": {
+        "A": [
+          "No change",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "No change"
+        ],
+        "C": [
+          "Increase",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "No change"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q32",
@@ -5239,7 +5740,7 @@
       "B": "investors and borrowers",
       "C": "financial institutions and investors",
       "D": "savers and lenders",
-      "E": "banks and savers . GO ON T O THE NEXT PAGE."
+      "E": "No change No change"
     },
     "answer": "A",
     "primary_unit": "U4",
@@ -5266,11 +5767,11 @@
     "year": "2015",
     "text": "An unanticipated decrease in aggregate demandwill most likely cause the unemployment rateand the inflation rate to change in which of thefollowing ways?\nUnemployment\nRate\nInflation\nRate",
     "options": {
-      "A": "Increase Increase",
-      "B": "Increase Decrease",
-      "C": "Increase No change",
-      "D": "Decrease Increase",
-      "E": "Decrease Decrease"
+      "A": "Increase | Increase",
+      "B": "Increase | Decrease",
+      "C": "Increase | No change",
+      "D": "Decrease | Increase",
+      "E": "Decrease | Decrease"
     },
     "answer": "B",
     "primary_unit": "U2",
@@ -5293,7 +5794,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Unemployment Rate",
+      "Inflation Rate"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Unemployment Rate",
+        "Inflation Rate"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "No change"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q42",
@@ -5304,7 +5837,7 @@
       "B": "$1,000",
       "C": "$2,000",
       "D": "$4,000",
-      "E": "$4,500 Item 43 was not scored."
+      "E": "$4,500"
     },
     "answer": "E",
     "primary_unit": "U4",
@@ -5370,7 +5903,7 @@
       "B": "$1,250",
       "C": "$2,000",
       "D": "$4,000",
-      "E": "$5,000 Price Quantity Demanded (Bushels) Quantity Supplied (Bushels) $2.00 10,000 40,000 $1.75 15,000 35,000 $1.50 20,000 20,000 $1.25 25,000 15,000 $1.00 30,000 10,000 $0.75 35,000 5,000"
+      "E": ",000"
     },
     "answer": "D",
     "primary_unit": "U4",
@@ -5400,7 +5933,7 @@
       "B": "$1.75 15,000",
       "C": "$1.50 20,000",
       "D": "$1.25 30,000",
-      "E": "$0.75 5,000 . ANNUAL CONSUMER PRICE INDEX (CPI) Year CPI 1929 20 1984 100 1995 120"
+      "E": "$0.75 5,000"
     },
     "answer": "C",
     "primary_unit": "U2",
@@ -5716,7 +6249,7 @@
     "year": "2015",
     "text": "Automatic stabilizers can do which of the\nfollowing?",
     "options": {
-      "A": "Offset the destabilizing influence of changes in tax revenu es",
+      "A": "Offset the destabilizing influence of changes in tax revenues",
       "B": "Aid the economy to move away from the full- employment output level",
       "C": "Allow policymakers to formulate a set of rules flexible and comprehensive enough to eliminate discretionary actions",
       "D": "Cause tax revenues to decrease when gross domestic product (GDP) decreases and to increase when GDP increases",
@@ -5958,7 +6491,7 @@
       "B": "Increase Decrease",
       "C": "No change Decrease",
       "D": "Decrease Increase",
-      "E": "Decrease Decrease Year Nominal GDP Price Index 2012 $100,000 200 2013 $110,000 220"
+      "E": "Decrease Decrease"
     },
     "answer": "B",
     "primary_unit": "U3",
@@ -6052,11 +6585,11 @@
     "year": "2016",
     "text": "When a central bank conducts open-market bondsales, the money supply, interest rate, andaggregate demand will change in which of thefollowing ways in the short run?\nMoney\nSupply Interest\nRate\nAggregate\nDemand",
     "options": {
-      "A": "Decrease Increase Decrease",
-      "B": "Decrease Decrease Increase",
-      "C": "Decrease Increase Increase",
-      "D": "Increase Decrease Increase",
-      "E": "Increase Decrease Decrease"
+      "A": "Decrease | Increase | Decrease",
+      "B": "Decrease | Decrease | Increase",
+      "C": "Decrease | Increase | Increase",
+      "D": "Increase | Decrease | Increase",
+      "E": "Increase | Decrease | Decrease"
     },
     "answer": "A",
     "primary_unit": "U4",
@@ -6079,7 +6612,46 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Money Supply",
+      "Interest Rate",
+      "Aggregate Demand"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Money Supply",
+        "Interest Rate",
+        "Aggregate Demand"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Decrease",
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Decrease",
+          "Increase",
+          "Increase"
+        ],
+        "D": [
+          "Increase",
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Increase",
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q07",
@@ -6259,7 +6831,7 @@
       "B": "Increase Depreciate",
       "C": "Decrease Depreciate",
       "D": "No change Depreciate",
-      "E": "Decrease Appreciate Assets Liabilities Reserves $100,000 Checkable Deposits $400,000 Required $80,000 Excess $20,000 Loans $300,000 Total $400,000 Total $400,000 . GO ON TO THE NE XT PAGE."
+      "E": "Decrease Appreciate"
     },
     "answer": "C",
     "primary_unit": "U6",
@@ -7701,11 +8273,11 @@
     "year": "2016",
     "text": "The aggregate supply and aggregate demand\ngraph above shows the current macroeconomic\nequilibrium of an economy. How will the price\nlevel and real output change if there is a sharp\nincrease in productivity and a simultaneous\nincrease in government purchases?\nPrice Level Real Output",
     "options": {
-      "A": "Increase Increase",
-      "B": "Increase Decrease",
-      "C": "Indeterminate Increase",
-      "D": "Indeterminate Decrease",
-      "E": "Indeterminate Indeterminate"
+      "A": "Increase | Increase",
+      "B": "Increase | Decrease",
+      "C": "Indeterminate | Increase",
+      "D": "Indeterminate | Decrease",
+      "E": "Indeterminate | Indeterminate"
     },
     "answer": "C",
     "primary_unit": "U3",
@@ -7734,7 +8306,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": true
+    "requires_graph": true,
+    "option_headers": [
+      "Price Level",
+      "Real Output"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Price Level",
+        "Real Output"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Indeterminate",
+          "Increase"
+        ],
+        "D": [
+          "Indeterminate",
+          "Decrease"
+        ],
+        "E": [
+          "Indeterminate",
+          "Indeterminate"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q55",
@@ -7913,11 +8517,11 @@
     "year": "2016",
     "text": "An increase in the money supply will affect the\nprice level and real gross domestic product (GDP)\nin which of the following ways in the long run?\nPrice Level Real GDP",
     "options": {
-      "A": "Decrease No change",
-      "B": "Increase Decrease",
-      "C": "Increase No change",
-      "D": "Decrease Increase",
-      "E": "No change No change END OF IF YOU FINISH BEFORE TIME IS CALLED, YOU MAY CHECK YOUR WORK ON THIS SECTION. DO NOT GO ON TO UNTIL YOU ARE TOLD TO DO SO. MAKE SURE YOU HAVE DONE THE FOLLOWING. PLACED YOUR AP NUMBER LABEL ON YOUR ANSWER SHEET WRITTEN AND GRIDDED YOUR AP NUMBER CORRECTLY ON YOUR ANSWER SHEET TAKEN THE AP EXAM LABEL FROM THE FRONT OF THIS BOOKLET AND PLACED IT ON YOUR ANSWER SHEET"
+      "A": "Decrease | No change",
+      "B": "Increase | Decrease",
+      "C": "Increase | No change",
+      "D": "Decrease | Increase",
+      "E": "No change | No change"
     },
     "answer": "C",
     "primary_unit": "U2",
@@ -7941,7 +8545,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Price Level",
+      "Real GDP"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Price Level",
+        "Real GDP"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "No change"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "No change"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "No change",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q01",
@@ -8080,7 +8716,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Real GDP",
+        "Nominal Interest Rate"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Increase",
+          "Increase"
+        ],
+        "C": [
+          "No change",
+          "No change"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    },
+    "option_headers": [
+      "Real GDP",
+      "Nominal Interest Rate"
+    ]
   },
   {
     "question_id": "2017_Q05",
@@ -8153,13 +8821,13 @@
   {
     "question_id": "2017_Q07",
     "year": 2017,
-    "text": "7. Assume that a country’s government increases \nborrowing. What will most likely happen to the \nprices of previously issued bonds and the price \nlevel in the short run? \n \n \n \n \n \n \nMACROECONOMICS \nSection I \nTime—70 minutes\n \n60 Questions \nDirections: Each of the questions or incomplete statements below is followed by five suggested answers or \ncompletions. Select the one that is best in each case and then fill in the corresponding circle on the answer sheet.",
+    "text": "Assume that a country's government increases borrowing. What will most likely happen to the prices of previously issued bonds and the price level in the short run?",
     "options": {
-      "A": "Increase Increase",
-      "B": "Increase Decrease",
-      "C": "Increase No change",
-      "D": "Decreas e Increase",
-      "E": "Decreas e Decrease . ."
+      "A": "Increase / Increase",
+      "B": "Increase / Decrease",
+      "C": "Increase / No change",
+      "D": "Decrease / Increase",
+      "E": "Decrease / Decrease"
     },
     "answer": "D",
     "primary_unit": "U3",
@@ -8176,7 +8844,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Bond Prices",
+        "Price Level"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "No change"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    },
+    "option_headers": [
+      "Bond Prices",
+      "Price Level"
+    ]
   },
   {
     "question_id": "2017_Q08",
@@ -8367,11 +9067,11 @@
     "year": 2017,
     "text": "14. Which of the following combinations of fiscal and monetary policy will reduce the price level? \nFiscal Policy Monetary Policy",
     "options": {
-      "A": "Increasing government spending",
-      "B": "Increasing government spending",
-      "C": "Decreasing government spending",
-      "D": "Decreasing government spending",
-      "E": "Decreasing taxes Buying government bonds Selling government bonds Buying government bonds Selling government bonds Decreasing the discount rate"
+      "A": "Increasing government spending | Buying government bonds",
+      "B": "Increasing government spending | Selling government bonds",
+      "C": "Decreasing government spending | Buying government bonds",
+      "D": "Decreasing government spending | Selling government bonds",
+      "E": "Decreasing taxes | Buying government bonds"
     },
     "answer": "D",
     "primary_unit": "U3",
@@ -8389,7 +9089,39 @@
       "evaluate",
       "recommend_policy"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Fiscal Policy",
+      "Monetary Policy"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Fiscal Policy",
+        "Monetary Policy"
+      ],
+      "rows": {
+        "A": [
+          "Increasing government spending",
+          "Buying government bonds"
+        ],
+        "B": [
+          "Increasing government spending",
+          "Selling government bonds"
+        ],
+        "C": [
+          "Decreasing government spending",
+          "Buying government bonds"
+        ],
+        "D": [
+          "Decreasing government spending",
+          "Selling government bonds"
+        ],
+        "E": [
+          "Decreasing taxes",
+          "Buying government bonds"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q15",
@@ -8432,7 +9164,7 @@
       "B": "Increase",
       "C": "Increase",
       "D": "No change",
-      "E": "Decrease Increase Decrease No change Decrease Decrease . ."
+      "E": "Decrease Decrease"
     },
     "answer": "B",
     "primary_unit": "U3",
@@ -8574,11 +9306,11 @@
     "year": 2017,
     "text": "21. Assume that banks hold no excess reserves. A decrease in the required reserve ratio will cause total reserves \nin banks, the money multiplier, and the money supply to change in which of the following ways? \nTotal Reserves Money Multiplier Money Supply",
     "options": {
-      "A": "Increase",
-      "B": "Increase",
-      "C": "No change",
-      "D": "Decrease",
-      "E": "No change Increase No change Increase Decrease Increase Increase Increase Decrease Decrease Increase"
+      "A": "Increase | Increase | Increase",
+      "B": "Increase | Increase | No change",
+      "C": "No change | Increase | Increase",
+      "D": "Decrease | Increase | Increase",
+      "E": "No change | Increase | Decrease"
     },
     "answer": "E",
     "primary_unit": "U4",
@@ -8598,7 +9330,46 @@
       "predict",
       "calculate"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Total Reserves",
+      "Money Multiplier",
+      "Money Supply"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Total Reserves",
+        "Money Multiplier",
+        "Money Supply"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Increase",
+          "No change"
+        ],
+        "C": [
+          "No change",
+          "Increase",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Increase",
+          "Increase"
+        ],
+        "E": [
+          "No change",
+          "Increase",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q22",
@@ -8726,7 +9497,7 @@
       "B": "Betania has a comparative advantage in producing apparel, and Alphania has a comparative advantage in producing electronics.",
       "C": "Alphania must be specializing in apparel, while Betania is specializing in electronics.",
       "D": "Workers in Alphania can produce more apparel per hour than workers in Betania.",
-      "E": "Consumers in Betania buy more electronics than consumers in Alphania. . . SRAS1 to SRAS2 SRAS to SRAS AD1 to AD2 AD 2 to AD1"
+      "E": "Consumers in Betania buy more electronics than consumers in Alphania."
     },
     "answer": "B",
     "primary_unit": "U1",
@@ -9082,7 +9853,7 @@
       "B": "Income taxes: Increase / Interest Rate: Increase / Investment: Decrease",
       "C": "Income taxes: Increase / Interest Rate: Decrease / Investment: Decrease",
       "D": "Income taxes: Decrease / Interest Rate: Decrease / Investment: Decrease",
-      "E": "Income taxes: Decrease / Interest Rate: Decrease / Investment: Increase"
+      "E": "Decrease Decrease Increase"
     },
     "answer": "E",
     "primary_unit": "U4",
@@ -9119,11 +9890,11 @@
     "year": 2017,
     "text": "39. Assume that the United States central bank sells \ngovernment bonds on the open market. How will \nthe sale affect the value of the United States dollar \non the foreign exchange market and United States \nexports? \nValue of the Dollar Exports",
     "options": {
-      "A": "Increase Decrease",
-      "B": "No change Decrease",
-      "C": "Decrease Decrease",
-      "D": "Decrease Increase",
-      "E": "Increase Increase"
+      "A": "Increase | Decrease",
+      "B": "No change | Decrease",
+      "C": "Decrease | Decrease",
+      "D": "Decrease | Increase",
+      "E": "Increase | Increase"
     },
     "answer": "A",
     "primary_unit": "U6",
@@ -9141,7 +9912,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Value of the Dollar",
+      "Exports"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Value of the Dollar",
+        "Exports"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "No change",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Increase",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q40",
@@ -9731,7 +10534,7 @@
       "B": "The central bank sells government bonds on the open market.",
       "C": "The government increases taxes without changing its spending.",
       "D": "The government decreases taxes without changing its spending.",
-      "E": "The government decreases taxes while simultaneously decreasing its spending. . . END OF SECTION I IF YOU FINISH BEFORE TIME IS CALLED, YOU MAY CHECK YOUR WORK ON THIS SECTION. DO NOT GO ON TO SECTION II UNTIL YOU ARE TOLD TO DO SO. MAKE SURE YOU HAVE DONE THE FOLLOWING. • PLACED YOUR AP NUMBER LABEL ON YOUR ANSWER SHEET • WRITTEN AND GRIDDED YOUR AP NUMBER CORRECTLY ON YOUR ANSWER SHEET • TAKEN THE AP EXAM LABEL FROM THE FRONT OF THIS BOOKLET AND PLACED IT ON YOUR ANSWER SHEET Section II: Free-Response Questions This is the free-response section of the 2017 AP exam. It includes cover material and other administrative instructions to help familiarize students with the mechanics of the exam. (Note that future exams may differ in look from the following content.)"
+      "E": "The government decreases taxes while simultaneously increasing its spending."
     },
     "answer": "A",
     "primary_unit": "U3",
@@ -10264,11 +11067,11 @@
     "year": "2018",
     "text": "How will an increase in demand and a\nsimultaneous decrease in supply affect the\nequilibrium price and quantity of a good\nin\na market?\nPrice",
     "options": {
-      "A": "Increase",
-      "B": "Increase",
-      "C": "Decrease",
-      "D": "Decrease",
-      "E": "Indeterminate . Quantity Increase Indeterminate Increase Indeterminate Indeterminate"
+      "A": "Increase | Increase",
+      "B": "Increase | Decrease",
+      "C": "Decrease | Increase",
+      "D": "Decrease | Decrease",
+      "E": "Indeterminate | Indeterminate"
     },
     "answer": "B",
     "primary_unit": "U3",
@@ -10289,7 +11092,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Equilibrium Price",
+      "Equilibrium Quantity"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Equilibrium Price",
+        "Equilibrium Quantity"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "Indeterminate",
+          "Indeterminate"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q17",
@@ -11048,7 +11883,7 @@
       "B": "Increase",
       "C": "Increase",
       "D": "Decrease",
-      "E": "Decrease Increase Decrease No change Increase No change"
+      "E": "Increase Decrease"
     },
     "answer": "A",
     "primary_unit": "U3",
@@ -11082,7 +11917,7 @@
       "B": "Decrease",
       "C": "Increase",
       "D": "Increase",
-      "E": "No change 2007 Increase Increase No change Decrease No change"
+      "E": "Decrease No change"
     },
     "answer": "C",
     "primary_unit": "U2",
@@ -11110,11 +11945,11 @@
     "year": "2018",
     "text": "If the government implements an expansionary\nfiscal policy, how will real gross domestic product\n(GDP) and the price level be affected in the\nshort run?\nReal GDP Price Level",
     "options": {
-      "A": "Increase Decrease",
-      "B": "Decrease No change",
-      "C": "No change Increase",
-      "D": "Increase Increase",
-      "E": "Decrease Decrease"
+      "A": "Increase | Decrease",
+      "B": "Decrease | No change",
+      "C": "No change | Increase",
+      "D": "Increase | Increase",
+      "E": "Decrease | Decrease"
     },
     "answer": "D",
     "primary_unit": "U2",
@@ -11138,7 +11973,39 @@
     "skills": [
       "predict"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Real GDP",
+      "Price Level"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Real GDP",
+        "Price Level"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Decrease",
+          "No change"
+        ],
+        "C": [
+          "No change",
+          "Increase"
+        ],
+        "D": [
+          "Increase",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q42",
@@ -11314,7 +12181,7 @@
       "B": "Increase Decrease Increase",
       "C": "Increase Increase Increase",
       "D": "Decrease Decrease Increase",
-      "E": "Decrease Increase Decrease C/) -0 0 0 0 Con s umer Good s"
+      "E": "Decrease Increase Decrease"
     },
     "answer": "C",
     "primary_unit": "U3",
@@ -12749,11 +13616,11 @@
     "year": "2019",
     "text": "Fred Jones withdraws $1,000 in cash fro m his\nsavings account. What immediate effect does\nthis transaction have on the monetary aggregate\nmeasures of M1 and M2 ?\nM1 M2",
     "options": {
-      "A": "Increas es Decreas es",
-      "B": "Increases No change",
-      "C": "Decreases No change",
-      "D": "No change Decreases",
-      "E": "No change No change"
+      "A": "Increases | Decreases",
+      "B": "Increases | No change",
+      "C": "Decreases | No change",
+      "D": "No change | Decreases",
+      "E": "No change | No change"
     },
     "answer": "B",
     "primary_unit": "U4",
@@ -12775,7 +13642,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "M1",
+      "M2"
+    ],
+    "option_table_data": {
+      "headers": [
+        "M1",
+        "M2"
+      ],
+      "rows": {
+        "A": [
+          "Increases",
+          "Decreases"
+        ],
+        "B": [
+          "Increases",
+          "No change"
+        ],
+        "C": [
+          "Decreases",
+          "No change"
+        ],
+        "D": [
+          "No change",
+          "Decreases"
+        ],
+        "E": [
+          "No change",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2019_Q33",
@@ -13130,11 +14029,11 @@
     "year": "2019",
     "text": "An economy is in short-run equilibrium at a level\nof output that is greater than potential output. If\nthere were no active fiscal or monetary policy\nintervention, which of the following changes in\noutput and the price level would occur in the\nlong run?\nOutput Price Level",
     "options": {
-      "A": "Increase Decrease",
-      "B": "Increase Increase",
-      "C": "Decreas e Decreas e",
-      "D": "Decrease Increase",
-      "E": "No change No change . Production Point Shirts Chairs A 20 0 B 16 1 C 12 2 D 8 3 E 4 4 F 0 5"
+      "A": "Increase | Decrease",
+      "B": "Increase | Increase",
+      "C": "Decrease | Decrease",
+      "D": "Decrease | Increase",
+      "E": "No change | No change"
     },
     "answer": "D",
     "primary_unit": "U4",
@@ -13157,7 +14056,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Output",
+      "Price Level"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Output",
+        "Price Level"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Increase",
+          "Increase"
+        ],
+        "C": [
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "No change",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2019_Q44",
@@ -13472,11 +14403,11 @@
     "year": "2019",
     "text": "Assume that the market for bottled water is in\nequilibrium. If both the supply of and the demand\nfor bottled water decrease, what will be the effect\non equilibrium price and quantity?\nPrice Quantity",
     "options": {
-      "A": "Decrease Decrease",
-      "B": "Decrease Increase",
-      "C": "Increase Decrease",
-      "D": "Increase Indeterminate",
-      "E": "Indeterminate Decrease"
+      "A": "Decrease | Decrease",
+      "B": "Decrease | Increase",
+      "C": "Increase | Decrease",
+      "D": "Increase | Indeterminate",
+      "E": "Indeterminate | Decrease"
     },
     "answer": "E",
     "primary_unit": "U3",
@@ -13497,18 +14428,50 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "Price",
+      "Quantity"
+    ],
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Quantity"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Decrease"
+        ],
+        "B": [
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Increase",
+          "Decrease"
+        ],
+        "D": [
+          "Increase",
+          "Indeterminate"
+        ],
+        "E": [
+          "Indeterminate",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2019_Q54",
     "year": "2019",
     "text": "An increase in government spending that is\nfinanced by an equal increase in taxes results\nin which of the following changes in aggregate\ndemand (AD) and short-run aggregate supply\n(SRAS) curves?\nAD Curve SRAS Curve",
     "options": {
-      "A": "Shifts to the right Shifts to the right",
-      "B": "Shifts to the left Shifts to the left",
-      "C": "Shifts to the right No change",
-      "D": "Shifts to the left No change",
-      "E": "No change No change"
+      "A": "Shifts to the right | Shifts to the right",
+      "B": "Shifts to the left | Shifts to the left",
+      "C": "Shifts to the right | No change",
+      "D": "Shifts to the left | No change",
+      "E": "No change | No change"
     },
     "answer": "C",
     "primary_unit": "U3",
@@ -13535,7 +14498,39 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_headers": [
+      "AD Curve",
+      "SRAS Curve"
+    ],
+    "option_table_data": {
+      "headers": [
+        "AD Curve",
+        "SRAS Curve"
+      ],
+      "rows": {
+        "A": [
+          "Shifts to the right",
+          "Shifts to the right"
+        ],
+        "B": [
+          "Shifts to the left",
+          "Shifts to the left"
+        ],
+        "C": [
+          "Shifts to the right",
+          "No change"
+        ],
+        "D": [
+          "Shifts to the left",
+          "No change"
+        ],
+        "E": [
+          "No change",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2019_Q55",
@@ -13716,7 +14711,7 @@
       "B": "It increases when gross domestic product increases.",
       "C": "It increases when the country’s government has a budget deficit.",
       "D": "It decreases when the country’s exports exceed its imports.",
-      "E": "It decreases when national savings decrease. END OF IF YOU FINISH BEFORE TIME IS CALLED, YOU MAY CHECK YOUR WORK ON THIS SECTION. DO NOT GO ON TO UNTIL YOU ARE TOLD TO DO SO. MAKE SURE YOU HAVE DONE THE FOLLOWING. PLACED YOUR AP NUMBER LABEL ON YOUR ANSWER SHEET WRITTEN AND GRIDDED YOUR AP NUMBER CORRECTLY ON YOUR ANSWER S HEET TAKEN THE AP EXAM LABEL FROM TH E FRONT OF THIS BOOKLET AND PLACED IT ON YOUR ANSWER SHEET ."
+      "E": "It decreases when national savings decrease."
     },
     "answer": "C",
     "primary_unit": "U6",

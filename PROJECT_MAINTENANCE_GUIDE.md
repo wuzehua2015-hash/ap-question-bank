@@ -51,26 +51,46 @@ cat dist/index.html | grep "src="
 
 **正确做法**:
 ```javascript
-// JSON中存储绝对路径
+// JSON中存储绝对路径（不带base前缀）
 "image_paths": ["/images/2016/2016_page18_img1.png"]
 
-// 前端直接使用，不要拼接BASE_URL
-<img src={path} />
+// 前端必须拼接BASE_URL（因为Vite base配置会影响资源路径）
+const BASE_URL = import.meta.env.BASE_URL || '/'
+<img src={path.startsWith('/') ? BASE_URL + path.slice(1) : path} />
 
-// 如果用了HashRouter，绝对路径 /images/ 指向的是域名根，不受路由影响
+// 示例：
+// base='/' 时：/images/2016/... → /images/2016/...（不变）
+// base='/ap-question-bank/' 时：/images/2016/... → /ap-question-bank/images/2016/...
 ```
+
+**为什么必须拼接BASE_URL？**
+- JSON中存储的路径是绝对路径（以 `/` 开头）
+- 浏览器解析绝对路径时，始终以域名根为基准，**忽略 Vite 的 base 配置**
+- 如果 Vite base 是 `/ap-question-bank/`，图片实际部署在 `/ap-question-bank/images/...`
+- 但浏览器请求 `/images/...` 会指向 `domain.com/images/...`，导致 404
+- **所有32道图片题都有这个问题**
 
 **错误做法**:
 ```javascript
-// 错误：在生产环境下会重复添加前缀
-const BASE_URL = import.meta.env.BASE_URL || '/'
-const path = `${BASE_URL}${imagePath.slice(1)}`  // 导致 /ap-question-bank/images/...
+// 错误1：直接拼接BASE_URL + imagePath（会重复路径）
+const path = `${BASE_URL}${imagePath}`  // 如果BASE_URL=/ap-question-bank/，结果是 /ap-question-bank//images/...
+
+// 错误2：不拼接BASE_URL，直接使用JSON中的绝对路径
+<img src={imagePath} />  // 当base≠/时图片404
+
+// 错误3：使用相对路径 ./images/...
+"image_paths": ["./images/2016/..."]  // 在HashRouter下会随URL变化，不稳定
 ```
 
 **检查清单**:
-- [ ] JSON中 `image_paths` 使用绝对路径 `/images/...`
-- [ ] 前端代码不手动拼接 `BASE_URL` 到图片路径
-- [ ] 部署后在 DevTools → Network 中检查图片请求状态
+- [ ] JSON中 `image_paths` 使用绝对路径 `/images/...`（不带base前缀，保持部署无关）
+- [ ] 前端代码必须拼接 `BASE_URL`：`<img src={path.startsWith('/') ? BASE_URL + path.slice(1) : path} />`
+- [ ] 开发时开启 `console.error` 在 `onError` 中，方便调试
+- [ ] 部署后在 DevTools → Network 中检查图片请求状态（确认无404）
+- [ ] 检查所有图片题（32道）是否正确显示
+- [ ] 如果图片仍然不显示，检查 `vite.config.js` 中 `base` 配置是否匹配部署路径
+- [ ] 如果图片仍然不显示，尝试在浏览器直接访问图片URL，确认路径正确
+- [ ] **特别注意：如果 base 是 `/ap-question-bank/`，图片URL必须是 `/ap-question-bank/images/...`
 
 ---
 
@@ -184,6 +204,7 @@ const path = `${BASE_URL}${imagePath.slice(1)}`  // 导致 /ap-question-bank/ima
 - JSON中缺少 `answer` 字段
 - 缺少 `correctAnswer` 字段（如果使用不同字段名）
 - 缺少 `has_graph` 或 `image_paths` 字段
+- **缺少 `option_table_data` 字段**：表格选项题没有结构化数据，导致选项渲染为纯文本（如 "Increase Increase"），学生无法判断列含义
 
 **检查清单**:
 - [ ] 所有题目都有 `answer` 字段（A-E之一）
@@ -191,10 +212,86 @@ const path = `${BASE_URL}${imagePath.slice(1)}`  // 导致 /ap-question-bank/ima
 - [ ] 有图表的题 `image_paths` 非空且路径正确
 - [ ] `question_id` 格式统一（如 `2016_Q01`）
 - [ ] 无重复 `question_id`
+- [ ] **表格选项题有 `option_table_data` 字段（包含 `headers` 和 `rows`）**
+- [ ] 表格选项题有 `option_headers` 字段（备用渲染方式）
 
 ---
 
-### 3.4 字符串搜索假阳性
+### 3.5 表格选项题（Table-Format Options）
+
+**问题描述**:
+AP考试中很多题目的选项是表格格式，有明确的列标题。例如：
+
+```
+M1        M2
+(A) Increases   Decreases
+(B) Increases   No change
+```
+
+但文本提取器会将这些表格的每行合并为纯文本：
+```json
+"A": "Increase Increase",
+"B": "Increase Decrease"
+```
+
+学生无法判断每个词对应哪一列，严重影响理解。
+
+**解决方案**:
+在JSON中新增 `option_table_data` 字段，包含结构化的表头和每行数据：
+
+```json
+{
+  "question_id": "2019_Q32",
+  "text": "Fred Jones withdraws $1,000...",
+  "options": {
+    "A": "Increases | Decreases",
+    "B": "Increases | No change",
+    "C": "Decreases | No change",
+    "D": "No change | Decreases",
+    "E": "No change | No change"
+  },
+  "option_table_data": {
+    "headers": ["M1", "M2"],
+    "rows": {
+      "A": ["Increases", "Decreases"],
+      "B": ["Increases", "No change"],
+      "C": ["Decreases", "No change"],
+      "D": ["No change", "Decreases"],
+      "E": ["No change", "No change"]
+    }
+  }
+}
+```
+
+前端渲染时检测 `option_table_data`，以表格形式展示（带列标题）。
+
+**表格选项识别方法**:
+1. 所有选项长度一致（2-4个词）
+2. 选项以"Increase/Decrease/No change/Indeterminate"等词汇为主
+3. 平均词长度很短（<12字符）
+4. 需要查看PDF确认实际列标题（M1/M2, Price/Quantity, Output/Price Level等）
+
+**常见表格选项类型**:
+| 列数 | 典型表头 | 年份示例 |
+|------|---------|---------|
+| 2列 | Price / Quantity | 2015_Q14, 2019_Q53 |
+| 2列 | M1 / M2 | 2019_Q32 |
+| 2列 | Output / Price Level | 2014_Q36, 2019_Q43 |
+| 2列 | Bond Prices / Interest Rates | 2012_Q43 |
+| 2列 | Real GDP / Price Level | 2018_Q41 |
+| 2列 | Fiscal Policy / Monetary Policy | 2017_Q14 |
+| 3列 | Money Supply / Interest Rate / Aggregate Demand | 2016_Q06 |
+| 3列 | Reserves / Demand Deposits / Loans | 2015_Q13 |
+| 3列 | Total Reserves / Money Multiplier / Money Supply | 2017_Q21 |
+
+**检查清单**:
+- [ ] 遍历所有选项，识别表格模式（2-4个短词，变化类词汇）
+- [ ] 查看PDF原文确认列标题
+- [ ] 为表格选项添加 `option_table_data` 字段
+- [ ] 确认 `option_table_data.headers` 和 `rows` 的列数一致
+- [ ] 前端支持表格渲染（带表头、可点击、颜色反馈）
+- [ ] 测试表格选项的选中/正确/错误状态显示正常
+
 
 **问题描述**:
 - 使用 `text.includes('table')` 搜索时，"stable" 也会被匹配
@@ -210,9 +307,109 @@ const path = `${BASE_URL}${imagePath.slice(1)}`  // 导致 /ap-question-bank/ima
 - [ ] 字符串搜索使用整词匹配或上下文确认
 - [ ] 手动抽查搜索结果，确认无假阳性
 
----
+### 3.6 文本污染（多题文本串混）
 
-## 四、文件与目录管理问题
+**问题描述**:
+PDF文本提取时，由于相邻题目之间没有明确分隔，导致下一个题目的文本混入当前题目，或当前题目选项被混入其他题目内容。表现为：
+- 选项文本异常长（>120字符）且包含不相关词汇
+- 选项中包含 "END OF"、"GO ON TO"、"BANK A"、"Production Point" 等页脚/表格文字
+- 选项中包含其他题目的选项文字（如Q26的选项混入Q25的选项E中）
+
+**常见污染模式**:
+| 污染标志 | 说明 | 示例 |
+|---------|------|------|
+| `END OF` | 页面末尾文字 | 混入选项E |
+| `GO ON TO THE NEXT PAGE` | 翻页提示 | 混入选项E |
+| `BANK A` / `BANK B` | 下一个题目的表格 | 混入当前选项 |
+| `Production Point` | 下一个题目的表格 | 混入当前选项 |
+| `Year Nominal GDP` | 下一个题目的表格 | 混入当前选项 |
+| `ANNUAL CONSUMER` | 下一个题目的表格 | 混入当前选项 |
+| `SRAS1` / `AD1` | 图表题的文字标记 | 混入上一个选项E |
+| `Item X was not scored` | 未计分题目标记（含任意编号） | 混入相邻选项 |
+| `Unauthorized copying` | 版权页脚 | 混入文本和选项 |
+| `PLACED YOUR AP NUMBER` | 考试说明 | 混入文本 |
+| `MACROECONOMICS` / `Section I` | 考试标题 | 混入题干文本 |
+| `Directions: Each of the questions` | 考试说明 | 混入题干文本 |
+| `Time—70 minutes` | 考试时长 | 混入题干文本 |
+| `fill in the corresponding circle` | 答题说明 | 混入题干文本 |
+| `Answer Key` | 答案页 | 混入末尾题目 |
+
+**特殊注意：Item scored 污染**
+
+AP考试PDF中某些题目标记为 "Item X was not scored"（不计入成绩），这些文字在PDF中紧跟在相邻题目后面，极易混入。
+
+| 实例 | 污染位置 | 正确内容 |
+|------|---------|---------|
+| `2015_Q21` E | `Decrease No change Item 22 was not scored.` | `Decrease No change` |
+| `2015_Q42` E | `$4,500 Item 43 was not scored.` | `$4,500` |
+
+**题干文本污染（之前完全遗漏！）**
+
+除了选项污染，**题干文本**也可能被严重污染。例如 `2017_Q07` 的text混入了整段考试说明：
+```
+MACROECONOMICS 
+Section I 
+Time—70 minutes
+60 Questions 
+Directions: Each of the questions or incomplete statements below is followed by five suggested answers...
+```
+
+**自动检测脚本**（必须同时检查选项和题干）：
+```javascript
+const pollution_keywords = [
+  // 选项污染关键词
+  'END OF', 'GO ON TO', 'BANK A', 'Production Point', 'Year Nominal GDP',
+  'ANNUAL CONSUMER', 'Item', 'was not scored', 'PLACED YOUR AP',
+  'Unauthorized copying', 'BANK B', 'BANK C', 'Assets Liabilities',
+  'GO ON T O THE NEXT PAGE', 'If you finish before time',
+  // 题干污染关键词
+  'MACROECONOMICS', 'Section I', 'Section II', 'Directions:',
+  'Time—70', 'Time-70', 'fill in the corresponding',
+  'Select the one that is best', 'Pencil required', 'Total Time:',
+  'Calculator not', 'Writing Instrument', 'Reading Period',
+  'Suggested Time', 'mark is erased', 'collect all materials',
+  'Answer Key', 'AP NUMBER', 'AP Exam', 'Answer sheet'
+];
+
+for (const q of data) {
+  // 检查选项
+  for (const [key, val] of Object.entries(q.options || {})) {
+    for (const kw of pollution_keywords) {
+      if (val.includes(kw)) {
+        console.log('OPTION POLLUTION:', q.question_id, key, 'contains', kw);
+      }
+    }
+  }
+  // 检查题干（重要！不能遗漏）
+  for (const kw of pollution_keywords) {
+    if (q.text.includes(kw)) {
+      console.log('TEXT POLLUTION:', q.question_id, 'text contains', kw);
+    }
+  }
+}
+```
+
+**手动检测方法**:
+1. 检查所有选项长度 > 120 字符的选项
+2. 检查选项末尾是否有句号+空格+大写字母开头（可能是下一个题目的文本）
+3. 检查选项中是否有与题目无关的词汇
+4. **检查题干文本末尾是否有多余空行+大写单词**（如 MACROECONOMICS、Section I）
+5. **检查题干中是否混入考试说明**（Directions、Time—70 minutes等）
+
+**修复方案**:
+1. 查找PDF原文确认正确选项和题干
+2. 用PDF文本定位精确内容，只保留当前题目的文本
+3. 如果无法确认，从PDF中重新读取该题页面
+
+**检查清单**:
+- [ ] 运行自动检测脚本（**同时检查选项和题干**）
+- [ ] 检查所有长度 > 120 的选项，确认是自然长文本还是污染
+- [ ] 检查选项末尾是否有多余字符
+- [ ] 特别检查每个选项E（污染最常出现在最后一个选项）
+- [ ] **检查题干文本末尾是否有多余空行+大写标题**
+- [ ] **检查题干中是否混入考试说明**（Directions、Time—70、Section I等）
+- [ ] 确认无 "Item X was not scored" 残留（任意X）
+
 
 ### 4.1 构建目录 vs 源代码目录混淆
 
@@ -452,12 +649,17 @@ const path = `${BASE_URL}${imagePath.slice(1)}`  // 导致 /ap-question-bank/ima
 3. ✅ 13道表格题图片提取
 4. ✅ 表格题文本清理（移除嵌入的数据）
 5. ✅ 表格题图片精确裁剪（移除题干文字）
-6. ✅ 图片路径简化（移除BASE_URL拼接）
+6. ✅ 图片路径简化（移除BASE_URL拼接）→ **后又修复：必须拼接BASE_URL**
 7. ✅ 移除硬编码学科名称（Footer、HomePage、title）
+8. ✅ **27道表格选项结构化**（添加 `option_table_data` 含表头和行数据）→ **30道**
+9. ✅ **文本污染清理**（8个污染选项修复，含2015_Q45/2017_Q26/2019_Q60等）
+10. ✅ **前端表格选项渲染**（QuestionCard.jsx 支持表格布局）
+11. ✅ **图片路径BASE_URL修复**（JSON存绝对路径，前端拼接BASE_URL）
 
 **待确认问题**:
 - ⏳ Vercel网站稳定访问（网络间歇性问题）
-- ⏳ 图片在网页中正确显示（待部署后验证）
+- ⏳ 图片在网页中正确显示（需部署后验证BASE_URL拼接是否生效）
+- ⏳ 表格选项题在网页中正确渲染为表格（带表头）
 
 **待开发功能**:
 1. 批改页成绩面板（分数、正确率、每题对错）

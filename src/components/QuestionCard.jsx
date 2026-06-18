@@ -14,6 +14,10 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
   // 图片路径直接使用JSON中定义的路径
   const imagePaths = question.image_paths || []
 
+  // 表格选项检测
+  const tableData = question.option_table_data
+  const isTableOptions = !!tableData
+
   return (
     <div className="bg-surface rounded-xl p-6 shadow-sm border border-border">
       {/* 题目标签 */}
@@ -29,44 +33,55 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
         {question.text}
       </h3>
 
-      {/* 图像 */}
+  {/* 图像 - 注意：需要拼接BASE_URL，因为Vite base配置会影响资源路径 */}
       {imagePaths.map((path, i) => (
         <img
           key={i}
-          src={path}
+          src={path.startsWith('/') ? BASE_URL + path.slice(1) : path}
           alt=""
           className="max-w-full max-h-80 mx-auto mb-4 rounded-lg border border-border"
-          onError={e => { e.target.style.display = 'none' }}
+          onError={e => { console.error('Image failed:', e.target.src); e.target.style.display = 'none' }}
         />
       ))}
 
-      {/* 选项 */}
-      <div className="space-y-3 mt-4">
-        {Object.entries(question.options || {}).map(([key, text]) => {
-          const isSelected = selectedAnswer === key
-          const isCorrect = question.answer === key
-          const showCorrect = isSubmitted && isCorrect
-          const showIncorrect = isSubmitted && isSelected && !isCorrect
+      {/* 选项 - 表格渲染 */}
+      {isTableOptions ? (
+        <TableOptions
+          tableData={tableData}
+          selectedAnswer={selectedAnswer}
+          answer={question.answer}
+          isSubmitted={isSubmitted}
+          onSelect={onSelect}
+        />
+      ) : (
+        /* 选项 - 普通渲染 */
+        <div className="space-y-3 mt-4">
+          {Object.entries(question.options || {}).map(([key, text]) => {
+            const isSelected = selectedAnswer === key
+            const isCorrect = question.answer === key
+            const showCorrect = isSubmitted && isCorrect
+            const showIncorrect = isSubmitted && isSelected && !isCorrect
 
-          return (
-            <button
-              key={key}
-              onClick={() => !isSubmitted && onSelect(key)}
-              disabled={isSubmitted}
-              className={`option-btn ${
-                showCorrect ? 'correct' :
-                showIncorrect ? 'incorrect' :
-                isSelected ? 'selected' : ''
-              }`}
-            >
-              <span className="font-bold mr-2">{key}.</span>
-              {text}
-              {showCorrect && <span className="ml-2 text-success text-sm">✓ 正确</span>}
-              {showIncorrect && <span className="ml-2 text-error text-sm">✗ 你的答案</span>}
-            </button>
-          )
-        })}
-      </div>
+            return (
+              <button
+                key={key}
+                onClick={() => !isSubmitted && onSelect(key)}
+                disabled={isSubmitted}
+                className={`option-btn ${
+                  showCorrect ? 'correct' :
+                  showIncorrect ? 'incorrect' :
+                  isSelected ? 'selected' : ''
+                }`}
+              >
+                <span className="font-bold mr-2">{key}.</span>
+                {text}
+                {showCorrect && <span className="ml-2 text-success text-sm">✓ 正确</span>}
+                {showIncorrect && <span className="ml-2 text-error text-sm">✗ 你的答案</span>}
+              </button>
+            )
+          })}
+        </div>
+      )}
 
       {/* 提交后答案 */}
       {isSubmitted && (
@@ -80,6 +95,63 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
           <div className="text-sm text-text-muted mt-1">来源：{question.source}</div>
         </div>
       )}
+    </div>
+  )
+}
+
+function TableOptions({ tableData, selectedAnswer, answer, isSubmitted, onSelect }) {
+  const { headers, rows } = tableData
+  const numCols = headers.length
+
+  // Grid columns: label + each header column
+  const gridStyle = {
+    display: 'grid',
+    gridTemplateColumns: `40px repeat(${numCols}, 1fr)`,
+    gap: '1px',
+  }
+
+  return (
+    <div className="mt-4 border border-border rounded-lg overflow-hidden">
+      {/* 表头 */}
+      <div className="grid" style={gridStyle}>
+        <div className="bg-gray-100 p-2 text-sm font-medium text-text-muted"></div>
+        {headers.map((h, i) => (
+          <div key={i} className="bg-gray-100 p-2 text-sm font-medium text-text-muted text-center">
+            {h}
+          </div>
+        ))}
+      </div>
+
+      {/* 选项行 */}
+      {Object.entries(rows).map(([key, values]) => {
+        const isSelected = selectedAnswer === key
+        const isCorrect = answer === key
+        const showCorrect = isSubmitted && isCorrect
+        const showIncorrect = isSubmitted && isSelected && !isCorrect
+
+        let rowClass = 'bg-surface hover:bg-gray-50 transition-colors cursor-pointer'
+        if (showCorrect) rowClass = 'bg-green-50 border-l-4 border-l-success'
+        else if (showIncorrect) rowClass = 'bg-red-50 border-l-4 border-l-error'
+        else if (isSelected) rowClass = 'bg-blue-50 border-l-4 border-l-brand'
+
+        return (
+          <div
+            key={key}
+            className={`grid border-t border-border ${rowClass}`}
+            style={gridStyle}
+            onClick={() => !isSubmitted && onSelect(key)}
+          >
+            <div className="p-2 text-sm font-bold text-text flex items-center justify-center">
+              {key}.
+            </div>
+            {values.map((val, i) => (
+              <div key={i} className="p-2 text-sm text-text text-center flex items-center justify-center">
+                {val}
+              </div>
+            ))}
+          </div>
+        )
+      })}
     </div>
   )
 }
