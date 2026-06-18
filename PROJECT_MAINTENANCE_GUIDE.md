@@ -329,6 +329,27 @@ const path = `${BASE_URL}${imagePath.slice(1)}`  // 导致 /ap-question-bank/ima
 
 ---
 
+## 七、品牌化硬编码问题 ⚠️
+
+### 7.1 学科名称写死在代码中
+
+**问题描述**:
+- Footer、HomePage、index.html 中硬编码了 "AP Macroeconomics"
+- 未来要支持 IB、Alevel 等学科时，需要到处修改
+
+**正确做法**:
+- 所有显示文本使用通用名称（如"智能题库"）
+- 学科名称放入配置文件，不要写死在 JSX 中
+- 版权信息也使用通用表述（"原出题机构"而不是"College Board"）
+
+**检查清单**:
+- [ ] Footer 中无硬编码学科名称
+- [ ] HomePage 标题无硬编码学科名称
+- [ ] index.html title 无硬编码学科名称
+- [ ] 版权信息使用通用表述
+
+---
+
 ## 七、网络与部署问题
 
 ### 7.1 Git推送失败
@@ -384,6 +405,7 @@ const path = `${BASE_URL}${imagePath.slice(1)}`  // 导致 /ap-question-bank/ima
 - [ ] 确认路由使用 HashRouter（静态部署）
 - [ ] 确认图片路径使用绝对路径 `/images/...`
 - [ ] 添加图片加载错误日志（开发时）
+- [ ] **确认无硬编码学科名称**（见第7节）
 
 ### 第四阶段：部署验证
 - [ ] 本地构建 `npm run build` 检查无错误
@@ -395,6 +417,7 @@ const path = `${BASE_URL}${imagePath.slice(1)}`  // 导致 /ap-question-bank/ima
 - [ ] 检查表格题是否文字不重复
 - [ ] 检查做题提交后成绩是否正确
 - [ ] 检查所有链接和按钮可用
+- [ ] **检查Footer/HomePage无硬编码学科名称**
 
 ---
 
@@ -430,6 +453,7 @@ const path = `${BASE_URL}${imagePath.slice(1)}`  // 导致 /ap-question-bank/ima
 4. ✅ 表格题文本清理（移除嵌入的数据）
 5. ✅ 表格题图片精确裁剪（移除题干文字）
 6. ✅ 图片路径简化（移除BASE_URL拼接）
+7. ✅ 移除硬编码学科名称（Footer、HomePage、title）
 
 **待确认问题**:
 - ⏳ Vercel网站稳定访问（网络间歇性问题）
