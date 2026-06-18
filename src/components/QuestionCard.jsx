@@ -1,6 +1,31 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
+
+function ImageWithFallback({ path }) {
+  const [src, setSrc] = useState(path.startsWith('/') ? BASE_URL + path.slice(1) : path)
+  const [hasError, setHasError] = useState(false)
+
+  if (hasError) return null
+
+  return (
+    <img
+      src={src}
+      alt=""
+      className="max-w-full max-h-80 mx-auto mb-4 rounded-lg border border-border"
+      onError={() => {
+        const originalPath = path.startsWith('/') ? path : '/' + path
+        if (src !== originalPath) {
+          console.log('Image fallback:', originalPath)
+          setSrc(originalPath)
+        } else {
+          console.error('Image failed completely:', path)
+          setHasError(true)
+        }
+      }}
+    />
+  )
+}
 
 function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
   useEffect(() => {
@@ -33,15 +58,9 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
         {question.text}
       </h3>
 
-  {/* 图像 - 注意：需要拼接BASE_URL，因为Vite base配置会影响资源路径 */}
+  {/* 图像 - 支持 BASE_URL 回退机制 */}
       {imagePaths.map((path, i) => (
-        <img
-          key={i}
-          src={path.startsWith('/') ? BASE_URL + path.slice(1) : path}
-          alt=""
-          className="max-w-full max-h-80 mx-auto mb-4 rounded-lg border border-border"
-          onError={e => { console.error('Image failed:', e.target.src); e.target.style.display = 'none' }}
-        />
+        <ImageWithFallback key={i} path={path} />
       ))}
 
       {/* 选项 - 表格渲染 */}

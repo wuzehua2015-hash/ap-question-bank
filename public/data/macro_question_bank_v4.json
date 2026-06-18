@@ -11202,7 +11202,7 @@
       "B": "Decreasing investment tax credits",
       "C": "Increasing interest rates",
       "D": "Increasing government expenditures",
-      "E": "Increasing the minimum wage . GoodX GoodY Price Quantity Price Quantity Year 1 $2 2 $1 4 Year2 $3 2 $2 4"
+      "E": "Increasing the minimum wage"
     },
     "answer": "D",
     "primary_unit": "U3",
@@ -12116,7 +12116,7 @@
       "B": "efficiency wages paid to labor",
       "C": "misperceptions about relative prices by suppliers",
       "D": "competition in the business sector",
-      "E": "labor contracts covering multiple years . Total Population 300 Working-age Population 200 Unemployed 10 Employed 90"
+      "E": "labor contracts covering multiple years"
     },
     "answer": "D",
     "primary_unit": "U3",
@@ -13514,11 +13514,11 @@
     "year": "2019",
     "text": "Country X has a budget deficit. Which of the\nfollowing changes in government budget outlays\nand tax revenues will result in a decrease in\nCountry X’s government budget deficit?\nGovernment Outlays Tax Revenues",
     "options": {
-      "A": "Fall by $100 milli on Fall by $600 million",
-      "B": "Fall by $200 milli on Fall by $200 million",
-      "C": "Rise by $300 milli on Fall by $300 million",
-      "D": "Rise by $400 milli on Rise by $600 million",
-      "E": "Rise by $500 million Rise by $500 million . Motorcycles Automobiles Country X 50 OR 80 Country Y 75 OR 40"
+      "A": "Fall by $100 million / Fall by $600 million",
+      "B": "Fall by $200 million / Fall by $200 million",
+      "C": "Rise by $300 million / Fall by $300 million",
+      "D": "Rise by $400 million / Rise by $600 million",
+      "E": "Rise by $500 million / Rise by $500 million"
     },
     "answer": "D",
     "primary_unit": "U5",
@@ -13542,7 +13542,39 @@
       "calculate",
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Government Outlays",
+        "Tax Revenues"
+      ],
+      "rows": {
+        "A": [
+          "Fall by $100 million",
+          "Fall by $600 million"
+        ],
+        "B": [
+          "Fall by $200 million",
+          "Fall by $200 million"
+        ],
+        "C": [
+          "Rise by $300 million",
+          "Fall by $300 million"
+        ],
+        "D": [
+          "Rise by $400 million",
+          "Rise by $600 million"
+        ],
+        "E": [
+          "Rise by $500 million",
+          "Rise by $500 million"
+        ]
+      }
+    },
+    "option_headers": [
+      "Government Outlays",
+      "Tax Revenues"
+    ]
   },
   {
     "question_id": "2019_Q30",
