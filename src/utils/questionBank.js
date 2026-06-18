@@ -83,21 +83,43 @@ export function generateQuiz(questions, config) {
   }
 }
 
+// Mock Exam composition: MUST match official exam weighting per subject
+// AP Macroeconomics: 60 MCQs, weighted by unit per College Board CED
+// Source: https://apcentral.collegeboard.org/courses/ap-macroeconomics/exam
+export const MOCK_EXAM_CONFIG = {
+  totalMCQ: 60,
+  frqCount: 3,
+  unitDistribution: {
+    // Unit: count (must sum to totalMCQ)
+    // Official ranges: U1 5-10%, U2 12-17%, U3 17-27%, U4 18-23%, U5 20-30%, U6 10-13%
+    // Selected values are midpoints within official ranges
+    U1: 4,  // 4/60 = 6.7%  (official: 5-10%)
+    U2: 9,  // 9/60 = 15%   (official: 12-17%)
+    U3: 13, // 13/60 = 21.7% (official: 17-27%)
+    U4: 12, // 12/60 = 20%  (official: 18-23%)
+    U5: 15, // 15/60 = 25%  (official: 20-30%)
+    U6: 7,  // 7/60 = 11.7% (official: 10-13%)
+  },
+}
+
 export function generateMockExam(questions, frqQuestions) {
-  // 60 MCQ：每个单元10题
-  const units = ['U1', 'U2', 'U3', 'U4', 'U5', 'U6']
-  const perUnit = 10
   const mcq = []
   
-  units.forEach(unit => {
+  // Validate config sums correctly
+  const configTotal = Object.values(MOCK_EXAM_CONFIG.unitDistribution).reduce((a, b) => a + b, 0)
+  if (configTotal !== MOCK_EXAM_CONFIG.totalMCQ) {
+    console.error(`Mock exam config error: unit counts sum to ${configTotal}, expected ${MOCK_EXAM_CONFIG.totalMCQ}`)
+  }
+  
+  for (const [unit, count] of Object.entries(MOCK_EXAM_CONFIG.unitDistribution)) {
     const unitQuestions = questions.filter(q => q.primary_unit === unit)
     const shuffled = unitQuestions.sort(() => Math.random() - 0.5)
-    mcq.push(...shuffled.slice(0, perUnit))
-  })
+    mcq.push(...shuffled.slice(0, count))
+  }
   
-  // 3 FRQ：随机
+  // FRQ: random
   const frqShuffled = frqQuestions.sort(() => Math.random() - 0.5)
-  const frq = frqShuffled.slice(0, 3)
+  const frq = frqShuffled.slice(0, MOCK_EXAM_CONFIG.frqCount)
   
   return {
     quiz: mcq,

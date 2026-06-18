@@ -128,35 +128,64 @@ function testUnitFilter() {
 
 ## Test 2: Mock Exam Composition Test
 
-Test that `generateMockExam` produces exactly the expected composition.
+Test that `generateMockExam` produces exactly the expected composition per official exam weighting.
+
+**CRITICAL:** Mock exam unit distribution MUST match the official exam weighting for the subject. Do NOT use equal distribution (10 per unit). For AP Macroeconomics, the official weighting is:
+
+| Unit | Official Range | Mock Exam Count |
+|------|---------------|----------------|
+| U1 | 5–10% | 4 |
+| U2 | 12–17% | 9 |
+| U3 | 17–27% | 13 |
+| U4 | 18–23% | 12 |
+| U5 | 20–30% | 15 |
+| U6 | 10–13% | 7 |
+| **Total** | **60 MCQs** | **60** |
 
 ```javascript
+import { MOCK_EXAM_CONFIG, UNITS } from '../src/utils/questionBank.js'
+
 function testMockExam() {
   const failures = []
-  const result = generateMockExam(data, frqData) // frqData can be empty for this test
+  const result = generateMockExam(data, frqData)
   
-  // Check: exactly 60 MCQs
-  if (result.quiz.length !== 60) {
+  // Check: exactly totalMCQ MCQs
+  if (result.quiz.length !== MOCK_EXAM_CONFIG.totalMCQ) {
     failures.push({
       test: 'Mock Exam: MCQ count',
       severity: 'CRITICAL',
       type: 'app-bug',
-      message: `Expected 60 MCQs, got ${result.quiz.length}`
+      message: `Expected ${MOCK_EXAM_CONFIG.totalMCQ} MCQs, got ${result.quiz.length}`
     })
   }
   
-  // Check: exactly 10 per unit
+  // Check: unit distribution matches MOCK_EXAM_CONFIG
   for (const unit of UNITS) {
+    const expectedCount = MOCK_EXAM_CONFIG.unitDistribution[unit.id]
     const unitCount = result.quiz.filter(q => q.primary_unit === unit.id).length
-    if (unitCount !== 10) {
+    if (unitCount !== expectedCount) {
       failures.push({
         test: `Mock Exam: ${unit.id} count`,
         severity: 'HIGH',
-        type: unitCount < 10 ? 'data-bug' : 'app-bug',
-        message: `Expected 10 ${unit.id} questions, got ${unitCount}`,
-        reason: unitCount < 10 ? 'Not enough questions in this unit' : 'Too many questions selected from this unit'
+        type: unitCount < expectedCount ? 'data-bug' : 'app-bug',
+        message: `Expected ${expectedCount} ${unit.id} questions, got ${unitCount}`,
+        reason: unitCount < expectedCount 
+          ? `Not enough questions in unit ${unit.id}. Database has ${data.filter(q => q.primary_unit === unit.id).length}, need ${expectedCount}.` 
+          : 'Too many questions selected from this unit (selection logic error)'
       })
     }
+  }
+  
+  // Check: config sum validation
+  const configTotal = Object.values(MOCK_EXAM_CONFIG.unitDistribution).reduce((a, b) => a + b, 0)
+  if (configTotal !== MOCK_EXAM_CONFIG.totalMCQ) {
+    failures.push({
+      test: 'Mock Exam: config validation',
+      severity: 'CRITICAL',
+      type: 'app-bug',
+      message: `MOCK_EXAM_CONFIG unit counts sum to ${configTotal}, expected ${MOCK_EXAM_CONFIG.totalMCQ}`,
+      reason: 'Unit distribution config is misconfigured. Check questionBank.js.'
+    })
   }
   
   // Check: no duplicate questions
@@ -547,13 +576,54 @@ fi
 
 To use this skill for a different subject:
 
-1. Update `UNITS` array to match the new subject's curriculum spec
-2. Update the data import path:
-   ```javascript
-   import data from '../public/data/[subject]_question_bank.json'
-   ```
-3. Adjust mock exam composition if the structure differs (e.g., IB might have different unit counts)
-4. The test logic itself is generic and doesn't need changes
+### 1. Update `UNITS` array
+
+```javascript
+export const UNITS = [
+  { id: 'U1', name: 'Measurements and Uncertainties' },
+  { id: 'U2', name: 'Mechanics' },
+  // ... etc for IB Physics SL
+]
+```
+
+### 2. Update `MOCK_EXAM_CONFIG`
+
+**CRITICAL: Must match the official exam format for the subject.**
+
+For AP subjects: Look up the official College Board Course and Exam Description (CED) for the unit weighting table. Do NOT guess or use equal distribution.
+
+```javascript
+export const MOCK_EXAM_CONFIG = {
+  totalMCQ: 60,  // or whatever the official exam has
+  frqCount: 3,   // or whatever the official exam has
+  unitDistribution: {
+    // Look up official exam weighting per unit
+    // Example: IB Physics SL might have different counts
+    U1: 4,
+    U2: 9,
+    U3: 13,
+    U4: 12,
+    U5: 15,
+    U6: 7,
+  },
+}
+```
+
+**Where to find official weighting:**
+- **AP**: College Board Course and Exam Description (CED) → Exam Information → Unit Weighting
+- **IB**: IB Subject Guide → Assessment → Paper structure
+- **A-Level**: Exam board specification → Assessment → Component weighting
+- **Custom**: Define your own weighting based on curriculum importance
+
+### 3. Update data import path
+
+```javascript
+import data from '../public/data/[subject]_question_bank.json'
+```
+
+### 4. The test logic is generic
+
+After updating `UNITS` and `MOCK_EXAM_CONFIG`, the test functions automatically adapt. No changes needed to test logic itself.
 
 ## Success Criteria
 

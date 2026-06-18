@@ -446,9 +446,42 @@ Some questions span multiple units. Set `primary_unit` to the **main concept bei
 
 Example: A question about "fiscal policy's effect on interest rates" tests U3 (fiscal policy) but mentions U4 (interest rates). Set `primary_unit: U3`, `secondary_units: [U4]`.
 
-## Step 5: JSON Assembly & Output
+## Step 5: Mock Exam Configuration
 
-### 5.1 Final JSON Schema
+Before assembling the final JSON, define the `MOCK_EXAM_CONFIG` for the subject. This is **critical** and must match the official exam format.
+
+### 5.1 Mock Exam Configuration (Must Match Official Exam)
+
+```javascript
+// AP Macroeconomics official weighting (from College Board CED)
+// Source: https://apcentral.collegeboard.org/courses/ap-macroeconomics/exam
+export const MOCK_EXAM_CONFIG = {
+  totalMCQ: 60,
+  frqCount: 3,
+  unitDistribution: {
+    // Unit: count (must sum to totalMCQ)
+    // Official ranges: U1 5-10%, U2 12-17%, U3 17-27%, U4 18-23%, U5 20-30%, U6 10-13%
+    U1: 4,  // 4/60 = 6.7%  (official: 5-10%)
+    U2: 9,  // 9/60 = 15%   (official: 12-17%)
+    U3: 13, // 13/60 = 21.7% (official: 17-27%)
+    U4: 12, // 12/60 = 20%  (official: 18-23%)
+    U5: 15, // 15/60 = 25%  (official: 20-30%)
+    U6: 7,  // 7/60 = 11.7% (official: 10-13%)
+  },
+}
+```
+
+**For other subjects:** Look up the official exam format and weighting:
+- AP: College Board CED → Exam Information → Unit Weighting table
+- IB: IB Subject Guide → Assessment → Paper structure
+- A-Level: Exam board specification → Assessment → Component weighting
+- Custom: Define based on curriculum priorities
+
+**NEVER use equal distribution (10 per unit) unless the official exam explicitly uses equal weighting.**
+
+## Step 6: JSON Assembly & Output
+
+### 6.1 Final JSON Schema
 
 ```json
 {
@@ -613,6 +646,7 @@ After building the JSON:
 - [ ] Zero page headers/footers in questions
 - [ ] All graph questions have corresponding image files
 - [ ] All questions have valid `primary_unit` (verified by LLM)
+- [ ] **Mock exam config matches official exam weighting** (not equal distribution)
 - [ ] Pre-audit check passes with 0 issues
 - [ ] `question-bank-audit` passes with 0 issues
 - [ ] JSON file committed to git
