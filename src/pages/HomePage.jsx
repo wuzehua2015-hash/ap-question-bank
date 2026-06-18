@@ -4,9 +4,9 @@ function HomePage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <section className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-brand mb-4">AP Macroeconomics 智能题库</h1>
+        <h1 className="text-4xl font-bold text-brand mb-4">智能题库</h1>
         <p className="text-lg text-text-muted max-w-2xl mx-auto mb-8">
-          基于 2012-2019 年官方真题，支持按单元生成 Quiz 和 Mock Exam。
+          基于官方真题，支持按单元生成 Quiz 和 Mock Exam。
         </p>
         <div className="flex gap-4 justify-center">
           <Link to="/quiz" className="inline-block bg-accent hover:bg-accent-light text-white font-semibold px-8 py-3 rounded-lg transition-colors">
