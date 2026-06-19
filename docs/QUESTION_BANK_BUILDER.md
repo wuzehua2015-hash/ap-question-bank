@@ -330,6 +330,10 @@ public/images/[year]/[year]_page[N]_img[M].png
 
 **Table questions** are questions where the options are structured as a table (e.g., columns for "Government Outlays" and "Tax Revenues").
 
+**CRITICAL: Table options must be split correctly by column.** A common error is splitting multi-word phrases incorrectly. For example:
+- ❌ Wrong: `["Increase", "taxes Sell government bonds"]` ("taxes" belongs in first column)
+- ✅ Correct: `["Increase taxes", "Sell government bonds"]` ("Increase taxes" is a single fiscal policy action)
+
 **Two approaches (use BOTH):**
 
 **Approach A: Extract table as image**
@@ -340,27 +344,67 @@ public/images/[year]/[year]_page[N]_img[M].png
 ```
 
 **Approach B: Extract table as structured data**
+
 ```python
-# For table questions, parse the table headers and rows
-# Store in option_table_data
+# Step 1: Identify the table headers from the PDF
+# The question text usually references the table headers,
+# and the table itself has column headers above the option rows
+
+# For example, a question about fiscal and monetary policy:
+# Text: "Which of the following combinations of fiscal and monetary policy..."
+# Table headers: "Fiscal Policy" | "Monetary Policy"
+# Row A: "Increase taxes" | "Sell government bonds"
+# Row B: "Decrease taxes" | "Buy government bonds"
+# Row C: "Decrease taxes" | "Lower margin requirements"
+# Row D: "Decrease government spending" | "Lower discount rate"
+# Row E: "Increase government spending" | "Raise discount rate"
+
+# Step 2: Build option_table_data
 {
   "option_table_data": {
-    "headers": ["Government Outlays", "Tax Revenues"],
+    "headers": ["Fiscal Policy", "Monetary Policy"],
     "rows": {
-      "A": ["Fall by $100 million", "Fall by $600 million"],
-      "B": ["Fall by $200 million", "Fall by $200 million"],
-      "C": ["Rise by $300 million", "Fall by $300 million"],
-      "D": ["Rise by $400 million", "Rise by $600 million"],
-      "E": ["Rise by $500 million", "Rise by $500 million"]
+      "A": ["Increase taxes", "Sell government bonds"],
+      "B": ["Decrease taxes", "Buy government bonds"],
+      "C": ["Decrease taxes", "Lower margin requirements"],
+      "D": ["Decrease government spending", "Lower discount rate"],
+      "E": ["Increase government spending", "Raise discount rate"]
     }
   }
 }
 ```
 
+**How to determine correct column splits:**
+
+1. **Read the question text** to understand what each column represents
+   - "combinations of fiscal and monetary policy" → Column 1 = Fiscal Policy, Column 2 = Monetary Policy
+   
+2. **Look at the original PDF table** (not just extracted text) to see the column headers and where the boundaries are
+
+3. **Use natural phrase boundaries**:
+   - "Increase taxes" → one column (a complete fiscal policy action)
+   - "Decrease government spending" → one column (a complete fiscal policy action)
+   - "Sell government bonds" → one column (a complete monetary policy action)
+   - "Lower discount rate" → one column (a complete monetary policy action)
+
+4. **Common multi-word phrases that must stay together**:
+   - `Increase taxes` / `Decrease taxes` / `No change` / `Not change`
+   - `Lower discount rate` / `Raise discount rate` / `Decrease discount rate`
+   - `Buy government bonds` / `Sell government bonds`
+   - `Lower margin requirements`
+   - `Decrease government spending` / `Increase government spending`
+   - `Shift to the right` / `Shift to the left` / `No change`
+   - `Fall by $X million` / `Rise by $X million`
+
+5. **NEVER split by single word**:
+   - ❌ `["Increase", "taxes Sell government bonds"]` ("taxes" belongs to first column)
+   - ❌ `["Decrease", "government Lower discount rate spending"]` (all words belong to one column)
+   - ❌ `["Shift", "to the left Shift to the left"]` ("Shift to the left" is a single phrase)
+
 **Critical rule:**
 - If a question has a table, ALWAYS extract it as an image (for visual rendering)
 - ALSO extract it as structured data (for interactive table rendering)
-- The `options` field should contain the text version with `/` separator: `"Fall by $100 million / Fall by $600 million"`
+- The `options` field should contain the text version with `/` separator: `"Increase taxes / Sell government bonds"`
 
 ### 3.3 Detect Which Questions Need Images
 
@@ -610,6 +654,15 @@ def pre_audit_check(data):
         count = len([q for q in data if q['year'] == year])
         print(f"Year {year}: {count} questions")
     
+    # 6. Verify all table options have matching option_table_data and text options
+    for q in data:
+        if q.get('option_table_data'):
+            headers = q['option_table_data']['headers']
+            for opt, cells in q['option_table_data']['rows'].items():
+                text = ' / '.join(cells)
+                if text != q['options'][opt]:
+                    issues.append(f"Table-text mismatch: {q['id']} option {opt}: '{text}' != '{q['options'][opt]}'")
+    
     return issues
 ```
 
@@ -638,6 +691,7 @@ After building the JSON:
 | Trailing dots artifact | `"end . ."` | OCR error | Auto-fix: `replace(/\s+\.\s+\.$/, '.')` |
 | **Word broken across lines** | `"invent\nories"` | PDF line break splits word | Detect and merge word fragments: `"invent"+"ories"` → `"inventories"` |
 | **Table headers mixed into text** | `"...expansionary?\nGovernment\nSpending\nTaxes"` | OCR extracts table headers as part of question text | Extract trailing header lines, remove from text, create `option_table_data` |
+| **Table option split wrong** | Option A: `["Increase", "taxes Sell government bonds"]` ("taxes" belongs to first column) | Multi-word phrases split by incorrect word boundary | Read PDF table carefully; use natural phrase boundaries (e.g., "Increase taxes" is one phrase); verify with table-image cross-check |
 | Embedded question numbers | Question 26 contains text from Q27 | Page boundary mid-question | Detect `\n\d+\.\s` in middle of text, split |
 
 ## Success Criteria
@@ -649,6 +703,7 @@ After building the JSON:
 - [ ] All graph questions have corresponding image files
 - [ ] All questions have valid `primary_unit` (verified by LLM)
 - [ ] **Mock exam config matches official exam weighting** (not equal distribution)
+- [ ] **All table options correctly split** (multi-word phrases stay together; e.g., "Increase taxes" is one phrase)
 - [ ] Pre-audit check passes with 0 issues
 - [ ] `question-bank-audit` passes with 0 issues
 - [ ] JSON file committed to git
