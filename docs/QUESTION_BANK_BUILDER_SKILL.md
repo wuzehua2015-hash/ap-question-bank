@@ -427,93 +427,176 @@ Then manually review each flagged question to:
 
 ## Step 4: Unit Classification (Automatic + Manual)
 
-### 4.1 Automatic Classification (Rule-based)
+### 4.1 Knowledge-Based Classification (NOT Keyword Matching)
+
+**CRITICAL:** Unit classification is based on **AP Macro CED knowledge ranges**, NOT keyword frequency. The standard is: "Would a student who has ONLY studied this unit be able to answer this question?"
+
+**U1: Basic Economic Concepts**
+- Scarcity, opportunity cost, PPF, comparative advantage, specialization, trade
+- Does NOT include: aggregate demand, GDP, unemployment, inflation, money, banking
+
+**U2: Economic Indicators**
+- GDP (real/nominal), unemployment types, inflation, CPI, business cycle
+- Does NOT include: AD-AS, fiscal policy, monetary policy, growth
+
+**U3: National Income and Price Determination**
+- AD-AS model (AD, SRAS, LRAS), short-run equilibrium, inflationary/recessionary gaps
+- Fiscal policy (government spending, taxes, multiplier, automatic stabilizers)
+- Short-run Phillips curve (trade-off between unemployment and inflation)
+- Does NOT include: money demand, money supply, monetary policy, central bank, banking, loanable funds, long-run growth, crowding out, LR Phillips curve
+
+**U4: Financial Sector**
+- Money, money demand, money supply, money market
+- Banking system, reserves, excess reserves, money multiplier
+- Monetary policy tools: open market operations, discount rate, reserve requirements
+- Central bank / Federal Reserve actions
+- Interest rates, bond prices, loanable funds market
+- Does NOT include: fiscal policy, AD-AS (unless testing monetary policy effects on AD), long-run growth, crowding out
+
+**U5: Long-Run Consequences of Stabilization Policies**
+- Fiscal + monetary policy COMBINATIONS (simultaneous actions, policy mix)
+- Long-run economic growth: production function, technology, human capital, physical capital
+- Crowding out (government borrowing raises interest rates, reduces private investment)
+- Long-run Phillips curve (vertical at natural rate)
+- Supply-side economics, rational expectations, sacrifice ratio
+- Does NOT include: AD-AS model alone, fiscal policy alone, monetary policy alone
+
+**U6: Open Economy**
+- Exchange rates, foreign exchange market, balance of payments
+- Net exports, trade deficits/surpluses, tariffs, quotas
+- Capital flows, appreciation/depreciation
+
+### 4.2 Classification Rules (Apply in Order)
 
 ```python
-from curriculum_spec import units  # Load the curriculum spec
-
 def classify_question(text, options):
-    full_text = (text + ' ' + ' '.join(options.values())).lower()
-    scores = {}
+    """
+    Classify by CED knowledge range. NOT keyword frequency.
+    Standard: Can a student answer this after studying ONLY this unit?
+    """
+    full = (text + ' ' + ' '.join(options.values())).lower()
     
-    for unit in units:
-        score = 0
-        for topic in unit['topics']:
-            # Count topic keyword matches
-            matches = len(re.findall(r'\b' + re.escape(topic.lower()) + r'\b', full_text))
-            score += matches * 2  # weight for topic matches
-            
-        # Also check for strong keywords (unit-specific, high-confidence)
-        if unit['code'] == 'U4':
-            strong = ['central bank', 'money supply', 'money demand', 'monetary policy', 'federal reserve', 'open market operations', 'buy government bonds', 'sell government bonds', 'discount rate', 'reserve requirements']
-            if any(kw in full_text for kw in strong):
-                score += 15  # Heavy weight for U4 strong signals - MUST NOT be overridden by fiscal policy keywords alone
-        elif unit['code'] == 'U5':
-            strong = ['economic growth', 'long-run growth', 'human capital', 'crowding out', 'stabilization policy', 'fiscal and monetary', 'fiscal-monetary combination', 'government spending and central bank']
-            if any(kw in full_text for kw in strong):
-                score += 15  # Heavy weight for U5 strong signals
-            # U5 combo questions: both fiscal and monetary policy present
-            has_fiscal = any(kw in full_text for kw in ['taxes', 'government spending', 'fiscal policy'])
-            has_monetary = any(kw in full_text for kw in ['money supply', 'monetary policy', 'central bank', 'federal reserve', 'bonds'])
-            if has_fiscal and has_monetary:
-                score += 20  # VERY strong signal: combination policy question
-        elif unit['code'] == 'U3':
-            strong = ['aggregate demand', 'aggregate supply', 'AD-AS', 'multiplier', 'government spending', 'taxes']
-            if any(kw in full_text for kw in strong):
-                score += 8  # Moderate weight for U3 signals - can be overridden by U4/U5 strong signals
-        # ... etc for other units
-        
-        scores[unit['code']] = score
+    # RULE 1: U6 (most specific - foreign trade markers)
+    u6_markers = ['exchange rate', 'foreign exchange', 'balance of payments', 
+                  'net exports', 'trade deficit', 'trade surplus', 'tariff', 'quota',
+                  'appreciation', 'depreciation', 'foreign country', 'canada', 'japan']
+    if any(m in full for m in u6_markers):
+        return 'U6'
     
-    # Pick the highest score
-    best_unit = max(scores, key=scores.get)
-    return best_unit, scores
+    # RULE 2: U5 fiscal+monetary COMBINATION (explicit combo)
+    combo_markers = [
+        'which of the following combinations of fiscal and monetary',
+        'which of the following combinations of policies',
+        'fiscal policy and monetary policy',
+        'government spending increases and at the same time the central bank',
+        'government spending decreases and at the same time the central bank',
+        'taxes increase and at the same time the central bank',
+        'taxes decrease and at the same time the central bank',
+        'government decreases spending while the country\'s central bank',
+        'government increases spending while the country\'s central bank'
+    ]
+    if any(m in full for m in combo_markers):
+        return 'U5'
+    
+    # RULE 3: U5 long-run growth / crowding out / LR Phillips
+    u5_growth = ['long-run economic growth', 'production function', 'human capital',
+                 'physical capital', 'technological progress', 'technology with',
+                 'crowding out', 'crowding-out', 'supply-side policy', 'supply side policy',
+                 'long-run phillips', 'long run phillips', 'sacrifice ratio', 
+                 'rational expectations', 'adaptive expectations']
+    if any(m in full for m in u5_growth):
+        return 'U5'
+    
+    # RULE 4: U4 monetary / banking (pure money/banking concepts)
+    # BUT: if a question is about fiscal policy with monetary terms only in options as distractors → U3
+    u4_core = ['money demand', 'money supply', 'transaction demand', 'precautionary demand',
+               'monetary policy', 'central bank', 'federal reserve', 'fed ', 'fed\'s',
+               'open market operation', 'open market purchase', 'open market sale',
+               'buy government bonds', 'sell government bonds',
+               'discount rate', 'reserve requirement', 'required reserve', 'excess reserves',
+               'loanable funds', 'money market', 'banking system', 'bank reserves',
+               'bond prices', 'price of bonds', 'velocity of money', 'quantity theory']
+    
+    # Check if U4 terms are the CORE concept being tested
+    u4_count = sum(1 for m in u4_core if m in full)
+    u3_fiscal = any(m in full for m in ['fiscal policy', 'government spending', 'taxes', 'aggregate demand', 'aggregate supply'])
+    
+    if u4_count >= 2 and not u3_fiscal:
+        # Pure monetary/banking question
+        return 'U4'
+    elif u4_count >= 2 and u3_fiscal:
+        # Both fiscal and monetary present, but not a combo question → check if testing monetary effects
+        if 'interest rate' in full or 'loanable funds' in full or 'bond' in full:
+            return 'U4'  # Fiscal policy causes U4 effects (loanable funds, interest rates)
+        # Otherwise stays U3 (fiscal is main concept, monetary terms are distractors)
+    elif u4_count == 1 and not u3_fiscal:
+        # Single strong U4 term, no fiscal context
+        return 'U4'
+    
+    # RULE 5: U3 AD-AS / fiscal policy
+    u3_markers = ['aggregate demand', 'aggregate supply', 'short-run aggregate supply', 'sras',
+                  'fiscal policy', 'government spending', 'government purchases', 'taxes',
+                  'multiplier', 'spending multiplier', 'tax multiplier', 'automatic stabilizer',
+                  'short-run phillips', 'short run phillips', 'stagflation', 'cost-push', 'demand-pull',
+                  'inflationary gap', 'recessionary gap', 'output gap']
+    if any(m in full for m in u3_markers):
+        return 'U3'
+    
+    # RULE 6: U2 indicators
+    u2_markers = ['gross domestic product', 'gdp', 'unemployment', 'inflation', 'cpi',
+                  'consumer price index', 'business cycle', 'recession', 'deflation',
+                  'labor force', 'participation rate', 'natural rate of unemployment']
+    if any(m in full for m in u2_markers):
+        return 'U2'
+    
+    # RULE 7: U1 basic concepts
+    u1_markers = ['scarcity', 'opportunity cost', 'production possibilities', 'ppf',
+                  'comparative advantage', 'absolute advantage', 'specialization']
+    if any(m in full for m in u1_markers):
+        return 'U1'
+    
+    return 'UNKNOWN'
 ```
 
-**Important:** This rule-based classification is a **first pass only**. It will have errors. The next step is LLM verification.
+**Critical principles:**
+1. **Keyword frequency is irrelevant.** "taxes" appearing 5 times doesn't make it U3 if the question is about monetary policy.
+2. **Teaching sequence matters.** A question about "money demand" is U4 even if it mentions "taxes" in one option. Students don't learn money demand until U4.
+3. **Distractors don't change the unit.** If a question tests fiscal policy (U3) but has "central bank" in one wrong option, it's still U3.
+4. **U5 combo questions are distinct.** If BOTH fiscal and monetary actions appear in the SAME correct answer or as an explicit combination, it's U5.
+5. **When in doubt, classify by the MOST ADVANCED concept tested.** If a question requires understanding both U3 and U4 to answer, it's the higher-numbered unit (U4 or U5).
 
-### 4.2 LLM Verification (Batch Review)
+### 4.3 LLM Verification (Batch Review)
 
-Use the same LLM prompt template as in `question-bank-audit`:
+Use the LLM prompt with CED knowledge ranges:
 
 ```
-You are an expert in [SUBJECT]. Review these questions and verify their unit classification.
+You are an AP Macroeconomics curriculum expert. Review these questions and verify their unit classification based on the College Board CED knowledge ranges.
 
-Unit definitions:
-[CURRICULUM SPEC]
+STANDARD: "Would a student who has ONLY studied this unit be able to answer this question?"
+
+Unit knowledge ranges:
+U1: Basic concepts (scarcity, PPF, comparative advantage, trade)
+U2: Economic indicators (GDP, unemployment, inflation, CPI, business cycle)
+U3: AD-AS model, fiscal policy (spending/taxes/multiplier), short-run Phillips curve, inflationary/recessionary gaps
+U4: Money, banking, monetary policy (Fed/central bank tools), interest rates, loanable funds, bond prices
+U5: Fiscal+monetary policy COMBINATIONS, long-run growth (technology/human capital/production function), crowding out, long-run Phillips curve, supply-side economics
+U6: Open economy (exchange rates, BOP, trade, capital flows)
 
 For each question, determine:
-1. What unit does this question primarily belong to? (Select ONE from the unit codes)
-2. Why? (1-2 sentences)
-3. Does it have secondary units? (Select 0-2 from the unit codes)
+1. What is the CORE concept being tested? (Which unit teaches this?)
+2. Are there keywords from other units that are just distractors/context?
+3. Would a student who hasn't studied U4/U5 be able to answer this?
 
-Output: { question_id, correct_unit, secondary_units, confidence, reasoning }
+Output: { question_id, correct_unit, reasoning }
 ```
 
 **Batch size:** 10 questions per LLM call
-**Coverage:** For a 400-question bank, sample 100 questions (25%) for LLM review. If systematic errors are found, expand to full review.
+**Coverage:** For a 400-question bank, sample 100 questions (25%). If systematic errors found, expand to full review.
 
-**U4 vs U5 combination rule:** Questions that involve **both fiscal policy and monetary policy** in combination (e.g., "Which combination of fiscal and monetary policy will...?") belong to **U5**, not U3 or U4. These are called **stabilization policy combination** questions.
-
-Examples:
-- "Increase taxes + Sell government bonds" → U5 (combination of fiscal and monetary)
-- "Government spending + Central bank sells bonds" → U5
-- "Decrease taxes + Buy government bonds" → U5
-
-**U4 standalone:** If the question only tests monetary policy concepts (money demand, money supply, central bank tools, interest rates, loanable funds) **without** combining with fiscal policy, it belongs to U4.
-
-Examples:
-- "What happens to money demand when nominal GDP increases?" → U4
-- "The central bank sells government bonds. What happens to the money supply?" → U4
-- "If the budget deficit increases, what happens to interest rates?" → U4 (loanable funds)
-
-### 4.3 Handle Cross-Unit Questions
-
-Some questions span multiple units. Set `primary_unit` to the **main concept being tested**, and `secondary_units` to units that provide context.
-
-Example: A question about "fiscal policy's effect on interest rates" tests U3 (fiscal policy) but mentions U4 (interest rates). Set `primary_unit: U3`, `secondary_units: [U4]`.
-
-**Exception:** If a question tests a combination of fiscal and monetary policy (e.g., "Which combination of fiscal and monetary policy will achieve full employment without changing the interest rate?"), the primary unit is U5 (stabilization policy combination), with secondary_units [U3, U4].
+**Specific checks for common errors:**
+- U3 questions with "money supply" or "central bank" in options: Are these distractors or core concepts?
+- U5 questions with only AD-AS: Are these actually U3 with U5 distractors?
+- U4 questions with "fiscal policy": Is the question testing monetary effects of fiscal policy (U4) or fiscal policy itself (U3)?
 
 ## Step 5: Mock Exam Configuration
 
