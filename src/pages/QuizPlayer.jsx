@@ -42,12 +42,15 @@ function QuizPlayer() {
     setScore(correct)
     setPhase('submitted')
 
+    // 保存MCQ答案到sessionStorage（供成绩页面使用）
+    sessionStorage.setItem('mcqAnswers', JSON.stringify(answers))
+
     // 记录已做题
     const doneIds = new Set(JSON.parse(localStorage.getItem('doneQuestions') || '[]'))
     quiz.forEach(q => doneIds.add(q.question_id))
     localStorage.setItem('doneQuestions', JSON.stringify([...doneIds]))
 
-    // 记录历史
+    // 记录历史（只记录MCQ部分）
     const history = JSON.parse(localStorage.getItem('quizHistory') || '[]')
     history.push({
       date: new Date().toISOString(),
@@ -56,6 +59,15 @@ function QuizPlayer() {
       score: Math.round((correct / quiz.length) * 100)
     })
     localStorage.setItem('quizHistory', JSON.stringify(history.slice(-20)))
+
+    // 检查是否是Mock Exam（有FRQ）
+    const hasFRQ = sessionStorage.getItem('currentFRQ')
+    if (hasFRQ) {
+      // 延迟后导航到FRQ页面
+      setTimeout(() => {
+        navigate('/frq')
+      }, 1500)
+    }
   }
 
   const currentQuestion = quiz[currentIndex]
@@ -89,8 +101,8 @@ function QuizPlayer() {
         </div>
       )}
 
-      {/* 提交后成绩 */}
-      {phase === 'submitted' && score !== null && (
+      {/* 提交后成绩（非Mock Exam） */}
+      {phase === 'submitted' && score !== null && !sessionStorage.getItem('currentFRQ') && (
         <div className={`mb-6 p-4 rounded-lg text-center ${score / quiz.length >= 0.7 ? 'bg-green-50 border border-success' : score / quiz.length >= 0.5 ? 'bg-yellow-50 border border-warning' : 'bg-red-50 border border-error'}`}>
           <div className="text-2xl font-bold">
             {score} / {quiz.length} 正确 ({Math.round((score / quiz.length) * 100)}%)
@@ -102,6 +114,24 @@ function QuizPlayer() {
             <button onClick={() => navigate('/quiz')} className="bg-accent text-white px-4 py-2 rounded-lg text-sm">
               再做一套
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* 提交后提示（Mock Exam，即将进入FRQ） */}
+      {phase === 'submitted' && score !== null && sessionStorage.getItem('currentFRQ') && (
+        <div className="mb-6 p-4 rounded-lg text-center bg-blue-50 border border-blue-200">
+          <div className="text-xl font-bold text-blue-800 mb-2">
+            MCQ 部分完成！
+          </div>
+          <div className="text-blue-700 mb-4">
+            {score} / {quiz.length} 正确 ({Math.round((score / quiz.length) * 100)}%)
+          </div>
+          <p className="text-sm text-blue-600 mb-4">
+            即将进入 Free Response Questions (FRQ) 部分...请准备好草稿纸
+          </p>
+          <div className="animate-pulse text-blue-500">
+            跳转中...
           </div>
         </div>
       )}

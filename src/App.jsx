@@ -5,6 +5,8 @@ import HomePage from './pages/HomePage'
 import QuizSetup from './pages/QuizSetup'
 import ExamSetup from './pages/ExamSetup'
 import QuizPlayer from './pages/QuizPlayer'
+import FRQPlayer from './pages/FRQPlayer'
+import ScorePage from './pages/ScorePage'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/quiz" element={<QuizSetup />} />
           <Route path="/exam" element={<ExamSetup />} />
           <Route path="/play" element={<QuizPlayer />} />
+          <Route path="/frq" element={<FRQPlayer />} />
+          <Route path="/score" element={<ScorePage />} />
         </Routes>
       </main>
       <Footer />

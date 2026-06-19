@@ -28,9 +28,10 @@ function ExamSetup() {
       <h1 className="text-2xl font-bold text-brand mb-6">Mock Exam</h1>
       <div className="bg-surface rounded-xl p-6 shadow-sm border border-border space-y-4">
         <div className="text-sm text-text-muted space-y-1">
-          <p>• 60 道 MCQ（每单元 10 题）</p>
-          <p>• 3 道 FRQ</p>
-          <p>• 模拟真实考试环境</p>
+          <p>• 60 道 MCQ（按官方单元占比抽题）</p>
+          <p>• 3 道 FRQ（来自同一年份，含完整评分标准）</p>
+          <p>• 模拟真实考试环境：MCQ 完成后进入 FRQ，需使用草稿纸作答</p>
+          <p>• 成绩页面提供 FRQ 评分标准，帮助自评计算总分</p>
         </div>
 
         {error && (
