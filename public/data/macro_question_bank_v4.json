@@ -5505,7 +5505,7 @@
       "E": "A decrease in government spending and an open-market sale of government securities"
     },
     "answer": "E",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "government spending",
@@ -5517,7 +5517,7 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U3 (score=9.0), Matched: ['government spending', 'tax', 'taxes']",
+    "classification_reasoning": "CED-based fix: U3 -> U5 (knowledge range verification)",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
@@ -6702,7 +6702,7 @@
       "E": "The long-run aggregate supply curve is shifting to the right."
     },
     "answer": "E",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "aggregate demand",
@@ -6716,7 +6716,7 @@
     ],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U3 (score=7.0), Matched: ['aggregate demand', 'aggregate supply', 'price level']",
+    "classification_reasoning": "CED-based fix: U3 -> U5 (knowledge range verification)",
     "difficulty_source": "inferred",
     "difficulty_score": 14,
     "skills": [
@@ -10888,7 +10888,7 @@
       "E": "the aggregate demand curve to the left in the short run and the long-run Phillips curve to the left"
     },
     "answer": "A",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [
       "U4",
       "U5"
@@ -10905,7 +10905,8 @@
     "skills": [
       "predict"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification_reasoning": "CED-based fix: U3 -> U5 (knowledge range verification)"
   },
   {
     "question_id": "2017_Q58",
@@ -11244,7 +11245,7 @@
       "E": "Decreasing income tax rates and increasing the federal funds rate"
     },
     "answer": "D",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [
       "U2"
     ],
@@ -11257,7 +11258,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam | AP Macro 2022 Exam (Practice Set 2)",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U4 (score=4.0), Secondary: ['U2'], Matched: ['money supply', 'fed']",
+    "classification_reasoning": "CED-based fix: U4 -> U5 (knowledge range verification)",
     "difficulty_source": "inferred",
     "difficulty_score": 3,
     "skills": [
@@ -12250,7 +12251,7 @@
       "E": "the long-run aggregate supply curve is horizontal"
     },
     "answer": "A",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "aggregate supply",
@@ -12265,7 +12266,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam | AP Macro 2022 Exam (Practice Set 2)",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U3 (score=7.0), Matched: ['aggregate supply', 'government spending', 'crowding out']",
+    "classification_reasoning": "CED-based fix: U3 -> U5 (knowledge range verification)",
     "difficulty_source": "official_stats",
     "difficulty_score": 9,
     "percent_correct": 66,
@@ -12922,7 +12923,7 @@
       "E": "Negative supply shocks affect the LRPC only."
     },
     "answer": "A",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [
       "U2",
       "U5"
@@ -12937,7 +12938,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U4 (score=7.0), Secondary: ['U2', 'U5'], Matched: ['phillips curve', 'short-run phillips curve', 'long-run phillips curve']",
+    "classification_reasoning": "CED-based fix: U3 -> U5 (knowledge range verification)",
     "difficulty_source": "official_stats",
     "difficulty_score": 12,
     "percent_correct": 65,
