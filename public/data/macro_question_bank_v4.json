@@ -485,7 +485,7 @@
     "option_table_data": {
       "headers": [
         "Consumption",
-        "Domestic Product"
+        "Real GDP"
       ],
       "rows": {
         "A": [
@@ -505,8 +505,8 @@
           "Decrease"
         ],
         "E": [
-          "No",
-          "change Increase."
+          "No change",
+          "Increase."
         ]
       }
     }
@@ -662,8 +662,8 @@
           "No change"
         ],
         "C": [
-          "No",
-          "change Decrease"
+          "No change",
+          "Decrease"
         ],
         "D": [
           "Decrease",
@@ -927,8 +927,8 @@
       "A": "Increase taxes Sell government bonds",
       "B": "Decrease taxes Buy government bonds",
       "C": "Decrease taxes Lower margin requirements",
-      "D": "Decrease government Lower discount rate spending",
-      "E": "Increase government Raise discount rate spending"
+      "D": "Decrease government spending Lower discount rate",
+      "E": "Increase government spending Raise discount rate"
     },
     "answer": "A",
     "primary_unit": "U3",
@@ -958,24 +958,24 @@
       ],
       "rows": {
         "A": [
-          "Increase",
-          "taxes Sell government bonds"
+          "Increase taxes",
+          "Sell government bonds"
         ],
         "B": [
-          "Decrease",
-          "taxes Buy government bonds"
+          "Decrease taxes",
+          "Buy government bonds"
         ],
         "C": [
-          "Decrease",
-          "taxes Lower margin requirements"
+          "Decrease taxes",
+          "Lower margin requirements"
         ],
         "D": [
-          "Decrease",
-          "government Lower discount rate spending"
+          "Decrease government spending",
+          "Lower discount rate"
         ],
         "E": [
-          "Increase",
-          "government Raise discount rate spending"
+          "Increase government spending",
+          "Raise discount rate"
         ]
       }
     }
@@ -4862,29 +4862,29 @@
     "requires_graph": false,
     "option_table_data": {
       "headers": [
-        "Aggregate Demand",
-        "Aggregate Supply"
+        "Aggregate Demand Curve",
+        "Aggregate Supply Curve"
       ],
       "rows": {
         "A": [
-          "Shift",
-          "to the right Shift to the right"
+          "Shift to the right",
+          "Shift to the right"
         ],
         "B": [
-          "Shift",
-          "to the left Shift to the left"
+          "Shift to the left",
+          "Shift to the left"
         ],
         "C": [
           "Shift to the left",
           "No change"
         ],
         "D": [
-          "No",
-          "change Shift to the left"
+          "No change",
+          "Shift to the left"
         ],
         "E": [
-          "No",
-          "change Shift to the right"
+          "No change",
+          "Shift to the right"
         ]
       }
     }
