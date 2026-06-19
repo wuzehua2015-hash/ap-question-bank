@@ -117,9 +117,33 @@ export function generateMockExam(questions, frqQuestions) {
     mcq.push(...shuffled.slice(0, count))
   }
   
-  // FRQ: random
-  const frqShuffled = frqQuestions.sort(() => Math.random() - 0.5)
-  const frq = frqShuffled.slice(0, MOCK_EXAM_CONFIG.frqCount)
+  // FRQ: select a year, then select a set if multiple sets exist for that year
+  const yearGroups = {}
+  for (const frq of frqQuestions) {
+    const year = frq.year
+    if (!yearGroups[year]) yearGroups[year] = []
+    yearGroups[year].push(frq)
+  }
+  
+  // Group by year + set for 2023 (which has multiple sets)
+  const yearSets = {}
+  for (const year of Object.keys(yearGroups)) {
+    const frqs = yearGroups[year]
+    const sets = {}
+    for (const frq of frqs) {
+      const set = frq.set || 'default'
+      if (!sets[set]) sets[set] = []
+      sets[set].push(frq)
+    }
+    yearSets[year] = sets
+  }
+  
+  // Randomly pick a year, then a set within that year
+  const years = Object.keys(yearSets)
+  const selectedYear = years[Math.floor(Math.random() * years.length)]
+  const sets = Object.keys(yearSets[selectedYear])
+  const selectedSet = sets[Math.floor(Math.random() * sets.length)]
+  const frq = yearSets[selectedYear][selectedSet]
   
   return {
     quiz: mcq,
