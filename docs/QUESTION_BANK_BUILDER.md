@@ -636,6 +636,8 @@ After building the JSON:
 | Graph questions without images | `has_graph=true` but no image file | Forgot to extract graph image | Flag graph questions during extraction, manually crop |
 | Wrong unit classification | U2 question about central bank | Weak keyword matching | Use LLM verification for all borderline cases |
 | Trailing dots artifact | `"end . ."` | OCR error | Auto-fix: `replace(/\s+\.\s+\.$/, '.')` |
+| **Word broken across lines** | `"invent\nories"` | PDF line break splits word | Detect and merge word fragments: `"invent"+"ories"` → `"inventories"` |
+| **Table headers mixed into text** | `"...expansionary?\nGovernment\nSpending\nTaxes"` | OCR extracts table headers as part of question text | Extract trailing header lines, remove from text, create `option_table_data` |
 | Embedded question numbers | Question 26 contains text from Q27 | Page boundary mid-question | Detect `\n\d+\.\s` in middle of text, split |
 
 ## Success Criteria
