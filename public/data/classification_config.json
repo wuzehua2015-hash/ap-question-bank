@@ -1,0 +1,356 @@
+{
+  "subject": "AP Macroeconomics",
+  "version": "2019 CED",
+  "classification_standard": "A student who has completed ONLY this unit should be able to answer this question.",
+  "exam_structure": {
+    "total_mcq": 60,
+    "frq_count": 3,
+    "unit_weighting": {
+      "U1": "5–10%",
+      "U2": "12–17%",
+      "U3": "17–27%",
+      "U4": "18–23%",
+      "U5": "20–30%",
+      "U6": "10–13%"
+    }
+  },
+  "units": [
+    {
+      "code": "U1",
+      "name": "Basic Economic Concepts",
+      "weighting": "5–10%",
+      "core_concepts": [
+        "Scarcity",
+        "Opportunity cost",
+        "Production Possibilities Frontier (PPF)",
+        "Comparative advantage",
+        "Absolute advantage",
+        "Specialization",
+        "Trade",
+        "Terms of trade",
+        "Autarky"
+      ],
+      "excluded_concepts": [
+        "GDP",
+        "Unemployment",
+        "Inflation",
+        "Aggregate demand",
+        "Aggregate supply",
+        "Fiscal policy",
+        "Monetary policy",
+        "Money",
+        "Banking",
+        "Interest rates",
+        "Economic growth",
+        "Exchange rates",
+        "International trade finance"
+      ],
+      "distinguishing_features": [
+        "No macroeconomic aggregates",
+        "No government policy",
+        "No money/banking",
+        "No international finance (only basic trade concepts)"
+      ],
+      "example_questions": [
+        "Calculate opportunity cost from PPF",
+        "Determine comparative advantage from output data",
+        "Find terms of trade range",
+        "PPF outward shift from technology (basic concept, not growth theory)"
+      ]
+    },
+    {
+      "code": "U2",
+      "name": "Economic Indicators and the Business Cycle",
+      "weighting": "12–17%",
+      "core_concepts": [
+        "Gross Domestic Product (GDP)",
+        "Real GDP vs Nominal GDP",
+        "GDP deflator",
+        "Unemployment rate",
+        "Types of unemployment (frictional, structural, cyclical, seasonal)",
+        "Natural rate of unemployment",
+        "Labor force participation rate",
+        "Inflation",
+        "Consumer Price Index (CPI)",
+        "Deflation",
+        "Disinflation",
+        "Business cycle (peak, trough, expansion, recession)"
+      ],
+      "excluded_concepts": [
+        "AD-AS model",
+        "Fiscal policy",
+        "Monetary policy",
+        "Money supply",
+        "Banking system",
+        "Loanable funds",
+        "Long-run economic growth",
+        "Crowding out",
+        "Exchange rates",
+        "Balance of payments"
+      ],
+      "distinguishing_features": [
+        "Measurement and definition",
+        "No policy analysis",
+        "No market models (AD-AS, money market, loanable funds)",
+        "Natural rate of unemployment is a DEFINITION (U2), not a long-run equilibrium concept (U5)"
+      ],
+      "example_questions": [
+        "Calculate GDP using expenditure approach",
+        "Identify type of unemployment",
+        "Calculate inflation rate from CPI",
+        "Identify business cycle stage"
+      ]
+    },
+    {
+      "code": "U3",
+      "name": "National Income and Price Determination",
+      "weighting": "17–27%",
+      "core_concepts": [
+        "Aggregate Demand (AD)",
+        "Components of AD (C, I, G, NX)",
+        "Short-Run Aggregate Supply (SRAS)",
+        "Long-Run Aggregate Supply (LRAS) in AD-AS context",
+        "AD-AS equilibrium",
+        "Changes in AD-AS in short run",
+        "Self-adjustment mechanism (long run)",
+        "Fiscal policy (government spending, taxes)",
+        "Spending multiplier",
+        "Tax multiplier",
+        "Automatic stabilizers",
+        "Short-run Phillips curve (SRPC)",
+        "Stagflation",
+        "Inflationary gap",
+        "Recessionary gap"
+      ],
+      "excluded_concepts": [
+        "Money demand",
+        "Money supply",
+        "Monetary policy tools",
+        "Central bank actions (OMO, discount rate, reserve requirements)",
+        "Banking system",
+        "Loanable funds market",
+        "Interest rate determination (as a market)",
+        "Long-run economic growth (production function, technology, human capital)",
+        "Crowding out",
+        "Long-run Phillips curve (LRPC)",
+        "Fiscal + monetary policy combinations",
+        "Supply-side economics",
+        "Rational expectations"
+      ],
+      "distinguishing_features": [
+        "AD-AS is THE core model",
+        "Fiscal policy ONLY (no monetary policy tools)",
+        "Short-run focus (SRPC, not LRPC)",
+        "Multiplier effects are short-run (AD shifts)"
+      ],
+      "boundary_rules": [
+        "Monetary terms (central bank, money supply) in WRONG OPTIONS only → still U3 (distractors)",
+        "Monetary terms in CORRECT ANSWER or question stem → U4 or U5 (core concept)",
+        "Fiscal policy + interest rate effect in AD-AS context → U3 (monetary is side effect)",
+        "Fiscal policy + interest rate in loanable funds context → U4 (loanable funds market)",
+        "SRPC = U3 (short-run Phillips curve taught in U3)",
+        "LRPC = U5 (long-run Phillips curve taught in U5)",
+        "LRAS in AD-AS equilibrium = U3 (taught as part of AD-AS model)",
+        "LRAS shifting outward (growth) = U5 (economic growth context)"
+      ],
+      "example_questions": [
+        "AD shifts right from increased consumer confidence → U3",
+        "Government spending multiplier calculation → U3",
+        "SRPC shows trade-off between unemployment and inflation → U3",
+        "Stagflation cause and effect → U3",
+        "Automatic stabilizer during recession → U3"
+      ]
+    },
+    {
+      "code": "U4",
+      "name": "Financial Sector",
+      "weighting": "18–23%",
+      "core_concepts": [
+        "Money functions",
+        "Money demand (transaction, precautionary, speculative)",
+        "Money supply",
+        "Money market (equilibrium interest rate)",
+        "Banking system (assets, liabilities)",
+        "Bank reserves",
+        "Required reserves",
+        "Excess reserves",
+        "Money multiplier",
+        "Monetary policy tools",
+        "Open market operations (OMO)",
+        "Discount rate",
+        "Reserve requirements",
+        "Central bank / Federal Reserve",
+        "Nominal interest rate",
+        "Real interest rate",
+        "Loanable funds market",
+        "Bond prices and interest rates",
+        "Monetary policy transmission to AD"
+      ],
+      "excluded_concepts": [
+        "Fiscal policy (government spending, taxes as main topic)",
+        "AD-AS equilibrium analysis (unless testing monetary transmission)",
+        "Fiscal + monetary policy combinations",
+        "Long-run economic growth",
+        "Crowding out",
+        "Long-run Phillips curve",
+        "Exchange rates (unless domestic interest rate effect)"
+      ],
+      "distinguishing_features": [
+        "Money and banking are THE focus",
+        "Monetary policy tools (Fed/central bank actions)",
+        "Interest rate determination (money market, loanable funds)",
+        "No fiscal policy combinations (that's U5)"
+      ],
+      "boundary_rules": [
+        "Monetary policy affecting AD → U4 (monetary transmission mechanism)",
+        "Fiscal policy in background + loanable funds foreground → U4",
+        "Money demand/supply = U4 (not taught in U3)",
+        "Budget deficit raising interest rates in loanable funds → U4",
+        "Budget deficit raising interest rates in AD-AS context → U3 (side effect of fiscal policy)"
+      ],
+      "example_questions": [
+        "Money demand increases, what happens to interest rate? → U4",
+        "Fed sells bonds, effect on money supply → U4",
+        "Money multiplier calculation → U4",
+        "Loanable funds market equilibrium → U4",
+        "Monetary policy transmission to AD → U4"
+      ]
+    },
+    {
+      "code": "U5",
+      "name": "Long-Run Consequences of Stabilization Policies",
+      "weighting": "20–30%",
+      "core_concepts": [
+        "Fiscal + monetary policy COMBINATIONS",
+        "Stabilization policy",
+        "Policy mix",
+        "Long-run economic growth",
+        "Production function",
+        "Human capital",
+        "Physical capital",
+        "Labor productivity",
+        "Technology / technological progress",
+        "Crowding out",
+        "Long-run Phillips curve (LRPC)",
+        "Supply-side economics",
+        "Rational expectations",
+        "Adaptive expectations",
+        "Sacrifice ratio"
+      ],
+      "excluded_concepts": [
+        "AD-AS model mechanics (shifts, equilibrium) as standalone",
+        "Fiscal policy alone (multiplier, automatic stabilizers)",
+        "Monetary policy tools alone (OMO, discount rate)",
+        "Money market mechanics",
+        "Banking system details",
+        "Short-run Phillips curve (SRPC)"
+      ],
+      "distinguishing_features": [
+        "EXPLICIT policy combinations (fiscal + monetary together)",
+        "Long-run focus (growth, LRPC)",
+        "Growth theory (production function, human capital, technology)",
+        "Crowding out (explicit concept)"
+      ],
+      "boundary_rules": [
+        "EXPLICIT combination of fiscal + monetary actions → U5 (e.g., 'govt spending increases while central bank sells bonds')",
+        "Long-run growth (PPF outward, LRAS shifting from productivity) → U5",
+        "Crowding out → U5 (explicitly taught in U5)",
+        "LRPC → U5 (vertical at natural rate)",
+        "Supply-side policy → U5",
+        "Economic convergence → U5"
+      ],
+      "example_questions": [
+        "Which fiscal-monetary combo corrects recession without inflation? → U5",
+        "Human capital investment shifts production function → U5",
+        "Crowding out from large budget deficit → U5",
+        "LRPC is vertical at natural rate → U5",
+        "Policy mix to reduce inflation without recession → U5"
+      ]
+    },
+    {
+      "code": "U6",
+      "name": "Open Economy—International Trade and Finance",
+      "weighting": "10–13%",
+      "core_concepts": [
+        "Exchange rates",
+        "Foreign exchange market",
+        "Balance of payments (BOP)",
+        "Current account",
+        "Financial account",
+        "Capital account",
+        "Net exports",
+        "Trade deficits",
+        "Trade surpluses",
+        "Tariffs",
+        "Quotas",
+        "Appreciation",
+        "Depreciation",
+        "Capital flows",
+        "International capital mobility"
+      ],
+      "excluded_concepts": [
+        "Domestic AD-AS (unless exchange rate effect on AD)",
+        "Domestic fiscal policy (unless through trade channel)",
+        "Domestic monetary policy (unless through exchange rate)",
+        "Growth theory",
+        "Crowding out"
+      ],
+      "distinguishing_features": [
+        "Foreign trade and finance focus",
+        "Exchange rates (appreciation/depreciation)",
+        "International capital flows",
+        "Balance of payments accounts"
+      ],
+      "example_questions": [
+        "Exchange rate appreciation effect on net exports → U6",
+        "BOP account classification → U6",
+        "Tariff effect on domestic price and quantity → U6",
+        "Capital inflow effect on loanable funds → U6 (or U4 if domestic interest rate focus)"
+      ]
+    }
+  ],
+  "cross_unit_rules": [
+    {
+      "situation": "Fiscal policy + monetary terms in options",
+      "rule": "If monetary terms are ONLY in wrong options (distractors) → U3. If monetary terms are in the correct answer or central to the question → U4 or U5."
+    },
+    {
+      "situation": "AD-AS with monetary policy",
+      "rule": "If testing AD shift FROM monetary policy (transmission mechanism) → U4. If testing AD-AS equilibrium WITH monetary policy as given → U3 or U4 depending on context."
+    },
+    {
+      "situation": "Interest rate changes from fiscal policy",
+      "rule": "If loanable funds market shown → U4. If AD-AS graph shown → U3."
+    },
+    {
+      "situation": "LRAS mentioned",
+      "rule": "In AD-AS equilibrium context (vertical LRAS, equilibrium) → U3. In growth/productivity context (shifting outward) → U5."
+    },
+    {
+      "situation": "Phillips curve mentioned",
+      "rule": "Short-run Phillips curve (SRPC) → U3. Long-run Phillips curve (LRPC) → U5."
+    },
+    {
+      "situation": "Government spending + central bank action in same question",
+      "rule": "If asking about COMBINATION of both → U5. If asking about one with the other as context → U3 or U4."
+    },
+    {
+      "situation": "Budget deficit and interest rates",
+      "rule": "If testing crowding out (reduced private investment) → U5. If testing loanable funds market shift → U4. If testing AD-AS with reduced investment → U3."
+    },
+    {
+      "situation": "Natural rate of unemployment",
+      "rule": "As a definition/measurement → U2. As long-run equilibrium (LRPC) → U5."
+    }
+  ],
+  "common_pitfalls": [
+    "Do NOT classify by keyword frequency ('taxes' 5x = U3 is wrong if the question is about money supply)",
+    "Do NOT classify by first keyword mentioned",
+    "Do NOT let distractors (wrong options) determine the unit",
+    "Do NOT ignore context: the same concept (e.g., interest rates) can be U3 or U4 depending on context",
+    "ALWAYS check: would a student who only studied this unit know this concept?",
+    "ALWAYS distinguish SRPC (U3) from LRPC (U5)",
+    "ALWAYS distinguish LRAS in equilibrium (U3) from LRAS in growth (U5)",
+    "ALWAYS distinguish fiscal policy alone (U3) from fiscal-monetary combination (U5)"
+  ]
+}
