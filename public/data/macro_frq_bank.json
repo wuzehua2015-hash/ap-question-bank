@@ -1894,5 +1894,466 @@
     ],
     "requires_graph": false,
     "image_paths": []
+  },
+  {
+    "question_id": "2023_FRQ1_S1",
+    "year": 2023,
+    "question_number": 1,
+    "set": "Practice Set 1",
+    "text": "1. Assume that a country's economy is in a short-run equilibrium and the actual unemployment rate is lower than the natural rate of unemployment.\n(a) Using a correctly labeled graph of the long-run aggregate supply curve, short-run aggregate supply curve, and aggregate demand curve, show each of the following.\n(i) Current price level, labeled PL1, and current output level, labeled Y1\n(ii) The full-employment output level, labeled YF\n(b) Assume the country's banking system has ample reserves. What monetary policy action should the country's central bank use to move the economy toward its long-run equilibrium?\n(c) Draw a correctly labeled graph of the country's reserve market, and show how the central bank's action to move the economy toward its long-run equilibrium affects the policy rate in the short run.\n(d) Based on the interest rate change from part (c), will each of the following increase, decrease, or remain the same in the short run?\n(i) Real output. Explain.\n(ii) Natural rate of unemployment\n(e) Assume instead that the central bank does not pursue the monetary policy action from part (b) and there was no other government intervention. Will each of the following increase, decrease, or remain the same in the long run?\n(i) Short-run aggregate supply. Explain.\n(ii) Employment",
+    "source": "AP Macro 2023 Practice Exam Set 1",
+    "primary_unit": "U4",
+    "secondary_units": [
+      "U3",
+      "U5"
+    ],
+    "rubric": {
+      "total_points": 9,
+      "points": [
+        {
+          "point_id": "a(i)",
+          "description": "One point is earned for drawing a correctly labeled graph showing a downward-sloping AD curve, an upward-sloping SRAS curve, equilibrium price level PL1, and output level Y1.",
+          "value": 1
+        },
+        {
+          "point_id": "a(ii)",
+          "description": "One point is earned for showing a vertical LRAS curve at YF to the left of the equilibrium output level.",
+          "value": 1
+        },
+        {
+          "point_id": "b",
+          "description": "One point is earned for stating that the central bank should increase its administered interest rates.",
+          "value": 1
+        },
+        {
+          "point_id": "c(i)",
+          "description": "One point is earned for drawing a correctly labeled graph of the reserve market with the supply curve intersecting the demand curve in the range of ample reserves.",
+          "value": 1
+        },
+        {
+          "point_id": "c(ii)",
+          "description": "One point is earned for showing an increase in the administered interest rates, resulting in an increase in the policy rate.",
+          "value": 1
+        },
+        {
+          "point_id": "d(i)",
+          "description": "One point is earned for stating that real output will decrease and for explaining that interest-sensitive spending will decrease, resulting in a decrease in aggregate demand and real output.",
+          "value": 1
+        },
+        {
+          "point_id": "d(ii)",
+          "description": "One point is earned for stating that the natural rate of unemployment will remain unchanged.",
+          "value": 1
+        },
+        {
+          "point_id": "e(i)",
+          "description": "One point is earned for stating that the short-run aggregate supply (SRAS) curve will shift to the left in the long run and for explaining that nominal wages will increase.",
+          "value": 1
+        },
+        {
+          "point_id": "e(ii)",
+          "description": "One point is earned for stating that employment will decrease.",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2023_FRQ2_S1",
+    "year": 2023,
+    "question_number": 2,
+    "set": "Practice Set 1",
+    "text": "2. The following is the balance sheet for Raymond Bank, one of many commercial banks in a country in which the banking system has limited reserves.\n\nAssets\nReserves $5,000\nBusiness loans $10,000\nStudent loans $8,000\nGovernment securities $2,000\nTotal assets $25,000\n\nLiabilities and Equity\nDemand deposits $20,000\nEquity (Net worth) $5,000\nTotal liabilities and equity $25,000\n\nAssume a 10 percent reserve requirement.\n(a) Calculate Raymond Bank's required reserves. Show your work.\n(b) Calculate the maximum amount of additional loans that Raymond Bank can make without selling its holdings of government securities. Show your work.\n(c) Assume that Raymond Bank and other banks now lend out all excess reserves.\n(i) Calculate the maximum possible change in demand deposits throughout the banking system. Show your work.\n(ii) What is the maximum possible change in total reserves throughout the banking system?\n(d) Suppose that the country's central bank purchases $1,000 of Raymond Bank's holdings of government securities as part of its open-market operations. Do Raymond Bank's required reserves initially increase, decrease, or remain the same as a result of the central bank's purchase? Explain.",
+    "source": "AP Macro 2023 Practice Exam Set 1",
+    "primary_unit": "U4",
+    "secondary_units": [],
+    "rubric": {
+      "total_points": 5,
+      "points": [
+        {
+          "point_id": "a",
+          "description": "One point is earned for correctly calculating Raymond Bank's required reserves, 0.10 x $20,000 = $2,000.",
+          "value": 1
+        },
+        {
+          "point_id": "b",
+          "description": "One point is earned for correctly calculating the maximum amount of loans that Raymond Bank can make, $3,000. Excess Reserves = Total Reserves - Required Reserves = $5,000 - $2,000 = $3,000.",
+          "value": 1
+        },
+        {
+          "point_id": "c(i)",
+          "description": "One point is earned for correctly calculating the maximum possible change in demand deposits throughout the banking system, $30,000. Maximum change in deposits = Excess Reserves x Money Multiplier = $3,000 x 1/0.1 = $30,000.",
+          "value": 1
+        },
+        {
+          "point_id": "c(ii)",
+          "description": "One point is earned for stating that the maximum possible change in total reserves throughout the banking system is $0.",
+          "value": 1
+        },
+        {
+          "point_id": "d",
+          "description": "One point is earned for stating that Raymond Bank's required reserves initially will remain the same and for explaining that there is no change in demand deposits or that only excess reserves increased.",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2023_FRQ3_S1",
+    "year": 2023,
+    "question_number": 3,
+    "set": "Practice Set 1",
+    "text": "3. Singapore and Japan are trading partners. The Japanese economy is operating at full employment, and Japan's current account balance is zero.\n(a) Assume the exchange rate between the Singapore dollar (SGD) and the Japanese yen (JPY) changes from 1 SGD = 82 JPY to 1 SGD = 65 JPY. Does the JPY appreciate or depreciate against the SGD?\n(b) Given your answer in part (a), will each of the following increase, decrease, or remain the same?\n(i) The price of Japanese goods in Singapore dollars\n(ii) Japan's net exports\n(c) Draw a single correctly labeled graph with the long-run Phillips curve and short-run Phillips curve for Japan. On the graph, show the new short-run equilibrium as a result of the change in Japan's net exports from part (b)(ii), labeled point X.\n(d) Given your answer in part (b)(ii), will each of the following be in deficit, surplus, or zero for Japan?\n(i) Current account balance\n(ii) Financial (capital) account balance",
+    "source": "AP Macro 2023 Practice Exam Set 1",
+    "primary_unit": "U6",
+    "secondary_units": [
+      "U3",
+      "U5"
+    ],
+    "rubric": {
+      "total_points": 6,
+      "points": [
+        {
+          "point_id": "a",
+          "description": "One point is earned for stating that JPY appreciates relative to the SGD.",
+          "value": 1
+        },
+        {
+          "point_id": "b(i)",
+          "description": "One point is earned for stating that the price of Japanese goods in Singapore dollars will increase.",
+          "value": 1
+        },
+        {
+          "point_id": "b(ii)",
+          "description": "One point is earned for stating that Japan's net exports will decrease.",
+          "value": 1
+        },
+        {
+          "point_id": "c(i)",
+          "description": "One point is earned for drawing a correctly labeled graph of the downward-sloping short-run Phillips curve (SRPC) for Japan.",
+          "value": 1
+        },
+        {
+          "point_id": "c(ii)",
+          "description": "One point is earned for showing a vertical long-run Phillips curve (LRPC) and for showing point X to the right of the LRPC on the SRPC.",
+          "value": 1
+        },
+        {
+          "point_id": "d",
+          "description": "One point is earned for stating that Japan's current account balance will be in deficit and that Japan's financial (capital) account balance will be in surplus.",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2023_FRQ1_S2",
+    "year": 2023,
+    "question_number": 1,
+    "set": "Practice Set 2",
+    "text": "1. Assume a country's economy is currently in recession.\n(a) Draw a correctly labeled graph of the long-run aggregate supply, short-run aggregate supply, and aggregate demand curves, and show each of the following.\n(i) Current real output, labeled Y1, and current price level, labeled PL1\n(ii) Full employment output, labeled YF\n(b) Assuming the banking system has ample reserves, identify one action the central bank can take to help the economy recover from the recession.\n(c) Draw a correctly labeled graph of the reserve market, and show the impact of the central bank's action identified in part (b) on the policy rate.\n(d) On your graph for part (a), show the effect of the central bank's action identified in part (b) on real output and the price level.\n(e) Assume there is an increase in business confidence as a result of the central bank's action.\n(i) What will happen to the demand for capital goods?\n(ii) Draw a correctly labeled graph of the loanable funds market, and show the effect of the change identified in part (e)(i) on the real interest rate.\n(f) Given your answer to part (e), what is the effect on potential real output in the long run? Explain.",
+    "source": "AP Macro 2023 Practice Exam Set 2",
+    "primary_unit": "U4",
+    "secondary_units": [
+      "U3",
+      "U5"
+    ],
+    "rubric": {
+      "total_points": 10,
+      "points": [
+        {
+          "point_id": "a(i)",
+          "description": "One point is earned for drawing a correctly labeled graph for AD and SRAS, showing PL1 and Y1 at the intersection of AD and SRAS.",
+          "value": 1
+        },
+        {
+          "point_id": "a(ii)",
+          "description": "One point is earned for drawing a vertical LRAS curve at YF to the right of Y1.",
+          "value": 1
+        },
+        {
+          "point_id": "b",
+          "description": "One point is earned for stating that the central bank can decrease its administered interest rates (e.g., interest on reserves) to help the economy recover from the recession.",
+          "value": 1
+        },
+        {
+          "point_id": "c(i)",
+          "description": "One point is earned for drawing a correctly labeled graph of the reserve market with the supply curve intersecting the demand curve in the range of ample reserves.",
+          "value": 1
+        },
+        {
+          "point_id": "c(ii)",
+          "description": "One point is earned for showing a decrease in the administered interest rates, resulting in a decrease in the policy rate.",
+          "value": 1
+        },
+        {
+          "point_id": "d",
+          "description": "One point is earned for showing a rightward shift in the aggregate demand curve and for showing an increase in real output and price level. The rightward shift in AD does not have to eliminate the output gap.",
+          "value": 1
+        },
+        {
+          "point_id": "e(i)",
+          "description": "One point is earned for stating that the demand for capital goods increases.",
+          "value": 1
+        },
+        {
+          "point_id": "e(ii)",
+          "description": "One point is earned for drawing a correctly labeled graph of the loanable funds market.",
+          "value": 1
+        },
+        {
+          "point_id": "e(iii)",
+          "description": "One point is earned for showing a rightward shift in the demand for loanable funds curve and an increase in the real interest rate.",
+          "value": 1
+        },
+        {
+          "point_id": "f",
+          "description": "One point is earned for stating that potential real output will increase and for explaining that capital accumulation will increase, causing the long-run aggregate supply (LRAS) curve to shift to the right.",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2023_FRQ2_S2",
+    "year": 2023,
+    "question_number": 2,
+    "set": "Practice Set 2",
+    "text": "2. The exchange rate between the Australian dollar and the Indian rupee is determined in a flexible foreign exchange market.\n(a) Assume India is currently in recession. What fiscal policy action could the Indian government take to eliminate the recession?\n(b) What would be the effect of the fiscal policy action identified in part (a) on interest rates in India?\n(c) Draw a correctly labeled graph of the foreign exchange market for the Australian dollar. Show on your graph the impact of the change in interest rates identified in part (b) on each of the following.\n(i) The supply of Australian dollars\n(ii) The equilibrium exchange rate of the Australian dollar\n(d) What would be the effect of the change in the exchange rate identified in part (c)(ii) on Australian exports?\n(e) What would be the effect of the change in Australian exports identified in part (d) on Australian unemployment?",
+    "source": "AP Macro 2023 Practice Exam Set 2",
+    "primary_unit": "U6",
+    "secondary_units": [
+      "U3"
+    ],
+    "rubric": {
+      "total_points": 5,
+      "points": [
+        {
+          "point_id": "a",
+          "description": "One point is earned for stating that the Indian government should increase government spending or decrease taxes.",
+          "value": 1
+        },
+        {
+          "point_id": "b",
+          "description": "One point is earned for stating that the interest rate in India will increase (or for explaining that the demand for loanable funds will increase or the supply of loanable funds will decrease).",
+          "value": 1
+        },
+        {
+          "point_id": "c(i)",
+          "description": "One point is earned for drawing a correctly labeled graph of the foreign exchange market for the Australian dollar.",
+          "value": 1
+        },
+        {
+          "point_id": "c(ii)",
+          "description": "One point is earned for showing a leftward shift in the supply of Australian dollars (or a rightward shift in the demand for Australian dollars) and an appreciation of the Australian dollar.",
+          "value": 1
+        },
+        {
+          "point_id": "d",
+          "description": "One point is earned for stating that Australian exports will decrease.",
+          "value": 1
+        },
+        {
+          "point_id": "e",
+          "description": "One point is earned for stating that Australian unemployment will increase.",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2023_FRQ3_S2",
+    "year": 2023,
+    "question_number": 3,
+    "set": "Practice Set 2",
+    "text": "3. Gross domestic product (GDP), unemployment, inflation, and economic growth are key measures of a country's economic performance.\nThe following statistics are from the country of Pattiland in 2016; dollar values are measured in 2016 dollars.\n(a) Calculate each of the following and show your work.\n(i) Nominal GDP\n(ii) Real GDP\n(iii) Real GDP per capita\n(b) Debbie is a citizen of the country of Wayland and owns a computer software firm in Pattiland. Is the output produced by Debbie's computer software firm included in Pattiland's nominal GDP calculated in part (a)? Explain.\n(c) The GDP deflator for Pattiland in 2015 was 110. In 2016 was Pattiland experiencing inflation or deflation, or is there insufficient information to determine Pattiland's economic condition? Explain.\n(d) Calculate the unemployment rate in Pattiland. Show your work.",
+    "source": "AP Macro 2023 Practice Exam Set 2",
+    "primary_unit": "U2",
+    "secondary_units": [],
+    "rubric": {
+      "total_points": 5,
+      "points": [
+        {
+          "point_id": "a(i)",
+          "description": "One point is earned for correctly calculating nominal GDP.",
+          "value": 1
+        },
+        {
+          "point_id": "a(ii)",
+          "description": "One point is earned for correctly calculating real GDP.",
+          "value": 1
+        },
+        {
+          "point_id": "a(iii)",
+          "description": "One point is earned for correctly calculating real GDP per capita.",
+          "value": 1
+        },
+        {
+          "point_id": "b",
+          "description": "One point is earned for stating that the output is included in Pattiland's nominal GDP and for explaining that the firm is located in Pattiland (or that GDP is based on the location of production).",
+          "value": 1
+        },
+        {
+          "point_id": "c",
+          "description": "One point is earned for stating that there is insufficient information and for explaining that the GDP deflator must be compared to the previous year's deflator (or that the base year is needed).",
+          "value": 1
+        },
+        {
+          "point_id": "d",
+          "description": "One point is earned for correctly calculating the unemployment rate.",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2023_FRQ1_S3",
+    "year": 2023,
+    "question_number": 1,
+    "set": "Practice Set 3",
+    "text": "1. Assume that a country's economy is currently in recession.\n(a) Draw a correctly labeled graph of the long-run and short-run Phillips curves. Label the current equilibrium as point Z.\n(b) Assume the banking system has limited reserves, banks in the country hold no excess reserves, and the public's holding of currency is constant. The required reserve ratio is 25%. The central bank of the country buys $100 billion in bonds from the nonbank public.\n(i) By how much will the monetary base of the country change?\n(ii) Calculate the change in the amount of loans in the banking system in the country. Show your work.\n(iii) Calculate the change in the money supply in the country. Show your work.\n(c) Draw a correctly labeled graph of the money market and show the effect of the change in the money supply identified in part (b)(iii) on the nominal interest rate.\n(d) Assume there is no change in inflationary expectations. On your graph in part (a), label a point W that is consistent with the effect of the change in the nominal interest rate identified in part (c).\n(e) Based on the change in the interest rate identified in part (c), how will the international value of the country's currency change?\n(f) Based on your answer in part (e), will the country's net exports increase, decrease, or stay the same? Explain.",
+    "source": "AP Macro 2023 Practice Exam Set 3",
+    "primary_unit": "U4",
+    "secondary_units": [
+      "U3",
+      "U6"
+    ],
+    "rubric": {
+      "total_points": 10,
+      "points": [
+        {
+          "point_id": "a(i)",
+          "description": "One point is earned for drawing a correctly labeled graph of the SRPC.",
+          "value": 1
+        },
+        {
+          "point_id": "a(ii)",
+          "description": "One point is earned for drawing the LRPC and for showing point Z on the SRPC to the right of the LRPC.",
+          "value": 1
+        },
+        {
+          "point_id": "b(i)",
+          "description": "One point is earned for stating that the monetary base will change by $100 billion.",
+          "value": 1
+        },
+        {
+          "point_id": "b(ii)",
+          "description": "One point is earned for correctly calculating the change in the amount of loans in the banking system as $300 (=4x$75).",
+          "value": 1
+        },
+        {
+          "point_id": "b(iii)",
+          "description": "One point is earned for correctly calculating the change in the money supply as $400 (=4x$100).",
+          "value": 1
+        },
+        {
+          "point_id": "c(i)",
+          "description": "One point is earned for drawing a correctly labeled graph of the money market.",
+          "value": 1
+        },
+        {
+          "point_id": "c(ii)",
+          "description": "One point is earned for showing a rightward shift in the money supply curve and a lower nominal interest rate.",
+          "value": 1
+        },
+        {
+          "point_id": "d",
+          "description": "One point is earned for showing point W to the left of point Z on the SRPC.",
+          "value": 1
+        },
+        {
+          "point_id": "e",
+          "description": "One point is earned for stating that the country's currency will depreciate.",
+          "value": 1
+        },
+        {
+          "point_id": "f",
+          "description": "One point is earned for stating that net exports will increase and for explaining that this is because the country's goods will be relatively cheaper than foreign goods.",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2023_FRQ2_S3",
+    "year": 2023,
+    "question_number": 2,
+    "set": "Practice Set 3",
+    "text": "2. Suppose that the United States government implements a fiscal policy that increases the budget surplus.\n(a) Draw a correctly labeled graph of the loanable funds market and show the effect of the increase in the budget surplus on the equilibrium real interest rate.\n(b) The European Union is a major trading partner of the United States. Given your answer in part (a) about the real interest rate, will the United States dollar appreciate or depreciate against the euro? Explain.\n(c) Suppose that the Federal Reserve, the central bank of the United States, decides to offset the change in the value of the dollar identified in part (b).\n(i) Would the Federal Reserve buy or sell the euro?\n(ii) Would the Federal Reserve buy or sell the dollar?\n(d) Suppose that the Federal Reserve wants to counteract the real interest rate change identified in part (a). What monetary policy action would the Federal Reserve take?",
+    "source": "AP Macro 2023 Practice Exam Set 3",
+    "primary_unit": "U4",
+    "secondary_units": [
+      "U6"
+    ],
+    "rubric": {
+      "total_points": 5,
+      "points": [
+        {
+          "point_id": "a",
+          "description": "One point is earned for drawing a correctly labeled graph of the loanable funds market and showing a leftward shift of the demand curve (or rightward shift of supply) and a decrease in the equilibrium real interest rate.",
+          "value": 1
+        },
+        {
+          "point_id": "b",
+          "description": "One point is earned for stating that the dollar will depreciate against the euro and for explaining that the demand for United States financial assets decreases.",
+          "value": 1
+        },
+        {
+          "point_id": "c(i)",
+          "description": "One point is earned for stating that the Federal Reserve should sell the euro and buy the dollar.",
+          "value": 1
+        },
+        {
+          "point_id": "c(ii)",
+          "description": "One point is earned for stating that the Federal Reserve should buy the dollar (and sell the euro).",
+          "value": 1
+        },
+        {
+          "point_id": "d",
+          "description": "One point is earned for stating that the Federal Reserve would increase its administered interest rates (e.g., interest on reserves).",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2023_FRQ3_S3",
+    "year": 2023,
+    "question_number": 3,
+    "set": "Practice Set 3",
+    "text": "3. The table above shows data for the economy of Fruitland, which produces two goods, apples and oranges.\n\nPrice of Apples: Year 1 $4, Year 2 $6\nQuantity of Apples: Year 1 10, Year 2 10\nPrice of Oranges: Year 1 $5, Year 2 $5\nQuantity of Oranges: Year 1 20, Year 2 20\n\n(a) Calculate the nominal gross domestic product (GDP) for year 2. Show your work.\n(b) Using year 1 as the base year, calculate real GDP for year 2. Show your work.\n(c) Calculate the GDP deflator for year 2. Show your work.\n(d) Assuming the market basket is composed of the quantities in year 1, calculate the consumer price index (CPI) for year 2. Show your work.\n(e) Suppose apple and orange pickers received a 2 percent increase in their wages. Based on your answer to part (d), would real wages of apple and orange pickers increase, decrease, or stay the same from year 1 to year 2? Explain.",
+    "source": "AP Macro 2023 Practice Exam Set 3",
+    "primary_unit": "U2",
+    "secondary_units": [],
+    "rubric": {
+      "total_points": 5,
+      "points": [
+        {
+          "point_id": "a",
+          "description": "One point is earned for correctly calculating the nominal GDP for year 2 as 160 (=6x10+5x20).",
+          "value": 1
+        },
+        {
+          "point_id": "b",
+          "description": "One point is earned for correctly calculating the real GDP for year 2 as 240 (=4x10+10x20).",
+          "value": 1
+        },
+        {
+          "point_id": "c",
+          "description": "One point is earned for correctly calculating the GDP deflator for year 2 as 67 (=160/240 x100).",
+          "value": 1
+        },
+        {
+          "point_id": "d",
+          "description": "One point is earned for correctly calculating the CPI for year 2 as 110 (=110/100 x100).",
+          "value": 1
+        },
+        {
+          "point_id": "e",
+          "description": "One point is earned for correctly stating that real wages will decrease and for explaining that the increase in the nominal wage rate is lower than the inflation rate (2% < 10%).",
+          "value": 1
+        }
+      ]
+    }
   }
 ]
