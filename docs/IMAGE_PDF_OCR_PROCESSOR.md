@@ -248,7 +248,92 @@ def extract_graph(pdf_path, page_num, bbox, output_path):
 ## 完整工作流
 
 ```python
-# 1. 检测 → 2. OCR拆分 → 3. 解析 → 4. 答案key → 5. 去重 → 6. 转换 → 7. 合并 → 8. 审计
+# 1. 检测 → 2. OCR拆分 → 3. 解析 → 4. 答案key → 5. 去重 → 6. 转换 → 7. 入库自查 → 8. 合并 → 9. 审计
 ```
+
+## 步骤7：入库前自查（Critical - 必须执行）
+
+在合并到题库之前，必须对每道新题执行以下检查：
+
+### 7.1 自动检查清单
+
+```python
+def pre_merge_check(new_questions):
+    issues = []
+    
+    for q in new_questions:
+        qid = q.get('question_id', 'UNKNOWN')
+        
+        # 1. 文本污染检查
+        pollution_patterns = [
+            'SECTION', 'ANSWER SHEET', 'Unauthorized', 
+            'any part of this page', 'GO ON TO', 'TIME IS CALLED'
+        ]
+        for opt, text in q.get('options', {}).items():
+            for pattern in pollution_patterns:
+                if pattern in text:
+                    issues.append(f"{qid} option {opt}: 包含污染文本 '{pattern}'")
+        
+        # 2. 选项开头artifact检查
+        for opt, text in q.get('options', {}).items():
+            if text.startswith('—') or text.startswith('....') or text.startswith('..'):
+                issues.append(f"{qid} option {opt}: 以artifact开头 '{text[:20]}...'")
+        
+        # 3. 单词粘连检查
+        for opt, text in q.get('options', {}).items():
+            if 'arightward' in text or 'Nochange' in text or 'Aincrease' in text.lower():
+                issues.append(f"{qid} option {opt}: 单词粘连 '{text[:30]}...'")
+        
+        # 4. 图形一致性检查
+        text_lower = q.get('text', '').lower()
+        if 'graph above' in text_lower or 'the graph' in text_lower or 'business cycle above' in text_lower:
+            if not q.get('has_graph', False):
+                issues.append(f"{qid}: 文本提到graph但has_graph=False")
+        
+        # 5. 表格一致性检查  
+        if 'table above' in text_lower or 'data above' in text_lower:
+            if not q.get('has_graph', False) and not q.get('option_table_data'):
+                issues.append(f"{qid}: 文本提到table/data但无图无表格数据")
+        
+        # 6. 答案有效性检查
+        answer = q.get('answer')
+        options = q.get('options', {})
+        if answer and answer not in options:
+            issues.append(f"{qid}: 答案 '{answer}' 不在选项中")
+        
+        # 7. 选项数量检查
+        if len(options) != 5:
+            issues.append(f"{qid}: 选项数量 {len(options)} ≠ 5")
+    
+    return issues
+```
+
+### 7.2 规则
+
+**只要有任何一项检查失败，就绝对不能入库。必须先修复，再重新检查，直到0 issues。**
+
+```python
+# 执行检查
+issues = pre_merge_check(new_converted)
+
+if issues:
+    print(f"发现 {len(issues)} 个问题，必须修复后才能入库：")
+    for issue in issues:
+        print(f"  ❌ {issue}")
+    raise ValueError(f"Pre-merge check failed with {len(issues)} issues")
+else:
+    print("✅ 所有新题通过入库前检查，可以安全合并")
+    existing_data.extend(new_converted)
+```
+
+---
+
+## 步骤8：合并到题库
+
+```python
+existing_data.extend(new_converted)
+```
+
+---
 
 **输出：** 通过 `question-bank-audit` 的干净 JSON 文件。
