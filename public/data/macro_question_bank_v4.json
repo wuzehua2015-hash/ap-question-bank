@@ -1083,7 +1083,7 @@
   {
     "question_id": "2012_Q28",
     "year": "2012",
-    "text": "An increase in net investment leads to faster economic growth because capital per worker and output per worker will change in which of the following ways?\nCapital Output per Worker per Worker",
+    "text": "An increase in net investment leads to faster economic growth because capital per worker and output per worker will change in which of the following ways?",
     "options": {
       "A": "Increase Increase",
       "B": "Increase Decrease",
@@ -1111,7 +1111,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Capital per Worker",
+        "Output per Worker"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "No change",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q29",
@@ -2392,7 +2420,7 @@
   {
     "question_id": "2014_Q05",
     "year": "2014",
-    "text": "A contraction in the money supply will most likely change the nominal interest rate and aggregate demand in which of the following ways in the short run?\nNominal\nInterest Rate Aggregate Demand",
+    "text": "A contraction in the money supply will most likely change the nominal interest rate and aggregate demand in which of the following ways in the short run?",
     "options": {
       "A": "Increase Decrease",
       "B": "Increase Increase",
@@ -2419,7 +2447,35 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Nominal Interest Rate",
+        "Aggregate Demand"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Increase",
+          "Increase"
+        ],
+        "C": [
+          "Increase",
+          "Not change"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "Decrease",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q06",
@@ -4042,7 +4098,35 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Net Exports",
+        "Aggregate Demand"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Decrease"
+        ],
+        "B": [
+          "Decrease",
+          "No change"
+        ],
+        "C": [
+          "Increase",
+          "Increase"
+        ],
+        "D": [
+          "Increase",
+          "Decrease"
+        ],
+        "E": [
+          "Increase",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q53",
@@ -6671,7 +6755,35 @@
     "skills": [
       "calculate"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Simple Spending Multiplier",
+        "MPS"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "No change",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q04",
@@ -7010,7 +7122,35 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Interest Rate",
+        "Canadian Dollar"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Appreciate"
+        ],
+        "B": [
+          "Increase",
+          "Depreciate"
+        ],
+        "C": [
+          "Decrease",
+          "Depreciate"
+        ],
+        "D": [
+          "No change",
+          "Depreciate"
+        ],
+        "E": [
+          "Decrease",
+          "Appreciate"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q13",
@@ -7153,7 +7293,41 @@
       "calculate",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Required Reserves",
+        "Excess Reserves",
+        "Total Money Supply"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Decrease",
+          "Decrease"
+        ],
+        "B": [
+          "Decrease",
+          "Decrease",
+          "Decrease"
+        ],
+        "C": [
+          "No Change",
+          "Decrease",
+          "No Change"
+        ],
+        "D": [
+          "Increase",
+          "No change",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Increase",
+          "Increase."
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q17",
@@ -7953,7 +8127,7 @@
   {
     "question_id": "2016_Q40",
     "year": "2016",
-    "text": "Assume that the government finances its spending by borrowing from the public. If the government increases deficit spending, the price of previously issued bonds and the real interest rate will change in which of the following ways?\nPrice of Bonds Real Interest Rate",
+    "text": "Assume that the government finances its spending by borrowing from the public. If the government increases deficit spending, the price of previously issued bonds and the real interest rate will change in which of the following ways?",
     "options": {
       "A": "Decrease Decrease",
       "B": "Decrease Increase",
@@ -7982,7 +8156,35 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price of Bonds",
+        "Real Interest Rate"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Decrease"
+        ],
+        "B": [
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Increase",
+          "Decrease"
+        ],
+        "D": [
+          "Increase",
+          "No change"
+        ],
+        "E": [
+          "Increase",
+          "Increase."
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q41",
@@ -8538,7 +8740,35 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Supply of Currency",
+        "Exchange Rate"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Depreciate"
+        ],
+        "B": [
+          "Increase",
+          "Appreciate"
+        ],
+        "C": [
+          "No change",
+          "Appreciate"
+        ],
+        "D": [
+          "Decrease",
+          "Depreciate"
+        ],
+        "E": [
+          "Decrease",
+          "Appreciate"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q56",
@@ -9324,7 +9554,7 @@
   {
     "question_id": "2017_Q16",
     "year": 2017,
-    "text": "If government spending increases and at the same time a country’s central bank sells bonds in the open market, the interest rate and private investment in plant and equipment (P&E) will most likely change in which of the following ways?\nInterest Rate\nPrivate\nInvestment\n in P&E",
+    "text": "If government spending increases and at the same time a country’s central bank sells bonds in the open market, the interest rate and private investment in plant and equipment (P&E) will most likely change in which of the following ways?",
     "options": {
       "A": "Increase",
       "B": "Increase",
@@ -9348,7 +9578,35 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Interest Rate",
+        "Private Investment in P&E"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          ""
+        ],
+        "B": [
+          "Increase",
+          ""
+        ],
+        "C": [
+          "Increase",
+          ""
+        ],
+        "D": [
+          "No change",
+          ""
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q17",
@@ -11302,7 +11560,7 @@
   {
     "question_id": "2018_Q17",
     "year": "2018",
-    "text": "An increase in government spending financed by increased borrowing will most likely change the real interest rate and the gross private domestic investment in which of the following ways?\nReal\nGross Private\nInterest Rate Domestic Investment",
+    "text": "An increase in government spending financed by increased borrowing will most likely change the real interest rate and the gross private domestic investment in which of the following ways?",
     "options": {
       "A": "No change No change",
       "B": "Decrease Increase",
@@ -11330,7 +11588,35 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Real Interest Rate",
+        "Gross Private Domestic Investment"
+      ],
+      "rows": {
+        "A": [
+          "No change",
+          "No change"
+        ],
+        "B": [
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Increase",
+          "Decrease"
+        ],
+        "E": [
+          "Increase",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q18",
@@ -12086,7 +12372,7 @@
   {
     "question_id": "2018_Q40",
     "year": "2018",
-    "text": "If an automobile was manufactured in 2006 and sold to a consumer in 2007, what was the effect on gross domestic product in 2006 and 2007?\n2006",
+    "text": "If an automobile was manufactured in 2006 and sold to a consumer in 2007, what was the effect on gross domestic product in 2006 and 2007?",
     "options": {
       "A": "No change",
       "B": "Decrease",
@@ -12113,7 +12399,35 @@
       "analyze",
       "explain"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "2006",
+        "2007"
+      ],
+      "rows": {
+        "A": [
+          "No change",
+          ""
+        ],
+        "B": [
+          "Decrease",
+          ""
+        ],
+        "C": [
+          "Increase",
+          ""
+        ],
+        "D": [
+          "Increase",
+          ""
+        ],
+        "E": [
+          "Decrease",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q41",
@@ -13161,7 +13475,35 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Short Run",
+        "Long Run"
+      ],
+      "rows": {
+        "A": [
+          "Falls",
+          "Falls"
+        ],
+        "B": [
+          "Rises",
+          "Rises"
+        ],
+        "C": [
+          "No change",
+          "Remains at the natural rate"
+        ],
+        "D": [
+          "Rises above the natural rate",
+          "Falls back to the natural rate"
+        ],
+        "E": [
+          "Falls below the natural rate",
+          "Rises back to the natural rate"
+        ]
+      }
+    }
   },
   {
     "question_id": "2019_Q13",
@@ -13718,7 +14060,7 @@
   {
     "question_id": "2019_Q29",
     "year": "2019",
-    "text": "Country X has a budget deficit. Which of the following changes in government budget outlays and tax revenues will result in a decrease in\nCountry X’s government budget deficit?\nGovernment Outlays Tax Revenues",
+    "text": "Country X has a budget deficit. Which of the following changes in government budget outlays and tax revenues will result in a decrease in Country X’s government budget deficit?",
     "options": {
       "A": "Fall by $100 million / Fall by $600 million",
       "B": "Fall by $200 million / Fall by $200 million",
