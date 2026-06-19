@@ -15334,7 +15334,7 @@
     "secondary_units": [],
     "topics": [],
     "difficulty": "Medium",
-    "has_graph": false,
+    "has_graph": true,
     "image_paths": [],
     "source": "AP Macro 2022 Exam (Practice Set 1)",
     "pure_unit": true,
@@ -15345,7 +15345,7 @@
       "identify",
       "evaluate"
     ],
-    "requires_graph": false,
+    "requires_graph": true,
     "option_table_data": null
   },
   {
@@ -15408,7 +15408,7 @@
   {
     "question_id": "2023_Q063",
     "year": 2023,
-    "text": "If government spending increases and at the same time a country’s central bank conducts monetary policy to increase its policy rate, the interest rate and private investment in plant and equipment (P&E) will most likely change in which of the following ways? Interest Rate Private Investment in P&E",
+    "text": "If government spending increases and at the same time a country's central bank conducts monetary policy to increase its policy rate, the interest rate and private investment in plant and equipment (P&E) will most likely change in which of the following ways?",
     "options": {
       "A": "Increase Increase",
       "B": "Increase Decrease",
@@ -15433,7 +15433,34 @@
       "evaluate"
     ],
     "requires_graph": false,
-    "option_table_data": null
+    "option_table_data": {
+      "headers": [
+        "Interest Rate",
+        "Private Investment in P&E"
+      ],
+      "options": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "No change"
+        ],
+        "D": [
+          "No change",
+          "Decrease"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2023_Q064",
@@ -15503,7 +15530,7 @@
     "year": 2023,
     "text": "For a country whose banking system has limited reserves, an open-market operation by the country’s central bank to reduce the unemployment rate would be to",
     "options": {
-      "A": ". sell bonds to decrease the interest rate and to increase aggregate demand",
+      "A": "Sell bonds to decrease the interest rate and to increase aggregate demand",
       "B": "sell bonds to increase the interest rate and to decrease aggregate demand",
       "C": "sell bonds to increase the interest rate and to increase investment",
       "D": "buy bonds to decrease the interest rate and to decrease aggregate demand",
@@ -15561,7 +15588,7 @@
   {
     "question_id": "2023_Q067",
     "year": 2023,
-    "text": "Assume that the United States central bank conducts monetary policy with the goal of increasing the federal funds rate. How will the increase in the federal funds rate affect the value of the United States dollar on the foreign exchange market and United States exports? Value of the Dollar Exports",
+    "text": "Assume that the United States central bank conducts monetary policy with the goal of increasing the federal funds rate. How will the increase in the federal funds rate affect the value of the United States dollar on the foreign exchange market and United States exports?",
     "options": {
       "A": "Increase Decrease",
       "B": "No change Decrease",
@@ -15586,7 +15613,34 @@
       "evaluate"
     ],
     "requires_graph": false,
-    "option_table_data": null
+    "option_table_data": {
+      "headers": [
+        "Value of the Dollar",
+        "Exports"
+      ],
+      "options": {
+        "A": [
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "No change",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Increase",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2023_Q068",
