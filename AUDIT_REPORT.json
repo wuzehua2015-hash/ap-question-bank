@@ -1,0 +1,382 @@
+{
+  "total": 414,
+  "pollution": [
+    {
+      "id": "2014_Q17",
+      "field": "text",
+      "type": "Next Q table leak (SRAS/AD)",
+      "severity": "CRITICAL",
+      "autoFixable": false,
+      "snippet": "The graph above shows two aggregate demand curves, AD1 and AD2, and an aggregate"
+    },
+    {
+      "id": "2015_Q56",
+      "field": "option E",
+      "type": "Unusually long option (possible mixed content)",
+      "severity": "MEDIUM",
+      "autoFixable": false,
+      "snippet": "Allow policymakers to prescribe public works programs during inflationary period..."
+    },
+    {
+      "id": "2016_Q32",
+      "field": "option A",
+      "type": "Next Q table leak (SRAS/AD)",
+      "severity": "CRITICAL",
+      "autoFixable": false,
+      "snippet": "SRAS 1 to SRAS2"
+    },
+    {
+      "id": "2016_Q32",
+      "field": "option B",
+      "type": "Next Q table leak (SRAS/AD)",
+      "severity": "CRITICAL",
+      "autoFixable": false,
+      "snippet": "SRAS 2 to SRAS1"
+    },
+    {
+      "id": "2016_Q32",
+      "field": "option C",
+      "type": "Next Q table leak (SRAS/AD)",
+      "severity": "CRITICAL",
+      "autoFixable": false,
+      "snippet": "AD 1 to AD2"
+    },
+    {
+      "id": "2016_Q32",
+      "field": "option D",
+      "type": "Next Q table leak (SRAS/AD)",
+      "severity": "CRITICAL",
+      "autoFixable": false,
+      "snippet": "AD 2 to AD1"
+    }
+  ],
+  "unitCheck": [
+    {
+      "id": "2012_Q24",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "monetary policy",
+        "discount rate"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2012_Q31",
+      "current": "U6",
+      "suggested": "U4",
+      "keywords": [
+        "money supply",
+        "nominal interest rate"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2012_Q48",
+      "current": "U6",
+      "suggested": "U4",
+      "keywords": [
+        "money supply",
+        "real interest rate"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2012_Q51",
+      "current": "U6",
+      "suggested": "U3",
+      "keywords": [
+        "aggregate demand",
+        "aggregate supply"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U3"
+    },
+    {
+      "id": "2012_Q53",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "money supply",
+        "federal reserve"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2014_Q37",
+      "current": "U6",
+      "suggested": "U4",
+      "keywords": [
+        "reserve ratio",
+        "real interest rate"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2014_Q46",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "federal reserve",
+        "open market",
+        "discount rate",
+        "reserve ratio"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2014_Q59",
+      "current": "U6",
+      "suggested": "U3",
+      "keywords": [
+        "aggregate demand",
+        "aggregate supply"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U3"
+    },
+    {
+      "id": "2015_Q29",
+      "current": "U6",
+      "suggested": "U4",
+      "keywords": [
+        "central bank",
+        "monetary policy"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2016_Q14",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "monetary policy",
+        "open market",
+        "discount rate",
+        "reserve ratio"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2016_Q52",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "central bank",
+        "reserve ratio"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2017_Q06",
+      "current": "U5",
+      "suggested": "U3",
+      "keywords": [
+        "aggregate demand",
+        "aggregate supply"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U3"
+    },
+    {
+      "id": "2017_Q16",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "central bank",
+        "open market"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2017_Q18",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "nominal interest rate",
+        "real interest rate"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2017_Q29",
+      "current": "U5",
+      "suggested": "U4",
+      "keywords": [
+        "central bank",
+        "real interest rate"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2017_Q39",
+      "current": "U6",
+      "suggested": "U4",
+      "keywords": [
+        "central bank",
+        "open market"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2017_Q55",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "central bank",
+        "money supply"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2017_Q57",
+      "current": "U3",
+      "suggested": "U5",
+      "keywords": [
+        "human capital",
+        "long-run phillips"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U5"
+    },
+    {
+      "id": "2017_Q60",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "central bank",
+        "money supply",
+        "open market"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2018_Q04",
+      "current": "U4",
+      "suggested": "U3",
+      "keywords": [
+        "aggregate demand",
+        "fiscal policy"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U3"
+    },
+    {
+      "id": "2018_Q12",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "money supply",
+        "discount rate",
+        "reserve ratio"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2018_Q49",
+      "current": "U6",
+      "suggested": "U4",
+      "keywords": [
+        "central bank",
+        "money supply"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2018_Q54",
+      "current": "U4",
+      "suggested": "U3",
+      "keywords": [
+        "aggregate demand",
+        "short-run phillips"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U3"
+    },
+    {
+      "id": "2019_Q02",
+      "current": "U3",
+      "suggested": "U5",
+      "keywords": [
+        "economic growth",
+        "human capital"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U5"
+    },
+    {
+      "id": "2019_Q17",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "discount rate",
+        "reserve ratio"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2019_Q21",
+      "current": "U5",
+      "suggested": "U3",
+      "keywords": [
+        "aggregate demand",
+        "aggregate supply"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U3"
+    },
+    {
+      "id": "2019_Q35",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "central bank",
+        "money supply"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2019_Q56",
+      "current": "U3",
+      "suggested": "U4",
+      "keywords": [
+        "central bank",
+        "open market"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    },
+    {
+      "id": "2019_Q58",
+      "current": "U6",
+      "suggested": "U4",
+      "keywords": [
+        "money supply",
+        "real interest rate"
+      ],
+      "confidence": "MEDIUM",
+      "reason": "Multiple strong keywords for U4"
+    }
+  ],
+  "images": [],
+  "autoFixed": 0
+}
