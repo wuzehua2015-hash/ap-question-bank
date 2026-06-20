@@ -22,4 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-temp_table_pages/
+# Raw PDFs and test reports
+scripts/raw_pdfs/
+SMOKE_TEST_REPORT.md
+AUDIT_REPORT.json
+AUDIT_REPORT.md
