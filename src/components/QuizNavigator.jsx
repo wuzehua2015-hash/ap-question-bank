@@ -6,7 +6,7 @@ function QuizNavigator({ questions, current, answers, phase, onJump }) {
       <div className="text-sm text-text-muted mb-2">
         {isSubmitted ? '点击题号跳转查看' : '点击题号跳转做题'}
       </div>
-      <div className="grid grid-cols-10 gap-1">
+      <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5 sm:gap-1">
         {questions.map((q, i) => {
           const answered = answers[q.question_id] !== undefined
           const isCurrent = i === current

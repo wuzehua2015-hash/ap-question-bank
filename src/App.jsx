@@ -9,6 +9,10 @@ import FRQPlayer from './pages/FRQPlayer'
 import FRQScorePage from './pages/FRQScorePage'
 import ScorePage from './pages/ScorePage'
 
+import SearchPage from './pages/SearchPage'
+import MistakeBook from './pages/MistakeBook'
+import HistoryPage from './pages/HistoryPage'
+
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -21,6 +25,9 @@ function App() {
           <Route path="/play" element={<QuizPlayer />} />
           <Route path="/frq" element={<FRQPlayer />} />
           <Route path="/frq-score" element={<FRQScorePage />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/mistakes" element={<MistakeBook />} />
+          <Route path="/history" element={<HistoryPage />} />
           <Route path="/score" element={<ScorePage />} />
         </Routes>
       </main>

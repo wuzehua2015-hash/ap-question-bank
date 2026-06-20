@@ -86,7 +86,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
                 key={key}
                 onClick={() => !isSubmitted && onSelect(key)}
                 disabled={isSubmitted}
-                className={`option-btn ${
+                className={`option-btn text-base sm:text-sm min-h-[48px] ${
                   showCorrect ? 'correct' :
                   showIncorrect ? 'incorrect' :
                   isSelected ? 'selected' : ''

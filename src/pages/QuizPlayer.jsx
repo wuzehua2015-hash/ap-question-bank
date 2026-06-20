@@ -36,9 +36,32 @@ function QuizPlayer() {
   const submitQuiz = () => {
     if (!allAnswered) return
     let correct = 0
+    const wrongIds = []
     quiz.forEach(q => {
-      if (answers[q.question_id] === q.answer) correct++
+      const isCorrect = answers[q.question_id] === q.answer
+      if (isCorrect) correct++
+      else wrongIds.push(q.question_id)
+
+      // 记录每道题的详细历史
+      const historyKey = 'questionHistory'
+      const allHistory = JSON.parse(localStorage.getItem(historyKey) || '{}')
+      if (!allHistory[q.question_id]) {
+        allHistory[q.question_id] = { attempts: [], correct_count: 0, wrong_count: 0 }
+      }
+      const rec = allHistory[q.question_id]
+      rec.attempts.push({
+        date: new Date().toISOString(),
+        correct: isCorrect,
+        selected: answers[q.question_id],
+        answer: q.answer,
+      })
+      if (isCorrect) rec.correct_count++
+      else rec.wrong_count++
+      // 只保留最近20次记录
+      rec.attempts = rec.attempts.slice(-20)
+      localStorage.setItem(historyKey, JSON.stringify(allHistory))
     })
+
     setScore(correct)
     setPhase('submitted')
 
@@ -49,6 +72,11 @@ function QuizPlayer() {
     const doneIds = new Set(JSON.parse(localStorage.getItem('doneQuestions') || '[]'))
     quiz.forEach(q => doneIds.add(q.question_id))
     localStorage.setItem('doneQuestions', JSON.stringify([...doneIds]))
+
+    // 记录错题（去重）
+    const wrongSet = new Set(JSON.parse(localStorage.getItem('wrongQuestions') || '[]'))
+    wrongIds.forEach(id => wrongSet.add(id))
+    localStorage.setItem('wrongQuestions', JSON.stringify([...wrongSet]))
 
     // 记录历史（只记录MCQ部分）
     const history = JSON.parse(localStorage.getItem('quizHistory') || '[]')
@@ -164,20 +192,20 @@ function QuizPlayer() {
       )}
 
       {/* 底部导航：上一题 / 下一题 */}
-      <div className="flex justify-between mt-6 no-print">
+      <div className="flex justify-between mt-6 no-print gap-3">
         <button
           onClick={() => setCurrentIndex(Math.max(0, currentIndex - 1))}
           disabled={currentIndex === 0}
-          className="px-4 py-2 rounded-lg border border-border bg-surface disabled:opacity-30"
+          className="flex-1 sm:flex-none px-4 py-3 rounded-lg border border-border bg-surface disabled:opacity-30 text-sm sm:text-base"
         >
-          上一题
+          ← 上一题
         </button>
         <button
           onClick={() => setCurrentIndex(Math.min(quiz.length - 1, currentIndex + 1))}
           disabled={currentIndex === quiz.length - 1}
-          className="px-4 py-2 rounded-lg border border-border bg-surface disabled:opacity-30"
+          className="flex-1 sm:flex-none px-4 py-3 rounded-lg border border-border bg-surface disabled:opacity-30 text-sm sm:text-base"
         >
-          下一题
+          下一题 →
         </button>
       </div>
 
