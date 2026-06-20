@@ -6,6 +6,7 @@ import QuizSetup from './pages/QuizSetup'
 import ExamSetup from './pages/ExamSetup'
 import QuizPlayer from './pages/QuizPlayer'
 import FRQPlayer from './pages/FRQPlayer'
+import FRQScorePage from './pages/FRQScorePage'
 import ScorePage from './pages/ScorePage'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/exam" element={<ExamSetup />} />
           <Route path="/play" element={<QuizPlayer />} />
           <Route path="/frq" element={<FRQPlayer />} />
+          <Route path="/frq-score" element={<FRQScorePage />} />
           <Route path="/score" element={<ScorePage />} />
         </Routes>
       </main>

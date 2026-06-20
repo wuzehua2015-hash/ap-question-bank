@@ -17,6 +17,7 @@ function ScorePage() {
     const quizStored = sessionStorage.getItem('currentQuiz')
     const answersStored = sessionStorage.getItem('mcqAnswers')
     const frqStored = sessionStorage.getItem('currentFRQ')
+    const frqScoresStored = sessionStorage.getItem('frqScores')
 
     if (!quizStored || !answersStored) {
       navigate('/')
@@ -26,31 +27,20 @@ function ScorePage() {
     const parsedQuiz = JSON.parse(quizStored)
     const parsedAnswers = JSON.parse(answersStored)
     const parsedFrqs = frqStored ? JSON.parse(frqStored) : []
+    const parsedFrqScores = frqScoresStored ? JSON.parse(frqScoresStored) : {}
 
     setQuiz(parsedQuiz)
     setAnswers(parsedAnswers)
     setFrqs(parsedFrqs)
+    setFrqScores(parsedFrqScores)
 
     let correct = 0
     parsedQuiz.forEach(q => {
       if (parsedAnswers[q.question_id] === q.answer) correct++
     })
     setMcqScore(correct)
-
-    const initialScores = {}
-    parsedFrqs.forEach(frq => {
-      initialScores[frq.question_id] = 0
-    })
-    setFrqScores(initialScores)
     setLoading(false)
   }, [navigate])
-
-  const handleFrqScoreChange = (questionId, value) => {
-    const num = parseInt(value) || 0
-    const max = frqs.find(f => f.question_id === questionId)?.rubric?.total_points || 0
-    const clamped = Math.max(0, Math.min(num, max))
-    setFrqScores(prev => ({ ...prev, [questionId]: clamped }))
-  }
 
   const totalFrqScore = Object.values(frqScores).reduce((a, b) => a + b, 0)
   const totalFrqMax = frqs.reduce((sum, f) => sum + (f.rubric?.total_points || 0), 0)
@@ -80,17 +70,15 @@ function ScorePage() {
     }
   })
 
-  const wrongQuestions = quiz.filter(q => answers[q.question_id] !== q.answer)
-
   const exportPDF = async () => {
     if (!pdfRef.current) return
     setExporting(true)
 
     const element = pdfRef.current
     const opt = {
-      margin: [15, 12, 15, 12],
+      margin: [10, 10, 10, 10],
       filename: `AP-Macro-Mock-Exam-Report-${new Date().toISOString().split('T')[0]}.pdf`,
-      image: { type: 'jpeg', quality: 0.98 },
+      image: { type: 'jpeg', quality: 0.95 },
       html2canvas: {
         scale: 2,
         useCORS: true,
@@ -106,6 +94,7 @@ function ScorePage() {
       pagebreak: {
         mode: ['css', 'legacy'],
         before: '.pdf-page-break',
+        after: '.pdf-page-break-after',
         avoid: '.pdf-avoid-break',
       },
     }
@@ -189,7 +178,7 @@ function ScorePage() {
         <div
           className="pdf-watermark"
           style={{
-            position: 'absolute',
+            position: 'fixed',
             top: 0,
             left: 0,
             width: '100%',
@@ -210,32 +199,32 @@ function ScorePage() {
         />
 
         {/* 封面页 */}
-        <div className="pdf-page-break" style={{ position: 'relative', zIndex: 1, padding: '40px 30px' }}>
+        <div style={{ position: 'relative', zIndex: 1, padding: '30px 20px' }}>
           {/* 页眉 */}
           <div style={{
             borderBottom: '2px solid #1e40af',
-            paddingBottom: '16px',
-            marginBottom: '40px',
+            paddingBottom: '12px',
+            marginBottom: '30px',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
             <div>
-              <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#1e40af' }}>翎英教育</div>
-              <div style={{ fontSize: '12px', color: '#6b7280', marginTop: '2px' }}>LynkEdu Education</div>
+              <div style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e40af' }}>翎英教育</div>
+              <div style={{ fontSize: '11px', color: '#6b7280', marginTop: '2px' }}>LynkEdu Education</div>
             </div>
-            <div style={{ fontSize: '11px', color: '#9ca3af', textAlign: 'right' }}>
+            <div style={{ fontSize: '10px', color: '#9ca3af', textAlign: 'right' }}>
               <div>AP Macroeconomics</div>
               <div>{new Date().toLocaleDateString('zh-CN')}</div>
             </div>
           </div>
 
           {/* 标题 */}
-          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#1f2937', marginBottom: '8px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '36px' }}>
+            <div style={{ fontSize: '26px', fontWeight: 'bold', color: '#1f2937', marginBottom: '6px' }}>
               Mock Exam 成绩单
             </div>
-            <div style={{ fontSize: '14px', color: '#6b7280' }}>
+            <div style={{ fontSize: '13px', color: '#6b7280' }}>
               AP Macroeconomics Practice Examination Report
             </div>
           </div>
@@ -247,78 +236,81 @@ function ScorePage() {
               : apScore >= 3
               ? 'linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)'
               : 'linear-gradient(135deg, #fee2e2 0%, #fecaca 100%)',
-            borderRadius: '16px',
-            padding: '32px',
+            borderRadius: '14px',
+            padding: '28px',
             textAlign: 'center',
-            marginBottom: '32px',
+            marginBottom: '28px',
             border: `3px solid ${apScore >= 4 ? '#10b981' : apScore >= 3 ? '#f59e0b' : '#ef4444'}`,
           }}>
-            <div style={{ fontSize: '14px', color: '#4b5563', marginBottom: '8px' }}>预估 AP 分数</div>
-            <div style={{ fontSize: '64px', fontWeight: 'bold', color: '#1f2937', lineHeight: 1 }}>
+            <div style={{ fontSize: '13px', color: '#4b5563', marginBottom: '6px' }}>预估 AP 分数</div>
+            <div style={{ fontSize: '56px', fontWeight: 'bold', color: '#1f2937', lineHeight: 1 }}>
               {apScore}
             </div>
-            <div style={{ fontSize: '14px', color: '#6b7280', marginTop: '8px' }}>
+            <div style={{ fontSize: '13px', color: '#6b7280', marginTop: '6px' }}>
               {apScore >= 5 ? 'Extremely Well Qualified' :
                apScore >= 4 ? 'Well Qualified' :
                apScore >= 3 ? 'Qualified' :
                apScore >= 2 ? 'Possibly Qualified' : 'No Recommendation'}
             </div>
-            <div style={{ fontSize: '13px', color: '#6b7280', marginTop: '12px' }}>
+            <div style={{ fontSize: '12px', color: '#6b7280', marginTop: '10px' }}>
               原始分 {totalScore} / {totalMax} ({Math.round((totalScore / totalMax) * 100)}%)
             </div>
           </div>
 
           {/* 双栏概览 */}
-          <div style={{ display: 'flex', gap: '16px', marginBottom: '32px' }}>
-            <div style={{ flex: 1, background: '#f3f4f6', borderRadius: '12px', padding: '20px' }}>
-              <div style={{ fontSize: '12px', color: '#6b7280', marginBottom: '4px' }}>Section I</div>
-              <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1e40af' }}>{mcqScore} / 60</div>
-              <div style={{ fontSize: '12px', color: '#9ca3af' }}>Multiple Choice</div>
-              <div style={{ fontSize: '13px', color: '#4b5563', marginTop: '8px' }}>
+          <div style={{ display: 'flex', gap: '14px', marginBottom: '28px' }}>
+            <div style={{ flex: 1, background: '#f3f4f6', borderRadius: '10px', padding: '18px' }}>
+              <div style={{ fontSize: '11px', color: '#6b7280', marginBottom: '4px' }}>Section I</div>
+              <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#1e40af' }}>{mcqScore} / 60</div>
+              <div style={{ fontSize: '11px', color: '#9ca3af' }}>Multiple Choice</div>
+              <div style={{ fontSize: '12px', color: '#4b5563', marginTop: '6px' }}>
                 {Math.round((mcqScore / 60) * 100)}% 正确率
               </div>
             </div>
-            <div style={{ flex: 1, background: '#f3f4f6', borderRadius: '12px', padding: '20px' }}>
-              <div style={{ fontSize: '12px', color: '#6b7280', marginBottom: '4px' }}>Section II</div>
-              <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1e40af' }}>
+            <div style={{ flex: 1, background: '#f3f4f6', borderRadius: '10px', padding: '18px' }}>
+              <div style={{ fontSize: '11px', color: '#6b7280', marginBottom: '4px' }}>Section II</div>
+              <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#1e40af' }}>
                 {totalFrqScore} / {totalFrqMax}
               </div>
-              <div style={{ fontSize: '12px', color: '#9ca3af' }}>Free Response</div>
-              <div style={{ fontSize: '13px', color: '#4b5563', marginTop: '8px' }}>
+              <div style={{ fontSize: '11px', color: '#9ca3af' }}>Free Response</div>
+              <div style={{ fontSize: '12px', color: '#4b5563', marginTop: '6px' }}>
                 自评得分
               </div>
             </div>
           </div>
 
           {/* 单元分布表 */}
-          <div style={{ marginBottom: '24px' }}>
+          <div style={{ marginBottom: '20px' }}>
             <div style={{
-              fontSize: '16px',
+              fontSize: '15px',
               fontWeight: 'bold',
               color: '#1f2937',
-              marginBottom: '16px',
-              paddingBottom: '8px',
+              marginBottom: '14px',
+              paddingBottom: '6px',
               borderBottom: '2px solid #e5e7eb',
             }}>
               单元正确率分布
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
               {Object.entries(unitStats).sort().map(([unit, stats]) => {
                 const pct = Math.round((stats.correct / stats.total) * 100)
                 return (
-                  <div key={unit} style={{
+                  <div key={unit} className="pdf-avoid-break" style={{
                     background: '#f9fafb',
-                    borderRadius: '10px',
-                    padding: '14px',
+                    borderRadius: '8px',
+                    padding: '12px',
                     borderLeft: `4px solid ${unitColor(unit)}`,
                   }}>
-                    <div style={{ fontSize: '13px', fontWeight: 'bold', color: '#1f2937' }}>
-                      {unit} — {unitName(unit)}
+                    <div style={{ fontSize: '12px', fontWeight: 'bold', color: '#1f2937' }}>
+                      {unit}
                     </div>
-                    <div style={{ fontSize: '22px', fontWeight: 'bold', color: unitColor(unit), marginTop: '4px' }}>
+                    <div style={{ fontSize: '11px', color: '#6b7280', marginBottom: '2px' }}>
+                      {unitName(unit)}
+                    </div>
+                    <div style={{ fontSize: '20px', fontWeight: 'bold', color: unitColor(unit) }}>
                       {pct}%
                     </div>
-                    <div style={{ fontSize: '11px', color: '#9ca3af', marginTop: '2px' }}>
+                    <div style={{ fontSize: '10px', color: '#9ca3af' }}>
                       {stats.correct} / {stats.total} 正确
                     </div>
                   </div>
@@ -328,38 +320,39 @@ function ScorePage() {
           </div>
         </div>
 
-        {/* MCQ 错题页 */}
-        {wrongQuestions.length > 0 && (
-          <div className="pdf-page-break" style={{ position: 'relative', zIndex: 1, padding: '40px 30px' }}>
-            <div style={{
-              borderBottom: '2px solid #1e40af',
-              paddingBottom: '16px',
-              marginBottom: '24px',
-            }}>
-              <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#1f2937' }}>
-                Section I: 错题分析
-              </div>
-              <div style={{ fontSize: '12px', color: '#9ca3af', marginTop: '4px' }}>
-                {wrongQuestions.length} 道错题 / {quiz.length} 道总题
-              </div>
+        {/* MCQ 全部题目页 */}
+        <div className="pdf-page-break" style={{ position: 'relative', zIndex: 1, padding: '30px 20px' }}>
+          <div style={{
+            borderBottom: '2px solid #1e40af',
+            paddingBottom: '12px',
+            marginBottom: '20px',
+          }}>
+            <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#1f2937' }}>
+              Section I: 全部 MCQ 题目回顾
             </div>
+            <div style={{ fontSize: '11px', color: '#9ca3af', marginTop: '4px' }}>
+              {mcqScore} 正确 / {quiz.length} 总题
+            </div>
+          </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              {wrongQuestions.map((q, idx) => (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            {quiz.map((q, idx) => {
+              const isCorrect = answers[q.question_id] === q.answer
+              return (
                 <div key={q.question_id} className="pdf-avoid-break" style={{
-                  background: '#fef2f2',
-                  borderRadius: '10px',
-                  padding: '16px',
-                  border: '1px solid #fecaca',
+                  background: isCorrect ? '#f0fdf4' : '#fef2f2',
+                  borderRadius: '8px',
+                  padding: '12px',
+                  border: `1px solid ${isCorrect ? '#bbf7d0' : '#fecaca'}`,
                 }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <span style={{ fontSize: '13px', fontWeight: 'bold', color: '#1f2937' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 'bold', color: '#1f2937' }}>
                       #{idx + 1} {q.question_id}
                     </span>
                     <span style={{
-                      fontSize: '11px',
-                      padding: '2px 8px',
-                      borderRadius: '12px',
+                      fontSize: '10px',
+                      padding: '2px 6px',
+                      borderRadius: '10px',
                       background: unitColor(q.primary_unit) + '20',
                       color: unitColor(q.primary_unit),
                       fontWeight: '500',
@@ -367,53 +360,76 @@ function ScorePage() {
                       {q.primary_unit}
                     </span>
                   </div>
-                  <p style={{ fontSize: '12px', color: '#4b5563', marginBottom: '8px', lineHeight: 1.5 }}>
+                  <p style={{ fontSize: '11px', color: '#4b5563', marginBottom: '6px', lineHeight: 1.4 }}>
                     {q.text}
                   </p>
-                  <div style={{ fontSize: '12px', display: 'flex', gap: '16px' }}>
-                    <span style={{ color: '#dc2626' }}>
-                      <strong>你的答案:</strong> {answers[q.question_id]}
+                  {/* 选项 */}
+                  {q.option_table_data ? (
+                    <div style={{ fontSize: '10px', color: '#6b7280', marginBottom: '4px' }}>
+                      [表格选项题]
+                    </div>
+                  ) : (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
+                      {Object.entries(q.options).map(([key, val]) => (
+                        <span key={key} style={{
+                          fontSize: '10px',
+                          padding: '2px 6px',
+                          borderRadius: '4px',
+                          background: key === q.answer ? '#dcfce7' : key === answers[q.question_id] && !isCorrect ? '#fee2e2' : '#f3f4f6',
+                          color: key === q.answer ? '#166534' : key === answers[q.question_id] && !isCorrect ? '#991b1b' : '#4b5563',
+                          border: `1px solid ${key === q.answer ? '#86efac' : key === answers[q.question_id] && !isCorrect ? '#fca5a5' : '#e5e7eb'}`,
+                        }}>
+                          {key}: {val.substring(0, 60)}{val.length > 60 ? '...' : ''}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  <div style={{ fontSize: '11px', display: 'flex', gap: '12px' }}>
+                    <span style={{ color: isCorrect ? '#16a34a' : '#dc2626', fontWeight: 'bold' }}>
+                      {isCorrect ? '✓ 正确' : '✗ 错误'}
                     </span>
-                    <span style={{ color: '#16a34a' }}>
-                      <strong>正确答案:</strong> {q.answer}
-                    </span>
+                    {!isCorrect && (
+                      <span style={{ color: '#dc2626' }}>
+                        你的答案: {answers[q.question_id]} | 正确答案: {q.answer}
+                      </span>
+                    )}
                   </div>
                 </div>
-              ))}
-            </div>
+              )
+            })}
           </div>
-        )}
+        </div>
 
         {/* FRQ 页 */}
         {frqs.length > 0 && (
-          <div className="pdf-page-break" style={{ position: 'relative', zIndex: 1, padding: '40px 30px' }}>
+          <div className="pdf-page-break" style={{ position: 'relative', zIndex: 1, padding: '30px 20px' }}>
             <div style={{
               borderBottom: '2px solid #1e40af',
-              paddingBottom: '16px',
-              marginBottom: '24px',
+              paddingBottom: '12px',
+              marginBottom: '20px',
             }}>
-              <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#1f2937' }}>
-                Section II: Free Response 评分
+              <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#1f2937' }}>
+                Section II: Free Response 回顾
               </div>
-              <div style={{ fontSize: '12px', color: '#9ca3af', marginTop: '4px' }}>
+              <div style={{ fontSize: '11px', color: '#9ca3af', marginTop: '4px' }}>
                 自评得分 {totalFrqScore} / {totalFrqMax}
               </div>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {frqs.map((frq, idx) => (
                 <div key={frq.question_id} className="pdf-avoid-break" style={{
                   background: '#f9fafb',
-                  borderRadius: '10px',
-                  padding: '20px',
+                  borderRadius: '8px',
+                  padding: '16px',
                   border: '1px solid #e5e7eb',
                 }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                    <div style={{ fontSize: '14px', fontWeight: 'bold', color: '#1f2937' }}>
-                      FRQ {frq.question_number} — {frq.year} Released Exam
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                    <div style={{ fontSize: '13px', fontWeight: 'bold', color: '#1f2937' }}>
+                      FRQ {frq.question_number}
                     </div>
                     <div style={{
-                      fontSize: '18px',
+                      fontSize: '16px',
                       fontWeight: 'bold',
                       color: '#1e40af',
                     }}>
@@ -421,27 +437,27 @@ function ScorePage() {
                     </div>
                   </div>
 
-                  <p style={{ fontSize: '12px', color: '#4b5563', marginBottom: '12px', lineHeight: 1.5 }}>
-                    {frq.text.split('\n')[0]}
+                  <p style={{ fontSize: '11px', color: '#4b5563', marginBottom: '10px', lineHeight: 1.4 }}>
+                    {frq.text}
                   </p>
 
-                  <div style={{ fontSize: '12px', fontWeight: 'bold', color: '#6b7280', marginBottom: '8px' }}>
-                    评分标准 (Rubric)
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#6b7280', marginBottom: '6px' }}>
+                    评分标准
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                     {frq.rubric?.points?.map((point, pidx) => (
                       <div key={pidx} style={{
-                        padding: '8px 10px',
+                        padding: '6px 8px',
                         background: '#fff',
-                        borderRadius: '6px',
+                        borderRadius: '4px',
                         borderLeft: '3px solid #d1d5db',
-                        fontSize: '11px',
+                        fontSize: '10px',
                         color: '#4b5563',
-                        lineHeight: 1.4,
+                        lineHeight: 1.3,
                       }}>
                         <span style={{ fontWeight: 'bold', color: '#1f2937' }}>{point.point_id}</span>
                         <span style={{ color: '#9ca3af', marginLeft: '4px' }}>({point.value} 分)</span>
-                        <span style={{ marginLeft: '8px' }}>{point.description}</span>
+                        <span style={{ marginLeft: '6px' }}>{point.description}</span>
                       </div>
                     ))}
                   </div>
@@ -455,15 +471,15 @@ function ScorePage() {
         <div style={{
           position: 'relative',
           zIndex: 1,
-          padding: '24px 30px',
+          padding: '20px 20px',
           textAlign: 'center',
           borderTop: '1px solid #e5e7eb',
-          marginTop: '24px',
+          marginTop: '20px',
         }}>
-          <div style={{ fontSize: '11px', color: '#9ca3af' }}>
+          <div style={{ fontSize: '10px', color: '#9ca3af' }}>
             翎英教育 LynkEdu · AP Macroeconomics Mock Exam Report
           </div>
-          <div style={{ fontSize: '10px', color: '#d1d5db', marginTop: '4px' }}>
+          <div style={{ fontSize: '9px', color: '#d1d5db', marginTop: '2px' }}>
             Generated on {new Date().toLocaleString('zh-CN')} · For practice purposes only
           </div>
         </div>

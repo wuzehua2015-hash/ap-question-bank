@@ -32,8 +32,8 @@ function FRQPlayer() {
   const allAcknowledged = frqs.length > 0 && acknowledged.slice(0, frqs.length).every(Boolean)
 
   const finishFRQ = () => {
-    // 进入成绩页面
-    navigate('/score')
+    // 进入 FRQ 评分页面（展示 rubric，学生自评）
+    navigate('/frq-score')
   }
 
   const currentFRQ = frqs[currentIndex]
@@ -72,13 +72,10 @@ function FRQPlayer() {
       {/* FRQ 题目卡片 */}
       {currentFRQ && (
         <div className="bg-surface rounded-xl shadow-sm border border-border p-6 mb-6">
-          {/* 题号和来源 */}
-          <div className="flex justify-between items-center mb-4 pb-3 border-b border-border">
-            <div>
-              <span className="text-lg font-bold text-brand">FRQ {currentFRQ.question_number}</span>
-              <span className="text-sm text-text-muted ml-2">({currentFRQ.rubric?.total_points || '?'} 分)</span>
-            </div>
-            <span className="text-sm text-text-muted">{currentFRQ.year} Released Exam</span>
+          {/* 题号 */}
+          <div className="flex items-center mb-4 pb-3 border-b border-border">
+            <span className="text-lg font-bold text-brand">FRQ {currentFRQ.question_number}</span>
+            <span className="text-sm text-text-muted ml-2">({currentFRQ.rubric?.total_points || '?'} 分)</span>
           </div>
 
           {/* 题目文本 */}
@@ -87,22 +84,6 @@ function FRQPlayer() {
               {currentFRQ.text}
             </div>
           </div>
-
-          {/* Rubric 预览（折叠） */}
-          <details className="mt-4 bg-gray-50 rounded-lg p-4">
-            <summary className="font-semibold text-sm cursor-pointer text-text-muted hover:text-text">
-              查看评分标准（Rubric）
-            </summary>
-            <div className="mt-3 space-y-2">
-              {currentFRQ.rubric?.points?.map((point, idx) => (
-                <div key={idx} className="text-sm pl-2 border-l-2 border-border">
-                  <span className="font-medium text-brand">{point.point_id}</span>
-                  <span className="text-text-muted ml-2">({point.value} 分)</span>
-                  <p className="text-text mt-1">{point.description}</p>
-                </div>
-              ))}
-            </div>
-          </details>
 
           {/* 完成标记 */}
           <div className="mt-6 pt-4 border-t border-border">
