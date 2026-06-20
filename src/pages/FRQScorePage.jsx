@@ -1,6 +1,37 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+/**
+ * 将文本中的数学符号标记转换为 HTML 标签。
+ * 例如：P L sub one → PL<sub>1</sub>，Y sub 2 → Y<sub>2</sub>
+ */
+function formatMathText(text) {
+  if (!text) return ''
+  let t = text
+  // 合并全大写缩写（A D → AD, P L → PL, S R A S → SRAS, L R A S → LRAS）
+  t = t.replace(/\b([A-Z]) ([A-Z]) ([A-Z]) ([A-Z]) ([A-Z])\b/g, '$1$2$3$4$5')
+  t = t.replace(/\b([A-Z]) ([A-Z]) ([A-Z]) ([A-Z])\b/g, '$1$2$3$4')
+  t = t.replace(/\b([A-Z]) ([A-Z]) ([A-Z])\b/g, '$1$2$3')
+  t = t.replace(/\b([A-Z]) ([A-Z])\b/g, '$1$2')
+  // 下标（sub one → sub 1，sub two → sub 2）
+  t = t.replace(/\bsub one\b/g, '<sub>1</sub>')
+  t = t.replace(/\bsub two\b/g, '<sub>2</sub>')
+  t = t.replace(/\bsub three\b/g, '<sub>3</sub>')
+  t = t.replace(/\bsub (\d+)\b/g, '<sub>$1</sub>')
+  t = t.replace(/\bsub f\b/g, '<sub>f</sub>')
+  // 上标
+  t = t.replace(/\bsup (\d+)\b/g, '<sup>$1</sup>')
+  // 清理多余符号
+  t = t.replace(/•\s*•\s*•\s*•\s*•/g, '...')
+  t = t.replace(/·\s*·\s*·/g, '...')
+  return t
+}
+
+function MathText({ text }) {
+  const html = formatMathText(text)
+  return <span dangerouslySetInnerHTML={{ __html: html }} />
+}
+
 function FRQScorePage() {
   const navigate = useNavigate()
   const [frqs, setFrqs] = useState([])
@@ -80,24 +111,26 @@ function FRQScorePage() {
 
             {/* 题目文本 */}
             <div className="mb-6">
-              <div className="whitespace-pre-wrap text-text leading-relaxed text-sm bg-gray-50 rounded-lg p-4">
-                {frq.text}
+              <div className="whitespace-pre-wrap text-text leading-relaxed text-base bg-gray-50 rounded-lg p-4">
+                <MathText text={frq.text} />
               </div>
             </div>
 
             {/* 评分标准 — 直接展示，无需下拉 */}
             <div className="bg-blue-50 rounded-lg p-4">
-              <div className="text-sm font-bold text-blue-800 mb-3">评分标准 (Scoring Rubric)</div>
+              <div className="text-base font-bold text-blue-800 mb-3">评分标准 (Scoring Rubric)</div>
               <div className="space-y-2">
                 {frq.rubric?.points?.map((point, pidx) => (
-                  <div key={pidx} className="text-sm pl-3 border-l-2 border-blue-300">
+                  <div key={pidx} className="text-base pl-3 border-l-2 border-blue-300">
                     <span className="font-bold text-blue-700">{point.point_id}</span>
                     <span className="text-blue-500 ml-2">({point.value} 分)</span>
-                    <p className="text-gray-700 mt-1">{point.description}</p>
+                    <p className="text-gray-700 mt-1">
+                      <MathText text={point.description} />
+                    </p>
                     {point.criteria && point.criteria.length > 0 && (
-                      <ul className="list-disc list-inside text-gray-500 mt-1 text-xs">
+                      <ul className="list-disc list-inside text-gray-500 mt-1 text-sm">
                         {point.criteria.map((c, ci) => (
-                          <li key={ci}>{c}</li>
+                          <li key={ci}><MathText text={c} /></li>
                         ))}
                       </ul>
                     )}
