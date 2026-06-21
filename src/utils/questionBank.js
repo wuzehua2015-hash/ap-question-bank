@@ -1,10 +1,11 @@
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
-// Cache: per-subject data + subjects config
+// Cache: per-subject data + subjects config + similarity index
 const cache = {
   subjects: null,
   mcq: {},
-  frq: {}
+  frq: {},
+  similarityIndex: {}
 }
 
 // ────────────────────────────
@@ -62,6 +63,36 @@ export async function loadFRQBank(subjectId = 'macro') {
   if (!res.ok) throw new Error(`Failed to load FRQ bank for ${subjectId}: ${res.status}`)
   cache.frq[subjectId] = await res.json()
   return cache.frq[subjectId]
+}
+
+// ────────────────────────────
+// Similarity Index Loading
+// ────────────────────────────
+
+export async function loadSimilarityIndex(subjectId = 'macro') {
+  if (cache.similarityIndex[subjectId]) return cache.similarityIndex[subjectId]
+  const cfg = await loadSubjectConfig(subjectId)
+  const similarityFile = cfg.similarityIndex || 'similarity_index.json'
+  try {
+    const res = await fetch(`${BASE_URL}data/${similarityFile}`)
+    if (!res.ok) {
+      console.warn(`Similarity index not found for ${subjectId}: ${res.status}`)
+      cache.similarityIndex[subjectId] = {}
+      return {}
+    }
+    cache.similarityIndex[subjectId] = await res.json()
+    return cache.similarityIndex[subjectId]
+  } catch (e) {
+    console.warn(`Failed to load similarity index for ${subjectId}:`, e.message)
+    cache.similarityIndex[subjectId] = {}
+    return {}
+  }
+}
+
+export function getSimilarQuestions(questionId, index, count = 3) {
+  const entry = index[questionId]
+  if (!entry || !entry.overall_top10) return []
+  return entry.overall_top10.slice(0, count)
 }
 
 // ────────────────────────────

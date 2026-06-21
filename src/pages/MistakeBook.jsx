@@ -4,6 +4,7 @@ import { loadMCQBank, UNITS } from '../utils/questionBank'
 import {
   getWrongQuestions, getQuestionHistory, setWrongQuestions
 } from '../utils/storage'
+import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
 
 function MistakeBook() {
   const navigate = useNavigate()
@@ -211,6 +212,11 @@ function MistakeBook() {
                       重新练习
                     </button>
                   </div>
+                  <SimilarQuestionsBlock
+                    questionId={q.question_id}
+                    allQuestions={questions}
+                    count={3}
+                  />
                 </div>
               )}
             </div>

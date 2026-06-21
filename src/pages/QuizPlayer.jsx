@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import QuestionCard from '../components/QuestionCard'
 import QuizNavigator from '../components/QuizNavigator'
-import { UNITS } from '../utils/questionBank'
+import { UNITS, loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
 import {
   getDoneQuestions, setDoneQuestions,
   getWrongQuestions, setWrongQuestions,
@@ -18,6 +18,8 @@ function QuizPlayer() {
   const [phase, setPhase] = useState('loading')
   const [score, setScore] = useState(null)
   const [quizInfo, setQuizInfo] = useState(null)
+  const [similarityIndex, setSimilarityIndex] = useState(null)
+  const [similarityLoading, setSimilarityLoading] = useState(false)
 
   useEffect(() => {
     const stored = sessionStorage.getItem('currentQuiz')
@@ -31,6 +33,23 @@ function QuizPlayer() {
     setQuizInfo(info ? JSON.parse(info) : null)
     setPhase('playing')
   }, [navigate])
+
+  // 提交后加载相似度索引（用于变式推荐）
+  useEffect(() => {
+    if (phase === 'submitted' && !sessionStorage.getItem('currentFRQ')) {
+      async function load() {
+        setSimilarityLoading(true)
+        try {
+          const index = await loadSimilarityIndex()
+          setSimilarityIndex(index)
+        } catch (e) {
+          console.warn('Failed to load similarity index:', e)
+        }
+        setSimilarityLoading(false)
+      }
+      load()
+    }
+  }, [phase])
 
   const handleAnswer = (questionId, option) => {
     if (phase !== 'playing') return
@@ -126,6 +145,42 @@ function QuizPlayer() {
   const currentQuestion = quiz[currentIndex]
   const progress = quiz.length > 0 ? ((currentIndex + 1) / quiz.length) * 100 : 0
 
+  // 计算错题及按单元分组
+  const wrongQuestions = useMemo(() => {
+    if (phase !== 'submitted') return []
+    return quiz.filter(q => answers[q.question_id] !== q.answer)
+  }, [quiz, answers, phase])
+
+  const wrongByUnit = useMemo(() => {
+    if (!similarityIndex || wrongQuestions.length === 0) return []
+    const questionsById = Object.fromEntries(quiz.map(q => [q.question_id, q]))
+    const grouped = {}
+    
+    wrongQuestions.forEach(q => {
+      const unit = q.primary_unit
+      if (!grouped[unit]) grouped[unit] = { unit, wrongQs: [], similarQs: [] }
+      grouped[unit].wrongQs.push(q)
+      
+      // 找 top-1 相似题
+      const sim = getSimilarQuestions(q.question_id, similarityIndex, 1)
+      if (sim.length > 0) {
+        const sq = questionsById[sim[0].question_id]
+        if (sq) grouped[unit].similarQs.push({ ...sim[0], question: sq })
+      }
+    })
+    
+    return Object.values(grouped)
+  }, [wrongQuestions, similarityIndex, quiz])
+
+  const practiceSimilar = (wrongQs, similarQs) => {
+    const selected = [...wrongQs, ...similarQs.map(s => s.question)].filter(Boolean)
+    if (selected.length === 0) return
+    sessionStorage.setItem('currentQuiz', JSON.stringify(selected))
+    sessionStorage.setItem('quizConfig', JSON.stringify({ unit: 'similar', count: selected.length, type: 'quiz' }))
+    sessionStorage.setItem('quizInfo', JSON.stringify({ requestedCount: selected.length, actualCount: selected.length, unit: 'similar' }))
+    navigate('/play')
+  }
+
   if (phase === 'loading') {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
@@ -156,19 +211,65 @@ function QuizPlayer() {
 
       {/* 提交后成绩（非Mock Exam） */}
       {phase === 'submitted' && score !== null && !sessionStorage.getItem('currentFRQ') && (
-        <div className={`mb-6 p-4 rounded-lg text-center ${score / quiz.length >= 0.7 ? 'bg-green-50 border border-success' : score / quiz.length >= 0.5 ? 'bg-yellow-50 border border-warning' : 'bg-red-50 border border-error'}`}>
-          <div className="text-2xl font-bold">
-            {score} / {quiz.length} 正确 ({Math.round((score / quiz.length) * 100)}%)
+        <>
+          <div className={`mb-6 p-4 rounded-lg text-center ${score / quiz.length >= 0.7 ? 'bg-green-50 border border-success' : score / quiz.length >= 0.5 ? 'bg-yellow-50 border border-warning' : 'bg-red-50 border border-error'}`}>
+            <div className="text-2xl font-bold">
+              {score} / {quiz.length} 正确 ({Math.round((score / quiz.length) * 100)}%)
+            </div>
+            <div className="flex gap-3 justify-center mt-3">
+              <button onClick={() => navigate('/')} className="bg-brand text-white px-4 py-2 rounded-lg text-sm">
+                返回首页
+              </button>
+              <button onClick={() => navigate('/quiz')} className="bg-accent text-white px-4 py-2 rounded-lg text-sm">
+                再做一套
+              </button>
+            </div>
           </div>
-          <div className="flex gap-3 justify-center mt-3">
-            <button onClick={() => navigate('/')} className="bg-brand text-white px-4 py-2 rounded-lg text-sm">
-              返回首页
-            </button>
-            <button onClick={() => navigate('/quiz')} className="bg-accent text-white px-4 py-2 rounded-lg text-sm">
-              再做一套
-            </button>
-          </div>
-        </div>
+
+          {/* 针对性练习：按单元分组显示错题变式 */}
+          {wrongByUnit.length > 0 && (
+            <div className="mb-6">
+              <div className="text-sm font-medium text-text-muted mb-3">针对性练习</div>
+              <div className="space-y-3">
+                {wrongByUnit.map(({ unit, wrongQs, similarQs }) => (
+                  <div key={unit} className="bg-surface rounded-xl border border-border p-4">
+                    <div className="text-sm font-medium text-brand mb-2">
+                      {unit} - 错了 {wrongQs.length} 题，试试这些变式
+                    </div>
+                    <div className="space-y-1 mb-3">
+                      {similarQs.map((sim) => (
+                        <div key={sim.question_id} className="text-xs text-text flex items-center gap-2">
+                          <span className="text-text-muted shrink-0">{sim.question_id}</span>
+                          <span className="truncate">{sim.question.text}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <button
+                      onClick={() => practiceSimilar(wrongQs, similarQs)}
+                      className="bg-accent hover:bg-accent-light text-white px-3 py-1.5 rounded text-xs font-medium transition-colors"
+                    >
+                      练习 {unit} 变式（{wrongQs.length + similarQs.length}题）
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 全部正确时的推荐 */}
+          {wrongByUnit.length === 0 && score === quiz.length && quiz.length > 0 && (
+            <div className="mb-6 bg-surface rounded-xl border border-border p-4 text-center">
+              <div className="text-sm font-medium text-success mb-2">全部正确！</div>
+              <div className="text-xs text-text-muted mb-3">试试这些进阶变式</div>
+              <button
+                onClick={() => navigate('/quiz')}
+                className="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+              >
+                再做一套
+              </button>
+            </div>
+          )}
+        </>
       )}
 
       {/* 提交后提示（Mock Exam，即将进入FRQ） */}

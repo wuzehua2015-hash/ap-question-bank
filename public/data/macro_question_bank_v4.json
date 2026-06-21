@@ -2577,13 +2577,13 @@
   {
     "question_id": "2014_Q09",
     "year": "2014",
-    "text": "The marginal propensity to save for thiseconomy is",
+    "text": "The marginal propensity to save for this economy is",
     "options": {
-      "A": "0",
-      "B": "0",
-      "C": "8",
-      "D": "2",
-      "E": "0"
+      "A": "0.1",
+      "B": "0.4",
+      "C": "0.8",
+      "D": "0.2",
+      "E": "0.5"
     },
     "answer": "D",
     "primary_unit": "U3",
@@ -4014,9 +4014,7 @@
     },
     "answer": "D",
     "primary_unit": "U4",
-    "secondary_units": [
-      "U4"
-    ],
+    "secondary_units": [],
     "topics": [
       "aggregate demand",
       "output",
@@ -4777,7 +4775,6 @@
     "primary_unit": "U1",
     "secondary_units": [
       "U5",
-      "U1",
       "U2"
     ],
     "topics": [
@@ -7205,7 +7202,6 @@
     "answer": "A",
     "primary_unit": "U4",
     "secondary_units": [
-      "U4",
       "U2"
     ],
     "topics": [
@@ -9540,7 +9536,6 @@
     "primary_unit": "U5",
     "secondary_units": [
       "U3",
-      "U5",
       "U2"
     ],
     "topics": [],
@@ -9661,7 +9656,6 @@
     "answer": "B",
     "primary_unit": "U3",
     "secondary_units": [
-      "U3",
       "U2"
     ],
     "topics": [],
@@ -9848,7 +9842,6 @@
     "answer": "D",
     "primary_unit": "U4",
     "secondary_units": [
-      "U4",
       "U2"
     ],
     "topics": [],
@@ -10542,7 +10535,6 @@
     "answer": "B",
     "primary_unit": "U3",
     "secondary_units": [
-      "U3",
       "U4",
       "U2"
     ],
@@ -10898,8 +10890,7 @@
     "answer": "A",
     "primary_unit": "U5",
     "secondary_units": [
-      "U4",
-      "U5"
+      "U4"
     ],
     "topics": [],
     "difficulty": "Medium",
@@ -11219,7 +11210,6 @@
     "answer": "E",
     "primary_unit": "U3",
     "secondary_units": [
-      "U3",
       "U2"
     ],
     "topics": [
@@ -12355,11 +12345,11 @@
     "year": "2018",
     "text": "Increases in government subsidies to encourage investment in research and development will affect aggregate demand (AD) and long-run aggregate supply (LRAS) in which of the following ways?",
     "options": {
-      "A": "Increase",
-      "B": "Increase",
-      "C": "Increase",
-      "D": "Decrease",
-      "E": "Increase Decrease"
+      "A": "Increase / Increase",
+      "B": "Increase / No change",
+      "C": "Increase / Decrease",
+      "D": "Decrease / Decrease",
+      "E": "No change / Increase"
     },
     "answer": "A",
     "primary_unit": "U3",
@@ -12382,7 +12372,35 @@
     "skills": [
       "predict"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "AD",
+        "LRAS"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "No change"
+        ],
+        "C": [
+          "Increase",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "No change",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q40",
@@ -12652,7 +12670,7 @@
       "A": "3%",
       "B": "5%",
       "C": "10%",
-      "D": "3%",
+      "D": "15%",
       "E": "50%"
     },
     "answer": "C",
@@ -12930,8 +12948,7 @@
     "answer": "A",
     "primary_unit": "U5",
     "secondary_units": [
-      "U2",
-      "U5"
+      "U2"
     ],
     "topics": [
       "phillips curve",
@@ -13000,7 +13017,6 @@
     "answer": "E",
     "primary_unit": "U3",
     "secondary_units": [
-      "U3",
       "U2"
     ],
     "topics": [
@@ -13036,7 +13052,6 @@
     "answer": "A",
     "primary_unit": "U4",
     "secondary_units": [
-      "U4",
       "U2"
     ],
     "topics": [
@@ -13772,7 +13787,6 @@
     "answer": "B",
     "primary_unit": "U4",
     "secondary_units": [
-      "U4",
       "U2"
     ],
     "topics": [
@@ -14800,7 +14814,6 @@
     "answer": "C",
     "primary_unit": "U4",
     "secondary_units": [
-      "U4",
       "U5",
       "U2"
     ],

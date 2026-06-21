@@ -4,6 +4,7 @@ import { loadMCQBank, UNITS } from '../utils/questionBank'
 import {
   getDoneQuestions, getWrongQuestions, getQuestionHistory
 } from '../utils/storage'
+import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
 
 const YEARS = ['2012', '2014', '2015', '2016', '2017', '2018', '2019', '2023']
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
@@ -229,6 +230,12 @@ function SearchPage() {
                       历史记录：{hist.correct_count} 次正确 / {hist.wrong_count} 次错误（共 {totalAttempts} 次）
                     </div>
                   )}
+                  {/* 相似题推荐 */}
+                  <SimilarQuestionsBlock
+                    questionId={q.question_id}
+                    allQuestions={questions}
+                    count={3}
+                  />
                   <div className="mt-3 flex gap-2">
                     {/* 单题练习功能已移除：搜索的核心是查找和浏览，不是练习。
                         如需针对性练习，请使用错题本或 Quiz 功能。 */}
