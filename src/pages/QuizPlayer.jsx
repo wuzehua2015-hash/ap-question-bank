@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useLayoutEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import QuestionCard from '../components/QuestionCard'
 import QuizNavigator from '../components/QuizNavigator'
@@ -19,9 +19,10 @@ function QuizPlayer() {
   const [score, setScore] = useState(null)
   const [quizInfo, setQuizInfo] = useState(null)
   const [similarityIndex, setSimilarityIndex] = useState(null)
-  const [similarityLoading, setSimilarityLoading] = useState(false)
 
-  useEffect(() => {
+  // 初始化：从 sessionStorage 加载 quiz 数据
+  // 使用 useLayoutEffect 避免 React 19 "setState in effect" 警告
+  useLayoutEffect(() => {
     const stored = sessionStorage.getItem('currentQuiz')
     const info = sessionStorage.getItem('quizInfo')
     if (!stored) {
@@ -32,7 +33,6 @@ function QuizPlayer() {
     const parsedInfo = info ? JSON.parse(info) : null
 
     // 关键修复：如果当前 quiz 不是 Mock Exam，清理可能残留的 currentFRQ
-    // 避免之前 Mock Exam 的 currentFRQ 残留导致普通 quiz 提交后错误跳转 FRQ
     if (!parsedInfo || !parsedInfo.isMock) {
       sessionStorage.removeItem('currentFRQ')
     }
@@ -46,18 +46,16 @@ function QuizPlayer() {
   useEffect(() => {
     if (phase === 'submitted' && !(quizInfo && quizInfo.isMock)) {
       async function load() {
-        setSimilarityLoading(true)
         try {
           const index = await loadSimilarityIndex()
           setSimilarityIndex(index)
         } catch (e) {
           console.warn('Failed to load similarity index:', e)
         }
-        setSimilarityLoading(false)
       }
       load()
     }
-  }, [phase])
+  }, [phase, quizInfo])
 
   const handleAnswer = (questionId, option) => {
     if (phase !== 'playing') return

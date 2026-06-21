@@ -13,6 +13,10 @@ function ExamSetup() {
     try {
       const [mcqs, frqs] = await Promise.all([loadMCQBank(), loadFRQBank()])
       const result = await generateMockExam(mcqs, frqs)
+      // DEFENSIVE: ensure result has expected shape before using
+      if (!result || !Array.isArray(result.quiz) || !Array.isArray(result.frq)) {
+        throw new Error('generateMockExam returned invalid result')
+      }
       sessionStorage.setItem('currentQuiz', JSON.stringify(result.quiz))
       sessionStorage.setItem('currentFRQ', JSON.stringify(result.frq))
       sessionStorage.setItem('quizConfig', JSON.stringify({ type: 'mock' }))

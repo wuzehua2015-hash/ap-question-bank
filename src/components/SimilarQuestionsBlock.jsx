@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
 
-function SimilarQuestionsBlock({ questionId, allQuestions, count = 3, includeSelf = true }) {
+function SimilarQuestionsBlock({ questionId, allQuestions, count = 3, _includeSelf = true }) {
   const navigate = useNavigate()
   const [similarData, setSimilarData] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -28,7 +28,7 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3, includeSel
           setSimilarData(resolved)
           setLoading(false)
         }
-      } catch (e) {
+      } catch {
         if (mounted) {
           setSimilarData([])
           setLoading(false)
