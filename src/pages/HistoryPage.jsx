@@ -1,5 +1,8 @@
 import { useState, useEffect, useMemo } from 'react'
 import { loadMCQBank, UNITS } from '../utils/questionBank'
+import {
+  getQuizHistory, getQuestionHistory
+} from '../utils/storage'
 
 function HistoryPage() {
   const [questions, setQuestions] = useState([])
@@ -16,8 +19,8 @@ function HistoryPage() {
 
   useEffect(() => {
     const refresh = () => {
-      setQuizHistory(JSON.parse(localStorage.getItem('quizHistory') || '[]'))
-      setQuestionHistory(JSON.parse(localStorage.getItem('questionHistory') || '{}'))
+      setQuizHistory(getQuizHistory())
+      setQuestionHistory(getQuestionHistory())
     }
     refresh()
     window.addEventListener('storage', refresh)

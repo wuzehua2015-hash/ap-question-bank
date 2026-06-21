@@ -1,6 +1,9 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { loadMCQBank, UNITS } from '../utils/questionBank'
+import {
+  getWrongQuestions, getQuestionHistory, setWrongQuestions
+} from '../utils/storage'
 
 function MistakeBook() {
   const navigate = useNavigate()
@@ -20,8 +23,8 @@ function MistakeBook() {
 
   useEffect(() => {
     const refresh = () => {
-      setWrongIds(JSON.parse(localStorage.getItem('wrongQuestions') || '[]'))
-      setQuestionHistory(JSON.parse(localStorage.getItem('questionHistory') || '{}'))
+      setWrongIds(getWrongQuestions())
+      setQuestionHistory(getQuestionHistory())
     }
     refresh()
     window.addEventListener('storage', refresh)
@@ -48,13 +51,13 @@ function MistakeBook() {
 
   const clearAll = () => {
     if (!confirm('确定清空所有错题记录？')) return
-    localStorage.removeItem('wrongQuestions')
+    setWrongQuestions([])
     setWrongIds([])
   }
 
   const removeOne = (id) => {
     const updated = wrongIds.filter(w => w !== id)
-    localStorage.setItem('wrongQuestions', JSON.stringify(updated))
+    setWrongQuestions(updated)
     setWrongIds(updated)
   }
 

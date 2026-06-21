@@ -1,23 +1,72 @@
-let mcqCache = null
-let frqCache = null
-
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
-export async function loadMCQBank() {
-  if (mcqCache) return mcqCache
-  const res = await fetch(`${BASE_URL}data/macro_question_bank_v4.json`)
-  if (!res.ok) throw new Error(`Failed to load MCQ bank: ${res.status}`)
-  mcqCache = await res.json()
-  return mcqCache
+// Cache: per-subject data + subjects config
+const cache = {
+  subjects: null,
+  mcq: {},
+  frq: {}
 }
 
-export async function loadFRQBank() {
-  if (frqCache) return frqCache
-  const res = await fetch(`${BASE_URL}data/macro_frq_bank.json`)
-  if (!res.ok) throw new Error(`Failed to load FRQ bank: ${res.status}`)
-  frqCache = await res.json()
-  return frqCache
+// ────────────────────────────
+// Subject Config Loading
+// ────────────────────────────
+
+export async function loadSubjects() {
+  if (cache.subjects) return cache.subjects
+  const res = await fetch(`${BASE_URL}data/subjects.json`)
+  if (!res.ok) throw new Error(`Failed to load subjects config: ${res.status}`)
+  cache.subjects = await res.json()
+  return cache.subjects
 }
+
+export async function loadSubjectConfig(subjectId) {
+  const { subjects } = await loadSubjects()
+  const cfg = subjects.find(s => s.id === subjectId)
+  if (!cfg) throw new Error(`Subject not found: ${subjectId}`)
+  return cfg
+}
+
+export async function getActiveSubjects() {
+  const { subjects } = await loadSubjects()
+  return subjects.filter(s => s.active)
+}
+
+export async function getSubjectUnits(subjectId) {
+  const cfg = await loadSubjectConfig(subjectId)
+  return cfg.units || []
+}
+
+export async function getMockExamConfig(subjectId) {
+  const cfg = await loadSubjectConfig(subjectId)
+  return cfg.mockExam
+}
+
+// ────────────────────────────
+// Question Bank Loading (by subject)
+// ────────────────────────────
+
+export async function loadMCQBank(subjectId = 'macro') {
+  if (cache.mcq[subjectId]) return cache.mcq[subjectId]
+  const cfg = await loadSubjectConfig(subjectId)
+  const res = await fetch(`${BASE_URL}data/${cfg.questionBank}`)
+  if (!res.ok) throw new Error(`Failed to load MCQ bank for ${subjectId}: ${res.status}`)
+  cache.mcq[subjectId] = await res.json()
+  return cache.mcq[subjectId]
+}
+
+export async function loadFRQBank(subjectId = 'macro') {
+  if (cache.frq[subjectId]) return cache.frq[subjectId]
+  const cfg = await loadSubjectConfig(subjectId)
+  if (!cfg.hasFRQ) return null
+  const res = await fetch(`${BASE_URL}data/${cfg.frqBank}`)
+  if (!res.ok) throw new Error(`Failed to load FRQ bank for ${subjectId}: ${res.status}`)
+  cache.frq[subjectId] = await res.json()
+  return cache.frq[subjectId]
+}
+
+// ────────────────────────────
+// Backward-compatible: default to macro
+// ────────────────────────────
 
 export const UNITS = [
   { id: 'U1', name: 'Basic Economic Concepts' },
@@ -28,20 +77,37 @@ export const UNITS = [
   { id: 'U6', name: 'Open Economy' },
 ]
 
+export const MOCK_EXAM_CONFIG = {
+  totalMCQ: 60,
+  frqCount: 3,
+  unitDistribution: {
+    U1: 4,
+    U2: 9,
+    U3: 13,
+    U4: 12,
+    U5: 15,
+    U6: 7,
+  },
+}
+
+// ────────────────────────────
+// Quiz Generation
+// ────────────────────────────
+
 export function generateQuiz(questions, config) {
   let pool = [...questions]
-  
-  // 按单元筛选 — 只按 primary_unit，不混入 secondary_units
+
+  // 按单元筛选 — 只按 primary_unit
   if (config.unit && config.unit !== 'all') {
     pool = pool.filter(q => q.primary_unit === config.unit)
   }
-  
+
   // 排除已做
-  const doneIds = new Set(JSON.parse(localStorage.getItem('doneQuestions') || '[]'))
+  const doneIds = new Set(JSON.parse(localStorage.getItem('macro_doneQuestions') || localStorage.getItem('doneQuestions') || '[]'))
   if (config.excludeDone) {
     pool = pool.filter(q => !doneIds.has(q.question_id))
   }
-  
+
   // 同来源限制（最多2题/来源）
   if (config.diverseSources !== false) {
     const sourceCount = {}
@@ -51,7 +117,7 @@ export function generateQuiz(questions, config) {
       return sourceCount[src] <= 2
     })
   }
-  
+
   // 放宽：取消同来源限制重试
   let count = config.count || 10
   if (pool.length < count) {
@@ -63,7 +129,7 @@ export function generateQuiz(questions, config) {
       pool = pool.filter(q => !doneIds.has(q.question_id))
     }
   }
-  
+
   if (pool.length < count) {
     // 再放宽：取消排除已做
     pool = [...questions]
@@ -71,7 +137,7 @@ export function generateQuiz(questions, config) {
       pool = pool.filter(q => q.primary_unit === config.unit)
     }
   }
-  
+
   // 随机排序并取指定数量
   pool = pool.sort(() => Math.random() - 0.5)
   const actualCount = Math.min(count, pool.length)
@@ -83,49 +149,33 @@ export function generateQuiz(questions, config) {
   }
 }
 
-// Mock Exam composition: MUST match official exam weighting per subject
-// AP Macroeconomics: 60 MCQs, weighted by unit per College Board CED
-// Source: https://apcentral.collegeboard.org/courses/ap-macroeconomics/exam
-export const MOCK_EXAM_CONFIG = {
-  totalMCQ: 60,
-  frqCount: 3,
-  unitDistribution: {
-    // Unit: count (must sum to totalMCQ)
-    // Official ranges: U1 5-10%, U2 12-17%, U3 17-27%, U4 18-23%, U5 20-30%, U6 10-13%
-    // Selected values are midpoints within official ranges
-    U1: 4,  // 4/60 = 6.7%  (official: 5-10%)
-    U2: 9,  // 9/60 = 15%   (official: 12-17%)
-    U3: 13, // 13/60 = 21.7% (official: 17-27%)
-    U4: 12, // 12/60 = 20%  (official: 18-23%)
-    U5: 15, // 15/60 = 25%  (official: 20-30%)
-    U6: 7,  // 7/60 = 11.7% (official: 10-13%)
-  },
-}
+// ────────────────────────────
+// Mock Exam Generation
+// ────────────────────────────
 
-export function generateMockExam(questions, frqQuestions) {
+export async function generateMockExam(questions, frqQuestions, subjectId = 'macro') {
+  const mockConfig = await getMockExamConfig(subjectId)
+
   const mcq = []
-  
-  // Validate config sums correctly
-  const configTotal = Object.values(MOCK_EXAM_CONFIG.unitDistribution).reduce((a, b) => a + b, 0)
-  if (configTotal !== MOCK_EXAM_CONFIG.totalMCQ) {
-    console.error(`Mock exam config error: unit counts sum to ${configTotal}, expected ${MOCK_EXAM_CONFIG.totalMCQ}`)
+  const configTotal = Object.values(mockConfig.unitDistribution).reduce((a, b) => a + b, 0)
+  if (configTotal !== mockConfig.totalMCQ) {
+    console.error(`Mock exam config error: unit counts sum to ${configTotal}, expected ${mockConfig.totalMCQ}`)
   }
-  
-  for (const [unit, count] of Object.entries(MOCK_EXAM_CONFIG.unitDistribution)) {
+
+  for (const [unit, count] of Object.entries(mockConfig.unitDistribution)) {
     const unitQuestions = questions.filter(q => q.primary_unit === unit)
     const shuffled = unitQuestions.sort(() => Math.random() - 0.5)
     mcq.push(...shuffled.slice(0, count))
   }
-  
-  // FRQ: select a year, then select a set if multiple sets exist for that year
+
+  // FRQ: select a year, then a set if multiple sets exist for that year
   const yearGroups = {}
   for (const frq of frqQuestions) {
     const year = frq.year
     if (!yearGroups[year]) yearGroups[year] = []
     yearGroups[year].push(frq)
   }
-  
-  // Group by year + set for 2023 (which has multiple sets)
+
   const yearSets = {}
   for (const year of Object.keys(yearGroups)) {
     const frqs = yearGroups[year]
@@ -137,14 +187,13 @@ export function generateMockExam(questions, frqQuestions) {
     }
     yearSets[year] = sets
   }
-  
-  // Randomly pick a year, then a set within that year
+
   const years = Object.keys(yearSets)
   const selectedYear = years[Math.floor(Math.random() * years.length)]
   const sets = Object.keys(yearSets[selectedYear])
   const selectedSet = sets[Math.floor(Math.random() * sets.length)]
   const frq = yearSets[selectedYear][selectedSet]
-  
+
   return {
     quiz: mcq,
     frq: frq,

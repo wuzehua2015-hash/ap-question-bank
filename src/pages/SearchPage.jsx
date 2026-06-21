@@ -1,6 +1,9 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { loadMCQBank, UNITS } from '../utils/questionBank'
+import {
+  getDoneQuestions, getWrongQuestions, getQuestionHistory
+} from '../utils/storage'
 
 const YEARS = ['2012', '2014', '2015', '2016', '2017', '2018', '2019', '2023']
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
@@ -27,9 +30,9 @@ function SearchPage() {
     }).catch(() => setLoading(false))
   }, [])
 
-  const doneIds = useMemo(() => new Set(JSON.parse(localStorage.getItem('doneQuestions') || '[]')), [])
-  const wrongIds = useMemo(() => new Set(JSON.parse(localStorage.getItem('wrongQuestions') || '[]')), [])
-  const questionHistory = useMemo(() => JSON.parse(localStorage.getItem('questionHistory') || '{}'), [])
+  const doneIds = useMemo(() => new Set(getDoneQuestions()), [])
+  const wrongIds = useMemo(() => new Set(getWrongQuestions()), [])
+  const questionHistory = useMemo(() => getQuestionHistory(), [])
 
   const filtered = useMemo(() => {
     let result = [...questions]

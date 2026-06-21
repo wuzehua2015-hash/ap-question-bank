@@ -3,6 +3,12 @@ import { useNavigate } from 'react-router-dom'
 import QuestionCard from '../components/QuestionCard'
 import QuizNavigator from '../components/QuizNavigator'
 import { UNITS } from '../utils/questionBank'
+import {
+  getDoneQuestions, setDoneQuestions,
+  getWrongQuestions, setWrongQuestions,
+  getQuestionHistory, setQuestionHistory,
+  getQuizHistory, setQuizHistory
+} from '../utils/storage'
 
 function QuizPlayer() {
   const navigate = useNavigate()
@@ -61,8 +67,7 @@ function QuizPlayer() {
       }
 
       // 记录每道题的详细历史
-      const historyKey = 'questionHistory'
-      const allHistory = JSON.parse(localStorage.getItem(historyKey) || '{}')
+      const allHistory = getQuestionHistory()
       if (!allHistory[q.question_id]) {
         allHistory[q.question_id] = { attempts: [], correct_count: 0, wrong_count: 0 }
       }
@@ -77,7 +82,7 @@ function QuizPlayer() {
       else rec.wrong_count++
       // 只保留最近20次记录
       rec.attempts = rec.attempts.slice(-20)
-      localStorage.setItem(historyKey, JSON.stringify(allHistory))
+      setQuestionHistory(allHistory)
     })
 
     setScore(correct)
@@ -87,17 +92,17 @@ function QuizPlayer() {
     sessionStorage.setItem('mcqAnswers', JSON.stringify(answers))
 
     // 记录已做题
-    const doneIds = new Set(JSON.parse(localStorage.getItem('doneQuestions') || '[]'))
+    const doneIds = new Set(getDoneQuestions())
     quiz.forEach(q => doneIds.add(q.question_id))
-    localStorage.setItem('doneQuestions', JSON.stringify([...doneIds]))
+    setDoneQuestions([...doneIds])
 
     // 记录错题（去重）
-    const wrongSet = new Set(JSON.parse(localStorage.getItem('wrongQuestions') || '[]'))
+    const wrongSet = new Set(getWrongQuestions())
     wrongIds.forEach(id => wrongSet.add(id))
-    localStorage.setItem('wrongQuestions', JSON.stringify([...wrongSet]))
+    setWrongQuestions([...wrongSet])
 
     // 记录历史（只记录MCQ部分）
-    const history = JSON.parse(localStorage.getItem('quizHistory') || '[]')
+    const history = getQuizHistory()
     history.push({
       date: new Date().toISOString(),
       count: quiz.length,
@@ -106,7 +111,7 @@ function QuizPlayer() {
       unitStats,
       difficultyStats,
     })
-    localStorage.setItem('quizHistory', JSON.stringify(history.slice(-20)))
+    setQuizHistory(history.slice(-20))
 
     // 检查是否是Mock Exam（有FRQ）
     const hasFRQ = sessionStorage.getItem('currentFRQ')
