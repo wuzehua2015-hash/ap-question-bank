@@ -18,7 +18,7 @@ function ExamSetup() {
         throw new Error('generateMockExam returned invalid result')
       }
       // Load timing config from subjects.json for multi-subject reuse
-      const mockConfig = await getMockExamConfig()
+      const mockConfig = await getMockExamConfig('macro')
       sessionStorage.setItem('currentQuiz', JSON.stringify(result.quiz))
       sessionStorage.setItem('currentFRQ', JSON.stringify(result.frq))
       sessionStorage.setItem('quizConfig', JSON.stringify({ type: 'mock' }))

@@ -37,7 +37,7 @@ export async function getSubjectUnits(subjectId) {
   return cfg.units || []
 }
 
-export async function getMockExamConfig(subjectId) {
+export async function getMockExamConfig(subjectId = 'macro') {
   const cfg = await loadSubjectConfig(subjectId)
   return cfg.mockExam
 }
