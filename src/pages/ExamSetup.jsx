@@ -16,6 +16,7 @@ function ExamSetup() {
       sessionStorage.setItem('currentQuiz', JSON.stringify(result.quiz))
       sessionStorage.setItem('currentFRQ', JSON.stringify(result.frq))
       sessionStorage.setItem('quizConfig', JSON.stringify({ type: 'mock' }))
+      sessionStorage.setItem('quizInfo', JSON.stringify({ type: 'mock', isMock: true }))
       navigate('/play')
     } catch (err) {
       setError('加载失败: ' + (err.message || '请检查网络'))

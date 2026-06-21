@@ -29,14 +29,22 @@ function QuizPlayer() {
       return
     }
     const parsed = JSON.parse(stored)
+    const parsedInfo = info ? JSON.parse(info) : null
+
+    // 关键修复：如果当前 quiz 不是 Mock Exam，清理可能残留的 currentFRQ
+    // 避免之前 Mock Exam 的 currentFRQ 残留导致普通 quiz 提交后错误跳转 FRQ
+    if (!parsedInfo || !parsedInfo.isMock) {
+      sessionStorage.removeItem('currentFRQ')
+    }
+
     setQuiz(parsed)
-    setQuizInfo(info ? JSON.parse(info) : null)
+    setQuizInfo(parsedInfo)
     setPhase('playing')
   }, [navigate])
 
-  // 提交后加载相似度索引（用于变式推荐）
+  // 提交后加载相似度索引（仅用于非 Mock Exam，Mock Exam 直接进入 FRQ）
   useEffect(() => {
-    if (phase === 'submitted' && !sessionStorage.getItem('currentFRQ')) {
+    if (phase === 'submitted' && !(quizInfo && quizInfo.isMock)) {
       async function load() {
         setSimilarityLoading(true)
         try {
@@ -132,9 +140,9 @@ function QuizPlayer() {
     })
     setQuizHistory(history.slice(-20))
 
-    // 检查是否是Mock Exam（有FRQ）
-    const hasFRQ = sessionStorage.getItem('currentFRQ')
-    if (hasFRQ) {
+    // 检查是否是Mock Exam（基于 quizInfo.isMock，而不是 currentFRQ 残留）
+    const isMockExam = quizInfo && quizInfo.isMock
+    if (isMockExam) {
       // 延迟后导航到FRQ页面
       setTimeout(() => {
         navigate('/frq')
@@ -175,6 +183,7 @@ function QuizPlayer() {
   const practiceSimilar = (wrongQs, similarQs) => {
     const selected = [...wrongQs, ...similarQs.map(s => s.question)].filter(Boolean)
     if (selected.length === 0) return
+    sessionStorage.removeItem('currentFRQ')  // 清理可能残留的 FRQ 数据
     sessionStorage.setItem('currentQuiz', JSON.stringify(selected))
     sessionStorage.setItem('quizConfig', JSON.stringify({ unit: 'similar', count: selected.length, type: 'quiz' }))
     sessionStorage.setItem('quizInfo', JSON.stringify({ requestedCount: selected.length, actualCount: selected.length, unit: 'similar' }))
@@ -210,7 +219,7 @@ function QuizPlayer() {
       )}
 
       {/* 提交后成绩（非Mock Exam） */}
-      {phase === 'submitted' && score !== null && !sessionStorage.getItem('currentFRQ') && (
+      {phase === 'submitted' && score !== null && !(quizInfo && quizInfo.isMock) && (
         <>
           <div className={`mb-6 p-4 rounded-lg text-center ${score / quiz.length >= 0.7 ? 'bg-green-50 border border-success' : score / quiz.length >= 0.5 ? 'bg-yellow-50 border border-warning' : 'bg-red-50 border border-error'}`}>
             <div className="text-2xl font-bold">
@@ -273,7 +282,7 @@ function QuizPlayer() {
       )}
 
       {/* 提交后提示（Mock Exam，即将进入FRQ） */}
-      {phase === 'submitted' && score !== null && sessionStorage.getItem('currentFRQ') && (
+      {phase === 'submitted' && score !== null && quizInfo && quizInfo.isMock && (
         <div className="mb-6 p-4 rounded-lg text-center bg-blue-50 border border-blue-200">
           <div className="text-xl font-bold text-blue-800 mb-2">
             MCQ 部分完成！

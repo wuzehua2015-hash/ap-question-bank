@@ -49,6 +49,7 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3, includeSel
       .filter(Boolean)
     
     if (selected.length === 0) return
+    sessionStorage.removeItem('currentFRQ')  // 清理可能残留的 Mock Exam FRQ 数据
     sessionStorage.setItem('currentQuiz', JSON.stringify(selected))
     sessionStorage.setItem('quizConfig', JSON.stringify({ unit: 'similar', count: selected.length, type: 'quiz' }))
     sessionStorage.setItem('quizInfo', JSON.stringify({ requestedCount: selected.length, actualCount: selected.length, unit: 'similar' }))
