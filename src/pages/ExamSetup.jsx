@@ -12,7 +12,7 @@ function ExamSetup() {
     setError(null)
     try {
       const [mcqs, frqs] = await Promise.all([loadMCQBank(), loadFRQBank()])
-      const result = generateMockExam(mcqs, frqs)
+      const result = await generateMockExam(mcqs, frqs)
       sessionStorage.setItem('currentQuiz', JSON.stringify(result.quiz))
       sessionStorage.setItem('currentFRQ', JSON.stringify(result.frq))
       sessionStorage.setItem('quizConfig', JSON.stringify({ type: 'mock' }))
