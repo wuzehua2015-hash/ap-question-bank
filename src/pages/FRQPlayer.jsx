@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useLayoutEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-const BASE_URL = import.meta.env.BASE_URL || '/'
+import Timer from '../components/Timer'
 
 function FRQPlayer() {
   const navigate = useNavigate()
@@ -9,15 +8,19 @@ function FRQPlayer() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [phase, setPhase] = useState('loading')
   const [acknowledged, setAcknowledged] = useState([false, false, false])
+  const [quizInfo, setQuizInfo] = useState(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const stored = sessionStorage.getItem('currentFRQ')
+    const info = sessionStorage.getItem('quizInfo')
     if (!stored) {
       navigate('/')
       return
     }
     const parsed = JSON.parse(stored)
+    const parsedInfo = info ? JSON.parse(info) : null
     setFrqs(parsed)
+    setQuizInfo(parsedInfo)
     setPhase('playing')
   }, [navigate])
 
@@ -32,8 +35,12 @@ function FRQPlayer() {
   const allAcknowledged = frqs.length > 0 && acknowledged.slice(0, frqs.length).every(Boolean)
 
   const finishFRQ = () => {
-    // 进入 FRQ 评分页面（展示 rubric，学生自评）
     navigate('/frq-score')
+  }
+
+  // 计时器超时：自动进入成绩页面
+  const handleTimerTimeout = () => {
+    finishFRQ()
   }
 
   const currentFRQ = frqs[currentIndex]
@@ -49,13 +56,25 @@ function FRQPlayer() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-6">
-      {/* 头部提示 */}
+      {/* 头部提示 + 计时器 */}
       <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <h2 className="text-lg font-bold text-blue-800 mb-2">Free Response Questions (FRQ)</h2>
-        <p className="text-sm text-blue-700">
-          共 3 道大题，请使用草稿纸作答。本部分为开放作答，系统不自动批改。
-          完成后请对照评分标准自行评估。
-        </p>
+        <div className="flex justify-between items-start">
+          <div>
+            <h2 className="text-lg font-bold text-blue-800 mb-2">Free Response Questions (FRQ)</h2>
+            <p className="text-sm text-blue-700">
+              共 {frqs.length} 道大题，请使用草稿纸作答。本部分为开放作答，系统不自动批改。
+              完成后请对照评分标准自行评估。
+            </p>
+          </div>
+          {quizInfo && quizInfo.isMock && quizInfo.frqTimeLimit && phase === 'playing' && (
+            <Timer
+              seconds={quizInfo.frqTimeLimit}
+              storageKey="mock_frq_timer"
+              onTimeout={handleTimerTimeout}
+              phase={phase}
+            />
+          )}
+        </div>
       </div>
 
       {/* 进度条 */}
