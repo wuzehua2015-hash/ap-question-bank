@@ -230,15 +230,8 @@ function SearchPage() {
                     </div>
                   )}
                   <div className="mt-3 flex gap-2">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        generateQuizFromSelection([q])
-                      }}
-                      className="bg-accent text-white px-3 py-1.5 rounded text-xs"
-                    >
-                      单题练习
-                    </button>
+                    {/* 单题练习功能已移除：搜索的核心是查找和浏览，不是练习。
+                        如需针对性练习，请使用错题本或 Quiz 功能。 */}
                   </div>
                 </div>
               )}
