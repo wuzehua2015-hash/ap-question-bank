@@ -56,6 +56,7 @@ function SearchPage() {
 
   const generateQuizFromSelection = (selectedQuestions) => {
     if (selectedQuestions.length === 0) return
+    sessionStorage.removeItem('currentFRQ')  // 清理可能残留的 Mock Exam FRQ 数据
     sessionStorage.setItem('currentQuiz', JSON.stringify(selectedQuestions))
     sessionStorage.setItem('quizConfig', JSON.stringify({ unit: 'custom', count: selectedQuestions.length, type: 'quiz' }))
     sessionStorage.setItem('quizInfo', JSON.stringify({ requestedCount: selectedQuestions.length, actualCount: selectedQuestions.length, unit: 'custom' }))

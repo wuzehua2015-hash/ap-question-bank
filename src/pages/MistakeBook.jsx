@@ -66,6 +66,7 @@ function MistakeBook() {
     if (wrongQuestions.length === 0) return
     const shuffled = [...wrongQuestions].sort(() => Math.random() - 0.5)
     const selected = shuffled.slice(0, Math.min(30, shuffled.length))
+    sessionStorage.removeItem('currentFRQ')  // 清理可能残留的 Mock Exam FRQ 数据
     sessionStorage.setItem('currentQuiz', JSON.stringify(selected))
     sessionStorage.setItem('quizConfig', JSON.stringify({ unit: 'wrong', count: selected.length, type: 'quiz' }))
     sessionStorage.setItem('quizInfo', JSON.stringify({ requestedCount: selected.length, actualCount: selected.length, unit: 'wrong' }))
@@ -202,6 +203,7 @@ function MistakeBook() {
                   <div className="mt-3">
                     <button
                       onClick={() => {
+                        sessionStorage.removeItem('currentFRQ')  // 清理可能残留的 Mock Exam FRQ 数据
                         sessionStorage.setItem('currentQuiz', JSON.stringify([q]))
                         sessionStorage.setItem('quizConfig', JSON.stringify({ unit: 'single', count: 1, type: 'quiz' }))
                         sessionStorage.setItem('quizInfo', JSON.stringify({ requestedCount: 1, actualCount: 1, unit: 'single' }))
