@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import QuestionCard from '../components/QuestionCard'
 import QuizNavigator from '../components/QuizNavigator'
+import { UNITS } from '../utils/questionBank'
 
 function QuizPlayer() {
   const navigate = useNavigate()
@@ -37,10 +38,27 @@ function QuizPlayer() {
     if (!allAnswered) return
     let correct = 0
     const wrongIds = []
+    
+    // 计算本次套题的单元统计
+    const unitStats = {}
+    const difficultyStats = { Easy: { total: 0, correct: 0 }, Medium: { total: 0, correct: 0 }, Hard: { total: 0, correct: 0 } }
+    UNITS.forEach(u => { unitStats[u.id] = { total: 0, correct: 0 } })
+    
     quiz.forEach(q => {
       const isCorrect = answers[q.question_id] === q.answer
       if (isCorrect) correct++
       else wrongIds.push(q.question_id)
+
+      // 单元统计
+      if (unitStats[q.primary_unit]) {
+        unitStats[q.primary_unit].total++
+        if (isCorrect) unitStats[q.primary_unit].correct++
+      }
+      // 难度统计
+      if (q.difficulty && difficultyStats[q.difficulty]) {
+        difficultyStats[q.difficulty].total++
+        if (isCorrect) difficultyStats[q.difficulty].correct++
+      }
 
       // 记录每道题的详细历史
       const historyKey = 'questionHistory'
@@ -84,7 +102,9 @@ function QuizPlayer() {
       date: new Date().toISOString(),
       count: quiz.length,
       correct,
-      score: Math.round((correct / quiz.length) * 100)
+      score: Math.round((correct / quiz.length) * 100),
+      unitStats,
+      difficultyStats,
     })
     localStorage.setItem('quizHistory', JSON.stringify(history.slice(-20)))
 

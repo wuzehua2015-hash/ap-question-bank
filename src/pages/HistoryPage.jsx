@@ -30,13 +30,15 @@ function HistoryPage() {
     const totalCorrect = quizHistory.reduce((sum, h) => sum + h.correct, 0)
     const overallRate = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0
 
-    // 单元统计
+    // 单元统计 - 优先使用 questionHistory（逐题精确），回退到 quizHistory.unitStats
     const unitStats = {}
     UNITS.forEach(u => { unitStats[u.id] = { total: 0, correct: 0 } })
 
+    let hasQuestionHistoryData = false
     Object.entries(questionHistory).forEach(([qid, rec]) => {
       const q = questions.find(q => q.question_id === qid)
       if (!q) return
+      hasQuestionHistoryData = true
       const unit = q.primary_unit
       if (unitStats[unit]) {
         unitStats[unit].total += rec.correct_count + rec.wrong_count
@@ -44,16 +46,46 @@ function HistoryPage() {
       }
     })
 
+    // 如果没有逐题历史，从 quizHistory 的 unitStats 汇总
+    if (!hasQuestionHistoryData) {
+      quizHistory.forEach(h => {
+        if (h.unitStats) {
+          Object.entries(h.unitStats).forEach(([unit, s]) => {
+            if (unitStats[unit]) {
+              unitStats[unit].total += s.total
+              unitStats[unit].correct += s.correct
+            }
+          })
+        }
+      })
+    }
+
     // 按难度统计
     const difficultyStats = { Easy: { total: 0, correct: 0 }, Medium: { total: 0, correct: 0 }, Hard: { total: 0, correct: 0 } }
+    let hasDifficultyData = false
     Object.entries(questionHistory).forEach(([qid, rec]) => {
       const q = questions.find(q => q.question_id === qid)
       if (!q || !q.difficulty || !difficultyStats[q.difficulty]) return
+      hasDifficultyData = true
       difficultyStats[q.difficulty].total += rec.correct_count + rec.wrong_count
       difficultyStats[q.difficulty].correct += rec.correct_count
     })
 
-    return { totalQuizzes, totalQuestions, totalCorrect, overallRate, unitStats, difficultyStats }
+    // 如果没有逐题历史，从 quizHistory 的 difficultyStats 汇总
+    if (!hasDifficultyData) {
+      quizHistory.forEach(h => {
+        if (h.difficultyStats) {
+          Object.entries(h.difficultyStats).forEach(([diff, s]) => {
+            if (difficultyStats[diff]) {
+              difficultyStats[diff].total += s.total
+              difficultyStats[diff].correct += s.correct
+            }
+          })
+        }
+      })
+    }
+
+    return { totalQuizzes, totalQuestions, totalCorrect, overallRate, unitStats, difficultyStats, hasQuestionHistoryData }
   }, [quizHistory, questionHistory, questions])
 
   const clearAll = () => {
@@ -122,6 +154,11 @@ function HistoryPage() {
           {/* 单元正确率 */}
           <div className="bg-surface rounded-xl p-4 shadow-sm border border-border mb-6">
             <h2 className="text-lg font-semibold text-brand mb-4">单元正确率</h2>
+            {!stats.hasQuestionHistoryData && (
+              <div className="text-xs text-text-muted bg-yellow-50 border border-yellow-200 rounded p-2 mb-3">
+                注意：新功能上线前的旧数据没有逐题记录，单元统计基于最近套题汇总。重新做题后将显示精确统计。
+              </div>
+            )}
             <div className="space-y-3">
               {UNITS.map(u => {
                 const s = stats.unitStats[u.id]
@@ -146,6 +183,11 @@ function HistoryPage() {
           {/* 难度分布 */}
           <div className="bg-surface rounded-xl p-4 shadow-sm border border-border mb-6">
             <h2 className="text-lg font-semibold text-brand mb-4">难度正确率</h2>
+            {!stats.hasQuestionHistoryData && (
+              <div className="text-xs text-text-muted bg-yellow-50 border border-yellow-200 rounded p-2 mb-3">
+                注意：新功能上线前的旧数据没有逐题难度记录。重新做题后将显示精确统计。
+              </div>
+            )}
             <div className="grid grid-cols-3 gap-3">
               {Object.entries(stats.difficultyStats).map(([diff, s]) => {
                 const rate = s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0

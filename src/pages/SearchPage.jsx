@@ -5,6 +5,8 @@ import { loadMCQBank, UNITS } from '../utils/questionBank'
 const YEARS = ['2012', '2014', '2015', '2016', '2017', '2018', '2019', '2023']
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
 
+const BASE_URL = import.meta.env.BASE_URL || '/'
+
 function SearchPage() {
   const navigate = useNavigate()
   const [questions, setQuestions] = useState([])
@@ -13,11 +15,10 @@ function SearchPage() {
   const [unitFilter, setUnitFilter] = useState('all')
   const [yearFilter, setYearFilter] = useState('all')
   const [difficultyFilter, setDifficultyFilter] = useState('all')
-  const [hasGraphFilter, setHasGraphFilter] = useState('all')
-  const [hasTableFilter, setHasTableFilter] = useState('all')
   const [doneFilter, setDoneFilter] = useState('all')
   const [wrongFilter, setWrongFilter] = useState('all')
   const [expandedId, setExpandedId] = useState(null)
+  const [showAnswerId, setShowAnswerId] = useState(null)
 
   useEffect(() => {
     loadMCQBank().then(data => {
@@ -44,12 +45,10 @@ function SearchPage() {
     if (unitFilter !== 'all') result = result.filter(q => q.primary_unit === unitFilter)
     if (yearFilter !== 'all') result = result.filter(q => String(q.year) === yearFilter)
     if (difficultyFilter !== 'all') result = result.filter(q => q.difficulty === difficultyFilter)
-    if (hasGraphFilter !== 'all') result = result.filter(q => q.has_graph === (hasGraphFilter === 'yes'))
-    if (hasTableFilter !== 'all') result = result.filter(q => !!q.option_table_data === (hasTableFilter === 'yes'))
     if (doneFilter !== 'all') result = result.filter(q => doneIds.has(q.question_id) === (doneFilter === 'yes'))
     if (wrongFilter !== 'all') result = result.filter(q => wrongIds.has(q.question_id) === (wrongFilter === 'yes'))
     return result
-  }, [questions, keyword, unitFilter, yearFilter, difficultyFilter, hasGraphFilter, hasTableFilter, doneFilter, wrongFilter, doneIds, wrongIds])
+  }, [questions, keyword, unitFilter, yearFilter, difficultyFilter, doneFilter, wrongFilter, doneIds, wrongIds])
 
   const generateQuizFromSelection = (selectedQuestions) => {
     if (selectedQuestions.length === 0) return
@@ -57,6 +56,13 @@ function SearchPage() {
     sessionStorage.setItem('quizConfig', JSON.stringify({ unit: 'custom', count: selectedQuestions.length, type: 'quiz' }))
     sessionStorage.setItem('quizInfo', JSON.stringify({ requestedCount: selectedQuestions.length, actualCount: selectedQuestions.length, unit: 'custom' }))
     navigate('/play')
+  }
+
+  const getImageUrl = (path) => {
+    if (path.startsWith('http')) return path
+    // Remove leading slash if present, then prepend BASE_URL
+    const cleanPath = path.startsWith('/') ? path.slice(1) : path
+    return `${BASE_URL}${cleanPath}`
   }
 
   if (loading) {
@@ -84,7 +90,7 @@ function SearchPage() {
 
       {/* 筛选器 */}
       <div className="bg-surface rounded-xl p-4 shadow-sm border border-border mb-6">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           <div>
             <label className="block text-xs font-medium text-text-muted mb-1">单元</label>
             <select value={unitFilter} onChange={e => setUnitFilter(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
@@ -104,22 +110,6 @@ function SearchPage() {
             <select value={difficultyFilter} onChange={e => setDifficultyFilter(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
               <option value="all">全部</option>
               {DIFFICULTIES.map(d => <option key={d} value={d}>{d}</option>)}
-            </select>
-          </div>
-          <div>
-            <label className="block text-xs font-medium text-text-muted mb-1">含图表</label>
-            <select value={hasGraphFilter} onChange={e => setHasGraphFilter(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
-              <option value="all">全部</option>
-              <option value="yes">是</option>
-              <option value="no">否</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-xs font-medium text-text-muted mb-1">表格选项</label>
-            <select value={hasTableFilter} onChange={e => setHasTableFilter(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
-              <option value="all">全部</option>
-              <option value="yes">是</option>
-              <option value="no">否</option>
             </select>
           </div>
           <div>
@@ -166,11 +156,15 @@ function SearchPage() {
           const correctRate = totalAttempts > 0 ? Math.round((hist.correct_count / totalAttempts) * 100) : null
           const isWrong = wrongIds.has(q.question_id)
           const isDone = doneIds.has(q.question_id)
+          const isShowAnswer = showAnswerId === q.question_id
           return (
             <div key={q.question_id} className="bg-surface rounded-xl border border-border overflow-hidden">
               <div
                 className="p-4 cursor-pointer hover:bg-gray-50 transition-colors"
-                onClick={() => setExpandedId(isExpanded ? null : q.question_id)}
+                onClick={() => {
+                  setExpandedId(isExpanded ? null : q.question_id)
+                  if (isExpanded) setShowAnswerId(null)
+                }}
               >
                 <div className="flex flex-wrap gap-2 mb-2">
                   <span className="bg-brand text-white text-xs px-2 py-1 rounded">{q.primary_unit}</span>
@@ -190,22 +184,43 @@ function SearchPage() {
               </div>
               {isExpanded && (
                 <div className="px-4 pb-4 border-t border-border bg-gray-50">
-                  <p className="text-sm text-text mb-3 mt-3">{q.text}</p>
+                  {/* 图片 - 只在展开时展示 */}
                   {q.image_paths && q.image_paths.length > 0 && (
-                    <div className="mb-3">
+                    <div className="mb-3 mt-3">
                       {q.image_paths.map((img, i) => (
-                        <img key={i} src={img} alt="" className="max-w-full max-h-60 rounded border border-border" />
+                        <img key={i} src={getImageUrl(img)} alt="" className="max-w-full max-h-60 rounded border border-border" />
                       ))}
                     </div>
                   )}
+                  {/* 选项 */}
                   <div className="space-y-1 mb-3">
                     {Object.entries(q.options || {}).map(([k, v]) => (
                       <div key={k} className="text-sm text-text"><span className="font-bold">{k}.</span> {v}</div>
                     ))}
                   </div>
-                  <div className="text-sm font-medium text-brand">正确答案：{q.answer}</div>
+                  {/* 答案 - 默认隐藏，需点击显示 */}
+                  <div className="flex items-center gap-3 mb-2">
+                    {isShowAnswer ? (
+                      <div className="text-sm font-medium text-brand">
+                        正确答案：{q.answer}
+                        <button
+                          onClick={(e) => { e.stopPropagation(); setShowAnswerId(null) }}
+                          className="ml-3 text-xs text-text-muted underline"
+                        >
+                          隐藏答案
+                        </button>
+                      </div>
+                    ) : (
+                      <button
+                        onClick={(e) => { e.stopPropagation(); setShowAnswerId(q.question_id) }}
+                        className="text-sm text-brand underline hover:text-brand-light"
+                      >
+                        查看答案
+                      </button>
+                    )}
+                  </div>
                   {hist && (
-                    <div className="text-xs text-text-muted mt-2">
+                    <div className="text-xs text-text-muted">
                       历史记录：{hist.correct_count} 次正确 / {hist.wrong_count} 次错误（共 {totalAttempts} 次）
                     </div>
                   )}

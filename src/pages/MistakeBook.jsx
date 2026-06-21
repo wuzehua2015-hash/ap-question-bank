@@ -127,8 +127,9 @@ function MistakeBook() {
 
       {wrongQuestions.length === 0 && (
         <div className="text-center py-12 text-text-muted bg-surface rounded-xl border border-border">
-          <p>暂无错题</p>
-          <p className="text-sm mt-1">做题后答错的题目会自动加入这里</p>
+          <p className="text-base font-medium mb-1">暂无错题</p>
+          <p className="text-sm">新功能上线后答错的题目会自动加入这里</p>
+          <p className="text-xs text-text-muted mt-1">之前的做题记录已保存，但错题本需要重新做题后开始记录</p>
         </div>
       )}
 
