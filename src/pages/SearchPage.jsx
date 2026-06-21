@@ -173,8 +173,6 @@ function SearchPage() {
                   <span className="bg-brand text-white text-xs px-2 py-1 rounded">{q.primary_unit}</span>
                   <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">{q.year}</span>
                   {q.difficulty && <span className={`text-xs px-2 py-1 rounded ${q.difficulty === 'Hard' ? 'bg-red-100 text-red-700' : q.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'}`}>{q.difficulty}</span>}
-                  {q.has_graph && <span className="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded">图表</span>}
-                  {q.option_table_data && <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">表格</span>}
                   {isDone && <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">已做</span>}
                   {isWrong && <span className="bg-red-100 text-red-700 text-xs px-2 py-1 rounded">错题</span>}
                   {correctRate !== null && (
@@ -196,11 +194,15 @@ function SearchPage() {
                     </div>
                   )}
                   {/* 选项 */}
-                  <div className="space-y-1 mb-3">
-                    {Object.entries(q.options || {}).map(([k, v]) => (
-                      <div key={k} className="text-sm text-text"><span className="font-bold">{k}.</span> {v}</div>
-                    ))}
-                  </div>
+                  {q.option_table_data ? (
+                    <SearchTableOptions tableData={q.option_table_data} />
+                  ) : (
+                    <div className="space-y-1 mb-3">
+                      {Object.entries(q.options || {}).map(([k, v]) => (
+                        <div key={k} className="text-sm text-text"><span className="font-bold">{k}.</span> {v}</div>
+                      ))}
+                    </div>
+                  )}
                   {/* 答案 - 默认隐藏，需点击显示 */}
                   <div className="flex items-center gap-3 mb-2">
                     {isShowAnswer ? (
@@ -244,6 +246,49 @@ function SearchPage() {
           )
         })}
       </div>
+    </div>
+  )
+}
+
+function SearchTableOptions({ tableData }) {
+  const { headers, rows } = tableData
+  const numCols = headers.length
+
+  const gridStyle = {
+    display: 'grid',
+    gridTemplateColumns: `40px repeat(${numCols}, 1fr)`,
+    gap: '1px',
+  }
+
+  return (
+    <div className="border border-border rounded-lg overflow-hidden mb-3">
+      {/* 表头 */}
+      <div className="grid" style={gridStyle}>
+        <div className="bg-gray-100 p-2 text-sm font-medium text-text-muted"></div>
+        {headers.map((h, i) => (
+          <div key={i} className="bg-gray-100 p-2 text-sm font-medium text-text-muted text-center">
+            {h}
+          </div>
+        ))}
+      </div>
+
+      {/* 选项行 */}
+      {Object.entries(rows).map(([key, values]) => (
+        <div
+          key={key}
+          className="grid border-t border-border bg-surface"
+          style={gridStyle}
+        >
+          <div className="p-2 text-sm font-bold text-text flex items-center justify-center">
+            {key}.
+          </div>
+          {values.map((val, i) => (
+            <div key={i} className="p-2 text-sm text-text text-center flex items-center justify-center">
+              {val}
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   )
 }

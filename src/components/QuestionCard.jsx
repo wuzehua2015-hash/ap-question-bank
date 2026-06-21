@@ -48,9 +48,6 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
       {/* 题目标签 */}
       <div className="flex flex-wrap gap-2 mb-3">
         <span className="bg-brand text-white text-xs px-2 py-1 rounded">{question.primary_unit}</span>
-        {imagePaths.length > 0 && (
-          <span className="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded">含图表</span>
-        )}
       </div>
 
       {/* 题目文本 */}

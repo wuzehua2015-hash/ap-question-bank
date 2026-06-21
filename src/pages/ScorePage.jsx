@@ -409,9 +409,7 @@ function ScorePage() {
                   )}
                   {/* 选项 */}
                   {q.option_table_data ? (
-                    <div style={{ fontSize: '20px', color: '#6b7280', marginBottom: '8px' }}>
-                      [表格选项题]
-                    </div>
+                    <ScoreTableOptions tableData={q.option_table_data} answer={q.answer} userAnswer={answers[q.question_id]} />
                   ) : (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '8px' }}>
                       {Object.entries(q.options).map(([key, val]) => (
@@ -553,6 +551,42 @@ function ScorePage() {
           再考一次
         </button>
       </div>
+    </div>
+  )
+}
+
+function ScoreTableOptions({ tableData, answer, userAnswer }) {
+  const { headers, rows } = tableData
+  const numCols = headers.length
+
+  return (
+    <div style={{ marginBottom: '12px', border: '1px solid #e5e7eb', borderRadius: '4px', overflow: 'hidden' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: `40px repeat(${numCols}, 1fr)`, gap: '1px', background: '#e5e7eb' }}>
+        <div style={{ background: '#f3f4f6', padding: '8px', fontSize: '14px', fontWeight: 500, color: '#6b7280' }}></div>
+        {headers.map((h, i) => (
+          <div key={i} style={{ background: '#f3f4f6', padding: '8px', fontSize: '14px', fontWeight: 500, color: '#6b7280', textAlign: 'center' }}>
+            {h}
+          </div>
+        ))}
+      </div>
+      {Object.entries(rows).map(([key, values]) => {
+        const isCorrect = key === answer
+        const isUserWrong = key === userAnswer && !isCorrect
+        const bg = isCorrect ? '#dcfce7' : isUserWrong ? '#fee2e2' : '#ffffff'
+        const color = isCorrect ? '#166534' : isUserWrong ? '#991b1b' : '#4b5563'
+        return (
+          <div key={key} style={{ display: 'grid', gridTemplateColumns: `40px repeat(${numCols}, 1fr)`, gap: '1px', background: '#e5e7eb' }}>
+            <div style={{ background: bg, padding: '8px', fontSize: '16px', fontWeight: 'bold', color, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {key}.
+            </div>
+            {values.map((val, i) => (
+              <div key={i} style={{ background: bg, padding: '8px', fontSize: '14px', color, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {val}
+              </div>
+            ))}
+          </div>
+        )
+      })}
     </div>
   )
 }
