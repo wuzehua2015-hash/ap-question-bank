@@ -153,7 +153,7 @@ function MockPdfPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {frqs.map((frq, idx) => (
                 <div key={frq.question_id} className="pdf-avoid-break">
-                  <FRQDisplay frq={frq} variant="pdf" index={idx + 1} />
+                  <FRQDisplay frq={frq} variant="pdf" index={idx + 1} showRubric={false} />
                 </div>
               ))}
             </div>

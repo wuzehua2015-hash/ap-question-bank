@@ -2,7 +2,7 @@ import { MathText } from './MathText'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
-// ─── 图片展示（复用 QuestionDisplay 的相同逻辑）───
+// ─── 图片展示 ───
 function DisplayImage({ path, variant }) {
   const imgUrl = path.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
 
@@ -12,7 +12,7 @@ function DisplayImage({ path, variant }) {
         src={imgUrl}
         alt=""
         style={{ maxWidth: '100%', maxHeight: '280px', display: 'block', margin: '12px auto' }}
-        onError={() => { /* 留空，不显示错误 */ }}
+        onError={() => {}}
       />
     )
   }
@@ -22,7 +22,7 @@ function DisplayImage({ path, variant }) {
       src={imgUrl}
       alt=""
       className="max-w-full max-h-80 mx-auto mb-4 rounded-lg border border-border"
-      onError={() => { /* 留空 */ }}
+      onError={() => {}}
     />
   )
 }
@@ -100,6 +100,82 @@ function RubricDisplay({ rubric, variant }) {
   )
 }
 
+// ─── FRQ 文本渲染器：自动识别子问题并添加缩进 ───
+function FRQText({ text, isPdf }) {
+  if (!text) return null
+
+  const lines = text.split('\n')
+
+  // 检测子问题标记：(a), (b), (c), (d), (i), (ii), (iii), (d)(i), (d)(ii) 等
+  const isSubQuestionLine = (line) => {
+    const trimmed = line.trim()
+    return /^\([a-z]\)/.test(trimmed) || /^\([i]+\)/.test(trimmed) || /^\([a-z]\)\([i]+\)/.test(trimmed)
+  }
+
+  // 检测主问题标记（非子问题）：1., 2., 3. 等
+  const isMainQuestionLine = (line) => {
+    const trimmed = line.trim()
+    return /^\d+\./.test(trimmed) && !/^\d+\)\./.test(trimmed)
+  }
+
+  if (isPdf) {
+    return (
+      <div style={{
+        fontFamily: "'Times New Roman', 'Georgia', 'Songti SC', 'SimSun', serif",
+        fontSize: '16px',
+        lineHeight: 1.8,
+        color: '#1f2937',
+      }}>
+        {lines.map((line, idx) => {
+          const subQ = isSubQuestionLine(line)
+          const mainQ = isMainQuestionLine(line)
+          const prevLine = idx > 0 ? lines[idx - 1] : null
+          const prevIsSubQ = prevLine ? isSubQuestionLine(prevLine) : false
+          const prevIsMainQ = prevLine ? isMainQuestionLine(prevLine) : false
+
+          return (
+            <div
+              key={idx}
+              style={{
+                // 子问题行：左侧缩进，顶部间距（如果前一行不是子问题）
+                marginLeft: subQ ? '24px' : '0',
+                marginTop: (subQ && !prevIsSubQ) ? '8px' : '0',
+                // 主问题行：顶部间距（如果前一行不是主问题）
+                marginTop: (mainQ && !prevIsMainQ) ? '4px' : undefined,
+                // 非子问题行：轻微左侧缩进（避免与题头对齐）
+                paddingLeft: (!subQ && !mainQ && line.trim()) ? '0' : '0',
+              }}
+            >
+              <MathText text={line} />
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+
+  // web 模式：保持原有样式，但增加子问题缩进
+  return (
+    <div className="text-base text-text leading-relaxed whitespace-pre-wrap">
+      {lines.map((line, idx) => {
+        const subQ = isSubQuestionLine(line)
+        const prevLine = idx > 0 ? lines[idx - 1] : null
+        const prevIsSubQ = prevLine ? isSubQuestionLine(prevLine) : false
+
+        return (
+          <div
+            key={idx}
+            className={subQ ? 'ml-6 mt-2' : ''}
+            style={subQ && !prevIsSubQ ? { marginTop: '8px' } : {}}
+          >
+            <MathText text={line} />
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 // ─── 主组件：FRQDisplay ───
 
 /**
@@ -109,8 +185,9 @@ function RubricDisplay({ rubric, variant }) {
  * @param {Object} frq - FRQ 数据对象
  * @param {string} variant - 'web' | 'pdf' — 样式模式
  * @param {number} index - 题号（1-based）
+ * @param {boolean} showRubric - 是否显示评分标准（默认 true）
  */
-function FRQDisplay({ frq, variant = 'web', index }) {
+function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
   if (!frq) return null
 
   const isPdf = variant === 'pdf'
@@ -122,13 +199,19 @@ function FRQDisplay({ frq, variant = 'web', index }) {
       {isPdf ? (
         <div style={{
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-          marginBottom: '12px', paddingBottom: '8px',
-          borderBottom: '1px solid #e5e7eb',
+          marginBottom: '14px', paddingBottom: '10px',
+          borderBottom: '2px solid #1e40af',
         }}>
-          <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#1f2937' }}>
+          <div style={{
+            fontSize: '20px', fontWeight: 'bold', color: '#1f2937',
+            fontFamily: "'Times New Roman', 'Georgia', serif",
+          }}>
             FRQ {frq.question_number}
           </div>
-          <div style={{ fontSize: '16px', fontWeight: '600', color: '#1e40af' }}>
+          <div style={{
+            fontSize: '16px', fontWeight: '600', color: '#1e40af',
+            fontFamily: "'Times New Roman', 'Georgia', serif",
+          }}>
             {frq.rubric?.total_points || 0} points
           </div>
         </div>
@@ -143,17 +226,14 @@ function FRQDisplay({ frq, variant = 'web', index }) {
         </div>
       )}
 
-      {/* 题目文本 */}
+      {/* 题目文本：使用 FRQText 渲染器，自动处理子问题缩进 */}
       {isPdf ? (
-        <div style={{
-          fontSize: '16px', fontWeight: '500', color: '#1f2937',
-          marginBottom: '12px', lineHeight: 1.6, whiteSpace: 'pre-line',
-        }}>
-          <MathText text={frq.text} />
+        <div style={{ marginBottom: '16px' }}>
+          <FRQText text={frq.text} isPdf={true} />
         </div>
       ) : (
-        <div className="text-base text-text leading-relaxed whitespace-pre-wrap mb-6 bg-gray-50 rounded-lg p-4">
-          <MathText text={frq.text} />
+        <div className="mb-6 bg-gray-50 rounded-lg p-4">
+          <FRQText text={frq.text} isPdf={false} />
         </div>
       )}
 
@@ -162,8 +242,8 @@ function FRQDisplay({ frq, variant = 'web', index }) {
         <DisplayImage key={i} path={path} variant={variant} />
       ))}
 
-      {/* 评分标准 */}
-      <RubricDisplay rubric={frq.rubric} variant={variant} />
+      {/* 评分标准（条件渲染） */}
+      {showRubric && <RubricDisplay rubric={frq.rubric} variant={variant} />}
     </div>
   )
 }
