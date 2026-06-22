@@ -1,5 +1,6 @@
 import { getCurrentQuiz, getCurrentFRQ, getQuizInfo } from '../utils/quizSession'
 import { exportToPdf, PdfContainer } from '../utils/pdfExport.jsx'
+import { BREAK_GUARD } from '../utils/pdfBreakGuard'
 import QuestionDisplay from '../components/QuestionDisplay'
 import FRQDisplay from '../components/FRQDisplay'
 import { useState, useEffect, useRef } from 'react'
@@ -152,7 +153,7 @@ function MockPdfPage() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {frqs.map((frq, idx) => (
-                <div key={frq.question_id} className="pdf-avoid-break">
+                <div key={frq.question_id}>
                   <FRQDisplay frq={frq} variant="pdf" index={idx + 1} showRubric={false} />
                 </div>
               ))}
@@ -236,6 +237,7 @@ function MockPdfPage() {
                         borderLeft: '3px solid #3b82f6',
                         fontSize: '14px',
                         color: '#374151',
+                        ...BREAK_GUARD.PARAGRAPH,
                       }}>
                         <span style={{ fontWeight: 'bold', color: '#1e40af' }}>{point.point_id}</span>
                         <span style={{ color: '#6b7280', marginLeft: '4px' }}>({point.value} pts)</span>

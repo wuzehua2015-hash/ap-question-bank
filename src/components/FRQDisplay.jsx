@@ -1,4 +1,5 @@
 import { MathText } from './MathText'
+import { parseFRQBlocks, isSubQuestionLine, BREAK_GUARD } from '../utils/pdfBreakGuard'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -11,7 +12,7 @@ function DisplayImage({ path, variant }) {
       <img
         src={imgUrl}
         alt=""
-        style={{ maxWidth: '100%', maxHeight: '280px', display: 'block', margin: '12px auto' }}
+        style={{ maxWidth: '100%', maxHeight: '280px', display: 'block', margin: '12px auto', ...BREAK_GUARD.MEDIA }}
         onError={() => {}}
       />
     )
@@ -51,6 +52,7 @@ function RubricDisplay({ rubric, variant }) {
               fontSize: '13px',
               color: '#374151',
               lineHeight: 1.5,
+              ...BREAK_GUARD.PARAGRAPH,
             }}>
               <span style={{ fontWeight: 'bold', color: '#1e40af' }}>{point.point_id}</span>
               <span style={{ color: '#6b7280', marginLeft: '4px' }}>({point.value} pts)</span>
@@ -100,23 +102,11 @@ function RubricDisplay({ rubric, variant }) {
   )
 }
 
-// ─── FRQ 文本渲染器：自动识别子问题并添加缩进 ───
+// ─── FRQ 文本渲染器：块级防截断 + 子问题缩进 ───
 function FRQText({ text, isPdf }) {
   if (!text) return null
 
-  const lines = text.split('\n')
-
-  // 检测子问题标记：(a), (b), (c), (d), (i), (ii), (iii), (d)(i), (d)(ii) 等
-  const isSubQuestionLine = (line) => {
-    const trimmed = line.trim()
-    return /^\([a-z]\)/.test(trimmed) || /^\([i]+\)/.test(trimmed) || /^\([a-z]\)\([i]+\)/.test(trimmed)
-  }
-
-  // 检测主问题标记（非子问题）：1., 2., 3. 等
-  const isMainQuestionLine = (line) => {
-    const trimmed = line.trim()
-    return /^\d+\./.test(trimmed) && !/^\d+\)\./.test(trimmed)
-  }
+  const blocks = parseFRQBlocks(text)
 
   if (isPdf) {
     return (
@@ -126,27 +116,23 @@ function FRQText({ text, isPdf }) {
         lineHeight: 1.8,
         color: '#1f2937',
       }}>
-        {lines.map((line, idx) => {
-          const subQ = isSubQuestionLine(line)
-          const mainQ = isMainQuestionLine(line)
-          const prevLine = idx > 0 ? lines[idx - 1] : null
-          const prevIsSubQ = prevLine ? isSubQuestionLine(prevLine) : false
-          const prevIsMainQ = prevLine ? isMainQuestionLine(prevLine) : false
+        {blocks.map((block, bidx) => {
+          const isSubQ = block.type === 'subquestion'
 
           return (
             <div
-              key={idx}
+              key={bidx}
               style={{
-                // 子问题行：左侧缩进，顶部间距（如果前一行不是子问题）
-                marginLeft: subQ ? '24px' : '0',
-                marginTop: (subQ && !prevIsSubQ) ? '8px' : '0',
-                // 主问题行：顶部间距（如果前一行不是主问题）
-                marginTop: (mainQ && !prevIsMainQ) ? '4px' : undefined,
-                // 非子问题行：轻微左侧缩进（避免与题头对齐）
-                paddingLeft: (!subQ && !mainQ && line.trim()) ? '0' : '0',
+                ...BREAK_GUARD.BLOCK,
+                marginLeft: isSubQ ? '24px' : '0',
+                marginTop: isSubQ ? '8px' : '0',
               }}
             >
-              <MathText text={line} />
+              {block.lines.map((line, lidx) => (
+                <div key={lidx}>
+                  <MathText text={line} />
+                </div>
+              ))}
             </div>
           )
         })}
@@ -154,21 +140,22 @@ function FRQText({ text, isPdf }) {
     )
   }
 
-  // web 模式：保持原有样式，但增加子问题缩进
+  // web 模式：同样使用块级渲染，但样式不同
   return (
     <div className="text-base text-text leading-relaxed whitespace-pre-wrap">
-      {lines.map((line, idx) => {
-        const subQ = isSubQuestionLine(line)
-        const prevLine = idx > 0 ? lines[idx - 1] : null
-        const prevIsSubQ = prevLine ? isSubQuestionLine(prevLine) : false
+      {blocks.map((block, bidx) => {
+        const isSubQ = block.type === 'subquestion'
 
         return (
           <div
-            key={idx}
-            className={subQ ? 'ml-6 mt-2' : ''}
-            style={subQ && !prevIsSubQ ? { marginTop: '8px' } : {}}
+            key={bidx}
+            className={isSubQ ? 'ml-6 mt-2' : ''}
           >
-            <MathText text={line} />
+            {block.lines.map((line, lidx) => (
+              <div key={lidx}>
+                <MathText text={line} />
+              </div>
+            ))}
           </div>
         )
       })}
@@ -201,6 +188,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
           marginBottom: '14px', paddingBottom: '10px',
           borderBottom: '2px solid #1e40af',
+          ...BREAK_GUARD.BLOCK,
         }}>
           <div style={{
             fontSize: '20px', fontWeight: 'bold', color: '#1f2937',
@@ -226,7 +214,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
         </div>
       )}
 
-      {/* 题目文本：使用 FRQText 渲染器，自动处理子问题缩进 */}
+      {/* 题目文本：使用 FRQText 块级渲染器，每个子问题作为一个不截断块 */}
       {isPdf ? (
         <div style={{ marginBottom: '16px' }}>
           <FRQText text={frq.text} isPdf={true} />
