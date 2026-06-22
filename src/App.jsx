@@ -9,6 +9,8 @@ import FRQPlayer from './pages/FRQPlayer'
 import FRQScorePage from './pages/FRQScorePage'
 import ScorePage from './pages/ScorePage'
 
+import QuizPdfPage from './pages/QuizPdfPage'
+
 import SearchPage from './pages/SearchPage'
 import MistakeBook from './pages/MistakeBook'
 import HistoryPage from './pages/HistoryPage'
@@ -32,6 +34,7 @@ function App() {
             <Route path="/mistakes" element={<MistakeBook />} />
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/score" element={<ScorePage />} />
+            <Route path="/quiz-pdf" element={<QuizPdfPage />} />
             {/* 预留：未来营销页 */}
             {/* <Route path="/about" element={<AboutPage />} /> */}
             {/* 预留：未来科目主页 */}

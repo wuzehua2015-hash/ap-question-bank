@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { loadMCQBank, loadFRQBank, generateMockExam, getMockExamConfig } from '../utils/questionBank'
-import { startMockExam } from '../utils/quizSession'
+import { startMockExam, startQuiz } from '../utils/quizSession'
 
 function ExamSetup() {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const [preview, setPreview] = useState(null)
 
   const generate = async () => {
     setLoading(true)
     setError(null)
+    setPreview(null)
     try {
       const [mcqs, frqs] = await Promise.all([loadMCQBank(), loadFRQBank()])
       const result = await generateMockExam(mcqs, frqs)
@@ -18,7 +20,7 @@ function ExamSetup() {
         throw new Error('generateMockExam returned invalid result')
       }
       const mockConfig = await getMockExamConfig('macro')
-      startMockExam({
+      setPreview({
         mcq: result.quiz,
         frq: result.frq,
         config: { type: 'mock' },
@@ -27,11 +29,28 @@ function ExamSetup() {
           frqTimeLimit: mockConfig.frqTimeLimit,
         },
       })
-      navigate('/play')
     } catch (err) {
       setError('加载失败: ' + (err.message || '请检查网络'))
+    } finally {
       setLoading(false)
     }
+  }
+
+  const startMock = () => {
+    if (!preview) return
+    startMockExam(preview)
+    navigate('/play')
+  }
+
+  const exportPdf = () => {
+    if (!preview) return
+    // PDF 导出只包含 MCQ 部分
+    startQuiz({
+      questions: preview.mcq,
+      config: { type: 'mock' },
+      info: { unit: 'all', requestedCount: preview.mcq.length, actualCount: preview.mcq.length },
+    })
+    navigate('/quiz-pdf')
   }
 
   return (
@@ -51,10 +70,32 @@ function ExamSetup() {
           </div>
         )}
 
-        <button onClick={generate} disabled={loading}
-          className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50">
-          {loading ? '生成中...' : '开始 Mock Exam'}
-        </button>
+        {!preview ? (
+          <button onClick={generate} disabled={loading}
+            className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50">
+            {loading ? '生成中...' : '开始 Mock Exam'}
+          </button>
+        ) : (
+          <div className="space-y-4">
+            <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+              ✅ 已生成 Mock Exam：{preview.mcq.length} 道 MCQ + {preview.frq.length} 道 FRQ
+            </div>
+            <div className="flex gap-3">
+              <button onClick={startMock}
+                className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors">
+                📝 开始 Mock Exam
+              </button>
+              <button onClick={exportPdf}
+                className="flex-1 bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors">
+                📄 导出 MCQ PDF
+              </button>
+            </div>
+            <button onClick={generate} disabled={loading}
+              className="w-full border border-border bg-surface hover:bg-gray-50 text-text font-semibold py-2 rounded-lg transition-colors text-sm">
+              {loading ? '重新生成中...' : '↻ 重新生成'}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   )

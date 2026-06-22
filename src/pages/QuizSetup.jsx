@@ -10,10 +10,12 @@ function QuizSetup() {
   const [excludeDone, setExcludeDone] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const [preview, setPreview] = useState(null)  // 存储生成结果
 
   const generate = async () => {
     setLoading(true)
     setError(null)
+    setPreview(null)
     try {
       const questions = await loadMCQBank()
       const result = generateQuiz(questions, { unit, count, excludeDone, diverseSources: true })
@@ -22,7 +24,7 @@ function QuizSetup() {
         setLoading(false)
         return
       }
-      startQuiz({
+      setPreview({
         questions: result.quiz,
         config: { unit, count: result.actualCount, type: 'quiz' },
         info: {
@@ -31,11 +33,23 @@ function QuizSetup() {
           unit: result.unit,
         },
       })
-      navigate('/play')
     } catch (err) {
       setError('加载失败: ' + (err.message || '请检查网络'))
+    } finally {
       setLoading(false)
     }
+  }
+
+  const startPractice = () => {
+    if (!preview) return
+    startQuiz(preview)
+    navigate('/play')
+  }
+
+  const exportPdf = () => {
+    if (!preview) return
+    startQuiz(preview)
+    navigate('/quiz-pdf')
   }
 
   return (
@@ -73,10 +87,32 @@ function QuizSetup() {
           </div>
         )}
 
-        <button onClick={generate} disabled={loading}
-          className="w-full bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50">
-          {loading ? '生成中...' : '生成 Quiz'}
-        </button>
+        {!preview ? (
+          <button onClick={generate} disabled={loading}
+            className="w-full bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50">
+            {loading ? '生成中...' : '生成 Quiz'}
+          </button>
+        ) : (
+          <div className="space-y-4">
+            <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+              ✅ 已生成 {preview.info.actualCount} 题（单元：{preview.info.unit}）
+            </div>
+            <div className="flex gap-3">
+              <button onClick={startPractice}
+                className="flex-1 bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors">
+                📝 开始练习
+              </button>
+              <button onClick={exportPdf}
+                className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors">
+                📄 导出 PDF
+              </button>
+            </div>
+            <button onClick={generate} disabled={loading}
+              className="w-full border border-border bg-surface hover:bg-gray-50 text-text font-semibold py-2 rounded-lg transition-colors text-sm">
+              {loading ? '重新生成中...' : '↻ 重新生成'}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   )

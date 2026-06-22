@@ -55,7 +55,7 @@ function SearchPage() {
     return result
   }, [questions, keyword, unitFilter, yearFilter, difficultyFilter, doneFilter, wrongFilter, doneIds, wrongIds])
 
-  const generateQuizFromSelection = (selectedQuestions) => {
+  const startPractice = (selectedQuestions) => {
     if (selectedQuestions.length === 0) return
     startCustomQuiz({
       questions: selectedQuestions,
@@ -63,6 +63,16 @@ function SearchPage() {
       info: { requestedCount: selectedQuestions.length, actualCount: selectedQuestions.length, unit: 'custom' },
     })
     navigate('/play')
+  }
+
+  const exportPdf = (selectedQuestions) => {
+    if (selectedQuestions.length === 0) return
+    startCustomQuiz({
+      questions: selectedQuestions,
+      config: { unit: 'custom', count: selectedQuestions.length, type: 'quiz' },
+      info: { requestedCount: selectedQuestions.length, actualCount: selectedQuestions.length, unit: 'custom' },
+    })
+    navigate('/quiz-pdf')
   }
 
   const getImageUrl = (path) => {
@@ -142,12 +152,20 @@ function SearchPage() {
       <div className="flex justify-between items-center mb-4">
         <span className="text-sm text-text-muted">共 {filtered.length} 道题</span>
         {filtered.length > 0 && filtered.length <= 60 && (
-          <button
-            onClick={() => generateQuizFromSelection(filtered)}
-            className="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-          >
-            练习这 {filtered.length} 题
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={() => startPractice(filtered)}
+              className="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              练习这 {filtered.length} 题
+            </button>
+            <button
+              onClick={() => exportPdf(filtered)}
+              className="border border-brand text-brand hover:bg-brand hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              📄 导出 PDF
+            </button>
+          </div>
         )}
       </div>
 

@@ -57,6 +57,18 @@ function MistakeBook() {
     setWrongIds([])
   }
 
+  const exportWrongPdf = () => {
+    if (wrongQuestions.length === 0) return
+    const shuffled = [...wrongQuestions].sort(() => Math.random() - 0.5)
+    const selected = shuffled.slice(0, Math.min(30, shuffled.length))
+    startWrongQuiz({
+      questions: selected,
+      config: { unit: 'wrong', count: selected.length, type: 'quiz' },
+      info: { requestedCount: selected.length, actualCount: selected.length, unit: 'wrong' },
+    })
+    navigate('/quiz-pdf')
+  }
+
   const removeOne = (id) => {
     const updated = wrongIds.filter(w => w !== id)
     setWrongQuestions(updated)
@@ -94,6 +106,14 @@ function MistakeBook() {
               className="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
             >
               练习错题（{Math.min(wrongQuestions.length, 30)}题）
+            </button>
+          )}
+          {wrongQuestions.length > 0 && (
+            <button
+              onClick={exportWrongPdf}
+              className="border border-brand text-brand hover:bg-brand hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            >
+              📄 导出 PDF
             </button>
           )}
           {wrongQuestions.length > 0 && (

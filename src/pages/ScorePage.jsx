@@ -1,38 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCurrentQuiz, getCurrentFRQ, getMCQAnswers } from '../utils/quizSession'
-import html2pdf from 'html2pdf.js'
-
-/**
- * 将文本中的数学符号标记转换为 HTML 标签。
- * 例如：P L sub one → PL<sub>1</sub>，Y sub 2 → Y<sub>2</sub>
- */
-function formatMathText(text) {
-  if (!text) return ''
-  let t = text
-  // 合并全大写缩写（A D → AD, P L → PL, S R A S → SRAS, L R A S → LRAS）
-  t = t.replace(/\b([A-Z]) ([A-Z]) ([A-Z]) ([A-Z]) ([A-Z])\b/g, '$1$2$3$4$5')
-  t = t.replace(/\b([A-Z]) ([A-Z]) ([A-Z]) ([A-Z])\b/g, '$1$2$3$4')
-  t = t.replace(/\b([A-Z]) ([A-Z]) ([A-Z])\b/g, '$1$2$3')
-  t = t.replace(/\b([A-Z]) ([A-Z])\b/g, '$1$2')
-  // 下标（sub one → sub 1，sub two → sub 2）
-  t = t.replace(/\bsub one\b/g, '<sub>1</sub>')
-  t = t.replace(/\bsub two\b/g, '<sub>2</sub>')
-  t = t.replace(/\bsub three\b/g, '<sub>3</sub>')
-  t = t.replace(/\bsub (\d+)\b/g, '<sub>$1</sub>')
-  t = t.replace(/\bsub f\b/g, '<sub>f</sub>')
-  // 上标
-  t = t.replace(/\bsup (\d+)\b/g, '<sup>$1</sup>')
-  // 清理多余符号
-  t = t.replace(/•\s*•\s*•\s*•\s*•/g, '...')
-  t = t.replace(/·\s*·\s*·/g, '...')
-  return t
-}
-
-function MathText({ text }) {
-  const html = formatMathText(text)
-  return <span dangerouslySetInnerHTML={{ __html: html }} />
-}
+import { MathText } from '../components/MathText'
+import { PdfContainer, exportToPdf } from '../utils/pdfExport.jsx'
 
 function ScorePage() {
   const navigate = useNavigate()
@@ -101,34 +71,9 @@ function ScorePage() {
   const exportPDF = async () => {
     if (!pdfRef.current) return
     setExporting(true)
-
-    const element = pdfRef.current
-    const opt = {
-      margin: [10, 10, 10, 10],
-      filename: `AP-Macro-Mock-Exam-Report-${new Date().toISOString().split('T')[0]}.pdf`,
-      image: { type: 'jpeg', quality: 0.95 },
-      html2canvas: {
-        scale: 2,
-        useCORS: true,
-        logging: false,
-        letterRendering: true,
-      },
-      jsPDF: {
-        unit: 'mm',
-        format: 'a4',
-        orientation: 'portrait',
-        compress: true,
-      },
-      pagebreak: {
-        mode: ['css', 'legacy'],
-        before: '.pdf-page-break',
-        after: '.pdf-page-break-after',
-        avoid: '.pdf-avoid-break',
-      },
-    }
-
     try {
-      await html2pdf().set(opt).from(element).save()
+      const filename = `AP-Macro-Mock-Exam-Report-${new Date().toISOString().split('T')[0]}.pdf`
+      await exportToPdf(pdfRef.current, filename)
     } finally {
       setExporting(false)
     }
@@ -192,39 +137,7 @@ function ScorePage() {
       </div>
 
       {/* ===== PDF 打印区域 ===== */}
-      <div
-        ref={pdfRef}
-        className="pdf-report"
-        style={{
-          fontFamily: "'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif",
-          color: '#1f2937',
-          lineHeight: 1.6,
-          background: '#fff',
-        }}
-      >
-        {/* 水印层 */}
-        <div
-          className="pdf-watermark"
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            pointerEvents: 'none',
-            zIndex: 0,
-            backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
-              `<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'>
-                <text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle'
-                  transform='rotate(-30, 150, 150)' font-family='Arial, sans-serif'
-                  font-size='22' font-weight='bold' fill='rgba(180,180,180,0.12)'>
-                  翎英教育
-                </text>
-              </svg>`
-            )}")`,
-            backgroundRepeat: 'repeat',
-          }}
-        />
+      <PdfContainer refProp={pdfRef}>
 
         {/* 封面页 */}
         <div style={{ position: 'relative', zIndex: 1, padding: '30px 20px' }}>
@@ -536,7 +449,7 @@ function ScorePage() {
             Generated on {new Date().toLocaleString('zh-CN')} · For practice purposes only
           </div>
         </div>
-      </div>
+      </PdfContainer>
       {/* ===== PDF 打印区域结束 ===== */}
 
       {/* 页面底部操作按钮 */}
