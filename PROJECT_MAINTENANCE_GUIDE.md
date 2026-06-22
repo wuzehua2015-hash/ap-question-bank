@@ -1005,4 +1005,68 @@ src/components/
 
 ---
 
+## 十五、PDF 防截断统一标准（2026-06-25 新增）
+
+### 15.1 问题：html2pdf.js 截断不一致
+
+**问题描述**:
+- MCQ 用 `className="pdf-avoid-break"` 保护整题，效果好（短内容，一页可放下）
+- FRQ 也用同样的 `pdf-avoid-break` 保护整题，但 FRQ 内容太长（多道子问题），整题比一页还长
+- html2pdf.js 的 `break-inside: avoid` 在元素比页面长时会**强制在内部截断**，导致子问题被拦腰切断
+- 答案页 rubric 条目完全没有保护，每个条目被截断在任意位置（截图中 `b` 部分丢失）
+
+**根因**: 没有区分"短内容"和"长内容"的保护策略。所有内容用同一种保护方式，导致长内容失效。
+
+### 15.2 解决方案：Break Guard System（4 级保护层级）
+
+**新建 `src/utils/pdfBreakGuard.js`**：定义 PDF 防截断统一标准。
+
+```javascript
+// 4 级保护层级
+const BREAK_GUARD = {
+  WHOLE_QUESTION: { breakInside: 'avoid' },  // 短内容：整题保护（MCQ）
+  PARAGRAPH: { breakInside: 'avoid' },      // 段落：单个条目保护（rubric）
+  BLOCK: { breakInside: 'avoid' },          // 内容块：子问题保护（FRQ）
+  MEDIA: { breakInside: 'avoid' },           // 媒体：图片/表格保护
+}
+```
+
+**使用策略**:
+
+| 内容类型 | 长度 | 保护层级 | 说明 |
+|---------|------|---------|------|
+| MCQ 整题 | 短（1页内） | WHOLE_QUESTION | 父容器加 `break-inside: avoid` |
+| FRQ 子问题 | 中（可能跨页） | BLOCK | 子问题标记行+后续行打包为一个块 |
+| Rubric 条目 | 短（1行-2行） | PARAGRAPH | 每个条目独立保护 |
+| 图片/表格 | 短 | MEDIA | 元素本身保护 |
+
+**关键规则**:
+- 长内容（FRQ）**不要**用 WHOLE_QUESTION（整题保护不可行）
+- 长内容用 BLOCK 级别：每个子问题是一个块，块之间允许分页
+- 不要在外层和内层同时加 `break-inside: avoid`（冲突）
+
+### 15.3 复用工具：FRQ 文本解析
+
+```javascript
+// parseFRQBlocks: 将 FRQ 文本按子问题拆分为块
+const blocks = parseFRQBlocks(text)
+// 返回: [{type: 'preface', lines: [...]}, {type: 'subquestion', lines: [...]}, ...]
+
+// isSubQuestionLine: 检测子问题标记 (a), (b), (i), (ii), (d)(i) 等
+// isMainQuestionLine: 检测主问题标记 1., 2., 3. 等
+```
+
+**复用**: AP Microeconomics、IB Economics、任何有简答题的科目都可以直接使用 `parseFRQBlocks` + `BREAK_GUARD.BLOCK`。
+
+### 15.4 检查清单（必须遵守）
+
+- [ ] MCQ 用 `WHOLE_QUESTION`（整题保护）
+- [ ] FRQ 用 `BLOCK`（子问题块保护），不用 `WHOLE_QUESTION`
+- [ ] Rubric 条目用 `PARAGRAPH`（每个条目保护）
+- [ ] 图片/表格用 `MEDIA`（元素保护）
+- [ ] 不要同时在外层和内层加 `break-inside: avoid`
+- [ ] 新科目复用 `pdfBreakGuard.js`，不重复造轮子
+
+---
+
 *本文档由 Kimi 维护。每次遇到新问题后应更新到本文档中。*
