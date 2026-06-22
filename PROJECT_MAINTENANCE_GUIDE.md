@@ -844,6 +844,108 @@ const { loadMCQ, loadFRQ, getMockConfig } = useSubject()
 - 检查 `getMockExamConfig` 是否传了参数（防止 `undefined` 错误）
 - 检查 `quizInfo` 在所有入口点都有 `mode` 和 `isMock` 字段
 
+## 十三、AP Macroeconomics 交付标准（2026-06-22 新增）
+
+> 基于当前项目实际状态，定义"可以对外发布"的最低标准。
+> 每次提交前必须逐项确认，不能跳过。
+
+### 13.1 数据质量（通过 quiz-bank-smoke-test）
+
+| 检查项 | 当前状态 | 标准 |
+|--------|---------|------|
+| MCQ 总数 | 432 题 | ≥ 432，不减少 |
+| FRQ 总数 | 30 题 | ≥ 30，不减少 |
+| 图片题 | 39 道 | 图片文件存在，无 0 字节 |
+| 表格选项题 | 54 道 | 含 `option_table_data`（headers + rows） |
+| 文本污染 | 0 CRITICAL | 无 MACROECONOMICS/Section I/Directions 等混入 |
+| 表格 header 污染 | 0 | 题干末尾不含 `option_table_data.headers` 文字 |
+| 重复 question_id | 0 | 无重复 |
+| 选项缺失 answer | 0 | 每题都有有效 answer（A-E） |
+| 共用图像引用 | 已确认 | 共用图像的题目已正确引用 |
+| 图像空白/截断 | 0 | 无空白图像，无截断 |
+
+**验证命令：**
+```bash
+node scripts/quiz-bank-smoke-test.js
+# 或运行 Python 烟测脚本
+```
+
+### 13.2 功能完整性（所有入口点可正常启动）
+
+| 入口点 | 操作路径 | 验证方法 |
+|--------|---------|---------|
+| 首页生成 Quiz | 首页 → 生成 Quiz | 能生成 10/20/30 题，进入 QuizPlayer |
+| 单元练习 | 首页 → 选择单元 → 生成 | 按单元过滤正确，排除已做生效 |
+| Mock Exam | 首页 → Mock Exam → 开始 | 60 道 MCQ + 3 道 FRQ，计时器正常 |
+| 错题本练习 | 错题本 → 练习错题 | 只包含错题，进入 QuizPlayer |
+| 单题重练 | 错题本 → 展开 → 重新练习 | 单题进入 QuizPlayer |
+| 搜索练习 | 搜索 → 练习这 N 题 | 筛选结果正确进入 QuizPlayer |
+| 相似题练习 | 搜索/错题本 → 相关变式 → 练习这组变式 | 原题 + 相似题进入 QuizPlayer |
+| 提交成绩 | QuizPlayer → 提交 | 非 Mock 显示成绩、单元统计、相似题推荐 |
+| FRQ 评分 | FRQPlayer → 完成 → 自评 → 进入成绩 | FRQ 细项评分 + 总分正确 |
+| 历史记录 | 历史记录页 | 显示最近套题、单元趋势、难度趋势 |
+| PDF 导出 | 成绩页 → 导出 PDF | 生成完整成绩单 PDF |
+
+### 13.3 跨流程验证（状态泄漏 bug 检查）
+
+> **这是最容易漏的 bug。** 必须按顺序手动测试以下流程：
+
+| 测试编号 | 操作序列 | 预期结果 | 历史 bug |
+|---------|---------|---------|---------|
+| C1 | Mock Exam → 做 3 题 → 返回首页 → 生成 Quiz → 提交 | 提交后显示成绩，**不**跳转 FRQ | 曾经：currentFRQ 残留导致跳转 FRQ |
+| C2 | 生成 Quiz → 提交 → Mock Exam → 提交 MCQ → 确认 → FRQ | FRQ 正常显示，有计时器 | 曾经：白屏（await 缺失） |
+| C3 | Mock Exam → 超时（或手动提交 MCQ）→ 过渡页面 → 确认 | 进入 FRQ，计时器 60min 启动 | 曾经：直接跳转无过渡页面 |
+| C4 | 搜索 → 练习一组变式 → 提交 | 提交后显示成绩，**不**跳转 FRQ | 曾经：currentFRQ 残留导致跳转 FRQ |
+| C5 | 错题本 → 练习错题 → 提交 → 再做 Mock Exam | Mock Exam FRQ 正常显示 | 曾经：状态泄漏 |
+| C6 | Mock Exam → 刷新页面（MCQ 中） | 计时器继续，不丢失进度 | 曾经：Timer 不持久化 |
+| C7 | Mock Exam → 提交 MCQ → 刷新（过渡页面） | 仍显示过渡页面，不白屏 | 曾经：phase 状态丢失 |
+| C8 | 任意 quiz → 用浏览器返回 → 再进入新 quiz | 新 quiz 状态干净，无旧数据 | 曾经：currentFRQ 残留 |
+
+### 13.4 Mock Exam 专项验证
+
+| 检查项 | 标准 | 验证方法 |
+|--------|------|---------|
+| MCQ 计时 | 70 分钟（4200 秒） | 进入 QuizPlayer 后右上角显示倒计时 |
+| FRQ 计时 | 60 分钟（3600 秒） | 进入 FRQPlayer 后右上角显示倒计时 |
+| 超时自动提交 | 计时结束自动提交 MCQ | 将计时器改短（如 5 秒）测试 |
+| 超时跳转 FRQ | MCQ 超时后自动进入 FRQ | 同上 |
+| 过渡页面 | 提交 MCQ 后显示确认页 | 有"确认进入 FRQ"按钮，非直接跳转 |
+| 刷新恢复 | 刷新页面后计时器继续 | 不重置为 70 分钟 |
+| 单元分布 | 60 题按官方占比 | U1:4, U2:9, U3:13, U4:12, U5:15, U6:7 |
+| FRQ 同一年份 | 3 道来自同一年 | 查看 FRQ 题号年份是否一致 |
+| 评分标准 | 每道 FRQ 有 rubric | FRQScorePage 显示评分细项 |
+| 总分计算 | MCQ + FRQ = 正确数 + 自评分 | ScorePage 总分正确 |
+
+### 13.5 代码检查（pre-deploy-check 必须全绿）
+
+```bash
+# 1. 构建
+node node_modules/vite/bin/vite.js build
+
+# 2. 运行检查
+node scripts/pre-deploy-check.js
+```
+
+**必须全部通过：**
+- [ ] Build check: dist/index.html 存在
+- [ ] Data files: 4 个必需文件在 dist/data/
+- [ ] Async audit: 无 suspicious async 调用
+- [ ] Session lifecycle: 所有入口点 import quizSession，无直接 sessionStorage 操作
+- [ ] Mock exam config: 单元分布加总 = 60
+
+**如果任一检查失败，禁止提交。**
+
+### 13.6 手动最终检查（推荐每次大更新后）
+
+1. **清空 localStorage**（在 DevTools → Application → Local Storage → 清除）
+2. 刷新页面，确认首页正常加载
+3. 做一套完整 Mock Exam（从生成到成绩页）
+4. 做一套普通 Quiz（从生成到成绩页）
+5. 搜索一道题，练习相似变式，提交
+6. 检查错题本是否有正确记录
+7. 检查历史记录页是否有正确记录
+8. 检查 ScorePage 的 PDF 导出是否正常
+
 ---
 
 *本文档由 Kimi 维护。每次遇到新问题后应更新到本文档中。*
