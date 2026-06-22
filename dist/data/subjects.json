@@ -1,0 +1,37 @@
+{
+  "subjects": [
+    {
+      "id": "macro",
+      "name": "AP Macroeconomics",
+      "shortName": "Macro",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "macro_question_bank_v4.json",
+      "frqBank": "macro_frq_bank.json",
+      "similarityIndex": "similarity_index.json",
+      "dataVersion": "v4",
+      "units": [
+        { "id": "U1", "name": "Basic Economic Concepts" },
+        { "id": "U2", "name": "Economic Indicators & Business Cycle" },
+        { "id": "U3", "name": "National Income & Price Determination" },
+        { "id": "U4", "name": "Financial Sector" },
+        { "id": "U5", "name": "Long-Run Consequences of Policies" },
+        { "id": "U6", "name": "Open Economy" }
+      ],
+      "mockExam": {
+        "totalMCQ": 60,
+        "frqCount": 3,
+        "mcqTimeLimit": 4200,
+        "frqTimeLimit": 3600,
+        "unitDistribution": {
+          "U1": 4,
+          "U2": 9,
+          "U3": 13,
+          "U4": 12,
+          "U5": 15,
+          "U6": 7
+        }
+      }
+    }
+  ]
+}
