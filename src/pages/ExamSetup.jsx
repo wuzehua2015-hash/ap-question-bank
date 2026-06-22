@@ -44,13 +44,19 @@ function ExamSetup() {
 
   const exportPdf = () => {
     if (!preview) return
-    // PDF 导出只包含 MCQ 部分
-    startQuiz({
-      questions: preview.mcq,
+    startMockExam({
+      mcq: preview.mcq,
+      frq: preview.frq,
       config: { type: 'mock' },
-      info: { unit: 'all', requestedCount: preview.mcq.length, actualCount: preview.mcq.length },
+      info: {
+        unit: 'all',
+        requestedCount: preview.mcq.length,
+        actualCount: preview.mcq.length,
+        mcqTimeLimit: preview.info.mcqTimeLimit,
+        frqTimeLimit: preview.info.frqTimeLimit,
+      },
     })
-    navigate('/quiz-pdf')
+    navigate('/mock-pdf')
   }
 
   return (
@@ -87,7 +93,7 @@ function ExamSetup() {
               </button>
               <button onClick={exportPdf}
                 className="flex-1 bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors">
-                📄 导出 MCQ PDF
+                📄 导出完整试卷
               </button>
             </div>
             <button onClick={generate} disabled={loading}

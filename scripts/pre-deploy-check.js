@@ -180,6 +180,45 @@ if (quizPlayerContent.includes('getCurrentQuiz') && quizPlayerContent.includes('
   fail('QuizPlayer missing quizSession readers — must use getCurrentQuiz / getQuizInfo')
 }
 
+// Check: MockPdfPage uses quizSession readers (both MCQ and FRQ)
+const mockPdfPath = path.join(SRC_DIR, 'pages', 'MockPdfPage.jsx')
+if (fs.existsSync(mockPdfPath)) {
+  const mockPdfContent = fs.readFileSync(mockPdfPath, 'utf-8')
+  if (mockPdfContent.includes('getCurrentQuiz') && mockPdfContent.includes('getCurrentFRQ')) {
+    pass('MockPdfPage reads via getCurrentQuiz + getCurrentFRQ')
+  } else {
+    fail('MockPdfPage must use both getCurrentQuiz and getCurrentFRQ from quizSession')
+  }
+  if (mockPdfContent.includes('getQuizInfo')) {
+    pass('MockPdfPage reads quizInfo via getQuizInfo')
+  } else {
+    warn('MockPdfPage missing getQuizInfo — may need quizInfo for display')
+  }
+} else {
+  fail('MockPdfPage.jsx not found — required for mock exam PDF export')
+}
+
+// Check: FRQDisplay component exists
+const frqDisplayPath = path.join(SRC_DIR, 'components', 'FRQDisplay.jsx')
+if (fs.existsSync(frqDisplayPath)) {
+  pass('FRQDisplay.jsx component exists')
+} else {
+  fail('FRQDisplay.jsx not found — required for mock exam PDF rendering')
+}
+
+// Check: App.jsx has /mock-pdf route
+const appPath = path.join(SRC_DIR, 'App.jsx')
+if (fs.existsSync(appPath)) {
+  const appContent = fs.readFileSync(appPath, 'utf-8')
+  if (appContent.includes('/mock-pdf') && appContent.includes('MockPdfPage')) {
+    pass('App.jsx has /mock-pdf route with MockPdfPage')
+  } else {
+    fail('App.jsx missing /mock-pdf route or MockPdfPage import')
+  }
+} else {
+  warn('App.jsx not found — skipping route check')
+}
+
 // Check: all entry points import from quizSession instead of direct setItem
 const entryPoints = [
   { file: 'pages/ExamSetup.jsx', import: 'quizSession' },

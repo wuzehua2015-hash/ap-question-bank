@@ -1,7 +1,7 @@
 # AP题库项目常见问题与维护清单
 
 > 本文档记录AP题库项目开发过程中遇到的所有问题，按类别分类，供后续新项目（微观经济学、其他学科）参考。
-> 最后更新: 2026-06-17
+> 最后更新: 2026-06-25
 
 ---
 
@@ -838,6 +838,9 @@ const { loadMCQ, loadFRQ, getMockConfig } = useSubject()
    - 所有入口点禁止直接操作 `sessionStorage` 的 quiz 核心状态
    - QuizPlayer / FRQPlayer 必须使用 `getCurrentQuiz` / `getCurrentFRQ` 读取
    - QuizPlayer 禁止保留旧的 `removeItem('currentFRQ')` hack
+   - **MockPdfPage 必须同时读取 `getCurrentQuiz` + `getCurrentFRQ`（不能漏 FRQ）**
+   - **FRQDisplay.jsx 组件必须存在**
+   - **App.jsx 必须包含 `/mock-pdf` 路由和 `MockPdfPage` 导入**
 5. **Mock exam config**: subjects.json 中 mockExam 的单元分布加总等于 totalMCQ
 
 **新增检查规则**（未来可扩展）：
@@ -884,7 +887,8 @@ node scripts/quiz-bank-smoke-test.js
 | 提交成绩 | QuizPlayer → 提交 | 非 Mock 显示成绩、单元统计、相似题推荐 |
 | FRQ 评分 | FRQPlayer → 完成 → 自评 → 进入成绩 | FRQ 细项评分 + 总分正确 |
 | 历史记录 | 历史记录页 | 显示最近套题、单元趋势、难度趋势 |
-| PDF 导出 | 成绩页 → 导出 PDF | 生成完整成绩单 PDF |
+| PDF 导出（Quiz） | QuizSetup → 导出 PDF | 生成纯 MCQ 试卷 PDF（含答案）
+| PDF 导出（Mock） | Mock Exam → 导出完整试卷 | 生成 MCQ + FRQ 完整试卷 PDF（含答案 + Rubric） |
 
 ### 13.3 跨流程验证（状态泄漏 bug 检查）
 
@@ -945,6 +949,59 @@ node scripts/pre-deploy-check.js
 6. 检查错题本是否有正确记录
 7. 检查历史记录页是否有正确记录
 8. 检查 ScorePage 的 PDF 导出是否正常
+
+---
+
+## 十四、Mock Exam PDF vs Quiz PDF 的架构分离（2026-06-25 新增）
+
+### 14.1 问题：Mock 和 Quiz 共享同一套 PDF 生成逻辑
+
+**问题描述**:
+- `QuizPdfPage` 被所有入口共用（QuizSetup、MistakeBook、SearchPage、ExamSetup）
+- 但 Mock Exam 的数据结构是 `{mcq, frq}`，而 Quiz 是 `{questions}`（纯 MCQ）
+- 结果：`ExamSetup` 的 "导出 PDF" 按钮只能传 MCQ 给 `QuizPdfPage`，FRQ 被丢弃
+- 按钮文字被迫写成 "导出 MCQ PDF"，但用户期望的是完整试卷
+
+**技术债表现**:
+- 若未来其他科目有不同 Mock 结构（如 2 道 FRQ 而非 3 道，或 FRQ 类型不同），当前架构无法扩展
+- 每新增一个 PDF 需求，都要在 `QuizPdfPage` 里加 `if (isMock)` 分支——代码会迅速腐化
+
+### 14.2 解决方案：两套独立页面 + 独立展示组件
+
+**核心原则**：Mock Exam 和 Quiz 是两种独立的 session type，必须有独立的 PDF 页面。
+
+```
+src/pages/
+├── QuizPdfPage.jsx    ← 纯 MCQ 试卷（Quiz / 错题 / 搜索 / 相似题）
+├── MockPdfPage.jsx    ← MCQ + FRQ 完整试卷（Mock Exam 专用）
+
+src/components/
+├── QuestionDisplay.jsx  ← MCQ 纯展示（web / pdf 双模式）
+├── FRQDisplay.jsx      ← FRQ 纯展示（web / pdf 双模式）
+```
+
+**路由分离**:
+| 入口点 | 存储方式 | 路由 | 页面 |
+|--------|---------|------|------|
+| QuizSetup | `startQuiz({questions})` | `/quiz-pdf` | `QuizPdfPage` |
+| MistakeBook | `startQuiz({questions})` | `/quiz-pdf` | `QuizPdfPage` |
+| SearchPage | `startQuiz({questions})` | `/quiz-pdf` | `QuizPdfPage` |
+| SimilarQuestions | `startQuiz({questions})` | `/quiz-pdf` | `QuizPdfPage` |
+| ExamSetup | `startMockExam({mcq, frq})` | `/mock-pdf` | `MockPdfPage` |
+
+**关键设计**:
+- `MockPdfPage` 同时读取 `getCurrentQuiz()` + `getCurrentFRQ()` + `getQuizInfo()`
+- `QuizPdfPage` 只读取 `getCurrentQuiz()`，不感知 FRQ 存在
+- `FRQDisplay` 与 `QuestionDisplay` 是同级组件，各自独立渲染，不互相耦合
+
+### 14.3 检查清单（必须遵守）
+
+- [ ] Mock Exam 的 PDF 导出入口必须导航到 `/mock-pdf`，不是 `/quiz-pdf`
+- [ ] Mock Exam 的 PDF 存储必须使用 `startMockExam({mcq, frq})`，不是 `startQuiz({questions})`
+- [ ] `MockPdfPage` 必须同时读取 MCQ 和 FRQ 数据，渲染完整试卷
+- [ ] `QuizPdfPage` 保持只处理 MCQ，不引入 `if (isMock)` 分支
+- [ ] 新科目如需不同 Mock 结构（如不同数量 FRQ），只需修改 `MockPdfPage` 的渲染逻辑，不影响 `QuizPdfPage`
+- [ ] pre-deploy-check 会自动验证 `/mock-pdf` 路由、`MockPdfPage` 存在、`FRQDisplay` 组件存在
 
 ---
 
