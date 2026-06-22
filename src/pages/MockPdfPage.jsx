@@ -241,7 +241,7 @@ function MockPdfPage() {
                       }}>
                         <span style={{ fontWeight: 'bold', color: '#1e40af' }}>{point.point_id}</span>
                         <span style={{ color: '#6b7280', marginLeft: '4px' }}>({point.value} pts)</span>
-                        <span style={{ marginLeft: '6px' }}>{point.description}</span>
+                        <span style={{ marginLeft: '6px' }}><MathText text={point.description} /></span>
                       </div>
                     ))}
                   </div>
