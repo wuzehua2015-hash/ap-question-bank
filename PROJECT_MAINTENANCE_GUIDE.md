@@ -1070,3 +1070,73 @@ const blocks = parseFRQBlocks(text)
 ---
 
 *本文档由 Kimi 维护。每次遇到新问题后应更新到本文档中。*
+
+---
+
+## 十六、单元分类错误与缺失图片（2026-06-22 新增）
+
+### 16.1 问题：GDP/经济成长题被错分到 U1
+
+**问题描述**:
+- `2023_Q075`（Country X apples/bananas GDP 题）被标记为 `U1`，但实际是 `U2`
+- `2017_Q05`（Economic growth measurement）被标记为 `U1`，但实际是 `U2`
+- `2023_Q061`（Real GDP 比较）被标记为 `U1`，但实际是 `U2`
+- `2017_Q09`（Real GDP 比较，2017 年版本）被标记为 `U3`，但实际是 `U2`
+- 用户发现："U1 的知识点还做不了这个题"
+
+**根本原因**:
+- 单元分类算法把 "economy" 相关关键词都当作 U1（基础概念）
+- 但 GDP、real GDP、nominal GDP、economic growth 都是 U2（经济指标）的内容
+- 分类器没有区分 "基本经济概念"（U1）和 "经济指标"（U2）
+
+**规则**:
+| 关键词 | 正确单元 | 错误示例 |
+|--------|---------|---------|
+| GDP, real GDP, nominal GDP, gross domestic product | U2 | 不能分到 U1 |
+| Economic growth, per capita real GDP | U2 | 不能分到 U1 |
+| Business cycle, unemployment rate, inflation rate | U2 | 不能分到 U1 |
+| Aggregate demand, aggregate supply, fiscal policy | U3 | 不能分到 U1/U2 |
+| Money demand, money supply, monetary policy, central bank | U4 | 不能分到 U1/U2/U3 |
+| Fiscal + monetary combination | U5 | 不能分到 U3/U4 |
+
+**修复方法**:
+1. 在 `quiz-bank-smoke-test` 中新增 `test_unit_misclassification` 测试
+2. 在 `question-bank-builder` 的 `pre_audit_check` 中新增单元分类检查
+3. 扫描所有 U1 题目，检查是否包含 U2/U3/U4 关键词
+4. 扫描重复题目，确保不同副本的单元一致
+
+**已修复题目**:
+- `2023_Q075`: U1 → U2（添加缺失的 apples/bananas 表格图片）
+- `2017_Q05`: U1 → U2
+- `2023_Q061`: U1 → U2
+- `2017_Q09`: U3 → U2
+
+### 16.2 问题：题目提到表格但图片缺失
+
+**问题描述**:
+- `2023_Q075` 的题干包含 "The following table shows prices and quantities..."
+- 但 `image_paths` 为空，导致表格没有显示
+- 用户看到的是选项表格（Nominal GDP / Real GDP），但缺少题目中的数据表格（Apples/Bananas 价格和数量）
+
+**根本原因**:
+- 2019 年版本（`2019_Q08`）已有该表格图片，但 2023 年版本（`2023_Q075`）没有复制图片
+- 数据导入时只复制了文本，没有复制图片路径
+
+**修复方法**:
+1. 从 2019 年 PDF 中提取表格图片（或复用 `2019_Q08` 的图片）
+2. 保存为 `public/images/2023/2023_Q075_table.png`
+3. 更新 `2023_Q075` 的 `image_paths` 和 `has_graph`
+
+**检查清单**:
+- [ ] 所有提到 "The following table shows" 的题目必须有 `image_paths`
+- [ ] 重复题目（不同年份的相同题）必须同步图片和单元分类
+- [ ] 在 `quiz-bank-smoke-test` 中检测重复题目的一致性
+
+### 16.3 新增技术债记录
+
+| 技术债 | 说明 | 优先级 |
+|--------|------|--------|
+| `option_table_data` 与 `image_paths` 并存 | 表格选项题同时用结构化数据和图片，需确认是否冗余 | 低 |
+| 重复题目同步机制 | 2019_Q08 和 2023_Q075 是同一题的不同副本，需要手动同步 | 中 |
+| 单元分类批量验证 | 当前依赖烟测，建议添加自动化分类验证脚本 | 中 |
+| FRQ rubric 示例图提取 | 需要画图题的 rubric 中应包含参考图（从 Scoring Guidelines 提取） | 高 |
