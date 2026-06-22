@@ -9155,7 +9155,7 @@
       "E": "Nominal gross domestic product"
     },
     "answer": "A",
-    "primary_unit": "U1",
+    "primary_unit": "U2",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [
@@ -9321,7 +9321,7 @@
       "E": "2015"
     },
     "answer": "D",
-    "primary_unit": "U3",
+    "primary_unit": "U2",
     "secondary_units": [],
     "topics": [],
     "difficulty": "Easy",
@@ -15356,7 +15356,7 @@
       "E": "2015"
     },
     "answer": "D",
-    "primary_unit": "U1",
+    "primary_unit": "U2",
     "secondary_units": [],
     "topics": [],
     "difficulty": "Medium",
@@ -15894,20 +15894,25 @@
       "E": "$560 / $280"
     },
     "answer": "C",
-    "primary_unit": "U1",
+    "primary_unit": "U2",
     "secondary_units": [],
-    "topics": [],
+    "topics": [
+      "gdp",
+      "gross domestic product",
+      "nominal gdp"
+    ],
     "difficulty": "Medium",
-    "has_graph": false,
-    "image_paths": [],
+    "has_graph": true,
+    "image_paths": [
+      "/images/2023/2023_Q075_table.png"
+    ],
     "source": "AP Macro 2023 Practice Exam Set 3",
     "pure_unit": true,
     "classification_reasoning": "Classified from 2022 AP Practice Exam content analysis",
     "difficulty_source": "inferred",
     "difficulty_score": 3,
     "skills": [
-      "identify",
-      "evaluate"
+      "calculate"
     ],
     "requires_graph": false,
     "option_table_data": {
