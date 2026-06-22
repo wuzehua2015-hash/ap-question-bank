@@ -224,7 +224,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
         </div>
       )}
 
-      {/* 图片占位：当requires_graph=true但image_paths为空时 */}
+      {/* 图片占位：当requires_graph=true但image_paths为空时（数据缺失）*/}
       {frq.requires_graph && imagePaths.length === 0 && (
         isPdf ? (
           <div style={{
@@ -238,11 +238,11 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
             color: '#92400e',
             ...BREAK_GUARD.BLOCK,
           }}>
-            (This question requires a table/graph. Please refer to the original exam.)
+            ⚠️ 表格/图表缺失 — 请联系管理员补充此题图片。
           </div>
         ) : (
           <div className="my-4 p-5 bg-yellow-50 border border-dashed border-yellow-400 rounded text-center text-sm text-yellow-800">
-            (本题需要表格/图表，请参见原始试卷。)
+            ⚠️ 表格/图表缺失 — 请联系管理员补充此题图片。
           </div>
         )
       )}
