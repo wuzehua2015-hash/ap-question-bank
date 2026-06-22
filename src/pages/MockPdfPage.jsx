@@ -3,6 +3,7 @@ import { exportToPdf, PdfContainer } from '../utils/pdfExport.jsx'
 import { BREAK_GUARD } from '../utils/pdfBreakGuard'
 import QuestionDisplay from '../components/QuestionDisplay'
 import FRQDisplay from '../components/FRQDisplay'
+import { MathText } from '../components/MathText'
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
