@@ -712,19 +712,137 @@ git log --oneline -5    # 查看最近5次提交
 15. ✅ **题目搜索/筛选**（SearchPage.jsx：关键词搜索、单元/年份/难度/图表/表格/已做/错题筛选）
 16. ✅ **错题本功能**（MistakeBook.jsx：记录错题、按单元筛选、练习错题、移除错题）
 17. ✅ **答题历史统计**（HistoryPage.jsx：总览、单元正确率、难度正确率、最近套题记录）
-18. ✅ **移动端响应式优化**（Header 汉堡菜单、HomePage 网格响应式、选项按钮最小高度、导航按钮响应式）
+19. ✅ **Mock Exam 计时系统**（Timer 组件 + MCQ 70min + FRQ 60min + 超时自动提交 + 过渡页面）
+20. ✅ **FRQ 跳转 bug 修复**（清理 currentFRQ 残留）
+21. ✅ **Mock Exam 白屏修复**（await generateMockExam）
+22. ✅ **Table header 污染修复**（3 道题的表头文字从题干中移除）
+23. ✅ **QuizSession 架构重构**（集中管理 sessionStorage + useSubject Hook）
 
 **待确认问题**:
 - ⏳ Vercel网站稳定访问（网络间歇性问题）
-- ⏳ 图片在网页中正确显示（需部署后验证BASE_URL拼接是否生效）
-- ⏳ 表格选项题在网页中正确渲染为表格（带表头）
-- ⏳ FRQ评分细项显示（147条rubric criteria已去重，需验证渲染）
+- ⏳ GitHub push 网络问题（中国大陆访问）
 
 **待开发功能**:
 1. ✅ 批改页成绩面板（ScorePage 已有：AP分数预估、单元正确率、PDF导出）
 2. ✅ 错题回顾（MistakeBook 已实现）
 3. ✅ PDF导出（ScorePage 已实现：html2pdf.js 导出完整成绩单）
 4. ✅ 历史记录持久化（HistoryPage 已实现：localStorage 持久化 + 趋势分析）
+
+---
+
+## 十一、前端架构：QuizSession 状态管理（2026-06-22 新增）
+
+### 11.1 问题：sessionStorage 分布式清理导致跨流程 bug
+
+**问题描述**:
+- `sessionStorage` 被多个入口点（ExamSetup、QuizSetup、MistakeBook、SearchPage、SimilarQuestionsBlock）直接读写
+- 每次新增一个 key（如 `currentFRQ`），需要在 N 个入口点分别加 `removeItem('currentFRQ')`
+- 典型 bug：先做 Mock Exam → 未做完 → 去 Search 练习变式 → 提交后错误跳转到 FRQ（因为 `currentFRQ` 残留）
+- 修复方式是"在 5 个入口点分别加 removeItem"——这是打地鼠式修复，新加一个入口就会漏掉
+
+**根本原因**:
+- 没有生命周期所有权：谁负责创建 session，谁负责清理？
+- 分布式清理：每个入口点都知道要清理哪些 key，但新入口点不知道
+- 隐式状态机：`quizInfo` 在不同入口点的形状不一致（有的有 `isMock`，有的没有）
+
+### 11.2 解决方案：QuizSession 集中管理器
+
+**新建 `src/utils/quizSession.js`**：所有 quiz 相关的 sessionStorage 操作收归一处。
+
+```javascript
+// 启动 Mock Exam（自动清理所有旧状态）
+startMockExam({
+  mcq: result.quiz,
+  frq: result.frq,
+  config: { type: 'mock' },
+  info: { mcqTimeLimit, frqTimeLimit },
+})
+
+// 启动普通 quiz
+startQuiz({ questions, config, info })
+
+// 启动错题练习
+startWrongQuiz({ questions, config, info })
+
+// 启动自定义 quiz（SearchPage / MistakeBook 单题）
+startCustomQuiz({ questions, config, info })
+
+// 启动相似题练习
+startSimilarQuiz({ questions, config, info })
+
+// 读取
+const quiz = getCurrentQuiz()
+const frq = getCurrentFRQ()
+const info = getQuizInfo()
+const answers = getMCQAnswers()
+
+// 写入
+setMCQAnswers(finalAnswers)
+
+// 完全清理
+clearQuizSession()
+```
+
+**关键设计**:
+- `clearAll()` 在每次启动新 quiz 时自动执行，无需入口点手动清理
+- `quizInfo` 由 `start*Quiz` 统一写入，保证 `mode` 和 `isMock` 字段始终存在
+- 新入口点只需调用 `startXxxQuiz`，不需要知道有哪些 key 需要清理
+
+### 11.3 解决方案：useSubject Hook
+
+**新建 `src/hooks/useSubject.js`**：为后续多科目扩展预留接口。
+
+```javascript
+const { loadMCQ, loadFRQ, getMockConfig } = useSubject()
+// 当前默认 'macro'，未来从 URL 参数或 React Context 读取
+```
+
+**为什么现在不做完整多科目？**
+- 当前项目只有 macro 一个科目，完整多科目架构（Context + Router + Subject Switcher）是过度工程
+- `useSubject` 作为**预留接口**，后续加科目时只需修改 Hook 内部实现，调用点不需要改
+
+### 11.4 检查清单（必须遵守）
+
+- [ ] 任何新入口点启动 quiz 时，**必须**使用 `startQuiz` / `startMockExam` / `startWrongQuiz` / `startCustomQuiz` / `startSimilarQuiz`
+- [ ] 禁止在任何入口点直接写 `sessionStorage.setItem('currentQuiz', ...)`
+- [ ] QuizPlayer / FRQPlayer 读取时**必须**使用 `getCurrentQuiz` / `getCurrentFRQ` / `getQuizInfo`
+- [ ] 禁止在 QuizPlayer 中写 `sessionStorage.removeItem('currentFRQ')`（quizSession 已处理）
+- [ ] pre-deploy-check 会自动验证以上规则
+
+### 11.5 已知状态 key（quizSession 管理）
+
+| key | 用途 | 写入者 | 读取者 |
+|-----|------|--------|--------|
+| currentQuiz | MCQ 题目数组 | start*Quiz | getCurrentQuiz → QuizPlayer |
+| currentFRQ | FRQ 题目数组 | startMockExam | getCurrentFRQ → FRQPlayer |
+| quizConfig | 配置（unit, count, type） | start*Quiz | 未使用（保留） |
+| quizInfo | 元数据（mode, isMock, timeLimit） | start*Quiz | getQuizInfo → QuizPlayer/FRQPlayer |
+| mcqAnswers | 用户答案 | setMCQAnswers | getMCQAnswers → ScorePage |
+
+**不属于 quizSession 的 key**（各自独立管理）：
+- `mock_mcq_timer` / `mock_frq_timer` → Timer 组件自身管理
+- `frqScores` → FRQScorePage → ScorePage 传递（评分中间状态）
+- `macro_doneQuestions` / `frqSubmissions` / `quizHistory` → localStorage 持久化数据
+
+---
+
+## 十二、pre-deploy-check 规则说明（2026-06-22 更新）
+
+当前 pre-deploy-check 包含 5 项检查：
+
+1. **Build check**: `dist/index.html` 存在
+2. **Data files**: `dist/data/` 下 4 个必需文件存在
+3. **Async audit**: 扫描所有 `src/` 下的 JS/JSX，检查 `async` 函数调用是否缺少 `await`（排除 `hooks/` 目录，因为 factory methods 返回 Promise 是设计意图）
+4. **Session lifecycle audit**: 
+   - 所有入口点必须 `import` 自 `quizSession`
+   - 所有入口点禁止直接操作 `sessionStorage` 的 quiz 核心状态
+   - QuizPlayer / FRQPlayer 必须使用 `getCurrentQuiz` / `getCurrentFRQ` 读取
+   - QuizPlayer 禁止保留旧的 `removeItem('currentFRQ')` hack
+5. **Mock exam config**: subjects.json 中 mockExam 的单元分布加总等于 totalMCQ
+
+**新增检查规则**（未来可扩展）：
+- 检查 `getMockExamConfig` 是否传了参数（防止 `undefined` 错误）
+- 检查 `quizInfo` 在所有入口点都有 `mode` 和 `isMock` 字段
 
 ---
 
