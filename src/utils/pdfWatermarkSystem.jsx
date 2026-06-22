@@ -51,10 +51,10 @@ function generateWatermarkSVG(config) {
 
 // ─── 生成水印层样式 ───
 
-export function getWatermarkStyle() {
+export function getWatermarkStyle(position = 'fixed') {
   const svgUrl = generateWatermarkSVG(WATERMARK_CONFIG)
   return {
-    position: 'fixed',
+    position,
     top: 0,
     left: 0,
     width: '100%',
@@ -68,11 +68,11 @@ export function getWatermarkStyle() {
 
 // ─── 水印层 React 组件 ───
 
-export function WatermarkLayer() {
+export function WatermarkLayer({ position = 'fixed' }) {
   return (
     <div
       className="pdf-watermark"
-      style={getWatermarkStyle()}
+      style={getWatermarkStyle(position)}
     />
   )
 }

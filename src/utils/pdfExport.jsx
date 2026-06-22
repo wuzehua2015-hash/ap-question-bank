@@ -66,7 +66,7 @@ export function PdfContainer({ children, refProp }) {
         position: 'relative',
       }}
     >
-      <WatermarkLayer />
+      <WatermarkLayer position="absolute" />
       <div style={{ position: 'relative', zIndex: 1 }}>
         {children}
       </div>
