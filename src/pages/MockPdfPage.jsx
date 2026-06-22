@@ -16,22 +16,36 @@ function MockPdfPage() {
   const [loading, setLoading] = useState(true)
   const [exporting, setExporting] = useState(false)
 
+  const [error, setError] = useState(null)
+  const [debugInfo, setDebugInfo] = useState(null)
+
   useEffect(() => {
-    const parsedMcqs = getCurrentQuiz()
-    const parsedFrqs = getCurrentFRQ()
-    const parsedInfo = getQuizInfo()
+    try {
+      const parsedMcqs = getCurrentQuiz()
+      const parsedFrqs = getCurrentFRQ()
+      const parsedInfo = getQuizInfo()
 
-    // MockPdfPage 需要同时有 MCQ 和 FRQ 才能渲染
-    if (!parsedMcqs || !parsedMcqs.length || !parsedFrqs || !parsedFrqs.length) {
-      navigate('/')
-      return
+      // 诊断日志
+      console.log('[MockPdfPage] currentQuiz:', parsedMcqs ? `${parsedMcqs.length} questions` : 'null')
+      console.log('[MockPdfPage] currentFRQ:', parsedFrqs ? `${parsedFrqs.length} frqs` : 'null')
+      console.log('[MockPdfPage] quizInfo:', parsedInfo)
+      setDebugInfo({ mcqCount: parsedMcqs?.length, frqCount: parsedFrqs?.length, hasQuizInfo: !!parsedInfo })
+
+      if (!parsedMcqs || !parsedMcqs.length || !parsedFrqs || !parsedFrqs.length) {
+        console.warn('[MockPdfPage] Missing data, redirecting to home')
+        navigate('/')
+        return
+      }
+
+      setMcqs(parsedMcqs)
+      setFrqs(parsedFrqs)
+      setQuizInfo(parsedInfo)
+      setLoading(false)
+    } catch (err) {
+      console.error('[MockPdfPage] Load error:', err)
+      setError(err.message || 'Unknown error loading data')
+      setLoading(false)
     }
-
-    // 安全校验：如果用户通过非 mock 入口访问，也允许渲染（只要有数据）
-    setMcqs(parsedMcqs)
-    setFrqs(parsedFrqs)
-    setQuizInfo(parsedInfo)
-    setLoading(false)
   }, [navigate])
 
   const handleExport = async () => {
@@ -54,6 +68,69 @@ function MockPdfPage() {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
         <p className="text-text-muted">加载中...</p>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-12 text-center">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-red-800">
+          <h2 className="text-xl font-bold mb-2">❌ 加载失败</h2>
+          <p className="mb-2">{error}</p>
+          {debugInfo && (
+            <pre className="text-left text-xs bg-red-100 rounded p-3 mt-2 overflow-auto">
+              {JSON.stringify(debugInfo, null, 2)}
+            </pre>
+          )}
+          <p className="text-sm mt-4 text-red-600">
+            请按 F12 打开控制台，查看详细错误日志。
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-12 text-center">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-red-800">
+          <h2 className="text-xl font-bold mb-2">❌ 加载失败</h2>
+          <p className="mb-2">{error}</p>
+          {debugInfo && (
+            <pre className="text-left text-xs bg-red-100 rounded p-3 mt-2 overflow-auto">
+              {JSON.stringify(debugInfo, null, 2)}
+            </pre>
+          )}
+          <p className="text-sm mt-4 text-red-600">
+            请按 F12 打开控制台，查看详细错误日志。
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  // 数据验证：提前捕获任何格式问题
+  try {
+    mcqs.forEach((q, i) => {
+      if (!q || !q.question_id) throw new Error(`MCQ index ${i} missing question_id: ${JSON.stringify(q)?.slice(0, 100)}`)
+      if (!q.text) throw new Error(`MCQ ${q.question_id} missing text`)
+      if (!q.options) throw new Error(`MCQ ${q.question_id} missing options`)
+      if (!q.answer) throw new Error(`MCQ ${q.question_id} missing answer`)
+    })
+    frqs.forEach((f, i) => {
+      if (!f || !f.question_id) throw new Error(`FRQ index ${i} missing question_id: ${JSON.stringify(f)?.slice(0, 100)}`)
+      if (!f.text) throw new Error(`FRQ ${f.question_id} missing text`)
+    })
+  } catch (validationErr) {
+    console.error('[MockPdfPage] Data validation error:', validationErr)
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-red-800">
+          <h2 className="text-xl font-bold mb-2">❌ 数据验证失败</h2>
+          <p className="mb-2">{validationErr.message}</p>
+          <p className="text-sm">请按 F12 查看控制台详细日志。</p>
+        </div>
       </div>
     )
   }
