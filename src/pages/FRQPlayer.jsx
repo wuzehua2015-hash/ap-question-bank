@@ -1,6 +1,7 @@
 import { useState, useLayoutEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Timer from '../components/Timer'
+import { getCurrentFRQ, getQuizInfo } from '../utils/quizSession'
 
 function FRQPlayer() {
   const navigate = useNavigate()
@@ -11,14 +12,12 @@ function FRQPlayer() {
   const [quizInfo, setQuizInfo] = useState(null)
 
   useLayoutEffect(() => {
-    const stored = sessionStorage.getItem('currentFRQ')
-    const info = sessionStorage.getItem('quizInfo')
-    if (!stored) {
+    const parsed = getCurrentFRQ()
+    const parsedInfo = getQuizInfo()
+    if (!parsed) {
       navigate('/')
       return
     }
-    const parsed = JSON.parse(stored)
-    const parsedInfo = info ? JSON.parse(info) : null
     setFrqs(parsed)
     setQuizInfo(parsedInfo)
     setPhase('playing')

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { loadMCQBank, UNITS, generateQuiz } from '../utils/questionBank'
+import { startQuiz } from '../utils/quizSession'
 
 function QuizSetup() {
   const navigate = useNavigate()
@@ -21,14 +22,15 @@ function QuizSetup() {
         setLoading(false)
         return
       }
-      sessionStorage.removeItem('currentFRQ')  // 清理可能残留的 Mock Exam FRQ 数据
-      sessionStorage.setItem('currentQuiz', JSON.stringify(result.quiz))
-      sessionStorage.setItem('quizConfig', JSON.stringify({ unit, count: result.actualCount, type: 'quiz' }))
-      sessionStorage.setItem('quizInfo', JSON.stringify({
-        requestedCount: result.requestedCount,
-        actualCount: result.actualCount,
-        unit: result.unit,
-      }))
+      startQuiz({
+        questions: result.quiz,
+        config: { unit, count: result.actualCount, type: 'quiz' },
+        info: {
+          requestedCount: result.requestedCount,
+          actualCount: result.actualCount,
+          unit: result.unit,
+        },
+      })
       navigate('/play')
     } catch (err) {
       setError('加载失败: ' + (err.message || '请检查网络'))

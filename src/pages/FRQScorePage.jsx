@@ -27,6 +27,8 @@ function formatMathText(text) {
   return t
 }
 
+import { getCurrentFRQ } from '../utils/quizSession'
+
 function MathText({ text }) {
   const html = formatMathText(text)
   return <span dangerouslySetInnerHTML={{ __html: html }} />
@@ -39,12 +41,11 @@ function FRQScorePage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const frqStored = sessionStorage.getItem('currentFRQ')
-    if (!frqStored) {
+    const parsed = getCurrentFRQ()
+    if (!parsed) {
       navigate('/')
       return
     }
-    const parsed = JSON.parse(frqStored)
     setFrqs(parsed)
 
     const initialScores = {}

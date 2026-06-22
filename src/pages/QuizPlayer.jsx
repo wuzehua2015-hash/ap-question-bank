@@ -4,6 +4,7 @@ import QuestionCard from '../components/QuestionCard'
 import QuizNavigator from '../components/QuizNavigator'
 import Timer from '../components/Timer'
 import { UNITS, loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
+import { getCurrentQuiz, getQuizInfo, setMCQAnswers, startSimilarQuiz } from '../utils/quizSession'
 import {
   getDoneQuestions, setDoneQuestions,
   getWrongQuestions, setWrongQuestions,
@@ -23,20 +24,12 @@ function QuizPlayer() {
 
   // 初始化：从 sessionStorage 加载 quiz 数据
   useLayoutEffect(() => {
-    const stored = sessionStorage.getItem('currentQuiz')
-    const info = sessionStorage.getItem('quizInfo')
-    if (!stored) {
+    const parsed = getCurrentQuiz()
+    const parsedInfo = getQuizInfo()
+    if (!parsed) {
       navigate('/')
       return
     }
-    const parsed = JSON.parse(stored)
-    const parsedInfo = info ? JSON.parse(info) : null
-
-    // 关键修复：如果当前 quiz 不是 Mock Exam，清理可能残留的 currentFRQ
-    if (!parsedInfo || !parsedInfo.isMock) {
-      sessionStorage.removeItem('currentFRQ')
-    }
-
     setQuiz(parsed)
     setQuizInfo(parsedInfo)
     setPhase('playing')
@@ -117,7 +110,7 @@ function QuizPlayer() {
     setScore(correct)
 
     // 保存MCQ答案（供成绩页面使用）
-    sessionStorage.setItem('mcqAnswers', JSON.stringify(finalAnswers))
+    setMCQAnswers(finalAnswers)
 
     // 记录已做题
     const doneIds = new Set(getDoneQuestions())
@@ -190,10 +183,11 @@ function QuizPlayer() {
   const practiceSimilar = (wrongQs, similarQs) => {
     const selected = [...wrongQs, ...similarQs.map(s => s.question)].filter(Boolean)
     if (selected.length === 0) return
-    sessionStorage.removeItem('currentFRQ')
-    sessionStorage.setItem('currentQuiz', JSON.stringify(selected))
-    sessionStorage.setItem('quizConfig', JSON.stringify({ unit: 'similar', count: selected.length, type: 'quiz' }))
-    sessionStorage.setItem('quizInfo', JSON.stringify({ requestedCount: selected.length, actualCount: selected.length, unit: 'similar' }))
+    startSimilarQuiz({
+      questions: selected,
+      config: { unit: 'similar', count: selected.length, type: 'quiz' },
+      info: { requestedCount: selected.length, actualCount: selected.length, unit: 'similar' },
+    })
     navigate('/play')
   }
 

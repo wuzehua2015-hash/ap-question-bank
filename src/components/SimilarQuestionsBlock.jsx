@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
+import { startSimilarQuiz } from '../utils/quizSession'
 
 function SimilarQuestionsBlock({ questionId, allQuestions, count = 3, _includeSelf = true }) {
   const navigate = useNavigate()
@@ -49,10 +50,11 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3, _includeSe
       .filter(Boolean)
     
     if (selected.length === 0) return
-    sessionStorage.removeItem('currentFRQ')  // 清理可能残留的 Mock Exam FRQ 数据
-    sessionStorage.setItem('currentQuiz', JSON.stringify(selected))
-    sessionStorage.setItem('quizConfig', JSON.stringify({ unit: 'similar', count: selected.length, type: 'quiz' }))
-    sessionStorage.setItem('quizInfo', JSON.stringify({ requestedCount: selected.length, actualCount: selected.length, unit: 'similar' }))
+    startSimilarQuiz({
+      questions: selected,
+      config: { unit: 'similar', count: selected.length, type: 'quiz' },
+      info: { requestedCount: selected.length, actualCount: selected.length, unit: 'similar' },
+    })
     navigate('/play')
   }
 

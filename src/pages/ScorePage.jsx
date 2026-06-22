@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { getCurrentQuiz, getCurrentFRQ, getMCQAnswers } from '../utils/quizSession'
 import html2pdf from 'html2pdf.js'
 
 /**
@@ -45,20 +46,16 @@ function ScorePage() {
   const [exporting, setExporting] = useState(false)
 
   useEffect(() => {
-    const quizStored = sessionStorage.getItem('currentQuiz')
-    const answersStored = sessionStorage.getItem('mcqAnswers')
-    const frqStored = sessionStorage.getItem('currentFRQ')
+    const parsedQuiz = getCurrentQuiz()
+    const parsedAnswers = getMCQAnswers()
+    const parsedFrqs = getCurrentFRQ() || []
     const frqScoresStored = sessionStorage.getItem('frqScores')
+    const parsedFrqScores = frqScoresStored ? JSON.parse(frqScoresStored) : {}
 
-    if (!quizStored || !answersStored) {
+    if (!parsedQuiz || !parsedAnswers) {
       navigate('/')
       return
     }
-
-    const parsedQuiz = JSON.parse(quizStored)
-    const parsedAnswers = JSON.parse(answersStored)
-    const parsedFrqs = frqStored ? JSON.parse(frqStored) : []
-    const parsedFrqScores = frqScoresStored ? JSON.parse(frqScoresStored) : {}
 
     setQuiz(parsedQuiz)
     setAnswers(parsedAnswers)

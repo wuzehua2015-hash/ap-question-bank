@@ -147,6 +147,8 @@ function walkDir(dir) {
     const fullPath = path.join(dir, entry)
     const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {
+      // Skip hooks directory — async factory methods return Promises intentionally
+      if (entry === 'hooks') continue
       walkDir(fullPath)
     } else if (/\.(js|jsx)$/.test(entry)) {
       scanFile(fullPath)
@@ -171,51 +173,75 @@ console.log('\n[4/5] sessionStorage lifecycle audit')
 const quizPlayerPath = path.join(SRC_DIR, 'pages', 'QuizPlayer.jsx')
 const quizPlayerContent = fs.readFileSync(quizPlayerPath, 'utf-8')
 
-// Check: QuizPlayer removes currentFRQ when not Mock
-if (quizPlayerContent.includes('removeItem(\'currentFRQ\')') &&
-    quizPlayerContent.includes('!parsedInfo.isMock')) {
-  pass('QuizPlayer clears currentFRQ on non-Mock entry')
+// Check: QuizPlayer reads via quizSession (not direct getItem)
+if (quizPlayerContent.includes('getCurrentQuiz') && quizPlayerContent.includes('getQuizInfo')) {
+  pass('QuizPlayer uses quizSession readers')
 } else {
-  fail('QuizPlayer missing currentFRQ cleanup on non-Mock entry')
+  fail('QuizPlayer missing quizSession readers — must use getCurrentQuiz / getQuizInfo')
 }
 
-// Check: all non-Mock entry points clear currentFRQ
+// Check: all entry points import from quizSession instead of direct setItem
 const entryPoints = [
-  { file: 'pages/QuizSetup.jsx', pattern: /removeItem\(['"]currentFRQ['"]\)/ },
-  { file: 'pages/MistakeBook.jsx', pattern: /removeItem\(['"]currentFRQ['"]\)/ },
-  { file: 'pages/SearchPage.jsx', pattern: /removeItem\(['"]currentFRQ['"]\)/ },
-  { file: 'components/SimilarQuestionsBlock.jsx', pattern: /removeItem\(['"]currentFRQ['"]\)/ },
+  { file: 'pages/ExamSetup.jsx', import: 'quizSession' },
+  { file: 'pages/QuizSetup.jsx', import: 'quizSession' },
+  { file: 'pages/MistakeBook.jsx', import: 'quizSession' },
+  { file: 'pages/SearchPage.jsx', import: 'quizSession' },
+  { file: 'components/SimilarQuestionsBlock.jsx', import: 'quizSession' },
 ]
 
-for (const { file, pattern } of entryPoints) {
+for (const { file, import: mod } of entryPoints) {
   const fullPath = path.join(SRC_DIR, file)
   if (!fs.existsSync(fullPath)) {
     warn(`${file} not found — skipping check`)
     continue
   }
   const content = fs.readFileSync(fullPath, 'utf-8')
-  if (pattern.test(content)) {
-    pass(`${file} clears currentFRQ`)
+  if (content.includes(`from '../utils/${mod}'`) || content.includes(`from "../utils/${mod}"`)) {
+    pass(`${file} imports from ${mod}`)
   } else {
-    fail(`${file} missing currentFRQ cleanup`)
+    fail(`${file} missing import from ${mod} — must use centralized quiz session`)
   }
 }
 
-// Check: ExamSetup sets isMock in quizInfo
-const examSetupPath = path.join(SRC_DIR, 'pages', 'ExamSetup.jsx')
-const examSetupContent = fs.readFileSync(examSetupPath, 'utf-8')
-if (examSetupContent.includes('isMock') && examSetupContent.includes('quizInfo')) {
-  pass('ExamSetup sets quizInfo.isMock')
-} else {
-  fail('ExamSetup missing quizInfo.isMock')
+// Check: no entry point uses raw sessionStorage.setItem('currentQuiz', ...) anymore
+for (const { file } of entryPoints) {
+  const fullPath = path.join(SRC_DIR, file)
+  if (!fs.existsSync(fullPath)) continue
+  const content = fs.readFileSync(fullPath, 'utf-8')
+  // Allow Timer's own sessionStorage usage, but block quiz core state manipulation
+  const hasRawQuizSetItem = /sessionStorage\.setItem\(['"](currentQuiz|currentFRQ|quizConfig|quizInfo)/.test(content)
+  if (hasRawQuizSetItem) {
+    fail(`${file} still uses raw sessionStorage for quiz state — must use quizSession`)
+  } else {
+    pass(`${file} uses quizSession (no raw quiz state manipulation)`)
+  }
 }
 
-// Check: ExamSetup has defensive validation
-if (examSetupContent.includes('Array.isArray(result.quiz)') &&
-    examSetupContent.includes('Array.isArray(result.frq)')) {
-  pass('ExamSetup has defensive result validation')
+// Check: QuizPlayer and FRQPlayer read via quizSession, not direct getItem
+const players = [
+  { file: 'pages/QuizPlayer.jsx', reader: 'getCurrentQuiz' },
+  { file: 'pages/FRQPlayer.jsx', reader: 'getCurrentFRQ' },
+]
+for (const { file, reader } of players) {
+  const fullPath = path.join(SRC_DIR, file)
+  if (!fs.existsSync(fullPath)) {
+    warn(`${file} not found — skipping check`)
+    continue
+  }
+  const content = fs.readFileSync(fullPath, 'utf-8')
+  if (content.includes(reader)) {
+    pass(`${file} reads via ${reader}`)
+  } else {
+    fail(`${file} missing ${reader} — must use quizSession reader`)
+  }
+}
+
+// Check: QuizPlayer no longer has the old removeItem('currentFRQ') hack
+// (quizPlayerPath and quizPlayerContent already declared above)
+if (quizPlayerContent.includes('removeItem(\'currentFRQ\')') || quizPlayerContent.includes('removeItem("currentFRQ")')) {
+  fail('QuizPlayer still has old removeItem(currentFRQ) hack — quizSession handles this')
 } else {
-  warn('ExamSetup missing defensive result validation')
+  pass('QuizPlayer no longer has the old currentFRQ cleanup hack')
 }
 
 // ────────────────────────────

@@ -4,6 +4,7 @@ import { loadMCQBank, UNITS } from '../utils/questionBank'
 import {
   getDoneQuestions, getWrongQuestions, getQuestionHistory
 } from '../utils/storage'
+import { startCustomQuiz } from '../utils/quizSession'
 import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
 
 const YEARS = ['2012', '2014', '2015', '2016', '2017', '2018', '2019', '2023']
@@ -56,10 +57,11 @@ function SearchPage() {
 
   const generateQuizFromSelection = (selectedQuestions) => {
     if (selectedQuestions.length === 0) return
-    sessionStorage.removeItem('currentFRQ')  // 清理可能残留的 Mock Exam FRQ 数据
-    sessionStorage.setItem('currentQuiz', JSON.stringify(selectedQuestions))
-    sessionStorage.setItem('quizConfig', JSON.stringify({ unit: 'custom', count: selectedQuestions.length, type: 'quiz' }))
-    sessionStorage.setItem('quizInfo', JSON.stringify({ requestedCount: selectedQuestions.length, actualCount: selectedQuestions.length, unit: 'custom' }))
+    startCustomQuiz({
+      questions: selectedQuestions,
+      config: { unit: 'custom', count: selectedQuestions.length, type: 'quiz' },
+      info: { requestedCount: selectedQuestions.length, actualCount: selectedQuestions.length, unit: 'custom' },
+    })
     navigate('/play')
   }
 
