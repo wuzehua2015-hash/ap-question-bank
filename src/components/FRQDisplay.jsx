@@ -28,114 +28,6 @@ function DisplayImage({ path, variant }) {
   )
 }
 
-// ─── 表格展示 ───
-function TableDisplay({ tableData, variant }) {
-  if (!tableData || !tableData.rows) return null
-
-  const { title, headers, rows } = tableData
-  const numCols = headers.length
-
-  if (variant === 'pdf') {
-    return (
-      <div style={{ margin: '16px 0', ...BREAK_GUARD.BLOCK }}>
-        {title && (
-          <div style={{
-            fontSize: '14px', fontWeight: 'bold', color: '#1f2937',
-            marginBottom: '8px', textAlign: 'center',
-            fontFamily: "'Times New Roman', 'Georgia', serif",
-          }}>
-            {title}
-          </div>
-        )}
-        <div style={{
-          border: '1px solid #374151',
-          borderRadius: '4px',
-          overflow: 'hidden',
-        }}>
-          {/* 表头 */}
-          {numCols > 0 && headers.some(h => h) && (
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: `repeat(${numCols}, 1fr)`,
-              gap: '1px',
-              background: '#374151',
-            }}>
-              {headers.map((h, i) => (
-                <div key={i} style={{
-                  background: '#e5e7eb',
-                  padding: '6px 8px',
-                  fontSize: '13px',
-                  fontWeight: 'bold',
-                  color: '#1f2937',
-                  textAlign: 'center',
-                  fontFamily: "'Times New Roman', 'Georgia', serif",
-                }}>
-                  {h}
-                </div>
-              ))}
-            </div>
-          )}
-          {/* 数据行 */}
-          {rows.map((row, ridx) => (
-            <div key={ridx} style={{
-              display: 'grid',
-              gridTemplateColumns: `repeat(${numCols}, 1fr)`,
-              gap: '1px',
-              background: '#374151',
-              borderTop: ridx > 0 ? '1px solid #374151' : 'none',
-            }}>
-              {row.map((cell, cidx) => (
-                <div key={cidx} style={{
-                  background: '#fff',
-                  padding: '6px 8px',
-                  fontSize: '13px',
-                  color: '#1f2937',
-                  textAlign: 'center',
-                  fontFamily: "'Times New Roman', 'Georgia', serif",
-                }}>
-                  {cell}
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-    )
-  }
-
-  // web 模式
-  return (
-    <div className="my-4">
-      {title && (
-        <div className="text-sm font-bold text-gray-800 mb-2 text-center">
-          {title}
-        </div>
-      )}
-      <div className="border border-gray-700 rounded overflow-hidden">
-        {numCols > 0 && headers.some(h => h) && (
-          <div className="grid bg-gray-700 gap-px" style={{ gridTemplateColumns: `repeat(${numCols}, 1fr)` }}>
-            {headers.map((h, i) => (
-              <div key={i} className="bg-gray-200 p-2 text-sm font-bold text-gray-800 text-center">
-                {h}
-              </div>
-            ))}
-          </div>
-        )}
-        {rows.map((row, ridx) => (
-          <div key={ridx} className="grid bg-gray-700 gap-px border-t border-gray-700" style={{ gridTemplateColumns: `repeat(${numCols}, 1fr)` }}>
-            {row.map((cell, cidx) => (
-              <div key={cidx} className="bg-white p-2 text-sm text-gray-800 text-center">
-                {cell}
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-// ─── 评分标准展示（Rubric）───
 function RubricDisplay({ rubric, variant }) {
   if (!rubric || !rubric.points) return null
 
@@ -286,7 +178,6 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
 
   const isPdf = variant === 'pdf'
   const imagePaths = frq.image_paths || []
-  const tableData = frq.table_data
 
   return (
     <div className={isPdf ? '' : 'bg-surface rounded-xl p-6 shadow-sm border border-border'}>
@@ -333,8 +224,28 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
         </div>
       )}
 
-      {/* 表格数据 */}
-      {tableData && <TableDisplay tableData={tableData} variant={variant} />}
+      {/* 图片占位：当requires_graph=true但image_paths为空时 */}
+      {frq.requires_graph && imagePaths.length === 0 && (
+        isPdf ? (
+          <div style={{
+            margin: '16px 0',
+            padding: '20px',
+            background: '#fef3c7',
+            borderRadius: '4px',
+            border: '1px dashed #f59e0b',
+            textAlign: 'center',
+            fontSize: '14px',
+            color: '#92400e',
+            ...BREAK_GUARD.BLOCK,
+          }}>
+            (This question requires a table/graph. Please refer to the original exam.)
+          </div>
+        ) : (
+          <div className="my-4 p-5 bg-yellow-50 border border-dashed border-yellow-400 rounded text-center text-sm text-yellow-800">
+            (本题需要表格/图表，请参见原始试卷。)
+          </div>
+        )
+      )}
 
       {/* 图片 */}
       {imagePaths.map((path, i) => (
