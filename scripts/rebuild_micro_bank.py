@@ -55,6 +55,14 @@ def clean_mcq_text(text):
     text = re.sub(r'GO ON TO THE NEXT PAGE', '', text)
     text = re.sub(r'-?\d+-', '', text)
     text = re.sub(r'© \d{4} The College Board\..*', '', text, flags=re.DOTALL)
+    
+    # Remove image description text (alt text from PDF) - long descriptions of figures/graphs
+    # These are added to the end of the question text block by PDF accessibility tools
+    text = re.sub(r'The figure shows.*?\n(?=\s*\d+\.|\n|$)', '', text, flags=re.DOTALL)
+    text = re.sub(r'The graph shows.*?\n(?=\s*\d+\.|\n|$)', '', text, flags=re.DOTALL)
+    text = re.sub(r'A figure shows.*?\n(?=\s*\d+\.|\n|$)', '', text, flags=re.DOTALL)
+    text = re.sub(r'The table shows.*?\n(?=\s*\d+\.|\n|$)', '', text, flags=re.DOTALL)
+    
     return text
 
 
@@ -160,6 +168,11 @@ def parse_mcqs(text, answers, page_map):
         else:
             q_block = text[end_pos:]
 
+        # CRITICAL FIX: If q_block spans across columns, cut at column break
+        # This prevents option E from matching text from the other column
+        if '___COLUMN_BREAK___' in q_block:
+            q_block = q_block.split('___COLUMN_BREAK___')[0]
+
         # Parse options using (A)...(B)...(C)...(D)...(E)... to end of block
         opt_pattern = r'\(A\)(.*?)\(B\)(.*?)\(C\)(.*?)\(D\)(.*?)\(E\)(.*?)$'
         match = re.search(opt_pattern, q_block, re.DOTALL)
@@ -167,6 +180,18 @@ def parse_mcqs(text, answers, page_map):
             continue
 
         q_text = q_block[:match.start()].strip()
+
+        # CRITICAL FIX: Remove image description text that leaks into question text
+        # This happens when PDF alt-text gets mixed with the question text
+        # Match "There is/are X figure(s)" where X can be digit or word
+        q_text = re.sub(r'There (?:is|are) (?:\d+|one|two|three|four|five) figures?.*$', '', q_text, flags=re.DOTALL)
+        q_text = re.sub(r'Figure \d+ shows.*?$', '', q_text, flags=re.DOTALL)
+        q_text = re.sub(r'The figure shows.*?$', '', q_text, flags=re.DOTALL)
+        q_text = re.sub(r'The graph shows.*?$', '', q_text, flags=re.DOTALL)
+        q_text = re.sub(r'The table shows.*?$', '', q_text, flags=re.DOTALL)
+        q_text = re.sub(r'A figure shows.*?$', '', q_text, flags=re.DOTALL)
+        q_text = q_text.strip()
+
         opt_a = match.group(1).strip()
         opt_b = match.group(2).strip()
         opt_c = match.group(3).strip()
@@ -196,6 +221,10 @@ def parse_mcqs(text, answers, page_map):
             r'\s*\(\.{2,}.*',  # ellipsis followed by data
             r'\s*\d{4,}\s+\d+\s+\(\..*',  # graph data like "8100 0 (.) ..."
             r'\s*\$\d+\s+\$\d+.*',  # price data like "$12 $10 $8..."
+            r'\s*The figure shows.*',  # image description text
+            r'\s*The graph shows.*',  # image description text
+            r'\s*A figure shows.*',  # image description text
+            r'\s*The table shows.*',  # image description text
         ]
         for pattern in pollution_patterns:
             opt_a = re.sub(pattern, '', opt_a, flags=re.IGNORECASE | re.DOTALL).strip()
@@ -442,7 +471,7 @@ def extract_page_text(page, use_two_column=True):
     left_text = '\n'.join([b[4] for b in left_sorted])
     right_text = '\n'.join([b[4] for b in right_sorted])
     
-    return left_text + '\n' + right_text
+    return left_text + '\n___COLUMN_BREAK___\n' + right_text
 
 
 def extract_from_pdf(year, pdf_path):
@@ -534,6 +563,37 @@ def render_page(doc, page_idx, out_path, dpi=150):
     return os.path.exists(out_path) and os.path.getsize(out_path) > 1024
 
 
+def render_page_image(doc, page_idx, out_path, dpi=200):
+    """Render only the image region from a PDF page (for graph questions).
+    
+    Finds the largest image on the page and crops to that region.
+    This avoids showing the entire page with other questions/text.
+    """
+    page = doc[page_idx]
+    images = page.get_images(full=True)
+    if not images:
+        return render_page(doc, page_idx, out_path, dpi)
+    
+    image_rects = []
+    for img in images:
+        xref = img[0]
+        rects = page.get_image_rects(xref)
+        for rect in rects:
+            image_rects.append(rect)
+    
+    if not image_rects:
+        return render_page(doc, page_idx, out_path, dpi)
+    
+    # Use largest image (this is the main graph/figure)
+    img_rect = max(image_rects, key=lambda r: r.width * r.height)
+    
+    zoom = dpi / 72
+    mat = fitz.Matrix(zoom, zoom)
+    pix = page.get_pixmap(clip=img_rect, matrix=mat)
+    pix.save(out_path)
+    return os.path.exists(out_path) and os.path.getsize(out_path) > 1024
+
+
 def main():
     mcq_map, frq_map = load_classifications()
 
@@ -582,7 +642,7 @@ def main():
                 rel_path = f'images/micro/mcq/{img_name}'
 
                 try:
-                    if render_page(doc, page_idx, img_path):
+                    if render_page_image(doc, page_idx, img_path, dpi=200):
                         rendered_mcq_pages[page_idx] = rel_path
                         q['img_path'] = rel_path
                     else:
@@ -610,7 +670,7 @@ def main():
                         img_path = os.path.join(IMG_DIR_MCQ, img_name)
                         rel_path = f'images/micro/mcq/{img_name}'
                         try:
-                            if render_page(doc, page_idx, img_path):
+                            if render_page_image(doc, page_idx, img_path, dpi=200):
                                 q['img_path'] = rel_path
                                 q['page'] = page_idx
                                 break

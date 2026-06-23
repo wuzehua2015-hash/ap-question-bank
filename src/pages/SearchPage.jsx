@@ -12,6 +12,8 @@ const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
+const YEARS = ['2012', '2013', '2014', '2015', '2016', '2017', '2018']
+
 function SearchPage() {
   const navigate = useNavigate()
   const { currentSubject } = useSubject()
