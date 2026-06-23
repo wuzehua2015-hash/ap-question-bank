@@ -3841,13 +3841,15 @@
       "E": "R to N N to Q"
     },
     "answer": "B",
-    "primary_unit": "U2",
+    "primary_unit": "U3",
     "secondary_units": [
-      "U3",
+      "U2",
       "U5"
     ],
     "topics": [
-      "inflation"
+      "aggregate demand",
+      "aggregate supply",
+      "demand-pull inflation"
     ],
     "difficulty": "Hard",
     "has_graph": true,
@@ -3856,7 +3858,7 @@
     ],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U2 (score=3.0), Secondary: ['U3', 'U5'], Matched: ['inflation']",
+    "classification_reasoning": "Primary: U3 (manual fix). This AD-AS graph question requires the full AD/AS model (LRAS, SRAS, AD shifts) which is taught in U3. While 'inflation' is introduced in U2, the analytical framework (AD-AS shifts, short-run vs long-run equilibrium) belongs to U3.",
     "difficulty_source": "inferred",
     "difficulty_score": 7,
     "skills": [
@@ -6501,11 +6503,11 @@
       "E": "$0.75 5,000"
     },
     "answer": "C",
-    "primary_unit": "U2",
+    "primary_unit": "U1",
     "secondary_units": [],
     "topics": [
-      "consumer price index",
-      "cpi"
+      "supply and demand",
+      "equilibrium"
     ],
     "difficulty": "Easy",
     "has_graph": true,
@@ -6514,7 +6516,7 @@
     ],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U2 (score=7.0), Matched: ['consumer price index', 'cpi']",
+    "classification_reasoning": "Primary: U1 (manual fix). This is a basic supply-and-demand equilibrium table. Students identify equilibrium price and quantity where quantity demanded equals quantity supplied. No concepts from U2 (Economic Indicators) are involved.",
     "difficulty_source": "inferred",
     "difficulty_score": 1,
     "skills": [
