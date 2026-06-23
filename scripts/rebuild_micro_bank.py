@@ -311,9 +311,15 @@ def parse_scoring_guidelines(text):
         # Remove trailing copyright/boilerplate from each guideline individually
         sg_text = re.sub(r'©\s*\d{4}\s*The\s+College\s+Board\..*', '', sg_text, flags=re.DOTALL).strip()
         sg_text = re.sub(r'Visit\s+the\s+College\s+Board\s+on\s+the\s+Web.*', '', sg_text, flags=re.DOTALL).strip()
-        sg_text = re.sub(r'AP\xae?\s+MICROECONOMICS\s+\d{4}\s+SCORING\s+GUIDELINES.*', '', sg_text, flags=re.DOTALL).strip()
+        # Only remove the scoring guidelines header if it appears at the START of the segment
+        # (not greedily to the end). Use ^ to anchor at start of string.
+        sg_text = re.sub(r'^AP\xae?\s+MICROECONOMICS\s+\d{4}\s+SCORING\s+GUIDELINES\s*\n?', '', sg_text, flags=re.MULTILINE).strip()
         
-        guidelines[q_num] = sg_text
+        # Merge with existing content if this question was already seen (e.g. "Question 1 (continued)")
+        if q_num in guidelines:
+            guidelines[q_num] += '\n' + sg_text
+        else:
+            guidelines[q_num] = sg_text
     
     return guidelines
 
@@ -404,9 +410,20 @@ def classify_pages(doc):
     return pages
 
 
-def extract_page_text(page):
-    """Extract text from a two-column page using block-based reading order."""
+def extract_page_text(page, use_two_column=True):
+    """Extract text from a page using block-based reading order.
+    
+    For two-column layouts (MCQ/FRQ), reads left column top-to-bottom, then right column.
+    For single-column or header-in-right-column layouts (scoring guidelines), 
+    use use_two_column=False to read by top-to-bottom, left-to-right order.
+    """
     blocks = page.get_text('blocks')
+    
+    if not use_two_column:
+        # Reading order: sort by y then x (top-to-bottom, left-to-right)
+        sorted_blocks = sorted(blocks, key=lambda b: (b[1], b[0]))
+        return '\n'.join([b[4] for b in sorted_blocks])
+    
     mid_x = page.rect.width / 2
     
     left_blocks = []
@@ -491,10 +508,13 @@ def extract_from_pdf(year, pdf_path):
             # Page might be a continuation, but for AP exams questions are usually on separate pages
             pass
 
-    # Extract scoring guidelines
+    # Extract scoring guidelines - use reading order (not two-column) because
+    # scoring guideline headers (e.g. "AP MICROECONOMICS 2013 SCORING GUIDELINES Question 3")
+    # sometimes appear in the right column at the top, while content is in the left column.
+    # Two-column extraction would place the header AFTER the content, breaking parsing.
     scoring_text = ''
     for page_idx in pages['scoring']:
-        scoring_text += '\n' + normalize_text(extract_page_text(doc[page_idx]))
+        scoring_text += '\n' + normalize_text(extract_page_text(doc[page_idx], use_two_column=False))
 
     # Parse
     mcqs = parse_mcqs(mcq_text, answers, page_map)
