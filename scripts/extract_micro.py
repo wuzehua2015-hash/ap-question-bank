@@ -1,3 +1,6 @@
+# DEPRECATED: This script uses character-level two-column extraction which causes
+# option truncation and text pollution. Use scripts/rebuild_micro_bank.py instead,
+# which uses PyMuPDF block-based extraction for robust reading order.
 import pdfplumber
 import re
 import json

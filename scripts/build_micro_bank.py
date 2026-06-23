@@ -1,3 +1,6 @@
+# DEPRECATED: This script builds from raw/classified data that may contain
+# truncated options and polluted FRQ text. Use scripts/rebuild_micro_bank.py
+# instead, which extracts directly from PDFs with robust cleanup.
 import json
 import os
 import re
