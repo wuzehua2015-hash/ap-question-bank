@@ -1,19 +1,20 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { loadMCQBank, UNITS } from '../utils/questionBank'
+import { useSubject } from '../contexts/SubjectContext'
+import { loadMCQBank, getSubjectUnits } from '../utils/questionBank'
 import {
   getDoneQuestions, getWrongQuestions, getQuestionHistory
 } from '../utils/storage'
 import { startCustomQuiz } from '../utils/quizSession'
 import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
 
-const YEARS = ['2012', '2014', '2015', '2016', '2017', '2018', '2019', '2023']
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
 function SearchPage() {
   const navigate = useNavigate()
+  const { currentSubject } = useSubject()
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(true)
   const [keyword, setKeyword] = useState('')
@@ -24,17 +25,22 @@ function SearchPage() {
   const [wrongFilter, setWrongFilter] = useState('all')
   const [expandedId, setExpandedId] = useState(null)
   const [showAnswerId, setShowAnswerId] = useState(null)
+  const [units, setUnits] = useState([])
 
   useEffect(() => {
-    loadMCQBank().then(data => {
+    getSubjectUnits(currentSubject).then(setUnits).catch(() => setUnits([]))
+  }, [currentSubject])
+
+  useEffect(() => {
+    loadMCQBank(currentSubject).then(data => {
       setQuestions(data)
       setLoading(false)
     }).catch(() => setLoading(false))
-  }, [])
+  }, [currentSubject])
 
-  const doneIds = useMemo(() => new Set(getDoneQuestions()), [])
-  const wrongIds = useMemo(() => new Set(getWrongQuestions()), [])
-  const questionHistory = useMemo(() => getQuestionHistory(), [])
+  const doneIds = useMemo(() => new Set(getDoneQuestions(currentSubject)), [currentSubject])
+  const wrongIds = useMemo(() => new Set(getWrongQuestions(currentSubject)), [currentSubject])
+  const questionHistory = useMemo(() => getQuestionHistory(currentSubject), [currentSubject])
 
   const filtered = useMemo(() => {
     let result = [...questions]
@@ -59,7 +65,7 @@ function SearchPage() {
     if (selectedQuestions.length === 0) return
     startCustomQuiz({
       questions: selectedQuestions,
-      config: { unit: 'custom', count: selectedQuestions.length, type: 'quiz' },
+      config: { unit: 'custom', count: selectedQuestions.length, type: 'quiz', subject: currentSubject },
       info: { requestedCount: selectedQuestions.length, actualCount: selectedQuestions.length, unit: 'custom' },
     })
     navigate('/play')
@@ -69,7 +75,7 @@ function SearchPage() {
     if (selectedQuestions.length === 0) return
     startCustomQuiz({
       questions: selectedQuestions,
-      config: { unit: 'custom', count: selectedQuestions.length, type: 'quiz' },
+      config: { unit: 'custom', count: selectedQuestions.length, type: 'quiz', subject: currentSubject },
       info: { requestedCount: selectedQuestions.length, actualCount: selectedQuestions.length, unit: 'custom' },
     })
     navigate('/quiz-pdf')
@@ -112,7 +118,7 @@ function SearchPage() {
             <label className="block text-xs font-medium text-text-muted mb-1">单元</label>
             <select value={unitFilter} onChange={e => setUnitFilter(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
               <option value="all">全部</option>
-              {UNITS.map(u => <option key={u.id} value={u.id}>{u.id}</option>)}
+              {units.map(u => <option key={u.id} value={u.id}>{u.id}</option>)}
             </select>
           </div>
           <div>

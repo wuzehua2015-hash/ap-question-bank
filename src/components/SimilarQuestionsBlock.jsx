@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSubject } from '../contexts/SubjectContext'
 import { loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
 import { startSimilarQuiz } from '../utils/quizSession'
 
 function SimilarQuestionsBlock({ questionId, allQuestions, count = 3, _includeSelf = true }) {
   const navigate = useNavigate()
+  const { currentSubject } = useSubject()
   const [similarData, setSimilarData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [expandedSimilarId, setExpandedSimilarId] = useState(null)
@@ -14,7 +16,7 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3, _includeSe
     let mounted = true
     async function load() {
       try {
-        const index = await loadSimilarityIndex()
+        const index = await loadSimilarityIndex(currentSubject)
         const topItems = getSimilarQuestions(questionId, index, count)
         const questionsById = Object.fromEntries(allQuestions.map(q => [q.question_id, q]))
         
@@ -38,7 +40,7 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3, _includeSe
     }
     load()
     return () => { mounted = false }
-  }, [questionId, allQuestions, count])
+  }, [questionId, allQuestions, count, currentSubject])
 
   if (loading) return <div className="text-xs text-text-muted py-2">加载相关变式...</div>
   if (!similarData || similarData.length === 0) return null
@@ -52,7 +54,7 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3, _includeSe
     if (selected.length === 0) return
     startSimilarQuiz({
       questions: selected,
-      config: { unit: 'similar', count: selected.length, type: 'quiz' },
+      config: { unit: 'similar', count: selected.length, type: 'quiz', subject: currentSubject },
       info: { requestedCount: selected.length, actualCount: selected.length, unit: 'similar' },
     })
     navigate('/play')

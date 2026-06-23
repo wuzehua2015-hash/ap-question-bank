@@ -133,8 +133,9 @@ export function generateQuiz(questions, config) {
     pool = pool.filter(q => q.primary_unit === config.unit)
   }
 
-  // 排除已做
-  const doneIds = new Set(JSON.parse(localStorage.getItem('macro_doneQuestions') || localStorage.getItem('doneQuestions') || '[]'))
+  // 排除已做 — subject-scoped
+  const subject = config.subject || 'macro'
+  const doneIds = new Set(JSON.parse(localStorage.getItem(`${subject}_doneQuestions`) || localStorage.getItem('doneQuestions') || '[]'))
   if (config.excludeDone) {
     pool = pool.filter(q => !doneIds.has(q.question_id))
   }

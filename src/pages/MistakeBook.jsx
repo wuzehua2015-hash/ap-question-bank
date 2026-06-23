@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { loadMCQBank, UNITS } from '../utils/questionBank'
+import { useSubject } from '../contexts/SubjectContext'
+import { loadMCQBank, getSubjectUnits } from '../utils/questionBank'
 import {
   getWrongQuestions, getQuestionHistory, setWrongQuestions
 } from '../utils/storage'
@@ -9,29 +10,35 @@ import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
 
 function MistakeBook() {
   const navigate = useNavigate()
+  const { currentSubject } = useSubject()
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(true)
   const [unitFilter, setUnitFilter] = useState('all')
   const [wrongIds, setWrongIds] = useState([])
   const [questionHistory, setQuestionHistory] = useState({})
   const [expandedId, setExpandedId] = useState(null)
+  const [units, setUnits] = useState([])
 
   useEffect(() => {
-    loadMCQBank().then(data => {
+    getSubjectUnits(currentSubject).then(setUnits).catch(() => setUnits([]))
+  }, [currentSubject])
+
+  useEffect(() => {
+    loadMCQBank(currentSubject).then(data => {
       setQuestions(data)
       setLoading(false)
     }).catch(() => setLoading(false))
-  }, [])
+  }, [currentSubject])
 
   useEffect(() => {
     const refresh = () => {
-      setWrongIds(getWrongQuestions())
-      setQuestionHistory(getQuestionHistory())
+      setWrongIds(getWrongQuestions(currentSubject))
+      setQuestionHistory(getQuestionHistory(currentSubject))
     }
     refresh()
     window.addEventListener('storage', refresh)
     return () => window.removeEventListener('storage', refresh)
-  }, [])
+  }, [currentSubject])
 
   const wrongSet = useMemo(() => new Set(wrongIds), [wrongIds])
 
@@ -53,7 +60,7 @@ function MistakeBook() {
 
   const clearAll = () => {
     if (!confirm('确定清空所有错题记录？')) return
-    setWrongQuestions([])
+    setWrongQuestions(currentSubject, [])
     setWrongIds([])
   }
 
@@ -63,7 +70,7 @@ function MistakeBook() {
     const selected = shuffled.slice(0, Math.min(30, shuffled.length))
     startWrongQuiz({
       questions: selected,
-      config: { unit: 'wrong', count: selected.length, type: 'quiz' },
+      config: { unit: 'wrong', count: selected.length, type: 'quiz', subject: currentSubject },
       info: { requestedCount: selected.length, actualCount: selected.length, unit: 'wrong' },
     })
     navigate('/quiz-pdf')
@@ -71,7 +78,7 @@ function MistakeBook() {
 
   const removeOne = (id) => {
     const updated = wrongIds.filter(w => w !== id)
-    setWrongQuestions(updated)
+    setWrongQuestions(currentSubject, updated)
     setWrongIds(updated)
   }
 
@@ -81,7 +88,7 @@ function MistakeBook() {
     const selected = shuffled.slice(0, Math.min(30, shuffled.length))
     startWrongQuiz({
       questions: selected,
-      config: { unit: 'wrong', count: selected.length, type: 'quiz' },
+      config: { unit: 'wrong', count: selected.length, type: 'quiz', subject: currentSubject },
       info: { requestedCount: selected.length, actualCount: selected.length, unit: 'wrong' },
     })
     navigate('/play')
@@ -133,7 +140,7 @@ function MistakeBook() {
           <div className="text-2xl font-bold text-brand">{wrongQuestions.length}</div>
           <div className="text-xs text-text-muted">错题总数</div>
         </div>
-        {UNITS.map(u => {
+        {units.map(u => {
           const count = wrongQuestions.filter(q => q.primary_unit === u.id).length
           return (
             <div key={u.id} className="bg-surface rounded-xl p-4 shadow-sm border border-border text-center">
@@ -148,7 +155,7 @@ function MistakeBook() {
       <div className="mb-4">
         <select value={unitFilter} onChange={e => setUnitFilter(e.target.value)} className="p-2 border border-border rounded bg-bg text-sm">
           <option value="all">全部单元</option>
-          {UNITS.map(u => <option key={u.id} value={u.id}>{u.id}: {u.name}</option>)}
+          {units.map(u => <option key={u.id} value={u.id}>{u.id}: {u.name}</option>)}
         </select>
       </div>
 
@@ -227,7 +234,7 @@ function MistakeBook() {
                       onClick={() => {
                         startCustomQuiz({
                           questions: [q],
-                          config: { unit: 'single', count: 1, type: 'quiz' },
+                          config: { unit: 'single', count: 1, type: 'quiz', subject: currentSubject },
                           info: { requestedCount: 1, actualCount: 1, unit: 'single' },
                         })
                         navigate('/play')

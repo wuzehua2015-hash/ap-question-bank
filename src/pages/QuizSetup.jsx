@@ -1,24 +1,31 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { loadMCQBank, UNITS, generateQuiz } from '../utils/questionBank'
+import { useSubject } from '../contexts/SubjectContext'
+import { loadMCQBank, getSubjectUnits, generateQuiz } from '../utils/questionBank'
 import { startQuiz } from '../utils/quizSession'
 
 function QuizSetup() {
   const navigate = useNavigate()
+  const { currentSubject } = useSubject()
   const [unit, setUnit] = useState('all')
   const [count, setCount] = useState(10)
   const [excludeDone, setExcludeDone] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
-  const [preview, setPreview] = useState(null)  // 存储生成结果
+  const [preview, setPreview] = useState(null)
+  const [units, setUnits] = useState([])
+
+  useEffect(() => {
+    getSubjectUnits(currentSubject).then(setUnits).catch(() => setUnits([]))
+  }, [currentSubject])
 
   const generate = async () => {
     setLoading(true)
     setError(null)
     setPreview(null)
     try {
-      const questions = await loadMCQBank()
-      const result = generateQuiz(questions, { unit, count, excludeDone, diverseSources: true })
+      const questions = await loadMCQBank(currentSubject)
+      const result = generateQuiz(questions, { unit, count, excludeDone, diverseSources: true, subject: currentSubject })
       if (result.actualCount === 0) {
         setError('没有符合条件的题目')
         setLoading(false)
@@ -26,7 +33,7 @@ function QuizSetup() {
       }
       setPreview({
         questions: result.quiz,
-        config: { unit, count: result.actualCount, type: 'quiz' },
+        config: { unit, count: result.actualCount, type: 'quiz', subject: currentSubject },
         info: {
           requestedCount: result.requestedCount,
           actualCount: result.actualCount,
@@ -61,7 +68,7 @@ function QuizSetup() {
           <select value={unit} onChange={e => setUnit(e.target.value)}
             className="w-full p-2 border border-border rounded-lg bg-bg">
             <option value="all">全部单元</option>
-            {UNITS.map(u => <option key={u.id} value={u.id}>{u.id}: {u.name}</option>)}
+            {units.map(u => <option key={u.id} value={u.id}>{u.id}: {u.name}</option>)}
           </select>
         </div>
 

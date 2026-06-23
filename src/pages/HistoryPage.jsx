@@ -1,31 +1,38 @@
 import { useState, useEffect, useMemo } from 'react'
-import { loadMCQBank, UNITS } from '../utils/questionBank'
+import { useSubject } from '../contexts/SubjectContext'
+import { loadMCQBank, getSubjectUnits } from '../utils/questionBank'
 import {
-  getQuizHistory, getQuestionHistory
+  getQuizHistory, getQuestionHistory, setQuizHistory, setQuestionHistory, clearSubjectData
 } from '../utils/storage'
 
 function HistoryPage() {
+  const { currentSubject } = useSubject()
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(true)
   const [quizHistory, setQuizHistory] = useState([])
   const [questionHistory, setQuestionHistory] = useState({})
+  const [units, setUnits] = useState([])
 
   useEffect(() => {
-    loadMCQBank().then(data => {
+    getSubjectUnits(currentSubject).then(setUnits).catch(() => setUnits([]))
+  }, [currentSubject])
+
+  useEffect(() => {
+    loadMCQBank(currentSubject).then(data => {
       setQuestions(data)
       setLoading(false)
     }).catch(() => setLoading(false))
-  }, [])
+  }, [currentSubject])
 
   useEffect(() => {
     const refresh = () => {
-      setQuizHistory(getQuizHistory())
-      setQuestionHistory(getQuestionHistory())
+      setQuizHistory(getQuizHistory(currentSubject))
+      setQuestionHistory(getQuestionHistory(currentSubject))
     }
     refresh()
     window.addEventListener('storage', refresh)
     return () => window.removeEventListener('storage', refresh)
-  }, [])
+  }, [currentSubject])
 
   const stats = useMemo(() => {
     const totalQuizzes = quizHistory.length
@@ -35,7 +42,7 @@ function HistoryPage() {
 
     // 单元统计 - 优先使用 questionHistory（逐题精确），回退到 quizHistory.unitStats
     const unitStats = {}
-    UNITS.forEach(u => { unitStats[u.id] = { total: 0, correct: 0 } })
+    units.forEach(u => { unitStats[u.id] = { total: 0, correct: 0 } })
 
     let hasQuestionHistoryData = false
     Object.entries(questionHistory).forEach(([qid, rec]) => {
@@ -93,10 +100,7 @@ function HistoryPage() {
 
   const clearAll = () => {
     if (!confirm('确定清空所有历史记录？')) return
-    localStorage.removeItem('quizHistory')
-    localStorage.removeItem('questionHistory')
-    localStorage.removeItem('doneQuestions')
-    localStorage.removeItem('wrongQuestions')
+    clearSubjectData(currentSubject)
     setQuizHistory([])
     setQuestionHistory({})
   }
@@ -163,7 +167,7 @@ function HistoryPage() {
               </div>
             )}
             <div className="space-y-3">
-              {UNITS.map(u => {
+              {units.map(u => {
                 const s = stats.unitStats[u.id]
                 const rate = s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0
                 return (

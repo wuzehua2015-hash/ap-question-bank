@@ -4,7 +4,7 @@ import QuestionCard from '../components/QuestionCard'
 import QuizNavigator from '../components/QuizNavigator'
 import Timer from '../components/Timer'
 import { UNITS, loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
-import { getCurrentQuiz, getQuizInfo, setMCQAnswers, startSimilarQuiz } from '../utils/quizSession'
+import { getCurrentQuiz, getQuizConfig, getQuizInfo, setMCQAnswers, startSimilarQuiz } from '../utils/quizSession'
 import {
   getDoneQuestions, setDoneQuestions,
   getWrongQuestions, setWrongQuestions,
@@ -21,17 +21,20 @@ function QuizPlayer() {
   const [score, setScore] = useState(null)
   const [quizInfo, setQuizInfo] = useState(null)
   const [similarityIndex, setSimilarityIndex] = useState(null)
+  const [subject, setSubject] = useState('macro')
 
   // 初始化：从 sessionStorage 加载 quiz 数据
   useLayoutEffect(() => {
     const parsed = getCurrentQuiz()
     const parsedInfo = getQuizInfo()
+    const config = getQuizConfig()
     if (!parsed) {
       navigate('/')
       return
     }
     setQuiz(parsed)
     setQuizInfo(parsedInfo)
+    setSubject(config?.subject || 'macro')
     setPhase('playing')
   }, [navigate])
 
@@ -40,7 +43,7 @@ function QuizPlayer() {
     if (phase === 'submitted' && !(quizInfo && quizInfo.isMock)) {
       async function load() {
         try {
-          const index = await loadSimilarityIndex()
+          const index = await loadSimilarityIndex(subject)
           setSimilarityIndex(index)
         } catch (e) {
           console.warn('Failed to load similarity index:', e)
@@ -48,7 +51,7 @@ function QuizPlayer() {
       }
       load()
     }
-  }, [phase, quizInfo])
+  }, [phase, quizInfo, subject])
 
   const handleAnswer = (questionId, option) => {
     if (phase !== 'playing') return
@@ -90,7 +93,7 @@ function QuizPlayer() {
         if (isCorrect) difficultyStats[q.difficulty].correct++
       }
 
-      const allHistory = getQuestionHistory()
+      const allHistory = getQuestionHistory(subject)
       if (!allHistory[q.question_id]) {
         allHistory[q.question_id] = { attempts: [], correct_count: 0, wrong_count: 0 }
       }
@@ -104,7 +107,7 @@ function QuizPlayer() {
       if (isCorrect) rec.correct_count++
       else rec.wrong_count++
       rec.attempts = rec.attempts.slice(-20)
-      setQuestionHistory(allHistory)
+      setQuestionHistory(subject, allHistory)
     })
 
     setScore(correct)
@@ -113,17 +116,17 @@ function QuizPlayer() {
     setMCQAnswers(finalAnswers)
 
     // 记录已做题
-    const doneIds = new Set(getDoneQuestions())
+    const doneIds = new Set(getDoneQuestions(subject))
     quiz.forEach(q => doneIds.add(q.question_id))
-    setDoneQuestions([...doneIds])
+    setDoneQuestions(subject, [...doneIds])
 
     // 记录错题
-    const wrongSet = new Set(getWrongQuestions())
+    const wrongSet = new Set(getWrongQuestions(subject))
     wrongIds.forEach(id => wrongSet.add(id))
-    setWrongQuestions([...wrongSet])
+    setWrongQuestions(subject, [...wrongSet])
 
     // 记录历史
-    const history = getQuizHistory()
+    const history = getQuizHistory(subject)
     history.push({
       date: new Date().toISOString(),
       count: quiz.length,
@@ -132,7 +135,7 @@ function QuizPlayer() {
       unitStats,
       difficultyStats,
     })
-    setQuizHistory(history.slice(-20))
+    setQuizHistory(subject, history.slice(-20))
 
     // Mock Exam → frqTransition；非 Mock → submitted
     if (quizInfo && quizInfo.isMock) {
@@ -140,7 +143,7 @@ function QuizPlayer() {
     } else {
       setPhase('submitted')
     }
-  }, [quiz, answers, quizInfo])
+  }, [quiz, answers, quizInfo, subject])
 
   // 计时器超时回调
   const handleTimerTimeout = useCallback(() => {
@@ -185,7 +188,7 @@ function QuizPlayer() {
     if (selected.length === 0) return
     startSimilarQuiz({
       questions: selected,
-      config: { unit: 'similar', count: selected.length, type: 'quiz' },
+      config: { unit: 'similar', count: selected.length, type: 'quiz', subject },
       info: { requestedCount: selected.length, actualCount: selected.length, unit: 'similar' },
     })
     navigate('/play')

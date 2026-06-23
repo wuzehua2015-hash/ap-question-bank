@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSubject } from '../contexts/SubjectContext'
 import { loadMCQBank, loadFRQBank, generateMockExam, getMockExamConfig } from '../utils/questionBank'
 import { startMockExam, startQuiz } from '../utils/quizSession'
 
 function ExamSetup() {
   const navigate = useNavigate()
+  const { currentSubject } = useSubject()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [preview, setPreview] = useState(null)
@@ -14,16 +16,16 @@ function ExamSetup() {
     setError(null)
     setPreview(null)
     try {
-      const [mcqs, frqs] = await Promise.all([loadMCQBank(), loadFRQBank()])
-      const result = await generateMockExam(mcqs, frqs)
+      const [mcqs, frqs] = await Promise.all([loadMCQBank(currentSubject), loadFRQBank(currentSubject)])
+      const result = await generateMockExam(mcqs, frqs, currentSubject)
       if (!result || !Array.isArray(result.quiz) || !Array.isArray(result.frq)) {
         throw new Error('generateMockExam returned invalid result')
       }
-      const mockConfig = await getMockExamConfig('macro')
+      const mockConfig = await getMockExamConfig(currentSubject)
       setPreview({
         mcq: result.quiz,
         frq: result.frq,
-        config: { type: 'mock' },
+        config: { type: 'mock', subject: currentSubject },
         info: {
           mcqTimeLimit: mockConfig.mcqTimeLimit,
           frqTimeLimit: mockConfig.frqTimeLimit,
@@ -48,13 +50,6 @@ function ExamSetup() {
       mcq: preview.mcq,
       frq: preview.frq,
       config: { type: 'mock' },
-      info: {
-        unit: 'all',
-        requestedCount: preview.mcq.length,
-        actualCount: preview.mcq.length,
-        mcqTimeLimit: preview.info.mcqTimeLimit,
-        frqTimeLimit: preview.info.frqTimeLimit,
-      },
     })
     navigate('/mock-pdf')
   }
@@ -62,12 +57,10 @@ function ExamSetup() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold text-brand mb-6">Mock Exam</h1>
-      <div className="bg-surface rounded-xl p-6 shadow-sm border border-border space-y-4">
-        <div className="text-sm text-text-muted space-y-1">
-          <p>• 60 道 MCQ（按官方单元占比抽题）</p>
-          <p>• 3 道 FRQ（来自同一年份，含完整评分标准）</p>
-          <p>• 模拟真实考试环境：MCQ 完成后进入 FRQ，需使用草稿纸作答</p>
-          <p>• 成绩页面提供 FRQ 评分标准，帮助自评计算总分</p>
+      <div className="bg-surface rounded-xl p-6 shadow-sm border border-border space-y-6">
+        <div className="text-sm text-text-muted">
+          <p>模拟真实考试环境，包含 60 道 MCQ 和 3 道 FRQ。</p>
+          <p>MCQ 限时 70 分钟，FRQ 限时 60 分钟。</p>
         </div>
 
         {error && (
@@ -79,21 +72,21 @@ function ExamSetup() {
         {!preview ? (
           <button onClick={generate} disabled={loading}
             className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50">
-            {loading ? '生成中...' : '开始 Mock Exam'}
+            {loading ? '生成中...' : '生成 Mock Exam'}
           </button>
         ) : (
           <div className="space-y-4">
             <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
-              ✅ 已生成 Mock Exam：{preview.mcq.length} 道 MCQ + {preview.frq.length} 道 FRQ
+              ✅ 已生成 {preview.mcq.length} 道 MCQ + {preview.frq.length} 道 FRQ
             </div>
             <div className="flex gap-3">
               <button onClick={startMock}
-                className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors">
-                📝 开始 Mock Exam
+                className="flex-1 bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors">
+                📝 开始考试
               </button>
               <button onClick={exportPdf}
-                className="flex-1 bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors">
-                📄 导出完整试卷
+                className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors">
+                📄 导出 PDF
               </button>
             </div>
             <button onClick={generate} disabled={loading}
