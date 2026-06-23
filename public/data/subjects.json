@@ -6,10 +6,11 @@
       "shortName": "Macro",
       "active": true,
       "hasFRQ": true,
-      "questionBank": "macro_question_bank_v4.json",
-      "frqBank": "macro_frq_bank.json",
-      "similarityIndex": "similarity_index.json",
-      "dataVersion": "v4",
+      "questionBank": "ap/macroeconomics/question_bank.json",
+      "frqBank": "ap/macroeconomics/frq_bank.json",
+      "similarityIndex": "ap/macroeconomics/similarity_index.json",
+      "classificationConfig": "ap/macroeconomics/classification_config.json",
+      "dataVersion": "v1",
       "units": [
         { "id": "U1", "name": "Basic Economic Concepts" },
         { "id": "U2", "name": "Economic Indicators & Business Cycle" },
@@ -30,6 +31,40 @@
           "U4": 12,
           "U5": 15,
           "U6": 7
+        }
+      }
+    },
+    {
+      "id": "micro",
+      "name": "AP Microeconomics",
+      "shortName": "Micro",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/microeconomics/question_bank.json",
+      "frqBank": "ap/microeconomics/frq_bank.json",
+      "similarityIndex": "ap/microeconomics/similarity_index.json",
+      "classificationConfig": "ap/microeconomics/classification_config.json",
+      "dataVersion": "v1",
+      "units": [
+        { "id": "U1", "name": "Basic Economic Concepts" },
+        { "id": "U2", "name": "Supply and Demand" },
+        { "id": "U3", "name": "Production, Cost, and Perfect Competition" },
+        { "id": "U4", "name": "Imperfect Competition" },
+        { "id": "U5", "name": "Factor Markets" },
+        { "id": "U6", "name": "Market Failure and the Role of Government" }
+      ],
+      "mockExam": {
+        "totalMCQ": 60,
+        "frqCount": 3,
+        "mcqTimeLimit": 4200,
+        "frqTimeLimit": 3600,
+        "unitDistribution": {
+          "U1": 7,
+          "U2": 13,
+          "U3": 15,
+          "U4": 12,
+          "U5": 7,
+          "U6": 6
         }
       }
     }
