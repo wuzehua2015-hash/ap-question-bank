@@ -275,10 +275,30 @@ def parse_frqs(text):
 
 def parse_scoring_guidelines(text):
     """Parse scoring guidelines from text."""
+    # Remove scoring worksheet, conversion chart, and everything after it FIRST.
+    # This is critical: if we remove "The College Board" globally with DOTALL first,
+    # it will greedily match from the first occurrence (between Q1 and Q2) all the
+    # way to the end of the document, deleting Q2 and Q3 entirely.
+    text = re.sub(r'(?:\d{4}\s*AP\s*Microeconomics\s+)?Scoring\s+Worksheet.*', '', text, flags=re.DOTALL)
+    text = re.sub(r'AP\s+Score\s+Conversion\s+Chart.*', '', text, flags=re.DOTALL)
+    text = re.sub(r'Composite\s+Score.*', '', text, flags=re.DOTALL)
+    text = re.sub(r'Question\s+Descriptors\s+and\s+Performance\s*Data.*', '', text, flags=re.DOTALL)
+    text = re.sub(r'Multiple-Choice\s+Questions.*', '', text, flags=re.DOTALL)
+    
+    # Remove weighting formulas from worksheet
+    text = re.sub(r'Question\s+\d+\s*[_\s]+×\s*\d+\.\d+\s*=\s*[_\s]+\s*\(out of \d+\)\s*\(Do not round\)', '', text)
+    text = re.sub(r'Sum\s*=\s*[_\s]+Weighted\s+Section\s*II\s*Score.*', '', text, flags=re.DOTALL)
+    
+    # Remove global College Board boilerplate (footer from last page only)
+    text = re.sub(r'The\s+College\s+Board\s+is\s+a\s+mission-driven.*', '', text, flags=re.DOTALL | re.IGNORECASE)
+    # NOTE: Do NOT remove 'Visit the College Board on the Web' globally here.
+    # It appears between each question's guidelines, so a global DOTALL removal
+    # would greedily delete everything from Q1 to the end of the document.
+    # We remove it per-question in the loop below instead.
+    
     guidelines = {}
-
-    q_matches = list(re.finditer(r'(?:AP®?\s+MICROECONOMICS\s+\d{4}\s+SCORING GUIDELINES\s+)?Question\s+(\d+)', text))
-
+    q_matches = list(re.finditer(r'(?:AP\xae?\s+MICROECONOMICS\s+\d{4}\s+SCORING\s+GUIDELINES\s+)?Question\s+(\d+)', text))
+    
     for i, match in enumerate(q_matches):
         q_num = int(match.group(1))
         start = match.start()
@@ -286,14 +306,16 @@ def parse_scoring_guidelines(text):
             end = q_matches[i+1].start()
         else:
             end = len(text)
-
+        
         sg_text = text[start:end].strip()
-        sg_text = re.sub(r'© \d{4} The College Board\..*', '', sg_text, flags=re.DOTALL).strip()
-
+        # Remove trailing copyright/boilerplate from each guideline individually
+        sg_text = re.sub(r'©\s*\d{4}\s*The\s+College\s+Board\..*', '', sg_text, flags=re.DOTALL).strip()
+        sg_text = re.sub(r'Visit\s+the\s+College\s+Board\s+on\s+the\s+Web.*', '', sg_text, flags=re.DOTALL).strip()
+        sg_text = re.sub(r'AP\xae?\s+MICROECONOMICS\s+\d{4}\s+SCORING\s+GUIDELINES.*', '', sg_text, flags=re.DOTALL).strip()
+        
         guidelines[q_num] = sg_text
-
+    
     return guidelines
-
 
 def classify_pages(doc):
     """Classify each page of the PDF into sections."""
