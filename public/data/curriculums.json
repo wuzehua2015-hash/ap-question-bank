@@ -1,0 +1,27 @@
+{
+  "curricula": [
+    {
+      "id": "ap",
+      "name": "AP",
+      "full_name": "Advanced Placement",
+      "subjects": [
+        {
+          "id": "macroeconomics",
+          "name": "Macroeconomics",
+          "short_name": "Macro",
+          "data_path": "ap/macroeconomics",
+          "has_mcq": true,
+          "has_frq": true,
+          "units": [
+            {"id": "U1", "name": "Basic Economic Concepts"},
+            {"id": "U2", "name": "Economic Indicators and the Business Cycle"},
+            {"id": "U3", "name": "National Income and Price Determination"},
+            {"id": "U4", "name": "Financial Sector"},
+            {"id": "U5", "name": "Long-Run Consequences of Stabilization Policies"},
+            {"id": "U6", "name": "Open Economy—International Trade and Finance"}
+          ]
+        }
+      ]
+    }
+  ]
+}

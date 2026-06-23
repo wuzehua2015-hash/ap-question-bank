@@ -168,13 +168,16 @@ python scripts/remove_watermark.py input.png output.png
 
 ---
 
-## 7. 分类器方案（文档，未实现）
+## 7. 分类器方案（已删除）
 
-**路径**：`docs/CLASSIFICATION_SOLUTION.md`
+原 `docs/CLASSIFICATION_SOLUTION.md`（多分类器投票方案）和 `docs/VIBE_CODING_CLASSIFICATION_RESEARCH.md`（Vibe Coding 调研报告）已删除。
 
-**用途**：多分类器投票方案设计文档，用于题目类型自动分类（MCQ/FRQ/Table/Graph）。
+当前单元分类的实际做法：
+- **人工分类**为主，遵循「最高单元优先」原则（涉及 U6 概念 → 必须归为 U6）
+- **脚本验证**为辅：`data_validator.cjs` 中的 `u2_exclusive` / `u3_exclusive` 等规则自动检查 U1/U2 题目是否包含高级单元关键词
+- 如需扩展新科目，可参考现有 `data_validator.cjs` 的模式，为每个科目定义专属验证规则
 
-**状态**：设计文档已完成，代码未实现。
+**注意**：已删除的调研文档中的核心后验证规则（如 U1 不能有 GDP 等）已全部整合到 `data_validator.cjs` 中。
 
 ---
 
@@ -186,17 +189,22 @@ python scripts/remove_watermark.py input.png output.png
 
 ---
 
-## Skill 索引（全局可复用）
+## 技能维护状态（项目级）
 
-以下 Skill 已安装到全局，不仅用于本项目：
+以下 Skill 已安装到全局，供本项目使用：
 
-| Skill | 路径 | 用途 | 触发条件 |
-|-------|------|------|----------|
-| `github-push-troubleshooting` | `~/.kimi/daimon/skills/github-push-troubleshooting/` | GitHub push 失败时的网络故障排查和回退策略 | push 失败、连接重置、超时 |
-| `neukol-monthly-course-stats` | `~/.kimi/daimon/skills/neukol-monthly-course-stats/` | Neukol 课程统计 | 每月课程统计 |
-| `post-market-review` | `~/.kimi/daimon/skills/post-market-review/` | 收盘复盘 | 收盘复盘请求 |
-| `pre-market-sentiment` | `~/.kimi/daimon/skills/pre-market-sentiment/` | 早盘舆情 | 早盘舆情分析 |
-| `stock-assistant` | `~/.kimi/daimon/skills/stock-assistant/` | 股票信息查询 | 股票报价、日K等 |
+| Skill | 路径 | 用途 | 状态 |
+|-------|------|------|------|
+| `quiz-bank-smoke-test` | `~/.kimi/daimon/skills/quiz-bank-smoke-test/` | 数据完整性验证（JSON + 图片） | **已更新至 v2** — 反映实际 `data_validator.cjs` + `image_validator.cjs` |
+| `quiz-app-smoke-test` | `~/.kimi/daimon/skills/quiz-app-smoke-test/` | 前端功能手动验证清单 | **已更新至 v2** — 从 Playwright 改为手动检查清单 |
+| `question-bank-builder` | `~/.kimi/daimon/skills/question-bank-builder/` | 题库建立完整流程 | **已更新至 v2** — 添加实际工具列表 |
+| `question-bank-audit` | `~/.kimi/daimon/skills/question-bank-audit/` | 题库质量审计 | **已更新至 v2** — 反映实际脚本审计流程 |
+| `ap-question-bank-maintenance` | `~/.kimi/daimon/skills/ap-question-bank-maintenance/` | 项目维护指南 | **已更新至 v2** — 补充维护清单要求 |
+| `github-push-troubleshooting` | `~/.kimi/daimon/skills/github-push-troubleshooting/` | GitHub push 故障排查 | ✅ 当前可用 |
+| `neukol-monthly-course-stats` | `~/.kimi/daimon/skills/neukol-monthly-course-stats/` | Neukol 课程统计 | ✅ 当前可用 |
+| `post-market-review` | `~/.kimi/daimon/skills/post-market-review/` | 收盘复盘 | ✅ 当前可用 |
+| `pre-market-sentiment` | `~/.kimi/daimon/skills/pre-market-sentiment/` | 早盘舆情 | ✅ 当前可用 |
+| `stock-assistant` | `~/.kimi/daimon/skills/stock-assistant/` | 股票信息查询 | ✅ 当前可用 |
 
 ---
 
@@ -210,4 +218,5 @@ python scripts/remove_watermark.py input.png output.png
 
 ---
 
-*最后更新：2025-06-22*（本次更新：新增 data_validator.cjs、image_validator.cjs、QUALITY_ASSURANCE.md、VIBE_CODING_CLASSIFICATION_RESEARCH.md、github-push-troubleshooting Skill）
+*最后更新：2025-06-23*
+（本次更新：删除 CLASSIFICATION_SOLUTION.md 和 VIBE_CODING_CLASSIFICATION_RESEARCH.md 引用，更新所有 skill 至 v2 版本）
