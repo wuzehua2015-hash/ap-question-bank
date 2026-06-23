@@ -266,6 +266,10 @@
   ],
   "cross_unit_rules": [
     {
+      "name": "Highest unit number rule (most important)",
+      "rule": "If a question involves concepts from multiple units, ALWAYS classify it to the HIGHEST unit number. A student must have learned all involved units to answer this question, so it belongs to the last unit learned. Examples: U3+U4→U4, U4+U6→U6, U3+U5→U5, U1+U3+U6→U6."
+    },
+    {
       "name": "Micro vs Macro equilibrium",
       "rule": "If the question is about a SPECIFIC PRODUCT MARKET (wheat, bottled water, cars) → U1. If the question is about the WHOLE ECONOMY (AD-AS, national output) → U3."
     },
@@ -304,6 +308,8 @@
     "NEVER let distractors determine the unit",
     "ALWAYS distinguish micro equilibrium (U1) from macro equilibrium (U3)",
     "ALWAYS distinguish definitional (U2) from analytical/model-based (U3+)",
-    "ALWAYS check: would a student who only studied this unit know this concept?"
+    "ALWAYS check: would a student who only studied this unit know this concept?",
+    "For cross-unit questions: ALWAYS take the HIGHEST unit number, never the core concept unit",
+    "Do NOT ignore cross-unit synthesis: any question with U6 concepts belongs to U6, even if it also has U3 concepts"
   ]
 }
