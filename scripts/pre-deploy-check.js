@@ -48,9 +48,12 @@ if (!fs.existsSync(distIndex)) {
 console.log('\n[2/5] Data files in dist/')
 const requiredDataFiles = [
   'data/subjects.json',
-  'data/macro_question_bank_v4.json',
-  'data/macro_frq_bank.json',
-  'data/similarity_index.json',
+  'data/ap/macroeconomics/question_bank.json',
+  'data/ap/macroeconomics/frq_bank.json',
+  'data/ap/macroeconomics/classification_config.json',
+  'data/ap/microeconomics/question_bank.json',
+  'data/ap/microeconomics/frq_bank.json',
+  'data/ap/microeconomics/classification_config.json',
 ]
 let allDataPresent = true
 for (const f of requiredDataFiles) {
