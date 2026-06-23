@@ -12,7 +12,14 @@ function DisplayImage({ path, variant }) {
       <img
         src={imgUrl}
         alt=""
-        style={{ maxWidth: '100%', maxHeight: '280px', display: 'block', margin: '12px auto' }}
+        style={{ 
+          maxWidth: '100%', 
+          maxHeight: '200px', 
+          display: 'block', 
+          margin: '12px auto',
+          pageBreakInside: 'avoid',
+          breakInside: 'avoid',
+        }}
         onError={() => { /* 留空，不显示错误 */ }}
       />
     )
@@ -151,7 +158,8 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index 
   const isTableOptions = !!tableData
 
   return (
-    <div className={isPdf ? '' : 'bg-surface rounded-xl p-6 shadow-sm border border-border'}>
+    <div className={isPdf ? '' : 'bg-surface rounded-xl p-6 shadow-sm border border-border'}
+      style={isPdf ? { pageBreakInside: 'avoid', breakInside: 'avoid' } : {}}>
       {/* 题目标签 */}
       {isPdf ? (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '8px' }}>

@@ -236,11 +236,13 @@ function ScorePage() {
               {Object.entries(unitStats).sort().map(([unit, stats]) => {
                 const pct = Math.round((stats.correct / stats.total) * 100)
                 return (
-                  <div key={unit} className="pdf-avoid-break" style={{
+                  <div key={unit} style={{
                     background: '#f9fafb',
                     borderRadius: '8px',
                     padding: '12px',
                     borderLeft: `4px solid ${unitColor(unit)}`,
+                    pageBreakInside: 'avoid',
+                    breakInside: 'avoid',
                   }}>
                     <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1f2937' }}>
                       {unit}
@@ -280,11 +282,14 @@ function ScorePage() {
             {quiz.map((q, idx) => {
               const isCorrect = answers[q.question_id] === q.answer
               return (
-                <div key={q.question_id} className="pdf-avoid-break" style={{
+                <div key={q.question_id} style={{
                   background: isCorrect ? '#f0fdf4' : '#fef2f2',
                   borderRadius: '8px',
                   padding: '24px',
                   border: `1px solid ${isCorrect ? '#bbf7d0' : '#fecaca'}`,
+                  pageBreakInside: 'avoid',
+                  breakInside: 'avoid',
+                  marginBottom: '24px',
                 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
                     <span style={{ fontSize: '24px', fontWeight: 'bold', color: '#1f2937' }}>
@@ -370,11 +375,14 @@ function ScorePage() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {frqs.map((frq, idx) => (
-                <div key={frq.question_id} className="pdf-avoid-break" style={{
+                <div key={frq.question_id} style={{
                   background: '#f9fafb',
                   borderRadius: '8px',
                   padding: '16px',
                   border: '1px solid #e5e7eb',
+                  pageBreakInside: 'avoid',
+                  breakInside: 'avoid',
+                  marginBottom: '16px',
                 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
                     <div style={{ fontSize: '26px', fontWeight: 'bold', color: '#1f2937' }}>

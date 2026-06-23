@@ -23,7 +23,7 @@ export const PDF_EXPORT_OPTIONS = {
     compress: true,
   },
   pagebreak: {
-    mode: ['css', 'legacy'],
+    mode: ['css'],
     before: '.pdf-page-break',
     after: '.pdf-page-break-after',
     avoid: '.pdf-avoid-break',

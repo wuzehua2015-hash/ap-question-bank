@@ -203,7 +203,7 @@ function MockPdfPage() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {mcqs.map((q, idx) => (
-                <div key={q.question_id} className="pdf-avoid-break">
+                <div key={q.question_id} style={{ pageBreakInside: 'avoid', breakInside: 'avoid', marginBottom: '24px' }}>
                   <div style={{
                     fontSize: '18px', fontWeight: 'bold', color: '#1f2937',
                     marginBottom: '8px', paddingBottom: '4px',

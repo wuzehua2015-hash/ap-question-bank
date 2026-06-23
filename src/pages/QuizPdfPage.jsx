@@ -116,7 +116,7 @@ function QuizPdfPage() {
           {/* 题目列表 */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             {quiz.map((q, idx) => (
-              <div key={q.question_id} className="pdf-avoid-break">
+              <div key={q.question_id} style={{ pageBreakInside: 'avoid', breakInside: 'avoid', marginBottom: '24px' }}>
                 <div style={{
                   fontSize: '18px',
                   fontWeight: 'bold',
