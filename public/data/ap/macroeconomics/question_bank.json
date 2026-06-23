@@ -625,7 +625,7 @@
       "E": "Net exports"
     },
     "answer": "D",
-    "primary_unit": "U6",
+    "primary_unit": "U3",
     "secondary_units": [
       "U3"
     ],
@@ -639,7 +639,7 @@
     "image_paths": [],
     "source": "AP Macro 2012 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U6 (score=10.0), Secondary: ['U3'], Matched: ['net exports', 'export', 'exports']",
+    "classification_reasoning": "Fixed by exclusion rule: Pure AD-AS analysis belongs to U3, not U6. Moved from U6 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 4,
     "skills": [
@@ -1211,7 +1211,7 @@
       "E": "raise the discount rate and lower the required reserve ratio to generate an increase in output"
     },
     "answer": "C",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [],
     "topics": [
       "monetary policy",
@@ -1225,7 +1225,7 @@
     "image_paths": [],
     "source": "AP Macro 2012 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=9.0), Matched: ['monetary policy', 'discount rate', 'bank']",
+    "classification_reasoning": "Fixed by exclusion rule: Fiscal policy without monetary combination belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 4,
     "skills": [
@@ -1816,7 +1816,7 @@
       "E": "Point X represents the most efficient combination of the two goods that can be produced by this economy."
     },
     "answer": "E",
-    "primary_unit": "U1",
+    "primary_unit": "U5",
     "secondary_units": [
       "U5",
       "U3"
@@ -1831,7 +1831,7 @@
     ],
     "source": "AP Macro 2012 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U1 (score=3.0), Secondary: ['U5', 'U3'], Matched: ['scarcity']",
+    "classification_reasoning": "Fixed by exclusion rule: economic growth in U1 → U5. A student in U1 would never encounter this concept.",
     "difficulty_source": "inferred",
     "difficulty_score": 5,
     "skills": [
@@ -1957,7 +1957,7 @@
       "E": "There is no change in the effectiveness of either monetary or fiscal policy."
     },
     "answer": "A",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [],
     "topics": [
       "monetary policy",
@@ -1968,7 +1968,7 @@
     "image_paths": [],
     "source": "AP Macro 2012 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=1.5), Matched: ['monetary policy', 'investment']",
+    "classification_reasoning": "Fixed by exclusion rule: Fiscal policy without monetary combination belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 5,
     "skills": [
@@ -2025,7 +2025,7 @@
       "E": "the long-run aggregate supply curve to shift to the right"
     },
     "answer": "E",
-    "primary_unit": "U6",
+    "primary_unit": "U3",
     "secondary_units": [],
     "topics": [
       "net exports",
@@ -2037,7 +2037,7 @@
     "image_paths": [],
     "source": "AP Macro 2012 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U6 (score=10.0), Matched: ['net exports', 'export', 'exports']",
+    "classification_reasoning": "Fixed by exclusion rule: Pure AD-AS analysis belongs to U3, not U6. Moved from U6 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 8,
     "skills": [
@@ -2621,7 +2621,7 @@
       "E": "Decreasing the money supply and increasing taxes"
     },
     "answer": "C",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [
       "U5"
     ],
@@ -2635,7 +2635,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U3 (score=5.0), Secondary: ['U5'], Matched: ['government spending', 'tax', 'taxes']",
+    "classification_reasoning": "Fixed: Policy actions in recession with both fiscal and monetary options → U5. Moved from U4 to U5.",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
@@ -2754,7 +2754,7 @@
       "E": "Decrease / Decrease"
     },
     "answer": "A",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [],
     "topics": [
       "nominal interest rate"
@@ -2764,7 +2764,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=1.0), Matched: ['nominal interest rate']",
+    "classification_reasoning": "Fixed by exclusion rule: Fiscal policy without monetary combination belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 4,
     "skills": [
@@ -2888,7 +2888,7 @@
       "E": "real interest rates"
     },
     "answer": "C",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [],
     "topics": [
       "money supply",
@@ -2900,7 +2900,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=7.0), Matched: ['money supply', 'nominal interest rate', 'real interest rate']",
+    "classification_reasoning": "Fixed by exclusion rule: U4 contains AD-AS curve analysis, which belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 10,
     "skills": [
@@ -3136,7 +3136,7 @@
       "E": "An increase in the discount rate"
     },
     "answer": "D",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [
       "U3"
     ],
@@ -3152,7 +3152,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U4 (score=7.0), Secondary: ['U3'], Matched: ['federal reserve', 'fed', 'discount rate']",
+    "classification_reasoning": "Fixed by exclusion rule: Fiscal policy without monetary combination belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 4,
     "skills": [
@@ -3666,7 +3666,7 @@
       "E": "Indeterminate Decrease."
     },
     "answer": "D",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "monetary policy",
@@ -3677,7 +3677,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=4.0), Matched: ['monetary policy', 'nominal interest rate']",
+    "classification_reasoning": "Fixed by exclusion rule: Fiscal-monetary policy combination belongs to U5. Moved from U4 to U5. ",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
@@ -3947,7 +3947,7 @@
       "E": "raise net exports."
     },
     "answer": "C",
-    "primary_unit": "U3",
+    "primary_unit": "U6",
     "secondary_units": [
       "U6",
       "U2"
@@ -3963,7 +3963,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U2 (score=11.0), Secondary: ['U6'], Matched: ['unemployment', 'unemployment rate', 'inflation']",
+    "classification_reasoning": "Fixed by exclusion rule: Net exports belong to U6. Moved from U3 to U6. ",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
@@ -3986,7 +3986,7 @@
       "E": "An increase in the supply of money"
     },
     "answer": "B",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [],
     "topics": [
       "nominal interest rate",
@@ -3997,7 +3997,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=4.0), Matched: ['nominal interest rate', 'real interest rate']",
+    "classification_reasoning": "Fixed by exclusion rule: U4 contains AD-AS curve analysis, which belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 8,
     "skills": [
@@ -4300,7 +4300,7 @@
       "E": "Increase / No change"
     },
     "answer": "C",
-    "primary_unit": "U6",
+    "primary_unit": "U3",
     "secondary_units": [],
     "topics": [
       "net exports",
@@ -4313,7 +4313,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U6 (score=13.0), Matched: ['net exports', 'capital outflow', 'export']",
+    "classification_reasoning": "Fixed by exclusion rule: Pure AD-AS analysis belongs to U3, not U6. Moved from U6 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
@@ -4650,7 +4650,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U6 (score=8.0), Secondary: ['U3'], Matched: ['foreign exchange']",
+    "classification_reasoning": "Fixed: Exchange rate in AD-AS context → U6. Moved from U3 to U6.",
     "difficulty_source": "inferred",
     "difficulty_score": 8,
     "skills": [
@@ -4673,7 +4673,7 @@
       "E": "not change"
     },
     "answer": "D",
-    "primary_unit": "U4",
+    "primary_unit": "U6",
     "secondary_units": [
       "U6"
     ],
@@ -4687,7 +4687,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U4 (score=9.0), Secondary: ['U6'], Matched: ['money supply', 'reserve requirement', 'bank']",
+    "classification_reasoning": "Fixed: Currency/appreciation with reserve requirement → U6 (exchange rate context). Moved from U4 to U6.",
     "difficulty_source": "inferred",
     "difficulty_score": 5,
     "skills": [
@@ -4783,7 +4783,7 @@
       "E": "unions have negotiated a wage increase for their members"
     },
     "answer": "D",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [
       "U6",
       "U5"
@@ -4797,7 +4797,7 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U4 (score=4.0), Secondary: ['U6', 'U5'], Matched: ['money supply', 'stock']",
+    "classification_reasoning": "Fixed by exclusion rule: U4 contains AD-AS curve analysis, which belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 4,
     "skills": [
@@ -4973,7 +4973,7 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U3 (score=1.5), Secondary: ['U2', 'U4', 'U5'], Matched: ['government spending', 'consumption']",
+    "classification_reasoning": "Fixed: Cost-push inflation with AD-AS context → U3. Moved from U4 to U3.",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
@@ -5030,7 +5030,7 @@
       "E": "innovation causes unemployment"
     },
     "answer": "A",
-    "primary_unit": "U1",
+    "primary_unit": "U2",
     "secondary_units": [
       "U5",
       "U2"
@@ -5044,7 +5044,7 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U2 (score=3.5), Secondary: ['U5', 'U1'], Matched: ['unemployment', 'labor force']",
+    "classification_reasoning": "Fixed by exclusion rule: labor force in U1 → U2. A student in U1 would never encounter this concept.",
     "difficulty_source": "inferred",
     "difficulty_score": 5,
     "skills": [
@@ -5339,7 +5339,7 @@
       "E": "An increase in the supply of dollars in foreign exchange markets"
     },
     "answer": "A",
-    "primary_unit": "U4",
+    "primary_unit": "U6",
     "secondary_units": [],
     "topics": [
       "money supply",
@@ -5356,7 +5356,7 @@
     ],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=14.0), Matched: ['money supply', 'federal reserve', 'fed']",
+    "classification_reasoning": "Fixed by exclusion rule: Foreign exchange/currency belongs to U6. Moved from U4 to U6. ",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
@@ -5548,7 +5548,7 @@
       "E": "Decrease / No change"
     },
     "answer": "A",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "fiscal policy",
@@ -5561,7 +5561,7 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U3 (score=8.0), Matched: ['fiscal policy', 'crowding out', 'output']",
+    "classification_reasoning": "Fixed by exclusion rule: crowding out in U3 → U5. A student in U3 would never encounter this concept.",
     "difficulty_source": "inferred",
     "difficulty_score": 4,
     "skills": [
@@ -6010,7 +6010,7 @@
       "E": "leftward shift of the aggregate demand curve"
     },
     "answer": "B",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [
       "U5"
     ],
@@ -6023,7 +6023,7 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U3 (score=6.0), Secondary: ['U5'], Matched: ['aggregate demand', 'aggregate supply']",
+    "classification_reasoning": "Fixed by exclusion rule: economic growth in U3 → U5. A student in U3 would never encounter this concept.",
     "difficulty_source": "inferred",
     "difficulty_score": 8,
     "skills": [
@@ -6148,7 +6148,7 @@
       "E": "An increase in the country’s cyclical unemployment rate"
     },
     "answer": "C",
-    "primary_unit": "U1",
+    "primary_unit": "U2",
     "secondary_units": [
       "U2"
     ],
@@ -6165,7 +6165,7 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U2 (score=14.5), Matched: ['unemployment', 'unemployment rate', 'inflation']",
+    "classification_reasoning": "Fixed by exclusion rule: labor force in U1 → U2. A student in U1 would never encounter this concept.",
     "difficulty_source": "inferred",
     "difficulty_score": 8,
     "skills": [
@@ -6223,7 +6223,7 @@
       "E": "an increase in unemployment due to crowding out"
     },
     "answer": "B",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [
       "U2",
       "U4",
@@ -6238,7 +6238,7 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U3 (score=6.0), Secondary: ['U2', 'U4', 'U5'], Matched: ['fiscal policy', 'crowding out']",
+    "classification_reasoning": "Fixed by exclusion rule: crowding out in U3 → U5. A student in U3 would never encounter this concept.",
     "difficulty_source": "inferred",
     "difficulty_score": 11,
     "skills": [
@@ -6435,7 +6435,7 @@
       "E": "Decrease taxes by $600 billion."
     },
     "answer": "C",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "aggregate demand",
@@ -6448,7 +6448,7 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U3 (score=12.0), Matched: ['aggregate demand', 'tax', 'taxes']",
+    "classification_reasoning": "Fixed by exclusion rule: crowding out in U3 → U5. A student in U3 would never encounter this concept.",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
@@ -6573,7 +6573,7 @@
       "E": "nominal interest rates increase as the price level decreases"
     },
     "answer": "D",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [],
     "topics": [
       "nominal interest rate"
@@ -6583,7 +6583,7 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=1.0), Matched: ['nominal interest rate']",
+    "classification_reasoning": "Fixed by exclusion rule: U4 contains AD-AS curve analysis, which belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 7,
     "skills": [
@@ -7370,7 +7370,7 @@
       "E": "increased the discount rate on loans to commercial banks"
     },
     "answer": "A",
-    "primary_unit": "U4",
+    "primary_unit": "U6",
     "secondary_units": [
       "U6"
     ],
@@ -7385,7 +7385,7 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U4 (score=8.0), Secondary: ['U6'], Matched: ['discount rate', 'bank', 'bond']",
+    "classification_reasoning": "Fixed by exclusion rule: Foreign exchange/currency belongs to U6. Moved from U4 to U6. ",
     "difficulty_source": "inferred",
     "difficulty_score": 3,
     "skills": [
@@ -7408,7 +7408,7 @@
       "E": "An increase in financial capital outflow"
     },
     "answer": "C",
-    "primary_unit": "U6",
+    "primary_unit": "U5",
     "secondary_units": [
       "U3"
     ],
@@ -7420,7 +7420,7 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam | AP Macro 2022 Exam (Practice Set 1)",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U6 (score=8.0), Secondary: ['U3'], Matched: ['capital outflow']",
+    "classification_reasoning": "Fixed by exclusion rule: economic growth in U6 → U5. A student in U6 would never encounter this concept.",
     "difficulty_source": "official_stats",
     "difficulty_score": 6,
     "percent_correct": 55,
@@ -7582,7 +7582,7 @@
       "E": "Increasing government spending"
     },
     "answer": "A",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [
       "U2"
     ],
@@ -7595,7 +7595,7 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Manual fix: U3 -> U4 (fiscal/monetary policy reclassification)",
+    "classification_reasoning": "Fixed by exclusion rule: Fiscal policy without monetary combination belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "official_stats",
     "difficulty_score": 5,
     "percent_correct": 68,
@@ -7949,7 +7949,7 @@
       "E": "Unemployment compensation"
     },
     "answer": "A",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [
       "U5",
       "U2"
@@ -7963,7 +7963,7 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U3 (score=6.0), Secondary: ['U5', 'U2'], Matched: ['government spending', 'tax']",
+    "classification_reasoning": "Fixed by exclusion rule: economic growth in U3 → U5. A student in U3 would never encounter this concept.",
     "difficulty_source": "official_stats",
     "difficulty_score": 9,
     "percent_correct": 82,
@@ -8060,7 +8060,7 @@
       "E": "An increase in the price of bonds."
     },
     "answer": "D",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [
       "U6"
     ],
@@ -8076,7 +8076,7 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U4 (score=9.0), Secondary: ['U6'], Matched: ['federal reserve', 'fed', 'reserve requirement']",
+    "classification_reasoning": "Fixed: Interest rates with government spending and trade deficit → U5. Moved from U4 to U5.",
     "difficulty_source": "official_stats",
     "difficulty_score": 7,
     "percent_correct": 47,
@@ -8100,7 +8100,7 @@
       "E": "how expectations change as the rate of inflation increases and the unemployment rate decreases"
     },
     "answer": "B",
-    "primary_unit": "U3",
+    "primary_unit": "U4",
     "secondary_units": [
       "U4",
       "U2"
@@ -8116,7 +8116,7 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U2 (score=10.0), Secondary: ['U4'], Matched: ['unemployment', 'unemployment rate', 'inflation']",
+    "classification_reasoning": "Fixed by exclusion rule: Monetary policy tools (money supply) belong to U4. Moved from U3 to U4. ",
     "difficulty_source": "official_stats",
     "difficulty_score": 7,
     "percent_correct": 76,
@@ -8424,7 +8424,7 @@
       "E": "shift the long-run Phillips curve to the right"
     },
     "answer": "B",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "nominal interest rate",
@@ -8437,7 +8437,7 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=12.0), Matched: ['nominal interest rate', 'real interest rate', 'phillips curve']",
+    "classification_reasoning": "Fixed by exclusion rule: long-run phillips curve in U4 → U5. A student in U4 would never encounter this concept.",
     "difficulty_source": "official_stats",
     "difficulty_score": 10,
     "percent_correct": 38,
@@ -9246,7 +9246,7 @@
       "E": "decreased taxes"
     },
     "answer": "C",
-    "primary_unit": "U3",
+    "primary_unit": "U6",
     "secondary_units": [],
     "topics": [
       "government spending",
@@ -9258,7 +9258,7 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U3 (score=9.0), Matched: ['government spending', 'tax', 'taxes']",
+    "classification_reasoning": "Fixed by exclusion rule: Tariff belongs to U6. Moved from U3 to U6. ",
     "difficulty_source": "official_stats",
     "difficulty_score": 3,
     "percent_correct": 54,
@@ -9495,7 +9495,7 @@
       "E": "A lower aggregate demand and a lower price level"
     },
     "answer": "C",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [
@@ -9518,7 +9518,8 @@
     ],
     "requires_graph": false,
     "curriculum": "ap",
-    "subject": "macroeconomics"
+    "subject": "macroeconomics",
+    "classification_reasoning": "Fixed by exclusion rule: economic growth in U3 → U5. A student in U3 would never encounter this concept."
   },
   {
     "question_id": "2017_Q03",
@@ -9639,7 +9640,7 @@
       "E": "Nominal gross domestic product"
     },
     "answer": "A",
-    "primary_unit": "U2",
+    "primary_unit": "U5",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [
@@ -9661,7 +9662,8 @@
     ],
     "requires_graph": false,
     "curriculum": "ap",
-    "subject": "macroeconomics"
+    "subject": "macroeconomics",
+    "classification_reasoning": "Fixed by exclusion rule: Economic growth measurement belongs to U5. Moved from U2 to U5. "
   },
   {
     "question_id": "2017_Q06",
@@ -9860,7 +9862,8 @@
     ],
     "requires_graph": false,
     "curriculum": "ap",
-    "subject": "macroeconomics"
+    "subject": "macroeconomics",
+    "classification_reasoning": "Fixed: Tax reduction with AD-AS context → U3. Moved from U4 to U3."
   },
   {
     "question_id": "2017_Q11",
@@ -10131,7 +10134,7 @@
       "E": "An increase in the labor-force participation rate"
     },
     "answer": "A",
-    "primary_unit": "U3",
+    "primary_unit": "U4",
     "secondary_units": [],
     "topics": [],
     "difficulty": "Medium",
@@ -10150,7 +10153,8 @@
     ],
     "requires_graph": true,
     "curriculum": "ap",
-    "subject": "macroeconomics"
+    "subject": "macroeconomics",
+    "classification_reasoning": "Fixed: Movement on SRPC with real interest rate → U4 (monetary policy effect). Moved from U3 to U4."
   },
   {
     "question_id": "2017_Q18",
@@ -10183,7 +10187,8 @@
     ],
     "requires_graph": false,
     "curriculum": "ap",
-    "subject": "macroeconomics"
+    "subject": "macroeconomics",
+    "classification_reasoning": "Fixed: Fiscal policy reducing inflation → U3. Moved from U4 to U3."
   },
   {
     "question_id": "2017_Q19",
@@ -10592,7 +10597,7 @@
       "E": "Rapidly harvesting timber and mineral resources"
     },
     "answer": "C",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [
       "U5"
     ],
@@ -10610,7 +10615,8 @@
     ],
     "requires_graph": false,
     "curriculum": "ap",
-    "subject": "macroeconomics"
+    "subject": "macroeconomics",
+    "classification_reasoning": "Fixed by exclusion rule: economic growth in U3 → U5. A student in U3 would never encounter this concept."
   },
   {
     "question_id": "2017_Q31",
@@ -10717,7 +10723,7 @@
       "E": "$120 billion"
     },
     "answer": "C",
-    "primary_unit": "U6",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [],
     "difficulty": "Medium",
@@ -10733,7 +10739,8 @@
     ],
     "requires_graph": false,
     "curriculum": "ap",
-    "subject": "macroeconomics"
+    "subject": "macroeconomics",
+    "classification_reasoning": "Fixed by exclusion rule: crowding out in U6 → U5. A student in U6 would never encounter this concept."
   },
   {
     "question_id": "2017_Q35",
@@ -10838,7 +10845,7 @@
       "E": "Decrease Decrease Increase"
     },
     "answer": "E",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [
       "U3"
     ],
@@ -10867,7 +10874,8 @@
     ],
     "requires_graph": false,
     "curriculum": "ap",
-    "subject": "macroeconomics"
+    "subject": "macroeconomics",
+    "classification_reasoning": "Fixed by exclusion rule: Economic growth belongs to U5. Moved from U4 to U5. "
   },
   {
     "question_id": "2017_Q39",
@@ -11410,7 +11418,7 @@
       "E": "Government spending is less than tax revenue, and the central bank keeps the money supply constant."
     },
     "answer": "C",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [
       "U5"
     ],
@@ -11428,7 +11436,7 @@
       "analyze"
     ],
     "requires_graph": false,
-    "classification_reasoning": "Manual fix: U3 -> U4 (fiscal/monetary policy reclassification)",
+    "classification_reasoning": "Fixed: Budget deficit with interest rates → U5 (crowding out context). Moved from U4 to U5.",
     "curriculum": "ap",
     "subject": "macroeconomics"
   },
@@ -11638,7 +11646,7 @@
       "E": "Household wealth"
     },
     "answer": "D",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [
       "U2",
       "U5"
@@ -11652,7 +11660,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam | AP Macro 2022 Exam (Practice Set 2)",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U3 (score=3.5), Secondary: ['U2', 'U5'], Matched: ['government spending', 'consumption']",
+    "classification_reasoning": "Fixed by exclusion rule: economic growth in U3 → U5. A student in U3 would never encounter this concept.",
     "difficulty_source": "inferred",
     "difficulty_score": 5,
     "skills": [
@@ -11710,7 +11718,7 @@
       "E": "It increases the money supply."
     },
     "answer": "D",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [
       "U3"
     ],
@@ -11724,7 +11732,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam | AP Macro 2022 Exam (Practice Set 2)",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U4 (score=5.0), Secondary: ['U3'], Matched: ['money supply', 'loanable funds', 'real interest rate']",
+    "classification_reasoning": "Fixed by exclusion rule: Fiscal policy without monetary combination belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "inferred",
     "difficulty_score": 11,
     "skills": [
@@ -11996,7 +12004,7 @@
       "E": "Increase government spending."
     },
     "answer": "A",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "government spending",
@@ -12008,7 +12016,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U3 (score=7.0), Secondary: ['U4'], Matched: ['government spending', 'tax', 'taxes']",
+    "classification_reasoning": "Fixed: Money supply + government spending → U5. Moved from U4 to U5.",
     "difficulty_source": "official_stats",
     "difficulty_score": 4,
     "percent_correct": 76,
@@ -12103,7 +12111,7 @@
       "E": "a movement along the aggregate demand curve"
     },
     "answer": "B",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [],
     "topics": [
       "aggregate demand",
@@ -12114,7 +12122,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Manual fix: U3 -> U4 (fiscal/monetary policy reclassification)",
+    "classification_reasoning": "Fixed by exclusion rule: U4 contains AD-AS curve analysis, which belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "official_stats",
     "difficulty_score": 5,
     "percent_correct": 58,
@@ -12203,7 +12211,7 @@
       "E": "Increase / Increase"
     },
     "answer": "D",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "real interest rate",
@@ -12214,7 +12222,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=1.5), Matched: ['real interest rate', 'investment']",
+    "classification_reasoning": "Fixed: Government spending + borrowing + interest rates → U5 (crowding out). Moved from U4 to U5.",
     "difficulty_source": "official_stats",
     "difficulty_score": 5,
     "percent_correct": 51,
@@ -12302,7 +12310,7 @@
       "E": "Increasing the minimum wage"
     },
     "answer": "D",
-    "primary_unit": "U3",
+    "primary_unit": "U4",
     "secondary_units": [
       "U4"
     ],
@@ -12319,7 +12327,7 @@
     ],
     "source": "AP Macro 2018 Official Practice Exam | AP Macro 2022 Exam (Practice Set 2)",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U3 (score=1.5), Secondary: ['U4'], Matched: ['tax', 'equilibrium', 'output']",
+    "classification_reasoning": "Fixed by exclusion rule: Monetary policy tools (money supply) belong to U4. Moved from U3 to U4. ",
     "difficulty_source": "official_stats",
     "difficulty_score": 5,
     "percent_correct": 74,
@@ -13221,7 +13229,7 @@
       "E": "Low levels of foreign investment in the country"
     },
     "answer": "C",
-    "primary_unit": "U6",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "foreign investment"
@@ -13231,7 +13239,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U6 (score=8.0), Matched: ['foreign investment']",
+    "classification_reasoning": "Fixed by exclusion rule: economic growth in U6 → U5. A student in U6 would never encounter this concept.",
     "difficulty_source": "official_stats",
     "difficulty_score": 3,
     "percent_correct": 71,
@@ -13291,7 +13299,7 @@
       "E": "Decreasing the required reserve ratio"
     },
     "answer": "A",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [],
     "topics": [
       "money supply",
@@ -13304,7 +13312,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam | AP Macro 2022 Exam (Practice Set 2)",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=6.0), Matched: ['money supply', 'discount rate', 'bond']",
+    "classification_reasoning": "Fixed by exclusion rule: Fiscal policy without monetary combination belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "official_stats",
     "difficulty_score": 1,
     "percent_correct": 77,
@@ -13507,7 +13515,7 @@
       "E": "actual inflation rate to fall below the expected inflation rate."
     },
     "answer": "B",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [
       "U2"
     ],
@@ -13521,7 +13529,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam | AP Macro 2022 Exam (Practice Set 2)",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U4 (score=9.0), Secondary: ['U2'], Matched: ['phillips curve', 'short-run phillips curve', 'long-run phillips curve']",
+    "classification_reasoning": "Fixed by exclusion rule: long-run phillips curve in U4 → U5. A student in U4 would never encounter this concept.",
     "difficulty_source": "official_stats",
     "difficulty_score": 7,
     "percent_correct": 51,
@@ -13828,7 +13836,7 @@
       "E": "An increase in imports"
     },
     "answer": "D",
-    "primary_unit": "U1",
+    "primary_unit": "U5",
     "secondary_units": [
       "U5",
       "U2",
@@ -13843,7 +13851,7 @@
     "image_paths": [],
     "source": "AP Macro 2019 Official Practice Exam | AP Macro 2022 Exam (Practice Set 3)",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U1 (score=6.0), Secondary: ['U5', 'U2', 'U3'], Matched: ['production possibilities', 'ppc']",
+    "classification_reasoning": "Fixed by exclusion rule: Government spending with PPC/growth context belongs to U5. Moved from U1 to U5. ",
     "difficulty_source": "inferred",
     "difficulty_score": 8,
     "skills": [
@@ -13914,7 +13922,7 @@
     "image_paths": [],
     "source": "AP Macro 2019 Official Practice Exam | AP Macro 2022 Exam (Practice Set 3)",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U6 (score=14.0), Matched: ['currency', 'depreciation', 'foreign exchange']",
+    "classification_reasoning": "Fixed: Foreign exchange + aggregate supply → U6. Moved from U3 to U6.",
     "difficulty_source": "inferred",
     "difficulty_score": 5,
     "skills": [
@@ -13970,7 +13978,7 @@
       "E": "A decrease in income tax rates"
     },
     "answer": "A",
-    "primary_unit": "U3",
+    "primary_unit": "U4",
     "secondary_units": [
       "U5",
       "U2",
@@ -13986,7 +13994,7 @@
     "image_paths": [],
     "source": "AP Macro 2019 Official Practice Exam | AP Macro 2022 Exam (Practice Set 3)",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U3 (score=3.0), Secondary: ['U5', 'U2', 'U4'], Matched: ['tax', 'output', 'recessionary gap']",
+    "classification_reasoning": "Fixed by exclusion rule: Monetary policy tools (money supply) belong to U4. Moved from U3 to U4. ",
     "difficulty_source": "inferred",
     "difficulty_score": 5,
     "skills": [
@@ -14751,7 +14759,7 @@
       "E": "increase both the interest rate and investment"
     },
     "answer": "D",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "monetary policy",
@@ -14762,7 +14770,7 @@
     "image_paths": [],
     "source": "AP Macro 2019 Official Practice Exam | AP Macro 2022 Exam (Practice Set 3)",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=1.5), Matched: ['monetary policy', 'investment']",
+    "classification_reasoning": "Fixed by exclusion rule: Fiscal-monetary policy combination belongs to U5. Moved from U4 to U5. ",
     "difficulty_source": "official_stats",
     "difficulty_score": 4,
     "percent_correct": 34,
@@ -15107,7 +15115,7 @@
       "E": "An individual in Country X buys new government bonds issued by Country E."
     },
     "answer": "E",
-    "primary_unit": "U4",
+    "primary_unit": "U6",
     "secondary_units": [],
     "topics": [
       "bond",
@@ -15118,7 +15126,7 @@
     "image_paths": [],
     "source": "AP Macro 2019 Official Practice Exam | AP Macro 2022 Exam (Practice Set 3)",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=2.0), Matched: ['bond', 'bonds']",
+    "classification_reasoning": "Fixed by exclusion rule: Balance of payments belongs to U6. Moved from U4 to U6. ",
     "difficulty_source": "official_stats",
     "difficulty_score": 1,
     "percent_correct": 35,
@@ -15541,7 +15549,7 @@
       "E": "Savings"
     },
     "answer": "C",
-    "primary_unit": "U3",
+    "primary_unit": "U4",
     "secondary_units": [],
     "topics": [
       "aggregate demand",
@@ -15553,7 +15561,7 @@
     "image_paths": [],
     "source": "AP Macro 2019 Official Practice Exam | AP Macro 2022 Exam (Practice Set 3)",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U3 (score=5.0), Matched: ['aggregate demand', 'government spending', 'tax']",
+    "classification_reasoning": "Fixed: Increase in AD and inflation with real interest rate → U4 (monetary transmission). Moved from U3 to U4.",
     "difficulty_source": "official_stats",
     "difficulty_score": 7,
     "percent_correct": 77,
@@ -15576,7 +15584,7 @@
       "E": "Selling government bonds"
     },
     "answer": "E",
-    "primary_unit": "U4",
+    "primary_unit": "U3",
     "secondary_units": [],
     "topics": [
       "discount rate",
@@ -15590,7 +15598,7 @@
     "image_paths": [],
     "source": "AP Macro 2019 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=7.0), Matched: ['discount rate', 'nominal interest rate', 'bank']",
+    "classification_reasoning": "Fixed by exclusion rule: Fiscal policy without monetary combination belongs to U3. Moved from U4 to U3. ",
     "difficulty_source": "official_stats",
     "difficulty_score": 5,
     "percent_correct": 32,
@@ -16526,7 +16534,7 @@
       "E": "The effect on the real interest rate and interest-sensitive spending is indeterminate."
     },
     "answer": "C",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [],
     "difficulty": "Medium",
@@ -16534,7 +16542,7 @@
     "image_paths": [],
     "source": "AP Macro 2023 Practice Exam Set 1",
     "pure_unit": true,
-    "classification_reasoning": "Classified from 2022 AP Practice Exam content analysis",
+    "classification_reasoning": "Fixed: Government spending + private savings + interest rates → U5. Moved from U4 to U5.",
     "difficulty_source": "inferred",
     "difficulty_score": 3,
     "skills": [
