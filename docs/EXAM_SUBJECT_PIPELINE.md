@@ -124,7 +124,7 @@ node scripts/run_with_env.cjs node scripts/data_validator.cjs
 
 **目的**：理解该科目的 PDF 具体形态，识别提取难点，为后续工具选择提供依据。
 
-**分析清单**：
+**分析清单**（基于v2.0数据规范）：
 
 | 检查项 | 记录内容 | 影响 |
 |--------|----------|------|
@@ -132,16 +132,24 @@ node scripts/run_with_env.cjs node scripts/data_validator.cjs
 | 是否有水印 | 查看是否有 "TestDaily" 等灰色水印覆盖 | 是否需要 `remove_watermark.py` |
 | 页面布局 | 单栏还是双栏？ | 决定提取策略（`use_two_column=True/False`） |
 | MCQ 选项格式 | `(A) text (B) text` 还是表格？ | 决定正则表达式和解析策略 |
-| 是否有表格选项 | 选项是 Demand/Supply 两列还是矩阵？ | 需要 `option_table_data` + 表格图像 |
-| 图像类型 | 嵌入图片？矢量图？图表？表格？ | 决定裁剪策略 |
+| **背景数据表** | 题干中是否有表格数据（如production data, payoff matrix） | 需要提取为 `background_data` |
+| **表格选项** | 选项是否以行列形式呈现（如Q18的tax table） | 需要 `option_table_columns` + `options_as_table` |
+| 图像类型 | 嵌入图片？矢量图？图表？ | 决定裁剪策略 |
+| **图形与文本表格区分** | payoff matrix是文本还是图片？ | 文本表格保留为`background_data`，图片才提取 |
 | 图形是否多题共用 | 是否有 "Questions X-Y are based on" 提示 | 需要记录 `shared_graph_questions` |
 | alt-text 污染 | 是否有 "The figure shows..." 等无障碍描述 | 需要过滤模式 |
 | FRQ 页面布局 | 是否有 answer page、additional page、scoring guidelines | 决定 FRQ 提取策略 |
 | 答案/得分标准位置 | 在 MCQ 末尾？单独文件？嵌入 FRQ 后面？ | 决定答案提取策略 |
-| 是否有评分标准图像 | rubric 中是否包含表格/图表 | 需要 `precise_table_cropper.py` |
+| FRQ中是否有数据表 | FRQ题干中是否有数字表格 | 需要提取为 `background_data` |
 
 **交付物**：
-- `docs/{subject}_pdf_analysis.md` — PDF 形态分析报告
+- `docs/{subject}_pdf_analysis.md` — PDF 形态分析报告（包含上述所有检查项的结果）
+- `docs/AP_QUESTION_DATA_SPEC_v2.md` — 数据规范确认（基于分析结果确认该科目使用哪种结构）
+
+**关键区分**（v2.0规范核心）：
+- 题干中的表格数据（如Q31 production data, Q40 payoff matrix）→ `background_data`
+- 选项区域的表格数据（如Q18 tax table, Q52 market structure）→ `option_table_columns` + `options_as_table`
+- 两者绝对不能混淆！这是导致之前数据质量问题的核心原因。
 
 ### 2.2 识别该科目特有陷阱
 
@@ -288,37 +296,80 @@ python scripts/precise_table_cropper.py \
 # 如果 precise_table_cropper.py 不能处理特定情况，修复它，而不是绕开它
 ```
 
-### 4.5 表格选项处理
+### 4.5 表格与背景数据处理（关键：区分两种表格）
+
+**根据v2.0数据规范，必须严格区分：**
+
+| 类型 | 字段 | 位置 | 示例 | 处理方式 |
+|------|------|------|------|----------|
+| **背景数据表** | `background_data` | 题干中 | Q31 production data | 结构化提取，保留在题干前 |
+| **选项表格** | `options` + `option_table_columns` | 选项区域 | Q18 tax price table | 结构化提取，标记`options_as_table=true` |
+
+**提取规则**：
+1. 如果表格在题干中，且题干有"According to the table above"等引用 → 是 `background_data`
+2. 如果表格在选项区域，每个选项是一行数据 → 是 `option_table_columns` + `options_as_table`
+3. 文本表格（如payoff matrix）→ 提取为 `background_data` 的文本描述，**不生成图片**
+4. 图形图表（如supply-demand diagram）→ 提取为图片，题干保留引用文字
 
 ```json
-// 表格题目的数据结构
+// 背景数据表示例（Q31）
 {
-  "question_id": "2014_Q40",
-  "text": "The payoff matrix...",
-  "options": {
-    "A": "Agronomia: High, Farmingdale: High",
-    "B": "Agronomia: High, Farmingdale: Low",
-    // ...
+  "question_id": "2012_Q31",
+  "question_text": "According to the information in the table above, which...",
+  "background_data": {
+    "type": "text_table",
+    "description": "UNITS OF MANUFACTURED GOODS AND SERVICE GOODS PRODUCED USING ONE HOUR OF LABOR",
+    "columns": ["Country", "Manufactured Goods", "Service Goods"],
+    "rows": [
+      ["A", "100 units", "300 units"],
+      ["B", "75 units", "150 units"]
+    ]
   },
-  "option_table_data": {
-    "headers": ["Agronomia's Profit", "Farmingdale's Profit"],
-    "rows": {
-      "A": ["High", "High"],
-      "B": ["High", "Low"]
-    }
-  },
-  "image_paths": ["/images/micro/mcq/2014_Q40_table.png"]
+  "options": [
+    "(A) Country A has both an absolute and a comparative advantage...",
+    "(B) Country A has an absolute advantage...",
+    "..."
+  ]
+}
+
+// 表格选项示例（Q18）
+{
+  "question_id": "2012_Q18",
+  "question_text": "What is the price paid by consumers and the net price received by producers after the tax is paid?",
+  "options": [
+    "(A) $11.00 | $10.45",
+    "(B) $11.00 | $10.00",
+    "(C) $10.45 | $10.00",
+    "(D) $10.45 | $9.45",
+    "(E) $10.00 | $9.45"
+  ],
+  "option_table_columns": ["Paid by Consumers", "Received by Producers"],
+  "options_as_table": true
 }
 ```
 
-**关键规则**：
-- 表格选项**必须**同时有 `image_paths`（视觉呈现）和 `option_table_data`（结构化数据）
-- 表格图像必须只包含表格，不包含题目文字
-- `options` 字段是文本版本（用 `/` 分隔），用于搜索和纯文本展示
-
-### 4.6 FRQ 提取（通用）
+### 4.6 FRQ 提取（通用，v2.0规范）
 
 **重要**：FRQ 必须在 Phase 4 中与 MCQ 同时提取，不能遗漏。
+
+**新增要求**（v2.0）：
+1. FRQ 中的数据表格（如2016 Q1的production data）必须提取为 `background_data`
+2. Rubric 必须输出为结构化对象，**不能是字符串**：
+   ```json
+   {
+     "rubric": {
+       "points": [
+         {
+           "point_id": "a",
+           "value": 1,
+           "description": "One point is earned for correctly stating that...",
+           "criteria": ["Correct identification of effect", "Correct explanation"]
+         }
+       ]
+     }
+   }
+   ```
+3. Rubric `description` 必须包含**具体内容**，不能只写 "Part (a)" 或 "Question 1"
 
 ```python
 def extract_frq(pdf_path, page_ranges, config):
@@ -329,12 +380,19 @@ def extract_frq(pdf_path, page_ranges, config):
     # 4. 提取 Scoring Guidelines（从 "Free-Response Scoring Guidelines" 页开始）
     # 5. 清理 boilerplate（从 config['frq_pollution_patterns']）
     # 6. 注意：clean_text 中的正则不要使用 re.DOTALL 跨行删除，避免误删 Scoring Guidelines
+    # 7. 将 rubric 解析为结构化对象（rubric.points 数组），不能是字符串
+    # 8. 提取 FRQ 中的数据表格为 background_data（如果存在）
 ```
 
 **FRQ 页面范围查找策略**（从后往前扫描）：
 1. 找到 `STOP` + `END OF EXAM` → FRQ 结束页
 2. 找到 `SECTION II` + `Free Response` + 下一页有实际题目内容 → FRQ 开始页
 3. 找到 `Scoring Guidelines` 且页码 > FRQ 结束页 → 评分标准开始页
+
+**Rubric 内容验证**：
+- 每个 `description` 必须包含具体的评分标准，不能只是题号引用
+- 示例："One point is earned for correctly identifying the opportunity cost..." ✅
+- 反例："Part (a)" ❌, "Question 1" ❌
 
 ### 4.7 题号完整性检查（不可跳过）
 
@@ -353,8 +411,6 @@ def validate_question_completeness(questions, year, expected_count=60):
 - 每个年份提取完成后，立即运行题号完整性检查
 - 如果发现缺失题号，不要继续下一步，立即分析原因并修复
 - 常见原因：目录页干扰、alt-text 导致提取跳过、双栏跨页分割
-
-### 4.8 多题共用图表处理
 
 ### 4.7 多题共用图表处理
 
@@ -475,13 +531,18 @@ node scripts/data_validator.cjs public/data/ap/microeconomics/question_bank.json
 
 | 检查项 | 来源 | 严重级别 | 说明 |
 |--------|------|----------|------|
-| 字段完整性 | JSON Schema | CRITICAL | |
+| 字段完整性 | JSON Schema | CRITICAL | 必须包含 `question_id`, `year`, `question_number`, `question_type`, `question_text`, `options`, `unit_tags` |
 | 单元有效性 | `classification_config.json` 的 `units[].code` | CRITICAL | |
 | 排除概念违反 | `classification_config.json` 的 `excluded_concepts` | CRITICAL | **硬性错误，必须为 0** |
-| 图像关联性 | `has_graph` + `image_paths` | CRITICAL | |
-| 表格格式 | `option_table_data` | CRITICAL | |
+| 图像关联性 | `images` + `diagram_references` | CRITICAL | |
+| 背景数据与选项区分 | `background_data` vs `options` | CRITICAL | **background_data绝对不能混入options** |
+| 表格格式 | `option_table_columns` + `options_as_table` | CRITICAL | 表格选项必须有列定义 |
 | 文本污染 | `classification_config.json` 的 `pollution_patterns` | CRITICAL | |
 | 选项截断 | 通用正则（不以 "and" / "the" / "of" 结尾） | CRITICAL | |
+| 图片大小 | 单张 < 500KB | WARNING | 超过可能包含其他题目 |
+| 编码检查 | 无 `\uFFFD` | CRITICAL | |
+| FRQ rubric结构 | `rubric.points` 数组 | CRITICAL | 不能是字符串 |
+| FRQ rubric内容 | `description` 必须包含具体内容 | CRITICAL | 不能只是 "Part (a)" |
 | pure_unit 一致性 | `pure_unit` + `secondary_units` | WARNING | 旧数据可能遗留，不影响部署 |
 | 核心概念覆盖 | `classification_config.json` 的 `core_concepts` | INFO | **软警告，可接受** |
 
