@@ -44,7 +44,7 @@ function normalizeOptions(options) {
     for (const opt of options) {
       const m = opt.match(/^\(([A-E])\)\s*/)
       const key = m ? m[1] : String(Object.keys(result).length)
-      result[key] = opt
+      result[key] = opt.replace(/^\([A-E]\)\s*/, '')  // strip prefix
     }
     return result
   }
