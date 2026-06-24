@@ -633,7 +633,7 @@ public/images/{subject}/
 
 ---
 
-## Phase 9: 科目总结与档案维护
+## Phase 9: 总结、推送与档案维护
 
 ### 9.1 科目总结文档
 
@@ -661,7 +661,40 @@ public/images/{subject}/
 - 无
 ```
 
-### 9.2 工具更新
+### 9.2 推送到 GitHub（不可跳过）
+
+**已发生的错误**：完成所有 Phase 0-8 后忘记推送到 GitHub，导致本地修改与远程不同步，后续工作可能丢失。
+
+```bash
+# 步骤 1：检查 git 状态
+git status
+
+# 步骤 2：暂存所有更改（包括新增文件和删除文件）
+git add -A
+
+# 步骤 3：提交（包含清晰的 commit message，记录所做工作）
+git commit -m "feat: {Subject} 全量重建 (Phase 0-9)
+
+- {X} MCQs + {Y} FRQs + {Z} images
+- 修复 ...
+- 新增 ...
+- 数据验证：0 errors, 0 warnings
+- 构建：vite build 通过"
+
+# 步骤 4：推送到远程
+git push origin main
+
+# 步骤 5：验证推送成功
+# 在浏览器中打开 GitHub 仓库确认 commit 已推送
+```
+
+**关键规则**：
+- **Phase 9 必须包含推送步骤，不能遗漏**
+- 提交信息必须包含：科目名称、数据量、关键修复、验证结果
+- 如果 `backups/` 目录存在，必须将其加入 `.gitignore`（备份不应提交到 git）
+- 推送后必须在 GitHub 网页确认 commit 已显示
+
+### 9.3 工具更新
 
 如果发现已有工具不能处理新科目的情况，**修复工具，不是绕开工具**：
 
@@ -669,12 +702,17 @@ public/images/{subject}/
 - `data_validator.cjs` 硬编码了科目 → 修复为通用化
 - `build_similarity_index.py` 不支持多科目 → 修复为支持 `--subject` 参数
 
-### 9.3 技能更新
+### 9.4 技能更新
 
 - 更新 `question-bank-builder` 技能：添加新科目特有的陷阱和解决方案
 - 更新 `ap-pdf-extraction` 技能：添加新科目的 PDF 形态特征
 - 更新 `question-bank-audit` 技能：添加新科目的审计检查项
 - 更新 `ap-question-bank-maintenance` 技能：更新 TOOLS_INVENTORY 和项目状态
+
+### 9.5 流程文档更新
+
+- 更新 `EXAM_SUBJECT_PIPELINE.md`：记录新科目执行中发现的新陷阱和修复方法
+- 更新 `MICROECONOMICS_REBUILD_LOG.md`（或对应科目日志）：记录所有错误和根本原因
 
 ---
 
