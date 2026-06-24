@@ -116,14 +116,16 @@ function MockPdfPage() {
   // 数据验证：提前捕获任何格式问题
   try {
     mcqs.forEach((q, i) => {
+      const qText = q.text || q.question_text
       if (!q || !q.question_id) throw new Error(`MCQ index ${i} missing question_id: ${JSON.stringify(q)?.slice(0, 100)}`)
-      if (!q.text) throw new Error(`MCQ ${q.question_id} missing text`)
+      if (!qText) throw new Error(`MCQ ${q.question_id} missing text`)
       if (!q.options) throw new Error(`MCQ ${q.question_id} missing options`)
       if (!q.answer) throw new Error(`MCQ ${q.question_id} missing answer`)
     })
     frqs.forEach((f, i) => {
+      const fText = f.text || f.question_text
       if (!f || !f.question_id) throw new Error(`FRQ index ${i} missing question_id: ${JSON.stringify(f)?.slice(0, 100)}`)
-      if (!f.text) throw new Error(`FRQ ${f.question_id} missing text`)
+      if (!fText) throw new Error(`FRQ ${f.question_id} missing text`)
     })
   } catch (validationErr) {
     console.error('[MockPdfPage] Data validation error:', validationErr)

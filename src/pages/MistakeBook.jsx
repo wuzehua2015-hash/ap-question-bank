@@ -186,7 +186,7 @@ function MistakeBook() {
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-text mb-2">{q.text}</p>
+                <p className="text-sm text-text mb-2">{q.text || q.question_text}</p>
                 <div className="flex gap-2">
                   <button
                     onClick={() => setExpandedId(isExpanded ? null : q.question_id)}

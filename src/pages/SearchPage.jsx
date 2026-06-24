@@ -49,7 +49,7 @@ function SearchPage() {
     const kw = keyword.trim().toLowerCase()
     if (kw) {
       result = result.filter(q => {
-        const text = (q.text || '').toLowerCase()
+        const text = (q.text || q.question_text || '').toLowerCase()
         const opts = Object.values(q.options || {}).join(' ').toLowerCase()
         const topics = (q.topics || []).join(' ').toLowerCase()
         return text.includes(kw) || opts.includes(kw) || topics.includes(kw)
@@ -211,7 +211,7 @@ function SearchPage() {
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-text line-clamp-2">{q.text}</p>
+                <p className="text-sm text-text line-clamp-2">{q.text || q.question_text}</p>
               </div>
               {isExpanded && (
                 <div className="px-4 pb-4 border-t border-border bg-gray-50">

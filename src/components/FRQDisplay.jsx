@@ -231,11 +231,11 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
       {/* 题目文本 */}
       {isPdf ? (
         <div style={{ marginBottom: '16px' }}>
-          <FRQText text={frq.text} isPdf={true} />
+          <FRQText text={frq.text || frq.question_text} isPdf={true} />
         </div>
       ) : (
         <div className="mb-6 bg-gray-50 rounded-lg p-4">
-          <FRQText text={frq.text} isPdf={false} />
+          <FRQText text={frq.text || frq.question_text} isPdf={false} />
         </div>
       )}
 

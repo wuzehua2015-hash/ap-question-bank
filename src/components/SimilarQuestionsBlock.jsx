@@ -92,7 +92,7 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3, _includeSe
                 <div className="flex items-center gap-2 min-w-0">
                   <span className="text-xs text-text-muted shrink-0">{q.question_id}</span>
                   <span className="text-xs bg-brand text-white px-1.5 py-0.5 rounded shrink-0">{q.primary_unit}</span>
-                  <span className="text-xs text-text truncate">{q.text}</span>
+                  <span className="text-xs text-text truncate">{q.text || q.question_text}</span>
                 </div>
                 <button className="text-xs text-brand hover:underline shrink-0 ml-2">
                   {isExpanded ? '收起' : '查看'}

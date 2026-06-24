@@ -310,7 +310,7 @@ function ScorePage() {
                     </span>
                   </div>
                   <p style={{ fontSize: '22px', color: '#4b5563', marginBottom: '12px', lineHeight: 1.5 }}>
-                    <MathText text={q.text} />
+                    <MathText text={q.text || q.question_text} />
                   </p>
                   {/* 图片 */}
                   {q.image_paths && q.image_paths.length > 0 && (
@@ -401,7 +401,7 @@ function ScorePage() {
                   </div>
 
                   <p style={{ fontSize: '22px', color: '#4b5563', marginBottom: '10px', lineHeight: 1.5 }}>
-                    <MathText text={frq.text} />
+                    <MathText text={frq.text || frq.question_text} />
                   </p>
 
                   {/* FRQ 图片 */}

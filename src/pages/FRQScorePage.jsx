@@ -113,7 +113,7 @@ function FRQScorePage() {
             {/* 题目文本 */}
             <div className="mb-6">
               <div className="whitespace-pre-wrap text-text leading-relaxed text-base bg-gray-50 rounded-lg p-4">
-                <MathText text={frq.text} />
+                <MathText text={frq.text || frq.question_text} />
               </div>
             </div>
 

@@ -263,7 +263,7 @@ function QuizPlayer() {
                       {similarQs.map((sim) => (
                         <div key={sim.question_id} className="text-xs text-text flex items-center gap-2">
                           <span className="text-text-muted shrink-0">{sim.question_id}</span>
-                          <span className="truncate">{sim.question.text}</span>
+                          <span className="truncate">{sim.question.text || sim.question.question_text}</span>
                         </div>
                       ))}
                     </div>

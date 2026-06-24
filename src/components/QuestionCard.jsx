@@ -52,7 +52,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
 
       {/* 题目文本 */}
       <h3 className="text-lg font-medium text-text mb-4 leading-relaxed whitespace-pre-line">
-        {question.text}
+        {question.text || question.question_text}
       </h3>
 
   {/* 图像 - 支持 BASE_URL 回退机制 */}

@@ -99,7 +99,7 @@ function FRQPlayer() {
           {/* 题目文本 */}
           <div className="prose max-w-none mb-6">
             <div className="whitespace-pre-wrap text-text leading-relaxed text-sm">
-              {currentFRQ.text}
+              {currentFRQ.text || currentFRQ.question_text}
             </div>
           </div>
 
