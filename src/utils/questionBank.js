@@ -46,12 +46,26 @@ export async function getMockExamConfig(subjectId = 'macro') {
 // Question Bank Loading (by subject)
 // ────────────────────────────
 
+// Normalize v2.0 options array ["(A)...", "(B)..."] → object {A: "...", B: "..."}
+function normalizeOptions(q) {
+  if (!q.options || !Array.isArray(q.options)) return q
+  const opts = {}
+  for (const opt of q.options) {
+    const m = opt.match(/^\(([A-E])\)\s*/)
+    const key = m ? m[1] : String(Object.keys(opts).length)
+    opts[key] = opt
+  }
+  q.options = opts
+  return q
+}
+
 export async function loadMCQBank(subjectId = 'macro') {
   if (cache.mcq[subjectId]) return cache.mcq[subjectId]
   const cfg = await loadSubjectConfig(subjectId)
   const res = await fetch(`${BASE_URL}data/${cfg.questionBank}`)
   if (!res.ok) throw new Error(`Failed to load MCQ bank for ${subjectId}: ${res.status}`)
-  cache.mcq[subjectId] = await res.json()
+  const data = await res.json()
+  cache.mcq[subjectId] = data.map(normalizeOptions)
   return cache.mcq[subjectId]
 }
 

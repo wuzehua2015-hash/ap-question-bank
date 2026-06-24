@@ -36,11 +36,27 @@ function DisplayImage({ path, variant }) {
 }
 
 // ─── 普通选项展示（无交互）───
+// 兼容 v2.0 数组格式 ["(A)...", "(B)..."] 和旧对象格式 {A: "...", B: "..."}
+function normalizeOptions(options) {
+  if (!options) return {}
+  if (Array.isArray(options)) {
+    const result = {}
+    for (const opt of options) {
+      const m = opt.match(/^\(([A-E])\)\s*/)
+      const key = m ? m[1] : String(Object.keys(result).length)
+      result[key] = opt
+    }
+    return result
+  }
+  return options
+}
+
 function DisplayOptions({ options, variant }) {
+  const opts = normalizeOptions(options)
   if (variant === 'pdf') {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '12px' }}>
-        {Object.entries(options || {}).map(([key, text]) => (
+        {Object.entries(opts).map(([key, text]) => (
           <div key={key} style={{ fontSize: '14px', color: '#374151', lineHeight: 1.5 }}>
             <span style={{ fontWeight: 'bold', marginRight: '4px' }}>{key}.</span>
             {text}
@@ -52,7 +68,7 @@ function DisplayOptions({ options, variant }) {
 
   return (
     <div className="space-y-3 mt-4">
-      {Object.entries(options || {}).map(([key, text]) => (
+      {Object.entries(opts).map(([key, text]) => (
         <div key={key} className="text-base sm:text-sm text-text min-h-[48px] flex items-center">
           <span className="font-bold mr-2">{key}.</span>
           {text}
