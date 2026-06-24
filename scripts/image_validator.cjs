@@ -1,6 +1,40 @@
 const fs = require('fs')
 const path = require('path')
 
+function validateAllSubjects() {
+  const subjectsPath = path.resolve('public/data/subjects.json')
+  const subjects = JSON.parse(fs.readFileSync(subjectsPath, 'utf8'))
+  
+  let allErrors = 0
+  let allWarnings = 0
+  
+  for (const subject of subjects) {
+    const imgDir = path.resolve('public/images', subject.id)
+    if (!fs.existsSync(imgDir)) {
+      console.log(`SKIP: ${subject.id} - no image dir`)
+      continue
+    }
+    const qbPath = path.resolve('public/data', subject.questionBank)
+    let referencedPaths = new Set()
+    if (fs.existsSync(qbPath)) {
+      const data = JSON.parse(fs.readFileSync(qbPath, 'utf8'))
+      for (const q of data) {
+        if (q.image_paths) {
+          for (const p of q.image_paths) referencedPaths.add(p)
+        }
+      }
+    }
+    const { errors, warnings } = validateImages(imgDir, referencedPaths)
+    allErrors += errors.length
+    allWarnings += warnings.length
+  }
+  
+  console.log(`\n=== TOTAL ===`)
+  console.log(`Total errors: ${allErrors}`)
+  console.log(`Total warnings: ${allWarnings}`)
+  return allErrors === 0
+}
+
 function validateImages(dir, referencedPaths = new Set()) {
   const baseDir = path.resolve(dir)
   console.log(`Validating images in: ${baseDir}`)

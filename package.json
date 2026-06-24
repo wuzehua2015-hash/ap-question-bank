@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate:data": "node scripts/data_validator.cjs",
+    "validate:images": "node scripts/image_validator.cjs",
+    "validate": "npm run validate:data && npm run validate:images",
+    "prebuild": "npm run validate",
+    "predev": "npm run validate"
   },
   "dependencies": {
     "html2pdf.js": "^0.14.0",

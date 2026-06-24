@@ -1,6 +1,31 @@
 const fs = require('fs')
 const path = require('path')
 
+function validateAllSubjects() {
+  const subjectsPath = path.resolve('public/data/subjects.json')
+  const data = JSON.parse(fs.readFileSync(subjectsPath, 'utf8'))
+  const subjects = data.subjects || data
+  
+  let allErrors = 0
+  let allWarnings = 0
+  
+  for (const subject of subjects) {
+    const qbPath = path.resolve('public/data', subject.questionBank)
+    if (!fs.existsSync(qbPath)) {
+      console.log(`SKIP: ${subject.id} - no question bank`)
+      continue
+    }
+    const { errors, warnings } = validate(qbPath)
+    allErrors += errors.length
+    allWarnings += warnings.length
+  }
+  
+  console.log(`\n=== TOTAL ===`)
+  console.log(`Total errors: ${allErrors}`)
+  console.log(`Total warnings: ${allWarnings}`)
+  return allErrors === 0
+}
+
 function validate(filePath) {
   console.log(`Validating: ${filePath}`)
   
@@ -91,11 +116,15 @@ function validate(filePath) {
   return { errors, warnings, passed: errors.length === 0 }
 }
 
-const filePath = process.argv[2] || 'public/data/macro_question_bank_v4.json'
-if (!fs.existsSync(filePath)) {
-  console.error(`File not found: ${filePath}`)
-  process.exit(1)
+const filePath = process.argv[2]
+if (filePath) {
+  if (!fs.existsSync(filePath)) {
+    console.error(`File not found: ${filePath}`)
+    process.exit(1)
+  }
+  const result = validate(filePath)
+  process.exit(result.passed ? 0 : 1)
+} else {
+  const passed = validateAllSubjects()
+  process.exit(passed ? 0 : 1)
 }
-
-const result = validate(filePath)
-process.exit(result.passed ? 0 : 1)
