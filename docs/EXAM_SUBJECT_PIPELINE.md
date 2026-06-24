@@ -716,6 +716,172 @@ git push origin main
 
 ---
 
+## Phase 10: 前端全量审计与条件循环 — 部署后的最终质量门禁
+
+**定位**：Phase 8（部署）和 Phase 9（推送）之后，必须执行 Phase 10。Phase 10 是**不可跳过的最终质量门禁**。
+
+**技能**：`frontend-full-audit`
+
+### 10.1 为什么需要 Phase 10
+
+**已发生的错误**：Microeconomics 重做时，Phase 6（数据验证）和 Phase 8（部署烟测）均未发现以下问题，直到 Phase 10 全量审计才暴露：
+- `option_table_data` 完全缺失（0/393 题有表格数据）
+- 图像选项题选项全部为空（3 题）
+- 表格数据被塞入纯文本选项（2 题）
+- 下标标记变 "sub" 文本（大量）
+- FRQ rubric 全为字符串（21/21 非结构化）
+- FRQ 文本截断（3 题）
+- 文本错误空格（大量）
+
+**根本原因**：Phase 6 的 `data_validator.cjs` 只检查字段存在性和格式，不检查内容语义正确性；Phase 8 的烟测只抽查少数页面，无法发现全量问题。Phase 10 通过**全量渲染审计 + 数据层直接分析**双路径发现这些问题。
+
+### 10.2 审计双路径
+
+#### 路径 A：WebBridge 渲染审计（发现前端呈现问题）
+
+使用 Kimi WebBridge 控制浏览器，对网站进行系统性全量检查。根据 Phase 1 的考试形态分析，该科目可能有 MCQ、FRQ、SAQ、DBQ、Paper 1/2/3 等不同题目类型，审计内容必须与考试形态一致，禁止硬编码 MCQ/FRQ。
+
+以 AP 考试为例（其他考试体系替换为对应题目类型）：
+
+1. **首页检查**：科目列表、科目切换
+2. **选择题浏览页全量检查**：逐页检查题目渲染，不是抽查
+   - 题目文本完整性（**截断 = P0**，学生看不到完整题目）
+   - 图表正确显示（**图像缺失 = P0**，学生缺少关键信息）
+   - 选项完整性、无截断、无空值（**空选项 = P0**，学生无法选择）
+   - **表格题是否渲染为表格**（不是纯文本选项，**未渲染 = P0**）
+   - **下标/数学符号是否正确渲染**（**显示错误 = P1**，学生可能看错数值）
+3. **搜索功能检查**：搜索结果、相似变式、空白页
+4. **Mock Exam / 练习模式检查**（关键）：生成至少 2 次 Mock Exam，检查题号、图表、选项、下标、PDF 导出
+5. **开放题检查**：题目文本完整性（**截断 = P0**）、图表、评分标准结构、分值、错误空格
+6. **移动端/响应式检查**（可选）
+
+**常见考试形态参考**：
+- AP：MCQ + FRQ → 检查选择题选项、开放题 rubric
+- IB：Paper 1 (MCQ/SAQ) + Paper 2 (DBQ/FRQ) + Paper 3 (HL extension) → 检查数据引用、文档分析、HL 内容
+- A-Level：Multiple Choice + Structured Questions + Essay → 检查结构化答题、essay 评分标准
+- NEC：MCQ + Case Analysis → 检查案例数据表格
+- 自定义：根据 Phase 1 的 `classification_config.json` 中 `questionTypes` 字段确定所有题目类型
+
+#### 路径 B：数据层直接分析（发现数据根因问题）
+
+不经过浏览器，直接分析 JSON 数据文件：
+
+```python
+# 数据层分析脚本模板（Python）—— 根据题目类型动态调整
+import json
+
+def analyze_question_bank(json_path, question_types):
+    """
+    question_types 从 subjects.json 或 classification_config.json 读取
+    例如：['mcq', 'frq'] 或 ['paper1', 'paper2', 'paper3']
+    """
+    with open(json_path) as f:
+        data = json.load(f)
+    
+    issues = []
+    
+    # 检查 1：空选项（仅对选择题类型）
+    if 'mcq' in question_types or 'multiple_choice' in question_types:
+        for q in data.get('questions', []):
+            for opt, text in q.get('options', {}).items():
+                if not text or text.strip() == '':
+                    issues.append(f"{q['question_id']}: 选项 {opt} 为空")
+    
+    # 检查 2：option_table_data 缺失（仅对表格题类型）
+    for q in data.get('questions', []):
+        if 'table' in q.get('text', '').lower() and not q.get('option_table_data') and not q.get('image_paths'):
+            issues.append(f"{q['question_id']}: 文本含表格但无 option_table_data 也无 image_paths")
+    
+    # 检查 3：下标标记被当作文本
+    for q in data.get('questions', []):
+        text = q.get('text', '') + ' '.join(q.get('options', {}).values())
+        if 'sub' in text.lower() and 'subscript' not in text.lower():
+            issues.append(f"{q['question_id']}: 可能包含未正确渲染的下标标记")
+    
+    # 检查 4：开放题评分标准结构（仅对开放题类型）
+    if 'frq' in question_types or 'open_response' in question_types:
+        for q in data.get('frqs', []):
+            if isinstance(q.get('rubric'), str):
+                issues.append(f"{q['question_id']}: rubric 是字符串而非结构化 dict")
+            if not q.get('points'):
+                issues.append(f"{q['question_id']}: 无 points 字段")
+    
+    return issues
+```
+
+**严重程度判断标准（以"学生能否正确完成这道题"为唯一标准）：**
+
+| 级别 | 定义 | 判断规则 |
+|------|------|----------|
+| **P0** | 学生无法正确完成这道题 | 题目文本截断/缺失、选项为空、表格数据缺失、图像缺失导致无法做题、答案/key缺失 |
+| **P1** | 学生可能给出错误答案，或体验严重受损 | 下标显示错误、文本错误空格、表格数据塞入文本、评分标准结构缺失、搜索功能异常 |
+| **P2** | 不影响做题正确性但体验差 | 布局错乱、打印/PDF问题、移动端适配 |
+| **P3** | 优化建议 | 字体、配色、交互优化 |
+
+**数据层问题检查清单**：
+
+| 检查项 | 严重级别 | 判断理由 |
+|--------|----------|----------|
+| 题目文本截断 | **P0** | 学生看不到完整题目，无法作答 |
+| 选项为空 | **P0** | 学生无法选择答案 |
+| `option_table_data` 完全缺失 | **P0** | 表格题无结构化数据，学生无法做表格题 |
+| 图像选项题选项为空 | **P0** | 图像题无文本选项，学生无法做图像题 |
+| 图像 404 | **P0** | 学生缺少关键图像信息 |
+| 表格数据被塞入文本选项 | **P1** | 格式错误导致理解困难，但学生仍能看到内容 |
+| 下标标记变 "sub" 文本 | **P1** | 学生可能看错数值，但通常能猜到意思 |
+| 文本错误空格 | **P1** | 阅读困难，可能导致误解 |
+| 开放题评分标准全为字符串 | **P1** | 无法按得分点查看，但学生仍能看到文字 |
+| 空选项 | **P0** | 学生无法选择答案 |
+
+### 10.3 条件循环（Audit → Fix → Re-audit）
+
+```
+Phase 10 启动
+  → 执行全量审计（WebBridge + 数据层）
+  → 生成问题报告
+  → 有新问题？
+    → 是：修复问题 → 重新构建并部署 → 返回 "重新执行完整全量审计"
+    → 否：通过，Phase 10 结束
+```
+
+**硬性规则**：
+1. **每次修复后必须重新执行完整全量审计**，不能只做局部验证
+2. **循环终止条件**：**问题列表中只有 P3（优化建议），P0/P1/P2 必须全部修复**。不允许遗留任何 P0/P1/P2 问题。
+3. **交付标准：P0、P1、P2 问题数均为 0**。只有 P3 可以遗留，但必须在报告中记录。
+4. **问题修复路径**：
+   - 数据问题（`option_table_data` 缺失、文本截断等）→ 回到 **Phase 4**（数据修复）
+   - 前端渲染问题（表格未渲染、下标显示异常等）→ 修复前端代码，回到 **Phase 8**（重新构建部署）
+   - 数据验证脚本不足 → 修复 `data_validator.cjs`，回到 **Phase 6**
+5. **任何修复后，必须从 Phase 10 重新开始**，不是局部验证
+
+### 10.4 问题记录与报告
+
+每个问题记录必须包含：
+- **问题描述**：简明描述
+- **页面位置**：URL + 具体位置 / 数据文件路径
+- **截图**：WebBridge 截图或数据层证据
+- **严重程度**：P0 / P1 / P2 / P3
+- **根因分析**：前端问题还是数据问题
+- **修复建议**：如何修复
+- **涉及题目 ID**：如 `2018_Q40`
+- **验证方法**：修复后如何验证
+
+报告保存到 `docs/FRONTEND_AUDIT_REPORT_{YYYYMMDD}.md`，包含：
+1. 审计概述（时间、科目、发现问题数）
+2. 按严重程度分组的问题列表
+3. 数据层问题统计
+4. 截图证据
+5. 修复优先级建议
+6. **条件循环状态**：当前是第几轮审计、上轮问题是否已修复
+
+### 10.5 交付物
+
+- `docs/FRONTEND_AUDIT_REPORT_{YYYYMMDD}.md` — 审计报告
+- 截图证据（保存到 `docs/audit_screenshots/`）
+- 数据层分析脚本输出
+
+---
+
 ## 执行检查清单（每次新科目必须逐项打钩）
 
 ### Phase 1: 前期准备
@@ -776,6 +942,16 @@ git push origin main
 - [ ] `PROJECT_MAINTENANCE_GUIDE.md` 已更新
 - [ ] `TOOLS_INVENTORY.md` 已更新
 
+### Phase 10: 前端全量审计（不可跳过）
+- [ ] WebBridge 渲染审计完成（首页、所有题目类型全量、搜索、Mock Exam×2、开放题）
+- [ ] 数据层直接分析完成（空选项、表格缺失、下标标记、评分标准结构）
+- [ ] `FRONTEND_AUDIT_REPORT_{YYYYMMDD}.md` 已生成
+- [ ] **条件循环通过：问题列表中无 P0、P1、P2（仅允许 P3 遗留）**
+- [ ] P0 问题数为 0（判断标准：学生能否正确完成这道题）
+- [ ] P1 问题数为 0（判断标准：学生可能给出错误答案或体验严重受损）
+- [ ] P2 问题数为 0（判断标准：不影响做题正确性但体验差）
+- [ ] 所有问题已记录（含题目 ID、严重程度及判断理由、根因分析、修复建议）
+
 ---
 
 ## 关键文件路径
@@ -798,6 +974,7 @@ git push origin main
 | 维护指南 | `PROJECT_MAINTENANCE_GUIDE.md` | 项目维护文档 |
 | 工具清单 | `TOOLS_INVENTORY.md` | 工具清单 |
 | 审计报告 | `AUDIT_REPORT.md` | 按次生成 |
+| 前端审计报告 | `docs/FRONTEND_AUDIT_REPORT_{YYYYMMDD}.md` | Phase 10 全量审计报告 |
 | 科目分析 | `docs/{subject}_pdf_analysis.md` | 科目 PDF 分析 |
 | 科目总结 | `docs/{subject}_summary.md` | 科目总结 |
 
@@ -812,3 +989,4 @@ git push origin main
 5. **禁止手动修改 JSON 而不运行验证**：任何手动编辑必须通过验证门禁
 6. **禁止在构建流程外部署**：`npm run build` 失败则禁止部署
 7. **禁止不复用技能**：启动新科目前必须读取 `question-bank-builder`、`ap-pdf-extraction`、`question-bank-audit` 技能
+8. **禁止跳过 Phase 10 前端全量审计**：任何部署后必须通过 WebBridge 全量审计 + 数据层分析；修复后必须重新执行完整审计，不是局部验证

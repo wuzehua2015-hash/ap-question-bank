@@ -3,9 +3,12 @@ import { useNavigate } from 'react-router-dom'
 import { getCurrentQuiz, getCurrentFRQ, getMCQAnswers } from '../utils/quizSession'
 import { MathText } from '../components/MathText'
 import { PdfContainer, exportToPdf } from '../utils/pdfExport.jsx'
+import { useSubject } from '../contexts/SubjectContext'
 
 function ScorePage() {
   const navigate = useNavigate()
+  const { currentSubjectConfig } = useSubject()
+  const subjectName = currentSubjectConfig?.name || 'AP Microeconomics'
   const pdfRef = useRef(null)
   const [quiz, setQuiz] = useState([])
   const [answers, setAnswers] = useState({})
@@ -155,7 +158,7 @@ function ScorePage() {
               <div style={{ fontSize: '22px', color: '#6b7280', marginTop: '2px' }}>LynkEdu Education</div>
             </div>
             <div style={{ fontSize: '20px', color: '#9ca3af', textAlign: 'right' }}>
-              <div>AP Macroeconomics</div>
+              <div>{subjectName}</div>
               <div>{new Date().toLocaleDateString('zh-CN')}</div>
             </div>
           </div>
@@ -166,7 +169,7 @@ function ScorePage() {
               Mock Exam 成绩单
             </div>
             <div style={{ fontSize: '26px', color: '#6b7280' }}>
-              AP Macroeconomics Practice Examination Report
+              {subjectName} Practice Examination Report
             </div>
           </div>
 
@@ -451,7 +454,7 @@ function ScorePage() {
           marginTop: '20px',
         }}>
           <div style={{ fontSize: '20px', color: '#9ca3af' }}>
-            翎英教育 LynkEdu · AP Macroeconomics Mock Exam Report
+            翎英教育 LynkEdu · {subjectName} Mock Exam Report
           </div>
           <div style={{ fontSize: '18px', color: '#d1d5db', marginTop: '2px' }}>
             Generated on {new Date().toLocaleString('zh-CN')} · For practice purposes only

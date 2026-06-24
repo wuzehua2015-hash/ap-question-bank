@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
@@ -38,10 +38,8 @@ function App() {
             <Route path="/score" element={<ScorePage />} />
             <Route path="/quiz-pdf" element={<QuizPdfPage />} />
             <Route path="/mock-pdf" element={<MockPdfPage />} />
-            {/* 预留：未来营销页 */}
-            {/* <Route path="/about" element={<AboutPage />} /> */}
-            {/* 预留：未来科目主页 */}
-            {/* <Route path="/subject/:id" element={<SubjectPage />} /> */}
+            {/* Catch-all: redirect unknown routes to home */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
         <Footer />

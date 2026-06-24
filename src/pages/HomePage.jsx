@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
-import { loadMCQBank } from '../utils/questionBank'
+import { loadMCQBank, loadFRQBank } from '../utils/questionBank'
 import { useState, useEffect } from 'react'
 
 function HomePage() {
@@ -12,13 +12,23 @@ function HomePage() {
       const stats = {}
       for (const subject of activeSubjects) {
         try {
-          const data = await loadMCQBank(subject.id)
+          const mcqData = await loadMCQBank(subject.id)
+          let frqCount = 0
+          if (subject.hasFRQ) {
+            try {
+              const frqData = await loadFRQBank(subject.id)
+              frqCount = frqData.length
+            } catch {
+              frqCount = 0
+            }
+          }
           stats[subject.id] = {
-            mcqCount: data.length,
+            mcqCount: mcqData.length,
+            frqCount,
             hasFRQ: subject.hasFRQ,
           }
         } catch {
-          stats[subject.id] = { mcqCount: 0, hasFRQ: false }
+          stats[subject.id] = { mcqCount: 0, frqCount: 0, hasFRQ: false }
         }
       }
       setSubjectStats(stats)
@@ -49,7 +59,7 @@ function HomePage() {
 
                 <div className="flex gap-4 mb-4 text-sm text-text-muted">
                   <div>{stats.mcqCount || '...'} MCQ</div>
-                  {stats.hasFRQ && <div>FRQ</div>}
+                  {stats.hasFRQ && <div>{stats.frqCount} FRQ</div>}
                 </div>
 
                 <div className="flex flex-wrap gap-2">

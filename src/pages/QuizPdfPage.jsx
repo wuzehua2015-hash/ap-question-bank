@@ -3,6 +3,7 @@ import { exportToPdf, PdfContainer } from '../utils/pdfExport.jsx'
 import QuestionDisplay from '../components/QuestionDisplay'
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSubject } from '../contexts/SubjectContext'
 
 const UNIT_NAMES = {
   U1: 'Basic Economic Concepts',
@@ -19,6 +20,8 @@ const UNIT_NAMES = {
 
 function QuizPdfPage() {
   const navigate = useNavigate()
+  const { currentSubjectConfig } = useSubject()
+  const subjectName = currentSubjectConfig?.name || 'AP Microeconomics'
   const pdfRef = useRef(null)
   const [quiz, setQuiz] = useState([])
   const [quizInfo, setQuizInfo] = useState(null)
@@ -102,7 +105,7 @@ function QuizPdfPage() {
               <div style={{ fontSize: '22px', color: '#6b7280', marginTop: '2px' }}>LynkEdu Education</div>
             </div>
             <div style={{ fontSize: '20px', color: '#9ca3af', textAlign: 'right' }}>
-              <div>AP Macroeconomics</div>
+              <div>{subjectName}</div>
               <div>{new Date().toLocaleDateString('zh-CN')}</div>
             </div>
           </div>

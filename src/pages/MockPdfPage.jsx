@@ -6,9 +6,12 @@ import FRQDisplay from '../components/FRQDisplay'
 import { MathText } from '../components/MathText'
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSubject } from '../contexts/SubjectContext'
 
 function MockPdfPage() {
   const navigate = useNavigate()
+  const { currentSubjectConfig } = useSubject()
+  const subjectName = currentSubjectConfig?.name || 'AP Microeconomics'
   const pdfRef = useRef(null)
   const [mcqs, setMcqs] = useState([])
   const [frqs, setFrqs] = useState([])
@@ -178,14 +181,14 @@ function MockPdfPage() {
               <div style={{ fontSize: '22px', color: '#6b7280', marginTop: '2px' }}>LynkEdu Education</div>
             </div>
             <div style={{ fontSize: '20px', color: '#9ca3af', textAlign: 'right' }}>
-              <div>AP Macroeconomics</div>
+              <div>{subjectName}</div>
               <div>{new Date().toLocaleDateString('zh-CN')}</div>
             </div>
           </div>
 
           <div style={{ textAlign: 'center', marginBottom: '24px' }}>
             <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1f2937' }}>
-              AP Macroeconomics Mock Exam
+              {subjectName} Mock Exam
             </div>
             <div style={{ fontSize: '20px', color: '#6b7280', marginTop: '6px' }}>
               Section I: {totalMcq} MCQs &nbsp;|&nbsp; Section II: {totalFrq} FRQs ({totalFrqPoints} points)
