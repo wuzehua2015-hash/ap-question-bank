@@ -1601,13 +1601,13 @@
   {
     "question_id": "2012_Q56",
     "year": 2012,
-    "text": "Firm XYZ produces and sells corn in a perfectly \ncompetitive market and hires its workers in a \nperfectly competitive labor market. Which of the \nfollowing best describes the demand curve for \nXYZ’s corn and XYZ’s demand curve for labor? \n\nDemand for \nXYZ’s \n \nXYZ’s Corn \nLabor Demand",
+    "text": "Firm XYZ produces and sells corn in a perfectly competitive market and hires its workers in a perfectly competitive labor market. Which of the following best describes the demand curve for XYZ's corn and XYZ's demand curve for labor?",
     "options": {
-      "A": "Horizontal \nHorizontal",
-      "B": "Horizontal \nDownward sloping",
-      "C": "Horizontal \nVertical",
-      "D": "Downward sloping \nDownward sloping",
-      "E": "Downward sloping \nHorizontal"
+      "A": "Horizontal, Horizontal",
+      "B": "Horizontal, Downward sloping",
+      "C": "Horizontal, Vertical",
+      "D": "Downward sloping, Downward sloping",
+      "E": "Downward sloping, Horizontal"
     },
     "answer": "B",
     "primary_unit": "U3",
@@ -1627,7 +1627,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Demand for XYZ's Corn",
+        "XYZ's Labor Demand"
+      ],
+      "rows": {
+        "A": [
+          "Horizontal",
+          "Horizontal"
+        ],
+        "B": [
+          "Horizontal",
+          "Downward sloping"
+        ],
+        "C": [
+          "Horizontal",
+          "Vertical"
+        ],
+        "D": [
+          "Downward sloping",
+          "Downward sloping"
+        ],
+        "E": [
+          "Downward sloping",
+          "Horizontal"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q57",
@@ -8934,7 +8962,7 @@
   {
     "question_id": "2017_Q12",
     "year": 2017,
-    "text": "Suppose that the demand for vegetables is price \nelastic. If the price of vegetables increases \nby 5 percent, the quantity of vegetables \ndemanded would",
+    "text": "Suppose that the demand for vegetables is price elastic. If the price of vegetables increases by 5 percent, the quantity demanded of vegetables will",
     "options": {
       "A": "increase by 5 percent",
       "B": "increase by more than 5 percent",
@@ -9824,7 +9852,7 @@
   {
     "question_id": "2017_Q43",
     "year": 2017,
-    "text": "According to the cost schedule in the table above, \nthe firm’s total fixed cost is",
+    "text": "According to the cost schedule in the table above, the firm's total fixed cost is",
     "options": {
       "A": "increasing",
       "B": "decreasing",
