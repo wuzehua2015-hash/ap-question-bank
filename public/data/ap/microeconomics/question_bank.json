@@ -345,13 +345,13 @@
   {
     "question_id": "2012_Q13",
     "year": 2012,
-    "text": "Businesses employ workers from city \nneighborhoods and rural areas. These workers \nare perfect substitutes and cannot relocate in the \nshort run. The government offers businesses a \nwage subsidy if they hire workers from city \nneighborhoods. What is the effect of the subsidy \non the wage rate of rural workers and on the total \nhours they work? \n\nWage Rate of \nTotal Hours Worked \n \nRural Workers \nby Rural Workers",
+    "text": "Businesses employ workers from city \nneighborhoods and rural areas. These workers \nare perfect substitutes and cannot relocate in the \nshort run. The government offers businesses a \nwage subsidy if they hire workers from city \nneighborhoods. What is the effect of the subsidy \non the wage rate of rural workers and on the total \nhours they work?",
     "options": {
-      "A": "Increase \nDecrease",
-      "B": "No change \nIncrease",
-      "C": "No change \nDecrease",
-      "D": "Decrease \nDecrease",
-      "E": "Decrease \nNo change"
+      "A": "Wage Rate of Total Hours Worked: Increase, Rural Workers by Rural Workers: Decrease",
+      "B": "Wage Rate of Total Hours Worked: No change, Rural Workers by Rural Workers: Increase",
+      "C": "Wage Rate of Total Hours Worked: No change, Rural Workers by Rural Workers: Decrease",
+      "D": "Wage Rate of Total Hours Worked: Decrease, Rural Workers by Rural Workers: Decrease",
+      "E": "Wage Rate of Total Hours Worked: Decrease, Rural Workers by Rural Workers: No change"
     },
     "answer": "D",
     "primary_unit": "U5",
@@ -370,18 +370,46 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Wage Rate of Total Hours Worked",
+        "Rural Workers by Rural Workers"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "No change",
+          "Increase"
+        ],
+        "C": [
+          "No change",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "Decrease",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q14",
     "year": 2012,
-    "text": "A per-unit tax on pollution produced by a firm \nwill affect the firm’s output and pollution levels in \nwhich of the following ways? \n\nOutput \nPollution",
+    "text": "A per-unit tax on pollution produced by a firm \nwill affect the firm’s output and pollution levels in \nwhich of the following ways?",
     "options": {
-      "A": "Increase \nIncrease",
-      "B": "Increase \nDecrease",
-      "C": "Decrease \nIncrease",
-      "D": "Decrease \nDecrease",
-      "E": "No change \nNo change"
+      "A": "Output: Increase, Pollution: Increase",
+      "B": "Output: Increase, Pollution: Decrease",
+      "C": "Output: Decrease, Pollution: Increase",
+      "D": "Output: Decrease, Pollution: Decrease",
+      "E": "Output: No change, Pollution: No change"
     },
     "answer": "D",
     "primary_unit": "U5",
@@ -398,7 +426,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Output",
+        "Pollution"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "No change",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q15",
@@ -494,13 +550,13 @@
   {
     "question_id": "2012_Q18",
     "year": 2012,
-    "text": "What is the price paid by consumers and the net \nprice received by producers after the tax is paid? \n\nPaid by \nReceived by \n \nConsumers \nProducers",
+    "text": "What is the price paid by consumers and the net \nprice received by producers after the tax is paid?",
     "options": {
-      "A": "$11.00 \n$10.45",
-      "B": "$11.00 \n$10.00",
-      "C": "$10.45 \n$10.00",
-      "D": "$10.45 \n$9.45",
-      "E": "$10.00 \n$9.45"
+      "A": "Paid by Received by: $11.00, Consumers Producers: $10.45",
+      "B": "Paid by Received by: $11.00, Consumers Producers: $10.00",
+      "C": "Paid by Received by: $10.45, Consumers Producers: $10.00",
+      "D": "Paid by Received by: $10.45, Consumers Producers: $9.45",
+      "E": "Paid by Received by: $10.00, Consumers Producers: $9.45"
     },
     "answer": "D",
     "primary_unit": "U5",
@@ -517,7 +573,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Paid by Received by",
+        "Consumers Producers"
+      ],
+      "rows": {
+        "A": [
+          "$11.00",
+          "$10.45"
+        ],
+        "B": [
+          "$11.00",
+          "$10.00"
+        ],
+        "C": [
+          "$10.45",
+          "$10.00"
+        ],
+        "D": [
+          "$10.45",
+          "$9.45"
+        ],
+        "E": [
+          "$10.00",
+          "$9.45"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q19",
@@ -1095,7 +1179,7 @@
   {
     "question_id": "2012_Q40",
     "year": 2012,
-    "text": "The payoff matrix below shows the per-unit \nprofits associated with the production strategies \nof two utility companies, UA and UB. Each \nfirm has two choices: to reduce production by \n10 percent or by 20 percent. The first entry in \neach cell indicates the profits to UA, and the \nsecond, the profits to UB. \n\nUB \n\nReduces \nProduction \nby 20 \nPercent \n\nReduces \nProduction \nby 10 \nPercent \n\nReduces \nProduction \nby 20 \nPercent \n\n$150, $150 \n\n$50, $250 \n\nUA \n\nReduces \nProduction \nby 10 \nPercent \n\n$250, $50 \n\n$100, $100 \n\n Based on the information, and assuming no \ncooperation, which of the following statements is \ntrue?",
+    "text": "The payoff matrix below shows the per-unit profits associated with the production strategies of two utility companies, UA and UB. Each firm has two choices: to reduce production by 10 percent or by 20 percent. The first entry in each cell indicates the profits to UA, and the second, the profits to UB. Based on the information, and assuming no cooperation, which of the following statements is true?",
     "options": {
       "A": "Neither company has a dominant strategy.",
       "B": "Both companies have an incentive to reduce \nproduction by 10%.",
@@ -1120,7 +1204,29 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "",
+        "UB: Reduces Production by 20 Percent",
+        "UB: Reduces Production by 10 Percent"
+      ],
+      "rows": {
+        "A": [
+          "UA: Reduces Production by 20 Percent",
+          "$150, $150",
+          "$50, $250"
+        ],
+        "B": [
+          "UA: Reduces Production by 10 Percent",
+          "$250, $50",
+          "$100, $100"
+        ],
+        "C": [],
+        "D": [],
+        "E": []
+      }
+    }
   },
   {
     "question_id": "2012_Q41",
@@ -1359,13 +1465,13 @@
   {
     "question_id": "2012_Q48",
     "year": 2012,
-    "text": "Suppose that the market supply curve for shoes \nis upward sloping and the market demand curve \nis downward sloping. How will the imposition \nof a sales tax on shoes affect the consumer \nsurplus, the producer surplus, and the total \nsurplus? \n\nConsumer \nProducer \nTotal \n \nSurplus \nSurplus \nSurplus",
+    "text": "Suppose that the market supply curve for shoes \nis upward sloping and the market demand curve \nis downward sloping. How will the imposition \nof a sales tax on shoes affect the consumer \nsurplus, the producer surplus, and the total \nsurplus?",
     "options": {
-      "A": "Decrease \nDecrease \nDecrease",
-      "B": "Decrease \nIncrease \nIncrease",
-      "C": "Decrease \nIncrease \nDecrease",
-      "D": "Increase \nDecrease \nDecrease",
-      "E": "Increase \nIncrease \nIncrease"
+      "A": "Consumer Surplus: Decrease, Producer Surplus: Decrease, Total Surplus: Decrease",
+      "B": "Consumer Surplus: Decrease, Producer Surplus: Increase, Total Surplus: Increase",
+      "C": "Consumer Surplus: Decrease, Producer Surplus: Increase, Total Surplus: Decrease",
+      "D": "Consumer Surplus: Increase, Producer Surplus: Decrease, Total Surplus: Decrease",
+      "E": "Consumer Surplus: Increase, Producer Surplus: Increase, Total Surplus: Increase"
     },
     "answer": "A",
     "primary_unit": "U2",
@@ -1388,7 +1494,41 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Consumer Surplus",
+        "Producer Surplus",
+        "Total Surplus"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Decrease",
+          "Decrease"
+        ],
+        "B": [
+          "Decrease",
+          "Increase",
+          "Increase"
+        ],
+        "C": [
+          "Decrease",
+          "Increase",
+          "Decrease"
+        ],
+        "D": [
+          "Increase",
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "Increase",
+          "Increase",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q49",
@@ -1481,13 +1621,13 @@
   {
     "question_id": "2012_Q52",
     "year": 2012,
-    "text": "The graph above shows the total revenue and total \ncost curves for a firm in which type of market \nstructure and what is the profit-maximizing \nquantity? \n\nMarket Structure \nQuantity",
+    "text": "The graph above shows the total revenue and total \ncost curves for a firm in which type of market \nstructure and what is the profit-maximizing \nquantity?",
     "options": {
-      "A": "Monopoly \nQ2",
-      "B": "Monopoly \nQ3",
-      "C": "Perfect Competition \nQ1",
-      "D": "Perfect Competition \nQ3",
-      "E": "Perfect Competition \nQ4"
+      "A": "Market Structure: Monopoly, Quantity: Q2",
+      "B": "Market Structure: Monopoly, Quantity: Q3",
+      "C": "Market Structure: Perfect Competition, Quantity: Q1",
+      "D": "Market Structure: Perfect Competition, Quantity: Q3",
+      "E": "Market Structure: Perfect Competition, Quantity: Q4"
     },
     "answer": "D",
     "primary_unit": "U3",
@@ -1510,7 +1650,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": true
+    "requires_graph": true,
+    "option_table_data": {
+      "headers": [
+        "Market Structure",
+        "Quantity"
+      ],
+      "rows": {
+        "A": [
+          "Monopoly",
+          "Q2"
+        ],
+        "B": [
+          "Monopoly",
+          "Q3"
+        ],
+        "C": [
+          "Perfect Competition",
+          "Q1"
+        ],
+        "D": [
+          "Perfect Competition",
+          "Q3"
+        ],
+        "E": [
+          "Perfect Competition",
+          "Q4"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q53",
@@ -1720,13 +1888,13 @@
   {
     "question_id": "2012_Q59",
     "year": 2012,
-    "text": "The socially optimal quantity and the per-unit tax \nthat will achieve the socially optimal quantity are \nwhich of the following? \n\nSocially \n\nOptimal Quantity \nPer-Unit Tax",
+    "text": "The socially optimal quantity and the per-unit tax \nthat will achieve the socially optimal quantity are \nwhich of the following?",
     "options": {
-      "A": "Q1 \nP4 – P2",
-      "B": "Q2 \nP3 – P2",
-      "C": "Q3 \nP4 – P2",
-      "D": "Q2 \nP3 – P1",
-      "E": "Q3 \nP3 – P2"
+      "A": "Socially: Q1, Optimal Quantity Per-Unit Tax: P4 – P2",
+      "B": "Socially: Q2, Optimal Quantity Per-Unit Tax: P3 – P2",
+      "C": "Socially: Q3, Optimal Quantity Per-Unit Tax: P4 – P2",
+      "D": "Socially: Q2, Optimal Quantity Per-Unit Tax: P3 – P1",
+      "E": "Socially: Q3, Optimal Quantity Per-Unit Tax: P3 – P2"
     },
     "answer": "D",
     "primary_unit": "U5",
@@ -1745,7 +1913,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Socially",
+        "Optimal Quantity Per-Unit Tax"
+      ],
+      "rows": {
+        "A": [
+          "Q1",
+          "P4 – P2"
+        ],
+        "B": [
+          "Q2",
+          "P3 – P2"
+        ],
+        "C": [
+          "Q3",
+          "P4 – P2"
+        ],
+        "D": [
+          "Q2",
+          "P3 – P1"
+        ],
+        "E": [
+          "Q3",
+          "P3 – P2"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q60",
@@ -1870,13 +2066,13 @@
   {
     "question_id": "2013_Q04",
     "year": 2013,
-    "text": "If the government imposes a tariff on imports of \ncheese, the price and quantity of imported cheese \nwill most likely change in which of the following \nways? \n\nPrice \nQuantity",
+    "text": "If the government imposes a tariff on imports of \ncheese, the price and quantity of imported cheese \nwill most likely change in which of the following \nways?",
     "options": {
-      "A": "Decrease \nDecrease",
-      "B": "Decrease \nIncrease",
-      "C": "Increase \nNot change",
-      "D": "Increase \nDecrease",
-      "E": "Increase \nIncrease"
+      "A": "Price: Decrease, Quantity: Decrease",
+      "B": "Price: Decrease, Quantity: Increase",
+      "C": "Price: Increase, Quantity: Not change",
+      "D": "Price: Increase, Quantity: Decrease",
+      "E": "Price: Increase, Quantity: Increase"
     },
     "answer": "D",
     "primary_unit": "U5",
@@ -1895,7 +2091,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Quantity"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Decrease"
+        ],
+        "B": [
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Increase",
+          "Not change"
+        ],
+        "D": [
+          "Increase",
+          "Decrease"
+        ],
+        "E": [
+          "Increase",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2013_Q05",
@@ -1932,7 +2156,7 @@
   {
     "question_id": "2013_Q06",
     "year": 2013,
-    "text": "The table above shows the demand schedules \nfor Jill and for all other consumers, as well as the \nmarket supply schedule for the same good. The \nequilibrium price in this market is\n\n$ 8\n140\n5,200\n5,750\n$7\n150\n5,400\n5,550\n$6\n160",
+    "text": "The table above shows the demand schedules for Jill and for all other consumers, as well as the market supply schedule for the same good. The equilibrium price in this market is?",
     "options": {
       "A": "$8",
       "B": "$7",
@@ -1959,7 +2183,47 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Jill's Quantity Demanded",
+        "All Others' Quantity Demanded",
+        "Market Supply"
+      ],
+      "rows": {
+        "A": [
+          "$8",
+          "140",
+          "5,200",
+          "5,750"
+        ],
+        "B": [
+          "$7",
+          "150",
+          "5,400",
+          "5,550"
+        ],
+        "C": [
+          "$6",
+          "160",
+          "5,600",
+          "5,350"
+        ],
+        "D": [
+          "$5",
+          "170",
+          "5,800",
+          "5,150"
+        ],
+        "E": [
+          "$4",
+          "180",
+          "6,000",
+          "4,950"
+        ]
+      }
+    }
   },
   {
     "question_id": "2013_Q07",
@@ -2609,7 +2873,7 @@
   {
     "question_id": "2013_Q31",
     "year": 2013,
-    "text": "The table above shows the amount of labor \nrequired to produce a unit of corn and a unit of \nshoes in Brazil and Spain. If both countries have \nequal numbers of workers, what pattern of \ninternational trade between Brazil and Spain is \nmost likely to emerge?\n\n2 hours of labor\n4 hours of labor\n8 hours of labor\n12 hours of labor\n31. The table above shows the amount of labor\n32. Which of the following changes i",
+    "text": "The table above shows the amount of labor required to produce a unit of corn and a unit of shoes in Brazil and Spain. If both countries have equal numbers of workers, what pattern of international trade between Brazil and Spain is most likely to emerge?",
     "options": {
       "A": "Brazil will export both corn and shoes.",
       "B": "Spain will export both corn and shoes.",
@@ -2636,18 +2900,40 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "",
+        "Corn",
+        "Shoes"
+      ],
+      "rows": {
+        "A": [
+          "Brazil",
+          "2 hours of labor",
+          "4 hours of labor"
+        ],
+        "B": [
+          "Spain",
+          "8 hours of labor",
+          "12 hours of labor"
+        ],
+        "C": [],
+        "D": [],
+        "E": []
+      }
+    }
   },
   {
     "question_id": "2013_Q32",
     "year": 2013,
-    "text": "Which of the following changes in the demand for \nand the supply of a good would necessarily lead \nto a decrease in the equilibrium quantity of the \ngood in the market in the short run? \n\nDemand \nSupply",
+    "text": "Which of the following changes in the demand for \nand the supply of a good would necessarily lead \nto a decrease in the equilibrium quantity of the \ngood in the market in the short run?",
     "options": {
-      "A": "Increase \nDecrease",
-      "B": "Increase \nNo change",
-      "C": "Decrease \nIncrease",
-      "D": "Decrease \nDecrease",
-      "E": "No change \nIncrease"
+      "A": "Demand: Increase, Supply: Decrease",
+      "B": "Demand: Increase, Supply: No change",
+      "C": "Demand: Decrease, Supply: Increase",
+      "D": "Demand: Decrease, Supply: Decrease",
+      "E": "Demand: No change, Supply: Increase"
     },
     "answer": "D",
     "primary_unit": "U2",
@@ -2668,7 +2954,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Demand",
+        "Supply"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Increase",
+          "No change"
+        ],
+        "C": [
+          "Decrease",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "No change",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2013_Q34",
@@ -2735,13 +3049,13 @@
   {
     "question_id": "2013_Q36",
     "year": 2013,
-    "text": "At its current employment level of labor and \ncapital, a firm observes the following. \n\n• \n• \n• \n• \n\nMarginal product of labor = 30 units \nMarginal product of capital = 60 units \nPrice of labor = $3 per unit \nPrice of capital = $15 per unit \nWhich of the following actions should the firm \ntake in order to achieve the least-cost combination \nof labor and capital and produce the same level of \noutput? \n\nLabor \nCapital",
+    "text": "At its current employment level of labor and \ncapital, a firm observes the following. \n\n• \n• \n• \n• \n\nMarginal product of labor = 30 units \nMarginal product of capital = 60 units \nPrice of labor = $3 per unit \nPrice of capital = $15 per unit \nWhich of the following actions should the firm \ntake in order to achieve the least-cost combination \nof labor and capital and produce the same level of \noutput?",
     "options": {
-      "A": "Increase \nIncrease",
-      "B": "Increase \nDecrease",
-      "C": "Decrease \nIncrease",
-      "D": "Decrease \nDecrease",
-      "E": "No change \nNo change"
+      "A": "Labor: Increase, Capital: Increase",
+      "B": "Labor: Increase, Capital: Decrease",
+      "C": "Labor: Decrease, Capital: Increase",
+      "D": "Labor: Decrease, Capital: Decrease",
+      "E": "Labor: No change, Capital: No change"
     },
     "answer": "B",
     "primary_unit": "U2",
@@ -2760,7 +3074,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Labor",
+        "Capital"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "No change",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2013_Q37",
@@ -2823,13 +3165,13 @@
   {
     "question_id": "2013_Q39",
     "year": 2013,
-    "text": "Assume that olive oil is produced in a constant-\ncost, perfectly competitive industry, which is \ncurrently in long-run equilibrium. If the current \nprice of olive oil is $5 per quart and the demand \nfor olive oil increases, then the price of olive oil \nwill change in which of the following ways in the \nshort run and long run? \n\n Short Run \nLong Run",
+    "text": "Assume that olive oil is produced in a constant-\ncost, perfectly competitive industry, which is \ncurrently in long-run equilibrium. If the current \nprice of olive oil is $5 per quart and the demand \nfor olive oil increases, then the price of olive oil \nwill change in which of the following ways in the \nshort run and long run?",
     "options": {
-      "A": "Be more than $5 \nBe more than $5",
-      "B": "Be more than $5 \nBe equal to $5",
-      "C": "Be equal to $5 \nBe equal to $5",
-      "D": "Be less than $5 \nBe less than $5",
-      "E": "Be less than $5 \nBe equal to $5"
+      "A": "Short Run: Be more than $5, Long Run: Be more than $5",
+      "B": "Short Run: Be more than $5, Long Run: Be equal to $5",
+      "C": "Short Run: Be equal to $5, Long Run: Be equal to $5",
+      "D": "Short Run: Be less than $5, Long Run: Be less than $5",
+      "E": "Short Run: Be less than $5, Long Run: Be equal to $5"
     },
     "answer": "B",
     "primary_unit": "U3",
@@ -2850,7 +3192,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Short Run",
+        "Long Run"
+      ],
+      "rows": {
+        "A": [
+          "Be more than $5",
+          "Be more than $5"
+        ],
+        "B": [
+          "Be more than $5",
+          "Be equal to $5"
+        ],
+        "C": [
+          "Be equal to $5",
+          "Be equal to $5"
+        ],
+        "D": [
+          "Be less than $5",
+          "Be less than $5"
+        ],
+        "E": [
+          "Be less than $5",
+          "Be equal to $5"
+        ]
+      }
+    }
   },
   {
     "question_id": "2013_Q40",
@@ -3187,13 +3557,13 @@
   {
     "question_id": "2013_Q51",
     "year": 2013,
-    "text": "Over the past 5 years, 50 new restaurants have opened and 30 have closed in the city of Zuni. Currently \nthere are 110 restaurants operating in the city. Which of the following best represents the market structure, \nbarriers to entry, and economic profits in the long run? \n\nMarket Structure \nBarriers to Entry \nLong-Run Economic Profits",
+    "text": "Over the past 5 years, 50 new restaurants have opened and 30 have closed in the city of Zuni. Currently \nthere are 110 restaurants operating in the city. Which of the following best represents the market structure, \nbarriers to entry, and economic profits in the long run?",
     "options": {
-      "A": "Perfect competition \nLow \nNegative",
-      "B": "Perfect competition \nHigh \nPositive",
-      "C": "Monopolistic competition \nLow \nZero",
-      "D": "Monopolistic competition \nHigh \nPositive",
-      "E": "Monopolistic competition \nHigh \nZero"
+      "A": "Market Structure: Perfect competition, Barriers to Entry: Low, Long-Run Economic Profits: Negative",
+      "B": "Market Structure: Perfect competition, Barriers to Entry: High, Long-Run Economic Profits: Positive",
+      "C": "Market Structure: Monopolistic competition, Barriers to Entry: Low, Long-Run Economic Profits: Zero",
+      "D": "Market Structure: Monopolistic competition, Barriers to Entry: High, Long-Run Economic Profits: Positive",
+      "E": "Market Structure: Monopolistic competition, Barriers to Entry: High, Long-Run Economic Profits: Zero"
     },
     "answer": "C",
     "primary_unit": "U4",
@@ -3215,7 +3585,41 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Market Structure",
+        "Barriers to Entry",
+        "Long-Run Economic Profits"
+      ],
+      "rows": {
+        "A": [
+          "Perfect competition",
+          "Low",
+          "Negative"
+        ],
+        "B": [
+          "Perfect competition",
+          "High",
+          "Positive"
+        ],
+        "C": [
+          "Monopolistic competition",
+          "Low",
+          "Zero"
+        ],
+        "D": [
+          "Monopolistic competition",
+          "High",
+          "Positive"
+        ],
+        "E": [
+          "Monopolistic competition",
+          "High",
+          "Zero"
+        ]
+      }
+    }
   },
   {
     "question_id": "2013_Q52",
@@ -3404,13 +3808,13 @@
   {
     "question_id": "2013_Q59",
     "year": 2013,
-    "text": "The graph above shows the conditions that a \nmonopsonist faces in a labor market. How many \nworkers would this monopsonist hire and what \nwage rate would it pay? \n\nNumber of Workers \nWage Rate",
+    "text": "The graph above shows the conditions that a \nmonopsonist faces in a labor market. How many \nworkers would this monopsonist hire and what \nwage rate would it pay?",
     "options": {
-      "A": "5 \n$37.50",
-      "B": "10 \n30",
-      "C": "10 \n20",
-      "D": "14 \n24",
-      "E": "14 \n37.50"
+      "A": "Number of Workers: 5, Wage Rate: $37.50",
+      "B": "Number of Workers: 10, Wage Rate: 30",
+      "C": "Number of Workers: 10, Wage Rate: 20",
+      "D": "Number of Workers: 14, Wage Rate: 24",
+      "E": "Number of Workers: 14, Wage Rate: 37.50"
     },
     "answer": "C",
     "primary_unit": "U5",
@@ -3431,7 +3835,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": true
+    "requires_graph": true,
+    "option_table_data": {
+      "headers": [
+        "Number of Workers",
+        "Wage Rate"
+      ],
+      "rows": {
+        "A": [
+          "5",
+          "$37.50"
+        ],
+        "B": [
+          "10",
+          "30"
+        ],
+        "C": [
+          "10",
+          "20"
+        ],
+        "D": [
+          "14",
+          "24"
+        ],
+        "E": [
+          "14",
+          "37.50"
+        ]
+      }
+    }
   },
   {
     "question_id": "2013_Q60",
@@ -3559,13 +3991,13 @@
   {
     "question_id": "2014_Q04",
     "year": 2014,
-    "text": "Assume that ice cream is a normal good. If the \nprice of ice cream decreases, the substitution \neffect and the income effect will lead to which of \nthe following changes in ice cream consumption? \n\nSubstitution Effect \nIncome Effect",
+    "text": "Assume that ice cream is a normal good. If the \nprice of ice cream decreases, the substitution \neffect and the income effect will lead to which of \nthe following changes in ice cream consumption?",
     "options": {
-      "A": "Increase \n Decrease",
-      "B": "Increase \n Increase",
-      "C": "Increase \n No change",
-      "D": "Decrease \n Increase",
-      "E": "Decrease \n No change"
+      "A": "Substitution Effect: Increase, Income Effect: Decrease",
+      "B": "Substitution Effect: Increase, Income Effect: Increase",
+      "C": "Substitution Effect: Increase, Income Effect: No change",
+      "D": "Substitution Effect: Decrease, Income Effect: Increase",
+      "E": "Substitution Effect: Decrease, Income Effect: No change"
     },
     "answer": "B",
     "primary_unit": "U1",
@@ -3582,7 +4014,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Substitution Effect",
+        "Income Effect"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Increase",
+          "Increase"
+        ],
+        "C": [
+          "Increase",
+          "No change"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q05",
@@ -3679,13 +4139,13 @@
   {
     "question_id": "2014_Q08",
     "year": 2014,
-    "text": "Compared to a perfectly competitive industry \nwith the same demand and cost curves, a \nmonopoly’s price and output will be which \nof the following? \n\nPrice\nOutput",
+    "text": "Compared to a perfectly competitive industry \nwith the same demand and cost curves, a \nmonopoly’s price and output will be which \nof the following?",
     "options": {
-      "A": "The same \nHigher",
-      "B": "Higher \nThe same",
-      "C": "Higher\nLower",
-      "D": "Lower \nThe same",
-      "E": "Lower\nHigher"
+      "A": "Price: The same, Output: Higher",
+      "B": "Price: Higher, Output: The same",
+      "C": "Price: Higher, Output: Lower",
+      "D": "Price: Lower, Output: The same",
+      "E": "Price: Lower, Output: Higher"
     },
     "answer": "C",
     "primary_unit": "U4",
@@ -3704,7 +4164,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Output"
+      ],
+      "rows": {
+        "A": [
+          "The same",
+          "Higher"
+        ],
+        "B": [
+          "Higher",
+          "The same"
+        ],
+        "C": [
+          "Higher",
+          "Lower"
+        ],
+        "D": [
+          "Lower",
+          "The same"
+        ],
+        "E": [
+          "Lower",
+          "Higher"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q09",
@@ -4186,13 +4674,13 @@
   {
     "question_id": "2014_Q27",
     "year": 2014,
-    "text": "If a per-unit tax is imposed on a monopolist, how \nwill the monopolist’s marginal cost curve, output, \nand the price paid by consumers be affected? \n\nMarginal Cost \nOutput \nPrice",
+    "text": "If a per-unit tax is imposed on a monopolist, how \nwill the monopolist’s marginal cost curve, output, \nand the price paid by consumers be affected?",
     "options": {
-      "A": "Shift down \nIncrease \nDecrease",
-      "B": "Shift down \nDecrease \nDecrease",
-      "C": "No shift \nDecrease \nDecrease",
-      "D": "Shift up \nDecrease \nIncrease",
-      "E": "Shift up \nIncrease \nIncrease"
+      "A": "Marginal Cost: Shift down, Output: Increase, Price: Decrease",
+      "B": "Marginal Cost: Shift down, Output: Decrease, Price: Decrease",
+      "C": "Marginal Cost: No shift, Output: Decrease, Price: Decrease",
+      "D": "Marginal Cost: Shift up, Output: Decrease, Price: Increase",
+      "E": "Marginal Cost: Shift up, Output: Increase, Price: Increase"
     },
     "answer": "D",
     "primary_unit": "U3",
@@ -4211,7 +4699,41 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Marginal Cost",
+        "Output",
+        "Price"
+      ],
+      "rows": {
+        "A": [
+          "Shift down",
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Shift down",
+          "Decrease",
+          "Decrease"
+        ],
+        "C": [
+          "No shift",
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Shift up",
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Shift up",
+          "Increase",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q28",
@@ -4248,7 +4770,7 @@
   {
     "question_id": "2014_Q29",
     "year": 2014,
-    "text": "The table above describes the production function \nof an auto parts manufacturer. Assume that the \nfirm can hire as many workers as it wants at the \nmarket wage rate of $600 per week per worker \nand sell as many auto parts as it wants at the price \nof $10 per part. To maximize profits, the firm \nshould hire\n\n0\n0\n1\n100\n2\n190\n3\n270\n4\n340",
+    "text": "The table above describes the production function of an auto parts manufacturer. Assume that the firm can hire as many workers as it wants at the market wage rate of $600 per week per worker and sell as many auto parts as it wants at the price of $10 per part. To maximize profits, the firm should hire?",
     "options": {
       "A": "0 workers",
       "B": "1 worker",
@@ -4271,7 +4793,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Number of Workers",
+        "Parts per Week"
+      ],
+      "rows": {
+        "A": [
+          "0",
+          "0"
+        ],
+        "B": [
+          "1",
+          "100"
+        ],
+        "C": [
+          "2",
+          "190"
+        ],
+        "D": [
+          "3",
+          "270"
+        ],
+        "E": [
+          "4",
+          "340"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q30",
@@ -4651,13 +5201,13 @@
   {
     "question_id": "2014_Q41",
     "year": 2014,
-    "text": "Which of the following will occur in a perfectly \ncompetitive labor market if Firm X’s demand for \nlabor decreases? \n\nEquilibrium \nMarket Wage Rate\nEmployment\nby Firm X",
+    "text": "Which of the following will occur in a perfectly \ncompetitive labor market if Firm X’s demand for \nlabor decreases?",
     "options": {
-      "A": "Increase \nIncrease",
-      "B": "No change \nNo change",
-      "C": "No change \nDecrease",
-      "D": "Decrease \nDecrease",
-      "E": "Decrease \nNo change"
+      "A": "Equilibrium Market Wage Rate: Increase, Employment by Firm X: Increase",
+      "B": "Equilibrium Market Wage Rate: No change, Employment by Firm X: No change",
+      "C": "Equilibrium Market Wage Rate: No change, Employment by Firm X: Decrease",
+      "D": "Equilibrium Market Wage Rate: Decrease, Employment by Firm X: Decrease",
+      "E": "Equilibrium Market Wage Rate: Decrease, Employment by Firm X: No change"
     },
     "answer": "C",
     "primary_unit": "U5",
@@ -4677,7 +5227,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Equilibrium Market Wage Rate",
+        "Employment by Firm X"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "No change",
+          "No change"
+        ],
+        "C": [
+          "No change",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "Decrease",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q42",
@@ -4799,13 +5377,13 @@
   {
     "question_id": "2014_Q45",
     "year": 2014,
-    "text": "Assume that under new environmental \nregulations, tire companies have to pay taxes \nbased on how much pollution is created when \nproducing each tire. The price paid by consumers \nand the quantity of tires sold will most likely \nchange in which of the following ways? \n\nPrice\nQuantity",
+    "text": "Assume that under new environmental \nregulations, tire companies have to pay taxes \nbased on how much pollution is created when \nproducing each tire. The price paid by consumers \nand the quantity of tires sold will most likely \nchange in which of the following ways?",
     "options": {
-      "A": "Increase \nDecrease",
-      "B": "Increase \nIncrease",
-      "C": "Decrease \nIncrease",
-      "D": "Decrease \nDecrease",
-      "E": "No change \nNo change"
+      "A": "Price: Increase, Quantity: Decrease",
+      "B": "Price: Increase, Quantity: Increase",
+      "C": "Price: Decrease, Quantity: Increase",
+      "D": "Price: Decrease, Quantity: Decrease",
+      "E": "Price: No change, Quantity: No change"
     },
     "answer": "A",
     "primary_unit": "U5",
@@ -4822,7 +5400,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Quantity"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Increase",
+          "Increase"
+        ],
+        "C": [
+          "Decrease",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "No change",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q46",
@@ -4947,13 +5553,13 @@
   {
     "question_id": "2014_Q50",
     "year": 2014,
-    "text": "If the \ndemand for these tickets is price inelastic, the \nnumber of people riding buses and subways and \nthe city’s revenues will most likely change in \nwhich of the following ways? \n\nNumber of People \nRiding \n \nCity’s Revenues",
+    "text": "If the \ndemand for these tickets is price inelastic, the \nnumber of people riding buses and subways and \nthe city’s revenues will most likely change in \nwhich of the following ways?",
     "options": {
-      "A": "Increase \nIncrease",
-      "B": "Decrease \nIncrease",
-      "C": "Decrease \nDecrease",
-      "D": "Decrease \nRemain constant",
-      "E": "Remain constant \nIncrease"
+      "A": "Number of People Riding: Increase, City’s Revenues: Increase",
+      "B": "Number of People Riding: Decrease, City’s Revenues: Increase",
+      "C": "Number of People Riding: Decrease, City’s Revenues: Decrease",
+      "D": "Number of People Riding: Decrease, City’s Revenues: Remain constant",
+      "E": "Number of People Riding: Remain constant, City’s Revenues: Increase"
     },
     "answer": "B",
     "primary_unit": "U2",
@@ -4972,7 +5578,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Number of People Riding",
+        "City’s Revenues"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Remain constant"
+        ],
+        "E": [
+          "Remain constant",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q51",
@@ -5348,7 +5982,7 @@
   {
     "question_id": "2015_Q03",
     "year": 2015,
-    "text": "The table above shows the quantity of gasoline \nsupplied and demanded at various prices in a \ncountry. If the government sets a price floor of \n$2.75 on a gallon of gasoline, what is the price per \ngallon?\n\n$2.50\n11,000\n17,000\n$2.75\n12,000\n16,000\n$3.00\n13,000\n15,000\n$3.25",
+    "text": "The table above shows the quantity of gasoline supplied and demanded at various prices in a country. If the government sets a price floor of $2.75 on a gallon of gasoline, what is the price per gallon?",
     "options": {
       "A": "$2.75",
       "B": "$3.00",
@@ -5373,18 +6007,52 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price per Gallon",
+        "Quantity Supplied",
+        "Quantity Demanded"
+      ],
+      "rows": {
+        "A": [
+          "$2.50",
+          "11,000",
+          "17,000"
+        ],
+        "B": [
+          "$2.75",
+          "12,000",
+          "16,000"
+        ],
+        "C": [
+          "$3.00",
+          "13,000",
+          "15,000"
+        ],
+        "D": [
+          "$3.25",
+          "14,000",
+          "14,000"
+        ],
+        "E": [
+          "$3.50",
+          "15,000",
+          "13,000"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q04",
     "year": 2015,
-    "text": "Last year 17 million tons of beans were sold for \n$300 per ton. This year 17 million tons of beans \nwere sold for $285 per ton. Which of the follow­\ning changes in demand and supply could have \ncaused this outcome? \n\nDemand\nSupply",
+    "text": "Last year 17 million tons of beans were sold for \n$300 per ton. This year 17 million tons of beans \nwere sold for $285 per ton. Which of the follow­\ning changes in demand and supply could have \ncaused this outcome?",
     "options": {
-      "A": "Increase\nIncrease",
-      "B": "Increase\nDecrease",
-      "C": "Decrease\nIncrease",
-      "D": "Decrease\nDecrease",
-      "E": "Increase\nNo change"
+      "A": "Demand: Increase, Supply: Increase",
+      "B": "Demand: Increase, Supply: Decrease",
+      "C": "Demand: Decrease, Supply: Increase",
+      "D": "Demand: Decrease, Supply: Decrease",
+      "E": "Demand: Increase, Supply: No change"
     },
     "answer": "C",
     "primary_unit": "U2",
@@ -5404,7 +6072,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Demand",
+        "Supply"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "Increase",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q05",
@@ -5623,7 +6319,7 @@
   {
     "question_id": "2015_Q12",
     "year": 2015,
-    "text": "A perfectly competitive firm hires three workers \nin a perfectly competitive labor market. The \nmarginal products of the three workers are \nshown in the table below. \n\nWorker\nMarginal Product\n\n1\n50\n2\n30\n3\n20\n\nWhich of the following will be true?",
+    "text": "A perfectly competitive firm hires three workers in a perfectly competitive labor market. The marginal products of the three workers are shown in the table below. Which of the following will be true?",
     "options": {
       "A": "Each worker will receive a wage based on the \nmarginal product of the last worker hired.",
       "B": "Each worker will receive a wage based on the \nmarginal product of the first worker hired.",
@@ -5653,18 +6349,40 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": true
+    "requires_graph": true,
+    "option_table_data": {
+      "headers": [
+        "Worker",
+        "Marginal Product"
+      ],
+      "rows": {
+        "A": [
+          "1",
+          "50"
+        ],
+        "B": [
+          "2",
+          "30"
+        ],
+        "C": [
+          "3",
+          "20"
+        ],
+        "D": [],
+        "E": []
+      }
+    }
   },
   {
     "question_id": "2015_Q13",
     "year": 2015,
-    "text": "Assume a perfectly competitive labor market. \nWhich of the following correctly describes the \nindividual firm’s demand curve for labor and the \nmarket demand curve for labor? \n\nFirm’s Demand \nCurve for Labor \n\nMarket Demand \nCurve for Labor",
+    "text": "Assume a perfectly competitive labor market. \nWhich of the following correctly describes the \nindividual firm’s demand curve for labor and the \nmarket demand curve for labor?",
     "options": {
-      "A": "Downward sloping",
-      "B": "Downward sloping",
-      "C": "Horizontal",
-      "D": "Horizontal",
-      "E": "Horizontal\n\nDownward sloping \nHorizontal \nDownward sloping \nHorizontal\nUpward sloping"
+      "A": "Firm’s Demand Curve for Labor: Downward sloping",
+      "B": "Firm’s Demand Curve for Labor: Downward sloping",
+      "C": "Firm’s Demand Curve for Labor: Horizontal",
+      "D": "Firm’s Demand Curve for Labor: Horizontal",
+      "E": "Firm’s Demand Curve for Labor: Horizontal, Market Demand Curve for Labor: Downward sloping"
     },
     "answer": "A",
     "primary_unit": "U3",
@@ -5684,7 +6402,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Firm’s Demand Curve for Labor",
+        "Market Demand Curve for Labor"
+      ],
+      "rows": {
+        "A": [
+          "Downward sloping",
+          ""
+        ],
+        "B": [
+          "Downward sloping",
+          ""
+        ],
+        "C": [
+          "Horizontal",
+          ""
+        ],
+        "D": [
+          "Horizontal",
+          ""
+        ],
+        "E": [
+          "Horizontal",
+          "Downward sloping"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q14",
@@ -5812,13 +6558,13 @@
   {
     "question_id": "2015_Q18",
     "year": 2015,
-    "text": "If an unusually cold summer destroyed a large \nportion of the bee population, the equilibrium price \nand quantity of honey produced by bees will most \nlikely change in which of the following ways? \n\nPrice\nQuantity",
+    "text": "If an unusually cold summer destroyed a large \nportion of the bee population, the equilibrium price \nand quantity of honey produced by bees will most \nlikely change in which of the following ways?",
     "options": {
-      "A": "Increase",
-      "B": "Increase",
-      "C": "Increase",
-      "D": "Decrease",
-      "E": "No change\n\nIncrease\nDecrease\nNo change\nDecrease\nDecrease"
+      "A": "Price: Increase",
+      "B": "Price: Increase",
+      "C": "Price: Increase",
+      "D": "Price: Decrease",
+      "E": "Price: No change, Quantity: Increase"
     },
     "answer": "B",
     "primary_unit": "U2",
@@ -5837,7 +6583,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Quantity"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          ""
+        ],
+        "B": [
+          "Increase",
+          ""
+        ],
+        "C": [
+          "Increase",
+          ""
+        ],
+        "D": [
+          "Decrease",
+          ""
+        ],
+        "E": [
+          "No change",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q19",
@@ -6419,13 +7193,13 @@
   {
     "question_id": "2015_Q37",
     "year": 2015,
-    "text": "Assume that Alpha and Beta are the only sellers \nof a product and they do not cooperate. Each firm \nhas to decide whether to raise the product price. \nThe payoff matrix below gives the profits, in \ndollars, associated with each pair of pricing \nstrategies. The first entry in each cell shows the \nprofits to Alpha, and the second, the profits to \nBeta. \n\nBeta\n\nDo Not \nRaise Price \n\nRaise Price \n\nRaise\nPrice\n$100\n \n, $100\n$30, $120\n\nAlpha\n\nDo Not \nRaise \nPrice \n\n$110, $20 \n$50, $70 \n\nAssuming both firms know the information in the \nmatrix, which of the following correctly describes \nthe dominant strategy of each firm? \n\nAlpha\nBeta",
+    "text": "Assume that Alpha and Beta are the only sellers \nof a product and they do not cooperate. Each firm \nhas to decide whether to raise the product price. \nThe payoff matrix below gives the profits, in \ndollars, associated with each pair of pricing \nstrategies. The first entry in each cell shows the \nprofits to Alpha, and the second, the profits to \nBeta. \n\nBeta\n\nDo Not \nRaise Price \n\nRaise Price \n\nRaise\nPrice\n$100\n \n, $100\n$30, $120\n\nAlpha\n\nDo Not \nRaise \nPrice \n\n$110, $20 \n$50, $70 \n\nAssuming both firms know the information in the \nmatrix, which of the following correctly describes \nthe dominant strategy of each firm?",
     "options": {
-      "A": "Do not raise price \nDo not raise price",
-      "B": "Do not raise price\nRaise price",
-      "C": "Raise price\nNo dominant strategy",
-      "D": "Raise price \nDo not raise price",
-      "E": "No dominant strategy\nRaise price"
+      "A": "Alpha: Do not raise price, Beta: Do not raise price",
+      "B": "Alpha: Do not raise price, Beta: Raise price",
+      "C": "Alpha: Raise price, Beta: No dominant strategy",
+      "D": "Alpha: Raise price, Beta: Do not raise price",
+      "E": "Alpha: No dominant strategy, Beta: Raise price"
     },
     "answer": "A",
     "primary_unit": "U4",
@@ -6444,7 +7218,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Alpha",
+        "Beta"
+      ],
+      "rows": {
+        "A": [
+          "Do not raise price",
+          "Do not raise price"
+        ],
+        "B": [
+          "Do not raise price",
+          "Raise price"
+        ],
+        "C": [
+          "Raise price",
+          "No dominant strategy"
+        ],
+        "D": [
+          "Raise price",
+          "Do not raise price"
+        ],
+        "E": [
+          "No dominant strategy",
+          "Raise price"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q38",
@@ -6478,13 +7280,13 @@
   {
     "question_id": "2015_Q39",
     "year": 2015,
-    "text": "Assume that the corn market is initially in long-\nrun equilibrium at point R. What are the short-run \nand long-run prices of corn if more corn is used as \na source of alternative energy? \n\nShort Run\nLong Run",
+    "text": "Assume that the corn market is initially in long-\nrun equilibrium at point R. What are the short-run \nand long-run prices of corn if more corn is used as \na source of alternative energy?",
     "options": {
-      "A": "P\nP _1",
-      "B": "P\nP _2",
-      "C": "P _1\nP _2",
-      "D": "p _2\np _1",
-      "E": "p _2\nP"
+      "A": "Short Run: P, Long Run: P _1",
+      "B": "Short Run: P, Long Run: P _2",
+      "C": "Short Run: P _1, Long Run: P _2",
+      "D": "Short Run: p _2, Long Run: p _1",
+      "E": "Short Run: p _2, Long Run: P"
     },
     "answer": "E",
     "primary_unit": "U1",
@@ -6501,7 +7303,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Short Run",
+        "Long Run"
+      ],
+      "rows": {
+        "A": [
+          "P",
+          "P _1"
+        ],
+        "B": [
+          "P",
+          "P _2"
+        ],
+        "C": [
+          "P _1",
+          "P _2"
+        ],
+        "D": [
+          "p _2",
+          "p _1"
+        ],
+        "E": [
+          "p _2",
+          "P"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q40",
@@ -6566,13 +7396,13 @@
   {
     "question_id": "2015_Q42",
     "year": 2015,
-    "text": "Assume that the government imposes an effective \nminimum wage in a perfectly competitive labor \nmarket. What will happen to employment and \ntotal wage payments? \n\nEmployment \nTotal Wage Payments",
+    "text": "Assume that the government imposes an effective \nminimum wage in a perfectly competitive labor \nmarket. What will happen to employment and \ntotal wage payments?",
     "options": {
-      "A": "Decrease \nIncrease",
-      "B": "Decrease\nDecrease",
-      "C": "Decrease\nIndeterminate",
-      "D": "Increase\nIncrease",
-      "E": "Increase\nIndeterminate"
+      "A": "Employment: Decrease, Total Wage Payments: Increase",
+      "B": "Employment: Decrease, Total Wage Payments: Decrease",
+      "C": "Employment: Decrease, Total Wage Payments: Indeterminate",
+      "D": "Employment: Increase, Total Wage Payments: Increase",
+      "E": "Employment: Increase, Total Wage Payments: Indeterminate"
     },
     "answer": "C",
     "primary_unit": "U5",
@@ -6593,18 +7423,46 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Employment",
+        "Total Wage Payments"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Increase"
+        ],
+        "B": [
+          "Decrease",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Indeterminate"
+        ],
+        "D": [
+          "Increase",
+          "Increase"
+        ],
+        "E": [
+          "Increase",
+          "Indeterminate"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q43",
     "year": 2015,
-    "text": "Suppose that people who work in the paint industry \nface a great risk of developing an incurable disease. \nA medical breakthrough that eliminates the risk \nwill most likely cause which of the following \nshifts in the supply and demand curves for \nworkers in the paint industry? \n\nSupply Curve\nDemand Curve",
+    "text": "Suppose that people who work in the paint industry \nface a great risk of developing an incurable disease. \nA medical breakthrough that eliminates the risk \nwill most likely cause which of the following \nshifts in the supply and demand curves for \nworkers in the paint industry?",
     "options": {
-      "A": "Shift right \nNo shift",
-      "B": "Shift left \nNo shift",
-      "C": "Shift left \nShift left",
-      "D": "Shift left\nShift right",
-      "E": "No shift \nShift left"
+      "A": "Supply Curve: Shift right, Demand Curve: No shift",
+      "B": "Supply Curve: Shift left, Demand Curve: No shift",
+      "C": "Supply Curve: Shift left, Demand Curve: Shift left",
+      "D": "Supply Curve: Shift left, Demand Curve: Shift right",
+      "E": "Supply Curve: No shift, Demand Curve: Shift left"
     },
     "answer": "A",
     "primary_unit": "U2",
@@ -6624,7 +7482,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Supply Curve",
+        "Demand Curve"
+      ],
+      "rows": {
+        "A": [
+          "Shift right",
+          "No shift"
+        ],
+        "B": [
+          "Shift left",
+          "No shift"
+        ],
+        "C": [
+          "Shift left",
+          "Shift left"
+        ],
+        "D": [
+          "Shift left",
+          "Shift right"
+        ],
+        "E": [
+          "No shift",
+          "Shift left"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q44",
@@ -7029,13 +7915,13 @@
   {
     "question_id": "2015_Q59",
     "year": 2015,
-    "text": "Which of the following about the relationship between marginal revenue (MR) \nand price (P) under monopolistic competition and perfect competition is \ncorrect? \n\nMonopolistic Competition\nPerfect Competition",
+    "text": "Which of the following about the relationship between marginal revenue (MR) \nand price (P) under monopolistic competition and perfect competition is \ncorrect?",
     "options": {
-      "A": "M\n R greater than P\nM R equals P",
-      "B": "M\n R less than P\nM R equals P",
-      "C": "MR decreases when P increases. \nMR increases when P decreases.",
-      "D": "M R equals P\nM R equals P",
-      "E": "M\n R equals P\nM R less than P"
+      "A": "Monopolistic Competition: M, Perfect Competition: R greater than P",
+      "B": "Monopolistic Competition: M, Perfect Competition: R less than P",
+      "C": "Monopolistic Competition: MR decreases when P increases., Perfect Competition: MR increases when P decreases.",
+      "D": "Monopolistic Competition: M R equals P, Perfect Competition: M R equals P",
+      "E": "Monopolistic Competition: M, Perfect Competition: R equals P"
     },
     "answer": "B",
     "primary_unit": "U5",
@@ -7052,18 +7938,46 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Monopolistic Competition",
+        "Perfect Competition"
+      ],
+      "rows": {
+        "A": [
+          "M",
+          "R greater than P"
+        ],
+        "B": [
+          "M",
+          "R less than P"
+        ],
+        "C": [
+          "MR decreases when P increases.",
+          "MR increases when P decreases."
+        ],
+        "D": [
+          "M R equals P",
+          "M R equals P"
+        ],
+        "E": [
+          "M",
+          "R equals P"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q60",
     "year": 2015,
-    "text": "In the monopsonistic labor market shown in the \ndiagram above, which of the following indicates \nthe number of workers the firm will hire and the \nwage rate it will pay? \n\nNumber\nof Workers\nWage Rate\n\nL _1\nL _1 \nL _1\nL_2\nL_2",
+    "text": "In the monopsonistic labor market shown in the \ndiagram above, which of the following indicates \nthe number of workers the firm will hire and the \nwage rate it will pay?",
     "options": {
-      "A": "[Image Option A]",
-      "B": "[Image Option B]",
-      "C": "[Image Option C]",
-      "D": "[Image Option D]",
-      "E": "W _1\n\nW_2\nW_3\n\nW_2\n\nW_4"
+      "A": "Number: [Image Option A]",
+      "B": "Number: [Image Option B]",
+      "C": "Number: [Image Option C]",
+      "D": "Number: [Image Option D]",
+      "E": "Number: W _1, of Workers: W_2, Wage Rate: W_3, L _1: W_2, L _1: W_4"
     },
     "answer": "A",
     "primary_unit": "U5",
@@ -7084,18 +7998,82 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": true
+    "requires_graph": true,
+    "option_table_data": {
+      "headers": [
+        "Number",
+        "of Workers",
+        "Wage Rate",
+        "L _1",
+        "L _1",
+        "L _1",
+        "L_2",
+        "L_2"
+      ],
+      "rows": {
+        "A": [
+          "[Image Option A]",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "B": [
+          "[Image Option B]",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "C": [
+          "[Image Option C]",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "D": [
+          "[Image Option D]",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "E": [
+          "W _1",
+          "W_2",
+          "W_3",
+          "W_2",
+          "W_4",
+          "",
+          "",
+          ""
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q02",
     "year": 2016,
-    "text": "On each figure, the horizontal axis is labeled Wheat and the vertical axis is labeled Apples. Figure 1 shows a downward sloping straight line starting from a point on the vertical axis and ending at a point on the horizontal axis. Figure 2 shows a downward sloping curve that starts from the vertical axis, curves outward away from the origin, and ends at a point on the horizontal axis.\n\nAs more wheat is produced, how will the \nopportunity cost of producing wheat, as \nrepresented in Figures 1 and 2, be affected? \n\nFigure 1 \nFigure 2",
+    "text": "On each figure, the horizontal axis is labeled Wheat and the vertical axis is labeled Apples. Figure 1 shows a downward sloping straight line starting from a point on the vertical axis and ending at a point on the horizontal axis. Figure 2 shows a downward sloping curve that starts from the vertical axis, curves outward away from the origin, and ends at a point on the horizontal axis.\n\nAs more wheat is produced, how will the \nopportunity cost of producing wheat, as \nrepresented in Figures 1 and 2, be affected?",
     "options": {
-      "A": "Decrease\nIncrease",
-      "B": "Increase\nDecrease",
-      "C": "No change\nIncrease",
-      "D": "No change\nDecrease",
-      "E": "Increase\nNo change"
+      "A": "Figure 1: Decrease, Figure 2: Increase",
+      "B": "Figure 1: Increase, Figure 2: Decrease",
+      "C": "Figure 1: No change, Figure 2: Increase",
+      "D": "Figure 1: No change, Figure 2: Decrease",
+      "E": "Figure 1: Increase, Figure 2: No change"
     },
     "answer": "B",
     "primary_unit": "U1",
@@ -7116,7 +8094,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Figure 1",
+        "Figure 2"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "No change",
+          "Increase"
+        ],
+        "D": [
+          "No change",
+          "Decrease"
+        ],
+        "E": [
+          "Increase",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q03",
@@ -7305,13 +8311,13 @@
   {
     "question_id": "2016_Q09",
     "year": 2016,
-    "text": "A single-price monopolist is currently producing in \nthe inelastic portion of its market demand curve. In \norder to maximize profits, the monopolist should \nchange the price and output in which of the \nfollowing ways? \n\nPrice\nOutput",
+    "text": "A single-price monopolist is currently producing in \nthe inelastic portion of its market demand curve. In \norder to maximize profits, the monopolist should \nchange the price and output in which of the \nfollowing ways?",
     "options": {
-      "A": "Increase\nIncrease",
-      "B": "Increase\nDecrease",
-      "C": "Increase\nNot change",
-      "D": "Decrease\nIncrease",
-      "E": "Not change\nIncrease"
+      "A": "Price: Increase, Output: Increase",
+      "B": "Price: Increase, Output: Decrease",
+      "C": "Price: Increase, Output: Not change",
+      "D": "Price: Decrease, Output: Increase",
+      "E": "Price: Not change, Output: Increase"
     },
     "answer": "B",
     "primary_unit": "U3",
@@ -7330,7 +8336,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Output"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "Not change"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Not change",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q10",
@@ -7548,13 +8582,13 @@
   {
     "question_id": "2016_Q17",
     "year": 2016,
-    "text": "A country produces computers and rice. If \nresources are fully employed and there is \ntechnological progress only in the production of \nrice, the opportunity costs of producing computers \nand rice will change in which of the following \nways? \n\nOpportunity Cost \nof Computers\n\nOpportunity Cost \nof Rice",
+    "text": "A country produces computers and rice. If \nresources are fully employed and there is \ntechnological progress only in the production of \nrice, the opportunity costs of producing computers \nand rice will change in which of the following \nways?",
     "options": {
-      "A": "Increase \nIncrease",
-      "B": "Increase\nDecrease",
-      "C": "No change\nDecrease",
-      "D": "Decrease\nIncrease",
-      "E": "Decrease\nDecrease"
+      "A": "Opportunity Cost of Computers: Increase, Opportunity Cost of Rice: Increase",
+      "B": "Opportunity Cost of Computers: Increase, Opportunity Cost of Rice: Decrease",
+      "C": "Opportunity Cost of Computers: No change, Opportunity Cost of Rice: Decrease",
+      "D": "Opportunity Cost of Computers: Decrease, Opportunity Cost of Rice: Increase",
+      "E": "Opportunity Cost of Computers: Decrease, Opportunity Cost of Rice: Decrease"
     },
     "answer": "B",
     "primary_unit": "U1",
@@ -7573,7 +8607,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Opportunity Cost of Computers",
+        "Opportunity Cost of Rice"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "No change",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q18",
@@ -7670,7 +8732,7 @@
   {
     "question_id": "2016_Q21",
     "year": 2016,
-    "text": "Based on the cost and output data in the table \nabove, a perfectly competitive firm will shut \ndown if price falls below\n\n0\n$0\n1\n20\n2\n30\n3\n48\n4\n72",
+    "text": "Based on the cost and output data in the table above, a perfectly competitive firm will shut down if price falls below?",
     "options": {
       "A": "$30",
       "B": "$20",
@@ -7693,7 +8755,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Output",
+        "Total Cost"
+      ],
+      "rows": {
+        "A": [
+          "0",
+          "$0"
+        ],
+        "B": [
+          "1",
+          "$20"
+        ],
+        "C": [
+          "2",
+          "$30"
+        ],
+        "D": [
+          "3",
+          "$48"
+        ],
+        "E": [
+          "4",
+          "$72"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q25",
@@ -8159,7 +9249,7 @@
   {
     "question_id": "2016_Q39",
     "year": 2016,
-    "text": "E Soda and R Soda are the only two firms in \nthe soft-drink industry. The companies cannot \ncooperate. Each firm can follow a high-price \nstrategy or a low-price strategy for pricing its \nproduct. In the payoff matrix below, the first entry \nin each cell shows the profits to E Soda and the \nsecond entry shows the profits to R Soda. \n\nR Soda\n\nLow Price High Price \n\nLow Price \n$25, $25 \n$90, $15 \n\nE Soda \n\nHigh Price \n$15, $90 \n$75, $75 \n\nGiven the information in the payoff matrix, it can \nbe concluded that",
+    "text": "E Soda and R Soda are the only two firms in the soft-drink industry. The companies cannot cooperate. Each firm can follow a high-price strategy or a low-price strategy for pricing its product. In the payoff matrix below, the first entry in each cell shows the profits to E Soda and the second entry shows the profits to R Soda. Given the information in the payoff matrix, it can be concluded that?",
     "options": {
       "A": "neither E Soda nor R Soda has a dominant \nstrategy",
       "B": "E Soda has a dominant strategy but R Soda \ndoes not",
@@ -8184,7 +9274,29 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "",
+        "R Soda: Low Price",
+        "R Soda: High Price"
+      ],
+      "rows": {
+        "A": [
+          "E Soda: Low Price",
+          "$25, $25",
+          "$90, $15"
+        ],
+        "B": [
+          "E Soda: High Price",
+          "$15, $90",
+          "$75, $75"
+        ],
+        "C": [],
+        "D": [],
+        "E": []
+      }
+    }
   },
   {
     "question_id": "2016_Q40",
@@ -9166,13 +10278,13 @@
   {
     "question_id": "2017_Q18",
     "year": 2017,
-    "text": "A typical firm in a perfectly competitive \nconstant-cost industry is operating with an \neconomic loss in the short run. When the industry \nreturns to long-run equilibrium, what will happen \nto the number of firms in the industry, the market \nprice, and the typical firm’s quantity? \n\nNumber\nof Firms\n\nMarket\nPrice\n\nFirm’s \nQuantity",
+    "text": "A typical firm in a perfectly competitive \nconstant-cost industry is operating with an \neconomic loss in the short run. When the industry \nreturns to long-run equilibrium, what will happen \nto the number of firms in the industry, the market \nprice, and the typical firm’s quantity?",
     "options": {
-      "A": "Decrease \nIncrease \nIncrease",
-      "B": "Decrease \nDecrease \nIncrease",
-      "C": "Decrease \nIncrease \nDecrease",
-      "D": "Increase \nIncrease \nDecrease",
-      "E": "Increase \nDecrease \nDecrease"
+      "A": "Number of Firms: Decrease, Market Price: Increase, Firm’s Quantity: Increase",
+      "B": "Number of Firms: Decrease, Market Price: Decrease, Firm’s Quantity: Increase",
+      "C": "Number of Firms: Decrease, Market Price: Increase, Firm’s Quantity: Decrease",
+      "D": "Number of Firms: Increase, Market Price: Increase, Firm’s Quantity: Decrease",
+      "E": "Number of Firms: Increase, Market Price: Decrease, Firm’s Quantity: Decrease"
     },
     "answer": "A",
     "primary_unit": "U3",
@@ -9191,7 +10303,41 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Number of Firms",
+        "Market Price",
+        "Firm’s Quantity"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Decrease",
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Decrease",
+          "Increase",
+          "Decrease"
+        ],
+        "D": [
+          "Increase",
+          "Increase",
+          "Decrease"
+        ],
+        "E": [
+          "Increase",
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q19",
@@ -9290,13 +10436,13 @@
   {
     "question_id": "2017_Q23",
     "year": 2017,
-    "text": "An art student spends all of her income on pencils \nand drawing pads. The student currently buys \n30 pencils at $1 each and 10 pads at $5 each. If \nthe marginal utility of the 30th pencil is 100 utils \nand the marginal utility of the 10th pad is \n400 utils, to maximize utility the student should \nchange her purchases of pencils and pads in which \nof the following ways? \n\nPencils \nPads",
+    "text": "An art student spends all of her income on pencils \nand drawing pads. The student currently buys \n30 pencils at $1 each and 10 pads at $5 each. If \nthe marginal utility of the 30th pencil is 100 utils \nand the marginal utility of the 10th pad is \n400 utils, to maximize utility the student should \nchange her purchases of pencils and pads in which \nof the following ways?",
     "options": {
-      "A": "Not change \nBuy more",
-      "B": "Buy more \nBuy more",
-      "C": "Buy more \nBuy less",
-      "D": "Buy less \nBuy more",
-      "E": "Buy less \nBuy less"
+      "A": "Pencils: Not change, Pads: Buy more",
+      "B": "Pencils: Buy more, Pads: Buy more",
+      "C": "Pencils: Buy more, Pads: Buy less",
+      "D": "Pencils: Buy less, Pads: Buy more",
+      "E": "Pencils: Buy less, Pads: Buy less"
     },
     "answer": "C",
     "primary_unit": "U1",
@@ -9313,7 +10459,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Pencils",
+        "Pads"
+      ],
+      "rows": {
+        "A": [
+          "Not change",
+          "Buy more"
+        ],
+        "B": [
+          "Buy more",
+          "Buy more"
+        ],
+        "C": [
+          "Buy more",
+          "Buy less"
+        ],
+        "D": [
+          "Buy less",
+          "Buy more"
+        ],
+        "E": [
+          "Buy less",
+          "Buy less"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q24",
@@ -9408,7 +10582,7 @@
   {
     "question_id": "2017_Q28",
     "year": 2017,
-    "text": "The table below shows the long-run total cost \nfunction of a firm. \n\nQuantity of Output \nTotal Cost ($) \n\n0 \n0 \n\n1 \n10 \n\n2 \n20 \n\n3 \n30 \n\n4 \n40 \n\n5 \n50 \n\nThe firm’s cost function exhibits",
+    "text": "The table below shows the long-run total cost function of a firm. The firm's cost function exhibits?",
     "options": {
       "A": "diseconomies of scale",
       "B": "constant returns to scale",
@@ -9437,7 +10611,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Quantity of Output",
+        "Total Cost ($)"
+      ],
+      "rows": {
+        "A": [
+          "0",
+          "0"
+        ],
+        "B": [
+          "1",
+          "10"
+        ],
+        "C": [
+          "2",
+          "20"
+        ],
+        "D": [
+          "3",
+          "30"
+        ],
+        "E": [
+          "4",
+          "40"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q29",
@@ -9472,13 +10674,13 @@
   {
     "question_id": "2017_Q30",
     "year": 2017,
-    "text": "The firm’s short-run supply curve is which of the \nfollowing? \n\nP \n1",
+    "text": "The firm’s short-run supply curve is which of the \nfollowing?",
     "options": {
-      "A": "The A V C curve above",
-      "B": "The A V C curve above P 2",
-      "C": "The A T C curve above P 3",
-      "D": "The M C curve above",
-      "E": "The M C curve above P 3 \n\nP\n 2"
+      "A": "P: The A V C curve above",
+      "B": "P: The A V C curve above P 2",
+      "C": "P: The A T C curve above P 3",
+      "D": "P: The M C curve above",
+      "E": "P: The M C curve above P 3, 1: P"
     },
     "answer": "D",
     "primary_unit": "U2",
@@ -9499,7 +10701,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "P",
+        "1"
+      ],
+      "rows": {
+        "A": [
+          "The A V C curve above",
+          ""
+        ],
+        "B": [
+          "The A V C curve above P 2",
+          ""
+        ],
+        "C": [
+          "The A T C curve above P 3",
+          ""
+        ],
+        "D": [
+          "The M C curve above",
+          ""
+        ],
+        "E": [
+          "The M C curve above P 3",
+          "P"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q31",
@@ -9565,13 +10795,13 @@
   {
     "question_id": "2017_Q33",
     "year": 2017,
-    "text": "Carmen consumes both entertainment and \nmedical care. For Carmen, entertainment is a \nnormal good, and the income elasticity of her \ndemand for medical care is zero. If Carmen’s \nincome increases, which of the following will be \nthe immediate impact on her consumption? \n\nEntertainment \nMedical Care",
+    "text": "Carmen consumes both entertainment and \nmedical care. For Carmen, entertainment is a \nnormal good, and the income elasticity of her \ndemand for medical care is zero. If Carmen’s \nincome increases, which of the following will be \nthe immediate impact on her consumption?",
     "options": {
-      "A": "Increase",
-      "B": "Increase",
-      "C": "No change",
-      "D": "Increase",
-      "E": "Decrease \n\nIncrease \nNo change \nIncrease \nDecrease \nIncrease"
+      "A": "Entertainment: Increase",
+      "B": "Entertainment: Increase",
+      "C": "Entertainment: No change",
+      "D": "Entertainment: Increase",
+      "E": "Entertainment: Decrease, Medical Care: Increase"
     },
     "answer": "B",
     "primary_unit": "U2",
@@ -9591,18 +10821,46 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Entertainment",
+        "Medical Care"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          ""
+        ],
+        "B": [
+          "Increase",
+          ""
+        ],
+        "C": [
+          "No change",
+          ""
+        ],
+        "D": [
+          "Increase",
+          ""
+        ],
+        "E": [
+          "Decrease",
+          "Increase"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q34",
     "year": 2017,
-    "text": "Assume that a perfectly competitive firm is in \nlong-run equilibrium. If industry demand for \nthe product increases, how will this firm’s price, \noutput, and profit change in the short run? \n\nPrice \nOutput \nProfit",
+    "text": "Assume that a perfectly competitive firm is in \nlong-run equilibrium. If industry demand for \nthe product increases, how will this firm’s price, \noutput, and profit change in the short run?",
     "options": {
-      "A": "Increase",
-      "B": "Increase",
-      "C": "Increase",
-      "D": "No change",
-      "E": "Decrease \n\nIncrease \nDecrease \nIncrease \nDecrease \nIncrease \n\nIncrease \nDecrease \nDecrease \nDecrease \nIncrease \n\nQuestions 37 refer to the following diagram of a natural monopolist."
+      "A": "Price: Increase",
+      "B": "Price: Increase",
+      "C": "Price: Increase",
+      "D": "Price: No change",
+      "E": "Price: Decrease, Output: Increase, Profit: Decrease"
     },
     "answer": "A",
     "primary_unit": "U3",
@@ -9623,7 +10881,41 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Output",
+        "Profit"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "",
+          ""
+        ],
+        "B": [
+          "Increase",
+          "",
+          ""
+        ],
+        "C": [
+          "Increase",
+          "",
+          ""
+        ],
+        "D": [
+          "No change",
+          "",
+          ""
+        ],
+        "E": [
+          "Decrease",
+          "Increase",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q35",
@@ -9910,13 +11202,13 @@
   {
     "question_id": "2017_Q45",
     "year": 2017,
-    "text": "Max employs both labor and capital to produce \ntoy trains. Currently the last unit of labor \nemployed has a marginal product of 15 units. \nThe last unit of capital employed has a marginal \nproduct of 40 units. The price of labor is $3 \nper unit, and the price of capital is $10 per unit. \nWhich of the following employment decisions \nshould Max follow to use the least-cost \ncombination of labor and capital to produce \nthe current quantity of toy trains? \n\nEmployment\nof Labor \n\nEmployment \nof Capital",
+    "text": "Max employs both labor and capital to produce \ntoy trains. Currently the last unit of labor \nemployed has a marginal product of 15 units. \nThe last unit of capital employed has a marginal \nproduct of 40 units. The price of labor is $3 \nper unit, and the price of capital is $10 per unit. \nWhich of the following employment decisions \nshould Max follow to use the least-cost \ncombination of labor and capital to produce \nthe current quantity of toy trains?",
     "options": {
-      "A": "Increase \nNo change",
-      "B": "Decrease \nIncrease",
-      "C": "Decrease \nDecrease",
-      "D": "Increase \nIncrease",
-      "E": "Increase \nDecrease"
+      "A": "Employment of Labor: Increase, Employment of Capital: No change",
+      "B": "Employment of Labor: Decrease, Employment of Capital: Increase",
+      "C": "Employment of Labor: Decrease, Employment of Capital: Decrease",
+      "D": "Employment of Labor: Increase, Employment of Capital: Increase",
+      "E": "Employment of Labor: Increase, Employment of Capital: Decrease"
     },
     "answer": "E",
     "primary_unit": "U2",
@@ -9935,7 +11227,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Employment of Labor",
+        "Employment of Capital"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "No change"
+        ],
+        "B": [
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Increase",
+          "Increase"
+        ],
+        "E": [
+          "Increase",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q46",
@@ -9973,13 +11293,13 @@
   {
     "question_id": "2017_Q47",
     "year": 2017,
-    "text": "What is the profit-maximizing price and quantity? \n\nPrice \nQuantity",
+    "text": "What is the profit-maximizing price and quantity?",
     "options": {
-      "A": "P 1",
-      "B": "P 2",
-      "C": "P 3\nQ 3",
-      "D": "P 4",
-      "E": "P 5\n\nQ\n \n1\n\nQ\n \n4\n\nQ\n \n2\n\nQ\n \n1"
+      "A": "Price: P 1",
+      "B": "Price: P 2",
+      "C": "Price: P 3, Quantity: Q 3",
+      "D": "Price: P 4",
+      "E": "Price: P 5, Quantity: Q"
     },
     "answer": "E",
     "primary_unit": "U3",
@@ -9996,7 +11316,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Quantity"
+      ],
+      "rows": {
+        "A": [
+          "P 1",
+          ""
+        ],
+        "B": [
+          "P 2",
+          ""
+        ],
+        "C": [
+          "P 3",
+          "Q 3"
+        ],
+        "D": [
+          "P 4",
+          ""
+        ],
+        "E": [
+          "P 5",
+          "Q"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q48",
@@ -10127,13 +11475,13 @@
   {
     "question_id": "2017_Q52",
     "year": 2017,
-    "text": "Suppose that the government imposes a per-unit \ntax on the producers of a good that has a perfectly \ninelastic demand. After the tax, the price and \nquantity of the good sold would change in which \nof the following ways? \n\nPrice \nQuantity",
+    "text": "Suppose that the government imposes a per-unit \ntax on the producers of a good that has a perfectly \ninelastic demand. After the tax, the price and \nquantity of the good sold would change in which \nof the following ways?",
     "options": {
-      "A": "Increase \nIncrease",
-      "B": "Increase \nDecrease",
-      "C": "Increase \nNot change",
-      "D": "Not change \nIncrease",
-      "E": "Decrease \nNot change"
+      "A": "Price: Increase, Quantity: Increase",
+      "B": "Price: Increase, Quantity: Decrease",
+      "C": "Price: Increase, Quantity: Not change",
+      "D": "Price: Not change, Quantity: Increase",
+      "E": "Price: Decrease, Quantity: Not change"
     },
     "answer": "C",
     "primary_unit": "U5",
@@ -10152,7 +11500,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Quantity"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "Not change"
+        ],
+        "D": [
+          "Not change",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Not change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q53",
@@ -10187,13 +11563,13 @@
   {
     "question_id": "2017_Q54",
     "year": 2017,
-    "text": "Assume that the government imposes an excise \ntax on the consumption of a good. The tax will \nhave the least impact on the market equilibrium \nquantity for which of the following combinations \nof the price elasticities of demand and supply? \n\nAbsolute Value of \nElasticity of Demand \nElasticity of Supply",
+    "text": "Assume that the government imposes an excise \ntax on the consumption of a good. The tax will \nhave the least impact on the market equilibrium \nquantity for which of the following combinations \nof the price elasticities of demand and supply?",
     "options": {
-      "A": "[Image Option A]",
-      "B": "[Image Option B]",
-      "C": "[Image Option C]",
-      "D": "[Image Option D]",
-      "E": "4 \n4 \n1 \nzero point five zero\n\n4 \nzero point five zero \n1 \n4 \n\nz\nero point five zero\nz\nero point five zero"
+      "A": "Absolute Value of: [Image Option A]",
+      "B": "Absolute Value of: [Image Option B]",
+      "C": "Absolute Value of: [Image Option C]",
+      "D": "Absolute Value of: [Image Option D]",
+      "E": "Absolute Value of: 4, Elasticity of Demand: 4, Elasticity of Supply: 1"
     },
     "answer": "E",
     "primary_unit": "U2",
@@ -10218,7 +11594,41 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Absolute Value of",
+        "Elasticity of Demand",
+        "Elasticity of Supply"
+      ],
+      "rows": {
+        "A": [
+          "[Image Option A]",
+          "",
+          ""
+        ],
+        "B": [
+          "[Image Option B]",
+          "",
+          ""
+        ],
+        "C": [
+          "[Image Option C]",
+          "",
+          ""
+        ],
+        "D": [
+          "[Image Option D]",
+          "",
+          ""
+        ],
+        "E": [
+          "4",
+          "4",
+          "1"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q55",
@@ -10414,13 +11824,13 @@
   {
     "question_id": "2018_Q03",
     "year": 2018,
-    "text": "If a hurricane reduced the crab population, the \nprice of crabs and quantity sold would change \nin which of the following ways? \n\nPrice \nQuantit)'.",
+    "text": "If a hurricane reduced the crab population, the \nprice of crabs and quantity sold would change \nin which of the following ways?",
     "options": {
-      "A": "Increase \nIncrease",
-      "B": "Increase \nDecrease",
-      "C": "Decrease \nIncrease",
-      "D": "Decrease \nDecrease",
-      "E": "No change \nDecrease"
+      "A": "Price: Increase, Quantit)'.: Increase",
+      "B": "Price: Increase, Quantit)'.: Decrease",
+      "C": "Price: Decrease, Quantit)'.: Increase",
+      "D": "Price: Decrease, Quantit)'.: Decrease",
+      "E": "Price: No change, Quantit)'.: Decrease"
     },
     "answer": "B",
     "primary_unit": "U1",
@@ -10437,7 +11847,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Quantit)'."
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "No change",
+          "Decrease"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q04",
@@ -11057,13 +12495,13 @@
   {
     "question_id": "2018_Q25",
     "year": 2018,
-    "text": "North Springs and South Springs are two firms \nthat serve the local market for bottled water. Each \nfirm must choose to either maintain or increase \nits current output. The first entry in each cell in \nthe payoff matrix below shows the profits for \nNorth Springs, and the second entry in each cell \nshows the profits for South Springs. \n\nSouth Springs \n\nMaintain \nIncrease \nOutput \nOutput \n\nMaintain \n$15,$30 \n$15,$45 \nNorth \nOutput \nSprings \nIncrease \n$30,$26 \n$27,$28 \nOutput \n\nIf the two firms do not cooperate, which of the \nfollowing represents the payoff North Springs and \nSouth Springs receive in the dominant-strategy \nequilibrium and the Nash equilibrium? \n\nDominant Strategy \nNash Equilibrium",
+    "text": "North Springs and South Springs are two firms \nthat serve the local market for bottled water. Each \nfirm must choose to either maintain or increase \nits current output. The first entry in each cell in \nthe payoff matrix below shows the profits for \nNorth Springs, and the second entry in each cell \nshows the profits for South Springs. \n\nSouth Springs \n\nMaintain \nIncrease \nOutput \nOutput \n\nMaintain \n$15,$30 \n$15,$45 \nNorth \nOutput \nSprings \nIncrease \n$30,$26 \n$27,$28 \nOutput \n\nIf the two firms do not cooperate, which of the \nfollowing represents the payoff North Springs and \nSouth Springs receive in the dominant-strategy \nequilibrium and the Nash equilibrium?",
     "options": {
-      "A": "None",
-      "B": "($27, $28)",
-      "C": "($30, $26)",
-      "D": "($27, $28)",
-      "E": "($30, $26) \n\n($27, $28) \n($15, $45) \n($15, $45) \n($27, $28) \n($27, $28)"
+      "A": "Dominant Strategy: None",
+      "B": "Dominant Strategy: ($27, $28)",
+      "C": "Dominant Strategy: ($30, $26)",
+      "D": "Dominant Strategy: ($27, $28)",
+      "E": "Dominant Strategy: ($30, $26), Nash Equilibrium: ($27, $28)"
     },
     "answer": "D",
     "primary_unit": "U4",
@@ -11083,7 +12521,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Dominant Strategy",
+        "Nash Equilibrium"
+      ],
+      "rows": {
+        "A": [
+          "None",
+          ""
+        ],
+        "B": [
+          "($27, $28)",
+          ""
+        ],
+        "C": [
+          "($30, $26)",
+          ""
+        ],
+        "D": [
+          "($27, $28)",
+          ""
+        ],
+        "E": [
+          "($30, $26)",
+          "($27, $28)"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q26",
@@ -11181,13 +12647,13 @@
   {
     "question_id": "2018_Q30",
     "year": 2018,
-    "text": "Which of the following describes the type of \nextemality generated by the unregulated private \nmarket and the resulting deadweight loss? \n\nType of \nDeadweight \nExtemality \nLoss",
+    "text": "Which of the following describes the type of \nextemality generated by the unregulated private \nmarket and the resulting deadweight loss?",
     "options": {
-      "A": "Positive \negh",
-      "B": "Positive \nehf",
-      "C": "Negative \nehf",
-      "D": "Negative \negh",
-      "E": "Negative \nP4ghP2"
+      "A": "Type of Deadweight: Positive, Extemality Loss: egh",
+      "B": "Type of Deadweight: Positive, Extemality Loss: ehf",
+      "C": "Type of Deadweight: Negative, Extemality Loss: ehf",
+      "D": "Type of Deadweight: Negative, Extemality Loss: egh",
+      "E": "Type of Deadweight: Negative, Extemality Loss: P4ghP2"
     },
     "answer": "D",
     "primary_unit": "U5",
@@ -11206,7 +12672,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Type of Deadweight",
+        "Extemality Loss"
+      ],
+      "rows": {
+        "A": [
+          "Positive",
+          "egh"
+        ],
+        "B": [
+          "Positive",
+          "ehf"
+        ],
+        "C": [
+          "Negative",
+          "ehf"
+        ],
+        "D": [
+          "Negative",
+          "egh"
+        ],
+        "E": [
+          "Negative",
+          "P4ghP2"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q31",
@@ -11339,7 +12833,7 @@
   {
     "question_id": "2018_Q35",
     "year": 2018,
-    "text": "Assume the following utility schedule for \nAaliyah's ice cream consumption. If she \nconsumes 6 units, what is the value of her \ntotal utility from consuming ice cream? \n\nMarginal Utility_ \n\nQuantity_ Consumed \n\n1 \n\n8 \n\n6 \n\n2 \n\n4 \n\n3 \n\n4 \n\n2 \n\n5 \n\n0 \n\n-2 \n\n6",
+    "text": "Assume the following utility schedule for Aaliyah's ice cream consumption. If she consumes 6 units, what is the value of her total utility from consuming ice cream?",
     "options": {
       "A": "22",
       "B": "20",
@@ -11362,7 +12856,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Quantity Consumed",
+        "Marginal Utility"
+      ],
+      "rows": {
+        "A": [
+          "1",
+          "8"
+        ],
+        "B": [
+          "2",
+          "6"
+        ],
+        "C": [
+          "3",
+          "4"
+        ],
+        "D": [
+          "4",
+          "2"
+        ],
+        "E": [
+          "5",
+          "0"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q36",
@@ -12102,13 +13624,13 @@
   {
     "question_id": "2016_Q01",
     "year": 2016,
-    "text": "Two alternative production possibility frontiers \nfor apples and wheat are shown in the figures \nbelow. There are two figures, titled Figure 1 and Figure 2. On each figure, the horizontal axis is labeled Wheat and the vertical axis is labeled Apples. Figure 1 shows a downward sloping straight line starting from a point on the vertical axis and ending at a point on the horizontal axis. Figure 2 shows a downward sloping curve that starts from the vertical axis, curves outward away from the origin, and ends at a point on the horizontal axis.\nThere are two figures, titled Figure 1 and Figure 2. On each figure, the horizontal axis is labeled Wheat and the vertical axis is labeled Apples. Figure 1 shows a downward sloping straight line starting from a point on the vertical axis and ending at a point on the horizontal axis. Figure 2 shows a downward sloping curve that starts from the vertical axis, curves outward away from the origin, and ends at a point on the horizontal axis.\nAs more wheat is produced, how will the \nopportunity cost of producing wheat, as \nrepresented in Figures 1 and 2, be affected? \nFigure 1 \nFigure 2",
+    "text": "Two alternative production possibility frontiers \nfor apples and wheat are shown in the figures \nbelow. There are two figures, titled Figure 1 and Figure 2. On each figure, the horizontal axis is labeled Wheat and the vertical axis is labeled Apples. Figure 1 shows a downward sloping straight line starting from a point on the vertical axis and ending at a point on the horizontal axis. Figure 2 shows a downward sloping curve that starts from the vertical axis, curves outward away from the origin, and ends at a point on the horizontal axis.\nThere are two figures, titled Figure 1 and Figure 2. On each figure, the horizontal axis is labeled Wheat and the vertical axis is labeled Apples. Figure 1 shows a downward sloping straight line starting from a point on the vertical axis and ending at a point on the horizontal axis. Figure 2 shows a downward sloping curve that starts from the vertical axis, curves outward away from the origin, and ends at a point on the horizontal axis.\nAs more wheat is produced, how will the \nopportunity cost of producing wheat, as \nrepresented in Figures 1 and 2, be affected?",
     "options": {
-      "A": "Decrease\nIncrease",
-      "B": "Increase\nDecrease",
-      "C": "No change\nIncrease",
-      "D": "No change\nDecrease",
-      "E": "Increase\nNo change"
+      "A": "Figure 1: Decrease, Figure 2: Increase",
+      "B": "Figure 1: Increase, Figure 2: Decrease",
+      "C": "Figure 1: No change, Figure 2: Increase",
+      "D": "Figure 1: No change, Figure 2: Decrease",
+      "E": "Figure 1: Increase, Figure 2: No change"
     },
     "answer": "C",
     "primary_unit": "U1",
@@ -12129,7 +13651,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Figure 1",
+        "Figure 2"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "No change",
+          "Increase"
+        ],
+        "D": [
+          "No change",
+          "Decrease"
+        ],
+        "E": [
+          "Increase",
+          "No change"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q22",
@@ -12230,13 +13780,13 @@
   {
     "question_id": "2016_Q41",
     "year": 2016,
-    "text": "Reff Corp is a firm with total revenue of $1,000, \nmarginal cost of $5, and average variable cost \nof $4. Both the output and the input markets are \nperfectly competitive, and Reff Corp is currently \nin long-run equilibrium. Reff Corp’s output and \ntotal fixed cost of production must be equal to \nwhich of the following? \nOutput\nFixed Cost",
+    "text": "Reff Corp is a firm with total revenue of $1,000, \nmarginal cost of $5, and average variable cost \nof $4. Both the output and the input markets are \nperfectly competitive, and Reff Corp is currently \nin long-run equilibrium. Reff Corp’s output and \ntotal fixed cost of production must be equal to \nwhich of the following?",
     "options": {
-      "A": "250\n$ 800",
-      "B": "250\n$ 400",
-      "C": "200\n$ 200",
-      "D": "200\n$ 400",
-      "E": "200\n$ 800"
+      "A": "Output: 250, Fixed Cost: $ 800",
+      "B": "Output: 250, Fixed Cost: $ 400",
+      "C": "Output: 200, Fixed Cost: $ 200",
+      "D": "Output: 200, Fixed Cost: $ 400",
+      "E": "Output: 200, Fixed Cost: $ 800"
     },
     "answer": "C",
     "primary_unit": "U3",
@@ -12259,7 +13809,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Output",
+        "Fixed Cost"
+      ],
+      "rows": {
+        "A": [
+          "250",
+          "$ 800"
+        ],
+        "B": [
+          "250",
+          "$ 400"
+        ],
+        "C": [
+          "200",
+          "$ 200"
+        ],
+        "D": [
+          "200",
+          "$ 400"
+        ],
+        "E": [
+          "200",
+          "$ 800"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q47",
@@ -12381,13 +13959,13 @@
   {
     "question_id": "2016_Q56",
     "year": 2016,
-    "text": "If both supply and demand for wheat increase, the equilibrium \nprice and quantity of wheat will most likely change in which \nof the following ways? \nPrice\nQuantity",
+    "text": "If both supply and demand for wheat increase, the equilibrium \nprice and quantity of wheat will most likely change in which \nof the following ways?",
     "options": {
-      "A": "Decrease \nDecrease",
-      "B": "Decrease \nIncrease",
-      "C": "Indeterminate \nIncrease",
-      "D": "Increase \nDecrease",
-      "E": "Increase \nIndeterminate"
+      "A": "Price: Decrease, Quantity: Decrease",
+      "B": "Price: Decrease, Quantity: Increase",
+      "C": "Price: Indeterminate, Quantity: Increase",
+      "D": "Price: Increase, Quantity: Decrease",
+      "E": "Price: Increase, Quantity: Indeterminate"
     },
     "answer": "C",
     "primary_unit": "U2",
@@ -12408,7 +13986,35 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Price",
+        "Quantity"
+      ],
+      "rows": {
+        "A": [
+          "Decrease",
+          "Decrease"
+        ],
+        "B": [
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Indeterminate",
+          "Increase"
+        ],
+        "D": [
+          "Increase",
+          "Decrease"
+        ],
+        "E": [
+          "Increase",
+          "Indeterminate"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q57",
@@ -12446,7 +14052,7 @@
   {
     "question_id": "2016_Q59",
     "year": 2016,
-    "text": "The table above shows the short-run output for \na perfectly competitive firm. If the price of the \nproduct is $10, what is the marginal revenue \nproduct of the third worker hired?\n\n1\n15\n2\n20\n3\n24\n4\n27\n5\n29",
+    "text": "The table above shows the short-run output for a perfectly competitive firm. If the price of the product is $10, what is the marginal revenue product of the third worker hired?",
     "options": {
       "A": "$24",
       "B": "$27",
@@ -12469,6 +14075,34 @@
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Number of Workers",
+        "Total Product"
+      ],
+      "rows": {
+        "A": [
+          "1",
+          "15"
+        ],
+        "B": [
+          "2",
+          "20"
+        ],
+        "C": [
+          "3",
+          "24"
+        ],
+        "D": [
+          "4",
+          "27"
+        ],
+        "E": [
+          "5",
+          "29"
+        ]
+      }
+    }
   }
 ]
