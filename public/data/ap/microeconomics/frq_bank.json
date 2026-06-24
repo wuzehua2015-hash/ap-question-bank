@@ -10,7 +10,81 @@
     "image_paths": [],
     "source": "AP Micro 2012",
     "has_graph": true,
-    "rubric": "10 points (5 + 1 + 2 + 2) (a) 5 points: (i) 3 points: • One point is earned for a correctly labeled downward-sloping demand curve and a downward-sloping marginal revenue curve below the demand curve. • One point is earned for identifying the profit-maximizing quantity, Qm, at MR = MC. • One point is earned for identifying price, Pm, above Qm on the demand curve. (ii) 1 point: • One point is earned for shading the area of economic loss. (iii) 1 point: • One point is earned for identifying the allocatively efficient quantity, Qe, at MC = D. (b) 1 point: • One point is earned for stating that the total revenue would decrease because the demand is price elastic in that range of the demand curve where MR > 0. (c) 2 points: • One point is earned for stating that the quantity will increase because the subsidy will cause the MC curve to shift downward and intersect the MR curve at a larger quantity. • One point is earned for stating that the consumer surplus will increase. (d) 2 points: • One point is earned for stating that the deadweight loss will not change because the lump- sum subsidy does not change the profit-maximizing quantity. • One point is earned for stating that economic losses will decrease. ."
+    "rubric": {
+      "total_points": 10,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 5,
+          "subparts": [
+            {
+              "letter": "i",
+              "points": 3,
+              "criteria": [
+                "One point is earned for a correctly labeled downward-sloping demand curve and a downward-sloping marginal revenue curve below the demand curve.",
+                "One point is earned for identifying the profit-maximizing quantity, Qm, at MR = MC.",
+                "One point is earned for identifying price, Pm, above Qm on the demand curve."
+              ]
+            },
+            {
+              "letter": "ii",
+              "points": 1,
+              "criteria": [
+                "One point is earned for shading the area of economic loss."
+              ]
+            },
+            {
+              "letter": "iii",
+              "points": 1,
+              "criteria": [
+                "One point is earned for identifying the allocatively efficient quantity, Qe, at MC = D."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that the total revenue would decrease because the demand is price elastic in that range of the demand curve where MR > 0."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": [
+                "One point is earned for stating that the quantity will increase because the subsidy will cause the MC curve to shift downward and intersect the MR curve at a larger quantity.",
+                "One point is earned for stating that the consumer surplus will increase."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": [
+                "One point is earned for stating that the deadweight loss will not change because the lump- sum subsidy does not change the profit-maximizing quantity.",
+                "One point is earned for stating that economic losses will decrease. ."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2012_FRQ2",
@@ -23,7 +97,65 @@
     "image_paths": [],
     "source": "AP Micro 2012",
     "has_graph": true,
-    "rubric": "6 points (3 + 1 + 1 + 1) (a) 3 points: • One point is earned for determining the total utility, which is 24. • One point is earned for stating that three bagels and five toy cars will be purchased. • One point is earned for explaining that with this combination of bagels and toys, the marginal utility per dollar spent on bagels equals the marginal utility per dollar spent on toy cars. (b) 1 point: • One point is earned for stating that Theresa’s demand for bagels will not change because the increase in the price of wheat will affect the supply of bagels, not the demand. (c) 1 point: • One point is earned for stating that bagels are inferior goods. (d) 1 point: • One point is earned for calculating the cross-price elasticity for toy cars and blocks: -0.04/0.10 = -0.4 ."
+    "rubric": {
+      "total_points": 6,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 3,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 3,
+              "criteria": [
+                "One point is earned for determining the total utility, which is 24.",
+                "One point is earned for stating that three bagels and five toy cars will be purchased.",
+                "One point is earned for explaining that with this combination of bagels and toys, the marginal utility per dollar spent on bagels equals the marginal utility per dollar spent on toy cars."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that Theresa’s demand for bagels will not change because the increase in the price of wheat will affect the supply of bagels, not the demand."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that bagels are inferior goods."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for calculating the cross-price elasticity for toy cars and blocks: -0.04/0.10 = -0.4 ."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2012_FRQ3",
@@ -38,7 +170,52 @@
     ],
     "source": "AP Micro 2012",
     "has_graph": true,
-    "rubric": "5 points (1 + 3 + 1) (a) 1 point: • One point is earned for stating that Loriland is importing 12 million pounds. (b) 3 points: • One point is earned for identifying the new level of domestic production as 6 million pounds. • One point is earned for calculating the domestic consumer surplus as $25 million and showing the work: ½ [($9 - $4) × 10] = $25 • One point is earned for calculating the revenue from the tariff as $8 million and showing the work: ($4 - $2) (10 - 6) = $8. (c) 1 point: • One point is earned for identifying the per-unit tariff that maximizes the sum of consumer and producer surplus as $0."
+    "rubric": {
+      "total_points": 5,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that Loriland is importing 12 million pounds."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 3,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 3,
+              "criteria": [
+                "One point is earned for identifying the new level of domestic production as 6 million pounds.",
+                "One point is earned for calculating the domestic consumer surplus as $25 million and showing the work: ½ [($9 - $4) × 10] = $25",
+                "One point is earned for calculating the revenue from the tariff as $8 million and showing the work: ($4 - $2) (10 - 6) = $8."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for identifying the per-unit tariff that maximizes the sum of consumer and producer surplus as $0."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2013_FRQ1",
@@ -54,7 +231,70 @@
     ],
     "source": "AP Micro 2013",
     "has_graph": true,
-    "rubric": "11 points The figure contains two graphs, the graph on the left is titled, Industry, and the graph on the right is titled, Grand Farm. Each graph is a graph in the first quadrant; and for each graph, the horizontal axis is labeled Quantity and the vertical axis is labeled Price. On the graph on the left, a quantity labeled, Q sub M, appears on the horizontal axis and a price labeled, P sub M, appears on the vertical axis. The graph has 2 lines that seem to be perpendicular to each other, lines D and S. The line labeled D begins near the vertical axis at a price above P sub M and moves down and to the right. The line ends near the horizontal axis to the right of the quantity Q sub M and below the price of P sub M. The line labeled S begins near the intersection of the horizontal axis and vertical axis. The line moves up and to the right and ends to the right of Q sub M and above P sub M. The 2 lines intersect at the coordinates, Q sub M, P sub M. On the graph on the right, a quantity labeled Q sub F appears on the horizontal axis and a price labeled P sub F appears on the vertical axis. The graph has 2 curves and a horizontal line. The horizontal line begins on the vertical axis at the price P sub F and moves to the right and is labeled D sub F equals M R sub F. The two curves are labeled M C and A T C, respectively. The curve labeled M C begins below P sub F near the vertical axis and at first moves down and to the right and then curves up and away from the horizontal axis. The M C curve crosses A T C curve at the lowest point of the A T C curve, then crosses the horizontal line labeled D sub F equals M R sub F at the quantity Q sub F and continues on moving steeply up and to the right. The U-shaped curve labeled A T C begins above P sub F near the vertical axis and moves gently down and to the right and then curves up and away from the horizontal axis as it moves gently up and to the right. The curve ends to the right of Q sub F and above P sub F. A T C curve begins above M C and crosses M C (a) 4 points: One point is earned for a correctly labeled graph of the market with a downward- sloping demand curve and upward sloping supply curve with the equilibrium identiﬁed a • s and . • One point is earned for showing a horizontal D and MR curve for the ﬁrm labeled and F • One point is earned for showing the proﬁt-maximizing quantity, at • One point is earned for showing the area representing economic proﬁt, shaded (b) 2 points: • One point is earned for stating that the number of ﬁrms will increase and for explaining that new ﬁrms will enter the market. One point is earned for stating that the equilibrium price decreases or is lower than • . . • The figure shows a graph in the first quadrant where the horizontal axis is labeled Quantity and the vertical axis is labeled Price. A quantity labeled, Q sub L, appears on the horizontal axis and a price labeled, P sub L, appears on the vertical axis. In the graph there are 2 curves and 2 downward-sloping lines. The line labeled, D sub L, and the line labeled, M R sub L, begin at the same point on the vertical axis above the price, P sub L. D sub L moves down and to the right and ends to the right of the quantity, Q sub L, and to the right of line M R sub L, above the horizontal axis. M R sub L moves down and to the right and crosses the horizontal axis at a point to the right of Q sub L. M R sub L line remains below the D sub L line. The curve labeled, M C, begins below P sub L and the curve A T C, near the vertical axis, and at first moves down and to the right and then curves up and away from the horizontal axis. The M C curve crosses the M R sub L curve at Q sub L, and as M C moves up and to the right, the curve then crosses A T C at the lowest point of the A T C curve, and finally crosses D sub L and continues moving steeply up and to the right as it remains above A T C. The curve labeled, A T C, begins just below P sub L and the M R sub L line, and above M C near the vertical axis, and moves gently down and to the right. A T C crosses M R sub L just to the left of Q sub L and then crosses M C just to the right of Q sub L as it curves up and away from the horizontal axis. A T C then crosses D sub L line as it continues to move gently up and to the right. The price P sub L occurs where the vertical line at Q sub L intersects with the D sub L line. (c) 4 points: One point is earned for drawing a correctly labeled graph with a downward sloping demand curve, with the marginal revenue curve below it. • One point is earned for drawing the average total cost curve, ATC, with the upward sloping marginal cost curve, MC passing through the lowest point of the ATC curve. One point is earned for identifying the proﬁt maximizing quantity, • at . • One point is earned for identifying the price, on the demand curve at and above ATC. The figure shows a graph where the horizontal axis is labeled Quantity and the vertical axis is labeled Price. A line labeled, D sub L, begins high up on the vertical axis and moves down and to the right ending above the horizontal axis. A curve labeled, L A T C, begins to the right of the vertical axis and slightly above D sub L. L A T C curves down and to the right and is tangent to D sub L line. Shortly after the tangency point, L A T C curves away from horizontal axis, and then continues to move up and to the right. (d) 1 point: One point is earned for a correctly labeled graph showing a long-run average total cost curve tangent to a downward-sloping demand curve. • ."
+    "rubric": {
+      "total_points": 11,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 4,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 4,
+              "criteria": [
+                "s and .",
+                "One point is earned for showing a horizontal D and MR curve for the ﬁrm labeled and F",
+                "One point is earned for showing the proﬁt-maximizing quantity, at",
+                "One point is earned for showing the area representing economic proﬁt, shaded"
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": [
+                "One point is earned for stating that the number of ﬁrms will increase and for explaining that new ﬁrms will enter the market. One point is earned for stating that the equilibrium price decreases or is lower than",
+                ". .",
+                "The figure shows a graph in the first quadrant where the horizontal axis is labeled Quantity and the vertical axis is labeled Price. A quantity labeled, Q sub L, appears on the horizontal axis and a price labeled, P sub L, appears on the vertical axis. In the graph there are 2 curves and 2 downward-sloping lines. The line labeled, D sub L, and the line labeled, M R sub L, begin at the same point on the vertical axis above the price, P sub L. D sub L moves down and to the right and ends to the right of the quantity, Q sub L, and to the right of line M R sub L, above the horizontal axis. M R sub L moves down and to the right and crosses the horizontal axis at a point to the right of Q sub L. M R sub L line remains below the D sub L line. The curve labeled, M C, begins below P sub L and the curve A T C, near the vertical axis, and at first moves down and to the right and then curves up and away from the horizontal axis. The M C curve crosses the M R sub L curve at Q sub L, and as M C moves up and to the right, the curve then crosses A T C at the lowest point of the A T C curve, and finally crosses D sub L and continues moving steeply up and to the right as it remains above A T C. The curve labeled, A T C, begins just below P sub L and the M R sub L line, and above M C near the vertical axis, and moves gently down and to the right. A T C crosses M R sub L just to the left of Q sub L and then crosses M C just to the right of Q sub L as it curves up and away from the horizontal axis. A T C then crosses D sub L line as it continues to move gently up and to the right. The price P sub L occurs where the vertical line at Q sub L intersects with the D sub L line."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 4,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 4,
+              "criteria": [
+                "One point is earned for drawing the average total cost curve, ATC, with the upward sloping marginal cost curve, MC passing through the lowest point of the ATC curve. One point is earned for identifying the proﬁt maximizing quantity,",
+                "at .",
+                "One point is earned for identifying the price, on the demand curve at and above ATC. The figure shows a graph where the horizontal axis is labeled Quantity and the vertical axis is labeled Price. A line labeled, D sub L, begins high up on the vertical axis and moves down and to the right ending above the horizontal axis. A curve labeled, L A T C, begins to the right of the vertical axis and slightly above D sub L. L A T C curves down and to the right and is tangent to D sub L line. Shortly after the tangency point, L A T C curves away from horizontal axis, and then continues to move up and to the right."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2013_FRQ2",
@@ -69,7 +309,63 @@
     ],
     "source": "AP Micro 2013",
     "has_graph": true,
-    "rubric": "4 points (a) 1point: One point is earned for stating that charging a low price is better for Beefsteak because it makes greater proﬁt: • . (b) 1 point: One point is earned for stating that Beefsteak does not have a dominant strategy. If Attaburer selects high, Beefsteak does better by selecting low • , and if Attaburger selects low, Beefsteak does better by selecting high . (c) 1 point: One point is earned for stating that Attaburger has an incentive to break the agreement, since it can earn higher proﬁt • by charging a lower price. (d) 1 point: One point is earned for stating that Attaburger earns $12, and Beefsteak earns $8. • ."
+    "rubric": {
+      "total_points": 4,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                ", and if Attaburger selects low, Beefsteak does better by selecting high ."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "by charging a lower price."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2013_FRQ3",
@@ -82,7 +378,61 @@
     "image_paths": [],
     "source": "AP Micro 2013",
     "has_graph": true,
-    "rubric": "6 points 1 plus 3 plus 1 plus 1 (a) 1 point: One point is earned for a correctly labeled graph showing a horizontal demand curve, D, for the ﬁrm at $7. • The figure shows a graph in the first quadrant where the horizontal axis is labeled Quantity and the vertical axis is labeled Price. A price labeled 7 dollars appears on the vertical axis. A horizontal line labeled, D, begins on the vertical axis at the price of 7 dollars. (b) 3 points: One point is earned for identifying the total ﬁxed cost, $10. One point is earned for stating that the loss-minimizing output is 3 One point is earned for stating the dollar value of the loss, • • . • (c) 1 point: One point is earned for stating that the ﬁrm continues to produce because it is covering its variable cost, or • . (d) 1 point: One point is earned for stating that the long-run equilibrium price for umbrellas is $8. •"
+    "rubric": {
+      "total_points": 6,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "The figure shows a graph in the first quadrant where the horizontal axis is labeled Quantity and the vertical axis is labeled Price. A price labeled 7 dollars appears on the vertical axis. A horizontal line labeled, D, begins on the vertical axis at the price of 7 dollars."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 3,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 3,
+              "criteria": [
+                "."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_FRQ1",
@@ -95,7 +445,69 @@
     "image_paths": [],
     "source": "AP Micro 2014",
     "has_graph": true,
-    "rubric": "10 Points (4+1+1+4) (a) 4 points: • One point is earned for showing an upward sloping MC curve going through the minimum point of the ATC curve. • One point is earned for a correctly labeled graph of the typical firm, Fresh Farm, with a horizontal demand curve below ATC, showing PF. • One point is earned for showing the profit-maximizing quantity, QF at MC=MR or MC=P if P is horizontal. • One point is earned for showing the AVC curve below the price line at QF. (b) 1 point: • One point is earned for stating that the new quantity will be less than QF, since demand decreases or price decreases. (c) 1 point: • One point is earned for stating that the long-run market supply for soybeans is perfectly elastic. Visit the College Board on the Web: www.collegeboard.com. (d) 4 points: • One point is earned for drawing a correctly labeled graph for the soybean market showing a downward sloping demand curve (or MSB), supply curve (or MPC), equilibrium quantity, QM, and price, PM. • One point is earned for drawing the marginal social cost curve above the supply curve. • One point is earned for showing the socially optimal quantity, QS, at MSB=MSC or D=MSC. • One point is earned for showing the area representing the deadweight loss, shaded completely. Visit the College Board on the Web: www.collegeboard.com."
+    "rubric": {
+      "total_points": 10,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 4,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 4,
+              "criteria": [
+                "One point is earned for showing an upward sloping MC curve going through the minimum point of the ATC curve.",
+                "One point is earned for a correctly labeled graph of the typical firm, Fresh Farm, with a horizontal demand curve below ATC, showing PF.",
+                "One point is earned for showing the profit-maximizing quantity, QF at MC=MR or MC=P if P is horizontal.",
+                "One point is earned for showing the AVC curve below the price line at QF."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that the new quantity will be less than QF, since demand decreases or price decreases."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that the long-run market supply for soybeans is perfectly elastic. Visit the College Board on the Web: www.collegeboard.com."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 4,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 4,
+              "criteria": [
+                "One point is earned for drawing a correctly labeled graph for the soybean market showing a downward sloping demand curve (or MSB), supply curve (or MPC), equilibrium quantity, QM, and price, PM.",
+                "One point is earned for drawing the marginal social cost curve above the supply curve.",
+                "One point is earned for showing the socially optimal quantity, QS, at MSB=MSC or D=MSC.",
+                "One point is earned for showing the area representing the deadweight loss, shaded completely. Visit the College Board on the Web: www.collegeboard.com."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_FRQ2",
@@ -110,7 +522,62 @@
     ],
     "source": "AP Micro 2014",
     "has_graph": true,
-    "rubric": "6 Points (1+1+1+1+2) (a) 1point: One point is earned for stating that demand is elastic because: (can use any one of the following as an explanation) Calculated percentage change in quantity is greater than the calculated percentage change in price. Calculated elasticity is greater than 1. The total revenue increases from $440 to $540 when price decreases from $11 to $9. (b) 1 point: One point is earned for stating that 40 units are purchased by consumers. (c) 1 point: • One point is earned for stating that the government purchases 75 – 40 = 35 units. • o o o • (d) 1 point: • One point is earned for redrawing the graph so that the supply curve shifts to the left resulting in PE = $11 and QE = 40. (e) 2 points: • One point is earned for stating that the increase in export will increase the demand for corn or shifts the demand curve to the right. • One point is earned for calculating the producer surplus. PS = ½ × ($11−$1) × 75 = ½ × $10 × 75 = $375. Visit the College Board on the Web: www.collegeboard.com."
+    "rubric": {
+      "total_points": 4,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that the government purchases 75 – 40 = 35 units.",
+                "o o o"
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for redrawing the graph so that the supply curve shifts to the left resulting in PE = $11 and QE = 40. (e) 2 points:",
+                "One point is earned for stating that the increase in export will increase the demand for corn or shifts the demand curve to the right.",
+                "One point is earned for calculating the producer surplus. PS = ½ × ($11−$1) × 75 = ½ × $10 × 75 = $375. Visit the College Board on the Web: www.collegeboard.com."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_FRQ3",
@@ -123,7 +590,64 @@
     "image_paths": [],
     "source": "AP Micro 2014",
     "has_graph": true,
-    "rubric": "5 Points (1+1+1+1+1) (a) 1 point: • One point is earned for stating yes. (b) 1 point: • One point is earned for calculating the MRP of the third worker: 40 × $0.50 or $20. (c) 1 point: • One point is earned for identifying the wage rate, $15. (d) 1 point: • One point is earned for identifying the profit-maximizing number of workers is 4. (e) 1 point: • One point is earned for stating that Schmitt’s Bakery will hire more workers, because the increase in demand for cookies increases the MRP or VMP or price or marginal revenue. Visit the College Board on the Web: www.collegeboard.com."
+    "rubric": {
+      "total_points": 4,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating yes."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for calculating the MRP of the third worker: 40 × $0.50 or $20."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for identifying the wage rate, $15."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for identifying the profit-maximizing number of workers is 4. (e) 1 point:",
+                "One point is earned for stating that Schmitt’s Bakery will hire more workers, because the increase in demand for cookies increases the MRP or VMP or price or marginal revenue. Visit the College Board on the Web: www.collegeboard.com."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2015_FRQ1",
@@ -136,7 +660,69 @@
     "image_paths": [],
     "source": "AP Micro 2015",
     "has_graph": true,
-    "rubric": "10 Points (5+1+1+3) (a) 5 points: • One point is earned for drawing a graph with correctly labeled axes, downward sloping demand curve, and M R below the demand curve. • One point is earned for identifying the profit-maximizing quantity, Q sub m , at M R equals M C. • One point is earned for identifying the price, P sub m, derived from the demand curve above Q sub m. • One point is earned for drawing M C passing through the minimum point on a u-shape A T C curve (or correct M C divided by A T C). • One point is earned for showing the area that represents the profit, completely shaded. (b) 1 point: • One point is earned for stating no with the explanation that at Q sub m, P greater than M C . (c) 1 point: • One point is earned for stating that the price stays the same because rent is a fixed cost that affects only the A T C or does not affect the M C (or does not affect the marginal values). (d) 3 points: • One point is earned for stating that the demand becomes more elastic. • One point is earned for stating that Raphael’s demand curve shifts to the left. • One point is earned for stating that Raphael’s hair salon does not produce the productively efficient quantity because the quantity Raphael produces does not minimize long-run A T C (or Q is to the left of the minimum point on A T C). The figure shows a graph with a horizontal axis labeled Quantity and vertical axis labeled Price. One quantity appears on the horizontal axis and is labeled Q sub m. One price appears on the vertical axis and is labeled P sub m. Two downward sloping lines and two cost curves appear on the graph. The two downward sloping lines, from left to right, begin at the same point on the vertical axis, which is above P sub m. The leftmost line is labeled M R and moves steeply downward and intersects the horizontal axis to the right of Q sub m, and ends below the horizontal axis. The rightmost line is labeled D, and moves down and to the right, and ends below price P sub m, to the right of line M R and quantity Q sub m, and above the horizontal axis. Line D remains above the M R line and the vertical distance between the two lines increases as they move down and to the right. Each cost curve intersects each downward sloping line, and the cost curves intersect each other to the right of Q sub m and below P sub m. The cost curves do not intersect the horizontal or vertical axes. The M C curve begins to the left of Q sub m and below P sub m, and curves slightly down and to the right, then curves steeply up and to the right, intersects the M R line at coordinates Q sub m, and below P sub m, and continues on to intersect the A T C curve, and then intersects line D. The A T C curve begins above the M C curve and below the left most M R line, just below P sub m. The curve then moves gently down and to the right, intersects the M R line, and then curves away from the horizontal axis at the intersection with the M C curve, and then moves gently up and to the right intersecting line D, and continues on. A rectangular section is shaded. The vertical axis makes up the left side of the rectangle. The top left corner of the rectangle is P sub m on the vertical axis, the top right corner of the rectangle is at the coordinates Q sub m on the D line, the bottom right corner of the rectangle is at the coordinate Q sub m on the A T C curve, and the bottom left corner is on the vertical axis. ."
+    "rubric": {
+      "total_points": 10,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 5,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 5,
+              "criteria": [
+                "One point is earned for drawing a graph with correctly labeled axes, downward sloping demand curve, and M R below the demand curve.",
+                "One point is earned for identifying the profit-maximizing quantity, Q sub m , at M R equals M C.",
+                "One point is earned for identifying the price, P sub m, derived from the demand curve above Q sub m.",
+                "One point is earned for drawing M C passing through the minimum point on a u-shape A T C curve (or correct M C divided by A T C).",
+                "One point is earned for showing the area that represents the profit, completely shaded."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating no with the explanation that at Q sub m, P greater than M C ."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that the price stays the same because rent is a fixed cost that affects only the A T C or does not affect the M C (or does not affect the marginal values)."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 3,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 3,
+              "criteria": [
+                "One point is earned for stating that the demand becomes more elastic.",
+                "One point is earned for stating that Raphael’s demand curve shifts to the left.",
+                "One point is earned for stating that Raphael’s hair salon does not produce the productively efficient quantity because the quantity Raphael produces does not minimize long-run A T C (or Q is to the left of the minimum point on A T C). The figure shows a graph with a horizontal axis labeled Quantity and vertical axis labeled Price. One quantity appears on the horizontal axis and is labeled Q sub m. One price appears on the vertical axis and is labeled P sub m. Two downward sloping lines and two cost curves appear on the graph. The two downward sloping lines, from left to right, begin at the same point on the vertical axis, which is above P sub m. The leftmost line is labeled M R and moves steeply downward and intersects the horizontal axis to the right of Q sub m, and ends below the horizontal axis. The rightmost line is labeled D, and moves down and to the right, and ends below price P sub m, to the right of line M R and quantity Q sub m, and above the horizontal axis. Line D remains above the M R line and the vertical distance between the two lines increases as they move down and to the right. Each cost curve intersects each downward sloping line, and the cost curves intersect each other to the right of Q sub m and below P sub m. The cost curves do not intersect the horizontal or vertical axes. The M C curve begins to the left of Q sub m and below P sub m, and curves slightly down and to the right, then curves steeply up and to the right, intersects the M R line at coordinates Q sub m, and below P sub m, and continues on to intersect the A T C curve, and then intersects line D. The A T C curve begins above the M C curve and below the left most M R line, just below P sub m. The curve then moves gently down and to the right, intersects the M R line, and then curves away from the horizontal axis at the intersection with the M C curve, and then moves gently up and to the right intersecting line D, and continues on. A rectangular section is shaded. The vertical axis makes up the left side of the rectangle. The top left corner of the rectangle is P sub m on the vertical axis, the top right corner of the rectangle is at the coordinates Q sub m on the D line, the bottom right corner of the rectangle is at the coordinate Q sub m on the A T C curve, and the bottom left corner is on the vertical axis. ."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2015_FRQ2",
@@ -149,7 +735,61 @@
     "image_paths": [],
     "source": "AP Micro 2015",
     "has_graph": true,
-    "rubric": "7 Points (1+3+1+1+1) (a) 1 point: One point is earned for drawing a graph with correctly labeled axes, supply, demand, and identifying equilibrium price and quantity as $1000 and 700. (b) 3 points: One point is earned for showing the price ceiling of $800 below $1000. One point is earned for showing • • • Q sub d derived from the demand curve at $800. • One point is earned for showing Q sub s derived from the supply curve at $800. (c) 1 point: One point is earned for showing the area representing the consumer surplus shaded completely. Note: If the supply curve from part (a) is not perfectly inelastic, no points can be awarded in parts (d) and (e). (d) 1 point: One point is earned for calculating the producer surplus: • • eight hundred dollars times 700 equals five hundred sixty thousand dollars. (e) 1 point: One point is earned for the explanation that the quantity supplied does not change after the imposition of the price ceiling. •The figure shows a graph with a horizontal axis labeled Quantity and a vertical axis labeled Price. Two quantities appear on the horizontal axis and from left to right, are labeled 700 Q sub s, and Q sub d. Two prices appear on the vertical axis and are labeled, from bottom to top, 800 dollars and 1,000 dollars. A vertical line labeled S, begins on the horizontal axis at 700 Q sub s, and moves upward, parallel to the vertical axis. A downward sloping line begins on the vertical axis, above the price 1,000 dollars, and moves down and to the right, intersects line S at the coordinates 700 Q sub s and 1,000 dollars, then passes through a point at coordinates Q sub d and 800 dollars, and ends above the horizontal axis. The area to the right of the vertical axis, below line D, to the left of line S, and above 800 dollars is shaded. ."
+    "rubric": {
+      "total_points": 6,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 3,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 3,
+              "criteria": [
+                "Q sub d derived from the demand curve at $800.",
+                "One point is earned for showing Q sub s derived from the supply curve at $800."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "eight hundred dollars times 700 equals five hundred sixty thousand dollars. (e) 1 point: One point is earned for the explanation that the quantity supplied does not change after the imposition of the price ceiling.",
+                "The figure shows a graph with a horizontal axis labeled Quantity and a vertical axis labeled Price. Two quantities appear on the horizontal axis and from left to right, are labeled 700 Q sub s, and Q sub d. Two prices appear on the vertical axis and are labeled, from bottom to top, 800 dollars and 1,000 dollars. A vertical line labeled S, begins on the horizontal axis at 700 Q sub s, and moves upward, parallel to the vertical axis. A downward sloping line begins on the vertical axis, above the price 1,000 dollars, and moves down and to the right, intersects line S at the coordinates 700 Q sub s and 1,000 dollars, then passes through a point at coordinates Q sub d and 800 dollars, and ends above the horizontal axis. The area to the right of the vertical axis, below line D, to the left of line S, and above 800 dollars is shaded. ."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2015_FRQ3",
@@ -162,7 +802,64 @@
     "image_paths": [],
     "source": "AP Micro 2015",
     "has_graph": true,
-    "rubric": "5 Points (1+1+1+1+1) (a) 1 point: • One point is earned for stating that diminishing returns does not set in with the second worker because the marginal product, M P, is increasing (M P of the first worker is 60 and the M P of the second worker is 80). (b) 1 point: • One point is earned for calculating the A F C equals five hundred dollars divided by two hundred fifty equals two dollars. (c) 1 point: • One point is earned for stating that the profit-maximizing number of workers is 5. The M R P of the fifth worker is two hundred forty dollars greater than the wage rate two hundred dollars. For the sixth worker, the M R P is eighty dollars less than the wage rate of two hundred dollars. (d) 1 point: • One point is earned for stating that the number of workers hired will be less than the number of workers in part (c), because the decrease in the price of peas decreases the marginal revenue product of labor open parenthesis M R P close parenthesis. (e) 1 point: • One point is earned for stating that the wage will be lower. ."
+    "rubric": {
+      "total_points": 4,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that diminishing returns does not set in with the second worker because the marginal product, M P, is increasing (M P of the first worker is 60 and the M P of the second worker is 80)."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for calculating the A F C equals five hundred dollars divided by two hundred fifty equals two dollars."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that the profit-maximizing number of workers is 5. The M R P of the fifth worker is two hundred forty dollars greater than the wage rate two hundred dollars. For the sixth worker, the M R P is eighty dollars less than the wage rate of two hundred dollars."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that the number of workers hired will be less than the number of workers in part (c), because the decrease in the price of peas decreases the marginal revenue product of labor open parenthesis M R P close parenthesis. (e) 1 point:",
+                "One point is earned for stating that the wage will be lower. ."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2016_FRQ1",
@@ -175,7 +872,69 @@
     "image_paths": [],
     "source": "AP Micro 2016",
     "has_graph": true,
-    "rubric": "10 points Open parenthesis, 5 plus 2, plus 2 plus 1, close parenthesis. The figure shows a graph with the horizontal axis labeled Quantity and the vertical axis labeled Price. There are two points on the horizontal axis labeled, from left to right, Q M and Q A. There is one point on the vertical axis labeled P M. There are four lines on the graph, two straight lines and two curved lines. One straight line labeled D, representing demand, slopes downward from left to right, starting from an unlabeled point above P M on the vertical axis. The second straight line labeled M R, representing marginal revenue, begins at the same point on the vertical axis, and moves downward below the demand line with a steeper slope, intersecting the horizontal axis at a point to the right of Q A. One curved line is labeled A T C, representing average total cost, and lies above the demand line everywhere. The A T C curve starts near the vertical axis toward the top of the graph, curves down and then curves up. The second curved line is labeled M C, representing marginal cost. The M C curve starts near the vertical axis toward the bottom of the graph and curves down, then curves upward to pass through lines M R and D. The M C curve intersects line M R at a point with coordinates Q M and an unlabeled point on the vertical axis below P M. The M C curve intersects line D at a point with coordinates Q A and an unlabeled point on the vertical axis below PM but above the coordinate of the M R intersection. The MC curve passes through the minimum point of the ATC curve and moves up. There is a vertical dotted line that starts from the point Q M going through the intersection of the M C and M R lines and crossing the D line at the coordinates P M and Q M and ending at a point on the downward sloping portion of the A T C curve above the demand line. There is also a shaded rectangle in the top left portion of the graph. The bottom line of the shaded rectangle begins at P M and horizontally runs and ends at the intersection of the demand line and the vertical dotted line from Q M. The top line of the shaded rectangle starts from a point above P M on the vertical axis and runs to the right to complete the box at the intersection of the vertical dotted line and the A T C curve. (a) 5 points: • One point is earned for drawing a correctly labeled graph with a downward sloping demand curve and downward-sloping marginal revenue curve below the demand curve • One point is earned for identifying the profit-maximizing quantity labeled Q M, at M R equals M C. • One point is earned for identifying price, P M on the demand curve above Q M. • One point is earned for drawing the average total cost curve,A T C, completely above the demand curve. • One point is earned for identifying the allocatively efficient quantity, labeled Q A. (b) 2 points: • One point is earned for shading the area of the lump-sum subsidy. • One point is earned for stating that the profit-maximizing quantity remains the same because marginal cost does not shift, or marginal revenue does not shift, or the subsidy only affects fixed cost, total cost, or total revenue. (c) 2 points: • One point is earned for stating that the per-unit subsidy increases the profit-maximizing quantity because marginal cost decreases or marginal revenue increases. • One point is earned for stating that the price paid by consumers decreases. (d) 1 point: • One point is earned for stating that a per-unit subsidy increases consumer surplus because the per-unit subsidy results in a lower price to consumers. ."
+    "rubric": {
+      "total_points": 10,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 5,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 5,
+              "criteria": [
+                "One point is earned for drawing a correctly labeled graph with a downward sloping demand curve and downward-sloping marginal revenue curve below the demand curve",
+                "One point is earned for identifying the profit-maximizing quantity labeled Q M, at M R equals M C.",
+                "One point is earned for identifying price, P M on the demand curve above Q M.",
+                "One point is earned for drawing the average total cost curve,A T C, completely above the demand curve.",
+                "One point is earned for identifying the allocatively efficient quantity, labeled Q A."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": [
+                "One point is earned for shading the area of the lump-sum subsidy.",
+                "One point is earned for stating that the profit-maximizing quantity remains the same because marginal cost does not shift, or marginal revenue does not shift, or the subsidy only affects fixed cost, total cost, or total revenue."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": [
+                "One point is earned for stating that the per-unit subsidy increases the profit-maximizing quantity because marginal cost decreases or marginal revenue increases.",
+                "One point is earned for stating that the price paid by consumers decreases."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that a per-unit subsidy increases consumer surplus because the per-unit subsidy results in a lower price to consumers. ."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2016_FRQ2",
@@ -188,7 +947,66 @@
     "image_paths": [],
     "source": "AP Micro 2016",
     "has_graph": true,
-    "rubric": "7 points Open parenthesis, 1 plus 2, plus 2 plus 2, close parenthesis. (a) 1 point: • One point is earned for stating that the marginal benefit of the third volleyball is $30. (b) 2 points: • One point is earned for the correct calculation of the total consumer surplus and showing the work. C S equals, open parent hes is, 95 dollars minus 18 dollars, close parenthesis, equals 77 dollars. or C S equals, open parenthesis, 50 dollars minus 9 dollars plus 45 dollars minus 9 dollars, close parenthesis, equals 77 dollars. • One point is earned for stating that Kerri should buy 5 volleyballs to maximize her total consumer surplus, and for explaining that the marginal benefit from purchasing the fifth ball is $10 which is greater than the price, $9. The marginal benefit from the sixth ball is less than the price. (c) 2 points: • One point is earned for drawing a correctly labeled graph for the volleyball market. • One point is earned for showing a leftward shift of the demand curve for volleyballs, resulting in a lower equilibrium price and quantity. (d) 2 points: • One point is earned for correctly calculating the income elasticity of demand for volleyballs: I E equals, open parenthesis, negative 5 over 10, close parenthesis, which equals negative one half. , and • One point is earned for stating that volleyballs are inferior goods because the income elasticity is negative indicating that an increase in income decreases the demand for volleyballs. The figure shows a graph with the horizontal axis labeled Quantity and the vertical axis labeled Price. There are two points on the horizontal axis labeled, from left to right, Q 2 and Q 1. There are two points on the vertical axis labeled, from top to bottom, P 1 and P 2. There are three lines on the graph. There is a line labeled S that starts near the vertical axis toward the bottom of the graph and slopes upward from left to right. There are two lines labeled D and D prime which start near the vertical axis toward the top of the graph and slope downward from left to right. Line D prime is to the left of line D and intersects line S at a point with coordinates Q 2 and P 2. Line D intersects line S at a point with coordinates Q 1 and P 1. There is a vertical arrow pointing downward from P 1 to P 2, a horizontal arrow pointing from Q 1 to Q 2, and a horizontal arrow pointing from D to D prime. The figure shows two graphs. The graph on the left is titled Market, with the horizontal axis labeled Quantity of Labor and the vertical axis labeled Wage. There is a point toward the middle of the horizontal axis labeled L M and a point toward the middle of the vertical axis labeled W M. There are two straight lines on the graph. A line labeled D starts near the vertical axis toward the top of the graph and slopes downward from left to right. A line labeled S starts near the vertical axis toward the bottom of the graph and slopes upward from left to right. Lines S and D intersect at a point with coordinates L M and W M. The graph on the right is titled Cleanit, with the horizontal axis labeled Quantity of Labor and the vertical axis labeled Wage. There is a point toward the middle of the horizontal axis labeled L F and a point toward the middle of the vertical axis labeled W F. There are two straight lines on the graph. A line labeled S equals M F C open parenthesis M R C close parenthesis extends horizontally from the point W F. A line labeled M R P starts near the vertical axis toward the top of the graph and slopes downward from left to right, and intersects line S at the horizontal coordinate L F. ."
+    "rubric": {
+      "total_points": 7,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for stating that the marginal benefit of the third volleyball is $30."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": [
+                "One point is earned for the correct calculation of the total consumer surplus and showing the work. C S equals, open parent hes is, 95 dollars minus 18 dollars, close parenthesis, equals 77 dollars. or C S equals, open parenthesis, 50 dollars minus 9 dollars plus 45 dollars minus 9 dollars, close parenthesis, equals 77 dollars.",
+                "One point is earned for stating that Kerri should buy 5 volleyballs to maximize her total consumer surplus, and for explaining that the marginal benefit from purchasing the fifth ball is $10 which is greater than the price, $9. The marginal benefit from the sixth ball is less than the price."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": [
+                "One point is earned for drawing a correctly labeled graph for the volleyball market.",
+                "One point is earned for showing a leftward shift of the demand curve for volleyballs, resulting in a lower equilibrium price and quantity."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": [
+                "One point is earned for correctly calculating the income elasticity of demand for volleyballs: I E equals, open parenthesis, negative 5 over 10, close parenthesis, which equals negative one half. , and",
+                "One point is earned for stating that volleyballs are inferior goods because the income elasticity is negative indicating that an increase in income decreases the demand for volleyballs. The figure shows a graph with the horizontal axis labeled Quantity and the vertical axis labeled Price. There are two points on the horizontal axis labeled, from left to right, Q 2 and Q 1. There are two points on the vertical axis labeled, from top to bottom, P 1 and P 2. There are three lines on the graph. There is a line labeled S that starts near the vertical axis toward the bottom of the graph and slopes upward from left to right. There are two lines labeled D and D prime which start near the vertical axis toward the top of the graph and slope downward from left to right. Line D prime is to the left of line D and intersects line S at a point with coordinates Q 2 and P 2. Line D intersects line S at a point with coordinates Q 1 and P 1. There is a vertical arrow pointing downward from P 1 to P 2, a horizontal arrow pointing from Q 1 to Q 2, and a horizontal arrow pointing from D to D prime. The figure shows two graphs. The graph on the left is titled Market, with the horizontal axis labeled Quantity of Labor and the vertical axis labeled Wage. There is a point toward the middle of the horizontal axis labeled L M and a point toward the middle of the vertical axis labeled W M. There are two straight lines on the graph. A line labeled D starts near the vertical axis toward the top of the graph and slopes downward from left to right. A line labeled S starts near the vertical axis toward the bottom of the graph and slopes upward from left to right. Lines S and D intersect at a point with coordinates L M and W M. The graph on the right is titled Cleanit, with the horizontal axis labeled Quantity of Labor and the vertical axis labeled Wage. There is a point toward the middle of the horizontal axis labeled L F and a point toward the middle of the vertical axis labeled W F. There are two straight lines on the graph. A line labeled S equals M F C open parenthesis M R C close parenthesis extends horizontally from the point W F. A line labeled M R P starts near the vertical axis toward the top of the graph and slopes downward from left to right, and intersects line S at the horizontal coordinate L F. ."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2016_FRQ3",
@@ -201,7 +1019,41 @@
     "image_paths": [],
     "source": "AP Micro 2016",
     "has_graph": true,
-    "rubric": "6 points Open parenthesis, 3 plus 2 plus 1, close parenthesis. (a) 3 points: • One point is earned for drawing a correctly labeled graph of the labor market with an upward-sloping labor supply curve and a downward-sloping labor demand curve, and for showing the equilibrium wage, W M, and the equilibrium quantity, L M. • One point is earned for drawing a correctly labeled graph for CleanIt showing a downward marginal revenue product curve,M R P, and a horizontal labor supply curve, labeled M F C, open parenthesis, M R C, close parenthesis. . • One point is earned for showing the equilibrium wage, labeled W F equal to W M and M F C, open parenthesis, M R C, close parenthesis. , and the equilibrium quantity of workers hired, labeled L F. (b) 2 points • One point is earned for stating that wage paid by CleanIt will be equal to W F because the firm is a wage taker; or because there is no change in WM; or because M F C, open parenthesis, M R C, close parenthesis. stays constant. • One point is earned for stating that the number of workers hired by CleanIt will increase because the marginal product of labor increases or there is an increase in the M R P of workers, or theM R P curve shifts to the right. (c) 1 point: • One point is earned for correctly calculating the wage and for showing the work. Open parenthesis, 100,000 div ided by 10, 000 dollars, clos e parenthesis, equals, open par enthesi s, 500 divided by W, close parenthesis. W equals 50 dollars. OR Open parenthesis, 10,000 dollars divided by 100,000, close parenthesis, equals, open parenthesis, W divided by 500, close parenthesis. W equals 50 dollars. OR Open parenthesis, 500 divided by 100,000, close parenthesis, equals, open parenthesis, W divided by 10,000 dollars, close parenthesis. W equals 50 dollars."
+    "rubric": {
+      "total_points": 6,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 3,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 3,
+              "criteria": [
+                "One point is earned for drawing a correctly labeled graph of the labor market with an upward-sloping labor supply curve and a downward-sloping labor demand curve, and for showing the equilibrium wage, W M, and the equilibrium quantity, L M.",
+                "One point is earned for drawing a correctly labeled graph for CleanIt showing a downward marginal revenue product curve,M R P, and a horizontal labor supply curve, labeled M F C, open parenthesis, M R C, close parenthesis. .",
+                "One point is earned for showing the equilibrium wage, labeled W F equal to W M and M F C, open parenthesis, M R C, close parenthesis. , and the equilibrium quantity of workers hired, labeled L F. (b) 2 points",
+                "One point is earned for stating that wage paid by CleanIt will be equal to W F because the firm is a wage taker; or because there is no change in WM; or because M F C, open parenthesis, M R C, close parenthesis. stays constant.",
+                "One point is earned for stating that the number of workers hired by CleanIt will increase because the marginal product of labor increases or there is an increase in the M R P of workers, or theM R P curve shifts to the right."
+              ]
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": [
+                "One point is earned for correctly calculating the wage and for showing the work. Open parenthesis, 100,000 div ided by 10, 000 dollars, clos e parenthesis, equals, open par enthesi s, 500 divided by W, close parenthesis. W equals 50 dollars. OR Open parenthesis, 10,000 dollars divided by 100,000, close parenthesis, equals, open parenthesis, W divided by 500, close parenthesis. W equals 50 dollars. OR Open parenthesis, 500 divided by 100,000, close parenthesis, equals, open parenthesis, W divided by 10,000 dollars, close parenthesis. W equals 50 dollars."
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2017_FRQ1",
@@ -214,7 +1066,55 @@
     "image_paths": [],
     "source": "AP Micro 2017",
     "has_graph": true,
-    "rubric": "10 points: 5 plus 1 plus 1 plus 3The figure shows a graph with the horizontal axis labeled Quantity and the vertical axis labeled Price. There is one point on the horizontal axis labeled Q J, and another unlabeled point to the right of point Q J. There is one point on the vertical axis labeled P J. There are two lines and two curves on the graph. One line is labeled D and begins at an unlabeled point above P J on the vertical axis and slopes downward from left to right, passing through the point with coordinates Q J and P J. The second line is labeled M R and begins at the same point on the vertical axis, and moves downward and to the right, but below the demand line. It passes through a point with a horizontal coordinate of Q J and a vertical coordinate below P J, and ends at a point far to the right of point Q J on the horizontal axis. One curve is labeled A T C and lies above the demand line everywhere. The A T C curve starts near the top and to the right of the vertical axis, curves downward, and then curves upward. The second curve is labeled M C. It starts near the vertical axis toward the bottom of the graph and curves downward at first, then curves upward and passes through line M R at a point with a horizontal coordinate of Q J and a vertical coordinate below P J. The M C curve continues sloping upward and intersects line D and then passes through the minimum point of the A T C curve and continues upward. There is a shaded area forming the shape of a triangle. The vertices of the triangle are as follows: the point on the D line with coordinates Q J and P J, the point where the D line intersects the M C curve, and the point where the M R line intersects the M C curve. (a) 5 points:  One point is earned for drawing a correctly labeled monopoly graph with a downward-sloping demand (D) curve and a marginal revenue open parenthesis, M R, close parenthesis. curve below the demand curve.  One point is earned for showing the firm’s average total cost open parenthesis, A T C, close parenthesis. curve above the demand curve at Q J with the M C curve rising and passing through the minimum of the A T C curve.  One point is earned for identifying the firm’s profit-maximizing quantity, Q J, at M C equals M R.  One point is earned for identifying the firm’s profit-maximizing price, P J, on the demand curve, above q j.  One point is earned for showing the area representing the deadweight loss shaded completely. Note: All quantities and prices should be labeled on the axes and connected to the intersection points by dashed lines. (b) 1 point:  One point is earned for stating that total revenue is greater than total variable cost or that A V C is less than P J. . (c) 1 point:  One point is earned for stating that the profit-maximizing quantity will stay the same because a change in fixed costs does not affect marginal cost. (d) 3 points:  One point is earned for stating that M R is greater thanM C.  One point is earned for stating that the lower price would cause quantity demanded to increase.  One point is earned for stating that the lower price would cause total revenue to increase, and for explaining that the decrease in price occurs in the elastic region of the demand curve. ."
+    "rubric": {
+      "total_points": 10,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 5,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 5,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 3,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 3,
+              "criteria": []
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2017_FRQ2",
@@ -227,7 +1127,55 @@
     "image_paths": [],
     "source": "AP Micro 2017",
     "has_graph": true,
-    "rubric": "7 points:1 plus 1 plus 1 plus 1 plus 3 (a) 1 point:  One point is earned for correctly calculating the A T C of producing 6 trumpets as $60 and for showing the work. A T C equals T C, divided by Q, which equals, open parenthesis F C plu s V C, close parenthesis, divided by Q, which equals, open parenthesis two hundred forty dollars plus one hundred twenty dollars, close parenthesis, divided by six, which equals three hundred sixty dollars, divided by six, which equals sixty dollars. OR A T C equals A F C plus A V C, which equals, open parenthesis, two hundred forty dollars divided by six, close parenthesis, plus, open parenthesis, one hundred twenty dollars divided by six, close parenthesis, which equals forty dollars plus twenty dollars, which equals sixty dollars. (b) 1 point:  One point is earned for correctly calculating the marginal cost of the eleventh trumpet as $100. (c) 1 point:  One point is earned for correctly stating that Brody’s profit-maximizing quantity is 9 trumpets, and for explaining how Brody uses marginal analysis. Brody determines quantity by equating M R toM C OR by choosing the greatest quantity with M R is greater than M C: At the 9th trumpet: M R is greater than M C, open parenthesis, sixty dollars is greater than fifty five dollars, close parenthesis and at the 10th trumpet: M R is less than M C, open parenthesis, sixty dollars is less than seventy dollars, close parenthesis OR At the 9th trumpet:M R is greater than M C, open parenthesis, sixty dollars is greater than fifty five dollars, close parenthesis and this is the last trumpet with M R is greater than M C Note: Using P instead of M R is also acceptable because P equals M R for perfectly competitive firms. (d) 1 point:  One point is earned for correctly calculating Brody’s profit as $80 and for showing the work. Profit equals Total Revenue minus Total Cost, which equals, open parenthesis, sixty dollars times nine, close parenthesis, minus, open parenthesis, two hundred twenty dollars plus two hundred forty dollars, close parenthesis, which equals five hundred forty dollars minus four hundred sixty dollars, which equals eighty dollars. OR Profit equals, open parenthesis, P minus A T C, close parenthesis, times, Q, which equals, open parenthesis sixty dollars minus fifty one dollars and eleven cents, close parenthesis, times nine, which equals eighty dollars. . The figure shows a graph with the horizontal axis labeled Quantity and the vertical axis labeled Price. The intersection of the horizontal and vertical axis is labeled zero. There is one point on the horizontal axis labeled Q with an asterisk and there is one point approximately halfway up the vertical axis labeled two hundred dollars. There is one horizontal line and two curves on the graph. The line is labeled d equals M R and starts at the two hundred dollar point on the vertical axis and moves horizontally to the right. One curve is labeled A T C and lies above the demand equals M R line everywhere. The A T C curve starts near the vertical axis toward the top of the graph, curves downward, and then curves upward. The second curve is labeled M C, representing marginal cost. The M C curve starts near the vertical axis toward the bottom of the graph and curves upward, passing through line d equals M R at the point with coordinates Q asterisk and 200 dollars. It continues upward, passing through A T C curve at its minimum point. There is also a shaded rectangle in the middle left portion of the graph. The length and bottom side of the shaded rectangle starts at the two hundred dollar point on the vertical axis, and ends where the vertical dotted line from point Q asterisk intersects the d equals M R line. The width of the rectangle is the vertical distance between the d equals MR line and the A T C curve. (e) 3 points:  One point is earned for drawing a correctly labeled graph for a perfectly competitive firm with a horizontal demand curve at P equals 200 dollars.  One point is earned for showing the profit-maximizing quantity, Q with an asterisk, on the horizontal axis at M R equals M C, connected with a dashed line.  One point is earned for showing the A T C curve above the demand (d) curve at Q with an asterisk and with the M C curve cutting the A T C curve at its minimum and for completely shading the area representing the loss. Note: All quantities and prices should be labeled on the axes and connected to the intersection points by dashed lines. ."
+    "rubric": {
+      "total_points": 7,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2017_FRQ3",
@@ -242,7 +1190,44 @@
     ],
     "source": "AP Micro 2017",
     "has_graph": true,
-    "rubric": "5 points: 1 plus 1 plus 3 (a) 1 point:  One point is earned for stating that the price elasticity of supply is greater than one and for explaining that the supply curve is horizontal OR the price elasticity of supply is infinite OR the supply is perfectly elastic. (b) 1 point:  One point is earned for correctly calculating the consumer surplus and showing the work as one half, times 80, times 4 dollars, equals 160 dollars. (c) 3 points:  One point is earned for stating that the total revenue will decrease and explaining that the quantity will decrease OR the percentage change of quantity demanded is greater than the percentage change in price OR demand is elastic in this price range.  One point is earned for stating that producer surplus will stay the same OR remain zero.  One point is earned for stating that total surplus will decrease and for explaining that the quantity decreases OR there is now deadweight loss after the tax is imposed OR the consumer surplus decreases by more than what is transferred to the government and producer surplus stays the same."
+    "rubric": {
+      "total_points": 5,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 3,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 3,
+              "criteria": []
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2018_FRQ1",
@@ -259,7 +1244,55 @@
     ],
     "source": "AP Micro 2018",
     "has_graph": true,
-    "rubric": "9 points (4,1,2,2) (a) 4 points: One point is earned for drawing a correctly labeled graph for the market with a downward sloping demand curve and an upward sloping supply curve, and for labeling PM and QM. One point is earned for drawing a horizontal marginal revenue curve for the firm, at PF. One point is earned for showing the profit-maximizing quantity at MC=MR, labeled QF. One point is earned for showing the ATC curve tangent to the MR curve at QF where ATC is at its minimum. (b) 1 points: One point is earned for stating that PM=PF, and for explaining that the firm is a price taker OR the firm accepts the market equilibrium price as given. (c) 2 points: One point is earned for stating that the firm’s output will not change in the short run, and for explaining that a change in a fixed cost will not affect the firm’s marginal cost OR that rent is not a variable cost AND will not affect the firm’s marginal cost. One point is earned for showing an upward shift of the ATC curve and the area representing the firm’s loss, completely shaded. (d) 2 points: One point is earned for stating the number of firms in the market will decrease, and for explaining that some firms will exit the market as a result of the losses incurred in the short run. One point is earned for stating that the new market equilibrium quantity will decrease relative to QM and the new market equilibrium price will increase relative to PM and for explaining that the market supply will shift to the left. . MARKET FlRM s Quantity Q MC Quantity"
+    "rubric": {
+      "total_points": 9,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 4,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 4,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": []
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2018_FRQ2",
@@ -274,7 +1307,55 @@
     ],
     "source": "AP Micro 2018",
     "has_graph": true,
-    "rubric": "5 points (2,1,1,1) (a) 2 points: One point is earned for stating one source of market failure is related to negative externality and for explaining that MSC>MPC. One point is earned for stating one source of market failure is related to monopoly and for explaining that P>MR. (b) 1 point: One point is earned for correctly identifying the profit-maximizing quantity is 150 units and the profit-maximizing price is $35. (c) 1 point: One point is earned for correctly identifying that with the tax the profit-maximizing quantity is 100 units and the profit-maximizing price is $40. (d) 1 point: One point is earned for stating that economic advisors would support no government intervention and for explaining using one of the following: o without intervention the firm would produce the socially efficient (optimal) quantity of 150 units. o without intervention the firm would produce a quantity of 150 units where the DWL is zero. o without intervention the firm would produce a quantity of 150 units where MSB=MSC. o with the tax intervention the firm would produce a quantity of 100 units where MSB>MSC. ."
+    "rubric": {
+      "total_points": 5,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "question_id": "2018_FRQ3",
@@ -290,6 +1371,54 @@
     ],
     "source": "AP Micro 2018",
     "has_graph": true,
-    "rubric": "7 points (2,1,1,1,2) (a) 2 points: One point is earned for drawing a correctly labeled graph of the market for milk with an upward sloping supply curve and a downward sloping demand curve. One point is earned for drawing an effective price floor, labeled PF, above the equilibrium price and for identifying the new quantity of milk, labeled QF, from the demand curve. (b) 1 point: One point is earned for stating the market is not allocatively efficient after the price floor is imposed and for explaining that marginal benefit is greater than marginal cost (MB > MC). (c) 1 point: One point is earned for completely shading the area representing the producer surplus. (d) 1 point: One point is earned for stating that total consumer spending on milk will decrease, and for explaining the demand is elastic or that the percentage increase in the price of milk will be less than the percentage decrease in the quantity demanded. . d) CJ ·;:: 0.. s PF t---.-------,..-- pl D Quantity (e) 2 points: One point is earned for drawing a correctly labeled graph for the egg market with an upward sloping supply curve and a downward sloping demand curve, and for showing a rightward shift in the demand curve for eggs. One point is earned for stating that the two goods are substitutes. . Scoring Worksheet The following provides a scoring worksheet and conversion table used for calculating a composite score of the exam."
+    "rubric": {
+      "total_points": 7,
+      "parts": [
+        {
+          "letter": "a",
+          "points": 2,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 2,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "b",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "c",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        },
+        {
+          "letter": "d",
+          "points": 1,
+          "subparts": [
+            {
+              "letter": "",
+              "points": 1,
+              "criteria": []
+            }
+          ]
+        }
+      ]
+    }
   }
 ]
