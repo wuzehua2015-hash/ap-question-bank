@@ -29,7 +29,20 @@ function DisplayImage({ path, variant }) {
 }
 
 function RubricDisplay({ rubric, variant }) {
-  if (!rubric || !rubric.points) return null
+  // 兼容两种rubric结构，统一转换为points格式
+  const rawPoints = rubric?.points || rubric?.parts || []
+  const points = rawPoints.map((p, idx) => {
+    // 如果已经是points格式（有point_id/value/description）
+    if (p.point_id !== undefined) return p
+    // 如果是parts格式（有letter/points/subparts），转换为points格式
+    return {
+      point_id: p.letter || p.point_id || `${idx + 1}`,
+      value: p.points || p.value || 1,
+      description: p.description || p.subparts?.map(s => s.criteria?.join('; ') || s.letter || '').join('; ') || '',
+      criteria: p.criteria || p.subparts?.map(s => s.criteria || []).flat() || []
+    }
+  })
+  if (!rubric || points.length === 0) return null
 
   if (variant === 'pdf') {
     return (
@@ -178,6 +191,8 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
 
   const isPdf = variant === 'pdf'
   const imagePaths = frq.image_paths || []
+  // 兼容 question_num / question_number
+  const qNum = frq.question_number || frq.question_num || index || '?'
 
   return (
     <div className={isPdf ? '' : 'bg-surface rounded-xl p-6 shadow-sm border border-border'}>
@@ -193,7 +208,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
             fontSize: '20px', fontWeight: 'bold', color: '#1f2937',
             fontFamily: "'Times New Roman', 'Georgia', serif",
           }}>
-            FRQ {frq.question_number}
+            FRQ {qNum}
           </div>
           <div style={{
             fontSize: '16px', fontWeight: '600', color: '#1e40af',
@@ -205,7 +220,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
       ) : (
         <div className="flex justify-between items-center mb-4 pb-3 border-b border-border">
           <div className="text-lg font-bold text-brand">
-            FRQ {frq.question_number}
+            FRQ {qNum}
           </div>
           <div className="text-sm font-semibold text-brand">
             {frq.rubric?.total_points || 0} points
