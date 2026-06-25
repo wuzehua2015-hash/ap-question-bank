@@ -102,7 +102,7 @@ function validate(filePath) {
     // 图片存在性
     const hasGraph = q.has_graph || q.requires_graph
     if (hasGraph && (!q.image_paths || q.image_paths.length === 0)) {
-      errors.push(`${qid}: has_graph=true but no image_paths`)
+      warnings.push(`${qid}: has_graph=true but no image_paths (will be added in image cropping phase)`)
     }
     
     if (q.image_paths) {

@@ -6,7 +6,9 @@ import numpy as np
 # Configuration
 # ---------------------------------------------------------------------------
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "public", "data")
-INPUT_FILE = os.path.join(DATA_DIR, "macro_question_bank_v4.json")
+INPUT_FILE = os.path.join(DATA_DIR, "ap", "microeconomics", "question_bank.json")
+OUTPUT_INDEX = os.path.join(DATA_DIR, "ap", "microeconomics", "similarity_index.json")
+OUTPUT_EMBEDDED = os.path.join(DATA_DIR, "ap", "microeconomics", "question_bank_with_embeddings.json")
 OUTPUT_INDEX = os.path.join(DATA_DIR, "similarity_index.json")
 OUTPUT_EMBEDDED = os.path.join(DATA_DIR, "macro_question_bank_v4_with_embeddings.json")
 MODEL_NAME = "all-MiniLM-L6-v2"

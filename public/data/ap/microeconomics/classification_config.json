@@ -6,271 +6,184 @@
     {
       "code": "U1",
       "name": "Basic Economic Concepts",
-      "weighting": "12–15%",
+      "weighting": "12-15%",
       "core_concepts": [
-        "scarcity", "opportunity cost", "production possibilities frontier (PPF)",
-        "comparative advantage", "absolute advantage", "specialization",
-        "trade", "terms of trade", "resource allocation", "economic systems",
-        "cost-benefit analysis", "marginal analysis", "marginal benefit", "marginal cost",
-        "consumer choice", "utility maximization", "budget constraint"
+        "scarcity",
+        "opportunity cost",
+        "production possibilities frontier",
+        "PPF",
+        "comparative advantage",
+        "absolute advantage",
+        "marginal analysis",
+        "trade",
+        "specialization"
       ],
       "excluded_concepts": [
-        "supply curve", "demand curve", "equilibrium price", "equilibrium quantity",
-        "elasticity", "consumer surplus", "producer surplus", "market efficiency",
-        "production function", "cost curves", "marginal cost of production", "average total cost",
-        "perfect competition", "monopoly", "monopolistic competition", "oligopoly",
-        "game theory", "factor markets", "wage", "rent", "interest", "profit",
-        "externality", "public good", "private good", "common resource",
-        "government intervention", "tax", "subsidy", "price ceiling", "price floor",
-        "quota", "tariff"
+        "supply curve",
+        "demand curve",
+        "equilibrium price",
+        "equilibrium quantity",
+        "consumer surplus",
+        "producer surplus"
       ],
       "distinguishing_features": [
-        "No market supply/demand analysis (that's U2)",
-        "No firm production/cost analysis (that's U3)",
-        "No market structure analysis (that's U4)",
-        "No factor market analysis (that's U5)",
-        "No market failure/government intervention (that's U6)"
+        "No market supply/demand analysis"
       ],
       "boundary_rules": [
         "PPF analysis = U1",
-        "Comparative advantage and trade = U1",
-        "Marginal analysis / cost-benefit = U1",
-        "Consumer choice / budget constraint = U1"
-      ],
-      "example_questions": [
-        "Comparative advantage and terms of trade",
-        "PPF opportunity cost",
-        "Marginal benefit vs marginal cost",
-        "Resource allocation in different economic systems"
+        "Comparative advantage = U1"
       ]
     },
     {
       "code": "U2",
       "name": "Supply and Demand",
-      "weighting": "20–25%",
+      "weighting": "20-25%",
       "core_concepts": [
-        "demand", "supply", "law of demand", "law of supply",
-        "equilibrium price", "equilibrium quantity", "market equilibrium",
-        "shift in demand", "shift in supply", "movement along the curve",
-        "price elasticity of demand", "price elasticity of supply",
-        "income elasticity", "cross-price elasticity",
-        "consumer surplus", "producer surplus", "total surplus",
-        "deadweight loss", "market efficiency",
-        "price ceiling", "price floor", "tax incidence", "subsidy",
-        "international trade", "tariff", "quota", "trade restrictions"
+        "supply",
+        "demand",
+        "equilibrium",
+        "price elasticity",
+        "income elasticity",
+        "cross-price elasticity",
+        "consumer surplus",
+        "producer surplus",
+        "price ceiling",
+        "price floor",
+        "tax incidence",
+        "deadweight loss"
       ],
       "excluded_concepts": [
-        "production function", "cost curves", "marginal cost of production",
-        "perfect competition", "monopoly", "monopolistic competition", "oligopoly",
-        "game theory", "factor markets", "wage", "rent", "interest",
-        "externality", "public good", "private good", "common resource"
+        "international trade effects on domestic markets beyond basic supply/demand",
+        "production costs",
+        "firm behavior"
       ],
       "distinguishing_features": [
-        "Supply and demand model is the CORE",
-        "Price elasticity and other elasticities",
-        "Consumer/producer surplus and efficiency",
-        "Government intervention in markets (price controls, taxes, subsidies)",
-        "International trade basics (tariff, quota)"
+        "Focuses on market-level supply and demand interactions"
       ],
       "boundary_rules": [
-        "Supply and demand for a specific product = U2",
-        "Elasticity calculations = U2",
-        "Consumer/producer surplus analysis = U2",
-        "Price ceiling/floor effects = U2",
-        "Tax incidence = U2",
-        "Tariff/quota effects on domestic market = U2",
-        "Perfectly competitive market equilibrium (no cost curves) = U2"
-      ],
-      "example_questions": [
-        "Demand shift due to income change",
-        "Price elasticity calculation",
-        "Consumer surplus after price change",
-        "Tax incidence analysis",
-        "Tariff effect on domestic price and quantity"
+        "Tax incidence in a single market = U2",
+        "Price controls in a single market = U2"
       ]
     },
     {
       "code": "U3",
       "name": "Production, Cost, and the Perfect Competition Model",
-      "weighting": "22–25%",
+      "weighting": "22-25%",
       "core_concepts": [
-        "production function", "short-run production", "long-run production",
-        "marginal product", "average product", "total product",
-        "marginal cost (MC)", "average total cost (ATC)", "average variable cost (AVC)", "average fixed cost (AFC)", "total cost (TC)", "fixed cost", "variable cost",
-        "economies of scale", "diseconomies of scale", "constant returns to scale",
-        "profit maximization", "MR = MC", "economic profit", "accounting profit", "normal profit",
-        "perfect competition", "price taker", "market demand vs firm demand",
-        "short-run supply curve", "shutdown condition", "break-even point",
-        "long-run equilibrium", "zero economic profit", "entry and exit"
+        "production function",
+        "marginal product",
+        "diminishing marginal returns",
+        "cost curves",
+        "marginal cost",
+        "average total cost",
+        "average variable cost",
+        "average fixed cost",
+        "perfect competition",
+        "profit maximization",
+        "shutdown decision",
+        "break-even point",
+        "long-run equilibrium"
       ],
       "excluded_concepts": [
-        "monopoly", "monopolistic competition", "oligopoly", "game theory",
-        "price discrimination", "factor markets", "wage", "rent",
-        "externality", "public good", "government intervention"
+        "monopoly pricing",
+        "oligopoly behavior",
+        "game theory"
       ],
       "distinguishing_features": [
-        "Cost curves (MC, ATC, AVC, AFC) are the core tools",
-        "Perfect competition model",
-        "Profit maximization (MR = MC)",
-        "Short-run and long-run firm decisions",
-        "No imperfect competition (that's U4)"
+        "Focuses on firm-level production decisions and perfect competition"
       ],
       "boundary_rules": [
-        "Cost curves and production = U3",
-        "Perfectly competitive firm profit maximization = U3",
-        "Short-run shutdown / long-run exit decisions = U3",
-        "Economies of scale = U3",
-        "IF a question mentions perfect competition AND monopoly → U3 if testing perfect competition, U4 if testing monopoly"
-      ],
-      "example_questions": [
-        "Draw MC and ATC curves for a perfectly competitive firm",
-        "Calculate profit at a given price",
-        "Determine whether to shut down in the short run",
-        "Identify the break-even price"
+        "Cost curves and profit maximization = U3",
+        "Perfect competition model = U3"
       ]
     },
     {
       "code": "U4",
       "name": "Imperfect Competition",
-      "weighting": "15–22%",
+      "weighting": "15-22%",
       "core_concepts": [
-        "monopoly", "monopoly power", "barriers to entry",
-        "price discrimination", "first-degree", "second-degree", "third-degree",
-        "monopolistic competition", "product differentiation", "excess capacity",
-        "oligopoly", "game theory", "Nash equilibrium", "prisoner's dilemma",
-        "collusion", "cartel", "dominant strategy",
-        "non-price competition", "advertising"
+        "monopoly",
+        "monopolistic competition",
+        "oligopoly",
+        "game theory",
+        "Nash equilibrium",
+        "payoff matrix",
+        "price discrimination",
+        "natural monopoly",
+        "barriers to entry",
+        "collusion",
+        "dominant strategy"
       ],
       "excluded_concepts": [
-        "perfect competition", "factor markets", "wage", "rent",
-        "externality", "public good", "government intervention in market failure"
+        "factor markets",
+        "wage determination",
+        "labor markets"
       ],
       "distinguishing_features": [
-        "Imperfectly competitive markets (monopoly, monopolistic competition, oligopoly)",
-        "Price discrimination",
-        "Game theory and strategic behavior",
-        "No perfect competition (that's U3)"
+        "Focuses on firm behavior when market power exists"
       ],
       "boundary_rules": [
-        "Monopoly profit maximization = U4",
-        "Price discrimination = U4",
-        "Monopolistic competition long-run equilibrium = U4",
-        "Oligopoly and game theory = U4",
-        "Comparison of market structures = U4 (if comparing imperfect to perfect competition)"
-      ],
-      "example_questions": [
-        "Monopoly price and quantity determination",
-        "Price discrimination and consumer surplus",
-        "Game theory payoff matrix",
-        "Oligopoly collusion vs competition"
+        "Monopoly/oligopoly/monopolistic competition = U4",
+        "Game theory and payoff matrices = U4"
       ]
     },
     {
       "code": "U5",
       "name": "Factor Markets",
-      "weighting": "10–13%",
+      "weighting": "10-13%",
       "core_concepts": [
-        "factor markets", "derived demand",
-        "marginal revenue product (MRP)", "marginal factor cost (MFC)",
-        "labor market", "wage determination", "minimum wage",
-        "perfectly competitive labor market", "monopsony",
-        "land market", "rent", "capital market", "interest"
+        "derived demand",
+        "marginal revenue product",
+        "marginal product of labor",
+        "wage determination",
+        "monopsony",
+        "labor supply",
+        "labor demand",
+        "minimum wage",
+        "unions",
+        "human capital"
       ],
       "excluded_concepts": [
-        "product market supply/demand (U2)",
-        "firm cost curves (U3)",
-        "monopoly pricing (U4)",
-        "externality / public good (U6)"
+        "product market pricing",
+        "consumer choice"
       ],
       "distinguishing_features": [
-        "Factor markets (labor, land, capital)",
-        "Derived demand for factors",
-        "Monopsony power in labor markets",
-        "No product market analysis (unless as context for factor demand)"
+        "Focuses on input markets (labor, capital, land)"
       ],
       "boundary_rules": [
-        "Labor market equilibrium = U5",
-        "MRP = MFC for profit-maximizing hiring = U5",
-        "Monopsony wage and employment = U5",
-        "Minimum wage effects in labor market = U5"
-      ],
-      "example_questions": [
-        "Hiring decision based on MRP and wage",
-        "Effect of minimum wage on employment",
-        "Monopsony vs competitive labor market"
+        "Labor market analysis = U5",
+        "Wage determination = U5"
       ]
     },
     {
       "code": "U6",
       "name": "Market Failure and the Role of Government",
-      "weighting": "8–13%",
+      "weighting": "8-12%",
       "core_concepts": [
-        "market failure", "efficiency vs equity",
-        "externality", "negative externality", "positive externality",
-        "marginal social cost (MSC)", "marginal social benefit (MSB)",
-        "socially optimal quantity", "overproduction", "underproduction",
-        "public good", "private good", "common resource", "free-rider problem",
-        "government intervention", "tax (Pigouvian)", "subsidy", "regulation",
-        "income inequality", "Lorenz curve", "Gini coefficient"
+        "externalities",
+        "negative externalities",
+        "positive externalities",
+        "public goods",
+        "common resources",
+        "free-rider problem",
+        "income distribution",
+        "taxes",
+        "subsidies",
+        "Lorenz curve",
+        "Gini coefficient"
       ],
       "excluded_concepts": [
-        "supply and demand basics (U2)",
-        "cost curves (U3)",
-        "monopoly (U4)",
-        "factor markets (U5)"
+        "monetary policy",
+        "fiscal policy macro"
       ],
       "distinguishing_features": [
-        "Market failure causes and solutions",
-        "Externalities (positive and negative)",
-        "Public goods and free-rider problem",
-        "Government intervention to correct market failure",
-        "Income inequality measurement"
+        "Focuses on market failures and government interventions"
       ],
       "boundary_rules": [
-        "Negative externality and tax/subsidy solution = U6",
-        "Public good and free-rider problem = U6",
-        "Common resource and overuse = U6",
-        "Government regulation to correct market failure = U6",
-        "Lorenz curve / Gini coefficient = U6"
-      ],
-      "example_questions": [
-        "Negative externality and socially optimal quantity",
-        "Public good and free-rider problem",
-        "Pigouvian tax to correct externality",
-        "Lorenz curve and income distribution"
+        "Externalities = U6",
+        "Public goods = U6",
+        "Income distribution = U6"
       ]
     }
-  ],
-  "cross_unit_rules": [
-    {
-      "name": "Highest unit number rule (most important)",
-      "rule": "If a question involves concepts from multiple units, ALWAYS classify it to the HIGHEST unit number. A student must have learned all involved units to answer this question, so it belongs to the last unit learned. Examples: U2+U3→U3, U3+U4→U4, U2+U5→U5, U1+U3+U6→U6."
-    },
-    {
-      "name": "Product market vs factor market",
-      "rule": "If the question is about a PRODUCT market (goods/services) → U2, U3, or U4. If the question is about a FACTOR market (labor, land, capital) → U5."
-    },
-    {
-      "name": "Perfect competition vs imperfect competition",
-      "rule": "If the question tests perfect competition (price taker, MR = P, zero economic profit in long run) → U3. If the question tests monopoly, monopolistic competition, or oligopoly → U4."
-    },
-    {
-      "name": "Market failure vs normal market analysis",
-      "rule": "If the question asks about socially optimal quantity, externalities, public goods, or government intervention to correct market failure → U6. If the question is about normal supply/demand without market failure → U2."
-    },
-    {
-      "name": "Distractor detection",
-      "rule": "If a concept from another unit appears ONLY in wrong answer options, it is a DISTRACTOR and does not change the primary unit."
-    }
-  ],
-  "common_pitfalls": [
-    "NEVER classify by keyword frequency alone",
-    "NEVER classify by first keyword mentioned",
-    "NEVER let distractors determine the unit",
-    "ALWAYS distinguish product market (U2-U4) from factor market (U5)",
-    "ALWAYS distinguish normal market analysis (U2-U5) from market failure (U6)",
-    "ALWAYS check: would a student who only studied this unit know this concept?",
-    "For cross-unit questions: ALWAYS take the HIGHEST unit number, never the core concept unit",
-    "Do NOT ignore cross-unit synthesis: any question with U6 concepts belongs to U6, even if it also has U2 concepts"
   ]
 }

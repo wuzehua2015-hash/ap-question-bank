@@ -59,13 +59,67 @@ function normalizeOptions(q) {
   return q
 }
 
+// ─── Frontend Adapter: v1/v2 → Internal Model ───
+// 统一字段名、格式、结构，UI层只依赖此内部模型
+export function adaptMCQ(raw) {
+  // 字段名兼容：保持v1字段名，UI层无需修改
+  return {
+    question_id: raw.question_id || raw.id || '',
+    text: raw.question_text || raw.text || '',
+    options: normalizeOptionsToObject(raw.options || {}),
+    answer: raw.answer || raw.correct_answer || '',
+    correct_answer: raw.answer || raw.correct_answer || '',
+    primary_unit: raw.primary_unit || raw.primaryUnit || 'U1',
+    secondary_units: raw.secondary_units || raw.secondaryUnits || [],
+    pure_unit: raw.pure_unit !== undefined ? raw.pure_unit : (raw.secondary_units || []).length === 0,
+    year: raw.year || 0,
+    question_number: raw.question_number || raw.question_num || 0,
+    question_type: raw.question_type || 'MCQ',
+    image_paths: raw.image_paths || raw.images || [],
+    option_table_data: raw.option_table_data || null,
+    diagram_references: raw.diagram_references || [],
+    background_data: raw.background_data || null,
+  }
+}
+
+export function adaptFRQ(raw) {
+  const rubric = raw.rubric || null
+  
+  return {
+    question_id: raw.question_id || raw.id || '',
+    text: raw.question_text || raw.text || '',
+    question_number: raw.question_number || raw.question_num || 0,
+    year: raw.year || 0,
+    image_paths: raw.image_paths || raw.images || [],
+    requires_graph: raw.requires_graph || false,
+    rubric: rubric,
+    background_data: raw.background_data || null,
+  }
+}
+
+// 辅助：将任何选项格式转换为对象
+function normalizeOptionsToObject(options) {
+  if (!options) return {}
+  if (Array.isArray(options)) {
+    const result = {}
+    for (const opt of options) {
+      const m = opt.match(/^\(([A-E])\)\s*/)
+      const key = m ? m[1] : String(Object.keys(result).length)
+      result[key] = opt.replace(/^\([A-E]\)\s*/, '')
+    }
+    return result
+  }
+  return options
+}
+
 export async function loadMCQBank(subjectId = 'macro') {
   if (cache.mcq[subjectId]) return cache.mcq[subjectId]
   const cfg = await loadSubjectConfig(subjectId)
   const res = await fetch(`${BASE_URL}data/${cfg.questionBank}`)
   if (!res.ok) throw new Error(`Failed to load MCQ bank for ${subjectId}: ${res.status}`)
   const data = await res.json()
-  cache.mcq[subjectId] = data.map(normalizeOptions)
+  // 统一适配：v1/v2 → 内部模型
+  cache.mcq[subjectId] = data.map(adaptMCQ)
   return cache.mcq[subjectId]
 }
 
@@ -75,7 +129,9 @@ export async function loadFRQBank(subjectId = 'macro') {
   if (!cfg.hasFRQ) return null
   const res = await fetch(`${BASE_URL}data/${cfg.frqBank}`)
   if (!res.ok) throw new Error(`Failed to load FRQ bank for ${subjectId}: ${res.status}`)
-  cache.frq[subjectId] = await res.json()
+  const data = await res.json()
+  // 统一适配：v1/v2 → 内部模型
+  cache.frq[subjectId] = data.map(adaptFRQ)
   return cache.frq[subjectId]
 }
 
