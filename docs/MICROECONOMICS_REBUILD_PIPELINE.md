@@ -27,6 +27,7 @@
 5. **问题分级**：P0（无法做题）、P1（可能做错）、P2（体验差）**必须全部归零**，只有P3（优化建议）可遗留
 6. **取缔万能脚本**：没有 `rebuild_all_years.py`，只有 `extract_2012.py`、`extract_2013.py` 等，或基于配置的一年一运行
 7. **所有年份完成后才做分类**：不边提取边分类，避免分类错误和提取错误互相干扰
+8. **分层提取策略**：明确区分"可脚本提取的纯文本题"和"必须手动处理的复杂格式题"
 
 ---
 
@@ -250,63 +251,137 @@ for i in range(3):
 
 ---
 
-## 六、Phase 3: 逐份提取（一年一提取，一年一审计）
+## 六、Phase 3: 分层提取策略（核心改变）
 
-### 6.1 提取流程
+> **根本问题：30-40%的复杂格式题用脚本提取不可靠。**
+> **解决方案：明确区分"可脚本提取的纯文本题"（A类）和"必须手动处理的复杂格式题"（B类）。**
 
-```
-PDF → 文本提取 → 题号解析 → 选项解析 → 答案匹配 → 初步清理 → 输出JSON
-```
+### 6.1 题目分类（每份PDF分析阶段确定）
 
-### 6.2 提取策略（基于PDF分析结果）
+在Phase 2分析PDF时，逐题标记类型：
 
-**对于每份PDF，根据Phase 2的分析结果选择提取策略：**
+| 类型 | 特征 | 占比 | 处理方式 |
+|------|------|------|----------|
+| **A类：纯文本MCQ** | 无表格、无图形、无下标/上标、无博弈论矩阵 | 60-70% | **脚本提取**（`page.get_text('blocks')` + 正则解析） |
+| **B类：表格选项MCQ** | 选项区域有表格（如需求/供给表、税收表） | 10-15% | **手动处理**：裁剪表格图片 + 人工输入结构化数据 |
+| **C类：图形MCQ** | 含图形、坐标选项（如Q₁,P₁）、或选项混入alt-text | 10-15% | **手动处理**：裁剪图形图片 + 人工输入选项文本 |
+| **D类：博弈论矩阵** | 2x2矩阵，无(A)(B)选项格式 | 1-2% | **手动处理**：裁剪矩阵图片 + 人工构建结构化数据 |
+| **FRQ** | 文字 + 可能含表格数据 | 3题/年 | 脚本提取文本 + 手动处理表格数据 |
 
-#### 策略A：标准双栏文本提取
+**关键规则：**
+- 如果一道题包含任何表格、图形、矩阵、坐标选项、下标/上标 → **直接标记为B/C/D类，不尝试脚本提取**
+- B/C/D类题的文本提取结果直接丢弃，使用手动输入的数据
+
+### 6.2 A类题提取（纯文本MCQ）
+
 ```python
-# 适用于：大多数年份的标准MCQ页面
+# 适用于：无表格、无图形、无下标/上标的纯文本题
+# 提取方式：按双栏布局，先左栏后右栏，按y坐标排序
 blocks = page.get_text('blocks')
-# 按x坐标分割左右栏
-left = [b for b in blocks if b[0] < mid_x]
-right = [b for b in blocks if b[0] >= mid_x]
-# 按y坐标排序，合并为线性文本
+left = sorted([b for b in blocks if b[0] < mid_x], key=lambda b: b[1])
+right = sorted([b for b in blocks if b[0] >= mid_x], key=lambda b: b[1])
+text = '\n'.join([b[4] for b in left + right])
+
+# 然后正则解析题号和选项
+# 这类题提取可靠，但仍需审计验证
 ```
 
-#### 策略B：表格题单独处理
+**A类题特点（可脚本提取）：**
+- 题干是连续文本，无表格数据混入
+- 选项是标准文本（如 `(A) increase`），无坐标、无矩阵
+- 无下标/上标（或极少，不影响理解）
+
+### 6.3 B/C/D类题手动处理（复杂格式题）
+
+**对于每道B/C/D类题，执行以下步骤：**
+
+1. **确定题目在PDF的哪一页**（在Phase 2分析时标记）
+2. **裁剪相关区域为图片**：
+   - 表格题：裁剪表格区域
+   - 图形题：裁剪图形区域
+   - 矩阵题：裁剪矩阵区域
+3. **人工阅读图片，手动构建数据**：
+   - 表格题：输入表格列名、行数据，构建 `option_table_data`
+   - 图形题：输入图形选项文本（如 `Q₁, P₁`），标记 `requires_graph=true`
+   - 矩阵题：输入矩阵行/列标签和payoff值
+4. **手动输入题干文本**（从PDF中直接复制，避免脚本提取错误）
+5. **手动输入选项文本**（A-E，确保正确）
+6. **标记特殊类型**：`has_table=true`, `requires_graph=true`, 等
+
+**示例：B类表格题手动处理**
 ```python
-# 适用于：表格选项题（如Q18、Q31、Q33等）
-# 1. 提取表格区域为图片（使用 precise_table_cropper.py）
-# 2. 从图片中手动读取表格数据，构建 structured_data
-# 3. 选项文本用 "/" 分隔列数据
-# 4. 标记 has_table=true
+{
+  "question_id": "2012_Q18",
+  "text": "What is the price paid by consumers and the net price received by producers after the tax is paid?",
+  "options": {
+    "A": "$11.00 | $10.45",
+    "B": "$11.00 | $10.00",
+    "C": "$10.45 | $10.00",
+    "D": "$10.45 | $9.45",
+    "E": "$10.00 | $9.45"
+  },
+  "answer": "D",
+  "has_table": true,
+  "option_table_data": {
+    "headers": ["Paid by Consumers", "Received by Producers"],
+    "rows": {
+      "A": ["$11.00", "$10.45"],
+      "B": ["$11.00", "$10.00"],
+      "C": ["$10.45", "$10.00"],
+      "D": ["$10.45", "$9.45"],
+      "E": ["$10.00", "$9.45"]
+    }
+  },
+  "image_paths": ["/images/micro/2012_Q18_table.png"]
+}
 ```
 
-#### 策略C：图形题单独处理
+**示例：C类图形题手动处理**
 ```python
-# 适用于：图形题、坐标选项题
-# 1. 提取图形为图片
-# 2. 标记 requires_graph=true
-# 3. 选项如果是坐标（如Q43），手动输入
-# 4. 如果选项是文本但混入alt-text（如Q32），手动清理
+{
+  "question_id": "2013_Q43",
+  "text": "A monopolist is currently producing at the profit-maximizing output level. Which of the following correctly identifies the output and price?",
+  "options": {
+    "A": "Q₁, P₁",
+    "B": "Q₁, P₂",
+    "C": "Q₁, P₃",
+    "D": "Q₁, P₄",  # 正确答案
+    "E": "Q₂, P₃"
+  },
+  "answer": "D",
+  "requires_graph": true,
+  "image_paths": ["/images/micro/2013_Q43_graph.png"]
+}
 ```
 
-#### 策略D：博弈论矩阵单独处理
-```python
-# 适用于：博弈论矩阵题（如Q40）
-# 1. 提取矩阵为图片
-# 2. 手动构建 payoff matrix 结构化数据
-# 3. 选项为矩阵描述文本
-```
+### 6.4 FRQ提取
 
-#### 策略E：FRQ单独处理
-```python
-# 适用于：所有FRQ
-# 1. 从 "SECTION II: Free Response" 页开始提取
-# 2. 找到 "STOP END OF EXAM" 确定结束页
-# 3. 提取 Question 1/2/3 文本
-# 4. 提取 Scoring Guidelines（从 "Free-Response Scoring Guidelines" 开始）
-# 5. 将 rubric 解析为结构化 dict（points数组），不能是字符串
-```
+**FRQ文本部分：脚本提取**
+- 从 "SECTION II: Free Response" 页开始
+- 提取 Question 1/2/3 的文本
+- 清理 boilerplate（页眉、页脚）
+
+**FRQ表格部分：手动处理**
+- 如果FRQ包含表格数据（如production data），裁剪表格为图片
+- 手动构建结构化数据，存入 `background_data`
+
+**FRQ Scoring Guidelines：脚本提取 + 手动校对**
+- 提取 "Free-Response Scoring Guidelines" 部分
+- 将 rubric 解析为结构化 dict（`points` 数组）
+- 每个 `description` 必须包含具体评分标准，不能只是题号
+- 手动校对确保没有截断或遗漏
+
+### 6.5 为什么这样有效
+
+| 之前（万能脚本） | 现在（分层策略） |
+|------------------|------------------|
+| 脚本试图提取所有题目（包括表格、图形、矩阵） | 脚本只提取纯文本题，复杂题手动处理 |
+| 表格结构被脚本破坏，列信息丢失 | 表格数据人工输入，列结构完全正确 |
+| 图形alt-text被当作选项文本 | 图形选项人工输入，避免alt-text污染 |
+| 坐标选项（如Q₁,P₁）无法自动提取 | 坐标选项人工输入，确保正确 |
+| 下标变"sub"文本 | 纯文本题中的下标在即时清理阶段处理，复杂题中的下标在手动输入时直接写正确格式 |
+
+**结论：30-40%的复杂题不再依赖脚本，从根本上杜绝了提取错误。
 
 ### 6.3 人工审核步骤（每份PDF提取后必做）
 
