@@ -16478,7 +16478,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Microeconomics 2016 Official Practice Exam",
-    "text": "The following table shows Kent's annual income over two years and the income taxes paid in each year. Annual Income Income Taxes Year 1 $100,000 $20,000 Year 2 $120,000 $30,000 With no changes in the marginal tax-rate schedule, which of the following is true about the tax rates?",
+    "text": "The following table shows Kent's annual income over two years and the income taxes paid in each year. With no changes in the marginal tax-rate schedule, which of the following is true about the tax rates?",
     "options": {
       "A": "The marginal tax rate was equal to the average tax rate for both incomes.",
       "B": "The marginal tax rate on the last $20,000 earned was greater than the marginal tax rate at $100,000 income, but the average tax rate decreased with the increase in income.",
@@ -16510,33 +16510,13 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U6"
       ]
     },
-    "has_graph": false,
-    "requires_graph": false,
+    "has_graph": true,
+    "requires_graph": true,
     "image_paths": [
       "/images/ap/microeconomics/2016/2016_Q45_tax_table.png"
     ],
     "option_table_data": null,
-    "background_data": {
-      "table": {
-        "headers": [
-          "",
-          "Annual Income",
-          "Income Taxes"
-        ],
-        "rows": [
-          [
-            "Year 1",
-            "$100,000",
-            "$20,000"
-          ],
-          [
-            "Year 2",
-            "$120,000",
-            "$30,000"
-          ]
-        ]
-      }
-    },
+    "background_data": null,
     "provenance": {
       "content_source": "2016 source PDF audited against backup/microeconomics_2026-06-25/2016_cleaned.json",
       "answer_source": "source PDF page 52",
@@ -22090,13 +22070,13 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Microeconomics 2018 Official Practice Exam",
-    "text": "North Springs and South Springs are two firms that serve the local market for bottled water. Each firm must choose to either maintain or increase its current output. The first entry in each cell in the payoff matrix below shows the profits for North Springs, and the second entry in each cell shows the profits for South Springs. South Springs Maintain Increase Output Output Maintain $15,$30 $15,$45 North Output Springs Increase $30,$26 $27,$28 Output If the two firms do not cooperate, which of the following represents the payoff North Springs and South Springs receive in the dominant-strategy equilibrium and the Nash equilibrium? Dominant Strategy Nash Equilibrium",
+    "text": "North Springs and South Springs are two firms that serve the local market for bottled water. Each firm must choose to either maintain or increase its current output. The first entry in each cell in the payoff matrix below shows the profits for North Springs, and the second entry in each cell shows the profits for South Springs. If the two firms do not cooperate, which of the following represents the payoff North Springs and South Springs receive in the dominant-strategy equilibrium and the Nash equilibrium?",
     "options": {
-      "A": "None",
-      "B": "($27, $28)",
-      "C": "($30, $26)",
-      "D": "($27, $28)",
-      "E": "($30, $26) ($27, $28) ($15, $45) ($15, $45) ($27, $28) ($27, $28) \u0002"
+      "A": "None; ($27, $28)",
+      "B": "($27, $28); ($15, $45)",
+      "C": "($30, $26); ($15, $45)",
+      "D": "($27, $28); ($27, $28)",
+      "E": "($30, $26); ($27, $28)"
     },
     "answer": "D",
     "has_graph": true,
@@ -22134,7 +22114,36 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U4"
       ]
     },
-    "pure_unit": true
+    "pure_unit": true,
+    "option_table_data": {
+      "headers": [
+        "Dominant Strategy",
+        "Nash Equilibrium"
+      ],
+      "rows": {
+        "A": [
+          "None",
+          "($27, $28)"
+        ],
+        "B": [
+          "($27, $28)",
+          "($15, $45)"
+        ],
+        "C": [
+          "($30, $26)",
+          "($15, $45)"
+        ],
+        "D": [
+          "($27, $28)",
+          "($27, $28)"
+        ],
+        "E": [
+          "($30, $26)",
+          "($27, $28)"
+        ]
+      }
+    },
+    "options_as_table": true
   },
   {
     "question_id": "2018_Q26",
@@ -23087,7 +23096,7 @@
       "B": "increase consumer surplus",
       "C": "increase the deadweight loss",
       "D": "increase producer surplus",
-      "E": "increase the quantity sold of the good 8100 0 (.) c:: ...... 'o 80 .... c:: (l) ~ o... 60 40 20 0 20 40 60 80 100 Percent of Familie s"
+      "E": "increase the quantity sold of the good"
     },
     "answer": "C",
     "has_graph": false,
