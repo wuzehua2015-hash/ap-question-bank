@@ -1,35 +1,15 @@
-/**
- * PDF Watermark System — 翎英教育 LynkEdu
- *
- * 独立的水印系统，所有 PDF 导出功能统一调用。
- * 后续只需修改此文件即可全局调整水印样式。
- *
- * 设计理念：
- * - 不依赖特定 PDF 库（html2pdf.js / jsPDF / 等），生成 SVG 数据 URI 作为 CSS background
- * - 所有水印参数集中管理，一处修改全局生效
- * - 水印通过 React 组件渲染为 DOM 层，html2pdf.js 自动将其转换为 PDF 水印
- */
-
-// ─── 全局配置 ───
-// 修改此处即可调整所有 PDF 的水印样式
-
 const WATERMARK_CONFIG = {
   text: '翎英教育 LynkEdu',
-  // 文字样式
-  fontSize: 22,          // 字体大小 (px)
-  fontWeight: 'bold',    // 字重
+  fontSize: 22,
+  fontWeight: 'bold',
   fontFamily: "Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif",
-  color: 'rgba(180, 180, 180, 0.12)',  // 文字颜色（含透明度）
-  // 布局
-  tileWidth: 300,        // 水印瓦片宽度 (px)
-  tileHeight: 300,       // 水印瓦片高度 (px)
-  rotation: -30,         // 旋转角度 (deg)
-  // 行为
-  pointerEvents: 'none', // 不阻挡点击
-  zIndex: 0,             // 层级（内容应在 zIndex 之上）
+  color: 'rgba(180, 180, 180, 0.12)',
+  tileWidth: 300,
+  tileHeight: 300,
+  rotation: -30,
+  pointerEvents: 'none',
+  zIndex: 0,
 }
-
-// ─── 生成水印 SVG 数据 URI ───
 
 function generateWatermarkSVG(config) {
   const {
@@ -49,8 +29,6 @@ function generateWatermarkSVG(config) {
   return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`
 }
 
-// ─── 生成水印层样式 ───
-
 export function getWatermarkStyle(position = 'fixed') {
   const svgUrl = generateWatermarkSVG(WATERMARK_CONFIG)
   return {
@@ -66,8 +44,6 @@ export function getWatermarkStyle(position = 'fixed') {
   }
 }
 
-// ─── 水印层 React 组件 ───
-
 export function WatermarkLayer({ position = 'fixed' }) {
   return (
     <div
@@ -77,8 +53,6 @@ export function WatermarkLayer({ position = 'fixed' }) {
   )
 }
 
-// ─── 便捷配置修改方法（供后续动态调整）───
-
 export function getWatermarkConfig() {
   return { ...WATERMARK_CONFIG }
 }
@@ -87,5 +61,4 @@ export function updateWatermarkConfig(partial) {
   Object.assign(WATERMARK_CONFIG, partial)
 }
 
-// 导出默认值供外部使用
 export { WATERMARK_CONFIG }

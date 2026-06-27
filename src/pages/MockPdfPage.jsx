@@ -1,12 +1,26 @@
+import { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { getCurrentQuiz, getCurrentFRQ, getQuizInfo } from '../utils/quizSession'
 import { exportToPdf, PdfContainer } from '../utils/pdfExport.jsx'
 import { BREAK_GUARD } from '../utils/pdfBreakGuard'
 import QuestionDisplay from '../components/QuestionDisplay'
 import FRQDisplay from '../components/FRQDisplay'
 import { MathText } from '../components/MathText'
-import { useState, useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
+
+const BASE_URL = import.meta.env.BASE_URL || '/'
+
+function formatMinutes(seconds, fallbackMinutes = 60) {
+  const value = Number(seconds)
+  if (!Number.isFinite(value) || value <= 0) return fallbackMinutes
+  return Math.round(value / 60)
+}
+
+function assetUrl(path) {
+  if (!path) return ''
+  if (path.startsWith('http')) return path
+  return path.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
+}
 
 function MockPdfPage() {
   const navigate = useNavigate()
@@ -18,7 +32,6 @@ function MockPdfPage() {
   const [quizInfo, setQuizInfo] = useState(null)
   const [loading, setLoading] = useState(true)
   const [exporting, setExporting] = useState(false)
-
   const [error, setError] = useState(null)
   const [debugInfo, setDebugInfo] = useState(null)
 
@@ -27,26 +40,30 @@ function MockPdfPage() {
       const parsedMcqs = getCurrentQuiz()
       const parsedFrqs = getCurrentFRQ()
       const parsedInfo = getQuizInfo()
-
-      // 诊断日志
-      console.log('[MockPdfPage] currentQuiz:', parsedMcqs ? `${parsedMcqs.length} questions` : 'null')
-      console.log('[MockPdfPage] currentFRQ:', parsedFrqs ? `${parsedFrqs.length} frqs` : 'null')
-      console.log('[MockPdfPage] quizInfo:', parsedInfo)
       setDebugInfo({ mcqCount: parsedMcqs?.length, frqCount: parsedFrqs?.length, hasQuizInfo: !!parsedInfo })
 
-      if (!parsedMcqs || !parsedMcqs.length || !parsedFrqs || !parsedFrqs.length) {
-        console.warn('[MockPdfPage] Missing data, redirecting to home')
+      if (!parsedMcqs?.length || !parsedFrqs?.length) {
         navigate('/')
         return
       }
+
+      parsedMcqs.forEach((q, i) => {
+        if (!q?.question_id) throw new Error(`MCQ index ${i} 缺少 question_id`)
+        if (!(q.text || q.question_text)) throw new Error(`MCQ ${q.question_id} 缺少题干`)
+        if (!q.options) throw new Error(`MCQ ${q.question_id} 缺少选项`)
+        if (!q.answer) throw new Error(`MCQ ${q.question_id} 缺少答案`)
+      })
+      parsedFrqs.forEach((f, i) => {
+        if (!f?.question_id) throw new Error(`FRQ index ${i} 缺少 question_id`)
+        if (!(f.text || f.question_text)) throw new Error(`FRQ ${f.question_id} 缺少题干`)
+      })
 
       setMcqs(parsedMcqs)
       setFrqs(parsedFrqs)
       setQuizInfo(parsedInfo)
       setLoading(false)
     } catch (err) {
-      console.error('[MockPdfPage] Load error:', err)
-      setError(err.message || 'Unknown error loading data')
+      setError(err.message || '加载数据时发生未知错误')
       setLoading(false)
     }
   }, [navigate])
@@ -56,15 +73,10 @@ function MockPdfPage() {
     setExporting(true)
     try {
       const date = new Date().toISOString().split('T')[0]
-      const filename = `LynkEdu-MockExam-${date}.pdf`
-      await exportToPdf(pdfRef.current, filename)
+      await exportToPdf(pdfRef.current, `LynkEdu-MockExam-${date}.pdf`)
     } finally {
       setExporting(false)
     }
-  }
-
-  const handleStartPractice = () => {
-    navigate('/play')
   }
 
   if (loading) {
@@ -79,62 +91,13 @@ function MockPdfPage() {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
         <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-red-800">
-          <h2 className="text-xl font-bold mb-2">❌ 加载失败</h2>
+          <h2 className="text-xl font-bold mb-2">加载失败</h2>
           <p className="mb-2">{error}</p>
           {debugInfo && (
             <pre className="text-left text-xs bg-red-100 rounded p-3 mt-2 overflow-auto">
               {JSON.stringify(debugInfo, null, 2)}
             </pre>
           )}
-          <p className="text-sm mt-4 text-red-600">
-            请按 F12 打开控制台，查看详细错误日志。
-          </p>
-        </div>
-      </div>
-    )
-  }
-
-  if (error) {
-    return (
-      <div className="max-w-4xl mx-auto px-4 py-12 text-center">
-        <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-red-800">
-          <h2 className="text-xl font-bold mb-2">❌ 加载失败</h2>
-          <p className="mb-2">{error}</p>
-          {debugInfo && (
-            <pre className="text-left text-xs bg-red-100 rounded p-3 mt-2 overflow-auto">
-              {JSON.stringify(debugInfo, null, 2)}
-            </pre>
-          )}
-          <p className="text-sm mt-4 text-red-600">
-            请按 F12 打开控制台，查看详细错误日志。
-          </p>
-        </div>
-      </div>
-    )
-  }
-
-  // 数据验证：提前捕获任何格式问题
-  try {
-    mcqs.forEach((q, i) => {
-      const qText = q.text || q.question_text
-      if (!q || !q.question_id) throw new Error(`MCQ index ${i} missing question_id: ${JSON.stringify(q)?.slice(0, 100)}`)
-      if (!qText) throw new Error(`MCQ ${q.question_id} missing text`)
-      if (!q.options) throw new Error(`MCQ ${q.question_id} missing options`)
-      if (!q.answer) throw new Error(`MCQ ${q.question_id} missing answer`)
-    })
-    frqs.forEach((f, i) => {
-      const fText = f.text || f.question_text
-      if (!f || !f.question_id) throw new Error(`FRQ index ${i} missing question_id: ${JSON.stringify(f)?.slice(0, 100)}`)
-      if (!fText) throw new Error(`FRQ ${f.question_id} missing text`)
-    })
-  } catch (validationErr) {
-    console.error('[MockPdfPage] Data validation error:', validationErr)
-    return (
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-red-800">
-          <h2 className="text-xl font-bold mb-2">❌ 数据验证失败</h2>
-          <p className="mb-2">{validationErr.message}</p>
-          <p className="text-sm">请按 F12 查看控制台详细日志。</p>
         </div>
       </div>
     )
@@ -143,32 +106,30 @@ function MockPdfPage() {
   const totalMcq = mcqs.length
   const totalFrq = frqs.length
   const totalFrqPoints = frqs.reduce((sum, f) => sum + (f.rubric?.total_points || 0), 0)
+  const frqMinutes = formatMinutes(quizInfo?.frqTimeLimit)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-6">
-      {/* 页面按钮 */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-brand">Mock Exam 试卷导出</h1>
         <div className="flex gap-3">
           <button
-            onClick={handleStartPractice}
+            onClick={() => navigate('/play')}
             className="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
           >
-            📝 开始 Mock Exam
+            开始 Mock Exam
           </button>
           <button
             onClick={handleExport}
             disabled={exporting}
-            className="flex items-center gap-2 bg-brand hover:bg-brand-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+            className="bg-brand hover:bg-brand-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
           >
-            {exporting ? '生成中...' : '📄 下载 PDF'}
+            {exporting ? '生成中...' : '下载 PDF'}
           </button>
         </div>
       </div>
 
-      {/* PDF 预览区域 */}
       <PdfContainer refProp={pdfRef}>
-        {/* 头部信息 */}
         <div style={{ padding: '30px 20px' }}>
           <div style={{
             borderBottom: '2px solid #1e40af',
@@ -197,7 +158,6 @@ function MockPdfPage() {
             </div>
           </div>
 
-          {/* Section I: Multiple Choice */}
           <div style={{ marginBottom: '40px' }}>
             <div style={{
               fontSize: '24px', fontWeight: 'bold', color: '#1e40af',
@@ -222,7 +182,6 @@ function MockPdfPage() {
             </div>
           </div>
 
-          {/* Section II: Free Response */}
           <div className="pdf-page-break" style={{ paddingTop: '30px' }}>
             <div style={{
               fontSize: '24px', fontWeight: 'bold', color: '#1e40af',
@@ -232,7 +191,7 @@ function MockPdfPage() {
               Section II: Free Response
             </div>
             <div style={{ fontSize: '16px', color: '#6b7280', marginBottom: '16px' }}>
-              建议用时：{quizInfo?.frqTimeLimit || 60} 分钟 &nbsp;|&nbsp; 总分：{totalFrqPoints} points
+              建议用时：{frqMinutes} 分钟 &nbsp;|&nbsp; 总分：{totalFrqPoints} points
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {frqs.map((frq, idx) => (
@@ -244,7 +203,6 @@ function MockPdfPage() {
           </div>
         </div>
 
-        {/* 分页：答案页 */}
         <div className="pdf-page-break" style={{ padding: '30px 20px' }}>
           <div style={{
             borderBottom: '2px solid #1e40af',
@@ -256,7 +214,6 @@ function MockPdfPage() {
             </div>
           </div>
 
-          {/* MCQ 答案 */}
           <div style={{ marginBottom: '30px' }}>
             <div style={{
               fontSize: '20px', fontWeight: 'bold', color: '#1e40af',
@@ -284,7 +241,6 @@ function MockPdfPage() {
             </div>
           </div>
 
-          {/* FRQ 评分标准 */}
           <div>
             <div style={{
               fontSize: '20px', fontWeight: 'bold', color: '#1e40af',
@@ -312,6 +268,21 @@ function MockPdfPage() {
                     </div>
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    {(frq.rubric_image_paths || []).map((path, i) => (
+                      <img
+                        key={`rubric-img-${i}`}
+                        src={assetUrl(path)}
+                        alt=""
+                        style={{
+                          maxWidth: '100%',
+                          maxHeight: '520px',
+                          display: 'block',
+                          margin: '8px auto 12px',
+                          pageBreakInside: 'avoid',
+                          breakInside: 'avoid',
+                        }}
+                      />
+                    ))}
                     {frq.rubric?.points?.map((point, pidx) => (
                       <div key={pidx} style={{
                         padding: '6px 8px',

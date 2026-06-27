@@ -5,9 +5,20 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores([
+    'dist/**',
+    'node_modules/**',
+    'venv/**',
+    '.venv/**',
+    'backup/**',
+    'backup_*/**',
+    'backups/**',
+    'temp_*/**',
+    'temp-page-renders/**',
+    'public/**',
+  ]),
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['src/**/*.{js,jsx}'],
     extends: [
       js.configs.recommended,
       reactHooks.configs.flat.recommended,
@@ -28,6 +39,17 @@ export default defineConfig([
       // If this becomes a real problem, refactor to useSyncExternalStore.
       'react-hooks/set-state-in-effect': 'warn',
       // Warn on unused variables (excluding _ prefixed)
+      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      'react-refresh/only-export-components': 'warn',
+    },
+  },
+  {
+    files: ['scripts/**/*.{js,cjs,mjs}'],
+    extends: [js.configs.recommended],
+    languageOptions: {
+      globals: globals.node,
+    },
+    rules: {
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     },
   },

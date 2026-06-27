@@ -11,8 +11,8 @@ import { loadMCQBank, loadFRQBank, getMockExamConfig } from '../utils/questionBa
 export function useSubject(subjectId = 'macro') {
   return {
     subjectId,
-    async loadMCQ() { return loadMCQBank(subjectId) },
-    async loadFRQ() { return loadFRQBank(subjectId) },
-    async getMockConfig() { return getMockExamConfig(subjectId) },
+    loadMCQ() { return loadMCQBank(subjectId) },
+    loadFRQ() { return loadFRQBank(subjectId) },
+    getMockConfig() { return getMockExamConfig(subjectId) },
   }
 }

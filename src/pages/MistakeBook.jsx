@@ -206,7 +206,9 @@ function MistakeBook() {
                 <div className="px-4 pb-4 border-t border-border bg-gray-50">
                   {q.image_paths && q.image_paths.length > 0 && (
                     <div className="mb-3 mt-3">
-                      {q.image_paths.map((img, i) => (
+                      {q.image_paths
+                        .filter(img => !(q.option_table_data && /option_table/i.test(img)))
+                        .map((img, i) => (
                         <img key={i} src={img} alt="" className="max-w-full max-h-60 rounded border border-border" />
                       ))}
                     </div>

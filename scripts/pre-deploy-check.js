@@ -15,9 +15,9 @@ import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const SRC_DIR = path.join(__dirname, '..', 'src')
 
-const FAIL = '\x1b[31m✗\x1b[0m'
-const PASS = '\x1b[32m✓\x1b[0m'
-const WARN = '\x1b[33m⚠\x1b[0m'
+const FAIL = '\x1b[31mFAIL\x1b[0m'
+const PASS = '\x1b[32mPASS\x1b[0m'
+const WARN = '\x1b[33mWARN\x1b[0m'
 
 let exitCode = 0
 function fail(msg) {
@@ -65,6 +65,9 @@ for (const f of requiredDataFiles) {
     allDataPresent = false
   }
 }
+if (allDataPresent) {
+  pass('All required data files are present in dist/')
+}
 
 // ────────────────────────────
 // Check 3: Async function call audit (static)
@@ -88,6 +91,12 @@ function scanFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8')
   const lines = content.split('\n')
 
+  function isInsideAwaitedPromiseAll(lineIndex) {
+    const start = Math.max(0, lineIndex - 12)
+    const nearby = lines.slice(start, lineIndex + 1).join(' ')
+    return /await\s+Promise\.all\s*\(\s*\[/.test(nearby)
+  }
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i]
     const lineNum = i + 1
@@ -109,7 +118,7 @@ function scanFile(filePath) {
           continue
         }
         // Also skip if the line (or previous line) starts with await Promise.all
-        if (line.includes('Promise.all(') || (i > 0 && lines[i - 1].includes('Promise.all('))) {
+        if (line.includes('Promise.all(') || (i > 0 && lines[i - 1].includes('Promise.all(')) || isInsideAwaitedPromiseAll(i)) {
           continue
         }
 
@@ -165,7 +174,7 @@ if (suspiciousPatterns.length === 0) {
   pass('No suspicious async calls without await detected')
 } else {
   for (const p of suspiciousPatterns) {
-    fail(`${p.file}:${p.line} — ${p.fn} called without await: "${p.text}"`)
+    fail(`${p.file}:${p.line} - ${p.fn} called without await: "${p.text}"`)
   }
 }
 
@@ -180,7 +189,7 @@ const quizPlayerContent = fs.readFileSync(quizPlayerPath, 'utf-8')
 if (quizPlayerContent.includes('getCurrentQuiz') && quizPlayerContent.includes('getQuizInfo')) {
   pass('QuizPlayer uses quizSession readers')
 } else {
-  fail('QuizPlayer missing quizSession readers — must use getCurrentQuiz / getQuizInfo')
+  fail('QuizPlayer missing quizSession readers - must use getCurrentQuiz / getQuizInfo')
 }
 
 // Check: MockPdfPage uses quizSession readers (both MCQ and FRQ)
@@ -195,10 +204,10 @@ if (fs.existsSync(mockPdfPath)) {
   if (mockPdfContent.includes('getQuizInfo')) {
     pass('MockPdfPage reads quizInfo via getQuizInfo')
   } else {
-    warn('MockPdfPage missing getQuizInfo — may need quizInfo for display')
+    warn('MockPdfPage missing getQuizInfo - may need quizInfo for display')
   }
 } else {
-  fail('MockPdfPage.jsx not found — required for mock exam PDF export')
+  fail('MockPdfPage.jsx not found - required for mock exam PDF export')
 }
 
 // Check: FRQDisplay component exists
@@ -206,7 +215,7 @@ const frqDisplayPath = path.join(SRC_DIR, 'components', 'FRQDisplay.jsx')
 if (fs.existsSync(frqDisplayPath)) {
   pass('FRQDisplay.jsx component exists')
 } else {
-  fail('FRQDisplay.jsx not found — required for mock exam PDF rendering')
+  fail('FRQDisplay.jsx not found - required for mock exam PDF rendering')
 }
 
 // Check: App.jsx has /mock-pdf route
@@ -219,7 +228,7 @@ if (fs.existsSync(appPath)) {
     fail('App.jsx missing /mock-pdf route or MockPdfPage import')
   }
 } else {
-  warn('App.jsx not found — skipping route check')
+  warn('App.jsx not found - skipping route check')
 }
 
 // Check: all entry points import from quizSession instead of direct setItem
@@ -234,14 +243,14 @@ const entryPoints = [
 for (const { file, import: mod } of entryPoints) {
   const fullPath = path.join(SRC_DIR, file)
   if (!fs.existsSync(fullPath)) {
-    warn(`${file} not found — skipping check`)
+    warn(`${file} not found - skipping check`)
     continue
   }
   const content = fs.readFileSync(fullPath, 'utf-8')
   if (content.includes(`from '../utils/${mod}'`) || content.includes(`from "../utils/${mod}"`)) {
     pass(`${file} imports from ${mod}`)
   } else {
-    fail(`${file} missing import from ${mod} — must use centralized quiz session`)
+    fail(`${file} missing import from ${mod} - must use centralized quiz session`)
   }
 }
 
@@ -253,7 +262,7 @@ for (const { file } of entryPoints) {
   // Allow Timer's own sessionStorage usage, but block quiz core state manipulation
   const hasRawQuizSetItem = /sessionStorage\.setItem\(['"](currentQuiz|currentFRQ|quizConfig|quizInfo)/.test(content)
   if (hasRawQuizSetItem) {
-    fail(`${file} still uses raw sessionStorage for quiz state — must use quizSession`)
+    fail(`${file} still uses raw sessionStorage for quiz state - must use quizSession`)
   } else {
     pass(`${file} uses quizSession (no raw quiz state manipulation)`)
   }
@@ -267,21 +276,21 @@ const players = [
 for (const { file, reader } of players) {
   const fullPath = path.join(SRC_DIR, file)
   if (!fs.existsSync(fullPath)) {
-    warn(`${file} not found — skipping check`)
+    warn(`${file} not found - skipping check`)
     continue
   }
   const content = fs.readFileSync(fullPath, 'utf-8')
   if (content.includes(reader)) {
     pass(`${file} reads via ${reader}`)
   } else {
-    fail(`${file} missing ${reader} — must use quizSession reader`)
+    fail(`${file} missing ${reader} - must use quizSession reader`)
   }
 }
 
 // Check: QuizPlayer no longer has the old removeItem('currentFRQ') hack
 // (quizPlayerPath and quizPlayerContent already declared above)
 if (quizPlayerContent.includes('removeItem(\'currentFRQ\')') || quizPlayerContent.includes('removeItem("currentFRQ")')) {
-  fail('QuizPlayer still has old removeItem(currentFRQ) hack — quizSession handles this')
+  fail('QuizPlayer still has old removeItem(currentFRQ) hack - quizSession handles this')
 } else {
   pass('QuizPlayer no longer has the old currentFRQ cleanup hack')
 }
@@ -305,7 +314,7 @@ if (fs.existsSync(subjectsPath)) {
     }
   }
 } else {
-  warn('subjects.json not found — skipping mock exam config check')
+  warn('subjects.json not found - skipping mock exam config check')
 }
 
 // ────────────────────────────

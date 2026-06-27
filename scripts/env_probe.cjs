@@ -19,7 +19,9 @@ function findExecutable(name) {
     const result = execSync(`${which} ${name}`, { encoding: 'utf8', timeout: 3000 })
     const lines = result.trim().split('\n').filter(Boolean)
     if (lines.length > 0) candidates.push(lines[0].trim())
-  } catch {}
+  } catch {
+    // Tool is not on PATH.
+  }
   
   // Windows-specific: check common locations
   if (process.platform === 'win32') {
@@ -50,7 +52,9 @@ function findExecutable(name) {
       for (const p of daimonPaths) {
         if (fs.existsSync(p)) candidates.push(p)
       }
-    } catch {}
+    } catch {
+      // Daimon runtime probing is best-effort.
+    }
   }
   
   return candidates[0] || null

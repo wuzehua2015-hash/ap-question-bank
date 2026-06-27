@@ -1,9 +1,7 @@
-import { useState } from 'react'
-import { MathText } from './MathText'
+﻿import { MathText } from './MathText'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
-// ─── 图片展示（支持 web / pdf 双模式）───
 function DisplayImage({ path, variant }) {
   const imgUrl = path.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
 
@@ -20,7 +18,7 @@ function DisplayImage({ path, variant }) {
           pageBreakInside: 'avoid',
           breakInside: 'avoid',
         }}
-        onError={() => { /* 留空，不显示错误 */ }}
+        onError={() => {}}
       />
     )
   }
@@ -30,13 +28,12 @@ function DisplayImage({ path, variant }) {
       src={imgUrl}
       alt=""
       className="max-w-full max-h-80 mx-auto mb-4 rounded-lg border border-border"
-      onError={() => { /* 留空 */ }}
+      onError={() => {}}
     />
   )
 }
 
-// ─── 普通选项展示（无交互）───
-// 兼容 v2.0 数组格式 ["(A)...", "(B)..."] 和旧对象格式 {A: "...", B: "..."}
+// Supports both array options ["(A)..."] and object options {A: "..."}.
 function normalizeOptions(options) {
   if (!options) return {}
   if (Array.isArray(options)) {
@@ -78,7 +75,6 @@ function DisplayOptions({ options, variant }) {
   )
 }
 
-// ─── 表格选项展示（无交互）───
 function DisplayTableOptions({ tableData, variant }) {
   const { headers, rows } = tableData
   const numCols = headers.length
@@ -97,7 +93,7 @@ function DisplayTableOptions({ tableData, variant }) {
         borderRadius: '4px',
         overflow: 'hidden',
       }}>
-        {/* 表头 */}
+        {/* Table header */}
         <div style={gridStyle}>
           <div style={{ background: '#f3f4f6', padding: '8px', fontSize: '13px', fontWeight: '500', color: '#6b7280' }}></div>
           {headers.map((h, i) => (
@@ -109,7 +105,7 @@ function DisplayTableOptions({ tableData, variant }) {
             </div>
           ))}
         </div>
-        {/* 选项行 */}
+        {/* Option rows */}
         {Object.entries(rows).map(([key, values]) => (
           <div key={key} style={{ ...gridStyle, borderTop: '1px solid #d1d5db' }}>
             <div style={{
@@ -154,29 +150,82 @@ function DisplayTableOptions({ tableData, variant }) {
   )
 }
 
-// ─── 主组件：QuestionDisplay ───
-
 /**
- * QuestionDisplay — 纯展示组件，无交互
- * 同时供 web（QuizPlayer）和 PDF（QuizPdfPage）使用
- *
- * @param {Object} question - 题目数据对象
- * @param {string} variant - 'web' | 'pdf' — 样式模式
- * @param {boolean} showAnswer - 是否显示答案（PDF 最后一页用）
- * @param {number} index - 题号（1-based）
+ * Shared read-only question display for web and PDF views.
  */
-function QuestionDisplay({ question, variant = 'web', showAnswer = false, index }) {
+function DisplayBackgroundTable({ tableData, variant }) {
+  if (!tableData || !tableData.headers || !tableData.rows) return null
+
+  const rows = Array.isArray(tableData.rows) ? tableData.rows : Object.values(tableData.rows)
+  const gridStyle = {
+    display: 'grid',
+    gridTemplateColumns: `repeat(${tableData.headers.length}, 1fr)`,
+    gap: '1px',
+  }
+
+  if (variant === 'pdf') {
+    return (
+      <div style={{
+        margin: '12px 0',
+        border: '1px solid #d1d5db',
+        borderRadius: '4px',
+        overflow: 'hidden',
+        pageBreakInside: 'avoid',
+        breakInside: 'avoid',
+      }}>
+        <div style={gridStyle}>
+          {tableData.headers.map((h, i) => (
+            <div key={i} style={{ background: '#f3f4f6', padding: '8px', fontSize: '12px', fontWeight: '600', color: '#374151', textAlign: 'center' }}>
+              {h}
+            </div>
+          ))}
+        </div>
+        {rows.map((row, ri) => (
+          <div key={ri} style={{ ...gridStyle, borderTop: '1px solid #d1d5db' }}>
+            {row.map((cell, ci) => (
+              <div key={ci} style={{ padding: '8px', fontSize: '12px', color: '#374151', textAlign: 'center' }}>
+                {cell}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  return (
+    <div className="my-4 border border-border rounded-lg overflow-hidden">
+      <div className="grid" style={gridStyle}>
+        {tableData.headers.map((h, i) => (
+          <div key={i} className="bg-gray-100 p-2 text-sm font-semibold text-text text-center">{h}</div>
+        ))}
+      </div>
+      {rows.map((row, ri) => (
+        <div key={ri} className="grid border-t border-border" style={gridStyle}>
+          {row.map((cell, ci) => (
+            <div key={ci} className="p-2 text-sm text-text text-center">{cell}</div>
+          ))}
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function QuestionDisplay({ question, variant = 'web', showAnswer = false, index: _index }) {
   if (!question) return null
 
   const isPdf = variant === 'pdf'
   const imagePaths = question.image_paths || []
   const tableData = question.option_table_data
+  const backgroundTable = question.background_data?.table
   const isTableOptions = !!tableData
+  const hasTableImage = imagePaths.some(path => /(?:^|[_/-])(table|payoff_matrix)(?:[_./-]|$)/i.test(path))
+  const displayImagePaths = imagePaths.filter(path => !(isTableOptions && /option_table/i.test(path)))
 
   return (
     <div className={isPdf ? '' : 'bg-surface rounded-xl p-6 shadow-sm border border-border'}
       style={isPdf ? { pageBreakInside: 'avoid', breakInside: 'avoid' } : {}}>
-      {/* 题目标签 */}
+      {/* Question tags */}
       {isPdf ? (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '8px' }}>
           <span style={{
@@ -191,7 +240,7 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index 
         </div>
       )}
 
-      {/* 题目文本 */}
+      {/* Question text */}
       {isPdf ? (
         <div style={{ fontSize: '16px', fontWeight: '500', color: '#1f2937', marginBottom: '12px', lineHeight: 1.6, whiteSpace: 'pre-line' }}>
           <MathText text={question.text || question.question_text} />
@@ -202,19 +251,21 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index 
         </h3>
       )}
 
-      {/* 图片 */}
-      {imagePaths.map((path, i) => (
+      {/* Images */}
+      <DisplayBackgroundTable tableData={hasTableImage ? null : backgroundTable} variant={variant} />
+
+      {displayImagePaths.map((path, i) => (
         <DisplayImage key={i} path={path} variant={variant} />
       ))}
 
-      {/* 选项 */}
+      {/* Options */}
       {isTableOptions ? (
         <DisplayTableOptions tableData={tableData} variant={variant} />
       ) : (
         <DisplayOptions options={question.options} variant={variant} />
       )}
 
-      {/* 答案（仅 showAnswer = true 时显示） */}
+      {/* Answer */}
       {showAnswer && (
         <div className={isPdf ? '' : 'mt-4 p-4 bg-bg rounded-lg border border-border'}>
           {isPdf ? (
@@ -233,3 +284,5 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index 
 }
 
 export default QuestionDisplay
+
+

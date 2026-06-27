@@ -1,13 +1,50 @@
 [
   {
     "question_id": "2012_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
     "year": 2012,
+    "source": "AP Microeconomics 2012 Official Practice Exam",
     "text": "Steverail, the only provider of train service operating between two cities, is currently incurring economic losses. \n(a) Using a correctly labeled graph, show each of the following. \n (i) Steverail's loss-minimizing price and quantity, labeled Pm and Qm , respectively \n (ii) The area of economic losses, shaded completely \n (iii) The allocatively efficient quantity, labeled Qe \n(b) If Steverail raised the price above Pm identified in part (a)(i), would total revenue increase, decrease, or not \nchange? Explain. \n(c) Assume a per-unit subsidy is provided to Steverail. \n (i) Will Steverail's quantity increase, decrease, or not change? Explain. \n (ii) Will consumer surplus increase, decrease, or not change? \n(d) Assume instead that a lump-sum subsidy is provided to Steverail. For the short run, answer the following. \n (i) Will the deadweight loss increase, decrease, or not change? Explain. \n (ii) Will Steverail's economic losses increase, decrease, or not change?",
-    "primary_unit": "U1",
-    "topics": [],
+    "primary_unit": "U4",
+    "secondary_units": [
+      {
+        "code": "U6",
+        "topic_code": "6.1",
+        "topic_name": "Socially Efficient and Inefficient Market Outcomes"
+      },
+      {
+        "code": "U6",
+        "topic_code": "6.4",
+        "topic_name": "The Effects of Government Intervention in Different Market Structures"
+      }
+    ],
+    "topics": [
+      {
+        "code": "4.2",
+        "name": "Monopoly"
+      }
+    ],
+    "skills": [
+      "4.A",
+      "2.A",
+      "3.A"
+    ],
     "difficulty": "Medium",
-    "source": "AP Micro 2012",
-    "has_graph": true,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "monopoly loss-minimization, allocative efficiency, subsidy effects, and monopoly graph"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U4.topics.4.2"
+      ]
+    },
+    "has_graph": false,
+    "image_paths": [],
+    "background_data": null,
     "rubric": {
       "points": [
         {
@@ -56,34 +93,80 @@
         {
           "point_id": "d",
           "value": 2,
-          "description": "One point is earned for stating that the deadweight loss will not change because the lump- sum subsidy does not change the profit-maximizing quantity. One point is earned for stating that economic losses will decrease. .",
+          "description": "One point is earned for stating that the deadweight loss will not change because the lump-sum subsidy does not change the profit-maximizing quantity. One point is earned for stating that economic losses will decrease.",
           "criteria": [
-            "One point is earned for stating that the deadweight loss will not change because the lump- sum subsidy does not change the profit-maximizing quantity.",
-            "One point is earned for stating that economic losses will decrease. ."
+            "One point is earned for stating that the deadweight loss will not change because the lump-sum subsidy does not change the profit-maximizing quantity.",
+            "One point is earned for stating that economic losses will decrease."
           ]
         }
+      ],
+      "total_points": 10.0
+    },
+    "provenance": {
+      "content_source": "dist/data/ap/microeconomics/2012_frq_bank.json",
+      "status": "source_pdf_verified",
+      "notes": [
+        "Prompt verified against source PDF page 40.",
+        "Rubric verified against scoring guidelines page 54.",
+        "FRQ1 asks students to draw a graph; no prompt image is required. Rubric graph retained separately and visually checked against page 54."
       ]
     },
-    "question_number": 1,
-    "question_type": "FRQ",
-    "parts": [],
-    "background_data": null,
-    "unit_tags": [
-      "U1"
+    "requires_graph_response": true,
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2012/2012_FRQ01_rubric_graph.png"
     ],
-    "topic_tags": [],
-    "images": [],
-    "frq_id": "2012_FRQ1"
+    "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2012.pdf",
+    "source_pages": {
+      "prompt": [
+        40
+      ],
+      "scoring_guidelines": [
+        54
+      ]
+    },
+    "pure_unit": false
   },
   {
     "question_id": "2012_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
     "year": 2012,
-    "text": "Theresa consumes both bagels and toy cars. \n \nQuantity of \nBagels \nMarginal Utility \nfrom Bagels (utils) \nQuantity of \nToy Cars \nMarginal Utility from \nToy Cars (utils) \n1 \n8 \n1 \n10 \n2 \n7 \n2 \n8 \n3 \n6 \n3 \n6 \n4 \n5 \n4 \n4 \n5 \n4 \n5 \n3 \n6 \n3 \n6 \n2 \n \n(a) The table above shows Theresa's marginal utility from bagels and toy cars. \n (i) What is her total utility from purchasing three toy cars? \n (ii) Theresa's weekly income is $11, the price of a bagel is $2, and the price of a toy car is $1. What \nquantity of bagels and toy cars will maximize Theresa's utility if she spends her entire weekly income \non bagels and toy cars? Explain your answer using marginal analysis. \n(b) Assume that the price of wheat, an input for the production of bagels, increases. Will Theresa's demand for \nbagels increase, decrease, or not change? Explain. \n(c) Suppose that Theresa's income elasticity for bagels is -0.2. Does the value of Theresa's income elasticity \nindicate that bagels are normal goods, inferior goods, substitutes, or complements? \n(d) Suppose that when the price of toy cars increases by 10 percent, Theresa buys 5 percent fewer toy cars and 4 \npercent less of a different toy, blocks. Calculate the cross-price elasticity for toy cars and blocks and indicate \nif it is positive or negative.",
+    "source": "AP Microeconomics 2012 Official Practice Exam",
+    "text": "Theresa consumes both bagels and toy cars.\n\n(a) The table above shows Theresa's marginal utility from bagels and toy cars.\n (i) What is her total utility from purchasing three toy cars?\n (ii) Theresa's weekly income is $11, the price of a bagel is $2, and the price of a toy car is $1. What quantity of bagels and toy cars will maximize Theresa's utility if she spends her entire weekly income on bagels and toy cars? Explain your answer using marginal analysis.\n(b) Assume that the price of wheat, an input for the production of bagels, increases. Will Theresa's demand for bagels increase, decrease, or not change? Explain.\n(c) Suppose that Theresa's income elasticity for bagels is -0.2. Does the value of Theresa's income elasticity indicate that bagels are normal goods, inferior goods, substitutes, or complements?\n(d) Suppose that when the price of toy cars increases by 10 percent, Theresa buys 5 percent fewer toy cars and 4 percent less of a different toy, blocks. Calculate the cross-price elasticity for toy cars and blocks and indicate if it is positive or negative.",
     "primary_unit": "U1",
-    "topics": [],
+    "secondary_units": [
+      {
+        "code": "U2",
+        "topic_code": "2.5",
+        "topic_name": "Other Elasticities"
+      }
+    ],
+    "topics": [
+      {
+        "code": "1.6",
+        "name": "Marginal Analysis and Consumer Choice"
+      }
+    ],
+    "skills": [
+      "2.C"
+    ],
     "difficulty": "Medium",
-    "source": "AP Micro 2012",
-    "has_graph": true,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "marginal utility, utility maximization, income elasticity, and cross-price elasticity"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U1.topics.1.6"
+      ]
+    },
+    "has_graph": false,
+    "image_paths": [
+      "/images/ap/microeconomics/2012/2012_FRQ02_utility_table.png"
+    ],
+    "background_data": null,
     "rubric": {
       "points": [
         {
@@ -99,9 +182,9 @@
         {
           "point_id": "b",
           "value": 1,
-          "description": "One point is earned for stating that Theresa’s demand for bagels will not change because the increase in the price of wheat will affect the supply of bagels, not the demand.",
+          "description": "One point is earned for stating that Theresa's demand for bagels will not change because the increase in the price of wheat will affect the supply of bagels, not the demand.",
           "criteria": [
-            "One point is earned for stating that Theresa’s demand for bagels will not change because the increase in the price of wheat will affect the supply of bagels, not the demand."
+            "One point is earned for stating that Theresa's demand for bagels will not change because the increase in the price of wheat will affect the supply of bagels, not the demand."
           ]
         },
         {
@@ -120,28 +203,77 @@
             "One point is earned for calculating the cross-price elasticity for toy cars and blocks: -0.04/0.10 = -0.4 ."
           ]
         }
+      ],
+      "total_points": 6.0
+    },
+    "provenance": {
+      "content_source": "dist/data/ap/microeconomics/2012_frq_bank.json",
+      "status": "source_pdf_verified",
+      "notes": [
+        "Prompt verified against source PDF page 46.",
+        "Utility table is rendered as a source-PDF crop at images/2012_FRQ02_utility_table.png.",
+        "Rubric verified against scoring guidelines page 55."
       ]
     },
-    "question_number": 2,
-    "question_type": "FRQ",
-    "parts": [],
-    "background_data": null,
-    "unit_tags": [
-      "U1"
-    ],
-    "topic_tags": [],
-    "images": [],
-    "frq_id": "2012_FRQ2"
+    "requires_graph_response": false,
+    "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2012.pdf",
+    "source_pages": {
+      "prompt": [
+        46
+      ],
+      "scoring_guidelines": [
+        55
+      ]
+    },
+    "pure_unit": false
   },
   {
     "question_id": "2012_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
     "year": 2012,
+    "source": "AP Microeconomics 2012 Official Practice Exam",
     "text": "Sugar is freely traded in the world market. Assume that a country, Loriland, is a price taker in the world market \nfor sugar. Some of the sugar consumed in Loriland is produced domestically while the rest is imported. The \nworld price of sugar is $2 per pound. The graph below shows Loriland's sugar market, and PW represents the \nworld price. \n\n(a) At the world price of $2 per pound, how much sugar is Loriland importing? \n(b) Suppose that Loriland imposes a per-unit tariff on sugar imports and the new domestic price including the \ntariff is $4. \n (i) Identify the new level of domestic production. \n (ii) Calculate the domestic consumer surplus for Loriland. You must show your work. \n (iii) Calculate the total tariff revenue collected by the government. You must show your work. \n(c) Given the world price of $2, what per-unit tariff maximizes the sum of Loriland's domestic consumer \nsurplus and producer surplus?",
-    "primary_unit": "U1",
-    "topics": [],
+    "primary_unit": "U2",
+    "secondary_units": [
+      {
+        "code": "U2",
+        "topic_code": "2.6",
+        "topic_name": "Market Equilibrium and Consumer and Producer Surplus"
+      },
+      {
+        "code": "U2",
+        "topic_code": "2.8",
+        "topic_name": "The Effects of Government Intervention in Markets"
+      }
+    ],
+    "topics": [
+      {
+        "code": "2.9",
+        "name": "International Trade and Public Policy"
+      }
+    ],
+    "skills": [
+      "3.A",
+      "2.C"
+    ],
     "difficulty": "Medium",
-    "source": "AP Micro 2012",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "world price, imports, tariff, consumer surplus, and tariff revenue in an international trade graph"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U2.topics.2.9"
+      ]
+    },
     "has_graph": true,
+    "image_paths": [
+      "/images/ap/microeconomics/2012/2012_FRQ03_graph.png"
+    ],
+    "background_data": null,
     "rubric": {
       "points": [
         {
@@ -155,10 +287,10 @@
         {
           "point_id": "b",
           "value": 3,
-          "description": "One point is earned for identifying the new level of domestic production as 6 million pounds. One point is earned for calculating the domestic consumer surplus as $25 million and showing the work: ½ [($9 - $4) × 10] = $25 One point is earned for calculating the revenue from the tariff as $8 million and showing the work: ($4 - $2) (10 - 6) = $8.",
+          "description": "One point is earned for identifying the new level of domestic production as 6 million pounds. One point is earned for calculating the domestic consumer surplus as $25 million and showing the work: 1/2 [($9 - $4) x 10] = $25. One point is earned for calculating the revenue from the tariff as $8 million and showing the work: ($4 - $2) (10 - 6) = $8.",
           "criteria": [
             "One point is earned for identifying the new level of domestic production as 6 million pounds.",
-            "One point is earned for calculating the domestic consumer surplus as $25 million and showing the work: ½ [($9 - $4) × 10] = $25",
+            "One point is earned for calculating the domestic consumer surplus as $25 million and showing the work: 1/2 [($9 - $4) x 10] = $25.",
             "One point is earned for calculating the revenue from the tariff as $8 million and showing the work: ($4 - $2) (10 - 6) = $8."
           ]
         },
@@ -170,19 +302,2219 @@
             "One point is earned for identifying the per-unit tariff that maximizes the sum of consumer and producer surplus as $0."
           ]
         }
+      ],
+      "total_points": 5.0
+    },
+    "provenance": {
+      "content_source": "dist/data/ap/microeconomics/2012_frq_bank.json",
+      "status": "source_pdf_verified",
+      "notes": [
+        "Prompt and graph verified against source PDF page 48.",
+        "Rubric verified against scoring guidelines page 56.",
+        "Formula characters corrected after source-PDF comparison."
       ]
     },
+    "requires_graph_response": false,
+    "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2012.pdf",
+    "source_pages": {
+      "prompt": [
+        48
+      ],
+      "scoring_guidelines": [
+        56
+      ]
+    },
+    "pure_unit": false
+  },
+  {
+    "question_id": "2013_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "year": 2013,
+    "source": "AP Microeconomics 2013 Official Practice Exam",
+    "text": "Grand Farm is a profit-maximizing firm that produces wheat in a perfectly competitive, constant-cost industry. Grand Farm is currently earning positive economic profit.\n(a) Draw correctly labeled side-by-side graphs for the wheat market and Grand Farm, and show each of the following.\n (i) The market price and quantity, labeled PM and QM, respectively\n (ii) Grand Farm's profit-maximizing quantity, labeled QF\n (iii) The area representing Grand Farm's economic profit, shaded completely\n(b) Assume the wheat market adjusts to long-run equilibrium. What will happen to the number of firms in the industry and the equilibrium price? Explain.\n(c) Assume instead that Grand Farm is a monopolistically competitive firm earning positive economic profit. Draw a correctly labeled graph for Grand Farm and show each of the following.\n (i) The profit-maximizing price and quantity, labeled PL and QL, respectively\n (ii) The area representing Grand Farm's economic profit, shaded completely\n(d) Assume the monopolistically competitive market adjusts to long-run equilibrium. On your graph in part (c), show the long-run average total cost curve, labeled LRATC, for Grand Farm.",
+    "primary_unit": "U3",
+    "secondary_units": [
+      {
+        "code": "U4",
+        "topic_code": "4.4",
+        "topic_name": "Monopolistic Competition"
+      }
+    ],
+    "topics": [
+      {
+        "code": "3.7",
+        "name": "Perfect Competition"
+      }
+    ],
+    "skills": [
+      "4.A",
+      "2.A",
+      "3.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "requires graphing and long-run adjustment for a perfectly competitive constant-cost industry, then monopolistic competition short-run and long-run graphs"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U3.topics.3.7",
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U4.topics.4.4"
+      ]
+    },
+    "has_graph": false,
+    "image_paths": [],
+    "background_data": null,
+    "requires_graph_response": true,
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2013/2013_FRQ01_rubric_graph_a.png",
+      "/images/ap/microeconomics/2013/2013_FRQ01_rubric_graph_c.png",
+      "/images/ap/microeconomics/2013/2013_FRQ01_rubric_graph_d.png"
+    ],
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 4,
+          "description": "Correctly labeled market and firm graphs for a perfectly competitive constant-cost industry, including PM/QM, horizontal D=MR for the firm, QF where MC=MR, and shaded economic profit.",
+          "criteria": [
+            "Market graph has downward-sloping demand and upward-sloping supply with equilibrium PM and QM.",
+            "Firm graph has horizontal D and MR labeled at the market price.",
+            "Profit-maximizing quantity QF is identified where MC=MR.",
+            "Economic profit area is shaded completely."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 2,
+          "description": "The number of firms increases as new firms enter, and the equilibrium price decreases below PM.",
+          "criteria": [
+            "Number of firms increases because positive economic profit attracts entry.",
+            "Equilibrium price decreases or is lower than PM."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 4,
+          "description": "Correct monopolistic competition short-run graph with downward-sloping demand, MR below demand, ATC, MC, QL at MC=MR, PL on demand, and profit area.",
+          "criteria": [
+            "Downward-sloping demand curve with MR below it.",
+            "ATC and MC are correctly drawn with MC through the lowest point of ATC.",
+            "Profit-maximizing quantity QL is identified at MC=MR.",
+            "Price PL is identified on demand above ATC and profit is shaded."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": "LRATC is shown tangent to the downward-sloping demand curve in long-run equilibrium.",
+          "criteria": [
+            "Long-run average total cost curve is tangent to the downward-sloping demand curve."
+          ]
+        }
+      ],
+      "total_points": 11.0
+    },
+    "provenance": {
+      "content_source": "source PDF pages 36 and 38",
+      "status": "source_pdf_verified",
+      "notes": [
+        "Prompt verified against source PDF page 36 and reprint page 38.",
+        "Rubric verified against scoring guideline pages 54-55.",
+        "Student draws required graphs; rubric graph crops are retained for internal audit."
+      ]
+    },
+    "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2013.pdf",
+    "source_pages": {
+      "prompt": [
+        36,
+        38
+      ],
+      "scoring_guidelines": [
+        54,
+        55
+      ]
+    },
+    "pure_unit": false
+  },
+  {
+    "question_id": "2013_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "year": 2013,
+    "source": "AP Microeconomics 2013 Official Practice Exam",
+    "text": "Attaburger and Beefsteak are the only two fast-food hamburger restaurants in a small town. Each firm must decide whether to charge a high price or a low price. The payoff matrix shows the daily profits for each combination of pricing strategies.\n(a) If Attaburger selects a high price, what strategy will Beefsteak select? Explain using dollar values from the payoff matrix.\n(b) Does Beefsteak have a dominant strategy? Explain using dollar values from the payoff matrix.\n(c) If the two firms cooperate and agree to choose high prices, and the agreement is not enforceable, does Attaburger have an incentive to break the agreement? Explain using dollar values from the payoff matrix.\n(d) In the Nash equilibrium, what are the daily profits for Attaburger and Beefsteak?",
+    "primary_unit": "U4",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "4.5",
+        "name": "Oligopoly and Game Theory"
+      }
+    ],
+    "skills": [
+      "2.C",
+      "3.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "payoff matrix, dominant strategy, collusion incentive, and Nash equilibrium in an oligopoly game"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U4.topics.4.5"
+      ]
+    },
+    "has_graph": false,
+    "image_paths": [
+      "/images/ap/microeconomics/2013/2013_FRQ02_payoff_matrix.png"
+    ],
+    "background_data": null,
+    "requires_graph_response": false,
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 1,
+          "description": "Beefsteak selects the low price because $14 is greater than $13.",
+          "criteria": [
+            "States low price and compares $14 to $13."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": "Beefsteak has no dominant strategy because it chooses low price if Attaburger chooses high price, but high price if Attaburger chooses low price.",
+          "criteria": [
+            "States no dominant strategy and supports it with $14>$13 and $8>$7."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "Attaburger has an incentive to break the agreement because by charging a lower price it earns $12 instead of $10.",
+          "criteria": [
+            "States there is an incentive to break and compares $12 to $10."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": "In the Nash equilibrium, Attaburger earns $12 and Beefsteak earns $8.",
+          "criteria": [
+            "Identifies the Nash equilibrium payoffs as $12 for Attaburger and $8 for Beefsteak."
+          ]
+        }
+      ],
+      "total_points": 4.0
+    },
+    "provenance": {
+      "content_source": "source PDF page 42",
+      "status": "source_pdf_verified",
+      "notes": [
+        "Prompt and payoff matrix verified against source PDF page 42.",
+        "Rubric verified against scoring guideline page 56.",
+        "Payoff matrix stored as image crop for faithful rendering."
+      ]
+    },
+    "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2013.pdf",
+    "source_pages": {
+      "prompt": [
+        42
+      ],
+      "scoring_guidelines": [
+        56
+      ]
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2013_FRQ3",
     "question_number": 3,
     "question_type": "FRQ",
-    "parts": [],
+    "year": 2013,
+    "source": "AP Microeconomics 2013 Official Practice Exam",
+    "text": "Umbrellas are produced by a perfectly competitive, constant-cost industry. In the short run, the equilibrium price is $7 per umbrella and the typical firm is operating with a loss. The table shows the total cost function for the typical firm.\n(a) Draw a correctly labeled graph for the typical firm and show its demand curve.\n(b) Calculate each of the following for the typical firm.\n (i) Total fixed cost\n (ii) The loss-minimizing quantity\n (iii) The dollar value of the loss at the loss-minimizing quantity\n(c) Explain why the firm will continue to produce in the short run even though it is earning a loss.\n(d) What is the long-run equilibrium price for umbrellas?",
+    "primary_unit": "U3",
+    "secondary_units": [
+      {
+        "code": "U3",
+        "topic_code": "3.2",
+        "topic_name": "Short-Run Production Costs"
+      },
+      {
+        "code": "U3",
+        "topic_code": "3.6",
+        "topic_name": "Firms Short-Run Decisions to Produce and Long-Run Decisions to Enter or Exit a Market"
+      }
+    ],
+    "topics": [
+      {
+        "code": "3.7",
+        "name": "Perfect Competition"
+      }
+    ],
+    "skills": [
+      "4.A",
+      "2.C"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "perfectly competitive firm demand, fixed cost, shutdown/loss minimization, and long-run constant-cost equilibrium"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U3.topics.3.7",
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U3.topics.3.6"
+      ]
+    },
+    "has_graph": false,
+    "image_paths": [
+      "/images/ap/microeconomics/2013/2013_FRQ03_cost_table.png"
+    ],
     "background_data": null,
-    "unit_tags": [
-      "U1"
+    "requires_graph_response": true,
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2013/2013_FRQ03_rubric_graph.png"
     ],
-    "topic_tags": [],
-    "images": [
-      "/images/micro/frq/2012_FRQ3_img0.png"
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 1,
+          "description": "Draws a correctly labeled horizontal demand curve for the firm at $7.",
+          "criteria": [
+            "Horizontal demand curve D is drawn at $7."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 3,
+          "description": "Total fixed cost is $10; loss-minimizing output is 3; the dollar value of the loss is $3.",
+          "criteria": [
+            "Identifies total fixed cost as $10.",
+            "States the loss-minimizing output is 3.",
+            "Calculates the loss as $21 - $24 = -$3."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "The firm continues to produce because it covers variable cost, or P > AVC, or TR > TVC, or losses are less than total fixed cost.",
+          "criteria": [
+            "Explains that the firm is covering variable cost or equivalent."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": "The long-run equilibrium price is $8.",
+          "criteria": [
+            "States $8."
+          ]
+        }
+      ],
+      "total_points": 6.0
+    },
+    "provenance": {
+      "content_source": "source PDF page 46",
+      "status": "source_pdf_verified",
+      "notes": [
+        "Prompt and cost table verified against source PDF page 46.",
+        "Rubric verified against scoring guideline page 57.",
+        "Cost table stored as image crop for faithful rendering."
+      ]
+    },
+    "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2013.pdf",
+    "source_pages": {
+      "prompt": [
+        46
+      ],
+      "scoring_guidelines": [
+        57
+      ]
+    },
+    "pure_unit": false
+  },
+  {
+    "question_id": "2014_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "year": 2014,
+    "source": "AP Microeconomics 2014 Official Practice Exam",
+    "text": "Assume soybeans are produced by a perfectly competitive, constant-cost industry. Fresh Farm is a typical firm producing soybeans and is currently operating with an economic loss.\n(a) Using a correctly labeled graph for Fresh Farm, show each of the following in the short run.\n (i) The marginal cost curve and average total cost, labeled MC and ATC, respectively\n (ii) Fresh Farm's price and loss-minimizing quantity, labeled PF and QF, respectively\n (iii) The average variable cost curve, labeled AVC\n(b) Suppose that newspapers have recently reported that excessive soybean consumption can cause health problems. As a result, will the new loss-minimizing quantity for Fresh Farm be greater than, less than, or equal to QF in the short run? Explain.\n(c) Is the long-run market supply for soybeans perfectly inelastic, relatively inelastic, unit elastic, relatively elastic, or perfectly elastic?\n(d) Assume now that the soybean market is in a long-run equilibrium and that fertilizers used in soybean production cause water pollution. Using a correctly labeled graph for the soybean market, show each of the following.\n (i) Market equilibrium quantity and price, labeled QM and PM\n (ii) Marginal social cost curve, labeled MSC\n (iii) Socially optimal quantity, labeled QS\n (iv) The area representing deadweight loss, shaded completely",
+    "primary_unit": "U3",
+    "secondary_units": [
+      {
+        "code": "U6",
+        "topic_code": "6.2",
+        "topic_name": "Externalities"
+      }
     ],
-    "frq_id": "2012_FRQ3"
+    "topics": [
+      {
+        "code": "3.7",
+        "name": "Perfect Competition"
+      }
+    ],
+    "skills": [
+      "4.A",
+      "4.B",
+      "2.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "perfectly competitive firm loss-minimization, constant-cost long-run supply, and negative externality graph"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U3.topics.3.7",
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U6.topics.6.2"
+      ]
+    },
+    "has_graph": false,
+    "image_paths": [],
+    "background_data": null,
+    "requires_graph_response": true,
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2014/2014_FRQ01_rubric_graph_a.png",
+      "/images/ap/microeconomics/2014/2014_FRQ01_rubric_graph_d.png"
+    ],
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 4,
+          "description": "Correct Fresh Farm short-run loss graph with MC through minimum ATC, horizontal D=MR below ATC showing PF, QF at MC=MR, and AVC below price at QF.",
+          "criteria": [
+            "MC is upward sloping through the minimum point of ATC.",
+            "Firm graph has a horizontal demand curve below ATC showing PF.",
+            "QF is shown at MC=MR or MC=P when price is horizontal.",
+            "AVC is below the price line at QF."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": "The new quantity will be less than QF because demand decreases or price decreases.",
+          "criteria": [
+            "States less than QF and explains demand/price decreases."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "The long-run market supply for soybeans is perfectly elastic.",
+          "criteria": [
+            "States perfectly elastic."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 4,
+          "description": "Correct soybean market graph with demand/MSB, supply/MPC, QM and PM, MSC above supply, QS at MSB=MSC or D=MSC, and shaded deadweight loss.",
+          "criteria": [
+            "Market graph shows demand or MSB, supply or MPC, QM and PM.",
+            "MSC is drawn above the supply curve.",
+            "QS is shown at MSB=MSC or D=MSC.",
+            "Deadweight loss area is shaded completely."
+          ]
+        }
+      ],
+      "total_points": 10.0
+    },
+    "provenance": {
+      "content_source": "source PDF page 27",
+      "status": "source_pdf_verified",
+      "notes": [
+        "Prompt verified against source PDF page 27.",
+        "Rubric verified against scoring guideline pages 43-44.",
+        "Student draws required graphs; rubric graph crops retained for internal audit."
+      ]
+    },
+    "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2014.pdf",
+    "source_pages": {
+      "prompt": [
+        27
+      ],
+      "scoring_guidelines": [
+        43,
+        44
+      ]
+    },
+    "pure_unit": false
+  },
+  {
+    "question_id": "2014_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "year": 2014,
+    "source": "AP Microeconomics 2014 Official Practice Exam",
+    "text": "The graph shows the perfectly competitive corn market.\n(a) Between the prices of $9 and $11, is the demand for corn relatively elastic, perfectly elastic, unit elastic, relatively inelastic, or perfectly inelastic? Explain using specific values.\nSuppose the government is considering different programs to help corn farmers in the market represented above.\n(b) Program 1: The government establishes a price floor at $11. How much corn will be purchased by consumers?\n(c) Program 2: The government guarantees a market price of $11 by purchasing all the surplus corn. How much corn will the government need to purchase?\n(d) Program 3: The government pays farmers to switch to wheat production. Redraw the graph of the corn market above including the numbers, and show the shift that illustrates how paying farmers to switch to wheat production can achieve a market price of $11 for corn.\n(e) Program 4: The government successfully markets corn as an export.\n (i) Explain how increasing exports can achieve a market price of $11.\n (ii) Calculate the producer surplus when the government successfully raises the price of corn to $11 by marketing it as an export. Show your work.",
+    "primary_unit": "U2",
+    "secondary_units": [
+      {
+        "code": "U2",
+        "topic_code": "2.8",
+        "topic_name": "The Effects of Government Intervention in Markets"
+      }
+    ],
+    "topics": [
+      {
+        "code": "2.3",
+        "name": "Price Elasticity of Demand"
+      }
+    ],
+    "skills": [
+      "4.B",
+      "2.C",
+      "3.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "elasticity, price floor, surplus purchase, supply shift, demand/export shift, and producer surplus in a market graph"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U2.topics.2.3",
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U2.topics.2.8"
+      ]
+    },
+    "has_graph": true,
+    "image_paths": [
+      "/images/ap/microeconomics/2014/2014_FRQ02_corn_market.png"
+    ],
+    "background_data": null,
+    "requires_graph_response": true,
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2014/2014_FRQ02_rubric_graph.png"
+    ],
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 1,
+          "description": "Demand is elastic; percentage quantity change is greater than percentage price change, elasticity is greater than 1, or total revenue rises from $440 to $540 when price falls from $11 to $9.",
+          "criteria": [
+            "States elastic with a valid numerical explanation."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": "Consumers purchase 40 units.",
+          "criteria": [
+            "States 40 units."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "The government purchases 75 - 40 = 35 units.",
+          "criteria": [
+            "States 35 units with or without calculation."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": "Supply shifts left so that PE = $11 and QE = 40.",
+          "criteria": [
+            "Shows a leftward supply shift achieving price $11 and quantity 40."
+          ]
+        },
+        {
+          "point_id": "e",
+          "value": 2,
+          "description": "Exports increase demand or shift demand right; producer surplus is 1/2 x ($11 - $1) x 75 = $375.",
+          "criteria": [
+            "Explains that increasing exports increases demand or shifts demand right.",
+            "Calculates producer surplus as $375."
+          ]
+        }
+      ],
+      "total_points": 6.0
+    },
+    "provenance": {
+      "content_source": "source PDF page 31",
+      "status": "source_pdf_verified",
+      "notes": [
+        "Prompt and corn market graph verified against source PDF page 31.",
+        "Rubric verified against scoring guideline page 45.",
+        "Prompt graph stored as a source-PDF crop."
+      ]
+    },
+    "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2014.pdf",
+    "source_pages": {
+      "prompt": [
+        31
+      ],
+      "scoring_guidelines": [
+        45
+      ]
+    },
+    "pure_unit": false
+  },
+  {
+    "question_id": "2014_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "year": 2014,
+    "source": "AP Microeconomics 2014 Official Practice Exam",
+    "text": "Schmitt's Bakery sells cookies in a perfectly competitive market and hires workers from a perfectly competitive labor market. Labor is the only variable input for Schmitt's Bakery. The table shows the workers hired per day, quantity of cookies produced per day, and total costs per day. The price of a cookie is $0.50.\n(a) When the firm hires the third worker, does it experience diminishing marginal returns?\n(b) What is the marginal revenue product of the third worker?\n(c) Based on the figures in the table above, what is the wage rate?\n(d) What is the profit-maximizing number of workers?\n(e) If the demand for cookies increases, will Schmitt's Bakery hire more, fewer, or the same number of workers? Explain.",
+    "primary_unit": "U5",
+    "secondary_units": [
+      {
+        "code": "U3",
+        "topic_code": "3.1",
+        "topic_name": "The Production Function"
+      }
+    ],
+    "topics": [
+      {
+        "code": "5.3",
+        "name": "Profit-Maximizing Behavior in Perfectly Competitive Factor Markets"
+      }
+    ],
+    "skills": [
+      "2.C",
+      "3.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "MRP, wage, profit-maximizing labor hiring, and derived labor demand from a production/cost table"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U5.topics.5.3",
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U3.topics.3.1"
+      ]
+    },
+    "has_graph": false,
+    "image_paths": [
+      "/images/ap/microeconomics/2014/2014_FRQ03_worker_table.png"
+    ],
+    "background_data": null,
+    "requires_graph_response": false,
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 1,
+          "description": "Yes.",
+          "criteria": [
+            "States yes."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": "The MRP of the third worker is 40 x $0.50 = $20.",
+          "criteria": [
+            "Calculates $20."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "The wage rate is $15.",
+          "criteria": [
+            "States $15."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": "The profit-maximizing number of workers is 4.",
+          "criteria": [
+            "States 4 workers."
+          ]
+        },
+        {
+          "point_id": "e",
+          "value": 1,
+          "description": "The bakery hires more workers because the increase in demand for cookies increases MRP, VMP, price, or marginal revenue.",
+          "criteria": [
+            "States more workers and explains via increased MRP/VMP/price/MR."
+          ]
+        }
+      ],
+      "total_points": 5.0
+    },
+    "provenance": {
+      "content_source": "source PDF page 35",
+      "status": "source_pdf_verified",
+      "notes": [
+        "Prompt and worker table verified against source PDF page 35.",
+        "Rubric verified against scoring guideline page 46.",
+        "Prompt table stored as a source-PDF crop for faithful rendering."
+      ]
+    },
+    "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2014.pdf",
+    "source_pages": {
+      "prompt": [
+        35
+      ],
+      "scoring_guidelines": [
+        46
+      ]
+    },
+    "pure_unit": false
+  },
+  {
+    "question_id": "2015_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "year": 2015,
+    "source": "AP Microeconomics 2015 Official Practice Exam",
+    "text": "Raphael's hair salon is a monopoly in a small town and is currently earning an economic profit.\n(a) Draw a correctly labeled graph for Raphael and include the curves that are necessary to identify the profit-maximizing price and quantity of haircuts, labeled Pm and Qm, and the area representing economic profits, shaded completely.\n(b) Does Raphael's hair salon produce the allocatively efficient quantity? Explain.\n(c) Assume that Raphael signs a new lease with an increase in rent, a fixed cost. Will the price of haircuts provided by Raphael increase, decrease, or stay the same in the short run? Explain.\n(d) Assume that new hair salons enter the market and that the market becomes monopolistically competitive. State whether demand becomes more elastic, whether Raphael's demand curve shifts, and whether Raphael produces the productively efficient quantity in long-run equilibrium. Explain.",
+    "primary_unit": "U4",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "4.2",
+        "name": "Monopoly"
+      }
+    ],
+    "skills": [
+      "4.A",
+      "2.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "FRQ prompt and scoring guideline directly test listed topic"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U4"
+      ]
+    },
+    "has_graph": false,
+    "requires_graph": false,
+    "image_paths": [],
+    "background_data": null,
+    "requires_graph_response": true,
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2015/2015_FRQ01_rubric_graph.png"
+    ],
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 5,
+          "description": "One point is earned for drawing a graph with correctly labeled axes, downward sloping demand curve, and MR below the demand curve. - One point is earned for identifying the profit-maximizing quantity, Q _m , at MR = MC. - One point is earned for identifying the price, P _m, derived from the demand curve above Q _m. - One point is earned for drawing MC passing through the minimum point on a u-shape ATC curve (or correct MC divided by ATC). - One point is earned for showing the area that represents the profit, completely shaded.",
+          "criteria": [
+            "One point is earned for drawing a graph with correctly labeled axes, downward sloping demand curve, and MR below the demand curve.",
+            "One point is earned for identifying the profit-maximizing quantity, Q _m , at MR = MC.",
+            "One point is earned for identifying the price, P _m, derived from the demand curve above Q _m.",
+            "One point is earned for drawing MC passing through the minimum point on a u-shape ATC curve (or correct MC divided by ATC).",
+            "One point is earned for showing the area that represents the profit, completely shaded."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": "One point is earned for stating no with the explanation that at Q _m, P > MC.",
+          "criteria": [
+            "One point is earned for stating no with the explanation that at Q _m, P > MC."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "One point is earned for stating that the price stays the same because rent is a fixed cost that affects only the ATC or does not affect the MC (or does not affect the marginal values).",
+          "criteria": [
+            "One point is earned for stating that the price stays the same because rent is a fixed cost that affects only the ATC or does not affect the MC (or does not affect the marginal values)."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 3,
+          "description": "One point is earned for stating that the demand becomes more elastic. - One point is earned for stating that Raphael’s demand curve shifts to the left. - One point is earned for stating that Raphael’s hair salon does not produce the productively efficient quantity because the quantity Raphael produces does not minimize long-run ATC (or Q is to the left of the minimum point on ATC).",
+          "criteria": [
+            "One point is earned for stating that the demand becomes more elastic.",
+            "One point is earned for stating that Raphael’s demand curve shifts to the left.",
+            "One point is earned for stating that Raphael’s hair salon does not produce the productively efficient quantity because the quantity Raphael produces does not minimize long-run ATC (or Q is to the left of the minimum point on ATC)."
+          ]
+        }
+      ],
+      "total_points": 10.0
+    },
+    "source_pages": {
+      "prompt": [
+        36,
+        38
+      ],
+      "scoring_guidelines": [
+        54
+      ]
+    },
+    "provenance": {
+      "content_source": "2015 source PDF Section II",
+      "rubric_source": "2015 scoring guideline page 54",
+      "image_source": "source PDF rendered page crops",
+      "rubric_text_source": "AP Micro 2015.pdf scoring guideline page(s) 54"
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2015_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "year": 2015,
+    "source": "AP Microeconomics 2015 Official Practice Exam",
+    "text": "The market for apartments in the town of Westville is currently in equilibrium, and consumers are renting 700 apartments at a price of $1,000 per apartment.\n(a) Assuming that the supply of apartments is perfectly inelastic, draw a correctly labeled graph for the apartment market and label the equilibrium price and quantity using the values above.\n(b) Now assume the government imposes a price ceiling of $800 for an apartment. On your graph, show the price ceiling, quantity demanded Qd, and quantity supplied Qs.\n(c) Shade completely the area representing consumer surplus after the imposition of the price ceiling.\n(d) Calculate the dollar value of producer surplus after the price ceiling. Show your work.\n(e) Explain why the price ceiling does not result in a deadweight loss.",
+    "primary_unit": "U2",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "2.8",
+        "name": "The Effects of Government Intervention in Markets"
+      }
+    ],
+    "skills": [
+      "4.A",
+      "2.C"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "FRQ prompt and scoring guideline directly test listed topic"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U2"
+      ]
+    },
+    "has_graph": false,
+    "requires_graph": false,
+    "image_paths": [],
+    "background_data": null,
+    "requires_graph_response": true,
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2015/2015_FRQ02_rubric_graph.png"
+    ],
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 1,
+          "description": "One point is earned for drawing a graph with correctly labeled axes, supply, demand, and identifying equilibrium price and quantity as $1000 and 700.",
+          "criteria": [
+            "One point is earned for drawing a graph with correctly labeled axes, supply, demand, and identifying equilibrium price and quantity as $1000 and 700."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 3,
+          "description": "One point is earned for showing the price ceiling of $800 below $1000. One point is earned for showing - • - Q _d derived from the demand curve at $800. - One point is earned for showing Q _s derived from the supply curve at $800.",
+          "criteria": [
+            "One point is earned for showing the price ceiling of $800 below $1000.",
+            "One point is earned for showing",
+            "•",
+            "Q _d derived from the demand curve at $800.",
+            "One point is earned for showing Q _s derived from the supply curve at $800."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "One point is earned for showing the area representing the consumer surplus shaded completely. Note: If the supply curve from part (a) is not perfectly inelastic, no points can be awarded in parts (d) and (e).",
+          "criteria": [
+            "One point is earned for showing the area representing the consumer surplus shaded completely. Note: If the supply curve from part (a) is not perfectly inelastic, no points can be awarded in parts (d) and (e)."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": "One point is earned for calculating the producer surplus: - • eight hundred dollars times 700 = five hundred sixty thousand dollars.",
+          "criteria": [
+            "One point is earned for calculating the producer surplus:",
+            "• eight hundred dollars times 700 = five hundred sixty thousand dollars."
+          ]
+        },
+        {
+          "point_id": "e",
+          "value": 1,
+          "description": "One point is earned for the explanation that the quantity supplied does not change after the imposition of the price ceiling.",
+          "criteria": [
+            "One point is earned for the explanation that the quantity supplied does not change after the imposition of the price ceiling."
+          ]
+        }
+      ],
+      "total_points": 7.0
+    },
+    "source_pages": {
+      "prompt": [
+        42
+      ],
+      "scoring_guidelines": [
+        55
+      ]
+    },
+    "provenance": {
+      "content_source": "2015 source PDF Section II",
+      "rubric_source": "2015 scoring guideline page 55",
+      "image_source": "source PDF rendered page crops",
+      "rubric_text_source": "AP Micro 2015.pdf scoring guideline page(s) 55"
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2015_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "year": 2015,
+    "source": "AP Microeconomics 2015 Official Practice Exam",
+    "text": "Coldbox Corporation hires its workers in a perfectly competitive labor market and produces and sells frozen peas in a perfectly competitive product market. The market price for frozen peas is $4 per bag. The table below shows short-run production; labor is the only variable input and fixed cost is $500.\n(a) When Coldbox hires the second worker, does it experience diminishing returns? Explain.\n(b) Calculate average fixed cost if Coldbox hires 3 workers. Show your work.\n(c) If the wage is $200 per worker, identify the profit-maximizing number of workers. Explain using marginal analysis.\n(d) If the price of frozen peas decreases by $2 per bag, would the number of workers hired be more than, less than, or equal to the number in part (c)? Explain.\n(e) Suppose Coldbox hires workers from a monopsonistic labor market. Would the wage be higher, lower, or equal to the equilibrium wage in a perfectly competitive labor market?",
+    "primary_unit": "U5",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "5.3",
+        "name": "Profit-Maximizing Behavior in Perfectly Competitive Factor Markets"
+      }
+    ],
+    "skills": [
+      "2.C",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "FRQ prompt and scoring guideline directly test listed topic"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U5"
+      ]
+    },
+    "has_graph": false,
+    "requires_graph": false,
+    "image_paths": [
+      "/images/ap/microeconomics/2015/2015_FRQ03_worker_table.png"
+    ],
+    "background_data": {
+      "table": {
+        "headers": [
+          "Number of Workers",
+          "Bags of Frozen Peas"
+        ],
+        "rows": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "60"
+          ],
+          [
+            "2",
+            "140"
+          ],
+          [
+            "3",
+            "250"
+          ],
+          [
+            "4",
+            "320"
+          ],
+          [
+            "5",
+            "380"
+          ],
+          [
+            "6",
+            "400"
+          ]
+        ]
+      }
+    },
+    "requires_graph_response": false,
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2015/2015_FRQ03_rubric_graph.png"
+    ],
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 1,
+          "description": "One point is earned for stating that diminishing returns does not set in with the second worker because the marginal product, M P, is increasing (M P of the first worker is 60 and the M P of the second worker is 80).",
+          "criteria": [
+            "One point is earned for stating that diminishing returns does not set in with the second worker because the marginal product, M P, is increasing (M P of the first worker is 60 and the M P of the second worker is 80)."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": "One point is earned for calculating the A F C = five hundred dollars divided by two hundred fifty = two dollars.",
+          "criteria": [
+            "One point is earned for calculating the A F C = five hundred dollars divided by two hundred fifty = two dollars."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "One point is earned for stating that the profit-maximizing number of workers is 5. The MR P of the fifth worker is two hundred forty dollars > the wage rate two hundred dollars. For the sixth worker, the MR P is eighty dollars < the wage rate of two hundred dollars.",
+          "criteria": [
+            "One point is earned for stating that the profit-maximizing number of workers is 5. The MR P of the fifth worker is two hundred forty dollars > the wage rate two hundred dollars. For the sixth worker, the MR P is eighty dollars < the wage rate of two hundred dollars."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": "One point is earned for stating that the number of workers hired will be < the number of workers in part (c), because the decrease in the price of peas decreases the marginal revenue product of labor ( MR P ).",
+          "criteria": [
+            "One point is earned for stating that the number of workers hired will be < the number of workers in part (c), because the decrease in the price of peas decreases the marginal revenue product of labor ( MR P )."
+          ]
+        },
+        {
+          "point_id": "e",
+          "value": 1,
+          "description": "One point is earned for stating that the wage will be lower.",
+          "criteria": [
+            "One point is earned for stating that the wage will be lower."
+          ]
+        }
+      ],
+      "total_points": 5.0
+    },
+    "source_pages": {
+      "prompt": [
+        46
+      ],
+      "scoring_guidelines": [
+        56
+      ]
+    },
+    "provenance": {
+      "content_source": "2015 source PDF Section II",
+      "rubric_source": "2015 scoring guideline page rendered and cropped for 2015_FRQ3",
+      "image_source": "source PDF rendered page crops",
+      "rubric_text_source": "AP Micro 2015.pdf scoring guideline page(s) 56"
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2016_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "year": 2016,
+    "source": "AP Microeconomics 2016 Official Practice Exam",
+    "text": "Kohelis Mining is a monopoly and is currently operating at a loss.\n(a) Draw a correctly labeled graph and show the profit-maximizing quantity QM, profit-maximizing price PM, average total cost curve ATC, and allocatively efficient quantity QA.\n(b) Suppose the government grants Kohelis Mining a lump-sum subsidy such that the firm earns zero economic profit. Shade the area of the subsidy and state whether the profit-maximizing quantity changes. Explain.\n(c) Suppose instead the government provides a per-unit subsidy such that the firm earns zero economic profit. State whether the profit-maximizing quantity changes and whether the price paid by consumers changes. Explain.\n(d) State whether the lump-sum or per-unit subsidy increases total consumer surplus, or whether the change is indeterminate. Explain.",
+    "primary_unit": "U4",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "4.2",
+        "name": "Monopoly"
+      }
+    ],
+    "skills": [
+      "4.A",
+      "2.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "FRQ prompt and scoring guideline directly test listed topic"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U4"
+      ]
+    },
+    "has_graph": false,
+    "requires_graph": false,
+    "requires_graph_response": true,
+    "image_paths": [],
+    "background_data": null,
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2016/2016_FRQ01_rubric_graph.png"
+    ],
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 5,
+          "description": "One point is earned for drawing a correctly labeled graph with a downward sloping demand curve and downward-sloping marginal revenue curve below the demand curve - One point is earned for identifying the profit-maximizing quantity labeled Q M, at MR = MC. - One point is earned for identifying price, P M on the demand curve above Q M. - One point is earned for drawing the average total cost curve,ATC, completely above the demand curve. - One point is earned for identifying the allocatively efficient quantity, labeled Q A.",
+          "criteria": [
+            "One point is earned for drawing a correctly labeled graph with a downward sloping demand curve and downward-sloping marginal revenue curve below the demand curve",
+            "One point is earned for identifying the profit-maximizing quantity labeled Q M, at MR = MC.",
+            "One point is earned for identifying price, P M on the demand curve above Q M.",
+            "One point is earned for drawing the average total cost curve,ATC, completely above the demand curve.",
+            "One point is earned for identifying the allocatively efficient quantity, labeled Q A."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 2,
+          "description": "One point is earned for shading the area of the lump-sum subsidy. - One point is earned for stating that the profit-maximizing quantity remains the same because marginal cost does not shift, or marginal revenue does not shift, or the subsidy - nly affects fixed cost, total cost, or total revenue.",
+          "criteria": [
+            "One point is earned for shading the area of the lump-sum subsidy.",
+            "One point is earned for stating that the profit-maximizing quantity remains the same because marginal cost does not shift, or marginal revenue does not shift, or the subsidy",
+            "nly affects fixed cost, total cost, or total revenue."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 2,
+          "description": "One point is earned for stating that the per-unit subsidy increases the profit-maximizing quantity because marginal cost decreases or marginal revenue increases. - One point is earned for stating that the price paid by consumers decreases.",
+          "criteria": [
+            "One point is earned for stating that the per-unit subsidy increases the profit-maximizing quantity because marginal cost decreases or marginal revenue increases.",
+            "One point is earned for stating that the price paid by consumers decreases."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": "One point is earned for stating that a per-unit subsidy increases consumer surplus because the per-unit subsidy results in a lower price to consumers.",
+          "criteria": [
+            "One point is earned for stating that a per-unit subsidy increases consumer surplus because the per-unit subsidy results in a lower price to consumers."
+          ]
+        }
+      ],
+      "total_points": 10.0
+    },
+    "source_pages": {
+      "prompt": [
+        36
+      ],
+      "scoring_guidelines": [
+        54
+      ]
+    },
+    "provenance": {
+      "content_source": "2016 source PDF Section II",
+      "rubric_source": "2016 scoring guideline page 54",
+      "image_source": "source PDF rendered page crops",
+      "rubric_text_source": "AP Micro 2016.pdf scoring guideline page(s) 54"
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2016_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "year": 2016,
+    "source": "AP Microeconomics 2016 Official Practice Exam",
+    "text": "Kerri goes shopping for volleyballs. The table below shows the dollar value of the total benefit she receives from buying various quantities of volleyballs.\n(a) Calculate the marginal benefit from buying the third volleyball.\n(b) If each volleyball is $9, calculate total consumer surplus for two volleyballs and identify the number of volleyballs that maximizes consumer surplus. Explain using marginal analysis.\n(c) Draw a correctly labeled market graph for volleyballs with P1 and Q1, then show the effect of a decrease in the price of soccer balls, a substitute for volleyballs.\n(d) Calculate the income elasticity of demand when a 10 percent increase in income causes demand for volleyballs to fall by 5 percent, and state whether volleyballs are normal or inferior. Explain.",
+    "primary_unit": "U1",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "1.6",
+        "name": "Marginal Analysis and Consumer Choice"
+      }
+    ],
+    "skills": [
+      "2.C",
+      "4.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "FRQ prompt and scoring guideline directly test listed topic"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U1"
+      ]
+    },
+    "has_graph": false,
+    "requires_graph": false,
+    "requires_graph_response": true,
+    "image_paths": [
+      "/images/ap/microeconomics/2016/2016_FRQ02_total_benefit_table.png"
+    ],
+    "background_data": {
+      "table": {
+        "headers": [
+          "Volleyballs",
+          "Total Benefit"
+        ],
+        "rows": [
+          [
+            "0",
+            "$0"
+          ],
+          [
+            "1",
+            "$50"
+          ],
+          [
+            "2",
+            "$95"
+          ],
+          [
+            "3",
+            "$125"
+          ],
+          [
+            "4",
+            "$146"
+          ],
+          [
+            "5",
+            "$156"
+          ],
+          [
+            "6",
+            "$160"
+          ],
+          [
+            "7",
+            "$161"
+          ]
+        ]
+      }
+    },
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2016/2016_FRQ02_rubric_graph.png"
+    ],
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 1,
+          "description": "One point is earned for stating that the marginal benefit of the third volleyball is $30.",
+          "criteria": [
+            "One point is earned for stating that the marginal benefit of the third volleyball is $30."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 2,
+          "description": "One point is earned for the correct calculation of the total consumer surplus and showing the work. CS =, open parent hes is, 95 dollars minus 18 dollars, ), = 77 dollars. - r CS =, (, 50 dollars minus 9 dollars plus 45 dollars minus 9 dollars, ), = 77 dollars. - One point is earned for stating that Kerri should buy 5 volleyballs to maximize her total consumer surplus, and for explaining that the marginal benefit from purchasing the fifth ball is $10 which is > the price, $9. The marginal benefit from the sixth ball is less than the price.",
+          "criteria": [
+            "One point is earned for the correct calculation of the total consumer surplus and showing the work. CS =, open parent hes is, 95 dollars minus 18 dollars, ), = 77 dollars.",
+            "r CS =, (, 50 dollars minus 9 dollars plus 45 dollars minus 9 dollars, ), = 77 dollars.",
+            "One point is earned for stating that Kerri should buy 5 volleyballs to maximize her total consumer surplus, and for explaining that the marginal benefit from purchasing the fifth ball is $10 which is > the price, $9. The marginal benefit from the sixth ball is less than the price."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 2,
+          "description": "One point is earned for drawing a correctly labeled graph for the volleyball market. - One point is earned for showing a leftward shift of the demand curve for volleyballs, resulting in a lower equilibrium price and quantity.",
+          "criteria": [
+            "One point is earned for drawing a correctly labeled graph for the volleyball market.",
+            "One point is earned for showing a leftward shift of the demand curve for volleyballs, resulting in a lower equilibrium price and quantity."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 2,
+          "description": "One point is earned for correctly calculating the income elasticity of demand for volleyballs: I E =, (, negative 5 over 10, ), which = negative one half. , and - One point is earned for stating that volleyballs are inferior goods because the income elasticity is negative indicating that an increase in income decreases the demand for volleyballs.",
+          "criteria": [
+            "One point is earned for correctly calculating the income elasticity of demand for volleyballs: I E =, (, negative 5 over 10, ), which = negative one half. , and",
+            "One point is earned for stating that volleyballs are inferior goods because the income elasticity is negative indicating that an increase in income decreases the demand for volleyballs."
+          ]
+        }
+      ],
+      "total_points": 7.0
+    },
+    "source_pages": {
+      "prompt": [
+        42
+      ],
+      "scoring_guidelines": [
+        55
+      ]
+    },
+    "provenance": {
+      "content_source": "2016 source PDF Section II",
+      "rubric_source": "2016 scoring guideline page 55",
+      "image_source": "source PDF rendered page crops",
+      "rubric_text_source": "AP Micro 2016.pdf scoring guideline page(s) 55"
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2016_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "year": 2016,
+    "source": "AP Microeconomics 2016 Official Practice Exam",
+    "text": "CleanIt is a perfectly competitive, profit-maximizing trash collection firm that hires workers in a perfectly competitive labor market.\n(a) Draw side-by-side graphs for the labor market and CleanIt showing the market wage WM, market quantity LM, the firm's MFC curve, MRP curve, wage WF, and workers hired LF.\n(b) If CleanIt is the only firm in the industry to adopt productivity-improving technology, state whether the wage paid and number of workers hired change in the short run. Explain.\n(c) CleanIt rents trucks for $10,000 each. The marginal product of the last truck is 100,000 units. If CleanIt is minimizing cost and the marginal product of the last worker is 500 units, calculate the wage. Show your work.",
+    "primary_unit": "U5",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "5.3",
+        "name": "Profit-Maximizing Behavior in Perfectly Competitive Factor Markets"
+      }
+    ],
+    "skills": [
+      "4.A",
+      "2.C"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "FRQ prompt and scoring guideline directly test listed topic"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U5"
+      ]
+    },
+    "has_graph": false,
+    "requires_graph": false,
+    "requires_graph_response": true,
+    "image_paths": [],
+    "background_data": null,
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2016/2016_FRQ03_rubric_graph.png"
+    ],
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 3,
+          "description": "One point is earned for drawing a correctly labeled graph of the labor market with an upward-sloping labor supply curve and a downward-sloping labor demand curve, and for showing the equilibrium wage, W M, and the equilibrium quantity, L M. - One point is earned for drawing a correctly labeled graph for CleanIt showing a downward marginal revenue product curve,MR P, and a horizontal labor supply curve, labeled MFC, (, MR C, ).. - One point is earned for showing the equilibrium wage, labeled W F equal to W M and MFC, (, MR C, ). , and the equilibrium quantity of workers hired, labeled L F.",
+          "criteria": [
+            "One point is earned for drawing a correctly labeled graph of the labor market with an upward-sloping labor supply curve and a downward-sloping labor demand curve, and for showing the equilibrium wage, W M, and the equilibrium quantity, L M.",
+            "One point is earned for drawing a correctly labeled graph for CleanIt showing a downward marginal revenue product curve,MR P, and a horizontal labor supply curve, labeled MFC, (, MR C, )..",
+            "One point is earned for showing the equilibrium wage, labeled W F equal to W M and MFC, (, MR C, ). , and the equilibrium quantity of workers hired, labeled L F."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 2,
+          "description": "One point is earned for stating that wage paid by CleanIt will be equal to W F because the firm is a wage taker; or because there is no change in WM; or because MFC, (, MR C, ). stays constant. - One point is earned for stating that the number of workers hired by CleanIt will increase because the marginal product of labor increases or there is an increase in the MR P of workers, or theMR P curve shifts to the right.",
+          "criteria": [
+            "One point is earned for stating that wage paid by CleanIt will be equal to W F because the firm is a wage taker; or because there is no change in WM; or because MFC, (, MR C, ). stays constant.",
+            "One point is earned for stating that the number of workers hired by CleanIt will increase because the marginal product of labor increases or there is an increase in the MR P of workers, or theMR P curve shifts to the right."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "One point is earned for correctly calculating the wage and for showing the work. (, 100,000 div ided by 10, 000 dollars, clos e parenthesis, =, open par enthesi s, 500 divided by W, ). W = 50 dollars. OR (, 10,000 dollars divided by 100,000, ), =, (, W divided by 500, ). W = 50 dollars. OR (, 500 divided by 100,000, ), =, (, W divided by 10,000 dollars, ). W = 50 dollars.",
+          "criteria": [
+            "One point is earned for correctly calculating the wage and for showing the work. (, 100,000 div ided by 10, 000 dollars, clos e parenthesis, =, open par enthesi s, 500 divided by W, ). W = 50 dollars. OR (, 10,000 dollars divided by 100,000, ), =, (, W divided by 500, ). W = 50 dollars. OR (, 500 divided by 100,000, ), =, (, W divided by 10,000 dollars, ). W = 50 dollars."
+          ]
+        }
+      ],
+      "total_points": 6.0
+    },
+    "source_pages": {
+      "prompt": [
+        46
+      ],
+      "scoring_guidelines": [
+        56
+      ]
+    },
+    "provenance": {
+      "content_source": "2016 source PDF Section II",
+      "rubric_source": "2016 scoring guideline page 56",
+      "image_source": "source PDF rendered page crops",
+      "rubric_text_source": "AP Micro 2016.pdf scoring guideline page(s) 56"
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2017_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "year": 2017,
+    "source": "AP Microeconomics 2017 Official Practice Exam",
+    "text": "Joyce owns a gas station and monopolizes gas sales along a remote stretch of road. In February, Joyce stayed open even though she earned negative economic profits.\n\n(a) Draw a correctly labeled graph for Joyce's gas station during February and show each of the following.\n    (i) The profit-maximizing output and price, labeled QJ and PJ\n    (ii) The average total cost curve, labeled ATC\n    (iii) Deadweight loss, completely shaded\n\n(b) What must have been true for Joyce to continue operating during the month of February even though she earned negative economic profit?\n\n(c) Assume that fixed costs for Joyce's gas station decrease. Would Joyce's profit-maximizing quantity increase, decrease, or stay the same in February? Explain.\n\n(d) During the month of July, demand increases so that Joyce now earns a positive economic profit. However, she realizes her profits would have been higher if she had reduced the price of gasoline.\n    (i) At the quantity sold in July, was marginal revenue greater than, equal to, or less than marginal cost?\n    (ii) Would the price decrease cause quantity demanded to increase, decrease, or stay the same?\n    (iii) Would the price decrease cause the total revenue to increase, decrease, or stay the same? Explain.",
+    "has_graph": false,
+    "requires_graph": false,
+    "requires_graph_response": true,
+    "image_paths": [],
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2017/2017_FRQ01_rubric_graph.png"
+    ],
+    "background_data": null,
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 5,
+          "description": " One point is earned for drawing a correctly labeled monopoly graph with a downward-sloping demand (D) curve and a marginal revenue (, MR, ). curve below the demand curve.  One point is earned for showing the firm’s average total cost (, ATC, ). curve above the demand curve at Q J with the MC curve rising and passing through the minimum - f the ATC curve.  One point is earned for identifying the firm’s profit-maximizing quantity, Q J, at MC = MR.  One point is earned for identifying the firm’s profit-maximizing price, P J, on the demand curve, above q j.  One point is earned for showing the area representing the deadweight loss shaded completely. Note: All quantities and prices should be labeled on the axes and connected to the intersection points by dashed lines.",
+          "criteria": [
+            "",
+            "One point is earned for drawing a correctly labeled monopoly graph with a downward-sloping demand (D) curve and a marginal revenue (, MR, ). curve below the demand curve. ",
+            "One point is earned for showing the firm’s average total cost (, ATC, ). curve above the demand curve at Q J with the MC curve rising and passing through the minimum",
+            "f the ATC curve. ",
+            "One point is earned for identifying the firm’s profit-maximizing quantity, Q J, at MC = MR. ",
+            "One point is earned for identifying the firm’s profit-maximizing price, P J, on the demand curve, above q j. ",
+            "One point is earned for showing the area representing the deadweight loss shaded completely. Note: All quantities and prices should be labeled on the axes and connected to the intersection points by dashed lines."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": " One point is earned for stating that total revenue is > total variable cost or that AVC is < P J. (continued)",
+          "criteria": [
+            "",
+            "One point is earned for stating that total revenue is > total variable cost or that AVC is < P J. (continued)"
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": " One point is earned for stating that the profit-maximizing quantity will stay the same because a change in fixed costs does not affect marginal cost.",
+          "criteria": [
+            "",
+            "One point is earned for stating that the profit-maximizing quantity will stay the same because a change in fixed costs does not affect marginal cost."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 3,
+          "description": " One point is earned for stating that MR is >MC.  One point is earned for stating that the lower price would cause quantity demanded to increase.  One point is earned for stating that the lower price would cause total revenue to increase, and for explaining that the decrease in price occurs in the elastic region of the demand curve.",
+          "criteria": [
+            "",
+            "One point is earned for stating that MR is >MC. ",
+            "One point is earned for stating that the lower price would cause quantity demanded to increase. ",
+            "One point is earned for stating that the lower price would cause total revenue to increase, and for explaining that the decrease in price occurs in the elastic region of the demand curve."
+          ]
+        }
+      ],
+      "total_points": 10.0
+    },
+    "source_pages": {
+      "prompt": [
+        35
+      ],
+      "scoring_guidelines": [
+        53,
+        54
+      ]
+    },
+    "provenance": {
+      "content_source": "2017 source PDF Section II",
+      "rubric_source": "2017 scoring guidelines",
+      "image_source": "source PDF rendered page crops",
+      "rubric_text_source": "AP_Microeconomics_2017_Full_Exam.pdf scoring guideline page(s) [53, 54]",
+      "prompt_text_source": "cleaned official prompt text from AP Micro 2017.pdf page(s) [34]"
+    },
+    "primary_unit": "U4",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "4.2",
+        "name": "Monopoly"
+      }
+    ],
+    "skills": [
+      "4.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "medium",
+      "evidence": [
+        "classified from tested concept in 2017 source PDF prompt"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U4"
+      ]
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2017_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "year": 2017,
+    "source": "AP Microeconomics 2017 Official Practice Exam",
+    "text": "Brody's firm produces trumpets in a perfectly competitive market. The table below shows Brody's total variable cost. He has a fixed cost of $240, and the price per trumpet is $60.\n\n(a) Calculate the average total cost of producing 6 trumpets. Show your work.\n\n(b) Calculate the marginal cost of producing the 11th trumpet.\n\n(c) What is Brody's profit-maximizing quantity? Use marginal analysis to explain your answer.\n\n(d) At the profit-maximizing quantity you determined in part (c), calculate Brody's profit or loss. Show your work.\n\n(e) Brody also produces saxophones at a loss in a perfectly competitive market. Draw a correctly labeled graph for Brody's firm showing the following at a market price of $200.\n    (i) Brody's profit-maximizing quantity of saxophones\n    (ii) Brody's loss, completely shaded",
+    "has_graph": true,
+    "requires_graph": true,
+    "requires_graph_response": true,
+    "image_paths": [
+      "/images/ap/microeconomics/2017/2017_FRQ02_trumpet_table.png"
+    ],
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2017/2017_FRQ02_rubric_graph.png"
+    ],
+    "background_data": null,
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 1,
+          "description": " One point is earned for correctly calculating the ATC of producing 6 trumpets as $60 and for showing the work. ATC = T C, divided by Q, which =, ( F C plu s V C, ), divided by Q, which =, ( two hundred forty dollars plus one hundred twenty dollars, ), divided by six, which = three hundred sixty dollars, divided by six, which = sixty dollars. OR ATC = A F C plus AVC, which =, (, two hundred forty dollars divided by six, ), plus, (, one hundred twenty dollars divided by six, ), which = forty dollars plus twenty dollars, which = sixty dollars.",
+          "criteria": [
+            "",
+            "One point is earned for correctly calculating the ATC of producing 6 trumpets as $60 and for showing the work. ATC = T C, divided by Q, which =, ( F C plu s V C, ), divided by Q, which =, ( two hundred forty dollars plus one hundred twenty dollars, ), divided by six, which = three hundred sixty dollars, divided by six, which = sixty dollars. OR ATC = A F C plus AVC, which =, (, two hundred forty dollars divided by six, ), plus, (, one hundred twenty dollars divided by six, ), which = forty dollars plus twenty dollars, which = sixty dollars."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": " One point is earned for correctly calculating the marginal cost of the eleventh trumpet as $100.",
+          "criteria": [
+            "",
+            "One point is earned for correctly calculating the marginal cost of the eleventh trumpet as $100."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": " One point is earned for correctly stating that Brody’s profit-maximizing quantity is 9 trumpets, and for explaining how Brody uses marginal analysis. Brody determines quantity by equating MR toMC OR by choosing the greatest quantity with MR is > MC: At the 9th trumpet: MR is > MC, (, sixty dollars is > fifty five dollars, ) and at the 10th trumpet: MR is < MC, (, sixty dollars is < seventy dollars, ) OR At the 9th trumpet:MR is > MC, (, sixty dollars is > fifty five dollars, ) and this is the last trumpet with MR is > MC Note: Using P instead of MR is also acceptable because P = MR for perfectly competitive firms.",
+          "criteria": [
+            "",
+            "One point is earned for correctly stating that Brody’s profit-maximizing quantity is 9 trumpets, and for explaining how Brody uses marginal analysis. Brody determines quantity by equating MR toMC OR by choosing the greatest quantity with MR is > MC: At the 9th trumpet: MR is > MC, (, sixty dollars is > fifty five dollars, ) and at the 10th trumpet: MR is < MC, (, sixty dollars is < seventy dollars, ) OR At the 9th trumpet:MR is > MC, (, sixty dollars is > fifty five dollars, ) and this is the last trumpet with MR is > MC Note: Using P instead of MR is also acceptable because P = MR for perfectly competitive firms."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": " One point is earned for correctly calculating Brody’s profit as $80 and for showing the work. Profit = Total Revenue minus Total Cost, which =, (, sixty dollars times nine, ), minus, (, two hundred twenty dollars plus two hundred forty dollars, ), which = five hundred forty dollars minus four hundred sixty dollars, which = eighty dollars. OR Profit =, (, P minus ATC, ), times, Q, which =, ( sixty dollars minus fifty one dollars and eleven cents, ), times nine, which = eighty dollars. (continued)",
+          "criteria": [
+            "",
+            "One point is earned for correctly calculating Brody’s profit as $80 and for showing the work. Profit = Total Revenue minus Total Cost, which =, (, sixty dollars times nine, ), minus, (, two hundred twenty dollars plus two hundred forty dollars, ), which = five hundred forty dollars minus four hundred sixty dollars, which = eighty dollars. OR Profit =, (, P minus ATC, ), times, Q, which =, ( sixty dollars minus fifty one dollars and eleven cents, ), times nine, which = eighty dollars. (continued)"
+          ]
+        },
+        {
+          "point_id": "e",
+          "value": 3,
+          "description": " One point is earned for drawing a correctly labeled graph for a perfectly competitive firm with a horizontal demand curve at P = 200 dollars.  One point is earned for showing the profit-maximizing quantity, Q with an asterisk, on the horizontal axis at MR = MC, connected with a dashed line.  One point is earned for showing the ATC curve above the demand (d) curve at Q with an asterisk and with the MC curve cutting the ATC curve at its minimum and for completely shading the area representing the loss. Note: All quantities and prices should be labeled on the axes and connected to the intersection points by dashed lines.",
+          "criteria": [
+            "",
+            "One point is earned for drawing a correctly labeled graph for a perfectly competitive firm with a horizontal demand curve at P = 200 dollars. ",
+            "One point is earned for showing the profit-maximizing quantity, Q with an asterisk, on the horizontal axis at MR = MC, connected with a dashed line. ",
+            "One point is earned for showing the ATC curve above the demand (d) curve at Q with an asterisk and with the MC curve cutting the ATC curve at its minimum and for completely shading the area representing the loss. Note: All quantities and prices should be labeled on the axes and connected to the intersection points by dashed lines."
+          ]
+        }
+      ],
+      "total_points": 7.0
+    },
+    "source_pages": {
+      "prompt": [
+        41
+      ],
+      "scoring_guidelines": [
+        55,
+        56
+      ]
+    },
+    "provenance": {
+      "content_source": "2017 source PDF Section II",
+      "rubric_source": "2017 scoring guidelines",
+      "image_source": "source PDF rendered page crops",
+      "rubric_text_source": "AP_Microeconomics_2017_Full_Exam.pdf scoring guideline page(s) [55, 56]",
+      "prompt_text_source": "cleaned official prompt text from AP Micro 2017.pdf page(s) [40]"
+    },
+    "primary_unit": "U3",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "3.5",
+        "name": "Profit Maximization"
+      }
+    ],
+    "skills": [
+      "2.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "medium",
+      "evidence": [
+        "classified from tested concept in 2017 source PDF prompt"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U3"
+      ]
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2017_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "year": 2017,
+    "source": "AP Microeconomics 2017 Official Practice Exam",
+    "text": "The market supply and demand for a product are shown in the diagram below.\n\n(a) Is the price elasticity of supply less than one, equal to one, or greater than one? Explain.\n\n(b) Calculate consumer surplus at the equilibrium price. Show your work.\n\n(c) Now suppose the government imposes a per-unit tax of $1 on producers.\n    (i) What happens to total revenue received by producers after they pay the tax to the government? Explain.\n    (ii) Will producer surplus increase, decrease, or stay the same?\n    (iii) Will total surplus increase, decrease, or stay the same? Explain.",
+    "has_graph": true,
+    "requires_graph": true,
+    "requires_graph_response": true,
+    "image_paths": [
+      "/images/ap/microeconomics/2017/2017_FRQ03_supply_demand_graph.png"
+    ],
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2017/2017_FRQ03_rubric_graph.png"
+    ],
+    "background_data": null,
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 1,
+          "description": " One point is earned for stating that the price elasticity of supply is > one and for explaining that the supply curve is horizontal OR the price elasticity of supply is infinite OR the supply is perfectly elastic.",
+          "criteria": [
+            "",
+            "One point is earned for stating that the price elasticity of supply is > one and for explaining that the supply curve is horizontal OR the price elasticity of supply is infinite OR the supply is perfectly elastic."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": " One point is earned for correctly calculating the consumer surplus and showing the work as - ne half, times 80, times 4 dollars, = 160 dollars.",
+          "criteria": [
+            "",
+            "One point is earned for correctly calculating the consumer surplus and showing the work as",
+            "ne half, times 80, times 4 dollars, = 160 dollars."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 3,
+          "description": " One point is earned for stating that the total revenue will decrease and explaining that the quantity will decrease OR the percentage change of quantity demanded is > the percentage change in price OR demand is elastic in this price range.  One point is earned for stating that producer surplus will stay the same OR remain zero.  One point is earned for stating that total surplus will decrease and for explaining that the quantity decreases OR there is now deadweight loss after the tax is imposed OR the consumer surplus decreases by more than what is transferred to the government and producer surplus stays the same.",
+          "criteria": [
+            "",
+            "One point is earned for stating that the total revenue will decrease and explaining that the quantity will decrease OR the percentage change of quantity demanded is > the percentage change in price OR demand is elastic in this price range. ",
+            "One point is earned for stating that producer surplus will stay the same OR remain zero. ",
+            "One point is earned for stating that total surplus will decrease and for explaining that the quantity decreases OR there is now deadweight loss after the tax is imposed OR the consumer surplus decreases by more than what is transferred to the government and producer surplus stays the same."
+          ]
+        }
+      ],
+      "total_points": 5.0
+    },
+    "source_pages": {
+      "prompt": [
+        45
+      ],
+      "scoring_guidelines": [
+        57
+      ]
+    },
+    "provenance": {
+      "content_source": "2017 source PDF Section II",
+      "rubric_source": "2017 scoring guideline page rendered and cropped for 2017_FRQ3",
+      "image_source": "source PDF rendered page crops",
+      "rubric_text_source": "AP_Microeconomics_2017_Full_Exam.pdf scoring guideline page(s) 57",
+      "prompt_text_source": "cleaned official prompt text from AP Micro 2017.pdf page(s) [44]"
+    },
+    "primary_unit": "U2",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "2.6",
+        "name": "Market Equilibrium and Consumer and Producer Surplus"
+      }
+    ],
+    "skills": [
+      "3.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "medium",
+      "evidence": [
+        "classified from tested concept in 2017 source PDF prompt"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U2"
+      ]
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2018_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "year": 2018,
+    "source": "AP Microeconomics 2018 Official Practice Exam",
+    "text": "Assume that pencils are manufactured in a perfectly competitive market that is in long-run equilibrium.\n\n(a) Draw correctly labeled side-by-side graphs for the pencil market and for a representative firm and show each of the following.\n    (i) The market price and quantity, labeled PM and QM, respectively\n    (ii) The firm's profit-maximizing price and quantity, labeled PF and QF, respectively\n\n(b) What is the relationship between PM and PF? Explain.\n\n(c) Rent on the factory building is an important fixed cost in the production of pencils, and the industry experiences significant increases in rent.\n    (i) What will happen to the firm's profit-maximizing quantity in the short run? Explain.\n    (ii) On your graph in part (a), show the impact of the rent increase and completely shade the area representing the firm's profit or loss in the short run.\n\n(d) As a result of the rent increase, what will happen to each of the following in the long run?\n    (i) The number of firms in the market. Explain.\n    (ii) The market equilibrium quantity relative to QM and the market equilibrium price relative to PM. Explain.",
+    "has_graph": false,
+    "requires_graph": false,
+    "requires_graph_response": true,
+    "image_paths": [],
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2018/2018_FRQ01_rubric_graph.png"
+    ],
+    "background_data": null,
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 4,
+          "description": "One point is earned for drawing a correctly labeled graph for the market with a downward sloping demand curve and an upward sloping supply curve, and for labeling PM and QM. One point is earned for drawing a horizontal marginal revenue curve for the firm, at PF. One point is earned for showing the profit-maximizing quantity at MC=MR, labeled QF. One point is earned for showing the ATC curve tangent to the MR curve at QF where ATC is at its minimum.",
+          "criteria": [
+            "One point is earned for drawing a correctly labeled graph for the market with a downward sloping demand curve and an upward sloping supply curve, and for labeling PM and QM.",
+            "One point is earned for drawing a horizontal marginal revenue curve for the firm, at PF.",
+            "One point is earned for showing the profit-maximizing quantity at MC=MR, labeled QF.",
+            "One point is earned for showing the ATC curve tangent to the MR curve at QF where ATC is at its minimum."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": "One point is earned for stating that PM=PF, and for explaining that the firm is a price taker OR the firm accepts the market equilibrium price as given.",
+          "criteria": [
+            "One point is earned for stating that PM=PF, and for explaining that the firm is a price taker OR the firm accepts the market equilibrium price as given."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 2,
+          "description": "One point is earned for stating that the firm’s output will not change in the short run, and for explaining that a change in a fixed cost will not affect the firm’s marginal cost OR that rent is not a variable cost AND will not affect the firm’s marginal cost. One point is earned for showing an upward shift of the ATC curve and the area representing the firm’s loss, completely shaded.",
+          "criteria": [
+            "One point is earned for stating that the firm’s output will not change in the short run, and for explaining that a change in a fixed cost will not affect the firm’s marginal cost OR that rent is not a variable cost AND will not affect the firm’s marginal cost.",
+            "One point is earned for showing an upward shift of the ATC curve and the area representing the firm’s loss, completely shaded."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 2,
+          "description": "One point is earned for stating the number of firms in the market will decrease, and for explaining that some firms will exit the market as a result of the losses incurred in the short run. One point is earned for stating that the new market equilibrium quantity will decrease relative to QM and the new market equilibrium price will increase relative to PM and for explaining that the market supply will shift to the left. MARKET FlRM s Quantity Q MC Quantity",
+          "criteria": [
+            "One point is earned for stating the number of firms in the market will decrease, and for explaining that some firms will exit the market as a result of the losses incurred in the short run.",
+            "One point is earned for stating that the new market equilibrium quantity will decrease relative to QM and the new market equilibrium price will increase relative to PM and for explaining that the market supply will shift to the left. MARKET FlRM s Quantity Q MC Quantity"
+          ]
+        }
+      ],
+      "total_points": 9.0
+    },
+    "source_pages": {
+      "prompt": [
+        29
+      ],
+      "scoring_guidelines": [
+        47
+      ]
+    },
+    "provenance": {
+      "content_source": "2018 source PDF Section II",
+      "rubric_source": "2018 scoring guidelines",
+      "image_source": "source PDF rendered page crops via pypdfium2",
+      "rubric_text_source": "AP Micro 2018.pdf scoring guideline page(s) 47",
+      "prompt_text_source": "cleaned official prompt text from AP Micro 2018.pdf page(s) [29]"
+    },
+    "primary_unit": "U3",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "3.5",
+        "name": "Profit Maximization"
+      }
+    ],
+    "skills": [
+      "2.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "medium",
+      "evidence": [
+        "classified from tested concept in 2018 source PDF prompt"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U3"
+      ]
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2018_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "year": 2018,
+    "source": "AP Microeconomics 2018 Official Practice Exam",
+    "text": "The graph below depicts the market conditions Zhao, Inc., faces in the zizzles market, where D = demand, MSB = marginal social benefit, MR = marginal revenue, MSC = marginal social cost, and MPC = marginal private cost.\n\n(a) What two potential sources of market failure exist in the market for Zhao's zizzles? Explain each potential source of market failure using the information in the graph.\n\n(b) Using numerical values from the graph, identify Zhao's profit-maximizing quantity and price.\n\n(c) Assume a $15 per-unit tax is imposed on the zizzles market. Using numerical values from the graph, identify Zhao's profit-maximizing quantity and price.\n\n(d) Zhao opposes the $15 per-unit tax analyzed above in part (c) and instead proposes a policy of no government intervention. If economic advisers are only interested in maximizing social welfare, would they support the policy of no government intervention? Explain.",
+    "has_graph": true,
+    "requires_graph": true,
+    "requires_graph_response": true,
+    "image_paths": [
+      "/images/ap/microeconomics/2018/2018_FRQ02_zizzles_graph.png"
+    ],
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2018/2018_FRQ02_rubric_graph.png"
+    ],
+    "background_data": null,
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 2,
+          "description": "One point is earned for stating one source of market failure is related to negative externality and for explaining that MSC>MPC. One point is earned for stating one source of market failure is related to monopoly and for explaining that P>MR.",
+          "criteria": [
+            "One point is earned for stating one source of market failure is related to negative externality and for explaining that MSC>MPC.",
+            "One point is earned for stating one source of market failure is related to monopoly and for explaining that P>MR."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": "One point is earned for correctly identifying the profit-maximizing quantity is 150 units and the profit-maximizing price is $35.",
+          "criteria": [
+            "One point is earned for correctly identifying the profit-maximizing quantity is 150 units and the profit-maximizing price is $35."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "One point is earned for correctly identifying that with the tax the profit-maximizing quantity is 100 units and the profit-maximizing price is $40.",
+          "criteria": [
+            "One point is earned for correctly identifying that with the tax the profit-maximizing quantity is 100 units and the profit-maximizing price is $40."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": "One point is earned for stating that economic advisors would support no government intervention and for explaining using one of the following: - without intervention the firm would produce the socially efficient (optimal) quantity of 150 units. - without intervention the firm would produce a quantity of 150 units where the DWL is zero. - without intervention the firm would produce a quantity of 150 units where MSB=MSC. - with the tax intervention the firm would produce a quantity of 100 units where MSB>MSC.",
+          "criteria": [
+            "One point is earned for stating that economic advisors would support no government intervention and for explaining using one of the following:",
+            "without intervention the firm would produce the socially efficient (optimal) quantity of 150 units.",
+            "without intervention the firm would produce a quantity of 150 units where the DWL is zero.",
+            "without intervention the firm would produce a quantity of 150 units where MSB=MSC.",
+            "with the tax intervention the firm would produce a quantity of 100 units where MSB>MSC."
+          ]
+        }
+      ],
+      "total_points": 5.0
+    },
+    "source_pages": {
+      "prompt": [
+        35
+      ],
+      "scoring_guidelines": [
+        48
+      ]
+    },
+    "provenance": {
+      "content_source": "2018 source PDF Section II",
+      "rubric_source": "2018 scoring guideline page rendered and cropped for 2018_FRQ2",
+      "image_source": "source PDF rendered page crops via pypdfium2",
+      "rubric_text_source": "AP Micro 2018.pdf scoring guideline page(s) 48",
+      "prompt_text_source": "cleaned official prompt text from AP Micro 2018.pdf page(s) [35]"
+    },
+    "primary_unit": "U6",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "6.1",
+        "name": "Socially Efficient and Inefficient Market Outcomes"
+      }
+    ],
+    "skills": [
+      "2.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "medium",
+      "evidence": [
+        "classified from tested concept in 2018 source PDF prompt"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U6"
+      ]
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2018_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "year": 2018,
+    "source": "AP Microeconomics 2018 Official Practice Exam",
+    "text": "Assume milk is produced and sold in a perfectly competitive market. To help milk producers, the government imposes an effective price floor on milk. Assume milk producers continue to sell milk only to households after the imposition of the price floor.\n\n(a) Draw a correctly labeled graph for the milk market and show the price floor, labeled PF, and the quantity of milk purchased by households, labeled QF.\n\n(b) Is the market for milk allocatively efficient after the price floor is imposed? Explain.\n\n(c) On your graph from part (a), shade the area that represents total producer surplus after the price floor is imposed.\n\n(d) Assume the absolute value of price elasticity of demand for milk is 2 throughout the price range. Would total consumer spending on milk increase, decrease, not change, or be indeterminate after the imposition of the price floor? Explain.\n\n(e) Assume the price floor in the milk market caused the equilibrium price of eggs, a related consumption good, to increase.\n    (i) Draw a correctly labeled graph of the egg market, and show the effect of the price floor in the milk market on the egg market.\n    (ii) What economic term describes the relationship between milk and egg?",
+    "has_graph": false,
+    "requires_graph": false,
+    "requires_graph_response": true,
+    "image_paths": [],
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2018/2018_FRQ03_rubric_graph.png"
+    ],
+    "background_data": null,
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 2,
+          "description": "One point is earned for drawing a correctly labeled graph of the market for milk with an upward sloping supply curve and a downward sloping demand curve. One point is earned for drawing an effective price floor, labeled PF, above the equilibrium price and for identifying the new quantity of milk, labeled QF, from the demand curve.",
+          "criteria": [
+            "One point is earned for drawing a correctly labeled graph of the market for milk with an upward sloping supply curve and a downward sloping demand curve.",
+            "One point is earned for drawing an effective price floor, labeled PF, above the equilibrium price and for identifying the new quantity of milk, labeled QF, from the demand curve."
+          ]
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": "One point is earned for stating the market is not allocatively efficient after the price floor is imposed and for explaining that marginal benefit is > marginal cost (MB > MC).",
+          "criteria": [
+            "One point is earned for stating the market is not allocatively efficient after the price floor is imposed and for explaining that marginal benefit is > marginal cost (MB > MC)."
+          ]
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "One point is earned for completely shading the area representing the producer surplus.",
+          "criteria": [
+            "One point is earned for completely shading the area representing the producer surplus."
+          ]
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": "One point is earned for stating that total consumer spending on milk will decrease, and for explaining the demand is elastic or that the percentage increase in the price of milk will be less than the percentage decrease in the quantity demanded. d) CJ ·;:: 0.. s PF t---.-------,..-- pl D Quantity",
+          "criteria": [
+            "One point is earned for stating that total consumer spending on milk will decrease, and for explaining the demand is elastic or that the percentage increase in the price of milk will be less than the percentage decrease in the quantity demanded. d) CJ ·;:: 0.. s PF t---.-------,..-- pl D Quantity"
+          ]
+        },
+        {
+          "point_id": "e",
+          "value": 2,
+          "description": "One point is earned for drawing a correctly labeled graph for the egg market with an upward sloping supply curve and a downward sloping demand curve, and for showing a rightward shift in the demand curve for eggs. One point is earned for stating that the two goods are substitutes. (continued)",
+          "criteria": [
+            "One point is earned for drawing a correctly labeled graph for the egg market with an upward sloping supply curve and a downward sloping demand curve, and for showing a rightward shift in the demand curve for eggs.",
+            "One point is earned for stating that the two goods are substitutes. (continued)"
+          ]
+        }
+      ],
+      "total_points": 7.0
+    },
+    "source_pages": {
+      "prompt": [
+        39
+      ],
+      "scoring_guidelines": [
+        49,
+        50
+      ]
+    },
+    "provenance": {
+      "content_source": "2018 source PDF Section II",
+      "rubric_source": "2018 scoring guidelines",
+      "image_source": "source PDF rendered page crops via pypdfium2",
+      "rubric_text_source": "AP Micro 2018.pdf scoring guideline page(s) [49, 50]",
+      "prompt_text_source": "cleaned official prompt text from AP Micro 2018.pdf page(s) [39]"
+    },
+    "primary_unit": "U2",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "2.6",
+        "name": "Market Equilibrium and Consumer and Producer Surplus"
+      }
+    ],
+    "skills": [
+      "3.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "medium",
+      "evidence": [
+        "classified from tested concept in 2018 source PDF prompt"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U2"
+      ]
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2019_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "year": 2019,
+    "source": "AP Microeconomics 2019 Official Practice Exam",
+    "text": "L&P Power is a natural monopoly supplying electricity for a city. The firm produces the profit-maximizing quantity of electricity and earns a positive economic profit.\n\n(a) Describe a condition that distinguishes a natural monopoly from a typical monopoly.\n\n(b) Draw a correctly labeled graph for the natural monopoly market in which L&P Power operates and show each of the following.\n    (i) The profit-maximizing quantity, labeled QM\n    (ii) The profit-maximizing price, labeled PM\n    (iii) The area representing economic profit, shaded completely\n\n(c) Suppose the government wants to regulate L&P to produce the maximum quantity that would allow it to earn zero economic profit. On your graph in part (b), show the maximum quantity it will produce to earn zero economic profit, labeled QR, and price, labeled PR.\n\n(d) Suppose instead the government wants to regulate L&P to produce the allocatively efficient quantity.\n    (i) Does L&P earn positive economic profit if it produces the allocatively efficient quantity? Explain.\n    (ii) Under what condition will L&P agree to produce the allocatively efficient quantity?",
+    "has_graph": false,
+    "requires_graph": false,
+    "requires_graph_response": true,
+    "image_paths": [],
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2019/2019_FRQ01_rubric_graph.png"
+    ],
+    "background_data": null,
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 1,
+          "description": "One point is earned for describing a condition that distinguishes a natural monopoly from a typical monopoly, such as decreasing average total cost over the entire range of market demand, economies of scale over the entire range of demand, or that one firm can supply the market at a lower cost than multiple firms.",
+          "criteria": []
+        },
+        {
+          "point_id": "b",
+          "value": 4,
+          "description": "One point is earned for a correctly labeled natural monopoly graph with downward-sloping demand and marginal revenue below demand. One point is earned for showing QM where MR = MC. One point is earned for showing PM on the demand curve above QM. One point is earned for completely shading the economic profit area.",
+          "criteria": []
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "One point is earned for showing the maximum quantity that would allow zero economic profit, labeled QR, and the corresponding price PR, where demand equals average total cost.",
+          "criteria": []
+        },
+        {
+          "point_id": "d",
+          "value": 3,
+          "description": "One point is earned for stating that L&P does not earn positive economic profit at the allocatively efficient quantity and explaining that price equals marginal cost at that quantity. One point is earned for stating that L&P will agree to produce the allocatively efficient quantity only if it receives a subsidy. One point is earned for explaining that the subsidy must cover the loss or make price equal average total cost at the allocatively efficient quantity.",
+          "criteria": []
+        }
+      ],
+      "total_points": 9.0
+    },
+    "source_pages": {
+      "prompt": [
+        20
+      ],
+      "scoring_guidelines": [
+        91,
+        92
+      ]
+    },
+    "provenance": {
+      "content_source": "2019 source PDF Section II",
+      "rubric_source": "2019 scoring guidelines",
+      "image_source": "source PDF rendered page crops via pypdfium2",
+      "rubric_text_source": "manually cleaned from official AP Micro 2019 scoring guidelines",
+      "prompt_text_source": "OCR-cleaned from AP Micro 2019 prompt pages 20, 26, 30",
+      "removed_prompt_page_images": [
+        "images/2019_FRQ01_prompt.png"
+      ],
+      "prompt_rendering_note": "Prompt pages are retained on disk for provenance but not rendered as question images; cleaned OCR text is the prompt source."
+    },
+    "primary_unit": "U4",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "4.2",
+        "name": "Monopoly"
+      }
+    ],
+    "skills": [
+      "4.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "medium",
+      "evidence": [
+        "classified from tested concept in 2019 source PDF and College Board rationale pages"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U4"
+      ]
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2019_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "year": 2019,
+    "source": "AP Microeconomics 2019 Official Practice Exam",
+    "text": "A movie theater company obtains the following estimated elasticities of demand.\n\n- The absolute value of the short-run price elasticity of demand for movie tickets is 0.85.\n- The absolute value of the long-run price elasticity of demand for movie tickets is 3.2.\n- The cross-price elasticity of demand for good X, another product sold by the theater, with respect to the price of movie tickets is -0.26.\n- The income elasticity of demand for movie tickets is 0.75.\n\nAnswer each of the following by referring to the given elasticities.\n\n(a) If the theater raises movie ticket prices by 10 percent, by what percentage and in what direction will the quantity demanded for movie tickets change in the short run?\n\n(b) Explain why the short-run price elasticity of demand for movie tickets differs from the long-run price elasticity of demand for movie tickets.\n\n(c) What will happen to total revenue from movie ticket sales in the long run if movie ticket prices increase? Explain using the relative percentage changes in price and quantity.\n\n(d) Are movie tickets a normal good or an inferior good? Explain.\n\n(e) Given the increase in the price of movie tickets in part (a), what would be the impact on the demand for good X? Use the appropriate graph for good X to illustrate your answer.",
+    "has_graph": false,
+    "requires_graph": false,
+    "requires_graph_response": true,
+    "image_paths": [],
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2019/2019_FRQ02_rubric_graph.png"
+    ],
+    "background_data": null,
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 1,
+          "description": "One point is earned for stating that quantity demanded will decrease by 8.5 percent.",
+          "criteria": []
+        },
+        {
+          "point_id": "b",
+          "value": 1,
+          "description": "One point is earned for explaining that demand is more elastic in the long run because consumers have more time to adjust or find substitutes.",
+          "criteria": []
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "One point is earned for stating that total revenue will decrease in the long run and explaining that demand is elastic because the long-run price elasticity is greater than 1.",
+          "criteria": []
+        },
+        {
+          "point_id": "d",
+          "value": 1,
+          "description": "One point is earned for stating that movie tickets are a normal good and explaining that income elasticity of demand is positive.",
+          "criteria": []
+        },
+        {
+          "point_id": "e",
+          "value": 1,
+          "description": "One point is earned for drawing a correctly labeled graph for good X showing a leftward shift of demand because the cross-price elasticity is negative, so movie tickets and good X are complements.",
+          "criteria": []
+        }
+      ],
+      "total_points": 5.0
+    },
+    "source_pages": {
+      "prompt": [
+        26
+      ],
+      "scoring_guidelines": [
+        93
+      ]
+    },
+    "provenance": {
+      "content_source": "2019 source PDF Section II",
+      "rubric_source": "2019 scoring guidelines",
+      "image_source": "source PDF rendered page crops via pypdfium2",
+      "rubric_text_source": "manually cleaned from official AP Micro 2019 scoring guidelines",
+      "prompt_text_source": "OCR-cleaned from AP Micro 2019 prompt pages 20, 26, 30",
+      "removed_prompt_page_images": [
+        "images/2019_FRQ02_prompt.png"
+      ],
+      "prompt_rendering_note": "Prompt pages are retained on disk for provenance but not rendered as question images; cleaned OCR text is the prompt source."
+    },
+    "primary_unit": "U2",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "2.6",
+        "name": "Market Equilibrium and Consumer and Producer Surplus"
+      }
+    ],
+    "skills": [
+      "3.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "medium",
+      "evidence": [
+        "classified from tested concept in 2019 source PDF and College Board rationale pages"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U2"
+      ]
+    },
+    "pure_unit": true
+  },
+  {
+    "question_id": "2019_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "year": 2019,
+    "source": "AP Microeconomics 2019 Official Practice Exam",
+    "text": "In the small country of Agrolsland, the equilibrium price of wheat is $10 per bushel. Wheat is produced in a competitive industry. The world market price of wheat is $20 per bushel.\n\n(a) Assume that Agrolsland currently does not engage in international trade in wheat. Draw a correctly labeled graph to illustrate the market for wheat in Agrolsland and indicate the following.\n    (i) The equilibrium price, labeled $10\n    (ii) The equilibrium quantity, labeled Q*\n    (iii) The domestic producer surplus, shaded completely and labeled PS\n\n(b) On the graph from part (a), show each of the following for Agrolsland if it engages in free trade in the world wheat market.\n    (i) The world price of a bushel of wheat, labeled $20\n    (ii) The quantity of wheat supplied by domestic producers, labeled QD\n    (iii) The domestic consumer surplus after trade, shaded completely and labeled CS\n\n(c) Given your answers in part (b), how does each of the following change if Agrolsland engages in international trade in the wheat market?\n    (i) The domestic consumer surplus\n    (ii) The domestic producer surplus",
+    "has_graph": false,
+    "requires_graph": false,
+    "requires_graph_response": true,
+    "image_paths": [],
+    "rubric_image_paths": [
+      "/images/ap/microeconomics/2019/2019_FRQ03_rubric_graph.png"
+    ],
+    "background_data": null,
+    "rubric": {
+      "points": [
+        {
+          "point_id": "a",
+          "value": 2,
+          "description": "One point is earned for drawing a correctly labeled graph of the domestic wheat market and showing the equilibrium price at $10 and equilibrium quantity Q*. One point is earned for completely shading and labeling the domestic producer surplus at the $10 equilibrium price.",
+          "criteria": []
+        },
+        {
+          "point_id": "b",
+          "value": 2,
+          "description": "One point is earned for showing the world price at $20 and the domestic quantity supplied at that price, labeled QD. One point is earned for completely shading and labeling the domestic consumer surplus after trade.",
+          "criteria": []
+        },
+        {
+          "point_id": "c",
+          "value": 1,
+          "description": "One point is earned for stating that domestic consumer surplus decreases and domestic producer surplus increases when Agrolsland engages in international trade at the higher world price.",
+          "criteria": []
+        }
+      ],
+      "total_points": 5.0
+    },
+    "source_pages": {
+      "prompt": [
+        30
+      ],
+      "scoring_guidelines": [
+        94
+      ]
+    },
+    "provenance": {
+      "content_source": "2019 source PDF Section II",
+      "rubric_source": "2019 scoring guidelines",
+      "image_source": "source PDF rendered page crops via pypdfium2",
+      "rubric_text_source": "manually cleaned from official AP Micro 2019 scoring guidelines",
+      "prompt_text_source": "OCR-cleaned from AP Micro 2019 prompt pages 20, 26, 30",
+      "removed_prompt_page_images": [
+        "images/2019_FRQ03_prompt.png"
+      ],
+      "prompt_rendering_note": "Prompt pages are retained on disk for provenance but not rendered as question images; cleaned OCR text is the prompt source."
+    },
+    "primary_unit": "U2",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "2.6",
+        "name": "Market Equilibrium and Consumer and Producer Surplus"
+      }
+    ],
+    "skills": [
+      "3.A"
+    ],
+    "difficulty": "medium",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "medium",
+      "evidence": [
+        "classified from tested concept in 2019 source PDF and College Board rationale pages"
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Microeconomics/docs/source_pack.json#units.U2"
+      ]
+    },
+    "pure_unit": true
   }
 ]

@@ -9,7 +9,7 @@ import {
   getDoneQuestions, setDoneQuestions,
   getWrongQuestions, setWrongQuestions,
   getQuestionHistory, setQuestionHistory,
-  getQuizHistory, setQuizHistory
+  getQuizHistory, setQuizHistory,
 } from '../utils/storage'
 
 function QuizPlayer() {
@@ -23,7 +23,6 @@ function QuizPlayer() {
   const [similarityIndex, setSimilarityIndex] = useState(null)
   const [subject, setSubject] = useState('macro')
 
-  // 初始化：从 sessionStorage 加载 quiz 数据
   useLayoutEffect(() => {
     const parsed = getCurrentQuiz()
     const parsedInfo = getQuizInfo()
@@ -38,7 +37,6 @@ function QuizPlayer() {
     setPhase('playing')
   }, [navigate])
 
-  // 提交后加载相似度索引（仅用于非 Mock Exam）
   useEffect(() => {
     if (phase === 'submitted' && !(quizInfo && quizInfo.isMock)) {
       async function load() {
@@ -61,14 +59,12 @@ function QuizPlayer() {
   const allAnswered = quiz.length > 0 && quiz.every(q => answers[q.question_id] !== undefined)
   const answeredCount = quiz.filter(q => answers[q.question_id] !== undefined).length
 
-  // 核心提交逻辑（支持手动提交和超时自动提交）
   const submitQuiz = useCallback((isTimeout = false) => {
-    // 超时自动提交：给未答题填充空字符串
     const finalAnswers = { ...answers }
     if (isTimeout) {
       quiz.forEach(q => {
         if (finalAnswers[q.question_id] === undefined) {
-          finalAnswers[q.question_id] = ''  // 超时未答标记为空
+          finalAnswers[q.question_id] = ''
         }
       })
     }
@@ -76,7 +72,11 @@ function QuizPlayer() {
     let correct = 0
     const wrongIds = []
     const unitStats = {}
-    const difficultyStats = { Easy: { total: 0, correct: 0 }, Medium: { total: 0, correct: 0 }, Hard: { total: 0, correct: 0 } }
+    const difficultyStats = {
+      Easy: { total: 0, correct: 0 },
+      Medium: { total: 0, correct: 0 },
+      Hard: { total: 0, correct: 0 },
+    }
     UNITS.forEach(u => { unitStats[u.id] = { total: 0, correct: 0 } })
 
     quiz.forEach(q => {
@@ -111,21 +111,16 @@ function QuizPlayer() {
     })
 
     setScore(correct)
-
-    // 保存MCQ答案（供成绩页面使用）
     setMCQAnswers(finalAnswers)
 
-    // 记录已做题
     const doneIds = new Set(getDoneQuestions(subject))
     quiz.forEach(q => doneIds.add(q.question_id))
     setDoneQuestions(subject, [...doneIds])
 
-    // 记录错题
     const wrongSet = new Set(getWrongQuestions(subject))
     wrongIds.forEach(id => wrongSet.add(id))
     setWrongQuestions(subject, [...wrongSet])
 
-    // 记录历史
     const history = getQuizHistory(subject)
     history.push({
       date: new Date().toISOString(),
@@ -137,7 +132,6 @@ function QuizPlayer() {
     })
     setQuizHistory(subject, history.slice(-20))
 
-    // Mock Exam → frqTransition；非 Mock → submitted
     if (quizInfo && quizInfo.isMock) {
       setPhase('frqTransition')
     } else {
@@ -145,12 +139,10 @@ function QuizPlayer() {
     }
   }, [quiz, answers, quizInfo, subject])
 
-  // 计时器超时回调
   const handleTimerTimeout = useCallback(() => {
-    submitQuiz(true)  // true = 超时自动提交
+    submitQuiz(true)
   }, [submitQuiz])
 
-  // 进入 FRQ
   const enterFRQ = () => {
     navigate('/frq')
   }
@@ -158,7 +150,6 @@ function QuizPlayer() {
   const currentQuestion = quiz[currentIndex]
   const progress = quiz.length > 0 ? ((currentIndex + 1) / quiz.length) * 100 : 0
 
-  // 计算错题及按单元分组
   const wrongQuestions = useMemo(() => {
     if (phase !== 'submitted' && phase !== 'frqTransition') return []
     return quiz.filter(q => answers[q.question_id] !== q.answer)
@@ -204,7 +195,6 @@ function QuizPlayer() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-6">
-      {/* 顶部栏：进度 + 计时器（Mock Exam 时显示） */}
       <div className="mb-4">
         <div className="flex justify-between items-center text-sm text-text-muted mb-1">
           <span>第 {currentIndex + 1} / {quiz.length} 题</span>
@@ -225,19 +215,17 @@ function QuizPlayer() {
         </div>
       </div>
 
-      {/* 提示信息 */}
       {quizInfo && quizInfo.actualCount < quizInfo.requestedCount && (
         <div className="mb-4 p-3 bg-yellow-50 border border-warning rounded-lg text-warning text-sm">
-          该单元仅剩 {quizInfo.actualCount} 题，已为您生成 {quizInfo.actualCount} 题
+          该单元仅有 {quizInfo.actualCount} 题，已为你生成 {quizInfo.actualCount} 题。
         </div>
       )}
 
-      {/* 提交后成绩（非Mock Exam） */}
       {phase === 'submitted' && score !== null && (
         <>
           <div className={`mb-6 p-4 rounded-lg text-center ${score / quiz.length >= 0.7 ? 'bg-green-50 border border-success' : score / quiz.length >= 0.5 ? 'bg-yellow-50 border border-warning' : 'bg-red-50 border border-error'}`}>
             <div className="text-2xl font-bold">
-              {score} / {quiz.length} 正确 ({Math.round((score / quiz.length) * 100)}%)
+              {score} / {quiz.length} 正确（{Math.round((score / quiz.length) * 100)}%）
             </div>
             <div className="flex gap-3 justify-center mt-3">
               <button onClick={() => navigate('/')} className="bg-brand text-white px-4 py-2 rounded-lg text-sm">
@@ -249,7 +237,6 @@ function QuizPlayer() {
             </div>
           </div>
 
-          {/* 针对性练习 */}
           {wrongByUnit.length > 0 && (
             <div className="mb-6">
               <div className="text-sm font-medium text-text-muted mb-3">针对性练习</div>
@@ -257,7 +244,7 @@ function QuizPlayer() {
                 {wrongByUnit.map(({ unit, wrongQs, similarQs }) => (
                   <div key={unit} className="bg-surface rounded-xl border border-border p-4">
                     <div className="text-sm font-medium text-brand mb-2">
-                      {unit} - 错了 {wrongQs.length} 题，试试这些变式
+                      {unit} - 错了 {wrongQs.length} 题，试试这些变式题。
                     </div>
                     <div className="space-y-1 mb-3">
                       {similarQs.map((sim) => (
@@ -271,7 +258,7 @@ function QuizPlayer() {
                       onClick={() => practiceSimilar(wrongQs, similarQs)}
                       className="bg-accent hover:bg-accent-light text-white px-3 py-1.5 rounded text-xs font-medium transition-colors"
                     >
-                      练习 {unit} 变式（{wrongQs.length + similarQs.length}题）
+                      练习 {unit} 变式（{wrongQs.length + similarQs.length} 题）
                     </button>
                   </div>
                 ))}
@@ -279,11 +266,10 @@ function QuizPlayer() {
             </div>
           )}
 
-          {/* 全部正确时的推荐 */}
           {wrongByUnit.length === 0 && score === quiz.length && quiz.length > 0 && (
             <div className="mb-6 bg-surface rounded-xl border border-border p-4 text-center">
               <div className="text-sm font-medium text-success mb-2">全部正确！</div>
-              <div className="text-xs text-text-muted mb-3">试试这些进阶变式</div>
+              <div className="text-xs text-text-muted mb-3">可以继续做一套新的练习。</div>
               <button
                 onClick={() => navigate('/quiz')}
                 className="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
@@ -295,7 +281,6 @@ function QuizPlayer() {
         </>
       )}
 
-      {/* Mock Exam: MCQ 完成后的过渡确认页面 */}
       {phase === 'frqTransition' && score !== null && (
         <div className="mb-6 space-y-4">
           <div className="p-4 rounded-lg text-center bg-blue-50 border border-blue-200">
@@ -303,13 +288,13 @@ function QuizPlayer() {
               MCQ 部分完成！
             </div>
             <div className="text-blue-700 mb-4">
-              {score} / {quiz.length} 正确 ({Math.round((score / quiz.length) * 100)}%)
+              {score} / {quiz.length} 正确（{Math.round((score / quiz.length) * 100)}%）
             </div>
             <p className="text-sm text-blue-600 mb-4">
-              接下来进入 Free Response Questions (FRQ) 部分
+              接下来进入 Free Response Questions（FRQ）部分。
             </p>
             <p className="text-xs text-blue-500 mb-4">
-              请准备好草稿纸和计算器，FRQ 部分计时开始后不可暂停
+              请准备好草稿纸和计算器。FRQ 部分计时开始后不可暂停。
             </p>
             <button
               onClick={enterFRQ}
@@ -321,7 +306,6 @@ function QuizPlayer() {
         </div>
       )}
 
-      {/* 题目卡片 */}
       {currentQuestion && (phase === 'playing' || phase === 'frqTransition') && (
         <QuestionCard
           question={currentQuestion}
@@ -331,7 +315,6 @@ function QuizPlayer() {
         />
       )}
 
-      {/* 提交按钮（playing阶段） */}
       {phase === 'playing' && (
         <div className="mt-4 flex justify-center no-print">
           <button
@@ -348,7 +331,6 @@ function QuizPlayer() {
         </div>
       )}
 
-      {/* 底部导航 */}
       <div className="flex justify-between mt-6 no-print gap-3">
         <button
           onClick={() => setCurrentIndex(Math.max(0, currentIndex - 1))}
@@ -366,7 +348,6 @@ function QuizPlayer() {
         </button>
       </div>
 
-      {/* 题号导航 */}
       <QuizNavigator
         questions={quiz}
         current={currentIndex}

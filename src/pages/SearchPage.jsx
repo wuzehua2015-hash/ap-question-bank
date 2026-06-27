@@ -12,7 +12,7 @@ const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
-const YEARS = ['2012', '2013', '2014', '2015', '2016', '2017', '2018']
+const YEARS = ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']
 
 function SearchPage() {
   const navigate = useNavigate()
@@ -190,6 +190,7 @@ function SearchPage() {
           const isWrong = wrongIds.has(q.question_id)
           const isDone = doneIds.has(q.question_id)
           const isShowAnswer = showAnswerId === q.question_id
+          const visibleImages = (q.image_paths || []).filter(img => !(q.option_table_data && /option_table/i.test(img)))
           return (
             <div key={q.question_id} className="bg-surface rounded-xl border border-border overflow-hidden">
               <div
@@ -216,9 +217,9 @@ function SearchPage() {
               {isExpanded && (
                 <div className="px-4 pb-4 border-t border-border bg-gray-50">
                   {/* 图片 - 只在展开时展示 */}
-                  {q.image_paths && q.image_paths.length > 0 && (
+                  {visibleImages.length > 0 && (
                     <div className="mb-3 mt-3">
-                      {q.image_paths.map((img, i) => (
+                      {visibleImages.map((img, i) => (
                         <img key={i} src={getImageUrl(img)} alt="" className="max-w-full max-h-60 rounded border border-border" />
                       ))}
                     </div>

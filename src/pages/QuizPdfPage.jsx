@@ -6,16 +6,16 @@ import { useNavigate } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
 
 const UNIT_NAMES = {
-  U1: 'Basic Economic Concepts',
-  U2: 'Economic Indicators & Business Cycle',
-  U3: 'National Income & Price Determination',
-  U4: 'Financial Sector',
-  U5: 'Long-Run Consequences of Policies',
-  U6: 'Open Economy',
-  all: 'All Units',
-  wrong: 'Wrong Questions',
-  custom: 'Custom Selection',
-  similar: 'Similar Variants',
+  U1: 'Unit 1',
+  U2: 'Unit 2',
+  U3: 'Unit 3',
+  U4: 'Unit 4',
+  U5: 'Unit 5',
+  U6: 'Unit 6',
+  all: '全部单元',
+  wrong: '错题',
+  custom: '自定义题组',
+  similar: '相似题组',
 }
 
 function QuizPdfPage() {
@@ -24,7 +24,7 @@ function QuizPdfPage() {
   const subjectName = currentSubjectConfig?.name || 'AP Microeconomics'
   const pdfRef = useRef(null)
   const [quiz, setQuiz] = useState([])
-  const [quizInfo, setQuizInfo] = useState(null)
+  const [quizInfo] = useState(null)
   const [loading, setLoading] = useState(true)
   const [exporting, setExporting] = useState(false)
 
@@ -35,7 +35,6 @@ function QuizPdfPage() {
       return
     }
     setQuiz(parsed)
-    setQuizInfo(null) // quizInfo is not needed for PDF display, but could be fetched if needed
     setLoading(false)
   }, [navigate])
 
@@ -44,15 +43,10 @@ function QuizPdfPage() {
     setExporting(true)
     try {
       const date = new Date().toISOString().split('T')[0]
-      const filename = `LynkEdu-Quiz-${date}.pdf`
-      await exportToPdf(pdfRef.current, filename)
+      await exportToPdf(pdfRef.current, `LynkEdu-Quiz-${date}.pdf`)
     } finally {
       setExporting(false)
     }
-  }
-
-  const handleStartPractice = () => {
-    navigate('/play')
   }
 
   if (loading) {
@@ -68,29 +62,26 @@ function QuizPdfPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-6">
-      {/* 页面按钮 */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-brand">导出 PDF</h1>
         <div className="flex gap-3">
           <button
-            onClick={handleStartPractice}
+            onClick={() => navigate('/play')}
             className="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
           >
-            📝 开始练习
+            开始练习
           </button>
           <button
             onClick={handleExport}
             disabled={exporting}
-            className="flex items-center gap-2 bg-brand hover:bg-brand-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+            className="bg-brand hover:bg-brand-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
           >
-            {exporting ? '生成中...' : '📄 下载 PDF'}
+            {exporting ? '生成中...' : '下载 PDF'}
           </button>
         </div>
       </div>
 
-      {/* PDF 预览区域 */}
       <PdfContainer refProp={pdfRef}>
-        {/* 头部信息 */}
         <div style={{ padding: '30px 20px' }}>
           <div style={{
             borderBottom: '2px solid #1e40af',
@@ -112,11 +103,10 @@ function QuizPdfPage() {
 
           <div style={{ textAlign: 'center', marginBottom: '24px' }}>
             <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1f2937' }}>
-              {unitName} — {totalCount} 题
+              {unitName} - {totalCount} 题
             </div>
           </div>
 
-          {/* 题目列表 */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             {quiz.map((q, idx) => (
               <div key={q.question_id} style={{ pageBreakInside: 'avoid', breakInside: 'avoid', marginBottom: '24px' }}>
@@ -130,17 +120,12 @@ function QuizPdfPage() {
                 }}>
                   #{idx + 1} {q.question_id}
                 </div>
-                <QuestionDisplay
-                  question={q}
-                  variant="pdf"
-                  index={idx + 1}
-                />
+                <QuestionDisplay question={q} variant="pdf" index={idx + 1} />
               </div>
             ))}
           </div>
         </div>
 
-        {/* 分页：答案页 */}
         <div className="pdf-page-break" style={{ padding: '30px 20px' }}>
           <div style={{
             borderBottom: '2px solid #1e40af',

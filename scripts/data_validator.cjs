@@ -12,12 +12,34 @@ function validateAllSubjects() {
   for (const subject of subjects) {
     const qbPath = path.resolve('public/data', subject.questionBank)
     if (!fs.existsSync(qbPath)) {
-      console.log(`SKIP: ${subject.id} - no question bank`)
+      const msg = `${subject.id}: missing question bank: ${subject.questionBank}`
+      if (subject.active) {
+        console.log(`ERROR: ${msg}`)
+        allErrors += 1
+      } else {
+        console.log(`SKIP: ${msg}`)
+      }
       continue
     }
     const { errors, warnings } = validate(qbPath)
     allErrors += errors.length
     allWarnings += warnings.length
+
+    if (subject.active && subject.hasFRQ && subject.frqBank) {
+      const frqPath = path.resolve('public/data', subject.frqBank)
+      if (!fs.existsSync(frqPath)) {
+        console.log(`ERROR: ${subject.id}: missing FRQ bank: ${subject.frqBank}`)
+        allErrors += 1
+      }
+    }
+
+    if (subject.active && subject.similarityIndex) {
+      const similarityPath = path.resolve('public/data', subject.similarityIndex)
+      if (!fs.existsSync(similarityPath)) {
+        console.log(`ERROR: ${subject.id}: missing similarity index: ${subject.similarityIndex}`)
+        allErrors += 1
+      }
+    }
   }
   
   console.log(`\n=== TOTAL ===`)
@@ -34,14 +56,26 @@ function validate(filePath) {
   const warnings = []
   
   const seenIds = new Set()
+  const optionPollutionPatterns = [
+    /Questions?\s+\d+\s*[-–]/i,
+    /Questions?\s+\d+\s+(refer|are|is)\b/i,
+    /GO ON TO THE NEXT PAGE/i,
+    /Unauthorized copying/i,
+    /College Board/i,
+    /PERCENTAGE OF INCOME RECEIVED/i,
+    /Number of Workers Total Output/i,
+    /Quantity of Good Y/i,
+    /Supply\s+I\s+J/i,
+  ]
   
   for (const q of data) {
     const qid = q.question_id || 'UNKNOWN'
+    const isNotScored = q.scoring_status === 'not_scored'
     
     // 必需字段（FRQ不需要answer）
     if (!q.question_id) errors.push('Missing question_id')
-    const isFRQ = q.rubric || q.question_num || q.question_number || q.requires_graph
-    if (!isFRQ && !q.answer && !q.answer_key) errors.push(`${qid}: Missing answer`)
+    const isFRQ = q.question_type === 'FRQ' || !!q.rubric
+    if (!isFRQ && !isNotScored && !q.answer && !q.answer_key) errors.push(`${qid}: Missing answer`)
     if (!q.primary_unit) errors.push(`${qid}: Missing primary_unit`)
     if (!q.text && !q.question_text) errors.push(`${qid}: Missing text`)
     
@@ -67,13 +101,16 @@ function validate(filePath) {
     }
     
     // 选项检查
-    if (q.options) {
+    if (q.options && !isNotScored) {
       for (const [opt, optText] of Object.entries(q.options)) {
         if (!optText || optText.trim() === '') {
           errors.push(`${qid}: Option ${opt} is empty`)
         }
         if (optText && optText.includes('\uFFFD')) {
           errors.push(`${qid}: Option ${opt} contains corrupted characters`)
+        }
+        if (optText && optionPollutionPatterns.some(pattern => pattern.test(optText))) {
+          errors.push(`${qid}: Option ${opt} appears polluted with neighboring question/table text`)
         }
       }
     }
@@ -84,12 +121,20 @@ function validate(filePath) {
     }
     
     // 单元范围
-    if (q.primary_unit && !['U1','U2','U3','U4','U5','U6'].includes(q.primary_unit)) {
+    if (q.primary_unit && !['U1','U2','U3','U4','U5','U6','not_applicable'].includes(q.primary_unit)) {
       errors.push(`${qid}: Invalid unit ${q.primary_unit}`)
+    }
+    if (!isNotScored && q.primary_unit === 'not_applicable') {
+      errors.push(`${qid}: primary_unit=not_applicable is only valid for not_scored items`)
+    }
+    if (isNotScored && q.primary_unit !== 'not_applicable') {
+      errors.push(`${qid}: not_scored item must use primary_unit=not_applicable`)
     }
     
     // pure_unit 一致性
-    if (q.pure_unit) {
+    if (isNotScored) {
+      // Official not-scored items are retained for provenance, but not classified into U1-U6.
+    } else if (q.pure_unit) {
       if (q.secondary_units && q.secondary_units.length > 0) {
         warnings.push(`${qid}: pure_unit=true but has secondary_units`)
       }
@@ -131,7 +176,7 @@ function validate(filePath) {
     }
     
     // FRQ 特定检查
-    if (q.rubric || q.question_num || q.question_number || q.requires_graph) {
+    if (isFRQ) {
       // FRQ字段名一致性
       if (!q.question_number && q.question_num) {
         warnings.push(`${qid}: FRQ uses 'question_num' instead of 'question_number'`)

@@ -1,189 +1,295 @@
 {
   "subject": "AP Microeconomics",
-  "version": "2022 CED",
-  "classification_standard": "A student who has completed ONLY this unit should be able to answer this question.",
+  "version": "source_pack_v1",
   "units": [
     {
       "code": "U1",
       "name": "Basic Economic Concepts",
-      "weighting": "12-15%",
-      "core_concepts": [
-        "scarcity",
-        "opportunity cost",
-        "production possibilities frontier",
-        "PPF",
-        "comparative advantage",
-        "absolute advantage",
-        "marginal analysis",
-        "trade",
-        "specialization"
-      ],
-      "excluded_concepts": [
-        "supply curve",
-        "demand curve",
-        "equilibrium price",
-        "equilibrium quantity",
-        "consumer surplus",
-        "producer surplus"
-      ],
-      "distinguishing_features": [
-        "No market supply/demand analysis"
-      ],
-      "boundary_rules": [
-        "PPF analysis = U1",
-        "Comparative advantage = U1"
+      "exam_weight_percent_range": "12-15",
+      "topics": [
+        {
+          "code": "1.1",
+          "name": "Scarcity",
+          "suggested_skill": "1.A"
+        },
+        {
+          "code": "1.2",
+          "name": "Resource Allocation and Economic Systems",
+          "suggested_skill": "1.D"
+        },
+        {
+          "code": "1.3",
+          "name": "Production Possibilities Curve",
+          "suggested_skill": "4.A"
+        },
+        {
+          "code": "1.4",
+          "name": "Comparative Advantage and Trade",
+          "suggested_skill": "1.C"
+        },
+        {
+          "code": "1.5",
+          "name": "Cost-Benefit Analysis",
+          "suggested_skill": "1.C"
+        },
+        {
+          "code": "1.6",
+          "name": "Marginal Analysis and Consumer Choice",
+          "suggested_skill": "2.C"
+        }
       ]
     },
     {
       "code": "U2",
       "name": "Supply and Demand",
-      "weighting": "20-25%",
-      "core_concepts": [
-        "supply",
-        "demand",
-        "equilibrium",
-        "price elasticity",
-        "income elasticity",
-        "cross-price elasticity",
-        "consumer surplus",
-        "producer surplus",
-        "price ceiling",
-        "price floor",
-        "tax incidence",
-        "deadweight loss"
-      ],
-      "excluded_concepts": [
-        "international trade effects on domestic markets beyond basic supply/demand",
-        "production costs",
-        "firm behavior"
-      ],
-      "distinguishing_features": [
-        "Focuses on market-level supply and demand interactions"
-      ],
-      "boundary_rules": [
-        "Tax incidence in a single market = U2",
-        "Price controls in a single market = U2"
+      "exam_weight_percent_range": "20-25",
+      "topics": [
+        {
+          "code": "2.1",
+          "name": "Demand",
+          "suggested_skill": "4.A"
+        },
+        {
+          "code": "2.2",
+          "name": "Supply",
+          "suggested_skill": "4.A"
+        },
+        {
+          "code": "2.3",
+          "name": "Price Elasticity of Demand",
+          "suggested_skill": "2.C"
+        },
+        {
+          "code": "2.4",
+          "name": "Price Elasticity of Supply",
+          "suggested_skill": "2.C"
+        },
+        {
+          "code": "2.5",
+          "name": "Other Elasticities",
+          "suggested_skill": "2.C"
+        },
+        {
+          "code": "2.6",
+          "name": "Market Equilibrium and Consumer and Producer Surplus",
+          "suggested_skill": "2.A"
+        },
+        {
+          "code": "2.7",
+          "name": "Market Disequilibrium and Changes in Equilibrium",
+          "suggested_skill": "3.A"
+        },
+        {
+          "code": "2.8",
+          "name": "The Effects of Government Intervention in Markets",
+          "suggested_skill": "3.A"
+        },
+        {
+          "code": "2.9",
+          "name": "International Trade and Public Policy",
+          "suggested_skill": "3.A"
+        }
       ]
     },
     {
       "code": "U3",
       "name": "Production, Cost, and the Perfect Competition Model",
-      "weighting": "22-25%",
-      "core_concepts": [
-        "production function",
-        "marginal product",
-        "diminishing marginal returns",
-        "cost curves",
-        "marginal cost",
-        "average total cost",
-        "average variable cost",
-        "average fixed cost",
-        "perfect competition",
-        "profit maximization",
-        "shutdown decision",
-        "break-even point",
-        "long-run equilibrium"
-      ],
-      "excluded_concepts": [
-        "monopoly pricing",
-        "oligopoly behavior",
-        "game theory"
-      ],
-      "distinguishing_features": [
-        "Focuses on firm-level production decisions and perfect competition"
-      ],
-      "boundary_rules": [
-        "Cost curves and profit maximization = U3",
-        "Perfect competition model = U3"
+      "exam_weight_percent_range": "22-25",
+      "topics": [
+        {
+          "code": "3.1",
+          "name": "The Production Function",
+          "suggested_skill": "1.A"
+        },
+        {
+          "code": "3.2",
+          "name": "Short-Run Production Costs",
+          "suggested_skill": "4.A"
+        },
+        {
+          "code": "3.3",
+          "name": "Long-Run Production Costs",
+          "suggested_skill": "1.A"
+        },
+        {
+          "code": "3.4",
+          "name": "Types of Profit",
+          "suggested_skill": "1.A"
+        },
+        {
+          "code": "3.5",
+          "name": "Profit Maximization",
+          "suggested_skill": "2.A"
+        },
+        {
+          "code": "3.6",
+          "name": "Firms' Short-Run Decisions to Produce and Long-Run Decisions to Enter or Exit a Market",
+          "suggested_skill": "2.A"
+        },
+        {
+          "code": "3.7",
+          "name": "Perfect Competition",
+          "suggested_skill": "4.A"
+        }
       ]
     },
     {
       "code": "U4",
       "name": "Imperfect Competition",
-      "weighting": "15-22%",
-      "core_concepts": [
-        "monopoly",
-        "monopolistic competition",
-        "oligopoly",
-        "game theory",
-        "Nash equilibrium",
-        "payoff matrix",
-        "price discrimination",
-        "natural monopoly",
-        "barriers to entry",
-        "collusion",
-        "dominant strategy"
-      ],
-      "excluded_concepts": [
-        "factor markets",
-        "wage determination",
-        "labor markets"
-      ],
-      "distinguishing_features": [
-        "Focuses on firm behavior when market power exists"
-      ],
-      "boundary_rules": [
-        "Monopoly/oligopoly/monopolistic competition = U4",
-        "Game theory and payoff matrices = U4"
+      "exam_weight_percent_range": "15-22",
+      "topics": [
+        {
+          "code": "4.1",
+          "name": "Introduction to Imperfectly Competitive Markets",
+          "suggested_skill": "1.A"
+        },
+        {
+          "code": "4.2",
+          "name": "Monopoly",
+          "suggested_skill": "4.A"
+        },
+        {
+          "code": "4.3",
+          "name": "Price Discrimination",
+          "suggested_skill": "4.A"
+        },
+        {
+          "code": "4.4",
+          "name": "Monopolistic Competition",
+          "suggested_skill": "4.A"
+        },
+        {
+          "code": "4.5",
+          "name": "Oligopoly and Game Theory",
+          "suggested_skill": "2.A"
+        }
       ]
     },
     {
       "code": "U5",
       "name": "Factor Markets",
-      "weighting": "10-13%",
-      "core_concepts": [
-        "derived demand",
-        "marginal revenue product",
-        "marginal product of labor",
-        "wage determination",
-        "monopsony",
-        "labor supply",
-        "labor demand",
-        "minimum wage",
-        "unions",
-        "human capital"
-      ],
-      "excluded_concepts": [
-        "product market pricing",
-        "consumer choice"
-      ],
-      "distinguishing_features": [
-        "Focuses on input markets (labor, capital, land)"
-      ],
-      "boundary_rules": [
-        "Labor market analysis = U5",
-        "Wage determination = U5"
+      "exam_weight_percent_range": "10-13",
+      "topics": [
+        {
+          "code": "5.1",
+          "name": "Introduction to Factor Markets",
+          "suggested_skill": "1.A"
+        },
+        {
+          "code": "5.2",
+          "name": "Changes in Factor Demand and Factor Supply",
+          "suggested_skill": "3.B"
+        },
+        {
+          "code": "5.3",
+          "name": "Profit-Maximizing Behavior in Perfectly Competitive Factor Markets",
+          "suggested_skill": "2.C"
+        },
+        {
+          "code": "5.4",
+          "name": "Monopsonistic Markets",
+          "suggested_skill": "2.A"
+        }
       ]
     },
     {
       "code": "U6",
       "name": "Market Failure and the Role of Government",
-      "weighting": "8-12%",
-      "core_concepts": [
-        "externalities",
-        "negative externalities",
-        "positive externalities",
-        "public goods",
-        "common resources",
-        "free-rider problem",
-        "income distribution",
-        "taxes",
-        "subsidies",
-        "Lorenz curve",
-        "Gini coefficient"
-      ],
-      "excluded_concepts": [
-        "monetary policy",
-        "fiscal policy macro"
-      ],
-      "distinguishing_features": [
-        "Focuses on market failures and government interventions"
-      ],
-      "boundary_rules": [
-        "Externalities = U6",
-        "Public goods = U6",
-        "Income distribution = U6"
+      "exam_weight_percent_range": "8-13",
+      "topics": [
+        {
+          "code": "6.1",
+          "name": "Socially Efficient and Inefficient Market Outcomes",
+          "suggested_skill": "2.A"
+        },
+        {
+          "code": "6.2",
+          "name": "Externalities",
+          "suggested_skill": "4.B"
+        },
+        {
+          "code": "6.3",
+          "name": "Public and Private Goods",
+          "suggested_skill": "1.B"
+        },
+        {
+          "code": "6.4",
+          "name": "The Effects of Government Intervention in Different Market Structures",
+          "suggested_skill": "4.C"
+        },
+        {
+          "code": "6.5",
+          "name": "Inequality",
+          "suggested_skill": "1.A"
+        }
       ]
+    }
+  ],
+  "skills": [
+    {
+      "code": "1.A",
+      "category": "Principles and Models",
+      "description": "Describe economic concepts, principles, or models."
+    },
+    {
+      "code": "1.B",
+      "category": "Principles and Models",
+      "description": "Identify an economic concept, principle, or model illustrated by an example."
+    },
+    {
+      "code": "1.C",
+      "category": "Principles and Models",
+      "description": "Identify an economic concept, principle, or model using quantitative data or calculations."
+    },
+    {
+      "code": "1.D",
+      "category": "Principles and Models",
+      "description": "Describe the similarities, differences, and limitations of economic concepts, principles, or models."
+    },
+    {
+      "code": "2.A",
+      "category": "Interpretation",
+      "description": "Using economic concepts, principles, or models, explain how a specific economic outcome occurs or what action should be taken in order to achieve a specific economic outcome."
+    },
+    {
+      "code": "2.B",
+      "category": "Interpretation",
+      "description": "Using economic concepts, principles, or models, explain how a specific economic outcome occurs when there are multiple contributing variables or what multiple actions should be taken in order to achieve a specific economic outcome."
+    },
+    {
+      "code": "2.C",
+      "category": "Interpretation",
+      "description": "Interpret a specific economic outcome using quantitative data or calculations."
+    },
+    {
+      "code": "3.A",
+      "category": "Manipulation",
+      "description": "Determine the outcome of an economic situation using economic concepts, principles, or models."
+    },
+    {
+      "code": "3.B",
+      "category": "Manipulation",
+      "description": "Determine the effect(s) of one or more changes on other economic markets."
+    },
+    {
+      "code": "3.C",
+      "category": "Manipulation",
+      "description": "Determine the effect(s) of a change in an economic situation using quantitative data or calculations."
+    },
+    {
+      "code": "4.A",
+      "category": "Graphing and Visuals",
+      "description": "Draw an accurately labeled graph or visual to represent an economic model or market."
+    },
+    {
+      "code": "4.B",
+      "category": "Graphing and Visuals",
+      "description": "Demonstrate your understanding of a specific economic situation on an accurately labeled graph or visual."
+    },
+    {
+      "code": "4.C",
+      "category": "Graphing and Visuals",
+      "description": "Demonstrate the effect of a change in an economic situation on an accurately labeled graph or visual."
     }
   ]
 }

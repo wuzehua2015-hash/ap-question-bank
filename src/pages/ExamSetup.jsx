@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
 import { loadMCQBank, loadFRQBank, generateMockExam, getMockExamConfig } from '../utils/questionBank'
-import { startMockExam, startQuiz } from '../utils/quizSession'
+import { startMockExam } from '../utils/quizSession'
 
 function ExamSetup() {
   const navigate = useNavigate()
@@ -19,7 +19,7 @@ function ExamSetup() {
       const [mcqs, frqs] = await Promise.all([loadMCQBank(currentSubject), loadFRQBank(currentSubject)])
       const result = await generateMockExam(mcqs, frqs, currentSubject)
       if (!result || !Array.isArray(result.quiz) || !Array.isArray(result.frq)) {
-        throw new Error('generateMockExam returned invalid result')
+        throw new Error('生成 Mock Exam 失败')
       }
       const mockConfig = await getMockExamConfig(currentSubject)
       setPreview({
@@ -32,7 +32,7 @@ function ExamSetup() {
         },
       })
     } catch (err) {
-      setError('加载失败: ' + (err.message || '请检查网络'))
+      setError('加载失败：' + (err.message || '请检查网络'))
     } finally {
       setLoading(false)
     }
@@ -46,11 +46,7 @@ function ExamSetup() {
 
   const exportPdf = () => {
     if (!preview) return
-    startMockExam({
-      mcq: preview.mcq,
-      frq: preview.frq,
-      config: { type: 'mock' },
-    })
+    startMockExam(preview)
     navigate('/mock-pdf')
   }
 
@@ -77,21 +73,21 @@ function ExamSetup() {
         ) : (
           <div className="space-y-4">
             <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
-              ✅ 已生成 {preview.mcq.length} 道 MCQ + {preview.frq.length} 道 FRQ
+              已生成 {preview.mcq.length} 道 MCQ + {preview.frq.length} 道 FRQ
             </div>
             <div className="flex gap-3">
               <button onClick={startMock}
                 className="flex-1 bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors">
-                📝 开始考试
+                开始考试
               </button>
               <button onClick={exportPdf}
                 className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors">
-                📄 导出 PDF
+                导出 PDF
               </button>
             </div>
             <button onClick={generate} disabled={loading}
               className="w-full border border-border bg-surface hover:bg-gray-50 text-text font-semibold py-2 rounded-lg transition-colors text-sm">
-              {loading ? '重新生成中...' : '↻ 重新生成'}
+              {loading ? '重新生成中...' : '重新生成'}
             </button>
           </div>
         )}

@@ -10,6 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+venv/
+.venv/
 *.local
 
 # Editor directories and files
@@ -22,16 +24,49 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
 # Raw PDFs and test reports
 scripts/raw_pdfs/
 SMOKE_TEST_REPORT.md
 AUDIT_REPORT.json
 AUDIT_REPORT.md
+public/audit_*.html
+
+# Local render/crop scratch outputs
+temp_*/
+temp-page-renders/
+public/images/**/crop_temp/
+public/images/crop_temp/
+
 # Python cache
 __pycache__/
 *.pyc
+
 # Backups
+backup/
 backup_*/
 backups/
 *.tar.gz
 
+# Legacy duplicates retained locally only after migration
+public/data/macro_*.json
+public/data/*_with_embeddings.json
+public/images/2012/
+public/images/2013/
+public/images/2014/
+public/images/2015/
+public/images/2016/
+public/images/2017/
+public/images/2018/
+public/images/2019/
+public/images/2023/
+public/images/frq/
+public/images/micro/
+
+# Local workspace directories (outside tracked scope)
+../../.workspace/
+../../docs/
+../../subjects/
+../../Future-Work/
+../../真题/
+../../教研系统/

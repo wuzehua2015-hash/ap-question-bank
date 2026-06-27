@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -27,6 +27,33 @@ function ImageWithFallback({ path }) {
   )
 }
 
+function BackgroundTable({ tableData }) {
+  if (!tableData || !tableData.headers || !tableData.rows) return null
+  const rows = Array.isArray(tableData.rows) ? tableData.rows : Object.values(tableData.rows)
+  const gridStyle = {
+    display: 'grid',
+    gridTemplateColumns: `repeat(${tableData.headers.length}, 1fr)`,
+    gap: '1px',
+  }
+
+  return (
+    <div className="my-4 border border-border rounded-lg overflow-hidden">
+      <div className="grid" style={gridStyle}>
+        {tableData.headers.map((h, i) => (
+          <div key={i} className="bg-gray-100 p-2 text-sm font-semibold text-text text-center">{h}</div>
+        ))}
+      </div>
+      {rows.map((row, ri) => (
+        <div key={ri} className="grid border-t border-border" style={gridStyle}>
+          {row.map((cell, ci) => (
+            <div key={ci} className="p-2 text-sm text-text text-center">{cell}</div>
+          ))}
+        </div>
+      ))}
+    </div>
+  )
+}
+
 function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -36,31 +63,36 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
 
   const isSubmitted = phase === 'submitted'
 
-  // 图片路径直接使用JSON中定义的路径
+  // Image paths are stored directly in the question JSON.
   const imagePaths = question.image_paths || []
 
-  // 表格选项检测
+  // Table options and background table support.
   const tableData = question.option_table_data
+  const backgroundTable = question.background_data?.table
   const isTableOptions = !!tableData
+  const hasTableImage = imagePaths.some(path => /(?:^|[_/-])(table|payoff_matrix)(?:[_./-]|$)/i.test(path))
+  const displayImagePaths = imagePaths.filter(path => !(isTableOptions && /option_table/i.test(path)))
 
   return (
     <div className="bg-surface rounded-xl p-6 shadow-sm border border-border">
-      {/* 题目标签 */}
+      {/* Question tags */}
       <div className="flex flex-wrap gap-2 mb-3">
         <span className="bg-brand text-white text-xs px-2 py-1 rounded">{question.primary_unit}</span>
       </div>
 
-      {/* 题目文本 */}
+      {/* Question text */}
       <h3 className="text-lg font-medium text-text mb-4 leading-relaxed whitespace-pre-line">
         {question.text || question.question_text}
       </h3>
 
-  {/* 图像 - 支持 BASE_URL 回退机制 */}
-      {imagePaths.map((path, i) => (
+      {/* Images */}
+      <BackgroundTable tableData={hasTableImage ? null : backgroundTable} />
+
+      {displayImagePaths.map((path, i) => (
         <ImageWithFallback key={i} path={path} />
       ))}
 
-      {/* 选项 - 表格渲染 */}
+      {/* Options */}
       {isTableOptions ? (
         <TableOptions
           tableData={tableData}
@@ -70,7 +102,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
           onSelect={onSelect}
         />
       ) : (
-        /* 选项 - 普通渲染 */
+        /* Standard options */
         <div className="space-y-3 mt-4">
           {Object.entries(question.options || {}).map(([key, text]) => {
             const isSelected = selectedAnswer === key
@@ -99,7 +131,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
         </div>
       )}
 
-      {/* 提交后答案 */}
+      {/* Answer after submission */}
       {isSubmitted && (
         <div className="mt-4 p-4 bg-bg rounded-lg border border-border">
           <div className="font-semibold text-brand">
@@ -128,7 +160,7 @@ function TableOptions({ tableData, selectedAnswer, answer, isSubmitted, onSelect
 
   return (
     <div className="mt-4 border border-border rounded-lg overflow-hidden">
-      {/* 表头 */}
+      {/* Table header */}
       <div className="grid" style={gridStyle}>
         <div className="bg-gray-100 p-2 text-sm font-medium text-text-muted"></div>
         {headers.map((h, i) => (
@@ -138,7 +170,7 @@ function TableOptions({ tableData, selectedAnswer, answer, isSubmitted, onSelect
         ))}
       </div>
 
-      {/* 选项行 */}
+      {/* Option rows */}
       {Object.entries(rows).map(([key, values]) => {
         const isSelected = selectedAnswer === key
         const isCorrect = answer === key
@@ -173,3 +205,4 @@ function TableOptions({ tableData, selectedAnswer, answer, isSubmitted, onSelect
 }
 
 export default QuestionCard
+

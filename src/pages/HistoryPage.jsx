@@ -2,15 +2,15 @@ import { useState, useEffect, useMemo } from 'react'
 import { useSubject } from '../contexts/SubjectContext'
 import { loadMCQBank, getSubjectUnits } from '../utils/questionBank'
 import {
-  getQuizHistory, getQuestionHistory, setQuizHistory, setQuestionHistory, clearSubjectData
+  getQuizHistory, getQuestionHistory, clearSubjectData,
 } from '../utils/storage'
 
 function HistoryPage() {
   const { currentSubject } = useSubject()
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(true)
-  const [quizHistory, setQuizHistory] = useState([])
-  const [questionHistory, setQuestionHistory] = useState({})
+  const [quizHistory, setQuizHistoryState] = useState([])
+  const [questionHistory, setQuestionHistoryState] = useState({})
   const [units, setUnits] = useState([])
 
   useEffect(() => {
@@ -18,16 +18,19 @@ function HistoryPage() {
   }, [currentSubject])
 
   useEffect(() => {
-    loadMCQBank(currentSubject).then(data => {
-      setQuestions(data)
-      setLoading(false)
-    }).catch(() => setLoading(false))
+    setLoading(true)
+    loadMCQBank(currentSubject)
+      .then(data => {
+        setQuestions(data)
+        setLoading(false)
+      })
+      .catch(() => setLoading(false))
   }, [currentSubject])
 
   useEffect(() => {
     const refresh = () => {
-      setQuizHistory(getQuizHistory(currentSubject))
-      setQuestionHistory(getQuestionHistory(currentSubject))
+      setQuizHistoryState(getQuizHistory(currentSubject))
+      setQuestionHistoryState(getQuestionHistory(currentSubject))
     }
     refresh()
     window.addEventListener('storage', refresh)
@@ -40,13 +43,12 @@ function HistoryPage() {
     const totalCorrect = quizHistory.reduce((sum, h) => sum + h.correct, 0)
     const overallRate = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0
 
-    // 单元统计 - 优先使用 questionHistory（逐题精确），回退到 quizHistory.unitStats
     const unitStats = {}
     units.forEach(u => { unitStats[u.id] = { total: 0, correct: 0 } })
 
     let hasQuestionHistoryData = false
     Object.entries(questionHistory).forEach(([qid, rec]) => {
-      const q = questions.find(q => q.question_id === qid)
+      const q = questions.find(item => item.question_id === qid)
       if (!q) return
       hasQuestionHistoryData = true
       const unit = q.primary_unit
@@ -56,53 +58,60 @@ function HistoryPage() {
       }
     })
 
-    // 如果没有逐题历史，从 quizHistory 的 unitStats 汇总
     if (!hasQuestionHistoryData) {
       quizHistory.forEach(h => {
-        if (h.unitStats) {
-          Object.entries(h.unitStats).forEach(([unit, s]) => {
-            if (unitStats[unit]) {
-              unitStats[unit].total += s.total
-              unitStats[unit].correct += s.correct
-            }
-          })
-        }
+        if (!h.unitStats) return
+        Object.entries(h.unitStats).forEach(([unit, s]) => {
+          if (unitStats[unit]) {
+            unitStats[unit].total += s.total
+            unitStats[unit].correct += s.correct
+          }
+        })
       })
     }
 
-    // 按难度统计
-    const difficultyStats = { Easy: { total: 0, correct: 0 }, Medium: { total: 0, correct: 0 }, Hard: { total: 0, correct: 0 } }
+    const difficultyStats = {
+      Easy: { total: 0, correct: 0 },
+      Medium: { total: 0, correct: 0 },
+      Hard: { total: 0, correct: 0 },
+    }
     let hasDifficultyData = false
     Object.entries(questionHistory).forEach(([qid, rec]) => {
-      const q = questions.find(q => q.question_id === qid)
+      const q = questions.find(item => item.question_id === qid)
       if (!q || !q.difficulty || !difficultyStats[q.difficulty]) return
       hasDifficultyData = true
       difficultyStats[q.difficulty].total += rec.correct_count + rec.wrong_count
       difficultyStats[q.difficulty].correct += rec.correct_count
     })
 
-    // 如果没有逐题历史，从 quizHistory 的 difficultyStats 汇总
     if (!hasDifficultyData) {
       quizHistory.forEach(h => {
-        if (h.difficultyStats) {
-          Object.entries(h.difficultyStats).forEach(([diff, s]) => {
-            if (difficultyStats[diff]) {
-              difficultyStats[diff].total += s.total
-              difficultyStats[diff].correct += s.correct
-            }
-          })
-        }
+        if (!h.difficultyStats) return
+        Object.entries(h.difficultyStats).forEach(([diff, s]) => {
+          if (difficultyStats[diff]) {
+            difficultyStats[diff].total += s.total
+            difficultyStats[diff].correct += s.correct
+          }
+        })
       })
     }
 
-    return { totalQuizzes, totalQuestions, totalCorrect, overallRate, unitStats, difficultyStats, hasQuestionHistoryData }
-  }, [quizHistory, questionHistory, questions])
+    return {
+      totalQuizzes,
+      totalQuestions,
+      totalCorrect,
+      overallRate,
+      unitStats,
+      difficultyStats,
+      hasQuestionHistoryData,
+    }
+  }, [quizHistory, questionHistory, questions, units])
 
   const clearAll = () => {
-    if (!confirm('确定清空所有历史记录？')) return
+    if (!confirm('确定清空所有学习记录？')) return
     clearSubjectData(currentSubject)
-    setQuizHistory([])
-    setQuestionHistory({})
+    setQuizHistoryState([])
+    setQuestionHistoryState({})
   }
 
   if (loading) {
@@ -130,56 +139,40 @@ function HistoryPage() {
       {quizHistory.length === 0 && (
         <div className="text-center py-12 text-text-muted bg-surface rounded-xl border border-border">
           <p>暂无学习记录</p>
-          <p className="text-sm mt-1">完成 Quiz 或 Mock Exam 后会自动记录</p>
+          <p className="text-sm mt-1">完成 Quiz 或 Mock Exam 后会自动记录。</p>
         </div>
       )}
 
       {quizHistory.length > 0 && (
         <>
-          {/* 总览卡片 */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-            <div className="bg-surface rounded-xl p-4 shadow-sm border border-border text-center">
-              <div className="text-2xl font-bold text-brand">{stats.totalQuizzes}</div>
-              <div className="text-xs text-text-muted">已完成套数</div>
-            </div>
-            <div className="bg-surface rounded-xl p-4 shadow-sm border border-border text-center">
-              <div className="text-2xl font-bold text-brand">{stats.totalQuestions}</div>
-              <div className="text-xs text-text-muted">总答题数</div>
-            </div>
-            <div className="bg-surface rounded-xl p-4 shadow-sm border border-border text-center">
-              <div className="text-2xl font-bold text-brand">{stats.totalCorrect}</div>
-              <div className="text-xs text-text-muted">正确数</div>
-            </div>
-            <div className="bg-surface rounded-xl p-4 shadow-sm border border-border text-center">
-              <div className={`text-2xl font-bold ${stats.overallRate >= 70 ? 'text-success' : stats.overallRate >= 50 ? 'text-warning' : 'text-error'}`}>
-                {stats.overallRate}%
-              </div>
-              <div className="text-xs text-text-muted">总正确率</div>
-            </div>
+            <StatCard label="已完成套数" value={stats.totalQuizzes} />
+            <StatCard label="总答题数" value={stats.totalQuestions} />
+            <StatCard label="正确数" value={stats.totalCorrect} />
+            <StatCard label="总正确率" value={`${stats.overallRate}%`} tone={rateTone(stats.overallRate)} />
           </div>
 
-          {/* 单元正确率 */}
           <div className="bg-surface rounded-xl p-4 shadow-sm border border-border mb-6">
             <h2 className="text-lg font-semibold text-brand mb-4">单元正确率</h2>
             {!stats.hasQuestionHistoryData && (
               <div className="text-xs text-text-muted bg-yellow-50 border border-yellow-200 rounded p-2 mb-3">
-                注意：新功能上线前的旧数据没有逐题记录，单元统计基于最近套题汇总。重新做题后将显示精确统计。
+                旧记录没有逐题数据，当前统计来自最近套题汇总；重新做题后会显示更精确的统计。
               </div>
             )}
             <div className="space-y-3">
               {units.map(u => {
-                const s = stats.unitStats[u.id]
+                const s = stats.unitStats[u.id] || { total: 0, correct: 0 }
                 const rate = s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0
                 return (
                   <div key={u.id}>
                     <div className="flex justify-between text-sm mb-1">
                       <span className="text-text">{u.id} {u.name}</span>
-                      <span className={`font-medium ${rate >= 70 ? 'text-success' : rate >= 50 ? 'text-warning' : 'text-error'}`}>
+                      <span className={`font-medium ${rateTone(rate)}`}>
                         {rate}% ({s.correct}/{s.total})
                       </span>
                     </div>
                     <div className="w-full bg-border rounded-full h-2">
-                      <div className={`h-2 rounded-full transition-all ${rate >= 70 ? 'bg-success' : rate >= 50 ? 'bg-warning' : 'bg-error'}`} style={{ width: `${rate}%` }} />
+                      <div className={`h-2 rounded-full transition-all ${barTone(rate)}`} style={{ width: `${rate}%` }} />
                     </div>
                   </div>
                 )
@@ -187,12 +180,11 @@ function HistoryPage() {
             </div>
           </div>
 
-          {/* 难度分布 */}
           <div className="bg-surface rounded-xl p-4 shadow-sm border border-border mb-6">
             <h2 className="text-lg font-semibold text-brand mb-4">难度正确率</h2>
             {!stats.hasQuestionHistoryData && (
               <div className="text-xs text-text-muted bg-yellow-50 border border-yellow-200 rounded p-2 mb-3">
-                注意：新功能上线前的旧数据没有逐题难度记录。重新做题后将显示精确统计。
+                旧记录没有逐题难度数据；重新做题后会显示更精确的统计。
               </div>
             )}
             <div className="grid grid-cols-3 gap-3">
@@ -200,9 +192,7 @@ function HistoryPage() {
                 const rate = s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0
                 return (
                   <div key={diff} className="text-center p-3 bg-gray-50 rounded-lg">
-                    <div className={`text-xl font-bold ${diff === 'Easy' ? 'text-green-600' : diff === 'Medium' ? 'text-yellow-600' : 'text-red-600'}`}>
-                      {rate}%
-                    </div>
+                    <div className={`text-xl font-bold ${rateTone(rate)}`}>{rate}%</div>
                     <div className="text-xs text-text-muted">{diff}</div>
                     <div className="text-xs text-text-muted">{s.correct}/{s.total}</div>
                   </div>
@@ -211,17 +201,18 @@ function HistoryPage() {
             </div>
           </div>
 
-          {/* 最近套题记录 */}
           <div className="bg-surface rounded-xl p-4 shadow-sm border border-border">
             <h2 className="text-lg font-semibold text-brand mb-4">最近套题记录</h2>
             <div className="space-y-2">
               {quizHistory.slice().reverse().map((h, i) => (
-                <div key={i} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                <div key={`${h.date}-${i}`} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                   <div>
-                    <div className="text-sm text-text">{new Date(h.date).toLocaleDateString('zh-CN')} {new Date(h.date).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })}</div>
+                    <div className="text-sm text-text">
+                      {new Date(h.date).toLocaleDateString('zh-CN')} {new Date(h.date).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })}
+                    </div>
                     <div className="text-xs text-text-muted">{h.count} 题</div>
                   </div>
-                  <div className={`text-lg font-bold ${h.score >= 70 ? 'text-success' : h.score >= 50 ? 'text-warning' : 'text-error'}`}>
+                  <div className={`text-lg font-bold ${rateTone(h.score)}`}>
                     {h.correct}/{h.count} ({h.score}%)
                   </div>
                 </div>
@@ -232,6 +223,27 @@ function HistoryPage() {
       )}
     </div>
   )
+}
+
+function StatCard({ label, value, tone = 'text-brand' }) {
+  return (
+    <div className="bg-surface rounded-xl p-4 shadow-sm border border-border text-center">
+      <div className={`text-2xl font-bold ${tone}`}>{value}</div>
+      <div className="text-xs text-text-muted">{label}</div>
+    </div>
+  )
+}
+
+function rateTone(rate) {
+  if (rate >= 70) return 'text-success'
+  if (rate >= 50) return 'text-warning'
+  return 'text-error'
+}
+
+function barTone(rate) {
+  if (rate >= 70) return 'bg-success'
+  if (rate >= 50) return 'bg-warning'
+  return 'bg-error'
 }
 
 export default HistoryPage
