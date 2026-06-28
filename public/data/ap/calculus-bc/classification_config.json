@@ -1,0 +1,85 @@
+{
+  "subject": "AP Calculus BC",
+  "version": "calc_bc_structured_v2",
+  "units": [
+    {
+      "code": "U1",
+      "name": "Limits and Continuity",
+      "exam_weight_percent_range": "4-7"
+    },
+    {
+      "code": "U2",
+      "name": "Differentiation: Definition and Fundamental Properties",
+      "exam_weight_percent_range": "4-7"
+    },
+    {
+      "code": "U3",
+      "name": "Differentiation: Composite, Implicit, and Inverse Functions",
+      "exam_weight_percent_range": "4-7"
+    },
+    {
+      "code": "U4",
+      "name": "Contextual Applications of Differentiation",
+      "exam_weight_percent_range": "6-9"
+    },
+    {
+      "code": "U5",
+      "name": "Analytical Applications of Differentiation",
+      "exam_weight_percent_range": "8-11"
+    },
+    {
+      "code": "U6",
+      "name": "Integration and Accumulation of Change",
+      "exam_weight_percent_range": "17-20"
+    },
+    {
+      "code": "U7",
+      "name": "Differential Equations",
+      "exam_weight_percent_range": "6-9"
+    },
+    {
+      "code": "U8",
+      "name": "Applications of Integration",
+      "exam_weight_percent_range": "6-9"
+    },
+    {
+      "code": "U9",
+      "name": "Parametric Equations, Polar Coordinates, and Vector-Valued Functions",
+      "exam_weight_percent_range": "11-12",
+      "bc_only": true
+    },
+    {
+      "code": "U10",
+      "name": "Infinite Sequences and Series",
+      "exam_weight_percent_range": "17-18",
+      "bc_only": true
+    }
+  ],
+  "skills": [
+    {
+      "code": "1",
+      "name": "Implementing Mathematical Processes",
+      "description": "Carry out mathematical rules, procedures, and technology-supported processes."
+    },
+    {
+      "code": "2",
+      "name": "Connecting Representations",
+      "description": "Connect verbal, analytical, graphical, numerical, and tabular representations."
+    },
+    {
+      "code": "3",
+      "name": "Justification",
+      "description": "Use definitions, theorems, tests, and reasoning to justify conclusions."
+    },
+    {
+      "code": "4",
+      "name": "Communication and Notation",
+      "description": "Use correct notation, units, mathematical language, and structured responses."
+    }
+  ],
+  "notes": [
+    "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 data are Markdown + LaTeX structured content.",
+    "Images are local graph/table assets only, not full-question screenshots.",
+    "Classification and similarity are provisional until all BC years are rebuilt."
+  ]
+}

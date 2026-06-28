@@ -1,13 +1,8 @@
 import { useState, useLayoutEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Timer from '../components/Timer'
+import FRQDisplay from '../components/FRQDisplay'
 import { getCurrentFRQ, getQuizInfo } from '../utils/quizSession'
-
-const BASE_URL = import.meta.env.BASE_URL || '/'
-
-function imageUrl(path) {
-  return path?.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
-}
 
 function FRQPlayer() {
   const navigate = useNavigate()
@@ -88,30 +83,8 @@ function FRQPlayer() {
       </div>
 
       {currentFRQ && (
-        <div className="bg-surface rounded-xl shadow-sm border border-border p-6 mb-6">
-          <div className="flex items-center mb-4 pb-3 border-b border-border">
-            <span className="text-lg font-bold text-brand">FRQ {currentFRQ.question_number}</span>
-            <span className="text-sm text-text-muted ml-2">({currentFRQ.rubric?.total_points || '?'} 分)</span>
-          </div>
-
-          <div className="prose max-w-none mb-6">
-            <div className="whitespace-pre-wrap text-text leading-relaxed text-sm">
-              {currentFRQ.text || currentFRQ.question_text}
-            </div>
-          </div>
-
-          {currentFRQ.image_paths && currentFRQ.image_paths.length > 0 && (
-            <div className="mb-6 space-y-3">
-              {currentFRQ.image_paths.map((path, idx) => (
-                <img
-                  key={idx}
-                  src={imageUrl(path)}
-                  alt=""
-                  className="max-w-full max-h-96 mx-auto rounded border border-border"
-                />
-              ))}
-            </div>
-          )}
+        <div className="mb-6">
+          <FRQDisplay frq={currentFRQ} showRubric={false} />
 
           <div className="mt-6 pt-4 border-t border-border">
             <label className="flex items-center gap-3 cursor-pointer select-none">
