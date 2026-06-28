@@ -25,7 +25,7 @@ function assetUrl(path) {
 function MockPdfPage() {
   const navigate = useNavigate()
   const { currentSubjectConfig } = useSubject()
-  const subjectName = currentSubjectConfig?.name || 'AP Microeconomics'
+  const subjectName = currentSubjectConfig?.name || 'AP Question Bank'
   const pdfRef = useRef(null)
   const [mcqs, setMcqs] = useState([])
   const [frqs, setFrqs] = useState([])
@@ -48,14 +48,16 @@ function MockPdfPage() {
       }
 
       parsedMcqs.forEach((q, i) => {
-        if (!q?.question_id) throw new Error(`MCQ index ${i} 缺少 question_id`)
-        if (!(q.text || q.question_text)) throw new Error(`MCQ ${q.question_id} 缺少题干`)
-        if (!q.options) throw new Error(`MCQ ${q.question_id} 缺少选项`)
-        if (!q.answer) throw new Error(`MCQ ${q.question_id} 缺少答案`)
+        if (!q?.question_id) throw new Error(`MCQ index ${i} is missing question_id`)
+        if (!(q.text || q.question_text)) throw new Error(`MCQ ${q.question_id} is missing question text`)
+        if (!q.options) throw new Error(`MCQ ${q.question_id} is missing options`)
+        if (!q.answer) throw new Error(`MCQ ${q.question_id} is missing answer`)
       })
       parsedFrqs.forEach((f, i) => {
-        if (!f?.question_id) throw new Error(`FRQ index ${i} 缺少 question_id`)
-        if (!(f.text || f.question_text)) throw new Error(`FRQ ${f.question_id} 缺少题干`)
+        if (!f?.question_id) throw new Error(`FRQ index ${i} is missing question_id`)
+        if (!(f.text || f.question_text || f.image_paths?.length)) {
+          throw new Error(`FRQ ${f.question_id} is missing prompt content`)
+        }
       })
 
       setMcqs(parsedMcqs)
@@ -63,7 +65,7 @@ function MockPdfPage() {
       setQuizInfo(parsedInfo)
       setLoading(false)
     } catch (err) {
-      setError(err.message || '加载数据时发生未知错误')
+      setError(err.message || 'Failed to load mock exam data.')
       setLoading(false)
     }
   }, [navigate])
@@ -82,7 +84,7 @@ function MockPdfPage() {
   if (loading) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
-        <p className="text-text-muted">加载中...</p>
+        <p className="text-text-muted">Loading...</p>
       </div>
     )
   }
@@ -91,7 +93,7 @@ function MockPdfPage() {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
         <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-red-800">
-          <h2 className="text-xl font-bold mb-2">加载失败</h2>
+          <h2 className="text-xl font-bold mb-2">Load Failed</h2>
           <p className="mb-2">{error}</p>
           {debugInfo && (
             <pre className="text-left text-xs bg-red-100 rounded p-3 mt-2 overflow-auto">
@@ -111,20 +113,20 @@ function MockPdfPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-6">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-brand">Mock Exam 试卷导出</h1>
+        <h1 className="text-2xl font-bold text-brand">Mock Exam PDF Export</h1>
         <div className="flex gap-3">
           <button
             onClick={() => navigate('/play')}
             className="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
           >
-            开始 Mock Exam
+            Start Mock Exam
           </button>
           <button
             onClick={handleExport}
             disabled={exporting}
             className="bg-brand hover:bg-brand-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
           >
-            {exporting ? '生成中...' : '下载 PDF'}
+            {exporting ? 'Generating...' : 'Download PDF'}
           </button>
         </div>
       </div>
@@ -191,7 +193,7 @@ function MockPdfPage() {
               Section II: Free Response
             </div>
             <div style={{ fontSize: '16px', color: '#6b7280', marginBottom: '16px' }}>
-              建议用时：{frqMinutes} 分钟 &nbsp;|&nbsp; 总分：{totalFrqPoints} points
+              Suggested time: {frqMinutes} minutes &nbsp;|&nbsp; Total: {totalFrqPoints} points
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {frqs.map((frq, idx) => (
@@ -275,7 +277,7 @@ function MockPdfPage() {
                         alt=""
                         style={{
                           maxWidth: '100%',
-                          maxHeight: '520px',
+                          maxHeight: '620px',
                           display: 'block',
                           margin: '8px auto 12px',
                           pageBreakInside: 'avoid',

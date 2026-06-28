@@ -1,15 +1,31 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
 import { loadMCQBank, loadFRQBank, generateMockExam, getMockExamConfig } from '../utils/questionBank'
 import { startMockExam } from '../utils/quizSession'
 
 function ExamSetup() {
   const navigate = useNavigate()
-  const { currentSubject } = useSubject()
+  const [searchParams] = useSearchParams()
+  const { currentSubject, setSubject } = useSubject()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [preview, setPreview] = useState(null)
+  const [mockConfig, setMockConfig] = useState(null)
+
+  useEffect(() => {
+    const subjectFromUrl = searchParams.get('subject')
+    if (subjectFromUrl && subjectFromUrl !== currentSubject) {
+      setSubject(subjectFromUrl)
+      return
+    }
+    setPreview(null)
+    setError(null)
+    getMockExamConfig(currentSubject)
+      .then(setMockConfig)
+      .catch(() => setMockConfig(null))
+  }, [currentSubject, searchParams, setSubject])
 
   const generate = async () => {
     setLoading(true)
@@ -21,14 +37,14 @@ function ExamSetup() {
       if (!result || !Array.isArray(result.quiz) || !Array.isArray(result.frq)) {
         throw new Error('生成 Mock Exam 失败')
       }
-      const mockConfig = await getMockExamConfig(currentSubject)
+      const currentMockConfig = await getMockExamConfig(currentSubject)
       setPreview({
         mcq: result.quiz,
         frq: result.frq,
         config: { type: 'mock', subject: currentSubject },
         info: {
-          mcqTimeLimit: mockConfig.mcqTimeLimit,
-          frqTimeLimit: mockConfig.frqTimeLimit,
+          mcqTimeLimit: currentMockConfig.mcqTimeLimit,
+          frqTimeLimit: currentMockConfig.frqTimeLimit,
         },
       })
     } catch (err) {
@@ -50,13 +66,18 @@ function ExamSetup() {
     navigate('/mock-pdf')
   }
 
+  const mcqCount = mockConfig?.totalMCQ || 0
+  const frqCount = mockConfig?.frqCount || 0
+  const mcqMinutes = mockConfig?.mcqTimeLimit ? Math.round(mockConfig.mcqTimeLimit / 60) : 0
+  const frqMinutes = mockConfig?.frqTimeLimit ? Math.round(mockConfig.frqTimeLimit / 60) : 0
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold text-brand mb-6">Mock Exam</h1>
       <div className="bg-surface rounded-xl p-6 shadow-sm border border-border space-y-6">
         <div className="text-sm text-text-muted">
-          <p>模拟真实考试环境，包含 60 道 MCQ 和 3 道 FRQ。</p>
-          <p>MCQ 限时 70 分钟，FRQ 限时 60 分钟。</p>
+          <p>模拟真实考试环境，包含 {mcqCount} 道 MCQ 和 {frqCount} 道 FRQ。</p>
+          <p>MCQ 限时 {mcqMinutes} 分钟，FRQ 限时 {frqMinutes} 分钟。</p>
         </div>
 
         {error && (
@@ -66,8 +87,11 @@ function ExamSetup() {
         )}
 
         {!preview ? (
-          <button onClick={generate} disabled={loading}
-            className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50">
+          <button
+            onClick={generate}
+            disabled={loading}
+            className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50"
+          >
             {loading ? '生成中...' : '生成 Mock Exam'}
           </button>
         ) : (
@@ -76,17 +100,24 @@ function ExamSetup() {
               已生成 {preview.mcq.length} 道 MCQ + {preview.frq.length} 道 FRQ
             </div>
             <div className="flex gap-3">
-              <button onClick={startMock}
-                className="flex-1 bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors">
+              <button
+                onClick={startMock}
+                className="flex-1 bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors"
+              >
                 开始考试
               </button>
-              <button onClick={exportPdf}
-                className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors">
+              <button
+                onClick={exportPdf}
+                className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors"
+              >
                 导出 PDF
               </button>
             </div>
-            <button onClick={generate} disabled={loading}
-              className="w-full border border-border bg-surface hover:bg-gray-50 text-text font-semibold py-2 rounded-lg transition-colors text-sm">
+            <button
+              onClick={generate}
+              disabled={loading}
+              className="w-full border border-border bg-surface hover:bg-gray-50 text-text font-semibold py-2 rounded-lg transition-colors text-sm"
+            >
               {loading ? '重新生成中...' : '重新生成'}
             </button>
           </div>

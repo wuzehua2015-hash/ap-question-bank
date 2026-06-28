@@ -46,15 +46,18 @@ if (!fs.existsSync(distIndex)) {
 // Check 2: All data files present in dist/
 // ────────────────────────────
 console.log('\n[2/5] Data files in dist/')
-const requiredDataFiles = [
-  'data/subjects.json',
-  'data/ap/macroeconomics/question_bank.json',
-  'data/ap/macroeconomics/frq_bank.json',
-  'data/ap/macroeconomics/classification_config.json',
-  'data/ap/microeconomics/question_bank.json',
-  'data/ap/microeconomics/frq_bank.json',
-  'data/ap/microeconomics/classification_config.json',
-]
+const subjectsConfigPath = path.join(__dirname, '..', 'public', 'data', 'subjects.json')
+const subjectsConfig = fs.existsSync(subjectsConfigPath)
+  ? JSON.parse(fs.readFileSync(subjectsConfigPath, 'utf-8'))
+  : { subjects: [] }
+const requiredDataFiles = ['data/subjects.json']
+for (const subject of subjectsConfig.subjects || []) {
+  if (!subject.active) continue
+  if (subject.questionBank) requiredDataFiles.push(`data/${subject.questionBank}`)
+  if (subject.hasFRQ && subject.frqBank) requiredDataFiles.push(`data/${subject.frqBank}`)
+  if (subject.classificationConfig) requiredDataFiles.push(`data/${subject.classificationConfig}`)
+  if (subject.similarityIndex) requiredDataFiles.push(`data/${subject.similarityIndex}`)
+}
 let allDataPresent = true
 for (const f of requiredDataFiles) {
   const fullPath = path.join(__dirname, '..', 'dist', f)

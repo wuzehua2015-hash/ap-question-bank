@@ -12,12 +12,30 @@
       "classificationConfig": "ap/macroeconomics/classification_config.json",
       "dataVersion": "v1",
       "units": [
-        { "id": "U1", "name": "Basic Economic Concepts" },
-        { "id": "U2", "name": "Economic Indicators & Business Cycle" },
-        { "id": "U3", "name": "National Income & Price Determination" },
-        { "id": "U4", "name": "Financial Sector" },
-        { "id": "U5", "name": "Long-Run Consequences of Policies" },
-        { "id": "U6", "name": "Open Economy" }
+        {
+          "id": "U1",
+          "name": "Basic Economic Concepts"
+        },
+        {
+          "id": "U2",
+          "name": "Economic Indicators & Business Cycle"
+        },
+        {
+          "id": "U3",
+          "name": "National Income & Price Determination"
+        },
+        {
+          "id": "U4",
+          "name": "Financial Sector"
+        },
+        {
+          "id": "U5",
+          "name": "Long-Run Consequences of Policies"
+        },
+        {
+          "id": "U6",
+          "name": "Open Economy"
+        }
       ],
       "mockExam": {
         "totalMCQ": 60,
@@ -46,12 +64,30 @@
       "classificationConfig": "ap/microeconomics/classification_config.json",
       "dataVersion": "v1",
       "units": [
-        { "id": "U1", "name": "Basic Economic Concepts" },
-        { "id": "U2", "name": "Supply and Demand" },
-        { "id": "U3", "name": "Production, Cost, and Perfect Competition" },
-        { "id": "U4", "name": "Imperfect Competition" },
-        { "id": "U5", "name": "Factor Markets" },
-        { "id": "U6", "name": "Market Failure and the Role of Government" }
+        {
+          "id": "U1",
+          "name": "Basic Economic Concepts"
+        },
+        {
+          "id": "U2",
+          "name": "Supply and Demand"
+        },
+        {
+          "id": "U3",
+          "name": "Production, Cost, and Perfect Competition"
+        },
+        {
+          "id": "U4",
+          "name": "Imperfect Competition"
+        },
+        {
+          "id": "U5",
+          "name": "Factor Markets"
+        },
+        {
+          "id": "U6",
+          "name": "Market Failure and the Role of Government"
+        }
       ],
       "mockExam": {
         "totalMCQ": 60,
@@ -65,6 +101,78 @@
           "U4": 12,
           "U5": 7,
           "U6": 6
+        }
+      }
+    },
+    {
+      "id": "calculus-bc",
+      "name": "AP Calculus BC",
+      "shortName": "Calc BC",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/calculus-bc/question_bank.json",
+      "frqBank": "ap/calculus-bc/frq_bank.json",
+      "similarityIndex": "ap/calculus-bc/similarity_index.json",
+      "classificationConfig": "ap/calculus-bc/classification_config.json",
+      "dataVersion": "v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Limits and Continuity"
+        },
+        {
+          "id": "U2",
+          "name": "Differentiation: Definition and Fundamental Properties"
+        },
+        {
+          "id": "U3",
+          "name": "Differentiation: Composite, Implicit, and Inverse Functions"
+        },
+        {
+          "id": "U4",
+          "name": "Contextual Applications of Differentiation"
+        },
+        {
+          "id": "U5",
+          "name": "Analytical Applications of Differentiation"
+        },
+        {
+          "id": "U6",
+          "name": "Integration and Accumulation of Change"
+        },
+        {
+          "id": "U7",
+          "name": "Differential Equations"
+        },
+        {
+          "id": "U8",
+          "name": "Applications of Integration"
+        },
+        {
+          "id": "U9",
+          "name": "Parametric Equations, Polar Coordinates, and Vector-Valued Functions"
+        },
+        {
+          "id": "U10",
+          "name": "Infinite Sequences and Series"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 45,
+        "frqCount": 6,
+        "mcqTimeLimit": 6300,
+        "frqTimeLimit": 5400,
+        "unitDistribution": {
+          "U1": 3,
+          "U2": 3,
+          "U3": 3,
+          "U4": 4,
+          "U5": 5,
+          "U6": 9,
+          "U7": 4,
+          "U8": 4,
+          "U9": 5,
+          "U10": 5
         }
       }
     }

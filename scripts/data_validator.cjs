@@ -21,7 +21,9 @@ function validateAllSubjects() {
       }
       continue
     }
-    const { errors, warnings } = validate(qbPath)
+    const validUnits = new Set((subject.units || []).map(u => u.id))
+    validUnits.add('not_applicable')
+    const { errors, warnings } = validate(qbPath, { validUnits })
     allErrors += errors.length
     allWarnings += warnings.length
 
@@ -48,7 +50,7 @@ function validateAllSubjects() {
   return allErrors === 0
 }
 
-function validate(filePath) {
+function validate(filePath, options = {}) {
   console.log(`Validating: ${filePath}`)
   
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'))
@@ -56,6 +58,7 @@ function validate(filePath) {
   const warnings = []
   
   const seenIds = new Set()
+  const validUnits = options.validUnits || new Set(['U1','U2','U3','U4','U5','U6','not_applicable'])
   const optionPollutionPatterns = [
     /Questions?\s+\d+\s*[-–]/i,
     /Questions?\s+\d+\s+(refer|are|is)\b/i,
@@ -121,7 +124,7 @@ function validate(filePath) {
     }
     
     // 单元范围
-    if (q.primary_unit && !['U1','U2','U3','U4','U5','U6','not_applicable'].includes(q.primary_unit)) {
+    if (q.primary_unit && !validUnits.has(q.primary_unit)) {
       errors.push(`${qid}: Invalid unit ${q.primary_unit}`)
     }
     if (!isNotScored && q.primary_unit === 'not_applicable') {
