@@ -1,4 +1,5 @@
 ﻿import { useEffect, useState } from 'react'
+import { MathText } from './MathText'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -82,7 +83,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
 
       {/* Question text */}
       <h3 className="text-lg font-medium text-text mb-4 leading-relaxed whitespace-pre-line">
-        {question.text || question.question_text}
+        <MathText text={question.text || question.question_text} />
       </h3>
 
       {/* Images */}
@@ -122,7 +123,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
                 }`}
               >
                 <span className="font-bold mr-2">{key}.</span>
-                {text}
+                <MathText text={text} />
                 {showCorrect && <span className="ml-2 text-success text-sm">✓ 正确</span>}
                 {showIncorrect && <span className="ml-2 text-error text-sm">✗ 你的答案</span>}
               </button>
@@ -205,4 +206,5 @@ function TableOptions({ tableData, selectedAnswer, answer, isSubmitted, onSelect
 }
 
 export default QuestionCard
+
 
