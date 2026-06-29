@@ -10,7 +10,10 @@ const path = require('path')
 const { spawn } = require('child_process')
 
 const DEFAULT_URL = 'http://127.0.0.1:5173/ap-question-bank/'
-const url = process.argv[2] || DEFAULT_URL
+const cliArgs = process.argv.slice(2)
+const headless = cliArgs.includes('--headless')
+const keepAlive = cliArgs.includes('--keep-alive')
+const url = cliArgs.find((arg) => !arg.startsWith('--')) || DEFAULT_URL
 
 function findChrome() {
   const candidates = []
@@ -55,7 +58,8 @@ if (!browser) {
   process.exit(1)
 }
 
-const userDataDir = path.resolve(__dirname, '..', '.workspace', 'quiet-browser-profile')
+const profileName = headless ? 'quiet-headless-profile' : 'quiet-browser-profile'
+const userDataDir = path.resolve(__dirname, '..', '.workspace', profileName)
 fs.mkdirSync(userDataDir, { recursive: true })
 
 const args = [
@@ -71,14 +75,38 @@ const args = [
   '--disable-gcm',
   '--log-level=3',
   '--silent',
-  url,
 ]
 
-const child = spawn(browser, args, {
-  detached: true,
-  stdio: 'ignore',
-  windowsHide: true,
-})
+if (headless) {
+  args.unshift('--headless=new')
+  args.push('--disable-gpu')
+  args.push('--dump-dom')
+} else {
+  args.push(url)
+}
 
-child.unref()
-console.log(`Opened quiet browser: ${url}`)
+if (headless) {
+  args.push(url)
+  const child = spawn(browser, args, {
+    stdio: ['ignore', 'ignore', 'ignore'],
+    windowsHide: true,
+  })
+
+  const timeout = setTimeout(() => {
+    child.kill('SIGTERM')
+  }, keepAlive ? 300000 : 15000)
+
+  child.on('exit', (code) => {
+    clearTimeout(timeout)
+    process.exit(code || 0)
+  })
+} else {
+  const child = spawn(browser, args, {
+    detached: true,
+    stdio: 'ignore',
+    windowsHide: true,
+  })
+
+  child.unref()
+  console.log(`Opened quiet browser: ${url}`)
+}
