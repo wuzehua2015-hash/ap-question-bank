@@ -16,7 +16,6 @@ import MockPdfPage from './pages/MockPdfPage'
 import SearchPage from './pages/SearchPage'
 import MistakeBook from './pages/MistakeBook'
 import HistoryPage from './pages/HistoryPage'
-import LocalAuditPage from './pages/LocalAuditPage'
 
 import { SubjectProvider } from './contexts/SubjectContext'
 
@@ -39,7 +38,6 @@ function App() {
             <Route path="/score" element={<ScorePage />} />
             <Route path="/quiz-pdf" element={<QuizPdfPage />} />
             <Route path="/mock-pdf" element={<MockPdfPage />} />
-            <Route path="/local-audit" element={<LocalAuditPage />} />
             {/* Catch-all: redirect unknown routes to home */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

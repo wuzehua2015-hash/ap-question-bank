@@ -17,7 +17,6 @@ function Header() {
     { path: '/search', label: '搜索' },
     { path: '/mistakes', label: '错题本' },
     { path: '/history', label: '记录' },
-    { path: '/local-audit', label: '本地验收' },
   ]
 
   const isActive = (path) => location.pathname === path
