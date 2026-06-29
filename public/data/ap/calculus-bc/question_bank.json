@@ -122,7 +122,7 @@
     "question_type": "MCQ",
     "year": 2008,
     "source": "AP Calculus BC 2008 Full Exam",
-    "text": "What is the value of $\\sum_{n=0}^{\\infty}\\left(-\\frac23\right)^n$?",
+    "text": "What is the value of $\\sum_{n=0}^{\\infty}\\left(-\\frac23\\right)^n$?",
     "options": {
       "A": "$-2$",
       "B": "$-\\frac25$",
@@ -180,11 +180,11 @@
     "question_type": "MCQ",
     "year": 2008,
     "source": "AP Calculus BC 2008 Full Exam",
-    "text": "For values of $h$ very close to $0$, which of the following functions best approximates $f(x)=\\frac{\tan(x+h)-\tan x}{h}$?",
+    "text": "For values of $h$ very close to $0$, which of the following functions best approximates $f(x)=\\frac{\\tan(x+h)-\\tan x}{h}$?",
     "options": {
       "A": "$\\sin x$",
       "B": "$\\frac{\\sin x}{x}$",
-      "C": "$\\frac{\tan x}{x}$",
+      "C": "$\\frac{\\tan x}{x}$",
       "D": "$\\sec x$",
       "E": "$\\sec^2 x$"
     },
@@ -298,11 +298,11 @@
     "source": "AP Calculus BC 2008 Full Exam",
     "text": "$\\int \\frac{e^x}{1+e^x}\\,dx=$",
     "options": {
-      "A": "$\\ln\\left(\\frac{1}{1+e^x}\right)+C$",
+      "A": "$\\ln\\left(\\frac{1}{1+e^x}\\right)+C$",
       "B": "$\\ln(1+e^x)+C$",
       "C": "$x-\\ln(1+e^x)+C$",
       "D": "$e^x+x+C$",
-      "E": "$\tan^{-1}(e^x)+C$"
+      "E": "$\\tan^{-1}(e^x)+C$"
     },
     "answer": "B",
     "primary_unit": "U6",
@@ -706,11 +706,11 @@
     "source": "AP Calculus BC 2008 Full Exam",
     "text": "For time $t>0$, the position of a particle moving in the $xy$-plane is given by the parametric equations $x=t^2+4t$ and $y=\\frac{1}{3t+1}$. What is the acceleration vector of the particle at time $t=1$?",
     "options": {
-      "A": "$\\left\\langle 2,\\frac1{32}\right\rangle$",
-      "B": "$\\left\\langle 2,\\frac9{32}\right\rangle$",
-      "C": "$\\left\\langle 5,\\frac14\right\rangle$",
-      "D": "$\\left\\langle 6,-\\frac3{16}\right\rangle$",
-      "E": "$\\left\\langle 6,-\\frac1{16}\right\rangle$"
+      "A": "$\\left\\langle 2,\\frac1{32}\\right\\rangle$",
+      "B": "$\\left\\langle 2,\\frac9{32}\\right\\rangle$",
+      "C": "$\\left\\langle 5,\\frac14\\right\\rangle$",
+      "D": "$\\left\\langle 6,-\\frac3{16}\\right\\rangle$",
+      "E": "$\\left\\langle 6,-\\frac1{16}\\right\\rangle$"
     },
     "answer": "B",
     "primary_unit": "U9",
@@ -764,10 +764,10 @@
     "source": "AP Calculus BC 2008 Full Exam",
     "text": "$\\int \\frac{2}{8-x^2}\\,dx=$",
     "options": {
-      "A": "$4\tan^{-1}\\left(\\frac{x}{2}\right)+C$",
+      "A": "$4\\tan^{-1}\\left(\\frac{x}{2}\\right)+C$",
       "B": "$8\\ln|x^2-4|+C$",
-      "C": "$2\\ln\\left|\\frac{x+2}{x-2}\right|+C$",
-      "D": "$2\\ln\\left|\\frac{x-2}{x+2}\right|+C$",
+      "C": "$2\\ln\\left|\\frac{x+2}{x-2}\\right|+C$",
+      "D": "$2\\ln\\left|\\frac{x-2}{x+2}\\right|+C$",
       "E": "$2\\ln|x+2|+2\\ln|x-2|+C$"
     },
     "answer": "C",
@@ -1114,7 +1114,7 @@
     "question_type": "MCQ",
     "year": 2008,
     "source": "AP Calculus BC 2008 Full Exam",
-    "text": "Which of the following series converge?\n\nI. $\\sum_{n=1}^{\\infty}\\frac1n$\n\nII. $\\sum_{n=1}^{\\infty}\\frac{3^n}{n!}$\n\nIII. $\\sum_{n=1}^{\\infty}\\left(\\frac{e}{\\pi}\right)^n$",
+    "text": "Which of the following series converge?\n\nI. $\\sum_{n=1}^{\\infty}\\frac1n$\n\nII. $\\sum_{n=1}^{\\infty}\\frac{3^n}{n!}$\n\nIII. $\\sum_{n=1}^{\\infty}\\left(\\frac{e}{\\pi}\\right)^n$",
     "options": {
       "A": "None",
       "B": "II only",
@@ -1288,7 +1288,7 @@
     "question_type": "MCQ",
     "year": 2008,
     "source": "AP Calculus BC 2008 Full Exam",
-    "text": "What is the slope of the line tangent to the polar curve $r=\theta^2$ at the point $\theta=\\frac{\\pi}{2}$?",
+    "text": "What is the slope of the line tangent to the polar curve $r=\\theta^2$ at the point $\\theta=\\frac{\\pi}{2}$?",
     "options": {
       "A": "$-\\frac{\\pi}{2}$",
       "B": "$-\\frac{2}{\\pi}$",
@@ -1578,7 +1578,7 @@
     "question_type": "MCQ",
     "year": 2008,
     "source": "AP Calculus BC 2008 Full Exam",
-    "text": "The function $f$ is given by $f(x)=\\frac{x^2+1}{x}\\sin\\left(\\frac1x\right)$. Which of the following statements are true?\n\nI. The graph of $f$ has a horizontal asymptote at $y=0$.\n\nII. The graph of $f$ has a horizontal asymptote at $y=1$.\n\nIII. The graph of $f$ has a vertical asymptote at $x=0$.",
+    "text": "The function $f$ is given by $f(x)=\\frac{x^2+1}{x}\\sin\\left(\\frac1x\\right)$. Which of the following statements are true?\n\nI. The graph of $f$ has a horizontal asymptote at $y=0$.\n\nII. The graph of $f$ has a horizontal asymptote at $y=1$.\n\nIII. The graph of $f$ has a vertical asymptote at $x=0$.",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -1754,7 +1754,7 @@
     "question_type": "MCQ",
     "year": 2008,
     "source": "AP Calculus BC 2008 Full Exam",
-    "text": "The graph above shows the polar curve $r=2\theta+\\cos\theta$ for $0\\le\theta\\le\\pi$. What is the area of the region bounded by the curve and the $x$-axis?",
+    "text": "The graph above shows the polar curve $r=2\\theta+\\cos\\theta$ for $0\\le\\theta\\le\\pi$. What is the area of the region bounded by the curve and the $x$-axis?",
     "options": {
       "A": "$3.069$",
       "B": "$4.935$",
@@ -1816,11 +1816,11 @@
     "source": "AP Calculus BC 2008 Full Exam",
     "text": "If $f$ is a differentiable function such that $f(3)=8$ and $f\\prime(3)=5$, which of the following statements could be false?",
     "options": {
-      "A": "$\\lim_{x\to3}f(x)=8$",
-      "B": "$\\lim_{x\to3^+}f(x)=\\lim_{x\to3^-}f(x)$",
-      "C": "$\\lim_{x\to3}\\frac{f(x)-8}{x-3}=5$",
-      "D": "$\\lim_{h\to0}\\frac{f(3+h)-8}{h}=5$",
-      "E": "$\\lim_{x\to3}f\\prime(x)=5$"
+      "A": "$\\lim_{x\\to3}f(x)=8$",
+      "B": "$\\lim_{x\\to3^+}f(x)=\\lim_{x\\to3^-}f(x)$",
+      "C": "$\\lim_{x\\to3}\\frac{f(x)-8}{x-3}=5$",
+      "D": "$\\lim_{h\\to0}\\frac{f(3+h)-8}{h}=5$",
+      "E": "$\\lim_{x\\to3}f\\prime(x)=5$"
     },
     "answer": "E",
     "primary_unit": "U2",
@@ -2164,7 +2164,7 @@
     "question_type": "MCQ",
     "year": 2008,
     "source": "AP Calculus BC 2008 Full Exam",
-    "text": "The third derivative of the function $f$ is continuous on the interval $(0,4)$. Values for $f$ and its first three derivatives at $x=2$ are given in the table below. What is $\\lim_{x\to2}\\frac{f(x)}{(x-2)^2}$?\n\n| $x$ | $f(x)$ | $f\\prime(x)$ | $f\\prime\\prime(x)$ | $f\\prime\\prime\\prime(x)$ |\n|---:|---:|---:|---:|---:|\n| $2$ | $0$ | $0$ | $5$ | $7$ |",
+    "text": "The third derivative of the function $f$ is continuous on the interval $(0,4)$. Values for $f$ and its first three derivatives at $x=2$ are given in the table below. What is $\\lim_{x\\to2}\\frac{f(x)}{(x-2)^2}$?\n\n| $x$ | $f(x)$ | $f\\prime(x)$ | $f\\prime\\prime(x)$ | $f\\prime\\prime\\prime(x)$ |\n|---:|---:|---:|---:|---:|\n| $2$ | $0$ | $0$ | $5$ | $7$ |",
     "options": {
       "A": "$0$",
       "B": "$\\frac52$",
@@ -5846,7 +5846,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Calculus BC 2013 Full Exam",
-    "text": "For which of the following does $\\displaystyle\\lim_{x\to\\infty} f(x)=0$?\n\nI. $f(x)=\\dfrac{\\ln x}{x^{99}}$\n\nII. $f(x)=\\dfrac{e^x}{\\ln x}$\n\nIII. $f(x)=\\dfrac{x^{99}}{e^x}$",
+    "text": "For which of the following does $\\displaystyle\\lim_{x\\to\\infty} f(x)=0$?\n\nI. $f(x)=\\dfrac{\\ln x}{x^{99}}$\n\nII. $f(x)=\\dfrac{e^x}{\\ln x}$\n\nIII. $f(x)=\\dfrac{x^{99}}{e^x}$",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -5965,7 +5965,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Calculus BC 2013 Full Exam",
-    "text": "If $a$ and $b$ are positive constants, then $\\displaystyle\\lim_{x\to\\infty}\\dfrac{\\ln(bx+1)}{\\ln(ax^2+3)}=$",
+    "text": "If $a$ and $b$ are positive constants, then $\\displaystyle\\lim_{x\\to\\infty}\\dfrac{\\ln(bx+1)}{\\ln(ax^2+3)}=$",
     "options": {
       "A": "$0$",
       "B": "$\\dfrac12$",
@@ -6023,7 +6023,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Calculus BC 2013 Full Exam",
-    "text": "What are all values of $x$ for which the series $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{(-1)^n}{n}\\left(x+\\dfrac32\right)^n$ converges?",
+    "text": "What are all values of $x$ for which the series $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{(-1)^n}{n}\\left(x+\\dfrac32\\right)^n$ converges?",
     "options": {
       "A": "$-\\dfrac52 < x < -\\dfrac12$",
       "B": "$-\\dfrac52 < x \\le -\\dfrac12$",
@@ -11072,7 +11072,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Calculus BC 2015 Full Exam",
-    "text": "$\\int \\left(2^t+e^{\\pi}\right)\\,dt=$",
+    "text": "$\\int \\left(2^t+e^{\\pi}\\right)\\,dt=$",
     "options": {
       "A": "$\\frac{2^{t+1}}{t+1}+\\frac{e^{\\pi+1}}{\\pi+1}+C$",
       "B": "$\\frac{2^t}{\\ln 2}+e^{\\pi}t+C$",

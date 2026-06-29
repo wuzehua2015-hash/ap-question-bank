@@ -5,7 +5,7 @@
     "question_type": "FRQ",
     "year": 2008,
     "source": "AP Calculus BC 2008 Full Exam",
-    "text": "The rate at which raw sewage enters a treatment tank is given by $E(t)=850+715\\cos\\left(\\frac{\\pi t^2}{9}\right)$ gallons per hour for $0\\le t\\le4$ hours. Treated sewage is removed from the tank at the constant rate of $645$ gallons per hour. The treatment tank is empty at time $t=0$.\n\n(a) How many gallons of sewage enter the treatment tank during the time interval $0\\le t\\le4$? Round your answer to the nearest gallon.\n\n(b) For $0\\le t\\le4$, at what time $t$ is the amount of sewage in the treatment tank greatest? To the nearest gallon, what is the maximum amount of sewage in the tank? Justify your answers.\n\n(c) For $0\\le t\\le4$, the cost of treating the raw sewage that enters the tank at time $t$ is $(0.15-0.02t)$ dollars per gallon. To the nearest dollar, what is the total cost of treating all the sewage that enters the tank during the time interval $0\\le t\\le4$?",
+    "text": "The rate at which raw sewage enters a treatment tank is given by $E(t)=850+715\\cos\\left(\\frac{\\pi t^2}{9}\\right)$ gallons per hour for $0\\le t\\le4$ hours. Treated sewage is removed from the tank at the constant rate of $645$ gallons per hour. The treatment tank is empty at time $t=0$.\n\n(a) How many gallons of sewage enter the treatment tank during the time interval $0\\le t\\le4$? Round your answer to the nearest gallon.\n\n(b) For $0\\le t\\le4$, at what time $t$ is the amount of sewage in the treatment tank greatest? To the nearest gallon, what is the maximum amount of sewage in the tank? Justify your answers.\n\n(c) For $0\\le t\\le4$, the cost of treating the raw sewage that enters the tank at time $t$ is $(0.15-0.02t)$ dollars per gallon. To the nearest dollar, what is the total cost of treating all the sewage that enters the tank during the time interval $0\\le t\\le4$?",
     "primary_unit": "U8",
     "secondary_units": [],
     "topics": [
@@ -120,7 +120,7 @@
         {
           "point_id": "d",
           "value": 2,
-          "description": "As $t\to\\infty$, $x(t)\to-\\infty$ because $6-3\\sqrt t$ is eventually negative with unbounded accumulated effect, while $y(t)$ approaches a finite limiting value since $\\int_3^\\infty t e^{-t}\\,dt$ converges. Award points for horizontal and vertical behavior."
+          "description": "As $t\\to\\infty$, $x(t)\\to-\\infty$ because $6-3\\sqrt t$ is eventually negative with unbounded accumulated effect, while $y(t)$ approaches a finite limiting value since $\\int_3^\\infty t e^{-t}\\,dt$ converges. Award points for horizontal and vertical behavior."
         }
       ]
     },
@@ -318,7 +318,7 @@
     "question_type": "FRQ",
     "year": 2008,
     "source": "AP Calculus BC 2008 Full Exam",
-    "text": "Let $f$ be the function satisfying $f\\prime(x)=4x-2xf(x)$ for all real numbers $x$, with $f(0)=5$ and $\\lim_{x\to\\infty}f(x)=2$.\n\n(a) Find the value of $\\int_0^\\infty(4x-2xf(x))\\,dx$. Show the work that leads to your answer.\n\n(b) Use Euler's method to approximate $f(-1)$, starting at $x=0$, with two steps of equal size.\n\n(c) Find the particular solution $y=f(x)$ to the differential equation $\\frac{dy}{dx}=4x-2xy$ with the initial condition $f(0)=5$.",
+    "text": "Let $f$ be the function satisfying $f\\prime(x)=4x-2xf(x)$ for all real numbers $x$, with $f(0)=5$ and $\\lim_{x\\to\\infty}f(x)=2$.\n\n(a) Find the value of $\\int_0^\\infty(4x-2xf(x))\\,dx$. Show the work that leads to your answer.\n\n(b) Use Euler's method to approximate $f(-1)$, starting at $x=0$, with two steps of equal size.\n\n(c) Find the particular solution $y=f(x)$ to the differential equation $\\frac{dy}{dx}=4x-2xy$ with the initial condition $f(0)=5$.",
     "primary_unit": "U7",
     "secondary_units": [],
     "topics": [
@@ -344,7 +344,7 @@
         {
           "point_id": "a",
           "value": 2,
-          "description": "Since $f\\prime(x)=4x-2xf(x)$, $\\int_0^\\infty(4x-2xf(x))\\,dx=\\int_0^\\infty f\\prime(x)\\,dx=\\lim_{x\to\\infty}f(x)-f(0)=2-5=-3$."
+          "description": "Since $f\\prime(x)=4x-2xf(x)$, $\\int_0^\\infty(4x-2xf(x))\\,dx=\\int_0^\\infty f\\prime(x)\\,dx=\\lim_{x\\to\\infty}f(x)-f(0)=2-5=-3$."
         },
         {
           "point_id": "b",
@@ -418,7 +418,7 @@
         {
           "point_id": "a",
           "value": 2,
-          "description": "Because the quotient is $0/0$, L\\prime Hospital\\prime s Rule gives $\\lim_{x\to0}\\frac{\\cos(2x)-1}{x^2}=\\lim_{x\to0}\\frac{-2\\sin(2x)}{2x}=\\lim_{x\to0}\\frac{-2\\cos(2x)}{1}=-2$. Since $g$ is continuous, $g(0)=-2$."
+          "description": "Because the quotient is $0/0$, L\\prime Hospital\\prime s Rule gives $\\lim_{x\\to0}\\frac{\\cos(2x)-1}{x^2}=\\lim_{x\\to0}\\frac{-2\\sin(2x)}{2x}=\\lim_{x\\to0}\\frac{-2\\cos(2x)}{1}=-2$. Since $g$ is continuous, $g(0)=-2$."
         },
         {
           "point_id": "b",
@@ -1759,12 +1759,12 @@
         {
           "point_id": "b",
           "value": 3,
-          "description": "Area $=\\int_0^1 e^{2x}\\,dx=\\left[\\frac12 e^{2x}\right]_0^1=\\frac12(e^2-1)$. Award 1 point for the integral, 1 point for the antiderivative, and 1 point for the answer."
+          "description": "Area $=\\int_0^1 e^{2x}\\,dx=\\left[\\frac12 e^{2x}\\right]_0^1=\\frac12(e^2-1)$. Award 1 point for the integral, 1 point for the antiderivative, and 1 point for the answer."
         },
         {
           "point_id": "c",
           "value": 4,
-          "description": "A valid expression is $V=1+\\int_1^{e^2}\\left(1-\\frac12\\ln y\right)^2\\,dy$. Award 2 points for the integrand, 1 point for limits, and 1 point for the answer."
+          "description": "A valid expression is $V=1+\\int_1^{e^2}\\left(1-\\frac12\\ln y\\right)^2\\,dy$. Award 2 points for the integrand, 1 point for limits, and 1 point for the answer."
         }
       ]
     },
@@ -1888,7 +1888,7 @@
     "question_type": "FRQ",
     "year": 2014,
     "source": "AP Calculus BC 2014 Full Exam",
-    "text": "A toy train moves along a straight track set up on a table. The position $x(t)$ of the train at time $t$ seconds is measured in centimeters from the center of the track. At time $t=1$, the train is $6$ centimeters to the left of the center, so $x(1)=-6$. For $0\\le t\\le 4$, the velocity of the train at time $t$ is given by $v(t)=3t^2-12$, where $v(t)$ is measured in centimeters per second.\n\n(a) For $0\\le t\\le 4$, find $x(t)$.\n\n(b) Find the total distance traveled by the train during the time interval $0\\le t\\le 4$.\n\n(c) A toy bus moving on the same table has position given by $(x(t),y(t))$. Here, $x(t)$ is the function found in part (a), and $y(t)=2+12\\sin\\left(\\frac{t}{4}\right)$ is the distance from the bus to the train track, in centimeters. Write, but do not evaluate, an integral expression that gives the total distance traveled by the bus during the time interval $0\\le t\\le 4$.",
+    "text": "A toy train moves along a straight track set up on a table. The position $x(t)$ of the train at time $t$ seconds is measured in centimeters from the center of the track. At time $t=1$, the train is $6$ centimeters to the left of the center, so $x(1)=-6$. For $0\\le t\\le 4$, the velocity of the train at time $t$ is given by $v(t)=3t^2-12$, where $v(t)$ is measured in centimeters per second.\n\n(a) For $0\\le t\\le 4$, find $x(t)$.\n\n(b) Find the total distance traveled by the train during the time interval $0\\le t\\le 4$.\n\n(c) A toy bus moving on the same table has position given by $(x(t),y(t))$. Here, $x(t)$ is the function found in part (a), and $y(t)=2+12\\sin\\left(\\frac{t}{4}\\right)$ is the distance from the bus to the train track, in centimeters. Write, but do not evaluate, an integral expression that gives the total distance traveled by the bus during the time interval $0\\le t\\le 4$.",
     "primary_unit": "U8",
     "secondary_units": [
       "U4",
@@ -1927,7 +1927,7 @@
         {
           "point_id": "c",
           "value": 3,
-          "description": "$y'(t)=3\\cos\\left(\\frac{t}{4}\right)$. A valid expression for distance is $\\int_0^4\\sqrt{(3t^2-12)^2+\\left(3\\cos\\left(\\frac{t}{4}\right)\right)^2}\\,dt$. Award 1 point for $y'(t)$ and 2 points for the integral."
+          "description": "$y'(t)=3\\cos\\left(\\frac{t}{4}\\right)$. A valid expression for distance is $\\int_0^4\\sqrt{(3t^2-12)^2+\\left(3\\cos\\left(\\frac{t}{4}\\right)\\right)^2}\\,dt$. Award 1 point for $y'(t)$ and 2 points for the integral."
         }
       ]
     },
@@ -1992,17 +1992,17 @@
         {
           "point_id": "a",
           "value": 3,
-          "description": "Let $u=\\ln x$, so $du=\\frac1x\\,dx$. Then $\\int_3^{\\infty}\\frac{1}{x\\ln x}\\,dx=\\lim_{b\to\\infty}\\int_3^b\\frac{1}{x\\ln x}\\,dx=\\lim_{b\to\\infty}\\int_{\\ln3}^{\\ln b}\\frac1u\\,du=\\lim_{b\to\\infty}[\\ln|u|]_{\\ln3}^{\\ln b}=\\infty$. Therefore, the series diverges. Award 1 point for the integral, 1 point for the antiderivative, and 1 point for evaluation."
+          "description": "Let $u=\\ln x$, so $du=\\frac1x\\,dx$. Then $\\int_3^{\\infty}\\frac{1}{x\\ln x}\\,dx=\\lim_{b\\to\\infty}\\int_3^b\\frac{1}{x\\ln x}\\,dx=\\lim_{b\\to\\infty}\\int_{\\ln3}^{\\ln b}\\frac1u\\,du=\\lim_{b\\to\\infty}[\\ln|u|]_{\\ln3}^{\\ln b}=\\infty$. Therefore, the series diverges. Award 1 point for the integral, 1 point for the antiderivative, and 1 point for evaluation."
         },
         {
           "point_id": "b",
           "value": 2,
-          "description": "The terms in this alternating series decrease in absolute value and $\\lim_{n\to\\infty}\\frac{1}{n\\ln n}=0$, so the Alternating Series Test guarantees convergence. Furthermore, $\\frac{1}{3\\ln3}-\\frac{1}{4\\ln4}<\text{Sum}<\\frac{1}{3\\ln3}<\\frac13$, so the sum is less than $\\frac13$. Award 1 point for properties and 1 point for explanation."
+          "description": "The terms in this alternating series decrease in absolute value and $\\lim_{n\\to\\infty}\\frac{1}{n\\ln n}=0$, so the Alternating Series Test guarantees convergence. Furthermore, $\\frac{1}{3\\ln3}-\\frac{1}{4\\ln4}<\\text{Sum}<\\frac{1}{3\\ln3}<\\frac13$, so the sum is less than $\\frac13$. Award 1 point for properties and 1 point for explanation."
         },
         {
           "point_id": "c",
           "value": 4,
-          "description": "Using the ratio test, $\\left|\\frac{(x-2)^{n+2}}{(n+1)\\ln(n+1)}\\cdot\\frac{n\\ln n}{(x-2)^{n+1}}\right|=\\left(\\frac{n}{n+1}\right)\\left(\\frac{\\ln n}{\\ln(n+1)}\right)|x-2|\to |x-2|$. Thus $|x-2|<1$, so $1<x<3$. When $x=1$, the series is $\\frac{1}{3\\ln3}-\\frac{1}{4\\ln4}+\\frac{1}{5\\ln5}-\\frac{1}{6\\ln6}+\\cdots$, which converges by the Alternating Series Test. When $x=3$, the series is $\\frac{1}{3\\ln3}+\\frac{1}{4\\ln4}+\\frac{1}{5\\ln5}+\\frac{1}{6\\ln6}+\\cdots$, which diverges by the integral test from part (a). Therefore, the interval of convergence is $1\\le x<3$. Award 1 point for setting up the ratio, 1 point for computing the limit, 1 point for the radius of convergence, and 1 point for endpoint analysis and interval."
+          "description": "Using the ratio test, $\\left|\\frac{(x-2)^{n+2}}{(n+1)\\ln(n+1)}\\cdot\\frac{n\\ln n}{(x-2)^{n+1}}\\right|=\\left(\\frac{n}{n+1}\\right)\\left(\\frac{\\ln n}{\\ln(n+1)}\\right)|x-2|\\to |x-2|$. Thus $|x-2|<1$, so $1<x<3$. When $x=1$, the series is $\\frac{1}{3\\ln3}-\\frac{1}{4\\ln4}+\\frac{1}{5\\ln5}-\\frac{1}{6\\ln6}+\\cdots$, which converges by the Alternating Series Test. When $x=3$, the series is $\\frac{1}{3\\ln3}+\\frac{1}{4\\ln4}+\\frac{1}{5\\ln5}+\\frac{1}{6\\ln6}+\\cdots$, which diverges by the integral test from part (a). Therefore, the interval of convergence is $1\\le x<3$. Award 1 point for setting up the ratio, 1 point for computing the limit, 1 point for the radius of convergence, and 1 point for endpoint analysis and interval."
         }
       ]
     },

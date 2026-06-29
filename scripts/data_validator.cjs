@@ -32,6 +32,10 @@ function validateAllSubjects() {
       if (!fs.existsSync(frqPath)) {
         console.log(`ERROR: ${subject.id}: missing FRQ bank: ${subject.frqBank}`)
         allErrors += 1
+      } else {
+        const frqResult = validate(frqPath, { validUnits })
+        allErrors += frqResult.errors.length
+        allWarnings += frqResult.warnings.length
       }
     }
 
@@ -70,6 +74,24 @@ function validate(filePath, options = {}) {
     /Quantity of Good Y/i,
     /Supply\s+I\s+J/i,
   ]
+
+  function findHiddenControlChars(value, currentPath, out) {
+    if (typeof value === 'string') {
+      for (let i = 0; i < value.length; i += 1) {
+        const code = value.charCodeAt(i)
+        if ((code < 32 && code !== 10) || code === 127) {
+          out.push(`${currentPath}: hidden control character U+${code.toString(16).padStart(4, '0')}`)
+          return
+        }
+      }
+    } else if (Array.isArray(value)) {
+      value.forEach((item, index) => findHiddenControlChars(item, `${currentPath}[${index}]`, out))
+    } else if (value && typeof value === 'object') {
+      for (const [key, item] of Object.entries(value)) {
+        findHiddenControlChars(item, `${currentPath}.${key}`, out)
+      }
+    }
+  }
   
   for (const q of data) {
     const qid = q.question_id || 'UNKNOWN'
@@ -87,6 +109,7 @@ function validate(filePath, options = {}) {
     if (text.includes('\uFFFD')) {
       errors.push(`${qid}: Text contains corrupted characters (U+FFFD)`)
     }
+    findHiddenControlChars(q, qid, errors)
     // 检查更多乱码模式：常见PDF提取残留
     const pollutionPatterns = [
       /STOP\s*END OF EXAM/i,

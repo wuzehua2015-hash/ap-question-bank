@@ -51,6 +51,77 @@ function renderLatexSegments(text) {
   return parts.join('')
 }
 
+function isMarkdownTableSeparator(line) {
+  const cells = line.trim().split('|').filter(Boolean).map(cell => cell.trim())
+  return cells.length > 1 && cells.every(cell => /^:?-{3,}:?$/.test(cell))
+}
+
+function isMarkdownTableRow(line) {
+  const trimmed = line.trim()
+  return trimmed.startsWith('|') && trimmed.endsWith('|') && trimmed.split('|').length >= 4
+}
+
+function splitMarkdownTableRow(line) {
+  return line.trim().slice(1, -1).split('|').map(cell => cell.trim())
+}
+
+function renderMarkdownTable(lines, startIndex) {
+  if (
+    startIndex + 1 >= lines.length ||
+    !isMarkdownTableRow(lines[startIndex]) ||
+    !isMarkdownTableSeparator(lines[startIndex + 1])
+  ) {
+    return null
+  }
+
+  const header = splitMarkdownTableRow(lines[startIndex])
+  const rows = []
+  let index = startIndex + 2
+
+  while (index < lines.length && isMarkdownTableRow(lines[index])) {
+    rows.push(splitMarkdownTableRow(lines[index]))
+    index += 1
+  }
+
+  const renderCell = (cell) => renderLatexSegments(cell)
+  const html = [
+    '<table class="math-markdown-table"><thead><tr>',
+    ...header.map(cell => `<th>${renderCell(cell)}</th>`),
+    '</tr></thead><tbody>',
+    ...rows.map(row => `<tr>${row.map(cell => `<td>${renderCell(cell)}</td>`).join('')}</tr>`),
+    '</tbody></table>',
+  ].join('')
+
+  return { html, nextIndex: index }
+}
+
+function renderTextWithMarkdownTables(text) {
+  const lines = text.split('\n')
+  const parts = []
+  let buffer = []
+
+  const flushBuffer = () => {
+    if (!buffer.length) return
+    parts.push(renderLatexSegments(buffer.join('\n')))
+    buffer = []
+  }
+
+  for (let i = 0; i < lines.length;) {
+    const table = renderMarkdownTable(lines, i)
+    if (table) {
+      flushBuffer()
+      parts.push(table.html)
+      i = table.nextIndex
+    } else {
+      buffer.push(lines[i])
+      i += 1
+    }
+  }
+
+  flushBuffer()
+  return parts.join('')
+}
+
 function normalizeLegacyMathText(text) {
   let t = text
   t = t.replace(/\b([A-Z]) ([A-Z]) ([A-Z]) ([A-Z]) ([A-Z])\b/g, '$1$2$3$4$5')
@@ -73,7 +144,7 @@ function normalizeLegacyMathText(text) {
 export function formatMathText(text) {
   if (!text) return ''
   const normalized = normalizeLegacyMathText(String(text))
-  return renderLatexSegments(normalized)
+  return renderTextWithMarkdownTables(normalized)
 }
 
 export function MathText({ text }) {
