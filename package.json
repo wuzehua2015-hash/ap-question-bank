@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "open:quiet": "node scripts/open_quiet_browser.cjs",
     "validate:data": "node scripts/data_validator.cjs",
     "validate:images": "node scripts/image_validator.cjs",
     "validate": "npm run validate:data && npm run validate:images",
