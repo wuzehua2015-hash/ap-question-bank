@@ -7,6 +7,7 @@ import {
 } from '../utils/storage'
 import { startCustomQuiz } from '../utils/quizSession'
 import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
+import { MathText } from '../components/MathText'
 
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
 
@@ -212,7 +213,9 @@ function SearchPage() {
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-text line-clamp-2">{q.text || q.question_text}</p>
+                <div className="text-sm text-text line-clamp-2">
+                  <MathText text={q.text || q.question_text} />
+                </div>
               </div>
               {isExpanded && (
                 <div className="px-4 pb-4 border-t border-border bg-gray-50">
@@ -230,7 +233,9 @@ function SearchPage() {
                   ) : (
                     <div className="space-y-1 mb-3">
                       {Object.entries(q.options || {}).map(([k, v]) => (
-                        <div key={k} className="text-sm text-text"><span className="font-bold">{k}.</span> {v}</div>
+                        <div key={k} className="text-sm text-text">
+                          <span className="font-bold">{k}.</span> <MathText text={v} />
+                        </div>
                       ))}
                     </div>
                   )}

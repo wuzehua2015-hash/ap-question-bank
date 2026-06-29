@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
 import { loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
 import { startSimilarQuiz } from '../utils/quizSession'
+import { MathText } from './MathText'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -129,7 +130,9 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3 }) {
                   <span className="text-xs text-text-muted shrink-0">{q.question_id}</span>
                   <span className="text-xs bg-brand text-white px-1.5 py-0.5 rounded shrink-0">{q.primary_unit}</span>
                   <span className="text-xs bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded shrink-0">{item.sharedTopics.join(', ')}</span>
-                  <span className="text-xs text-text truncate">{q.text || q.question_text}</span>
+                  <span className="text-xs text-text truncate">
+                    <MathText text={q.text || q.question_text} />
+                  </span>
                 </div>
                 <button className="text-xs text-brand hover:underline shrink-0 ml-2">
                   {isExpanded ? '收起' : '查看'}
@@ -153,7 +156,9 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3 }) {
                   ) : (
                     <div className="space-y-1 mb-2">
                       {Object.entries(q.options || {}).map(([key, value]) => (
-                        <div key={key} className="text-xs text-text"><span className="font-bold">{key}.</span> {value}</div>
+                        <div key={key} className="text-xs text-text">
+                          <span className="font-bold">{key}.</span> <MathText text={value} />
+                        </div>
                       ))}
                     </div>
                   )}
