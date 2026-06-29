@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCurrentFRQ } from '../utils/quizSession'
 import { MathText } from '../components/MathText'
+import { normalizeRubricPoints } from '../utils/rubric'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -104,10 +105,12 @@ function FRQScorePage() {
               )}
 
               <div className="space-y-2">
-                {(frq.rubric?.points || []).map((point, pidx) => (
+                {normalizeRubricPoints(frq.rubric).map((point, pidx) => (
                   <div key={pidx} className="text-base pl-3 border-l-2 border-blue-300">
-                    <span className="font-bold text-blue-700">{point.point_id}</span>
-                    <span className="text-blue-500 ml-2">({point.value} 分)</span>
+                    <div className="font-bold text-blue-700">
+                      {point.point_id}
+                      <span className="text-blue-500 ml-2 font-normal">({point.value} 分)</span>
+                    </div>
                     <p className="text-gray-700 mt-1">
                       <MathText text={point.description} />
                     </p>

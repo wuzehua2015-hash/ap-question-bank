@@ -175,6 +175,63 @@
           "U10": 5
         }
       }
+    },
+    {
+      "id": "statistics",
+      "name": "AP Statistics",
+      "shortName": "Stats",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/statistics/question_bank.json",
+      "frqBank": "ap/statistics/frq_bank.json",
+      "similarityIndex": "ap/statistics/similarity_index.json",
+      "classificationConfig": "ap/statistics/classification_config.json",
+      "dataVersion": "local-2008-2017-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Exploring One-Variable Data"
+        },
+        {
+          "id": "U2",
+          "name": "Exploring Two-Variable Data"
+        },
+        {
+          "id": "U3",
+          "name": "Collecting Data"
+        },
+        {
+          "id": "U4",
+          "name": "Probability, Random Variables, and Probability Distributions"
+        },
+        {
+          "id": "U5",
+          "name": "Sampling Distributions"
+        },
+        {
+          "id": "U6",
+          "name": "Inference for Categorical Data: Proportions"
+        },
+        {
+          "id": "U7",
+          "name": "Inference for Quantitative Data: Means"
+        },
+        {
+          "id": "U8",
+          "name": "Inference for Categorical Data: Chi-Square"
+        },
+        {
+          "id": "U9",
+          "name": "Inference for Quantitative Data: Slopes"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 40,
+        "frqCount": 6,
+        "mcqTimeLimit": 5400,
+        "frqTimeLimit": 5400,
+        "unitDistribution": {}
+      }
     }
   ]
 }

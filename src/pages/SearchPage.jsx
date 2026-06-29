@@ -13,8 +13,6 @@ const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
-const YEARS = ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']
-
 function SearchPage() {
   const navigate = useNavigate()
   const { currentSubject } = useSubject()
@@ -37,6 +35,7 @@ function SearchPage() {
   useEffect(() => {
     loadMCQBank(currentSubject).then(data => {
       setQuestions(data)
+      setYearFilter('all')
       setLoading(false)
     }).catch(() => setLoading(false))
   }, [currentSubject])
@@ -44,6 +43,9 @@ function SearchPage() {
   const doneIds = useMemo(() => new Set(getDoneQuestions(currentSubject)), [currentSubject])
   const wrongIds = useMemo(() => new Set(getWrongQuestions(currentSubject)), [currentSubject])
   const questionHistory = useMemo(() => getQuestionHistory(currentSubject), [currentSubject])
+  const years = useMemo(() => {
+    return [...new Set(questions.map(q => String(q.year)).filter(Boolean))].sort((a, b) => Number(a) - Number(b))
+  }, [questions])
 
   const filtered = useMemo(() => {
     let result = [...questions]
@@ -128,7 +130,7 @@ function SearchPage() {
             <label className="block text-xs font-medium text-text-muted mb-1">年份</label>
             <select value={yearFilter} onChange={e => setYearFilter(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
               <option value="all">全部</option>
-              {YEARS.map(y => <option key={y} value={y}>{y}</option>)}
+              {years.map(y => <option key={y} value={y}>{y}</option>)}
             </select>
           </div>
           <div>

@@ -4,6 +4,7 @@ import { getCurrentQuiz, getCurrentFRQ, getMCQAnswers } from '../utils/quizSessi
 import { MathText } from '../components/MathText'
 import { PdfContainer, exportToPdf } from '../utils/pdfExport.jsx'
 import { useSubject } from '../contexts/SubjectContext'
+import { normalizeRubricPoints } from '../utils/rubric'
 
 function ScorePage() {
   const navigate = useNavigate()
@@ -377,7 +378,7 @@ function ScorePage() {
                         style={{ maxWidth: '100%', maxHeight: '420px', borderRadius: '4px', marginBottom: '8px' }}
                       />
                     ))}
-                    {frq.rubric?.points?.map((point, pidx) => (
+                    {normalizeRubricPoints(frq.rubric).map((point, pidx) => (
                       <div key={pidx} style={{
                         padding: '6px 8px',
                         background: '#fff',
@@ -387,9 +388,11 @@ function ScorePage() {
                         color: '#4b5563',
                         lineHeight: 1.3,
                       }}>
-                        <span style={{ fontWeight: 'bold', color: '#1f2937' }}>{point.point_id}</span>
-                        <span style={{ color: '#9ca3af', marginLeft: '4px' }}>({point.value} 分)</span>
-                        <span style={{ marginLeft: '6px' }}><MathText text={point.description} /></span>
+                        <div style={{ fontWeight: 'bold', color: '#1f2937', marginBottom: '4px' }}>
+                          {point.point_id}
+                          <span style={{ color: '#9ca3af', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} 分)</span>
+                        </div>
+                        <div><MathText text={point.description} /></div>
                       </div>
                     ))}
                   </div>

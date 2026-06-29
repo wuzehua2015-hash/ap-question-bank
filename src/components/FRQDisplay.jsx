@@ -1,5 +1,6 @@
 import { MathText } from './MathText'
 import { parseFRQBlocks, BREAK_GUARD } from '../utils/pdfBreakGuard'
+import { normalizeRubricPoints } from '../utils/rubric'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -34,19 +35,6 @@ function DisplayImage({ path, variant }) {
   )
 }
 
-function normalizeRubricPoints(rubric) {
-  const rawPoints = rubric?.points || rubric?.parts || []
-  return rawPoints.map((p, idx) => {
-    if (p.point_id !== undefined) return p
-    return {
-      point_id: p.letter || p.point_id || `${idx + 1}`,
-      value: p.points || p.value || 1,
-      description: p.description || p.subparts?.map(s => s.criteria?.join('; ') || s.letter || '').join('; ') || '',
-      criteria: p.criteria || p.subparts?.map(s => s.criteria || []).flat() || [],
-    }
-  })
-}
-
 function RubricDisplay({ rubric, variant }) {
   const points = normalizeRubricPoints(rubric)
   if (!rubric || points.length === 0) return null
@@ -73,11 +61,13 @@ function RubricDisplay({ rubric, variant }) {
               lineHeight: 1.5,
               ...BREAK_GUARD.PARAGRAPH,
             }}>
-              <span style={{ fontWeight: 'bold', color: '#1e40af' }}>{point.point_id}</span>
-              <span style={{ color: '#6b7280', marginLeft: '4px' }}>({point.value} pts)</span>
-              <span style={{ marginLeft: '6px' }}>
+              <div style={{ fontWeight: 'bold', color: '#1e40af', marginBottom: '4px' }}>
+                {point.point_id}
+                <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} pts)</span>
+              </div>
+              <div>
                 <MathText text={point.description} />
-              </span>
+              </div>
             </div>
           ))}
         </div>
@@ -93,8 +83,10 @@ function RubricDisplay({ rubric, variant }) {
       <div className="space-y-2">
         {points.map((point, idx) => (
           <div key={idx} className="pl-3 border-l-2 border-blue-300 py-2 bg-blue-50/50 rounded-r">
-            <span className="font-bold text-blue-700">{point.point_id}</span>
-            <span className="text-blue-500 ml-2">({point.value} pts)</span>
+            <div className="font-bold text-blue-700">
+              {point.point_id}
+              <span className="text-blue-500 ml-2 font-normal">({point.value} pts)</span>
+            </div>
             <p className="text-gray-700 mt-1 text-sm">
               <MathText text={point.description} />
             </p>

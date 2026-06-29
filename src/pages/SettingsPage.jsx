@@ -6,7 +6,7 @@ function SettingsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
       <h1 className="text-2xl font-bold text-brand mb-2">科目设置</h1>
-      <p className="text-text-muted mb-8">选择当前要练习和验收的科目。</p>
+      <p className="text-text-muted mb-8">选择当前要练习和使用的科目。</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {activeSubjects.map(subject => {

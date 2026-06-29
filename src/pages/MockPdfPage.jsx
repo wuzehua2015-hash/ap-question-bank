@@ -7,6 +7,7 @@ import QuestionDisplay from '../components/QuestionDisplay'
 import FRQDisplay from '../components/FRQDisplay'
 import { MathText } from '../components/MathText'
 import { useSubject } from '../contexts/SubjectContext'
+import { normalizeRubricPoints } from '../utils/rubric'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -285,7 +286,7 @@ function MockPdfPage() {
                         }}
                       />
                     ))}
-                    {frq.rubric?.points?.map((point, pidx) => (
+                    {normalizeRubricPoints(frq.rubric).map((point, pidx) => (
                       <div key={pidx} style={{
                         padding: '6px 8px',
                         background: '#fff',
@@ -295,9 +296,11 @@ function MockPdfPage() {
                         color: '#374151',
                         ...BREAK_GUARD.PARAGRAPH,
                       }}>
-                        <span style={{ fontWeight: 'bold', color: '#1e40af' }}>{point.point_id}</span>
-                        <span style={{ color: '#6b7280', marginLeft: '4px' }}>({point.value} pts)</span>
-                        <span style={{ marginLeft: '6px' }}><MathText text={point.description} /></span>
+                        <div style={{ fontWeight: 'bold', color: '#1e40af', marginBottom: '4px' }}>
+                          {point.point_id}
+                          <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} pts)</span>
+                        </div>
+                        <div><MathText text={point.description} /></div>
                       </div>
                     ))}
                   </div>
