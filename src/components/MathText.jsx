@@ -30,11 +30,15 @@ function renderLatexSegments(text) {
   let match
 
   while ((match = pattern.exec(text)) !== null) {
+    const token = match[0]
+    if (token.startsWith('$') && !token.startsWith('$$') && !isLikelyInlineLatex(token, text, match.index)) {
+      continue
+    }
+
     if (match.index > lastIndex) {
       parts.push(escapeHtml(text.slice(lastIndex, match.index)))
     }
 
-    const token = match[0]
     if (token.startsWith('$$')) {
       parts.push(renderLatex(token.slice(2, -2), true))
     } else if (token.startsWith('\\[')) {
@@ -49,6 +53,23 @@ function renderLatexSegments(text) {
 
   parts.push(escapeHtml(text.slice(lastIndex)))
   return parts.join('')
+}
+
+function isLikelyInlineLatex(token, fullText, startIndex) {
+  const body = token.slice(1, -1).trim()
+  const before = fullText[startIndex - 1] || ''
+  const after = fullText[startIndex + token.length] || ''
+
+  if (!body) return false
+  if (/^\d[\d,.]*(?:\s|$|[A-Za-z])/.test(body)) return false
+  if (/^\(?\d/.test(body)) return false
+  if (/^[A-Za-z]?\d[\d,.]*$/.test(body)) return false
+  if (/^[A-Za-z][A-Za-z0-9']*(?:\([A-Za-z0-9]+\))?$/.test(body)) return true
+  if (/^[A-Za-z\s.,;:'"!?-]+$/.test(body)) return false
+  if ((before === '(' || before === ' ') && /^\d/.test(body)) return false
+  if (/^\s*(?:per|million|billion|trillion|and|or)\b/i.test(after)) return false
+
+  return /\\|[_^{}]|[=<>]|\b(?:frac|sum|int|lim|sqrt|left|right|le|ge|pi|theta|alpha|beta)\b/.test(body)
 }
 
 function isMarkdownTableSeparator(line) {
