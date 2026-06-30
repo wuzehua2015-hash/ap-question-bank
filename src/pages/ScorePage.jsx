@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCurrentQuiz, getCurrentFRQ, getMCQAnswers } from '../utils/quizSession'
 import { MathText } from '../components/MathText'
+import { RubricDescription } from '../components/FRQDisplay'
 import { PdfContainer, exportToPdf } from '../utils/pdfExport.jsx'
 import { useSubject } from '../contexts/SubjectContext'
 import { normalizeRubricPoints } from '../utils/rubric'
@@ -392,7 +393,7 @@ function ScorePage() {
                           {point.point_id}
                           <span style={{ color: '#9ca3af', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} 分)</span>
                         </div>
-                        <div><MathText text={point.description} /></div>
+                        <RubricDescription text={point.description} variant="pdf" />
                       </div>
                     ))}
                   </div>
