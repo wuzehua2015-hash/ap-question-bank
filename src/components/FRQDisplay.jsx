@@ -305,7 +305,7 @@ function DisplayImage({ path, variant }) {
   )
 }
 
-function RubricDisplay({ rubric, variant }) {
+export function RubricDisplay({ rubric, variant }) {
   const points = normalizeRubricPoints(rubric)
   if (!rubric || points.length === 0) return null
   const isSingleGuideline =

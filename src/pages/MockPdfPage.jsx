@@ -4,9 +4,8 @@ import { getCurrentQuiz, getCurrentFRQ, getQuizInfo } from '../utils/quizSession
 import { exportToPdf, PdfContainer } from '../utils/pdfExport.jsx'
 import { BREAK_GUARD } from '../utils/pdfBreakGuard'
 import QuestionDisplay from '../components/QuestionDisplay'
-import FRQDisplay, { RubricDescription } from '../components/FRQDisplay'
+import FRQDisplay, { RubricDisplay } from '../components/FRQDisplay'
 import { useSubject } from '../contexts/SubjectContext'
-import { normalizeRubricPoints } from '../utils/rubric'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -285,33 +284,7 @@ function MockPdfPage() {
                         }}
                       />
                     ))}
-                    {(() => {
-                      const points = normalizeRubricPoints(frq.rubric)
-                      const isSingleGuideline =
-                        points.length === 1 &&
-                        /scoring guideline/i.test(points[0].point_id || '') &&
-                        Number(points[0].value || 0) === Number(frq.rubric?.total_points || 0)
-                      return points.map((point, pidx) => (
-                      <div key={pidx} style={{
-                        padding: isSingleGuideline ? '8px 10px' : '6px 8px',
-                        background: '#fff',
-                        borderRadius: '4px',
-                        borderLeft: isSingleGuideline ? '0' : '3px solid #3b82f6',
-                        fontSize: '14px',
-                        color: '#374151',
-                        lineHeight: 1.55,
-                        ...BREAK_GUARD.PARAGRAPH,
-                      }}>
-                        {!isSingleGuideline && (
-                          <div style={{ fontWeight: 'bold', color: '#1e40af', marginBottom: '4px' }}>
-                            {point.point_id}
-                            <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} pts)</span>
-                          </div>
-                        )}
-                        <RubricDescription text={point.description} variant="pdf" />
-                      </div>
-                      ))
-                    })()}
+                    <RubricDisplay rubric={frq.rubric} variant="pdf" />
                   </div>
                 </div>
               ))}
