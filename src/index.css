@@ -39,14 +39,20 @@ body {
   @apply border-error bg-red-50;
 }
 
+.math-markdown-table-wrap {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+}
+
 .math-markdown-table {
   width: max-content;
   max-width: 100%;
-  margin: 0.75rem 0;
+  margin: 0;
   border-collapse: collapse;
   font-size: 0.95em;
   line-height: 1.35;
-  overflow-x: auto;
 }
 
 .math-markdown-table th,

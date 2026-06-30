@@ -29,7 +29,7 @@ function DisplayImage({ path, variant }) {
     <img
       src={imgUrl}
       alt=""
-      className="max-w-full max-h-[720px] mx-auto mb-4 rounded-lg border border-border"
+      className="max-w-full max-h-[820px] mx-auto mb-4 rounded-lg border border-border"
       onError={() => {}}
     />
   )
@@ -38,6 +38,10 @@ function DisplayImage({ path, variant }) {
 function RubricDisplay({ rubric, variant }) {
   const points = normalizeRubricPoints(rubric)
   if (!rubric || points.length === 0) return null
+  const isSingleGuideline =
+    points.length === 1 &&
+    /scoring guideline/i.test(points[0].point_id || '') &&
+    Number(points[0].value || 0) === Number(rubric.total_points || 0)
 
   if (variant === 'pdf') {
     return (
@@ -52,7 +56,7 @@ function RubricDisplay({ rubric, variant }) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
           {points.map((point, idx) => (
             <div key={idx} style={{
-              padding: '8px 10px',
+              padding: isSingleGuideline ? '10px 12px' : '8px 10px',
               background: '#f8fafc',
               borderRadius: '4px',
               borderLeft: '3px solid #3b82f6',
@@ -61,10 +65,12 @@ function RubricDisplay({ rubric, variant }) {
               lineHeight: 1.5,
               ...BREAK_GUARD.PARAGRAPH,
             }}>
-              <div style={{ fontWeight: 'bold', color: '#1e40af', marginBottom: '4px' }}>
-                {point.point_id}
-                <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} pts)</span>
-              </div>
+              {!isSingleGuideline && (
+                <div style={{ fontWeight: 'bold', color: '#1e40af', marginBottom: '4px' }}>
+                  {point.point_id}
+                  <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} pts)</span>
+                </div>
+              )}
               <div>
                 <MathText text={point.description} />
               </div>
@@ -82,12 +88,14 @@ function RubricDisplay({ rubric, variant }) {
       </div>
       <div className="space-y-2">
         {points.map((point, idx) => (
-          <div key={idx} className="pl-3 border-l-2 border-blue-300 py-2 bg-blue-50/50 rounded-r">
-            <div className="font-bold text-blue-700">
-              {point.point_id}
-              <span className="text-blue-500 ml-2 font-normal">({point.value} pts)</span>
-            </div>
-            <p className="text-gray-700 mt-1 text-sm">
+          <div key={idx} className={`${isSingleGuideline ? 'px-3' : 'pl-3 border-l-2 border-blue-300'} py-2 bg-blue-50/50 rounded-r`}>
+            {!isSingleGuideline && (
+              <div className="font-bold text-blue-700">
+                {point.point_id}
+                <span className="text-blue-500 ml-2 font-normal">({point.value} pts)</span>
+              </div>
+            )}
+            <p className="text-gray-700 mt-1 text-sm leading-relaxed">
               <MathText text={point.description} />
             </p>
           </div>
@@ -118,11 +126,7 @@ function FRQText({ text, isPdf }) {
               marginTop: block.type === 'subquestion' ? '8px' : '0',
             }}
           >
-            {block.lines.map((line, lidx) => (
-              <div key={lidx}>
-                <MathText text={line} />
-              </div>
-            ))}
+            <MathText text={block.lines.join('\n')} />
           </div>
         ))}
       </div>
@@ -133,11 +137,7 @@ function FRQText({ text, isPdf }) {
     <div className="text-base text-text leading-relaxed whitespace-pre-wrap">
       {blocks.map((block, bidx) => (
         <div key={bidx} className={block.type === 'subquestion' ? 'ml-6 mt-2' : ''}>
-          {block.lines.map((line, lidx) => (
-            <div key={lidx}>
-              <MathText text={line} />
-            </div>
-          ))}
+          <MathText text={block.lines.join('\n')} />
         </div>
       ))}
     </div>
@@ -172,7 +172,7 @@ function MissingGraphNotice({ isPdf }) {
   )
 }
 
-function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
+function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = true }) {
   if (!frq) return null
 
   const isPdf = variant === 'pdf'
@@ -181,7 +181,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true }) {
   const qNum = frq.question_number || frq.question_num || index || '?'
 
   return (
-    <div className={isPdf ? '' : 'bg-surface rounded-xl p-6 shadow-sm border border-border'}>
+    <div className={isPdf ? '' : framed ? 'bg-surface rounded-xl p-6 shadow-sm border border-border' : ''}>
       {isPdf ? (
         <div style={{
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',

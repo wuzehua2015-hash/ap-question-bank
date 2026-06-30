@@ -244,15 +244,31 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
   const playableQuestions = questions.filter(isPlayableMCQ)
 
   const mcq = []
-  const configTotal = Object.values(mockConfig.unitDistribution).reduce((a, b) => a + b, 0)
-  if (configTotal !== mockConfig.totalMCQ) {
+  const unitDistribution = mockConfig.unitDistribution || {}
+  const configTotal = Object.values(unitDistribution).reduce((a, b) => a + b, 0)
+  if (configTotal > 0 && configTotal !== mockConfig.totalMCQ) {
     console.error(`Mock exam config error: unit counts sum to ${configTotal}, expected ${mockConfig.totalMCQ}`)
   }
 
-  for (const [unit, count] of Object.entries(mockConfig.unitDistribution)) {
-    const unitQuestions = playableQuestions.filter(q => q.primary_unit === unit)
-    const shuffled = unitQuestions.sort(() => Math.random() - 0.5)
-    mcq.push(...shuffled.slice(0, count))
+  if (configTotal > 0) {
+    const selectedIds = new Set()
+    for (const [unit, count] of Object.entries(unitDistribution)) {
+      const unitQuestions = playableQuestions.filter(q => q.primary_unit === unit)
+      const shuffled = [...unitQuestions].sort(() => Math.random() - 0.5)
+      for (const q of shuffled.slice(0, count)) {
+        selectedIds.add(q.question_id)
+        mcq.push(q)
+      }
+    }
+
+    if (mcq.length < mockConfig.totalMCQ) {
+      const remaining = playableQuestions
+        .filter(q => !selectedIds.has(q.question_id))
+        .sort(() => Math.random() - 0.5)
+      mcq.push(...remaining.slice(0, mockConfig.totalMCQ - mcq.length))
+    }
+  } else {
+    mcq.push(...[...playableQuestions].sort(() => Math.random() - 0.5).slice(0, mockConfig.totalMCQ))
   }
 
   // FRQ: select a year, then a set if multiple sets exist for that year

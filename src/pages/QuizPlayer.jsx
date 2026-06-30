@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import QuestionCard from '../components/QuestionCard'
 import QuizNavigator from '../components/QuizNavigator'
 import Timer from '../components/Timer'
-import { UNITS, loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
+import { UNITS, loadMCQBank, loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
 import { getCurrentQuiz, getQuizConfig, getQuizInfo, setMCQAnswers, startSimilarQuiz } from '../utils/quizSession'
 import {
   getDoneQuestions, setDoneQuestions,
@@ -21,6 +21,7 @@ function QuizPlayer() {
   const [score, setScore] = useState(null)
   const [quizInfo, setQuizInfo] = useState(null)
   const [similarityIndex, setSimilarityIndex] = useState(null)
+  const [questionBank, setQuestionBank] = useState([])
   const [subject, setSubject] = useState('macro')
 
   useLayoutEffect(() => {
@@ -41,8 +42,12 @@ function QuizPlayer() {
     if (phase === 'submitted' && !(quizInfo && quizInfo.isMock)) {
       async function load() {
         try {
-          const index = await loadSimilarityIndex(subject)
+          const [index, bank] = await Promise.all([
+            loadSimilarityIndex(subject),
+            loadMCQBank(subject),
+          ])
           setSimilarityIndex(index)
+          setQuestionBank(bank)
         } catch (e) {
           console.warn('Failed to load similarity index:', e)
         }
@@ -157,25 +162,37 @@ function QuizPlayer() {
 
   const wrongByUnit = useMemo(() => {
     if (!similarityIndex || wrongQuestions.length === 0) return []
-    const questionsById = Object.fromEntries(quiz.map(q => [q.question_id, q]))
+    const sourceQuestions = questionBank.length > 0 ? questionBank : quiz
+    const questionsById = Object.fromEntries(sourceQuestions.map(q => [q.question_id, q]))
+    const wrongIds = new Set(wrongQuestions.map(q => q.question_id))
     const grouped = {}
 
     wrongQuestions.forEach(q => {
       const unit = q.primary_unit
-      if (!grouped[unit]) grouped[unit] = { unit, wrongQs: [], similarQs: [] }
+      if (!grouped[unit]) grouped[unit] = { unit, wrongQs: [], similarQs: [], similarIds: new Set() }
       grouped[unit].wrongQs.push(q)
-      const sim = getSimilarQuestions(q.question_id, similarityIndex, 1)
-      if (sim.length > 0) {
-        const sq = questionsById[sim[0].question_id]
-        if (sq) grouped[unit].similarQs.push({ ...sim[0], question: sq })
+      const candidates = getSimilarQuestions(q.question_id, similarityIndex, 12)
+      for (const item of candidates) {
+        const sq = questionsById[item.question_id]
+        if (!sq) continue
+        if (wrongIds.has(sq.question_id)) continue
+        if (grouped[unit].similarIds.has(sq.question_id)) continue
+        if (sq.primary_unit && q.primary_unit && sq.primary_unit !== q.primary_unit) continue
+        grouped[unit].similarIds.add(sq.question_id)
+        grouped[unit].similarQs.push({ ...item, question: sq })
+        break
       }
     })
 
-    return Object.values(grouped)
-  }, [wrongQuestions, similarityIndex, quiz])
+    return Object.values(grouped).map(({ similarIds, ...group }) => group)
+  }, [wrongQuestions, similarityIndex, questionBank, quiz])
 
   const practiceSimilar = (wrongQs, similarQs) => {
-    const selected = [...wrongQs, ...similarQs.map(s => s.question)].filter(Boolean)
+    const selectedById = new Map()
+    ;[...wrongQs, ...similarQs.map(s => s.question)].filter(Boolean).forEach(q => {
+      selectedById.set(q.question_id, q)
+    })
+    const selected = [...selectedById.values()]
     if (selected.length === 0) return
     startSimilarQuiz({
       questions: selected,

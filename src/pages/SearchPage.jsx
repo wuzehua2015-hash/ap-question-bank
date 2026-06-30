@@ -225,7 +225,7 @@ function SearchPage() {
                   {visibleImages.length > 0 && (
                     <div className="mb-3 mt-3">
                       {visibleImages.map((img, i) => (
-                        <img key={i} src={getImageUrl(img)} alt="" className="max-w-full max-h-60 rounded border border-border" />
+                        <img key={i} src={getImageUrl(img)} alt="" className="max-w-full max-h-[520px] rounded border border-border" />
                       ))}
                     </div>
                   )}

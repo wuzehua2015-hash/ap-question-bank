@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "open:quiet": "node scripts/open_quiet_browser.cjs",
     "audit:browser:quiet": "node scripts/open_quiet_browser.cjs --headless",
+    "stable:push": "node scripts/stable_push.cjs",
     "validate:data": "node scripts/data_validator.cjs",
     "validate:images": "node scripts/image_validator.cjs",
     "validate": "npm run validate:data && npm run validate:images",

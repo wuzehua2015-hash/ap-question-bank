@@ -13,7 +13,7 @@ function ImageWithFallback({ path }) {
     <img
       src={src}
       alt=""
-      className="max-w-full max-h-80 mx-auto mb-4 rounded-lg border border-border"
+      className="max-w-full max-h-[560px] mx-auto mb-4 rounded-lg border border-border"
       onError={() => {
         const originalPath = path.startsWith('/') ? path : '/' + path
         if (src !== originalPath) {

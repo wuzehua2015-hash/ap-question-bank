@@ -1,15 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCurrentFRQ } from '../utils/quizSession'
-import { MathText } from '../components/MathText'
-import { normalizeRubricPoints } from '../utils/rubric'
-
-const BASE_URL = import.meta.env.BASE_URL || '/'
-
-function imageUrl(path) {
-  if (!path) return ''
-  return path.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
-}
+import FRQDisplay from '../components/FRQDisplay'
 
 function FRQScorePage() {
   const navigate = useNavigate()
@@ -81,43 +73,7 @@ function FRQScorePage() {
               </div>
             </div>
 
-            <div className="mb-6 whitespace-pre-wrap text-text leading-relaxed text-base bg-gray-50 rounded-lg p-4">
-              <MathText text={frq.text || frq.question_text} />
-            </div>
-
-            {(frq.image_paths || []).length > 0 && (
-              <div className="mb-6 space-y-3">
-                {(frq.image_paths || []).map((path, i) => (
-                  <img key={i} src={imageUrl(path)} alt="" className="max-w-full max-h-96 mx-auto rounded border border-border" />
-                ))}
-              </div>
-            )}
-
-            <div className="bg-blue-50 rounded-lg p-4">
-              <div className="text-base font-bold text-blue-800 mb-3">评分标准</div>
-
-              {(frq.rubric_image_paths || []).length > 0 && (
-                <div className="mb-4 space-y-3">
-                  {(frq.rubric_image_paths || []).map((path, i) => (
-                    <img key={i} src={imageUrl(path)} alt="" className="max-w-full max-h-96 mx-auto rounded border border-blue-200 bg-white" />
-                  ))}
-                </div>
-              )}
-
-              <div className="space-y-2">
-                {normalizeRubricPoints(frq.rubric).map((point, pidx) => (
-                  <div key={pidx} className="text-base pl-3 border-l-2 border-blue-300">
-                    <div className="font-bold text-blue-700">
-                      {point.point_id}
-                      <span className="text-blue-500 ml-2 font-normal">({point.value} 分)</span>
-                    </div>
-                    <p className="text-gray-700 mt-1">
-                      <MathText text={point.description} />
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <FRQDisplay frq={frq} variant="web" index={idx + 1} showRubric={true} framed={false} />
           </div>
         ))}
       </div>

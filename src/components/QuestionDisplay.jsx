@@ -12,7 +12,7 @@ function DisplayImage({ path, variant }) {
         alt=""
         style={{ 
           maxWidth: '100%', 
-          maxHeight: '200px', 
+          maxHeight: '420px', 
           display: 'block', 
           margin: '12px auto',
           pageBreakInside: 'avoid',
@@ -27,7 +27,7 @@ function DisplayImage({ path, variant }) {
     <img
       src={imgUrl}
       alt=""
-      className="max-w-full max-h-80 mx-auto mb-4 rounded-lg border border-border"
+      className="max-w-full max-h-[560px] mx-auto mb-4 rounded-lg border border-border"
       onError={() => {}}
     />
   )

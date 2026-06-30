@@ -146,7 +146,7 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3 }) {
                       {(q.image_paths || [])
                         .filter(img => !(q.option_table_data && /option_table/i.test(img)))
                         .map((img, i) => (
-                          <img key={i} src={imageUrl(img)} alt="" className="max-w-full max-h-40 rounded border border-border" />
+                          <img key={i} src={imageUrl(img)} alt="" className="max-w-full max-h-72 rounded border border-border" />
                         ))}
                     </div>
                   )}

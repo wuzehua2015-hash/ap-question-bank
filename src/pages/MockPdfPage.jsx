@@ -286,23 +286,33 @@ function MockPdfPage() {
                         }}
                       />
                     ))}
-                    {normalizeRubricPoints(frq.rubric).map((point, pidx) => (
+                    {(() => {
+                      const points = normalizeRubricPoints(frq.rubric)
+                      const isSingleGuideline =
+                        points.length === 1 &&
+                        /scoring guideline/i.test(points[0].point_id || '') &&
+                        Number(points[0].value || 0) === Number(frq.rubric?.total_points || 0)
+                      return points.map((point, pidx) => (
                       <div key={pidx} style={{
-                        padding: '6px 8px',
+                        padding: isSingleGuideline ? '8px 10px' : '6px 8px',
                         background: '#fff',
                         borderRadius: '4px',
-                        borderLeft: '3px solid #3b82f6',
+                        borderLeft: isSingleGuideline ? '0' : '3px solid #3b82f6',
                         fontSize: '14px',
                         color: '#374151',
+                        lineHeight: 1.55,
                         ...BREAK_GUARD.PARAGRAPH,
                       }}>
-                        <div style={{ fontWeight: 'bold', color: '#1e40af', marginBottom: '4px' }}>
-                          {point.point_id}
-                          <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} pts)</span>
-                        </div>
+                        {!isSingleGuideline && (
+                          <div style={{ fontWeight: 'bold', color: '#1e40af', marginBottom: '4px' }}>
+                            {point.point_id}
+                            <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} pts)</span>
+                          </div>
+                        )}
                         <div><MathText text={point.description} /></div>
                       </div>
-                    ))}
+                      ))
+                    })()}
                   </div>
                 </div>
               ))}
