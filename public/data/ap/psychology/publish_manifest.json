@@ -1,0 +1,53 @@
+{
+  "subject": "AP Psychology",
+  "published_from": "subjects/AP/Psychology/02-data/{2012,2018}",
+  "years": [
+    2012,
+    2018
+  ],
+  "items": [
+    {
+      "year": 2012,
+      "mcq": 100,
+      "frq": 2
+    },
+    {
+      "year": 2018,
+      "mcq": 100,
+      "frq": 2
+    }
+  ],
+  "audit_reports": {
+    "2012": {
+      "year_dir": "subjects/AP/Psychology/02-data/2012",
+      "mcq_file": "subjects/AP/Psychology/02-data/2012/question_bank_cleaned.json",
+      "frq_file": "subjects/AP/Psychology/02-data/2012/frq_bank_cleaned.json",
+      "mcq_count": 100,
+      "frq_count": 2,
+      "p0_error_count": 0,
+      "warning_count": 0,
+      "publishable": true,
+      "errors": [],
+      "warnings": [],
+      "notes": []
+    },
+    "2018": {
+      "year_dir": "subjects/AP/Psychology/02-data/2018",
+      "mcq_file": "subjects/AP/Psychology/02-data/2018/question_bank_cleaned.json",
+      "frq_file": "subjects/AP/Psychology/02-data/2018/frq_bank_cleaned.json",
+      "mcq_count": 100,
+      "frq_count": 2,
+      "p0_error_count": 0,
+      "warning_count": 0,
+      "publishable": true,
+      "errors": [],
+      "warnings": [],
+      "notes": []
+    }
+  },
+  "published_at": "2026-06-30T04:37:15.287857+00:00",
+  "notes": [
+    "Local source PDFs use the legacy paper AP Psychology exam: 100 MCQ, 2 FRQ.",
+    "Images are cropped local assets for visual questions only; source PDFs remain local and are not published."
+  ]
+}

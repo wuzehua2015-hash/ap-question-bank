@@ -242,6 +242,73 @@
           "U9": 3
         }
       }
+    },
+    {
+      "id": "psychology",
+      "name": "AP Psychology",
+      "shortName": "Psych",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/psychology/question_bank.json",
+      "frqBank": "ap/psychology/frq_bank.json",
+      "similarityIndex": "ap/psychology/similarity_index.json",
+      "classificationConfig": "ap/psychology/classification_config.json",
+      "dataVersion": "local-2012-2018-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Scientific Foundations of Psychology"
+        },
+        {
+          "id": "U2",
+          "name": "Biological Bases of Behavior"
+        },
+        {
+          "id": "U3",
+          "name": "Sensation and Perception"
+        },
+        {
+          "id": "U4",
+          "name": "Learning"
+        },
+        {
+          "id": "U5",
+          "name": "Cognitive Psychology"
+        },
+        {
+          "id": "U6",
+          "name": "Developmental Psychology"
+        },
+        {
+          "id": "U7",
+          "name": "Motivation, Emotion, and Personality"
+        },
+        {
+          "id": "U8",
+          "name": "Clinical Psychology"
+        },
+        {
+          "id": "U9",
+          "name": "Social Psychology"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 100,
+        "frqCount": 2,
+        "mcqTimeLimit": 4200,
+        "frqTimeLimit": 3000,
+        "unitDistribution": {
+          "U1": 13,
+          "U2": 10,
+          "U3": 7,
+          "U4": 9,
+          "U5": 16,
+          "U6": 9,
+          "U7": 15,
+          "U8": 13,
+          "U9": 8
+        }
+      }
     }
   ]
 }
