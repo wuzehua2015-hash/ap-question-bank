@@ -1,7 +1,8 @@
 {
   "subject": "AP Psychology",
-  "published_from": "subjects/AP/Psychology/02-data/{2012,2018,2023/set_*,2024/set_*,2025/set_*}",
+  "published_from": "subjects/AP/Psychology/02-data/{1999,2012,2018,2023/set_*,2024/set_*,2025/set_*}",
   "years": [
+    1999,
     2012,
     2018
   ],
@@ -32,6 +33,11 @@
     }
   ],
   "items": [
+    {
+      "year": 1999,
+      "mcq": 100,
+      "frq": 0
+    },
     {
       "year": 2012,
       "mcq": 100,
@@ -80,6 +86,25 @@
     }
   ],
   "audit_reports": {
+    "1999": {
+      "subject": "AP Psychology",
+      "year": 1999,
+      "mcq_count": 100,
+      "frq_count": 0,
+      "not_scored": [
+        41,
+        99
+      ],
+      "p0_error_count": 0,
+      "warning_count": 0,
+      "publishable": true,
+      "errors": [],
+      "warnings": [],
+      "notes": [
+        "1999 released exam excerpt mirror; scanned OCR with fixed page/column expected ranges.",
+        "Items 41 and 99 are official not-scored items."
+      ]
+    },
     "2012": {
       "year_dir": "subjects/AP/Psychology/02-data/2012",
       "mcq_file": "subjects/AP/Psychology/02-data/2012/question_bank_cleaned.json",
@@ -203,10 +228,11 @@
       ]
     }
   },
-  "published_at": "2026-06-30T09:42:41.630828+00:00",
+  "published_at": "2026-06-30T12:01:35.492911+00:00",
   "notes": [
     "2012 and 2018 local source PDFs use the legacy paper AP Psychology exam: 100 MCQ, 2 FRQ.",
     "2023-2025 public AP Central PDFs are FRQ-only official release sets with scoring guidelines; they do not add MCQ.",
+    "1999 scanned MCQ excerpt is published after fixed page-range OCR, manual repairs, and not-scored item handling.",
     "2004 and 2007 scanned MCQ mirrors remain local candidates until OCR truncation is fully repaired and audited.",
     "Images are cropped local assets for visual questions only; source PDFs remain local and are not published."
   ]
