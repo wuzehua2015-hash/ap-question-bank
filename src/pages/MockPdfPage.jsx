@@ -4,8 +4,7 @@ import { getCurrentQuiz, getCurrentFRQ, getQuizInfo } from '../utils/quizSession
 import { exportToPdf, PdfContainer } from '../utils/pdfExport.jsx'
 import { BREAK_GUARD } from '../utils/pdfBreakGuard'
 import QuestionDisplay from '../components/QuestionDisplay'
-import FRQDisplay from '../components/FRQDisplay'
-import { MathText } from '../components/MathText'
+import FRQDisplay, { RubricDescription } from '../components/FRQDisplay'
 import { useSubject } from '../contexts/SubjectContext'
 import { normalizeRubricPoints } from '../utils/rubric'
 
@@ -309,7 +308,7 @@ function MockPdfPage() {
                             <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} pts)</span>
                           </div>
                         )}
-                        <div><MathText text={point.description} /></div>
+                        <RubricDescription text={point.description} variant="pdf" />
                       </div>
                       ))
                     })()}

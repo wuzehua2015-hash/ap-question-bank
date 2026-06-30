@@ -4,6 +4,97 @@ import { normalizeRubricPoints } from '../utils/rubric'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
+function rubricParagraphs(text) {
+  if (!text) return []
+
+  const normalized = String(text)
+    .replace(/\r\n/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .replace(/\s+(Solution)\s+/g, '\n\n$1\n\n')
+    .replace(/\s+(Question\s+\d+\s+\(continued\)\s+Scoring)\s+/g, '\n\n$1\n\n')
+    .replace(/\s+(Part\s+\([a-z]\):)\s+/gi, '\n\n$1 ')
+    .replace(/\s+(Part\s+\([a-z]\)\s+is\s+scored\s+as\s+follows:)\s+/gi, '\n\n$1\n\n')
+    .replace(/\s+(Step\s+\d+:)\s+/g, '\n\n$1 ')
+    .replace(/\s+(Notes:)\s+/g, '\n\n$1\n\n')
+    .replace(/\s+(Essentially correct\s+\(E\)\s+if)/g, '\n$1')
+    .replace(/\s+(Partially correct\s+\(P\)\s+if)/g, '\n$1')
+    .replace(/\s+(Incorrect\s+\(I\)\s+if)/g, '\n$1')
+    .replace(/\s+(OR\s+if)/g, '\n$1')
+    .replace(/\s+((?:4|3|2|1)\s+(?:Complete|Substantial|Developing|Minimal)\s+Response)\s+/g, '\n\n$1 ')
+
+  return normalized
+    .split(/\n{2,}/)
+    .map(part => part.trim())
+    .filter(Boolean)
+}
+
+function rubricParagraphType(text) {
+  if (/^Solution$/i.test(text)) return 'major'
+  if (/^Question\s+\d+\s+Intent/i.test(text)) return 'major'
+  if (/^Question\s+\d+\s+\(continued\)\s+Scoring/i.test(text)) return 'major'
+  if (/^Part\s+\([a-z]\):/i.test(text)) return 'part'
+  if (/^Step\s+\d+:/i.test(text)) return 'part'
+  if (/^Part\s+\([a-z]\)\s+is\s+scored\s+as\s+follows:/i.test(text)) return 'criteria'
+  if (/^Notes:/i.test(text)) return 'notes'
+  if (/^(?:4|3|2|1)\s+(?:Complete|Substantial|Developing|Minimal)\s+Response/i.test(text)) return 'score'
+  return 'body'
+}
+
+export function RubricDescription({ text, variant = 'web' }) {
+  const paragraphs = rubricParagraphs(text)
+  const isPdf = variant === 'pdf'
+
+  if (isPdf) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        {paragraphs.map((paragraph, idx) => {
+          const type = rubricParagraphType(paragraph)
+          const isHeading = type !== 'body'
+          return (
+            <div
+              key={idx}
+              style={{
+                whiteSpace: 'pre-wrap',
+                fontSize: isHeading ? '13px' : '12px',
+                lineHeight: isHeading ? 1.45 : 1.65,
+                fontWeight: ['major', 'part', 'criteria', 'score'].includes(type) ? '700' : '400',
+                color: type === 'major' ? '#1e40af' : '#374151',
+                background: type === 'major' ? '#eff6ff' : 'transparent',
+                borderLeft: ['part', 'criteria', 'notes', 'score'].includes(type) ? '3px solid #bfdbfe' : '0',
+                padding: type === 'major' ? '6px 8px' : ['part', 'criteria', 'notes', 'score'].includes(type) ? '3px 0 3px 8px' : '0',
+                borderRadius: type === 'major' ? '4px' : '0',
+                ...BREAK_GUARD.PARAGRAPH,
+              }}
+            >
+              <MathText text={paragraph} />
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-3">
+      {paragraphs.map((paragraph, idx) => {
+        const type = rubricParagraphType(paragraph)
+        const isHeading = type !== 'body'
+        const className = [
+          'whitespace-pre-wrap',
+          isHeading ? 'text-sm font-semibold' : 'text-sm leading-7 text-gray-700',
+          type === 'major' ? 'bg-blue-100/70 text-blue-900 px-3 py-2 rounded-md border border-blue-200' : '',
+          ['part', 'criteria', 'notes', 'score'].includes(type) ? 'pl-3 border-l-2 border-blue-200 text-gray-800' : '',
+        ].filter(Boolean).join(' ')
+        return (
+          <div key={idx} className={className}>
+            <MathText text={paragraph} />
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 function DisplayImage({ path, variant }) {
   const imgUrl = path.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
   const isPromptPage = /_prompt(_p\d+)?\.(png|jpe?g|webp)$/i.test(path)
@@ -71,9 +162,7 @@ function RubricDisplay({ rubric, variant }) {
                   <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} pts)</span>
                 </div>
               )}
-              <div>
-                <MathText text={point.description} />
-              </div>
+              <RubricDescription text={point.description} variant="pdf" />
             </div>
           ))}
         </div>
@@ -95,9 +184,7 @@ function RubricDisplay({ rubric, variant }) {
                 <span className="text-blue-500 ml-2 font-normal">({point.value} pts)</span>
               </div>
             )}
-            <p className="text-gray-700 mt-1 text-sm leading-relaxed">
-              <MathText text={point.description} />
-            </p>
+            <RubricDescription text={point.description} variant="web" />
           </div>
         ))}
       </div>
