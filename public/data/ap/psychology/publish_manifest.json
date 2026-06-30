@@ -1,9 +1,35 @@
 {
   "subject": "AP Psychology",
-  "published_from": "subjects/AP/Psychology/02-data/{2012,2018}",
+  "published_from": "subjects/AP/Psychology/02-data/{2012,2018,2023/set_*,2024/set_*,2025/set_*}",
   "years": [
     2012,
     2018
+  ],
+  "official_frq_sets": [
+    {
+      "year": 2023,
+      "set": "set_1"
+    },
+    {
+      "year": 2023,
+      "set": "set_2"
+    },
+    {
+      "year": 2024,
+      "set": "set_1"
+    },
+    {
+      "year": 2024,
+      "set": "set_2"
+    },
+    {
+      "year": 2025,
+      "set": "set_1"
+    },
+    {
+      "year": 2025,
+      "set": "set_2"
+    }
   ],
   "items": [
     {
@@ -14,6 +40,42 @@
     {
       "year": 2018,
       "mcq": 100,
+      "frq": 2
+    },
+    {
+      "year": 2023,
+      "set": "set_1",
+      "mcq": 0,
+      "frq": 2
+    },
+    {
+      "year": 2023,
+      "set": "set_2",
+      "mcq": 0,
+      "frq": 2
+    },
+    {
+      "year": 2024,
+      "set": "set_1",
+      "mcq": 0,
+      "frq": 2
+    },
+    {
+      "year": 2024,
+      "set": "set_2",
+      "mcq": 0,
+      "frq": 2
+    },
+    {
+      "year": 2025,
+      "set": "set_1",
+      "mcq": 0,
+      "frq": 2
+    },
+    {
+      "year": 2025,
+      "set": "set_2",
+      "mcq": 0,
       "frq": 2
     }
   ],
@@ -43,11 +105,109 @@
       "errors": [],
       "warnings": [],
       "notes": []
+    },
+    "2023_set_1": {
+      "subject": "AP Psychology",
+      "year": 2023,
+      "set": "set_1",
+      "mcq_count": 0,
+      "frq_count": 2,
+      "p0_error_count": 0,
+      "warning_count": 0,
+      "publishable": true,
+      "errors": [],
+      "warnings": [],
+      "notes": [
+        "Official AP Central FRQ and scoring guideline PDFs.",
+        "FRQ-only release set; no MCQ source is associated with these public PDFs."
+      ]
+    },
+    "2023_set_2": {
+      "subject": "AP Psychology",
+      "year": 2023,
+      "set": "set_2",
+      "mcq_count": 0,
+      "frq_count": 2,
+      "p0_error_count": 0,
+      "warning_count": 0,
+      "publishable": true,
+      "errors": [],
+      "warnings": [],
+      "notes": [
+        "Official AP Central FRQ and scoring guideline PDFs.",
+        "FRQ-only release set; no MCQ source is associated with these public PDFs."
+      ]
+    },
+    "2024_set_1": {
+      "subject": "AP Psychology",
+      "year": 2024,
+      "set": "set_1",
+      "mcq_count": 0,
+      "frq_count": 2,
+      "p0_error_count": 0,
+      "warning_count": 0,
+      "publishable": true,
+      "errors": [],
+      "warnings": [],
+      "notes": [
+        "Official AP Central FRQ and scoring guideline PDFs.",
+        "FRQ-only release set; no MCQ source is associated with these public PDFs."
+      ]
+    },
+    "2024_set_2": {
+      "subject": "AP Psychology",
+      "year": 2024,
+      "set": "set_2",
+      "mcq_count": 0,
+      "frq_count": 2,
+      "p0_error_count": 0,
+      "warning_count": 0,
+      "publishable": true,
+      "errors": [],
+      "warnings": [],
+      "notes": [
+        "Official AP Central FRQ and scoring guideline PDFs.",
+        "FRQ-only release set; no MCQ source is associated with these public PDFs."
+      ]
+    },
+    "2025_set_1": {
+      "subject": "AP Psychology",
+      "year": 2025,
+      "set": "set_1",
+      "mcq_count": 0,
+      "frq_count": 2,
+      "p0_error_count": 0,
+      "warning_count": 0,
+      "publishable": true,
+      "errors": [],
+      "warnings": [],
+      "notes": [
+        "Official AP Central FRQ and scoring guideline PDFs.",
+        "FRQ-only release set; no MCQ source is associated with these public PDFs."
+      ]
+    },
+    "2025_set_2": {
+      "subject": "AP Psychology",
+      "year": 2025,
+      "set": "set_2",
+      "mcq_count": 0,
+      "frq_count": 2,
+      "p0_error_count": 0,
+      "warning_count": 0,
+      "publishable": true,
+      "errors": [],
+      "warnings": [],
+      "notes": [
+        "Official AP Central FRQ and scoring guideline PDFs.",
+        "FRQ-only release set; no MCQ source is associated with these public PDFs."
+      ]
     }
   },
-  "published_at": "2026-06-30T04:37:15.287857+00:00",
+  "published_at": "2026-06-30T09:42:41.630828+00:00",
   "notes": [
-    "Local source PDFs use the legacy paper AP Psychology exam: 100 MCQ, 2 FRQ.",
+    "2012 and 2018 local source PDFs use the legacy paper AP Psychology exam: 100 MCQ, 2 FRQ.",
+    "2023-2025 public AP Central PDFs are FRQ-only official release sets with scoring guidelines; they do not add MCQ.",
+    "2004 and 2007 scanned MCQ mirrors remain local candidates until OCR truncation is fully repaired and audited.",
     "Images are cropped local assets for visual questions only; source PDFs remain local and are not published."
   ]
 }
