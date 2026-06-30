@@ -59,8 +59,10 @@ function isLikelyInlineLatex(token, fullText, startIndex) {
   const body = token.slice(1, -1).trim()
   const before = fullText[startIndex - 1] || ''
   const after = fullText[startIndex + token.length] || ''
+  const hasExplicitMathSyntax = /\\[A-Za-z]+|[_^{}]|[=<>]/.test(body)
 
   if (!body) return false
+  if (/^\(?\d/.test(body) && hasExplicitMathSyntax) return true
   if (/^\d[\d,.]*(?:\s|$|[A-Za-z])/.test(body)) return false
   if (/^\(?\d/.test(body)) return false
   if (/^[A-Za-z]?\d[\d,.]*$/.test(body)) return false
@@ -69,7 +71,7 @@ function isLikelyInlineLatex(token, fullText, startIndex) {
   if ((before === '(' || before === ' ') && /^\d/.test(body)) return false
   if (/^\s*(?:per|million|billion|trillion|and|or)\b/i.test(after)) return false
 
-  return /\\|[_^{}]|[=<>]|\b(?:frac|sum|int|lim|sqrt|left|right|le|ge|pi|theta|alpha|beta)\b/.test(body)
+  return hasExplicitMathSyntax || /\b(?:frac|sum|int|lim|sqrt|left|right|le|ge|pi|theta|alpha|beta)\b/.test(body)
 }
 
 function isMarkdownTableSeparator(line) {
