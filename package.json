@@ -13,7 +13,8 @@
     "stable:push": "node scripts/stable_push.cjs",
     "validate:data": "node scripts/data_validator.cjs",
     "validate:images": "node scripts/image_validator.cjs",
-    "validate": "npm run validate:data && npm run validate:images",
+    "validate:rubrics": "node scripts/rubric_text_validator.cjs",
+    "validate": "npm run validate:data && npm run validate:images && npm run validate:rubrics",
     "prebuild": "npm run validate",
     "predev": "npm run validate"
   },
