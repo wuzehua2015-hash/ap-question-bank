@@ -208,14 +208,18 @@ function SearchTableOptions({ tableData }) {
       <div className="grid" style={gridStyle}>
         <div className="bg-gray-100 p-1.5 text-xs font-medium text-text-muted"></div>
         {headers.map((header, i) => (
-          <div key={i} className="bg-gray-100 p-1.5 text-xs font-medium text-text-muted text-center">{header}</div>
+          <div key={i} className="bg-gray-100 p-1.5 text-xs font-medium text-text-muted text-center">
+            <MathText text={header} forceInlineLatex />
+          </div>
         ))}
       </div>
       {Object.entries(rows).map(([key, values]) => (
         <div key={key} className="grid border-t border-border bg-surface" style={gridStyle}>
           <div className="p-1.5 text-xs font-bold text-text flex items-center justify-center">{key}.</div>
           {values.map((value, i) => (
-            <div key={i} className="p-1.5 text-xs text-text text-center flex items-center justify-center">{value}</div>
+            <div key={i} className="p-1.5 text-xs text-text text-center flex items-center justify-center">
+              <MathText text={value} forceInlineLatex />
+            </div>
           ))}
         </div>
       ))}

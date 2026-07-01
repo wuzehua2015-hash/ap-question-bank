@@ -120,14 +120,14 @@ function renderMarkdownTable(lines, startIndex) {
   return { html, nextIndex: index }
 }
 
-function renderTextWithMarkdownTables(text) {
+function renderTextWithMarkdownTables(text, options = {}) {
   const lines = text.split('\n')
   const parts = []
   let buffer = []
 
   const flushBuffer = () => {
     if (!buffer.length) return
-    parts.push(renderLatexSegments(buffer.join('\n')))
+    parts.push(renderLatexSegments(buffer.join('\n'), options))
     buffer = []
   }
 
@@ -166,13 +166,13 @@ function normalizeLegacyMathText(text) {
  * Converts text with optional LaTeX math delimiters into HTML for shared web/PDF rendering.
  * Supported math delimiters: $...$, $$...$$, \(...\), \[...\].
  */
-export function formatMathText(text) {
+export function formatMathText(text, options = {}) {
   if (!text) return ''
   const normalized = normalizeLegacyMathText(String(text))
-  return renderTextWithMarkdownTables(normalized)
+  return renderTextWithMarkdownTables(normalized, options)
 }
 
-export function MathText({ text }) {
-  const html = formatMathText(text)
+export function MathText({ text, forceInlineLatex = false }) {
+  const html = formatMathText(text, { forceInlineLatex })
   return <span dangerouslySetInnerHTML={{ __html: html }} />
 }

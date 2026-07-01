@@ -41,13 +41,17 @@ function BackgroundTable({ tableData }) {
     <div className="my-4 border border-border rounded-lg overflow-hidden">
       <div className="grid" style={gridStyle}>
         {tableData.headers.map((h, i) => (
-          <div key={i} className="bg-gray-100 p-2 text-sm font-semibold text-text text-center">{h}</div>
+          <div key={i} className="bg-gray-100 p-2 text-sm font-semibold text-text text-center">
+            <MathText text={h} forceInlineLatex />
+          </div>
         ))}
       </div>
       {rows.map((row, ri) => (
         <div key={ri} className="grid border-t border-border" style={gridStyle}>
           {row.map((cell, ci) => (
-            <div key={ci} className="p-2 text-sm text-text text-center">{cell}</div>
+            <div key={ci} className="p-2 text-sm text-text text-center">
+              <MathText text={cell} forceInlineLatex />
+            </div>
           ))}
         </div>
       ))}
@@ -166,7 +170,7 @@ function TableOptions({ tableData, selectedAnswer, answer, isSubmitted, onSelect
         <div className="bg-gray-100 p-2 text-sm font-medium text-text-muted"></div>
         {headers.map((h, i) => (
           <div key={i} className="bg-gray-100 p-2 text-sm font-medium text-text-muted text-center">
-            {h}
+            <MathText text={h} forceInlineLatex />
           </div>
         ))}
       </div>
@@ -195,7 +199,7 @@ function TableOptions({ tableData, selectedAnswer, answer, isSubmitted, onSelect
             </div>
             {values.map((val, i) => (
               <div key={i} className="p-2 text-sm text-text text-center flex items-center justify-center">
-                {val}
+                <MathText text={val} forceInlineLatex />
               </div>
             ))}
           </div>

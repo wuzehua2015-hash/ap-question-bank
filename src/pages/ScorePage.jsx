@@ -398,7 +398,7 @@ function ScoreTableOptions({ tableData, answer, userAnswer }) {
         <div style={{ background: '#f3f4f6', padding: '8px', fontSize: '14px', fontWeight: 500, color: '#6b7280' }}></div>
         {headers.map((h, i) => (
           <div key={i} style={{ background: '#f3f4f6', padding: '8px', fontSize: '14px', fontWeight: 500, color: '#6b7280', textAlign: 'center' }}>
-            {h}
+            <MathText text={h} forceInlineLatex />
           </div>
         ))}
       </div>
@@ -414,7 +414,7 @@ function ScoreTableOptions({ tableData, answer, userAnswer }) {
             </div>
             {values.map((val, i) => (
               <div key={i} style={{ background: bg, padding: '8px', fontSize: '14px', color, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                {val}
+                <MathText text={val} forceInlineLatex />
               </div>
             ))}
           </div>

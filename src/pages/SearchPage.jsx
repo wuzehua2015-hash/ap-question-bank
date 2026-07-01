@@ -304,7 +304,7 @@ function SearchTableOptions({ tableData }) {
         <div className="bg-gray-100 p-2 text-sm font-medium text-text-muted"></div>
         {headers.map((h, i) => (
           <div key={i} className="bg-gray-100 p-2 text-sm font-medium text-text-muted text-center">
-            {h}
+            <MathText text={h} forceInlineLatex />
           </div>
         ))}
       </div>
@@ -321,7 +321,7 @@ function SearchTableOptions({ tableData }) {
           </div>
           {values.map((val, i) => (
             <div key={i} className="p-2 text-sm text-text text-center flex items-center justify-center">
-              {val}
+              <MathText text={val} forceInlineLatex />
             </div>
           ))}
         </div>
