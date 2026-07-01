@@ -24,7 +24,8 @@ function renderLatex(source, displayMode) {
   }
 }
 
-function renderLatexSegments(text) {
+function renderLatexSegments(text, options = {}) {
+  const { forceInlineLatex = false } = options
   const parts = []
   const pattern = /(\$\$[\s\S]+?\$\$|\$[^$\n]+?\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\))/g
   let lastIndex = 0
@@ -32,7 +33,7 @@ function renderLatexSegments(text) {
 
   while ((match = pattern.exec(text)) !== null) {
     const token = match[0]
-    if (token.startsWith('$') && !token.startsWith('$$') && !isLikelyInlineLatex(token, text, match.index)) {
+    if (token.startsWith('$') && !token.startsWith('$$') && !forceInlineLatex && !isLikelyInlineLatex(token, text, match.index)) {
       continue
     }
 
@@ -107,7 +108,7 @@ function renderMarkdownTable(lines, startIndex) {
     index += 1
   }
 
-  const renderCell = (cell) => renderLatexSegments(cell)
+  const renderCell = (cell) => renderLatexSegments(cell, { forceInlineLatex: true })
   const html = [
     '<span class="math-markdown-table-wrap"><table class="math-markdown-table"><thead><tr>',
     ...header.map(cell => `<th>${renderCell(cell)}</th>`),
