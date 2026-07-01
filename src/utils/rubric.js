@@ -23,3 +23,11 @@ export function normalizeRubricPoints(rubric) {
     }
   })
 }
+
+export function isOfficialWholeRubric(point, rubric) {
+  const pointId = String(point?.point_id || '')
+  return (
+    /^official_(?:scoring_guideline|rubric)$/i.test(pointId) &&
+    Number(point?.value || 0) === Number(rubric?.total_points || 0)
+  )
+}

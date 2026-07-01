@@ -3,6 +3,8 @@
   "published_from": "subjects/AP/Psychology/02-data/{1999,2012,2018,2023/set_*,2024/set_*,2025/set_*}",
   "years": [
     1999,
+    2004,
+    2007,
     2012,
     2018
   ],
@@ -35,7 +37,17 @@
   "items": [
     {
       "year": 1999,
+      "mcq": 98,
+      "frq": 0
+    },
+    {
+      "year": 2004,
       "mcq": 100,
+      "frq": 0
+    },
+    {
+      "year": 2007,
+      "mcq": 99,
       "frq": 0
     },
     {
@@ -103,6 +115,36 @@
       "notes": [
         "1999 released exam excerpt mirror; scanned OCR with fixed page/column expected ranges.",
         "Items 41 and 99 are official not-scored items."
+      ]
+    },
+    "2004": {
+      "subject": "AP Psychology",
+      "year": 2004,
+      "mcq_count": 100,
+      "frq_count": 0,
+      "p0_error_count": 0,
+      "warning_count": 0,
+      "publishable": true,
+      "errors": [],
+      "warnings": [],
+      "notes": [
+        "Scanned released exam excerpt processed by OCR.",
+        "Answer key was extracted from the answer-key table and spot checked against the PDF."
+      ]
+    },
+    "2007": {
+      "subject": "AP Psychology",
+      "year": 2007,
+      "mcq_count": 100,
+      "frq_count": 0,
+      "p0_error_count": 0,
+      "warning_count": 0,
+      "publishable": true,
+      "errors": [],
+      "warnings": [],
+      "notes": [
+        "Scanned released exam excerpt processed by OCR.",
+        "Answer key was extracted from the answer-key table and spot checked against the PDF."
       ]
     },
     "2012": {
@@ -228,12 +270,11 @@
       ]
     }
   },
-  "published_at": "2026-06-30T12:01:35.492911+00:00",
+  "published_at": "2026-06-30T13:07:57.231302+00:00",
   "notes": [
     "2012 and 2018 local source PDFs use the legacy paper AP Psychology exam: 100 MCQ, 2 FRQ.",
     "2023-2025 public AP Central PDFs are FRQ-only official release sets with scoring guidelines; they do not add MCQ.",
-    "1999 scanned MCQ excerpt is published after fixed page-range OCR, manual repairs, and not-scored item handling.",
-    "2004 and 2007 scanned MCQ mirrors remain local candidates until OCR truncation is fully repaired and audited.",
+    "1999, 2004, and 2007 scanned MCQ excerpts are published after fixed page-range OCR, manual repairs, and not-scored item handling.",
     "Images are cropped local assets for visual questions only; source PDFs remain local and are not published."
   ]
 }

@@ -82,7 +82,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
       </div>
 
       {/* Question text */}
-      <h3 className="text-lg font-medium text-text mb-4 leading-relaxed whitespace-pre-line">
+      <h3 className="text-lg font-medium text-text mb-4 leading-relaxed">
         <MathText text={question.text || question.question_text} />
       </h3>
 

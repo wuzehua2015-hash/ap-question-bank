@@ -1,21 +1,72 @@
 import { MathText } from './MathText'
 import { parseFRQBlocks, BREAK_GUARD } from '../utils/pdfBreakGuard'
-import { normalizeRubricPoints } from '../utils/rubric'
+import { isOfficialWholeRubric, normalizeRubricPoints } from '../utils/rubric'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
+
+function normalizePromptText(text) {
+  const normalized = String(text || '')
+    .replace(/\r\n/g, '\n')
+    .replace(/[ \t]+/g, ' ')
+    .replace(/\n(?!(?:\s*(?:[A-F]\.|[ivx]+\.|Part\s+[A-Z]\b|Part\s+\([a-z]\)|Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+|•)))/gi, ' ')
+    .replace(/\s+(Part\s+[A-Z]\b)/g, '\n\n$1')
+    .replace(/\s+([A-F]\.\s+(?=[A-Z]))/g, '\n$1')
+    .replace(/\s+([ivx]+\.)\s+(?=[A-Z])/gi, '\n$1 ')
+    .replace(/\s+(Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+)\s+/g, '\n\n$1\n')
+    .replace(/\s*•\s*/g, '\n• ')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
+
+  return normalizePromptTables(normalized)
+}
+
+function normalizePromptTables(text) {
+  return text.replace(
+    /Mean Percentages of Correct, Misled, and Incorrect Responses for Each Misinformation Condition Response Type Misinformation Condition High Misinformation Group Medium Misinformation Group Low misinformation Group Correct 63% 66% 74% Misled 30% 27% 19% Incorrect 7% 7% 7%/i,
+    [
+      'Mean Percentages of Correct, Misled, and Incorrect Responses for Each Misinformation Condition',
+      '',
+      '| Response Type | High Misinformation Group | Medium Misinformation Group | Low Misinformation Group |',
+      '|---|---:|---:|---:|',
+      '| Correct | 63% | 66% | 74% |',
+      '| Misled | 30% | 27% | 19% |',
+      '| Incorrect | 7% | 7% | 7% |',
+    ].join('\n') + '\n\n'
+  )
+}
 
 function rubricParagraphs(text) {
   if (!text) return []
 
   const normalized = String(text)
     .replace(/\r\n/g, '\n')
+    .replace(/[ \t]+/g, ' ')
+    .replace(/\n(?!(?:\s*(?:\([a-z]\)|[A-E]\.|Part\s+\([a-z]\)|Part\s+[A-Z]\b|Step\s+\d+:|Point\s+\d+:|Notes:|Additional Note:|Examples? that|Essentially correct|Partially correct|Incorrect|OR\b|\d+\s+(?:Complete|Substantial|Developing|Minimal)\s+Response|\||[-*•]\s)))/gi, ' ')
+    .replace(/\s+(General Considerations)\s+/gi, '\n\n$1\n')
+    .replace(/\s+(AP PSYCHOLOGY\s+\d{4}\s+SCORING GUIDELINES\s+Question\s+\d+(?:\s+\(continued\))?)/gi, '\n\n$1\n')
+    .replace(/(\d+\s+Points?)\s+(General Considerations)/gi, '$1\n\n$2')
+    .replace(/(FRQ\s+\d+:[^\n]+)\s+(\d+\s+Points?)/gi, '$1\n$2')
+    .replace(/\s+(Reporting Category)\s+(Scoring Criteria)\s+/gi, '\n\n$1\n$2\n')
+    .replace(/\s+(Decision Rules and Scoring Notes)\s+/gi, '\n\n$1\n')
+    .replace(/\s+(Examples? that (?:do not earn|earn) this point:)\s*/gi, '\n\n$1\n')
+    .replace(/\s+(Additional Note:)\s*/gi, '\n\n$1\n')
+    .replace(/\s+(\d+\.\s+(?=[A-Z]))/g, '\n$1')
+    .replace(/\s+((?:0|1|2|3|4|5|6|7)\s+points?)\s+/gi, '\n$1 ')
+    .replace(/\s+(Responses that (?:do not earn|earn) this point:)\s*/gi, '\n\n$1\n')
+    .replace(/\s+(The response (?:does not|describes|proposes|provides|accurately|identifies|explains|uses|includes)\b)/gi, '\n$1')
+    .replace(/\s+(•\s*)/g, '\n$1')
     .replace(/\n{3,}/g, '\n\n')
     .replace(/\s+(Solution)\s+/g, '\n\n$1\n\n')
     .replace(/\s+(Question\s+\d+\s+\(continued\)\s+Scoring)\s+/g, '\n\n$1\n\n')
     .replace(/\s+(Part\s+\([a-z]\):)\s+/gi, '\n\n$1 ')
+    .replace(/\s+(Part\s+[A-F](?:\s+\([ivx]+\))?)\s+/gi, '\n\n$1\n')
     .replace(/\s+(Part\s+\([a-z]\)\s+is\s+scored\s+as\s+follows:)\s+/gi, '\n\n$1\n\n')
     .replace(/\s+(Step\s+\d+:)\s+/g, '\n\n$1 ')
+    .replace(/\s+(Point\s+\d+:)\s+/g, '\n\n$1 ')
     .replace(/\s+(Notes:)\s+/g, '\n\n$1\n\n')
+    .replace(/\s*•\s*(Score:)\s+/g, '\n$1 ')
+    .replace(/\s+(Score:)\s+/g, '\n$1 ')
+    .replace(/\s+(Do NOT score\b)/g, '\n$1')
     .replace(/\s+(Essentially correct\s+\(E\)\s+if)/g, '\n$1')
     .replace(/\s+(Partially correct\s+\(P\)\s+if)/g, '\n$1')
     .replace(/\s+(Incorrect\s+\(I\)\s+if)/g, '\n$1')
@@ -32,10 +83,24 @@ function rubricParagraphType(text) {
   if (/^Solution$/i.test(text)) return 'major'
   if (/^Question\s+\d+\s+Intent/i.test(text)) return 'major'
   if (/^Question\s+\d+\s+\(continued\)\s+Scoring/i.test(text)) return 'major'
+  if (/^\d+\s+points?$/i.test(text)) return 'major'
+  if (/^\d+\s+points?\s+General Considerations$/i.test(text)) return 'major'
+  if (/^FRQ\s+\d+:/i.test(text)) return 'major'
+  if (/^General Considerations$/i.test(text)) return 'major'
+  if (/^Reporting Category$/i.test(text)) return 'major'
+  if (/^Scoring Criteria$/i.test(text)) return 'major'
+  if (/^Decision Rules and Scoring Notes$/i.test(text)) return 'major'
+  if (/^AP PSYCHOLOGY\s+\d{4}\s+SCORING GUIDELINES/i.test(text)) return 'major'
+  if (/^Examples? that (?:do not earn|earn) this point:/i.test(text)) return 'criteria'
+  if (/^Additional Note:/i.test(text)) return 'notes'
   if (/^Part\s+\([a-z]\):/i.test(text)) return 'part'
+  if (/^Part\s+[A-Z]\b/i.test(text)) return 'part'
   if (/^Step\s+\d+:/i.test(text)) return 'part'
+  if (/^Point\s+\d+:/i.test(text)) return 'part'
   if (/^Part\s+\([a-z]\)\s+is\s+scored\s+as\s+follows:/i.test(text)) return 'criteria'
   if (/^Notes:/i.test(text)) return 'notes'
+  if (/^Responses that (?:do not earn|earn) this point:/i.test(text)) return 'criteria'
+  if (/^(?:0|1|2|3|4|5|6)\s+points?/i.test(text)) return 'score'
   if (/^(?:4|3|2|1)\s+(?:Complete|Substantial|Developing|Minimal)\s+Response/i.test(text)) return 'score'
   return 'body'
 }
@@ -76,21 +141,66 @@ function criterionLabel(line) {
 }
 
 function scoreLabel(line) {
+  if (/^\d+\s+points?/i.test(String(line || '').trim()) && !/^[0-6]\s+points?/i.test(String(line || '').trim())) return null
+  const pointMatch = String(line || '').match(/^([0-6])\s+(points?)\s*(.*)$/i)
+  if (pointMatch) return { score: pointMatch[1], title: pointMatch[2], rest: pointMatch[3] }
   const match = String(line || '').match(/^([1-4])\s+((?:Complete|Substantial|Developing|Minimal)\s+Response)\s*(.*)$/i)
   if (!match) return null
   return { score: match[1], title: match[2], rest: match[3] }
 }
 
 function partLabel(line) {
-  const match = String(line || '').match(/^(Part\s+\([a-z]\):|Step\s+\d+:)\s*(.*)$/i)
+  const match = String(line || '').match(/^(Part\s+\([a-z]\):|Part\s+[A-Z]\b|Step\s+\d+:|Point\s+\d+:)\s*(.*)$/i)
   if (!match) return null
   return { label: match[1], rest: match[2] }
 }
 
+function numberedLabel(line) {
+  const match = String(line || '').match(/^(\d+\.)\s+(.*)$/)
+  if (!match) return null
+  return { number: match[1], rest: match[2] }
+}
+
+function bulletLabel(line) {
+  const match = String(line || '').match(/^•\s*(.*)$/)
+  if (!match) return null
+  if (!match[1].trim()) return null
+  return match[1]
+}
+
 function RubricLine({ line, type, isPdf }) {
+  if (/^•\s*$/.test(String(line || '').trim())) return null
   const label = criterionLabel(line)
   const score = scoreLabel(line)
   const part = partLabel(line)
+  const numbered = numberedLabel(line)
+  const bullet = bulletLabel(line)
+
+  if (/^Score:/i.test(line)) {
+    const content = line.replace(/^Score:\s*/i, '')
+    if (isPdf) {
+      return (
+        <div style={{
+          margin: '3px 0 3px 12px',
+          paddingLeft: '8px',
+          borderLeft: '2px solid #d1d5db',
+          color: '#475569',
+          lineHeight: 1.5,
+          ...BREAK_GUARD.PARAGRAPH,
+        }}>
+          <span style={{ fontWeight: '700', color: '#334155' }}>Example: </span>
+          <MathText text={content} />
+        </div>
+      )
+    }
+
+    return (
+      <div className="ml-4 pl-3 border-l-2 border-gray-200 text-sm leading-6 text-gray-600">
+        <span className="font-semibold text-gray-700">Example: </span>
+        <MathText text={content} />
+      </div>
+    )
+  }
 
   if (score) {
     if (isPdf) {
@@ -112,6 +222,85 @@ function RubricLine({ line, type, isPdf }) {
           <span className="font-semibold text-gray-900">{score.title}</span>
           {score.rest && <span> <MathText text={score.rest} /></span>}
         </div>
+      </div>
+    )
+  }
+
+  if (/^Responses that (?:do not earn|earn) this point:/i.test(line)) {
+    const earns = /Responses that earn/i.test(line)
+    const color = earns ? '#047857' : '#b45309'
+    const bg = earns ? '#ecfdf5' : '#fffbeb'
+
+    if (isPdf) {
+      return (
+        <div style={{
+          marginTop: '6px',
+          padding: '5px 8px',
+          background: bg,
+          color,
+          borderRadius: '4px',
+          fontWeight: '700',
+          fontSize: '12px',
+          ...BREAK_GUARD.PARAGRAPH,
+        }}>
+          <MathText text={line} />
+        </div>
+      )
+    }
+
+    return (
+      <div className={`${earns ? 'bg-emerald-50 text-emerald-800' : 'bg-amber-50 text-amber-800'} text-xs font-bold px-2 py-1 rounded mt-2`}>
+        <MathText text={line} />
+      </div>
+    )
+  }
+
+  if (numbered) {
+    if (isPdf) {
+      return (
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '22px 1fr',
+          gap: '7px',
+          padding: '3px 0',
+          lineHeight: 1.55,
+          ...BREAK_GUARD.PARAGRAPH,
+        }}>
+          <div style={{ color: '#1e40af', fontWeight: '700', fontSize: '12px' }}>{numbered.number}</div>
+          <div><MathText text={numbered.rest} /></div>
+        </div>
+      )
+    }
+
+    return (
+      <div className="grid grid-cols-[1.75rem_1fr] gap-2 py-1 text-sm leading-6 text-gray-700">
+        <span className="font-bold text-blue-700">{numbered.number}</span>
+        <span><MathText text={numbered.rest} /></span>
+      </div>
+    )
+  }
+
+  if (bullet) {
+    if (isPdf) {
+      return (
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '14px 1fr',
+          gap: '6px',
+          padding: '2px 0',
+          lineHeight: 1.5,
+          ...BREAK_GUARD.PARAGRAPH,
+        }}>
+          <div style={{ color: '#64748b' }}>•</div>
+          <div><MathText text={bullet} /></div>
+        </div>
+      )
+    }
+
+    return (
+      <div className="grid grid-cols-[1rem_1fr] gap-2 py-0.5 text-sm leading-6 text-gray-700">
+        <span className="text-gray-500">•</span>
+        <span><MathText text={bullet} /></span>
       </div>
     )
   }
@@ -196,27 +385,33 @@ export function RubricDescription({ text, variant = 'web' }) {
           const type = rubricParagraphType(paragraph)
           const lines = splitRubricLines(paragraph)
           const isHeading = type !== 'body'
-          const headingText = ['criteria', 'notes'].includes(type) ? lines[0] : paragraph
-          const detailLines = ['criteria', 'notes'].includes(type) ? lines.slice(1) : lines
+          const hasSeparateHeading = ['major', 'criteria', 'notes'].includes(type) && lines.length > 1
+          const headingText = hasSeparateHeading || ['criteria', 'notes'].includes(type) ? lines[0] : paragraph
+          const detailLines = hasSeparateHeading || ['criteria', 'notes'].includes(type) ? lines.slice(1) : lines
           return (
             <div
               key={idx}
               style={{
-                whiteSpace: 'pre-wrap',
                 fontSize: isHeading ? '13px' : '12px',
                 lineHeight: isHeading ? 1.45 : 1.65,
-                fontWeight: ['major', 'score'].includes(type) ? '700' : '400',
-                color: type === 'major' ? '#1e40af' : '#374151',
-                background: type === 'major' ? '#eff6ff' : type === 'criteria' ? '#ffffff' : 'transparent',
+                fontWeight: '400',
+                color: '#374151',
+                background: type === 'criteria' ? '#ffffff' : 'transparent',
                 borderLeft: ['part', 'criteria', 'notes', 'score'].includes(type) ? '3px solid #bfdbfe' : '0',
-                padding: type === 'major' ? '6px 8px' : ['part', 'criteria', 'notes', 'score'].includes(type) ? '5px 0 5px 8px' : '0',
-                borderRadius: ['major', 'criteria'].includes(type) ? '4px' : '0',
+                padding: ['part', 'criteria', 'notes', 'score'].includes(type) ? '5px 0 5px 8px' : type === 'major' ? '4px 0' : '0',
+                borderRadius: type === 'criteria' ? '4px' : '0',
                 ...BREAK_GUARD.PARAGRAPH,
               }}
             >
-              {['criteria', 'notes'].includes(type) ? (
+              {hasSeparateHeading || ['criteria', 'notes'].includes(type) ? (
                 <div>
-                  <div style={{ fontWeight: '700', color: '#1e40af', marginBottom: '4px' }}>
+                  <div style={{
+                    fontWeight: '700',
+                    color: '#1e40af',
+                    marginBottom: '4px',
+                    paddingBottom: type === 'major' ? '2px' : '0',
+                    borderBottom: type === 'major' ? '1px solid #dbeafe' : '0',
+                  }}>
                     <MathText text={headingText} />
                   </div>
                   {detailLines.map((line, lineIdx) => (
@@ -241,19 +436,19 @@ export function RubricDescription({ text, variant = 'web' }) {
         const type = rubricParagraphType(paragraph)
         const lines = splitRubricLines(paragraph)
         const isHeading = type !== 'body'
-        const headingText = ['criteria', 'notes'].includes(type) ? lines[0] : paragraph
-        const detailLines = ['criteria', 'notes'].includes(type) ? lines.slice(1) : lines
+        const hasSeparateHeading = ['major', 'criteria', 'notes'].includes(type) && lines.length > 1
+        const headingText = hasSeparateHeading || ['criteria', 'notes'].includes(type) ? lines[0] : paragraph
+        const detailLines = hasSeparateHeading || ['criteria', 'notes'].includes(type) ? lines.slice(1) : lines
         const className = [
-          'whitespace-pre-wrap',
-          ['major', 'score'].includes(type) ? 'text-sm font-semibold' : 'text-sm leading-7 text-gray-700',
-          type === 'major' ? 'bg-blue-100/70 text-blue-900 px-3 py-2 rounded-md border border-blue-200' : '',
+          ['major', 'score'].includes(type) ? 'text-sm' : 'text-sm leading-7 text-gray-700',
+          type === 'major' ? 'text-blue-900 py-1 border-b border-blue-100' : '',
           type === 'criteria' ? 'bg-white border border-blue-100 rounded-md px-3 py-2' : '',
           type === 'notes' ? 'bg-amber-50/70 border border-amber-100 rounded-md px-3 py-2 text-amber-900' : '',
           ['part', 'score'].includes(type) ? 'pl-3 border-l-2 border-blue-200 text-gray-800' : '',
         ].filter(Boolean).join(' ')
         return (
           <div key={idx} className={className}>
-            {['criteria', 'notes'].includes(type) ? (
+            {hasSeparateHeading || ['criteria', 'notes'].includes(type) ? (
               <div>
                 <div className="font-bold text-blue-800 mb-1.5"><MathText text={headingText} /></div>
                 <div className="divide-y divide-gray-100">
@@ -310,8 +505,7 @@ export function RubricDisplay({ rubric, variant }) {
   if (!rubric || points.length === 0) return null
   const isSingleGuideline =
     points.length === 1 &&
-    /scoring guideline/i.test(points[0].point_id || '') &&
-    Number(points[0].value || 0) === Number(rubric.total_points || 0)
+    isOfficialWholeRubric(points[0], rubric)
 
   if (variant === 'pdf') {
     return (
@@ -326,10 +520,10 @@ export function RubricDisplay({ rubric, variant }) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
           {points.map((point, idx) => (
             <div key={idx} style={{
-              padding: isSingleGuideline ? '10px 12px' : '8px 10px',
+              padding: isSingleGuideline ? '0' : '8px 10px',
               background: '#f8fafc',
               borderRadius: '4px',
-              borderLeft: '3px solid #3b82f6',
+              borderLeft: isSingleGuideline ? '0' : '3px solid #3b82f6',
               fontSize: '13px',
               color: '#374151',
               lineHeight: 1.5,
@@ -356,7 +550,7 @@ export function RubricDisplay({ rubric, variant }) {
       </div>
       <div className="space-y-2">
         {points.map((point, idx) => (
-          <div key={idx} className={`${isSingleGuideline ? 'px-3' : 'pl-3 border-l-2 border-blue-300'} py-2 bg-blue-50/50 rounded-r`}>
+          <div key={idx} className={`${isSingleGuideline ? '' : 'pl-3 border-l-2 border-blue-300'} py-2 bg-blue-50/50 rounded-r`}>
             {!isSingleGuideline && (
               <div className="font-bold text-blue-700">
                 {point.point_id}
@@ -373,7 +567,8 @@ export function RubricDisplay({ rubric, variant }) {
 
 function FRQText({ text, isPdf }) {
   if (!text) return null
-  const blocks = parseFRQBlocks(text)
+  const normalizedText = normalizePromptText(text)
+  const blocks = parseFRQBlocks(normalizedText)
 
   if (isPdf) {
     return (
@@ -392,7 +587,9 @@ function FRQText({ text, isPdf }) {
               marginTop: block.type === 'subquestion' ? '8px' : '0',
             }}
           >
-            <MathText text={block.lines.join('\n')} />
+            <div style={{ whiteSpace: 'pre-wrap' }}>
+              <MathText text={block.lines.join('\n')} />
+            </div>
           </div>
         ))}
       </div>
@@ -400,10 +597,12 @@ function FRQText({ text, isPdf }) {
   }
 
   return (
-    <div className="text-base text-text leading-relaxed whitespace-pre-wrap">
+    <div className="text-base text-text leading-relaxed">
       {blocks.map((block, bidx) => (
         <div key={bidx} className={block.type === 'subquestion' ? 'ml-6 mt-2' : ''}>
-          <MathText text={block.lines.join('\n')} />
+          <div className="whitespace-pre-wrap">
+            <MathText text={block.lines.join('\n')} />
+          </div>
         </div>
       ))}
     </div>

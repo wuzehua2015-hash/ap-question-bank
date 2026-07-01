@@ -242,11 +242,11 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
 
       {/* Question text */}
       {isPdf ? (
-        <div style={{ fontSize: '16px', fontWeight: '500', color: '#1f2937', marginBottom: '12px', lineHeight: 1.6, whiteSpace: 'pre-line' }}>
+        <div style={{ fontSize: '16px', fontWeight: '500', color: '#1f2937', marginBottom: '12px', lineHeight: 1.6 }}>
           <MathText text={question.text || question.question_text} />
         </div>
       ) : (
-        <h3 className="text-lg font-medium text-text mb-4 leading-relaxed whitespace-pre-line">
+        <h3 className="text-lg font-medium text-text mb-4 leading-relaxed">
           <MathText text={question.text || question.question_text} />
         </h3>
       )}

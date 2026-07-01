@@ -2,10 +2,9 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCurrentQuiz, getCurrentFRQ, getMCQAnswers } from '../utils/quizSession'
 import { MathText } from '../components/MathText'
-import { RubricDescription } from '../components/FRQDisplay'
+import FRQDisplay from '../components/FRQDisplay'
 import { PdfContainer, exportToPdf } from '../utils/pdfExport.jsx'
 import { useSubject } from '../contexts/SubjectContext'
-import { normalizeRubricPoints } from '../utils/rubric'
 
 function ScorePage() {
   const navigate = useNavigate()
@@ -350,53 +349,10 @@ function ScorePage() {
                     </div>
                   </div>
 
-                  <p style={{ fontSize: '22px', color: '#4b5563', marginBottom: '10px', lineHeight: 1.5 }}>
-                    <MathText text={frq.text || frq.question_text} />
-                  </p>
-
-                  {frq.image_paths && frq.image_paths.length > 0 && (
-                    <div style={{ marginBottom: '10px' }}>
-                      {frq.image_paths.map((imgPath, i) => (
-                        <img
-                          key={i}
-                          src={import.meta.env.BASE_URL + imgPath.replace(/^\//, '')}
-                          alt=""
-                          style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '4px' }}
-                        />
-                      ))}
-                    </div>
-                  )}
-
                   <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#6b7280', marginBottom: '6px' }}>
                     评分标准
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                    {(frq.rubric_image_paths || []).map((imgPath, i) => (
-                      <img
-                        key={`rubric-${i}`}
-                        src={import.meta.env.BASE_URL + imgPath.replace(/^\//, '')}
-                        alt=""
-                        style={{ maxWidth: '100%', maxHeight: '420px', borderRadius: '4px', marginBottom: '8px' }}
-                      />
-                    ))}
-                    {normalizeRubricPoints(frq.rubric).map((point, pidx) => (
-                      <div key={pidx} style={{
-                        padding: '6px 8px',
-                        background: '#fff',
-                        borderRadius: '4px',
-                        borderLeft: '3px solid #d1d5db',
-                        fontSize: '20px',
-                        color: '#4b5563',
-                        lineHeight: 1.3,
-                      }}>
-                        <div style={{ fontWeight: 'bold', color: '#1f2937', marginBottom: '4px' }}>
-                          {point.point_id}
-                          <span style={{ color: '#9ca3af', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} 分)</span>
-                        </div>
-                        <RubricDescription text={point.description} variant="pdf" />
-                      </div>
-                    ))}
-                  </div>
+                  <FRQDisplay frq={frq} variant="pdf" showRubric={true} framed={false} />
                 </div>
               ))}
             </div>

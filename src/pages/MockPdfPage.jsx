@@ -23,8 +23,7 @@ function assetUrl(path) {
 
 function MockPdfPage() {
   const navigate = useNavigate()
-  const { currentSubjectConfig } = useSubject()
-  const subjectName = currentSubjectConfig?.name || 'AP Question Bank'
+  const { currentSubjectConfig, subjects } = useSubject()
   const pdfRef = useRef(null)
   const [mcqs, setMcqs] = useState([])
   const [frqs, setFrqs] = useState([])
@@ -104,6 +103,9 @@ function MockPdfPage() {
     )
   }
 
+  const sessionSubjectId = quizInfo?.subject || quizInfo?.config?.subject
+  const sessionSubjectConfig = subjects?.find(subject => subject.id === sessionSubjectId)
+  const subjectName = sessionSubjectConfig?.name || currentSubjectConfig?.name || 'AP Question Bank'
   const totalMcq = mcqs.length
   const totalFrq = frqs.length
   const totalFrqPoints = frqs.reduce((sum, f) => sum + (f.rubric?.total_points || 0), 0)
