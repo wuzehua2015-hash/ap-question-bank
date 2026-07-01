@@ -64,6 +64,7 @@ function isLikelyInlineLatex(token, fullText, startIndex) {
   const hasExplicitMathSyntax = /\\[A-Za-z]+|[_^{}]|[=<>]/.test(body)
 
   if (!body) return false
+  if (/^\(?-?\d[\d,.]*\)?$/.test(body)) return true
   if (/^\(?\d/.test(body) && hasExplicitMathSyntax) return true
   if (/^\d[\d,.]*(?:\s|$|[A-Za-z])/.test(body)) return false
   if (/^\(?\d/.test(body)) return false
