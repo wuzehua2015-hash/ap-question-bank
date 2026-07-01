@@ -69,6 +69,10 @@ body {
   font-weight: 650;
 }
 
+.katex {
+  white-space: nowrap;
+}
+
 @media print {
   .no-print { display: none !important; }
   .print-only { display: block !important; }
