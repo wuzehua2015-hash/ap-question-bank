@@ -14,6 +14,7 @@ function renderLatex(source, displayMode) {
   try {
     return katex.renderToString(source, {
       displayMode,
+      output: 'html',
       throwOnError: false,
       strict: 'ignore',
       trust: false,
