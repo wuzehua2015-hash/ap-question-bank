@@ -2153,11 +2153,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
     "text": "A circular loop of radius r is located in a uniform\nmagnetic field of magnitude B directed at an\nangle to the plane of the loop, as shown above.\nWhat is the magnetic flux through the loop?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "A": "$\\pi r^2B\\sin\\theta$",
+      "B": "$\\pi r^2B\\cos\\theta$",
+      "C": "$\\pi r^2B$",
+      "D": "$2\\pi rB\\cos\\theta$",
+      "E": "$2\\pi rB$"
     },
     "answer": "A",
     "primary_unit": "U13",
@@ -2207,11 +2207,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
     "text": "A circular loop of wire of radius R is\nperpendicular to a magnetic field whose\nmagnitude as a function of time t is given by the\nequation\n, where b and c are\npositive, nonzero constants. What is the\nmagnitude of the emf induced in the loop\nas a function of time t ?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "A": "$2\\pi R(bt^2+ct)$",
+      "B": "$2\\pi R(2bt+c)$",
+      "C": "$\\pi R^2(bt^2+ct)$",
+      "D": "$\\pi R^2(bt+c)$",
+      "E": "$\\pi R^2(2bt+c)$"
     },
     "answer": "E",
     "primary_unit": "U13",
@@ -2367,11 +2367,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
     "text": "Questions 8-10\nA charge\nis inside a hollow region in an\nelectrically neutral piece of solid metal, as shown\nabove. The dashed line represents a Gaussian surface\nwithin the metal that completely encloses the hollow\nregion.\n\nWhich of the following correctly relates the\nelectric potentials V at points X, Y, and Z ?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "A": "$V_X<V_Y<V_Z$",
+      "B": "$V_Y<V_X<V_Z$",
+      "C": "$V_Y<V_Z<V_X$",
+      "D": "$V_Z<V_X<V_Y$",
+      "E": "$V_Z<V_Y<V_X$"
     },
     "answer": "E",
     "primary_unit": "U9",
@@ -2747,11 +2747,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
     "text": "Two long, straight wires are fixed parallel to one\nanother a distance\napart. The wires carry equal\nconstant currents\nin the same direction. The\nattractive magnetic force per unit length between\nthem is\n. What is the force per unit\nlength between the wires if their separation is\nand each carries current\n? ?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "A": "$f/4$",
+      "B": "$f/2$",
+      "C": "$f$",
+      "D": "$3f/2$",
+      "E": "$2f$"
     },
     "answer": "E",
     "primary_unit": "U12",
@@ -3123,11 +3123,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
     "text": "A thin ring of radius R has charge\ndistributed\nuniformly around the ring. The center of the ring\nis at the origin of an x-axis perpendicular to the\nplane of the ring, as shown in the figure above. A\npoint charge\non the x-axis at position\nis\nreleased from rest. What is its kinetic energy\nwhen it reaches position P at\n\non the x-axis?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "A": "$\\frac{3}{10}\\frac{kQq}{R}$",
+      "B": "$\\frac{1}{2}\\frac{kQq}{R}$",
+      "C": "$\\frac{1}{\\sqrt{3}}\\frac{kQq}{R}$",
+      "D": "$\\frac{kQq}{R}$",
+      "E": "$\\frac{kQq}{R}\\left(\\frac{1}{\\sqrt{2}}-\\frac{1}{\\sqrt{5}}\\right)$"
     },
     "answer": "E",
     "primary_unit": "U9",
@@ -3615,11 +3615,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
     "text": "An electric field is produced by the very long,\nuniformly charged rod shown above. If the strength\nof the electric field is\nat a distance\nfrom the\naxis of the rod, at what distance from the axis is the\nfield strength\n?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "A": "$\\frac{r_1}{100}$",
+      "B": "$\\frac{r_1}{10}$",
+      "C": "$\\sqrt{10}\\,r_1$",
+      "D": "$10r_1$",
+      "E": "$100r_1$"
     },
     "answer": "D",
     "primary_unit": "U8",
@@ -3984,13 +3984,13 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "Two particles with the same speed\nv\nsub zero enter a\nregion of uniform magnetic field B directed into\nthe page and are initially traveling perpendicular\nto B, as shown above. Particle Y has charge negative Q\nand mass M; particle Z has charge positive Q and mass\n2M. Which of the following pairs of paths shown\nis possible for the subsequent motion of the\nparticles?\nParticle Y\nN egative Q, M\nParticle Z\nP ositive Q, 2\nM",
+    "text": "Two particles with the same speed $v_0$ enter a region of uniform magnetic field $\\mathbf{B}$ directed into the page and are initially traveling perpendicular to $\\mathbf{B}$, as shown above. Particle Y has charge $-Q$ and mass $M$; particle Z has charge $+Q$ and mass $2M$. Which of the following pairs of paths shown is possible for the subsequent motion of the particles?",
     "options": {
-      "A": "1 4",
-      "B": "2 4",
-      "C": "3 1",
-      "D": "4 1",
-      "E": "4 2\nThe figure shows a graph with a horizontal axis labeled x and a vertical axis labeled y. Where the axes meet is a small circle labeled z and with a note in parentheses: “positive z out of page”. A solid arrow starts where the two axes meet and extends upward on the y-axis and is labeled B. Another solid arrow starts where the two axes meet and extends to the right on the x-axis and is labeled E."
+      "A": "Particle Y: path 1; particle Z: path 4.",
+      "B": "Particle Y: path 2; particle Z: path 4.",
+      "C": "Particle Y: path 3; particle Z: path 1.",
+      "D": "Particle Y: path 4; particle Z: path 1.",
+      "E": "Particle Y: path 4; particle Z: path 2."
     },
     "answer": "C",
     "primary_unit": "U12",
@@ -4094,11 +4094,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
     "text": "Questions 6-7\nA region contains a uniform electric field\nof strength E in the Positive x-direction and a uniform\nmagnetic field of strength B in the Positive y-direction,\nrelative to the axes shown above. A positively\ncharged particle passes through these two fields\nin a straight line at a constant speed v .\n\nThe magnetic field strength B is equal to",
     "options": {
-      "A": "E",
-      "B": "E times v",
-      "C": "T\nhe fraction E over v",
-      "D": "E",
-      "E": "E\ntimes v squared\nThe figure shows a grid of three rows that each have seven Xs. In the center of the figure is a bold label B with the words “into page” in parentheses adjacent to it. At the bottom of the figure is a solid line with a gap in the center. Just below the gap is an arrow pointing up to the gap and labeled v sub zero. Just above the gap are four arcs that originate from the gap and curve in a semicircle and end on the solid line with arrows pointing down. Two arcs curve to the left of the gap and two arcs curve to the right of the gap. On each side of the gap, one of the arcs reaches the solid line twice as far from the gap as the other. These four arcs are labeled, from left to right: one, two, three and four."
+      "A": "$E$",
+      "B": "$Ev$",
+      "C": "$\\frac{E}{v}$",
+      "D": "$\\frac{v}{E}$",
+      "E": "$Ev^2$"
     },
     "answer": "C",
     "primary_unit": "U12",
@@ -4144,21 +4144,21 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "Two long, straight, parallel wires in the plane of the page\ncarry equal currents I in opposite directions, as shown above.\nWhat are the directions of the resultant magnetic field B, if\nany, at each of the points R, S, and T ?\nR S T",
+    "text": "Two long, straight, parallel wires in the plane of the page carry equal currents $I$ in opposite directions, as shown above. What are the directions of the resultant magnetic field $\\mathbf{B}$, if any, at each of the points $R$, $S$, and $T$?",
     "options": {
-      "A": "Out of the page\nInto the page\nOut of the page",
-      "B": "Out of the page\nNone, B equals zero\nOut of the page",
-      "C": "Out of the page\nNone, B equals zero\nInto the page",
-      "D": "Into the page\nNone, B equals zero\nOut of the page",
-      "E": "Into the page\nOut of the page\nInto the page\nThe figure shows five equally spaced vertical lines. From left to right, there is a short dashed line with a point at the top labeled R, a long solid line with an arrow pointing up labeled I, a short dashed line with a point at the top labeled S, a long solid line with an arrow pointing down labeled I, and a short dashed line with a point at the top labeled T. There are four horizontal double-sided dimensional arrows that are all labeled d. From left to right: the first goes from the dashed line with the point R to the right solid line. The second goes from the left solid line to the dashed line with the point S. The third goes from the dashed line with the point S to the right solid line. The fourth goes from the right solid line to the dashed line with the point T.\n\nThe figure on the left shows a solid square wire loop . The top and left sides are labeled 0.2 m. There is an arrow extending to the right from the center of the right side of the solid square and is labeled v. A second larger square is represented with dashed sides. The right side of the solid square meets and is centered on the left side of the larger dashed square. Inside the large dashed square is a group of dots arranged in three columns with 4 dots down in each column. On the top row of dots adjacent to the center dot is the letter B.\n\nThe figure on the right is a graph. Thevertical axis is labeled phi in units of Tesla meters squared. The vertical axis is labeled with the following numbers: zero, zero point zero, zero three, and zero point zero, zero six. The horizontal axis is labeled t in units of milliseconds. The horizontal axis is labeled with the following numbers: zero, eight, sixteen and twenty-four. A straight line starts at the point phi equal to zero and t equal to zero and extends up and to the right to the point phi equal to zero point zero, zero six and t equal to eight. From that point, a horizontal line extends to the point phi equal to zero point zero zero six and t equal to sixteen. From that point, a straight line extends down and to the right to the point phi equal to zero and t equal to twenty-four.\nA square wire loop of side Zero point two meters moves with a constant speed of\nv eq u\na ls 25 meters per second\nthrough a region containing a\nmagnetic field of strength B equals 0 point one five Tesla, as shown above left. A graph of the magnetic flux phi through the loop as a\nfunction of time t is shown above right. Time t equals zero occurs when the right edge of the loop just begins to enter the\nfield."
+      "A": "R: out of the page; S: into the page; T: out of the page.",
+      "B": "R: out of the page; S: none, $B=0$; T: out of the page.",
+      "C": "R: out of the page; S: none, $B=0$; T: into the page.",
+      "D": "R: into the page; S: none, $B=0$; T: out of the page.",
+      "E": "R: into the page; S: out of the page; T: into the page."
     },
     "answer": "A",
-    "primary_unit": "U13",
+    "primary_unit": "U12",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U13.x",
-        "name": "Electromagnetic Induction"
+        "code": "U12.x",
+        "name": "Magnetic Fields and Electromagnetism"
       }
     ],
     "skills": [
@@ -4181,7 +4181,7 @@
       "review_status": "draft_needs_year_gate",
       "confidence": "low",
       "evidence": [
-        "Matched keyword: flux"
+        "Matched keyword: magnetic field"
       ],
       "rejected_units": [],
       "source_refs": [
@@ -4312,7 +4312,7 @@
       "B": "It is counterclockwise and increasing.",
       "C": "It is clockwise and constant.",
       "D": "It is clockwise and increasing.",
-      "E": "It is oscillating.\nThe figure shows two concentric cirlces representing a spherical shell. The inner circle is white on the inside and has a dimensional arrow from its center to its edge labeled R sub 1. The outer circle has a dimensional arrow from its center to its edge labeled R sub 2. The area between the two cirles is colored gray and labeled positive Q. An arrow extends from the center of the circles down and to the left to a point inside the smaller cirlce and is labeled r."
+      "E": "It is oscillating."
     },
     "answer": "A",
     "primary_unit": "U13",
@@ -4330,8 +4330,7 @@
     "has_graph": true,
     "requires_graph": true,
     "image_paths": [
-      "images/ap/physics-c-e-m/2014/2014_mcq11_img01.png",
-      "images/ap/physics-c-e-m/2014/2014_mcq11_img02.png"
+      "images/ap/physics-c-e-m/2014/2014_mcq11_img01.png"
     ],
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2014.pdf",
@@ -4361,7 +4360,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "Questions 12-13\nA charge postive q is uniformly distributed throughout a\nnonconducting spherical shell of inner radius R sub one and\nouter radius R sub two, as shown above. The electric field is\ndetermined at a distance r from the center of the\nspherical shell.\n\nThe electric field for r is less than R sub 1 is",
+    "text": "A charge $+Q$ is uniformly distributed throughout a nonconducting spherical shell of inner radius $R_1$ and outer radius $R_2$, as shown above. The electric field is determined at a distance $r$ from the center of the spherical shell. The electric field for $r<R_1$ is",
     "options": {
       "A": "0",
       "B": "$\\frac{1}{4\\pi\\epsilon_0}\\frac{Q}{R_1^2}$",
@@ -4382,9 +4381,11 @@
       "2.B"
     ],
     "difficulty": "medium",
-    "has_graph": false,
-    "requires_graph": false,
-    "image_paths": [],
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-e-m/2014/2014_mcq12_img01.png"
+    ],
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2014.pdf",
       "notes": [
@@ -4413,7 +4414,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "Questions 12-13\nA charge postive q is uniformly distributed throughout a\nnonconducting spherical shell of inner radius R sub one and\nouter radius R sub two, as shown above. The electric field is\ndetermined at a distance r from the center of the\nspherical shell.\n\nThe electric field for r is greater than R sub 2 is",
+    "text": "A charge $+Q$ is uniformly distributed throughout a nonconducting spherical shell of inner radius $R_1$ and outer radius $R_2$, as shown above. The electric field is determined at a distance $r$ from the center of the spherical shell. The electric field for $r>R_2$ is",
     "options": {
       "A": "$\\frac{1}{4\\pi\\epsilon_0}\\frac{Q}{R_2^2}$",
       "B": "$\\frac{1}{4\\pi\\epsilon_0}\\frac{Q}{r^2-R_2^2}$",
@@ -4434,9 +4435,11 @@
       "2.B"
     ],
     "difficulty": "medium",
-    "has_graph": false,
-    "requires_graph": false,
-    "image_paths": [],
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-e-m/2014/2014_mcq13_img01.png"
+    ],
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2014.pdf",
       "notes": [
@@ -4467,19 +4470,19 @@
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
     "text": "The maximum charge a capacitor can store on\none plate is limited by which of the following?",
     "options": {
-      "A": "How much charge can physically fit on the\nconducting plates",
-      "B": "The maximum time rate of change of the\ncharge on the other plate",
-      "C": "The nonzero energy needed to remove an\nelectron from the conducting plates",
-      "D": "The finite value of the capacitance",
-      "E": "The electrical discharge when the electric\nfield between the plates becomes too great\nThe figure shows a section of a circuit with four capacitors. From left to right, its starts with one capacictor , then splits into two branches in parallel, with each branch containing one capacitor. The two branches then connect to another single capacitor in series."
+      "A": "How much charge can physically fit on the conducting plates.",
+      "B": "The maximum time rate of change of the charge on the other plate.",
+      "C": "The nonzero energy needed to remove an electron from the conducting plates.",
+      "D": "The finite value of the capacitance.",
+      "E": "The electrical discharge when the electric field between the plates becomes too great."
     },
     "answer": "E",
-    "primary_unit": "U11",
+    "primary_unit": "U10",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U11.x",
-        "name": "Electric Circuits"
+        "code": "U10.x",
+        "name": "Conductors and Capacitors"
       }
     ],
     "skills": [
@@ -4502,7 +4505,7 @@
       "review_status": "draft_needs_year_gate",
       "confidence": "low",
       "evidence": [
-        "Matched keyword: circuit"
+        "Matched keyword: capacitor"
       ],
       "rejected_units": [],
       "source_refs": [
@@ -4630,12 +4633,12 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "Capacitor C and resistors\nR\nsub one and\nR\nsub two are\nconnected to a battery as illustrated above. The\ncapacitor is initially uncharged. The battery\nsupplies constant voltage V after the switch S is\nclosed at time t equals zero. Which of the following\ngraphs best represents the current i sub one through the\nresistor R\nsub one as a function of t ?Each of the five options has a graph with a horizontal axis labeled t and a vertical axis labeled I sub 1. The origin where the two axes meet is labeled O.\nThe graph for option A starts near the top of the vertical axis, extends down and to the right with an initally steep negative slope but then levels off and asymptotically approaches, from above, the horizontal axis.",
+    "text": "Capacitor $C$ and resistors $R_1$ and $R_2$ are connected to a battery as illustrated above. The capacitor is initially uncharged. The battery supplies constant voltage $V$ after the switch $S$ is closed at time $t=0$. Which of the following graphs best represents the current $I_1$ through resistor $R_1$ as a function of $t$?",
     "options": {
-      "A": "The graph for option B starts near the bottom of the vertical axis, extends up and to the right with an initally steep positive slope but then levels off and asymptotically approaches, from below, a dashed horizontal line about four-fifths of the way up vertical axis.",
-      "B": "The graph for option C starts at the origin, extends up and to the right with an initally steep positive slope but then levels off and asymptotically approaches, from below, a dashed horizontal line about two thirds of the way up the vertical axis.",
-      "C": "The graph for option D starts near the top of the vertical axis, extends down and to the right with an initally steep negative slope but then levels off and asymptotically approaches, from above, a dashed horizontal line about one-quarter of the way up the vertical axis.",
-      "D": "The graph for option E starts at the origin, extends up and to the right with an initally small positive slope but then it gets steeper and asymptotically approaches the vertical as it reaches about three-fourths of the way along the horizontal axis.\nThe figure shows a group of four capacitors in a circuit. The circuit is open at the left side with each of the two wires terminating at a point. Three of the capacitors are on three parallel branches. The fourth capacitor is on the top branch that extends between the first and second parallel branches.",
+      "A": "Diagram A",
+      "B": "Diagram B",
+      "C": "Diagram C",
+      "D": "Diagram D",
       "E": "Diagram E"
     },
     "answer": "D",
@@ -4672,7 +4675,7 @@
       "review_status": "draft_needs_year_gate",
       "confidence": "low",
       "evidence": [
-        "Matched keyword: wire"
+        "Matched keyword: current"
       ],
       "rejected_units": [],
       "source_refs": [
@@ -4691,11 +4694,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
     "text": "Four identical capacitors of capacitance C are\nconnected as illustrated above. What is their\nequivalent capacitance?",
     "options": {
-      "A": "shows a straight line that starts at the point labeled I sub zero and extends down and to the right, crossing the horizontal axis about a third of the way along the horizontal axis.",
-      "B": "Diagram B",
-      "C": "shows a straight line that starts at the origin, extends up and to the right, reaching the height equal to I sub zero about three-fourths of the way along the horizontal axis",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "A": "$\\frac{3C}{5}$",
+      "B": "$\\frac{4C}{3}$",
+      "C": "$\\frac{5C}{3}$",
+      "D": "$3C$",
+      "E": "$4C$"
     },
     "answer": "C",
     "primary_unit": "U10",
@@ -4743,7 +4746,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "The circuit shown above consists of a battery of emf epsilon and\ninternal resistance r, a resistor R, an inductor L, and a switch\nS, initially in position 1. After the current i in the inductor\nreaches its maximum value I sub zero, S is switched instantaneously\nfrom position 1 to position 2 at time t equals zero. Subsequent\nvariation of i with t is best represented by which of the\nfollowing graphs?The options each have a graph with a horizontal axis labeled t and a vertical axis labeled i. The origin, where the two axes meet is label O. About two-thirds of the way up the vertical axis is the label I sub zero.\nshows a curve that starts at the point labeled I sub zero, extends down and to the right with an initally steep negative slope but then levels off and asymptotically approaches the horizontal axis.\nshows a curve that starts at the origin, extends up and to the right with an initally steep positive slope and then levels off and asymptotically approaches the horizontal as it reaches a height of I sub zero\nThe figure shows a circuit with a left branch, a middle branch, and a right branch. The left branch has a battery and a resistor. The battery is labeled epsilon with its top plate labeled positive and its bottom plate labeled negative. The resistor is labeled r. The right branch has a resistor labeled R and an inductor labeled L. At the bottom of the middle branch is a switch labeled S. The switch can reach a point labeled 1 that is on the left branch or a point labeled 2 that is on the middle branch. The switch is touching the point labeled 1 and there is a gap between the bottom of the middle branch and the switch S.",
+    "text": "The circuit shown above consists of a battery of emf $\\mathcal{E}$ and internal resistance $r$, a resistor $R$, an inductor $L$, and a switch $S$, initially in position 1. After the current $i$ in the inductor reaches its maximum value $I_0$, $S$ is switched instantaneously from position 1 to position 2 at time $t=0$. Subsequent variation of $i$ with $t$ is best represented by which of the following graphs?",
     "options": {
       "A": "Circuit A",
       "B": "Circuit B",
@@ -4966,11 +4969,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
     "text": "Copper wire A has twice the length and half the\ndiameter of copper wire B, but carries the same\ncurrent I. If P is the rate at which energy is\ndissipated in wire B, what is the rate at which\nenergy is dissipated in wire A?",
     "options": {
-      "A": "T\nhe fraction one over eight times P",
-      "B": "T\nhe fraction one over four times P",
-      "C": "P",
-      "D": "4P\nThe figure shows two parallel horizontal rings with a vertical axis through their centers. One ring is above the other and each is labeled with arrows and each is also labeled I. For each ring the arrows point in a clockwise motion if viewed from above the rings.\n\nThe figure shows two vertical lines. The vertical line on the left is labeled roman numeral I and has an arrow pointing up that is labeled 15 A. The vertical line on the right is labeled roman numeral II and has an arrow pointing down that is labeled 5 A. There is a point labeled P to the right of the two lines at a vertical position equal to the midpoint of the two lines. At the top of the lines is a doubled sided dimensional arrow that extends from one vertical line to the other and is labeled zero point two zero meters. Also at the top of the lines is a doubled sided dimensional arrow that extends from the right vertical line to a horizontal position equal to the position of the point P and is labeled zero point two zero meters.",
-      "E": "Diagram E"
+      "A": "$\\frac{1}{8}P$",
+      "B": "$\\frac{1}{4}P$",
+      "C": "$P$",
+      "D": "$4P$",
+      "E": "$8P$"
     },
     "answer": "E",
     "primary_unit": "U12",
@@ -5232,7 +5235,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "An electron moving to the right with constant\nvelocity enters a region with a uniform magnetic\nfield B directed toward the top of the page, as\nshown above. In what direction will the electron\ninitially be deflected?\nThe figure shows a shaded rectangular bar labeled Magnet. Eight curved lines with arrows come out of each end of the bar. The two lines on the middle of left side of the bar go off to the left, and the two lines on the middle of right side of the bar go off to the right. The arrows indicate that the top three lines come out of the right side of the bar, curve back above the bar, and then curve and enter the left side of the bar. The arrows also indicate that the bottom three lines come out of the right side of the bar, curve back below the bar, and then curve and enter the left side of the bar. There is a horizontal line with arrows pointing to the right above the bar and in the middle of the curved lines. This line is labeled Wire.",
+    "text": "An electron moving to the right with constant velocity enters a region with a uniform magnetic field $\\mathbf{B}$ directed toward the top of the page, as shown above. In what direction will the electron initially be deflected?",
     "options": {
       "A": "Toward the top of the page",
       "B": "Toward the bottom of the page",
@@ -5269,7 +5272,7 @@
       "review_status": "draft_needs_year_gate",
       "confidence": "low",
       "evidence": [
-        "Matched keyword: wire"
+        "Matched keyword: magnetic field"
       ],
       "rejected_units": [],
       "source_refs": [
@@ -5446,13 +5449,13 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "If the charge on a parallel-plate capacitor is\ndecreased from6 picocoulombs to 2 picocoulombs and the plate\nseparation is increased from 1 millimeter to 3 millimeters,\nthe energy stored in the capacitor will change\nfrom U sub zero to",
+    "text": "If the charge on a parallel-plate capacitor is decreased from $6\\ \\mathrm{pC}$ to $2\\ \\mathrm{pC}$ and the plate separation is increased from $1\\ \\mathrm{mm}$ to $3\\ \\mathrm{mm}$, the energy stored in the capacitor will change from $U_0$ to",
     "options": {
-      "A": "The fraction U sub zero over 4",
-      "B": "The fraction U sub zero over 3",
-      "C": "3 U sub zero",
-      "D": "8 U sub zero",
-      "E": "27 U sub zero"
+      "A": "$\\frac{U_0}{4}$",
+      "B": "$\\frac{U_0}{3}$",
+      "C": "$3U_0$",
+      "D": "$8U_0$",
+      "E": "$27U_0$"
     },
     "answer": "B",
     "primary_unit": "U10",
@@ -5660,19 +5663,19 @@
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
     "text": "What is the direction of the electric field at\npoint C ?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "A": "$W_{EXT}$ positive; $W_{ELEC}$ positive.",
+      "B": "$W_{EXT}$ positive; $W_{ELEC}$ negative.",
+      "C": "$W_{EXT}$ negative; $W_{ELEC}$ positive.",
+      "D": "$W_{EXT}$ negative; $W_{ELEC}$ negative.",
+      "E": "None of the above, since both works are zero."
     },
     "answer": "E",
-    "primary_unit": "U8",
+    "primary_unit": "U9",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U8.x",
-        "name": "Electric Charges, Fields, and Gauss's Law"
+        "code": "U9.x",
+        "name": "Electric Potential"
       }
     ],
     "skills": [
@@ -5693,7 +5696,7 @@
       "review_status": "draft_needs_year_gate",
       "confidence": "low",
       "evidence": [
-        "Matched keyword: electric field"
+        "Matched keyword: work"
       ],
       "rejected_units": [],
       "source_refs": [
@@ -5712,11 +5715,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
     "text": "The particle at corner P is allowed to move while\nthe other two particles are held in place. What is\nthe work done by the electric field as the particle\nat corner P moves to infinity?\n2 2kQ s",
     "options": {
-      "A": "Diagram A",
-      "B": "2kQ\ns",
-      "C": "2 kQ s 2 2 kQ s",
-      "D": "2 2 2kQ s",
-      "E": "Diagram E"
+      "A": "$V_I<V_{II}$",
+      "B": "$V_I=V_{II}$",
+      "C": "$V_I>V_{II}$",
+      "D": "It cannot be determined without knowing the magnitudes of the charges.",
+      "E": "It cannot be determined without knowing the distance between points I and II."
     },
     "answer": "A",
     "primary_unit": "U9",
@@ -5823,11 +5826,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
     "text": "Questions 3-4\nFour resistors, all with the same resistance R, are\nconnected as shown above.\n\nIf the power supply produces 10 V and the\nresistance R is 5 W, what is the current in\nresistor 4 R ?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "A": "$15\\ \\mathrm{A}$",
+      "B": "$5\\ \\mathrm{A}$",
+      "C": "$2\\ \\mathrm{A}$",
+      "D": "$\\frac{1}{2}\\ \\mathrm{A}$",
+      "E": "$\\frac{1}{5}\\ \\mathrm{A}$"
     },
     "answer": "C",
     "primary_unit": "U12",
@@ -7179,11 +7182,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
     "text": "Four long, straight wires are arranged at the\nvertices of a square with sides of length 2a, as\nshown in the figure above. Each wire carries a\ncurrent I. The currents of three of the wires are\ndirected into the page, while the current at\npoint C is directed out of the page. What is the\nmagnetic field at the center of the square?",
     "options": {
-      "A": "0 2 I a m p\ntoward wire D",
-      "B": "0 2 I a m p\ntoward wire B",
-      "C": "0 2 I a m p\ntoward the bottom of the page",
-      "D": "0 2 I a m p\ntoward wire D",
-      "E": "0 2 I a m p\ntoward wire B"
+      "A": "$\\frac{\\mu_0 I}{\\sqrt{2}\\pi a}$, toward wire D.",
+      "B": "$\\frac{\\mu_0 I}{\\sqrt{2}\\pi a}$, toward wire B.",
+      "C": "$\\frac{\\mu_0 I}{\\sqrt{2}\\pi a}$, toward the bottom of the page.",
+      "D": "$\\frac{\\mu_0 I}{2\\pi a}$, toward wire D.",
+      "E": "$\\frac{\\mu_0 I}{2\\pi a}$, toward wire B."
     },
     "answer": "A",
     "primary_unit": "U12",
@@ -7719,11 +7722,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
     "text": "The plate separation is now increased to a distance 2d. Which of the following correctly describes the\nchange, if any, of the voltage across the capacitor, the electric field between the plates, and the energy\nstored in the capacitor?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "A": "Voltage does not change; electric field does not change; energy does not change.",
+      "B": "Voltage does not change; electric field doubles; energy does not change.",
+      "C": "Voltage doubles; electric field doubles; energy does not change.",
+      "D": "Voltage doubles; electric field does not change; energy doubles.",
+      "E": "Voltage doubles; electric field doubles; energy doubles."
     },
     "answer": "D",
     "primary_unit": "U10",
@@ -9445,19 +9448,19 @@
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
     "text": "A small particle with charge\nWELEC -\n\n-\nby both the external force and the\nelectrostatic force is zero.",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "A": "$W_{EXT}$ positive; $W_{ELEC}$ positive.",
+      "B": "$W_{EXT}$ positive; $W_{ELEC}$ negative.",
+      "C": "$W_{EXT}$ negative; $W_{ELEC}$ positive.",
+      "D": "$W_{EXT}$ negative; $W_{ELEC}$ negative.",
+      "E": "None of the above, since the work done by both the external force and the electrostatic force is zero."
     },
     "answer": "B",
-    "primary_unit": "U8",
+    "primary_unit": "U9",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U8.x",
-        "name": "Electric Charges, Fields, and Gauss's Law"
+        "code": "U9.x",
+        "name": "Electric Potential"
       }
     ],
     "skills": [
@@ -9480,7 +9483,7 @@
       "review_status": "draft_needs_year_gate",
       "confidence": "low",
       "evidence": [
-        "Matched keyword: charge"
+        "Matched keyword: work"
       ],
       "rejected_units": [],
       "source_refs": [
@@ -12095,11 +12098,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
     "text": "A positively charged particle travels along the\npath shown in the figure above through region 1\nand between two parallel plates in region 2. A\nmagnetic field exists in region 1, and one of the\nplates in region 2 is at a higher potential than the\nother. What is the direction of the magnetic field\nin region 1, and which plate is at a higher\npotential in region 2 ?\nRegion 1\nPlate at Higher Potential",
     "options": {
-      "A": "Out of the page\nTop plate",
-      "B": "Out of the page\nBottom plate",
-      "C": "Into the page\nTop plate",
-      "D": "Into the page\nBottom plate",
-      "E": "To the right\nBottom plate\nT"
+      "A": "Out of the page; top plate.",
+      "B": "Out of the page; bottom plate.",
+      "C": "Into the page; top plate.",
+      "D": "Into the page; bottom plate.",
+      "E": "To the right; bottom plate."
     },
     "answer": "A",
     "primary_unit": "U12",
@@ -12311,11 +12314,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
     "text": "The magnetic field at a perpendicular distance r\nfrom a long, straight current-carrying wire is\ndirectly proportional to",
     "options": {
-      "A": "r",
-      "B": "r\n\nsquared",
-      "C": "1\nover r",
-      "D": "t h\ne fraction 1 over r squared, end fraction",
-      "E": "n\natural log of r"
+      "A": "$r$",
+      "B": "$r^2$",
+      "C": "$\\frac{1}{r}$",
+      "D": "$\\frac{1}{r^2}$",
+      "E": "$\\ln(r)$"
     },
     "answer": "C",
     "primary_unit": "U12",
@@ -12361,12 +12364,12 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "All switches are open, and there is no stored\nenergy in the capacitor or the inductor.\nSwitch S sub 3 is closed. What is the current in the\ninductor after steady state has been reached?",
+    "text": "All switches are open, and there is no stored energy in the capacitor or the inductor. Switch $S_3$ is closed. What is the current in the inductor after steady state has been reached?",
     "options": {
-      "A": "t he f\nraction epsilon over L R, end fraction",
-      "B": "e\npsilon R, over\nL",
-      "C": "e\np silon L, over\nR",
-      "D": "e\npsilon over\nR",
+      "A": "$\\frac{\\epsilon}{LR}$",
+      "B": "$\\frac{\\epsilon R}{L}$",
+      "C": "$\\frac{\\epsilon L}{R}$",
+      "D": "$\\frac{\\epsilon}{R}$",
       "E": "Zero"
     },
     "answer": "D",
@@ -12967,11 +12970,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
     "text": "The potential energy stored in the charge\nconfiguration shown is",
     "options": {
-      "A": "t h e\nfra c\ntion with numerator Q squared, and denominator 4 pi epsilon naught a, end fraction",
-      "B": "t h e\nfra c\ntion with numerator Q, and denominator 4 pi epsilon naught times a squared, end fraction",
+      "A": "$\\frac{Q^2}{4\\pi\\epsilon_0 a}$",
+      "B": "$\\frac{Q}{4\\pi\\epsilon_0 a^2}$",
       "C": "zero",
-      "D": "t h e\n\nfrac t\nion with numerator negative Q, and denominator 4 pi epsilon naught times a squared, end fraction",
-      "E": "t h e fract\nion with numerator negative Q squared, and denominator 4 pi epsilon naught a, end fraction"
+      "D": "$-\\frac{Q}{4\\pi\\epsilon_0 a^2}$",
+      "E": "$-\\frac{Q^2}{4\\pi\\epsilon_0 a}$"
     },
     "answer": "E",
     "primary_unit": "U8",
@@ -13022,10 +13025,10 @@
     "text": "The electric potential at point P due to the two\nspheres is",
     "options": {
       "A": "zero",
-      "B": "t h\ne fraction with numerator Q, and denominator 4 pi epsilon naught a, end fraction",
-      "C": "t h\ne fr act\nion with numerator Q, and denominator 4 pi epsilon naught, times a squared, end fraction",
-      "D": "t he\nfra c\ntion with numerator 2 Q, and denominator 4 pi epsilon naught a, end fraction",
-      "E": "t he\nfra cti\non with numerator 2 Q, and denominator 4 pi epsilon naught, times a squared, end fraction"
+      "B": "$\\frac{Q}{4\\pi\\epsilon_0 a}$",
+      "C": "$\\frac{Q}{4\\pi\\epsilon_0 a^2}$",
+      "D": "$\\frac{2Q}{4\\pi\\epsilon_0 a}$",
+      "E": "$\\frac{2Q}{4\\pi\\epsilon_0 a^2}$"
     },
     "answer": "A",
     "primary_unit": "U9",
@@ -13235,13 +13238,13 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Two positive point charges, both of magnitude\n4.0 times 10 to the power negative 6 coulombs\n, are situated along the x-axis at\nx sub 1 equals negative 2.0 meters\nand x sub 2 equals positive 2.0 meters\n. What is the\nelectric potential at the origin of the xy-coordinate\nsystem?",
+    "text": "Two positive point charges, both of magnitude $4.0\\times10^{-6}\\ \\mathrm{C}$, are situated along the $x$-axis at $x_1=-2.0\\ \\mathrm{m}$ and $x_2=+2.0\\ \\mathrm{m}$. What is the electric potential at the origin of the $xy$-coordinate system?",
     "options": {
-      "A": "negative 3.6 times 10 to the power 4 volts",
-      "B": "negative 1.8 times 10 to the power 4 volts",
-      "C": "0 volt",
-      "D": "1.8 times 10 to the power 4 volts",
-      "E": "3.6 times 10 to the power 4 volts\n\nT"
+      "A": "$-3.6\\times10^4\\ \\mathrm{V}$",
+      "B": "$-1.8\\times10^4\\ \\mathrm{V}$",
+      "C": "$0\\ \\mathrm{V}$",
+      "D": "$1.8\\times10^4\\ \\mathrm{V}$",
+      "E": "$3.6\\times10^4\\ \\mathrm{V}$"
     },
     "answer": "E",
     "primary_unit": "U9",
@@ -13609,13 +13612,13 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Two conducting plates hold equal and opposite\ncharges that create an electric field of magnitude\nE equals 95 newtons per coulomb\nthat is directed to the right, as\nshown in the figure above. Points A and B are\n0.75 centimeter apart with A closer to the positive plate.\nA proton is released from rest at point A. What is\nthe kinetic energy of the proton when it reaches\npoint B ?",
+    "text": "Two conducting plates hold equal and opposite charges that create an electric field of magnitude $E=95\\ \\mathrm{N/C}$ directed to the right, as shown in the figure above. Points A and B are $0.75\\ \\mathrm{cm}$ apart with A closer to the positive plate. A proton is released from rest at point A. What is the kinetic energy of the proton when it reaches point B?",
     "options": {
       "A": "0",
-      "B": "positive 1.14 times 10 to the power negative 19 joules",
-      "C": "positive 1.52 times 10 to the power negative 17 joules",
-      "D": "positive 1.92 times 10 to the negative 7 joules",
-      "E": "positive 71 joules"
+      "B": "$+1.14\\times10^{-19}\\ \\mathrm{J}$",
+      "C": "$+1.52\\times10^{-17}\\ \\mathrm{J}$",
+      "D": "$+1.92\\times10^{-7}\\ \\mathrm{J}$",
+      "E": "$+71\\ \\mathrm{J}$"
     },
     "answer": "B",
     "primary_unit": "U9",
@@ -13823,7 +13826,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Questions 12-13\nT\nTwo concentric spherical conducting shells and\nfour labeled points are shown above. The outer shell\nhas a net charge uppercase Q equals negative 20 nanocoulombs\n. The inner shell has a net\ncharge lowercase q equals positive 10 nanocoulombs\n.\n\nWhat is the charge on the outer surface of the\nouter shell?",
+    "text": "Two concentric spherical conducting shells and four labeled points are shown above. The outer shell has a net charge $Q=-20\\ \\mathrm{nC}$. The inner shell has a net charge $q=+10\\ \\mathrm{nC}$. What is the charge on the outer surface of the outer shell?",
     "options": {
       "A": "negative 30 nanocoulombs",
       "B": "negative 20 nanocoulombs",
@@ -13877,13 +13880,13 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Questions 12-13\nT\nTwo concentric spherical conducting shells and\nfour labeled points are shown above. The outer shell\nhas a net charge uppercase Q equals negative 20 nanocoulombs\n. The inner shell has a net\ncharge lowercase q equals positive 10 nanocoulombs\n.\n\nThe magnitudes of the electric fields at the\nfour labeled points in the figure are E sub R , E sub S , E sub T ,\nand E sub U , respectively. Which of the following\ncorrectly ranks the points according to the\nmagnitude of their electric fields?",
+    "text": "Two concentric spherical conducting shells and four labeled points are shown above. The outer shell has a net charge $Q=-20\\ \\mathrm{nC}$. The inner shell has a net charge $q=+10\\ \\mathrm{nC}$. The magnitudes of the electric fields at the four labeled points are $E_R$, $E_S$, $E_T$, and $E_U$, respectively. Which of the following correctly ranks the points according to the magnitude of their electric fields?",
     "options": {
-      "A": "E sub R equals E sub S, which equals E sub T, which equals E sub U",
-      "B": "E sub S is greater than E sub T, which is greater than open parenthesis, E sub R equals E sub U, close parenthesis",
-      "C": "open parenthesis, E sub S equals E sub T, close parenthesis, which is greater than E sub U, which is greater than E sub R",
-      "D": "E sub T is greater than E sub S, which is greater than E sub R, which is greater than E sub U",
-      "E": "open parenthesis E sub S equals E sub T close parenthesis, which is greater than open parenthesis E sub R, equals E sub U close parenthesis"
+      "A": "$E_R=E_S=E_T=E_U$",
+      "B": "$E_S>E_T>(E_R=E_U)$",
+      "C": "$(E_S=E_T)>E_U>E_R$",
+      "D": "$E_T>E_S>E_R>E_U$",
+      "E": "$(E_S=E_T)>(E_R=E_U)$"
     },
     "answer": "B",
     "primary_unit": "U8",
@@ -13983,13 +13986,13 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Four parallel plate capacitors all have the same\nplate area and have the plate separations shown\nabove. Both capacitors A and B have air between\nthe plates, while the space between the plates\nof both capacitors C and D is filled with a\ndielectric slab of dielectric constant\n\nkappa equals 2\nWhich of the following correctly ranks the\ncapacitors in order of their capacitance from\nlargest to smallest ?",
+    "text": "Four parallel plate capacitors all have the same plate area and have the plate separations shown above. Both capacitors A and B have air between the plates, while the space between the plates of both capacitors C and D is filled with a dielectric slab of dielectric constant $\\kappa=2$. Which of the following correctly ranks the capacitors in order of their capacitance from largest to smallest?",
     "options": {
-      "A": "B is greater than, open parenthesis, A equals D, close parenthesis, which is greater than C",
-      "B": "open parenthesis, A equals C, close parenthesis, which is greater than open parenthesis, B equals D, close parenthesis",
-      "C": "C is greater than, open parenthesis, A equals D, close parenthesis, which is greater than B",
-      "D": "open parenthesis, B equals D, close parenthesis, is greater than open parenthesis, A equals C, close parenthesis",
-      "E": "D is greater than C, which is greater than B, which is greater than A"
+      "A": "$B>(A=D)>C$",
+      "B": "$(A=C)>(B=D)$",
+      "C": "$C>(A=D)>B$",
+      "D": "$(B=D)>(A=C)$",
+      "E": "$D>C>B>A$"
     },
     "answer": "C",
     "primary_unit": "U10",
@@ -14200,10 +14203,10 @@
     "text": "Questions 19-20\nT\nA capacitor of capacitance C sub a is first charged to\na voltage V sub 0 , as shown above on the left. Without\nlosing any charge, the capacitor is now disconnected\nfrom the voltage source and connected to a second\ninitially uncharged capacitor of capacitance C sub b that is\nthree times C sub a , and the circuit is allowed to reach\nequilibrium, as shown above on the right.\n\nIf Q sub a is the new charge on capacitor C sub a , the\ncharge Q sub b on capacitor\n\nC sub b is given by",
     "options": {
       "A": "0",
-      "B": "the fraction Q sub a over 3",
-      "C": "the fraction Q sub a over 2",
-      "D": "Q sub a",
-      "E": "3 Q sub a"
+      "B": "$Q_a/3$",
+      "C": "$Q_a/2$",
+      "D": "$Q_a$",
+      "E": "$3Q_a$"
     },
     "answer": "E",
     "primary_unit": "U11",
