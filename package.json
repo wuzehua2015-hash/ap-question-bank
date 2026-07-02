@@ -11,10 +11,12 @@
     "open:quiet": "node scripts/open_quiet_browser.cjs",
     "audit:browser:quiet": "node scripts/open_quiet_browser.cjs --headless",
     "stable:push": "node scripts/stable_push.cjs",
+    "stable:status": "node scripts/stable_push_status.cjs",
     "validate:data": "node scripts/data_validator.cjs",
     "validate:images": "node scripts/image_validator.cjs",
     "validate:rubrics": "node scripts/rubric_text_validator.cjs",
-    "validate": "npm run validate:data && npm run validate:images && npm run validate:rubrics",
+    "validate:regression": "node scripts/cross_subject_regression.cjs",
+    "validate": "npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:regression",
     "prebuild": "npm run validate",
     "predev": "npm run validate"
   },
