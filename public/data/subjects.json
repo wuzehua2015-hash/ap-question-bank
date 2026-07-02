@@ -371,6 +371,58 @@
           "U8": 5
         }
       }
+    },
+    {
+      "id": "physics-c-e-m",
+      "name": "AP Physics C: Electricity and Magnetism",
+      "shortName": "Physics C E&M",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/physics-c-e-m/question_bank.json",
+      "frqBank": "ap/physics-c-e-m/frq_bank.json",
+      "similarityIndex": "ap/physics-c-e-m/similarity_index.json",
+      "classificationConfig": "ap/physics-c-e-m/classification_config.json",
+      "dataVersion": "historical-2012-2019-v1",
+      "units": [
+        {
+          "id": "U8",
+          "name": "Electric Charges, Fields, and Gauss's Law"
+        },
+        {
+          "id": "U9",
+          "name": "Electric Potential"
+        },
+        {
+          "id": "U10",
+          "name": "Conductors and Capacitors"
+        },
+        {
+          "id": "U11",
+          "name": "Electric Circuits"
+        },
+        {
+          "id": "U12",
+          "name": "Magnetic Fields and Electromagnetism"
+        },
+        {
+          "id": "U13",
+          "name": "Electromagnetic Induction"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 35,
+        "frqCount": 3,
+        "mcqTimeLimit": 2700,
+        "frqTimeLimit": 2700,
+        "unitDistribution": {
+          "U8": 6,
+          "U9": 5,
+          "U10": 6,
+          "U11": 7,
+          "U12": 6,
+          "U13": 5
+        }
+      }
     }
   ]
 }
