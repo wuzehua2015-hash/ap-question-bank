@@ -1451,11 +1451,11 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "The solid conducting sphere of radius R shown\nabove has a charge Q\n+\ndistributed uniformly on\nits surface. The potential at the center of the solid\nsphere is\n0 1 4 Q R p +",
+    "text": "The solid conducting sphere of radius $R$ shown above has a charge $+Q$ distributed uniformly on its surface. The potential at the center of the solid sphere is",
     "options": {
-      "A": "0 1 4 Q R p -",
-      "B": "Diagram B",
-      "C": "2 0 1 4 Q R p -",
+      "A": "$+\\frac{1}{4\\pi\\epsilon_0}\\frac{Q}{R}$",
+      "B": "$-\\frac{1}{4\\pi\\epsilon_0}\\frac{Q}{R}$",
+      "C": "$-\\frac{1}{4\\pi\\epsilon_0}\\frac{Q}{R^2}$",
       "D": "zero",
       "E": "undefined"
     },
@@ -1505,13 +1505,13 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "Questions 29-31\nA circuit consists of a resistor R, an inductor L,\nand an open switch S connected in series with a\nbattery. The switch is then closed at time t = 0.\n\nIf the current in the circuit is I at time t, what\nenergy is stored in the circuit in addition to that\nstored in the battery?",
+    "text": "Questions 29-31\nA circuit consists of a resistor $R$, an inductor $L$, and an open switch $S$ connected in series with a battery. The switch is then closed at time $t=0$.\n\nIf the current in the circuit is $I$ at time $t$, what energy is stored in the circuit in addition to that stored in the battery?",
     "options": {
-      "A": "LI",
-      "B": "I2R",
-      "C": "2 1\n2 LI",
-      "D": "LI + I2R",
-      "E": "2 2 1\n2 LI\nI R +"
+      "A": "$LI$",
+      "B": "$I^2R$",
+      "C": "$\\frac{1}{2}LI^2$",
+      "D": "$LI+I^2R$",
+      "E": "$\\frac{1}{2}LI^2+I^2R$"
     },
     "answer": "C",
     "primary_unit": "U13",
@@ -1667,13 +1667,13 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "A capacitor of capacitance C1 is charged and then\nconnected to another initially uncharged capacitor\nof capacitance C2 = 2C1, as shown above, with the\nswitch S in the open position. When S is closed\nand the system comes to equilibrium, which of the\nfollowing is true of the charges on the capacitors\nand the potential differences across them?\nCharge\nPotential Difference",
+    "text": "A capacitor of capacitance $C_1$ is charged and then connected to another initially uncharged capacitor of capacitance $C_2=2C_1$, as shown above, with the switch $S$ in the open position. When $S$ is closed and the system comes to equilibrium, which of the following is true of the charges on the capacitors and the potential differences across them?",
     "options": {
-      "A": "1 2 1 2 Q Q =\n\n1 2 1 2 V V =",
-      "B": "1 2 1 2 Q Q =\n\n1 2 V V =",
-      "C": "1 2 Q Q =\n\n1 2 V V =",
-      "D": "1 2 Q Q =\n\n1 2 1 2 V V =",
-      "E": "1 2 2 Q Q =\n\n1 2 V V ="
+      "A": "$Q_1=\\frac{1}{2}Q_2$; $V_1=\\frac{1}{2}V_2$.",
+      "B": "$Q_1=\\frac{1}{2}Q_2$; $V_1=V_2$.",
+      "C": "$Q_1=Q_2$; $V_1=V_2$.",
+      "D": "$Q_1=Q_2$; $V_1=\\frac{1}{2}V_2$.",
+      "E": "$Q_1=2Q_2$; $V_1=V_2$."
     },
     "answer": "B",
     "primary_unit": "U11",
@@ -1829,13 +1829,13 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "A long, straight wire of radius a carries a current I\nout of the page, which is uniformly distributed\nover the cross section of the wire. The value of\nÚ Bi\nv\n\nd\n, the line integral of the magnetic field\nB around the wedge-shaped path, equals which of\nthe following?",
+    "text": "A charged particle with mass $m$ and charge $q$ moves in a circular path of radius $R$ in a uniform magnetic field produced by a long straight wire carrying current $I$. Which of the following expressions is dimensionally consistent with the speed of the particle?",
     "options": {
-      "A": "0 2 I m q p m q I",
-      "B": "0 2 2 2 p a m q I",
-      "C": "0 2 2 2 p R m",
-      "D": "0 2 I p a m",
-      "E": "0 2 I p R •\nPLACED YOUR AP NUMBER LABEL ON YOUR ANSWER SHEET\n•\nWRITTEN AND GRIDDED YOUR AP NUMBER CORRECTLY ON YOUR\nANSWER SHEET\n•\nTAKEN THE AP EXAM LABEL FROM THE FRONT OF THIS BOOKLET\nAND PLACED IT ON YOUR ANSWER SHEET"
+      "A": "$\\frac{\\mu_0 Iq}{2\\pi m}$",
+      "B": "$\\frac{\\mu_0 Iq}{2\\pi a m}$",
+      "C": "$\\frac{\\mu_0 Iq}{2\\pi R m}$",
+      "D": "$\\frac{\\mu_0 I}{2\\pi a m}$",
+      "E": "$\\frac{\\mu_0 I}{2\\pi R}$"
     },
     "answer": "A",
     "primary_unit": "U12",
@@ -2311,13 +2311,13 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "Questions 8-10\nA charge\nis inside a hollow region in an\nelectrically neutral piece of solid metal, as shown\nabove. The dashed line represents a Gaussian surface\nwithin the metal that completely encloses the hollow\nregion.\n\nWhat is the net electric flux through the Gaussian\nsurface?",
+    "text": "Questions 8-10\nA charge $+Q$ is inside a hollow region in an electrically neutral piece of solid metal, as shown above. The dashed line represents a Gaussian surface within the metal that completely encloses the hollow region.\n\nWhat is the net electric flux through the Gaussian surface?",
     "options": {
-      "A": "Diagram A",
+      "A": "$-Q/\\epsilon_0$",
       "B": "Zero",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "It cannot be determined without knowing the\nexact shape of the Gaussian surface."
+      "C": "$+Q/\\epsilon_0$",
+      "D": "$+2Q/\\epsilon_0$",
+      "E": "It cannot be determined without knowing the exact shape of the Gaussian surface."
     },
     "answer": "B",
     "primary_unit": "U13",
@@ -2365,7 +2365,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "Questions 8-10\nA charge\nis inside a hollow region in an\nelectrically neutral piece of solid metal, as shown\nabove. The dashed line represents a Gaussian surface\nwithin the metal that completely encloses the hollow\nregion.\n\nWhich of the following correctly relates the\nelectric potentials V at points X, Y, and Z ?",
+    "text": "Questions 8-10\nA charge $+Q$ is inside a hollow region in an electrically neutral piece of solid metal, as shown above. The dashed line represents a Gaussian surface within the metal that completely encloses the hollow region.\n\nWhich of the following correctly relates the electric potentials $V$ at points X, Y, and Z?",
     "options": {
       "A": "$V_X<V_Y<V_Z$",
       "B": "$V_Y<V_X<V_Z$",
@@ -2587,13 +2587,13 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "Three identical conducting spheres are mounted\non insulating handles, as shown above. Spheres I\nand II have equal charges of\nand are separated\nby a fixed distance. They repel each other with an\nelectrostatic force of magnitude F. Sphere III,\ninitially uncharged, is first touched to sphere I,\nthen to sphere II, and then removed. If the charge\ndistribution on each sphere is assumed to always\nbe spherical, the new magnitude of the\nelectrostatic force between spheres I and II is",
+    "text": "Three identical conducting spheres are mounted on insulating handles, as shown above. Spheres I and II have equal charges of $+Q$ and are separated by a fixed distance. They repel each other with an electrostatic force of magnitude $F$. Sphere III, initially uncharged, is first touched to sphere I, then to sphere II, and then removed. If the charge distribution on each sphere is always spherical, the new magnitude of the electrostatic force between spheres I and II is",
     "options": {
       "A": "zero",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "B": "$F/16$",
+      "C": "$F/4$",
+      "D": "$F/2$",
+      "E": "$3F/8$"
     },
     "answer": "E",
     "primary_unit": "U10",
@@ -2799,13 +2799,13 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "Suppose that the magnetic field due to a very long\nstraight wire carrying current I has magnitude\n\nat a distance\nfrom the wire. If the wire is bent\ninto a right angle and placed on the xy-axes as\nshown above, the magnitude of the magnetic field\nat point P on the x-axis at a distance of\n\nfrom\nthe bend is most nearly",
+    "text": "Suppose that the magnetic field due to a very long straight wire carrying current $I$ has magnitude $B_0$ at a distance $r_0$ from the wire. If the wire is bent into a right angle and placed on the xy-axes as shown above, the magnitude of the magnetic field at point P on the x-axis at a distance of $r_0$ from the bend is most nearly",
     "options": {
       "A": "zero",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "B": "$B_0/4$",
+      "C": "$B_0/2$",
+      "D": "$B_0$",
+      "E": "$2B_0$"
     },
     "answer": "C",
     "primary_unit": "U12",
@@ -3015,13 +3015,13 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "A charge\nis placed at the center of a cube.\nWhat is the flux of the electric field through one\nface of the cube?",
+    "text": "A charge $+q$ is placed at the center of a cube. What is the flux of the electric field through one face of the cube?",
     "options": {
-      "A": "0",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "6",
-      "E": "The flux through one face cannot be deter-\nmined from the information given."
+      "A": "$0$",
+      "B": "$q/\\epsilon_0$",
+      "C": "$q/(6\\epsilon_0)$",
+      "D": "$6\\epsilon_0 q$",
+      "E": "The flux through one face cannot be determined from the information given."
     },
     "answer": "C",
     "primary_unit": "U13",
@@ -3229,13 +3229,13 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "A parallel-plate capacitor of capacitance C\nconsists of two plates of area A separated by\ndistance d as shown above. The upper and\nlower plates are given a net charge of\nand ,\nrespectively. What is the electric field between\nthe plates?",
+    "text": "A parallel-plate capacitor of capacitance $C$ consists of two plates of area $A$ separated by distance $d$ as shown above. The upper and lower plates are given a net charge of $+q$ and $-q$, respectively. What is the electric field between the plates?",
     "options": {
       "A": "Zero",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "Diagram E"
+      "B": "$\\frac{C}{2qd}$",
+      "C": "$\\frac{C}{qd}$",
+      "D": "$\\frac{2q}{Cd}$",
+      "E": "$\\frac{q}{Cd}$"
     },
     "answer": "E",
     "primary_unit": "U10",
@@ -3283,13 +3283,13 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "Five air-filled parallel-plate capacitors have the\nplate areas and plate separations listed below,\nwhere A and d are constants. The capacitors are\neach connected to the same potential difference.\nWhich capacitor stores the greatest amount of\nenergy?\nArea Separation",
+    "text": "Five air-filled parallel-plate capacitors have the plate areas and plate separations listed below, where A and d are constants. The capacitors are each connected to the same potential difference. Which capacitor stores the greatest amount of energy?",
     "options": {
-      "A": "2A",
-      "B": "2A\n2d",
-      "C": "A",
-      "D": "Diagram D",
-      "E": "2d"
+      "A": "Area $2A$; separation $d/2$.",
+      "B": "Area $2A$; separation $2d$.",
+      "C": "Area $A$; separation $d$.",
+      "D": "Area $A/2$; separation $d/2$.",
+      "E": "Area $A/2$; separation $2d$."
     },
     "answer": "A",
     "primary_unit": "U10",
@@ -3668,13 +3668,13 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "Four identical point charges q are fixed at the\ncorners of a square with sides of length a, as\nshown above. The potential at the center of the\nsquare due to these charges is",
+    "text": "Four identical point charges $q$ are fixed at the corners of a square with sides of length $a$, as shown above. The potential at the center of the square due to these charges is",
     "options": {
-      "A": "zero\nq 0 1 4 2a p",
-      "B": "Diagram B",
-      "C": "1 4 q a p 0 4 1 4 q a p",
-      "D": "0 4 2 1 4 q a p",
-      "E": "0"
+      "A": "zero",
+      "B": "$\\frac{1}{4\\pi\\epsilon_0}\\frac{q}{\\sqrt{2}a}$",
+      "C": "$\\frac{1}{4\\pi\\epsilon_0}\\frac{q}{a}$",
+      "D": "$\\frac{1}{4\\pi\\epsilon_0}\\frac{4q}{a}$",
+      "E": "$\\frac{1}{4\\pi\\epsilon_0}\\frac{4\\sqrt{2}q}{a}$"
     },
     "answer": "E",
     "primary_unit": "U8",
@@ -3720,13 +3720,13 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "A total charge Q is uniformly distributed through-\nout a spherical volume of radius a. Which of the\nfollowing is a dimensionally correct expression for\nthe potential difference between the center of the\nsphere and its surface?",
+    "text": "A total charge $Q$ is uniformly distributed throughout a spherical volume of radius $a$. Which of the following is a dimensionally correct expression for the potential difference between the center of the sphere and its surface?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "IF YOU FINISH BEFORE TIME IS CALLED,\nYOU MAY CHECK YOUR WORK ON ELECTRICITY AND MAGNETISM SECTION I ONLY\n\nDO NOT TURN TO ANY OTHER TEST MATERIALS.\nMAKE SURE YOU HAVE DONE THE FOLLOWING.\n•\n\n.\nPLACED YOUR AP NUMBER LABEL ON YOUR ANSWER SHEET\n•\nWRITTEN AND GRIDDED YOUR AP NUMBER CORRECTLY ON YOUR\nANSWER SHEET\n•\nTAKEN THE AP EXAM LABEL FROM THE FRONT OF THIS BOOKLET\nAND PLACED IT ON YOUR ANSWER SHEET"
+      "A": "$\\left(\\frac{1}{8\\pi\\epsilon_0}\\right)Q$",
+      "B": "$\\left(\\frac{1}{8\\pi\\epsilon_0}\\right)Qa^2$",
+      "C": "$\\left(\\frac{1}{8\\pi\\epsilon_0}\\right)Qa$",
+      "D": "$\\left(\\frac{1}{8\\pi\\epsilon_0}\\right)\\frac{Q}{a}$",
+      "E": "$\\left(\\frac{1}{8\\pi\\epsilon_0}\\right)\\frac{Q}{a^2}$"
     },
     "answer": "D",
     "primary_unit": "U9",
@@ -4576,11 +4576,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
     "text": "Circuit P consists of three identical capacitors\nconnected in parallel with a battery. Circuit S\nconsists of the same three capacitors connected in\nseries with the same battery. When the capacitors\nare fully charged, what is the ratio of the total\nenergy stored in circuit P to the total energy\nstored in circuit S ?",
     "options": {
-      "A": "9",
-      "B": "3",
-      "C": "1",
-      "D": "o n e third",
-      "E": "o n e ninth"
+      "A": "$9$",
+      "B": "$3$",
+      "C": "$1$",
+      "D": "$1/3$",
+      "E": "$1/9$"
     },
     "answer": "A",
     "primary_unit": "U11",
@@ -6047,13 +6047,13 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "Questions 8-9\nAn insulated nonconducting sphere of radius R\nhas a charge Q uniformly distributed throughout its\nvolume. It is surrounded by a concentric spherical\nconducting shell of inner radius a and outer radius b,\nas shown in the figure above. There is no net charge\non the conducting shell. Let E be the electric field\nmagnitude at a distance r from the center of the\nspheres.\n\nWhich of the following represents a correct\napplication of Gauss’s law for r > b ?",
+    "text": "Questions 8-9\nAn insulated nonconducting sphere of radius $R$ has a charge $Q$ uniformly distributed throughout its volume. It is surrounded by a concentric spherical conducting shell of inner radius $a$ and outer radius $b$, as shown in the figure above. There is no net charge on the conducting shell. Let $E$ be the electric field magnitude at a distance $r$ from the center of the spheres.\n\nWhich of the following represents a correct application of Gauss's law for $r>b$?",
     "options": {
-      "A": "2 0\n(4 )\nE r π = 0\n(4 )\nQ E r π =",
-      "B": "2 0\n(4 )\nQ E R π =",
-      "C": "2 3 2 3 0\n(4 )\nQr E r R π =",
-      "D": "3 2 3 0\n(4 )\nQa E r R π =",
-      "E": "Diagram E"
+      "A": "$0=E(4\\pi)r^2$",
+      "B": "$\\frac{Q}{\\epsilon_0}=E(4\\pi)r^2$",
+      "C": "$\\frac{Q}{\\epsilon_0}=E(4\\pi)R^2$",
+      "D": "$\\frac{Qr^3}{\\epsilon_0 R^3}=E(4\\pi)r^2$",
+      "E": "$\\frac{Qa^3}{\\epsilon_0 R^3}=E(4\\pi)r^2$"
     },
     "answer": "B",
     "primary_unit": "U10",
@@ -6101,13 +6101,13 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "Questions 8-9\nAn insulated nonconducting sphere of radius R\nhas a charge Q uniformly distributed throughout its\nvolume. It is surrounded by a concentric spherical\nconducting shell of inner radius a and outer radius b,\nas shown in the figure above. There is no net charge\non the conducting shell. Let E be the electric field\nmagnitude at a distance r from the center of the\nspheres.\n\nWhich of the following represents a correct\napplication of Gauss’s law for r < R ?",
+    "text": "Questions 8-9\nAn insulated nonconducting sphere of radius $R$ has a charge $Q$ uniformly distributed throughout its volume. It is surrounded by a concentric spherical conducting shell of inner radius $a$ and outer radius $b$, as shown in the figure above. There is no net charge on the conducting shell. Let $E$ be the electric field magnitude at a distance $r$ from the center of the spheres.\n\nWhich of the following represents a correct application of Gauss's law for $r<R$?",
     "options": {
-      "A": "2 0 (4 E r π =\n\n) 0\n(4 )\nQ E r π =",
-      "B": "2 0\n(4 )\nQ E R π =",
-      "C": "2 3 2 3 0\n(4 )\nQr E r R π =",
-      "D": "3 2 3 0\n(4 )\nQa E r R π =",
-      "E": "Diagram E"
+      "A": "$0=E(4\\pi)r^2$",
+      "B": "$\\frac{Q}{\\epsilon_0}=E(4\\pi)r^2$",
+      "C": "$\\frac{Q}{\\epsilon_0}=E(4\\pi)R^2$",
+      "D": "$\\frac{Qr^3}{\\epsilon_0 R^3}=E(4\\pi)r^2$",
+      "E": "$\\frac{Qa^3}{\\epsilon_0 R^3}=E(4\\pi)r^2$"
     },
     "answer": "D",
     "primary_unit": "U10",
@@ -6209,13 +6209,13 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "Questions 11-13\nIn the circuit above, all of the resistors have the same\nresistance R. Switch S has been in position a for a\nvery long time.\n\nWhat is the energy stored by the inductor?",
+    "text": "Questions 11-13\nIn the circuit above, all of the resistors have the same resistance $R$. Switch $S$ has been in position $a$ for a very long time.\n\nWhat is the energy stored by the inductor?",
     "options": {
-      "A": "Zero\nR e 2",
-      "B": "Circuit B",
-      "C": "2 1\n2 Le",
-      "D": "1\n2 L R\ne 2 1 2 L R e 2",
-      "E": "Circuit E"
+      "A": "Zero",
+      "B": "$\\frac{\\mathcal{E}^2}{R}$",
+      "C": "$\\frac{1}{2}L\\mathcal{E}^2$",
+      "D": "$\\frac{1}{2}L\\frac{\\mathcal{E}}{R}$",
+      "E": "$\\frac{1}{2}L\\frac{\\mathcal{E}^2}{R^2}$"
     },
     "answer": "E",
     "primary_unit": "U13",
@@ -8795,13 +8795,13 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "Questions 24-25\nThe circuit represented in the figure above contains\nfour resistors and a battery. The 45 V battery has a\n1 W internal resistance.\n\nWhich of the following ranks the absolute values\nof the potential differences V\nDelta\nacross the\nresistors from highest to lowest?",
+    "text": "Questions 24-25\nThe circuit represented in the figure above contains four resistors and a battery. The 45 V battery has a 1 ohm internal resistance.\n\nWhich of the following ranks the absolute values of the potential differences $\\Delta V$ across the resistors from highest to lowest?",
     "options": {
-      "A": "3 1 2 4 V V V V Delta\n>Delta\n>Delta\n>Delta",
-      "B": "4 2 1 3 V V V V Delta\n>Delta\n>Delta\n>Delta",
-      "C": "1 4 2 3 V V V V Delta\n>Delta\n>Delta\n>Delta",
-      "D": "( ) 1 2 3 4 V V V V Delta\n>Delta\n=Delta\n>Delta",
-      "E": "( ) 4 2 3 1 V V V V Delta\n>Delta\n=Delta\n>Delta"
+      "A": "$\\Delta V_3>\\Delta V_1>\\Delta V_2>\\Delta V_4$",
+      "B": "$\\Delta V_4>\\Delta V_2>\\Delta V_1>\\Delta V_3$",
+      "C": "$\\Delta V_1>\\Delta V_4>\\Delta V_2>\\Delta V_3$",
+      "D": "$\\Delta V_1>(\\Delta V_2=\\Delta V_3)>\\Delta V_4$",
+      "E": "$\\Delta V_4>(\\Delta V_2=\\Delta V_3)>\\Delta V_1$"
     },
     "answer": "D",
     "primary_unit": "U11",
@@ -9338,13 +9338,13 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "A particle of charge +q is released from rest at\nposition B, which is a distance 2d from the center\nof a fixed nonconducting sphere that has a charge\nof –Q distributed uniformly throughout its\nvolume, as shown in the figure above. When the\nparticle reaches position A, which is a distance d\nfrom the center of the charged sphere, its kinetic\nenergy is\n0\nK . The same particle is now released\nfrom rest at position C, which is a distance 4d\nfrom the center of the nonconducting sphere. The\nkinetic energy of the particle when it again\nreaches position A is",
+    "text": "A particle of charge $+q$ is released from rest at position B, which is a distance $2d$ from the center of a fixed nonconducting sphere that has a charge of $-Q$ distributed uniformly throughout its volume, as shown in the figure above. When the particle reaches position A, which is a distance $d$ from the center of the charged sphere, its kinetic energy is $K_0$. The same particle is now released from rest at position C, which is a distance $4d$ from the center of the nonconducting sphere. The kinetic energy of the particle when it again reaches position A is",
     "options": {
-      "A": "0 K",
-      "B": "0 3 2 K",
-      "C": "0 2K",
-      "D": "0 5 2 K",
-      "E": "0 3K\nMAKE SURE YOU HAVE DONE THE FOLLOWING.\n* * *"
+      "A": "$K_0$",
+      "B": "$3K_0/2$",
+      "C": "$2K_0$",
+      "D": "$5K_0/2$",
+      "E": "$3K_0$"
     },
     "answer": "B",
     "primary_unit": "U10",
@@ -9554,13 +9554,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Questions 3-4\nA small sphere has a charge +q. Spherical Gaussian\nsurfaces A and B are concentric with the sphere, as\nshown in the figure above. The radii of surfaces A\nand B are r and 2r, respectively.\n\nThe magnitude of the electric flux through A is\nF A . The magnitude of the electric flux through\nsurface B is FB . The ratio F\nF A\nB is",
+    "text": "Questions 3-4\nA small sphere has a charge $+q$. Spherical Gaussian surfaces A and B are concentric with the sphere, as shown above. The radii of surfaces A and B are $r$ and $2r$, respectively.\n\nThe magnitude of the electric flux through A is $\\Phi_A$. The magnitude of the electric flux through surface B is $\\Phi_B$. The ratio $\\Phi_A/\\Phi_B$ is",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "4 1 2 1 1 1 1 2 1 4"
+      "A": "$4/1$",
+      "B": "$2/1$",
+      "C": "$1/1$",
+      "D": "$1/2$",
+      "E": "$1/4$"
     },
     "answer": "C",
     "primary_unit": "U13",
@@ -9608,13 +9608,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Questions 3-4\nA small sphere has a charge +q. Spherical Gaussian\nsurfaces A and B are concentric with the sphere, as\nshown in the figure above. The radii of surfaces A\nand B are r and 2r, respectively.\n\nThe magnitude of the electric field at surface A\nis EA . The magnitude of the electric field at\nsurface B is EB . The ratio EA EB is\n4 1",
+    "text": "Questions 3-4\nA small sphere has a charge $+q$. Spherical Gaussian surfaces A and B are concentric with the sphere, as shown above. The radii of surfaces A and B are $r$ and $2r$, respectively.\n\nThe magnitude of the electric field at surface A is $E_A$. The magnitude of the electric field at surface B is $E_B$. The ratio $E_A/E_B$ is",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "2 1 1 1 1 2 1 4"
+      "A": "$4/1$",
+      "B": "$2/1$",
+      "C": "$1/1$",
+      "D": "$1/2$",
+      "E": "$1/4$"
     },
     "answer": "A",
     "primary_unit": "U8",
@@ -9880,13 +9880,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "A copper rod of resistance R is in electrical\ncontact with a frictionless U-shaped rail of\nwidth L and negligible resistance. The rod is\nrho\npulled to the right at a constant velocity v . A\nrho\nmagnetic field B is directed into the page, as\nshown in the figure above. Under these\nconditions, the electric power dissipated in the\nrod is P. If the velocity of the rod is doubled and\nthe magnetic field strength is reduced by half, the\npower dissipated in the rod is\n4 P",
+    "text": "A copper rod of resistance $R$ is in electrical contact with a frictionless U-shaped rail of width $L$ and negligible resistance. The rod is pulled to the right at a constant velocity $\\vec{v}$. A magnetic field $\\vec{B}$ is directed into the page, as shown in the figure above. Under these conditions, the electric power dissipated in the rod is $P$. If the velocity of the rod is doubled and the magnetic field strength is reduced by half, the power dissipated in the rod is",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "P",
-      "D": "Diagram D",
-      "E": "4P P 2 2P"
+      "A": "$P/4$",
+      "B": "$P/2$",
+      "C": "$P$",
+      "D": "$2P$",
+      "E": "$4P$"
     },
     "answer": "C",
     "primary_unit": "U12",
@@ -10473,13 +10473,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Questions 20-22\nThree small spheres, A, B, and C, have charges\nwith magnitudes qA , qB , and qC , respectively.\nThe three spheres are aligned along a straight line, as\nshown in the figure above. At the instant shown, the\nnet force on sphere A is zero.\n\nThe ratio q\nq C is B",
+    "text": "Questions 20-22\nThree small spheres, A, B, and C, have charges with magnitudes $q_A$, $q_B$, and $q_C$, respectively. The three spheres are aligned along a straight line, as shown in the figure above. At the instant shown, the net force on sphere A is zero.\n\nThe ratio $q_C/q_B$ is",
     "options": {
-      "A": "1 1",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "9 4 4 9 1 4 1 9"
+      "A": "$9/4$",
+      "B": "$1/1$",
+      "C": "$4/9$",
+      "D": "$1/4$",
+      "E": "$1/9$"
     },
     "answer": "A",
     "primary_unit": "U8",
@@ -10635,13 +10635,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Three resistors are connected to an ideal battery,\nas shown in the figure above. The battery has\nan emf e\n. Two of the resistors have known\nresistances R and 2R. The third resistor has\nunknown resistance X. The current in two of the\nbranches is shown. What is the value of the\nunknown resistance X ?\n5 R R 4 R 2",
+    "text": "Three resistors are connected to an ideal battery, as shown in the figure above. The battery has an emf $\\mathcal{E}$. Two of the resistors have known resistances $R$ and $2R$. The third resistor has unknown resistance X. The current in two of the branches is shown. What is the value of the unknown resistance X?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "R",
-      "E": "2R"
+      "A": "$R/5$",
+      "B": "$R/4$",
+      "C": "$R/2$",
+      "D": "$R$",
+      "E": "$2R$"
     },
     "answer": "C",
     "primary_unit": "U13",
@@ -10905,13 +10905,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Questions 27-28\nQuestions 29-30\nA hollow conducting sphere is surrounded by a\nlarger concentric spherical conducting shell, as shown\nabove. The inner sphere has a net charge of –Q, and\nthe outer sphere has a net charge of +3Q.\n\nWhat is the net charge on the outer surface of the\nspherical shell?",
+    "text": "Questions 27-28\nA hollow conducting sphere is surrounded by a larger concentric spherical conducting shell, as shown above. The inner sphere has a net charge of $-Q$, and the outer sphere has a net charge of $+3Q$.\n\nWhat is the net charge on the outer surface of the spherical shell?",
     "options": {
-      "A": "0",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D",
-      "E": "+Q +2Q +3Q +4Q\nTwo small spheres are arranged along a line and\ncarry charges of +4Q and –3Q, as shown in the figure\nabove. The vertical lines are equally spaced."
+      "A": "$0$",
+      "B": "$+Q$",
+      "C": "$+2Q$",
+      "D": "$+3Q$",
+      "E": "$+4Q$"
     },
     "answer": "C",
     "primary_unit": "U10",
@@ -11443,13 +11443,13 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "Capacitors C sub 1 and C sub 2\nare connected as shown in\nthe circuit above. The capacitance of C sub 1 is C, and\nthe capacitance of C sub 2 is C over 3\n. The equivalent\ncapacitance between points A and B is C sub E Q. A\ndielectric is inserted into capacitor C sub 2 , and the\nequivalent capacitance between points A and B is\nnow 2 C sub E Q. What is the value of the dielectric\nconstant for this dielectric?",
+    "text": "Capacitors $C_1$ and $C_2$ are connected as shown in the circuit above. The capacitance of $C_1$ is $C$, and the capacitance of $C_2$ is $C/3$. The equivalent capacitance between points A and B is $C_{EQ}$. A dielectric is inserted into capacitor $C_2$, and the equivalent capacitance between points A and B is now $2C_{EQ}$. What is the value of the dielectric constant for this dielectric?",
     "options": {
-      "A": "2",
-      "B": "3",
-      "C": "4",
-      "D": "5",
-      "E": "The value cannot be determined without\nknowing the value of C."
+      "A": "$2$",
+      "B": "$3$",
+      "C": "$4$",
+      "D": "$5$",
+      "E": "The value cannot be determined without knowing the value of $C$."
     },
     "answer": "D",
     "primary_unit": "U11",
@@ -11551,13 +11551,13 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "A square coil with sides of length 1.0 centimeters is moved through a region of uniform magnetic field at a constant\nspeed, as shown in the figure above. Which of the following graphs best shows the current I in the coil as a\nfunction of the position x of the right edge as the coil moves through the magnetic field, where counterclockwise\ncurrent is positive?\nThe figure presents a graph in quadrants 1 and 4 of a coordinate plane, with the origin labeled O. The horizontal axis is labeled “x, in centimeters,” and the numbers 1 and 3 are indicated. The vertical axis is labeled “I, in amperes,” and no numbers are indicated along the axis. The graph consists of four connected straight line segments. The first line segment begins at a point below the origin on the vertical axis, and extends upward and to the right until it reaches 1 on the x axis. The second line segment extends horizontally along the x axis, until it reaches 3. The third line segment extends vertically upward by the same distance as the graph began below the origin. The fourth line segment extends downward and to the right until it ends at 4 on the x axis.",
+    "text": "A square coil with sides of length 1.0 centimeters is moved through a region of uniform magnetic field at a constant speed, as shown in the figure above. Which of the following graphs best shows the current $I$ in the coil as a function of the position $x$ of the right edge as the coil moves through the magnetic field, where counterclockwise current is positive?",
     "options": {
+      "A": "Diagram A",
       "B": "Diagram B",
-      "A": "The figure presents a graph in quadrants 1 and 4 of a coordinate plane, with the origin labeled O. The horizontal axis is labeled “x, in centimeters,” and the numbers 1 and 3 are indicated. The vertical axis is labeled “I, in amperes,” and no numbers are indicated along the axis. The graph consists of four connected straight line segments. The first line segment begins at a point above the origin on the vertical axis, and extends downward and to the right until it reaches 1 on the x axis. The second line segment extends horizontally along the x axis, until it reaches 3. The third line segment extends vertically downward by the same distance as the graph began above the origin. The fourth line segment extends upward and to the right until it ends at 4 on the x axis.",
+      "C": "Diagram C",
       "D": "Diagram D",
-      "C": "The figure presents a graph in quadrants 1 and 4 of a coordinate plane, with the origin labeled O. The horizontal axis is labeled “x, in centimeters,” and the numbers 1 and 3 are indicated. The vertical axis is labeled “I, in amperes,” and no numbers are indicated along the axis. The graph consists of two connected straight line segments. The first line segment begins at a point below the origin on the vertical axis, and extends upward and to the right. It crosses the x axis at 2, and continues upward until it reaches a point that is 4 units to the right of the vertical axis and the same distance above the x axis as the graph started below the origin. The second line segment extends vertically downward until it ends at 4 on the x axis.",
-      "E": "The figure presents a region of uniform magnetic field B, directed out of the page, in the first quadrant of a coordinate plane with origin labeled O. The horizontal axis is labeled “x, in centimeters,” and the numbers 1 and 3 are indicated. The magnetic field has vertical boundaries at the lines x equals 0, and x equals 3. A square coil with sides of length 1.0 centimeters is shown with its right side adjacent to the x equals 0 boundary of the magnetic field. A rightward pointing arrow is drawn from the square coil into the region with the magnetic field.\nThe figure presents a graph in quadrants 1 and 4 of a coordinate plane, with the origin labeled O. The horizontal axis is labeled “x, in centimeters,” and the numbers 1 and 3 are indicated. The vertical axis is labeled “I, in amperes,” and no numbers are indicated along the axis. The graph consists of six connected straight line segments. The first line segment begins at a point below the origin on the vertical axis, and extends horizontally to the right 1 unit. The second line segment extends vertically upward until it reaches 1 on the x axis. The third line segment extends horizontally along the x axis, until it reaches 3. The fourth line segment extends vertically upward by the same distance as the graph began below the origin. The fifth line segment extends horizontally to the right until it ends at a point that is 4 units to the right of the vertical axis and the same distance above the x axis as the graph started below the origin. The sixth line segment extends vertically downward until it reaches 4 on the x axis.\nThe figure presents a graph in quadrants 1 and 4 of a coordinate plane, with the origin labeled O. The horizontal axis is labeled “x, in centimeters,” and the numbers 1 and 3 are indicated. The vertical axis is labeled “I, in amperes,” and no numbers are indicated along the axis. The graph consists of six connected straight line segments. The first line segment begins at a point above the origin on the vertical axis, and extends horizontally to the right 1 unit. The second line segment extends vertically downward until it reaches 1 on the x axis. The third line segment extends horizontally along the x axis, until it reaches 3. The fourth line segment extends vertically downward by the same distance as the graph began below the origin. The fifth line segment extends horizontally to the right until it ends at a point that is 4 units to the right of the vertical axis and the same distance below the x axis as the graph started below the origin. The sixth line segment extends vertically upward until it reaches 4 on the x axis.\n\nT"
+      "E": "Diagram E"
     },
     "answer": "B",
     "primary_unit": "U12",
@@ -11828,13 +11828,13 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "After being brought into contact with conductor\nX, conductor Y is moved a very large distance\naway from conductor X. What is the total electric\nflux through a closed cubical surface surrounding\nconductor X, as shown above?",
+    "text": "Questions 9-11\nThe figure above shows two charged spherical conductors, X and Y, which are equal in size. When each conductor is isolated and surrounded by a closed cubical surface, the total electric flux through the surfaces is $+\\Phi_0$ for conductor X and $-4\\Phi_0$ for conductor Y.\n\nAfter being brought into contact with conductor X, conductor Y is moved a very large distance away from conductor X. What is the total electric flux through a closed cubical surface surrounding conductor X, as shown above?",
     "options": {
-      "A": "n\negative 3 phi naught",
-      "B": "n eg a t i\nve three halves phi naught",
-      "C": "o n e h\nalf phi naught",
-      "D": "p h\ni naught",
-      "E": "t hr\ne e halves phi naught\nT"
+      "A": "$-3\\Phi_0$",
+      "B": "$-\\frac{3}{2}\\Phi_0$",
+      "C": "$\\frac{1}{2}\\Phi_0$",
+      "D": "$\\Phi_0$",
+      "E": "$\\frac{3}{2}\\Phi_0$"
     },
     "answer": "B",
     "primary_unit": "U13",
@@ -12640,13 +12640,13 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "A charged capacitor C, resistor R, and switch S\nare connected in series. Voltmeter V is connected\nin parallel with the resistor, as shown in the figure\nabove. At time t equals 0, the switch is then closed.\nWhich of the following shows the potential\ndifference delta V reading on the voltmeter as a\nfunction of time t after the switch is closed?\nThe figure presents the graph of a curve in the first quadrant of a coordinate plane, with the origin labeled O. The horizontal axis is labeled t, and the vertical axis is labeled delta V. The curve begins at the origin and extends up and to the right. The curve is concave down, becoming approximately horizontal approximately three fourths of the way along, and high above the horizontal axis.",
+    "text": "A charged capacitor $C$, resistor $R$, and switch $S$ are connected in series. Voltmeter $V$ is connected in parallel with the resistor, as shown in the figure above. At time $t=0$, the switch is then closed. Which of the following shows the potential difference $\\Delta V$ reading on the voltmeter as a function of time $t$ after the switch is closed?",
     "options": {
-      "A": "The figure presents the graph of a curve in the first quadrant of a coordinate plane, with the origin labeled O. The horizontal axis is labeled t, and the vertical axis is labeled delta V. The curve begins on the vertical axis, high above the origin, and extends down and to the right. The curve is concave up, becoming approximately horizontal and ends near the horizontal axis, far to the right of the origin.",
-      "B": "The figure presents the graph of a curve in the first quadrant of a coordinate plane, with the origin labeled O. The horizontal axis is labeled t, and the vertical axis is labeled delta V. The curve begins at the origin and initially extends up and to the right. The curve is concave up, starts approximately horizontally, and then gets steeper high above the horizontal axis.",
-      "C": "The figure presents the graph of a line in the first quadrant of a coordinate plane, with the origin labeled O. The horizontal axis is labeled t, and the vertical axis is labeled delta V. The line begins on the vertical axis, high above the origin, and extends in a straight line horizontally to the right until it ends.",
-      "D": "The figure presents the graph of a line in the first quadrant of a coordinate plane, with the origin labeled O. The horizontal axis is labeled t, and the vertical axis is labeled delta V. The line begins on the vertical axis, high above the origin, and extends in a straight line down and to the right until it reaches the horizontal axis, far to the right of the origin.",
-      "E": "The figure presents a circuit with a capacitor, a resistor, a voltmeter, and an open switch. The left side of the circuit has a capacitor labeled C. Moving clockwise around the circuit, the right side has a resistor labeled R. The voltmeter is on a parallel branch that is to the right of resistor R, with connections above and below resistor R. The bottom/side has an open switch labeled S.\nT"
+      "A": "Diagram A",
+      "B": "Diagram B",
+      "C": "Diagram C",
+      "D": "Diagram D",
+      "E": "Diagram E"
     },
     "answer": "B",
     "primary_unit": "U11",
@@ -14256,21 +14256,21 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Questions 19-20\nT\nA capacitor of capacitance C sub a is first charged to\na voltage V sub 0 , as shown above on the left. Without\nlosing any charge, the capacitor is now disconnected\nfrom the voltage source and connected to a second\ninitially uncharged capacitor of capacitance C sub b that is\nthree times C sub a , and the circuit is allowed to reach\nequilibrium, as shown above on the right.\n\nThe new voltage across capacitor C sub a is V sub a . How\ndoes this new voltage compare with the original\nvoltage of V sub 0 ?",
+    "text": "Questions 19-20\nA capacitor of capacitance $C_a$ is first charged to a voltage $V_0$, as shown above on the left. Without losing any charge, the capacitor is now disconnected from the voltage source and connected to a second initially uncharged capacitor of capacitance $C_b$ that is three times $C_a$, and the circuit is allowed to reach equilibrium, as shown above on the right.\n\nThe new voltage across capacitor $C_a$ is $V_a$. How does this new voltage compare with the original voltage of $V_0$?",
     "options": {
-      "A": "V sub a is greater than V sub 0\nThe figure presents a diagram of an electrical circuit with a middle vertical branch. The left side of the circuit is taller than the right side of the circuit. Beginning on the left side of the circuit and moving clockwise, the left side has a battery labeled E m f. The middle vertical branch has a lightbulb labeled A above a lightbulb labeled B. Between lightbulbs A and B a wire branches off to the right and there is an open switch labeled S. Continuing to the right of the open switch and vertically downward the circuit has a lightbulb labeled C.",
-      "B": "V sub a is less than V sub 0",
-      "C": "V sub a is equal to V sub 0",
-      "D": "It depends on the value of C sub a .",
-      "E": "It depends on the value of C sub b ."
+      "A": "$V_a>V_0$",
+      "B": "$V_a<V_0$",
+      "C": "$V_a=V_0$",
+      "D": "It depends on the value of $C_a$.",
+      "E": "It depends on the value of $C_b$."
     },
     "answer": "B",
-    "primary_unit": "U12",
+    "primary_unit": "U11",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U12.x",
-        "name": "Magnetic Fields and Electromagnetism"
+        "code": "U11.x",
+        "name": "Electric Circuits"
       }
     ],
     "skills": [
@@ -14294,7 +14294,7 @@
       "review_status": "draft_needs_year_gate",
       "confidence": "low",
       "evidence": [
-        "Matched keyword: wire"
+        "Matched keyword: circuit"
       ],
       "rejected_units": [],
       "source_refs": [
@@ -14583,13 +14583,13 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Questions 25-26\nT\nTwo wires perpendicular to the x-axis have\ncurrents I directed out of the page, as shown above.\nEach wire is a distance d from the y-axis. Point P lies\non the y-axis at the coordinate (0 comma a)\n, and point R lies\non the x-axis at the coordinate\n\n(negative d over 2 comma 0)\n.\n\nWhich of the following best represents the\ndirection of the net magnetic field at point P?\nThe figure presents an arrow pointing diagonally upwards and to the right",
+    "text": "Questions 25-26\nTwo wires perpendicular to the x-axis have currents $I$ directed out of the page, as shown above. Each wire is a distance $d$ from the y-axis. Point P lies on the y-axis at the coordinate $(0,a)$, and point R lies on the x-axis at the coordinate $(-d/2,0)$.\n\nWhich of the following best represents the direction of the net magnetic field at point P?",
     "options": {
-      "A": "Diagram A",
-      "B": "The figure presents an arrow pointing horizontally to the right\nThe figure presents and arrow pointing vertically upwards",
-      "C": "Diagram C",
-      "D": "The figure presents an arrow pointing horizontally to the left\nThe figure presents and arrow pointing vertically downwards",
-      "E": "Diagram E"
+      "A": "Up and to the right.",
+      "B": "To the right.",
+      "C": "Toward the top of the page.",
+      "D": "To the left.",
+      "E": "Toward the bottom of the page."
     },
     "answer": "D",
     "primary_unit": "U12",
