@@ -3,7 +3,8 @@ import { formatMathText } from '../utils/mathTextFormat'
 
 export { formatMathText }
 
-export function MathText({ text, forceInlineLatex = false }) {
+export function MathText({ text, forceInlineLatex = false, as = 'span' }) {
   const html = formatMathText(text, { forceInlineLatex })
-  return <span dangerouslySetInnerHTML={{ __html: html }} />
+  const Component = as === 'div' ? 'div' : 'span'
+  return <Component dangerouslySetInnerHTML={{ __html: html }} />
 }

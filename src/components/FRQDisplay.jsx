@@ -5,21 +5,9 @@ import { isOfficialWholeRubric, normalizeRubricPoints } from '../utils/rubric'
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
 function normalizePromptText(text) {
-  const normalized = String(text || '')
-    .replace(/\r\n/g, '\n')
-    .replace(/[ \t]+/g, ' ')
-    .replace(/(?<!\|)\n(?!(?:\s*(?:\||\([a-z]\)|[A-F]\.|[ivx]+\.|Part\s+[A-Z]\b|Part\s+\([a-z]\)|Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+|•)))/gi, ' ')
-    .replace(/\s+(Part\s+[A-Z]\b)/g, '\n\n$1')
-    .replace(/\s+(\([a-z]\)\s+)/gi, '\n\n$1')
-    .replace(/\s+([A-F]\.\s+(?=[A-Z]))/g, '\n$1')
-    .replace(/\s+([ivx]+\.)\s+(?=[A-Z])/gi, '\n$1 ')
-    .replace(/\s+(Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+)\s+/g, '\n\n$1\n')
-    .replace(/\s*•\s*/g, '\n• ')
-    .replace(/\n{3,}/g, '\n\n')
-    .trim()
-
-  return normalizePromptTables(normalized)
+  return normalizePromptTextV2(text)
 }
+
 
 function normalizePromptTables(text) {
   return text.replace(
@@ -36,13 +24,58 @@ function normalizePromptTables(text) {
   )
 }
 
+function normalizePromptTextV2(text) {
+  const tableBlocks = []
+  const isTableRow = (value) => /^\s*\|.*\|\s*$/.test(value || '')
+  const isSeparator = (value) => {
+    const cells = String(value || '').trim().split('|').filter(Boolean).map(cell => cell.trim())
+    return cells.length > 1 && cells.every(cell => /^:?-{3,}:?$/.test(cell))
+  }
+
+  const lines = String(text || '').replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n')
+  const protectedLines = []
+
+  for (let idx = 0; idx < lines.length; idx += 1) {
+    const line = lines[idx]
+    if (isTableRow(line) && isSeparator(lines[idx + 1])) {
+      const table = [line, lines[idx + 1]]
+      idx += 2
+      while (idx < lines.length && isTableRow(lines[idx])) {
+        table.push(lines[idx])
+        idx += 1
+      }
+      idx -= 1
+      const token = `@@FRQ_TABLE_${tableBlocks.length}@@`
+      tableBlocks.push(table.join('\n'))
+      protectedLines.push(token)
+    } else {
+      protectedLines.push(line)
+    }
+  }
+
+  const normalized = protectedLines.join('\n')
+    .replace(/[ \t]+/g, ' ')
+    .replace(/(?<!\|)\n(?!(?:\s*(?:\||\([a-z]\)|[A-F]\.|[ivx]+\.|Part\s+[A-Z]\b|Part\s+\([a-z]\)|Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+|\u2022)))/gi, ' ')
+    .replace(/\s+(Part\s+[A-Z]\b)/g, '\n\n$1')
+    .replace(/\s+(\([a-z]\)\s+)/gi, '\n\n$1')
+    .replace(/\s+([A-F]\.\s+(?=[A-Z]))/g, '\n$1')
+    .replace(/\s+([ivx]+\.)\s+(?=[A-Z])/gi, '\n$1 ')
+    .replace(/\s+(Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+)\s+/g, '\n\n$1\n')
+    .replace(/\s*\u2022\s*/g, '\n\u2022 ')
+    .replace(/@@FRQ_TABLE_(\d+)@@/g, (_, idx) => `\n\n${tableBlocks[Number(idx)] || ''}\n\n`)
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
+
+  return normalizePromptTables(normalized)
+}
+
 function rubricParagraphs(text) {
   if (!text) return []
 
   const normalized = String(text)
     .replace(/\r\n/g, '\n')
     .replace(/[ \t]+/g, ' ')
-    .replace(/\n(?!(?:\s*(?:\([a-z]\)|[A-E]\.|Part\s+\([a-z]\)|Part\s+[A-Z]\b|Step\s+\d+:|Point\s+\d+:|Notes:|Additional Note:|Examples? that|Essentially correct|Partially correct|Incorrect|OR\b|\d+\s+(?:Complete|Substantial|Developing|Minimal)\s+Response|\||[-*•]\s)))/gi, ' ')
+    .replace(/\n(?!(?:\s*(?:\([a-z]\)|[A-E]\.|Part\s+\([a-z]\)|Part\s+[A-Z]\b|Step\s+\d+:|Point\s+\d+:|Notes:|Additional Note:|Examples? that|Essentially correct|Partially correct|Incorrect|OR\b|\d+\s+(?:Complete|Substantial|Developing|Minimal)\s+Response|\||[-*\u2022\s])))/gi, ' ')
     .replace(/\s+(General Considerations)\s+/gi, '\n\n$1\n')
     .replace(/\s+(AP PSYCHOLOGY\s+\d{4}\s+SCORING GUIDELINES\s+Question\s+\d+(?:\s+\(continued\))?)/gi, '\n\n$1\n')
     .replace(/(\d+\s+Points?)\s+(General Considerations)/gi, '$1\n\n$2')
@@ -55,7 +88,7 @@ function rubricParagraphs(text) {
     .replace(/\s+((?:0|1|2|3|4|5|6|7)\s+points?)\s+/gi, '\n$1 ')
     .replace(/\s+(Responses that (?:do not earn|earn) this point:)\s*/gi, '\n\n$1\n')
     .replace(/\s+(The response (?:does not|describes|proposes|provides|accurately|identifies|explains|uses|includes)\b)/gi, '\n$1')
-    .replace(/\s+(•\s*)/g, '\n$1')
+    .replace(/\s*\u2022\s*/g, '\n\u2022 ')
     .replace(/\n{3,}/g, '\n\n')
     .replace(/\s+(Solution)\s+/g, '\n\n$1\n\n')
     .replace(/\s+(Question\s+\d+\s+\(continued\)\s+Scoring)\s+/g, '\n\n$1\n\n')
@@ -65,7 +98,7 @@ function rubricParagraphs(text) {
     .replace(/\s+(Step\s+\d+:)\s+/g, '\n\n$1 ')
     .replace(/\s+(Point\s+\d+:)\s+/g, '\n\n$1 ')
     .replace(/\s+(Notes:)\s+/g, '\n\n$1\n\n')
-    .replace(/\s*•\s*(Score:)\s+/g, '\n$1 ')
+    .replace(/\s*\u2022\s*(Score:)\s+/g, '\n$1 ')
     .replace(/\s+(Score:)\s+/g, '\n$1 ')
     .replace(/\s+(Do NOT score\b)/g, '\n$1')
     .replace(/\s+(Essentially correct\s+\(E\)\s+if)/g, '\n$1')
@@ -163,14 +196,14 @@ function numberedLabel(line) {
 }
 
 function bulletLabel(line) {
-  const match = String(line || '').match(/^•\s*(.*)$/)
+  const match = String(line || '').match(/^\s*(?:\u2022)\s*(.*)$/)
   if (!match) return null
   if (!match[1].trim()) return null
   return match[1]
 }
 
 function RubricLine({ line, type, isPdf }) {
-  if (/^•\s*$/.test(String(line || '').trim())) return null
+  if (/^\s*(?:\u2022)\s*$/.test(String(line || '').trim())) return null
   const label = criterionLabel(line)
   const score = scoreLabel(line)
   const part = partLabel(line)
@@ -292,7 +325,7 @@ function RubricLine({ line, type, isPdf }) {
           lineHeight: 1.5,
           ...BREAK_GUARD.PARAGRAPH,
         }}>
-          <div style={{ color: '#64748b' }}>•</div>
+          <div style={{ color: '#64748b' }}>{'\u2022'}</div>
           <div><MathText text={bullet} /></div>
         </div>
       )
@@ -300,7 +333,7 @@ function RubricLine({ line, type, isPdf }) {
 
     return (
       <div className="grid grid-cols-[1rem_1fr] gap-2 py-0.5 text-sm leading-6 text-gray-700">
-        <span className="text-gray-500">•</span>
+        <span className="text-gray-500">{'\u2022'}</span>
         <span><MathText text={bullet} /></span>
       </div>
     )
@@ -568,8 +601,19 @@ export function RubricDisplay({ rubric, variant }) {
 
 function FRQText({ text, isPdf }) {
   if (!text) return null
-  const normalizedText = normalizePromptText(text)
+  const normalizedText = normalizePromptTextV2(text)
   const blocks = parseFRQBlocks(normalizedText)
+  const renderBlockText = (block) => {
+    const blockText = block.lines.join('\n')
+    const hasTable = /^\s*\|.*\|\s*$/m.test(blockText)
+    return hasTable ? (
+      <MathText text={blockText} as="div" />
+    ) : (
+      <div style={{ whiteSpace: 'pre-wrap' }}>
+        <MathText text={blockText} />
+      </div>
+    )
+  }
 
   if (isPdf) {
     return (
@@ -588,9 +632,7 @@ function FRQText({ text, isPdf }) {
               marginTop: block.type === 'subquestion' ? '8px' : '0',
             }}
           >
-            <div style={{ whiteSpace: 'pre-wrap' }}>
-              <MathText text={block.lines.join('\n')} />
-            </div>
+            {renderBlockText(block)}
           </div>
         ))}
       </div>
@@ -601,9 +643,7 @@ function FRQText({ text, isPdf }) {
     <div className="text-base text-text leading-relaxed">
       {blocks.map((block, bidx) => (
         <div key={bidx} className={block.type === 'subquestion' ? 'ml-6 mt-2' : ''}>
-          <div className="whitespace-pre-wrap">
-            <MathText text={block.lines.join('\n')} />
-          </div>
+          {renderBlockText(block)}
         </div>
       ))}
     </div>

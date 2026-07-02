@@ -120,11 +120,11 @@ function renderMarkdownTable(lines, startIndex) {
 
   const renderCell = (cell) => renderLatexSegments(cell, { forceInlineLatex: true })
   const html = [
-    '<span class="math-markdown-table-wrap"><table class="math-markdown-table"><thead><tr>',
+    '<div class="math-markdown-table-wrap"><table class="math-markdown-table"><thead><tr>',
     ...header.map(cell => `<th>${renderCell(cell)}</th>`),
     '</tr></thead><tbody>',
     ...rows.map(row => `<tr>${row.map(cell => `<td>${renderCell(cell)}</td>`).join('')}</tr>`),
-    '</tbody></table></span>',
+    '</tbody></table></div>',
   ].join('')
 
   return { html, nextIndex: index }
