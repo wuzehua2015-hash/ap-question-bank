@@ -9500,13 +9500,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Which of the following best describes the\nrelationship between the electric potentials VI and\nVII at points I and II, respectively?\nV < V\nI II",
+    "text": "Which of the following best describes the relationship between the electric potentials $V_I$ and $V_{II}$ at points I and II, respectively?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "It cannot be determined without knowing\nV = V\nI II\n\nV > V\nI II\nthe magnitudes of the charges.",
-      "E": "It cannot be determined without knowing\nthe distance between points I and II."
+      "A": "$V_I<V_{II}$",
+      "B": "$V_I=V_{II}$",
+      "C": "$V_I>V_{II}$",
+      "D": "It cannot be determined without knowing the magnitudes of the charges.",
+      "E": "It cannot be determined without knowing the distance between points I and II."
     },
     "answer": "A",
     "primary_unit": "U9",
@@ -9521,9 +9521,11 @@
       "2.B"
     ],
     "difficulty": "medium",
-    "has_graph": false,
-    "requires_graph": false,
-    "image_paths": [],
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-e-m/2017/2017_mcq2_img01.png"
+    ],
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2017.pdf",
       "notes": [
