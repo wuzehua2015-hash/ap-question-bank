@@ -25,19 +25,26 @@ function renderLatex(source, displayMode) {
 
 function renderLatexSegments(text, options = {}) {
   const { forceInlineLatex = false } = options
+  const restoredHtml = []
+  const protectedText = String(text).replace(/<\/?(?:sub|sup)>|&lt;(\/?(?:sub|sup))&gt;/gi, (raw, escapedTag) => {
+    const tag = escapedTag || raw.slice(1, -1)
+    const token = `@@HTML_TAG_${restoredHtml.length}@@`
+    restoredHtml.push(`<${tag.toLowerCase()}>`)
+    return token
+  })
   const parts = []
   const pattern = /(\$\$[\s\S]+?\$\$|\$[^$\n]+?\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\))/g
   let lastIndex = 0
   let match
 
-  while ((match = pattern.exec(text)) !== null) {
+  while ((match = pattern.exec(protectedText)) !== null) {
     const token = match[0]
-    if (token.startsWith('$') && !token.startsWith('$$') && !forceInlineLatex && !isLikelyInlineLatex(token, text, match.index)) {
+    if (token.startsWith('$') && !token.startsWith('$$') && !forceInlineLatex && !isLikelyInlineLatex(token, protectedText, match.index)) {
       continue
     }
 
     if (match.index > lastIndex) {
-      parts.push(escapeHtml(text.slice(lastIndex, match.index)))
+      parts.push(escapeHtml(protectedText.slice(lastIndex, match.index)))
     }
 
     if (token.startsWith('$$')) {
@@ -52,8 +59,8 @@ function renderLatexSegments(text, options = {}) {
     lastIndex = pattern.lastIndex
   }
 
-  parts.push(escapeHtml(text.slice(lastIndex)))
-  return parts.join('')
+  parts.push(escapeHtml(protectedText.slice(lastIndex)))
+  return parts.join('').replace(/@@HTML_TAG_(\d+)@@/g, (_, idx) => restoredHtml[Number(idx)] || '')
 }
 
 function isLikelyInlineLatex(token, fullText, startIndex) {
@@ -63,6 +70,9 @@ function isLikelyInlineLatex(token, fullText, startIndex) {
   const hasExplicitMathSyntax = /\\[A-Za-z]+|[_^{}]|[=<>]/.test(body)
 
   if (!body) return false
+  if (/^[+-]?[A-Za-z](?:_[A-Za-z0-9]+)?$/.test(body)) return true
+  if (/^[+-]?\d+(?:\.\d+)?[A-Za-z](?:_[A-Za-z0-9]+)?$/.test(body)) return true
+  if (/^[+-]?[A-Za-z0-9](?:_[A-Za-z0-9]+)?\/[A-Za-z0-9](?:_[A-Za-z0-9]+)?$/.test(body)) return true
   if (/^\(?-?\d[\d,.]*\)?$/.test(body)) return true
   if (/^\(?\d/.test(body) && hasExplicitMathSyntax) return true
   if (/^\d[\d,.]*(?:\s|$|[A-Za-z])/.test(body)) return false

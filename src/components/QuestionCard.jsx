@@ -127,7 +127,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
                 }`}
               >
                 <span className="font-bold mr-2">{key}.</span>
-                <MathText text={text} />
+                <MathText text={text} forceInlineLatex />
                 {showCorrect && <span className="ml-2 text-success text-sm">✓ 正确</span>}
                 {showIncorrect && <span className="ml-2 text-error text-sm">✗ 你的答案</span>}
               </button>

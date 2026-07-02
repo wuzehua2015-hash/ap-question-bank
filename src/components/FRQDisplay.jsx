@@ -645,6 +645,24 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
   const imagePaths = frq.image_paths || []
   const rubricImagePaths = frq.rubric_image_paths || []
   const qNum = frq.question_number || frq.question_num || index || '?'
+  const officialImagesFirst = frq.display_mode === 'official_images_first'
+  const promptText = frq.text || frq.question_text
+
+  const promptTextBlock = promptText && (
+    isPdf ? (
+      <div style={{ marginBottom: '16px' }}>
+        <FRQText text={promptText} isPdf={true} />
+      </div>
+    ) : (
+      <div className="mb-6 bg-gray-50 rounded-lg p-4">
+        <FRQText text={promptText} isPdf={false} />
+      </div>
+    )
+  )
+
+  const imageBlock = imagePaths.map((path, i) => (
+    <DisplayImage key={i} path={path} variant={variant} />
+  ))
 
   return (
     <div className={isPdf ? '' : framed ? 'bg-surface rounded-xl p-6 shadow-sm border border-border' : ''}>
@@ -677,25 +695,29 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
         </div>
       )}
 
-      {(frq.text || frq.question_text) && (
-        isPdf ? (
-          <div style={{ marginBottom: '16px' }}>
-            <FRQText text={frq.text || frq.question_text} isPdf={true} />
-          </div>
-        ) : (
-          <div className="mb-6 bg-gray-50 rounded-lg p-4">
-            <FRQText text={frq.text || frq.question_text} isPdf={false} />
-          </div>
-        )
-      )}
-
       {frq.requires_graph && imagePaths.length === 0 && (
         <MissingGraphNotice isPdf={isPdf} />
       )}
 
-      {imagePaths.map((path, i) => (
-        <DisplayImage key={i} path={path} variant={variant} />
-      ))}
+      {officialImagesFirst ? (
+        <>
+          {isPdf && promptTextBlock}
+          {imageBlock}
+          {promptText && !isPdf && (
+              <details className="mb-6 rounded-lg border border-border bg-gray-50 p-3 text-sm text-text-muted">
+                <summary className="cursor-pointer font-semibold text-text">Extracted text (supplemental)</summary>
+                <div className="mt-3">
+                  <FRQText text={promptText} isPdf={false} />
+                </div>
+              </details>
+          )}
+        </>
+      ) : (
+        <>
+          {promptTextBlock}
+          {imageBlock}
+        </>
+      )}
 
       {showRubric && rubricImagePaths.map((path, i) => (
         <DisplayImage key={`rubric-${i}`} path={path} variant={variant} />
