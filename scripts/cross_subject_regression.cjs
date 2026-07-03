@@ -45,6 +45,10 @@ async function main() {
   const forcedCell = formatMathText('$4$', { forceInlineLatex: true })
   assert(hasKatex(forcedCell), 'Structured table cells must support forced inline math rendering.')
 
+  const htmlEntityText = formatMathText('&quot;Do not laugh&quot; should decode before rendering.')
+  assert(htmlEntityText.includes('&quot;Do not laugh&quot;'), 'Decoded quotes should be escaped once for safe HTML output.')
+  assert(!htmlEntityText.includes('&amp;quot;'), 'HTML entities from source data must not be double-escaped in rendered text.')
+
   const css = readText('src/index.css')
   assert(/\.katex\s*\{[^}]*white-space:\s*nowrap/s.test(css), 'KaTeX CSS must prevent formula wrapping in narrow cells.')
 

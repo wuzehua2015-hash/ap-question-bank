@@ -9,6 +9,21 @@ function escapeHtml(text) {
     .replace(/'/g, '&#39;')
 }
 
+function decodeHtmlEntities(text) {
+  return String(text)
+    .replace(/&quot;/g, '"')
+    .replace(/&#34;/g, '"')
+    .replace(/&#x22;/gi, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&#39;/g, "'")
+    .replace(/&#x27;/gi, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&#60;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#62;/g, '>')
+    .replace(/&amp;/g, '&')
+}
+
 function renderLatex(source, displayMode) {
   try {
     return katex.renderToString(source, {
@@ -174,6 +189,6 @@ function normalizeLegacyMathText(text) {
 
 export function formatMathText(text, options = {}) {
   if (!text) return ''
-  const normalized = normalizeLegacyMathText(String(text))
+  const normalized = normalizeLegacyMathText(decodeHtmlEntities(text))
   return renderTextWithMarkdownTables(normalized, options)
 }

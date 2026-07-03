@@ -60,6 +60,11 @@ function validate(filePath, options = {}) {
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'))
   const errors = []
   const warnings = []
+  const textArtifactPatterns = [
+    { name: 'raw HTML entity', pattern: /&(quot|apos|amp|lt|gt|#34|#39|#x22|#x27);/i },
+    { name: 'mojibake Chinese/UI marker', pattern: /\u7f08\u5e9庤|\u93bc\udc3滅|\u95bf\u6b13|\u68e3\u682d|\u923\u937/ },
+    { name: 'replacement character', pattern: /\uFFFD/ },
+  ]
   
   const seenIds = new Set()
   const validUnits = options.validUnits || new Set(['U1','U2','U3','U4','U5','U6','not_applicable'])
@@ -92,6 +97,23 @@ function validate(filePath, options = {}) {
       }
     }
   }
+
+  function findTextArtifacts(value, currentPath, out) {
+    if (typeof value === 'string') {
+      for (const { name, pattern } of textArtifactPatterns) {
+        if (pattern.test(value)) {
+          out.push(`${currentPath}: contains ${name}`)
+          return
+        }
+      }
+    } else if (Array.isArray(value)) {
+      value.forEach((item, index) => findTextArtifacts(item, `${currentPath}[${index}]`, out))
+    } else if (value && typeof value === 'object') {
+      for (const [key, item] of Object.entries(value)) {
+        findTextArtifacts(item, `${currentPath}.${key}`, out)
+      }
+    }
+  }
   
   for (const q of data) {
     const qid = q.question_id || 'UNKNOWN'
@@ -110,6 +132,7 @@ function validate(filePath, options = {}) {
       errors.push(`${qid}: Text contains corrupted characters (U+FFFD)`)
     }
     findHiddenControlChars(q, qid, errors)
+    findTextArtifacts(q, qid, errors)
     // 检查更多乱码模式：常见PDF提取残留
     const pollutionPatterns = [
       /STOP\s*END OF EXAM/i,

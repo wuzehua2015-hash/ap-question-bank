@@ -863,11 +863,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
     "text": "When two resistors having resistances\n1\nR and\n2 R\nare connected in parallel, the equivalent resistance\nof the combination is 10 W . Which of the\nfollowing statements about the resistances is true?",
     "options": {
-      "A": "Both\n1\nR and\n2\nR are greater than 10 W .",
-      "B": "Both\n1\nR and\n2\nR are equal to 10 W .",
-      "C": "Both\n1\nR and\n2\nR are less than 10 W .",
-      "D": "The sum of\n1\nR and\n2\nR is 10 W .",
-      "E": "One of the resistances is greater than 10 W ,\nand the other is less than 10 W ."
+      "A": "Both $R_1$ and $R_2$ are greater than $10\\,\\Omega$.",
+      "B": "Both $R_1$ and $R_2$ are equal to $10\\,\\Omega$.",
+      "C": "Both $R_1$ and $R_2$ are less than $10\\,\\Omega$.",
+      "D": "The sum of $R_1$ and $R_2$ is $10\\,\\Omega$.",
+      "E": "One of the resistances is greater than $10\\,\\Omega$, and the other is less than $10\\,\\Omega$."
     },
     "answer": "A",
     "primary_unit": "U11",
@@ -3778,7 +3778,7 @@
       "B": "A cylinder whose axis is perpendicular to the\nwire and passes through the wire",
       "C": "A sphere with the wire through its center",
       "D": "A cube with the wire passing through the\ncenters of opposite faces",
-      "E": "A cube with the wire along a diagonal\n\nA uniform electric field exists between two parallel plates that are perpendicular to an x-axis and separated by\n0.01 m, as shown above on the left. The graph above on the right shows the electric potential between the plates as a\nfunction of position x on the x-axis."
+      "E": "A cube with the wire along a diagonal"
     },
     "answer": "A",
     "primary_unit": "U12",
@@ -5021,11 +5021,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
     "text": "Questions 24-25\nTwo parallel wires that lie in the plane of the page,\nas shown above, are a distance of Zero point two zero meters apart. Wire I\ncarries a current of fifteen amps toward the top of the page,\nand wire II carries a current of five amps toward the bottom\nof the page.\n\nWhat is the magnitude of the net magnetic field at\npoint P, located Zero point two zero meters to the right of wire II ?",
     "options": {
-      "A": "Zer o\n\npoint five microteslas",
-      "B": "One\npoint zero microteslas",
-      "C": "Two\npoint five microteslas",
-      "D": "Fiv e\npoint zero microteslas",
-      "E": "Seve n\npoint five microteslas"
+      "A": "$0.5\\,\\mu\\mathrm{T}$",
+      "B": "$1.0\\,\\mu\\mathrm{T}$",
+      "C": "$2.5\\,\\mu\\mathrm{T}$",
+      "D": "$5.0\\,\\mu\\mathrm{T}$",
+      "E": "$7.5\\,\\mu\\mathrm{T}$"
     },
     "answer": "C",
     "primary_unit": "U12",
@@ -5079,7 +5079,7 @@
       "B": "Fif t y\n\nmicronewtons per meter",
       "C": "Sev e n\nt\ny-five micronewtons per meter",
       "D": "One h u\nndred micronewtons per meter",
-      "E": "One h u\nndred fifty micronewtons per meter\nThe figure on the left shows a circular ring in the center of a group of dots arranged in 6 columns of 6 dots each. Under the figure is the label B equals 1.5 T and in parentheses “out of page”.\n\nThe figure on the left shows a circular ring in the center of a group of Xs arranged in 6 columns of 6 Xs each. Under the figure is the label B equals 1.5 T and in parentheses “into page”."
+      "E": "One h u\nndred fifty micronewtons per meter"
     },
     "answer": "C",
     "primary_unit": "U12",
@@ -5289,13 +5289,13 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "A wire is placed parallel to a bar magnet, as\nshown above, and carries current to the right.\nSeveral magnetic field lines outside the bar\nmagnet are shown. Which of the following\ncorrectly describes the net magnetic force and\ntorque on the wire?\nNet Force\nTorque",
+    "text": "A wire is placed parallel to a bar magnet, as shown above, and carries current to the right. Several magnetic field lines outside the bar magnet are shown. Which of the following correctly describes the net magnetic force and torque on the wire?",
     "options": {
       "A": "Toward the top of the page\nZero",
       "B": "Toward the bottom of the page\nZero",
       "C": "Toward the right\nNonzero",
       "D": "Zero\nZero",
-      "E": "Zero\nNonzero\nFour parallel vertical arrows are pointing upwards and are labeled B. A circle with a negative sign is to the left of the midpoint of these arrows. There is a directional arrow extending from the circle to the right towards the arrows."
+      "E": "Zero\nNonzero"
     },
     "answer": "E",
     "primary_unit": "U12",
@@ -5334,7 +5334,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Net Force",
+        "Torque"
+      ],
+      "rows": {
+        "A": [
+          "Toward the top of the page",
+          "Zero"
+        ],
+        "B": [
+          "Toward the bottom of the page",
+          "Zero"
+        ],
+        "C": [
+          "Toward the right",
+          "Nonzero"
+        ],
+        "D": [
+          "Zero",
+          "Zero"
+        ],
+        "E": [
+          "Zero",
+          "Nonzero"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q30",
@@ -5559,7 +5587,7 @@
       "B": "inversely proportional to r squared",
       "C": "directly proportional to r",
       "D": "directly proportional to r squared",
-      "E": "independent of r\nThe diagram/shows three parallel horizontal lines. Above the top line is the label E. Halfway between the top and middle lines, about three-fourths of the way horizontally along the lines, is a point labeled C. Halfway between the middle and bottom lines about one-fourth of the way horizontally along the lines is a point labeled A, and about three-fourths of the way horizontally along the lines, and directly below C, is a point labeled B."
+      "E": "independent of r"
     },
     "answer": "E",
     "primary_unit": "U13",
@@ -7125,7 +7153,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "Two parallel wires, A and B, have currents in\nopposite directions, as shown in the figure above.\nCurrent Bi is twice as large as Ai . The force on\nwire A due to current Bi has magnitude F. Which\nof the following correctly describes the direction\nand magnitude of the force on wire B due to\ncurrent Ai ?\nDirection Magnitude",
+    "text": "Two parallel wires, A and B, have currents in opposite directions, as shown in the figure above. Current Bi is twice as large as Ai . The force on wire A due to current Bi has magnitude F. Which of the following correctly describes the direction and magnitude of the force on wire B due to current Ai ?",
     "options": {
       "A": "To the left\nF",
       "B": "To the left\n2F",
@@ -7171,7 +7199,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Direction",
+        "Magnitude"
+      ],
+      "rows": {
+        "A": [
+          "To the left",
+          "F"
+        ],
+        "B": [
+          "To the left",
+          "2F"
+        ],
+        "C": [
+          "To the left",
+          "4F"
+        ],
+        "D": [
+          "To the right",
+          "F"
+        ],
+        "E": [
+          "To the right",
+          "2F"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q29",
@@ -7452,7 +7508,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "Questions 34-35\nTwo identical rectangular conducting loops and a\nvery long, straight wire lie in the plane of the page, as\nshown above. The loops are equal distances from the\nwire, and there is a current to the right in the wire.\n\nIf the current in the wire is decreasing, what is the\ndirection of the induced current, if any, in each of\nthe loops?\nLoop X\nLoop\n\nY",
+    "text": "Questions 34-35 Two identical rectangular conducting loops and a very long, straight wire lie in the plane of the page, as shown above. The loops are equal distances from the wire, and there is a current to the right in the wire. If the current in the wire is decreasing, what is the direction of the induced current, if any, in each of the loops?",
     "options": {
       "A": "Counterclockwise\nClockwise",
       "B": "Counterclockwise\nCounterclockwise",
@@ -7497,7 +7553,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Loop X",
+        "Loop Y"
+      ],
+      "rows": {
+        "A": [
+          "Counterclockwise",
+          "Clockwise"
+        ],
+        "B": [
+          "Counterclockwise",
+          "Counterclockwise"
+        ],
+        "C": [
+          "Clockwise",
+          "Counterclockwise"
+        ],
+        "D": [
+          "Clockwise",
+          "Clockwise"
+        ],
+        "E": [
+          "None",
+          "None"
+        ]
+      }
+    }
   },
   {
     "question_id": "2015_Q35",
@@ -7506,7 +7590,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "Questions 34-35\nTwo identical rectangular conducting loops and a\nvery long, straight wire lie in the plane of the page, as\nshown above. The loops are equal distances from the\nwire, and there is a current to the right in the wire.\n\nIf the current in the wire is constant and the wire\nis moved toward loop X, what is the direction of\nthe induced current, if any, in each of the loops?\nLoop X\nLoop\n\nY",
+    "text": "Questions 34-35 Two identical rectangular conducting loops and a very long, straight wire lie in the plane of the page, as shown above. The loops are equal distances from the wire, and there is a current to the right in the wire. If the current in the wire is constant and the wire is moved toward loop X, what is the direction of the induced current, if any, in each of the loops?",
     "options": {
       "A": "Counterclockwise\nClockwise",
       "B": "Counterclockwise\nCounterclockwise",
@@ -7551,7 +7635,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Loop X",
+        "Loop Y"
+      ],
+      "rows": {
+        "A": [
+          "Counterclockwise",
+          "Clockwise"
+        ],
+        "B": [
+          "Counterclockwise",
+          "Counterclockwise"
+        ],
+        "C": [
+          "Clockwise",
+          "Counterclockwise"
+        ],
+        "D": [
+          "Clockwise",
+          "Clockwise"
+        ],
+        "E": [
+          "None",
+          "None"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q01",
@@ -7670,11 +7782,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
     "text": "Two long parallel wires have currents of 1I and\n2I and are a distance d apart. The force per unit\nlength exerted by one wire on the other is F L .\nThe current in each wire is doubled, and the\ndistance between the wires is reduced to\n2 d .\nThe new force per unit length is",
     "options": {
-      "A": "2\nF L",
-      "B": "F\nL",
-      "C": "2F\nL",
-      "D": "4F\nL",
-      "E": "8F\nL\n\nA capacitor is constructed of two large, identical, parallel metal plates separated by a small distance d.\nA battery fully charges the capacitor and is then disconnected."
+      "A": "$\\frac{F}{2L}$",
+      "B": "$\\frac{F}{L}$",
+      "C": "$\\frac{2F}{L}$",
+      "D": "$\\frac{4F}{L}$",
+      "E": "$\\frac{8F}{L}$"
     },
     "answer": "E",
     "primary_unit": "U12",
@@ -8092,21 +8204,21 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "Questions 10-11\nThe figure above shows a thin, circular\nnonconducting sheet of positive charge uniformly\ndistributed over its area. The radius of the sheet\nis R. Point O is at the center of the sheet. Point S is\na distance x from the center of the sheet, and point T\nis a distance 4x from the center of the sheet.\nAssume R\nx >> .\n\nA small sphere of mass m and charge q\n- is\nreleased from rest at point T. If the electric\npotentials at points S and T are\nS\nV and\nT V ,\nrespectively, what is the speed of the sphere\nwhen it reaches point S ? Ignore the effects of\ngravity.",
+    "text": "Questions 10-11\nThe figure above shows a thin, circular nonconducting sheet of positive charge uniformly distributed over its area. The radius of the sheet is $R$. Point $O$ is at the center of the sheet. Point $S$ is a distance $x$ from the center of the sheet, and point $T$ is a distance $4x$ from the center of the sheet. Assume $R \\gg x$.\n\nA small sphere of mass $m$ and charge $-q$ is released from rest at point $T$. If the electric potentials at points $S$ and $T$ are $V_S$ and $V_T$, respectively, what is the speed of the sphere when it reaches point $S$? Ignore the effects of gravity.",
     "options": {
-      "A": "( 2 S q V V m + ) T",
-      "B": "( ) 4 S T q V V m +",
-      "C": "( ) 2 S T q V V m -",
-      "D": "( ) 2 S T q V V m +",
-      "E": "( ) 2 S T q V V m -"
+      "A": "$\\frac{2q}{m}(V_S+V_T)$",
+      "B": "$\\frac{4q}{m}(V_S+V_T)$",
+      "C": "$\\sqrt{\\frac{q}{2m}(V_S-V_T)}$",
+      "D": "$\\sqrt{\\frac{q}{2m}(V_S+V_T)}$",
+      "E": "$\\sqrt{\\frac{2q}{m}(V_S-V_T)}$"
     },
     "answer": "E",
-    "primary_unit": "U8",
+    "primary_unit": "U9",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U8.x",
-        "name": "Electric Charges, Fields, and Gauss's Law"
+        "code": "U9.x",
+        "name": "Electric Potential"
       }
     ],
     "skills": [
@@ -8129,7 +8241,7 @@
       "review_status": "draft_needs_year_gate",
       "confidence": "low",
       "evidence": [
-        "Matched keyword: charge"
+        "Matched keyword: electric potential"
       ],
       "rejected_units": [],
       "source_refs": [
@@ -8146,13 +8258,13 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "Questions 12-13\nCapacitor K L M N\nPlate area\nA A 2A 2A\nPlate separation\nd 2d d 2d\nThe chart above shows the plate area and\nseparation for four different air-filled parallel-plate\ncapacitors: K, L, M, and N.\n\nEach capacitor is charged such that the same\nelectric field is created between the plates. Which\nof the following correctly ranks the charge stored\non each capacitor?",
+    "text": "Questions 12-13\nThe chart below shows the plate area and separation for four different air-filled parallel-plate capacitors: K, L, M, and N.\n\nEach capacitor is charged such that the same electric field is created between the plates. Which of the following correctly ranks the charge stored on each capacitor?",
     "options": {
-      "A": "(\n) ( ) M N K Q Q Q Q = > = L",
-      "B": "M K N L Q Q Q Q > > >",
-      "C": "(\n) ( K M L N Q Q Q Q = > = )",
-      "D": "K L M N Q Q Q Q = = =",
-      "E": "M K N L Q Q Q Q > = > ( )"
+      "A": "$Q_M=Q_N>Q_K=Q_L$",
+      "B": "$Q_M>Q_K>Q_N>Q_L$",
+      "C": "$Q_K=Q_M>Q_L=Q_N$",
+      "D": "$Q_K=Q_L=Q_M=Q_N$",
+      "E": "$Q_M>Q_K=Q_N>Q_L$"
     },
     "answer": "A",
     "primary_unit": "U10",
@@ -8189,7 +8301,34 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "table": {
+        "headers": [
+          "Capacitor",
+          "K",
+          "L",
+          "M",
+          "N"
+        ],
+        "rows": [
+          [
+            "Plate area",
+            "$A$",
+            "$A$",
+            "$2A$",
+            "$2A$"
+          ],
+          [
+            "Plate separation",
+            "$d$",
+            "$2d$",
+            "$d$",
+            "$2d$"
+          ]
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q13",
@@ -8198,13 +8337,13 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "Questions 12-13\nCapacitor K L M N\nPlate area\nA A 2A 2A\nPlate separation\nd 2d d 2d\nThe chart above shows the plate area and\nseparation for four different air-filled parallel-plate\ncapacitors: K, L, M, and N.\n\nEach capacitor is charged such that the same\npotential difference exists across the plates.\nWhich of the following correctly ranks the\nmagnitude of electric field between\nthe plates of each capacitor?",
+    "text": "Questions 12-13\nThe chart below shows the plate area and separation for four different air-filled parallel-plate capacitors: K, L, M, and N.\n\nEach capacitor is charged such that the same potential difference exists across the plates. Which of the following correctly ranks the magnitude of electric field between the plates of each capacitor?",
     "options": {
-      "A": "(\n) ( ) M N K E E E = > = L E",
-      "B": "M K N L E E E E > > >",
-      "C": "(\n) ( K M L N E E E E = > = )",
-      "D": "K L M N E E E E = = =",
-      "E": "L K N E E E E > = > ( ) M"
+      "A": "$E_M=E_N>E_K=E_L$",
+      "B": "$E_M>E_K>E_N>E_L$",
+      "C": "$E_K=E_M>E_L=E_N$",
+      "D": "$E_K=E_L=E_M=E_N$",
+      "E": "$E_L>E_K=E_N>E_M$"
     },
     "answer": "C",
     "primary_unit": "U10",
@@ -8241,7 +8380,34 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "table": {
+        "headers": [
+          "Capacitor",
+          "K",
+          "L",
+          "M",
+          "N"
+        ],
+        "rows": [
+          [
+            "Plate area",
+            "$A$",
+            "$A$",
+            "$2A$",
+            "$2A$"
+          ],
+          [
+            "Plate separation",
+            "$d$",
+            "$2d$",
+            "$d$",
+            "$2d$"
+          ]
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q14",
@@ -8689,7 +8855,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "A loop of wire at location X is moving toward the right with constant speed v in a region of uniform magnetic\nfield B\nrho\n, which is perpendicular to the plane of the loop. The magnetic field region ends at the dashed line, as\nshown in the figure above. Later, the loop is at location Y and exiting the magnetic field with the same constant\nspeed v. The process is then repeated with the loop moving at a speed of 2v. Which of the following best\ndescribes the emf in the loop at the two positions shown when the process is repeated at a speed of 2v ?\nEmf at Location X\nEmf at Location Y",
+    "text": "A loop of wire at location X is moving toward the right with constant speed v in a region of uniform magnetic field B rho , which is perpendicular to the plane of the loop. The magnetic field region ends at the dashed line, as shown in the figure above. Later, the loop is at location Y and exiting the magnetic field with the same constant speed v. The process is then repeated with the loop moving at a speed of 2v. Which of the following best describes the emf in the loop at the two positions shown when the process is repeated at a speed of 2v ?",
     "options": {
       "A": "Nonzero and halved\nNonzero and halved",
       "B": "Nonzero and doubled\nNonzero and doubled",
@@ -8734,7 +8900,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Emf at Location X",
+        "Emf at Location Y"
+      ],
+      "rows": {
+        "A": [
+          "Nonzero and halved",
+          "Nonzero and halved"
+        ],
+        "B": [
+          "Nonzero and doubled",
+          "Nonzero and doubled"
+        ],
+        "C": [
+          "Nonzero and doubled",
+          "Zero at both speeds"
+        ],
+        "D": [
+          "Zero at both speeds",
+          "Zero at both speeds"
+        ],
+        "E": [
+          "Zero at both speeds",
+          "Nonzero and doubled"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q23",
@@ -9065,11 +9259,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
     "text": "A small object with a charge of q = 3.0 C\n+\nmu and\na mass m =\n6 2.0 10 kg - ¥\nenters a magnetic field\nof magnitude B = 0.20 T directed into the page, as\nshown in the figure above. If the speed of the\nobject is 1000 m/s , the object’s acceleration at\nthe moment it enters the field is most nearly",
     "options": {
-      "A": "zero because the velocity is perpendicular to\nthe magnetic field",
-      "B": "2\n300 m/s toward the bottom of the page",
-      "C": "2\n300 m/s toward the top of the page",
-      "D": "2\n600 m/s toward the bottom of the page",
-      "E": "2\n600 m/s toward the top of the page"
+      "A": "zero because the velocity is perpendicular to the magnetic field",
+      "B": "$300\\,\\mathrm{m/s^2}$ toward the bottom of the page",
+      "C": "$300\\,\\mathrm{m/s^2}$ toward the top of the page",
+      "D": "$600\\,\\mathrm{m/s^2}$ toward the bottom of the page",
+      "E": "$600\\,\\mathrm{m/s^2}$ toward the top of the page"
     },
     "answer": "C",
     "primary_unit": "U12",
@@ -9119,11 +9313,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
     "text": "A 0.20 m long wire carries a current of 15 A\nand lies perpendicular to a magnetic field. The\nmagnetic force on the wire is measured to be\n0.060 N. What is the magnitude of the magnetic\nfield?",
     "options": {
-      "A": "0.010 T",
-      "B": "0.020 T",
-      "C": "0.040 T",
-      "D": "0.060 T",
-      "E": "0.080 T"
+      "A": "0.010",
+      "B": "0.020",
+      "C": "0.040",
+      "D": "0.060",
+      "E": "0.080"
     },
     "answer": "B",
     "primary_unit": "U12",
@@ -9284,7 +9478,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "Two identical capacitors, Y and Z, are connected\nin series with an ideal battery, as shown in\nfigure 1 above, and fully charged. Each capacitor\nhas a dielectric slab of dielectric constant\n1\nkappa>\n\nbetween its plates. If the dielectric slab is\nremoved from capacitor Z, which of the\nfollowing describes what happens to the\nvoltage across each capacitor?\nVoltage across\nCapacitor Y\nVoltage across\nCapacitor Z",
+    "text": "Two identical capacitors, Y and Z, are connected in series with an ideal battery, as shown in figure 1 above, and fully charged. Each capacitor has a dielectric slab of dielectric constant 1 kappa> between its plates. If the dielectric slab is removed from capacitor Z, which of the following describes what happens to the voltage across each capacitor?",
     "options": {
       "A": "Increases\nDecreases",
       "B": "Increases\nIncreases",
@@ -9329,7 +9523,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Voltage across Capacitor Y",
+        "Voltage across Capacitor Z"
+      ],
+      "rows": {
+        "A": [
+          "Increases",
+          "Decreases"
+        ],
+        "B": [
+          "Increases",
+          "Increases"
+        ],
+        "C": [
+          "Remains the same",
+          "Remains the same"
+        ],
+        "D": [
+          "Decreases",
+          "Decreases"
+        ],
+        "E": [
+          "Decreases",
+          "Increases"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q34",
@@ -10583,11 +10805,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
     "text": "Questions 20-22\nThree small spheres, A, B, and C, have charges\nwith magnitudes qA , qB , and qC , respectively.\nThe three spheres are aligned along a straight line, as\nshown in the figure above. At the instant shown, the\nnet force on sphere A is zero.\n\nWhich of the following is true about the sign of\ncharge qA ?",
     "options": {
-      "A": "The sign of charge qA must be the same as\nthat of qB .",
-      "B": "The sign of charge qA must be the same as\nthat of qC .",
-      "C": "The sign of charge qA must be the same as\nthat of either qB or qC\ngreater magnitude.\n, whichever has the",
-      "D": "The sign of charge qA must be the same as\nthat of either q\nor q\nB\nC , whichever has the\nlesser magnitude.",
-      "E": "It is possible that qA could be either positive\nor negative."
+      "A": "The sign of charge $q_A$ must be the same as that of $q_B$.",
+      "B": "The sign of charge $q_A$ must be the same as that of $q_C$.",
+      "C": "The sign of charge $q_A$ must be the same as that of either $q_B$ or $q_C$, whichever has the greater magnitude.",
+      "D": "The sign of charge $q_A$ must be the same as that of either $q_B$ or $q_C$, whichever has the lesser magnitude.",
+      "E": "It is possible that $q_A$ could be either positive or negative."
     },
     "answer": "E",
     "primary_unit": "U8",
@@ -11173,7 +11395,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "A metal wire of resistance 10 Τ is bent into a\ncircular hoop of radius 0.10 meter and placed in a\nuniform magnetic field, as shown in Figure 1\nabove. The magnetic field strength B as a function\nof time is shown in Figure 2, where positive refers\nto a magnetic field directed out of the page. What\nare the magnitude and direction of the current\ninduced in the ring at time t = 6 s?\nMagnitude Direction",
+    "text": "A metal wire of resistance 10 Τ is bent into a circular hoop of radius 0.10 meter and placed in a uniform magnetic field, as shown in Figure 1 above. The magnetic field strength B as a function of time is shown in Figure 2, where positive refers to a magnetic field directed out of the page. What are the magnitude and direction of the current induced in the ring at time t = 6 s?",
     "options": {
       "A": "3.8 mA\nClockwise",
       "B": "3.8 mA\nCounterclockwise",
@@ -11218,7 +11440,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Magnitude",
+        "Direction"
+      ],
+      "rows": {
+        "A": [
+          "3.8 mA",
+          "Clockwise"
+        ],
+        "B": [
+          "3.8 mA",
+          "Counterclockwise"
+        ],
+        "C": [
+          "0.42 mA",
+          "Clockwise"
+        ],
+        "D": [
+          "0.42 mA",
+          "Counterclockwise"
+        ],
+        "E": [
+          "0",
+          "No direction"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q34",
@@ -11718,7 +11968,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "A parallel plate capacitor with air between the\nplates is charged and then disconnected from the\nsource of emf. If the space between the plates is\nnow filled with a dielectric, what happens to the\ncapacitance of the capacitor and the magnitude of\nthe electric field between the plates?\nMagnitude of the\nElectric Field\nCapacitance",
+    "text": "A parallel plate capacitor with air between the plates is charged and then disconnected from the source of emf. If the space between the plates is now filled with a dielectric, what happens to the capacitance of the capacitor and the magnitude of the electric field between the plates?",
     "options": {
       "A": "Increases\nIncreases",
       "B": "Increases\nRemains constant",
@@ -11764,7 +12014,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Magnitude of the Electric Field",
+        "Capacitance"
+      ],
+      "rows": {
+        "A": [
+          "Increases",
+          "Increases"
+        ],
+        "B": [
+          "Increases",
+          "Remains constant"
+        ],
+        "C": [
+          "Increases",
+          "Decreases"
+        ],
+        "D": [
+          "Decreases",
+          "Increases"
+        ],
+        "E": [
+          "Decreases",
+          "Decreases"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q09",
@@ -11889,7 +12167,7 @@
       "B": "It would decrease.",
       "C": "It would change sign.",
       "D": "It would remain constant, with the flux\nthrough each side of the surface also\nremaining constant.",
-      "E": "It would remain constant, but the flux\nthrough each side of the cubical surface\nwould change.\n\nT"
+      "E": "It would remain constant, but the flux\nthrough each side of the cubical surface\nwould change."
     },
     "answer": "E",
     "primary_unit": "U13",
@@ -12759,7 +13037,7 @@
       "B": "negative z-direction",
       "C": "positive x-direction",
       "D": "negative x-direction",
-      "E": "negative y-direction\nT"
+      "E": "negative y-direction"
     },
     "answer": "B",
     "primary_unit": "U12",
@@ -13082,7 +13360,7 @@
       "B": "to the right",
       "C": "toward the bottom of the page",
       "D": "toward the top of the page",
-      "E": "undefined, because the magnitude of the\nelectric field at point P is zero\n\nT"
+      "E": "undefined, because the magnitude of the\nelectric field at point P is zero"
     },
     "answer": "B",
     "primary_unit": "U8",
@@ -13132,11 +13410,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
     "text": "An inductor and two resistors are connected to\nan ideal battery, as shown in the figure above.\nWhat is the time constant for the circuit?",
     "options": {
-      "A": "0\n.22 microsecond",
-      "B": "0\n.33 microsecond",
-      "C": "0\n.67 microsecond",
-      "D": "1\n.0 microsecond",
-      "E": "7\n2 microseconds\nT"
+      "A": "$0.22\\,\\mu\\mathrm{s}$",
+      "B": "$0.33\\,\\mu\\mathrm{s}$",
+      "C": "$0.67\\,\\mu\\mathrm{s}$",
+      "D": "$1.0\\,\\mu\\mathrm{s}$",
+      "E": "$72\\,\\mu\\mathrm{s}$"
     },
     "answer": "D",
     "primary_unit": "U13",
@@ -13296,7 +13574,7 @@
       "B": "Negative",
       "C": "No net charge, but it is polarized with\npositive charges on the left side of the\nsphere",
       "D": "No net charge, but it is polarized with\nnegative charges on the left side of the\nsphere",
-      "E": "No net charge and no polarization\n\nT"
+      "E": "No net charge and no polarization"
     },
     "answer": "E",
     "primary_unit": "U12",
@@ -13350,7 +13628,7 @@
       "B": "negative 3000 electron volts",
       "C": "positive 3000 electron volts",
       "D": "positive 4000 electron volts",
-      "E": "positive 5000 electron volts\nT"
+      "E": "positive 5000 electron volts"
     },
     "answer": "B",
     "primary_unit": "U9",
@@ -13398,7 +13676,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "An electric dipole consisting of a positive\ncharge and a negative charge held a fixed\ndistance apart is at rest in an external, nonuniform\nelectric field E, as shown in the figure above.\nWhich of the following best describes the net\ntorque and net force exerted on the dipole?\nNet Torque\nNet Force",
+    "text": "An electric dipole consisting of a positive charge and a negative charge held a fixed distance apart is at rest in an external, nonuniform electric field $E$, as shown in the figure above. Which of the following best describes the net torque and net force exerted on the dipole?",
     "options": {
       "A": "Clockwise\nTo the left",
       "B": "Clockwise\nTo the right",
@@ -13443,7 +13721,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Net Torque",
+        "Net Force"
+      ],
+      "rows": {
+        "A": [
+          "Clockwise",
+          "To the left"
+        ],
+        "B": [
+          "Clockwise",
+          "To the right"
+        ],
+        "C": [
+          "Counterclockwise",
+          "To the left"
+        ],
+        "D": [
+          "Counterclockwise",
+          "To the right"
+        ],
+        "E": [
+          "Zero",
+          "Zero"
+        ]
+      }
+    }
   },
   {
     "question_id": "2019_Q05",
@@ -13458,7 +13764,7 @@
       "B": "2 only",
       "C": "3 only",
       "D": "1 and 2 only",
-      "E": "1, 2, and 3\nT"
+      "E": "1, 2, and 3"
     },
     "answer": "B",
     "primary_unit": "U13",
@@ -13564,7 +13870,7 @@
       "B": "The magnitude of the force sphere B exerts\non sphere A is three times larger than the\nmagnitude of the force sphere A exerts on\nsphere B.",
       "C": "The force sphere B exerts on sphere A\nis equal in magnitude to the force sphere A\nexerts on sphere B.",
       "D": "If the spheres are free to move, the magnitude\nof the force sphere B exerts on sphere A\nwill decrease as the spheres move.",
-      "E": "If the spheres are brought into contact\nwith each other and then returned to the\npositions shown, the two spheres will attract\neach other.\nT"
+      "E": "If the spheres are brought into contact\nwith each other and then returned to the\npositions shown, the two spheres will attract\neach other."
     },
     "answer": "C",
     "primary_unit": "U10",
@@ -13938,7 +14244,7 @@
       "B": "The potential difference between the plates of\nthe capacitor will decrease.",
       "C": "The capacitance of the capacitor will\ndecrease.",
       "D": "The charge stored on the capacitor will\nincrease.",
-      "E": "The energy stored in the capacitor will\nincrease. T"
+      "E": "The energy stored in the capacitor will\nincrease."
     },
     "answer": "B",
     "primary_unit": "U11",
@@ -14913,7 +15219,7 @@
       "B": "Into the page",
       "C": "Toward the bottom of the page",
       "D": "Toward the top of the page",
-      "E": "Undefined, since the magnitude of the\nmagnetic field is zero.\nT"
+      "E": "Undefined, since the magnitude of the\nmagnetic field is zero."
     },
     "answer": "B",
     "primary_unit": "U12",
@@ -15021,7 +15327,7 @@
       "B": "Moving the loop to the right",
       "C": "Moving the loop to the left",
       "D": "Moving the loop up away from the wire",
-      "E": "Moving the loop down toward the wire\nT"
+      "E": "Moving the loop down toward the wire"
     },
     "answer": "E",
     "primary_unit": "U12",
