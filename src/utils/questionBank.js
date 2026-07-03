@@ -65,6 +65,11 @@ export function adaptMCQ(raw) {
     diagram_references: raw.diagram_references || [],
     background_data: raw.background_data || null,
     rubric_image_paths: raw.rubric_image_paths || [],
+    group_id: raw.group_id || null,
+    group_members: raw.group_members || [],
+    group_role: raw.group_role || null,
+    group_context: raw.group_context || null,
+    requires_group_context: !!raw.requires_group_context,
   }
 }
 
@@ -86,6 +91,45 @@ export function adaptFRQ(raw) {
 
 function isPlayableMCQ(q) {
   return q.scoring_status !== 'not_scored' && !!q.answer && Object.keys(q.options || {}).length > 0
+}
+
+function questionOrder(q) {
+  return Number(q.question_number || q.official_number || 0)
+}
+
+function makeQuestionBuckets(questions) {
+  const byGroup = new Map()
+  const singles = []
+  for (const q of questions) {
+    if (q.group_id) {
+      if (!byGroup.has(q.group_id)) byGroup.set(q.group_id, [])
+      byGroup.get(q.group_id).push(q)
+    } else {
+      singles.push([q])
+    }
+  }
+  const groups = [...byGroup.values()].map(group => [...group].sort((a, b) => questionOrder(a) - questionOrder(b)))
+  return [...groups, ...singles].filter(bucket => bucket.length > 0)
+}
+
+function bucketPrimaryUnit(bucket) {
+  const counts = {}
+  for (const q of bucket) counts[q.primary_unit] = (counts[q.primary_unit] || 0) + 1
+  return Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] || bucket[0]?.primary_unit
+}
+
+function flattenBucketsToLimit(buckets, limit, { exact = false } = {}) {
+  const selected = []
+  for (const bucket of buckets) {
+    if (selected.length + bucket.length > limit) {
+      if (exact) continue
+      if (selected.length === 0) selected.push(...bucket)
+      continue
+    }
+    selected.push(...bucket)
+    if (selected.length >= limit) break
+  }
+  return selected.slice(0, exact ? limit : selected.length)
 }
 
 // Normalize option formats to an A-E keyed object.
@@ -226,13 +270,14 @@ export function generateQuiz(questions, config) {
     }
   }
 
-  // Shuffle and return the requested count.
-  pool = pool.sort(() => Math.random() - 0.5)
+  // Shuffle grouped buckets and return contiguous official question groups.
+  const buckets = makeQuestionBuckets(pool).sort(() => Math.random() - 0.5)
   const actualCount = Math.min(count, pool.length)
+  const quiz = flattenBucketsToLimit(buckets, actualCount, { exact: false })
   return {
-    quiz: pool.slice(0, actualCount),
+    quiz,
     requestedCount: count,
-    actualCount: actualCount,
+    actualCount: quiz.length,
     unit: config.unit || 'all',
   }
 }
@@ -253,22 +298,24 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
   if (configTotal > 0) {
     const selectedIds = new Set()
     for (const [unit, count] of Object.entries(unitDistribution)) {
-      const unitQuestions = playableQuestions.filter(q => q.primary_unit === unit)
-      const shuffled = [...unitQuestions].sort(() => Math.random() - 0.5)
-      for (const q of shuffled.slice(0, count)) {
+      const unitBuckets = makeQuestionBuckets(playableQuestions)
+        .filter(bucket => bucketPrimaryUnit(bucket) === unit && bucket.every(q => !selectedIds.has(q.question_id)))
+        .sort(() => Math.random() - 0.5)
+      const chosen = flattenBucketsToLimit(unitBuckets, count, { exact: true })
+      for (const q of chosen) {
         selectedIds.add(q.question_id)
         mcq.push(q)
       }
     }
 
     if (mcq.length < mockConfig.totalMCQ) {
-      const remaining = playableQuestions
-        .filter(q => !selectedIds.has(q.question_id))
+      const remainingBuckets = makeQuestionBuckets(playableQuestions.filter(q => !selectedIds.has(q.question_id)))
         .sort(() => Math.random() - 0.5)
-      mcq.push(...remaining.slice(0, mockConfig.totalMCQ - mcq.length))
+      mcq.push(...flattenBucketsToLimit(remainingBuckets, mockConfig.totalMCQ - mcq.length, { exact: true }))
     }
   } else {
-    mcq.push(...[...playableQuestions].sort(() => Math.random() - 0.5).slice(0, mockConfig.totalMCQ))
+    const buckets = makeQuestionBuckets(playableQuestions).sort(() => Math.random() - 0.5)
+    mcq.push(...flattenBucketsToLimit(buckets, mockConfig.totalMCQ, { exact: true }))
   }
 
   // FRQ: select a year, then a set if multiple sets exist for that year
