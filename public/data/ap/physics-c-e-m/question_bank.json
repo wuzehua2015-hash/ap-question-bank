@@ -8366,7 +8366,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "A capacitor stores energy\n1\nU when it holds\ncharge Q. The same capacitor stores energy\n2 U\nwhen it holds charge 16Q. What is the\nratio 2 U\nU1 ?",
+    "text": "A capacitor stores energy $U_1$ when it holds charge $Q$. The same capacitor stores energy $U_2$ when it holds charge $16Q$. What is the ratio $U_2/U_1$?",
     "options": {
       "A": "8",
       "B": "16",
@@ -10694,13 +10694,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Three capacitors are connected in series to an\nideal voltage source and charged, as shown in\nFigure 1 above. The capacitors are identical\nexcept that capacitor X has air between its\nplates, whereas capacitors Y and Z each have a\ndielectric slab of dielectric constant η > 1\nbetween their plates. If the dielectric slab is\nremoved from capacitor Z, as shown in Figure 2,\nwhich of the following describes what will\nhappen to the voltage across each capacitor?\nVoltage across\nCapacitor X\nVoltage across\nCapacitor Y\nVoltage across\nCapacitor Z",
+    "text": "Three capacitors are connected in series to an ideal voltage source and charged, as shown in Figure 1 above. The capacitors are identical except that capacitor X has air between its plates, whereas capacitors Y and Z each have a dielectric slab of dielectric constant $\\eta>1$ between their plates. If the dielectric slab is removed from capacitor Z, as shown in Figure 2, which of the following describes what will happen to the voltage across each capacitor?",
     "options": {
-      "A": "Increases",
-      "B": "Increases",
-      "C": "Increases",
-      "D": "Decreases",
-      "E": "Decreases\nIncreases Decreases Decreases Increases Decreases Decreases Decreases Increases Decreases Increases"
+      "A": "Increases | Increases | Decreases",
+      "B": "Increases | Decreases | Decreases",
+      "C": "Increases | Decreases | Increases",
+      "D": "Decreases | Increases | Decreases",
+      "E": "Decreases | Decreases | Increases"
     },
     "answer": "E",
     "primary_unit": "U10",
@@ -10739,7 +10739,41 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Voltage across Capacitor X",
+        "Voltage across Capacitor Y",
+        "Voltage across Capacitor Z"
+      ],
+      "rows": {
+        "A": [
+          "Increases",
+          "Increases",
+          "Decreases"
+        ],
+        "B": [
+          "Increases",
+          "Decreases",
+          "Decreases"
+        ],
+        "C": [
+          "Increases",
+          "Decreases",
+          "Increases"
+        ],
+        "D": [
+          "Decreases",
+          "Increases",
+          "Decreases"
+        ],
+        "E": [
+          "Decreases",
+          "Decreases",
+          "Increases"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q11",
@@ -10748,13 +10782,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Questions 11-12\n\nIf the switch remains closed when the slab is\ninserted, what changes, if any, occur?\nA parallel-plate capacitor connected to a battery is\nfully charged with the switch S closed, as shown in\nthe circuit above. A slab of dielectric constant\nis slowly inserted between the plates of the capacitor.\nk > 1\nPotential Difference\nAcross the Plates\nCharge on\nPositive Plate",
+    "text": "Questions 11-12\nA parallel-plate capacitor connected to a battery is fully charged with switch $S$ closed, as shown in the circuit above. A slab of dielectric constant $k>1$ is slowly inserted between the plates of the capacitor.\n\nIf the switch remains closed when the slab is inserted, what changes, if any, occur?",
     "options": {
-      "A": "Remains the same\nIncreases",
-      "B": "Remains the same\nDecreases",
-      "C": "Increases\nRemains the same",
-      "D": "Decreases Increases",
-      "E": "Decreases\nRemains the same"
+      "A": "Remains the same | Increases",
+      "B": "Remains the same | Decreases",
+      "C": "Increases | Remains the same",
+      "D": "Decreases | Increases",
+      "E": "Decreases | Remains the same"
     },
     "answer": "A",
     "primary_unit": "U11",
@@ -10801,7 +10835,35 @@
     ],
     "group_role": "member",
     "group_context": "Questions 11-12",
-    "requires_group_context": true
+    "requires_group_context": true,
+    "option_table_data": {
+      "headers": [
+        "Potential Difference Across the Plates",
+        "Charge on Positive Plate"
+      ],
+      "rows": {
+        "A": [
+          "Remains the same",
+          "Increases"
+        ],
+        "B": [
+          "Remains the same",
+          "Decreases"
+        ],
+        "C": [
+          "Increases",
+          "Remains the same"
+        ],
+        "D": [
+          "Decreases",
+          "Increases"
+        ],
+        "E": [
+          "Decreases",
+          "Remains the same"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q12",
@@ -10810,13 +10872,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Questions 11-12\n\nIf, instead, the switch is open with the capacitor\nstill fully charged when the slab is inserted, what\nchanges, if any, occur?\nPotential Difference\nAcross the Plates\nCharge on\nPositive Plate",
+    "text": "Questions 11-12\nA parallel-plate capacitor connected to a battery is fully charged with switch $S$ closed, as shown in the circuit above. A slab of dielectric constant $k>1$ is slowly inserted between the plates of the capacitor.\n\nIf, instead, the switch is open with the capacitor still fully charged when the slab is inserted, what changes, if any, occur?",
     "options": {
-      "A": "Remains the same\nIncreases",
-      "B": "Remains the same\nDecreases",
-      "C": "Increases\nRemains the same",
-      "D": "Decreases Increases",
-      "E": "Decreases\nRemains the same"
+      "A": "Remains the same | Increases",
+      "B": "Remains the same | Decreases",
+      "C": "Increases | Remains the same",
+      "D": "Decreases | Increases",
+      "E": "Decreases | Remains the same"
     },
     "answer": "E",
     "primary_unit": "U11",
@@ -10863,7 +10925,35 @@
     ],
     "group_role": "member",
     "group_context": "Questions 11-12",
-    "requires_group_context": true
+    "requires_group_context": true,
+    "option_table_data": {
+      "headers": [
+        "Potential Difference Across the Plates",
+        "Charge on Positive Plate"
+      ],
+      "rows": {
+        "A": [
+          "Remains the same",
+          "Increases"
+        ],
+        "B": [
+          "Remains the same",
+          "Decreases"
+        ],
+        "C": [
+          "Increases",
+          "Remains the same"
+        ],
+        "D": [
+          "Decreases",
+          "Increases"
+        ],
+        "E": [
+          "Decreases",
+          "Remains the same"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q13",
@@ -11632,13 +11722,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "A parallel-plate capacitor connected to an ideal\nbattery has charge + Q on its top plate. The\nenergy stored in the capacitor is U C . While the\ncapacitor remains connected to the battery, the\nseparation between the two plates is doubled.\nWhich of the following gives the new charge on\nthe top plate and the new energy stored in the\ncapacitor?\nCharge\nPotential Energy",
+    "text": "A parallel-plate capacitor connected to an ideal battery has charge $+Q$ on its top plate. The energy stored in the capacitor is $U_C$. While the capacitor remains connected to the battery, the separation between the two plates is doubled. Which of the following gives the new charge on the top plate and the new energy stored in the capacitor?",
     "options": {
-      "A": "+2Q",
-      "B": "+2Q\nUC 2\n2UC",
-      "C": "+Q\nU C",
-      "D": "+Q 2\n2UC",
-      "E": "UC 2\n+Q 2"
+      "A": "$+2Q$ | $U_C/2$",
+      "B": "$+2Q$ | $2U_C$",
+      "C": "$+Q$ | $U_C$",
+      "D": "$+Q/2$ | $2U_C$",
+      "E": "$+Q/2$ | $U_C/2$"
     },
     "answer": "E",
     "primary_unit": "U11",
@@ -11677,7 +11767,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Charge",
+        "Potential Energy"
+      ],
+      "rows": {
+        "A": [
+          "$+2Q$",
+          "$U_C/2$"
+        ],
+        "B": [
+          "$+2Q$",
+          "$2U_C$"
+        ],
+        "C": [
+          "$+Q$",
+          "$U_C$"
+        ],
+        "D": [
+          "$+Q/2$",
+          "$2U_C$"
+        ],
+        "E": [
+          "$+Q/2$",
+          "$U_C/2$"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q27",
@@ -11918,13 +12036,13 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Object A and object B are separated by distance d.\nObject A has charge +q, and object B has\ncharge -2q. Object A has a force of magnitude F\nexerted on it by object B. What are the magnitude\nand direction of the force exerted on object B?\nMagnitude Direction F 2\n\n2F",
+    "text": "Object A and object B are separated by distance $d$. Object A has charge $+q$, and object B has charge $-2q$. Object A has a force of magnitude $F$ exerted on it by object B. What are the magnitude and direction of the force exerted on object B?",
     "options": {
-      "A": "Away from object A",
-      "B": "F\nAway from object A",
-      "C": "2F\nAway from object A",
-      "D": "F\nToward object A",
-      "E": "Toward object A"
+      "A": "$F/2$ | Away from object A",
+      "B": "$F$ | Away from object A",
+      "C": "$2F$ | Away from object A",
+      "D": "$F$ | Toward object A",
+      "E": "$2F$ | Toward object A"
     },
     "answer": "D",
     "primary_unit": "U8",
@@ -11963,7 +12081,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Magnitude",
+        "Direction"
+      ],
+      "rows": {
+        "A": [
+          "$F/2$",
+          "Away from object A"
+        ],
+        "B": [
+          "$F$",
+          "Away from object A"
+        ],
+        "C": [
+          "$2F$",
+          "Away from object A"
+        ],
+        "D": [
+          "$F$",
+          "Toward object A"
+        ],
+        "E": [
+          "$2F$",
+          "Toward object A"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q32",
@@ -13102,13 +13248,13 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "Two long, straight parallel wires X and Y are\nseparated by a distance d and carry currents I and\n2 I, as shown in the figure above. The force on\nwire X has magnitude F. If the current in each\nwire is both doubled and reversed in direction,\nwhich of the following is true of the magnitude\nand direction of the new force on wire X?\nMagnitude Direction",
+    "text": "Two long, straight parallel wires X and Y are separated by a distance $d$ and carry currents $I$ and $2I$, as shown in the figure above. The force on wire X has magnitude $F$. If the current in each wire is both doubled and reversed in direction, which of the following is true of the magnitude and direction of the new force on wire X?",
     "options": {
-      "A": "F Unchanged",
-      "B": "2 F Reversed",
-      "C": "2 F Unchanged",
-      "D": "4 F Reversed",
-      "E": "4 F Unchanged"
+      "A": "$F$ | Unchanged",
+      "B": "$2F$ | Reversed",
+      "C": "$2F$ | Unchanged",
+      "D": "$4F$ | Reversed",
+      "E": "$4F$ | Unchanged"
     },
     "answer": "E",
     "primary_unit": "U12",
@@ -13147,7 +13293,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Magnitude",
+        "Direction"
+      ],
+      "rows": {
+        "A": [
+          "$F$",
+          "Unchanged"
+        ],
+        "B": [
+          "$2F$",
+          "Reversed"
+        ],
+        "C": [
+          "$2F$",
+          "Unchanged"
+        ],
+        "D": [
+          "$4F$",
+          "Reversed"
+        ],
+        "E": [
+          "$4F$",
+          "Unchanged"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q17",
@@ -13665,13 +13839,13 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "Two concentric circular wire loops carry equal\ncurrents I in opposite directions, as shown in the\nfigure above. The inner loop has a radius a and\ncarries a counterclockwise current. The outer loop\nhas a radius b and carries a clockwise current.\nWhat is the magnitude and direction of the\nmagnetic field at the center of the loops?\nMagnitude Direction",
+    "text": "Two concentric circular wire loops carry equal currents $I$ in opposite directions, as shown in the figure above. The inner loop has radius $a$ and carries a counterclockwise current. The outer loop has radius $b$ and carries a clockwise current. What is the magnitude and direction of the magnetic field at the center of the loops?",
     "options": {
-      "A": "$\\frac{\\mu_0 I}{2}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$; out of the page.",
-      "B": "$\\frac{\\mu_0 I}{2}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$; into the page.",
-      "C": "Zero; direction undefined.",
-      "D": "$\\frac{\\mu_0 I}{2\\pi}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$; out of the page.",
-      "E": "$\\frac{\\mu_0 I}{2\\pi}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$; into the page."
+      "A": "$\\frac{\\mu_0 I}{2}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$ | out of the page",
+      "B": "$\\frac{\\mu_0 I}{2}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$ | into the page",
+      "C": "Zero | direction undefined",
+      "D": "$\\frac{\\mu_0 I}{2\\pi}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$ | out of the page",
+      "E": "$\\frac{\\mu_0 I}{2\\pi}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$ | into the page"
     },
     "answer": "A",
     "primary_unit": "U12",
@@ -13710,7 +13884,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Magnitude",
+        "Direction"
+      ],
+      "rows": {
+        "A": [
+          "$\\frac{\\mu_0 I}{2}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$",
+          "out of the page"
+        ],
+        "B": [
+          "$\\frac{\\mu_0 I}{2}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$",
+          "into the page"
+        ],
+        "C": [
+          "Zero",
+          "direction undefined"
+        ],
+        "D": [
+          "$\\frac{\\mu_0 I}{2\\pi}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$",
+          "out of the page"
+        ],
+        "E": [
+          "$\\frac{\\mu_0 I}{2\\pi}\\left(\\frac{1}{a}-\\frac{1}{b}\\right)$",
+          "into the page"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q27",
@@ -15959,13 +16161,13 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "An electron of mass m and charge negative e is\ntraveling to the right parallel to a wire with\nspeed v . The electron is a distance d from the\nwire. The wire is carrying a current I to the\nright, as shown in the figure above. Which\nof the following gives the magnitude and\ndirection of the force exerted on the electron\nby the current-carrying wire?\nMagnitude Direction",
+    "text": "An electron of mass $m$ and charge $-e$ is traveling to the right parallel to a wire with speed $v$. The electron is a distance $d$ from the wire. The wire is carrying a current $I$ to the right, as shown in the figure above. Which of the following gives the magnitude and direction of the force exerted on the electron by the current-carrying wire?",
     "options": {
-      "A": "$\\frac{\\mu_0 Iev}{2\\pi d}$; toward the top of the page.",
-      "B": "$\\frac{\\mu_0 Iev}{2\\pi d}$; out of the page.",
-      "C": "$\\frac{\\mu_0 Iev}{2\\pi d}$; into the page.",
-      "D": "$\\frac{\\mu_0 Iev}{2m\\pi d}$; toward the top of the page.",
-      "E": "$\\frac{\\mu_0 Iev}{2m\\pi d}$; out of the page."
+      "A": "$\\frac{\\mu_0 Iev}{2\\pi d}$ | toward the top of the page",
+      "B": "$\\frac{\\mu_0 Iev}{2\\pi d}$ | out of the page",
+      "C": "$\\frac{\\mu_0 Iev}{2\\pi d}$ | into the page",
+      "D": "$\\frac{\\mu_0 Iev}{2m\\pi d}$ | toward the top of the page",
+      "E": "$\\frac{\\mu_0 Iev}{2m\\pi d}$ | out of the page"
     },
     "answer": "A",
     "primary_unit": "U12",
@@ -16004,7 +16206,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Magnitude",
+        "Direction"
+      ],
+      "rows": {
+        "A": [
+          "$\\frac{\\mu_0 Iev}{2\\pi d}$",
+          "toward the top of the page"
+        ],
+        "B": [
+          "$\\frac{\\mu_0 Iev}{2\\pi d}$",
+          "out of the page"
+        ],
+        "C": [
+          "$\\frac{\\mu_0 Iev}{2\\pi d}$",
+          "into the page"
+        ],
+        "D": [
+          "$\\frac{\\mu_0 Iev}{2m\\pi d}$",
+          "toward the top of the page"
+        ],
+        "E": [
+          "$\\frac{\\mu_0 Iev}{2m\\pi d}$",
+          "out of the page"
+        ]
+      }
+    }
   },
   {
     "question_id": "2019_Q32",
