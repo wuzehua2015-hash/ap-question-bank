@@ -21,7 +21,7 @@ const BAD_TEXT_PATTERNS = [
   { name: 'mojibake_common', re: /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7]/ },
   { name: 'raw_html_entity', re: /&(?:quot|amp|lt|gt|nbsp);/i },
   { name: 'visible_mojibake_cjk', re: /[\u9354\u68f0\u93bc\u7edb\u95ff\u59dd\u7035\u6d93\u93c4\u935a\u9a9e\u95c5\u5bb8\u6ccc\u6d60\u9429\u5997\u6ad2\u704f]/ },
-  { name: 'physics_ocr_vector_g', re: /\b(?:aG|B\s+G|G\s+G|B\s+d\s*∫\s*G)\b/ },
+  { name: 'physics_ocr_vector_g', re: /\b(?:aG|B\s+G|G\s+G|B\s+d\s*(?:\u222b|int)\s*G)\b/i },
   { name: 'physics_ocr_energy_ratio', re: /\benergy\s+1\s+U\b|\bratio\s+2\s+U\s+U1\b/i },
   { name: 'physics_ocr_charge_units', re: /\bC\s+Q\s+m\b|\bQ\s+m\s*=/i },
 ]
@@ -282,20 +282,15 @@ function selectAuditMcq(mcq) {
 }
 
 function selectAuditFrq(frq) {
-  const byYear = new Map()
-  for (const q of frq) {
-    if (!byYear.has(q.year)) byYear.set(q.year, [])
-    byYear.get(q.year).push(q)
-  }
-  const years = [...byYear.keys()].sort((a, b) => b - a)
-  return (byYear.get(years[0]) || frq).slice(0, 3)
+  return frq
 }
 
 async function auditSearch(client, errors, warnings, artifacts) {
-  await navigate(client, `${baseUrl}#/search`)
+  await navigate(client, routeUrl('#/search'))
+  await waitForImages(client)
   const info = await collectPageInfo(client, 'search')
   checkPageInfo(info, errors, warnings)
-  if (!/搜索|Search|题目|Question/.test(info.text)) {
+  if (!/Search|Question|\u641c\u7d22|\u9898\u76ee/i.test(info.text)) {
     warnings.push({ page: 'search', kind: 'unexpected_search_text', sample: info.text.slice(0, 200) })
   }
   await screenshot(client, `${subjectId}-search.png`, artifacts)
@@ -303,7 +298,8 @@ async function auditSearch(client, errors, warnings, artifacts) {
 
 async function auditQuizPdf(client, questions, errors, warnings, artifacts) {
   await seedQuizSession(client, questions, [], { isMock: false, mode: 'custom' })
-  await navigate(client, `${baseUrl}#/quiz-pdf`)
+  await navigate(client, routeUrl('#/quiz-pdf'))
+  await waitForImages(client)
   const info = await collectPageInfo(client, 'quiz-pdf')
   checkPageInfo(info, errors, warnings)
   const expectedTables = questions.filter(q => q.option_table_data).length
@@ -318,16 +314,22 @@ async function auditQuizPdf(client, questions, errors, warnings, artifacts) {
 
 async function auditMockPdf(client, mcq, frq, errors, warnings, artifacts) {
   await seedQuizSession(client, mcq, frq, { isMock: true, mode: 'mock' })
-  await navigate(client, `${baseUrl}#/mock-pdf`)
+  await navigate(client, routeUrl('#/mock-pdf'))
+  await waitForImages(client)
   const info = await collectPageInfo(client, 'mock-pdf')
   checkPageInfo(info, errors, warnings)
-  if (!/Scoring Rubric|评分|Rubric|points/i.test(info.text)) {
+  if (!/Free Response Rubric Reference|Scoring Rubric|Rubric/i.test(info.text)) {
     errors.push({ page: 'mock-pdf', kind: 'rubric_not_visible' })
   }
   if (info.brokenImages.length) {
     errors.push({ page: 'mock-pdf', kind: 'broken_images', images: info.brokenImages.slice(0, 10) })
   }
   await screenshot(client, `${subjectId}-mock-pdf.png`, artifacts)
+  const mockRubricScroll = await scrollToText(client, /Free Response Rubric Reference|Scoring Rubric|Rubric/i)
+  if (!mockRubricScroll.found) {
+    errors.push({ page: 'mock-pdf', kind: 'rubric_scroll_target_not_found' })
+  }
+  await screenshot(client, `${subjectId}-mock-pdf-rubric.png`, artifacts)
 }
 
 async function auditScorePage(client, mcq, frq, errors, warnings, artifacts) {
@@ -335,13 +337,66 @@ async function auditScorePage(client, mcq, frq, errors, warnings, artifacts) {
   const answers = {}
   for (const q of mcq) answers[q.question_id] = q.answer || 'A'
   await evaluate(client, `sessionStorage.setItem('mcqAnswers', ${JSON.stringify(JSON.stringify(answers))})`)
-  await navigate(client, `${baseUrl}#/score`)
+  await navigate(client, routeUrl('#/score'))
+  await waitForImages(client)
   const info = await collectPageInfo(client, 'score')
   checkPageInfo(info, errors, warnings)
-  if (!/FRQ|Rubric|评分|points/i.test(info.text)) {
+  if (!/Scoring Rubric|Rubric/i.test(info.text)) {
     warnings.push({ page: 'score', kind: 'score_page_missing_frq_or_rubric_text' })
   }
   await screenshot(client, `${subjectId}-score.png`, artifacts)
+  const scoreRubricScroll = await scrollToText(client, /Scoring Rubric|Rubric/i)
+  if (!scoreRubricScroll.found) {
+    errors.push({ page: 'score', kind: 'rubric_scroll_target_not_found' })
+  }
+  await screenshot(client, `${subjectId}-score-rubric.png`, artifacts)
+}
+
+function routeUrl(hash) {
+  return `${baseUrl}?audit=${Date.now()}${hash}`
+}
+
+async function scrollToText(client, re) {
+  const result = await evaluate(client, `(() => {
+    const pattern = new RegExp(${JSON.stringify(re.source)}, ${JSON.stringify(re.flags)});
+    const candidates = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li,summary,strong,div')]
+      .filter(el => {
+        const text = (el.innerText || '').trim();
+        return text.length > 0 && text.length < 220;
+      });
+    const target = candidates.find(el => pattern.test(el.innerText || ''));
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY;
+      document.documentElement.style.scrollBehavior = 'auto';
+      document.body.style.scrollBehavior = 'auto';
+      window.scrollTo(0, Math.max(0, top - Math.round(window.innerHeight * 0.25)));
+      return {
+        found: true,
+        text: (target.innerText || '').trim(),
+        targetTop: top,
+        scrollY: window.scrollY,
+      };
+    } else {
+      window.scrollTo(0, Math.max(0, document.body.scrollHeight * 0.65));
+      return { found: false, text: '', scrollY: window.scrollY };
+    }
+  })()`)
+  await sleep(400)
+  return result
+}
+
+async function waitForImages(client) {
+  await evaluate(client, `(() => {
+    const timeout = new Promise(resolve => setTimeout(resolve, 8000));
+    const loads = [...document.images].map(img => {
+      if (img.complete) return Promise.resolve();
+      return new Promise(resolve => {
+        img.addEventListener('load', resolve, { once: true });
+        img.addEventListener('error', resolve, { once: true });
+      });
+    });
+    return Promise.race([Promise.all(loads), timeout]);
+  })()`)
 }
 
 async function seedQuizSession(client, mcq, frq, info) {
