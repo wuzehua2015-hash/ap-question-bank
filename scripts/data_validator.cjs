@@ -62,14 +62,15 @@ function validate(filePath, options = {}) {
   const warnings = []
   const textArtifactPatterns = [
     { name: 'raw HTML entity', pattern: /&(quot|apos|amp|lt|gt|#34|#39|#x22|#x27);/i },
-    { name: 'mojibake Chinese/UI marker', pattern: /\u7f08\u5e9庤|\u93bc\udc3滅|\u95bf\u6b13|\u68e3\u682d|\u923\u937/ },
+    { name: 'visible mojibake marker', pattern: /[\u9234\u95b3\u6d7c\u640e\u94ff\u74a7\u9354\u68f0\u7ecc\u93bc\u9429\u9366\u936a\u5a34]/ },
+    { name: 'mojibake Chinese/UI marker', pattern: /[\u9354\u68f0\u9429\u9366\u936a\u95c1\u95b3\u6d7c\u93bc\u940f\u7035]/ },
     { name: 'replacement character', pattern: /\uFFFD/ },
   ]
   
   const seenIds = new Set()
   const validUnits = options.validUnits || new Set(['U1','U2','U3','U4','U5','U6','not_applicable'])
   const optionPollutionPatterns = [
-    /Questions?\s+\d+\s*[-–]/i,
+    /Questions?\s+\d+\s*(?:-|through|and)/i,
     /Questions?\s+\d+\s+(refer|are|is)\b/i,
     /GO ON TO THE NEXT PAGE/i,
     /Unauthorized copying/i,
@@ -79,6 +80,22 @@ function validate(filePath, options = {}) {
     /Quantity of Good Y/i,
     /Supply\s+I\s+J/i,
   ]
+  const physicsArtifactPatterns = [
+    { name: 'physics OCR vector G', pattern: /\b(?:aG|B\s+G|G\s+G|B\s+d\s*(?:\u222b|int)\s*G)\b/i },
+    { name: 'physics OCR energy ratio', pattern: /\benergy\s+1\s+U\b|\bratio\s+2\s+U\s+U1\b/i },
+    { name: 'physics OCR charge units', pattern: /\bC\s+Q\s+m\b|\bQ\s+m\s*=/i },
+    { name: 'physics OCR differential equation', pattern: /\bQ\s+dQ\s+R\s*C\s+dt\b|\b0\s+Q\s+dQ\s+R\s*C\s+dt\b/i },
+  ]
+  const structuredTableHeaderPatterns = [
+    /Voltage across\s+Capacitor X\s+Voltage across\s+Capacitor Y\s+Voltage across\s+Capacitor Z/i,
+    /Potential Difference\s+Across the Plates\s+Charge on\s+Positive Plate/i,
+    /Charge\s+Potential Energy/i,
+    /Magnitude\s+Direction/i,
+    /Net Torque\s+Net Force/i,
+    /Net Force\s+Torque/i,
+  ]
+  const byId = new Map()
+  const isPhysicsEM = /physics-c-e-m/i.test(filePath)
 
   function findHiddenControlChars(value, currentPath, out) {
     if (typeof value === 'string') {
@@ -119,21 +136,30 @@ function validate(filePath, options = {}) {
     const qid = q.question_id || 'UNKNOWN'
     const isNotScored = q.scoring_status === 'not_scored'
     
-    // 必需字段（FRQ不需要answer）
+    // Required fields
     if (!q.question_id) errors.push('Missing question_id')
     const isFRQ = q.question_type === 'FRQ' || !!q.rubric
     if (!isFRQ && !isNotScored && !q.answer && !q.answer_key) errors.push(`${qid}: Missing answer`)
     if (!q.primary_unit) errors.push(`${qid}: Missing primary_unit`)
     if (!q.text && !q.question_text) errors.push(`${qid}: Missing text`)
     
-    // 文本编码检查（U+FFFD 替换字符）
+    // Text encoding checks
     const text = q.text || ''
     if (text.includes('\uFFFD')) {
       errors.push(`${qid}: Text contains corrupted characters (U+FFFD)`)
     }
     findHiddenControlChars(q, qid, errors)
     findTextArtifacts(q, qid, errors)
-    // 检查更多乱码模式：常见PDF提取残留
+    if (isPhysicsEM) {
+      const searchableText = JSON.stringify(q)
+      for (const { name, pattern } of physicsArtifactPatterns) {
+        if (pattern.test(searchableText)) {
+          errors.push(`${qid}: contains ${name}`)
+          break
+        }
+      }
+    }
+    // PDF boilerplate and extraction residue checks
     const pollutionPatterns = [
       /STOP\s*END OF EXAM/i,
       /THIS PAGE MAY BE USED FOR TAKING NOTES/i,
@@ -149,7 +175,7 @@ function validate(filePath, options = {}) {
       }
     }
     
-    // 选项检查
+    // Option checks
     if (q.options && !isNotScored) {
       for (const [opt, optText] of Object.entries(q.options)) {
         if (!optText || optText.trim() === '') {
@@ -167,9 +193,10 @@ function validate(filePath, options = {}) {
     if (q.question_id) {
       if (seenIds.has(q.question_id)) errors.push(`Duplicate: ${q.question_id}`)
       seenIds.add(q.question_id)
+      byId.set(q.question_id, q)
     }
     
-    // 单元范围
+    // Unit range
     if (q.primary_unit && !validUnits.has(q.primary_unit)) {
       errors.push(`${qid}: Invalid unit ${q.primary_unit}`)
     }
@@ -180,7 +207,7 @@ function validate(filePath, options = {}) {
       errors.push(`${qid}: not_scored item must use primary_unit=not_applicable`)
     }
     
-    // pure_unit 一致性
+    // pure_unit consistency
     if (isNotScored) {
       // Official not-scored items are retained for provenance, but not classified into U1-U6.
     } else if (q.pure_unit) {
@@ -193,7 +220,7 @@ function validate(filePath, options = {}) {
       }
     }
     
-    // 图片存在性
+    // Image presence
     const hasGraph = q.has_graph || q.requires_graph
     if (hasGraph && (!q.image_paths || q.image_paths.length === 0)) {
       warnings.push(`${qid}: has_graph=true but no image_paths (will be added in image cropping phase)`)
@@ -209,7 +236,7 @@ function validate(filePath, options = {}) {
           if (stats.size < 1024) {
             warnings.push(`${qid}: Image too small: ${imgPath}`)
           }
-          // 图片过大可能是整页PDF
+          // Very large images are often accidental full-page crops.
           if (stats.size > 500 * 1024) {
             warnings.push(`${qid}: Image very large (${(stats.size/1024).toFixed(1)}KB), may be full-page PDF: ${imgPath}`)
           }
@@ -217,20 +244,39 @@ function validate(filePath, options = {}) {
       }
     }
     
-    // option_table_data 格式
+    // option_table_data shape
     if (q.option_table_data) {
       if (!q.option_table_data.headers || !q.option_table_data.rows) {
         errors.push(`${qid}: Invalid option_table_data format`)
+      } else {
+        const headers = q.option_table_data.headers
+        const rows = q.option_table_data.rows
+        if (!Array.isArray(headers) || headers.length === 0) {
+          errors.push(`${qid}: option_table_data.headers must be a non-empty array`)
+        }
+        if (!rows || typeof rows !== 'object' || Array.isArray(rows)) {
+          errors.push(`${qid}: option_table_data.rows must be an object keyed by option letter`)
+        } else {
+          for (const key of Object.keys(q.options || {})) {
+            if (!Array.isArray(rows[key])) {
+              errors.push(`${qid}: option_table_data missing row for option ${key}`)
+            } else if (Array.isArray(headers) && rows[key].length !== headers.length) {
+              errors.push(`${qid}: option_table_data row ${key} has ${rows[key].length} cells, expected ${headers.length}`)
+            }
+          }
+        }
       }
+    } else if (!isFRQ && structuredTableHeaderPatterns.some(pattern => pattern.test(text))) {
+      errors.push(`${qid}: text contains structured option-table headers but missing option_table_data`)
     }
     
-    // FRQ 特定检查
+    // FRQ-specific checks
     if (isFRQ) {
-      // FRQ字段名一致性
+      // FRQ field-name consistency
       if (!q.question_number && q.question_num) {
         warnings.push(`${qid}: FRQ uses 'question_num' instead of 'question_number'`)
       }
-      // FRQ rubric结构
+      // FRQ rubric structure
       if (q.rubric) {
         if (!q.rubric.points && q.rubric.parts) {
           warnings.push(`${qid}: FRQ rubric uses 'parts' instead of 'points'`)
@@ -239,30 +285,46 @@ function validate(filePath, options = {}) {
           errors.push(`${qid}: FRQ rubric missing total_points/points/parts`)
         }
       }
-      // FRQ文本长度检查
+      // FRQ prompt length check
       if (q.text && q.text.length < 50) {
         warnings.push(`${qid}: FRQ text very short (${q.text.length} chars), possible truncation`)
       }
     }
   }
-  
+  for (const q of data) {
+    const qid = q.question_id || 'UNKNOWN'
+    if (!q.group_id) continue
+    if (!Array.isArray(q.group_members) || q.group_members.length < 2) {
+      errors.push(`${qid}: group_id present but group_members is missing or too small`)
+      continue
+    }
+    for (const memberId of q.group_members) {
+      const member = byId.get(memberId)
+      if (!member) {
+        errors.push(`${qid}: group member not found: ${memberId}`)
+      } else if (member.group_id !== q.group_id) {
+        errors.push(`${qid}: group member ${memberId} has mismatched group_id ${member.group_id}`)
+      }
+    }
+  }
+
   console.log(`\n=== Validation Results ===`)
   console.log(`Total: ${data.length} questions`)
   console.log(`Errors: ${errors.length}`)
   console.log(`Warnings: ${warnings.length}`)
   
   if (errors.length > 0) {
-    console.log('\n❌ Errors:')
+    console.log('\nErrors:')
     errors.forEach(e => console.log('  ', e))
   }
   
   if (warnings.length > 0) {
-    console.log('\n⚠️ Warnings:')
+    console.log('\nWarnings:')
     warnings.forEach(w => console.log('  ', w))
   }
   
   if (errors.length === 0 && warnings.length === 0) {
-    console.log('\n✅ All checks passed')
+    console.log('\nAll checks passed')
   }
   
   return { errors, warnings, passed: errors.length === 0 }
