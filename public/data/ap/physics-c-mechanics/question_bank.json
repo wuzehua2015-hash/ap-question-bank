@@ -175,11 +175,11 @@
     "type": "MCQ",
     "text": "Three objects are located along the x-axis as \nshown above. The center of mass of the objects \nis at x =",
     "options": {
-      "A": "1.0 m",
-      "B": "1.5 m",
-      "C": "2.0 m",
-      "D": "2.5 m",
-      "E": "3.0 m"
+      "A": "$1.0\\,\\mathrm{m}$",
+      "B": "$1.5\\,\\mathrm{m}$",
+      "C": "$2.0\\,\\mathrm{m}$",
+      "D": "$2.5\\,\\mathrm{m}$",
+      "E": "$3.0\\,\\mathrm{m}$"
     },
     "answer": "D",
     "image_paths": [
@@ -217,10 +217,10 @@
     "text": "Which of the following is equivalent to a unit of \nmomentum?",
     "options": {
       "A": "Joule",
-      "B": "Newton",
+      "B": "N",
       "C": "Joule second",
-      "D": "Newton second",
-      "E": "Newton meter"
+      "D": "N second",
+      "E": "N meter"
     },
     "answer": "D",
     "image_paths": [],
@@ -294,11 +294,11 @@
     "type": "MCQ",
     "text": "The maximum mass that can be hung vertically \nfrom a string without breaking the string is 10 kg. \nA length of this string that is 2 $m$ long is used to \nrotate a 0.5 kg object in a circle on a frictionless \ntable with the string horizontal. The maximum \nspeed that the mass can attain under these \nconditions without the string breaking is most \nnearly",
     "options": {
-      "A": "5 $$m$$/s",
-      "B": "10 $$m$$/s",
-      "C": "14 $$m$$/s",
-      "D": "20 $$m$$/s",
-      "E": "100 $$m$$/s"
+      "A": "$5\\,\\mathrm{m/s}$",
+      "B": "$10\\,\\mathrm{m/s}$",
+      "C": "$14\\,\\mathrm{m/s}$",
+      "D": "$20\\,\\mathrm{m/s}$",
+      "E": "$100\\,\\mathrm{m/s}$"
     },
     "answer": "D",
     "image_paths": [],
@@ -372,7 +372,7 @@
     "type": "MCQ",
     "text": "A particle of mass $m$ starts from rest at position $x=0$ and time $t=0$. It moves along the positive $x$-axis under the influence of a single force $F_x=bt$, where $b$ is a constant. The velocity $v$ of the particle is given by",
     "options": {
-      "A": "$\\frac{bt^2}{2m}$",
+      "A": "$\\frac{bt^2}{$2\\,\\mathrm{m}$}$",
       "B": "$\\frac{bt^2}{m}$",
       "C": "$\\frac{2bt}{m}$",
       "D": "$\\frac{bt}{m}$",
@@ -411,11 +411,11 @@
     "type": "MCQ",
     "text": "Three blocks, A, B, and C, of masses 1, 2, and \n3 kg, respectively, are initially at rest on a \nfrictionless surface as indicated in the figure \nabove. What force F has to be applied on block C \nto accelerate the three blocks at 2 \n2\n$m$ s ?",
     "options": {
-      "A": "0.33 N",
-      "B": "1.5 N",
-      "C": "3.0 N",
-      "D": "6.0 N",
-      "E": "12 N"
+      "A": "$0.33\\,\\mathrm{N}$",
+      "B": "$1.5\\,\\mathrm{N}$",
+      "C": "$3.0\\,\\mathrm{N}$",
+      "D": "$6.0\\,\\mathrm{N}$",
+      "E": "$12\\,\\mathrm{N}$"
     },
     "answer": "E",
     "image_paths": [],
@@ -450,11 +450,11 @@
     "type": "MCQ",
     "text": "An electrical motor provides 0.50 W of \nmechanical power. How much time will it take \nthe motor to lift a 0.1 kg mass at constant speed \nfrom the floor to a shelf 2.0 $m$ above the floor?",
     "options": {
-      "A": "0.25 s",
-      "B": "0.40 s",
-      "C": "1.0 s",
-      "D": "2.0 s",
-      "E": "4.0 s"
+      "A": "$0.25\\,\\mathrm{s}$",
+      "B": "$0.40\\,\\mathrm{s}$",
+      "C": "$1.0\\,\\mathrm{s}$",
+      "D": "$2.0\\,\\mathrm{s}$",
+      "E": "$4.0\\,\\mathrm{s}$"
     },
     "answer": "E",
     "image_paths": [],
@@ -489,14 +489,16 @@
     "type": "MCQ",
     "text": "A block slides from rest with negligible friction \ndown the track above, descending a vertical \nheight of 5.0 $m$ to point P at the bottom. It then \nslides on the horizontal surface. The coefficient of \nfriction between the block and the horizontal \nsurface is 0.20. How far does the block slide on \nthe horizontal surface before it comes to rest?",
     "options": {
-      "A": "0.40 $$m$$",
-      "B": "1.0 $$m$$",
-      "C": "2.5 $$m$$",
-      "D": "10 $$m$$",
-      "E": "25 $$m$$"
+      "A": "$0.40\\,\\mathrm{m}$",
+      "B": "$1.0\\,\\mathrm{m}$",
+      "C": "$2.5\\,\\mathrm{m}$",
+      "D": "$10\\,\\mathrm{m}$",
+      "E": "$25\\,\\mathrm{m}$"
     },
     "answer": "E",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2012/2012_p022_img01.png"
+    ],
     "primary_unit": "U2",
     "unit": "U2",
     "unit_name": "Force and Translational Dynamics",
@@ -567,13 +569,13 @@
     "year": 2012,
     "question_number": 15,
     "type": "MCQ",
-    "text": "The velocity of a particle moving along the x-axis \nis given as a function of time by the expression \n( )\n2\n3.0\n2.0\n4.0\nt\nt\nt\n$v$\n=\n-\n+\n, where $v$ is in meters \nper second and t is in seconds. What is the \nacceleration of the particle at t = 2.0 s?",
+    "text": "The velocity of a particle moving along the $x$-axis is given as a function of time by the expression $v=3.0t^2-2.0t+4.0$, where $v$ is in $\\mathrm{m/s}$ and $t$ is in seconds. What is the acceleration of the particle at $t=2.0\\,\\mathrm{s}$?",
     "options": {
-      "A": "2\n4.0 $$m$$/s",
-      "B": "2\n6.0 $$m$$/s",
-      "C": "2\n8.0 $$m$$/s",
-      "D": "2\n10.0 $$m$$/s",
-      "E": "2\n12.0 $$m$$/s"
+      "A": "$4.0\\,\\mathrm{m/s^2}$",
+      "B": "$6.0\\,\\mathrm{m/s^2}$",
+      "C": "$8.0\\,\\mathrm{m/s^2}$",
+      "D": "$10.0\\,\\mathrm{m/s^2}$",
+      "E": "$12.0\\,\\mathrm{m/s^2}$"
     },
     "answer": "D",
     "image_paths": [],
@@ -608,11 +610,11 @@
     "type": "MCQ",
     "text": "At which of the following times is the upward \nvelocity of the object the greatest?",
     "options": {
-      "A": "0.00 s",
-      "B": "0.25 s",
-      "C": "0.50 s",
-      "D": "0.75 s",
-      "E": "1.00 s"
+      "A": "$0.00\\,\\mathrm{s}$",
+      "B": "$0.25\\,\\mathrm{s}$",
+      "C": "$0.50\\,\\mathrm{s}$",
+      "D": "$0.75\\,\\mathrm{s}$",
+      "E": "$1.00\\,\\mathrm{s}$"
     },
     "answer": "B",
     "image_paths": [],
@@ -647,11 +649,11 @@
     "type": "MCQ",
     "text": "What is the spring constant of the spring?",
     "options": {
-      "A": "16 N/$$m$$",
-      "B": "20 N/$$m$$",
-      "C": "32 N/$$m$$",
-      "D": "40 N/$$m$$",
-      "E": "64 N/$$m$$"
+      "A": "$16\\,\\mathrm{N/m}$",
+      "B": "$20\\,\\mathrm{N/m}$",
+      "C": "$32\\,\\mathrm{N/m}$",
+      "D": "$40\\,\\mathrm{N/m}$",
+      "E": "$64\\,\\mathrm{N/m}$"
     },
     "answer": "A",
     "image_paths": [],
@@ -803,7 +805,7 @@
     "year": 2012,
     "question_number": 21,
     "type": "MCQ",
-    "text": "Which of the following is a differential equation that correctly describes Newton's second law for a simple harmonic oscillator of mass $m$ and restoring force constant $k$?",
+    "text": "Which of the following is a differential equation that correctly describes N's second law for a simple harmonic oscillator of mass $m$ and restoring force constant $k$?",
     "options": {
       "A": "$kx=m\\frac{d^2x}{dt^2}$",
       "B": "$-kx=m\\frac{d^2x}{dt^2}$",
@@ -842,7 +844,7 @@
     "year": 2012,
     "question_number": 22,
     "type": "MCQ",
-    "text": "At position 2, the comet’s kinetic energy is",
+    "text": "Questions 22-24\nThe elliptical orbit of a comet is shown above. Positions 1 and 2 are, respectively, the farthest and nearest positions to the Sun, and at position 1 the distance from the comet to the Sun is 10 times that at position 2.\n\nAt position 2, the comet's kinetic energy is",
     "options": {
       "A": "the same as at position 1",
       "B": "less than at position 1",
@@ -1008,11 +1010,11 @@
     "type": "MCQ",
     "text": "Two 4 kg blocks hang from a rope that passes \nover two frictionless pulleys, as shown in the \nfigure above. What is the tension in the horizontal \nportion of the rope if the blocks are not moving \nand the rope and the two pulleys have negligible \nmass?",
     "options": {
-      "A": "4 N",
-      "B": "8 N",
-      "C": "20 N",
-      "D": "40 N",
-      "E": "80 N"
+      "A": "$4\\,\\mathrm{N}$",
+      "B": "$8\\,\\mathrm{N}$",
+      "C": "$20\\,\\mathrm{N}$",
+      "D": "$40\\,\\mathrm{N}$",
+      "E": "$80\\,\\mathrm{N}$"
     },
     "answer": "D",
     "image_paths": [
@@ -1049,11 +1051,11 @@
     "type": "MCQ",
     "text": "A person throws a ball of mass 0.20 kg. The ball \nstarts from rest, accelerates horizontally and \nuniformly through a distance of 0.90 $m$, and \nleaves the person’s hand at 30 $m$/s. The average \nhorizontal force applied to the ball by the person’s \nhand is",
     "options": {
-      "A": "3.3 N",
-      "B": "16.7 N",
-      "C": "81 N",
-      "D": "100 N",
-      "E": "200 N"
+      "A": "$3.3\\,\\mathrm{N}$",
+      "B": "$16.7\\,\\mathrm{N}$",
+      "C": "$81\\,\\mathrm{N}$",
+      "D": "$100\\,\\mathrm{N}$",
+      "E": "$200\\,\\mathrm{N}$"
     },
     "answer": "D",
     "image_paths": [],
@@ -1326,11 +1328,11 @@
     "type": "MCQ",
     "text": "Questions 34-35\nA particle moves in a circle in such a way that the $x$- and $y$-coordinates of its motion, given in meters as functions of time $t$ in seconds, are $x=5\\cos(3t)$ and $y=5\\sin(3t)$.\n\nWhat is the radius of the circle?",
     "options": {
-      "A": "5 $$m$$\n3",
-      "B": "5 $$m$$\n2",
-      "C": "5 $$m$$",
-      "D": "10 $$m$$",
-      "E": "15 $$m$$"
+      "A": "$5/3\\,\\mathrm{m}$",
+      "B": "$5/2\\,\\mathrm{m}$",
+      "C": "$5\\,\\mathrm{m}$",
+      "D": "$10\\,\\mathrm{m}$",
+      "E": "$15\\,\\mathrm{m}$"
     },
     "answer": "C",
     "image_paths": [],
@@ -1365,11 +1367,11 @@
     "type": "MCQ",
     "text": "Questions 34-35\nA particle moves in a circle in such a way that the $x$- and $y$-coordinates of its motion, given in meters as functions of time $t$ in seconds, are $x=5\\cos(3t)$ and $y=5\\sin(3t)$.\n\nWhich of the following is true of the speed of the particle?",
     "options": {
-      "A": "It is always equal to 5 $$m$$/s.",
-      "B": "It is always equal to 15 $$m$$/s.",
-      "C": "It oscillates with a range of 0 to 5 $$m$$/s.",
-      "D": "It oscillates with a range of 0 to 15 $$m$$/s.",
-      "E": "It oscillates with a range of 5 to 15 $$m$$/s."
+      "A": "It is always equal to $5\\,\\mathrm{m/s}$.",
+      "B": "It is always equal to $15\\,\\mathrm{m/s}$.",
+      "C": "It oscillates with a range of $0$ to $5\\,\\mathrm{m/s}$.",
+      "D": "It oscillates with a range of $0$ to $15\\,\\mathrm{m/s}$.",
+      "E": "It oscillates with a range of $5$ to $15\\,\\mathrm{m/s}$."
     },
     "answer": "B",
     "image_paths": [],
@@ -1402,13 +1404,13 @@
     "year": 2013,
     "question_number": 1,
     "type": "MCQ",
-    "text": "How far does the object travel during the first 10 s \nof its motion?",
+    "text": "How far does the object travel during the first $10\\,\\mathrm{s}$ \nof its motion?",
     "options": {
-      "A": "62 $$m$$",
-      "B": "320 $$m$$",
-      "C": "383 $$m$$",
-      "D": "1100 $$m$$",
-      "E": "1600 $$m$$"
+      "A": "$62\\,\\mathrm{m}$",
+      "B": "$320\\,\\mathrm{m}$",
+      "C": "$383\\,\\mathrm{m}$",
+      "D": "$1100\\,\\mathrm{m}$",
+      "E": "$1600\\,\\mathrm{m}$"
     },
     "answer": "D",
     "image_paths": [],
@@ -1443,11 +1445,11 @@
     "type": "MCQ",
     "text": "What is the instantaneous net force that acts on\nthe object at\n?",
     "options": {
-      "A": "140 N",
-      "B": "160 N",
-      "C": "320 N",
-      "D": "1280 N",
-      "E": "2560 N"
+      "A": "$140\\,\\mathrm{N}$",
+      "B": "$160\\,\\mathrm{N}$",
+      "C": "$320\\,\\mathrm{N}$",
+      "D": "$1280\\,\\mathrm{N}$",
+      "E": "$2560\\,\\mathrm{N}$"
     },
     "answer": "A",
     "image_paths": [],
@@ -1480,7 +1482,7 @@
     "year": 2013,
     "question_number": 3,
     "type": "MCQ",
-    "text": "How much work is done by the net force between \nt = 0 and t = 1 s ?",
+    "text": "How much work is done by the net force between \nt = 0 and t = $1\\,\\mathrm{s}$ ?",
     "options": {
       "A": "5 J",
       "B": "50 J",
@@ -1558,13 +1560,13 @@
     "year": 2013,
     "question_number": 5,
     "type": "MCQ",
-    "text": "A small particle starts from rest from the origin\nof an xy-coordinate system and travels in the \nxy-plane. Its acceleration in the x-direction is\n, and its acceleration in the y-direction\nis \n. What is the x-coordinate of the \nparticle when its y-coordinate is 12 $m$?",
+    "text": "A small particle starts from rest from the origin of an $xy$-coordinate system and travels in the $xy$-plane. Its acceleration in the $x$-direction is $a_x=2\\,\\mathrm{m/s^2}$, and its acceleration in the $y$-direction is $a_y=8\\,\\mathrm{m/s^2}$. What is the $x$-coordinate of the particle when its $y$-coordinate is $12\\,\\mathrm{m}$?",
     "options": {
-      "A": "3.0 $$m$$",
-      "B": "6.0 $$m$$",
-      "C": "12 $$m$$",
-      "D": "24 $$m$$",
-      "E": "48 $$m$$"
+      "A": "$3.0\\,\\mathrm{m}$",
+      "B": "$6.0\\,\\mathrm{m}$",
+      "C": "$12\\,\\mathrm{m}$",
+      "D": "$24\\,\\mathrm{m}$",
+      "E": "$48\\,\\mathrm{m}$"
     },
     "answer": "D",
     "image_paths": [],
@@ -1639,10 +1641,10 @@
     "text": "A force $F$ accelerates a system of two blocks, $X$ and $Y$, on a horizontal frictionless surface, as shown above. The acceleration is $4\\,\\mathrm{m/s^2}$. The force with which block $Y$ pushes on block $X$ has magnitude",
     "options": {
       "A": "zero",
-      "B": "6 N",
-      "C": "8 N",
-      "D": "16 N",
-      "E": "24 N"
+      "B": "$6\\,\\mathrm{N}$",
+      "C": "$8\\,\\mathrm{N}$",
+      "D": "$16\\,\\mathrm{N}$",
+      "E": "$24\\,\\mathrm{N}$"
     },
     "answer": "D",
     "image_paths": [
@@ -1836,13 +1838,13 @@
     "year": 2013,
     "question_number": 12,
     "type": "MCQ",
-    "text": "The velocity $v$, in meters per second, of an object moving in a straight line is given as a function of time $t$, in seconds, by $v=4t^3+2t$. The total distance the object travels between $t=1\\,\\mathrm{s}$ and $t=2\\,\\mathrm{s}$ is",
+    "text": "The velocity $v$, in $\\mathrm{m/s}$, of an object moving in a straight line is given as a function of time $t$, in seconds, by $v=4t^3+2t$. The total distance the object travels between $t=1\\,\\mathrm{s}$ and $t=2\\,\\mathrm{s}$ is",
     "options": {
-      "A": "12 m",
-      "B": "18 m",
-      "C": "24 m",
-      "D": "30 m",
-      "E": "36 m"
+      "A": "$12\\,\\mathrm{m}$",
+      "B": "$18\\,\\mathrm{m}$",
+      "C": "$24\\,\\mathrm{m}$",
+      "D": "$30\\,\\mathrm{m}$",
+      "E": "$36\\,\\mathrm{m}$"
     },
     "answer": "B",
     "image_paths": [],
@@ -2673,11 +2675,11 @@
     "type": "MCQ",
     "text": "What is the magnitude of the average force \nexerted by the racket on the ball?",
     "options": {
-      "A": "5 N",
-      "B": "10 N",
-      "C": "20 N",
-      "D": "25 N",
-      "E": "50 N"
+      "A": "$5\\,\\mathrm{N}$",
+      "B": "$10\\,\\mathrm{N}$",
+      "C": "$20\\,\\mathrm{N}$",
+      "D": "$25\\,\\mathrm{N}$",
+      "E": "$50\\,\\mathrm{N}$"
     },
     "answer": "E",
     "image_paths": [
@@ -2833,7 +2835,7 @@
     "year": 2014,
     "question_number": 2,
     "type": "MCQ",
-    "text": "A student with a mass of 50 kg is standing on \na bathroom scale while riding in an elevator. If \nthe reading on the scale is 400 N, which of the \nfollowing is a correct description of the elevator’s \nmotion?",
+    "text": "A student with a mass of 50 kg is standing on \na bathroom scale while riding in an elevator. If \nthe reading on the scale is $400\\,\\mathrm{N}$, which of the \nfollowing is a correct description of the elevator’s \nmotion?",
     "options": {
       "A": "Moving upward with increasing speed",
       "B": "Moving upward with constant speed",
@@ -3325,11 +3327,11 @@
     "type": "MCQ",
     "text": "As shown in the figure above, a child of mass \n25 kg who is running at a speed of 3 $m$/s jumps \nonto a stationary sled of mass 5 kg on a frozen \nlake. The speed at which the child and sled begin \nto slide across the ice is most nearly",
     "options": {
-      "A": "0.4 $$m$$/s",
-      "B": "0.6 $$m$$/s",
-      "C": "1.3 $$m$$/s",
-      "D": "2.5 $$m$$/s",
-      "E": "15 $$m$$/s"
+      "A": "0.4 $m$/s",
+      "B": "0.6 $m$/s",
+      "C": "1.3 $m$/s",
+      "D": "2.5 $m$/s",
+      "E": "15 $m$/s"
     },
     "answer": "D",
     "image_paths": [
@@ -3364,7 +3366,7 @@
     "year": 2014,
     "question_number": 15,
     "type": "MCQ",
-    "text": "A block of mass $m$ is initially sliding with speed\n0\n$v$ on a horizontal frictionless surface, as shown \nabove. It makes an elastic, head-on collision with \nanother block of mass 2m that is initially at rest. \nWhich of the following correctly shows the \nmotion of the blocks after the collision?",
+    "text": "A block of mass $m$ is initially sliding with speed\n0\n$v$ on a horizontal frictionless surface, as shown \nabove. It makes an elastic, head-on collision with \nanother block of mass $2\\,\\mathrm{m}$ that is initially at rest. \nWhich of the following correctly shows the \nmotion of the blocks after the collision?",
     "options": {
       "A": "Diagram A",
       "B": "Diagram B",
@@ -3772,7 +3774,7 @@
     "year": 2014,
     "question_number": 25,
     "type": "MCQ",
-    "text": "Which of the following is true about the speed of \nthe object during the time interval from 0 to 8 s?",
+    "text": "Which of the following is true about the speed of \nthe object during the time interval from 0 to $8\\,\\mathrm{s}$?",
     "options": {
       "A": "It increases during the entire interval.",
       "B": "It decreases during the entire interval.",
@@ -3811,7 +3813,7 @@
     "year": 2014,
     "question_number": 26,
     "type": "MCQ",
-    "text": "Which of the following is true about the \nacceleration of the object during the time interval \nfrom\n0 to 8 s?",
+    "text": "Which of the following is true about the \nacceleration of the object during the time interval \nfrom\n0 to $8\\,\\mathrm{s}$?",
     "options": {
       "A": "It increases during the entire interval.",
       "B": "It decreases during the entire interval.",
@@ -3850,12 +3852,12 @@
     "year": 2014,
     "question_number": 27,
     "type": "MCQ",
-    "text": "What is the net displacement of the object for the \ntime interval from\n0 to 8 s?",
+    "text": "What is the net displacement of the object for the \ntime interval from\n0 to $8\\,\\mathrm{s}$?",
     "options": {
-      "A": "0 $$m$$",
-      "B": "5 $$m$$",
-      "C": "10 $$m$$",
-      "D": "20 $$m$$",
+      "A": "0 $m$",
+      "B": "5 $m$",
+      "C": "10 $m$",
+      "D": "20 $m$",
       "E": "It cannot be determined without knowing the \ninitial position of the object."
     },
     "answer": "A",
@@ -3889,13 +3891,13 @@
     "year": 2014,
     "question_number": 28,
     "type": "MCQ",
-    "text": "An object starts from rest and accelerates \nuniformly in the horizontal direction, moving \n32 $m$ during the first 4 s\n4 s. What are the magnitudes \nof the object’s displacement and velocity after it \naccelerates for the first 3 s\nMagnitude of \nDisplacement\nMagnitude of \nVelocity",
+    "text": "An object starts from rest and accelerates \nuniformly in the horizontal direction, moving \n32 $m$ during the first $4\\,\\mathrm{s}$\n$4\\,\\mathrm{s}$. What are the magnitudes \nof the object’s displacement and velocity after it \naccelerates for the first $3\\,\\mathrm{s}$\nMagnitude of \nDisplacement\nMagnitude of \nVelocity",
     "options": {
-      "A": "24 m; 24 m/s",
-      "B": "24 m; 18 m/s",
-      "C": "18 m; 18 m/s",
-      "D": "18 m; 12 m/s",
-      "E": "8 m; 12 m/s"
+      "A": "$24\\,\\mathrm{m}$; $24\\,\\mathrm{m/s}$",
+      "B": "$24\\,\\mathrm{m}$; $18\\,\\mathrm{m/s}$",
+      "C": "$18\\,\\mathrm{m}$; $18\\,\\mathrm{m/s}$",
+      "D": "$18\\,\\mathrm{m}$; $12\\,\\mathrm{m/s}$",
+      "E": "$8\\,\\mathrm{m}$; $12\\,\\mathrm{m/s}$"
     },
     "answer": "D",
     "image_paths": [],
@@ -3928,13 +3930,13 @@
     "year": 2014,
     "question_number": 29,
     "type": "MCQ",
-    "text": "A 2.0 kg cart rolls with negligible friction on a \nhorizontal surface, as shown in the figure above. \nThe coefficient of static friction between the cart \nand the 1.0 kg block on top of the cart is 0.7. \nIf a horizontal 15 N force is applied to the cart \nas shown and the block does not slide on the cart, \nthe magnitude of the horizontal component of \nthe force that the block exerts on the cart is \nmost nearly",
+    "text": "A 2.0 kg cart rolls with negligible friction on a \nhorizontal surface, as shown in the figure above. \nThe coefficient of static friction between the cart \nand the 1.0 kg block on top of the cart is 0.7. \nIf a horizontal $15\\,\\mathrm{N}$ force is applied to the cart \nas shown and the block does not slide on the cart, \nthe magnitude of the horizontal component of \nthe force that the block exerts on the cart is \nmost nearly",
     "options": {
-      "A": "2 N",
-      "B": "5 N",
-      "C": "8 N",
-      "D": "10 N",
-      "E": "15 N"
+      "A": "$2\\,\\mathrm{N}$",
+      "B": "$5\\,\\mathrm{N}$",
+      "C": "$8\\,\\mathrm{N}$",
+      "D": "$10\\,\\mathrm{N}$",
+      "E": "$15\\,\\mathrm{N}$"
     },
     "answer": "B",
     "image_paths": [
@@ -4217,7 +4219,7 @@
     "year": 2015,
     "question_number": 1,
     "type": "MCQ",
-    "text": "In which of the graphs is the magnitude of the \nmomentum of the object increasing?",
+    "text": "Questions 1-3\nThe graphs below show position $x$ plotted as a function of time $t$ for each of three objects constrained to move along a straight, level path.\n\nIn which of the graphs is the magnitude of the momentum of the object increasing?",
     "options": {
       "A": "II only",
       "B": "III only",
@@ -4226,7 +4228,9 @@
       "E": "II and III"
     },
     "answer": "B",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2015/2015_p020_img01.png"
+    ],
     "primary_unit": "U4",
     "unit": "U4",
     "unit_name": "Linear Momentum",
@@ -4256,7 +4260,7 @@
     "year": 2015,
     "question_number": 2,
     "type": "MCQ",
-    "text": "In which of the graphs does the object have a \nconstant nonzero kinetic energy?",
+    "text": "Questions 1-3\nThe graphs below show position $x$ plotted as a function of time $t$ for each of three objects constrained to move along a straight, level path.\n\nIn which of the graphs does the object have a constant nonzero kinetic energy?",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -4265,7 +4269,9 @@
       "E": "I and III"
     },
     "answer": "B",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2015/2015_p020_img01.png"
+    ],
     "primary_unit": "U3",
     "unit": "U3",
     "unit_name": "Work, Energy, and Power",
@@ -4734,13 +4740,13 @@
     "year": 2015,
     "question_number": 14,
     "type": "MCQ",
-    "text": "A block of mass 3 kilograms is swung on a cord in a\nhorizontal circle of radius 2 $m$. The speed of the \nblock is meters per second. . The magnitude of the acceleration \nof the block is most nearly",
+    "text": "A block of mass $3\\,\\mathrm{kg}$ is swung on a cord in a horizontal circle of radius $2\\,\\mathrm{m}$. The speed of the block is $6\\,\\mathrm{m/s}$. The magnitude of the acceleration of the block is most nearly",
     "options": {
       "A": "zero",
-      "B": "10 meters per second squared",
-      "C": "18 meters per second squared",
-      "D": "36 meters per second squared",
-      "E": "54 meters per second squared"
+      "B": "$10\\,\\mathrm{m/s^2}$",
+      "C": "$18\\,\\mathrm{m/s^2}$",
+      "D": "$36\\,\\mathrm{m/s^2}$",
+      "E": "$54\\,\\mathrm{m/s^2}$"
     },
     "answer": "C",
     "image_paths": [],
@@ -4775,11 +4781,11 @@
     "type": "MCQ",
     "text": "Two $1.0\\,\\mathrm{kg}$ balls have a perfectly elastic head-on collision, as shown in the figure above. Before the collision, ball $X$ has a velocity of $2.0\\,\\mathrm{m/s}$ to the right and ball $Y$ has a velocity of $4.0\\,\\mathrm{m/s}$ to the left. After the collision, ball $X$ has a velocity of",
     "options": {
-      "A": "0 m/s",
-      "B": "2.0 m/s to the right",
-      "C": "2.0 m/s to the left",
-      "D": "4.0 m/s to the right",
-      "E": "4.0 m/s to the left"
+      "A": "$0\\,\\mathrm{m/s}$",
+      "B": "$2.0\\,\\mathrm{m/s}$ to the right",
+      "C": "$2.0\\,\\mathrm{m/s}$ to the left",
+      "D": "$4.0\\,\\mathrm{m/s}$ to the right",
+      "E": "$4.0\\,\\mathrm{m/s}$ to the left"
     },
     "answer": "E",
     "image_paths": [
@@ -4814,13 +4820,13 @@
     "year": 2015,
     "question_number": 16,
     "type": "MCQ",
-    "text": "An object of mass $m$ and velocity 3 v toward the\neast has a completely inelastic collision with an \nobject of mass 2 $m$ and velocity 2 v toward the \nnorth. After the collision, the momentum of the \ncombined object has a magnitude of",
+    "text": "An object of mass $m$ and velocity $3v$ toward the east has a completely inelastic collision with an object of mass $2m$ and velocity $2v$ toward the north. After the collision, the momentum of the combined object has a magnitude of",
     "options": {
-      "A": "5 $$m$$ v",
-      "B": "7mv",
-      "C": "10 $$m$$ v",
-      "D": "12 $$m$$ v",
-      "E": "15 $$m$$ v\nThe figure shows a block labeled two point zero kilograms at the top of an inclined plane. The incline is at a 37 degree angle above the horizontal."
+      "A": "$5mv$",
+      "B": "$7mv$",
+      "C": "$10mv$",
+      "D": "$12mv$",
+      "E": "$15mv$"
     },
     "answer": "A",
     "image_paths": [],
@@ -4855,11 +4861,11 @@
     "type": "MCQ",
     "text": "A $2.0\\,\\mathrm{kg}$ block is released from rest at the top of a rough plane inclined at $37^\\circ$ to the horizontal, as shown above. The block slides down the incline with an acceleration of $4.0\\,\\mathrm{m/s^2}$. What is the approximate magnitude of the force of friction on the block as it slides down the incline?",
     "options": {
-      "A": "4.0 N",
-      "B": "6.0 N",
-      "C": "10 N",
-      "D": "12 N",
-      "E": "20 N"
+      "A": "$4.0\\,\\mathrm{N}$",
+      "B": "$6.0\\,\\mathrm{N}$",
+      "C": "$10\\,\\mathrm{N}$",
+      "D": "$12\\,\\mathrm{N}$",
+      "E": "$20\\,\\mathrm{N}$"
     },
     "answer": "A",
     "image_paths": [
@@ -5095,11 +5101,11 @@
     "type": "MCQ",
     "text": "Questions 23-24\nA block is hung vertically from a spring of force constant $50\\,\\mathrm{N/m}$ and slowly lowered to equilibrium, stretching the spring by $0.10\\,\\mathrm{m}$, as shown in the figure above.\n\nIf instead of being lowered slowly to equilibrium, the block, still attached to the spring, was released from rest and allowed to fall, which of the following would happen?",
     "options": {
-      "A": "It would descend 0.10 m and remain at that position.",
-      "B": "It would descend 0.10 m and then reverse its direction of motion.",
-      "C": "It would descend 0.20 m and remain at that position.",
-      "D": "It would descend 0.20 m and then reverse its direction of motion.",
-      "E": "It would descend more than 0.20 m and then reverse its direction of motion."
+      "A": "It would descend $0.10\\,\\mathrm{m}$ and remain at that position.",
+      "B": "It would descend $0.10\\,\\mathrm{m}$ and then reverse its direction of motion.",
+      "C": "It would descend $0.20\\,\\mathrm{m}$ and remain at that position.",
+      "D": "It would descend $0.20\\,\\mathrm{m}$ and then reverse its direction of motion.",
+      "E": "It would descend more than $0.20\\,\\mathrm{m}$ and then reverse its direction of motion."
     },
     "answer": "D",
     "image_paths": [
@@ -5134,16 +5140,18 @@
     "year": 2015,
     "question_number": 24,
     "type": "MCQ",
-    "text": "The spring and attached block are allowed to \ncome to rest at position X and are then moved to \nrest at position Y along the diagonal path shown \nabove. What is the work done on the block by the \nspring in moving it along this path?",
+    "text": "Questions 23-24\nA block is hung vertically from a spring of force constant $50\\,\\mathrm{N/m}$ and slowly lowered to equilibrium, stretching the spring by $0.10\\,\\mathrm{m}$, as shown in the figure above.\n\nThe spring and attached block are allowed to come to rest at position $X$ and are then moved to rest at position $Y$ along the diagonal path shown above. What is the work done on the block by the spring in moving it along this path?",
     "options": {
-      "A": "zero Joules",
-      "B": "15 Joules",
-      "C": "20 Joules",
-      "D": "25 Joules",
-      "E": "It cannot be determined without being given \nthe value of the mass of the block."
+      "A": "zero joules",
+      "B": "$15\\,\\mathrm{J}$",
+      "C": "$20\\,\\mathrm{J}$",
+      "D": "$25\\,\\mathrm{J}$",
+      "E": "It cannot be determined without being given the value of the mass of the block."
     },
     "answer": "B",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2015/2015_p025_img01.png"
+    ],
     "primary_unit": "U7",
     "unit": "U7",
     "unit_name": "Oscillations",
@@ -5333,7 +5341,7 @@
     "year": 2015,
     "question_number": 29,
     "type": "MCQ",
-    "text": "Questions 29-30 refer to the following.\nA ball of mass $m$, suspended by a cord of length $\\ell$, is displaced along its arc until it is elevated a vertical distance of $\\ell/2$ above its lowest position at point $P$, as shown above. The ball is then released from rest and swings like a simple pendulum.\n\nThe speed of the ball as it swings through point $P$ is",
+    "text": "Questions 29-30\nA ball of mass $m$, suspended by a cord of length $\\ell$, is displaced along its arc until it is elevated a vertical distance of $\\ell/2$ above its lowest position at point $P$, as shown above. The ball is then released from rest and swings like a simple pendulum.\n\nThe speed of the ball as it swings through point $P$ is",
     "options": {
       "A": "$\\sqrt{g\\ell}$",
       "B": "$\\sqrt{2g\\ell}$",
@@ -5374,7 +5382,7 @@
     "year": 2015,
     "question_number": 30,
     "type": "MCQ",
-    "text": "Questions 29-30 refer to the following.\nA ball of mass $m$, suspended by a cord of length $\\ell$, is displaced along its arc until it is elevated a vertical distance of $\\ell/2$ above its lowest position at point $P$, as shown above. The ball is then released from rest and swings like a simple pendulum.\n\nIf air resistance and friction in the pivot are negligible, quantities that are conserved as the ball swings back and forth include which of the following?\n\nI. Mechanical energy of the ball-Earth system\nII. Linear momentum of the ball\nIII. Angular momentum of the ball about the pivot point",
+    "text": "Questions 29-30\nA ball of mass $m$, suspended by a cord of length $\\ell$, is displaced along its arc until it is elevated a vertical distance of $\\ell/2$ above its lowest position at point $P$, as shown above. The ball is then released from rest and swings like a simple pendulum.\n\nIf air resistance and friction in the pivot are negligible, quantities that are conserved as the ball swings back and forth include which of the following?\n\nI. Mechanical energy of the ball-Earth system\nII. Linear momentum of the ball\nIII. Angular momentum of the ball about the pivot point",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -5545,9 +5553,9 @@
     "options": {
       "A": "$\\frac{3}{4}\\,\\mathrm{s}$",
       "B": "$\\frac{4}{3}\\,\\mathrm{s}$",
-      "C": "2 s",
+      "C": "$2\\,\\mathrm{s}$",
       "D": "$\\sqrt{6}\\,\\mathrm{s}$",
-      "E": "3 s"
+      "E": "$3\\,\\mathrm{s}$"
     },
     "answer": "C",
     "image_paths": [],
@@ -5621,13 +5629,13 @@
     "year": 2016,
     "question_number": 1,
     "type": "MCQ",
-    "text": "A projectile is launched with a speed of $40\\,\\mathrm{m/s}$ at an angle of $30^\\circ$ above the horizontal, as shown in the figure above. The projectile lands on a plateau 3 s later. The height $\\Delta y$ of the plateau is most nearly",
+    "text": "A projectile is launched with a speed of $40\\,\\mathrm{m/s}$ at an angle of $30^\\circ$ above the horizontal, as shown in the figure above. The projectile lands on a plateau $3\\,\\mathrm{s}$ later. The height $\\Delta y$ of the plateau is most nearly",
     "options": {
-      "A": "15 m",
-      "B": "30 m",
-      "C": "45 m",
-      "D": "60 m",
-      "E": "75 m"
+      "A": "$15\\,\\mathrm{m}$",
+      "B": "$30\\,\\mathrm{m}$",
+      "C": "$45\\,\\mathrm{m}$",
+      "D": "$60\\,\\mathrm{m}$",
+      "E": "$75\\,\\mathrm{m}$"
     },
     "answer": "A",
     "image_paths": [
@@ -5703,13 +5711,13 @@
     "year": 2016,
     "question_number": 3,
     "type": "MCQ",
-    "text": "Which of the following statements must be true \nfor a falling object that has been dropped from \nrest near the surface of Earth?",
+    "text": "Which of the following statements must be true for a falling object that has been dropped from rest near the surface of Earth?",
     "options": {
-      "A": "The derivative of the distance the object falls \nwith respect to time equals \n2\n9.8 $$m$$ s .",
-      "B": "The object falls a vertical distance of 9.8 $$m$$ \nduring the first second only.",
-      "C": "The object falls a vertical distance of 9.8 $$m$$ \nduring each second.",
-      "D": "The speed of the object as it falls is a constant\n9.8 $$m$$ s .",
-      "E": "The speed of the object increases by 9.8 $$m$$ s \nduring each second."
+      "A": "The derivative of the distance the object falls with respect to time equals $9.8\\,\\mathrm{m/s^2}$.",
+      "B": "The object falls a vertical distance of $9.8\\,\\mathrm{m}$ during the first second only.",
+      "C": "The object falls a vertical distance of $9.8\\,\\mathrm{m}$ during each second.",
+      "D": "The speed of the object as it falls is a constant $9.8\\,\\mathrm{m/s}$.",
+      "E": "The speed of the object increases by $9.8\\,\\mathrm{m/s}$ during each second."
     },
     "answer": "E",
     "image_paths": [],
@@ -5902,11 +5910,11 @@
     "type": "MCQ",
     "text": "The magnitude of the force exerted on the block \nby the table is most nearly",
     "options": {
-      "A": "35 N",
-      "B": "32 N",
-      "C": "29 N",
-      "D": "20 N",
-      "E": "11 N"
+      "A": "$35\\,\\mathrm{N}$",
+      "B": "$32\\,\\mathrm{N}$",
+      "C": "$29\\,\\mathrm{N}$",
+      "D": "$20\\,\\mathrm{N}$",
+      "E": "$11\\,\\mathrm{N}$"
     },
     "answer": "C",
     "image_paths": [],
@@ -6063,13 +6071,13 @@
     "year": 2016,
     "question_number": 12,
     "type": "MCQ",
-    "text": "A horizontal uniform plank is supported by ropes \nI and II at points P and Q, respectively, as shown \nabove. The two ropes have negligible mass. The \ntension in rope I is 150 N. The point at which rope \nII is attached to the plank is now moved to point \nR halfway between point Q and point C, the \ncenter of the plank. The plank remains horizontal. \nWhich of the following are most nearly the new \ntensions in the two ropes?\nTension in I \nTension in II",
+    "text": "A horizontal uniform plank is supported by ropes \nI and II at points P and Q, respectively, as shown \nabove. The two ropes have negligible mass. The \ntension in rope I is $150\\,\\mathrm{N}$. The point at which rope \nII is attached to the plank is now moved to point \nR halfway between point Q and point C, the \ncenter of the plank. The plank remains horizontal. \nWhich of the following are most nearly the new \ntensions in the two ropes?\nTension in I \nTension in II",
     "options": {
-      "A": "75 N\n225 N",
-      "B": "100 N \n200 N",
-      "C": "112.5 N \n112.5 N",
-      "D": "112.5 N \n187.5 N",
-      "E": "150 N \n300 N"
+      "A": "$75\\,\\mathrm{N}$\n$225\\,\\mathrm{N}$",
+      "B": "$100\\,\\mathrm{N}$ \n$200\\,\\mathrm{N}$",
+      "C": "$112.5\\,\\mathrm{N}$ \n$112.5\\,\\mathrm{N}$",
+      "D": "$112.5\\,\\mathrm{N}$ \n$187.5\\,\\mathrm{N}$",
+      "E": "$150\\,\\mathrm{N}$ \n$300\\,\\mathrm{N}$"
     },
     "answer": "B",
     "image_paths": [],
@@ -6104,11 +6112,11 @@
     "type": "MCQ",
     "text": "The potential energy U as a function of \nthe position x of an object is given by\n( )\n400\nU x = -\nx , where U is in joules and x is \nin meters. The object is released from rest at \nposition x = 30 $m$ and is free to move along the \nx-axis. When the object has moved a distance of \n10 $m$ from its initial position, the magnitude of the \nforce associated with this potential energy \nfunction is",
     "options": {
-      "A": "20 N",
-      "B": "10 N",
-      "C": "4.0 N",
-      "D": "1.0 N",
-      "E": "0.25 N"
+      "A": "$20\\,\\mathrm{N}$",
+      "B": "$10\\,\\mathrm{N}$",
+      "C": "$4.0\\,\\mathrm{N}$",
+      "D": "$1.0\\,\\mathrm{N}$",
+      "E": "$0.25\\,\\mathrm{N}$"
     },
     "answer": "D",
     "image_paths": [],
@@ -6180,7 +6188,7 @@
     "year": 2016,
     "question_number": 15,
     "type": "MCQ",
-    "text": "Three blocks of masses $m$, 3m, and 2m resting on \na frictionless horizontal surface are connected to \nidentical ideal springs, as shown above. A force of \nmagnitude F directed to the left is then applied to \nthe left end of spring A. Which spring is stretched \nthe most when the blocks are all moving with the \nsame acceleration?",
+    "text": "Three blocks of masses $m$, $3\\,\\mathrm{m}$, and $2\\,\\mathrm{m}$ resting on \na frictionless horizontal surface are connected to \nidentical ideal springs, as shown above. A force of \nmagnitude F directed to the left is then applied to \nthe left end of spring A. Which spring is stretched \nthe most when the blocks are all moving with the \nsame acceleration?",
     "options": {
       "A": "A",
       "B": "B",
@@ -6260,13 +6268,13 @@
     "year": 2016,
     "question_number": 17,
     "type": "MCQ",
-    "text": "The position x of an object is given as a function\nof time t by the equation \n3\n8\n4\nx\nt\n=\n+\n- 6t , \nwhere x is in meters and t is in seconds. What is \nthe maximum positive velocity attained by this \nobject?",
+    "text": "The position $x$ of an object is given as a function of time $t$ by the equation $x=8+4t-6t^3$, where $x$ is in meters and $t$ is in seconds. What is the maximum positive velocity attained by this object?",
     "options": {
-      "A": "4 $$m$$ s",
-      "B": "8 $$m$$ s",
-      "C": "18 $$m$$ s",
-      "D": "36 $$m$$ s",
-      "E": "There is no maximum positive velocity \nbecause the object never moves in the \npositive direction."
+      "A": "$4\\,\\mathrm{m/s}$",
+      "B": "$8\\,\\mathrm{m/s}$",
+      "C": "$18\\,\\mathrm{m/s}$",
+      "D": "$36\\,\\mathrm{m/s}$",
+      "E": "There is no maximum positive velocity because the object never moves in the positive direction."
     },
     "answer": "A",
     "image_paths": [],
@@ -6533,7 +6541,7 @@
     "year": 2016,
     "question_number": 24,
     "type": "MCQ",
-    "text": "Questions 24-25\nThe following graph shows the force $\\vec F$ exerted on a 2 kg object as a function of the distance $d$ that the object travels. The object is at rest at $d=0$ and travels on a horizontal, frictionless surface along the line of action of the force.\n\nThe work done on the object by the force $\\vec F$ during the first 10 m of travel is most nearly",
+    "text": "Questions 24-25\nThe following graph shows the force $\\vec F$ exerted on a 2 kg object as a function of the distance $d$ that the object travels. The object is at rest at $d=0$ and travels on a horizontal, frictionless surface along the line of action of the force.\n\nThe work done on the object by the force $\\vec F$ during the first $10\\,\\mathrm{m}$ of travel is most nearly",
     "options": {
       "A": "7.5 J",
       "B": "10 J",
@@ -6574,13 +6582,13 @@
     "year": 2016,
     "question_number": 25,
     "type": "MCQ",
-    "text": "Questions 24-25\nThe following graph shows the force $\\vec F$ exerted on a 2 kg object as a function of the distance $d$ that the object travels. The object is at rest at $d=0$ and travels on a horizontal, frictionless surface along the line of action of the force.\n\nThe kinetic energy of the 2 kg object when $d$ equals 20 m is the same as when $d$ is most nearly",
+    "text": "Questions 24-25\nThe following graph shows the force $\\vec F$ exerted on a 2 kg object as a function of the distance $d$ that the object travels. The object is at rest at $d=0$ and travels on a horizontal, frictionless surface along the line of action of the force.\n\nThe kinetic energy of the 2 kg object when $d$ equals $20\\,\\mathrm{m}$ is the same as when $d$ is most nearly",
     "options": {
-      "A": "0 m",
-      "B": "5 m",
-      "C": "10 m",
-      "D": "12.5 m",
-      "E": "15 m"
+      "A": "$0\\,\\mathrm{m}$",
+      "B": "$5\\,\\mathrm{m}$",
+      "C": "$10\\,\\mathrm{m}$",
+      "D": "$12.5\\,\\mathrm{m}$",
+      "E": "$15\\,\\mathrm{m}$"
     },
     "answer": "B",
     "image_paths": [
@@ -6615,7 +6623,7 @@
     "year": 2016,
     "question_number": 26,
     "type": "MCQ",
-    "text": "The acceleration due to gravity on the surface \nof the Moon is about 1 6 of that on the surface \nof Earth. An astronaut weighs 600 N on Earth. \nThe astronaut’s mass on the Moon is most nearly",
+    "text": "The acceleration due to gravity on the surface \nof the Moon is about 1 6 of that on the surface \nof Earth. An astronaut weighs $600\\,\\mathrm{N}$ on Earth. \nThe astronaut’s mass on the Moon is most nearly",
     "options": {
       "A": "600 kg",
       "B": "360 kg",
@@ -6775,13 +6783,13 @@
     "year": 2016,
     "question_number": 30,
     "type": "MCQ",
-    "text": "A 5.0 kg object suspended on a spring oscillates \nsuch that its position x as a function of time t is \ngiven by the equation ( )\n(\n)\ncos\nx t\nA\n$\\omega$\n=\nt , where\nA = 0.80 $m$ and \n1\n2.0 s\n$\\omega$\n-\n=\n. What is the\nmagnitude of the maximum net force on the \nobject during the motion?",
+    "text": "A 5.0 kg object suspended on a spring oscillates \nsuch that its position x as a function of time t is \ngiven by the equation ( )\n(\n)\ncos\nx t\nA\n$\\omega$\n=\nt , where\nA = 0.80 $m$ and \n1\n$2.0\\,\\mathrm{s}$\n$\\omega$\n-\n=\n. What is the\nmagnitude of the maximum net force on the \nobject during the motion?",
     "options": {
-      "A": "3.2 N",
-      "B": "4.0 N",
-      "C": "8.0 N",
-      "D": "12.8 N",
-      "E": "16.0 N"
+      "A": "$3.2\\,\\mathrm{N}$",
+      "B": "$4.0\\,\\mathrm{N}$",
+      "C": "$8.0\\,\\mathrm{N}$",
+      "D": "$12.8\\,\\mathrm{N}$",
+      "E": "$16.0\\,\\mathrm{N}$"
     },
     "answer": "E",
     "image_paths": [],
@@ -6974,7 +6982,7 @@
     "year": 2016,
     "question_number": 35,
     "type": "MCQ",
-    "text": "An equation for the motion of an object is given as $x=\\frac{vt^2}{4}-Bt^2$, where $B$ is a constant. The variable $v$ indicates velocity, in meters per second; $t$ indicates time, in seconds; and $x$ indicates displacement, in meters. What is the unit of measure for $B$?",
+    "text": "An equation for the motion of an object is given as $x=\\frac{vt^2}{4}-Bt^2$, where $B$ is a constant. The variable $v$ indicates velocity, in $\\mathrm{m/s}$; $t$ indicates time, in seconds; and $x$ indicates displacement, in meters. What is the unit of measure for $B$?",
     "options": {
       "A": "s",
       "B": "m/s",
@@ -7494,8 +7502,8 @@
     "text": "A skier is traveling down a slope that is \ninclined 30∞ above the horizontal. The \ncoefficient of kinetic friction between the \nskier and the slope is 0.10. Which of the \nfollowing best describes the acceleration \nof the skier?",
     "options": {
       "A": "It is zero.",
-      "B": "It is about \n.\n4.0 $$m$$ s2\n9.0 $$m$$ s2",
-      "C": "It is about \n.\n10 $$m$$ s2",
+      "B": "It is about \n.\n4.0 $m$ s2\n9.0 $m$ s2",
+      "C": "It is about \n.\n10 $m$ s2",
       "D": "It is about \n.",
       "E": "It cannot be determined without knowing the \nmass of the skier."
     },
@@ -7530,7 +7538,7 @@
     "year": 2017,
     "question_number": 14,
     "type": "MCQ",
-    "text": "What is the ball’s acceleration at time t = 1 s?",
+    "text": "What is the ball’s acceleration at time t = $1\\,\\mathrm{s}$?",
     "options": {
       "A": "$-10\\,\\mathrm{m/s^2}$",
       "B": "$-5\\,\\mathrm{m/s^2}$",
@@ -7571,11 +7579,11 @@
     "type": "MCQ",
     "text": "At what time does the ball reach its maximum \nheight above the building?",
     "options": {
-      "A": "0.2 s",
-      "B": "0.4 s",
-      "C": "0.5 s",
-      "D": "1.0 s",
-      "E": "2.0 s"
+      "A": "$0.2\\,\\mathrm{s}$",
+      "B": "$0.4\\,\\mathrm{s}$",
+      "C": "$0.5\\,\\mathrm{s}$",
+      "D": "$1.0\\,\\mathrm{s}$",
+      "E": "$2.0\\,\\mathrm{s}$"
     },
     "answer": "C",
     "image_paths": [],
@@ -7608,13 +7616,13 @@
     "year": 2017,
     "question_number": 16,
     "type": "MCQ",
-    "text": "If the ball reaches the ground at t = 2.0 s, what is \nthe height of the building?",
+    "text": "If the ball reaches the ground at t = $2.0\\,\\mathrm{s}$, what is \nthe height of the building?",
     "options": {
-      "A": "5 $$m$$",
-      "B": "10 $$m$$",
-      "C": "15 $$m$$",
-      "D": "20 $$m$$",
-      "E": "30 $$m$$"
+      "A": "5 $m$",
+      "B": "10 $m$",
+      "C": "15 $m$",
+      "D": "20 $m$",
+      "E": "30 $m$"
     },
     "answer": "B",
     "image_paths": [],
@@ -7808,10 +7816,10 @@
     "text": "A cannonball is shot from the top of a 30 $m$ \nhigh hill at a velocity of 25 $m$ s and at an \nangle of 40° above the horizontal and lands on \nthe ground below. The speed of the cannonball \nat the top of its path is most nearly",
     "options": {
       "A": "0",
-      "B": "16 m/s",
-      "C": "19 m/s",
-      "D": "25 m/s",
-      "E": "29 m/s"
+      "B": "$16\\,\\mathrm{m/s}$",
+      "C": "$19\\,\\mathrm{m/s}$",
+      "D": "$25\\,\\mathrm{m/s}$",
+      "E": "$29\\,\\mathrm{m/s}$"
     },
     "answer": "C",
     "image_paths": [],
@@ -7846,11 +7854,11 @@
     "type": "MCQ",
     "text": "A 1500 kg car is pushing a 4000 kg truck. The car\nand truck are accelerating at 2.0 $m$ s2 . Assuming \nthat the frictional force on the truck is negligible, \nwhat force is the truck exerting on the car?",
     "options": {
-      "A": "0 N",
-      "B": "3000 N",
-      "C": "5000 N",
-      "D": "8000 N",
-      "E": "11,000 N"
+      "A": "$0\\,\\mathrm{N}$",
+      "B": "$3000\\,\\mathrm{N}$",
+      "C": "$5000\\,\\mathrm{N}$",
+      "D": "$8000\\,\\mathrm{N}$",
+      "E": "11,$000\\,\\mathrm{N}$"
     },
     "answer": "D",
     "image_paths": [],
@@ -7924,7 +7932,7 @@
     "year": 2017,
     "question_number": 24,
     "type": "MCQ",
-    "text": "The ratio of the speeds v v \n1 \n2 is\nR2 R1",
+    "text": "Questions 24-26\nTwo satellites of masses $m_1$ and $m_2$ orbit a planet of mass $M$ in circular orbits. The satellites travel in opposite directions with speeds $v_1$ and $v_2$, as shown in the figure above. Their orbital radii are $R_1$ and $R_2$, respectively. Assume that $M\\gg m_2>m_1$.\n\nThe ratio of the speeds $v_1/v_2$ is",
     "options": {
       "A": "$\\sqrt{R_2/R_1}$",
       "B": "$\\sqrt{R_1/R_2}$",
@@ -7933,7 +7941,9 @@
       "E": "1"
     },
     "answer": "A",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2017/2017_p028_img01.png"
+    ],
     "primary_unit": "U1",
     "unit": "U1",
     "unit_name": "Kinematics",
@@ -8449,16 +8459,18 @@
     "year": 2018,
     "question_number": 2,
     "type": "MCQ",
-    "text": "The object has a speed of 2 $m$ eters per second at which of the\nfollowing times?",
+    "text": "Questions 1-2\nAn object is moving along a straight line. The object's velocity as a function of time is shown in the graph above.\n\nThe object has a speed of $2\\,\\mathrm{m/s}$ at which of the following times?",
     "options": {
-      "A": "1 second only",
-      "B": "6 seconds only",
-      "C": "9 seconds only",
-      "D": "4\n seconds and 10 seconds only",
-      "E": "1 second, 6 seconds, and 9 seconds"
+      "A": "$1\\,\\mathrm{s}$ only",
+      "B": "$6\\,\\mathrm{s}$ only",
+      "C": "$9\\,\\mathrm{s}$ only",
+      "D": "$4\\,\\mathrm{s}$ and $10\\,\\mathrm{s}$ only",
+      "E": "$1\\,\\mathrm{s}$, $6\\,\\mathrm{s}$, and $9\\,\\mathrm{s}$"
     },
     "answer": "E",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2018/2018_p021_img01.png"
+    ],
     "primary_unit": "U1",
     "unit": "U1",
     "unit_name": "Kinematics",
@@ -8527,16 +8539,18 @@
     "year": 2018,
     "question_number": 4,
     "type": "MCQ",
-    "text": "Four directions at point Z are indicated as 1",
+    "text": "Questions 4-5\nA sphere on the end of a string is released from rest at point X and swings through point Y to point Z, as shown in the figure above. Point Y is the lowest point for the sphere as it swings. Air resistance is negligible.\n\nFour directions at point Z are indicated as 1, 2, 3, and 4 in the figure above. Which of the following best indicates the direction of the acceleration of the sphere at point Z?",
     "options": {
       "A": "1",
       "B": "2",
       "C": "3",
       "D": "4",
-      "E": "The direction of the acceleration is undefined \nbecause the acceleration equals zero.\nT"
+      "E": "The direction of the acceleration is undefined because the acceleration equals zero."
     },
     "answer": "C",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2018/2018_p022_img01.png"
+    ],
     "primary_unit": "U1",
     "unit": "U1",
     "unit_name": "Kinematics",
@@ -8811,13 +8825,13 @@
     "year": 2018,
     "question_number": 11,
     "type": "MCQ",
-    "text": "Car A can travel around a curved section of road \nwithout skidding at a maximum constant speed \nof 10 meters per second . When car B travels around the same \ncurve without skidding at its maximum speed, it \nhas twice the centripetal acceleration as car A. \nThe maximum speed at which car B can safely \ntravel around the curve is most nearly",
+    "text": "Car A can travel around a curved section of road without skidding at a maximum constant speed of $10\\,\\mathrm{m/s}$. When car B travels around the same curve without skidding at its maximum speed, it has twice the centripetal acceleration as car A. The maximum speed at which car B can safely travel around the curve is most nearly",
     "options": {
-      "A": "5\n.\n0 $$m$$ e ters per second",
-      "B": "1\n0 meters per second",
-      "C": "1\n4 meters per second",
-      "D": "2\n0 meters per second",
-      "E": "2\n8 meters per second"
+      "A": "$5.0\\,\\mathrm{m/s}$",
+      "B": "$10\\,\\mathrm{m/s}$",
+      "C": "$14\\,\\mathrm{m/s}$",
+      "D": "$20\\,\\mathrm{m/s}$",
+      "E": "$28\\,\\mathrm{m/s}$"
     },
     "answer": "C",
     "image_paths": [],
@@ -8889,13 +8903,13 @@
     "year": 2018,
     "question_number": 13,
     "type": "MCQ",
-    "text": "A 3.0 kilograms block accelerates at 2.0 me ters per second squared because\nof a constant net force. A block of unknown mass\naccelerates at 6.0 me ters per second squared because of the same net \nforce. What is the mass of the second block?",
+    "text": "A $3.0\\,\\mathrm{kg}$ block accelerates at $2.0\\,\\mathrm{m/s^2}$ because of a constant net force. A block of unknown mass accelerates at $6.0\\,\\mathrm{m/s^2}$ because of the same net force. What is the mass of the second block?",
     "options": {
-      "A": "Zero",
-      "B": "120 Newtonsto the right",
-      "C": "120 Newtonsto the left",
-      "D": "240 Newtonsto the right",
-      "E": "240 Newtons to the left \nT\nT"
+      "A": "$9.0\\,\\mathrm{kg}$",
+      "B": "$4.0\\,\\mathrm{kg}$",
+      "C": "$3.0\\,\\mathrm{kg}$",
+      "D": "$1.5\\,\\mathrm{kg}$",
+      "E": "$1.0\\,\\mathrm{kg}$"
     },
     "answer": "E",
     "image_paths": [],
@@ -8931,10 +8945,10 @@
     "text": "A cart is moving to the right with a constant speed of $20\\,\\mathrm{m/s}$. A box of mass $80\\,\\mathrm{kg}$ moves with the cart without slipping. The coefficient of static friction between the box and cart is 0.30, and the coefficient of kinetic friction between the box and cart is 0.15. What are the magnitude and direction of the frictional force acting on the box as it moves with the cart?",
     "options": {
       "A": "Zero",
-      "B": "120 N to the right",
-      "C": "120 N to the left",
-      "D": "240 N to the right",
-      "E": "240 N to the left"
+      "B": "$120\\,\\mathrm{N}$ to the right",
+      "C": "$120\\,\\mathrm{N}$ to the left",
+      "D": "$240\\,\\mathrm{N}$ to the right",
+      "E": "$240\\,\\mathrm{N}$ to the left"
     },
     "answer": "A",
     "image_paths": [
@@ -9339,13 +9353,13 @@
     "year": 2018,
     "question_number": 24,
     "type": "MCQ",
-    "text": "What is the magnitude of the change \nin momentum of the block due to the \nhorizontal force?",
+    "text": "Questions 23-24\nA block on a level horizontal surface of negligible friction is initially traveling at $20\\,\\mathrm{m/s}$ to the left. A horizontal force $\\vec F$ is exerted to the right on the block for the time interval $0<t<0.10\\,\\mathrm{s}$. The magnitude of the force is given as a function of time $t$ by the equation $F=\\alpha t$, where $\\alpha=240\\,\\mathrm{N/s}$ and $t$ is in seconds.\n\nWhat is the magnitude of the change in momentum of the block due to the horizontal force?",
     "options": {
-      "A": "1\n.\n2 k ilogra\n$$m$$ meters per second",
-      "B": "1\n2\n k ilogra\n$$m$$ meters per second",
-      "C": "2\n4\n k ilogra\n$$m$$ meters per second",
-      "D": "2\n40 kilogra\n$$m$$ meters per second",
-      "E": "The change in momentum of the block \ncannot be determined without knowing \nthe block’s mass."
+      "A": "$1.2\\,\\mathrm{kg\\cdot m/s}$",
+      "B": "$12\\,\\mathrm{kg\\cdot m/s}$",
+      "C": "$24\\,\\mathrm{kg\\cdot m/s}$",
+      "D": "$240\\,\\mathrm{kg\\cdot m/s}$",
+      "E": "The change in momentum of the block cannot be determined without knowing the block's mass."
     },
     "answer": "A",
     "image_paths": [],
@@ -9460,16 +9474,18 @@
     "year": 2018,
     "question_number": 27,
     "type": "MCQ",
-    "text": "The period of the oscillation for the object is \nmost nearly",
+    "text": "Questions 27-28\nA $0.50\\,\\mathrm{kg}$ object is attached to a vertical spring of constant $k$, as shown above. The object is pulled down and released. The object oscillates vertically. If up is the positive direction, the position $x$ of the object as a function of time $t$ is given by the formula $x=\\beta\\sin(\\omega t+\\phi)$, where $\\beta=0.20\\,\\mathrm{m}$, $\\omega=4.0\\,\\mathrm{rad/s}$, and $\\phi=\\pi/3\\,\\mathrm{rad}$.\n\nThe period of the oscillation for the object is most nearly",
     "options": {
-      "A": "4.0 seconds",
-      "B": "3.1 seconds",
-      "C": "2.0 seconds",
-      "D": "1.6 seconds",
-      "E": "1.1 seconds"
+      "A": "$4.0\\,\\mathrm{s}$",
+      "B": "$3.1\\,\\mathrm{s}$",
+      "C": "$2.0\\,\\mathrm{s}$",
+      "D": "$1.6\\,\\mathrm{s}$",
+      "E": "$1.1\\,\\mathrm{s}$"
     },
     "answer": "D",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2018/2018_p029_img02.png"
+    ],
     "primary_unit": "U7",
     "unit": "U7",
     "unit_name": "Oscillations",
@@ -9583,11 +9599,11 @@
     "type": "MCQ",
     "text": "Blocks X and Y of masses $3.0\\,\\mathrm{kg}$ and $5.0\\,\\mathrm{kg}$, respectively, are connected by a light string and are both on a level horizontal surface of negligible friction. A force $F=12\\,\\mathrm{N}$ is exerted on block Y, as shown in the figure above. What is the tension in the string connecting the two blocks?",
     "options": {
-      "A": "1.5 N",
-      "B": "4.0 N",
-      "C": "4.5 N",
-      "D": "7.5 N",
-      "E": "12 N"
+      "A": "$1.5\\,\\mathrm{N}$",
+      "B": "$4.0\\,\\mathrm{N}$",
+      "C": "$4.5\\,\\mathrm{N}$",
+      "D": "$7.5\\,\\mathrm{N}$",
+      "E": "$12\\,\\mathrm{N}$"
     },
     "answer": "C",
     "image_paths": [
@@ -9828,10 +9844,10 @@
     "text": "Cars A and B are moving in opposite directions along a straight road. They pass each other at time $t=0$. Their velocities $v$ are given as a function of time $t$ in the graph above. The distance between the cars at $t=8\\,\\mathrm{s}$ is",
     "options": {
       "A": "Zero",
-      "B": "24 m",
-      "C": "48 m",
-      "D": "96 m",
-      "E": "192 m"
+      "B": "$24\\,\\mathrm{m}$",
+      "C": "$48\\,\\mathrm{m}$",
+      "D": "$96\\,\\mathrm{m}$",
+      "E": "$192\\,\\mathrm{m}$"
     },
     "answer": "D",
     "image_paths": [
@@ -10303,13 +10319,13 @@
     "year": 2019,
     "question_number": 13,
     "type": "MCQ",
-    "text": "In one trial, the initial speed of cart A is \n \n2.5 meters per second\nand the initial speed of cart B is \n \n1.5 meters per second . The \nangle theta relative to east that the carts travel after \nthe collision is most nearly",
+    "text": "In one trial, the initial speed of cart A is $2.5\\,\\mathrm{m/s}$ and the initial speed of cart B is $1.5\\,\\mathrm{m/s}$. The angle $\\theta$ relative to east that the carts travel after the collision is most nearly",
     "options": {
-      "A": "2\n2 degrees",
-      "B": "3\n6 degrees",
-      "C": "4\n5 degrees",
-      "D": "5\n4 degrees",
-      "E": "6\n2 degrees"
+      "A": "$22^\\circ$",
+      "B": "$36^\\circ$",
+      "C": "$45^\\circ$",
+      "D": "$54^\\circ$",
+      "E": "$62^\\circ$"
     },
     "answer": "A",
     "image_paths": [],
@@ -10545,7 +10561,7 @@
     "year": 2019,
     "question_number": 19,
     "type": "MCQ",
-    "text": "Questions 18-19\nA projectile of mass $m$ traveling with speed $v_i$ collides with and sticks to a block of mass $M$ initially at rest on a horizontal track, as shown above. After the collision, the block-projectile system moves with speed $v_f$ and then smoothly transitions onto an inclined plane. Friction is negligible.\n\nWhich of the following is a correct expression for the maximum height that the block-projectile system moves up the inclined plane in terms of $v_f$?",
+    "text": "Questions 18-19\nA projectile of mass $m$ traveling with speed $v_i$ collides with and sticks to a block of mass $M$ initially at rest on a horizontal track, as shown above. After the collision, the block-projectile system moves with speed $v_f$ and then smoothly transitions onto an inclined plane of height $h$. Friction is negligible.\n\nWhich of the following is a correct expression for the maximum height that the block-projectile system moves up the inclined plane in terms of $v_f$?",
     "options": {
       "A": "$\\frac{v_f^2}{2g}$",
       "B": "$\\frac{v_f}{\\sqrt{2g}}$",
@@ -10990,13 +11006,13 @@
     "year": 2019,
     "question_number": 30,
     "type": "MCQ",
-    "text": "A space shuttle has a mass of 90,000 kilograms . In order\nto stay in a circular orbit, it must have a velocity \nof 8000 meters per seconds . The pilot discovers that the shuttle \nhas slowed down to 7900 meters per seconds , and the shuttle’s \nspeed needs to increase. If the thrusters exert a \nconstant force of 50,000 newtons , how long do the \nthrusters have to exert this force in order to return \nthe shuttle to orbital velocity?",
+    "text": "A space shuttle has a mass of $90{,}000\\,\\mathrm{kg}$. In order to stay in a circular orbit, it must have a velocity of $8000\\,\\mathrm{m/s}$. The pilot discovers that the shuttle has slowed down to $7900\\,\\mathrm{m/s}$, and the shuttle's speed needs to increase. If the thrusters exert a constant force of $50{,}000\\,\\mathrm{N}$, how long do the thrusters have to exert this force in order to return the shuttle to orbital velocity?",
     "options": {
-      "A": "30 seconds",
-      "B": "60 seconds",
-      "C": "120 seconds",
-      "D": "180 seconds",
-      "E": "240 seconds\nT"
+      "A": "$30\\,\\mathrm{s}$",
+      "B": "$60\\,\\mathrm{s}$",
+      "C": "$120\\,\\mathrm{s}$",
+      "D": "$180\\,\\mathrm{s}$",
+      "E": "$240\\,\\mathrm{s}$"
     },
     "answer": "D",
     "image_paths": [],
@@ -11029,16 +11045,18 @@
     "year": 2019,
     "question_number": 31,
     "type": "MCQ",
-    "text": "A pendulum and a spring both have a 1 kilogram sphere\nattached to their ends and have the same length \nwhen in equilibrium, as shown in the figure \nabove. They both oscillate with the same period. \nIf the 1 kilogram spheres are replaced with 2 kilograms spheres \nand the amplitudes of oscillation are unchanged, \nwhich of the following is true about the resultant \nperiod of oscillation for each?\nPendulum \nSpring",
+    "text": "A pendulum and a spring both have a $1\\,\\mathrm{kg}$ sphere attached to their ends and have the same length when in equilibrium, as shown in the figure above. They both oscillate with the same period. If the $1\\,\\mathrm{kg}$ spheres are replaced with $2\\,\\mathrm{kg}$ spheres and the amplitudes of oscillation are unchanged, which of the following is true about the resultant period of oscillation for each?",
     "options": {
-      "A": "Remains the same \nDecreases",
-      "B": "Remains the same \nIncreases",
-      "C": "Remains the same \nRemains the same",
-      "D": "Increases \nRemains the same",
-      "E": "Increases \nIncreases"
+      "A": "Pendulum: remains the same; Spring: decreases",
+      "B": "Pendulum: remains the same; Spring: increases",
+      "C": "Pendulum: remains the same; Spring: remains the same",
+      "D": "Pendulum: increases; Spring: remains the same",
+      "E": "Pendulum: increases; Spring: increases"
     },
     "answer": "B",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2019/2019_p029_img01.png"
+    ],
     "primary_unit": "U7",
     "unit": "U7",
     "unit_name": "Oscillations",
