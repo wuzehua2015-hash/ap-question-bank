@@ -271,6 +271,7 @@ function MockPdfPage() {
                     </div>
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    <RubricDisplay rubric={frq.rubric} variant="pdf" />
                     {(frq.rubric_image_paths || []).map((path, i) => (
                       <img
                         key={`rubric-img-${i}`}
@@ -286,7 +287,6 @@ function MockPdfPage() {
                         }}
                       />
                     ))}
-                    <RubricDisplay rubric={frq.rubric} variant="pdf" />
                   </div>
                 </div>
               ))}

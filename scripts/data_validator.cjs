@@ -85,6 +85,34 @@ function validate(filePath, options = {}) {
     { name: 'physics OCR energy ratio', pattern: /\benergy\s+1\s+U\b|\bratio\s+2\s+U\s+U1\b/i },
     { name: 'physics OCR charge units', pattern: /\bC\s+Q\s+m\b|\bQ\s+m\s*=/i },
     { name: 'physics OCR differential equation', pattern: /\bQ\s+dQ\s+R\s*C\s+dt\b|\b0\s+Q\s+dQ\s+R\s*C\s+dt\b/i },
+    { name: 'physics figure alt-text leakage', pattern: /The figure (?:on the left|on the right|presents|shows).{0,240}(?:vertical axis is labeled|horizontal axis has|straight line graphs? starts)/is },
+    { name: 'physics spoken-number OCR leakage', pattern: /\bOne\s+point\s+zero\s+micro\b|Ne\s+g\s+a\s+tive/i },
+    { name: 'physics yen-sign scientific notation OCR leakage', pattern: /\u00a5/ },
+    { name: 'physics spoken decimal OCR leakage', pattern: /\bz\s*ero\s+point\b|\bzero\s+point\s+\w+/i },
+    { name: 'physics spoken scientific notation OCR leakage', pattern: /\btimes\s+10\s+(?:raised\s+to\s+the\s+power\s+of|to\s+the)\s+negative\b/i },
+    { name: 'physics spoken unit OCR leakage', pattern: /\b(?:negative|positive)\s+\d+(?:,\d+)?\s+(?:electron volts|nanocoulombs)\b|\bmillijoules?\b|\bmilliamps?\b/i },
+    { name: 'physics formula narration OCR leakage', pattern: /\b(?:open|close)\s+parenthesis\b|\bend\s+subscript\b|\bequals\s+the\s+fraction\b|\bwith\s+numerator\b|\bover\s+R\s*C\b/i },
+    { name: 'physics subscript narration OCR leakage', pattern: /\b(?:V|R|A|E|t|epsilon|lambda|sigma|phi|kappa)\s+sub\s+(?:C|max|one|total|\d)\b/i },
+    { name: 'physics split-symbol OCR leakage', pattern: /\b(?:current|force|magnitude|charge|voltage|field|radius|distance|speed|velocity|resistance)\s+[A-Z]\s+[A-Z]\b/i },
+    { name: 'physics signed-variable OCR leakage', pattern: /\b(?:positive|negative)\s+(?:e|q|Q|3\s*q)\b/i },
+    { name: 'physics FRQ function notation OCR leakage', pattern: /\(\s*\)\s*(?:E|V)\s+[a-z]\b/ },
+    { name: 'physics FRQ charge-sum OCR leakage', pattern: /\bT\s+i\s+o\s+Q\s*Q\s*Q\b|\bQ\s+Q\s+Q\s*=\s*\+/i },
+    { name: 'physics FRQ missing formula OCR leakage', pattern: /is given by the expression\s*,\s*where\s*and\s+C\s+is\s+a\s+positive\s+constant/i },
+    { name: 'physics FRQ tofu glyph leakage', pattern: /\u0E00/ },
+    { name: 'physics trailing star artifact', pattern: /\*\s*\*\s*\*/ },
+    { name: 'physics split magnetic-flux OCR leakage', pattern: /\bmagnetic flux\s+[a-z]\s*\n\s*[a-z]\b|\b[a-z]\s+t\s+[a-z]\s*=\s*t\s*\+/i },
+    { name: 'physics split exponential OCR leakage', pattern: /\b0\s+t\s+I\s+I\s+e\s+alpha\b|\bI\s+e\s+alpha\s+-\s*=/i },
+    { name: 'physics unnormalized Ohm OCR leakage', pattern: /\b\d+\s+Omega\s+resistor\b|\bresistance\s+\d+\s+W\s+lies\b/i },
+    { name: 'physics work-symbol OCR leakage', pattern: /\bWELEC\b|\bWEXT\b/i },
+    { name: 'physics incomplete inductor prompt', pattern: /\bAn inductor with inductance\s+potential difference across the inductor\b/i },
+    { name: 'physics malformed roman numeral option', pattern: /"\s*E\s*"\s*:\s*"\s*1\\n\s*,\s*2,\s*and\s*3\s*"/i },
+    { name: 'physics swapped potential-comparison options', pattern: /corner P[\s\S]{0,300}\$V_I<V_\{II\}\$/i },
+    { name: 'physics swapped work-sign options', pattern: /direction\s+of\s+the\s+electric\s+field[\s\S]{0,500}W_\{EXT\}/i },
+    { name: 'physics raw stacked fraction option', pattern: /"\s*[A-E]\s*"\s*:\s*"\s*\d+\s+\d+\\n(?:k|q|R|Q|I)/i },
+    { name: 'physics split field-ratio option', pattern: /"\s*[A-E]\s*"\s*:\s*"\s*(?:4|16)?\s*T\s+E\s*"/i },
+    { name: 'physics split roman numeral list', pattern: /\b1Increasing\b|\bsolenoid\s+3\s+Inserting\b/i },
+    { name: 'physics split voltage labels', pattern: /located\s+on\s+lines\s+2\s+V\s+and\s+4\s+V|equipotential\s+region\s+6\s+V/i },
+    { name: 'physics spoken coordinate OCR leakage', pattern: /\bcoordinate\s+\(0 comma|\bnegative d over 2 comma 0\b/i },
   ]
   const structuredTableHeaderPatterns = [
     /Voltage across\s+Capacitor X\s+Voltage across\s+Capacitor Y\s+Voltage across\s+Capacitor Z/i,
@@ -304,6 +332,13 @@ function validate(filePath, options = {}) {
         errors.push(`${qid}: group member not found: ${memberId}`)
       } else if (member.group_id !== q.group_id) {
         errors.push(`${qid}: group member ${memberId} has mismatched group_id ${member.group_id}`)
+      }
+    }
+    if (isPhysicsEM && /(?:shown above|diagram above|figure above)/i.test(q.text || '')) {
+      const members = q.group_members.map(memberId => byId.get(memberId)).filter(Boolean)
+      const groupHasImage = members.some(member => Array.isArray(member.image_paths) && member.image_paths.length > 0)
+      if (groupHasImage && (!Array.isArray(q.image_paths) || q.image_paths.length === 0)) {
+        errors.push(`${qid}: physics shared-context group references a figure but this member has no image_paths`)
       }
     }
   }

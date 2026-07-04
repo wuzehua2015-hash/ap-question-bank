@@ -30,7 +30,62 @@ const RULES = [
     pattern: /observed expected expected|\(\s*\)\s*\d+\s+\d/,
     message: 'A mathematical formula appears to be OCR-tokenized instead of readable.',
   },
+  {
+    name: 'physics rubric OCR formula fragments',
+    pattern: /\b(?:Q d E A|r r p|Q E r p|i Q|m d f|B Lh|TQV|CTQ|QQV|Q r r p|R s u b|s u b|p e r|Distribution of points o)\b/i,
+    message: 'Physics scoring rubric contains OCR formula fragments instead of readable math text.',
+  },
 ]
+
+function rubricQualityFindings(file, record) {
+  const result = []
+  const relative = path.relative(ROOT, file)
+  const subject = relative.split(path.sep).slice(-2, -1)[0]
+  if (subject !== 'physics-c-e-m') return result
+
+  const rubric = record.rubric
+  const points = rubric && Array.isArray(rubric.points) ? rubric.points : []
+  const text = points.map(point => point.description || point.criteria || point.text || '').join('\n')
+  const normalized = text.replace(/\s+/g, ' ').trim()
+  const hasOfficialImages = Array.isArray(record.rubric_image_paths) && record.rubric_image_paths.length > 0
+  const partMarkers = (normalized.match(/\bPart\s+\([a-z]\)|\([a-z]\)|\bpart\s+[a-z]\b/gi) || []).length
+  const imageReliance = /\b(?:official\s+)?(?:algebra|equation|formula|point-by-point|details?|solution|equivalent\s+forms?)\s+(?:details?\s+)?(?:are\s+)?shown\s+in\s+the\s+rubric\s+images?\b|see\s+rubric\s+images?\b/i
+
+  if ((record.points || rubric?.total_points || 0) >= 15 && points.length <= 1) {
+    result.push({
+      file: relative,
+      question_id: record.question_id || record.id || 'unknown',
+      field: 'rubric.points',
+      rule: 'single-row physics rubric',
+      message: 'Physics FRQ rubric must expose readable part-level scoring rows, not a single 15-point guideline.',
+      sample: normalized.slice(0, 260),
+    })
+  }
+
+  if (points.length <= 1 && (record.points || rubric?.total_points || 0) >= 15 && normalized.length >= 300 && partMarkers < 2) {
+    result.push({
+      file: relative,
+      question_id: record.question_id || record.id || 'unknown',
+      field: 'rubric.points',
+      rule: 'missing part-level rubric structure',
+      message: 'Full-length Physics FRQ rubric should expose scoring by parts, not only a prose overview.',
+      sample: normalized.slice(0, 260),
+    })
+  }
+
+  if (imageReliance.test(normalized)) {
+    result.push({
+      file: relative,
+      question_id: record.question_id || record.id || 'unknown',
+      field: 'rubric.points',
+      rule: 'rubric image reliance',
+      message: 'Physics FRQ rubric text must state the scoring criteria directly; images may supplement but not replace text.',
+      sample: normalized.match(imageReliance)?.[0] || normalized.slice(0, 260),
+    })
+  }
+
+  return result
+}
 
 function walkJsonFiles(dir) {
   const result = []
@@ -72,6 +127,8 @@ for (const file of walkJsonFiles(DATA_ROOT)) {
   if (!Array.isArray(records)) continue
 
   for (const record of records) {
+    findings.push(...rubricQualityFindings(file, record))
+
     for (const [field, text] of rubricTexts(record)) {
       const value = String(text || '')
       for (const rule of RULES) {

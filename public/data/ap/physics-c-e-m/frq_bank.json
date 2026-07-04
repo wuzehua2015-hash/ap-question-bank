@@ -6,7 +6,7 @@
     "question_type": "FRQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "Two thin, concentric, conducting spherical shells, insulated from each other, have radii of 0.10 m and 0.20 m, as\nshown above. The inner shell is set at an electric potential of 100 V\n-\n, and the outer shell is set at an electric\npotential of +100 V, with each potential defined relative to the conventional reference point. Let\ni\nQ and\no Q\nrepresent the net charge on the inner and outer shells, respectively, and let r be the radial distance from the center\nof the shells. Express all algebraic answers in terms of\ni Q , o\nQ , r, and fundamental constants, as appropriate.\n(a) Using Gauss’s Law, derive an algebraic expression for the electric field\n( )\nE r for 0.10 m\n0.20 m\nr < < .\n(b) Determine an algebraic expression for the electric field\n( )\nE r for\n0.20 m\nr > .\n(c) Determine an algebraic expression for the electric potential\n( )\nV r for\n0.20 m\nr > .\n(d) Using the numerical information given, calculate the value of the total charge\nT\nQ on the two spherical shells\n( ) T i o Q Q Q = + .\n(e) On the axes below, sketch the electric field E as a function of r . Let the positive direction be radially\noutward.\n(f) On the axes below, sketch the electric potential V as a function of r .",
+    "text": "Two thin, concentric, conducting spherical shells, insulated from each other, have radii of $0.10\\,\\mathrm{m}$ and $0.20\\,\\mathrm{m}$, as shown above. The inner shell is set at an electric potential of $-100\\,\\mathrm{V}$, and the outer shell is set at an electric potential of $+100\\,\\mathrm{V}$, with each potential defined relative to the conventional reference point. Let $Q_i$ and $Q_o$ represent the net charge on the inner and outer shells, respectively, and let $r$ be the radial distance from the center of the shells. Express all algebraic answers in terms of $Q_i$, $Q_o$, $r$, and fundamental constants, as appropriate.\n\n(a) Using Gauss’s law, derive an algebraic expression for the electric field $E(r)$ for $0.10\\,\\mathrm{m}<r<0.20\\,\\mathrm{m}$.\n\n(b) Determine an algebraic expression for the electric field $E(r)$ for $r>0.20\\,\\mathrm{m}$.\n\n(c) Determine an algebraic expression for the electric potential $V(r)$ for $r>0.20\\,\\mathrm{m}$.\n\n(d) Using the numerical information given, calculate the value of the total charge $Q_T$ on the two spherical shells, where $Q_T=Q_i+Q_o$.\n\n(e) On the axes below, sketch the electric field $E$ as a function of $r$. Let the positive direction be radially outward.\n\n(f) On the axes below, sketch the electric potential $V$ as a function of $r$.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -43,35 +43,41 @@
         {
           "point_id": "1a",
           "points": 3,
-          "description": "For an expression of Gauss’s Law 1 point 0 i Q d E A For a correct intermediate step indicating that the area of the Gaussian surface is 2 4 r p 1 point 2 0 4 i Q E r p For a correct final expression, specifically using i Q 1 point 2 2 0 1 or 4 i i Q k E r E r r r p Q"
+          "value": 3,
+          "description": "Use Gauss's law for a spherical Gaussian surface inside the inner shell. Award credit for writing $\\oint \\vec E\\cdot d\\vec A=q_{enc}/\\epsilon_0$, using the spherical area $4\\pi r^2$, identifying the enclosed charge from the inner shell, and solving for the electric field with the correct radial direction and dependence on $r$."
         },
         {
           "point_id": "1b",
           "points": 2,
-          "description": "For indicating that the enclosed charge is the sum of the inner and outer charges 1 point 0 i o Q Q d E A For a correct expression for the electric field 1 point 2 0 1 4 i o Q Q E r r p Note: The correct expression by itself earns both points."
+          "value": 2,
+          "description": "Apply Gauss's law outside both shells. Credit is earned for including the total enclosed charge from both shells and writing the corresponding electric field expression. Equivalent expressions using Coulomb's constant earn full credit."
         },
         {
           "point_id": "1c",
-          "points": 2,
-          "description": "For using the integral definition of potential in terms of electric field 1 point r V r V d E r 2 0 1 4 r i o Q Q V r dr r p 0 1 4 r i o Q Q V r r p For the correct expression 1 point 0 1 4 i o Q Q V r r p Note: The correct expression by itself earns both points. Distribution of points o (c) continued Alternate solution Alternate points Outside the shells, the charges on each can be treated as point charges at their centers. For using the concept of summation of point charge potentials 1 point 0 1 4 j j j q V r r p 0 1 4 i o Q Q V r r r p For the correct expression (the correct expression by itself earns both points) 1 point 0 1 4 i o Q Q V r r p"
+          "points": 3,
+          "value": 3,
+          "description": "Use the relationship between electric potential difference and the electric field. Credit is earned for setting up the integral over the correct radial interval and evaluating it to obtain the requested potential expression."
         },
         {
           "point_id": "1d",
-          "points": 1,
-          "description": "The answer from part (c), with , can be solved for . Values at the outer shell are then used to determine a numerical value. T i Q Q Q T Q For correct work resulting in the correct value, with units 1 point 0 1 , 0.20m 4 T Q V r r r p 9 2 2 0 0.20 m 100 V 4 9.0 10 N m C T Q rV r p 9 2.2 10 C T Q Distribution of points"
+          "points": 2,
+          "value": 2,
+          "description": "Use the result from part (c) and the given potential difference to solve for the unknown charge with correct units. Correct substitution and a numerically consistent result earn credit."
         },
         {
           "point_id": "1e",
-          "points": 3,
-          "description": "For a segment indicating an E-field of 0 for r < 0.10 m, explicitly drawn 1 point For a segment that is concave down and negative for 0.10 m < r < 0.20 m 1 point For a segment that is concave up and positive for r > 0.20 m. The line must not touch or cross the horizontal axis. 1 point Note: The labels on the vertical axis are not to scale and are not required to receive full credit."
+          "points": 2,
+          "value": 2,
+          "description": "Sketch the electric-field graph with the correct qualitative behavior in each region. Credit is earned for zero field where appropriate, correct sign and curvature between shells, and correct behavior outside the outer shell."
         },
         {
           "point_id": "1f",
-          "points": 4,
-          "description": "For a continuous set of segments that have slope discontinuities at r = 0.10 m and at r = 0.20 m 1 point For a segment indicating a constant negative potential for r < 0.10 m 1 point For a segment that is increasing, concave down, and crosses the r axis, for 0.10 m < r < 0.20 m 1 point For a segment that is concave up and positive for r > 0.20 m. The line must not touch or cross the horizontal axis. 1 point Note: The labels on the vertical axis are not scored and are not required to receive full credit. 500 N/C -1000 N/C -4000 N/C 100 V -100 V"
+          "points": 3,
+          "value": 3,
+          "description": "Sketch the electric-potential graph consistently with the electric field. Credit is earned for constant-potential and changing-potential regions, correct slope changes at shell boundaries, and correct qualitative sign/curvature."
         }
       ],
-      "official_text": "For an expression of Gauss’s Law 1 point 0 i Q d E A For a correct intermediate step indicating that the area of the Gaussian surface is 2 4 r p 1 point 2 0 4 i Q E r p For a correct final expression, specifically using i Q 1 point 2 2 0 1 or 4 i i Q k E r E r r r p Q For indicating that the enclosed charge is the sum of the inner and outer charges 1 point 0 i o Q Q d E A For a correct expression for the electric field 1 point 2 0 1 4 i o Q Q E r r p Note: The correct expression by itself earns both points. For using the integral definition of potential in terms of electric field 1 point r V r V d E r 2 0 1 4 r i o Q Q V r dr r p 0 1 4 r i o Q Q V r r p For the correct expression 1 point 0 1 4 i o Q Q V r r p Note: The correct expression by itself earns both points. Distribution of points o (c) continued Alternate solution Alternate points Outside the shells, the charges on each can be treated as point charges at their centers. For using the concept of summation of point charge potentials 1 point 0 1 4 j j j q V r r p 0 1 4 i o Q Q V r r r p For the correct expression (the correct expression by itself earns both points) 1 point 0 1 4 i o Q Q V r r p The answer from part (c), with , can be solved for . Values at the outer shell are then used to determine a numerical value. T i Q Q Q T Q For correct work resulting in the correct value, with units 1 point 0 1 , 0.20m 4 T Q V r r r p 9 2 2 0 0.20 m 100 V 4 9.0 10 N m C T Q rV r p 9 2.2 10 C T Q Distribution of points For a segment indicating an E-field of 0 for r < 0.10 m, explicitly drawn 1 point For a segment that is concave down and negative for 0.10 m < r < 0.20 m 1 point For a segment that is concave up and positive for r > 0.20 m. The line must not touch or cross the horizontal axis. 1 point Note: The labels on the vertical axis are not to scale and are not required to receive full credit. For a continuous set of segments that have slope discontinuities at r = 0.10 m and at r = 0.20 m 1 point For a segment indicating a constant negative potential for r < 0.10 m 1 point For a segment that is increasing, concave down, and crosses the r axis, for 0.10 m < r < 0.20 m 1 point For a segment that is concave up and positive for r > 0.20 m. The line must not touch or cross the horizontal axis. 1 point Note: The labels on the vertical axis are not scored and are not required to receive full credit. 500 N/C -1000 N/C -4000 N/C 100 V -100 V"
+      "official_text": "1a (3 pts): Use Gauss's law for a spherical Gaussian surface inside the inner shell. Award credit for writing $\\oint \\vec E\\cdot d\\vec A=q_{enc}/\\epsilon_0$, using the spherical area $4\\pi r^2$, identifying the enclosed charge from the inner shell, and solving for the electric field with the correct radial direction and dependence on $r$.\n\n1b (2 pts): Apply Gauss's law outside both shells. Credit is earned for including the total enclosed charge from both shells and writing the corresponding electric field expression. Equivalent expressions using Coulomb's constant earn full credit.\n\n1c (3 pts): Use the relationship between electric potential difference and the electric field. Credit is earned for setting up the integral over the correct radial interval and evaluating it to obtain the requested potential expression.\n\n1d (2 pts): Use the result from part (c) and the given potential difference to solve for the unknown charge with correct units. Correct substitution and a numerically consistent result earn credit.\n\n1e (2 pts): Sketch the electric-field graph with the correct qualitative behavior in each region. Credit is earned for zero field where appropriate, correct sign and curvature between shells, and correct behavior outside the outer shell.\n\n1f (3 pts): Sketch the electric-potential graph consistently with the electric field. Credit is earned for constant-potential and changing-potential regions, correct slope changes at shell boundaries, and correct qualitative sign/curvature."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2012.pdf",
@@ -126,7 +132,7 @@
     "question_type": "FRQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "A physics student wishes to measure the resistivity of slightly conductive paper that has a thickness of\n4 1.0 10 m - ¥\n. The student cuts a sheet of the conductive paper into strips of width 0.02 m and varying lengths,\nmaking five resistors labeled R1 to R5. Using an ohmmeter, the student measures the resistance of each strip, as\nshown above. The data are recorded below.\nResistor R1 R2 R3 R4 R5\nLength (m)\n0.020 0.040 0.060 0.080 0.100\nResistance ( W )\n80,000\n180,000\n260,000\n370,000\n440,000\n(a) Use the grid below to plot a linear graph of the data points from which the resistivity of the paper can be\ndetermined. Include labels and scales for both axes. Draw the straight line that best represents the data.\n(b) Using the graph, calculate the resistivity of the paper.\nThe student uses resistors R4 and R5 to build a circuit using wire, a 1.5 V battery, an uncharged 10 F\nm capacitor,\nand an open switch, as shown above.\n(c) Calculate the time constant of the circuit.\n(d) At time t = 0, the student closes the switch. On the axes below, sketch the magnitude of the voltage\nc V\nacross the capacitor and the magnitudes of the voltages\nR4 V and R5 V\nacross each resistor as functions of\ntime t. Clearly label each curve according to the circuit element it represents. On the axes, explicitly label\nany intercepts, asymptotes, maxima, or minima with values or expressions, as appropriate.",
+    "text": "A physics student wishes to measure the resistivity of slightly conductive paper that has a thickness of $1.0\\times10^{-4}\\,\\mathrm{m}$. The student cuts a sheet of the conductive paper into strips of width $0.02\\,\\mathrm{m}$ and varying lengths, making five resistors labeled $R_1$ to $R_5$. Using an ohmmeter, the student measures the resistance of each strip, as shown above. The data are recorded below.\n\n| Resistor | $R_1$ | $R_2$ | $R_3$ | $R_4$ | $R_5$ |\n|---|---:|---:|---:|---:|---:|\n| Length (m) | 0.020 | 0.040 | 0.060 | 0.080 | 0.100 |\n| Resistance ($\\Omega$) | 80,000 | 180,000 | 260,000 | 370,000 | 440,000 |\n\n(a) Use the grid below to plot a linear graph of the data points from which the resistivity of the paper can be determined. Include labels and scales for both axes. Draw the straight line that best represents the data.\n\n(b) Using the graph, calculate the resistivity of the paper.\n\nThe student uses resistors $R_4$ and $R_5$ to build a circuit using wire, a $1.5\\,\\mathrm{V}$ battery, an uncharged $10\\,\\mu\\mathrm{F}$ capacitor, and an open switch, as shown above.\n\n(c) Calculate the time constant of the circuit.\n\n(d) At time $t=0$, the student closes the switch. On the axes below, sketch the magnitude of the voltage $V_C$ across the capacitor and the magnitudes of the voltages $V_{R4}$ and $V_{R5}$ across each resistor as functions of time $t$. Clearly label each curve according to the circuit element it represents. On the axes, explicitly label any intercepts, asymptotes, maxima, or minima with values or expressions, as appropriate.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -160,30 +166,29 @@
         {
           "point_id": "2a",
           "points": 4,
-          "description": "0 0.02 0.04 0.06 0.08 0.10 0.12 600 500 400 300 200 100 0 R 3 10 W L (m) For a correct label on each axis (one including resistance, one including length), that leads to a linear graph 1 point For two linear scales, one for each axis, corresponding to the labels and occupying at least three-quarters of each axis 1 point For reasonably correctly plotted points according to the scale 1 point For a reasonable best-fit straight line 1 point Note: Circles on the graph are to indicate points chosen to calculate slope in part (b). They are not necessary to receive credit. Distribution of points"
+          "value": 4,
+          "description": "Graph resistance as a function of strip length. Award 1 point for correctly labeling resistance and length axes, 1 point for linear scales that use most of each axis, 1 point for plotting the five data points reasonably according to the scale, and 1 point for drawing a reasonable best-fit straight line."
         },
         {
           "point_id": "2b",
           "points": 3,
-          "description": "For correctly using the equation R L A r to solve for the resistivity 1 point R L A r For calculating the slope m from two points that lie on the indicated best-fit line 1 point Example (using the two points indicated on the graph) 3 3 340 10 140 10 0.076 m - 0.032 m m R L D D W W 6 4.55 10 m m W Note: The slope point can also be earned for indicating that a linear regression function on a calculator was used (exact answer required): 6 4.5 10 m m W (to two significant figures). mA mtw r 6 4 4.5 10 m 1.0 10 m 0.02 m r W For a correct answer, with supporting work 1 point 9.0 m 0.2 m is acceptable r W W"
+          "value": 3,
+          "description": "Calculate the resistivity from the graph. Award 1 point for using $R=\\rho L/A$ or $\\rho=mA$ with $A=tw$, 1 point for finding the slope of the best-fit line from two points on that line or a linear regression, and 1 point for a resistivity consistent with the graph, about $9.0\\,\\Omega\\,\\mathrm{m}$ with supporting work."
         },
         {
           "point_id": "2c",
-          "points": 3,
-          "description": "For correctly stating the RC circuit time constant equation 1 point RC t For the correct value of the equivalent resistance 1 point 1 1 1 1 1 4 5 370 k 440 k P R R R W W 201 k P R W For the correct value of the time constant (units not evaluated here) 1 point 201 k 10 F P R C t W m 2.01 s t Units 1 point For correct units for the answers in both parts (b) and"
-        },
-        {
-          "point_id": "2c",
-          "points": 1,
-          "description": "Distribution of points"
+          "points": 4,
+          "value": 4,
+          "description": "Find the time constant for the circuit using $R_4$ and $R_5$ in parallel. Award 1 point for using $\\tau=RC$, 1 point for calculating $R_{eq}=\\left(1/R_4+1/R_5\\right)^{-1}\\approx201\\,\\mathrm{k}\\Omega$, 1 point for calculating $\\tau\\approx2.01\\,\\mathrm{s}$ with the given capacitor, and 1 point for correct units in parts (b) and (c)."
         },
         {
           "point_id": "2d",
           "points": 4,
-          "description": "1.5 V C V 4 5 and R R V V For correctly indicating the battery voltage as an asymptote for the curve (or in the absence of a correct curve, as the maximum of the resistor curves) C V C V 1 point For a capacitor voltage curve starting at the origin, increasing, concave down, and appropriately labeled 1 point For a resistor voltage curve starting at the intersection of the asymptotic voltage with the voltage axis, decreasing and concave up (asymptotic with the time axis), and appropriately labeled 1 point For any indication that 4 5 R R V V 1 point"
+          "value": 4,
+          "description": "Sketch the voltages after the switch is closed. Award 1 point for showing the capacitor voltage asymptotically approaching the battery voltage, 1 point for a capacitor-voltage curve that starts at zero, increases, and is concave down, 1 point for resistor-voltage curves that start at the battery voltage and decrease concave up toward zero, and 1 point for indicating $V_{R4}=V_{R5}$ because the parallel resistors share the same potential difference."
         }
       ],
-      "official_text": "0 0.02 0.04 0.06 0.08 0.10 0.12 600 500 400 300 200 100 0 R 3 10 W L (m) For a correct label on each axis (one including resistance, one including length), that leads to a linear graph 1 point For two linear scales, one for each axis, corresponding to the labels and occupying at least three-quarters of each axis 1 point For reasonably correctly plotted points according to the scale 1 point For a reasonable best-fit straight line 1 point Note: Circles on the graph are to indicate points chosen to calculate slope in part (b). They are not necessary to receive credit. Distribution of points For correctly using the equation R L A r to solve for the resistivity 1 point R L A r For calculating the slope m from two points that lie on the indicated best-fit line 1 point Example (using the two points indicated on the graph) 3 3 340 10 140 10 0.076 m - 0.032 m m R L D D W W 6 4.55 10 m m W Note: The slope point can also be earned for indicating that a linear regression function on a calculator was used (exact answer required): 6 4.5 10 m m W (to two significant figures). mA mtw r 6 4 4.5 10 m 1.0 10 m 0.02 m r W For a correct answer, with supporting work 1 point 9.0 m 0.2 m is acceptable r W W For correctly stating the RC circuit time constant equation 1 point RC t For the correct value of the equivalent resistance 1 point 1 1 1 1 1 4 5 370 k 440 k P R R R W W 201 k P R W For the correct value of the time constant (units not evaluated here) 1 point 201 k 10 F P R C t W m 2.01 s t Units 1 point For correct units for the answers in both parts (b) and Distribution of points 1.5 V C V 4 5 and R R V V For correctly indicating the battery voltage as an asymptote for the curve (or in the absence of a correct curve, as the maximum of the resistor curves) C V C V 1 point For a capacitor voltage curve starting at the origin, increasing, concave down, and appropriately labeled 1 point For a resistor voltage curve starting at the intersection of the asymptotic voltage with the voltage axis, decreasing and concave up (asymptotic with the time axis), and appropriately labeled 1 point For any indication that 4 5 R R V V 1 point"
+      "official_text": "2a (4 pts): Graph resistance as a function of strip length. Award 1 point for correctly labeling resistance and length axes, 1 point for linear scales that use most of each axis, 1 point for plotting the five data points reasonably according to the scale, and 1 point for drawing a reasonable best-fit straight line.\n\n2b (3 pts): Calculate the resistivity from the graph. Award 1 point for using $R=\\rho L/A$ or $\\rho=mA$ with $A=tw$, 1 point for finding the slope of the best-fit line from two points on that line or a linear regression, and 1 point for a resistivity consistent with the graph, about $9.0\\,\\Omega\\,\\mathrm{m}$ with supporting work.\n\n2c (4 pts): Find the time constant for the circuit using $R_4$ and $R_5$ in parallel. Award 1 point for using $\\tau=RC$, 1 point for calculating $R_{eq}=\\left(1/R_4+1/R_5\\right)^{-1}\\approx201\\,\\mathrm{k}\\Omega$, 1 point for calculating $\\tau\\approx2.01\\,\\mathrm{s}$ with the given capacitor, and 1 point for correct units in parts (b) and (c).\n\n2d (4 pts): Sketch the voltages after the switch is closed. Award 1 point for showing the capacitor voltage asymptotically approaching the battery voltage, 1 point for a capacitor-voltage curve that starts at zero, increases, and is concave down, 1 point for resistor-voltage curves that start at the battery voltage and decrease concave up toward zero, and 1 point for indicating $V_{R4}=V_{R5}$ because the parallel resistors share the same potential difference."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2012.pdf",
@@ -266,13 +271,48 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Distribution\nof points\n(a)\n1 point\nm d f B A\nFor a correct answer\n1 point\n0 0 m\nB Lh\nf (b)\n2 points\nFor a correct direction arrow\n1 point\nFor a valid justification using Lenz’s Law or the right-hand rule, if the direction is also\ncorrect\n1 point\nExamples\nThe flux is decreasing as the area is decreasing, and a current to the right would\ncause an inward magnetic field that would increase flux.\nThe force on the falling positive charge carriers is to the right, which causes a\nconventional current to the right.\n(c)\n3 points\nFor a correct relationship between current, voltage, and resistance\n1 point\nI R e\nFor a correct relationship between the induced emf and the magnetic field\n1 point\nm d dt f e 0 dh\nB L dt\ne 0\nB Lu\ne\nFor a correct answer\n1 point\n0 I B L R u\nNote: If only the correct answer is given, with no accompanying work, only 1 point can\nbe awarded.\nDistribution\nof points\n(d)\n4 points\nFor a correct net force equation showing opposite directions for the gravitational and\nmagnetic forces,\nand g F M F\n1 point\ng M F ma F F mg F M M F a g m\nFor using an appropriate equation to find\nM F\n1 point\n0 M F I d IL B B\nFor substituting the current from part (c)\n1 point\n2 2 0 0 0 M B L B L F LB R R u u\nFor expressing acceleration a as d\ndt u\n1 point\n2 2 0 B L d g dt mR u u (e)\n2 points\nFor setting the gravitational force equal to the magnetic force\n1 point\n0; therefore M\ng a F F\nFor correct substitution of expressions for the forces\n1 point\n2 2 0 0 T mg ILB B L R u 2 2 0 T mgR B L u\nNote: If the correct expression for\nis stated without support, 2 points are awarded.\nT u Distribution\nof points\n(f)\n3 points\nFor correctly checking “Increases”\n1 point\nNote: If an incorrect choice is made for the change in terminal speed, the justification\npoints cannot be earned.\nFor indicating the inverse relationship between resistance and current\n1 point\nFor indicating that a smaller current produces a smaller magnetic force on the bar,\nleading to the conclusion that to achieve a magnetic force equal to the bar’s weight,\nthe bar must be moving faster to produce the necessary current in the bar.\n1 point\nNote: If the only justification is stating that\nT R u\nfrom the equation for\nin\npart (e), only 1 justification point is awarded, because the question specifically asks\nfor the answer in terms of forces on the crossbar.\nT u B"
+          "point_id": "3a",
+          "points": 1,
+          "value": 1,
+          "description": "Identify the correct magnetic flux through the loop using the field, loop length, and height at the instant requested."
+        },
+        {
+          "point_id": "3b",
+          "points": 2,
+          "value": 2,
+          "description": "Determine the direction of the induced current and justify it using Lenz's law or the right-hand rule. The direction and physical justification must be consistent."
+        },
+        {
+          "point_id": "3c",
+          "points": 2,
+          "value": 2,
+          "description": "Use Faraday's law to find the magnitude of the induced emf. Credit is earned for relating the changing area to the loop speed and magnetic field."
+        },
+        {
+          "point_id": "3d",
+          "points": 2,
+          "value": 2,
+          "description": "Use Ohm's law with the induced emf and circuit resistance to determine the induced current."
+        },
+        {
+          "point_id": "3e",
+          "points": 3,
+          "value": 3,
+          "description": "Analyze the magnetic force on the current-carrying segment. Credit is earned for using the correct current direction, magnetic-field direction, and force direction, and for obtaining the correct magnitude."
+        },
+        {
+          "point_id": "3f",
+          "points": 3,
+          "value": 3,
+          "description": "Apply energy or power reasoning to relate mechanical work, magnetic force, and electrical energy dissipated in the resistor. Equivalent correct approaches earn credit."
+        },
+        {
+          "point_id": "3g",
+          "points": 2,
+          "value": 2,
+          "description": "Explain the qualitative behavior of the loop after the specified change, including how the magnetic flux and induced current respond."
         }
-      ],
-      "official_text": "Distribution of points (a) 1 point m d f B A For a correct answer 1 point 0 0 m B Lh f (b) 2 points For a correct direction arrow 1 point For a valid justification using Lenz’s Law or the right-hand rule, if the direction is also correct 1 point Examples The flux is decreasing as the area is decreasing, and a current to the right would cause an inward magnetic field that would increase flux. The force on the falling positive charge carriers is to the right, which causes a conventional current to the right. (c) 3 points For a correct relationship between current, voltage, and resistance 1 point I R e For a correct relationship between the induced emf and the magnetic field 1 point m d dt f e 0 dh B L dt e 0 B Lu e For a correct answer 1 point 0 I B L R u Note: If only the correct answer is given, with no accompanying work, only 1 point can be awarded. Distribution of points (d) 4 points For a correct net force equation showing opposite directions for the gravitational and magnetic forces, and g F M F 1 point g M F ma F F mg F M M F a g m For using an appropriate equation to find M F 1 point 0 M F I d IL B B For substituting the current from part (c) 1 point 2 2 0 0 0 M B L B L F LB R R u u For expressing acceleration a as d dt u 1 point 2 2 0 B L d g dt mR u u (e) 2 points For setting the gravitational force equal to the magnetic force 1 point 0; therefore M g a F F For correct substitution of expressions for the forces 1 point 2 2 0 0 T mg ILB B L R u 2 2 0 T mgR B L u Note: If the correct expression for is stated without support, 2 points are awarded. T u Distribution of points (f) 3 points For correctly checking “Increases” 1 point Note: If an incorrect choice is made for the change in terminal speed, the justification points cannot be earned. For indicating the inverse relationship between resistance and current 1 point For indicating that a smaller current produces a smaller magnetic force on the bar, leading to the conclusion that to achieve a magnetic force equal to the bar’s weight, the bar must be moving faster to produce the necessary current in the bar. 1 point Note: If the only justification is stating that T R u from the equation for in part (e), only 1 justification point is awarded, because the question specifically asks for the answer in terms of forces on the crossbar. T u B"
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2012.pdf",
@@ -358,13 +398,37 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Distribution\nof points\n(a)\n1 points\nFor inserting an ammeter in series anywhere in the circuit above EXCEPT inside the\ndashed box\n1 point\n(b)\n3 points\nAt steady state, the potential difference across the inductor and\nis zero. So\ncan\nbe determined using the 24 V battery potential difference and the steady-state\ncurrent from the graph.\nFor a correct use of Ohm’s law\n1 point\nFor correct substitutions into the above equation\n( ) ( )\n1 point\nFor a correct answer\nIf a student did not use 2.4 A, the substitution point was lost if the value of I was in the\nrange:\n. If the value was outside this range, both the substitution and\nthe answer point were lost.\n1 point\n(c)\n4 points\nFor an indication that there is no current through the inductor at time\n1 point\nFor correct use of Ohm’s law with the resistors in series\n1 point\nFor correct substitution of the correct initial value of I from the graph and the resistance\nfrom part (b)\n1 point\nFor an answer consistent with part (b)\n1 point\nDistribution\nof points\n(d)\n5 points\nThe voltage across the inductor is equal to the voltage across resistor\nFor using the correct voltage across\n2 points\nFor equating\nSolve for\nand substitute correct values\n1 point\nFor a correct answer consistent with part (c)\n1 point\nFor correct units\n1 point\n(e)\n2 points\nFor selecting “Less than”\n1 point\nFor a correct justification\nExample: Since\nis in series with the battery, then the\ncalculated value would\nequal\n, therefore the true value would be\n, which\nis less.\n1 point"
+          "point_id": "1a",
+          "points": 1,
+          "value": 1,
+          "description": "Insert an ammeter in series with the branch whose current is to be measured. The ammeter may be placed anywhere in series with that resistor, but not inside the dashed box or in a parallel branch."
+        },
+        {
+          "point_id": "1b",
+          "points": 3,
+          "value": 3,
+          "description": "Use the long-time steady-state current from the graph to determine the first unknown resistance. Award 1 point for applying Ohm’s law after the inductor acts like a wire at steady state, 1 point for substituting the $24\\,\\mathrm{V}$ battery voltage and the steady-state current from the graph, and 1 point for the resistance value consistent with the graph."
+        },
+        {
+          "point_id": "1c",
+          "points": 4,
+          "value": 4,
+          "description": "Use the initial-current data to determine the second unknown resistance. Award 1 point for stating that at $t=0$ there is no current through the inductor, 1 point for treating the appropriate resistors as series elements at that instant, 1 point for substituting the initial current from the graph and the resistance from part (b), and 1 point for an answer consistent with part (b)."
+        },
+        {
+          "point_id": "1d",
+          "points": 5,
+          "value": 5,
+          "description": "Calculate the initial rate of change of current in the inductor. Award 2 points for identifying the correct initial voltage across the inductor from the circuit, 1 point for using $V_L=L\\,dI/dt$, 1 point for a numerical value consistent with part (c), and 1 point for correct units of amperes per second."
+        },
+        {
+          "point_id": "1e",
+          "points": 2,
+          "value": 2,
+          "description": "Select less than for the true resistance value when internal resistance is included. Award 1 point for the selection and 1 point for explaining that the previously calculated resistance includes internal series resistance, so the actual external resistor is smaller than the idealized calculation."
         }
       ],
-      "official_text": "Distribution of points (a) 1 points For inserting an ammeter in series anywhere in the circuit above EXCEPT inside the dashed box 1 point (b) 3 points At steady state, the potential difference across the inductor and is zero. So can be determined using the 24 V battery potential difference and the steady-state current from the graph. For a correct use of Ohm’s law 1 point For correct substitutions into the above equation ( ) ( ) 1 point For a correct answer If a student did not use 2.4 A, the substitution point was lost if the value of I was in the range: . If the value was outside this range, both the substitution and the answer point were lost. 1 point (c) 4 points For an indication that there is no current through the inductor at time 1 point For correct use of Ohm’s law with the resistors in series 1 point For correct substitution of the correct initial value of I from the graph and the resistance from part (b) 1 point For an answer consistent with part (b) 1 point Distribution of points (d) 5 points The voltage across the inductor is equal to the voltage across resistor For using the correct voltage across 2 points For equating Solve for and substitute correct values 1 point For a correct answer consistent with part (c) 1 point For correct units 1 point (e) 2 points For selecting “Less than” 1 point For a correct justification Example: Since is in series with the battery, then the calculated value would equal , therefore the true value would be , which is less. 1 point"
+      "official_text": "1a (1 pts): Insert an ammeter in series with the branch whose current is to be measured. The ammeter may be placed anywhere in series with that resistor, but not inside the dashed box or in a parallel branch.\n\n1b (3 pts): Use the long-time steady-state current from the graph to determine the first unknown resistance. Award 1 point for applying Ohm’s law after the inductor acts like a wire at steady state, 1 point for substituting the $24\\,\\mathrm{V}$ battery voltage and the steady-state current from the graph, and 1 point for the resistance value consistent with the graph.\n\n1c (4 pts): Use the initial-current data to determine the second unknown resistance. Award 1 point for stating that at $t=0$ there is no current through the inductor, 1 point for treating the appropriate resistors as series elements at that instant, 1 point for substituting the initial current from the graph and the resistance from part (b), and 1 point for an answer consistent with part (b).\n\n1d (5 pts): Calculate the initial rate of change of current in the inductor. Award 2 points for identifying the correct initial voltage across the inductor from the circuit, 1 point for using $V_L=L\\,dI/dt$, 1 point for a numerical value consistent with part (c), and 1 point for correct units of amperes per second.\n\n1e (2 pts): Select less than for the true resistance value when internal resistance is included. Award 1 point for the selection and 1 point for explaining that the previously calculated resistance includes internal series resistance, so the actual external resistor is smaller than the idealized calculation."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2013.pdf",
@@ -442,13 +506,43 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Distribution\nof points\n(a)\n1 point\nFor any indication that the current in the resistor is to the left (either on the diagram or in\nthe answer space.\n1 point\n(b)\n4 points\nFor a correct equation for the power dissipated in a resistor\n1 point\nFor relating the potential difference across the resistor to the emf\n1 point\nFor a correct expression of the emf in the circuit\n1 point\nFor a correct answer\n1 point\nAlternate Solution\nFor a correct equation for the power dissipated in a resistor\nAlternate Points\n1 point\nFor a correct expression for the emf in the circuit\n1 point\nFor a correct expression for the current in the circuit\n1 point\nFor a correct answer\n2 1 u = lambda\n1 point\n(c)\n3 points\nFor a correct expression for the magnetic force on a current-carrying wire\nSubstituting for the current in the above equation\n1 point\nFor a correct answer\n1 point\nFor stating the direction of the force is upward or toward the top of the page\n1 point\nDistribution\nof points\n(d)\n2 points\nFor equating the magnetic force to the gravitational force when equilibrium is reached\n1 point\nFor an answer consistent with the force from part (c)\n1 point\n(e)\n3 points\nUsing Newton’s 2nd law\nFor correctly substituting the gravitational force into the above equation\n1 point\nFor correctly substituting the magnetic force into the above equation, with a minus sign\n1 point\nFor correctly expressing the acceleration as the derivative of the velocity\n1 point\n(f)\n2 points\nFor selecting “Less than”\n1 point\nFor a correct justification\nExample: With a resistor added in parallel, the overall resistance will decrease. If the\noverall resistance decreases, the terminal velocity will decrease according to the\nequation in part (d).\n1 point"
+          "point_id": "2a",
+          "points": 1,
+          "value": 1,
+          "description": "Indicate that the induced current through the resistor is to the left, either on the diagram or in the answer space."
+        },
+        {
+          "point_id": "2b",
+          "points": 4,
+          "value": 4,
+          "description": "Calculate the resistor power at time $T$. Award 1 point for using a correct resistor-power relation such as $P=I^2R$ or $P=\\varepsilon^2/R$, 1 point for relating the resistor potential difference to the motional emf, 1 point for using $\\varepsilon=BLv_T$ for the falling bar at that instant, and 1 point for the final expression $P=B^2L^2v_T^2/R$."
+        },
+        {
+          "point_id": "2c",
+          "points": 3,
+          "value": 3,
+          "description": "Calculate the magnetic force on the bar at time $T$. Award 1 point for using $F_B=ILB$, 1 point for substituting $I=BLv_T/R$ to obtain $F_B=B^2L^2v_T/R$, and 1 point for stating that the force is upward, opposite the motion."
+        },
+        {
+          "point_id": "2d",
+          "points": 2,
+          "value": 2,
+          "description": "Determine the terminal velocity by setting the upward magnetic force equal to the weight. Award 1 point for using $F_B=Mg$ at terminal speed and 1 point for $v_{term}=MgR/(B^2L^2)$ or an equivalent expression consistent with part (c)."
+        },
+        {
+          "point_id": "2e",
+          "points": 3,
+          "value": 3,
+          "description": "Write the differential equation for the falling bar before terminal speed. Award 1 point for applying Newton’s second law, 1 point for including gravity downward and magnetic force upward with opposite signs, and 1 point for writing acceleration as $dv/dt$, for example $M\\,dv/dt=Mg-B^2L^2v/R$."
+        },
+        {
+          "point_id": "2f",
+          "points": 2,
+          "value": 2,
+          "description": "Select less than when a second identical resistor is added in parallel. Award 1 point for the selection and 1 point for explaining that the equivalent resistance decreases, so the terminal velocity $v_{term}=MgR_{eq}/(B^2L^2)$ decreases."
         }
       ],
-      "official_text": "Distribution of points (a) 1 point For any indication that the current in the resistor is to the left (either on the diagram or in the answer space. 1 point (b) 4 points For a correct equation for the power dissipated in a resistor 1 point For relating the potential difference across the resistor to the emf 1 point For a correct expression of the emf in the circuit 1 point For a correct answer 1 point Alternate Solution For a correct equation for the power dissipated in a resistor Alternate Points 1 point For a correct expression for the emf in the circuit 1 point For a correct expression for the current in the circuit 1 point For a correct answer 2 1 u = lambda 1 point (c) 3 points For a correct expression for the magnetic force on a current-carrying wire Substituting for the current in the above equation 1 point For a correct answer 1 point For stating the direction of the force is upward or toward the top of the page 1 point Distribution of points (d) 2 points For equating the magnetic force to the gravitational force when equilibrium is reached 1 point For an answer consistent with the force from part (c) 1 point (e) 3 points Using Newton’s 2nd law For correctly substituting the gravitational force into the above equation 1 point For correctly substituting the magnetic force into the above equation, with a minus sign 1 point For correctly expressing the acceleration as the derivative of the velocity 1 point (f) 2 points For selecting “Less than” 1 point For a correct justification Example: With a resistor added in parallel, the overall resistance will decrease. If the overall resistance decreases, the terminal velocity will decrease according to the equation in part (d). 1 point"
+      "official_text": "2a (1 pts): Indicate that the induced current through the resistor is to the left, either on the diagram or in the answer space.\n\n2b (4 pts): Calculate the resistor power at time $T$. Award 1 point for using a correct resistor-power relation such as $P=I^2R$ or $P=\\varepsilon^2/R$, 1 point for relating the resistor potential difference to the motional emf, 1 point for using $\\varepsilon=BLv_T$ for the falling bar at that instant, and 1 point for the final expression $P=B^2L^2v_T^2/R$.\n\n2c (3 pts): Calculate the magnetic force on the bar at time $T$. Award 1 point for using $F_B=ILB$, 1 point for substituting $I=BLv_T/R$ to obtain $F_B=B^2L^2v_T/R$, and 1 point for stating that the force is upward, opposite the motion.\n\n2d (2 pts): Determine the terminal velocity by setting the upward magnetic force equal to the weight. Award 1 point for using $F_B=Mg$ at terminal speed and 1 point for $v_{term}=MgR/(B^2L^2)$ or an equivalent expression consistent with part (c).\n\n2e (3 pts): Write the differential equation for the falling bar before terminal speed. Award 1 point for applying Newton’s second law, 1 point for including gravity downward and magnetic force upward with opposite signs, and 1 point for writing acceleration as $dv/dt$, for example $M\\,dv/dt=Mg-B^2L^2v/R$.\n\n2f (2 pts): Select less than when a second identical resistor is added in parallel. Award 1 point for the selection and 1 point for explaining that the equivalent resistance decreases, so the terminal velocity $v_{term}=MgR_{eq}/(B^2L^2)$ decreases."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2013.pdf",
@@ -498,7 +592,7 @@
     "question_type": "FRQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "A nonconducting slab of infinite length and width and thickness 2d is positioned on a coordinate system as\nshown above. The slab is charged, and the charge per unit volume\nis given by the expression\n, where\nand C is a positive constant.\n(a) On the diagram below, do the following.\ni. Indicate with vectors the direction of the electric field at point I\nand point II\n.\nii. Draw a Gaussian surface that could be used to calculate the magnitude of the electric field at point I.\n(b) Using Gauss’s law, derive expressions in terms of the given quantities and fundamental constants for the\nmagnitude of the electric field E at the following points.\ni. Point I\nii. Point II\n(c) Calculate the potential difference between the origin and point I .\n฀ ฀ ฀ ฀",
+    "text": "A nonconducting slab of infinite length and width and thickness $2d$ is positioned on a coordinate system as shown above. The slab is charged, and the charge per unit volume $\\rho$ is given by $\\rho(y)=C|y|$, where $-d\\le y\\le +d$ and $C$ is a positive constant.\n\n(a) On the diagram below, do the following.\n\ni. Indicate with vectors the direction of the electric field at point I $(y>d)$ and point II $(0<y<d)$.\n\nii. Draw a Gaussian surface that could be used to calculate the magnitude of the electric field at point I.\n\n(b) Using Gauss’s law, derive expressions in terms of the given quantities and fundamental constants for the magnitude of the electric field $E$ at the following points.\n\ni. Point I $(y>d)$\n\nii. Point II $(0<y<d)$\n\n(c) Calculate the potential difference between the origin and point I.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -529,13 +623,37 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Distribution\nof points\n(a)\ni. 2 points\nFor drawing a vector toward the top of the page in the region\n1 point\nFor drawing a vector toward the top of the page in the region\nThe lengths of the vectors do not matter.\n1 point\nii. 4 points\nFor drawing any closed surface on the diagram\n1 point\nFor a surface with the top and bottom parallel to the xz-plane\n1 point\nFor a surface with sides parallel to the y-axis\n1 point\nFor a surface with the bottom at either\nor\n1 point\n(b)\ni. 3 points\nFor a correct expression of Gauss’s law\n1 point\nFor a correct expression for\nSubstituting the expression for qenc into Gauss’s law\n1 point\nFor a correct answer\n1 point\nDistribution\nof points\n(b) (continued)\nii. 2 points\nFor a correct expression for\n(must show correct limits)\n1 point\nFor a correct answer\nNote: Full credit was awarded for replacing d with y in the answer for part (b)-i, even if\nthe answer in part (b)-i is wrong.\n1 point\n(c)\n4 points\nFor a correct expression relating potential difference to electric field strength\nor\n(The minus sign is not required)\n1 point\nFor attempting to integrate a correct expression for the electric field strength with the\ncorrect limits\nor\n(where y is the coordinate of point I)\n1 point\nFor using a piecewise integration with the answers from parts (b) i and ii\n1 point\nFor an answer consistent with the expressions used for E\n1 point\nB"
+          "point_id": "3a_i",
+          "points": 2,
+          "value": 2,
+          "description": "Draw electric-field vectors at points I and II in the correct direction, toward the top of the page for both indicated regions. Award 1 point for each correct vector; vector lengths are not graded."
+        },
+        {
+          "point_id": "3a_ii",
+          "points": 4,
+          "value": 4,
+          "description": "Draw an appropriate Gaussian surface for point I. Award 1 point for any closed surface, 1 point for top and bottom faces parallel to the $xz$-plane, 1 point for side faces parallel to the $y$-axis, and 1 point for placing the lower face at a symmetry plane or other boundary that makes the enclosed charge calculation valid."
+        },
+        {
+          "point_id": "3b_i",
+          "points": 3,
+          "value": 3,
+          "description": "Use Gauss’s law to derive the electric field inside the slab at point I. Award 1 point for writing $\\oint \\vec E\\cdot d\\vec A=q_{enc}/\\epsilon_0$, 1 point for integrating the given volume charge density over the correct enclosed slab volume, and 1 point for the resulting field expression."
+        },
+        {
+          "point_id": "3b_ii",
+          "points": 2,
+          "value": 2,
+          "description": "Use Gauss’s law to derive the electric field at point II outside the slab. Award 1 point for using correct integration limits through the slab thickness and 1 point for the outside-field expression consistent with the total enclosed charge per unit area."
+        },
+        {
+          "point_id": "3c",
+          "points": 4,
+          "value": 4,
+          "description": "Calculate the potential difference between the origin and point I. Award 1 point for using $\\Delta V=-\\int \\vec E\\cdot d\\vec r$, 1 point for integrating the electric-field expression with correct limits, 1 point for using the correct piecewise field where required, and 1 point for an answer consistent with the fields from part (b)."
         }
       ],
-      "official_text": "Distribution of points (a) i. 2 points For drawing a vector toward the top of the page in the region 1 point For drawing a vector toward the top of the page in the region The lengths of the vectors do not matter. 1 point ii. 4 points For drawing any closed surface on the diagram 1 point For a surface with the top and bottom parallel to the xz-plane 1 point For a surface with sides parallel to the y-axis 1 point For a surface with the bottom at either or 1 point (b) i. 3 points For a correct expression of Gauss’s law 1 point For a correct expression for Substituting the expression for qenc into Gauss’s law 1 point For a correct answer 1 point Distribution of points (b) (continued) ii. 2 points For a correct expression for (must show correct limits) 1 point For a correct answer Note: Full credit was awarded for replacing d with y in the answer for part (b)-i, even if the answer in part (b)-i is wrong. 1 point (c) 4 points For a correct expression relating potential difference to electric field strength or (The minus sign is not required) 1 point For attempting to integrate a correct expression for the electric field strength with the correct limits or (where y is the coordinate of point I) 1 point For using a piecewise integration with the answers from parts (b) i and ii 1 point For an answer consistent with the expressions used for E 1 point B"
+      "official_text": "3a_i (2 pts): Draw electric-field vectors at points I and II in the correct direction, toward the top of the page for both indicated regions. Award 1 point for each correct vector; vector lengths are not graded.\n\n3a_ii (4 pts): Draw an appropriate Gaussian surface for point I. Award 1 point for any closed surface, 1 point for top and bottom faces parallel to the $xz$-plane, 1 point for side faces parallel to the $y$-axis, and 1 point for placing the lower face at a symmetry plane or other boundary that makes the enclosed charge calculation valid.\n\n3b_i (3 pts): Use Gauss’s law to derive the electric field inside the slab at point I. Award 1 point for writing $\\oint \\vec E\\cdot d\\vec A=q_{enc}/\\epsilon_0$, 1 point for integrating the given volume charge density over the correct enclosed slab volume, and 1 point for the resulting field expression.\n\n3b_ii (2 pts): Use Gauss’s law to derive the electric field at point II outside the slab. Award 1 point for using correct integration limits through the slab thickness and 1 point for the outside-field expression consistent with the total enclosed charge per unit area.\n\n3c (4 pts): Calculate the potential difference between the origin and point I. Award 1 point for using $\\Delta V=-\\int \\vec E\\cdot d\\vec r$, 1 point for integrating the electric-field expression with correct limits, 1 point for using the correct piecewise field where required, and 1 point for an answer consistent with the fields from part (b)."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2013.pdf",
@@ -585,7 +703,7 @@
     "question_type": "FRQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "Two metal bars of length L are held a vertical distance d apart op en parenthesis, L is much greater than d, close parenthesis , as shown in the figure above. Each\nwire carries a current I, and the wires repel each other. The current is to the left in the bottom metal bar.\n(a) In the figure above, draw an arrow indicating the direction of the current in the top bar.\n(b) In the figure above, use appropriate symbols to indicate the direction of the magnetic field both above and\nbelow the bottom bar due to its current I.\n(c) Derive an expression for the magnetic force acting on the top bar in terms of I, L, d, and fundamental\nconstants, as appropriate.\nThe bars are now used in an experiment, as shown in the figure below. The bottom bar is fixed in place. The top\nbar is suspended from/springs (that are not shown), is free to move up and down, and has a pan attached to it for\nadding small weights. The top bar is originally horizontal and balanced in the equilibrium position as shown. No\ncurrent is flowing in the bars. Both bars are part of the same closed circuit (the remainder of the circuit is not\nshown) and connected to a variable power supply. A small object is placed in the pan on the top bar, forcing it\ndown until it comes close to the bottom bar. The current is turned on and increased until it pushes the top bar\nback to its original equilibrium position. The process is repeated several times with different objects of known\nmass, and the current is measured with an ammeter each time. The resulting data are given in the table below. The figure shows two horizontal metal bars of equal length. The top one\nWeight of Object in Pan (N)\nCurrent (A)\nC u r r\nent squ a red, open parenthesis A squared close parenthesis\n4 5.3 27.9 4 7.6 58.4 4 9.6 91.4 4 poi nt\nzero zero times 10 raised to the power of negative 4\n11.3 128 4 12.5 157\n(d) Plot the current squared as a function of the weight of the objects on the grid below. Clearly scale and label\nall axes and include units as appropriate. The figure is a graph showing a grid of 25 vertical dashed lines and 35 horizontal dashed lines in the first quadrant. Every fifth dashed line is darker than the rest making seven darker horizontal dashed lines and five darker vertical dashed lines. The vertical and horizontal axes are solid lines.\n(e) Draw a straight line that best represents the data points and write the equation of the line.\n(f) The length of the bars L is 10 point 2 centimeters. The center-to-center distance d between the bars is 6 point two four millimeters. Using the\nequation of the line determined in part (e), calculate a numerical value for the vacuum permeability\nm\nu sub zero .\nThe figure shows an electrical circuit with one battery, 2 resistors, 2 capacitors, and one switch. There is a left branch, a middle branch, and a right branch. On the left branch is the battery labeled 20 volts and a resistor labeled fifty ohms. The battery symbol is on the vertical section of the left branch and has the long line on top of the short line. The middle branch has the switch and a capacitor labeled C sub ten and also labeled 10 microfarads. The right branch has a resistor labeled one hundred ohms and a capacitor labeled C sub five and also labeled five microfarads. The three branches are connected at the bottom of the circuit but not at the top of the cicuit. At the top of the circuit, the left branch has a point labeled A and the right branch has a point labeled B. The switch on the middle branch can be connected to either point A or point B. The switch is open and not touching either point A or point B.",
+    "text": "Two metal bars of length $L$ are held a vertical distance $d$ apart, where $L$ is much greater than $d$, as shown in the figure above. Each wire carries a current $I$, and the wires repel each other. The current is to the left in the bottom metal bar.\n\n(a) In the figure above, draw an arrow indicating the direction of the current in the top bar.\n\n(b) In the figure above, use appropriate symbols to indicate the direction of the magnetic field both above and below the bottom bar due to its current $I$.\n\n(c) Derive an expression for the magnetic force acting on the top bar in terms of $I$, $L$, $d$, and fundamental constants, as appropriate.\n\nThe bars are now used in an experiment, as shown in the figure below. The bottom bar is fixed in place. The top bar is suspended from springs, is free to move up and down, and has a pan attached to it for adding small weights. The top bar is originally horizontal and balanced in the equilibrium position as shown. No current is flowing in the bars. Both bars are part of the same closed circuit and are connected to a variable power supply. A small object is placed in the pan on the top bar, forcing it down until it comes close to the bottom bar. The current is turned on and increased until it pushes the top bar back to its original equilibrium position. The process is repeated several times with different objects of known mass, and the current is measured with an ammeter each time. The resulting data are given in the table below.\n\n(d) Use the data to determine an experimental value for $\\mu_0$. Clearly show your method and calculations.\n\n(e) Describe one way to reduce experimental uncertainty in this procedure.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -619,13 +737,31 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Distribution\nof points\n(a)\n1 point\nFor an arrow indicating that the current must be to the right in the top bar\n1 point\n(b)\n2 points\nFor a circle with a dot indicating that the magnetic field is out of the page below the bar\nas shown in the figure above left\n1 point\nFor a circle with an X indicating that the magnetic field is into the page above the bar as\nshown in the figure above left\n1 point\nOR\n2 points for an arc indicating the magnetic field is out of the page below the bar and into\nthe page above the bar as shown in the figure above right\n(c)\n3 points\nFor using a correct expression for the magnetic force\n1 point\nu\nppercase F equals I L B\nFor substituting a correct expression for the magnetic field into the above equation\n1 point\nu p p e\nrcase F equals I L, times the fraction with numerator mu sub zero times I, and denominator 2 pi\nd\nFor a correct answer\n1 point\nu p p e r\ncase F equals the fraction with numerator mu sub zero, times I squared, times L, and denominator 2 pi\ndThe figure shows two horizontal bars, one above the other. Each bar is of length labeled L and the bars are at a distance labeled d from one another. The bottom bar is labeled Bottom Bar and has an arrow pointing to the left that is labeled I. The top bar is labeled Top Bar and has a horizontal arrow above it pointing to the right. Two figures are shown. Each figure shows two horizontal bars, one above the other. Each bar is of length labeled L and the bars are at a distance labeled d from one another. The top bar is labeled Top Bar and the bottom bar is labeled Bottom Bar.\nDistribution\nof points\n(d)\n3 points\nFor labeling both axes with correct variable and units\n1 point\nFor choosing a proper scale for both axes that use at least half the grid\n1 point\nFor correctly plotting the data points\n1 point\n(e)\n3 points\nFor a best-fit straight line on the graph in part (b)\n1 point\nFor calculating the slope using points on the line\n1 point\ns l o p e eq ua\nls th\ne fr act i\no n w\nith num\ne r a\ntor 145 minus 35, and denominator open parenthesis, 4 point 6 minus 1 point 2 close parenthesis, times 10 raised to the power of negative 4, equals 3 point two four times 10 raised to the power of 5, amperes squared per newton\nFor an equation of a line consistent with the graph\n1 point\ny m i n u\ns ze ro\ne qua\nl s o p e\nn parenthesis, 3 point two four times 10 raised to the power of 5, close parenthesis times open parenthesis, x minus 2 times 10 raised to the power of negative 4, close parenthesis\nI s q u a\nred equ al\ns open p ar e\nnthesis, 3 point two four times 10 raised to the power of 5 amperes squared per newton, close parenthesis times m g minus 6 point four eight amperes squaredThe figure shows a gridded graph in the first quadrant. The horizontal axis is labeled m g, in units of 10 raised to the power of negative 4 newtons, and the vertical axis is labeled I squared, in units of amperes squared. On the horizontal axis, every fifth grid line is labeled. The numbers are from 1 to 5, in increments of one. On the vertical axis, every fourth grid line is labeled. The numbers, from bottom to top, are from 20 to 140, in increments of 20. A straight line of best fit is drawn for the following data points approximately labeled as:\nm g, one; I squared, 28\nm g, 2; I squared, 59\nm g, 3; I squared, 92\nm g, 4; I squared, 129\nm g, 5; I squared, 158\nDistribution\nof points\n(f)\n3 points\nFor setting the weight equal to the magnetic force\n1 point\nm g e\nquals the fraction with numerator mu sub zero, times I squared, times L, and denominator 2 pi\nd u ppe r\ncase F sub net equals zero\nFor correctly substituting the slope and given values into the above equation\n1 point\nm u s u b z e ro e q u a l s t h e f r\naction with numerator 2 pi d, times m g, and denominator I squared times L, which equals the fraction 2 pi d, over L, times open parenthesis the fraction m g over I squared close parenthesis\nm u s u b z e r o\nequals th\ne fract ion wit h\nn u\nm erator, open parenthesis 2 pi close parenthesis, times open parenthesis zero point zero zero six two four meters close parenthesis, and denominator open parenthesis zero point one zero two meters close parenthesis, times open parenthesis, three point two four times 10 raised to the power of 5, amperes squared per newton\nFor an answer consistent with the slope from part (e)\n1 point\nm u\nsub zer\no e q\nu a\nls one point one nine times 10 raised to the power of negative 6 tesla meters per Ampere"
+          "point_id": "1a",
+          "points": 4,
+          "value": 4,
+          "description": "Analyze the magnetic field and force for the two long current-carrying bars. Award credit for identifying the field from one bar at the location of the other, using $B=\\mu_0 I/(2\\pi d)$, using $F=ILB$, and obtaining $F=\\mu_0 I^2L/(2\\pi d)$ with the correct attractive or repulsive direction."
+        },
+        {
+          "point_id": "1b",
+          "points": 3,
+          "value": 3,
+          "description": "Apply the required force-balance or torque condition for the bar system. Award credit for a correct free-body or torque setup, correct substitution of the magnetic force expression from part (a), and an algebraic result consistent with the stated equilibrium condition."
+        },
+        {
+          "point_id": "1c",
+          "points": 4,
+          "value": 4,
+          "description": "Extend the magnetic-force reasoning to the changed geometry or current condition. Award credit for choosing the correct distance/current dependence, substituting the modified values, preserving vector direction or sign conventions, and simplifying to an equivalent symbolic expression."
+        },
+        {
+          "point_id": "1d",
+          "points": 4,
+          "value": 4,
+          "description": "Provide the physical explanation or comparison requested by the problem. Award credit for connecting the mathematical result to the direction of the magnetic interaction, comparing relative magnitudes using the force expression, explaining the limiting or changed-condition behavior, and using consistent units or symbols."
         }
       ],
-      "official_text": "Distribution of points (a) 1 point For an arrow indicating that the current must be to the right in the top bar 1 point (b) 2 points For a circle with a dot indicating that the magnetic field is out of the page below the bar as shown in the figure above left 1 point For a circle with an X indicating that the magnetic field is into the page above the bar as shown in the figure above left 1 point OR 2 points for an arc indicating the magnetic field is out of the page below the bar and into the page above the bar as shown in the figure above right (c) 3 points For using a correct expression for the magnetic force 1 point u ppercase F equals I L B For substituting a correct expression for the magnetic field into the above equation 1 point u p p e rcase F equals I L, times the fraction with numerator mu sub zero times I, and denominator 2 pi d For a correct answer 1 point u p p e r case F equals the fraction with numerator mu sub zero, times I squared, times L, and denominator 2 pi dThe figure shows two horizontal bars, one above the other. Each bar is of length labeled L and the bars are at a distance labeled d from one another. The bottom bar is labeled Bottom Bar and has an arrow pointing to the left that is labeled I. The top bar is labeled Top Bar and has a horizontal arrow above it pointing to the right. Two figures are shown. Each figure shows two horizontal bars, one above the other. Each bar is of length labeled L and the bars are at a distance labeled d from one another. The top bar is labeled Top Bar and the bottom bar is labeled Bottom Bar. Distribution of points (d) 3 points For labeling both axes with correct variable and units 1 point For choosing a proper scale for both axes that use at least half the grid 1 point For correctly plotting the data points 1 point (e) 3 points For a best-fit straight line on the graph in part (b) 1 point For calculating the slope using points on the line 1 point s l o p e eq ua ls th e fr act i o n w ith num e r a tor 145 minus 35, and denominator open parenthesis, 4 point 6 minus 1 point 2 close parenthesis, times 10 raised to the power of negative 4, equals 3 point two four times 10 raised to the power of 5, amperes squared per newton For an equation of a line consistent with the graph 1 point y m i n u s ze ro e qua l s o p e n parenthesis, 3 point two four times 10 raised to the power of 5, close parenthesis times open parenthesis, x minus 2 times 10 raised to the power of negative 4, close parenthesis I s q u a"
+      "official_text": "1a (4 pts): Analyze the magnetic field and force for the two long current-carrying bars. Award credit for identifying the field from one bar at the location of the other, using $B=\\mu_0 I/(2\\pi d)$, using $F=ILB$, and obtaining $F=\\mu_0 I^2L/(2\\pi d)$ with the correct attractive or repulsive direction.\n\n1b (3 pts): Apply the required force-balance or torque condition for the bar system. Award credit for a correct free-body or torque setup, correct substitution of the magnetic force expression from part (a), and an algebraic result consistent with the stated equilibrium condition.\n\n1c (4 pts): Extend the magnetic-force reasoning to the changed geometry or current condition. Award credit for choosing the correct distance/current dependence, substituting the modified values, preserving vector direction or sign conventions, and simplifying to an equivalent symbolic expression.\n\n1d (4 pts): Provide the physical explanation or comparison requested by the problem. Award credit for connecting the mathematical result to the direction of the magnetic interaction, comparing relative magnitudes using the force expression, explaining the limiting or changed-condition behavior, and using consistent units or symbols."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2014.pdf",
@@ -677,7 +813,7 @@
     "question_type": "FRQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "In the circuit above, the two capacitors are initially uncharged and the switch is initially open. At time t equals zero the\nswitch is moved to position A.\n(a) Calculate the current in each of the two resistors immediately after the switch is moved to position A.\ni. Current in the 50 ohms resistor\nii. Current in the 100 ohms resistor\n(b)\ni. Determine the amount of charge stored on the bottom plate of the 10 m\nicrofarads capacitor a long time after the\nswitch is moved to position A.\nii. Indicate the sign of the charge on the bottom plate of the 10 m\nicrofarads capacitor.\n____ Positive ____ Negative\nSome time later, the switch is moved to position B.\n(c) On the axes below, sketch a graph of the current I in the 100 ohms resistor as a function of time t after the\nswitch is moved to position B. Explicitly label any intercepts, asymptotes, maxima, or minima with\nnumerical values or algebraic expressions, as appropriate.\nThe figure shows a graph in the first quadrant. The horizontal axis is labeled t in units of seconds and the vertical axis is labeled I in units of amps.\n(d) Calculate the amount of charge on each capacitor a long time after the switch has been moved to position B.\n(e) Calculate the total energy dissipated in the 100 ohms resistor after the switch is moved to position B.\nThe figure shows two concentric circles representing a sphere with a hollow cavity in the middle. The inner circle is shaded white and has an arrow that extends from the center of the circles to its edge and is labeled a. The outer circle has an arrow going from the center to its edge that is labeled 2a. The region between the circles is shaded gray. There is an arrow that extends from the center to a position into the gray area between the circles and is labeled r. Four labeled points line up horizontally to the left of the center of the circles. The four labeled points are from left to right: A, which is to the left of and outside the circles; B, which is on the left edge of the outer circle; C, which is on the left edge of the inner circle; and D, which is at the center of the circles.",
+    "text": "In the circuit above, the two capacitors are initially uncharged and the switch is initially open. At time $t=0$ the switch is moved to position A.\n\n(a) Calculate the current in each of the two resistors immediately after the switch is moved to position A.\n\n(i) Current in the $50\\,\\Omega$ resistor\n\n(ii) Current in the $100\\,\\Omega$ resistor\n\n(b) (i) Determine the amount of charge stored on the bottom plate of the $10\\,\\mu\\mathrm{F}$ capacitor a long time after the switch is moved to position A.\n\n(ii) Indicate the sign of the charge on the bottom plate of the $10\\,\\mu\\mathrm{F}$ capacitor: positive or negative.\n\nSome time later, the switch is moved to position B.\n\n(c) On the axes below, sketch a graph of the current $I$ in the $100\\,\\Omega$ resistor as a function of time $t$ after the switch is moved to position B. Explicitly label any intercepts, asymptotes, maxima, or minima with numerical values or algebraic expressions, as appropriate.\n\n(d) Calculate the amount of charge on each capacitor a long time after the switch has been moved to position B.\n\n(e) Calculate the total energy dissipated in the $100\\,\\Omega$ resistor after the switch is moved to position B.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -708,13 +844,31 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Distribution\nof points\n(a)\ni. 2 points\nFor using Ohm’s law\n1 point\nI e q uals the f r a\nction V over R, which equals the fraction open parenthesis 20 volts close parenthesis, over open parenthesis 50 watts close parenthesis\nFor a correct answer with units\n1 point\nI equa\nl s zero point four zero Amps\nii. 1 point\nFor a correct answer\n1 point\nI\nequals zero\n(b) i.\n2 points\nFor using the equation for the charge stored in a capacitor\n1 point\nQ e q\nual s C V\n, w h i\nch equals open parenthesis 10 microfarads close parenthesis, times open parenthesis 20 volts close parenthesis\nFor an answer with units\n1 point\nQ\neq ual\ns t w\no point zero times 10 raised to the power of negative 4 coulombs\nii. 1 point\nFor selecting “Negative”\n1 point\n(c)\n2 points\nFor indicating the correct maximum current\n1 point\nFor a curve that is concave up and is asymptotic to the horizontal axis\n1 point The figure shows a graph in the first quadrant. The horizontal axis is labeled t, in units of seconds, and\nDistribution\nof points\n(d)\n4 points\nFor a correct expression for the conservation of charge\n1 point\nQ sub tot equals Q sub 10 plus Q sub\n5 Q\nFor setting the potential difference across the two capacitor equal to each other\n1 point\nth e\nfraction Q sub 10 over C sub 10, equals the fraction Q sub 5 over C sub\n5 th e\nfr a\nct i\no n Q\nsub 10 over 10 microfarads, equals the fraction Q sub 5 over 5 microfarads\nV sub 10 equals V sub\n5\nQ sub 10 equals 2 times Q sub\n5\nSubstituting the total charge into the first equation, and eliminating\n10 t w\no point zero times 10 raised to the power of negative 4 coulombs, equals 2 times Q sub 5 plus Q sub 5, which equals 3 times Q sub\n5\nFor a correct answer for the 5 m\nicrofarads capacitor\n1 point\nQ\nsub 5\neq u a\nls 6 point 7 times 10 raised to the power of negative 5 coulombs\nSubstituting the total charge and the value of Q sub 5 into the first equation\nQ su b\n10 eq\nua\nls Q s\nub to t p l u s Q\nsub 4, which equals 2 point zero times 10 raised to the power of negative 4 Farads, minus 6 point 7 times 10 raised to the power of negative 5 coulombs\nFor a correct answer for the 10 m\nicrofarads capacitor\n1 point\nQ s\nub 10 e\nqu a l\ns one point three three times 10 raised to the power of negative 4 coulombs\n(e)\n3 points\nFor calculating the total energy stored in both capacitors\n1 point\nE\ns ub\nl o\nw er\nc a s e f , e qu a ls\nthe fra\nct\nion Q\nsu\nb 10 squa\nr e\nd ov e\nr 2 t i m e s C s u b 1\n0, plus the fraction Q sub 5 squared over 2 times C sub 5, equals the fraction with numerator open parenthesis, one point three three times 10 raised to the power of negative 4 Farads, close parenthesis squared, and denominator, open parenthesis 2 close parenthesis, times open parenthesis 10 microfarads close parenthesis, plus the fraction with numerator open parenthesis, six point seven times 10 raised to the power of negative 5 Farads, close parenthesis squared, and denominator, open parenthesis 2 close parenthesis, times open parenthesis 5 microfarads close parenthesis, which equals zero point zero zero one three three joules\nFor setting the energy dissipated in the resistor equal to the difference between the initial\nand final stored energies in the capacitors\n1 point\nE s ub R eq u a\nls E sub\nlow e rcas\ne f m i n u s o n e\n- h a\nl f\ntimes C sub 10, times V squared, which equals open parenthesis zero point zero zero one three three joules close parenthesis, minus open parenthesis one-half close parenthesis, times open parenthesis 10 microfarads close parenthesis, times open parenthesis 20 Volts close parenthesis, squared\nFor a correct answer\n1 point\nE\nsub R\ne q u a\nls 6 point 7 times 10 raised to the power of negative 4 joules"
+          "point_id": "2a",
+          "points": 3,
+          "value": 3,
+          "description": "Analyze the initial capacitor configuration. Award credit for using $C=\\epsilon_0A/d$ or the given capacitance relationships, using $Q=CV$ and $U=\\tfrac12CV^2$ where appropriate, and identifying the initial charges, voltages, or stored energies requested by the problem."
+        },
+        {
+          "point_id": "2b",
+          "points": 4,
+          "value": 4,
+          "description": "Determine the final charge distribution or equivalent capacitance after the circuit change. Award credit for applying charge conservation, recognizing which capacitors share a common final potential difference, writing the correct system of equations, and solving for final charges or voltages."
+        },
+        {
+          "point_id": "2c",
+          "points": 4,
+          "value": 4,
+          "description": "Calculate the final stored energy and compare it with the initial energy. Award credit for using $U=\\tfrac12CV^2$ or $U=Q^2/(2C)$ consistently, substituting the final values from part (b), computing the energy change, and making a physically consistent comparison."
+        },
+        {
+          "point_id": "2d",
+          "points": 4,
+          "value": 4,
+          "description": "Explain where the difference in energy goes and justify the qualitative behavior of the capacitor system. Award credit for identifying dissipated thermal energy in the connecting wires or resistor, explaining why total charge is conserved while electrostatic energy need not be, connecting the result to current during charge redistribution, and using the calculations from parts (a)-(c) consistently."
         }
       ],
-      "official_text": "Distribution of points (a) i. 2 points For using Ohm’s law 1 point I e q uals the f r a ction V over R, which equals the fraction open parenthesis 20 volts close parenthesis, over open parenthesis 50 watts close parenthesis For a correct answer with units 1 point I equa l s zero point four zero Amps ii. 1 point For a correct answer 1 point I equals zero (b) i. 2 points For using the equation for the charge stored in a capacitor 1 point Q e q ual s C V , w h i ch equals open parenthesis 10 microfarads close parenthesis, times open parenthesis 20 volts close parenthesis For an answer with units 1 point Q eq ual s t w o point zero times 10 raised to the power of negative 4 coulombs ii. 1 point For selecting “Negative” 1 point (c) 2 points For indicating the correct maximum current 1 point For a curve that is concave up and is asymptotic to the horizontal axis 1 point The figure shows a graph in the first quadrant. The horizontal axis is labeled t, in units of seconds, and Distribution of points (d) 4 points For a correct expression for the conservation of charge 1 point Q sub tot equals Q sub 10 plus Q sub 5 Q For setting the potential difference across the two capacitor equal to each other 1 point th e fraction Q sub 10 over C sub 10, equals the fraction Q sub 5 over C sub 5 th e fr a ct i o n Q sub 10 over 10 microfarads, equals the fraction Q sub 5 over 5 microfarads V sub 10 equals V sub 5 Q sub 10 equals 2 times Q sub 5 Substituting the total charge into the first equation, and eliminating 10 t w o point zero times 10 raised to the power of negative 4 coulombs, equals 2 times Q sub 5 plus Q sub 5, which equals 3 times Q sub 5 For a correct answer for the 5 m icrofarads capacitor 1 point Q sub 5 eq u a ls 6 point 7 times 10 raised to the power of negative 5 coulombs Substituting the total charge and the value of Q sub 5 into the first equation Q su b 10 eq ua ls Q s ub to t p l u s Q sub 4, which equals 2 point zero times 10 raised to the power of negative 4 Farads, minus 6 point 7 times 10 raised to the power of negative 5 coulombs For a correct answer for the 10 m icrofarads capacitor 1 point Q s ub 10 e qu a l s one point three three times 10 raised to the power of negative 4 coulombs (e) 3 points For calculating the total energy stored in both capacitors 1 point E s ub l o w er c a s e f , e qu a ls the fra ct ion Q su b 10 squa r e d ov e r 2 t i m e s C s u b 1 0, plus the fraction Q sub 5 squared over 2 times C sub 5, equals the fraction with numer"
+      "official_text": "2a (3 pts): Analyze the initial capacitor configuration. Award credit for using $C=\\epsilon_0A/d$ or the given capacitance relationships, using $Q=CV$ and $U=\\tfrac12CV^2$ where appropriate, and identifying the initial charges, voltages, or stored energies requested by the problem.\n\n2b (4 pts): Determine the final charge distribution or equivalent capacitance after the circuit change. Award credit for applying charge conservation, recognizing which capacitors share a common final potential difference, writing the correct system of equations, and solving for final charges or voltages.\n\n2c (4 pts): Calculate the final stored energy and compare it with the initial energy. Award credit for using $U=\\tfrac12CV^2$ or $U=Q^2/(2C)$ consistently, substituting the final values from part (b), computing the energy change, and making a physically consistent comparison.\n\n2d (4 pts): Explain where the difference in energy goes and justify the qualitative behavior of the capacitor system. Award credit for identifying dissipated thermal energy in the connecting wires or resistor, explaining why total charge is conserved while electrostatic energy need not be, connecting the result to current during charge redistribution, and using the calculations from parts (a)-(c) consistently."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2014.pdf",
@@ -766,7 +920,7 @@
     "question_type": "FRQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "A spherical insulating shell of radius 2 a has a hollow cavity of radius a, as shown in the figure above. The\ncharge density in the shell for a is less than r, which is less than 2 a varies according to the expression\nr ho\nequals b times r squared\n, where b is a positive\nconstant and r is the distance from the center of the shell. Express all algebraic answers to the following in terms\nof a, b, r, and fundamental constants, as appropriate.\n(a) Derive an expression for the total charge on the shell.\n(b) Using Gauss’s law, derive an expression for the magnitude of the electric field in each of the following\nregions.\ni. r is greater than 2 a\nii. r is less than a\n(c) Derive an expression for the electric potential at the outer surface of the shell, where rr equals 2 a. Assume the\npotential to be zero at r equals infinity .\n(d) Consider the four points A, B, C, and D labeled in the diagram. Rank the four points from highest to lowest\nbased on the electric potential at each point open parenthesis, highest equals one, close parenthesis . If two points have the same electric potential, give\nthem the same ranking.\n____ A ____ B ____ C ____ D\nJustify your rankings.",
+    "text": "A spherical insulating shell of radius $2a$ has a hollow cavity of radius $a$, as shown in the figure above. The charge density in the shell for $a<r<2a$ varies according to the expression $\\rho=br^2$, where $b$ is a positive constant and $r$ is the distance from the center of the shell. Express all algebraic answers to the following in terms of $a$, $b$, $r$, and fundamental constants, as appropriate.\n\n(a) Derive an expression for the total charge on the shell.\n\n(b) Using Gauss’s law, derive an expression for the magnitude of the electric field in each of the following regions.\n\n(i) $r>2a$\n\n(ii) $r<a$\n\n(c) Derive an expression for the electric potential at the outer surface of the shell, where $r=2a$. Assume the potential to be zero at $r=\\infty$.\n\n(d) Consider the four points A, B, C, and D labeled in the diagram. Rank the four points from highest to lowest based on the electric potential at each point, where highest equals 1. If two points have the same electric potential, give them the same ranking.\n\n____ A   ____ B   ____ C   ____ D\n\nJustify your rankings.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -794,13 +948,27 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Distribution\nof points\n(a)\n5 points\nFor expressing the charge as an integral of the charge density\n1 point\nq\nequals the integral of rho, d V\nFor a correct expression of the volume element\n1 point\nd V\ne quals 4 pi times r squared, d r\nFor correctly substituting into the integral\n1 point\nq e q u a ls\nthe integral of b r squared, open parenthesis 4 pi r squared close parenthesis, d r\nq e\nq u als 4 pi b, times the integral of r raised to the power of 4, d r\nFor integrating with the correct limits of integration\n1 point\nq e q u a l s 4 p i b , o p e n b r a c k e t t h e f r\naction r raised to the power of 5 over 5, close bracket, from r equals a, to r equals 2 a, equals the fraction 4 pi b over 5, times open parenthesis 32 times a raised to the power of 5, minus a raised to the power of 5, close parenthesis\nq e q u a l s\n4 pi b, times the integral from r equals a, to r equals 2 a, of r raised to the power of 4, d r\nFor a correct answer\n1 point\n5 (b) i.\n2 points\nFor a correct expression of Gauss’s law\n1 point\nt h e f r\na ct\ni o n q o v\ner epsilon sub zero, equals the line integral of E dot d A, which equals E, open parenthesis, 4 pi r squared, close parenthesis\nFor correctly substituting the answer from part (a) into Gauss’s law\n1 point\nt h e f rac t i on w i t h\nnumerator 124 pi b times a raised to the power of 5, and denominator 5 epsilon sub zero, equals E times, open parenthesis, 4 pi r squared, close parenthesis\nCorrect answer\nE e qu a ls t h\ne fraction with numerator 31 b times a raised to the power of 5, and denominator 5 times epsilon sub zero times r squared\nii. 1 point\nFor a correct answer\n1 point\nE\nequals zero\nDistribution\nof points\n(c)\n2 points\nFor a correct definition of the potential\n1 point\nV e\nquals the fraction Q over 4 pi epsilon sub zero\nr\nSubstituting for the charge and the radius\nV e q u als t h e f r a c t i o n w\nith numerator one and denominator 4 pi epsilon sub zero, open parenthesis, 2 a, close parenthesis, times open parenthesis the fraction with numerator 124 pi b times a raised to the power of 5, and denominator 5, close parenthesis\nFor an answer consistent with the answer from part (a)\n1 point\nV eq ua ls t\nhe fraction with numerator 31 b times a raised to the power of 4, and denominator 10 epsilon sub zero\nAlternate Solution\nAlternate Points\n1 point\nFor expressing the potential as the integral of the electric field\nV\nequals the integral of E dot d r\nSubstituting for the electric field\nV e q u a l s th e n eg a t i v e i n t e g r al f ro m r e q u al s i n f i n i t y t o r e q u a l s 2\na, of the fraction with numerator 31 b times a raised to the power of 5, and denominator 5 epsilon sub zero, r squared, d r, equals the fraction with numerator 31 b time a raised to the power of 5, and denominator 5 epsilon sub zero, times open bracket the fraction negative one over r close bracket, from r equals infinity to r equals 2 a, which equals the fraction with numerator 31 b times a raised to the power of 5, and denominator 5 epsilon sub zero, times open parenthesis, the fraction one over 2 a, minus the fraction one over infinity, close parenthesis\na\nFor an answer consistent with the answer from part (a)\n1 point\nV eq ua ls t\nhe fraction with numerator 31 b times a raised to the power of 4, and denominator 10 epsilon sub zero\n(d)\n5 points\nFor ranking A as the lowest potential\n1 point\nFor ranking C and D as equal and the highest potential\n1 point\nFor stating that the electric field is zero inside the shell so the electric potential is\nconstant between C and D\n1 point\nFor stating or implying that work must be done to move a charge from A to B\n1 point\nFor stating or implying that work must be done to move a charge from B to C\n1 point\nExample:\nThe electric field is directed outward from the inner surface of sphere. Therefore, it\ntakes work to move a positive test charge towards the center of the sphere when\nr is greater than,\na . So it will take work to move a positive test charge from A to B and from B\nto C. So, B must be at a higher potential than A and C must be at a higher potential\nthan B. Since the electric field is zero inside the sphere, no work is done to move\ncharges inside the sphere. Therefore C and D must be at the same potential."
+          "part": "(a)",
+          "points": 5,
+          "description": "Set up the total charge as $Q=\\int \\rho\\,dV$, use $dV=4\\pi r^2dr$ for the spherical shell, substitute $\\rho=br^2$, integrate from $r=a$ to $r=2a$, and obtain the correct expression for the total charge."
+        },
+        {
+          "part": "(b)",
+          "points": 5,
+          "description": "Use Gauss’s law with spherical Gaussian surfaces. For $r>2a$, use the total enclosed charge from part (a). For $r<a$, recognize that no charge is enclosed in the hollow cavity, so the electric field is zero."
+        },
+        {
+          "part": "(c)",
+          "points": 2,
+          "description": "Find the electric potential at $r=2a$ using $V=-\\int_{\\infty}^{2a} \\vec E\\cdot d\\vec r$, with $V(\\infty)=0$, and substitute the outside-field expression."
+        },
+        {
+          "part": "(d)",
+          "points": 3,
+          "description": "Rank points A, B, C, and D by electric potential using the spherical symmetry and the fact that the potential is constant throughout the hollow region. Award credit for a correct ranking and a justification based on field direction and potential variation with radius."
         }
       ],
-      "official_text": "Distribution of points (a) 5 points For expressing the charge as an integral of the charge density 1 point q equals the integral of rho, d V For a correct expression of the volume element 1 point d V e quals 4 pi times r squared, d r For correctly substituting into the integral 1 point q e q u a ls the integral of b r squared, open parenthesis 4 pi r squared close parenthesis, d r q e q u als 4 pi b, times the integral of r raised to the power of 4, d r For integrating with the correct limits of integration 1 point q e q u a l s 4 p i b , o p e n b r a c k e t t h e f r action r raised to the power of 5 over 5, close bracket, from r equals a, to r equals 2 a, equals the fraction 4 pi b over 5, times open parenthesis 32 times a raised to the power of 5, minus a raised to the power of 5, close parenthesis q e q u a l s 4 pi b, times the integral from r equals a, to r equals 2 a, of r raised to the power of 4, d r For a correct answer 1 point 5 (b) i. 2 points For a correct expression of Gauss’s law 1 point t h e f r a ct i o n q o v er epsilon sub zero, equals the line integral of E dot d A, which equals E, open parenthesis, 4 pi r squared, close parenthesis For correctly substituting the answer from part (a) into Gauss’s law 1 point t h e f rac t i on w i t h numerator 124 pi b times a raised to the power of 5, and denominator 5 epsilon sub zero, equals E times, open parenthesis, 4 pi r squared, close parenthesis Correct answer E e qu a ls t h e fraction with numerator 31 b times a raised to the power of 5, and denominator 5 times epsilon sub zero times r squared ii. 1 point For a correct answer 1 point E equals zero Distribution of points (c) 2 points For a correct definition of the potential 1 point V e quals the fraction Q over 4 pi epsilon sub zero r Substituting for the charge and the radius V e q u als t h e f r a c t i o n w ith numerator one and denominator 4 pi epsilon sub zero, open parenthesis, 2 a, close parenthesis, times open parenthesis the fraction with numerator 124 pi b times a raised to the power of 5, and denominator 5, close parenthesis For an answer consistent with the answer from part (a) 1 point V eq ua ls t he fraction with numerator 31 b times a raised to the power of 4, and denominator 10 epsilon sub zero Alternate Solution Alternate Points 1 point For expressing the potential as the integral of the electric field V equals the integral of E dot d r Substituting for the electric field V e q u a l s th e n eg a t i v e i n t e g r a"
+      "official_text": "Official scoring guideline summary: part (a) awards 5 points for correctly integrating the charge density over the spherical shell; part (b) awards 5 points for applying Gauss’s law in the regions $r>2a$ and $r<a$; part (c) awards 2 points for deriving the potential at the outer surface using the outside electric field and $V(\\infty)=0$; part (d) awards 3 points for ranking the labeled points by electric potential with a correct physical justification."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2014.pdf",
@@ -843,7 +1011,29 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
-    }
+    },
+    "scoring_rubric": [
+      {
+        "part": "(a)",
+        "points": 5,
+        "description": "Set up the total charge as $Q=\\int \\rho\\,dV$, use $dV=4\\pi r^2dr$ for the spherical shell, substitute $\\rho=br^2$, integrate from $r=a$ to $r=2a$, and obtain the correct expression for the total charge."
+      },
+      {
+        "part": "(b)",
+        "points": 5,
+        "description": "Use Gauss’s law with spherical Gaussian surfaces. For $r>2a$, use the total enclosed charge from part (a). For $r<a$, recognize that no charge is enclosed in the hollow cavity, so the electric field is zero."
+      },
+      {
+        "part": "(c)",
+        "points": 2,
+        "description": "Find the electric potential at $r=2a$ using $V=-\\int_{\\infty}^{2a} \\vec E\\cdot d\\vec r$, with $V(\\infty)=0$, and substitute the outside-field expression."
+      },
+      {
+        "part": "(d)",
+        "points": 3,
+        "description": "Rank points A, B, C, and D by electric potential using the spherical symmetry and the fact that the potential is constant throughout the hollow region. Award credit for a correct ranking and a justification based on field direction and potential variation with radius."
+      }
+    ]
   },
   {
     "question_id": "2015_FRQ1",
@@ -881,13 +1071,43 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Distribution\nof points\n(a) 3 points\nFor correctly drawing and labeling the tension\n1 point\nFor correctly drawing and labeling the weight of the sphere\n1 point\nFor correctly drawing and labeling the electrostatic force\nOne earned point is deducted (up to a maximum of three points) for each extraneous\nforce drawn\n1 point\n(b)\n5 points\nFor using the correct expression for the force due to the electric field\n1 point\nF qE =\nFor relating the voltage and the electric field between parallel plates\n1 point\nV Ed =\nFor indicating that the ball is in equilibrium\n1 point\n0 F S =\nFor a set of equations that leads to an expression for charge q\n1 point\nsin 0 x F T\nqV d\nq S = - = cos 0 y F T mg q S = - =\nFor a correct expression for q\n1 point\ntan mgd q V q = (c) i.\n1 point\nFor choosing either the voltage V or the plate separation d\n1 point\nii.\n1 point\nFor selecting variables to graph that are consistent with (c)i and will produce\na straight line\nIf V is chosen, the graph should be tanq\n1 point\nas a function of V or vice versa\nIf d is chosen, the graph should be d as a function of cotq , 1 d as a function\nof tanq or vice versa\nFT mg FE Distribution\nof points\n(d)\n2 points\n1 point\nFor identifying one difficulty in accurately measuring the angle with a protractor\nFor specifying an appropriate remedy for the difficulty\n1 point\n(e)\n3 points\nFor indicating that the ball’s charge will change\n1 point\nFor indicating that the ball’s charge changes polarity\n1 point\nFor indicating ball will be repelled as a result\n1 point"
+          "point_id": "1a",
+          "points": 3,
+          "value": 3,
+          "description": "Draw and label the forces on the conducting ball. Award 1 point for tension along the thread, 1 point for weight $mg$ downward, and 1 point for the horizontal electric force. Deduct earned points, up to three, for extraneous forces."
+        },
+        {
+          "point_id": "1b",
+          "points": 5,
+          "value": 5,
+          "description": "Derive the charge magnitude. Award 1 point for using $F_E=qE$, 1 point for using $E=V/d$, 1 point for stating equilibrium $\\sum \\vec F=0$, 1 point for component equations such as $T\\sin\\theta=qV/d$ and $T\\cos\\theta=mg$, and 1 point for $q=mgd\\tan\\theta/V$."
+        },
+        {
+          "point_id": "1c_i",
+          "points": 1,
+          "value": 1,
+          "description": "Identify a quantity to vary over multiple trials. Either the voltage $V$ or the plate separation $d$ earns credit."
+        },
+        {
+          "point_id": "1c_ii",
+          "points": 1,
+          "value": 1,
+          "description": "Choose graph variables that make a straight line and are consistent with part (c)(i). For varying $V$, graph $\\tan\\theta$ versus $V$ or the inverse relation. For varying $d$, graph $d$ versus $\\cot\\theta$, $1/d$ versus $\\tan\\theta$, or an equivalent linear pair."
+        },
+        {
+          "point_id": "1d",
+          "points": 2,
+          "value": 2,
+          "description": "Describe a measurement difficulty and remedy for the angle. Award 1 point for a valid difficulty such as parallax, locating the equilibrium center, or reading the protractor precisely, and 1 point for an appropriate remedy such as using a mirror/scale alignment, video analysis, repeated measurements, or a longer pointer/thread reference."
+        },
+        {
+          "point_id": "1e",
+          "points": 3,
+          "value": 3,
+          "description": "Describe what happens when the ball touches a plate at high voltage. Award 1 point for stating that the ball’s charge changes, 1 point for stating that it changes polarity after contact with the plate, and 1 point for explaining that it is then repelled and can move toward the opposite plate until the voltage is turned off."
         }
       ],
-      "official_text": "Distribution of points (a) 3 points For correctly drawing and labeling the tension 1 point For correctly drawing and labeling the weight of the sphere 1 point For correctly drawing and labeling the electrostatic force One earned point is deducted (up to a maximum of three points) for each extraneous force drawn 1 point (b) 5 points For using the correct expression for the force due to the electric field 1 point F qE = For relating the voltage and the electric field between parallel plates 1 point V Ed = For indicating that the ball is in equilibrium 1 point 0 F S = For a set of equations that leads to an expression for charge q 1 point sin 0 x F T qV d q S = - = cos 0 y F T mg q S = - = For a correct expression for q 1 point tan mgd q V q = (c) i. 1 point For choosing either the voltage V or the plate separation d 1 point ii. 1 point For selecting variables to graph that are consistent with (c)i and will produce a straight line If V is chosen, the graph should be tanq 1 point as a function of V or vice versa If d is chosen, the graph should be d as a function of cotq , 1 d as a function of tanq or vice versa FT mg FE Distribution of points (d) 2 points 1 point For identifying one difficulty in accurately measuring the angle with a protractor For specifying an appropriate remedy for the difficulty 1 point (e) 3 points For indicating that the ball’s charge will change 1 point For indicating that the ball’s charge changes polarity 1 point For indicating ball will be repelled as a result 1 point"
+      "official_text": "1a (3 pts): Draw and label the forces on the conducting ball. Award 1 point for tension along the thread, 1 point for weight $mg$ downward, and 1 point for the horizontal electric force. Deduct earned points, up to three, for extraneous forces.\n\n1b (5 pts): Derive the charge magnitude. Award 1 point for using $F_E=qE$, 1 point for using $E=V/d$, 1 point for stating equilibrium $\\sum \\vec F=0$, 1 point for component equations such as $T\\sin\\theta=qV/d$ and $T\\cos\\theta=mg$, and 1 point for $q=mgd\\tan\\theta/V$.\n\n1c_i (1 pts): Identify a quantity to vary over multiple trials. Either the voltage $V$ or the plate separation $d$ earns credit.\n\n1c_ii (1 pts): Choose graph variables that make a straight line and are consistent with part (c)(i). For varying $V$, graph $\\tan\\theta$ versus $V$ or the inverse relation. For varying $d$, graph $d$ versus $\\cot\\theta$, $1/d$ versus $\\tan\\theta$, or an equivalent linear pair.\n\n1d (2 pts): Describe a measurement difficulty and remedy for the angle. Award 1 point for a valid difficulty such as parallax, locating the equilibrium center, or reading the protractor precisely, and 1 point for an appropriate remedy such as using a mirror/scale alignment, video analysis, repeated measurements, or a longer pointer/thread reference.\n\n1e (3 pts): Describe what happens when the ball touches a plate at high voltage. Award 1 point for stating that the ball’s charge changes, 1 point for stating that it changes polarity after contact with the plate, and 1 point for explaining that it is then repelled and can move toward the opposite plate until the voltage is turned off."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2015.pdf",
@@ -1517,13 +1737,49 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Score the response across parts (a) through (d): calculate electron work and speed from the potential function, derive the electric field from the potential, sketch the requested graphs with correct slopes/asymptotes, and justify the particle motion using electric force and energy reasoning. Official equations and point-by-point formula work are shown in the rubric images."
+          "point_id": "a(i)",
+          "points": 2,
+          "value": 2,
+          "description": "Part (a)(i): Use the electric potential difference to find the magnitude of the work done by the electric field on the electron. Credit is earned for applying $W=q\\Delta V$ and for the correct result with units, $W=1.50\\times10^{-16}\\,\\mathrm{J}$, equivalently about $940\\,\\mathrm{eV}$."
+        },
+        {
+          "point_id": "a(ii)",
+          "points": 2,
+          "value": 2,
+          "description": "Part (a)(ii): Relate the work from part (a)(i) to the change in kinetic energy. Credit is earned for using $W=\\Delta K=\\frac12mv^2$ with the electron mass and for the correct speed, about $1.82\\times10^7\\,\\mathrm{m/s}$."
+        },
+        {
+          "point_id": "b",
+          "points": 2,
+          "value": 2,
+          "description": "Part (b): Derive the x-component of the electric field from the potential by using $E_x=-dV/dx$. The accepted expression is $E_x=-4x-7$ in the given units."
+        },
+        {
+          "point_id": "c(i)",
+          "points": 2,
+          "value": 2,
+          "description": "Part (c)(i): The acceleration graph for the electron from $x=0$ to $x=20\\,\\mathrm{m}$ should be a straight line with nonzero positive slope and a positive intercept, consistent with the electric force on a negative charge."
+        },
+        {
+          "point_id": "c(ii)",
+          "points": 2,
+          "value": 2,
+          "description": "Part (c)(ii): The kinetic-energy graph should start at the origin, stay nonnegative, and increase into the first quadrant with concave-up behavior."
+        },
+        {
+          "point_id": "d",
+          "points": 2,
+          "value": 2,
+          "description": "Part (d): Select only $x=-2\\,\\mathrm{m}$. The justification must connect electron acceleration to the direction opposite the electric field and note that the electric field is positive only for positions less than about $-1.75\\,\\mathrm{m}$."
+        },
+        {
+          "point_id": "e",
+          "points": 3,
+          "value": 3,
+          "description": "Part (e): Determine the added potential difference by integrating the net field from $x=0$ to $x=20\\,\\mathrm{m}$. Credit is earned for recognizing $E_{net}=E_1+E_2$, substituting the correct field expressions and limits/signs, and obtaining $\\Delta V=800\\,\\mathrm{V}$; equivalent alternate potential-difference reasoning earns credit."
         }
       ],
-      "official_text": "Score the response across parts (a) through (d): calculate electron work and speed from the potential function, derive the electric field from the potential, sketch the requested graphs with correct slopes/asymptotes, and justify the particle motion using electric force and energy reasoning. Official equations and point-by-point formula work are shown in the rubric images."
+      "official_text": "a(i): Part (a)(i): Use the electric potential difference to find the magnitude of the work done by the electric field on the electron. Credit is earned for applying $W=q\\Delta V$ and for the correct result with units, $W=1.50\\times10^{-16}\\,\\mathrm{J}$, equivalently about $940\\,\\mathrm{eV}$.\n\na(ii): Part (a)(ii): Relate the work from part (a)(i) to the change in kinetic energy. Credit is earned for using $W=\\Delta K=\\frac12mv^2$ with the electron mass and for the correct speed, about $1.82\\times10^7\\,\\mathrm{m/s}$.\n\nb: Part (b): Derive the x-component of the electric field from the potential by using $E_x=-dV/dx$. The accepted expression is $E_x=-4x-7$ in the given units.\n\nc(i): Part (c)(i): The acceleration graph for the electron from $x=0$ to $x=20\\,\\mathrm{m}$ should be a straight line with nonzero positive slope and a positive intercept, consistent with the electric force on a negative charge.\n\nc(ii): Part (c)(ii): The kinetic-energy graph should start at the origin, stay nonnegative, and increase into the first quadrant with concave-up behavior.\n\nd: Part (d): Select only $x=-2\\,\\mathrm{m}$. The justification must connect electron acceleration to the direction opposite the electric field and note that the electric field is positive only for positions less than about $-1.75\\,\\mathrm{m}$.\n\ne: Part (e): Determine the added potential difference by integrating the net field from $x=0$ to $x=20\\,\\mathrm{m}$. Credit is earned for recognizing $E_{net}=E_1+E_2$, substituting the correct field expressions and limits/signs, and obtaining $\\Delta V=800\\,\\mathrm{V}$; equivalent alternate potential-difference reasoning earns credit."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2017.pdf",
@@ -1606,13 +1862,49 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Score the response across parts (a) through (d): draw the required charging/discharging circuit, identify the capacitor graphs, use equal final potential and charge conservation to find final charges and stored energy, and explain the qualitative behavior of the circuit. Official equations and point-by-point formula work are shown in the rubric images."
+          "point_id": "a",
+          "points": 4,
+          "value": 4,
+          "description": "Part (a): Draw one circuit in which the battery can charge only capacitor $C_1$ in one switch position and then, in the other position, $C_1$ discharges through $C_2$ and resistor $R$. Credit is earned for the battery branch, resistor in series with $C_2$, and both required switch functions."
+        },
+        {
+          "point_id": "b",
+          "points": 1,
+          "value": 1,
+          "description": "Part (b): Correctly label the graph that starts high and decreases as $C_1$, and the graph that starts at zero and increases as $C_2$."
+        },
+        {
+          "point_id": "c(i)",
+          "points": 3,
+          "value": 3,
+          "description": "Part (c)(i): For a long time after switching, the capacitors share the same final potential difference and total charge is conserved. With $C_1=2.0\\,\\mu\\mathrm{F}$, $C_2=6.0\\,\\mu\\mathrm{F}$, and $\\epsilon=12\\,\\mathrm{V}$, the accepted final charges are $q_1=6.0\\,\\mu\\mathrm{C}$ and $q_2=18\\,\\mu\\mathrm{C}$."
+        },
+        {
+          "point_id": "c(ii)",
+          "points": 1,
+          "value": 1,
+          "description": "Part (c)(ii): Use $V=q/C$ with the final charges to obtain $V_1=V_2=3.0\\,\\mathrm{V}$."
+        },
+        {
+          "point_id": "d",
+          "points": 3,
+          "value": 3,
+          "description": "Part (d): The energy dissipated in the resistor is the difference between the initial stored energy and the final stored energy in both capacitors. Credit is earned for the energy accounting and for a correct numerical substitution giving $108\\,\\mu\\mathrm{J}$."
+        },
+        {
+          "point_id": "e(i)",
+          "points": 2,
+          "value": 2,
+          "description": "Part (e)(i): Apply Kirchhoff's loop rule in the discharge circuit and substitute capacitor voltage relations and current direction consistently. A correct differential equation may be written in an equivalent form involving $q_1$, $q_2$, $R$, $C_1$, $C_2$, and $dq/dt$."
+        },
+        {
+          "point_id": "e(ii)",
+          "points": 1,
+          "value": 1,
+          "description": "Part (e)(ii): The relevant time constant uses the equivalent capacitance of $C_1$ and $C_2$ in series. With $C_{eq}=1.5\\,\\mu\\mathrm{F}$ and $R=1000\\,\\Omega$, $\\tau=1.5\\,\\mathrm{ms}$."
         }
       ],
-      "official_text": "Score the response across parts (a) through (d): draw the required charging/discharging circuit, identify the capacitor graphs, use equal final potential and charge conservation to find final charges and stored energy, and explain the qualitative behavior of the circuit. Official equations and point-by-point formula work are shown in the rubric images."
+      "official_text": "a: Part (a): Draw one circuit in which the battery can charge only capacitor $C_1$ in one switch position and then, in the other position, $C_1$ discharges through $C_2$ and resistor $R$. Credit is earned for the battery branch, resistor in series with $C_2$, and both required switch functions.\n\nb: Part (b): Correctly label the graph that starts high and decreases as $C_1$, and the graph that starts at zero and increases as $C_2$.\n\nc(i): Part (c)(i): For a long time after switching, the capacitors share the same final potential difference and total charge is conserved. With $C_1=2.0\\,\\mu\\mathrm{F}$, $C_2=6.0\\,\\mu\\mathrm{F}$, and $\\epsilon=12\\,\\mathrm{V}$, the accepted final charges are $q_1=6.0\\,\\mu\\mathrm{C}$ and $q_2=18\\,\\mu\\mathrm{C}$.\n\nc(ii): Part (c)(ii): Use $V=q/C$ with the final charges to obtain $V_1=V_2=3.0\\,\\mathrm{V}$.\n\nd: Part (d): The energy dissipated in the resistor is the difference between the initial stored energy and the final stored energy in both capacitors. Credit is earned for the energy accounting and for a correct numerical substitution giving $108\\,\\mu\\mathrm{J}$.\n\ne(i): Part (e)(i): Apply Kirchhoff's loop rule in the discharge circuit and substitute capacitor voltage relations and current direction consistently. A correct differential equation may be written in an equivalent form involving $q_1$, $q_2$, $R$, $C_1$, $C_2$, and $dq/dt$.\n\ne(ii): Part (e)(ii): The relevant time constant uses the equivalent capacitance of $C_1$ and $C_2$ in series. With $C_{eq}=1.5\\,\\mu\\mathrm{F}$ and $R=1000\\,\\Omega$, $\\tau=1.5\\,\\mathrm{ms}$."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2017.pdf",
@@ -1691,13 +1983,43 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Score the response across parts (a) through (d): compute magnetic flux by integrating the nonuniform field, differentiate flux to obtain induced emf and current, determine the direction of induced current, and apply magnetic force reasoning to the moving conducting bar."
+          "point_id": "a",
+          "points": 3,
+          "value": 3,
+          "description": "Part (a): Calculate magnetic flux by integrating the nonuniform field $B(x)=cx+B_0$ across the square loop. Credit is earned for substituting the field into the flux integral, using correct limits for the loop width, and obtaining an expression equivalent to $\\Phi_B=s^2(cx_0+\\frac12cs+B_0)$."
+        },
+        {
+          "point_id": "b",
+          "points": 3,
+          "value": 3,
+          "description": "Part (b): Use Faraday's law and the chain rule as the loop moves with speed $v$. The induced emf magnitude is equivalent to $vcs^2$, so the induced current magnitude is $I=vcs^2/R$."
+        },
+        {
+          "point_id": "c",
+          "points": 2,
+          "value": 2,
+          "description": "Part (c): Select counterclockwise. The justification must state that the into-page magnetic flux through the loop is increasing and that Lenz's law requires an induced field out of the page."
+        },
+        {
+          "point_id": "d",
+          "points": 3,
+          "value": 3,
+          "description": "Part (d): Select left for the net magnetic force. Credit is earned for recognizing the forces on the top and bottom segments cancel and the right side experiences a larger magnetic force than the left side because the field is stronger at larger $x$."
+        },
+        {
+          "point_id": "e",
+          "points": 3,
+          "value": 3,
+          "description": "Part (e): Express the external force as the difference between the magnetic forces on the right and left sides of the loop, substitute the field values on both sides, and use the induced current from part (b). The accepted expression is equivalent to $F_{ext}=v c^2 s^4/R$."
+        },
+        {
+          "point_id": "f",
+          "points": 1,
+          "value": 1,
+          "description": "Part (f): Correctly rank the four sides by magnetic-force magnitude and direction: left side rank 3, right side rank 1, top and bottom tied at rank 2."
         }
       ],
-      "official_text": "Score the response across parts (a) through (d): compute magnetic flux by integrating the nonuniform field, differentiate flux to obtain induced emf and current, determine the direction of induced current, and apply magnetic force reasoning to the moving conducting bar."
+      "official_text": "a: Part (a): Calculate magnetic flux by integrating the nonuniform field $B(x)=cx+B_0$ across the square loop. Credit is earned for substituting the field into the flux integral, using correct limits for the loop width, and obtaining an expression equivalent to $\\Phi_B=s^2(cx_0+\\frac12cs+B_0)$.\n\nb: Part (b): Use Faraday's law and the chain rule as the loop moves with speed $v$. The induced emf magnitude is equivalent to $vcs^2$, so the induced current magnitude is $I=vcs^2/R$.\n\nc: Part (c): Select counterclockwise. The justification must state that the into-page magnetic flux through the loop is increasing and that Lenz's law requires an induced field out of the page.\n\nd: Part (d): Select left for the net magnetic force. Credit is earned for recognizing the forces on the top and bottom segments cancel and the right side experiences a larger magnetic force than the left side because the field is stronger at larger $x$.\n\ne: Part (e): Express the external force as the difference between the magnetic forces on the right and left sides of the loop, substitute the field values on both sides, and use the induced current from part (b). The accepted expression is equivalent to $F_{ext}=v c^2 s^4/R$.\n\nf: Part (f): Correctly rank the four sides by magnetic-force magnitude and direction: left side rank 3, right side rank 1, top and bottom tied at rank 2."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2017.pdf",
@@ -1748,7 +2070,7 @@
     "question_type": "FRQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "A circuit is created with an ideal battery and five resistors with the values shown in the figure above.\nAn open switch is shown that can connect points X and Y. A voltmeter V and an ammeter A sub 1 are also\nshown in the figure.\n(a) The switch is in the open position.\n1 Calculate the current measured by the ammeter A sub 1.\n2\nCalculate the potential difference measured by the voltmeter V.\n(b) The switch is now moved to the closed position.\n1 Calculate the current measured by the ammeter A sub 1.\n____ ____ ____\nQuestion 1 continues on the next page.\n2\nCalculate the potential difference measured by the voltmeter V.\nA student wants to determine if there is a current in the closed switch. The switch is now replaced with\nammeter A sub 2 between points X and Y. The ammeter acts as a closed switch and can measure the current,\nif any, between the two points.\nThe figure presents a circuit identical to the previous circuit, except that switch S is replaced by an ammeter A 2, and voltmeter V is removed. The left side has a battery labeled epsilon equals 20 volts. Moving up the left side and across the top, the next element is a resistor labeled R 1 equals 2 ohms. To the right of the resistor, the circuit splits into two vertical branches. Moving downward, the first vertical branch contains a resistor labeled R 2 equals 6 ohms, a point labeled X, and a resistor labeled R 4 equals 12 ohms. Moving downward, the second vertical branch contains a resistor labeled R 3 equals 12 ohms, a point labeled Y, and a resistor labeled R 5 equals 6 ohms. Points X and Y are directly across from each other and are connected by an ammeter labeled A 2. Continuing clockwise around the circuit, after the two vertical branches join together, an ammeter labeled A 1 is indicated on the bottom/side of the circuit.\n(c)\n1 Calculate the current measured by ammeter A sub 2 .\n2\nIndicate the direction of the current, if any, through the ammeter A sub 2 .\nLeft Right\nUndefined, because the current is zero\n____ ____\nThe figure presents a circuit identical to the first circuit, except that a 12 microfarad capacitor is in series with switch S between points X and Y, and voltmeter V is removed. The left side has a battery labeled epsilon equals 20 volts. Moving up the left side and across the top, the next element is a resistor labeled R 1 equals 2 ohms. To the right of the resistor, the circuit splits into two vertical branches. Moving downward, the first vertical branch contains a resistor labeled R 2 equals 6 ohms, a point labeled X, and a resistor labeled R 4 equals 12 ohms. Moving downward, the second vertical branch contains a resistor labeled R 3 equals 12 ohms, a point labeled Y, and a resistor labeled R 5 equals 6 ohms. Points X and Y are directly across from each other and are connected by an open switch in series with a capacitor labeled C equals 12 microfarads. Continuting clockwise around the circuit, after the two vertical branches join together, an ammeter labeled A 1 is indicated on the bottom/side of the circuit.\n(d) The ammeter A sub 2 is replaced with switch S and capacitor\nC\nequals ,\n12 microfarads , as shown in the figure above. Switch\nS is closed.\n1 Calculate the charge stored on the positive plate of capacitor C a long time after switch S is closed.\n2\nWhich point, X or Y, is at a higher electric potential?\nX Y\nJustify your answer.",
+    "text": "A circuit is created with an ideal battery and five resistors with the values shown in the figure above. An open switch is shown that can connect points X and Y. A voltmeter V and an ammeter $A_1$ are also shown in the figure.\n\n(a) The switch is in the open position.\n\n(i) Calculate the current measured by ammeter $A_1$.\n\n(ii) Calculate the potential difference measured by voltmeter V.\n\n(b) The switch is now moved to the closed position.\n\n(i) Calculate the current measured by ammeter $A_1$.\n\n(ii) Calculate the potential difference measured by voltmeter V.\n\nA student wants to determine if there is a current in the closed switch. The switch is now replaced with ammeter $A_2$ between points X and Y. The ammeter acts as a closed switch and can measure the current, if any, between the two points.\n\n(c) (i) Calculate the current measured by ammeter $A_2$.\n\n(ii) Indicate the direction of the current, if any, through ammeter $A_2$.\n\n____ Left   ____ Right   ____ Undefined, because the current is zero\n\n(d) Ammeter $A_2$ is replaced with switch S and capacitor $C=12\\,\\mu\\mathrm{F}$, as shown in the figure above. Switch S is closed.\n\n(i) Calculate the charge stored on the positive plate of capacitor C a long time after switch S is closed.\n\n(ii) Which point, X or Y, is at a higher electric potential? Justify your answer.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -1782,13 +2104,55 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Score the response across the resistor-circuit investigation: analyze the open-switch and closed-switch equivalent circuits, calculate ammeter and voltmeter readings, determine the current direction through the replacement ammeter, and use the capacitor branch to find long-time charge and relative potential. Official point-by-point equations and accepted alternatives are shown in the rubric images."
+          "point_id": "a(1)",
+          "points": 3,
+          "value": 3,
+          "description": "Part (a)(1): With the switch open, combine $R_2+R_4=18\\,\\Omega$ and $R_3+R_5=18\\,\\Omega$ in parallel, then add $R_1$. The equivalent resistance is $11\\,\\Omega$ and the ammeter reading is $1.82\\,\\mathrm{A}$."
+        },
+        {
+          "point_id": "a(2)",
+          "points": 1,
+          "value": 1,
+          "description": "Part (a)(2): Use the current from part (a)(1) to find the potential difference across the branch containing $R_3$. The voltmeter reading is $10.9\\,\\mathrm{V}$."
+        },
+        {
+          "point_id": "b(1)",
+          "points": 3,
+          "value": 3,
+          "description": "Part (b)(1): With the switch closed, combine $R_2$ with $R_3$ in parallel and $R_4$ with $R_5$ in parallel, then add $R_1$. The equivalent resistance is $10\\,\\Omega$ and the ammeter reading is $2.0\\,\\mathrm{A}$."
+        },
+        {
+          "point_id": "b(2)",
+          "points": 1,
+          "value": 1,
+          "description": "Part (b)(2): The potential difference measured by the voltmeter in the closed-switch circuit is $8.0\\,\\mathrm{V}$, consistent with the voltage across the $R_2/R_3$ parallel combination."
+        },
+        {
+          "point_id": "c(1)",
+          "points": 2,
+          "value": 2,
+          "description": "Part (c)(1): Find the currents through the relevant branches and take their difference for the ammeter between points X and Y. The accepted current through $A_2$ is $0.67\\,\\mathrm{A}$."
+        },
+        {
+          "point_id": "c(2)",
+          "points": 1,
+          "value": 1,
+          "description": "Part (c)(2): Select right for the direction of current through $A_2$, unless a prior arithmetic result of zero current is carried through consistently."
+        },
+        {
+          "point_id": "d(1)",
+          "points": 3,
+          "value": 3,
+          "description": "Part (d)(1): A long time after the switch is closed, treat the capacitor branch as open and use the potential difference between X and Y. The charge on the positive capacitor plate is found from $Q=C\\Delta V$; the official solution gives the numerical value and sign convention in the rubric image."
+        },
+        {
+          "point_id": "d(2)",
+          "points": 1,
+          "value": 1,
+          "description": "Part (d)(2): Identify which point, X or Y, is at the higher potential from the sign of the capacitor charge and the branch potentials, with a consistent justification."
         }
       ],
-      "official_text": "Score the response across the resistor-circuit investigation: analyze the open-switch and closed-switch equivalent circuits, calculate ammeter and voltmeter readings, determine the current direction through the replacement ammeter, and use the capacitor branch to find long-time charge and relative potential. Official point-by-point equations and accepted alternatives are shown in the rubric images."
+      "official_text": "a(1): Part (a)(1): With the switch open, combine $R_2+R_4=18\\,\\Omega$ and $R_3+R_5=18\\,\\Omega$ in parallel, then add $R_1$. The equivalent resistance is $11\\,\\Omega$ and the ammeter reading is $1.82\\,\\mathrm{A}$.\n\na(2): Part (a)(2): Use the current from part (a)(1) to find the potential difference across the branch containing $R_3$. The voltmeter reading is $10.9\\,\\mathrm{V}$.\n\nb(1): Part (b)(1): With the switch closed, combine $R_2$ with $R_3$ in parallel and $R_4$ with $R_5$ in parallel, then add $R_1$. The equivalent resistance is $10\\,\\Omega$ and the ammeter reading is $2.0\\,\\mathrm{A}$.\n\nb(2): Part (b)(2): The potential difference measured by the voltmeter in the closed-switch circuit is $8.0\\,\\mathrm{V}$, consistent with the voltage across the $R_2/R_3$ parallel combination.\n\nc(1): Part (c)(1): Find the currents through the relevant branches and take their difference for the ammeter between points X and Y. The accepted current through $A_2$ is $0.67\\,\\mathrm{A}$.\n\nc(2): Part (c)(2): Select right for the direction of current through $A_2$, unless a prior arithmetic result of zero current is carried through consistently.\n\nd(1): Part (d)(1): A long time after the switch is closed, treat the capacitor branch as open and use the potential difference between X and Y. The charge on the positive capacitor plate is found from $Q=C\\Delta V$; the official solution gives the numerical value and sign convention in the rubric image.\n\nd(2): Part (d)(2): Identify which point, X or Y, is at the higher potential from the sign of the capacitor charge and the branch potentials, with a consistent justification."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2018.pdf",
@@ -1849,7 +2213,7 @@
     "question_type": "FRQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "A coaxial cable is composed of a central conducting wire surrounded by a cylindrical insulator, and around\nthat is a conducting cylindrical shell with an insulating cover. A power supply of e m fepsilon is used at one end\nto connect the two conducting regions, and a resistive load of resistance R is connected at the other end of\nthe cable to complete the circuit, as shown in the schematic diagram and circuit figure above.\nEach of the following two figures present a cross section of the preceding coaxial cable from the perspective of the battery end. The central conducting wire is shown as a circle, enclosed in a larger circle, which is the cylindrical insulator. In each figure, a point P inside the cylindrical insulator is up and to the right and a distance b from the center of the cable. This insulator is enclosed in a larger circle, which is the cylindrical conducting shell, which is also enclosed in the insulating cover. In figure 1, a point Q is indicated outside of the coaxial cable entirely to the left of the center of the cable. In figure 2, there are no additional points indicated.\nA cross section of the cable from the perspective of the power supply end is depicted above as if looking into the\nleft end of the cable. Point P is inside the cylindrical insulator a distance b from the center of the cable. Point Q\nis outside the cable.\n(a)\n1 On figure 1 shown above left, draw an Amperian loop that could be used to determine the magnitude\nof the magnetic field at point P in the diagram. Clearly mark this loop as “Loop 1.”\n2\nOn figure 1, draw an Amperian loop that could be used to determine the magnitude of the magnetic\nfield at point Q in the diagram. Clearly mark this loop as “Loop 2.”\n3\nOn figure 2 shown above right, draw an arrow to show the direction of the magnetic field at point P.\nThe arrow should start on and point away from the point in the direction of the magnetic field.\nQuestion 2 continues on the next page.\n(b) Using Ampere’s law, derive an expression for the magnitude of the magnetic field at point P. Express your\nanswer in terms of epsilon , R, b, and physical constants, as appropriate.\n(c) Determine the magnitude of the magnetic field at point Q.\nJustify your answer.\nSome physics students conduct an experiment with a coaxial cable in which they connect the cable to a\nvariable power supply and measure the resulting magnetic field strength at point P inside the cylindrical\ninsulator using a magnetic field sensor. Point P is 0.0050 meters from the center of the cable. The plot of the\nmagnetic field strength B as a function of the e m f epsilon of the power supply is shown below.\nThe figure presents a scatterplot in the first quadrant of a coordinate plane. The horizontal axis is labeled “Epsilon, in volts,” and the numbers 0 through 10, in increments of 2, are indicated. The vertical axis is labeled “B, in times 10 to the negative 5 power teslas,” and the numbers 0 through 25, in increments of 5, are indicated. There are 4 data points in the scatter plot. The data are as follows. Note that all values are approximate.\nPoint 1 represents 2.5 volts and 2.5 times 10 to the negative 5 power teslas.\nPoint 2 represents 5 volts and 10.5 times 10 to the negative 5 power teslas.\nPoint 3 represents 7.6 volts and 14.7 times 10 to the negative 5 power teslas.\nPoint 4 represents 10 volts and 20 times 10 to the negative 5 power teslas.\n(d)\n1 Draw the best-fit line for the data.\n2\nUse the straight line to calculate the resistance R of the resistor used in the experiment.\n(e) The lab group uses a multimeter to measure the resist ance of the resistor and determines that their\nexperimental value for R from part (d) is approximately 10% larger than that found with the multimeter.\nDescribe a physical reason that might account for this result.\n(f) The lab group notices that when the current is reversed in the cable and the experiment is again performed,\nthe plot has a positive vertical axis intercept equal in magnitude to the negative vertical axis intercept in the\nplot shown before part (d).\n1 Describe a physical reason for the vertical axis intercept.\n2\nDescribe a physical reason that the vertical axis intercept switches from negative to positive when the\ncurrent in the cable is reversed.\n____ ____ ____\nThe figure presents a diagram of a capacitor that consists of a top and bottom capacitor plate. Both plates are horizontally oriented. The top capacitor plate has a charge density of positive sigma, and the bottom capacitor plate has a charge density of negative sigma. The plates are separated by a vertical distance d. Note that the figure is not drawn to scale.",
+    "text": "A coaxial cable is composed of a central conducting wire surrounded by a cylindrical insulator, and around that is a conducting cylindrical shell with an insulating cover. A power supply of emf $\\epsilon$ is used at one end to connect the two conducting regions, and a resistive load of resistance $R$ is connected at the other end of the cable to complete the circuit, as shown in the schematic diagram and circuit figure above. A cross section of the cable from the perspective of the power supply end is depicted above as if looking into the left end of the cable. Point P is inside the cylindrical insulator a distance $b$ from the center of the cable. Point Q is outside the cable.\n\n(a) (i) On figure 1 shown above left, draw an Amperian loop that could be used to determine the magnitude of the magnetic field at point P in the diagram. Clearly mark this loop as “Loop 1.”\n\n(ii) On figure 1, draw an Amperian loop that could be used to determine the magnitude of the magnetic field at point Q in the diagram. Clearly mark this loop as “Loop 2.”\n\n(b) Determine the magnitude and direction of the magnetic field at point P.\n\n(c) Determine the magnitude and direction of the magnetic field at point Q.\n\n(d) Determine the magnitude and direction of the electric field at point P.\n\n(e) Determine the direction of the Poynting vector at point P and explain how it relates to energy transfer in the cable.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -1887,13 +2251,43 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Score the response across the coaxial-cable magnetic-field investigation: draw appropriate Amperian loops, identify field direction, use Ampere's law to derive the field at point P, justify the field at point Q, fit the experimental data, and use the graph to determine resistance and evaluate uncertainty. Official point-by-point equations and accepted alternatives are shown in the rubric images."
+          "point_id": "a",
+          "points": 2,
+          "value": 2,
+          "description": "Part (a): Draw an Amperian loop centered on the coaxial cable and indicate the magnetic field direction tangent to the loop using the right-hand rule. Credit is earned for geometry and direction."
+        },
+        {
+          "point_id": "b",
+          "points": 3,
+          "value": 3,
+          "description": "Part (b): Apply Ampere's law around the circular loop at point P. Use the cable current $I=\\epsilon/R$ and solve for the field magnitude; equivalent forms of $B=\\mu_0\\epsilon/(2\\pi b R)$ earn credit."
+        },
+        {
+          "point_id": "c",
+          "points": 2,
+          "value": 2,
+          "description": "Part (c): At point Q outside the complete coaxial cable, the net enclosed current is zero because the return current cancels the central current. Therefore the magnetic field magnitude is zero, with justification from Ampere's law."
+        },
+        {
+          "point_id": "d",
+          "points": 3,
+          "value": 3,
+          "description": "Part (d): For the experimental data, choose a linear graph based on the theoretical relationship, label axes with units, plot the data reasonably, and draw a best-fit line rather than connecting points."
+        },
+        {
+          "point_id": "e",
+          "points": 3,
+          "value": 3,
+          "description": "Part (e): Use the slope of the best-fit line to determine the requested resistance or physical constant according to the derived relationship. Credit is earned for using the graph rather than a single raw point and for correct units."
+        },
+        {
+          "point_id": "f",
+          "points": 2,
+          "value": 2,
+          "description": "Part (f): Evaluate the uncertainty or experimental limitation using the graph and measurement setup. A valid response must connect the stated error source to the direction or size of the result."
         }
       ],
-      "official_text": "Score the response across the coaxial-cable magnetic-field investigation: draw appropriate Amperian loops, identify field direction, use Ampere's law to derive the field at point P, justify the field at point Q, fit the experimental data, and use the graph to determine resistance and evaluate uncertainty. Official point-by-point equations and accepted alternatives are shown in the rubric images."
+      "official_text": "a: Part (a): Draw an Amperian loop centered on the coaxial cable and indicate the magnetic field direction tangent to the loop using the right-hand rule. Credit is earned for geometry and direction.\n\nb: Part (b): Apply Ampere's law around the circular loop at point P. Use the cable current $I=\\epsilon/R$ and solve for the field magnitude; equivalent forms of $B=\\mu_0\\epsilon/(2\\pi b R)$ earn credit.\n\nc: Part (c): At point Q outside the complete coaxial cable, the net enclosed current is zero because the return current cancels the central current. Therefore the magnetic field magnitude is zero, with justification from Ampere's law.\n\nd: Part (d): For the experimental data, choose a linear graph based on the theoretical relationship, label axes with units, plot the data reasonably, and draw a best-fit line rather than connecting points.\n\ne: Part (e): Use the slope of the best-fit line to determine the requested resistance or physical constant according to the derived relationship. Credit is earned for using the graph rather than a single raw point and for correct units.\n\nf: Part (f): Evaluate the uncertainty or experimental limitation using the graph and measurement setup. A valid response must connect the stated error source to the direction or size of the result."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2018.pdf",
@@ -1954,7 +2348,7 @@
     "question_type": "FRQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "A parallel plate capacitor is connected to a battery, fully charged, and then isolated from the battery. The plates\nare given equal and opposite charge densities sigma , and the separation between the plates is d, as shown in the\nfigure above. The area of each plate has a value of A.\n(a) Derive an expression for the energy stored in the capacitor. Express your answer in terms of sigma , d, A, and\nphysical constants, as appropriate.\nThe figure presents a diagram of a capacitor that consists of a top plate, a bottom capacitor plate, and a Metal Slab. All 3 components are horizontally oriented. The top capacitor plate has a charge density of positive sigma, and the bottom capacitor plate has a charge density of negative sigma. The plates are separated by a vertical distance d. The Metal Slab is positioned halfway between the two plates and has a vertical thickness x.\nWhile the capacitor is isolated from the battery, an uncharged metal slab of thickness x and area Ais inserted\nbetween the capacitor plates so that it is an equal distance from the two plates, as shown in the figure above.\n(b) On the figure above, draw an arrow to indicate the direction of the electric field in the following\nthree regions of space between the capacitor plates. If the electric field is zero in any region, indicate\nthis by writing quote, E equals 0, end quotein that region.\n1 The region between the top plate and the metal slab\n2\nThe region inside the metal slab\n3\nThe region between the metal slab and the bottom plate\n(c) On the lines below, rank the regions according to the magnitude of the electric field, with 1 being the largest\nmagnitude. If any regions have the same magnitude of electric field, give them the same ranking.\nThe region between the top plate and the metal slab\nThe region inside the metal slab\nThe region between the metal slab and the bottom plate\n____ ____ ____\nQuestion 3 continues on the next page.\n(d) Is the capacitance of the capacitor with the metal slab greater than, less than, or equal to the capacitance of\nthe original capacitor without the slab?\n____ Greater than\n____ Less than\n____ Equal to\nJustify your answer.\n(e) When charged to the original charge density, is the energy stored in the capacitor with the metal slab greater\nthan, less than, or equal to the original energy stored in the capacitor calculated in part (a) ?\nGreater than\nLess than\nEqual to\nJustify your answer.\nSome physics students conduct an experiment in which they charge the capacitor to the same potential\ndifference, isolate it from the battery, insert the metal slab, and measure the new potential difference across the\ncapacitor. This experiment is repeated with slabs of different thickness. The plot of the potential difference delta V\nacross the capacitor as a function of the thickness x of the slab is shown below. A best-fit line for the data has\nbeen drawn.\nThe figure presents a scatterplot in the first quadrant of a coordinate plane. The horizontal axis is labeled “Slab Thickness x, in centimeters,” and the numbers 0 through 12, in increments of 2, are indicated. The vertical axis is labeled “Potential Difference delta V, in volts,” and the numbers 0 through 25, in increments of 5, are indicated. There are 5 data points in the scatter plot. The data are as follows. Note that all values are approximate.\nPoint 1 represents 2.3 centimeters, 19.2 volts.\nPoint 2 represents 3.3 centimeters, 18.6 volts.\nPoint 3 represents 5 centimeters, 12.5 volts.\nPoint 4 represents 7.3 centimeters, 8.2 volts.\nPoint 5 represents 8 centimeters, 5 volts.\nA best fit line is also given. The line begins at the point representing 2 centimeters, 20 volts, and extends downward and to the right until it ends at the point representing 8. 8 centimeters, 4 volts.\n(f) Use the best-fit line to calculate the following:\n1 sigma , the charge density on the plates\n2\nd, the distance between the capacitor plates",
+    "text": "A parallel-plate capacitor is connected to a battery, fully charged, and then isolated from the battery. The plates are given equal and opposite charge densities $\\sigma$, and the separation between the plates is $d$, as shown in the figure above. The area of each plate has a value of $A$.\n\n(a) Derive an expression for the energy stored in the capacitor. Express your answer in terms of $\\sigma$, $d$, $A$, and physical constants, as appropriate.\n\nWhile the capacitor is isolated from the battery, an uncharged metal slab of thickness $x$ and area $A$ is inserted between the capacitor plates so that it is an equal distance from the two plates, as shown in the figure above.\n\n(b) On the figure above, draw an arrow to indicate the direction of the electric field in the following three regions of space between the capacitor plates. If the electric field is zero in any region, indicate this by writing $E=0$ in that region.\n\n(i) The region between the top plate and the metal slab\n\n(ii) The region inside the metal slab\n\n(iii) The region between the metal slab and the bottom plate\n\n(c) On the lines below, rank the regions according to the magnitude of the electric field in each region. Explain your reasoning.\n\n(d) Derive an expression for the potential difference between the capacitor plates after the slab is inserted.\n\n(e) Derive an expression for the energy stored in the capacitor after the slab is inserted.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -1990,13 +2384,37 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Score the response across the magnetic-induction question: reason about flux and induced emf/current, apply Lenz's law and magnetic force directions, calculate requested quantities using the given geometry and motion, and justify the physical behavior. Official point-by-point equations and accepted alternatives are shown in the rubric images."
+          "point_id": "a",
+          "points": 3,
+          "value": 3,
+          "description": "Part (a): Derive the original energy stored in the isolated parallel-plate capacitor using $Q=\\sigma A$, $C=\\epsilon_0 A/d$, and $U=Q^2/(2C)$ or an equivalent energy-density method. The accepted expression is equivalent to $U=\\sigma^2Ad/(2\\epsilon_0)$."
+        },
+        {
+          "point_id": "b",
+          "points": 3,
+          "value": 3,
+          "description": "Part (b): With the metal slab inserted, draw the electric field only in the gaps between conductor surfaces and in the direction from the positive plate toward the negative plate. The electric field inside the conducting slab is zero."
+        },
+        {
+          "point_id": "c",
+          "points": 3,
+          "value": 3,
+          "description": "Part (c): Explain charge redistribution on the slab surfaces and use conductor/electrostatic reasoning to support the field pattern. Credit is earned for induced surface charges and zero field inside the conductor."
+        },
+        {
+          "point_id": "d",
+          "points": 3,
+          "value": 3,
+          "description": "Part (d): The capacitance with the slab is greater than the original capacitance because the effective separation containing electric field is reduced from $d$ to $d-x$. Equivalent derivations using series gaps earn credit."
+        },
+        {
+          "point_id": "e",
+          "points": 3,
+          "value": 3,
+          "description": "Part (e): With the capacitor isolated at the same charge density, the stored energy is less than the original energy because the capacitance is greater while $U=Q^2/(2C)$. A correct expression or consistent qualitative justification earns credit."
         }
       ],
-      "official_text": "Score the response across the magnetic-induction question: reason about flux and induced emf/current, apply Lenz's law and magnetic force directions, calculate requested quantities using the given geometry and motion, and justify the physical behavior. Official point-by-point equations and accepted alternatives are shown in the rubric images."
+      "official_text": "a: Part (a): Derive the original energy stored in the isolated parallel-plate capacitor using $Q=\\sigma A$, $C=\\epsilon_0 A/d$, and $U=Q^2/(2C)$ or an equivalent energy-density method. The accepted expression is equivalent to $U=\\sigma^2Ad/(2\\epsilon_0)$.\n\nb: Part (b): With the metal slab inserted, draw the electric field only in the gaps between conductor surfaces and in the direction from the positive plate toward the negative plate. The electric field inside the conducting slab is zero.\n\nc: Part (c): Explain charge redistribution on the slab surfaces and use conductor/electrostatic reasoning to support the field pattern. Credit is earned for induced surface charges and zero field inside the conductor.\n\nd: Part (d): The capacitance with the slab is greater than the original capacitance because the effective separation containing electric field is reduced from $d$ to $d-x$. Equivalent derivations using series gaps earn credit.\n\ne: Part (e): With the capacitor isolated at the same charge density, the stored energy is less than the original energy because the capacitance is greater while $U=Q^2/(2C)$. A correct expression or consistent qualitative justification earns credit."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2018.pdf",
@@ -2057,7 +2475,7 @@
     "question_type": "FRQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Students design an experiment to determine the unknown dielectric constant\nkappa of a plastic material.\nA capacitor is created using two square aluminum plates of side length s equals 30 centimeters that are separated by\na distance d equals 1.0 millimeter . This capacitor is placed in a circuit with an ideal 6.0-volt battery, a resistor of resistance\nR equals 500 ohms\n, voltmeter V, and an open switch S, as shown above. A 1.0 millimeter thick piece of plastic is inserted\nbetween the aluminum plates. The distance x that the plastic is inserted between the plates can be varied, and the\nvoltmeter is used to measure the potential difference V sub C across the capacitor. The switch is closed, and readings\nfrom the voltmeter are recorded as a function of time t. The data are plotted to create the graph shown below.\nThe figure presents the graph of a curve in a plane with the origin labeled O. The horizontal axis is labeled t. Just to the right of the origin is a tick mark labeled t sub one half. The vertical axis is labeled V sub C, in volts, and the numbers 3 and 6 are indicated. The curve begins at the origin and moves steadily upward and to the right at first. It passes through the point with coordinates t sub one half, comma 3, and continues upward with a decreasing rate until it starts to level off as it approaches V sub C equals 6.\nThe time t sub one half shown above is the time for the capacitor to charge to half the potential difference of the battery.\n(a) The potential difference across the capacitor as a function of time is modeled by the equation\nV s\nub C equals V sub max, end subscript, times, open parenthesis, 1 minus e raised to the negative t over R C, power, close parenthesis\n, where V sub max equals 6 volts\n. Derive an expression for the capacitance C of the capacitor.\nExpress your answer in terms of t sub one half , R, and physical constants, as appropriate.\nThe data for x and t sub one half are recorded for several trials and\nthe value of C for each trial is calculated. The results\nare shown in the chart below.\nx, in meters\n0.050 0.10 0.15 0.20 0.25 t s u b o\nn e half, in microseconds\n0.44 0.63 0.75 0.88 1.10\nC, in nanofarads\n1.27 1.82 2.16 2.54 3.17\n(b) Plot the experimental value of the capacitance C as a function of the distance x on the graph below. Clearly\nscale and label all axes, including units if appropriate. Draw a straight line that best represents the data.\nThe figure presents a 25 by 20 grid. The gridlines are dashed lines. There are bolder dashed lines drawn every 5 grid units in the horizontal and vertical directions.\n(c) The capacitor in the lab can be treated as two capacitors in parallel, one with the dielectric and one with air\nbetween the plates. Show that the capacitance can be expressed as\nC equals, the fraction epsilon sub 0, end subscript, times S, and denominator d, end fraction, times, open parenthesis, s plus, x times open parenthesis, kappa minus 1, close parenthesis, close parenthesis.\n.\nQuestion 1 continues on the next page.\n(d) Using the graph from part (b), calculate the value of the dielectric constant kappa .\n(e) The students now want to verify the value for the permittivity constant, epsilon sub 0 . Using the graph from part (b),\ncalculate an experimental value for epsilon sub 0 .\n(f) Assume the value found in part (e) is higher than the accepted value for the permittivity constant. State one\npossible physical reason for this error and explain how it could have caused this error.",
+    "text": "Students design an experiment to determine the unknown dielectric constant $\\kappa$ of a plastic material. A capacitor is created using two square aluminum plates of side length $s=30\\,\\mathrm{cm}$ that are separated by a distance $d=1.0\\,\\mathrm{mm}$. This capacitor is placed in a circuit with an ideal $6.0\\,\\mathrm{V}$ battery, a resistor of resistance $R=500\\,\\Omega$, voltmeter V, and an open switch S, as shown above. A $1.0\\,\\mathrm{mm}$ thick piece of plastic is inserted between the aluminum plates. The distance $x$ that the plastic is inserted between the plates can be varied, and the voltmeter is used to measure the potential difference $V_C$ across the capacitor. The switch is closed, and readings from the voltmeter are recorded as a function of time $t$. The data are plotted to create the graph shown below. The time $t_{1/2}$ shown above is the time for the capacitor to charge to half the potential difference of the battery.\n\n(a) The potential difference across the capacitor as a function of time is modeled by the equation $V_C=V_{\\max}(1-e^{-t/(RC)})$, where $V_{\\max}=6\\,\\mathrm{V}$. Derive an expression for the capacitance $C$ of the capacitor. Express your answer in terms of $t_{1/2}$, $R$, and physical constants, as appropriate.\n\nThe data for $x$ and $t_{1/2}$ are recorded for several trials and the value of $C$ for each trial is calculated. The results are shown in the chart below.\n\n| $x$ (m) | 0.050 | 0.10 | 0.15 | 0.20 | 0.25 |\n|---:|---:|---:|---:|---:|---:|\n| $t_{1/2}$ ($\\mu\\mathrm{s}$) | 0.44 | 0.63 | 0.75 | 0.88 | 1.10 |\n| $C$ (nF) | 1.27 | 1.82 | 2.16 | 2.54 | 3.17 |\n\n(b) Plot the experimental value of the capacitance $C$ as a function of the distance $x$ on the graph below. Clearly scale and label all axes, including units if appropriate. Draw a straight line that best represents the data.\n\n(c) The capacitor in the lab can be treated as two capacitors in parallel, one with the dielectric and one with air between the plates. Show that the capacitance can be expressed as $C=\\frac{\\epsilon_0 s}{d}\\left[s+x(\\kappa-1)\\right]$.\n\n(d) Using the graph from part (b), calculate the value of the dielectric constant $\\kappa$.\n\n(e) The students now want to verify the value for the permittivity constant $\\epsilon_0$. Using the graph from part (b), calculate an experimental value for $\\epsilon_0$.\n\n(f) Assume the value found in part (e) is higher than the accepted value for the permittivity constant. State one possible physical reason for this error and explain how it could have caused this error.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -2091,13 +2509,43 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Score the response across the experimental capacitor investigation: identify variables and measurements, linearize or otherwise use the data to determine the dielectric constant, account for uncertainty, and justify the physical interpretation. Official point-by-point details are shown in the rubric images."
+          "point_id": "a",
+          "points": 2,
+          "value": 2,
+          "description": "Part (a): Use the charging model $V_C=V_{max}(1-e^{-t/RC})$ and the condition $V_C=V_{max}/2$ at $t=t_{1/2}$. The accepted expression is $C=t_{1/2}/(R\\ln2)$."
+        },
+        {
+          "point_id": "b",
+          "points": 3,
+          "value": 3,
+          "description": "Part (b): Plot capacitance $C$ versus insertion distance $x$ with labeled axes and units, use a reasonable scale, plot all data points accurately, and draw a best-fit straight line."
+        },
+        {
+          "point_id": "c",
+          "points": 3,
+          "value": 3,
+          "description": "Part (c): Treat the device as two capacitors in parallel: an air-filled area and a dielectric-filled area. Show that $C=\\epsilon_0 s\\,[s+x(\\kappa-1)]/d$ or an algebraically equivalent expression."
+        },
+        {
+          "point_id": "d",
+          "points": 3,
+          "value": 3,
+          "description": "Part (d): Use the slope of the best-fit line and the expression from part (c) to calculate the dielectric constant $\\kappa$. Credit is earned for linking slope to $\\epsilon_0 s(\\kappa-1)/d$ and using consistent units."
+        },
+        {
+          "point_id": "e",
+          "points": 2,
+          "value": 2,
+          "description": "Part (e): Use the vertical intercept or the part (c) expression with graph information to calculate an experimental value for $\\epsilon_0$, with correct unit handling."
+        },
+        {
+          "point_id": "f",
+          "points": 2,
+          "value": 2,
+          "description": "Part (f): State a physical reason that would make the experimental $\\epsilon_0$ too high and explain the direction of the effect. Valid examples include plate separation smaller than assumed, fringing/capacitance not modeled, or systematic timing/measurement error that increases calculated capacitance."
         }
       ],
-      "official_text": "Score the response across the experimental capacitor investigation: identify variables and measurements, linearize or otherwise use the data to determine the dielectric constant, account for uncertainty, and justify the physical interpretation. Official point-by-point details are shown in the rubric images."
+      "official_text": "a: Part (a): Use the charging model $V_C=V_{max}(1-e^{-t/RC})$ and the condition $V_C=V_{max}/2$ at $t=t_{1/2}$. The accepted expression is $C=t_{1/2}/(R\\ln2)$.\n\nb: Part (b): Plot capacitance $C$ versus insertion distance $x$ with labeled axes and units, use a reasonable scale, plot all data points accurately, and draw a best-fit straight line.\n\nc: Part (c): Treat the device as two capacitors in parallel: an air-filled area and a dielectric-filled area. Show that $C=\\epsilon_0 s\\,[s+x(\\kappa-1)]/d$ or an algebraically equivalent expression.\n\nd: Part (d): Use the slope of the best-fit line and the expression from part (c) to calculate the dielectric constant $\\kappa$. Credit is earned for linking slope to $\\epsilon_0 s(\\kappa-1)/d$ and using consistent units.\n\ne: Part (e): Use the vertical intercept or the part (c) expression with graph information to calculate an experimental value for $\\epsilon_0$, with correct unit handling.\n\nf: Part (f): State a physical reason that would make the experimental $\\epsilon_0$ too high and explain the direction of the effect. Valid examples include plate separation smaller than assumed, fringing/capacitance not modeled, or systematic timing/measurement error that increases calculated capacitance."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2019.pdf",
@@ -2157,7 +2605,7 @@
     "question_type": "FRQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "A thin wire of length L has a uniform charge density\npositive lambda . A cylindrical Gaussian surface of radius d is drawn\nwith the wire along its central axis, as shown above. Point P is located at the center of one end of the cylinder, a\ndistance d from the end of the wire. Point Q is on the edge of the cylinder directly above the center of the wire,\nas shown above.\nA student says, “Gauss’s law can be used to find the electric flux phi through the Gaussian surface.”\n(a) Is the student’s statement correct or incorrect?\n____ Correct\n____ Incorrect\nIf you have chosen “Correct,” use Gauss’s law to find the electric flux phi through the Gaussian surface.\nIf you have chosen “Incorrect,” explain why the student’s reasoning is incorrect and why Gauss’s law cannot\nbe applied in this situation.\n(b) Two students discuss whether or not they can use Gauss’s law to find the electric field at points P and Q.\nAt which of the points, if either, is Gauss’s law a useful method for finding the electric field?\n_____ At point P only\n____ At point Q only\n_____ At both points P and Q\n____ At neither point P nor point Q\nJustify your answer.\n(c) Assuming the electric potential is zero at infinity, show that the value for the electric potential at point P is\ngiven by the following expression.\nV\nequals the fraction with numerator lambda and denominator 4 pi times epsilon sub 0, end fraction, times the natural log of, open parenthesis, the fraction L plus d, over d, close parenthesis\nFigure 2 presents a diagram of wire located along a horizontal x axis. The wire begins on the left side of the axis at the origin, and is a distance of L along the axis. To the right of the wire is a point labeled P on the x axis. The distance from the right end of the wire to point P is d.\nThe wire is aligned along the x-axis with the origin at the left end of the wire, as shown in Figure 2 above.\n(d) A positively charged particle of charge positive e and mass m is released from rest at point P. On the axes below,\nsketch the kinetic energy K of the particle, the potential energy U of the wire-particle system, and the total\nenergy E sub total of the wire-particle system as functions of the particle’s position x. Clearly label each sketch\nwith K, U, and E sub total . Explicitly label any maximum with numerical values or algebraic expressions, as\nappropriate.\nQuestion 2 continues on the next page.\nThe figure presents the first quadrant of a coordinate plane, with the origin labeled O. The horizontal axis is labeled x. Just to the right of the origin on the x axis is a tick mark labeled L plus d.\nFigure 3 presents a diagram of wire located along a horizontal x axis. The wire begins on the left side of the axis at the origin, and is a distance of L along the axis.\n(e) Derive an expression for the magnitude of the electric field due to the wire as a function of the position\nalong the x-axis, where x is greater than L\n. Express your answer in terms of x, L, lambda , and physical constants, as\nappropriate.\nThe figure presents a circuit diagram consisting of a battery, a switch, 2 resistors, and an inductor. The left side of the circuit has a 12 volt battery. Moving up the left side and along the top of the circuit is an open switch labeled S. To the right of the open switch the circuit splits into to vertical branches. The first vertical branch has a resistor labeled R sub 1, 30 ohms. The second vertical branch has an inductor labeled L, 50 millihenries. The portion of the bottom/side, between the two vertical branches has a resistor labeled R sub 2 equals 20 ohms.",
+    "text": "A thin wire of length $L$ has a uniform charge density $+\\lambda$. A cylindrical Gaussian surface of radius $d$ is drawn with the wire along its central axis, as shown above. Point P is located at the center of one end of the cylinder, a distance $d$ from the end of the wire. Point Q is on the edge of the cylinder directly above the center of the wire, as shown above.\n\nA student says, “Gauss’s law can be used to find the electric flux $\\Phi$ through the Gaussian surface.”\n\n(a) Is the student’s statement correct or incorrect?\n\n____ Correct   ____ Incorrect\n\nIf you have chosen “Correct,” use Gauss’s law to find the electric flux $\\Phi$ through the Gaussian surface. If you have chosen “Incorrect,” explain why the student’s reasoning is incorrect and why Gauss’s law cannot be applied in this situation.\n\n(b) Two students discuss whether or not they can use Gauss’s law to find the electric field at points P and Q. At which of the points, if either, is Gauss’s law a useful method for finding the electric field?\n\n____ At point P only   ____ At point Q only   ____ At both points P and Q   ____ At neither point P nor point Q\n\nJustify your answer.\n\n(c) Assuming the electric potential is zero at infinity, show that the value for the electric potential at point P is given by the following expression:\n\n$$V=\\frac{\\lambda}{4\\pi\\epsilon_0}\\ln\\left(\\frac{L+d}{d}\\right).$$\n\nThe wire is aligned along the $x$-axis with the origin at the left end of the wire, as shown in Figure 2 above.\n\n(d) A positively charged particle of charge $+e$ and mass $m$ is released from rest at point P. On the axes below, sketch the kinetic energy $K$ of the particle, the potential energy $U$ of the wire-particle system, and the total energy $E_{\\mathrm{total}}$ of the wire-particle system as functions of the particle’s position $x$. Clearly label each sketch with $K$, $U$, and $E_{\\mathrm{total}}$. Explicitly label any maximum with numerical values or algebraic expressions, as appropriate.\n\n(e) Derive an expression for the magnitude of the electric field due to the wire as a function of the position along the $x$-axis, where $x>L$. Express your answer in terms of $x$, $L$, $\\lambda$, and physical constants, as appropriate.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -2193,13 +2641,37 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Score the response across the Gauss's law question: evaluate when Gauss's law is useful, reason about symmetry and electric flux, derive or justify the electric field where appropriate, and explain the behavior at the specified points. Official point-by-point details are shown in the rubric images."
+          "point_id": "a",
+          "points": 1,
+          "value": 1,
+          "description": "Part (a): Select correct for the statement that Gauss's law can be used to find the total electric flux through the Gaussian surface. The flux is $\\Phi_E=q_{enc}/\\epsilon_0=\\lambda L/\\epsilon_0$."
+        },
+        {
+          "point_id": "b",
+          "points": 1,
+          "value": 1,
+          "description": "Part (b): Select either at neither point P nor Q, or at point Q only, with justification consistent with the chosen Gaussian surface. The key idea is that Gauss's law gives field values only when symmetry makes the field constant or otherwise known on the surface."
+        },
+        {
+          "point_id": "c",
+          "points": 3,
+          "value": 3,
+          "description": "Part (c): Derive the potential at P by integrating contributions from charge elements on the wire. Credit is earned for setting up $dV=(1/4\\pi\\epsilon_0)dq/r$, using $dq=\\lambda dr$, integrating from $d$ to $d+L$, and obtaining $V=\\frac{\\lambda}{4\\pi\\epsilon_0}\\ln((L+d)/d)$."
+        },
+        {
+          "point_id": "d",
+          "points": 6,
+          "value": 6,
+          "description": "Part (d): Sketch energy versus position for a released positive charge. $K$ starts at zero at $x=L+d$, increases, is concave down, and approaches a horizontal asymptote; $U$ starts at its maximum, decreases, is concave up, and approaches zero; total energy is a horizontal line at the maximum value."
+        },
+        {
+          "point_id": "e",
+          "points": 4,
+          "value": 4,
+          "description": "Part (e): Derive the electric field on the x-axis for $x>L$ either by direct integration or by differentiating the potential. The accepted expression is equivalent to $E=\\lambda L/[4\\pi\\epsilon_0(x-L)x]$."
         }
       ],
-      "official_text": "Score the response across the Gauss's law question: evaluate when Gauss's law is useful, reason about symmetry and electric flux, derive or justify the electric field where appropriate, and explain the behavior at the specified points. Official point-by-point details are shown in the rubric images."
+      "official_text": "a: Part (a): Select correct for the statement that Gauss's law can be used to find the total electric flux through the Gaussian surface. The flux is $\\Phi_E=q_{enc}/\\epsilon_0=\\lambda L/\\epsilon_0$.\n\nb: Part (b): Select either at neither point P nor Q, or at point Q only, with justification consistent with the chosen Gaussian surface. The key idea is that Gauss's law gives field values only when symmetry makes the field constant or otherwise known on the surface.\n\nc: Part (c): Derive the potential at P by integrating contributions from charge elements on the wire. Credit is earned for setting up $dV=(1/4\\pi\\epsilon_0)dq/r$, using $dq=\\lambda dr$, integrating from $d$ to $d+L$, and obtaining $V=\\frac{\\lambda}{4\\pi\\epsilon_0}\\ln((L+d)/d)$.\n\nd: Part (d): Sketch energy versus position for a released positive charge. $K$ starts at zero at $x=L+d$, increases, is concave down, and approaches a horizontal asymptote; $U$ starts at its maximum, decreases, is concave up, and approaches zero; total energy is a horizontal line at the maximum value.\n\ne: Part (e): Derive the electric field on the x-axis for $x>L$ either by direct integration or by differentiating the potential. The accepted expression is equivalent to $E=\\lambda L/[4\\pi\\epsilon_0(x-L)x]$."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2019.pdf",
@@ -2259,7 +2731,7 @@
     "question_type": "FRQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "The circuit shown above is constructed using an ideal\n12 volts battery, an ideal switch S, and two resistors and an\ninductor with the values shown. Switch S is closed. After a long time, the circuit reaches steady-state conditions.\n(a) Calculate the current through R sub 1 .\n(b) Calculate the current through the battery.\nThe switch is then opened at time t equals 0 .\n(c) Determine the current in the inductor immediately after the switch is opened.\n(d)\ni. Determine the current in resistor R sub 1 immediately after the switch is opened.\nii. Which of the following statements is correct about the current through R sub 1 immediately after the switch\nis opened?\n_____ The current is up through R sub 1 .\n_____ The current is down through R sub 1 .\n_____ There is no current through R sub 1 .\nJustify your answer.\n(e) Immediately after the switch is opened, is the top end or bottom end of the inductor at the higher electric\npotential?\n____ Top end\n____ Bottom end\nJustify your answer.\nQuestion 3 continues on the next page.\n(f) On the axes below, sketch a graph of the potential difference V across the inductor as a function of time after\nthe switch is opened. Explicitly label the vertical axis intercept with a numerical value.\nThe figure presents the first quadrant of a coordinate plane, with the origin labeled O. The horizontal axis is labeled t, and the vertical axis is labeled V.\n(g) Write but DO NOT solve a differential equation that could be solved for the current through the inductor as\na function of time after the switch is opened.\n* * *",
+    "text": "The circuit shown above is constructed using an ideal $12\\,\\mathrm{V}$ battery, an ideal switch S, and two resistors and an inductor with the values shown. Switch S is closed. After a long time, the circuit reaches steady-state conditions.\n\n(a) Calculate the current through $R_1$.\n\n(b) Calculate the current through the battery.\n\nThe switch is then opened at time $t=0$.\n\n(c) Determine the current in the inductor immediately after the switch is opened.\n\n(d) (i) Determine the current in resistor $R_1$ immediately after the switch is opened.\n\n(ii) Which of the following statements is correct about the current through $R_1$ immediately after the switch is opened?\n\n____ The current is up through $R_1$.\n\n____ The current is down through $R_1$.\n\n____ There is no current through $R_1$.\n\nJustify your answer.\n\n(e) Immediately after the switch is opened, is the top end or bottom end of the inductor at the higher electric potential?\n\n____ Top end   ____ Bottom end\n\nJustify your answer.\n\n(f) On the axes below, sketch a graph of the potential difference $V$ across the inductor as a function of time after the switch is opened. Explicitly label the vertical-axis intercept with a numerical value.\n\n(g) Write but do NOT solve a differential equation that could be solved for the current through the inductor as a function of time after the switch is opened.",
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
@@ -2291,13 +2763,55 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "official_scoring_guideline",
-          "points": 15,
-          "value": 15,
-          "description": "Score the response across the LR circuit question: calculate steady-state currents, analyze the inductor before and after the switch is opened, determine resistor currents, and justify the time-dependent behavior. Official point-by-point details are shown in the rubric images."
+          "point_id": "a",
+          "points": 2,
+          "value": 2,
+          "description": "Part (a): After a long time with the switch closed, the inductor behaves like a wire. Use Ohm's law for $R_1$ to get $I_{R1}=12\\,\\mathrm{V}/30\\,\\Omega=0.40\\,\\mathrm{A}$."
+        },
+        {
+          "point_id": "b",
+          "points": 2,
+          "value": 2,
+          "description": "Part (b): Calculate the equivalent resistance of the parallel branches, $R_T=12\\,\\Omega$, and use Ohm's law to find the battery current, $1.0\\,\\mathrm{A}$."
+        },
+        {
+          "point_id": "c",
+          "points": 1,
+          "value": 1,
+          "description": "Part (c): Immediately after the switch opens, the inductor current cannot change instantaneously. The current is consistent with the prior $R_2$ branch current, $0.60\\,\\mathrm{A}$."
+        },
+        {
+          "point_id": "d(i)",
+          "points": 1,
+          "value": 1,
+          "description": "Part (d)(i): The current through $R_1$ immediately after opening is $0.60\\,\\mathrm{A}$, consistent with the inductor current path."
+        },
+        {
+          "point_id": "d(ii)",
+          "points": 2,
+          "value": 2,
+          "description": "Part (d)(ii): Select up through $R_1$. The justification must state that the inductor resists a change in current and maintains the current direction through the loop immediately after the switch opens."
+        },
+        {
+          "point_id": "e",
+          "points": 1,
+          "value": 1,
+          "description": "Part (e): Select bottom end for the higher-potential end of the inductor, or a result consistent with part (d). The justification must connect current direction/emf to the inductor terminal potential."
+        },
+        {
+          "point_id": "f",
+          "points": 3,
+          "value": 3,
+          "description": "Part (f): The graph of the inductor potential difference after opening should start at the correct maximum value, $30\\,\\mathrm{V}$, decay toward zero, be concave up, and approach the horizontal axis asymptotically."
+        },
+        {
+          "point_id": "g",
+          "points": 3,
+          "value": 3,
+          "description": "Part (g): Write a differential equation from the loop rule after the switch is opened. Credit is earned for applying $V_L-V_{R2}-V_{R1}=0$, substituting resistor and inductor voltage relations, and writing an equivalent equation such as $-L\\,dI/dt=I(R_1+R_2)$."
         }
       ],
-      "official_text": "Score the response across the LR circuit question: calculate steady-state currents, analyze the inductor before and after the switch is opened, determine resistor currents, and justify the time-dependent behavior. Official point-by-point details are shown in the rubric images."
+      "official_text": "a: Part (a): After a long time with the switch closed, the inductor behaves like a wire. Use Ohm's law for $R_1$ to get $I_{R1}=12\\,\\mathrm{V}/30\\,\\Omega=0.40\\,\\mathrm{A}$.\n\nb: Part (b): Calculate the equivalent resistance of the parallel branches, $R_T=12\\,\\Omega$, and use Ohm's law to find the battery current, $1.0\\,\\mathrm{A}$.\n\nc: Part (c): Immediately after the switch opens, the inductor current cannot change instantaneously. The current is consistent with the prior $R_2$ branch current, $0.60\\,\\mathrm{A}$.\n\nd(i): Part (d)(i): The current through $R_1$ immediately after opening is $0.60\\,\\mathrm{A}$, consistent with the inductor current path.\n\nd(ii): Part (d)(ii): Select up through $R_1$. The justification must state that the inductor resists a change in current and maintains the current direction through the loop immediately after the switch opens.\n\ne: Part (e): Select bottom end for the higher-potential end of the inductor, or a result consistent with part (d). The justification must connect current direction/emf to the inductor terminal potential.\n\nf: Part (f): The graph of the inductor potential difference after opening should start at the correct maximum value, $30\\,\\mathrm{V}$, decay toward zero, be concave up, and approach the horizontal axis asymptotically.\n\ng: Part (g): Write a differential equation from the loop rule after the switch is opened. Credit is earned for applying $V_L-V_{R2}-V_{R1}=0$, substituting resistor and inductor voltage relations, and writing an equivalent equation such as $-L\\,dI/dt=I(R_1+R_2)$."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2019.pdf",

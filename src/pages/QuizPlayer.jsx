@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import QuestionCard from '../components/QuestionCard'
 import QuizNavigator from '../components/QuizNavigator'
 import Timer from '../components/Timer'
+import { MathText } from '../components/MathText'
 import { UNITS, loadMCQBank, loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
 import { getCurrentQuiz, getQuizConfig, getQuizInfo, setMCQAnswers, startSimilarQuiz } from '../utils/quizSession'
 import {
@@ -267,7 +268,9 @@ function QuizPlayer() {
                       {similarQs.map((sim) => (
                         <div key={sim.question_id} className="text-xs text-text flex items-center gap-2">
                           <span className="text-text-muted shrink-0">{sim.question_id}</span>
-                          <span className="truncate">{sim.question.text || sim.question.question_text}</span>
+                          <span className="truncate">
+                            <MathText text={sim.question.text || sim.question.question_text} forceInlineLatex />
+                          </span>
                         </div>
                       ))}
                     </div>

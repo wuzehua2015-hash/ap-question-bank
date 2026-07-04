@@ -759,11 +759,11 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
         </>
       )}
 
+      {showRubric && <RubricDisplay rubric={frq.rubric} variant={variant} />}
+
       {showRubric && rubricImagePaths.map((path, i) => (
         <DisplayImage key={`rubric-${i}`} path={path} variant={variant} />
       ))}
-
-      {showRubric && <RubricDisplay rubric={frq.rubric} variant={variant} />}
     </div>
   )
 }

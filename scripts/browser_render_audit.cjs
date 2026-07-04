@@ -21,9 +21,14 @@ const BAD_TEXT_PATTERNS = [
   { name: 'mojibake_common', re: /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7]/ },
   { name: 'raw_html_entity', re: /&(?:quot|amp|lt|gt|nbsp);/i },
   { name: 'visible_mojibake_cjk', re: /[\u9354\u68f0\u93bc\u7edb\u95ff\u59dd\u7035\u6d93\u93c4\u935a\u9a9e\u95c5\u5bb8\u6ccc\u6d60\u9429\u5997\u6ad2\u704f]/ },
+]
+
+const PHYSICS_TEXT_PATTERNS = [
   { name: 'physics_ocr_vector_g', re: /\b(?:aG|B\s+G|G\s+G|B\s+d\s*(?:\u222b|int)\s*G)\b/i },
   { name: 'physics_ocr_energy_ratio', re: /\benergy\s+1\s+U\b|\bratio\s+2\s+U\s+U1\b/i },
   { name: 'physics_ocr_charge_units', re: /\bC\s+Q\s+m\b|\bQ\s+m\s*=/i },
+  { name: 'physics_split_symbol', re: /\b(?:current\s+X\s+I|magnitude\s+B\s+F|force\s+B\s+F)\b/i },
+  { name: 'physics_signed_variable_words', re: /\b(?:charge\s+positive\s+e|charges?\s+negative\s+q\s+and\s+positive\s+3\s*q)\b/i },
 ]
 
 main().catch((error) => {
@@ -439,7 +444,10 @@ async function collectPageInfo(client, page) {
 
 function checkPageInfo(info, errors, warnings) {
   if (!info.visibleTextLength) errors.push({ page: info.page, kind: 'blank_page', url: info.url })
-  for (const pattern of BAD_TEXT_PATTERNS) {
+  const patterns = subjectId === 'physics-c-e-m'
+    ? [...BAD_TEXT_PATTERNS, ...PHYSICS_TEXT_PATTERNS]
+    : BAD_TEXT_PATTERNS
+  for (const pattern of patterns) {
     if (pattern.re.test(info.text)) {
       errors.push({ page: info.page, kind: pattern.name, sample: sampleMatch(info.text, pattern.re) })
     }
