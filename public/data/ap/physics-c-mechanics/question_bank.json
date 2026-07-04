@@ -2256,7 +2256,7 @@
     "year": 2013,
     "question_number": 21,
     "type": "MCQ",
-    "text": "What is the coefficient of friction \nbetween the box and the floor?",
+    "text": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.\n\nWhat is the coefficient of friction between the box and the floor?",
     "options": {
       "A": "0.10",
       "B": "0.20",
@@ -2285,6 +2285,14 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2013.pdf",
       "raw_chunk_sha256": "9153d0b7b22839b943db1ffc21e870665682a1e33cfec7108ec6d5bd73503512"
     },
+    "group_id": "2013_Q21_22",
+    "group_members": [
+      "2013_Q21",
+      "2013_Q22"
+    ],
+    "group_role": "lead",
+    "requires_group_context": true,
+    "group_context": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.",
     "rubric_image_paths": []
   },
   {
@@ -2295,13 +2303,13 @@
     "year": 2013,
     "question_number": 22,
     "type": "MCQ",
-    "text": "Which of the following best describes the \nfrictional forces exerted on the box \nand on the floor while the box is sliding?\nThe figure shows a block labeled $m$ on a horizontal surface. From the midpoint of the right edge of the block is an arrow labeled F that points up and to the right and is an angle of theta with the horizontal.\nBox \nFloor",
+    "text": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.\n\nWhich of the following best describes the frictional forces exerted on the box and on the floor while the box is sliding?",
     "options": {
-      "A": "None \nNone",
-      "B": "To the right \nTo the right",
-      "C": "To the right \nTo the left",
-      "D": "To the left \nNone",
-      "E": "To the left \nTo the right"
+      "A": "Box: none; floor: none",
+      "B": "Box: to the right; floor: to the right",
+      "C": "Box: to the right; floor: to the left",
+      "D": "Box: to the left; floor: none",
+      "E": "Box: to the left; floor: to the right"
     },
     "answer": "E",
     "image_paths": [],
@@ -2324,6 +2332,42 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2013.pdf",
       "raw_chunk_sha256": "76675fdb4852fd30d120430d021c37d5e5cc926d2847cfd74eba8d52523bdba8"
     },
+    "option_table_data": {
+      "headers": [
+        "Box",
+        "Floor"
+      ],
+      "rows": {
+        "A": [
+          "None",
+          "None"
+        ],
+        "B": [
+          "To the right",
+          "To the right"
+        ],
+        "C": [
+          "To the right",
+          "To the left"
+        ],
+        "D": [
+          "To the left",
+          "None"
+        ],
+        "E": [
+          "To the left",
+          "To the right"
+        ]
+      }
+    },
+    "group_id": "2013_Q21_22",
+    "group_members": [
+      "2013_Q21",
+      "2013_Q22"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "group_context": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.",
     "rubric_image_paths": []
   },
   {
@@ -3183,6 +3227,34 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2014.pdf",
       "raw_chunk_sha256": "0aab8f76f08c53fb5dc0e92cedb272ca6a49cb06c895f4b1419d50040654e175"
     },
+    "option_table_data": {
+      "headers": [
+        "Rotational Speed",
+        "Angular Momentum"
+      ],
+      "rows": {
+        "A": [
+          "Stays the same",
+          "Increases"
+        ],
+        "B": [
+          "Stays the same",
+          "Stays the same"
+        ],
+        "C": [
+          "Stays the same",
+          "Decreases"
+        ],
+        "D": [
+          "Decreases",
+          "Stays the same"
+        ],
+        "E": [
+          "Decreases",
+          "Decreases"
+        ]
+      }
+    },
     "group_id": "2014_Q07_08",
     "group_members": [
       "2014_Q07",
@@ -3982,7 +4054,7 @@
     "year": 2014,
     "question_number": 28,
     "type": "MCQ",
-    "text": "An object starts from rest and accelerates \nuniformly in the horizontal direction, moving \n32 $m$ during the first $4\\,\\mathrm{s}$\n$4\\,\\mathrm{s}$. What are the magnitudes \nof the object’s displacement and velocity after it \naccelerates for the first $3\\,\\mathrm{s}$\nMagnitude of \nDisplacement\nMagnitude of \nVelocity",
+    "text": "An object starts from rest and accelerates uniformly in the horizontal direction, moving $32\\,\\mathrm{m}$ during the first $4\\,\\mathrm{s}$. What are the magnitudes of the object's displacement and velocity after it accelerates for the first $3\\,\\mathrm{s}$?",
     "options": {
       "A": "$24\\,\\mathrm{m}$; $24\\,\\mathrm{m/s}$",
       "B": "$24\\,\\mathrm{m}$; $18\\,\\mathrm{m/s}$",
@@ -4010,6 +4082,34 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2014.pdf",
       "raw_chunk_sha256": "7dc882a80cf93b4a131b37bff813401b95b4f6e6d6c541f56339f634d931a89b"
+    },
+    "option_table_data": {
+      "headers": [
+        "Magnitude of Displacement",
+        "Magnitude of Velocity"
+      ],
+      "rows": {
+        "A": [
+          "$24\\,\\mathrm{m}$",
+          "$24\\,\\mathrm{m/s}$"
+        ],
+        "B": [
+          "$24\\,\\mathrm{m}$",
+          "$18\\,\\mathrm{m/s}$"
+        ],
+        "C": [
+          "$18\\,\\mathrm{m}$",
+          "$18\\,\\mathrm{m/s}$"
+        ],
+        "D": [
+          "$18\\,\\mathrm{m}$",
+          "$12\\,\\mathrm{m/s}$"
+        ],
+        "E": [
+          "$8\\,\\mathrm{m}$",
+          "$12\\,\\mathrm{m/s}$"
+        ]
+      }
     },
     "rubric_image_paths": []
   },
@@ -5943,16 +6043,18 @@
     "year": 2016,
     "question_number": 4,
     "type": "MCQ",
-    "text": "The position x as a function of time t for an object \nmoving in a straight line is shown in the graph \nabove. Which of the following best describes the \nobject’s speed and direction of motion during the \ntime interval shown?\nSpeed \nDirection of Motion",
+    "text": "The position $x$ as a function of time $t$ for an object moving in a straight line is shown in the graph above. Which of the following best describes the object's speed and direction of motion during the time interval shown?",
     "options": {
-      "A": "Decreasing\nPositive",
-      "B": "Increasing\nPositive",
-      "C": "Constant\nPositive",
-      "D": "Decreasing\nNegative",
-      "E": "Increasing\nNegative"
+      "A": "Speed decreasing; direction of motion positive",
+      "B": "Speed increasing; direction of motion positive",
+      "C": "Speed constant; direction of motion positive",
+      "D": "Speed decreasing; direction of motion negative",
+      "E": "Speed increasing; direction of motion negative"
     },
     "answer": "A",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2016/2016_p021_img01.png"
+    ],
     "primary_unit": "U1",
     "unit": "U1",
     "unit_name": "Kinematics",
@@ -5971,6 +6073,34 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2016.pdf",
       "raw_chunk_sha256": "7eb62281a4ef6d1bee631312dd58f8cb2bcbc241c3ec5386dee5ce11a77e9211"
+    },
+    "option_table_data": {
+      "headers": [
+        "Speed",
+        "Direction of Motion"
+      ],
+      "rows": {
+        "A": [
+          "Decreasing",
+          "Positive"
+        ],
+        "B": [
+          "Increasing",
+          "Positive"
+        ],
+        "C": [
+          "Constant",
+          "Positive"
+        ],
+        "D": [
+          "Decreasing",
+          "Negative"
+        ],
+        "E": [
+          "Increasing",
+          "Negative"
+        ]
+      }
     },
     "rubric_image_paths": []
   },
@@ -6280,16 +6410,18 @@
     "year": 2016,
     "question_number": 12,
     "type": "MCQ",
-    "text": "A horizontal uniform plank is supported by ropes \nI and II at points P and Q, respectively, as shown \nabove. The two ropes have negligible mass. The \ntension in rope I is $150\\,\\mathrm{N}$. The point at which rope \nII is attached to the plank is now moved to point \nR halfway between point Q and point C, the \ncenter of the plank. The plank remains horizontal. \nWhich of the following are most nearly the new \ntensions in the two ropes?\nTension in I \nTension in II",
+    "text": "A horizontal uniform plank is supported by ropes I and II at points P and Q, respectively, as shown above. The two ropes have negligible mass. The tension in rope I is $150\\,\\mathrm{N}$. The point at which rope II is attached to the plank is now moved to point R halfway between point Q and point C, the center of the plank. The plank remains horizontal. Which of the following are most nearly the new tensions in the two ropes?",
     "options": {
-      "A": "$75\\,\\mathrm{N}$\n$225\\,\\mathrm{N}$",
-      "B": "$100\\,\\mathrm{N}$ \n$200\\,\\mathrm{N}$",
-      "C": "$112.5\\,\\mathrm{N}$ \n$112.5\\,\\mathrm{N}$",
-      "D": "$112.5\\,\\mathrm{N}$ \n$187.5\\,\\mathrm{N}$",
-      "E": "$150\\,\\mathrm{N}$ \n$300\\,\\mathrm{N}$"
+      "A": "Tension in I: $75\\,\\mathrm{N}$; tension in II: $225\\,\\mathrm{N}$",
+      "B": "Tension in I: $100\\,\\mathrm{N}$; tension in II: $200\\,\\mathrm{N}$",
+      "C": "Tension in I: $112.5\\,\\mathrm{N}$; tension in II: $112.5\\,\\mathrm{N}$",
+      "D": "Tension in I: $112.5\\,\\mathrm{N}$; tension in II: $187.5\\,\\mathrm{N}$",
+      "E": "Tension in I: $150\\,\\mathrm{N}$; tension in II: $300\\,\\mathrm{N}$"
     },
     "answer": "B",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2016/2016_p024_img03.png"
+    ],
     "primary_unit": "U2",
     "unit": "U2",
     "unit_name": "Force and Translational Dynamics",
@@ -6308,6 +6440,34 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2016.pdf",
       "raw_chunk_sha256": "15e0990d12ca3f331adfdd6c79a870a61351ccf49bccaad41060352af80667ee"
+    },
+    "option_table_data": {
+      "headers": [
+        "Tension in I",
+        "Tension in II"
+      ],
+      "rows": {
+        "A": [
+          "$75\\,\\mathrm{N}$",
+          "$225\\,\\mathrm{N}$"
+        ],
+        "B": [
+          "$100\\,\\mathrm{N}$",
+          "$200\\,\\mathrm{N}$"
+        ],
+        "C": [
+          "$112.5\\,\\mathrm{N}$",
+          "$112.5\\,\\mathrm{N}$"
+        ],
+        "D": [
+          "$112.5\\,\\mathrm{N}$",
+          "$187.5\\,\\mathrm{N}$"
+        ],
+        "E": [
+          "$150\\,\\mathrm{N}$",
+          "$300\\,\\mathrm{N}$"
+        ]
+      }
     },
     "rubric_image_paths": []
   },
@@ -6972,6 +7132,34 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2016.pdf",
       "raw_chunk_sha256": "2257486023a9bf261575d75bbce9905eb28385374de9318df07707bfd71a41f6"
+    },
+    "option_table_data": {
+      "headers": [
+        "Velocity",
+        "Acceleration"
+      ],
+      "rows": {
+        "A": [
+          "0",
+          "0"
+        ],
+        "B": [
+          "$v_0\\cos\\theta$",
+          "0"
+        ],
+        "C": [
+          "$v_0\\sin\\theta$",
+          "0"
+        ],
+        "D": [
+          "$v_0\\cos\\theta$",
+          "$9.8\\,\\mathrm{m/s^2}$"
+        ],
+        "E": [
+          "$v_0\\sin\\theta$",
+          "$9.8\\,\\mathrm{m/s^2}$"
+        ]
+      }
     },
     "rubric_image_paths": []
   },
@@ -10684,13 +10872,13 @@
     "year": 2019,
     "question_number": 10,
     "type": "MCQ",
-    "text": "A sphere of mass $m$ is dropped from the top of a building and reaches the ground before achieving terminal\nvelocity. The force of air resistance that acts on the sphere as it falls is given by F equals negative k v \n , where k is a positive \nconstant and v is the velocity of the sphere. What happens to the magnitude of the sphere’s velocity and \nacceleration, and to the distance it falls during each second, as the sphere approaches the ground?\nMagnitude of Velocity \nMagnitude of Acceleration \nDistance of Fall Each Second",
+    "text": "A sphere of mass $m$ is dropped from the top of a building and reaches the ground before achieving terminal velocity. The force of air resistance that acts on the sphere as it falls is given by $F=-kv$, where $k$ is a positive constant and $v$ is the velocity of the sphere. What happens to the magnitude of the sphere's velocity and acceleration, and to the distance it falls during each second, as the sphere approaches the ground?",
     "options": {
-      "A": "Increases \nIncreases \nIncreases",
-      "B": "Increases \nDecreases \nIncreases",
-      "C": "Increases \nDecreases \nDecreases",
-      "D": "Decreases \nIncreases \nDecreases",
-      "E": "Decreases \nDecreases \nIncreases"
+      "A": "Velocity increases; acceleration increases; distance of fall each second increases",
+      "B": "Velocity increases; acceleration decreases; distance of fall each second increases",
+      "C": "Velocity increases; acceleration decreases; distance of fall each second decreases",
+      "D": "Velocity decreases; acceleration increases; distance of fall each second decreases",
+      "E": "Velocity decreases; acceleration decreases; distance of fall each second increases"
     },
     "answer": "B",
     "image_paths": [],
@@ -10712,6 +10900,40 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2019.pdf",
       "raw_chunk_sha256": "27b0732345d56becb1c539e3aa43b7866fc25219f497165581a292c58059bdbd"
+    },
+    "option_table_data": {
+      "headers": [
+        "Magnitude of Velocity",
+        "Magnitude of Acceleration",
+        "Distance of Fall Each Second"
+      ],
+      "rows": {
+        "A": [
+          "Increases",
+          "Increases",
+          "Increases"
+        ],
+        "B": [
+          "Increases",
+          "Decreases",
+          "Increases"
+        ],
+        "C": [
+          "Increases",
+          "Decreases",
+          "Decreases"
+        ],
+        "D": [
+          "Decreases",
+          "Increases",
+          "Decreases"
+        ],
+        "E": [
+          "Decreases",
+          "Decreases",
+          "Increases"
+        ]
+      }
     },
     "rubric_image_paths": []
   },
