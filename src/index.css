@@ -71,6 +71,18 @@ body {
 
 .katex {
   white-space: nowrap;
+  color: inherit;
+}
+
+.katex .katex-html {
+  display: inline-block;
+  color: currentColor;
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
 }
 
 @media print {

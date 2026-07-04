@@ -117,6 +117,10 @@ function validate(filePath, options = {}) {
     { name: 'physics split roman numeral list', pattern: /\b1Increasing\b|\bsolenoid\s+3\s+Inserting\b/i },
     { name: 'physics split voltage labels', pattern: /located\s+on\s+lines\s+2\s+V\s+and\s+4\s+V|equipotential\s+region\s+6\s+V/i },
     { name: 'physics spoken coordinate OCR leakage', pattern: /\bcoordinate\s+\(0 comma|\bnegative d over 2 comma 0\b/i },
+    { name: 'physics bare subscript variable OCR leakage', pattern: /\b(?:C1|C2|Q1|Q2|q1|q2|R1|R2|V1|V2|Fext|B0|x0|h0|uT)\b/ },
+    { name: 'physics unrendered microfarad OCR leakage', pattern: /\b\d+(?:\.\d+)?\s*(?:F\s+m|µF)\b/i },
+    { name: 'physics unrendered ohm OCR leakage', pattern: /(?:resistance|resistor|resistors|load|connected to a)\s+[^"{}]{0,80}\b\d+(?:\.\d+)?\s*W\b|\bR\s*=\s*\d+(?:\.\d+)?\s*(?:W|Omega)\b/i },
+    { name: 'physics bare epsilon OCR leakage', pattern: /(?:^|[^\\])\b(?:epsilon|e)\s*=\s*\d+(?:\.\d+)?\s*V\b|ε/ },
   ]
   const structuredTableHeaderPatterns = [
     /Voltage across\s+Capacitor X\s+Voltage across\s+Capacitor Y\s+Voltage across\s+Capacitor Z/i,
@@ -163,6 +167,14 @@ function validate(filePath, options = {}) {
       }
     }
   }
+
+  function stripMathSegments(value) {
+    return value
+      .replace(/\$\$[\s\S]*?\$\$/g, ' ')
+      .replace(/\$[^$]*\$/g, ' ')
+      .replace(/\\\([\s\S]*?\\\)/g, ' ')
+      .replace(/\\\[[\s\S]*?\\\]/g, ' ')
+  }
   
   for (const q of data) {
     const qid = q.question_id || 'UNKNOWN'
@@ -183,7 +195,7 @@ function validate(filePath, options = {}) {
     findHiddenControlChars(q, qid, errors)
     findTextArtifacts(q, qid, errors)
     if (isPhysicsEM) {
-      const searchableText = JSON.stringify(q)
+      const searchableText = JSON.stringify(q, (key, value) => (typeof value === 'string' ? stripMathSegments(value) : value))
       for (const { name, pattern } of physicsArtifactPatterns) {
         if (pattern.test(searchableText)) {
           errors.push(`${qid}: contains ${name}`)
