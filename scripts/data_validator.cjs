@@ -23,7 +23,7 @@ function validateAllSubjects() {
     }
     const validUnits = new Set((subject.units || []).map(u => u.id))
     validUnits.add('not_applicable')
-    const { errors, warnings } = validate(qbPath, { validUnits })
+    const { errors, warnings } = validate(qbPath, { validUnits, subjectId: subject.id })
     allErrors += errors.length
     allWarnings += warnings.length
 
@@ -33,7 +33,7 @@ function validateAllSubjects() {
         console.log(`ERROR: ${subject.id}: missing FRQ bank: ${subject.frqBank}`)
         allErrors += 1
       } else {
-        const frqResult = validate(frqPath, { validUnits })
+        const frqResult = validate(frqPath, { validUnits, subjectId: subject.id })
         allErrors += frqResult.errors.length
         allWarnings += frqResult.warnings.length
       }
@@ -69,6 +69,7 @@ function validate(filePath, options = {}) {
   
   const seenIds = new Set()
   const validUnits = options.validUnits || new Set(['U1','U2','U3','U4','U5','U6','not_applicable'])
+  const subjectId = options.subjectId || ''
   const optionPollutionPatterns = [
     /Questions?\s+\d+\s*(?:-|through|and)/i,
     /Questions?\s+\d+\s+(refer|are|is)\b/i,
@@ -333,6 +334,24 @@ function validate(filePath, options = {}) {
       if (q.text && q.text.length < 50) {
         warnings.push(`${qid}: FRQ text very short (${q.text.length} chars), possible truncation`)
       }
+    }
+  }
+  if (subjectId === 'physics-c-mechanics') for (const q of data) {
+    const qid = q.question_id || 'UNKNOWN'
+    const text = q.text || q.question_text || ''
+    const match = text.match(/^Questions\s+(\d+)-(\d+)/i)
+    if (!match) continue
+    const start = Number(match[1])
+    const end = Number(match[2])
+    const expectedMembers = []
+    const year = q.year || String(qid).slice(0, 4)
+    for (let n = start; n <= end; n += 1) expectedMembers.push(`${year}_Q${String(n).padStart(2, '0')}`)
+    const expectedGroupId = `${year}_Q${String(start).padStart(2, '0')}_${String(end).padStart(2, '0')}`
+    if (q.group_id !== expectedGroupId) {
+      errors.push(`${qid}: text declares Questions ${start}-${end} but group_id is ${q.group_id || 'missing'}, expected ${expectedGroupId}`)
+    }
+    if (JSON.stringify(q.group_members || []) !== JSON.stringify(expectedMembers)) {
+      errors.push(`${qid}: text declares Questions ${start}-${end} but group_members is incomplete`)
     }
   }
   for (const q of data) {

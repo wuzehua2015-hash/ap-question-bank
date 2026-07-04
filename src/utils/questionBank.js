@@ -118,6 +118,19 @@ function bucketPrimaryUnit(bucket) {
   return Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] || bucket[0]?.primary_unit
 }
 
+function bucketSource(bucket) {
+  return bucket[0]?.source || (bucket[0]?.year ? String(bucket[0].year) : 'unknown')
+}
+
+function filterBucketsBySourceDiversity(buckets, maxPerSource = 2) {
+  const sourceCount = {}
+  return buckets.filter(bucket => {
+    const src = bucketSource(bucket)
+    sourceCount[src] = (sourceCount[src] || 0) + 1
+    return sourceCount[src] <= maxPerSource
+  })
+}
+
 function flattenBucketsToLimit(buckets, limit, { exact = false } = {}) {
   const selected = []
   for (const bucket of buckets) {
@@ -226,53 +239,48 @@ export const MOCK_EXAM_CONFIG = {
 
 export function generateQuiz(questions, config) {
   const playableQuestions = questions.filter(isPlayableMCQ)
-  let pool = [...playableQuestions]
+  let buckets = makeQuestionBuckets(playableQuestions)
 
-  // Filter by primary unit.
+  // Filter by primary unit without splitting official grouped questions.
   if (config.unit && config.unit !== 'all') {
-    pool = pool.filter(q => q.primary_unit === config.unit)
+    buckets = buckets.filter(bucket => bucket.some(q => q.primary_unit === config.unit))
   }
 
   // Optionally exclude completed questions using subject-scoped history.
   const subject = config.subject || 'macro'
   const doneIds = new Set(JSON.parse(localStorage.getItem(`${subject}_doneQuestions`) || localStorage.getItem('doneQuestions') || '[]'))
   if (config.excludeDone) {
-    pool = pool.filter(q => !doneIds.has(q.question_id))
-  }
-
-  // Limit repeated source papers in one quiz.
-  if (config.diverseSources !== false) {
-    const sourceCount = {}
-    pool = pool.filter(q => {
-      const src = q.source || 'unknown'
-      sourceCount[src] = (sourceCount[src] || 0) + 1
-      return sourceCount[src] <= 2
-    })
+    buckets = buckets.filter(bucket => bucket.every(q => !doneIds.has(q.question_id)))
   }
 
   // Relax source diversity first if the filtered pool is too small.
   let count = config.count || 10
-  if (pool.length < count) {
-    pool = [...playableQuestions]
+  if (buckets.flat().length < count) {
+    buckets = makeQuestionBuckets(playableQuestions)
     if (config.unit && config.unit !== 'all') {
-      pool = pool.filter(q => q.primary_unit === config.unit)
+      buckets = buckets.filter(bucket => bucket.some(q => q.primary_unit === config.unit))
     }
     if (config.excludeDone) {
-      pool = pool.filter(q => !doneIds.has(q.question_id))
+      buckets = buckets.filter(bucket => bucket.every(q => !doneIds.has(q.question_id)))
     }
   }
 
-  if (pool.length < count) {
+  if (buckets.flat().length < count) {
     // Relax completed-question exclusion if needed.
-    pool = [...playableQuestions]
+    buckets = makeQuestionBuckets(playableQuestions)
     if (config.unit && config.unit !== 'all') {
-      pool = pool.filter(q => q.primary_unit === config.unit)
+      buckets = buckets.filter(bucket => bucket.some(q => q.primary_unit === config.unit))
     }
   }
 
   // Shuffle grouped buckets and return contiguous official question groups.
-  const buckets = makeQuestionBuckets(pool).sort(() => Math.random() - 0.5)
-  const actualCount = Math.min(count, pool.length)
+  const diverseBuckets = config.diverseSources === false ? buckets : filterBucketsBySourceDiversity(buckets)
+  const availableCount = buckets.reduce((sum, bucket) => sum + bucket.length, 0)
+  if (flattenBucketsToLimit(diverseBuckets, count, { exact: false }).length >= Math.min(count, availableCount)) {
+    buckets = diverseBuckets
+  }
+  buckets = buckets.sort(() => Math.random() - 0.5)
+  const actualCount = Math.min(count, availableCount)
   const quiz = flattenBucketsToLimit(buckets, actualCount, { exact: false })
   return {
     quiz,
