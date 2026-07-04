@@ -1,0 +1,3016 @@
+[
+  {
+    "question_id": "2012_FRQ1",
+    "frq_id": "2012_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2012,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2012 Practice Exam",
+    "text": "Experiment 1. A block of mass 0.30 kg is placed on a frictionless table and is attached to one end of a horizontal \nspring of spring constant k, as shown above. The other end of the spring is attached to a fixed wall. The block is \nset into oscillatory motion by stretching the spring and releasing the block from rest at time t = 0. A motion \ndetector is used to record the position of the block as it oscillates. The resulting graph of velocity u versus time t \nis shown below. The positive direction for all quantities is to the right. \n(a) Determine the equation for ( )t\nu\n, including numerical values for all constants. \n(b) Given that the equilibrium position is at \n0\nx =\n, determine the equation for x(t), including numerical values \nfor all constants.\n(c) Calculate the value of k. \nExperiment 2. The block and spring arrangement is now placed on a rough surface, as shown below. The block \nis displaced so that the spring is compressed a distance d and released from rest. \n(d) On the dots below that represent the block, draw and label the forces (not components) that act on the block \nwhen the spring is compressed a distance \n2\nx\nd\n=\nand the block is moving in the direction indicated below \neach dot. \nToward \nAway from \nthe equilibrium position \nthe equilibrium position \n(e) Draw a sketch of u versus t in this case. Assume that there is a negligible change in the period and that the \npositive direction is still to the right.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U7.frq",
+        "name": "Oscillations"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2012/2012_frq1_img01.png",
+      "images/ap/physics-c-mechanics/2012/2012_frq1_img02.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2012/2012_rubric1_img01.png",
+      "images/ap/physics-c-mechanics/2012/2012_rubric1_img02.png",
+      "images/ap/physics-c-mechanics/2012/2012_rubric1_img03.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "1a",
+          "part": "1a",
+          "points": 4,
+          "value": 4,
+          "description": "For writing a correct trigonometric equation for velocity as a function of time, including the negative sign 1 point max max sin sin 2 For using 2 f w p or 2 T p w to solve for w 1 point For using the correct period of 0.70 s from the graph 1 point For using the correct value of the maximum speed from the graph (acceptable range of values for: max u 0.15 m s to 0.17 m s ) 1 point Note: One point is deducted if incorrect phase shift f is used. Full credit is awarded for a correct answer with no work shown. Students are also given credit if the value of k from part (c) is used to calculate using."
+        },
+        {
+          "point_id": "1b",
+          "part": "1b",
+          "points": 2,
+          "value": 2,
+          "description": "Take the integral of the velocity determined in part (a) 0.16 m s sin 9.0 rad dt t u dt For a correct trigonometric expression consistent with integrating the answer from part (a) 1 point For a correct consistent with the integrating the answer from part (a) max x 1 point"
+        },
+        {
+          "point_id": "1c",
+          "part": "1c",
+          "points": 2,
+          "value": 2,
+          "description": "For a correct relationship between the period and the spring constant 1 point 2 For substituting correct values from previous parts into a correct expression 1 point"
+        },
+        {
+          "point_id": "1d",
+          "part": "1d",
+          "points": 4,
+          "value": 4,
+          "description": "Toward the equilibrium position Away from the equilibrium position For drawing and labeling and mg correctly on both diagrams N F 1 point On diagram of the block moving toward the equilibrium position: For a correctly drawn and labeled spring force to the right 1 point For a correctly drawn and labeled friction force to the left 1 point On diagram of the block moving away from the equilibrium position: For a correctly drawn and labeled spring force and friction force to the right 1 point Notes Length of vectors is not considered, only direction. There is a 1-point maximum deduction for any vectors not touching (or at least almost touching) the dot or for any extraneous forces.Vectors can be drawn from the dot outward OR toward the dot, pointing inward and touching the dot."
+        },
+        {
+          "point_id": "1e",
+          "part": "1e",
+          "points": 3,
+          "value": 3,
+          "description": "For a graph passing through equilibrium at 0.35 s intervals 1 point For a graph displaying damped oscillations 1 point For a graph that starts at zero with an increasing positive velocity 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2012.pdf",
+      "prompt_pages": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "rubric_pages": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2012_FRQ2",
+    "frq_id": "2012_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2012,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2012 Practice Exam",
+    "text": "You are to perform an experiment investigating the conservation of mechanical energy involving a \ntransformation from initial gravitational potential energy to translational kinetic energy. \n(a) You are given the equipment listed below, all the supports required to hold the equipment, and a lab table. \nOn the list below, indicate each piece of equipment you would use by checking the line next to each item. \n____ Track \n____ Meterstick \n____ Set of objects of different masses \n____ Cart \n____ Electronic balance \n____ Lightweight low-friction pulley \n____ String \n____ Stopwatch \n(b) Outline a procedure for performing the experiment. Include a diagram of your experimental setup. Label the \nequipment in your diagram. Also include a description of the measurements you would make and a symbol \nfor each measurement.\n(c) Give a detailed account of the calculations of gravitational potential energy and translational kinetic energy \nboth before and after the transformation, in terms of the quantities measured in part (b). \n(d) After your first trial, your calculations show that the energy increased during the experiment. Assuming you \nmade no mathematical errors, give a reasonable explanation for this result. \n(e) On all other trials, your calculations show that the energy decreased during the experiment. Assuming you \nmade no mathematical errors, give a reasonable physical explanation for the fact that the average energy you \ndetermined decreased. Include references to conservative and nonconservative forces, as appropriate.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Work, Energy, and Power",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U3.frq",
+        "name": "Work, Energy, and Power"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2012/2012_frq2_img01.png",
+      "images/ap/physics-c-mechanics/2012/2012_frq2_img02.png"
+    ],
+    "rubric_image_paths": [],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "2a",
+          "part": "2a",
+          "points": 1,
+          "value": 1,
+          "description": "For choosing the meterstick and stopwatch, regardless of what else is checked 1 point"
+        },
+        {
+          "point_id": "2b",
+          "part": "2b",
+          "points": 4,
+          "value": 4,
+          "description": "For a procedure that indicates the height needed to calculate gravitational potential energy 1 point For a procedure that indicates distance and time measurements to calculate velocity 1 point For a diagram and a clear indication of the height measurement 1 point For a diagram and a clear indication of the distance measurement 1 point Example #1 Use the electronic balance to determine the mass of the cart and the mass of one object. Attach the object to the cart using the string. Place the cart on the track and hang the object so that the string passes through the pulley. Allow the object to fall a distance h from its initial position to the floor, using the meterstick to measure the distance fallen. Use the stopwatch to measure the time t it takes the object to fall the distance h. Measure the height H of the table. (b) Example #2 Use the electronic balance to determine the mass m of the cart. Set the track at an incline, and measure the height h of the incline. Place the cart at the top of the incline, and release from rest. Using the stopwatch, measure the time t it takes for the cart to move down the incline. Measure the distance d that the cart moves down the incline. d h"
+        },
+        {
+          "point_id": "2c",
+          "part": "2c",
+          "points": 6,
+          "value": 6,
+          "description": "For a clear indication of the initial potential energy of the system 1 point For a clear indication of the final potential energy of the system 1 point For a clear indication of the initial kinetic energy of the system 1 point For a clear indication of the final kinetic energy of the system 1 point For a correct calculation of the instantaneous velocity of the system 2 points Example #1 Initial gravitational potential energy: 0 gH Final gravitational potential energy: gf Initial kinetic energy: 0 0 K Final kinetic energy: 2 1 2 Acceleration is constant, so 0 1 2, where d is the distance along the track. 2 (c) Example #2 h Initial gravitational potential energy: 0 g U mg Final gravitational potential energy 0 gf U Initial kinetic energy 0 0 K Final kinetic energy 2 1 2 f f K $\\mu$ Acceleration is constant, so 0 1 2. 2"
+        },
+        {
+          "point_id": "2d",
+          "part": "2d",
+          "points": 2,
+          "value": 2,
+          "description": "For identifying a reasonable cause for the increase in energy 1 point For a reasonable explanation related to the cause identified 1 point Example An unintentional push was applied to the cart, thus increasing the initial energy."
+        },
+        {
+          "point_id": "2e",
+          "part": "2e",
+          "points": 2,
+          "value": 2,
+          "description": "For identifying a reasonable cause for the decrease in energy related to the nonconservative forces acting on the system 1 point For a reasonable explanation related to the cause identified 1 point Example Friction acting on the object decreases the speed, thereby decreasing the energy."
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2012.pdf",
+      "prompt_pages": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "rubric_pages": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2012_FRQ3",
+    "frq_id": "2012_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2012,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2012 Practice Exam",
+    "text": "A ring of mass M, radius R, and rotational inertia \n2\nMR is initially sliding on a frictionless surface at constant \nvelocity \n0\nu to the right, as shown above. At time t = 0 it encounters a surface with coefficient of friction m and \nbegins sliding and rotating. After traveling a distance L, the ring begins rolling without sliding. Express all \nanswers to the following in terms of M, R, \n0\nu , m, and fundamental constants, as appropriate. \n(a) Starting from Newton’s second law in either translational or rotational form, as appropriate, derive a \ndifferential equation that can be used to solve for the magnitude of the following as the ring is sliding and \nrotating. \ni. The linear velocity u of the ring as a function of time t \nii. The angular velocity w of the ring as a function of time t \n(b) Derive an expression for the magnitude of the following as the ring is sliding and rotating. \ni. The linear velocity u of the ring as a function of time t \nii. The angular velocity w of the ring as a function of time t\n(c) Derive an expression for the time it takes the ring to travel the distance L. \n(d) Derive an expression for the magnitude of the velocity of the ring immediately after it has traveled the \ndistance L. \n(e) Derive an expression for the distance L.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Energy and Momentum of Rotating Systems",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U6.frq",
+        "name": "Energy and Momentum of Rotating Systems"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2012/2012_frq3_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "3a",
+          "part": "3a",
+          "points": 6,
+          "value": 6,
+          "description": "i. 3 points For starting with Newton’s second law for translation, with friction as the net force 1 point For a correct expression for the frictional force 1 point f Mg m For indicating that linear acceleration is the time derivative of velocity 1 point For starting with Newton’s second law for rotation, with a correct substitution for the rotational inertia 1 point 2 MR t a For a correct expression for the torque, using the frictional force 1 point MgR t m For indicating that the angular acceleration is the time derivative of the angular velocity 1 point d dt dt R m w"
+        },
+        {
+          "point_id": "3b",
+          "part": "3b",
+          "points": 4,
+          "value": 4,
+          "description": "i. 2 points For setting up the integral of the function determined in part (a)-i 1 point 0 0 t d gdt For the correct answer 1 point 0 gt u u m ii. 2 points For setting up the integral of the function determined in part (a)-ii 1 point 0 0 dt For the correct answer 1 point gt R w m"
+        },
+        {
+          "point_id": "3c",
+          "part": "3c",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For indicating that the linear speed is equal to Rw when the slipping stops 1 point R u w 0 gt gt For the correct answer 1 point 0 2"
+        },
+        {
+          "point_id": "3d",
+          "part": "3d",
+          "points": 1,
+          "value": 1,
+          "description": "1 point For substituting the time found in part (c) into a correct kinematics equation 1 point"
+        },
+        {
+          "point_id": "3e",
+          "part": "3e",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For setting up the integral of the velocity function determined in part (b)-i 1 point 0 0 For the correct answer, with correct supporting work 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2012.pdf",
+      "prompt_pages": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "rubric_pages": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2013_FRQ1",
+    "frq_id": "2013_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2013,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2013 Practice Exam",
+    "text": "A ball of mass m and cross-sectional area A is released from rest near the surface of Earth. The ball experiences\na resistive force due to the air that is proportional to the ball’s velocity, \n, where b is a positive \nconstant. Determine all algebraic answers in terms of m, b, A, and fundamental constants. \n(a) Draw free-body diagrams for the ball for the following situations. Give each vector a descriptive label and\ndraw them approximately to scale. \nThe figure is titled A Short Time After the Ball is Released and consist of a grid of dashed squares containing six units vertically and six units horizontally. A dot resides in the center of the grid.The figure is titled Once the Ball Has Reached Terminal Velocity and consist of a grid of dashed squares containing six units vertically and six units horizontally. A dot resides in the center of the grid.\n(b) Calculate the terminal velocity \nof the ball.\n(c) Starting from Newton’s laws, derive an expression for the time required for the ball to reach one third the \nterminal velocity. \n(d) Sketch the following two graphs of the ball’s motion from when the ball is released at time\nuntil it \napproaches terminal velocity. The figure consists of 2 graphs. The graph on the left has a horizontal axis labeled Time, a vertical axis labeled, Acceleration, and an origin labeled O. The graph on the right has a horizontal axis labeled Time, a",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "Force and Translational Dynamics",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U2.frq",
+        "name": "Force and Translational Dynamics"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2013/2013_frq1_img01.png",
+      "images/ap/physics-c-mechanics/2013/2013_frq1_img02.png",
+      "images/ap/physics-c-mechanics/2013/2013_frq1_img03.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2013/2013_rubric1_img01.png",
+      "images/ap/physics-c-mechanics/2013/2013_rubric1_img02.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "1a",
+          "part": "1a",
+          "points": 4,
+          "value": 4,
+          "description": "The figure consists of two diagrams. Each diagram consists of a grid of dashed squares containing six units vertically and six units horizontally. A dot resides in the center of both diagrams. The diagram on the left is titled A Short Time After the Ball is Released. It For having all four forces properly labeled and in the proper direction 1 point For having both W vectors of equal length 1 point For having a short time after the ball is released 1 point For having at terminal velocity Note: 1 earned point was deducted if there were any extraneous forces 1 point"
+        },
+        {
+          "point_id": "1b",
+          "part": "1b",
+          "points": 2,
+          "value": 2,
+          "description": "For setting the resistive force equal to the weight when at terminal velocity Substituting correct expressions for both forces 1 point For the correct magnitude of the terminal velocity 1 point"
+        },
+        {
+          "point_id": "1c",
+          "part": "1c",
+          "points": 4,
+          "value": 4,
+          "description": "For a correct differential equation expressing Newton’s 2nd law Solving the differential equation for u the ratio with numerator, the derivative of v, and denominator, $v_{T}$ minus v, equals the ratio, b A over m, times the derivative of t This is of the form, where u equals $v_{T}$ minus vand. v of t, equals $v_{T}$, times, (, 1 minus e raised to, the ratio with numerator, negative b A times t and denominator, m, ) 1 point For a correct expression of velocity as a function of time 1 point For substituting into the above equation Solving the above equation for time 1 point For a correct answer (negative sign required) or (with no negative sign) Note: If the differential equation is incorrect, the student could still earn credit for solving the equation and substituting. 1 point"
+        },
+        {
+          "point_id": "1d",
+          "part": "1d",
+          "points": 5,
+          "value": 5,
+          "description": "For an acceleration graph that does NOT begin at the origin 1 point For an acceleration graph that has a horizontal asymptote of 1 point For a velocity graph that begins at the origin 1 point For a velocity graph that has a horizontal asymptote of, as appropriate 1 point For having both graphs with proper and accurate curvature 1 pointThe figure consists of 2 graphs. The graph on the left has a horizontal axis labeled Time, a vertical axis labeled, A"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2013.pdf",
+      "prompt_pages": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "rubric_pages": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2013_FRQ2",
+    "frq_id": "2013_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2013,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2013 Practice Exam",
+    "text": "A 0.30 kg cart moving at 2.0 m/s to the right collides with a 0.10 kg cart, initially moving at 3.0 m/s to the left. \nAfter the collision, the 0.10 kg cart moves to the right with a speed of 1.2 m/s. Assume friction is negligible. \n(a) Calculate the magnitude and direction of the velocity of the 0.30 kg cart after the collision. \n(b) Is this an elastic collision? Justify your answer. \nThe 0.30 kg cart is now removed. The 0.10 kg cart continues to move to the right and then collides with and \ncompresses an ideal spring whose right end is attached to a fixed wall. \n(c) Calculate the potential energy of the spring when it reaches maximum compression.\n(d) The maximum compression of the spring is 0.10 m. Calculate the spring constant of the spring. \n(e) Suppose instead that the spring is nonlinear such that the force F due to the spring when it is compressed a \ndistance x is \n. Calculate the value of the constant b if the spring is compressed 0.10 m.\n-10- The figure consists of a solid disk, a block, and a pulley. The disk is aligned to spin in the horizontal plane and is mounted on a vertical axis. The vertical axis is attached to a horizontal surface. The pulley is to the right of the disk and is attached to a vertical surface. A string is wrapped around the edge of the disk, passes over the pulley, and is tied to a block that hangs freely in the vertical direction.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U7.frq",
+        "name": "Oscillations"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": false,
+    "requires_graph": false,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "2a",
+          "part": "2a",
+          "points": 4,
+          "value": 4,
+          "description": "For a correct statement of the conservation of momentum 1 point For correctly substituting into the above equation 1 point For a correct answer with units 1 point For correctly indicating the direction is to the right 1 point"
+        },
+        {
+          "point_id": "2b",
+          "part": "2b",
+          "points": 2,
+          "value": 2,
+          "description": "For answering “no”, or that the collision is inelastic 1 point For a correct justification Examples: No, the collision is not elastic. As shown in the calculations below, the final kinetic energy is less than the initial kinetic energy. No, the collision is not elastic. Since and, must be less than. No, the collision is not elastic. The final relative velocity is less than the initial relative velocity. 1 point"
+        },
+        {
+          "point_id": "2c",
+          "part": "2c",
+          "points": 3,
+          "value": 3,
+          "description": "For a correct statement of the conservation of energy 1 point For correctly substituting into the above equation $U_{S}$ 2 equals one half, times, ( zero point one zero kilogram, ), times, (, one point two meters per second, ), squared 1 point For a correct answer with units Note: If the student uses the wrong cart, mixes up values for mass and/or velocity, or has a sign error, only the first point can be earned. 1 point"
+        },
+        {
+          "point_id": "2d",
+          "part": "2d",
+          "points": 3,
+          "value": 3,
+          "description": "For a correct expression for the potential energy of a spring Substituting into the above equation 1 point For an answer consistent with part (c) 1 point For correct units Note: There was no penalty for a sign error. If the wrong cart was used in part (c), then an acceptable answer is. 1 point"
+        },
+        {
+          "point_id": "2e",
+          "part": "2e",
+          "points": 3,
+          "value": 3,
+          "description": "For setting up a correct integral 1 point For a correct equation for the potential energy of the spring Substituting into the above equation 1 point For an answer consistent with part (c) and with correct sign and units b equals 2880 Newtons per meter cubed. open bracket, or the ratio with numerator kilogram, and denominator, ( meter squared times second squared ), close bracket Note: If the wrong cart was used in part (c), then an acceptable answer is. 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2013.pdf",
+      "prompt_pages": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "rubric_pages": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2013_FRQ3",
+    "frq_id": "2013_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2013,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2013 Practice Exam",
+    "text": "A solid disk of radius 0.10 m is mounted on a vertical axis. A string of negligible mass is wrapped around the \nrim of the disk; passes over a small, lightweight, frictionless pulley as shown above; and is tied to a block of \nmass 0.05 kg. The system is released from rest, and a computer records the velocity of the falling block as a \nfunction of time, as shown below.\nThe figure shows quadrant one of a graph. The horizontal axis is labeled Time, is in units of seconds, and is numbered from zero point two five to zero point five five in increments of zero point zero five. The vertical axis is labeled Velocity, is in units of meters per second, and is numbered from zero point zero zero, to one point seven five in increments of zero point two five. The following data points, in terms of seconds, are labeled as approximations. Time, zero point three zero seconds; velocity zero point eight one meters per second. Time, zero point three three seconds; velocity zero point nine two meters per second. Time, zero point three five seconds; velocity one point zero zero meters per second. Time, zero point three eight seconds; velocity one point one zero meters per second. Time, zero point four zero seconds; velocity one point one seven meters per second. Time, zero point four three seconds; velocity one point one nine meters per second. Time, zero point four five seconds; velocity one point two five meters per second. Time, zero point four eight seconds; velocity one point three zero meters per second. Time, zero point five zero seconds; velocity one point four five meters per second. Time, zero point five three seconds; velocity one point four nine meters per second.\n(a) Using the graph above, calculate the acceleration of the falling block.\n(b) Use your result from part (a) to calculate the rotational inertia of the disk. \n(c) Calculate the angular momentum of the disk at time \n(d) The disk is removed and replaced with a hoop of the same mass and radius, but with all of its mass \nconcentrated near the rim of the hoop and connected to the axis by lightweight spokes. The experiment \nis then repeated. Is the angular acceleration of the hoop greater than, less than, or the same as that of the \nsolid disk? \nGreater than \nLess than \nThe same \nJustify your answer.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Energy and Momentum of Rotating Systems",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U6.frq",
+        "name": "Energy and Momentum of Rotating Systems"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2013/2013_frq3_img01.png",
+      "images/ap/physics-c-mechanics/2013/2013_frq3_img02.png"
+    ],
+    "rubric_image_paths": [],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "3a",
+          "part": "3a",
+          "points": 4,
+          "value": 4,
+          "description": "For correctly expressing the acceleration as the slope or rate of change of velocity 1 point For using two points from a best-fit line to calculate the slope/acceleration (not data points unless the data points are on the line) 1 point For a reasonable numerical value for a 1 point For correct units (was earned even if numerical answer was not correct) (acceptable range of answers: 2.5 to 3.3) 1 point"
+        },
+        {
+          "point_id": "3b",
+          "part": "3b",
+          "points": 5,
+          "value": 5,
+          "description": "For a correct expression of Newton’s 2nd law for rotational motion 1 point For a correct substitution for the angular acceleration in terms of the linear acceleration alpha equals, a over R 1 point For a correct expression of Newton’s 2nd law for translational motion Substituting the expression for T into the expression for the rotational inertia Substituting values into the above equation 1 point For a numerical answer consistent with part (a) 1 point For correct units (the acceptable range for a gives a range of 0.000985 to 0.00146, or using a range of 0.00101 to 0.0015 1 point"
+        },
+        {
+          "point_id": "3c",
+          "part": "3c",
+          "points": 4,
+          "value": 4,
+          "description": "For a correct expression for angular momentum 1 point For correc t substitution into any proper rotational kinematics expression $\\omega$ equals alpha times t and alpha equals, a, over R or o mega equals v over R and v equals, a, times t Substituting into the above equation L equals the ratio with numerator, ( zero point zero zero one three kilogram meters squared, ), times, ( two point seven meters per second squared ), times, ( zero point four five second, ), and denominator, ( zero point one zero meters, ) 1 point For a numerical answer consistent with part (a) and part (b) 1 point For correct units An"
+        },
+        {
+          "point_id": "3d",
+          "part": "3d",
+          "points": 2,
+          "value": 2,
+          "description": "For correctly selecting “Less than” 1 point For a correct justification Examples: The same force is applied to the system (or the same torque acts on the hoop/disk) Rotational inertia is higher for a hoop than a disk, so the acceleration will decrease. Since the potential energy stays the same and the rotational inertia of a hoop is greater than that of a disk, more of the energy goes into rotating the disk and less into moving the block. So the linear acceleration of the block will be less. with the hoop than with a disk. Since, the angular acceleration of the hoop will be less. A derivation of,, or an equivalent expression, and an explanation that the rotational inertia of the hoop is larger. 1 point B"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2013.pdf",
+      "prompt_pages": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "rubric_pages": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2014_FRQ1",
+    "frq_id": "2014_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2014,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2014 Practice Exam",
+    "text": "Experiment 1: A block of mass 1.5 kg is placed on a long board. You are to design an experiment to determine \nthe coefficient of static friction between the block and the board. \n(a) \ni. From the following list of available equipment, check those additional items you would use for the\npurpose of determining the coefficient of static friction. \n____ Ruler \n____ Spring scale\n____ String \n____ Meterstick \n____ Pulley \n____ Protractor \n____ Photogate \n____ Stopwatch \n____ Mass hanger\n____ Clamps and supports \n____ Objects of various known masses \nii. Sketch a diagram of your experimental setup and label the pieces of equipment that would be used. \niii. Outline the experimental procedure you would use, including a list of quantities you would measure. \nFor each quantity, identify the equipment you would use to make the measurement. \n(b) Explain how to use the measurements described in part (a) to calculate the coefficient of static friction. \nInclude a free-body diagram in your explanation that shows all forces (not components) acting on the block \nwhile the measurements are being made. \nExperiment 2: In a second experiment, the coefficient of kinetic friction between the block and the board is \nabove the horizontal. The block is released \ndetermined to be 0.10. The board is now inclined at an angle of 25∞\nfrom rest at the top of the incline and slides 2.0 m down the incline. \n(c) Calculate the work done by kinetic friction as the block slides down the incline. \n(d) The mass of the block is now increased without changing the coefficient of kinetic friction, and \nexperiment 2 is repeated. How does each of the following change? \ni. The magnitude of the frictional force \nIncreases Decreases Remains the same \nii. The magnitude of the velocity of the block as it reaches the bottom of the incline \nIncreases Decreases Remains the same \niii. The kinetic energy of the block at the bottom of the incline \nIncreases Decreases Remains the same",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U7.frq",
+        "name": "Oscillations"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": false,
+    "requires_graph": false,
+    "image_paths": [],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2014/2014_rubric1_img01.png",
+      "images/ap/physics-c-mechanics/2014/2014_rubric1_img02.png",
+      "images/ap/physics-c-mechanics/2014/2014_rubric1_img03.png",
+      "images/ap/physics-c-mechanics/2014/2014_rubric1_img04.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "1a",
+          "part": "1a",
+          "points": 4,
+          "value": 4,
+          "description": "i. 1 point For selecting equipment consistent with the diagram drawn in part (a)-ii 1 point ii. 1 point For labeling a diagram consistent with the procedure in described part (a)-iii 1 point iii. 2 points For listing specific quantities to be measured that can be used to determine the coefficient of static friction 1 point For indicating which equipment will be used to take the measurements listed above 1 point Example: Pull the spring scale to the right until the block starts to move. Use the spring scale to measure the maximum force exerted on the block. Alternate Example: Place the block on the board while the board is horizontal. Lift one end of the board until the block begins to slide. Use a protractor to measure the angle at which the block begins to slide."
+        },
+        {
+          "point_id": "1b",
+          "part": "1b",
+          "points": 5,
+          "value": 5,
+          "description": "5 points The experiment described by the student must attempt to measure the coefficient of static friction sm, not the coefficient of kinetic friction. Solution for example shown above: For vectors indicating the normal force up and the force of gravity down 1 point For a vector indicating the horizontal applied force 1 point For a vector indicating the static friction opposite the applied force 1 point Note: One point is deducted if there are any extraneous vectors or any vectors not starting on and pointing away from the block. For setting the net force equal to zero 1 point For a correct expression for the coefficient of static friction 1 point for alternate example: Alternate points For a vector indicating the force of gravity down 1 point For a vector indicating the normal force perpendicular to the incline 1 point For a vector indicating the static friction up the incline 1 point Note: One point is deducted if there are any extraneous vectors or any vectors not starting on and pointing away from the block For setting the net force equal to zero 1 point For a correct expression for the coefficient of static friction 1 point"
+        },
+        {
+          "point_id": "1c",
+          "part": "1c",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For a correct equation to solve for the work done 1 point For correctly substituting for the force of kinetic friction 1 point For a correct answer 1 point Note: Answers without the negative sign only lose the answer point."
+        },
+        {
+          "point_id": "1d",
+          "part": "1d",
+          "points": 3,
+          "value": 3,
+          "description": "i. 1 point For selecting “Increases” 1 point ii. 1 point For selecting “Remains the same” 1 point iii. 1 point For selecting “Increases” 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+      "prompt_pages": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "rubric_pages": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2014_FRQ2",
+    "frq_id": "2014_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2014,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2014 Practice Exam",
+    "text": "A satellite of mass m is in a stable circular orbit around Earth at a distance \n1\nR from the center of Earth. \nThe mass of Earth is \ne\nM . \n(a) Derive an expression for the following in terms of m, \n1\nR , \ne\nM , and fundamental constants, as appropriate. \ni. The orbital speed \n1\nu of the satellite \nii. The total energy of the satellite in this orbit, assuming gravitational potential energy to be zero at an \ninfinite distance from the center of Earth \nThe satellite’s booster rockets fire and lift the satellite to a higher circular orbit of radius \n1\n2R . The satellite \nfollows the path shown in the diagram below, moving a total distance S during the orbital change. The \ncomponent of the rockets’ force parallel to the path is given by the equation \n(\n)\n0 1\nx\nF\nF\nS\n=\n-\n, where x is the \nvariable distance traveled along the path at any moment. \n(b) Derive an expression for the total work done on the satellite by the force F in terms of \n0\nF and S. \n(c) If the total distance S is equal to \n1\n3R , derive an expression for \n0\nF in terms of \ne\nM , \n1\nR , m, and fundamental \nconstants, as appropriate.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Work, Energy, and Power",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U3.frq",
+        "name": "Work, Energy, and Power"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2014/2014_FRQ2_orbit.png"
+    ],
+    "rubric_image_paths": [],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "2a",
+          "part": "2a",
+          "points": 6,
+          "value": 6,
+          "description": "i. 3 points Set the gravitational force equal to the centripetal force. g F F = C For a correct expression for the gravitational force 1 point For a correct expression for the centripetal force 1 point For a correct answer 1 point For an expression of the total energy as the sum of the gravitational potential energy and the kinetic energy of the satellite 1 point For substituting a correct expression for the kinetic energy of the satellite 1 point For a correct answer 1 point"
+        },
+        {
+          "point_id": "2b",
+          "part": "2b",
+          "points": 4,
+          "value": 4,
+          "description": "4 points For a correct equation for the work done expressed as the integral of the force 1 point For substituting the given expression for force into the above equation 1 point For integrating with the correct limits 1 point For a correct answer 1 point 0 2 F S W ="
+        },
+        {
+          "point_id": "2c",
+          "part": "2c",
+          "points": 5,
+          "value": 5,
+          "description": "5 points For a correct statement relating work and change in energy 1 point For substituting the correct initial radius into the expression for potential energy 1 point For substituting the correct final radius into the expression for potential energy 1 point For a correct substitution of the answer from part (b) 1 point For an answer consistent with part (b) and the change in energy 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+      "prompt_pages": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "rubric_pages": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2014_FRQ3",
+    "frq_id": "2014_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2014,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2014 Practice Exam",
+    "text": "A uniform disk of mass M and radius R is suspended vertically from a pivot on its edge so that it is free to swing \nwithout friction, as shown in Figure 1 above. The disk is raised to an initial angular displacement \n0\nq with \nrespect to the vertical, as shown in Figure 2 above, and released from rest. The rotational inertia of the disk about \nits center of mass is \n2 2\nI\nMR\n=\n. Express all algebraic answers in terms of the given quantities and fundamental \nconstants, as appropriate. \n(a) Derive an expression for the rotational inertia of the disk about the pivot. \n(b) Derive an expression for the maximum angular velocity of the disk during its swing. \n(c) Using Newton’s second law in either translational or rotational form, as appropriate, write a differential \nequation that could be used to determine the angular displacement of the disk q as a function of time t. \nDo not solve the equation. \n(d) Derive an expression for the period for small-amplitude oscillations of the disk. \n(e) Suppose the disk is replaced with another uniform disk with twice the radius, and the pivot point is again on \nthe edge of the disk. How will the period of small-amplitude oscillations be affected by the new disk? \nIt will increase. It will decrease. It will remain the same. \nThere is not enough information to determine the period. \nJustify your answer.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U7.frq",
+        "name": "Oscillations"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2014/2014_FRQ3_disk_setup.png",
+      "images/ap/physics-c-mechanics/2014/2014_frq3_img01.png",
+      "images/ap/physics-c-mechanics/2014/2014_frq3_img02.png"
+    ],
+    "rubric_image_paths": [],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "3a",
+          "part": "3a",
+          "points": 2,
+          "value": 2,
+          "description": "For a correct expression of the parallel axis theorem 1 point For a correct answer 1 point 2 3 2 I MR ="
+        },
+        {
+          "point_id": "3b",
+          "part": "3b",
+          "points": 4,
+          "value": 4,
+          "description": "For a correct expression of the conservation of energy for the disk 1 point For correctly setting the initial gravitational potential energy equal to the rotational kinetic energy at the bottom of the swing 1 point For substituting a correct expression for the initial height 1 point For an answer consistent with part (a) 1 point"
+        },
+        {
+          "point_id": "3c",
+          "part": "3c",
+          "points": 3,
+          "value": 3,
+          "description": "For using a correct expression of Newton’s 2nd law for rotational motion 1 point For substituting a correct expression for torque into the above equation 1 point For expressing the above equation as a differential equation (Note: Any appropriate manipulation of this equation is acceptable, including a subsequent small angle approximation.) 1 point"
+        },
+        {
+          "point_id": "3d",
+          "part": "3d",
+          "points": 4,
+          "value": 4,
+          "description": "For using a correct expression for simple harmonic motion 1 point For substituting the small angle approximation (sinq q ) into the answer from part (c) 1 point For relating the correct expression for the angular velocity to the equation for period 1 point For a correct answer 1 point"
+        },
+        {
+          "point_id": "3e",
+          "part": "3e",
+          "points": 2,
+          "value": 2,
+          "description": "For selecting “It will increase” 1 point For a correct justification 1 point Example: The period of the disk is proportional to the square root of the radius of the disk, T µ. R A doubling of the radius of the disk will increase the period by a factor of 2."
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+      "prompt_pages": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "rubric_pages": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2015_FRQ1",
+    "frq_id": "2015_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2015,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2015 Practice Exam",
+    "text": "A new sports car is undergoing acceleration tests to determine its specifications. The following data on speed v versus \ntime t are recorded for the car as it accelerates from rest along a straight track. \nv , ( meters per second ) \n0\n14\n23\n30\n35\n39\nt , ( seconds )\n0\n2\n4\n6\n8\n10\n(a) On the axes below, plot u as a function of t and sketch a curve that best represents the data. The figure shows a graph in the first quadrant. The horizontal axis is labeled t, in units of seconds, and the numbers appearing on it, from left to right, are zero through 12 in increments of 2 and with vertical dashed gridlines at\n(b) Answer each of the following for the time period t equals zero seconds to t equals 10 seconds. \ni. Does the speed of the car increase, decrease, or stay the same?\n____ Increase\n____ Decrease \n____ Stay the same\nJustify your answer.\nii. Does the acceleration of the car increase, decrease, or stay the same?\n____ Increase \n____ Decrease \n____ Stay the same\nJustify your answer.\n(c) Explain how you would use your graph in part (a) to find the distance traveled by the car between \nt equals 2 seconds and \nt equals 8 seconds . \nThe equation for the speed v of the car as a function of time t found from the graph is v \no\nf t\nequals negative zero point three t squared, plus 7 \nt\n, where v is\nin meters per second and t is in seconds. \n(d) Derive an expression for the acceleration of the car a, of t) as a function of time t .\n(e) Calculate the position of the car as a function of time,\nx\nof t , assuming that the car starts from rest at the origin of a\ncoordinate system.\n(f) Calculate the distance traveled by the car between \nt equals 2 seconds and \nt equals 8 seconds .\n-8- The figure shows a track that has a ramp to the left of a circular loop. There is a small block labeled M at the very top of the ramp at a height above the ground labeled H. The circular loop has a point labeled P on the upper right side of the loop. There is a dashed angle that extends from the center of the loop to point P. The angle is labeled $\\theta$ above the horizontal. The height from the bottom of the loop to the center of the loop is labeled H over 2. A dashed horizonta",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U1",
+    "unit": "U1",
+    "unit_name": "Kinematics",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U1.frq",
+        "name": "Kinematics"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2015/2015_frq1_img01.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2015/2015_rubric1_img01.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "1a",
+          "part": "1a",
+          "points": 3,
+          "value": 3,
+          "description": "3 points The figure shows a graph in the first quadrant. The horizontal axis is labeled t, in units of seconds, and the numbers appearing on it, from left to right, are zero through 12 in increments of 2 and with vertical dashed gridlines at each label. The vertical axis is labeled v, in units of meters per second, and the numbers appearing on it, from bottom to top, are zero through 45, in increments of 5 and with horizontal dashed gridlines at each label. A curve is drawn that begins at the origin and extends up and to the right with a decreasing slope. The curve passes through the following data points: zero comma zero. 2 comma 13. 4 comma 23. 6 comma 30. 8 comma 35. 10 comma 39. For accurately plotting at least five points 1 point For a smooth curve with a positive slope 1 point For a concave down curve starting at the origin 1 point"
+        },
+        {
+          "point_id": "1b",
+          "part": "1b",
+          "points": 2,
+          "value": 2,
+          "description": "i. 1 point The correct choice is “Increase” For a correct justification 1 point Example: The speed increases as the magnitude of the velocity increases for each data point ii. 1 point The correct choice is “Decrease” For a correct justification 1 point Example: Since the slope of the line decreases with time, the acceleration of the car must decrease with time"
+        },
+        {
+          "point_id": "1c",
+          "part": "1c",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For mentioning area under the curve 1 point For specifically describing the area between t eq u als 2 se c onds and t equals 8 seconds 1 point Example: To determine the distance traveled from a velocity-time graph, one should find the area under the curve. For time als 2 s e conds and t equals 8 seconds, one can approximate the area using a trapezoid that approximately fills the area under the curve."
+        },
+        {
+          "point_id": "1d",
+          "part": "1d",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For beginning with an indication that the acceleration is the derivative of velocity 1 point a of t, equals the derivative of v with respect to t For correctly evaluating the derivative 1 point"
+        },
+        {
+          "point_id": "1e",
+          "part": "1e",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For an indication that the displacement is the integral of the velocity 1 point For attempting to integrate with appropriate limits or constant of integration 1 point For the correct answer 1 point, egative zero point one t cubed, plus 3 point five t squared 2"
+        },
+        {
+          "point_id": "1f",
+          "part": "1f",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For recognizing that the distance is the change in position 1 point als x of 8, minus x of 2 2 For using the expression from part (e) to calculate x of 2 and x of 8 1 point For the correct answer with units 1 point delta x e q uals 159 point six meters"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2015.pdf",
+      "prompt_pages": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "rubric_pages": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2015_FRQ2",
+    "frq_id": "2015_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2015,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2015 Practice Exam",
+    "text": "The model of a roller coaster shown above consists of a ramp and a circular loop. A small block of mass M starts from \nheight H with speed \nv\nequals zero\nand slides without friction down the ramp and around the inside of the loop of radius \n2 . \nPosition P is a point on the loop at an angle $\\theta$ with the horizontal, as shown above. Express all algebraic answers in \nterms of M, H, $\\theta$ , and fundamental constants, as appropriate. \n(a) Derive an expression for the speed of the block at position P. \n(b) On the following diagram, draw and label vectors to represent the forces (not components) on the block when it is at \nposition P. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot at \nposition P. The figure shows a dashed circle with one dashed radius that extends from the center of the circle to the small block at the point labeled P on the upper right side of the circle.\n(c) Derive an expression for the magnitude of the force exerted by the loop on the block when it is at position P. If you \nneed to draw anything other than what you have shown in part (b) to assist in your solution, use the space below. Do \nNOT add anything to the figure in part (b). \n(d) Calculate the angle \nL , in degrees, at which the block leaves the loop. \n(e) The small block is replaced with a small sphere that also starts at height H. Now there is enough friction to allow the \nsphere to roll down the ramp without slipping. Identify how the new angle \nn at which the sphere leaves the loop \ncompares with the angle \nL calculated in part (d). \n____\n$\\theta_{n}$ is less than $\\theta_{L}$\n____ \n$\\theta_{n}$ equals $\\theta_{L}$\n____ \n$\\theta_{n}$ is greater than $\\theta_{L}$\nExplain your reasoning.\n-10- The figure shows a horizontal board attached to a vertical support at a pivot point labeled P. The vertical support is at the right edge of a building. The length of the board is labeled 2 point 4 meters and two thirds of the board is past the pivot point on the right side. There is a box labeled Crate attached to the right end of the board, and an unlabeled vertical wire attached to the left end of the board that extends down to the top of the building. The distance between the pivot and the vertical wire to the left is labeled zero point eight zero meters. The label is in the upper right corner of the building.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Energy and Momentum of Rotating Systems",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U6.frq",
+        "name": "Energy and Momentum of Rotating Systems"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2015/2015_frq2_img01.png",
+      "images/ap/physics-c-mechanics/2015/2015_frq2_img02.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2015/2015_rubric2_img01.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "2a",
+          "part": "2a",
+          "points": 3,
+          "value": 3,
+          "description": "For a correct application of conservation of energy 1 point For relating $y_{p}$ to H and $\\theta$ 1 point For a correct final expression for v, which does not have to be simplified 1 point"
+        },
+        {
+          "point_id": "2b",
+          "part": "2b",
+          "points": 2,
+          "value": 2,
+          "description": "For correctly drawing and labeling a vector for the weight of the block For correctly drawing and labeling a vector for the normal force on the block 1 point 1 point One earned point is deducted (up to a maximum of two points) for each extraneous force drawn"
+        },
+        {
+          "point_id": "2c",
+          "part": "2c",
+          "points": 5,
+          "value": 5,
+          "description": "For applying Newton’s second law with more than one force 1 point For setting the sum of the forces in the radial direction equal to t he fraction m v squared over R 1 point For using the correct radial component of the weight 1 point For correctly substituting for the speed and radius from part (a) 1 point For an answer consistent with part (a) 1 point $F_{N}$ e qu, ( 2 minus 3 sine $\\theta$ close parenthesisThe figure shows a dashed circle with a point at the center. A point labeled P is on the upper right side of the dashed circle. A dashed line extends from the center of the circle to point P. A small shaded box is located at point P. An arrow points from point P toward the center of the circle, and is labeled $F_{N}$. A vertical arrow points vertically down from point P, and is labeled m g."
+        },
+        {
+          "point_id": "2d",
+          "part": "2d",
+          "points": 2,
+          "value": 2,
+          "description": "For setting the normal force equal to zero (explicitly or implicitly) 1 point For an answer consistent with part (c) 1 point thet a e quals 41 point eight degrees"
+        },
+        {
+          "point_id": "2e",
+          "part": "2e",
+          "points": 3,
+          "value": 3,
+          "description": "For correctly selecting $\\theta_{n}$, is less than $\\theta_{L}$ 1 point For indicating that the sphere will be moving slower (or has less kinetic energy) when it loses contact 1 point For indicating that some of the initial potential energy now goes into rotational kinetic energy 1 point Example: Since some of the energy must go into the rotational energy of the sphere, the sphere will have slower translational speed at every point on the track. Since the sphere moves slower than the block, the sphere will lose contact with the loop at a lower height and a smaller angle."
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2015.pdf",
+      "prompt_pages": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "rubric_pages": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2015_FRQ3",
+    "frq_id": "2015_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2015,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2015 Practice Exam",
+    "text": "A uniform, rigid, thin board that is two point four meters long and weighs 200 Newtons is attached to a post by a pivot at point P and hangs \nover the edge of a building, as shown above. A crate weighing 400 Newtons is attached to the right end of the board. The left \nend of the board, zero point eight zero meters from the pivot, is attached to a light vertical wire anchored at the other end to keep the board \nfrom rotating. \n(a) On the diagram below, draw and label vectors to represent all the forces (not components) acting on the board. Show \neach force vector originating at its point of application. The figure shows a horizontal board with a dot about one third of the way from the left edge. \n(b) Calculate the magnitudes of the forces exerted on the board by the post and by the wire. If you need to draw \nanything other than what you have shown in part (a) to assist in your solution, use the space below. Do NOT add \nanything to the figure in part (a).\n(c) The rotational inertia of the board alone about its center is \no\nn\ne twelfth M times L squared , where M is the mass of the board and L is its \nlength. Calculate the rotational inertia of the combined board-crate system about point P. \n(d) Suppose that the wire breaks and the board begins to pivot about point P. Calculate each of the following. \ni. The magnitude of the initial angular acceleration of the board-crate system \nii. The magnitude of the initial linear acceleration of the left end of the board",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Torque and Rotational Dynamics",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U5.frq",
+        "name": "Torque and Rotational Dynamics"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2015/2015_frq3_img01.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2015/2015_rubric3_img01.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "3a",
+          "part": "3a",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For correctly drawing and labeling the three downward forces: tension, weight of the board, weight of the crate 1 point For correctly drawing and labeling the upward force exerted on the board by the post 1 point For drawing all of the forces at their respective points of action 1 point One earned point is deducted (up to a maximum of two points) for each extraneous force drawn"
+        },
+        {
+          "point_id": "3b",
+          "part": "3b",
+          "points": 4,
+          "value": 4,
+          "description": "4 points For summing the torques about any labeled point and setting that sum equal to zero 1 point For substituting correct radii for all torques 1 point For correctly calculating either the tension or the post force 1 point For a correct method for determining the remaining force and a consistent answer 1 point $F_{up}$, equals $F_{down}$ $F_{pos}$ t, equals $w_{board}$, plus $w_{crate}$, plus $F_{T}$ $F_{T}$, eq uals 1 5 0 0 Newtons minus 200 Newtons minus 400 Newtons $F_{T}$, equals 900 NewtonsThe figure shows a horizontal board with three vertical downward arrows and one vertical upward arrow drawn. One downward arrow is on the left edge of the board and is labeled $F_{T}$. A second downward arrow is at the center of the board and is labeled $w_{board}$. The third downward arrow is on the right edge of the board and is labeled $w_{crate}$. The upward arrow is about one third of the way from the left edge of the board and is labeled $F_{post}$."
+        },
+        {
+          "point_id": "3c",
+          "part": "3c",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For correctly calculating the rotational inertia of the board about P 1 point I s ub bo ar d -P e qu a ls, ase M, d squared, plus $I_{c}$ m, equals M, d squared, plus one twelfth times M L squared $I_{b}$ oard- P equal s, ope n par enthe sis the fr acti o n 200 9 eight meters per second squared ), times ( zero point four meters ) squared, plus one twelfth times, ( the ratio 200 Newtons over 9 point For correctly calculating the rotational inertia of the crate about P 1 point als $m_{c}$ rat e, times r sq, pen parenthesis the ratio 400 Newtons over 9 point For recognizing that the total rotational inertia of the system about P is the sum of the inertia of the board and the crate about P 1 point"
+        },
+        {
+          "point_id": "3d",
+          "part": "3d",
+          "points": 4,
+          "value": 4,
+          "description": "i. 2 points For summing torques about P, setting the sum equal to I times alpha, and substituting appropriate values 1 point For an answer consistent with part (c) 1 point For a correct relationship between angular and linear acceleration 1 point For an answer consistent with part (d)i. 1 point For correct units on all answers 1 point"
+        },
+        {
+          "point_id": "3units",
+          "part": "3units",
+          "points": 1,
+          "value": 1,
+          "description": "For correct units on all answers"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2015.pdf",
+      "prompt_pages": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "rubric_pages": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2016_FRQ1",
+    "frq_id": "2016_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2016,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2016 Practice Exam",
+    "text": "A block of mass \nB\nm is being pulled up a ramp by a hanging object of mass \nH\nm , as shown in the figure above. \nThe blocks are attached to each other by a light string that passes over a pulley of negligible mass and friction. \nBoth the block and the hanging object are moving at constant speed, and the angle of the ramp with the \nhorizontal is \\$\\theta$. The coefficient of kinetic friction between the block and the ramp is \nk\n\\$\\mu$. \n(a) On the dots below, which represent the block and the hanging object, draw and label the forces (not \ncomponents) that act on the block and the hanging object. Each force must be represented by a distinct \narrow starting on, and pointing away from, the appropriate dot. \n(b) Derive an expression for the mass mH of the hanging object. Express your answer in terms of \nB\nm , \\$\\theta$, \nk\n\\$\\mu$, and physical constants, as appropriate. If you need to draw anything other than what you have shown in \npart (a) to assist in your solution, use the space below. Do NOT add anything to the figure in part (a).\nIt is determined that \nB\nm = 2.0 kg, \n30\n\\$\\theta$=\no, and \nk\n\\$\\mu$ = 0.10. While the block is moving up the ramp and the \nhanging object is moving downward, the string is suddenly cut. \n(c) \ni. Calculate the magnitude of the acceleration of the block immediately after the string is cut. \nii. What is the direction of the acceleration of the block immediately after the string is cut? \n____ Up the ramp _____ Down the ramp \n____ No direction, because the acceleration is zero \niii. Determine the magnitude of the acceleration of the hanging object immediately after the string is cut. \n(d) Assume the block is moving up the ramp at 2.0 m s when the string is cut. Calculate how far the block \ntravels up the ramp from the time the string is cut until the block stops, assuming there is sufficient distance \non the ramp.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Work, Energy, and Power",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U3.frq",
+        "name": "Work, Energy, and Power"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2016/2016_frq1_img01.png",
+      "images/ap/physics-c-mechanics/2016/2016_frq1_img02.png",
+      "images/ap/physics-c-mechanics/2016/2016_frq1_img03.png",
+      "images/ap/physics-c-mechanics/2016/2016_frq1_img04.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2016/2016_rubric1_img01.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "1a",
+          "part": "1a",
+          "points": 4,
+          "value": 4,
+          "description": "4 points For correctly drawing and labeling the force of tension and the force of friction for the Block 1 point For correctly drawing and labeling the normal force vector for the Block 1 point For correctly drawing and labeling the weight vector for the Block 1 point For correctly drawing and labeling both vertical vectors for the Hanging Object 1 point Note: a maximum of three points can only be earned if there are any extraneous vectors"
+        },
+        {
+          "point_id": "1b",
+          "part": "1b",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For a correct Newton’s 2nd law equation of the two-block system q For setting the acceleration of the two-block system equal to zero either implicitly or explicitly q m q For a correct answer ( ) q m q = + sin cos 1 point"
+        },
+        {
+          "point_id": "1c",
+          "part": "1c",
+          "points": 5,
+          "value": 5,
+          "description": "i. 3 points For correctly applying Newton’s second law to the block For correctly substituting into the above equation = - + 2 9.8 m s 0.10 cos30 sin30 a 1 point For a correct answer = 2 5.75 m s a (Note: = 2 5.87 m s a if = 2 10 m s g is used) 1 point ii. 1 point For selecting “Down the ramp” 1 point iii. 1 point For a correct answer = 2 a 9.81 m s g (Note: = 2 a 10 m s g is also acceptable) Note: No work needs to be shown for this part 1 point"
+        },
+        {
+          "point_id": "1d",
+          "part": "1d",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For using a correct kinematics equation for calculating the distance traveled by the block = + 2 2 2 1 2 v v ad 1 point For setting the final velocity of the block equal to zero = + - - = - 2 1 2 2 1 2 0 2 2.0 m s 2 2 5.75 m s v ad v d a 1 point For a correct answer = 0.348 m d (Note: = 0.341 m d if = 2 10 m s g is used) 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2016.pdf",
+      "prompt_pages": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "rubric_pages": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2016_FRQ2",
+    "frq_id": "2016_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2016,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2016 Practice Exam",
+    "text": "An experiment is performed on a frictionless surface consisting of a horizontal section and a ramp inclined at a \n20∞ angle. Block A of mass 3.0 kg rests on the horizontal section against but not attached to an ideal spring at its \nequilibrium length, as shown in the figure above. The spring has a spring constant of \n700 N m\nk =\n. Block A is \npushed to the left, compressing the spring 0.15 m, and then released. \n(a) Calculate the speed of block A when it leaves the spring. \n(b) Calculate the maximum distance d block A travels up the ramp. \n(c) On the axis below, sketch a graph of the speed v of block A as a function of time t from t = 0 to t = 3t . \nBlock A is released at time t = 0, loses contact with the spring at time t = 1t , transitions to the ramp at time \nt = 2t , and reaches its maximum height at time t = 3t .\nIn a second experiment, block B, of mass 0.50 kg, is placed on the ramp a distance of d from the bottom of the \nramp and held in place. Block A is released from the spring as in the first experiment. Block B is released from \nrest so that it collides with block A as block A travels up the ramp. The two blocks collide at a distance of \n2\nd\nup the ramp. The blocks stick together after the collision. \n(d) \ni. Calculate the speed of the two blocks immediately after the collision. \nii. In what direction, if any, are the two blocks moving immediately after the collision? \n____ Up the ramp ____ Down the ramp \n____ Undefined, because the blocks momentarily come to rest after the collision \n(e) \ni. Calculate the magnitude of the impulse exerted on block A by block B. \nii. In what direction, if any, is the impulse exerted on block A by block B ? \n____ Up the ramp ____ Down the ramp \n____ Undefined, because the impulse is zero",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U7.frq",
+        "name": "Oscillations"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2016/2016_frq2_img01.png",
+      "images/ap/physics-c-mechanics/2016/2016_frq2_img02.png",
+      "images/ap/physics-c-mechanics/2016/2016_frq2_img03.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2016/2016_rubric2_img01.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "2a",
+          "part": "2a",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For correctly using conservation of energy to determine the speed of block A = 1 2 2 2 1 1 2 2 700 N m 0.15 m 3.0 kg S U K kx mv 1 point For a correct answer = 2.29 m s v 1 point"
+        },
+        {
+          "point_id": "2b",
+          "part": "2b",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For correctly using conservation of energy to determine the distance block A travels up the ramp q q = 1 2 2 2 2 2 1 sin 2 3.0 kg 2.29 m s 2 sin 2 3.0 kg 9.8 m s sin20 g K U mv mgh mgd mv d mg 1 point For a correct answer = 0.783 m d (Note: = 0.767 m d if = 2 10 m s g is used) 1 point"
+        },
+        {
+          "point_id": "2c",
+          "part": "2c",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For a concave down curve that starts at the origin t = 0 and becomes horizontal as t = 1t 1 point For a horizontal line from t = 1t to t = 2t that is continuous with first section 1 point For a straight line with a negative slope from t = 2t to the horizontal axis at t = 3t that is continuous with second section 1 point"
+        },
+        {
+          "point_id": "2d",
+          "part": "2d",
+          "points": 6,
+          "value": 6,
+          "description": "i. 5 points For correctly using conservation of energy to determine speed of block A For correctly substituting into the equation above For a correct answer = 1.62 (Note: = 1.60 if = 2 10 m s g is used) 1 point For correctly using conservation of energy to determine speed of block B q = 1 2 2 2 2 1 2 1 sin 2 2 9.8 m s 0.783 sin20 g U K mgh mv d mg mv v Correct answer = 1.62 (Note: = 1.64 if = 2 10 m s g is used) 1 point For correctly using conservation of momentum to determine the speed of the blocks after the collision + = + + - = + 3.0 kg 1.62 m s 0.50 kg 1.62 m s 3.0 kg 0.50 kg Correct answer = 1.16 m s fv (Note: = 1.14 m s fv if = 2 10 m s g is used) 1 point"
+        },
+        {
+          "point_id": "2e",
+          "part": "2e",
+          "points": 2,
+          "value": 2,
+          "description": "i. 1 point For an answer consistent with the speed of the blocks determined in part (d) J = -1.38 Ns (Note: J = -1.38 Ns if g = 10 m s2 is used) Note: The negative sign is not needed since the question asks for magnitude 1 point ii. 1 point For selecting “Down the ramp” 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2016.pdf",
+      "prompt_pages": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "rubric_pages": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2016_FRQ3",
+    "frq_id": "2016_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2016,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2016 Practice Exam",
+    "text": "A uniform rod of mass M and length L is pivoted at a point a distance \n3\nL\nfrom the top end, as shown above. \nThe rod is pulled back so that it makes a small angle with the vertical and is then released. \n(a) Using integral calculus, show that the rotational inertia for the rod around its pivot is \n2 9\nML\n. \n(b) \ni. Using Newton’s 2nd law in rotational form, write but do NOT solve a differential equation in terms \nof M, L, and physical constants, as appropriate, that can be used to determine the angular displacement \n$\\theta$ as a function of time t . \nii. Using the differential equation from part (b)i, show that the period of oscillation for the rod is given by \nthe expression \n2\n2\n3\nL\nT\ng\n\\$\\pi$\n=\n.\nAn experiment is performed with thin, uniform metal rods of different lengths, each pivoted around a \npoint one third the length of the rod from the top end and used as a physical pendulum, as shown in the \nfigure on the previous page. Each rod is pulled back so that it makes a small angle with the vertical and \nis then released, and the period of oscillation is measured. The data are recorded in the table below. \nLength (m) \n0.5 \n1.0 \n1.5 \n2.0 \n2.5\nPeriod (s) \n1.2 \n1.6 \n2.0 \n2.3 \n2.6\n(c) Indicate below which quantities should be graphed to yield a straight line whose slope could be \nused to calculate a numerical value for the acceleration due to gravity g. \nHorizontal axis:\nVertical axis: \nUse the remaining rows in the table above, as needed, to record any quantities that you indicated that \nare not given. \n(d) Plot the straight line data points on the graph below. Clearly scale and label all axes, including units \nif appropriate. Draw a straight line that best represents the data. \n(e) Using your straight line, determine an experimental value for g.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U7.frq",
+        "name": "Oscillations"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2016/2016_frq3_img01.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2016/2016_rubric3_img01.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "3a",
+          "part": "3a",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For using integral calculus to attempt to calculate the rotational inertia of the rod l l l = 2 2 & & I r dm M L dm dr I r dr 1 point For correctly integrating the formula above l = 3 3 r I 1 point For integrating using the correct limits or correct constant of integration l Correct answer: = 2 9 I ML 1 point"
+        },
+        {
+          "point_id": "3b",
+          "part": "3b",
+          "points": 4,
+          "value": 4,
+          "description": "i. 2 points For using a correct expression of Newton’s 2nd law for the rotation of the rod t ^ = Fr Ia 1 point For expressing the equation as a differential equation 1 point For using the small-angle approximation; where q q ª sin 1 point For comparing above equation to the rotational form of simple harmonic motion or for solving the differential equation 1 point Correct answer: p = 2 2 3 L T g"
+        },
+        {
+          "point_id": "3c",
+          "part": "3c",
+          "points": 1,
+          "value": 1,
+          "description": "1 point For selecting appropriate variable to create a straight line relationship Example: Horizontal axis: Length Vertical axis: Period Squared Note: Square root of Length and Period is also acceptable as is reversing the axes 1 point"
+        },
+        {
+          "point_id": "3d",
+          "part": "3d",
+          "points": 4,
+          "value": 4,
+          "description": "4 points For labeling both axes with appropriate variables and units 1 point For a correct scale that uses more than half the grid 1 point For correctly plotting data indicated in part (c) 1 point For drawing a straight line consistent with the given data 1 point"
+        },
+        {
+          "point_id": "3e",
+          "part": "3e",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For correctly calculating slope using the best-fit straight line and not data points - - = - - 2 2 1 2 1 6.0 2.0 slope 2.86 s m 2.20 0.80 Note: linear regression gives = 2 slope 2.67 s m 1 point For correctly relating g to the slope 2 2 2 2 2 2 4 2 4 × 2 2 2 3 3 3 8 8 3 × 3 × 2.86 slope slope = 1 point ( ) For a correct answer = 2 9.20 m s g Note: linear regression gives = 2 9.86 m s g 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2016.pdf",
+      "prompt_pages": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "rubric_pages": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2017_FRQ1",
+    "frq_id": "2017_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2017,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2017 Practice Exam",
+    "text": "A spring of negligible mass and with a spring constant of 50 N m\nis hung vertically, as shown above in the \nfigure on the left. A block of mass 1.0 kg is attached to the spring and slowly lowered a distance x0 until it \nhangs at rest at the equilibrium position, as shown above in the figure on the right. \n(a) On the dot below that represents the block, draw and label the forces (not components) that act on the block \nwhen it is at the equilibrium position shown. Each force must be represented by a distinct arrow starting on, \nand pointing away from, the dot. \n(b) Calculate the distance x0 that the spring is stretched from its original length to the equilibrium position. \nQuestion 1 continues on the next 2 pages. \nWhile the 1.0 kg block is in equilibrium, a 0.20 kg ball of clay is launched with speed v0 vertically from the \nground 1.0 meter below the hanging block. The clay has speed v = 5.0 m s\n1 \nwhen it collides with the block. \n(c) Calculate the speed v0 . \nUpon impact, the clay sticks to the 1.0 kg block. \n(d) \ni. Calculate the speed of the block immediately after the collision. \nii. Calculate the kinetic energy lost in the collision. \niii. Determine the period of oscillation for the block-clay-spring system. \n(e) When the oscillating block-clay-spring system reaches its maximum speed after the collision, will the spring \nbe stretched from its original length by a distance greater than, less than, or equal to x0 ? \n____ Greater than ____ Less than ____ Equal to \nJustify your answer. \n(f) The collision is repeated using a rubber ball with the same mass as the ball of clay. The rubber ball is \nlaunched vertically with the same speed v0 . The collision between the rubber ball and the block is elastic. \nWill the speed of the block immediately after colliding with the rubber ball be greater than, less than, or \nequal to the speed of the block you calculated in part (d)i ? \n____ Greater than ____ Less than \n____ Equal to \nJustify your answer.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U7.frq",
+        "name": "Oscillations"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2017/2017_frq1_img01.png",
+      "images/ap/physics-c-mechanics/2017/2017_frq1_img02.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2017/2017_rubric1_img01.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "1a",
+          "part": "1a",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For correctly drawing and labeling the weight of the block 1 point For correctly drawing and labeling the force of the spring Note: A maximum of one point can be earned if there are any extraneous vectors. 1 point"
+        },
+        {
+          "point_id": "1b",
+          "part": "1b",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For correctly substituting an expression for the spring force and the gravitational force into Newton's second law 1 point For a correct answer 1 point"
+        },
+        {
+          "point_id": "1c",
+          "part": "1c",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For using an appropriate kinematics equation to determine the initial speed of the clay 1 point For a correct answer with units 1 point"
+        },
+        {
+          "point_id": "1d",
+          "part": "1d",
+          "points": 5,
+          "value": 5,
+          "description": "i) 2 points For using conservation of momentum to determine the speed of the block after the collision 1 point For a correct answer with units 1 point For substituting the correct mass and initial speed OR the same mass and initial speed as part (d)(i) into the kinetic energy equation 1 point For calculating the total kinetic energy after the collision using the combined mass and using the speed from part (d)(i) 1 point Note: A maximum of one point can be earned if any other energy is included in the calculations above. iii) 1 point For using the combined mass in the equation for the period of oscillation of a spring 1 point"
+        },
+        {
+          "point_id": "1e",
+          "part": "1e",
+          "points": 2,
+          "value": 2,
+          "description": "2 points Select “Greater than” For any correct equilibrium statement even if the wrong selection is made For indicating that the greater mass will stretch the spring more at equilibrium and the corresponding checkbox is selected Example: Since maximum velocity occurs when the block is at equilibrium and there is now more mass attached to the spring, the spring will be longer when the block-spring system is at maximum velocity. 1 point 1 point"
+        },
+        {
+          "point_id": "1f",
+          "part": "1f",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For correctly selecting “Greater than” and attempting to justify the selection 1 point For a correct justification Example: Since kinetic energy is conserved in an elastic collision, the speed of the target object (block) will be greater after the collision with the rubber ball than it was with the piece of clay. Note: If incorrect selection is made, the justification cannot earn credit. 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2017.pdf",
+      "prompt_pages": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "rubric_pages": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2017_FRQ2",
+    "frq_id": "2017_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2017,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2017 Practice Exam",
+    "text": "A cart of mass M is on a level, horizontal track. The cart is attached to one end of an ideal spring, and the \nother end of the spring is attached to a vertical support. The spring has a spring constant k. The cart is pulled \nto the right, stretching the spring a distance d, as shown above, and released from rest at time t = 0. The \ncart-spring system begins to oscillate, and the position x of the cart as a function of time t is given by the \nequation ( ) = d cos (\nx t \nωt ) , where x is in meters, ω is in rad s , and t is in seconds. Assume the mass of the \ncart’s wheels to be negligible. \n(a) Derive an equation for the velocity of the cart v as a function of time t . \n(b) On the axes below, sketch a graph of the velocity v of the cart as a function of time t for two complete \noscillations. On the graph, T represents the time for one complete oscillation. Explicitly label asymptotes, \nmaxima, or minima with algebraic expressions, as appropriate. \n(c) Express all answers in part (c) in terms of w , t, M, d, k, and physical constants, as appropriate. \ni. Determine an expression for the kinetic energy K of the system as a function of time t. \nii. Determine an expression for the potential energy U of the system as a function of time t. \niii. Using the equations from parts (c)i and (c)ii, show that the rate of change of the total energy of the \nsystem dE dt is zero. \nQuestion 2 continues on the next 2 pages. \nTwo springs identical to the spring above are attached to each side of the cart of unknown mass M, as shown in \nFigure 1 above. The cart is on a level, horizontal track of negligible friction. A piece of clay is added to the top \nof the cart so that it will stick to the cart. The cart is displaced to the left a distance d and released from rest, as \nshown in Figure 2 above. The period of oscillation is recorded. This procedure is repeated for several different \npieces of clay of different masses. In each trial, the cart is displaced the same distance d. The data are shown \nbelow on the linear graph of T2 as a function of mC , where T is the period of oscillation and mC represents the \nmass of the clay. \n(d) From the graph, determine the following. \ni. k, the spring constant of each spring \nii. M, the mass of the cart \n(e) The experiment is repeated, but in a second set of trials, the cart is pulled back a distance D, where D > d . \nDescribe any changes that will occur for the straight line on the graph in part (d). \nJustify your answer.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U7.frq",
+        "name": "Oscillations"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2017/2017_frq2_img01.png",
+      "images/ap/physics-c-mechanics/2017/2017_frq2_img02.png",
+      "images/ap/physics-c-mechanics/2017/2017_frq2_img03.png",
+      "images/ap/physics-c-mechanics/2017/2017_frq2_img04.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2017/2017_rubric2_img01.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "2a",
+          "part": "2a",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For indicating that the velocity is the derivative of the position 1 point For correctly taking the derivative of the position 1 point"
+        },
+        {
+          "point_id": "2b",
+          "part": "2b",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For labeling maximum and/or minimum velocity as \\omegad and/or d \\$\\omega$ - respectively OR labels consistent with the expression in part (a) 1 point For beginning the graph at zero and in the negative direction 1 point For drawing two sinusoidal curves with the first ending at T and the second ending at 2T 1 point"
+        },
+        {
+          "point_id": "2c",
+          "part": "2c",
+          "points": 4,
+          "value": 4,
+          "description": "i) 1 point For an answer consistent with part (a) 1 point For an answer consistent with the position function used in part (a) 1 point () iii) 2 points For indicating that the total energy is the sum of the equations for parts (c)(i) and (c)(ii) 1 point For correctly indicating that the derivative of the above equation is zero 1 point"
+        },
+        {
+          "point_id": "2d",
+          "part": "2d",
+          "points": 4,
+          "value": 4,
+          "description": "i) 2 points For correctly calculating the slope using the best-fit line and not the data points Example: 1 point For correctly relating the slope to the equivalent spring constant for the two-spring system Example: 1 point () ii) 2 points For relating the mass of the cart to the period and substituting values of a point from the graph 1 point For substituting the value for the spring constant from part (d)(i) Example: 1 point"
+        },
+        {
+          "point_id": "2e",
+          "part": "2e",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For indicating that the line would not change 1 point For a correct justification Example: Since the period does not depend on the amplitude of oscillation, the graph would not change. Note: If student does not indicate the line would not change, the justification cannot earn credit. 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2017.pdf",
+      "prompt_pages": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "rubric_pages": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2017_FRQ3",
+    "frq_id": "2017_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2017,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2017 Practice Exam",
+    "text": "A sphere of mass m and radius r is released from rest at the top of a curved track of height H. The sphere travels \ndown the curved track and around a loop of radius R. The sphere rolls without slipping during the entire motion. \nPoint A on the loop is at height R, and point B is at the top of the loop. The rotational inertia of the sphere is \n2mr 2 5.\nExpress all of your answers in parts (a) through (d) in terms of m, r, H, R, and physical constants, as \nappropriate. Assume r << R. \n(a) On the dots below, which represent the sphere, draw and label the forces (not components) that are exerted \non the sphere at point A and at point B, respectively. Each force must be represented by a distinct arrow \nstarting on and pointing away from the dot. \n(b) \ni. Derive an expression for the speed of the sphere at point A. \nii. Derive an expression for the normal force the track exerts on the sphere at point A. \n(c) Calculate the ratio of the rotational kinetic energy to the translational kinetic energy of the sphere at point A. \n(d) The minimum release height necessary for the sphere to travel around the loop and not lose contact with the \nloop at point B is H MIN . The sphere is replaced with a hoop of the same mass and radius. Will the value of \nH MIN increase, decrease, or stay the same? \n____ Increase ____ Decrease \n____ Stay the same \nJustify your answer. \nThe sphere is again released from a known height H and eventually leaves the track at point C, which is a \nheight R above the bottom of the loop, as shown in the figure above. The track makes an angle of θ above the \nhorizontal at point C. Express your answer in part (e) in terms of m, r, H, R, θ, and physical constants, as \nappropriate. \n(e) Calculate the maximum height above the bottom of the loop that the sphere will reach.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Energy and Momentum of Rotating Systems",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U6.frq",
+        "name": "Energy and Momentum of Rotating Systems"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2017/2017_frq3_img01.png",
+      "images/ap/physics-c-mechanics/2017/2017_frq3_img02.png",
+      "images/ap/physics-c-mechanics/2017/2017_frq3_img03.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2017/2017_rubric3_img01.png",
+      "images/ap/physics-c-mechanics/2017/2017_rubric3_img02.png",
+      "images/ap/physics-c-mechanics/2017/2017_rubric3_img03.png",
+      "images/ap/physics-c-mechanics/2017/2017_rubric3_img04.png",
+      "images/ap/physics-c-mechanics/2017/2017_rubric3_img05.png",
+      "images/ap/physics-c-mechanics/2017/2017_rubric3_img06.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "3a",
+          "part": "3a",
+          "points": 3,
+          "value": 3,
+          "description": "3 points For correctly drawing and labeling the weight and normal force at point A 1 point For correctly drawing and labeling the weight and normal force at point B 1 point For correctly drawing and labeling the frictional force at point A Note: A maximum of 2 points can be earned if there are any extraneous vectors. 1 point"
+        },
+        {
+          "point_id": "3b",
+          "part": "3b",
+          "points": 4,
+          "value": 4,
+          "description": "i) 2 points For using the equation for conservation of energy for the sphere 1 point For a correct answer 1 point For correctly setting the normal force equal to the centripetal force 1 point For an answer consistent with part (b)(i) above 1 point"
+        },
+        {
+          "point_id": "3c",
+          "part": "3c",
+          "points": 2,
+          "value": 2,
+          "description": "2 points For using the equation for the ratio of the rotational and translational kinetic energies 1 point For a correct answer: 1 point =2 5 Note: Credit is given if units are included."
+        },
+        {
+          "point_id": "3d",
+          "part": "3d",
+          "points": 2,
+          "value": 2,
+          "description": "2 points Correct answer: “Increase” For a statement indicating the rotational inertia of the hoop is greater 1 point For a statement indicating the effect of the greater rotational inertia on the linear speed of the hoop 1 point Example: Since the rotational inertia of the hoop is higher than that of the sphere, if the hoop and sphere start at the same height, the hoop will rotate at a slower speed and thus have a lower linear speed. Therefore, you need to start it at a higher initial height so that it travels fast enough to make it through the loop."
+        },
+        {
+          "point_id": "3e",
+          "part": "3e",
+          "points": 4,
+          "value": 4,
+          "description": "4 points For using an appropriate kinematics equation to determine the maximum height of the sphere 1 point For using only the vertical component of the velocity at point C to calculate the maximum height of the sphere 1 point For indicating that the speed at point C is the same as the speed at point A 1 point For a correct answer 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2017.pdf",
+      "prompt_pages": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "rubric_pages": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2018_FRQ1",
+    "frq_id": "2018_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2018,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2018 Practice Exam",
+    "text": "A student sets up an experiment with a cart on a level horizontal track. The cart is attached with an elastic cord \nto a force sensor that is fixed in place on the left end of the track. A motion sensor is at the right end of the track, \nas shown in the figure above. The cart is given an initial speed of \nv\nnaugh t\n, equals 2.0 meters per second\nand moves with this constant \nspeed until the elastic cord exerts a force on the cart. The motion of the cart is measured with the motion \ndetector, and the force the elastic cord exerts on the cart is measured with the force sensor. Both sensors are \nset up so that the positive direction is to the left. The data recorded by both sensors are shown in the graphs \nof velocity as a function of time and force as a function of time below. \nThe figure presents 2 curves in 2 separate coordinate planes. Graph 1. The horizontal axis is labeled “Time, in seconds,” and no numbers are indicated. The vertical axis is labeled “Velocity, in meters per second,” and the numbers negative 2 through 2, in increments of 2, are indicated. The curve begins on the vertical axis at negative 2. The curve extends horizontally to the right until approximately one third of the way along the horizontal axis, where it begins increasing. The curve crosses the horizontal axis approximately halfway along the axis, and continues to increase until it begins to levels off at approximately two thirds of the way along the horizontal axis where velocity equals 2. It then continues horizontally until it ends. Graph 2. The horizontal axis is labeled “Time, in seconds,” and the numbers 0.5 and 1.0 are indicated. The vertical axis is labeled “Force, in Newtons,” and no numbers are indicated. The curve begins on the horizontal axis at 0.5. It is concave down, extends upward and to the right, reaches its maximum at about 0.565, then extends downward and to the right until it reaches 0.75 on the horizontal axis. The region bounded by the curve and the horizontal axis is shaded. It is indicated on the graph that Area equals 1.0 Newton seconds. \n(a) Calculate the mass m of the cart. \nFor time period from 0.50 seconds to 0.75 seconds, the force F the elastic cord exerts on the cart is given as a function of \ntime t by the equation\nF \ne\nqua\nl\ns\n, A times the sine of, (, $\\omega$ t, ) , where \nA equa\nl\ns, 6.3 Newtons and $\\omega$ equals, 12.6 radians per second\n. \n(b) Using the given equation, show that the area under the graph above is \n1\n.0 Newton second s .\n(c) The experiment is repeated using a different cord that exerts a larger average force on the cart. The cart \nstarts and ends with the same speeds as those in the original experiment. Will the area for the graph of \nforce as a function of time for the new cord be greater than, less than, or equal to the area for that of the \noriginal cord? \n____ Greater than \n____ Less than \n____ Equal to \nJustify your answer. \nThe elastic cord from the original experiment can be modeled as an ideal spring with force constant k . \n(d) Derive an expression for the maximum change in length $x_{MAX}$ for the cord. Express your answer in terms of \nm, k, $v_0$, and physical constants, as appropriate. \nThe student performs several trials of the experiment. For the first trial, the cart is empty. In each succeeding \ntrial, a block is added to the cart. In all trials, the cart has an initial speed of 2.0 me ters per second to the right, the cart \nrebounds to the left with a speed of 2.0 me ters per second , and the maximum change in length of the elastic cord is \nmeasured. The total mass M of the cart and the maximum change in length of the cord in each trial are recorded \nin the table below. \nT\nh\ne figure presents a\nparti\na\nl\nl\ny\nc\no\nmpl\nete \n4 col\numn ta\nble. \nThe he\nading\nfor c\nolumn\n1 is \n“Tota\nl Mass of Cart M, in kilograms,” and the heading for column 2 is “$x_{MAX}$, in meters.” Columns 3 and 4 have no headings, and there is no data provided. There are 5 rows of data. The data in the table are as follows.\nRow 1. Total Mass of Cart M, 0.25 kilograms. $x_{MAX}$, 0.142 meter.\nRow 2. Total Mass of Cart M, 0.75 kilograms. $x_{MAX}$, 0.253 meter.\nRow 3. Total Mass of Cart M, 1.25 kilograms. $x_{MAX}$, 0.349 meter.\nRow 4. Total Mass of Cart M, 1.75 kilograms. $x_{MAX}$, 0.431 meter.\nRow 5. Total Mass of Cart M, 2.25 kilograms. $x_{MAX}$, 0.465 meter.\n(e) Indicate below which quantities should be graphed to yield a straight line with a slope that could be used to \ncalculate a numerical value for the force constant of the elastic cord k. \nVertical axis:\nHorizontal axis:\nUse the remaining columns in the table on the previous page, as needed, to record any quantities that you \nindicated that are not given. \n(f) Plot the data points for the quantities indicated in part (e) on the graph below. Clearly scale and label all \naxes, including units as appropriate. Draw a straight line that best represents the data. The figure is a 25 by 25 gr\n(g) Use the best-fit line to calculate the force constant k of the elastic cord. \n____\n____ \nThe figure presents the graph of a curve in the first quadrant in the coordinate plane. The horizontal axis is labeled “x, in meters,” and the numbers 0 through 16, in increments of 2, are indicated. The vertical axis is labeled “U, in Joules,” and the numbers 0 through 14, in increments of 2, are indicated. The curve consists of four straight line segments. After the first line segment, each line segment begins where the previous line segment ends.\nThe first line segment begins on the vertical axis at point zero comma 12, and extends downward and to the right until it ends on the horizontal axis at point 6 comma 0. The second line segment extends horizontally to the right until it ends on the horizontal axis at point 8 comma 0. The third line segment extends upward and to the right until it ends at point 14 comma 6. The fourth line segment extends horizontally to the right until it ends at point 16 comma 6.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U7.frq",
+        "name": "Oscillations"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2018/2018_frq1_img01.png",
+      "images/ap/physics-c-mechanics/2018/2018_frq1_img02.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2018/2018_rubric1_img01.png",
+      "images/ap/physics-c-mechanics/2018/2018_rubric1_img02.png",
+      "images/ap/physics-c-mechanics/2018/2018_rubric1_img03.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "1a",
+          "part": "1a",
+          "points": 2,
+          "value": 2,
+          "description": "Calculate the mass m of the cart. For correctly using the area under the graph to calculate the mass of the cart J e q uals, w hich equals delta p, which equals m times (, $v_{2}$ minus $v_{1}$, ) ) - 1 point For a correct answer with units, the f racti o n Are a ove arenthesis, $v_{2}$ minus $v_{1}$, ),, which equals the ratio 1.0 Newton seconds over (, 2.0 meters per second minus negative 2.0 meters per second, ), ) m equal s 0.25 kilograms 1 point For time period from0.50 seconds to0.75 seconds, the force F the elastic cord exerts on the cart is given as a function of time t by the equation F e q ual s, A times the sine of, (, $\\omega$ t, ) t, where A equa ls, 6.3 Newtons and o m ega equals, 12.6 radians per second."
+        },
+        {
+          "point_id": "1b",
+          "part": "1b",
+          "points": 2,
+          "value": 2,
+          "description": "Using the given equation, show that the area under the graph above is 1.0 Newton second s. For relating the time integral of given equation to the area under the curve 1 point For applying the correct limits of integration J equa ls A rea, whi c h equals the integral from 0.50 to 0.75, of A, times the sine of (, $\\omega$ t, ), with respect to ativ e, t he f ract ion, A o ver ome ga, end fr, times open bracket, the cosine of (, $\\omega$ t, ), close bracket, evaluated from 0.50 to 0.75, which equals negative, the ratio 6.3 Newtons, over 12.6 radians per second,, times open bracket, the cosine of (, 12.6 t, ), close bracket, evaluated from 0.50 to 0.75 t J e qu a l s, ve 0.50, ti mes ope n pa rent h e s is, the cosine of open bracket, 12.6 times 0.75, close bracket, minus the cosine of open bracket, 12.6 times 0.50, close bracket, ) J equals 1.0 Newton second s 1 point"
+        },
+        {
+          "point_id": "1c",
+          "part": "1c",
+          "points": 2,
+          "value": 2,
+          "description": "The experiment is repeated using a different cord that exerts a larger average force on the cart. The cart starts and ends with the same speeds as those in the original experiment. Will the area for the graph of force as a function of time for the new cord be greater than, less than, or equal to the area for that of the original cord? ____ Greater than ____ Less than ____ Equal to Justify your answer. For selecting “Equal to” with an attempt at a relevant justification 1 point For a correct justification Example: Since the cart starts and ends at the same velocity, the impulse on the cart will be the same so the area under the graph will be the same. Note: If the wrong selection is made, the justification is ignored. 1 point The elastic cord from the original experiment can be modeled as an ideal spring with force constant k."
+        },
+        {
+          "point_id": "1d",
+          "part": "1d",
+          "points": 2,
+          "value": 2,
+          "description": "Derive an expression for the maximum change in length MAX for the cord. Express your answer in terms of m, k, $v_0$, and physical constants, as appropriate. For correctly using conservation of energy $U_{MAX}$ equals $K_{MAX}$ o ne ti mes, $x_{MAX}$, squared, equals one half m times, $v_0$, squared 2 1 point For a correct answer $x_{M}$ A X equals, $v_0$, times the square root of m over k, end root 1 point The student performs several trials of the experiment. For the first trial, the cart is empty. In each succeeding trial, a block is added to the cart. In all trials, the cart has an initial speed of 2.0 m eters per second to the right, the cart rebounds to the left with a speed of 2.0 m eters per second, and the maximum change in length of the elastic cord is measured. The total mass M of the cart and the maximum change in length of the cord in each trial are recorded in the table below. The figure presents a parti all y comp lete 4 colu mn ta ble. T he he ading for c olumn 1 is “Total Mass of Cart M, in kilograms,” and the heading for column 2 is “$x_{MAX}$, in meters.” Columns 3 and 4 have no headings, and there is no data provided. There are 5 rows of data. The data in the."
+        },
+        {
+          "point_id": "1e",
+          "part": "1e",
+          "points": 1,
+          "value": 1,
+          "description": "Indicate below which quantities should be graphed to yield a straight line with a slope that could be used to calculate a numerical value for the force constant of the elastic cord k. Vertical axis: Horizontal axis: Use the remaining columns in the table on the previous page, as needed, to record any quantities that you indicated that are not given. For correctly indicating two variables that will yield a straight line that could be used to determine a value for k Example: Vertical Axis: MAX Horizontal Axis: t he square root of m Note: Student earns full credit if axes are reversed or if they use another acceptable combination 1 point"
+        },
+        {
+          "point_id": "1f",
+          "part": "1f",
+          "points": 4,
+          "value": 4,
+          "description": "Plot the data points for the quantities indicated in part (e) on the graph below. Clearly scale and label all axes, including units as appropriate. Draw a straight line that best represents the data.The figure presents a scatterplot in the coordinate plane. The horizontal axis is labeled “square root of m, end root, in square root of kilograms,” and the numbers 0 through 2.5, in increments of 0.5, are indicated. The vertical axis is labeled “$x_{MAX}$, in m For a correct scale that uses more than half the grid 1 point For correctly labeling the axis with variables and units consistent with part (e) Note: Student earns full credit if axes are reversed 1 point For correctly plotting data 1 point For drawing a straight line consistent with the plotted data 1 point"
+        },
+        {
+          "point_id": "1g",
+          "part": "1g",
+          "points": 2,
+          "value": 2,
+          "description": "Use the best-fit line to calculate the force constant k of the elastic cord. For correctly calculating the slope from the best-fit line and not the data points Example: qual s, t he frac tion w ith nume r a to $x_{max}$, and denominator delta square root of m,, which equals the ratio with numerator 0.40 meters minus 0.20 meters, and denominator (, 1.32 minus 0.70, ), square root of kilograms,, which equals 0.34 meters per square root of kilograms (linear regression slope equals 0.3 3 meters per square root of kilograms 1 point For correctly relating the slope to the force constant k Example: ght o ver t he sq ro o t of k. Therefore, k equals $v_0$, squared, over slope squared, which equals the ratio (, 2.0 meters per second, ), squared, over, (, 0.34 meters per square root of kilograms, ), squared, k equ a l s 34.6 Newtons per meter (linear regression k equ a l s 36.7 Newtons per meter ) 1 point"
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+      "prompt_pages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "rubric_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2018_FRQ2",
+    "frq_id": "2018_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2018,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2018 Practice Exam",
+    "text": "The variable x represents the position of particle A in a two-particle system. Particle B remains at rest. The \nabove graph shows the potential energy \nU\nof x) of the system as a function of position x of particle A, which\nhas a mass of 0.40 kilograms. Particle A is released from rest at the position x equals, 2.0 meters. Assume positive to be toward \nthe right. \n(a) Calculate the speed of particle A when it reaches position x equals, 14.0 meters. \n(b) \n1 Calculate the magnitude of the acceleration of particle A when it reaches position x equals, 3.0 meters. \n2\nWhat is the direction of the acceleration of particle A when it reaches position x e quals, 3.0 meters? \nLeft \nRight \n(c) Determine the magnitude of the acceleration of particle A when it reaches position x equals, 7.0 meters.\n(d) Particle A is again released from rest at the positionx equals, 2.0 meters. \n1 Calculate the elapsed time for particle A to travel from position x equals, 2.0 meters to position x equals, 6.0 meters. \n2\nCalculate the elapsed time for particle A to travel from position x equals, 6.0 meters to position x equals, 8.0 meters. \n3\nCalculate the elapsed time for particle A to travel from position x equals, 8.0 meters to position x equals, 14 meters. \n(e) Particle A is now placed at position x \ne\nquals, 7.0 meters. In order for particle A to reach the position x equals, 16.0 meters\nand to be moving at a speed of 1.0 meters per second , what initial speed should particle A be given at its new initial \nposition of x equals, 7.0 meters? \n(f) On the grid below, carefully draw a graph of the force F acting on particle A as a function of x for the \nrange0 less than x, less than 16 meters. \nThe figure presents the first and fourth quadrants of a coordinate grid. The horizontal axis is labeled “x, in meters,” and the numbers 0 through 16, in increments of 2, are indicated. The vertical axis is labeled “F, in Newtons,” and the numbers negative 4 through 4, in increments of 1, are indicated.\n____\n____ \nThe figure presents the side view of a cylinder of mass M and radius R in two positions on an inclined plane. The cylinder is initially at the top of the inclined plane. The figure indicates that the cylinder rolls down the inclined plane to a vertical height of h below the initial position.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Work, Energy, and Power",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U3.frq",
+        "name": "Work, Energy, and Power"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2018/2018_frq2_img01.png",
+      "images/ap/physics-c-mechanics/2018/2018_frq2_img02.png",
+      "images/ap/physics-c-mechanics/2018/2018_frq2_img03.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2018/2018_rubric2_img01.png",
+      "images/ap/physics-c-mechanics/2018/2018_rubric2_img02.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "2a",
+          "part": "2a",
+          "points": 2,
+          "value": 2,
+          "description": "2 points Calculate the speed of particle A when it reaches position x equals, 14.0 meters. For correctly using conservation of energy $U_{1}$, plus $K_{1}$, equals $U_{2}$, plus $K_{2}$ $U_{1}$, p lus 0, equals $U_{2}$, plus one half m times v squared mv 1 point For correctly substituting values from the graph into the equation above 8 j o u le s, eq ual s 6 jou l e s, plus one half times 0.40 kilograms, times v squared ) v equa l s 3.16 meters per second 1 point"
+        },
+        {
+          "point_id": "2b",
+          "part": "2b",
+          "points": 3,
+          "value": 3,
+          "description": "2 points Calculate the magnitude of the acceleration of particle A when it reaches position x equals, 3.0 meters. For correctly relating the slope of the line to the force exerted on the particle at i v e slo pe, ve the ratio with numerator $U_{2}$, minus $U_{1}$, and denominator $x_{2}$, minus $x_{1}$,, which equals negative $rac{12 joules minus 0 joules}{0 meters minus 6 meters}$, which equals 2.0 Newtons 1 point For using Newton’s second law to calculate the acceleration of the particle a, e q uals F ove r m, whi uals 2.0 Newtons over 0.40 kilograms, which equals 5.0 meters per second squared Note: point is awarded for n ega ti v e 5.0 meters per second squared 1 point i) con’t"
+        },
+        {
+          "point_id": "2c",
+          "part": "2c",
+          "points": 1,
+          "value": 1,
+          "description": "1 point Determine the magnitude of the acceleration of particle A when it reaches position x equals, 7.0 meters. For a correct answer F equ als negative slope, which equals 0. Therefore, a, equals 0 a Note: credit is given even if no work is shown 1 point"
+        },
+        {
+          "point_id": "2d",
+          "part": "2d",
+          "points": 4,
+          "value": 4,
+          "description": "Particle A is again released from rest at the position x equals, 2.0 meters. 1 2 points Calculate the elapsed time for particle A to travel from position x equals, 2.0 meters to position x equals, 6.0 meters. For using a correct kinematic equation to calculate the time ub 1, times t, plus one half a, times t squared, which equals 0 plus one half a, times t squared 2 1 point For correctly substituting acceleration from part b 1 into equation above th are ro ot of the ratio 2 d over a, end root, which equals the square root of the ratio with numerator 2 times (, 6.0 meters minus 2.0 meters, ), and denominator 5.0 meters per second squared, end root, which equals 1.26 second s 1 point i) con’t 1 point Calculate the elapsed time for particle A to travel from position x equals 8.0 meters to position x equals 14 meters. For using a correct kinematic equation to calculate the time one half times (, $v_{1}$, plus $v_{2}$, ), times t t e qu fra c t ion wi t h nu me 2 d, and denominator $v_{1}$, plus $v_{2}$,, which equals the ratio with numerator 2 times (, 14 meters minus 8.0 meters, ), and denominator 6.32 meters per second, plus 3.16 meters per second, t equals 1.26 seconds 1 point"
+        },
+        {
+          "point_id": "2e",
+          "part": "2e",
+          "points": 1,
+          "value": 1,
+          "description": "1 points Particle A is now placed at position x equals 7.0 meters. In order for particle A to reach the position x equals 16.0 meters and to be moving at a speed of 1.0 meters per second 1, what initial speed should particle A be given at its new initial position of x equals 7.0 meters? For correctly using conservation of energy to calculate the speed $U_{1}$, plus $K_{1}$, equals $U_{2}$, plus $K_{2}$ 2 0 mes $m_{1}$, times $v_{1}$, squared, equals $U_{2}$, plus one half times $m_{2}$, times $v_{2}$ squared 2 o ne ti me s 0. 40 kilog, time s $v_{1}$, squared, equals 6 joules plus one half times 0.40 kilograms, times (, 1.0 meter per second, ), squared v equa l s 5.57 meters per second 1 point"
+        },
+        {
+          "point_id": "2f",
+          "part": "2f",
+          "points": 3,
+          "value": 3,
+          "description": "3 points for the range0 is less than x, which is less than 16 meters.The figure presents the graph of four line segments in a coordinate plane. The horizontal axis is labeled “x, in meters,” and the numbers 0 through 16, in increments of 2, are indicated. The vertical axis is labeled “F, in Newtons,” and the numbers negative 4 through 4, in increments of 1, are indicated. Each line segment is horizontal. The line segments are as follows. Line segment 1 begins at the point 0, comma 2, and ends at the point 6, comma 2. Line segment 2 begins at the point 6, comma 0, and ends at the point 8, comma 0. Line segment 3 begins at the point 8, comma negative 1, and ends at the point 14, comma negative 1. Line segment 4 begins at the point 14, comma 0, and ends at the point 16, comma 0. For a horizontal line at F equals 2 Newtons from x equals 0 meters to x equals 6 meters 1 point For a horizontal line at F equals 0 from x equals 6 meters tox equals 8 meters and fromx equals 14 meters tox equals 16 meters 1 point For a horizontal line at F equals negative 1 Newtons fromx equals 8 meters tox equals 14 meters Note: Two points earned if shape and magnitudes are correct but graph is inverted 1 point"
+        },
+        {
+          "point_id": "2remaining",
+          "part": "2remaining",
+          "points": 1,
+          "value": 1,
+          "description": "Additional remaining official point allocation for this question, retained from the College Board scoring guideline where the PDF text layer splits the continued rubric across layout regions."
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+      "prompt_pages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "rubric_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2018_FRQ3",
+    "frq_id": "2018_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2018,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2018 Practice Exam",
+    "text": "A cylinder of mass M and radius R is released from rest at the top of an inclined plane, as shown above. \nThe cylinder rolls without slipping down the incline. The rotational inertia of the cylinder is \n2\n. \n(a) Derive an expression for the angular momentum of the cylinder about its center of mass when it has rolled \na vertical distance h. Express your answer in terms of M, R, h, and physical constants, as appropriate. \n(b) Is the angular momentum of the cylinder conserved as the cylinder rolls down the vertical distance h ? \nYes \nNo \nJustify your answer. \nThe figure presents the edge view and side view of a toy. The toy is composed of 3 narrow cylinders attached around a common axis through their centers. The edge view shows 3 side by side vertically oriented rectangles, such that the outer 2 rectangles are taller than the center rectangle. The side view shows 2 concentric circles, such that one circle is smaller and located inside the other.\nA child’s toy is composed of 3 narrow cylinders attached around a common axis through their centers, \nas shown above. The central cylinder has a mass M and radius R. Each of the two outer cylinders has \na mass M and radius 2 R. \n(c) Derive an expression for the rotational inertia of the toy around its center. Express your answer in \nterms of M, R, and physical constants, as appropriate.\n-13-The figure presents a toy represented by two concentric circles at the top of a slanted track that is inclined at an angle of $\\theta$ above the horizontal. The smaller circle is tangent to the track.\nThe toy is placed on a narrow track that is inclined at an angle of \n$\\theta$ above the horizontal. Only the central \ncylinder is in contact with the track, as shown above. The toy rolls without slipping down the track. \n(d) \n1 On the dot below, which represents the toy, draw and label the forces (not components) that act on the \ntoy. The dashed line is parallel to the narrow track. Each force must be represented by a distinct arrow \nstarting on, and pointing away from, the dot. The figure presents a large dot bisected by a dashed line that extends down and to the left, and up and to the right from the dot\n2\nDerive an expression for the linear acceleration of the toy as it rolls down the track. Express your \nanswer in terms of M, R, $\\theta$ , and physical constants, as appropriate. \n3\nDetermine the force of friction exerted on the toy as it rolls down the track. Express your answer in \nterms of M, R, $\\theta$ , and physical constants, as appropriate. The figure presents a toy represented by two concentric circles in two positions. The toy is initially at the top of a slanted track that is inclined at an angle of $\\theta$ above the horizontal. The smaller circle is tangent to the track. The figure indicates that the toy has rolled down the incline and is moving along the horizontal surface away from the slanted track at a speed v with the smaller circle tangent to the track.\n(e) The toy reaches the bottom of the incline and rolls at constant speed v along a horizontal section of the track, \nas shown above. Derive an expression for the total kinetic energy of the toy while it is rolling. Express your \nanswer in terms of M, R, v, and physical constants, as appropriate.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Energy and Momentum of Rotating Systems",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U6.frq",
+        "name": "Energy and Momentum of Rotating Systems"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2018/2018_frq3_img01.png",
+      "images/ap/physics-c-mechanics/2018/2018_frq3_img02.png",
+      "images/ap/physics-c-mechanics/2018/2018_frq3_img03.png",
+      "images/ap/physics-c-mechanics/2018/2018_frq3_img04.png",
+      "images/ap/physics-c-mechanics/2018/2018_frq3_img05.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2018/2018_rubric3_img01.png",
+      "images/ap/physics-c-mechanics/2018/2018_rubric3_img02.png",
+      "images/ap/physics-c-mechanics/2018/2018_rubric3_img03.png",
+      "images/ap/physics-c-mechanics/2018/2018_rubric3_img04.png",
+      "images/ap/physics-c-mechanics/2018/2018_rubric3_img05.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "3a",
+          "part": "3a",
+          "points": 3,
+          "value": 3,
+          "description": "3 points Derive an expression for the angular momentum of the cylinder about its center of mass when it has rolled a vertical distance h. Express your answer in terms of M, R, h, and physical constants, as appropriate. For correctly using conservation of energy $U_{g}$ 1, plus $K_{1}$, equals $U_{g}$ 2, plus $K_{2}$ 2 g K $U_{g}$ 1, plus 0, equals 0 plus $K_{2}$ 2 cas e m t imes g h equals, one half times m, times v squared, plus one half times I, times $\\omega$ squared 2 1 point For correctly substituting into equation above for both linear and rotational kinetic energy tim ls, one half times M, times (, R $\\omega$, ), squared, plus one half times (, the ratio M times R squared, over 2, ), times $\\omega$ squared g h eq u a ls three fourths times R squared, times, $\\omega$ squared o m e ga e quals the square root of $rac{4 g h}{3 times R squared}$, end root 1 point For correctly substituting into the equation for angular momentum al ga, uals (, the ratio M times R squared, over 2, ), times the square root of $rac{4 g h}{3 times R squared}$, end root L e q ua ls M R times the square root of g h over 3, end root 1 point"
+        },
+        {
+          "point_id": "3b",
+          "part": "3b",
+          "points": 1,
+          "value": 1,
+          "description": "1 point For a correct justification Example: The frictional force exerts an external torque on the cylinder therefore the angular momentum of the cylinder is not conserevd. Example: The angular velocity is changing with h; therefore, L is changing. 1 point The figure presents the edge view and side view of a toy. The toy is composed of 3 narrow cylinders attached around a common axis through their centers. The edge view shows 3 side by side vertically oriented rectangles, such that the outer 2 rectangle A child’s toy is composed of 3 narrow cylinders attached around a common axis through their centers, as shown above. The central cylinder has a mass M and radius R. Each of the two outer cylinders has a mass M and radius 2 R."
+        },
+        {
+          "point_id": "3c",
+          "part": "3c",
+          "points": 2,
+          "value": 2,
+          "description": "2 points Derive an expression for the rotational inertia of the toy around its center. Express your answer in terms of M, R, and physical constants, as appropriate. For setting the total rotational inertia for the toy equal to the sum of the rotaional inertias of the three cylinders $I_{t}$ otal equal s, 2 $I_{OUTER}$, plus $I_{INNER}$, which equals 2 times (, the ratio M times R squared over 2, ), sub OUTER, plus (, the ratio M times R squared over 2, ), sub INNER 2 2 I s ub total equals, 2 times (, the ratio with numerator M times (, 2 R, ), squared, and denominator 2,, ), plus (, the ratio M times R squared over 2, ), which equals 4 times M times R squared, plus the ratio M times R squared, over 2 2 4 MR MR 1 point For a correct answer: I s ub t ot al equals, nine halves, times M, times R squared 1 point The figure presents a toy represented by two concentric circles at the top of a slanted track that is inclined at an angle of $\\theta$ above the horizontal. The smaller circle is tangent to the track. The toy is placed on a narrow track that is inclined at an angle of $\\theta$ above the horizontal. Only the central cylinder is in contact with the track, as shown above. The toy rolls without slipping down the track."
+        },
+        {
+          "point_id": "3d",
+          "part": "3d",
+          "points": 4,
+          "value": 4,
+          "description": "3 points On the dot below, which represents the toy, draw and label the forces (not components) that act on the toy. The dashed line is parallel to the narrow track. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot. gure presents a large dot bisected by a dashed line that extends down and to the left, and up and to the right from the dot. Three arrows indicating the directions of forces are drawn outwards from the large dot. The force $F_{}$ f points along the dashed line, up and to the right. The force $F_{N}$ points perpendicular to the dashed line, up and to the left. The force $F_{W}$ points directly downward. For correctly drawing a vector representing the normal force perpendicular to the dashed line 1 point For correctly drawing a vector representing the weight of the toy directed straight down 1 point For correctly drawing a vector representing the frictional force directed up the incline Note: A maximum of two points can be earned if there are any extraneous vectors 1 point 2 3 points Derive an expression for the linear acceleration of the toy as it rolls down the track. Express your answer in terms of M, R, $\\theta$, and physical constants, as appropriate. For correctly using Newton’s second law in linear form for the toy on the incline., 3 times M times g, times the sine of $\\theta$, minus $F_{}$ f, equals 3 M times a.. 1 point For an answer consistent with part d 2 $F_{l}$ owe rca ua l s, nine halves, times M, times (, two fifths, times g, times the sine of $\\theta$, ), which equals nine fifths, times M times g, times the sine of $\\theta$ ( ) 1 point The figure presents a toy represented by two concentric circles in two positions. The toy is initially at the top of a slanted track that is inclined at an angle."
+        },
+        {
+          "point_id": "3e",
+          "part": "3e",
+          "points": 2,
+          "value": 2,
+          "description": "2 points The toy reaches the bottom of the incline and rolls at constant speed v along a horizontal section of the track, as shown above. Derive an expression for the total kinetic energy of the toy while it is rolling. Express your answer in terms of M, R, v, and physical constants, as appropriate. For using both rotational and linear kinetic energy for the total kinetic energy of the toy $K_{L}$, plus $K_{R}$, which equals one half times m, times v squared, plus one half times I, times $\\omega$ squared 1 point For correctly substituting for both the rotational inertia, the mass, and o m e ga equals v over R R into the equation above ti re nt he si s, 3 t imes M, ), times v squared, plus one half times, (, nine halves, times M, times R squared, ), times $\\omega$ squared, which equals three halves, times M, times v squared, plus nine fourths, times M, times R squared, times (, v over R, ), squared, which equals fifteen fourths, times M, times v squared 1 point"
+        },
+        {
+          "point_id": "3remaining",
+          "part": "3remaining",
+          "points": 3,
+          "value": 3,
+          "description": "Additional remaining official point allocation for this question, retained from the College Board scoring guideline where the PDF text layer splits the continued rubric across layout regions."
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+      "prompt_pages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "rubric_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2019_FRQ1",
+    "frq_id": "2019_FRQ1",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2019,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2019 Practice Exam",
+    "text": "A projectile is launched from the back of a cart of mass m that is held at rest, as shown above. At time t equals 0 \n, the \nprojectile leaves the cart with speed $v_{0}$ at an angle $\\theta$ above the horizontal. The projectile lands at point P. \nAssume that the starting height of the projectile above the ground is negligible compared to the maximum height \nreached by the projectile and the horizontal distance traveled. \n(a) Derive an expression for the time $t_{P}$ at which the projectile reaches point P. Express your answer in terms of \n$v_{0}$ , $\\theta$ , and physical constants, as appropriate. \n(b) On the axes below, sketch the horizontal component $v_{x}$ and the vertical component $v_{y}$ of the velocity of \nthe projectile as a function of time t from t equals 0 until t equals $t_{P}$ \n. Explicitly label the vertical intercepts with \nalgebraic expressions. \nThe figure presents two sets of axes. In both sets of axes, the horizontal axis is labeled t, and two tick marks are indicated at equal intervals along the positive portion of the horizontal axis. The first tick mark is unlabeled, and the second tick mark is labeled $t_{p}$. In the set of axes on the left, the vertical axis is labeled $v_{x}$. In the set of axes on the right, the vertical axis is labeled $v_{y}$.\nThe figure presents a diagram of a cart on a horizontal surface. The cart is moving horizontally to the right at a speed of $v_{1}$. There is a projectile located at the left edge of the cart. The diagram indicates that the projectile is launched from the cart upward and to the left at an angle labeled $\\theta$ with the horizontal, and at speed $v_{0}$. A point labeled P is indicated on the horizontal surface, far to the left of the cart. A point labeled Q is indicated on the horizontal surface, between the cart and point P, a horizontal distance of D from the cart. A note states that the figure is not drawn to scale.\nThe projectile is again launched from the same position, but with the cart traveling to the right with speed \n$v_{1}$ \nrelative to the ground, as shown above. The projectile again leaves the cart with speed $v_{0}$ relative to the cart at\nan angle $\\theta$ above the horizontal, and the projectile lands at point Q, which is a horizontal distance D from the \nlaunching point. Express your answers in terms of $v_{0}$ , $\\theta$ , and physical constants, as appropriate. \n(c) Give a physical reason why the projectile lands at point Q, which is not as far from the launch position as \npoint P is, and explain how that physical reason affects the flight of the projectile. \n(d) Derive an expression for $v_{1}$ . Express your answer in terms of $v_{0}$ , $\\theta$ , D, and physical constants, as \nappropriate. \nAfter the launch, the cart’s speed is $v_{2}$ . Beginning at time t equals 0 , the cart experiences a braking force of \nF equals negative b v , where b is a positive constant with units of kilograms per second and v is the speed of the cart. Express your \nanswers to the following in terms of m, b, $v_{2}$ , and physical constants, as appropriate. \n(e) \ni. Using Newton’s second law, write but DO NOT solve a differential equation that represents the motion \nof the cart while it experiences the braking force. \nii. Show that the speed v of t of the cart as a function of time is given by the equation \nv o\nf t e q uals $v_{2}$, , times e raised to the negative b t, over m, power \n.\niii. Derive an expression for the distance the cart travels from t equals 0 until the time it comes to a stop. \nThe figure presents a diagram of a string hanging vertically from a ceiling. The string is wrapped around the edge of a uniform disk with mass M and radius uppercase R. The disk is located a vertical distance of 3 uppercase R from the ground.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Work, Energy, and Power",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U3.frq",
+        "name": "Work, Energy, and Power"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2019/2019_frq1_img01.png",
+      "images/ap/physics-c-mechanics/2019/2019_frq1_img02.png",
+      "images/ap/physics-c-mechanics/2019/2019_frq1_img03.png",
+      "images/ap/physics-c-mechanics/2019/2019_frq1_img04.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2019/2019_rubric1_img01.png",
+      "images/ap/physics-c-mechanics/2019/2019_rubric1_img02.png",
+      "images/ap/physics-c-mechanics/2019/2019_rubric1_img03.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "1a",
+          "part": "1a",
+          "points": 2,
+          "value": 2,
+          "description": "2 points Derive an expression for the time $t_{P}$ at which the projectile reaches point P. Express your answer in terms of $v_{0}$, $\\theta$, and physical constants, as appropriate. For using an appropriate kinematics equation to calculate the time to the highest point of the flight $v_{x}$,, $v_{x}$ 0,, plus $a_{x}$,, times t; therefore, $v_{y}$, equals, $v_{y}$ 0,, plus $a_{y}$,, times $t_{top}$ 1 point For substituting into the equation above and doubling the time 0 e q u als, $v_{0}$,, times the sine of $\\theta$, minus g times $t_{top}$; therefore $t_{top}$ equals, the ratio with numerator $v_{0}$,, times the sine of $\\theta$, and denominator g t equ a ls, 2 $t_{top}$, which equals, the ratio with numerator 2 $v_{0}$,, times, the sine of $\\theta$, and denominator g 1 point"
+        },
+        {
+          "point_id": "1b",
+          "part": "1b",
+          "points": 5,
+          "value": 5,
+          "description": "5 points On the axes below, sketch the horizontal component $v_{x}$ and the vertical component $v_{y}$ of the velocity of the projectile as a function of time t from t equals 0 until t equals $t_{P}$. Explicitly label the vertical intercepts with algebraic expressions. For a straight horizontal line with positive values on the $v_{x}$ graph 1 point For correctly indicating the y-intercept on the $v_{x}$ graph 1 point For a straight line with an initially positive value on the $v_{y}$ graph 1 point For a line with negative slope that crosses the horizontal axis on the $v_{y}$ graph 1 point For correctly indicating the y-intercept on the $v_{y}$ graph 1 point The figure presents a diagram of a cart on a horizontal surface. The cart is moving horizontally to the right at a speed of $v_{1}$. There is a projectile located at the left edge of the cart. The diagram indicates that the projectile is launched from the cart upward and to the left at an angle labeled $\\theta$ with the horizontal, and at speed $v_{0}$. A point labeled P is indicated on the horizontal surface, far to the left of the cart. A point labeled Q is indicated on the horizontal surface, between the cart and point P, a horizontal distance of D from the cart. A note states that the figure is not drawn to scale. The projectile is again launched from the same position, but with the cart traveling to the right with."
+        },
+        {
+          "point_id": "1c",
+          "part": "1c",
+          "points": 1,
+          "value": 1,
+          "description": "f, 1 point Give a physical reason why the projectile lands at point Q, which is not as far from the launch position as point P is, and explain how that physical reason affects the flight of the projectile. For an appropriate physical reason and correct explanation Claim: The projectile will not travel as far as the stationary case. Evidence: The rightward component of velocity causes the initial horizontal launch velocity of the projectile with respect to the ground to be less than when the cart was stationary. Reasoning: The projectile had a component of velocity to the right with respect to the ground at the time of launch. 1 point"
+        },
+        {
+          "point_id": "1d",
+          "part": "1d",
+          "points": 2,
+          "value": 2,
+          "description": "f, 2 points Derive an expression for $v_{1}$. Express your answer in terms of $v_{0}$, $\\theta$, D, and physical constants, as appropriate. For a correct expression for the horizontal component of the velocity of the projectile v s ub x, e q u als, $v_{0}$,, times, (, the cosine of $\\theta$, ), minus $v_{1}$ 1 1 point For correctly substituting into the equation for constant speed ual s, $v_{x}$, bscript, times t; therefore D equals, (, $v_{0}$,, times, (, the cosine of $\\theta$, ), minus $v_{1}$, ), times, (, 2 $v_{0}$,, times, (, the sine of $\\theta$, ), over g, ) θ wi th n ume r ato r D, ator 2 $v_{0}$,, times, (, the sine of $\\theta$, ), over g,, equals, $v_{0}$,, times, (, the cosine of $\\theta$, ), minus $v_{1}$; therefore $v_{1}$, equals, $v_{0}$,, times, (, the cosine of $\\theta$, ), minus the ratio with numerator g D, and denominator 2 $v_{0}$,, times the sine of $\\theta$, 0 θ θ 1 point After the launch, the cart’s speed is $v_{2}$. Beginning at time t equals 0, the cart experiences a braking force of F e quals negative b v, where b is a positive constant with units of k ilograms per second and v is the speed of the cart. Express your answers to the following in terms of m, b, $v_{2}$, and physical constants, as appropriate."
+        },
+        {
+          "point_id": "1e",
+          "part": "1e",
+          "points": 2,
+          "value": 2,
+          "description": "i) a, 1 point Using Newton’s second law, write but DO NOT solve a differential equation that represents the motion of the cart while it experiences the braking force. For an appropriate differential equation F e quals, m a n eg a ti, equals, m times the derivative of v with respect to t 1 point For a correct separation of variable in the above differential equation t he tive of the ratio b over m,, d t, equals, the ratio 1 over v,, d v 1 point For integrating with appropriate limits or constant of integration th, 0, me equals t, of, the ratio b over m,, d t prime, equals, the integral from, v equals $v_{2}$, to v equals v of t, of, the ratio 1 over v,, d v; therefore, the negative of, open bracket, the ratio b over m,, times t prime, close bracket, evaluated from t prime equals 0, to t prime equals t, equals, open bracket, the natural log of v, close bracket, evaluated from v equals $v_{2}$, to v equals v of t ( ) v v t = th,, times, (, t minus 0, ), equals, the natural log of, (, v of t, ), minus the natural log of $v_{2}$, which equals, the natural log of, (, the ratio with numerator v of t, and denominator $v_{2}$, ) se ve b t, over m, power, equals, the ratio with numerator v of t, and denominator $v_{2}$; therefore, v of t, equals, $v_{2}$,, times e raised to the negative b t, over m, power − 1 point iii) 2 points Derive an expression for the distance the cart travels."
+        },
+        {
+          "point_id": "1remaining",
+          "part": "1remaining",
+          "points": 3,
+          "value": 3,
+          "description": "Additional remaining official point allocation for this question, retained from the College Board scoring guideline where the PDF text layer splits the continued rubric across layout regions."
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2019.pdf",
+      "prompt_pages": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "rubric_pages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2019_FRQ2",
+    "frq_id": "2019_FRQ2",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2019,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2019 Practice Exam",
+    "text": "A thin uniform disk of mass M and radius uppercase R has a string wrapped around its edge and attached to the ceiling. \nThe bottom of the disk is at a height 3 uppercase R above the floor, as shown above. The disk is released from rest. The \nrotational inertia of a disk around its center is \nI\nequals, one half M, uppercase R squared \n. \n(a) On the circle below that represents the disk, draw and label the forces (not components) that act on the disk. \nEach force must be represented by a distinct arrow starting on, and pointing away from, the disk, beginning \nat the point where the force is exerted on the disk. The dot is at the center of the disk. \nThe figure presents a disk with a dot at its center.\n(b) When released from rest, the disk falls and the string unwinds. The force the string exerts on the disk is $F_{T}$ , \nand the gravitational force exerted on the disk is $F_{g}$ . Which of the following expressions correctly relates \n$F_{T}$ and $F_{g}$ as the disk falls?\n____ $F_{T}$\nis less than $F_{g}$\n____ $F_{T}$\nequals $F_{g}$\n____ \nF\ns ub \nT\nis greater than $F_{g}$\nJustify your answer. \n(c) Express all answers in terms of M, uppercase R , and physical constants, as appropriate. \ni. Derive an expression for the acceleration a of the disk as it falls. \nii. Derive an expression for the time delta t that it takes the disk to reach the ground. \niii. Derive an expression for the rotational kinetic energy $K_{rotation}$ of the disk at the instant it reaches the \nground. \nThe figure presents a diagram. In the diagram, a disk is shown with a small wedge cut out of it. The wedge extends from the center of the disk to the edge of the disk. To the right of the disk, the wedge is shown separate from the disk, and horizontally oriented. An arrow indicates that the portion of the wedge that was from the center of the disk is labeled Tip. The horizontal distance of the wedge is uppercase R. A note states that the figure is not drawn to scale.\n(d) A very narrow wedge is cut out of the thin uniform disk of mass M, as shown above. If lowercase r is the distance \nfrom the tip of the wedge, then the linear mass density of the wedge can be expressed as follows: \n$\\lambda$ of r, equals $rac{M lowercase r}{25 uppercase R squared}$ \n. \ni. Using integral calculus, derive an expression for the rotational inertia of the wedge around its tip. \nii. Derive an expression for the rotational inertia of the modified disk (i.e., the disk after the narrow \nwedge is cut out) around its original center. \n1. The right side of block B is attached to a horizontal string that passes over the pulley on the right edge of the table. This portion of the string is labeled String 2. The vertical portion of the string is attached to block C which is hanging on the right side of the table.",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U7.frq",
+        "name": "Oscillations"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2019/2019_frq2_img01.png",
+      "images/ap/physics-c-mechanics/2019/2019_frq2_img02.png",
+      "images/ap/physics-c-mechanics/2019/2019_frq2_img03.png",
+      "images/ap/physics-c-mechanics/2019/2019_frq2_img04.png",
+      "images/ap/physics-c-mechanics/2019/2019_frq2_img05.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2019/2019_rubric2_img01.png",
+      "images/ap/physics-c-mechanics/2019/2019_rubric2_img02.png",
+      "images/ap/physics-c-mechanics/2019/2019_rubric2_img03.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "2a",
+          "part": "2a",
+          "points": 2,
+          "value": 2,
+          "description": "a, 2 points On the circle below that represents the disk, draw and label the forces (not components) that act on the disk. Each force must be represented by a distinct arrow starting on, and pointing away from, the disk, beginning at the point where the force is exerted on the disk. The dot is at the center of the disk. The figure presents a disk with a dot at its center, and two force vectors. A force vector labeled $F_{W}$ points vertically downward from the dot at the center of the disk. A force vector labeled $F_{T}$ points vertically upward from the left side of the disk, and is shorter than the $F_{W}$ vector. For drawing and labeling the weight of the block directed downward starting at the center of the disk 1 point For drawing and labeling the tension directed upward starting at the left edge of the disk 1 point Note: A maximum of one point can be earned if there are any extraneous vectors."
+        },
+        {
+          "point_id": "2b",
+          "part": "2b",
+          "points": 2,
+          "value": 2,
+          "description": "a, 2 points When released from rest, the disk falls and the string unwinds. The force the string exerts on the disk is $F_{T}$, and the gravitational force exerted on the disk is g. Which of the following expressions correctly relates $F_{T}$ and $F_{g}$ as the disk falls? ____ F s ub T is less than $F_{g}$ g ____ $F_{T}$ equals $F_{g}$ ____ $F_{T}$ is greater than $F_{g}$ Justify your answer. For selecting $F_{T}$ is less than $F_{g}$ 1 point For a correct justification Example Justification: The center of mass of the disk accelerates downward, so the force of gravity must be greater than the tension in the string. 1 point"
+        },
+        {
+          "point_id": "2c",
+          "part": "2c",
+          "points": 6,
+          "value": 6,
+          "description": "Express all answers in terms of M, R, and physical constants, as appropriate. i) 4 points Derive an expression for the acceleration a of the disk as it falls. For an expression of Newton’s second law in linear form $F_{ne}$ t, e q u als, m, a; therefore, M g minus $F_{T}$ equals, M, a 1 point For an expression of Newton’s second law in rotational form ua l s, I alpha; therefore, $F_{T}$,, times R, equals, one half M R squared, times alpha 2 1 point For correctly relating the linear and rotational accelerations $F_{T}$, ub s c r ipt, times R, equals, one half M R squared, times the ratio a over R; therefore, $F_{T}$ equals, one half M, a 1 point For combining the two equations u p p er ca se M g minus one half M, a, equals, M, a; therefore, a equals two thirds g 1 point ii) b, 2 points Derive an expression for the time delta t that it takes the disk to reach the ground. For correctly substituting the distance into a kinematic equation to calculate the time ua l s, $v_{1}$,, times t, plus one half a, t squared; therefore 3 R equals, 0 plus one half a, t squared 2 1 point For substituting the acceleration from part (c)(i) into equation above 3 R e qu a l s, one third g T squared; therefore, T equals 3 times the square root of the ratio R over g, end root 3 1 point iii) b, 1 point Derive an expression for the rotational kinetic energy $K_{rotation}$ of the disk at the instant it reaches the ground. For correctly substituting into an equation for the rotational kinetic energy of the disk K e q ua l s, eg, e quals, one half, times, one half M R squared, times, (, alpha, t, ), squared, which equals, one fourth M R squared, times, (, the ratio a over R, ), squared, times, (, 3 times the square root of the ratio R over g, ), squared, o n e fo ercase M, times, (, two thirds g,."
+        },
+        {
+          "point_id": "2d",
+          "part": "2d",
+          "points": 3,
+          "value": 3,
+          "description": "A very narrow wedge is cut out of the thin uniform disk of mass M, as shown above. If r is the distance from the tip of the wedge, then the linear mass density of the wedge can be expressed as follows: l am bd, equals, $rac{ M r}{25 R squared}$. i. c, 3 points Using integral calculus, derive an expression for the rotational inertia of the wedge around its tip. For integrating an appropriate equation to calculate rotational inertia of the wedge I equals, the indefinite integral of r squared, d m lo we r c as, $\\lambda$ r; therefore, d m, equals, $\\lambda$ d r, which equals, $rac{ M r}{25 R squared}$, d r 1 point For correctly substituting into equation for rotational inertia I e q ua ls, de gral of, r squared, times, (, $rac{ M r}{25 R squared}$, ), d r, which equals, $rac{ M}{25 R squared}$, times the indefinite integral of r cubed, d r 1 point For integrating with appropriate limits or constant of integration, t h e fr ac ti on or, tor 25 times R squared,, times the integral from r equals 0, to r equals R, of, r cubed, d r, which equals, $rac{ M}{25 times R squared}$, times, open bracket, the ratio r to the fourth power, over 4, close bracket, evaluated from r equals 0, to r equals R, which equals, the ratio M, over 25 R squared,, times, (, the ratio R to the fourth power, over 4,, minus 0, ), which equals, the ratio 1 over 100,, times M, R squared 1 point ii. c, 1 point."
+        },
+        {
+          "point_id": "2remaining",
+          "part": "2remaining",
+          "points": 2,
+          "value": 2,
+          "description": "Additional remaining official point allocation for this question, retained from the College Board scoring guideline where the PDF text layer splits the continued rubric across layout regions."
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2019.pdf",
+      "prompt_pages": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "rubric_pages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  },
+  {
+    "question_id": "2019_FRQ3",
+    "frq_id": "2019_FRQ3",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "year": 2019,
+    "subject": "AP Physics C: Mechanics",
+    "subject_id": "physics-c-mechanics",
+    "source": "AP Physics C: Mechanics 2019 Practice Exam",
+    "text": "Three blocks are connected by strings that pass over pulleys of negligible mass. Block B is on a level, \nhorizontal surface of negligible friction. Block A is on top of block B. String 1 connects blocks A and B. The \ncoefficients of static and kinetic friction between blocks A and B are $\\mu_{s}$ and $\\mu_{k}$ , respectively. Block C is \nhanging over the end of the table and is attached to block B by string 2, as shown above. The masses of blocks \nA, B, and C are $m_{A}$ , $m_{B}$ , and $m_{C}$ , respectively. When block C is released, the system remains at rest. \n(a) \ni. On the dot below, which represents block A, draw and label the forces (not components) that act on \nblock A. Each force must be represented by a distinct arrow starting on, and pointing away from, \nthe dot. \nBlock A \nA dot is shown.\nii. On the dot below, which represents block B, draw and label the forces (not components) that act \non block B. Each force must be represented by a distinct arrow starting on, and pointing away from, \nthe dot. \nBlock B \nA dot is shown.\n(b) Derive an expression for the maximum value for mC at which the blocks will remain at rest. Express all \nalgebraic answers in terms of $\\mu_{s}$ , $\\mu_{k}$ , $m_{A}$ , $m_{B}$ , $m_{C}$ , and physical constants, as appropriate. \nThe figure presents a diagram of a pulley system at the edge of a table. A block labeled B is attached to the horizontal portion of a string that passes over the pulley. A block labeled C is hanging from the vertical portion of the string. There is a piece of clay sitting on top of block B.\nThe setup is modified, as shown in the figure above. Block A and one of the pulleys are removed, and block B \nremains on the table. There is still negligible friction between block B and the table. A lump of clay is added to \nblock B. The students use Newton’s second law to derive an equation for the acceleration $a_{C}$ of block C. The \nacceleration is given by the equation $a_{C}$ equals, the ratio with numerator $m_{C}$, , times g, and denominator $m_{total}$,  \n, where $m_{total}$ is the combined mass of the clay and the two \nblocks. Students use the setup shown above to experimentally determine the acceleration g due to gravity. In \neach trial, a student moves a small amount of clay from block B to block C and then releases the blocks from \nrest, recording the new values of $m_{C}$ and $a_{C}$ . The total mass of the clay and the two blocks is \n$m_{total}$, equals 5.0 kilograms \n.\nThe graph below shows $a_{C}$ as a function of $m_{C}$ , where $m_{C}$ is now the combined mass of block C and the mass \nof clay added to block C. \nThe figure presents a graph of 6 data points in a gridded plane. The horizontal axis is labeled $m_{C}$ in kilograms and the numbers 0 through 2.5, in increments of 0.5, are indicated. The vertical axis is labeled $a_{C}$ in meters per second squared. The locations of the data point are as follows: Data point 1: 0.5 comma 1; Data point 2: 0.8 comma 1.5; Data point 3: 1.1 comma 2; Data point 4: 1.4 comma 2.9; Data point 5: 1.7 comma 3.2; Data point 6: 2.1 comma 3.9.\n(c) \ni. Draw a best-fit line to the data points in the graph above. \nii. Use the best-fit line from part (c)(i) to calculate an experimental value for the acceleration g due to \ngravity. \n(d) If the mass of the pulley in part (c) is significant, would the experimental value of g be greater than, less \nthan, or equal to the value calculated in part (c)(ii) ? \n____ Greater than \n____ Less than \n____ Equal to \nJustify your answer. \nA different group of students repeats the experiment, but instead of moving clay from block B to block C, \nthey just remove a small amount of clay from block B and set it aside, away from the setup. The equation \n$a_{C}$\neq\nual\ns, the ratio with numerator $m_{C}$, , times g, and denominator $m_{total}$,  still applies to the new experiment.\n(e) In order to provide a straight-line graph that can be used to determine an experimental value for g, what two \nquantities should the students now graph? Check all that apply. \n____ \n____ \n____ \n____ \n____ \n____ \n$a_{c}$,\nv\nersus, the ratio 1 over $m_{total}$, \na\n, \ns\nub c, v\ne\nrsu\ns, $m_{total}$\n$a_{c}$, \nv\nersus, the ratio $m_{c}$, over $m_{total}$, \n$a_{c}$\n, versus, $m_{c}$\nm\ns\nub c, v\ne\nrsus, $m_{total}$\n$m_{c}$,\nv\nersus, the ratio 1 over $m_{total}$, \nJustify your answer. \n• \n• \n•",
+    "answer": "",
+    "points": 15,
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Torque and Rotational Dynamics",
+    "secondary_units": [],
+    "topics": [
+      {
+        "code": "U5.frq",
+        "name": "Torque and Rotational Dynamics"
+      }
+    ],
+    "skills": [
+      "1.C",
+      "2.B",
+      "3.C"
+    ],
+    "difficulty": "medium",
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2019/2019_frq3_img01.png",
+      "images/ap/physics-c-mechanics/2019/2019_frq3_img02.png",
+      "images/ap/physics-c-mechanics/2019/2019_frq3_img03.png"
+    ],
+    "rubric_image_paths": [
+      "images/ap/physics-c-mechanics/2019/2019_rubric3_img01.png",
+      "images/ap/physics-c-mechanics/2019/2019_rubric3_img02.png",
+      "images/ap/physics-c-mechanics/2019/2019_rubric3_img03.png",
+      "images/ap/physics-c-mechanics/2019/2019_rubric3_img04.png",
+      "images/ap/physics-c-mechanics/2019/2019_rubric3_img05.png"
+    ],
+    "rubric": {
+      "total_points": 15,
+      "points": [
+        {
+          "point_id": "3a",
+          "part": "3a",
+          "points": 5,
+          "value": 5,
+          "description": "i) 2 points On the dot below, which represents block A, draw and label the forces (not components) that act on block A. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot. The figure presents a free body diagram labeled “Block A.” The diagram consists of four arrows extending from a dot. The arrows have labels and directions as follows. An arrow labeled $F_{N1}$ extends vertically upward. An arrow labeled f extends horizontally to the right. An arrow labeled $m_{A}$,, g, extends vertically downward. An arrow labeled $F_{T1}$ extends horizontally to the left. The four arrows appear to have the same length. For correctly drawing and labeling the vertical forces on block A 1 point For correctly drawing and labeling the horizontal forces on block A Note: A maximum of one point can be earned if there are any extraneous vectors 1 point ii) 3 points On the dot below, which represents block B, draw and label the forces (not components) that act on block B. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot. The figure presents a free body diagram labeled “Block B.” The diagram consists of six arrows extending from a dot. The arrows have labels and directions as follows. An arrow labeled $F_{N2}$ extends vertically upward. An arrow labeled $F_{T2}$ extends horizontally to the right. An arrow labeled $F_{N1}$ extends vertically downward. An arrow labeled $m_{B}$,, g extends vertically downward. An arrow labeled $F_{T1}$ extends horizontally to the left. An arrow labeled f extends horizontally to the left. All of the arrows appear to be approximately the same length, with the exception of the arrow labeled f, which is shorter than the other arrows. For correctly drawing and labeling the."
+        },
+        {
+          "point_id": "3b",
+          "part": "3b",
+          "points": 3,
+          "value": 3,
+          "description": "b, 3 points Derive an expression for the maximum value for $m_{C}$ at which the blocks will remain at rest. Express all algebraic answers in terms of $\\mu_{s}$, $\\mu_{k}$, $m_{A}$, $m_{B}$, $m_{C}$, and physical constants, as appropriate. For an expression of Newton’s second law on block $F_{T2}$,, minus f, minus $F_{T1}$,, equals, $m_{B}$,, a, which equals 0; therefore, $F_{T2}$, equals f plus $F_{T1}$ Expression of Newton’s second law on blocks A and $F_{T1}$,, minus f, equals $m_{A}$,, a, which equals 0; therefore $F_{T1}$, equals f $m_{C}$,, g, minus $F_{T2}$, equals $m_{C}$,, a, which equals 0; therefore $F_{T2}$, equals $m_{C}$,, 2 C 1 point For a correct expression for the frictional force equals, $\\mu_{s}$,, times $F_{N}$, which equals, $\\mu_{s}$,, times $m_{A}$,, times rc a s e $F_{T2}$, equals, $m_{C}$,, g, which equals, f plus f, which equals, 2 f, which equals, 2 $\\mu_{s}$,, times $m_{A}$,, times g A s 1 point For an answer consistent with part (a)(ii) $m_{C}$, equals, 2 $\\mu_{s}$,, times $m_{A}$ 1 point The figure presents a diagram of a pulley system at the edge of a The setup is modified, as shown in the figure above. Block A and one of the pulleys are removed, and block B remains on the table. There is still negligible friction between block B and the table. A lump of clay is added to block B. The students use Newton’s second law to derive an equation for the."
+        },
+        {
+          "point_id": "3c",
+          "part": "3c",
+          "points": 4,
+          "value": 4,
+          "description": "i) e, 1 point Draw a best-fit line to the data points in the graph above. The figure presents a graph of 6 data points and a best fit line in a gridded plane. The horizontal axis is labeled “$m_{C}$, in kilograms,” and the numbers 0 through 2.5, in increments of 0.5, are indicated. The vertical axis is labeled “$a_{C}$, in meters per second squared.” The locations of the data points are as follows. Note that all values are approximate. Data point 1: 0.5 comma 1; Data point 2: 0.8 comma 1.5; Data point 3: 1.1 comma 2; Data point 4: 1.4 comma 2.9; Data point 5: 1.7 comma 3.2; Data point 6: 2.1 comma 3.9. The best fit line begins just below and to the left of Data point 1, and ends just above and to the right of data point 6. Data points 1 and 2 are just above the line, data points 3 and 6 are just below the line, and the line crosses through data points 4 and 5. For drawing an appropriate best-fit line 1 point ii) e, 3 points Use the best-fit line from part (c)(i) to calculate an experimental value for the acceleration g due to gravity. For calculating the slope from the best-fit line and not from the data points unless the data points fall on the best-fit line sl als, t h e frac tion d e lta y ov er, which equals, the ratio with numerator, (, 4.0 minus 1.0, ), meters per second squared, and denominator, (, 2.05 minus 0.52, ), kilograms,, which equals, 2.0 meters per kilogram seconds squared 1 point For correctly relating the slope to g slop e equ als, tion g over $m_{total}$; therefore, g equals $m_{total}$, times slope 1 point For calculating an experimental value for g with units als, $m_{tota}$ l, times s lop e, w h ich equals, 5.0 kilograms, times 2.0 meters per kilogram seconds squared, which equals, 10.0 meters per second squared 1 point"
+        },
+        {
+          "point_id": "3d",
+          "part": "3d",
+          "points": 1,
+          "value": 1,
+          "description": "a, 1 point For a correct justification Example Justification: If the pulley has mass, the system will have more inertia and therefore the acceleration of the system be less. If the acceleration of the system is less, the experimental value of g is less. Note: “Greater than” is accepted if the student provides a reasonable justification. 1 point A different group of students repeats the experiment, but instead of moving clay from block B to block C, they just remove a small amount of clay from block B and set it aside, away from the setup. The equation $a_{C}$, equals, the ratio with numerator $m_{C}$,, times g, and denominator $m_{total}$, still applies to the new experiment."
+        },
+        {
+          "point_id": "3e",
+          "part": "3e",
+          "points": 2,
+          "value": 2,
+          "description": "e, 2 points In order to provide a straight-line graph that can be used to determine an experimental value for g, what two quantities should the students now graph? Check all that apply. ____ $a_{c}$, versus, the ratio 1 over $m_{total}$, ____ $a_{c}$, versus, $m_{total}$ ____ $a_{c}$, versus, the ratio $m_{c}$, over $m_{total}$, ____ $a_{c}$, versus, $m_{c}$ C m ____ $m_{c}$, versus, $m_{total}$ ____ $m_{c}$, versus, the ratio 1 over $m_{total}$, Justify your answer. For selecting “ $a_{c}$, versus, the ratio 1 over $m_{total}$, ” and “ $a_{c}$, versus, the ratio $m_{c}$, over $m_{total}$, ” 1 point For a correct justification Example Justification: By removing the clay, the total mass is a variable. As the total mass of the system is decreased, the acceleration increase; thus $a_{c}$, versus, the ratio 1 over $m_{total}$ and $a_{c}$, versus, the ratio $m_{c}$, over $m_{total}$, will generate a straight line graph that can be used to determine an experimental value for g. 1 point INT‐1.A – Describe an object (either in a state of equilibrium or acceleration) in different types of physical situations such as inclines, falling through air resistance, Atwood machines, or circular tracks). INT‐1.B.b – Calculate a force of unknown magnitude acting on an object in equilibrium. INT-1.C.e – Derive a complete Newton’s second law statement (in the appropriate direction) for an object in."
+        }
+      ],
+      "official_text": ""
+    },
+    "provenance": {
+      "pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2019.pdf",
+      "prompt_pages": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "rubric_pages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92
+      ],
+      "notes": [
+        "Draft structured from official PDF text; focused diagram/rubric images are supplemental and require visual review."
+      ]
+    },
+    "pure_unit": true,
+    "classification": {
+      "review_status": "draft_needs_year_gate",
+      "confidence": "medium",
+      "evidence": [
+        "Draft keyword classification from FRQ prompt and scoring guideline."
+      ],
+      "rejected_units": [],
+      "source_refs": [
+        "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
+      ],
+      "classification_version": "physics_c_mechanics_frq_draft_v1"
+    }
+  }
+]

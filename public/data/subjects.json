@@ -423,6 +423,63 @@
           "U13": 5
         }
       }
+    },
+    {
+      "id": "physics-c-mechanics",
+      "name": "AP Physics C: Mechanics",
+      "shortName": "Physics C Mech",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/physics-c-mechanics/question_bank.json",
+      "frqBank": "ap/physics-c-mechanics/frq_bank.json",
+      "similarityIndex": "ap/physics-c-mechanics/similarity_index.json",
+      "classificationConfig": "ap/physics-c-mechanics/classification_config.json",
+      "dataVersion": "historical-2012-2019-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Kinematics"
+        },
+        {
+          "id": "U2",
+          "name": "Force and Translational Dynamics"
+        },
+        {
+          "id": "U3",
+          "name": "Work, Energy, and Power"
+        },
+        {
+          "id": "U4",
+          "name": "Linear Momentum"
+        },
+        {
+          "id": "U5",
+          "name": "Torque and Rotational Dynamics"
+        },
+        {
+          "id": "U6",
+          "name": "Energy and Momentum of Rotating Systems"
+        },
+        {
+          "id": "U7",
+          "name": "Oscillations"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 35,
+        "frqCount": 3,
+        "mcqTimeLimit": 2700,
+        "frqTimeLimit": 2700,
+        "unitDistribution": {
+          "U1": 10,
+          "U2": 8,
+          "U3": 4,
+          "U4": 4,
+          "U5": 3,
+          "U6": 1,
+          "U7": 5
+        }
+      }
     }
   ]
 }
