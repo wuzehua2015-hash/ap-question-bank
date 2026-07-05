@@ -17,6 +17,7 @@
     "audit:answerability:web-snapshots": "node scripts/capture_answerability_web_snapshots.cjs",
     "audit:answerability:gate": "node scripts/validate_answerability_review.cjs",
     "audit:answerability:gate:all": "node scripts/validate_answerability_review.cjs --all",
+    "audit:physics-mechanics:image-content": "node scripts/audit_physics_mechanics_image_content.cjs",
     "audit:full": "npm run validate && npm run build && npm run audit:render:all",
     "stable:push": "node scripts/stable_push.cjs",
     "stable:status": "node scripts/stable_push_status.cjs",
