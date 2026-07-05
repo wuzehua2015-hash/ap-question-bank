@@ -53,9 +53,12 @@ function normalizePromptTextV2(text) {
     }
   }
 
+  const paragraphToken = '@@FRQ_PARAGRAPH_BREAK@@'
   const normalized = protectedLines.join('\n')
+    .replace(/\n{2,}/g, `\n${paragraphToken}\n`)
     .replace(/[ \t]+/g, ' ')
     .replace(/(?<!\|)\n(?!(?:\s*(?:\||- \[ \]|\([a-z]\)|[A-F]\.|[ivx]+\.|Part\s+[A-Z]\b|Part\s+\([a-z]\)|Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+|\u2022)))/gi, ' ')
+    .replace(new RegExp(`\\s*${paragraphToken}\\s*`, 'g'), '\n\n')
     .replace(/\s+(Part\s+[A-Z]\b)/g, '\n\n$1')
     .replace(/\s+(\([a-z]\)\s+)/gi, '\n\n$1')
     .replace(/\s+([A-F]\.\s+(?=[A-Z]))/g, '\n$1')
