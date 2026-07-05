@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
 import { loadMCQBank, getSubjectUnits } from '../utils/questionBank'
 import {
@@ -15,6 +15,7 @@ const BASE_URL = import.meta.env.BASE_URL || '/'
 
 function SearchPage() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const { currentSubject } = useSubject()
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(true)
@@ -37,8 +38,20 @@ function SearchPage() {
       setQuestions(data)
       setYearFilter('all')
       setLoading(false)
+      const qid = searchParams.get('qid')
+      if (qid) {
+        setKeyword(qid)
+        setExpandedId(qid)
+      }
     }).catch(() => setLoading(false))
-  }, [currentSubject])
+  }, [currentSubject, searchParams])
+
+  useEffect(() => {
+    const qid = searchParams.get('qid')
+    if (!qid || questions.length === 0) return
+    setKeyword(qid)
+    setExpandedId(qid)
+  }, [searchParams, questions])
 
   const doneIds = useMemo(() => new Set(getDoneQuestions(currentSubject)), [currentSubject])
   const wrongIds = useMemo(() => new Set(getWrongQuestions(currentSubject)), [currentSubject])
@@ -53,9 +66,13 @@ function SearchPage() {
     if (kw) {
       result = result.filter(q => {
         const text = (q.text || q.question_text || '').toLowerCase()
+        const id = (q.question_id || q.id || '').toLowerCase()
         const opts = Object.values(q.options || {}).join(' ').toLowerCase()
-        const topics = (q.topics || []).join(' ').toLowerCase()
-        return text.includes(kw) || opts.includes(kw) || topics.includes(kw)
+        const topicText = (q.topics || []).map(topic => {
+          if (typeof topic === 'string') return topic
+          return [topic.code, topic.name].filter(Boolean).join(' ')
+        }).join(' ').toLowerCase()
+        return id.includes(kw) || text.includes(kw) || opts.includes(kw) || topicText.includes(kw)
       })
     }
     if (unitFilter !== 'all') result = result.filter(q => q.primary_unit === unitFilter)
@@ -195,8 +212,9 @@ function SearchPage() {
           const isShowAnswer = showAnswerId === q.question_id
           const visibleImages = (q.image_paths || []).filter(img => !(q.option_table_data && /option_table/i.test(img)))
           return (
-            <div key={q.question_id} className="bg-surface rounded-xl border border-border overflow-hidden">
+            <div key={q.question_id} data-question-id={q.question_id} className="bg-surface rounded-xl border border-border overflow-hidden">
               <div
+                data-question-toggle={q.question_id}
                 className="p-4 cursor-pointer hover:bg-gray-50 transition-colors"
                 onClick={() => {
                   setExpandedId(isExpanded ? null : q.question_id)
@@ -204,6 +222,7 @@ function SearchPage() {
                 }}
               >
                 <div className="flex flex-wrap gap-2 mb-2">
+                  <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">{q.question_id}</span>
                   <span className="bg-brand text-white text-xs px-2 py-1 rounded">{q.primary_unit}</span>
                   <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">{q.year}</span>
                   {q.difficulty && <span className={`text-xs px-2 py-1 rounded ${q.difficulty === 'Hard' ? 'bg-red-100 text-red-700' : q.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'}`}>{q.difficulty}</span>}
@@ -215,7 +234,7 @@ function SearchPage() {
                     </span>
                   )}
                 </div>
-                <div className="text-sm text-text line-clamp-2">
+                <div className={`text-sm text-text ${isExpanded ? '' : 'line-clamp-2'}`}>
                   <MathText text={q.text || q.question_text} />
                 </div>
               </div>

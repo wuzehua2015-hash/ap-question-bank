@@ -52,12 +52,14 @@ async function main() {
     await client.send('Page.enable')
     await client.send('Runtime.enable')
     await setViewport(client, 1440, 1400)
+    await client.send('Page.addScriptToEvaluateOnNewDocument', {
+      source: `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`,
+    })
 
     const selectedMcq = selectAuditMcq(mcq)
     const selectedFrq = selectAuditFrq(frq)
 
     await navigate(client, baseUrl)
-    await evaluate(client, `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)})`)
 
     await auditSearch(client, errors, warnings, artifacts)
     await auditQuizPdf(client, selectedMcq, errors, warnings, artifacts)
@@ -358,7 +360,9 @@ async function auditScorePage(client, mcq, frq, errors, warnings, artifacts) {
 }
 
 function routeUrl(hash) {
-  return `${baseUrl}?audit=${Date.now()}${hash}`
+  const cleanHash = hash.startsWith('#') ? hash : `#${hash}`
+  const separator = cleanHash.includes('?') ? '&' : '?'
+  return `${baseUrl}${cleanHash}${separator}audit=${Date.now()}`
 }
 
 async function scrollToText(client, re) {
@@ -392,15 +396,23 @@ async function scrollToText(client, re) {
 
 async function waitForImages(client) {
   await evaluate(client, `(() => {
-    const timeout = new Promise(resolve => setTimeout(resolve, 8000));
-    const loads = [...document.images].map(img => {
-      if (img.complete) return Promise.resolve();
-      return new Promise(resolve => {
-        img.addEventListener('load', resolve, { once: true });
-        img.addEventListener('error', resolve, { once: true });
-      });
+    return new Promise(async resolve => {
+      const sleep = ms => new Promise(r => setTimeout(r, ms));
+      const originalY = window.scrollY;
+      const steps = Math.max(1, Math.ceil((document.body?.scrollHeight || 0) / Math.max(1, window.innerHeight)));
+      for (let i = 0; i <= steps; i += 1) {
+        window.scrollTo(0, i * window.innerHeight);
+        await sleep(80);
+      }
+      window.scrollTo(0, originalY);
+      const deadline = Date.now() + 15000;
+      while (Date.now() < deadline) {
+        const pending = [...document.images].some(img => !img.complete || img.naturalWidth === 0);
+        if (!pending) break;
+        await sleep(250);
+      }
+      resolve();
     });
-    return Promise.race([Promise.all(loads), timeout]);
   })()`)
 }
 

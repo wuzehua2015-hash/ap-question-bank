@@ -388,7 +388,7 @@
     "type": "MCQ",
     "text": "A particle of mass $m$ starts from rest at position $x=0$ and time $t=0$. It moves along the positive $x$-axis under the influence of a single force $F_x=bt$, where $b$ is a constant. The velocity $v$ of the particle is given by",
     "options": {
-      "A": "$\\frac{bt^2}{$2\\,\\mathrm{m}$}$",
+      "A": "$\\frac{bt^2}{2m}$",
       "B": "$\\frac{bt^2}{m}$",
       "C": "$\\frac{2bt}{m}$",
       "D": "$\\frac{bt}{m}$",
@@ -425,7 +425,7 @@
     "year": 2012,
     "question_number": 11,
     "type": "MCQ",
-    "text": "Three blocks, A, B, and C, of masses 1, 2, and \n3 kg, respectively, are initially at rest on a \nfrictionless surface as indicated in the figure \nabove. What force F has to be applied on block C \nto accelerate the three blocks at 2 \n2\n$m$ s ?",
+    "text": "Three blocks, $A$, $B$, and $C$, of masses $1\\,\\mathrm{kg}$, $2\\,\\mathrm{kg}$, and $3\\,\\mathrm{kg}$, respectively, are initially at rest on a frictionless surface as indicated in the figure above. What force $F$ has to be applied on block $C$ to accelerate the three blocks at $2\\,\\mathrm{m/s^2}$?",
     "options": {
       "A": "$0.33\\,\\mathrm{N}$",
       "B": "$1.5\\,\\mathrm{N}$",
@@ -434,7 +434,9 @@
       "E": "$12\\,\\mathrm{N}$"
     },
     "answer": "E",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2012/2012_p022_img01.png"
+    ],
     "primary_unit": "U2",
     "unit": "U2",
     "unit_name": "Force and Translational Dynamics",
@@ -2540,7 +2542,7 @@
     "year": 2013,
     "question_number": 27,
     "type": "MCQ",
-    "text": "A particle moves on a straight line with a speed\nthat changes with time t according to the\nequation \n, where \n and \n are \nconstants. The acceleration a of the particle is \nrelated to its speed by which of the following \nequations?",
+    "text": "A particle moves on a straight line with a speed $v$ that changes with time $t$ according to the equation $v=v_0e^{-\\beta t}$, where $v_0$ and $\\beta$ are constants. The acceleration $a$ of the particle is related to its speed by which of the following equations?",
     "options": {
       "A": "$a=-\\beta v$",
       "B": "$a=-\\beta v^2$",
@@ -2776,7 +2778,7 @@
     "year": 2013,
     "question_number": 33,
     "type": "MCQ",
-    "text": "What is the magnitude of the average force \nexerted by the racket on the ball?",
+    "text": "Questions 33-34\nA $0.060\\,\\mathrm{kg}$ tennis ball moving at $15\\,\\mathrm{m/s}$ strikes a tennis racket and rebounds at $10\\,\\mathrm{m/s}$ in the opposite direction, as shown above. The ball is in contact with the racket for $0.030\\,\\mathrm{s}$.\n\nWhat is the magnitude of the average force exerted by the racket on the ball?",
     "options": {
       "A": "$5\\,\\mathrm{N}$",
       "B": "$10\\,\\mathrm{N}$",
@@ -2807,6 +2809,14 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2013.pdf",
       "raw_chunk_sha256": "f7a9c70fb4932138cfd1d18675f4025a3d88f3eebf1b02c61499d111d83bdc62"
     },
+    "group_id": "2013_Q33_34",
+    "group_members": [
+      "2013_Q33",
+      "2013_Q34"
+    ],
+    "group_role": "lead",
+    "requires_group_context": true,
+    "group_context": "Questions 33-34\nA $0.060\\,\\mathrm{kg}$ tennis ball moving at $15\\,\\mathrm{m/s}$ strikes a tennis racket and rebounds at $10\\,\\mathrm{m/s}$ in the opposite direction, as shown above. The ball is in contact with the racket for $0.030\\,\\mathrm{s}$.",
     "rubric_image_paths": []
   },
   {
@@ -2817,13 +2827,13 @@
     "year": 2013,
     "question_number": 34,
     "type": "MCQ",
-    "text": "How does the magnitude of the average force \nexerted by the ball on the racket compare to the \nmagnitude of the average force exerted by the \nracket on the ball?",
+    "text": "Questions 33-34\nA $0.060\\,\\mathrm{kg}$ tennis ball moving at $15\\,\\mathrm{m/s}$ strikes a tennis racket and rebounds at $10\\,\\mathrm{m/s}$ in the opposite direction, as shown above. The ball is in contact with the racket for $0.030\\,\\mathrm{s}$.\n\nHow does the magnitude of the average force exerted by the ball on the racket compare to the magnitude of the average force exerted by the racket on the ball?",
     "options": {
       "A": "It is less.",
       "B": "It is equal.",
       "C": "It is greater.",
-      "D": "It cannot be determined without knowing \nthe mass of the racket.",
-      "E": "It cannot be determined without knowing \nthe recoil speed of the racket."
+      "D": "It cannot be determined without knowing the mass of the racket.",
+      "E": "It cannot be determined without knowing the recoil speed of the racket."
     },
     "answer": "B",
     "image_paths": [
@@ -2848,6 +2858,14 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2013.pdf",
       "raw_chunk_sha256": "89ba9eb2103b0c32c494df751a273c2908f414d07f11b31a5a4b52f1e716b9e9"
     },
+    "group_id": "2013_Q33_34",
+    "group_members": [
+      "2013_Q33",
+      "2013_Q34"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "group_context": "Questions 33-34\nA $0.060\\,\\mathrm{kg}$ tennis ball moving at $15\\,\\mathrm{m/s}$ strikes a tennis racket and rebounds at $10\\,\\mathrm{m/s}$ in the opposite direction, as shown above. The ball is in contact with the racket for $0.030\\,\\mathrm{s}$.",
     "rubric_image_paths": []
   },
   {
@@ -3513,7 +3531,7 @@
     "year": 2014,
     "question_number": 15,
     "type": "MCQ",
-    "text": "A block of mass $m$ is initially sliding with speed\n0\n$v$ on a horizontal frictionless surface, as shown \nabove. It makes an elastic, head-on collision with \nanother block of mass $2\\,\\mathrm{m}$ that is initially at rest. \nWhich of the following correctly shows the \nmotion of the blocks after the collision?",
+    "text": "A block of mass $m$ is initially sliding with speed\n0\n $v$ on a horizontal frictionless surface, as shown \nabove. It makes an elastic, head-on collision with \nanother block of mass $2\\,\\mathrm{m}$ that is initially at rest. \nWhich of the following correctly shows the \nmotion of the blocks after the collision?",
     "options": {
       "A": "Diagram A",
       "B": "Diagram B",
@@ -3859,9 +3877,9 @@
     "type": "MCQ",
     "text": "A gear containing 20 teeth on its circumference \nis meshed with a gear containing 60 teeth on its \ncircumference, as shown above. If the angular \nspeed of the 20-tooth gear is $\\omega$ , what is the \nangular speed of the 60-tooth gear?",
     "options": {
-      "A": "60\n$\\omega$",
-      "B": "20\n$\\omega$",
-      "C": "3\n$\\omega$",
+      "A": "60\n $\\omega$",
+      "B": "20\n $\\omega$",
+      "C": "3\n $\\omega$",
       "D": "$\\omega$",
       "E": "3w"
     },
@@ -4279,7 +4297,7 @@
     "year": 2014,
     "question_number": 33,
     "type": "MCQ",
-    "text": "Which graph best represents the magnitude of the \nmomentum of the ball?",
+    "text": "Questions 33-34\nA very light ball is released from rest at time $t=0$ and falls through the air, which provides significant resistance.\n\nWhich graph best represents the magnitude of the momentum of the ball?",
     "options": {
       "A": "Diagram A",
       "B": "Diagram B",
@@ -4314,6 +4332,14 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2014.pdf",
       "raw_chunk_sha256": "a1016ff375ff00d3966269d0e4f29841b07d8841dd4ba752b7858dd15bf06b61"
     },
+    "group_id": "2014_Q33_34",
+    "group_members": [
+      "2014_Q33",
+      "2014_Q34"
+    ],
+    "group_role": "lead",
+    "requires_group_context": true,
+    "group_context": "Questions 33-34\nA very light ball is released from rest at time $t=0$ and falls through the air, which provides significant resistance.",
     "rubric_image_paths": []
   },
   {
@@ -4324,7 +4350,7 @@
     "year": 2014,
     "question_number": 34,
     "type": "MCQ",
-    "text": "Which graph best represents the magnitude of the \nnet force on the ball?",
+    "text": "Questions 33-34\nA very light ball is released from rest at time $t=0$ and falls through the air, which provides significant resistance.\n\nWhich graph best represents the magnitude of the net force on the ball?",
     "options": {
       "A": "Diagram A",
       "B": "Diagram B",
@@ -4359,6 +4385,14 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2014.pdf",
       "raw_chunk_sha256": "2e1da0e82f5bacee1c847b275f1761d0bb5209ab99f31fe26bced689c341d44a"
     },
+    "group_id": "2014_Q33_34",
+    "group_members": [
+      "2014_Q33",
+      "2014_Q34"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "group_context": "Questions 33-34\nA very light ball is released from rest at time $t=0$ and falls through the air, which provides significant resistance.",
     "rubric_image_paths": []
   },
   {
@@ -6192,16 +6226,18 @@
     "year": 2016,
     "question_number": 7,
     "type": "MCQ",
-    "text": "The change in the kinetic energy of the block after \nmoving a distance of 3 $m$ is most nearly",
+    "text": "Questions 7-8\nA $2\\,\\mathrm{kg}$ block is initially at rest on a horizontal frictionless table. A force of $15\\,\\mathrm{N}$ is then exerted on the block at an angle of $37^\\circ$ to the horizontal, as shown above.\n\nThe change in the kinetic energy of the block after moving a distance of $3\\,\\mathrm{m}$ is most nearly",
     "options": {
-      "A": "60 J",
-      "B": "45 J",
-      "C": "36 J",
-      "D": "27 J",
-      "E": "24 J"
+      "A": "$60\\,\\mathrm{J}$",
+      "B": "$45\\,\\mathrm{J}$",
+      "C": "$36\\,\\mathrm{J}$",
+      "D": "$27\\,\\mathrm{J}$",
+      "E": "$24\\,\\mathrm{J}$"
     },
     "answer": "C",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2016/2016_p023_img01.png"
+    ],
     "primary_unit": "U3",
     "unit": "U3",
     "unit_name": "Work, Energy, and Power",
@@ -6221,6 +6257,14 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2016.pdf",
       "raw_chunk_sha256": "17d46d25867e89af4d32ee437c101263be445d02820e2ff3512dc7bc1a5395a2"
     },
+    "group_id": "2016_Q07_08",
+    "group_members": [
+      "2016_Q07",
+      "2016_Q08"
+    ],
+    "group_role": "lead",
+    "requires_group_context": true,
+    "group_context": "Questions 7-8\nA $2\\,\\mathrm{kg}$ block is initially at rest on a horizontal frictionless table. A force of $15\\,\\mathrm{N}$ is then exerted on the block at an angle of $37^\\circ$ to the horizontal, as shown above.",
     "rubric_image_paths": []
   },
   {
@@ -6231,7 +6275,7 @@
     "year": 2016,
     "question_number": 8,
     "type": "MCQ",
-    "text": "The magnitude of the force exerted on the block \nby the table is most nearly",
+    "text": "Questions 7-8\nA $2\\,\\mathrm{kg}$ block is initially at rest on a horizontal frictionless table. A force of $15\\,\\mathrm{N}$ is then exerted on the block at an angle of $37^\\circ$ to the horizontal, as shown above.\n\nThe magnitude of the force exerted on the block by the table is most nearly",
     "options": {
       "A": "$35\\,\\mathrm{N}$",
       "B": "$32\\,\\mathrm{N}$",
@@ -6240,7 +6284,9 @@
       "E": "$11\\,\\mathrm{N}$"
     },
     "answer": "C",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2016/2016_p023_img01.png"
+    ],
     "primary_unit": "U2",
     "unit": "U2",
     "unit_name": "Force and Translational Dynamics",
@@ -6260,6 +6306,14 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2016.pdf",
       "raw_chunk_sha256": "ae336e2699003ec3bef45c74fda4550483734cc82788f22f7bdb3f2651d9f65f"
     },
+    "group_id": "2016_Q07_08",
+    "group_members": [
+      "2016_Q07",
+      "2016_Q08"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "group_context": "Questions 7-8\nA $2\\,\\mathrm{kg}$ block is initially at rest on a horizontal frictionless table. A force of $15\\,\\mathrm{N}$ is then exerted on the block at an angle of $37^\\circ$ to the horizontal, as shown above.",
     "rubric_image_paths": []
   },
   {
@@ -7574,7 +7628,7 @@
     "year": 2017,
     "question_number": 4,
     "type": "MCQ",
-    "text": "Suppose that a spherical star spinning at an initial\nangular velocity $\\omega$ suddenly collapses to half \nof its original radius without any loss of mass. \nAssume the star has uniform density before and \nafter the collapse. What will the angular velocity \nof the star be after the collapse?\n4\n$\\omega$",
+    "text": "Suppose that a spherical star spinning at an initial\nangular velocity $\\omega$ suddenly collapses to half \nof its original radius without any loss of mass. \nAssume the star has uniform density before and \nafter the collapse. What will the angular velocity \nof the star be after the collapse?\n4\n $\\omega$",
     "options": {
       "A": "$\\omega/4$",
       "B": "$\\omega/2$",
@@ -7693,16 +7747,19 @@
     "year": 2017,
     "question_number": 7,
     "type": "MCQ",
-    "text": "Two carts of equal mass are on a horizontal \nsurface with negligible friction. Cart A is \napproaching cart B, which is at rest, as shown in \nFigure 1 above. Attached to cart B is a spring that \nis initially compressed. At the moment cart A \ncollides with cart B, the spring is released and \npushes on cart A, as shown in Figure 2 above. \nWhich of the following correctly states what \nhappens to the kinetic energy and the momentum \nof the two-cart system as a result of the collision \ncompared to those quantities before the collision?\nDecreases \nStays the same \nIncreases \nIncreases \nStays the same",
+    "text": "Two carts of equal mass are on a horizontal surface with negligible friction. Cart $A$ is approaching cart $B$, which is at rest, as shown in Figure 1 above. Attached to cart $B$ is a spring that is initially compressed. At the moment cart $A$ collides with cart $B$, the spring is released and pushes on cart $A$, as shown in Figure 2 above. Which of the following correctly states what happens to the kinetic energy and the momentum of the two-cart system as a result of the collision compared to those quantities before the collision?",
     "options": {
-      "A": "Increases",
-      "B": "Increases",
-      "C": "Increases",
-      "D": "Stays the same",
-      "E": "Stays the same"
+      "A": "Kinetic energy increases; momentum decreases",
+      "B": "Kinetic energy increases; momentum stays the same",
+      "C": "Kinetic energy increases; momentum increases",
+      "D": "Kinetic energy stays the same; momentum increases",
+      "E": "Kinetic energy stays the same; momentum stays the same"
     },
     "answer": "B",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2017/2017_p023_img01.png",
+      "images/ap/physics-c-mechanics/2017/2017_p023_img02.png"
+    ],
     "primary_unit": "U7",
     "unit": "U7",
     "unit_name": "Oscillations",
@@ -7721,6 +7778,34 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2017.pdf",
       "raw_chunk_sha256": "c530b72c4cd2f71fadf65ee782b1e9e68ab91e4e140e3ef317f53a6c351de361"
+    },
+    "option_table_data": {
+      "headers": [
+        "Kinetic energy",
+        "Magnitude of momentum"
+      ],
+      "rows": {
+        "A": [
+          "Increases",
+          "Decreases"
+        ],
+        "B": [
+          "Increases",
+          "Stays the same"
+        ],
+        "C": [
+          "Increases",
+          "Increases"
+        ],
+        "D": [
+          "Stays the same",
+          "Increases"
+        ],
+        "E": [
+          "Stays the same",
+          "Stays the same"
+        ]
+      }
     },
     "rubric_image_paths": []
   },
@@ -7988,7 +8073,7 @@
     "year": 2017,
     "question_number": 14,
     "type": "MCQ",
-    "text": "What is the ball’s acceleration at time t = $1\\,\\mathrm{s}$?",
+    "text": "Questions 14-16\nA ball of mass $2.0\\,\\mathrm{kg}$ is thrown vertically upward from the top of a building. The ball's velocity $v$ is given as a function of time $t$ by the equation $v(t)=R-St$, where $R=5\\,\\mathrm{m/s}$ and $S=10\\,\\mathrm{m/s^2}$. The positive direction is upward.\n\nWhat is the ball's acceleration at time $t=1\\,\\mathrm{s}$?",
     "options": {
       "A": "$-10\\,\\mathrm{m/s^2}$",
       "B": "$-5\\,\\mathrm{m/s^2}$",
@@ -8017,6 +8102,15 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2017.pdf",
       "raw_chunk_sha256": "7066532972a20387798d359e3a8d78018dfce7adb207647c30429663ded804bd"
     },
+    "group_id": "2017_Q14_16",
+    "group_members": [
+      "2017_Q14",
+      "2017_Q15",
+      "2017_Q16"
+    ],
+    "group_role": "lead",
+    "requires_group_context": true,
+    "group_context": "Questions 14-16\nA ball of mass $2.0\\,\\mathrm{kg}$ is thrown vertically upward from the top of a building. The ball's velocity $v$ is given as a function of time $t$ by the equation $v(t)=R-St$, where $R=5\\,\\mathrm{m/s}$ and $S=10\\,\\mathrm{m/s^2}$. The positive direction is upward.",
     "rubric_image_paths": []
   },
   {
@@ -8027,7 +8121,7 @@
     "year": 2017,
     "question_number": 15,
     "type": "MCQ",
-    "text": "At what time does the ball reach its maximum \nheight above the building?",
+    "text": "Questions 14-16\nA ball of mass $2.0\\,\\mathrm{kg}$ is thrown vertically upward from the top of a building. The ball's velocity $v$ is given as a function of time $t$ by the equation $v(t)=R-St$, where $R=5\\,\\mathrm{m/s}$ and $S=10\\,\\mathrm{m/s^2}$. The positive direction is upward.\n\nAt what time does the ball reach its maximum height above the building?",
     "options": {
       "A": "$0.2\\,\\mathrm{s}$",
       "B": "$0.4\\,\\mathrm{s}$",
@@ -8056,6 +8150,15 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2017.pdf",
       "raw_chunk_sha256": "46951ea2eb6cdc683c61bd1c749c91343c5ed2943ee7857ebaac97599b97bb4f"
     },
+    "group_id": "2017_Q14_16",
+    "group_members": [
+      "2017_Q14",
+      "2017_Q15",
+      "2017_Q16"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "group_context": "Questions 14-16\nA ball of mass $2.0\\,\\mathrm{kg}$ is thrown vertically upward from the top of a building. The ball's velocity $v$ is given as a function of time $t$ by the equation $v(t)=R-St$, where $R=5\\,\\mathrm{m/s}$ and $S=10\\,\\mathrm{m/s^2}$. The positive direction is upward.",
     "rubric_image_paths": []
   },
   {
@@ -8066,13 +8169,13 @@
     "year": 2017,
     "question_number": 16,
     "type": "MCQ",
-    "text": "If the ball reaches the ground at t = $2.0\\,\\mathrm{s}$, what is \nthe height of the building?",
+    "text": "Questions 14-16\nA ball of mass $2.0\\,\\mathrm{kg}$ is thrown vertically upward from the top of a building. The ball's velocity $v$ is given as a function of time $t$ by the equation $v(t)=R-St$, where $R=5\\,\\mathrm{m/s}$ and $S=10\\,\\mathrm{m/s^2}$. The positive direction is upward.\n\nIf the ball reaches the ground at $t=2.0\\,\\mathrm{s}$, what is the height of the building?",
     "options": {
-      "A": "5 $m$",
-      "B": "10 $m$",
-      "C": "15 $m$",
-      "D": "20 $m$",
-      "E": "30 $m$"
+      "A": "$5\\,\\mathrm{m}$",
+      "B": "$10\\,\\mathrm{m}$",
+      "C": "$15\\,\\mathrm{m}$",
+      "D": "$20\\,\\mathrm{m}$",
+      "E": "$30\\,\\mathrm{m}$"
     },
     "answer": "B",
     "image_paths": [],
@@ -8095,6 +8198,15 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2017.pdf",
       "raw_chunk_sha256": "0cb09fccc8d72bb9072a526bb4aec143813eefc315a764aff22ea1e78a629144"
     },
+    "group_id": "2017_Q14_16",
+    "group_members": [
+      "2017_Q14",
+      "2017_Q15",
+      "2017_Q16"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "group_context": "Questions 14-16\nA ball of mass $2.0\\,\\mathrm{kg}$ is thrown vertically upward from the top of a building. The ball's velocity $v$ is given as a function of time $t$ by the equation $v(t)=R-St$, where $R=5\\,\\mathrm{m/s}$ and $S=10\\,\\mathrm{m/s^2}$. The positive direction is upward.",
     "rubric_image_paths": []
   },
   {
@@ -8694,26 +8806,28 @@
     "year": 2017,
     "question_number": 31,
     "type": "MCQ",
-    "text": "Which of the following best describes the \nacceleration vector for the particle at the \nmoment shown in the diagram?",
+    "text": "Questions 31-32\nA particle of mass $m$ moves counterclockwise around a horizontal circle of radius $r$, as shown above. The angular speed of the particle is given as a function of time $t$ by $\\omega(t)=bt$, where $b$ is a positive constant and $t\\ge0$.\n\nWhich of the following best describes the acceleration vector for the particle at the moment shown in the diagram?",
     "options": {
       "A": "It is directed toward the left.",
       "B": "It is directed toward the bottom of the page.",
       "C": "It is directed toward the top of the page.",
-      "D": "It has components directed toward the right \nand toward the bottom of the page.",
-      "E": "It has components directed toward the left \nand toward the bottom of the page."
+      "D": "It has components directed toward the right and toward the bottom of the page.",
+      "E": "It has components directed toward the left and toward the bottom of the page."
     },
     "answer": "E",
-    "image_paths": [],
-    "primary_unit": "U1",
-    "unit": "U1",
-    "unit_name": "Kinematics",
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2017/2017_p030_img02.png"
+    ],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Torque and Rotational Dynamics",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
     "skills": [],
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U1",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": "Draft keyword classification; must be replaced by Source Pack classification before final publish.",
@@ -8723,6 +8837,14 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2017.pdf",
       "raw_chunk_sha256": "1bd88ce38b53eef062449fb9b49570b553375c65c74a6e6c432ca5710e673e36"
     },
+    "group_id": "2017_Q31_32",
+    "group_members": [
+      "2017_Q31",
+      "2017_Q32"
+    ],
+    "group_role": "lead",
+    "requires_group_context": true,
+    "group_context": "Questions 31-32\nA particle of mass $m$ moves counterclockwise around a horizontal circle of radius $r$, as shown above. The angular speed of the particle is given as a function of time $t$ by $\\omega(t)=bt$, where $b$ is a positive constant and $t\\ge0$.",
     "rubric_image_paths": []
   },
   {
@@ -8733,16 +8855,18 @@
     "year": 2017,
     "question_number": 32,
     "type": "MCQ",
-    "text": "What is the magnitude of the angular momentum of the particle about the center of the circle as a function of time?",
+    "text": "Questions 31-32\nA particle of mass $m$ moves counterclockwise around a horizontal circle of radius $r$, as shown above. The angular speed of the particle is given as a function of time $t$ by $\\omega(t)=bt$, where $b$ is a positive constant and $t\\ge0$.\n\nWhat is the magnitude of the angular momentum of the particle about the center of the circle as a function of time?",
     "options": {
-      "A": "$mbtr$",
+      "A": "$\\frac{mbt}{r}$",
       "B": "$mbrt$",
-      "C": "$\\frac{1}{2}mbrt^2$",
-      "D": "$\\frac{1}{2}mbr^2t$",
-      "E": "$mbr^2t$"
+      "C": "$mbr^2t$",
+      "D": "$mb^2rt^2$",
+      "E": "$mb^2r^2t^2$"
     },
     "answer": "C",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2017/2017_p030_img02.png"
+    ],
     "primary_unit": "U6",
     "unit": "U6",
     "unit_name": "Energy and Momentum of Rotating Systems",
@@ -8762,6 +8886,14 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2017.pdf",
       "raw_chunk_sha256": "33597590e9fb3badf4bf000b17df3b8748876fa22ac26cfa7f1378543adcab41"
     },
+    "group_id": "2017_Q31_32",
+    "group_members": [
+      "2017_Q31",
+      "2017_Q32"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "group_context": "Questions 31-32\nA particle of mass $m$ moves counterclockwise around a horizontal circle of radius $r$, as shown above. The angular speed of the particle is given as a function of time $t$ by $\\omega(t)=bt$, where $b$ is a positive constant and $t\\ge0$.",
     "rubric_image_paths": []
   },
   {
@@ -9427,13 +9559,13 @@
     "year": 2018,
     "question_number": 12,
     "type": "MCQ",
-    "text": "A car is traveling down the highway at speed v\nwhen the driver slams on the brakes and skids to a \nstop in a distance d. Assuming the same frictional \nforce, how far would the car slide if its speed \nwas 2 v ?",
+    "text": "A car is traveling down the highway at speed $v$ when the driver slams on the brakes and skids to a stop in a distance $d$. Assuming the same frictional force, how far would the car slide if its speed was $2v$?",
     "options": {
-      "A": "d\n4",
-      "B": "d\n over 2",
-      "C": "d",
-      "D": "2\n d",
-      "E": "4\n \nd"
+      "A": "$d/4$",
+      "B": "$d/2$",
+      "C": "$d$",
+      "D": "$2d$",
+      "E": "$4d$"
     },
     "answer": "E",
     "image_paths": [],
@@ -10201,11 +10333,11 @@
     "type": "MCQ",
     "text": "A ball, rolling without slipping on a horizontal \nsurface, encounters a frictionless, downward-\nsloping ramp, as shown above. Which of the \nfollowing correctly describes the motion of the \nball on the ramp?",
     "options": {
-      "A": "Constant translational speed with no\nangular speed",
-      "B": "Increasing translational speed with no\nangular speed",
-      "C": "Increasing translational speed with constant \nnonzero angular speed",
-      "D": "Increasing translational speed with \ndecreasing angular speed",
-      "E": "Increasing translational speed with increasing \nangular speed\nT"
+      "A": "Constant translational speed with no angular speed",
+      "B": "Increasing translational speed with no angular speed",
+      "C": "Increasing translational speed with constant nonzero angular speed",
+      "D": "Increasing translational speed with decreasing angular speed",
+      "E": "Increasing translational speed with increasing angular speed"
     },
     "answer": "C",
     "image_paths": [
@@ -10281,16 +10413,18 @@
     "year": 2018,
     "question_number": 31,
     "type": "MCQ",
-    "text": "When the arm and hand hang straight down, the \ndistance from the shoulder to the center of mass \nof the arm-hand system is most nearly",
+    "text": "When the arm and hand hang straight down, the distance from the shoulder to the center of mass of the arm-hand system is most nearly",
     "options": {
-      "A": "0\n.25 meter",
-      "B": "0\n.35 meter",
-      "C": "0\n.37 meter",
-      "D": "0\n.50 meter",
-      "E": "0\n.93 meter\nT"
+      "A": "$0.25\\,\\mathrm{m}$",
+      "B": "$0.35\\,\\mathrm{m}$",
+      "C": "$0.37\\,\\mathrm{m}$",
+      "D": "$0.50\\,\\mathrm{m}$",
+      "E": "$0.93\\,\\mathrm{m}$"
     },
     "answer": "C",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2018/2018_p031_img02.png"
+    ],
     "primary_unit": "U4",
     "unit": "U4",
     "unit_name": "Linear Momentum",
@@ -11588,13 +11722,13 @@
     "year": 2019,
     "question_number": 25,
     "type": "MCQ",
-    "text": "A satellite is in a circular orbit such that it \nstays directly over the same point on Earth’s \nequator. Which of the following must be true \nfor the satellite?\n1. It must have a specific mass.\n2. It must have a specific altitude.\n3. It must have a specific angular velocity.",
+    "text": "A satellite is in a circular orbit such that it stays directly over the same point on Earth's equator. Which of the following must be true for the satellite?\n1. It must have a specific mass.\n2. It must have a specific altitude.\n3. It must have a specific angular velocity.",
     "options": {
       "A": "1 only",
       "B": "2 only",
       "C": "1 and 2 only",
       "D": "2 and 3 only",
-      "E": "1\n, 2, and 3\n\nT"
+      "E": "1, 2, and 3"
     },
     "answer": "D",
     "image_paths": [],
@@ -11928,13 +12062,13 @@
     "year": 2019,
     "question_number": 33,
     "type": "MCQ",
-    "text": "For system A, when the block is halfway between \nits release position and its equilibrium position, \nthe block’s kinetic energy is K and the elastic \npotential energy of the spring-block system is U. \nThe ratio K over U is",
+    "text": "For system A, when the block is halfway between its release position and its equilibrium position, the block's kinetic energy is $K$ and the elastic potential energy of the spring-block system is $U$. The ratio $K/U$ is",
     "options": {
-      "A": "1 over 3",
-      "B": "1\n over 2",
-      "C": "1\n over 1",
-      "D": "2\n over 1",
-      "E": "3\n over 1"
+      "A": "$1/3$",
+      "B": "$1/2$",
+      "C": "$1/1$",
+      "D": "$2/1$",
+      "E": "$3/1$"
     },
     "answer": "E",
     "image_paths": [],
@@ -11967,13 +12101,13 @@
     "year": 2019,
     "question_number": 34,
     "type": "MCQ",
-    "text": "A student wants to use an apparatus similar to \nsystem B to measure the acceleration due to \ngravity g. If the mass of the block, the force \nconstant of the spring, and the angle of the \nincline are known, what additional data must be \nmeasured to determine an experimental value \nfor g ?\n1. The stretch of the spring at the equilibrium \nposition\n2. The speed of the block as it passes the \nequilibrium position\n3. The time interval between two consecutive \npasses through the equilibrium position",
+    "text": "A student wants to use an apparatus similar to system B to measure the acceleration due to gravity $g$. If the mass of the block, the force constant of the spring, and the angle of the incline are known, what additional data must be measured to determine an experimental value for $g$?\n1. The stretch of the spring at the equilibrium position\n2. The speed of the block as it passes the equilibrium position\n3. The time interval between two consecutive passes through the equilibrium position",
     "options": {
       "A": "1 only",
       "B": "2 only",
       "C": "1 and 2",
       "D": "2 and 3",
-      "E": "1 and 3\n\nT"
+      "E": "1 and 3"
     },
     "answer": "A",
     "image_paths": [],

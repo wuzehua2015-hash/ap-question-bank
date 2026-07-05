@@ -326,7 +326,7 @@ function QuizPlayer() {
         </div>
       )}
 
-      {currentQuestion && (phase === 'playing' || phase === 'frqTransition') && (
+      {currentQuestion && (phase === 'playing' || phase === 'submitted' || phase === 'frqTransition') && (
         <QuestionCard
           question={currentQuestion}
           selectedAnswer={answers[currentQuestion.question_id]}
