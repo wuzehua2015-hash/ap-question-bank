@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
 import { MathText } from './MathText'
+import { formatAnswer, isAnswerCorrect, isMultipleAnswerQuestion, normalizeSelectedAnswer } from '../utils/questionBank'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -60,16 +61,17 @@ function BackgroundTable({ tableData }) {
 }
 
 function isDiagramOptionSet(options) {
-  const expected = ['A', 'B', 'C', 'D', 'E']
-  return expected.every(key => options?.[key] === `Diagram ${key}`)
+  const keys = Object.keys(options || {}).sort()
+  return keys.length >= 4 && keys.every(key => options?.[key] === `Diagram ${key}`)
 }
 
 function DiagramOptionButtons({ imagePaths, options, selectedAnswer, answer, isSubmitted, onSelect }) {
   if (!isDiagramOptionSet(options)) return null
 
-  const hasContextImage = imagePaths.length === 6
-  const diagramImages = hasContextImage ? imagePaths.slice(1, 6) : imagePaths.slice(0, 5)
-  if (diagramImages.length !== 5) return null
+  const optionCount = Object.keys(options || {}).length
+  const hasContextImage = imagePaths.length === optionCount + 1
+  const diagramImages = hasContextImage ? imagePaths.slice(1, optionCount + 1) : imagePaths.slice(0, optionCount)
+  if (diagramImages.length !== optionCount) return null
 
   const getUrl = (path) => path.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
 
@@ -113,6 +115,21 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
   if (!question) return null
 
   const isSubmitted = phase === 'submitted'
+  const isMultiple = isMultipleAnswerQuestion(question)
+  const selectedSet = new Set(normalizeSelectedAnswer(selectedAnswer))
+  const correctSet = new Set(question.answers?.length ? question.answers : normalizeSelectedAnswer(question.answer))
+
+  const handleOptionSelect = (key) => {
+    if (isSubmitted) return
+    if (!isMultiple) {
+      onSelect(key)
+      return
+    }
+    const next = new Set(selectedSet)
+    if (next.has(key)) next.delete(key)
+    else next.add(key)
+    onSelect([...next].sort().join(','))
+  }
 
   // Image paths are stored directly in the question JSON.
   const imagePaths = question.image_paths || []
@@ -121,11 +138,12 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
   const tableData = question.option_table_data
   const backgroundTable = question.background_data?.table
   const isTableOptions = !!tableData
-  const hasDiagramOptionImages = isDiagramOptionSet(question.options) && imagePaths.length >= 5
+  const diagramOptionCount = Object.keys(question.options || {}).length
+  const hasDiagramOptionImages = isDiagramOptionSet(question.options) && imagePaths.length >= diagramOptionCount
   const hasTableImage = imagePaths.some(path => /(?:^|[_/-])(table|payoff_matrix)(?:[_./-]|$)/i.test(path))
   const displayImagePaths = imagePaths
     .filter(path => !(isTableOptions && /option_table/i.test(path)))
-    .filter((_, index) => !(hasDiagramOptionImages && (imagePaths.length === 6 ? index > 0 : index < 5)))
+    .filter((_, index) => !(hasDiagramOptionImages && (imagePaths.length === diagramOptionCount + 1 ? index > 0 : index < diagramOptionCount)))
 
   return (
     <div className="bg-surface rounded-xl p-6 shadow-sm border border-border">
@@ -168,15 +186,15 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
         /* Standard options */
         <div className="space-y-3 mt-4">
           {Object.entries(question.options || {}).map(([key, text]) => {
-            const isSelected = selectedAnswer === key
-            const isCorrect = question.answer === key
+            const isSelected = selectedSet.has(key)
+            const isCorrect = correctSet.has(key)
             const showCorrect = isSubmitted && isCorrect
             const showIncorrect = isSubmitted && isSelected && !isCorrect
 
             return (
               <button
                 key={key}
-                onClick={() => !isSubmitted && onSelect(key)}
+                onClick={() => handleOptionSelect(key)}
                 disabled={isSubmitted}
                 className={`option-btn text-base sm:text-sm min-h-[48px] ${
                   showCorrect ? 'correct' :
@@ -184,6 +202,13 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
                   isSelected ? 'selected' : ''
                 }`}
               >
+                {isMultiple && (
+                  <span className={`mr-2 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded border text-[10px] ${
+                    isSelected ? 'border-brand bg-brand text-white' : 'border-border bg-white'
+                  }`}>
+                    {isSelected ? '✓' : ''}
+                  </span>
+                )}
                 <span className="font-bold mr-2">{key}.</span>
                 <MathText text={text} forceInlineLatex />
                 {showCorrect && <span className="ml-2 text-success text-sm">✓ 正确</span>}
@@ -198,9 +223,9 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
       {isSubmitted && (
         <div className="mt-4 p-4 bg-bg rounded-lg border border-border">
           <div className="font-semibold text-brand">
-            答案：{question.answer}
-            {selectedAnswer && selectedAnswer !== question.answer && (
-              <span className="text-error ml-2">（你的答案：{selectedAnswer}）</span>
+            答案：{formatAnswer(question.answers?.length ? question.answers : question.answer)}
+            {selectedAnswer && !isAnswerCorrect(question, selectedAnswer) && (
+              <span className="text-error ml-2">（你的答案：{formatAnswer(selectedAnswer)}）</span>
             )}
           </div>
           <div className="text-sm text-text-muted mt-1">来源：{question.source}</div>

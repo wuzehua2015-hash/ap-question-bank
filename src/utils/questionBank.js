@@ -44,12 +44,15 @@ export async function getMockExamConfig(subjectId = 'macro') {
 
 // Frontend adapter: v1/v2 source data -> internal model.
 export function adaptMCQ(raw) {
+  const answers = normalizeAnswers(raw)
   return {
     question_id: raw.question_id || raw.id || '',
     text: raw.question_text || raw.text || '',
     options: normalizeOptionsToObject(raw.options || {}),
-    answer: raw.answer || raw.correct_answer || '',
-    correct_answer: raw.answer || raw.correct_answer || '',
+    answer: answers.length > 1 ? answers.join(',') : (answers[0] || ''),
+    answers,
+    answer_type: raw.answer_type || (answers.length > 1 ? 'multiple' : 'single'),
+    correct_answer: answers.length > 1 ? answers.join(',') : (answers[0] || ''),
     scoring_status: raw.scoring_status || 'scored',
     primary_unit: raw.primary_unit || raw.primaryUnit || 'U1',
     secondary_units: raw.secondary_units || raw.secondaryUnits || [],
@@ -71,6 +74,36 @@ export function adaptMCQ(raw) {
     group_context: raw.group_context || null,
     requires_group_context: !!raw.requires_group_context,
   }
+}
+
+function normalizeAnswers(raw) {
+  const source = raw.answers || raw.correct_answers || raw.answer || raw.correct_answer || ''
+  if (Array.isArray(source)) return source.map(String).map(s => s.trim()).filter(Boolean).sort()
+  return String(source)
+    .split(',')
+    .map(s => s.trim())
+    .filter(Boolean)
+    .sort()
+}
+
+export function isMultipleAnswerQuestion(q) {
+  return q?.answer_type === 'multiple' || (q?.answers || []).length > 1 || String(q?.answer || '').includes(',')
+}
+
+export function normalizeSelectedAnswer(value) {
+  if (Array.isArray(value)) return value.map(String).sort()
+  if (value === undefined || value === null || value === '') return []
+  return String(value).split(',').map(s => s.trim()).filter(Boolean).sort()
+}
+
+export function isAnswerCorrect(q, selected) {
+  const expected = (q.answers && q.answers.length ? q.answers : normalizeSelectedAnswer(q.answer)).sort()
+  const actual = normalizeSelectedAnswer(selected)
+  return expected.length === actual.length && expected.every((value, index) => value === actual[index])
+}
+
+export function formatAnswer(value) {
+  return normalizeSelectedAnswer(value).join(',')
 }
 
 export function adaptFRQ(raw) {

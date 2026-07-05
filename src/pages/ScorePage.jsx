@@ -5,6 +5,7 @@ import { MathText } from '../components/MathText'
 import FRQDisplay from '../components/FRQDisplay'
 import { PdfContainer, exportToPdf } from '../utils/pdfExport.jsx'
 import { useSubject } from '../contexts/SubjectContext'
+import { formatAnswer, isAnswerCorrect } from '../utils/questionBank'
 
 function ScorePage() {
   const navigate = useNavigate()
@@ -35,7 +36,7 @@ function ScorePage() {
     setAnswers(parsedAnswers)
     setFrqs(parsedFrqs)
     setFrqScores(parsedFrqScores)
-    setMcqScore(parsedQuiz.filter(q => parsedAnswers[q.question_id] === q.answer).length)
+    setMcqScore(parsedQuiz.filter(q => isAnswerCorrect(q, parsedAnswers[q.question_id])).length)
     setLoading(false)
   }, [navigate])
 
@@ -60,7 +61,7 @@ function ScorePage() {
     const unit = q.primary_unit
     if (!unitStats[unit]) unitStats[unit] = { total: 0, correct: 0 }
     unitStats[unit].total++
-    if (answers[q.question_id] === q.answer) unitStats[unit].correct++
+    if (isAnswerCorrect(q, answers[q.question_id])) unitStats[unit].correct++
   })
 
   const exportPDF = async () => {
@@ -237,7 +238,9 @@ function ScorePage() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             {quiz.map((q, idx) => {
-              const isCorrect = answers[q.question_id] === q.answer
+              const isCorrect = isAnswerCorrect(q, answers[q.question_id])
+              const correctSet = new Set(q.answers?.length ? q.answers : [q.answer].filter(Boolean))
+              const selectedSet = new Set(formatAnswer(answers[q.question_id]).split(',').filter(Boolean))
               return (
                 <div key={q.question_id} style={{
                   background: isCorrect ? '#f0fdf4' : '#fef2f2',
@@ -289,9 +292,9 @@ function ScorePage() {
                           fontSize: '20px',
                           padding: '4px 12px',
                           borderRadius: '4px',
-                          background: key === q.answer ? '#dcfce7' : key === answers[q.question_id] && !isCorrect ? '#fee2e2' : '#f3f4f6',
-                          color: key === q.answer ? '#166534' : key === answers[q.question_id] && !isCorrect ? '#991b1b' : '#4b5563',
-                          border: `1px solid ${key === q.answer ? '#86efac' : key === answers[q.question_id] && !isCorrect ? '#fca5a5' : '#e5e7eb'}`,
+                          background: correctSet.has(key) ? '#dcfce7' : selectedSet.has(key) && !isCorrect ? '#fee2e2' : '#f3f4f6',
+                          color: correctSet.has(key) ? '#166534' : selectedSet.has(key) && !isCorrect ? '#991b1b' : '#4b5563',
+                          border: `1px solid ${correctSet.has(key) ? '#86efac' : selectedSet.has(key) && !isCorrect ? '#fca5a5' : '#e5e7eb'}`,
                         }}>
                           {key}: <MathText text={val} />
                         </span>
@@ -304,7 +307,7 @@ function ScorePage() {
                     </span>
                     {!isCorrect && (
                       <span style={{ color: '#dc2626' }}>
-                        你的答案：{answers[q.question_id]} | 正确答案：{q.answer}
+                        你的答案：{formatAnswer(answers[q.question_id])} | 正确答案：{formatAnswer(q.answers?.length ? q.answers : q.answer)}
                       </span>
                     )}
                   </div>

@@ -184,7 +184,10 @@ function validate(filePath, options = {}) {
     // Required fields
     if (!q.question_id) errors.push('Missing question_id')
     const isFRQ = q.question_type === 'FRQ' || !!q.rubric
-    if (!isFRQ && !isNotScored && !q.answer && !q.answer_key) errors.push(`${qid}: Missing answer`)
+    const normalizedAnswers = Array.isArray(q.answers)
+      ? q.answers.map(String).map(s => s.trim()).filter(Boolean)
+      : String(q.answer || q.correct_answer || '').split(',').map(s => s.trim()).filter(Boolean)
+    if (!isFRQ && !isNotScored && normalizedAnswers.length === 0 && !q.answer_key) errors.push(`${qid}: Missing answer`)
     if (!q.primary_unit) errors.push(`${qid}: Missing primary_unit`)
     if (!q.text && !q.question_text) errors.push(`${qid}: Missing text`)
     
@@ -222,6 +225,10 @@ function validate(filePath, options = {}) {
     
     // Option checks
     if (q.options && !isNotScored) {
+      const optionKeys = new Set(Object.keys(q.options))
+      for (const ans of normalizedAnswers) {
+        if (!optionKeys.has(ans)) errors.push(`${qid}: Answer ${ans} is not present in options`)
+      }
       for (const [opt, optText] of Object.entries(q.options)) {
         if (!optText || optText.trim() === '') {
           errors.push(`${qid}: Option ${opt} is empty`)

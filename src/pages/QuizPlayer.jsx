@@ -4,7 +4,7 @@ import QuestionCard from '../components/QuestionCard'
 import QuizNavigator from '../components/QuizNavigator'
 import Timer from '../components/Timer'
 import { MathText } from '../components/MathText'
-import { UNITS, loadMCQBank, loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
+import { UNITS, loadMCQBank, loadSimilarityIndex, getSimilarQuestions, isAnswerCorrect } from '../utils/questionBank'
 import { getCurrentQuiz, getQuizConfig, getQuizInfo, setMCQAnswers, startSimilarQuiz } from '../utils/quizSession'
 import {
   getDoneQuestions, setDoneQuestions,
@@ -86,7 +86,7 @@ function QuizPlayer() {
     UNITS.forEach(u => { unitStats[u.id] = { total: 0, correct: 0 } })
 
     quiz.forEach(q => {
-      const isCorrect = finalAnswers[q.question_id] === q.answer
+      const isCorrect = isAnswerCorrect(q, finalAnswers[q.question_id])
       if (isCorrect) correct++
       else wrongIds.push(q.question_id)
 
@@ -109,6 +109,7 @@ function QuizPlayer() {
         correct: isCorrect,
         selected: finalAnswers[q.question_id],
         answer: q.answer,
+        answers: q.answers || [],
       })
       if (isCorrect) rec.correct_count++
       else rec.wrong_count++
@@ -158,7 +159,7 @@ function QuizPlayer() {
 
   const wrongQuestions = useMemo(() => {
     if (phase !== 'submitted' && phase !== 'frqTransition') return []
-    return quiz.filter(q => answers[q.question_id] !== q.answer)
+    return quiz.filter(q => !isAnswerCorrect(q, answers[q.question_id]))
   }, [quiz, answers, phase])
 
   const wrongByUnit = useMemo(() => {

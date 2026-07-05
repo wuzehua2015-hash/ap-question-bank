@@ -480,6 +480,53 @@
           "U7": 5
         }
       }
+    },
+    {
+      "id": "us-government-politics",
+      "name": "AP United States Government and Politics",
+      "shortName": "AP Gov",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/us-government-politics/question_bank.json",
+      "frqBank": "ap/us-government-politics/frq_bank.json",
+      "similarityIndex": "ap/us-government-politics/similarity_index.json",
+      "classificationConfig": "ap/us-government-politics/classification_config.json",
+      "dataVersion": "local-2018-full-practice-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Foundations of American Democracy"
+        },
+        {
+          "id": "U2",
+          "name": "Interactions Among Branches of Government"
+        },
+        {
+          "id": "U3",
+          "name": "Civil Liberties and Civil Rights"
+        },
+        {
+          "id": "U4",
+          "name": "American Political Ideologies and Beliefs"
+        },
+        {
+          "id": "U5",
+          "name": "Political Participation"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 55,
+        "frqCount": 4,
+        "mcqTimeLimit": 4800,
+        "frqTimeLimit": 6000,
+        "unitDistribution": {
+          "U1": 12,
+          "U2": 15,
+          "U3": 9,
+          "U4": 8,
+          "U5": 11
+        }
+      }
     }
   ]
 }

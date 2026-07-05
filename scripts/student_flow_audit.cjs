@@ -13,6 +13,7 @@ const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject || 'physics-c-mechanics'
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
 const port = Number(args.port || 9555)
+let activeSubject = null
 
 fs.mkdirSync(WORKSPACE, { recursive: true })
 
@@ -23,6 +24,7 @@ main().catch(error => {
 
 async function main() {
   const subject = loadSubject(subjectId)
+  activeSubject = subject
   const mcq = readJson(path.join(PUBLIC, 'data', subject.questionBank))
   const frq = subject.frqBank ? readJson(path.join(PUBLIC, 'data', subject.frqBank)) : []
   const similarity = subject.similarityIndex
@@ -45,13 +47,17 @@ async function main() {
       source: `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`,
     })
 
-    await auditQuizPlay(client, mcq, errors, warnings, artifacts)
+    const quizSample = selectQuizSample(mcq)
+    const searchSample = selectSearchSample(mcq)
+    await auditQuizPlay(client, quizSample, errors, warnings, artifacts)
     await auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts)
-    await auditTargetSearchItems(client, ['2016_Q34', '2017_Q33', '2017_Q34', '2017_Q35', '2018_Q23'], errors, warnings, artifacts)
+    await auditTargetSearchItems(client, searchSample.map(q => q.question_id), errors, warnings, artifacts)
 
     const report = {
       subject_id: subjectId,
       baseUrl,
+      quiz_sample: quizSample.map(q => q.question_id),
+      search_sample: searchSample.map(q => q.question_id),
       generated_at: new Date().toISOString(),
       errors,
       warnings,
@@ -95,20 +101,19 @@ function validateDataBehavior(subject, mcq, frq, similarity, errors, warnings) {
       }
     }
   }
-  if (frq.length !== Number(subject.mockExam?.frqCount || 0) * 8) {
-    warnings.push({ area: 'data', kind: 'frq_count_note', count: frq.length })
+  const expectedFrq = Number(subject.mockExam?.frqCount || 0)
+  if (subject.hasFRQ && frq.length < expectedFrq) {
+    errors.push({ area: 'data', kind: 'frq_count_below_mock_requirement', count: frq.length, expectedFrq })
+  } else if (subject.hasFRQ && frq.length !== expectedFrq) {
+    warnings.push({ area: 'data', kind: 'frq_count_note', count: frq.length, expectedFrq })
   }
 }
 
-async function auditQuizPlay(client, mcq, errors, warnings, artifacts) {
-  const quiz = [
-    findQuestion(mcq, '2016_Q34'),
-    findQuestion(mcq, '2013_Q22'),
-    findQuestion(mcq, '2017_Q23'),
-    findQuestion(mcq, '2017_Q33'),
-    findQuestion(mcq, '2017_Q34'),
-    findQuestion(mcq, '2017_Q35'),
-  ].filter(Boolean)
+async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
+  if (!quiz.length) {
+    errors.push({ page: 'quiz-play', kind: 'no_quiz_sample_selected' })
+    return
+  }
   await navigate(client, routeUrl('#/'))
   await seedSession(client, quiz, [], { isMock: false, mode: 'custom', requestedCount: quiz.length, actualCount: quiz.length })
   await navigate(client, routeUrl('#/play'))
@@ -123,27 +128,36 @@ async function auditQuizPlay(client, mcq, errors, warnings, artifacts) {
     if (!questionVisible) {
       warnings.push({ page: 'quiz-play', kind: 'current_question_id_not_visible', question_id: quiz[i].question_id })
     }
-    await clickOption(client, 'A')
-    if (i < quiz.length - 1) await clickTextButton(client, /下一|Next/)
+    const answers = chooseWrongAnswers(quiz[i])
+    for (const answer of (answers.length ? answers : ['A'])) {
+      await clickOption(client, answer)
+    }
+    if (i < quiz.length - 1) await clickTextButton(client, /下一题|Next/i)
   }
-  await clickTextButton(client, /提交|Submit/)
+  await clickTextButton(client, /提交|Submit|Finish/i)
   await sleep(1200)
   const submitted = await collectVisibleState(client)
   checkVisibleState('quiz:submitted', submitted, errors, warnings)
   if (!/变式|similar|错了/i.test(submitted.text)) {
     errors.push({ page: 'quiz-play', kind: 'similar_recommendation_not_visible_after_wrong_answers' })
   }
-  if (/(^|\n)2016_Q34(\n|$).*(^|\n)2016_Q34(\n|$)/s.test(submitted.text)) {
-    errors.push({ page: 'quiz-play', kind: 'duplicate_similar_recommendation_visible' })
+  const duplicate = quiz.find(q => {
+    const re = new RegExp(`(^|\\n)${escapeRegex(q.question_id)}(\\n|$).*(^|\\n)${escapeRegex(q.question_id)}(\\n|$)`, 's')
+    return re.test(submitted.text)
+  })
+  if (duplicate) {
+    errors.push({ page: 'quiz-play', kind: 'duplicate_similar_recommendation_visible', question_id: duplicate.question_id })
   }
   await screenshot(client, `${subjectId}-quiz-submitted.png`, artifacts)
 }
 
 async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
-  const selectedMcq = mcq.slice(0, 35)
-  const selectedFrq = frq.filter(item => item.year === 2016).slice(0, 3)
-  if (selectedFrq.length !== 3) {
-    errors.push({ page: 'frq', kind: 'missing_2016_frq_set', found: selectedFrq.length })
+  const totalMcq = Number(activeSubject?.mockExam?.totalMCQ || mcq.length || 0)
+  const expectedFrq = Number(activeSubject?.mockExam?.frqCount || frq.length || 0)
+  const selectedMcq = mcq.slice(0, totalMcq || mcq.length)
+  const selectedFrq = selectFrqSample(frq, expectedFrq)
+  if (activeSubject?.hasFRQ && selectedFrq.length !== expectedFrq) {
+    errors.push({ page: 'frq', kind: 'missing_frq_set_for_subject', found: selectedFrq.length, expectedFrq })
     return
   }
   await navigate(client, routeUrl('#/'))
@@ -152,8 +166,8 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     mode: 'mock',
     requestedCount: selectedMcq.length,
     actualCount: selectedMcq.length,
-    mcqTimeLimit: 2700,
-    frqTimeLimit: 2700,
+    mcqTimeLimit: activeSubject?.mockExam?.mcqTimeLimit,
+    frqTimeLimit: activeSubject?.mockExam?.frqTimeLimit,
   })
   await navigate(client, routeUrl('#/frq'))
   for (let i = 0; i < selectedFrq.length; i += 1) {
@@ -162,7 +176,7 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     checkVisibleState(`frq-player:${selectedFrq[i].question_id}`, info, errors, warnings)
     if (!/Free Response|FRQ/i.test(info.text)) errors.push({ page: 'frq-player', kind: 'frq_header_missing' })
     await clickCheckbox(client)
-    if (i < selectedFrq.length - 1) await clickTextButton(client, /下一|Next/)
+    if (i < selectedFrq.length - 1) await clickTextButton(client, /下一题|Next/i)
   }
   await clickTextButton(client, /完成 FRQ|进入.*成绩|Finish/i)
   await sleep(1000)
@@ -194,15 +208,60 @@ async function auditTargetSearchItems(client, ids, errors, warnings, artifacts) 
     if (!info.text.includes(id)) {
       errors.push({ page: 'search', kind: 'target_question_not_visible', question_id: id })
     }
-    if (id === '2016_Q34' && !/Block 1|Block 2|Mass|Area/.test(info.ocrText || info.text)) {
-      // The visible page text will not include image OCR; ensure the image itself is visible and large enough.
-      const tableImage = info.images.find(img => /2016_Q34_table/.test(img.src))
-      if (!tableImage || tableImage.width < 500 || tableImage.height < 150) {
-        errors.push({ page: 'search', kind: 'q34_table_image_not_readable', image: tableImage || null })
-      }
-    }
   }
   await screenshot(client, `${subjectId}-target-search.png`, artifacts)
+}
+
+function selectQuizSample(mcq) {
+  const selected = []
+  addByPredicate(selected, mcq, q => (q.image_paths || []).length > 0, 2)
+  addByPredicate(selected, mcq, q => q.option_table_data || q.background_data?.table, 4)
+  addByPredicate(selected, mcq, q => q.group_id || q.requires_group_context, 6)
+  addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 5, 7)
+  addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 4, 8)
+  addByPredicate(selected, mcq, () => true, 8)
+  return selected.slice(0, Math.min(8, Math.max(1, mcq.length)))
+}
+
+function selectSearchSample(mcq) {
+  const selected = []
+  addByPredicate(selected, mcq, q => (q.image_paths || []).length > 0, 8)
+  addByPredicate(selected, mcq, q => q.option_table_data || q.background_data?.table, 12)
+  addByPredicate(selected, mcq, q => q.group_id || q.requires_group_context, 16)
+  addByPredicate(selected, mcq, q => /source:|according to|graph|table|chart|map|cartoon|excerpt|passage/i.test(`${q.text || ''} ${Object.values(q.options || {}).join(' ')}`), 20)
+  addByPredicate(selected, mcq, () => true, 20)
+  return selected.slice(0, Math.min(20, mcq.length))
+}
+
+function selectFrqSample(frq, expectedFrq) {
+  if (!expectedFrq) return []
+  const byYear = new Map()
+  for (const item of frq) {
+    const key = item.year || 'unknown'
+    if (!byYear.has(key)) byYear.set(key, [])
+    byYear.get(key).push(item)
+  }
+  const completeYear = [...byYear.values()]
+    .map(items => items.slice().sort((a, b) => Number(a.question_number || 0) - Number(b.question_number || 0)))
+    .find(items => items.length >= expectedFrq)
+  return (completeYear || frq).slice(0, expectedFrq)
+}
+
+function addByPredicate(selected, mcq, predicate, targetCount) {
+  for (const q of mcq) {
+    if (selected.length >= targetCount) break
+    if (selected.some(item => item.question_id === q.question_id)) continue
+    if (predicate(q)) selected.push(q)
+  }
+}
+
+function chooseWrongAnswers(question) {
+  const correct = new Set(Array.isArray(question.answers) && question.answers.length
+    ? question.answers
+    : String(question.answer || 'A').split(',').map(s => s.trim()).filter(Boolean))
+  const keys = Object.keys(question.options || {})
+  const wrong = keys.find(key => !correct.has(key))
+  return [wrong || keys[0] || 'A']
 }
 
 async function seedSession(client, mcq, frq, info) {
@@ -300,6 +359,7 @@ function checkVisibleState(page, info, errors, warnings) {
     { kind: 'replacement_char', re: /\uFFFD/ },
     { kind: 'raw_html_entity', re: /&(?:quot|amp|lt|gt|nbsp);/i },
     { kind: 'exam_footer_pollution', re: /IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING/i },
+    { kind: 'option_source_pollution', re: /[A-E]\.\s*[^\n]{0,120}\bSource:\s+/i },
     { kind: 'spoken_math', re: /\b(?:the )?fraction\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i },
     { kind: 'raw_mapping_key', re: /\bofficial_(?:scoring_guideline|rubric)\b|rubric_image_paths/i },
     { kind: 'missing_formula_phrase', re: /\b(?:according to|given by|modeled by) the equation\s*,/i },
@@ -309,10 +369,23 @@ function checkVisibleState(page, info, errors, warnings) {
     if (match) errors.push({ page, kind: item.kind, sample: sampleText(info.text, match.index) })
   }
   if (info.bodyHeight < 250) warnings.push({ page, kind: 'short_body', bodyHeight: info.bodyHeight })
+  checkImageReadability(page, info.visibleImages, errors, warnings)
 }
 
-function findQuestion(mcq, id) {
-  return mcq.find(q => q.question_id === id)
+function checkImageReadability(page, images, errors, warnings) {
+  for (const img of images || []) {
+    if (img.width > 0 && img.height > 0 && (img.width < 180 || img.height < 90)) {
+      warnings.push({ page, kind: 'small_visible_image', image: img })
+    }
+    if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+      const displayedRatio = img.width / Math.max(1, img.height)
+      const naturalRatio = img.naturalWidth / Math.max(1, img.naturalHeight)
+      const ratioDelta = Math.abs(displayedRatio - naturalRatio) / Math.max(0.1, naturalRatio)
+      if (ratioDelta > 0.25) {
+        errors.push({ page, kind: 'image_aspect_ratio_distorted', image: img, displayedRatio, naturalRatio })
+      }
+    }
+  }
 }
 
 function loadSubject(id) {
@@ -513,6 +586,10 @@ function sampleText(text, index) {
 
 function normalized(text) {
   return String(text || '').replace(/\s+/g, ' ').trim()
+}
+
+function escapeRegex(text) {
+  return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
 function sleep(ms) {

@@ -77,16 +77,17 @@ function DisplayOptions({ options, variant }) {
 
 function isDiagramOptionSet(options) {
   const opts = normalizeOptions(options)
-  const expected = ['A', 'B', 'C', 'D', 'E']
-  return expected.every(key => opts[key] === `Diagram ${key}`)
+  const keys = Object.keys(opts).sort()
+  return keys.length >= 4 && keys.every(key => opts[key] === `Diagram ${key}`)
 }
 
 function DisplayDiagramOptionImages({ imagePaths, options, variant }) {
   if (!isDiagramOptionSet(options)) return null
 
-  const hasContextImage = imagePaths.length === 6
-  const diagramImages = hasContextImage ? imagePaths.slice(1, 6) : imagePaths.slice(0, 5)
-  if (diagramImages.length !== 5) return null
+  const optionCount = Object.keys(normalizeOptions(options)).length
+  const hasContextImage = imagePaths.length === optionCount + 1
+  const diagramImages = hasContextImage ? imagePaths.slice(1, optionCount + 1) : imagePaths.slice(0, optionCount)
+  if (diagramImages.length !== optionCount) return null
 
   const isPdf = variant === 'pdf'
   const getUrl = (path) => path.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
@@ -284,7 +285,7 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
   const hasTableImage = imagePaths.some(path => /(?:^|[_/-])(table|payoff_matrix)(?:[_./-]|$)/i.test(path))
   const displayImagePaths = imagePaths
     .filter(path => !(isTableOptions && /option_table/i.test(path)))
-    .filter((_, index) => !(hasDiagramOptionImages && (imagePaths.length === 6 ? index > 0 : index < 5)))
+    .filter((_, index) => !(hasDiagramOptionImages && (imagePaths.length === Object.keys(normalizeOptions(question.options)).length + 1 ? index > 0 : index < Object.keys(normalizeOptions(question.options)).length)))
 
   return (
     <div className={isPdf ? '' : 'bg-surface rounded-xl p-6 shadow-sm border border-border'}
