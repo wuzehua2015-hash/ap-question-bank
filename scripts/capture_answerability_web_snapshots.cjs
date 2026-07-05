@@ -17,6 +17,7 @@ const limit = args.limit ? Number(args.limit) : null
 const offset = args.offset ? Number(args.offset) : 0
 const onlyPriority = args.priority || null
 const onlyIds = args.ids ? new Set(String(args.ids).split(',').map(id => id.trim()).filter(Boolean)) : null
+const includeReviewed = args['include-reviewed'] === 'true' || args.includeReviewed === 'true'
 
 if (!subjectId) {
   console.error('Usage: node scripts/capture_answerability_web_snapshots.cjs --subject <subject_id> [--priority P1_REVIEW] [--limit 50]')
@@ -51,7 +52,7 @@ async function main() {
     ? readJson(path.join(auditDir, 'review_results.json'))
     : { items: [] }
   const reviewed = new Set((review.items || []).filter(item => item.status === 'PASS').map(item => item.question_id))
-  let items = (manifest.items || []).filter(item => item.type === 'MCQ' && !reviewed.has(item.question_id))
+  let items = (manifest.items || []).filter(item => item.type === 'MCQ' && (includeReviewed || !reviewed.has(item.question_id)))
   if (onlyPriority) items = items.filter(item => item.priority === onlyPriority)
   if (onlyIds) items = items.filter(item => onlyIds.has(item.question_id))
   if (offset || limit) items = items.slice(offset, limit ? offset + limit : undefined)
