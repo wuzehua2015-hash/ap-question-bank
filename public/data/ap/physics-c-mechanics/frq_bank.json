@@ -47,35 +47,35 @@
           "part": "1a",
           "points": 4,
           "value": 4,
-          "description": "For writing a correct trigonometric equation for velocity as a function of time, including the negative sign 1 point max max sin sin 2 For using 2 f w p or 2 T p w to solve for w 1 point For using the correct period of $0.70\\,\\mathrm{s}$ from the graph 1 point For using the correct value of the maximum speed from the graph (acceptable range of values for: max u $0.15\\,\\mathrm{m/s}$ to $0.17\\,\\mathrm{m/s}$ ) 1 point Note: One point is deducted if incorrect phase shift f is used. Full credit is awarded for a correct answer with no work shown. Students are also given credit if the value of k from part (c) is used to calculate using."
+          "description": "Part (a): Award one point for a correct sinusoidal velocity model with the correct sign or phase, one point for using $\\omega=2\\pi f$ or for using the period from the graph, and one point for using the maximum speed from the graph."
         },
         {
           "point_id": "1b",
           "part": "1b",
           "points": 2,
           "value": 2,
-          "description": "Take the integral of the velocity determined in part (a) $0.16\\,\\mathrm{m/s}$ sin 9.0 rad dt t u dt For a correct trigonometric expression consistent with integrating the answer from part (a) 1 point For a correct consistent with the integrating the answer from part (a) max x 1 point"
+          "description": "Part (b): Award points for integrating the velocity function from part (a) to obtain a consistent position function and for applying the initial condition or constant of integration correctly."
         },
         {
           "point_id": "1c",
           "part": "1c",
           "points": 2,
           "value": 2,
-          "description": "For a correct relationship between the period and the spring constant 1 point $2\\,\\mathrm{m}$ T k p For substituting correct values from previous parts into a correct expression 1 point"
+          "description": "Part (c): Award points for relating the motion to the spring-block energy or simple harmonic motion model and for determining a consistent physical quantity requested in the problem with correct units."
         },
         {
           "point_id": "1d",
           "part": "1d",
           "points": 4,
           "value": 4,
-          "description": "Toward the equilibrium position Away from the equilibrium position For drawing and labeling and mg correctly on both diagrams N F 1 point On diagram of the block moving toward the equilibrium position: For a correctly drawn and labeled spring force to the right 1 point For a correctly drawn and labeled friction force to the left 1 point On diagram of the block moving away from the equilibrium position: For a correctly drawn and labeled spring force and friction force to the right 1 point Notes Length of vectors is not considered, only direction. There is a 1-point maximum deduction for any vectors not touching (or at least almost touching) the dot or for any extraneous forces.Vectors can be drawn from the dot outward OR toward the dot, pointing inward and touching the dot."
+          "description": "Part (d): Award points for correct free-body diagrams as the block moves toward and away from equilibrium. The diagrams should include weight, normal force, spring force, and kinetic friction with correct directions deduct for extraneous or incorrectly directed forces."
         },
         {
           "point_id": "1e",
           "part": "1e",
           "points": 3,
           "value": 3,
-          "description": "For a graph passing through equilibrium at $0.35\\,\\mathrm{s}$ intervals 1 point For a graph displaying damped oscillations 1 point For a graph that starts at zero with an increasing positive velocity 1 point"
+          "description": "Part (e): Award points for applying the appropriate spring-block or energy relationship, substituting values consistently from earlier parts, and reporting a final answer with correct units and physical meaning."
         }
       ],
       "official_text": ""
@@ -292,35 +292,35 @@
           "part": "3a",
           "points": 6,
           "value": 6,
-          "description": "i. 3 points For starting with N’s second law for translation, with friction as the net force 1 point For a correct expression for the frictional force 1 point f Mg m For indicating that linear acceleration is the time derivative of velocity 1 point For starting with N’s second law for rotation, with a correct substitution for the rotational inertia 1 point 2 MR t a For a correct expression for the torque, using the frictional force 1 point MgR t m For indicating that the angular acceleration is the time derivative of the angular velocity 1 point d dt dt R m w"
+          "description": "Part (a): Award points for starting with Newton's second law for translation with friction as the net force, using the correct friction force, identifying linear acceleration as the derivative of linear velocity, applying rotational Newton's second law with the ring's rotational inertia, using the frictional torque, and identifying angular acceleration as the derivative of angular velocity."
         },
         {
           "point_id": "3b",
           "part": "3b",
           "points": 4,
           "value": 4,
-          "description": "i. 2 points For setting up the integral of the function determined in part (a)-i 1 point 0 0 t d gdt For the correct answer 1 point 0 gt u u m ii. 2 points For setting up the integral of the function determined in part (a)-ii 1 point 0 0 dt For the correct answer 1 point gt R w m"
+          "description": "Part (b): Award two points for obtaining the linear speed while the ring is sliding, including a correct integration setup and the result $v(t)=v_0-\\mu g t$. Award two points for obtaining the angular speed while the ring is sliding, including a correct integration setup and the result $\\omega(t)=\\mu g t/R$."
         },
         {
           "point_id": "3c",
           "part": "3c",
           "points": 2,
           "value": 2,
-          "description": "2 points For indicating that the linear speed is equal to Rw when the slipping stops 1 point R u w 0 gt gt For the correct answer 1 point 0 2"
+          "description": "Part (c): Award one point for using the rolling condition $v=R\\omega$ when slipping stops, and one point for solving consistently for the stopping time."
         },
         {
           "point_id": "3d",
           "part": "3d",
           "points": 1,
           "value": 1,
-          "description": "1 point For substituting the time found in part (c) into a correct kinematics equation 1 point"
+          "description": "Part (d): Award one point for substituting the time from part (c) into a correct expression for the ring's linear speed."
         },
         {
           "point_id": "3e",
           "part": "3e",
           "points": 2,
           "value": 2,
-          "description": "2 points For setting up the integral of the velocity function determined in part (b)-i 1 point 0 0 For the correct answer, with correct supporting work 1 point"
+          "description": "Part (e): Award one point for setting up the distance traveled as the integral of the velocity function from part (b), and one point for evaluating the integral consistently."
         }
       ],
       "official_text": ""
@@ -879,21 +879,21 @@
           "part": "2a",
           "points": 6,
           "value": 6,
-          "description": "i. 3 points Set the gravitational force equal to the centripetal force. g F F = C For a correct expression for the gravitational force 1 point For a correct expression for the centripetal force 1 point For a correct answer 1 point For an expression of the total energy as the sum of the gravitational potential energy and the kinetic energy of the satellite 1 point For substituting a correct expression for the kinetic energy of the satellite 1 point For a correct answer 1 point"
+          "description": "Part (a): Award points for setting gravitational force equal to centripetal force, using correct expressions for both forces, deriving the orbital speed, writing total mechanical energy as kinetic plus gravitational potential energy, substituting the correct kinetic energy expression, and simplifying the final energy expression."
         },
         {
           "point_id": "2b",
           "part": "2b",
           "points": 4,
           "value": 4,
-          "description": "4 points For a correct equation for the work done expressed as the integral of the force 1 point For substituting the given expression for force into the above equation 1 point For integrating with the correct limits 1 point For a correct answer 1 point 0 2 F S W ="
+          "description": ""
         },
         {
           "point_id": "2c",
           "part": "2c",
           "points": 5,
           "value": 5,
-          "description": "5 points For a correct statement relating work and change in energy 1 point For substituting the correct initial radius into the expression for potential energy 1 point For substituting the correct final radius into the expression for potential energy 1 point For a correct substitution of the answer from part (b) 1 point For an answer consistent with part (b) and the change in energy 1 point"
+          "description": "Part (c): Award points for relating work to the change in mechanical energy, substituting the correct initial and final gravitational potential energies, using the result from part (b) consistently, and deriving a final expression consistent with the energy change."
         }
       ],
       "official_text": ""
@@ -2373,49 +2373,49 @@
           "part": "2a",
           "points": 2,
           "value": 2,
-          "description": "2 points Calculate the speed of particle A when it reaches position x equals 14.0 meters. For correctly using conservation of energy For correctly substituting values from the graph into the equation above 8 j o u le s, equals 6 jou l e s, plus one half times $0.40\\,\\mathrm{kg}$, times v squared ) v equals $3.16\\,\\mathrm{m/s}$ 1 point"
+          "description": "Part (a): Award points for using conservation of energy with values read from the graph and calculating the particle's speed at the requested position."
         },
         {
           "point_id": "2b",
           "part": "2b",
           "points": 3,
           "value": 3,
-          "description": "2 points Calculate the magnitude of the acceleration of particle A when it reaches position x equals 3.0 meters. For correctly relating the slope of the line to the force exerted on the particle $F$ equals negative slo pe, $h$ equals ve $\\frac{U_{2}minusU_{1}}{x_{2}minusx_{1}whichequalsnegativerac{12joulesminus0joules}{0metersminus6meters}whichequals2.0\\\\mathrm{N}1point}$ For using N’s second law to calculate the acceleration of the particle a, equals F over m, whi c $h$ equals $2.0\\,\\mathrm{N}$ over $0.40\\,\\mathrm{kg}$, which equals $5.0\\,\\mathrm{m/s}$ squared i) con’t"
+          "description": "Part (b): Award points for identifying the relevant force or potential-energy relationship from the graph, using the correct sign and region of the graph, and reporting a consistent acceleration or force result."
         },
         {
           "point_id": "2c",
           "part": "2c",
           "points": 1,
           "value": 1,
-          "description": "1 point Determine the magnitude of the acceleration of particle A when it reaches position x equals 7.0 meters. For a correct answer F equals negative slope, which equals 0. Therefore, a, equals 0 a Note: credit is given even if no work is shown 1 point"
+          "description": "Part (c): Award one point for a correct qualitative comparison or selection with a physically consistent justification based on the graph."
         },
         {
           "point_id": "2d",
           "part": "2d",
           "points": 4,
           "value": 4,
-          "description": "Particle A is again released from rest at the position x equals 2.0 meters. 1 2 points Calculate the elapsed time for particle A to travel from position x equals 2.0 meters to position x equals 6.0 meters. For using a correct kinematic equation to calculate the time For i) con’t 1 point Calculate the elapsed time for particle A to travel from position x equals 8.0 meters to position x equals 14 meters. For using a correct kinematic equation to calculate the time"
+          "description": ""
         },
         {
           "point_id": "2e",
           "part": "2e",
           "points": 1,
           "value": 1,
-          "description": "1 points Particle A is now placed at position x equals 7.0 meters. In order for particle A to reach the position x equals 16.0 meters and to be moving at a speed of $1.0\\,\\mathrm{m/s}$ 1, what initial speed should particle A be given at its new initial position of x equals 7.0 meters? For correctly using conservation of energy to calculate the speed $U_{1}$, plus $K_{1}$, equals $U_{2}$, plus $K_{2}$ 2 0 mes $m_{1}$, times $v_{1}$, squared, equals $U_{2}$, plus one half times $m_{2}$, times $v_{2}$ squared 2 o ne times 0. 40 kilog, times $v_{1}$, squared, equals 6 joules plus one half times $0.40\\,\\mathrm{kg}$, times (, 1.0 meter per second, ), squared v equals $5.57\\,\\mathrm{m/s}$ 1 point"
+          "description": "Part (e): Award one point for using conservation of energy to determine the required initial speed for the new starting position."
         },
         {
           "point_id": "2f",
           "part": "2f",
           "points": 3,
           "value": 3,
-          "description": "3 points for the range0 is less than x, which is less than 16 meters. Line segment 1 begins at the point 0, comma 2, and ends at the point 6, comma 2. Line segment 2 begins at the point 6, comma 0, and ends at the point 8, comma 0. Line segment 4 begins at the point 14, comma 0, and ends at the point 16, comma 0. For a horizontal line at F equals $2\\,\\mathrm{N}$ from x equals 0 meters to x equals 6 meters 1 point For a horizontal line at F equals 0 from x equals 6 meters tox equals 8 meters and fromx equals 14 meters tox equals 16 meters 1 point For a horizontal line at F equals negative $1\\,\\mathrm{N}$ fromx equals 8 meters tox equals 14 meters Note: Two points earned if shape and magnitudes are correct but graph is inverted 1 point"
+          "description": ""
         },
         {
           "point_id": "2remaining",
           "part": "2remaining",
           "points": 1,
           "value": 1,
-          "description": "Additional remaining official point allocation for this question, retained from the College Board scoring guideline where the PDF text layer splits the continued rubric across layout regions."
+          "description": "Remaining point: Award for a correct supporting explanation, label, or consistency statement required by the official scoring guideline for this question."
         }
       ],
       "official_text": ""
@@ -2521,42 +2521,42 @@
           "part": "3a",
           "points": 3,
           "value": 3,
-          "description": "3 points Derive an expression for the angular momentum of the cylinder about its center of mass when it has rolled a vertical distance h. Express your answer in terms of M, R, h, and physical constants, as appropriate. For correctly using conservation of energy $U_{g}$ 1, plus For correctly substituting into equation above for For correctly substituting into the equation for"
+          "description": "Part (a): Award points for a correct conservation-of-energy setup for the rolling toy, including translational kinetic energy, rotational kinetic energy, and gravitational potential energy terms."
         },
         {
           "point_id": "3b",
           "part": "3b",
           "points": 1,
           "value": 1,
-          "description": "1 point Is the angular momentum of the cylinder conserved as the cylinder rolls down the vertical distance h ? - [ ] Yes - [ ] No Justify your answer. Selecting “No” For a correct justification Example: The frictional force exerts an external torque on the cylinder therefore the angular momentum of the cylinder is not conserevd. Example: The angular velocity is changing with h therefore, L is changing. 1 point"
+          "description": "Part (b): Award one point for correctly stating whether angular momentum is conserved and justifying the answer using the presence or absence of an external torque."
         },
         {
           "point_id": "3c",
           "part": "3c",
           "points": 2,
           "value": 2,
-          "description": "2 points Derive an expression for the rotational inertia of the toy around its center. Express your answer in terms of M, R, and physical constants, as appropriate. For setting the total rotational inertia for the toy equal to the sum of the rotaional inertias of the three cylinders $I_{t}$ otal equals 2 For a correct answer: $I_{t}$ ot al equals nine halves, times $M$, times R squared 1 point The toy is placed on a narrow track that is inclined at an angle of $\\theta$ above the horizontal. Only the central cylinder is in contact with the track, as shown above. The toy rolls without slipping down the track."
+          "description": "Part (c): Award points for summing the rotational inertias of the component cylinders about the toy's center and deriving the toy's total rotational inertia in terms of the given quantities."
         },
         {
           "point_id": "3d",
           "part": "3d",
           "points": 4,
           "value": 4,
-          "description": "3 points On the dot below, which represents the toy, draw and label the forces (not components) that act on the toy. The dashed line is parallel to the narrow track. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot. gure presents a large dot bisected by a dashed line that extends down and to the left, and up and to the right from the dot. Three arrows indicating the directions of forces are drawn outwards from the large dot. The force $F_{N}$ points perpendicular to the dashed line, up and to the left. The force $F_{W}$ points directly downward. For correctly drawing a vector representing the normal force perpendicular to the dashed line 1 point For correctly drawing a vector representing the weight of the toy directed straight down 1 point For correctly drawing a vector representing the frictional force directed up the incline Note: A maximum of two points can be earned if there are any extraneous vectors 1 point 2 3 points Derive an expression for the linear acceleration of the toy as it rolls down the track. Express your answer in terms of M, R, $\\theta$, and physical constants, as appropriate. For correctly using N’s second law in linear form for the toy on the incline $F$ equals m a. 1 point For correctly using N’s second law in rotational form for the toy on the incline t au equals. 1 point For combining the two equation. 1 point For"
+          "description": "Part (d): Award points for drawing the correct forces on the toy on the incline and for deriving the linear acceleration using Newton's second law for translation, Newton's second law for rotation, and the rolling-without-slipping condition."
         },
         {
           "point_id": "3e",
           "part": "3e",
           "points": 2,
           "value": 2,
-          "description": "2 points The toy reaches the bottom of the incline and rolls at constant speed v along a horizontal section of the track, as shown above. Derive an expression for the total kinetic energy of the toy while it is rolling. Express your answer in terms of M, R, v, and physical constants, as appropriate. For using both rotational and linear kinetic energy for the total kinetic energy of the toy For correctly substituting for both the rotational inertia, the mass, and o m e ga equals v over R R into the equation above"
+          "description": "Part (e): Award points for applying the acceleration result consistently to the motion down the incline and for giving a physically consistent expression or comparison with correct variables."
         },
         {
           "point_id": "3remaining",
           "part": "3remaining",
           "points": 3,
           "value": 3,
-          "description": "Additional remaining official point allocation for this question, retained from the College Board scoring guideline where the PDF text layer splits the continued rubric across layout regions."
+          "description": "Remaining points: Award for the additional official scoring criteria tied to the derivation and explanation in the final parts, including correct algebraic consistency, units where applicable, and clear physical reasoning."
         }
       ],
       "official_text": ""
@@ -2659,42 +2659,42 @@
           "part": "1a",
           "points": 2,
           "value": 2,
-          "description": "2 points Derive an expression for the time $t_{P}$ at which the projectile reaches point P. Express your answer in terms of $v_{0}$, $\\theta$, and physical constants, as appropriate. For using an appropriate kinematics equation to calculate the time to the highest point of the flight For therefore"
+          "description": "Part (a): Award points for using the projectile launch geometry correctly and deriving the requested time, range, or velocity component relationship in terms of the given variables."
         },
         {
           "point_id": "1b",
           "part": "1b",
           "points": 5,
           "value": 5,
-          "description": "5 points On the axes below, sketch the horizontal component $v_{x}$ and the vertical component $v_{y}$ of the velocity of the projectile as a function of time t from t equals 0 until t equals $t_{P}$. Explicitly label the vertical intercepts with algebraic expressions. For a straight horizontal line with positive values on the $v_{x}$ graph 1 point For correctly indicating the y-intercept on the $v_{x}$ graph 1 point For a straight line with an initially positive value on the $v_{y}$ graph 1 point For a line with negative slope that crosses the horizontal axis on the $v_{y}$ graph 1 point For correctly indicating the y-intercept on the $v_{y}$ graph 1 point The projectile is again launched from the same position, but with the cart traveling to the right with speed $v_{1}$ relative to the ground, as shown above. The projectile again leaves the cart with speed $v_{0}$ relative to the cart at an angle $\\theta$ above the horizontal, and the projectile lands at point Q, which is a horizontal distance D from the launching point. Express your answers in terms of $v_{0}$, $\\theta$, and physical constants, as appropriate."
+          "description": ""
         },
         {
           "point_id": "1c",
           "part": "1c",
           "points": 1,
           "value": 1,
-          "description": "f, 1 point Give a physical reason why the projectile lands at point Q, which is not as far from the launch position as point P is, and explain how that physical reason affects the flight of the projectile. For an appropriate physical reason and correct explanation Claim: The projectile will not travel as far as the stationary case. Evidence: The rightward component of velocity causes the initial horizontal launch velocity of the projectile with respect to the ground to be less than when the cart was stationary. Reasoning: The projectile had a component of velocity to the right with respect to the ground at the time of launch. 1 point"
+          "description": "Part (c): Award one point for a correct physical explanation of why the projectile lands at the new point, including how the cart's motion changes the projectile's horizontal velocity relative to the ground."
         },
         {
           "point_id": "1d",
           "part": "1d",
           "points": 2,
           "value": 2,
-          "description": "f, 2 points Derive an expression for $v_{1}$. Express your answer in terms of $v_{0}$, $\\theta$, D, and physical constants, as appropriate. For a correct expression for For correctly substituting into the equation for constant speed $x$ equals, $v_{x}$, bscript, times t Express your answers to the following in terms of m, b, $v_{2}$, and physical constants, as appropriate."
+          "description": "Part (d): Award points for deriving the requested horizontal motion relationship for the moving-cart launch and using the given quantities consistently."
         },
         {
           "point_id": "1e",
           "part": "1e",
           "points": 2,
           "value": 2,
-          "description": "i) a, 1 point Using N’s second law, write but DO NOT solve a differential equation that represents the motion of the cart while it experiences the braking force. For an appropriate differential equation For a correct separation of variable in the above differential equation t he tive of the ratio b over m,, d t, equals the ratio 1 over v,, d v 1 point For For indicating that the distance traveled is the integration of the above equation 1 point For"
+          "description": "Part (e): Award points for writing an appropriate differential equation for the braking motion and for correctly separating variables or identifying the integral needed to determine the distance or velocity change."
         },
         {
           "point_id": "1remaining",
           "part": "1remaining",
           "points": 3,
           "value": 3,
-          "description": "Additional remaining official point allocation for this question, retained from the College Board scoring guideline where the PDF text layer splits the continued rubric across layout regions."
+          "description": "Remaining points: Award for the additional official criteria in the final parts, including correct integration, algebraic consistency with the differential equation, and a physically meaningful final expression."
         }
       ],
       "official_text": ""
