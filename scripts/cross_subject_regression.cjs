@@ -54,7 +54,7 @@ async function main() {
 
   const frqDisplay = readText('src/components/FRQDisplay.jsx')
   assert(frqDisplay.includes('(?<!\\|)\\n'), 'FRQ prompt normalization must preserve newlines after Markdown table rows.')
-  assert(frqDisplay.includes('(?:\\||\\([a-z]\\)|'), 'FRQ prompt normalization must preserve Markdown table rows and (a)-style parts.')
+  assert(frqDisplay.includes('(?:\\||- \\[ \\]|\\([a-z]\\)|'), 'FRQ prompt normalization must preserve Markdown table rows, checklist rows, and (a)-style parts.')
 
   const tableRenderFiles = [
     'src/components/QuestionDisplay.jsx',

@@ -162,6 +162,11 @@ function renderTextWithMarkdownTables(text, options = {}) {
       flushBuffer()
       parts.push(table.html)
       i = table.nextIndex
+    } else if (/^\s*- \[ \]\s+/.test(lines[i])) {
+      flushBuffer()
+      const label = lines[i].replace(/^\s*- \[ \]\s+/, '').trim()
+      parts.push(`<div class="math-check-option"><span class="math-check-box"></span>${renderLatexSegments(label, { ...options, forceInlineLatex: true })}</div>`)
+      i += 1
     } else {
       buffer.push(lines[i])
       i += 1

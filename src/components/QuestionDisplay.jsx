@@ -75,6 +75,61 @@ function DisplayOptions({ options, variant }) {
   )
 }
 
+function isDiagramOptionSet(options) {
+  const opts = normalizeOptions(options)
+  const expected = ['A', 'B', 'C', 'D', 'E']
+  return expected.every(key => opts[key] === `Diagram ${key}`)
+}
+
+function DisplayDiagramOptionImages({ imagePaths, options, variant }) {
+  if (!isDiagramOptionSet(options)) return null
+
+  const hasContextImage = imagePaths.length === 6
+  const diagramImages = hasContextImage ? imagePaths.slice(1, 6) : imagePaths.slice(0, 5)
+  if (diagramImages.length !== 5) return null
+
+  const isPdf = variant === 'pdf'
+  const getUrl = (path) => path.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
+
+  return (
+    <div
+      className={isPdf ? '' : 'mt-4 grid gap-3 sm:grid-cols-2'}
+      style={isPdf ? {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+        gap: '10px',
+        marginTop: '12px',
+        pageBreakInside: 'avoid',
+        breakInside: 'avoid',
+      } : {}}
+    >
+      {diagramImages.map((path, idx) => {
+        const key = String.fromCharCode(65 + idx)
+        return (
+          <div
+            key={path}
+            className={isPdf ? '' : 'rounded-lg border border-border bg-white p-3'}
+            style={isPdf ? { border: '1px solid #d1d5db', borderRadius: '6px', padding: '8px' } : {}}
+          >
+            <div
+              className={isPdf ? '' : 'mb-2 text-sm font-semibold text-text'}
+              style={isPdf ? { fontSize: '13px', fontWeight: 700, color: '#374151', marginBottom: '6px' } : {}}
+            >
+              {key}. Diagram {key}
+            </div>
+            <img
+              src={getUrl(path)}
+              alt={`Diagram ${key}`}
+              className={isPdf ? '' : 'mx-auto max-h-[260px] max-w-full'}
+              style={isPdf ? { maxWidth: '100%', maxHeight: '220px', display: 'block', margin: '0 auto' } : {}}
+            />
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 function DisplayTableOptions({ tableData, variant }) {
   const { headers, rows } = tableData
   const numCols = headers.length
@@ -225,8 +280,11 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
   const tableData = question.option_table_data
   const backgroundTable = question.background_data?.table
   const isTableOptions = !!tableData
+  const hasDiagramOptionImages = isDiagramOptionSet(question.options) && imagePaths.length >= 5
   const hasTableImage = imagePaths.some(path => /(?:^|[_/-])(table|payoff_matrix)(?:[_./-]|$)/i.test(path))
-  const displayImagePaths = imagePaths.filter(path => !(isTableOptions && /option_table/i.test(path)))
+  const displayImagePaths = imagePaths
+    .filter(path => !(isTableOptions && /option_table/i.test(path)))
+    .filter((_, index) => !(hasDiagramOptionImages && (imagePaths.length === 6 ? index > 0 : index < 5)))
 
   return (
     <div className={isPdf ? '' : 'bg-surface rounded-xl p-6 shadow-sm border border-border'}
@@ -267,6 +325,8 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
       {/* Options */}
       {isTableOptions ? (
         <DisplayTableOptions tableData={tableData} variant={variant} />
+      ) : hasDiagramOptionImages ? (
+        <DisplayDiagramOptionImages imagePaths={imagePaths} options={question.options} variant={variant} />
       ) : (
         <DisplayOptions options={question.options} variant={variant} />
       )}

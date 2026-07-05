@@ -55,11 +55,12 @@ function normalizePromptTextV2(text) {
 
   const normalized = protectedLines.join('\n')
     .replace(/[ \t]+/g, ' ')
-    .replace(/(?<!\|)\n(?!(?:\s*(?:\||\([a-z]\)|[A-F]\.|[ivx]+\.|Part\s+[A-Z]\b|Part\s+\([a-z]\)|Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+|\u2022)))/gi, ' ')
+    .replace(/(?<!\|)\n(?!(?:\s*(?:\||- \[ \]|\([a-z]\)|[A-F]\.|[ivx]+\.|Part\s+[A-Z]\b|Part\s+\([a-z]\)|Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+|\u2022)))/gi, ' ')
     .replace(/\s+(Part\s+[A-Z]\b)/g, '\n\n$1')
     .replace(/\s+(\([a-z]\)\s+)/gi, '\n\n$1')
     .replace(/\s+([A-F]\.\s+(?=[A-Z]))/g, '\n$1')
     .replace(/\s+([ivx]+\.)\s+(?=[A-Z])/gi, '\n$1 ')
+    .replace(/\s+(- \[ \]\s+)/g, '\n$1')
     .replace(/\s+(Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+)\s+/g, '\n\n$1\n')
     .replace(/\s*\u2022\s*/g, '\n\u2022 ')
     .replace(/@@FRQ_TABLE_(\d+)@@/g, (_, idx) => `\n\n${tableBlocks[Number(idx)] || ''}\n\n`)

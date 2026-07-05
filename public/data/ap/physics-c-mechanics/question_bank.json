@@ -2256,7 +2256,7 @@
     "year": 2013,
     "question_number": 21,
     "type": "MCQ",
-    "text": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.\n\nWhat is the coefficient of friction between the box and the floor?",
+    "text": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed of $10\\,\\mathrm{m/s}$ slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.\n\nWhat is the coefficient of friction between the box and the floor?",
     "options": {
       "A": "0.10",
       "B": "0.20",
@@ -2292,7 +2292,7 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.",
+    "group_context": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed of $10\\,\\mathrm{m/s}$ slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.",
     "rubric_image_paths": []
   },
   {
@@ -2303,7 +2303,7 @@
     "year": 2013,
     "question_number": 22,
     "type": "MCQ",
-    "text": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.\n\nWhich of the following best describes the frictional forces exerted on the box and on the floor while the box is sliding?",
+    "text": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed of $10\\,\\mathrm{m/s}$ slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.\n\nWhich of the following best describes the frictional forces exerted on the box and on the floor while the box is sliding?",
     "options": {
       "A": "Box: none; floor: none",
       "B": "Box: to the right; floor: to the right",
@@ -2367,7 +2367,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.",
+    "group_context": "Questions 21-22\nA $20\\,\\mathrm{kg}$ box moving at an initial speed of $10\\,\\mathrm{m/s}$ slides $25\\,\\mathrm{m}$ to the right on a horizontal floor before it comes to a complete stop.",
     "rubric_image_paths": []
   },
   {
@@ -3312,13 +3312,13 @@
     "year": 2014,
     "question_number": 10,
     "type": "MCQ",
-    "text": "A newly discovered planet is found to have twice \nthe radius and three times the mass of Earth. \nIf the acceleration due to gravity at the surface of \nEarth is g, the acceleration due to gravity at the \nsurface of the new planet is",
+    "text": "A newly discovered planet is found to have twice the radius and three times the mass of Earth. If the acceleration due to gravity at the surface of Earth is $g$, the acceleration due to gravity at the surface of the new planet is",
     "options": {
-      "A": "2\n3\ng",
-      "B": "3\n4\ng",
-      "C": "g",
-      "D": "4\n3\ng",
-      "E": "3\n2\ng"
+      "A": "$\\frac{2}{3}g$",
+      "B": "$\\frac{3}{4}g$",
+      "C": "$g$",
+      "D": "$\\frac{4}{3}g$",
+      "E": "$\\frac{3}{2}g$"
     },
     "answer": "B",
     "image_paths": [],
@@ -7499,7 +7499,12 @@
     },
     "answer": "C",
     "image_paths": [
-      "images/ap/physics-c-mechanics/2017/2017_Q02_options.png"
+      "images/ap/physics-c-mechanics/2017/2017_p022_img01.png",
+      "images/ap/physics-c-mechanics/2017/2017_p022_img02.png",
+      "images/ap/physics-c-mechanics/2017/2017_p022_img03.png",
+      "images/ap/physics-c-mechanics/2017/2017_p022_img04.png",
+      "images/ap/physics-c-mechanics/2017/2017_p022_img05.png",
+      "images/ap/physics-c-mechanics/2017/2017_p022_img06.png"
     ],
     "primary_unit": "U1",
     "unit": "U1",
@@ -7944,13 +7949,13 @@
     "year": 2017,
     "question_number": 13,
     "type": "MCQ",
-    "text": "A skier is traveling down a slope that is \ninclined 30∞ above the horizontal. The \ncoefficient of kinetic friction between the \nskier and the slope is 0.10. Which of the \nfollowing best describes the acceleration \nof the skier?",
+    "text": "A skier is traveling down a slope that is inclined $30^\\circ$ above the horizontal. The coefficient of kinetic friction between the skier and the slope is 0.10. Which of the following best describes the acceleration of the skier?",
     "options": {
       "A": "It is zero.",
-      "B": "It is about \n.\n4.0 $m$ s2\n9.0 $m$ s2",
-      "C": "It is about \n.\n10 $m$ s2",
-      "D": "It is about \n.",
-      "E": "It cannot be determined without knowing the \nmass of the skier."
+      "B": "It is about $4.0\\,\\mathrm{m/s^2}$.",
+      "C": "It is about $9.0\\,\\mathrm{m/s^2}$.",
+      "D": "It is about $10\\,\\mathrm{m/s^2}$.",
+      "E": "It cannot be determined without knowing the mass of the skier."
     },
     "answer": "B",
     "image_paths": [],
@@ -10616,7 +10621,7 @@
     "year": 2019,
     "question_number": 4,
     "type": "MCQ",
-    "text": "The direction of the velocity of the car is",
+    "text": "Questions 4-6\nA car is traveling clockwise around a circular racetrack of radius $1440\\,\\mathrm{m}$. When the car is at the northernmost point on the circle, as shown above, it has a speed of $36.0\\,\\mathrm{m/s}$ and is slowing down at a rate of $1.20\\,\\mathrm{m/s^2}$.\n\nThe direction of the velocity of the car is",
     "options": {
       "A": "due east",
       "B": "south of east",
@@ -10625,7 +10630,9 @@
       "E": "due west"
     },
     "answer": "A",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2019/2019_p018_img01.png"
+    ],
     "primary_unit": "U1",
     "unit": "U1",
     "unit_name": "Kinematics",
@@ -10645,6 +10652,15 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2019.pdf",
       "raw_chunk_sha256": "045d72ca3157cdab950c21b25442004bc651ba789c9ad1115e5a6e65affe75c2"
     },
+    "group_id": "2019_Q04_06",
+    "group_members": [
+      "2019_Q04",
+      "2019_Q05",
+      "2019_Q06"
+    ],
+    "group_role": "lead",
+    "requires_group_context": true,
+    "group_context": "Questions 4-6\nA car is traveling clockwise around a circular racetrack of radius $1440\\,\\mathrm{m}$. When the car is at the northernmost point on the circle, as shown above, it has a speed of $36.0\\,\\mathrm{m/s}$ and is slowing down at a rate of $1.20\\,\\mathrm{m/s^2}$.",
     "rubric_image_paths": []
   },
   {
@@ -10655,7 +10671,7 @@
     "year": 2019,
     "question_number": 5,
     "type": "MCQ",
-    "text": "The direction of the acceleration of the car is",
+    "text": "Questions 4-6\nA car is traveling clockwise around a circular racetrack of radius $1440\\,\\mathrm{m}$. When the car is at the northernmost point on the circle, as shown above, it has a speed of $36.0\\,\\mathrm{m/s}$ and is slowing down at a rate of $1.20\\,\\mathrm{m/s^2}$.\n\nThe direction of the acceleration of the car is",
     "options": {
       "A": "due east",
       "B": "south of east",
@@ -10664,7 +10680,9 @@
       "E": "due west"
     },
     "answer": "D",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2019/2019_p018_img01.png"
+    ],
     "primary_unit": "U1",
     "unit": "U1",
     "unit_name": "Kinematics",
@@ -10684,6 +10702,15 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2019.pdf",
       "raw_chunk_sha256": "1319507f8818baedd21349484d228c14d4ece759eaac495ec0ce22458532335e"
     },
+    "group_id": "2019_Q04_06",
+    "group_members": [
+      "2019_Q04",
+      "2019_Q05",
+      "2019_Q06"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "group_context": "Questions 4-6\nA car is traveling clockwise around a circular racetrack of radius $1440\\,\\mathrm{m}$. When the car is at the northernmost point on the circle, as shown above, it has a speed of $36.0\\,\\mathrm{m/s}$ and is slowing down at a rate of $1.20\\,\\mathrm{m/s^2}$.",
     "rubric_image_paths": []
   },
   {
@@ -10694,16 +10721,18 @@
     "year": 2019,
     "question_number": 6,
     "type": "MCQ",
-    "text": "What is the magnitude of the acceleration of\nthe car?",
+    "text": "Questions 4-6\nA car is traveling clockwise around a circular racetrack of radius $1440\\,\\mathrm{m}$. When the car is at the northernmost point on the circle, as shown above, it has a speed of $36.0\\,\\mathrm{m/s}$ and is slowing down at a rate of $1.20\\,\\mathrm{m/s^2}$.\n\nWhat is the magnitude of the acceleration of the car?",
     "options": {
-      "A": "0\n.3\n0 meter per second squared",
-      "B": "0\n.9\n0 meter per second squared",
-      "C": "1\n.\n2 \nmet er s per second squared",
-      "D": "1\n.\n5 \nmet er s per second squared",
-      "E": "2\n.\n1 \nmet er s per second squared"
+      "A": "$0.30\\,\\mathrm{m/s^2}$",
+      "B": "$0.90\\,\\mathrm{m/s^2}$",
+      "C": "$1.2\\,\\mathrm{m/s^2}$",
+      "D": "$1.5\\,\\mathrm{m/s^2}$",
+      "E": "$2.1\\,\\mathrm{m/s^2}$"
     },
     "answer": "D",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-mechanics/2019/2019_p018_img01.png"
+    ],
     "primary_unit": "U1",
     "unit": "U1",
     "unit_name": "Kinematics",
@@ -10723,6 +10752,15 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2019.pdf",
       "raw_chunk_sha256": "4685ff2f59b18cd7ad35662150c8fd6d1843f99a2b8439eeeb2c1c47d110e2ba"
     },
+    "group_id": "2019_Q04_06",
+    "group_members": [
+      "2019_Q04",
+      "2019_Q05",
+      "2019_Q06"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "group_context": "Questions 4-6\nA car is traveling clockwise around a circular racetrack of radius $1440\\,\\mathrm{m}$. When the car is at the northernmost point on the circle, as shown above, it has a speed of $36.0\\,\\mathrm{m/s}$ and is slowing down at a rate of $1.20\\,\\mathrm{m/s^2}$.",
     "rubric_image_paths": []
   },
   {

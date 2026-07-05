@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
 import { loadMCQBank, loadFRQBank, generateMockExam, getMockExamConfig } from '../utils/questionBank'
 import { startMockExam } from '../utils/quizSession'

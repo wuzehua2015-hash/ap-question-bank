@@ -64,8 +64,11 @@ function QuizSetup() {
       <div className="bg-surface rounded-xl p-6 shadow-sm border border-border space-y-6">
         <div>
           <label className="block text-sm font-semibold text-brand mb-2">单元</label>
-          <select value={unit} onChange={event => setUnit(event.target.value)}
-            className="w-full p-2 border border-border rounded-lg bg-bg">
+          <select
+            value={unit}
+            onChange={event => setUnit(event.target.value)}
+            className="w-full p-2 border border-border rounded-lg bg-bg"
+          >
             <option value="all">全部单元</option>
             {units.map(u => <option key={u.id} value={u.id}>{u.id}: {u.name}</option>)}
           </select>
@@ -100,8 +103,11 @@ function QuizSetup() {
         )}
 
         {!preview ? (
-          <button onClick={generate} disabled={loading}
-            className="w-full bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50">
+          <button
+            onClick={generate}
+            disabled={loading}
+            className="w-full bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50"
+          >
             {loading ? '生成中...' : '生成 Quiz'}
           </button>
         ) : (
@@ -110,17 +116,24 @@ function QuizSetup() {
               已生成 {preview.info.actualCount} 题（单元：{preview.info.unit}）
             </div>
             <div className="flex gap-3">
-              <button onClick={startPractice}
-                className="flex-1 bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors">
+              <button
+                onClick={startPractice}
+                className="flex-1 bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors"
+              >
                 开始练习
               </button>
-              <button onClick={exportPdf}
-                className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors">
+              <button
+                onClick={exportPdf}
+                className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors"
+              >
                 导出 PDF
               </button>
             </div>
-            <button onClick={generate} disabled={loading}
-              className="w-full border border-border bg-surface hover:bg-gray-50 text-text font-semibold py-2 rounded-lg transition-colors text-sm">
+            <button
+              onClick={generate}
+              disabled={loading}
+              className="w-full border border-border bg-surface hover:bg-gray-50 text-text font-semibold py-2 rounded-lg transition-colors text-sm"
+            >
               {loading ? '重新生成中...' : '重新生成'}
             </button>
           </div>

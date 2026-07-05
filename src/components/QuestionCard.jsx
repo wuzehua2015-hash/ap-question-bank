@@ -59,6 +59,52 @@ function BackgroundTable({ tableData }) {
   )
 }
 
+function isDiagramOptionSet(options) {
+  const expected = ['A', 'B', 'C', 'D', 'E']
+  return expected.every(key => options?.[key] === `Diagram ${key}`)
+}
+
+function DiagramOptionButtons({ imagePaths, options, selectedAnswer, answer, isSubmitted, onSelect }) {
+  if (!isDiagramOptionSet(options)) return null
+
+  const hasContextImage = imagePaths.length === 6
+  const diagramImages = hasContextImage ? imagePaths.slice(1, 6) : imagePaths.slice(0, 5)
+  if (diagramImages.length !== 5) return null
+
+  const getUrl = (path) => path.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
+
+  return (
+    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+      {diagramImages.map((path, idx) => {
+        const key = String.fromCharCode(65 + idx)
+        const isSelected = selectedAnswer === key
+        const isCorrect = answer === key
+        const showCorrect = isSubmitted && isCorrect
+        const showIncorrect = isSubmitted && isSelected && !isCorrect
+        return (
+          <button
+            key={path}
+            onClick={() => !isSubmitted && onSelect(key)}
+            disabled={isSubmitted}
+            className={`rounded-lg border bg-white p-3 text-left transition-colors ${
+              showCorrect ? 'border-success bg-green-50' :
+              showIncorrect ? 'border-error bg-red-50' :
+              isSelected ? 'border-brand bg-blue-50' : 'border-border hover:bg-gray-50'
+            }`}
+          >
+            <div className="mb-2 text-sm font-semibold text-text">
+              {key}. Diagram {key}
+              {showCorrect && <span className="ml-2 text-success">✓ 正确</span>}
+              {showIncorrect && <span className="ml-2 text-error">✗ 你的答案</span>}
+            </div>
+            <img src={getUrl(path)} alt={`Diagram ${key}`} className="mx-auto max-h-[260px] max-w-full" />
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
 function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -75,8 +121,11 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
   const tableData = question.option_table_data
   const backgroundTable = question.background_data?.table
   const isTableOptions = !!tableData
+  const hasDiagramOptionImages = isDiagramOptionSet(question.options) && imagePaths.length >= 5
   const hasTableImage = imagePaths.some(path => /(?:^|[_/-])(table|payoff_matrix)(?:[_./-]|$)/i.test(path))
-  const displayImagePaths = imagePaths.filter(path => !(isTableOptions && /option_table/i.test(path)))
+  const displayImagePaths = imagePaths
+    .filter(path => !(isTableOptions && /option_table/i.test(path)))
+    .filter((_, index) => !(hasDiagramOptionImages && (imagePaths.length === 6 ? index > 0 : index < 5)))
 
   return (
     <div className="bg-surface rounded-xl p-6 shadow-sm border border-border">
@@ -101,6 +150,15 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
       {isTableOptions ? (
         <TableOptions
           tableData={tableData}
+          selectedAnswer={selectedAnswer}
+          answer={question.answer}
+          isSubmitted={isSubmitted}
+          onSelect={onSelect}
+        />
+      ) : hasDiagramOptionImages ? (
+        <DiagramOptionButtons
+          imagePaths={imagePaths}
+          options={question.options}
           selectedAnswer={selectedAnswer}
           answer={question.answer}
           isSubmitted={isSubmitted}
