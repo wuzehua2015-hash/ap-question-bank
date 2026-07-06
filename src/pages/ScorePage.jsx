@@ -6,6 +6,7 @@ import FRQDisplay from '../components/FRQDisplay'
 import { PdfContainer, exportToPdf } from '../utils/pdfExport.jsx'
 import { useSubject } from '../contexts/SubjectContext'
 import { formatAnswer, isAnswerCorrect } from '../utils/questionBank'
+import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
 
 function ScoreBackgroundTable({ tableData }) {
   if (!tableData?.headers?.length || !tableData?.rows?.length) return null
@@ -286,6 +287,8 @@ function ScorePage() {
               const isCorrect = isAnswerCorrect(q, answers[q.question_id])
               const correctSet = new Set(q.answers?.length ? q.answers : [q.answer].filter(Boolean))
               const selectedSet = new Set(formatAnswer(answers[q.question_id]).split(',').filter(Boolean))
+              const visibleImages = getQuestionImagePaths(q.image_paths || [], q.options, q.option_table_data)
+              const diagramOptionLayout = getDiagramOptionLayout(q.image_paths || [], q.options)
               return (
                 <div key={q.question_id} style={{
                   background: isCorrect ? '#f0fdf4' : '#fef2f2',
@@ -315,10 +318,9 @@ function ScorePage() {
                     <MathText text={q.text || q.question_text} />
                   </p>
                   <ScoreBackgroundTable tableData={q.background_data?.table} />
-                  {q.image_paths && q.image_paths.length > 0 && (
+                  {visibleImages.length > 0 && (
                     <div style={{ marginBottom: '12px' }}>
-                      {q.image_paths
-                        .filter(imgPath => !(q.option_table_data && /option_table/i.test(imgPath)))
+                      {visibleImages
                         .map((imgPath, i) => (
                           <img
                             key={i}
@@ -331,6 +333,12 @@ function ScorePage() {
                   )}
                   {q.option_table_data ? (
                     <ScoreTableOptions tableData={q.option_table_data} answer={q.answer} userAnswer={answers[q.question_id]} />
+                  ) : diagramOptionLayout ? (
+                    <ScoreDiagramOptions
+                      diagramGroups={diagramOptionLayout}
+                      answer={q.answer}
+                      userAnswer={answers[q.question_id]}
+                    />
                   ) : (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '8px' }}>
                       {Object.entries(q.options).map(([key, val]) => (
@@ -466,6 +474,47 @@ function ScoreTableOptions({ tableData, answer, userAnswer }) {
                 <MathText text={val} forceInlineLatex />
               </div>
             ))}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+function ScoreDiagramOptions({ diagramGroups, answer, userAnswer }) {
+  const selected = formatAnswer(userAnswer)
+  return (
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+      gap: '12px',
+      marginBottom: '12px',
+    }}>
+      {diagramGroups.map((paths, idx) => {
+        const key = String.fromCharCode(65 + idx)
+        const isCorrect = key === answer
+        const isUserWrong = key === selected && !isCorrect
+        const border = isCorrect ? '#86efac' : isUserWrong ? '#fca5a5' : '#e5e7eb'
+        const bg = isCorrect ? '#dcfce7' : isUserWrong ? '#fee2e2' : '#ffffff'
+        return (
+          <div key={`${key}-${paths.join('|')}`} style={{ border: `1px solid ${border}`, borderRadius: '6px', padding: '8px', background: bg }}>
+            <div style={{ fontSize: '16px', fontWeight: 700, color: '#374151', marginBottom: '6px' }}>
+              {key}. Diagram {key}
+            </div>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: paths.length > 1 ? 'repeat(2, minmax(0, 1fr))' : '1fr',
+              gap: '6px',
+            }}>
+              {paths.map((path, imageIdx) => (
+                <img
+                  key={path}
+                  src={import.meta.env.BASE_URL + path.replace(/^\//, '')}
+                  alt={`Diagram ${key}${paths.length > 1 ? ` part ${imageIdx + 1}` : ''}`}
+                  style={{ maxWidth: '100%', maxHeight: '220px', display: 'block', margin: '0 auto' }}
+                />
+              ))}
+            </div>
           </div>
         )
       })}

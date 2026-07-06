@@ -6,6 +6,7 @@ import { getDoneQuestions, getQuestionHistory, getWrongQuestions } from '../util
 import { startCustomQuiz } from '../utils/quizSession'
 import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
 import { MathText } from '../components/MathText'
+import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
 
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
 const BASE_URL = import.meta.env.BASE_URL || '/'
@@ -171,7 +172,8 @@ function SearchPage() {
           const isWrong = wrongIds.has(q.question_id)
           const isDone = doneIds.has(q.question_id)
           const isShowAnswer = showAnswerId === q.question_id
-          const visibleImages = (q.image_paths || []).filter(img => !(q.option_table_data && /option_table/i.test(img)))
+          const visibleImages = getQuestionImagePaths(q.image_paths || [], q.options, q.option_table_data)
+          const diagramOptionLayout = getDiagramOptionLayout(q.image_paths || [], q.options)
 
           return (
             <div key={q.question_id} data-question-id={q.question_id} className="bg-surface rounded-xl border border-border overflow-hidden">
@@ -211,6 +213,8 @@ function SearchPage() {
 
                   {q.option_table_data ? (
                     <OptionTable tableData={q.option_table_data} />
+                  ) : diagramOptionLayout ? (
+                    <DiagramOptions diagramGroups={diagramOptionLayout} />
                   ) : (
                     <div className="space-y-1 mb-3">
                       {Object.entries(q.options || {}).map(([k, v]) => (
@@ -356,6 +360,31 @@ function OptionTable({ tableData }) {
           </div>
         ))}
       </div>
+    </div>
+  )
+}
+
+function DiagramOptions({ diagramGroups }) {
+  return (
+    <div className="mb-3 grid gap-3 sm:grid-cols-2">
+      {diagramGroups.map((paths, idx) => {
+        const key = String.fromCharCode(65 + idx)
+        return (
+          <div key={`${key}-${paths.join('|')}`} className="rounded-lg border border-border bg-white p-3">
+            <div className="mb-2 text-sm font-semibold text-text">{key}. Diagram {key}</div>
+            <div className="grid gap-2" style={{ gridTemplateColumns: paths.length > 1 ? 'repeat(2, minmax(0, 1fr))' : '1fr' }}>
+              {paths.map((path, imageIdx) => (
+                <img
+                  key={path}
+                  src={BASE_URL + path.replace(/^\//, '')}
+                  alt={`Diagram ${key}${paths.length > 1 ? ` part ${imageIdx + 1}` : ''}`}
+                  className="mx-auto max-h-[260px] max-w-full"
+                />
+              ))}
+            </div>
+          </div>
+        )
+      })}
     </div>
   )
 }

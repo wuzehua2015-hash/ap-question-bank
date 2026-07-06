@@ -527,6 +527,73 @@
           "U5": 11
         }
       }
+    },
+    {
+      "id": "chemistry",
+      "name": "AP Chemistry",
+      "shortName": "Chem",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/chemistry/question_bank.json",
+      "frqBank": "ap/chemistry/frq_bank.json",
+      "similarityIndex": "ap/chemistry/similarity_index.json",
+      "classificationConfig": "ap/chemistry/classification_config.json",
+      "dataVersion": "strict-gated-2014-2015-2016-2018-2019-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Atomic Structure and Properties"
+        },
+        {
+          "id": "U2",
+          "name": "Molecular and Ionic Compound Structure and Properties"
+        },
+        {
+          "id": "U3",
+          "name": "Intermolecular Forces and Properties"
+        },
+        {
+          "id": "U4",
+          "name": "Chemical Reactions"
+        },
+        {
+          "id": "U5",
+          "name": "Kinetics"
+        },
+        {
+          "id": "U6",
+          "name": "Thermodynamics"
+        },
+        {
+          "id": "U7",
+          "name": "Equilibrium"
+        },
+        {
+          "id": "U8",
+          "name": "Acids and Bases"
+        },
+        {
+          "id": "U9",
+          "name": "Applications of Thermodynamics"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 50,
+        "frqCount": 7,
+        "mcqTimeLimit": 5400,
+        "frqTimeLimit": 6300,
+        "unitDistribution": {
+          "U1": 5,
+          "U2": 5,
+          "U3": 8,
+          "U4": 6,
+          "U5": 6,
+          "U6": 6,
+          "U7": 5,
+          "U8": 5,
+          "U9": 4
+        }
+      }
     }
   ]
 }

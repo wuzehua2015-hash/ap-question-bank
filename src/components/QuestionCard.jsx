@@ -1,6 +1,7 @@
 ﻿import { useEffect, useState } from 'react'
 import { MathText } from './MathText'
 import { formatAnswer, isAnswerCorrect, isMultipleAnswerQuestion, normalizeSelectedAnswer } from '../utils/questionBank'
+import { getDiagramOptionLayout, getQuestionImagePaths, isDiagramOptionSet } from '../utils/diagramOptions'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -60,24 +61,15 @@ function BackgroundTable({ tableData }) {
   )
 }
 
-function isDiagramOptionSet(options) {
-  const keys = Object.keys(options || {}).sort()
-  return keys.length >= 4 && keys.every(key => options?.[key] === `Diagram ${key}`)
-}
-
 function DiagramOptionButtons({ imagePaths, options, selectedAnswer, answer, isSubmitted, onSelect }) {
-  if (!isDiagramOptionSet(options)) return null
-
-  const optionCount = Object.keys(options || {}).length
-  const hasContextImage = imagePaths.length === optionCount + 1
-  const diagramImages = hasContextImage ? imagePaths.slice(1, optionCount + 1) : imagePaths.slice(0, optionCount)
-  if (diagramImages.length !== optionCount) return null
+  const diagramGroups = getDiagramOptionLayout(imagePaths, options)
+  if (!diagramGroups) return null
 
   const getUrl = (path) => path.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
 
   return (
     <div className="mt-4 grid gap-3 sm:grid-cols-2">
-      {diagramImages.map((path, idx) => {
+      {diagramGroups.map((paths, idx) => {
         const key = String.fromCharCode(65 + idx)
         const isSelected = selectedAnswer === key
         const isCorrect = answer === key
@@ -85,7 +77,7 @@ function DiagramOptionButtons({ imagePaths, options, selectedAnswer, answer, isS
         const showIncorrect = isSubmitted && isSelected && !isCorrect
         return (
           <button
-            key={path}
+            key={`${key}-${paths.join('|')}`}
             onClick={() => !isSubmitted && onSelect(key)}
             disabled={isSubmitted}
             className={`rounded-lg border bg-white p-3 text-left transition-colors ${
@@ -99,7 +91,16 @@ function DiagramOptionButtons({ imagePaths, options, selectedAnswer, answer, isS
               {showCorrect && <span className="ml-2 text-success">✓ 正确</span>}
               {showIncorrect && <span className="ml-2 text-error">✗ 你的答案</span>}
             </div>
-            <img src={getUrl(path)} alt={`Diagram ${key}`} className="mx-auto max-h-[260px] max-w-full" />
+            <div className="grid gap-2" style={{ gridTemplateColumns: paths.length > 1 ? 'repeat(2, minmax(0, 1fr))' : '1fr' }}>
+              {paths.map((path, imageIdx) => (
+                <img
+                  key={path}
+                  src={getUrl(path)}
+                  alt={`Diagram ${key}${paths.length > 1 ? ` part ${imageIdx + 1}` : ''}`}
+                  className="mx-auto max-h-[260px] max-w-full"
+                />
+              ))}
+            </div>
           </button>
         )
       })}
@@ -138,12 +139,9 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
   const tableData = question.option_table_data
   const backgroundTable = question.background_data?.table
   const isTableOptions = !!tableData
-  const diagramOptionCount = Object.keys(question.options || {}).length
-  const hasDiagramOptionImages = isDiagramOptionSet(question.options) && imagePaths.length >= diagramOptionCount
+  const hasDiagramOptionImages = isDiagramOptionSet(question.options) && !!getDiagramOptionLayout(imagePaths, question.options)
   const hasTableImage = imagePaths.some(path => /(?:^|[_/-])(table|payoff_matrix)(?:[_./-]|$)/i.test(path))
-  const displayImagePaths = imagePaths
-    .filter(path => !(isTableOptions && /option_table/i.test(path)))
-    .filter((_, index) => !(hasDiagramOptionImages && (imagePaths.length === diagramOptionCount + 1 ? index > 0 : index < diagramOptionCount)))
+  const displayImagePaths = getQuestionImagePaths(imagePaths, question.options, tableData)
 
   return (
     <div className="bg-surface rounded-xl p-6 shadow-sm border border-border">

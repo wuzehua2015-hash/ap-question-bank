@@ -1,0 +1,3991 @@
+[
+  {
+    "question_id": "2014_FRQ1",
+    "frq_id": "2014_FRQ1",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2014,
+    "question_number": 1,
+    "question_type": "FRQ",
+    "text": "A student is given the task of determining the $I^-$ content of tablets that contain $KI$ and an inert, water-soluble sugar as a filler. A tablet is dissolved in $50.0\\,\\mathrm{mL}$ of distilled water, and an excess of $0.20\\,\\mathrm{M}\\ Pb(NO_3)_2(aq)$ is added to the solution. A yellow precipitate forms, which is then filtered, washed, and dried. The data from the experiment are shown in the table below.\n\n| Measurement | Mass |\n|---|---:|\n| Mass of KI tablet | $0.425\\,\\mathrm{g}$ |\n| Mass of thoroughly dried filter paper | $1.462\\,\\mathrm{g}$ |\n| Mass of filter paper plus precipitate after first drying | $1.775\\,\\mathrm{g}$ |\n| Mass of filter paper plus precipitate after second drying | $1.699\\,\\mathrm{g}$ |\n| Mass of filter paper plus precipitate after third drying | $1.698\\,\\mathrm{g}$ |\n\n(a) For the chemical reaction that occurs when the precipitate forms,\n\n  i. write a balanced, net-ionic equation for the reaction, and\n\n  ii. explain why the reaction is best represented by a net-ionic equation.\n\n(b) Explain the purpose of drying and weighing the filter paper with the precipitate three times.\n\n(c) In the filtrate solution, is the molar concentration of $K^+$ greater than, less than, or equal to the molar concentration of $NO_3^-$? Justify your answer.\n\n(d) Calculate the number of moles of precipitate that is produced in the experiment.\n\n(e) Calculate the mass percent of $I^-$ in the tablet.\n\n(f) In another trial, the student dissolves a tablet in $55.0\\,\\mathrm{mL}$ of water instead of $50.0\\,\\mathrm{mL}$ of water. Predict whether the experimentally determined mass percent of $I^-$ will be greater than, less than, or equal to the amount calculated in part (e). Justify your answer.\n\n(g) A student in another lab also wants to determine the $I^-$ content of a KI tablet but does not have access to $Pb(NO_3)_2$. However, the student does have access to $0.20\\,\\mathrm{M}\\ AgNO_3$, which reacts with $I^-(aq)$ to produce $AgI(s)$. The value of $K_{sp}$ for $AgI$ is $8.5\\times10^{-17}$.\n\n  i. Will the substitution of $AgNO_3$ for $Pb(NO_3)_2$ result in the precipitation of the $I^-$ ion from solution? Justify your answer.\n\n  ii. The student only has access to one KI tablet and a balance that can measure to the nearest $0.01\\,\\mathrm{g}$. Will the student be able to determine the mass of $AgI$ produced to three significant figures? Justify your answer.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Equilibrium",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 1 scoring guideline: award points for lead iodide precipitation equation, net ionic reasoning, repeated drying purpose, filtrate ion comparison, moles of precipitate, mass percent iodide, effect of dilution, silver iodide precipitation, and significant-figure limitation.",
+      "points": [
+        {
+          "point_id": "1a_i",
+          "points": 1,
+          "description": "Writes $Pb^{2+}(aq)+2I^-(aq)\\rightarrow PbI_2(s)$."
+        },
+        {
+          "point_id": "1a_ii",
+          "points": 1,
+          "description": "Explains that spectator ions are omitted and the net ionic equation shows the species directly involved in precipitation."
+        },
+        {
+          "point_id": "1b",
+          "points": 1,
+          "description": "Explains drying and weighing repeatedly to ensure constant mass and complete removal of water."
+        },
+        {
+          "point_id": "1c",
+          "points": 1,
+          "description": "Correctly compares $[K^+]$ and $[NO_3^-]$ in the filtrate with a valid justification based on excess lead nitrate and spectator ions."
+        },
+        {
+          "point_id": "1d",
+          "points": 1,
+          "description": "Calculates moles of $PbI_2$ from the final precipitate mass."
+        },
+        {
+          "point_id": "1e_setup",
+          "points": 1,
+          "description": "Uses the $PbI_2$ stoichiometry to determine moles or mass of iodide in the tablet."
+        },
+        {
+          "point_id": "1e_percent",
+          "points": 1,
+          "description": "Calculates the mass percent of $I^-$ in the tablet."
+        },
+        {
+          "point_id": "1f",
+          "points": 1,
+          "description": "Predicts that using $55.0\\,\\mathrm{mL}$ instead of $50.0\\,\\mathrm{mL}$ does not change the mass percent if all iodide precipitates, and justifies the prediction."
+        },
+        {
+          "point_id": "1g_i",
+          "points": 1,
+          "description": "Explains that $AgNO_3$ will precipitate $I^-$ because $AgI$ has a very small $K_{sp}$."
+        },
+        {
+          "point_id": "1g_ii",
+          "points": 1,
+          "description": "Explains whether the available balance precision is sufficient to determine the $AgI$ mass to three significant figures."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
+      "prompt_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "rubric_pages": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2014_FRQ2",
+    "frq_id": "2014_FRQ2",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2014,
+    "question_number": 2,
+    "question_type": "FRQ",
+    "text": "$CH_3CH_2COOH(aq)+H_2O(l)\\rightleftharpoons CH_3CH_2COO^-(aq)+H_3O^+(aq)$\n\nPropanoic acid, $CH_3CH_2COOH$, is a carboxylic acid that reacts with water according to the equation above. At $25^\\circ\\mathrm{C}$ the pH of a $50.0\\,\\mathrm{mL}$ sample of $0.20\\,\\mathrm{M}\\ CH_3CH_2COOH$ is 2.79.\n\n(a) Identify a Brønsted-Lowry conjugate acid-base pair in the reaction. Clearly label which is the acid and which is the base.\n\n(b) Determine the value of $K_a$ for propanoic acid at $25^\\circ\\mathrm{C}$.\n\n(c) For each of the following statements, determine whether the statement is true or false. In each case, explain the reasoning that supports your answer.\n\n  i. The pH of a solution prepared by mixing the $50.0\\,\\mathrm{mL}$ sample of $0.20\\,\\mathrm{M}\\ CH_3CH_2COOH$ with a $50.0\\,\\mathrm{mL}$ sample of $0.20\\,\\mathrm{M}\\ NaOH$ is 7.00.\n\n  ii. If the pH of a hydrochloric acid solution is the same as the pH of a propanoic acid solution, then the molar concentration of the hydrochloric acid solution must be less than the molar concentration of the propanoic acid solution.\n\nA student is given the task of determining the concentration of a propanoic acid solution of unknown concentration. A $0.173\\,\\mathrm{M}\\ NaOH$ solution is available to use as the titrant. The student uses a $25.00\\,\\mathrm{mL}$ volumetric pipet to deliver the propanoic acid solution to a clean, dry flask. After adding an appropriate indicator to the flask, the student titrates the solution with the $0.173\\,\\mathrm{M}\\ NaOH$, reaching the endpoint after $20.52\\,\\mathrm{mL}$ of the base solution has been added.\n\n(d) Calculate the molarity of the propanoic acid solution.\n\n(e) The student is asked to redesign the experiment to determine the concentration of a butanoic acid solution instead of a propanoic acid solution. For butanoic acid the value of $pK_a$ is 4.83. The student claims that a different indicator will be required to determine the equivalence point of the titration accurately. Based on your response to part (b), do you agree with the student's claim? Justify your answer.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 2 scoring guideline: award points for conjugate pair identification, Ka calculation, two true/false acid-base explanations, titration molarity calculation, and indicator-choice justification.",
+      "points": [
+        {
+          "point_id": "2a",
+          "points": 1,
+          "description": "Identifies a correct conjugate acid-base pair and labels acid/base roles, such as $CH_3CH_2COOH/CH_3CH_2COO^-$."
+        },
+        {
+          "point_id": "2b_h",
+          "points": 1,
+          "description": "Uses pH 2.79 to determine $[H_3O^+]$."
+        },
+        {
+          "point_id": "2b_ka",
+          "points": 1,
+          "description": "Calculates $K_a$ for propanoic acid using equilibrium concentrations."
+        },
+        {
+          "point_id": "2c_i_choice",
+          "points": 1,
+          "description": "States that the pH after mixing equal moles of propanoic acid and NaOH is not 7.00."
+        },
+        {
+          "point_id": "2c_i_reason",
+          "points": 1,
+          "description": "Explains that the conjugate base of the weak acid makes the solution basic at equivalence."
+        },
+        {
+          "point_id": "2c_ii_choice",
+          "points": 1,
+          "description": "States that the HCl molarity must be less than the propanoic acid molarity for the same pH."
+        },
+        {
+          "point_id": "2c_ii_reason",
+          "points": 1,
+          "description": "Explains that HCl is strong while propanoic acid is weak and only partially ionizes."
+        },
+        {
+          "point_id": "2d_setup",
+          "points": 1,
+          "description": "Uses titration stoichiometry with $0.173\\,\\mathrm{M}$ NaOH and $20.52\\,\\mathrm{mL}$ titrant."
+        },
+        {
+          "point_id": "2d_calc",
+          "points": 1,
+          "description": "Calculates the molarity of the propanoic acid sample."
+        },
+        {
+          "point_id": "2e",
+          "points": 1,
+          "description": "Evaluates the indicator claim using the similar $pK_a$ values and expected equivalence-point region."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
+      "prompt_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "rubric_pages": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2014_FRQ3",
+    "frq_id": "2014_FRQ3",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2014,
+    "question_number": 3,
+    "question_type": "FRQ",
+    "text": "A student is given a standard galvanic cell, represented above, that has a Cu electrode and a Sn electrode. As current flows through the cell, the student determines that the Cu electrode increases in mass and the Sn electrode decreases in mass.\n\n(a) Identify the electrode at which oxidation is occurring. Explain your reasoning based on the student's observations.\n\n(b) As the mass of the Sn electrode decreases, where does the mass go?\n\n(c) In the expanded view of the center portion of the salt bridge shown below, draw and label a particle view of what occurs in the salt bridge as the cell begins to operate. Omit solvent molecules and use arrows to show the movement of particles.\n\n(d) A nonstandard cell is made by replacing the $1.0\\,\\mathrm{M}$ solutions of $Cu(NO_3)_2$ and $Sn(NO_3)_2$ in the standard cell with $0.50\\,\\mathrm{M}$ solutions of $Cu(NO_3)_2$ and $Sn(NO_3)_2$. The volumes of solutions in the nonstandard cell are identical to those in the standard cell.\n\n  i. Is the cell potential of the nonstandard cell greater than, less than, or equal to the cell potential of the standard cell? Justify your answer.\n\n  ii. Both the standard and nonstandard cells can be used to power an electronic device. Would the nonstandard cell power the device for the same time, a longer time, or a shorter time as compared with the standard cell? Justify your answer.\n\n(e) In another experiment, the student places a new Sn electrode into a fresh solution of $1.0\\,\\mathrm{M}\\ Cu(NO_3)_2$.\n\n| Half-Reaction | $E^\\circ$ (V) |\n|---|---:|\n| $Cu^+ + e^-\\rightarrow Cu(s)$ | 0.52 |\n| $Cu^{2+}+2e^-\\rightarrow Cu(s)$ | 0.34 |\n| $Sn^{4+}+2e^-\\rightarrow Sn^{2+}$ | 0.15 |\n| $Sn^{2+}+2e^-\\rightarrow Sn(s)$ | -0.14 |\n\n  i. Using information from the table above, write a net-ionic equation for the reaction between the Sn electrode and the $Cu(NO_3)_2$ solution that would be thermodynamically favorable. Justify that the reaction is thermodynamically favorable.\n\n  ii. Calculate the value of $\\Delta G^\\circ$ for the reaction. Include units with your answer.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [
+      "images/ap/chemistry/2014/2014_p059_img01.png",
+      "images/ap/chemistry/2014/2014_p059_img02.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Applications of Thermodynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 3 scoring guideline: award points for oxidation electrode reasoning, location of lost tin mass, salt bridge ion movement, nonstandard cell potential and capacity reasoning, favorable tin/copper reaction, and Gibbs free energy calculation.",
+      "points": [
+        {
+          "point_id": "3a",
+          "points": 1,
+          "description": "Identifies the Sn electrode as the oxidation electrode because it loses mass as Sn atoms become ions."
+        },
+        {
+          "point_id": "3b",
+          "points": 1,
+          "description": "Explains that the lost Sn mass enters solution as tin ions."
+        },
+        {
+          "point_id": "3c_cation",
+          "points": 1,
+          "description": "Shows cations in the salt bridge moving toward the Cu half-cell/cathode region as needed to maintain charge balance."
+        },
+        {
+          "point_id": "3c_anion",
+          "points": 1,
+          "description": "Shows anions moving toward the Sn half-cell/anode region as needed to maintain charge balance."
+        },
+        {
+          "point_id": "3d_i",
+          "points": 1,
+          "description": "States that the nonstandard cell potential is equal to the standard cell potential because both ion concentrations are changed by the same factor for a reaction quotient of 1."
+        },
+        {
+          "point_id": "3d_ii",
+          "points": 1,
+          "description": "Explains that the nonstandard cell powers the device for a shorter time because there are fewer moles of reacting ions."
+        },
+        {
+          "point_id": "3e_i_equation",
+          "points": 1,
+          "description": "Writes a thermodynamically favorable net ionic reaction between Sn and $Cu^{2+}$, such as $Sn(s)+Cu^{2+}(aq)\\rightarrow Sn^{2+}(aq)+Cu(s)$."
+        },
+        {
+          "point_id": "3e_i_justify",
+          "points": 1,
+          "description": "Justifies favorability using a positive cell potential from the reduction potentials."
+        },
+        {
+          "point_id": "3e_ii_setup",
+          "points": 1,
+          "description": "Sets up $\\Delta G^\\circ=-nFE^\\circ$ with the correct number of electrons."
+        },
+        {
+          "point_id": "3e_ii_calc",
+          "points": 1,
+          "description": "Calculates $\\Delta G^\\circ$ with units."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
+      "prompt_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "rubric_pages": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2014_FRQ4",
+    "frq_id": "2014_FRQ4",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2014,
+    "question_number": 4,
+    "question_type": "FRQ",
+    "text": "$CaCO_3(s)\\rightleftharpoons CaO(s)+CO_2(g)$\n\nWhen heated, calcium carbonate decomposes according to the equation above. In a study of the decomposition of calcium carbonate, a student added a $50.0\\,\\mathrm{g}$ sample of powdered $CaCO_3(s)$ to a $1.00\\,\\mathrm{L}$ rigid container. The student sealed the container, pumped out all the gases, then heated the container in an oven at $1100\\,\\mathrm{K}$. As the container was heated, the total pressure of the $CO_2(g)$ in the container was measured over time. The data are plotted in the graph below.\n\n(a) Calculate the number of moles of $CO_2(g)$ present in the container after 20 minutes of heating.\n\n(b) The student claimed that the final pressure in the container in each experiment became constant because all of the $CaCO_3(s)$ had decomposed. Explain why the student's claim is not correct.\n\n(c) After 20 minutes some $CO_2(g)$ was injected into the container, initially raising the pressure to $1.5\\,\\mathrm{atm}$. Would the final pressure inside the container be less than, greater than, or equal to $1.5\\,\\mathrm{atm}$? Explain your answer.\n\n(d) Are there sufficient data obtained in the experiments to determine the value of the equilibrium constant, $K_p$, for the decomposition of $CaCO_3(s)$ at $1100\\,\\mathrm{K}$? Justify your answer.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2014/2014_p063_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 4 scoring guideline: award points for ideal-gas moles of carbon dioxide, explaining equilibrium plateau, response to injected carbon dioxide, and whether the data determine Kp.",
+      "points": [
+        {
+          "point_id": "4a",
+          "points": 1,
+          "description": "Calculates moles of $CO_2$ at 20 minutes using $PV=nRT$."
+        },
+        {
+          "point_id": "4b",
+          "points": 1,
+          "description": "Explains that pressure becomes constant because equilibrium is reached, not because all $CaCO_3$ has decomposed."
+        },
+        {
+          "point_id": "4c",
+          "points": 1,
+          "description": "Predicts the final pressure after adding $CO_2$ and justifies using equilibrium shift/Le Chatelier reasoning."
+        },
+        {
+          "point_id": "4d",
+          "points": 1,
+          "description": "Explains whether the equilibrium pressure data are sufficient to determine $K_p$ for the decomposition reaction."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
+      "prompt_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "rubric_pages": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2014_FRQ5",
+    "frq_id": "2014_FRQ5",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2014,
+    "question_number": 5,
+    "question_type": "FRQ",
+    "text": "Some binary compounds that form between fluorine and various nonmetals are listed in the table below.\n\n| Nonmetal | Formula of Fluoride Compound |\n|---|---|\n| C | $CF_4$ |\n| N | $NF_3$ |\n| O | $OF_2$ |\n\nA student examines the data and poses the following hypothesis: the number of F atoms that will bond to a nonmetal is always equal to 8 minus the number of valence electrons in the nonmetal atom.\n\n(a) Based on the student's hypothesis, what should be the formula of the compound that forms between chlorine and fluorine?\n\n(b) In an attempt to verify the hypothesis, the student researches the fluoride compounds of the other halogens and finds the formula $ClF_3$. In the box below, draw a complete Lewis electron-dot diagram for a molecule of $ClF_3$.\n\n(c) Two possible geometric shapes for the $ClF_3$ molecule are trigonal planar and T-shaped. The student does some research and learns that the molecule has a dipole moment. Which of the two shapes is consistent with the fact that the $ClF_3$ molecule has a dipole moment? Justify your answer.\n\n(d) Based on concepts of atomic structure and periodicity, propose a modification to the student's previous hypothesis to account for the existence of $ClF_3$.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 5 scoring guideline: award points for predicted chlorine fluoride formula, complete ClF3 Lewis diagram, molecular shape consistent with polarity, and a revised hypothesis allowing expanded valence for heavier halogens.",
+      "points": [
+        {
+          "point_id": "5a",
+          "points": 1,
+          "description": "Predicts $ClF$ from the student's original hypothesis."
+        },
+        {
+          "point_id": "5b",
+          "points": 1,
+          "description": "Draws a complete Lewis electron-dot diagram for $ClF_3$ with correct bonds and lone pairs."
+        },
+        {
+          "point_id": "5c",
+          "points": 1,
+          "description": "Chooses the T-shaped geometry and explains that it is consistent with a molecular dipole."
+        },
+        {
+          "point_id": "5d",
+          "points": 1,
+          "description": "Proposes a valid modification to the hypothesis based on expanded valence or period effects for chlorine and heavier halogens."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
+      "prompt_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "rubric_pages": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2014_FRQ6",
+    "frq_id": "2014_FRQ6",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2014,
+    "question_number": 6,
+    "question_type": "FRQ",
+    "text": "A student places a mixture of plastic beads consisting of polypropylene (PP) and polyvinyl chloride (PVC) in a $1.0\\,\\mathrm{L}$ beaker containing distilled water. After stirring the contents of the beaker vigorously, the student observes that the beads of one type of plastic sink to the bottom of the beaker and the beads of the other type of plastic float on the water. The chemical structures of PP and PVC are represented by the diagrams below, which show segments of each polymer.\n\n(a) Given that the spacing between polymer chains in PP and PVC is similar, the beads that sink are made of which polymer? Explain.\n\n(b) The boiling point of liquid propene ($226\\,\\mathrm{K}$) is lower than the boiling point of liquid vinyl chloride ($260\\,\\mathrm{K}$). Account for this difference in terms of intermolecular forces.\n\n(c) Using the table of standard enthalpies of formation below, determine whether the combustion of $2.00\\,\\mathrm{mol}$ of propene is exothermic or endothermic. Justify your answer with a calculation.\n\n| Substance | $\\Delta H^\\circ_f$ ($\\mathrm{kJ/mol}$) |\n|---|---:|\n| $C_3H_6(g)$ | 20.4 |\n| $CO_2(g)$ | -393.5 |\n| $H_2O(l)$ | -285.8 |",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2014/2014_p067_img01.png",
+      "images/ap/chemistry/2014/2014_p067_img02.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 6 scoring guideline: award points for identifying the denser polymer, intermolecular-force comparison, and enthalpy of combustion calculation.",
+      "points": [
+        {
+          "point_id": "6a",
+          "points": 1,
+          "description": "Identifies PVC as the beads that sink and justifies based on greater molar mass per comparable chain segment or higher density."
+        },
+        {
+          "point_id": "6b",
+          "points": 1,
+          "description": "Explains that vinyl chloride has stronger intermolecular forces than propene because of the polar C-Cl bond/dipole-dipole attractions."
+        },
+        {
+          "point_id": "6c_setup",
+          "points": 1,
+          "description": "Sets up the combustion enthalpy calculation using standard enthalpies of formation."
+        },
+        {
+          "point_id": "6c_conclusion",
+          "points": 1,
+          "description": "Determines that combustion of propene is exothermic and supports the conclusion with the calculated sign."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
+      "prompt_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "rubric_pages": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2014_FRQ7",
+    "frq_id": "2014_FRQ7",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2014,
+    "question_number": 7,
+    "question_type": "FRQ",
+    "text": "The half-life, $t_{1/2}$, of the catalyzed isomerization of cis-2-butene gas to produce trans-2-butene gas, represented above, was measured under various conditions, as shown in the table below.\n\n| Trial | Initial pressure of cis-2-butene (torr) | Volume (L) | Temperature (K) | $t_{1/2}$ (s) |\n|---:|---:|---:|---:|---:|\n| 1 | 300.0 | 2.00 | 350.0 | 100.0 |\n| 2 | 600.0 | 2.00 | 350.0 | 100.0 |\n| 3 | 300.0 | 4.00 | 350.0 | 100.0 |\n| 4 | 300.0 | 2.00 | 365 | 50.0 |\n\n(a) The reaction is first order. Explain how the data in the table are consistent with a first-order reaction.\n\n(b) Calculate the rate constant, $k$, for the reaction at $350.0\\,\\mathrm{K}$. Include appropriate units with your answer.\n\n(c) Is the initial rate of the reaction in trial 1 greater than, less than, or equal to the initial rate in trial 2? Justify your answer.\n\n(d) The half-life of the reaction in trial 4 is less than the half-life in trial 1. Explain why, in terms of activation energy.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2014/2014_p069_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Equilibrium",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 7 scoring guideline: award points for first-order half-life evidence, first-order rate constant, initial-rate comparison, and temperature/activation-energy explanation.",
+      "points": [
+        {
+          "point_id": "7a",
+          "points": 1,
+          "description": "Explains that the half-life is independent of initial pressure/concentration for trials at the same temperature, consistent with first-order kinetics."
+        },
+        {
+          "point_id": "7b",
+          "points": 1,
+          "description": "Calculates $k=\\ln2/t_{1/2}$ at $350.0\\,\\mathrm{K}$ with units of $s^{-1}$."
+        },
+        {
+          "point_id": "7c",
+          "points": 1,
+          "description": "States that the initial rate in trial 1 is less than in trial 2 and justifies using first-order dependence on concentration/pressure."
+        },
+        {
+          "point_id": "7d",
+          "points": 1,
+          "description": "Explains that at higher temperature a greater fraction of molecules has energy equal to or greater than the activation energy, so the reaction is faster and the half-life is shorter."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
+      "prompt_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "rubric_pages": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2015_FRQ1",
+    "frq_id": "2015_FRQ1",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2015,
+    "question_number": 1,
+    "question_type": "FRQ",
+    "text": "A student uses a galvanic cell to determine the concentration of ethanol, $C_2H_5OH$, in an aqueous solution. The cell is based on the half-cell reactions represented in the table below.\n\n| Half-reaction | $E^\\circ$ (V) |\n|---|---:|\n| $2CO_2(g)+12H^+(aq)+12e^-\\rightarrow C_2H_5OH(aq)+3H_2O(l)$ | $-0.085$ |\n| $O_2(g)+4H^+(aq)+4e^-\\rightarrow2H_2O(l)$ | $1.229$ |\n\n(a) Write a balanced equation for the overall reaction that occurs in the cell.\n\n(b) Calculate $E^\\circ$ for the overall reaction that occurs in the cell.\n\n(c) A $10.0\\,\\mathrm{mL}$ sample of $C_2H_5OH(aq)$ is put into the electrochemical cell. The cell produces an average current of $0.10\\,\\mathrm{A}$ for $20.\\,\\mathrm{s}$, at which point the $C_2H_5OH(aq)$ has been totally consumed.\n\n  i. Calculate the charge, in coulombs, that passed through the cell.\n\n  ii. Calculate the initial molar concentration of $C_2H_5OH$ in the solution.\n\nAn alternative approach to determine the concentration of $C_2H_5OH(aq)$ in a solution is based on the reaction represented below.\n\n$3C_2H_5OH(aq)+2Cr_2O_7^{2-}(aq)+16H^+(aq)\\rightarrow4Cr^{3+}(aq)+3CH_3COOH(aq)+11H_2O(l)$\n\nA solution has an initial $Cr_2O_7^{2-}$ concentration of $1.0\\times10^{-3}\\,\\mathrm{M}$ and an initial $C_2H_5OH$ concentration of $0.500\\,\\mathrm{M}$. The solution contains enough strong acid to keep the pH essentially constant throughout the reaction. The student places a sample of the solution in a cuvette with a path length of $0.50\\,\\mathrm{cm}$ and places it in a spectrophotometer set to measure absorbance at $440\\,\\mathrm{nm}$. $Cr_2O_7^{2-}$ is the only species in the reaction mixture that absorbs light at this wavelength. The table shows the absorbance as a function of time for the first trial.\n\n| Time (min) | Absorbance at 440 nm |\n|---:|---:|\n| 0.00 | 0.782 |\n| 1.50 | 0.553 |\n| 3.00 | 0.389 |\n| 4.50 | 0.278 |\n| 6.00 | 0.194 |\n\n(d) Calculate $[Cr_2O_7^{2-}]$ at $1.50\\,\\mathrm{min}$.\n\n(e) The student runs a second trial but this time uses a cuvette that has a path length of $1.00\\,\\mathrm{cm}$. Describe how the experimental setup should be adjusted to keep the initial absorbance at $0.782$. Justify your answer with respect to the factors that influence absorbance.\n\nFor the concentrations used, the rate law can be written as $rate=k_{obs}[Cr_2O_7^{2-}]^y$, where $k_{obs}=k[C_2H_5OH]$.\n\n(f) Explain how the experimental data indicate that the reaction is first order with respect to $Cr_2O_7^{2-}$.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Applications of Thermodynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 1 scoring guideline: award points for the balanced ethanol oxidation overall reaction, the standard cell potential, charge from current and time, ethanol concentration from electron stoichiometry, dichromate concentration from absorbance, the path-length adjustment needed to keep absorbance constant, and evidence that the reaction is first order in dichromate.",
+      "points": [
+        {
+          "point_id": "1a_reactants_products",
+          "points": 1,
+          "description": "Writes the correct overall reactants and products for ethanol reacting with oxygen to form carbon dioxide and water."
+        },
+        {
+          "point_id": "1a_balance",
+          "points": 1,
+          "description": "Balances the overall equation, for example $C_2H_5OH(aq)+3O_2(g)\\rightarrow2CO_2(g)+3H_2O(l)$."
+        },
+        {
+          "point_id": "1b",
+          "points": 1,
+          "description": "Calculates the standard cell potential consistently with the overall reaction, $E^\\circ_{cell}=1.314\\,\\mathrm{V}$."
+        },
+        {
+          "point_id": "1c_i",
+          "points": 1,
+          "description": "Calculates the charge passed through the cell as $q=It=(0.10\\,\\mathrm{A})(20.\\,\\mathrm{s})=2.0\\,\\mathrm{C}$."
+        },
+        {
+          "point_id": "1c_ii_moles",
+          "points": 1,
+          "description": "Uses Faraday's constant and the 12-electron stoichiometry to determine the moles of ethanol consumed."
+        },
+        {
+          "point_id": "1c_ii_molarity",
+          "points": 1,
+          "description": "Converts the moles of ethanol in $10.0\\,\\mathrm{mL}$ to an initial molarity of about $1.7\\times10^{-4}\\,\\mathrm{M}$."
+        },
+        {
+          "point_id": "1d",
+          "points": 1,
+          "description": "Uses Beer's law proportionality to calculate $[Cr_2O_7^{2-}]$ at $1.50\\,\\mathrm{min}$ from the absorbance ratio."
+        },
+        {
+          "point_id": "1e_setup",
+          "points": 1,
+          "description": "States that the dichromate concentration should be lowered when the path length is doubled."
+        },
+        {
+          "point_id": "1e_justification",
+          "points": 1,
+          "description": "Justifies the adjustment with $A=abc$: to keep $A$ constant when $b$ doubles, $c$ must be halved."
+        },
+        {
+          "point_id": "1f",
+          "points": 1,
+          "description": "Explains that the absorbance, and therefore $[Cr_2O_7^{2-}]$, decreases by a nearly constant fraction over equal time intervals, showing first-order behavior."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2015_FRQ2",
+    "frq_id": "2015_FRQ2",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2015,
+    "question_number": 2,
+    "question_type": "FRQ",
+    "text": "Answer the following questions about $Fe$ and $Al$ compounds.\n\n(a) $Fe_2O_3(s)$ and $Al_2O_3(s)$ have similar chemical properties; some similarities are due to the oxides having similar lattice energies. Give two reasons why the lattice energies of the oxides are similar.\n\nUse the following reactions that involve $Fe$ and $Al$ compounds to answer parts (b) and (c).\n\nIn distilled water:\n\nReaction 1: $Fe_2O_3(s)+3H_2O(l)\\rightarrow2Fe(OH)_3(s)$\n\nReaction 2: $Al_2O_3(s)+3H_2O(l)\\rightarrow2Al(OH)_3(s)$\n\nIn base:\n\nReaction 3: $Fe(OH)_3(s)+NaOH(aq)$: no reaction\n\nReaction 4: $Al(OH)_3(s)+NaOH(aq)\\rightarrow NaAl(OH)_4(aq)$\n\nIn acid:\n\nReaction 5: $Fe(OH)_3(s)+3HCl(aq)\\rightarrow FeCl_3(aq)+3H_2O(l)$\n\nReaction 6: $Al(OH)_3(s)+3HCl(aq)\\rightarrow AlCl_3(aq)+3H_2O(l)$\n\nReaction 7: $NaAl(OH)_4(aq)+HCl(aq)\\rightarrow Al(OH)_3(s)+NaCl(aq)+H_2O(l)$\n\nWhen heated:\n\nReaction 8: $2Fe(OH)_3(s)\\xrightarrow{heat}Fe_2O_3(s)+3H_2O(g)$\n\nReaction 9: $2Al(OH)_3(s)\\xrightarrow{heat}Al_2O_3(s)+3H_2O(g)$\n\n| Compound | $K_{sp}$ |\n|---|---:|\n| $Fe(OH)_3$ | $4\\times10^{-38}$ |\n| $Al(OH)_3$ | $1\\times10^{-33}$ |\n\n(b) A $1.0\\,\\mathrm{g}$ sample of powdered $Fe_2O_3(s)$ and a $1.0\\,\\mathrm{g}$ sample of powdered $Al_2O_3(s)$ are mixed together and placed in $1.0\\,\\mathrm{L}$ of distilled water.\n\n  i. Which ion, $Fe^{3+}(aq)$ or $Al^{3+}(aq)$, will be present in the higher concentration? Justify your answer with respect to the $K_{sp}$ values.\n\n  ii. Write a balanced chemical equation for the dissolution reaction that results in production of the ion identified in part (b)(i).\n\n(c) Students are asked to develop a plan for separating $Al_2O_3(s)$ from a mixture of powdered $Fe_2O_3(s)$ and powdered $Al_2O_3(s)$ using chemical reactions and laboratory techniques.\n\n  i. One student proposes adding water to the mixture and then filtering. Explain why this approach is not reasonable.\n\n  ii. A second student starts a plan by adding $NaOH(aq)$ to convert $Al_2O_3(s)$ to $Al(OH)_3(s)$ and then to $NaAl(OH)_4(aq)$, followed by filtering out solid $Fe(OH)_3$ and saving the filtrate. Complete the plan by listing the additional steps needed to recover $Al_2O_3(s)$ in the correct order, referring to reaction numbers where applicable.\n\n  iii. The second student recovers $5.5\\,\\mathrm{g}$ of $Al_2O_3(s)$ from a $10.0\\,\\mathrm{g}$ sample of the mixture. Calculate the percent of $Al$ by mass in the mixture. The molar mass of $Al_2O_3$ is $101.96\\,\\mathrm{g/mol}$ and the molar mass of $Fe_2O_3$ is $159.70\\,\\mathrm{g/mol}$.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Chemical Reactions",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 2 scoring guideline: award points for explaining similar lattice energies, comparing solubilities from Ksp, writing the dissolution equation, rejecting water-only separation, completing a chemical separation plan for aluminum oxide, and calculating percent aluminum by mass in the mixture.",
+      "points": [
+        {
+          "point_id": "2a_charge",
+          "points": 1,
+          "description": "States that $Fe^{3+}$ and $Al^{3+}$ have the same ionic charge."
+        },
+        {
+          "point_id": "2a_size",
+          "points": 1,
+          "description": "States that $Fe^{3+}$ and $Al^{3+}$ have similar ionic sizes, so the oxide lattice energies are similar."
+        },
+        {
+          "point_id": "2b_i",
+          "points": 1,
+          "description": "Identifies $Al^{3+}(aq)$ as present at the higher concentration because $Al(OH)_3$ has the larger $K_{sp}$."
+        },
+        {
+          "point_id": "2b_ii",
+          "points": 1,
+          "description": "Writes the dissolution equilibrium $Al(OH)_3(s)\\rightleftharpoons Al^{3+}(aq)+3OH^-(aq)$."
+        },
+        {
+          "point_id": "2c_i",
+          "points": 1,
+          "description": "Explains that adding water and filtering is not reasonable because both oxides have very low solubility and would remain solids."
+        },
+        {
+          "point_id": "2c_ii_acid",
+          "points": 1,
+          "description": "Adds acid to the filtrate to convert $NaAl(OH)_4(aq)$ to $Al(OH)_3(s)$, using reaction 7 or an equivalent description."
+        },
+        {
+          "point_id": "2c_ii_filter",
+          "points": 1,
+          "description": "Filters to collect the precipitated $Al(OH)_3(s)$."
+        },
+        {
+          "point_id": "2c_ii_heat",
+          "points": 1,
+          "description": "Heats the collected $Al(OH)_3(s)$ to form $Al_2O_3(s)$, using reaction 9 or an equivalent description."
+        },
+        {
+          "point_id": "2c_iii_al_from_alumina",
+          "points": 1,
+          "description": "Calculates the mass of aluminum in $5.5\\,\\mathrm{g}$ of $Al_2O_3$ using the molar mass ratio $2M_{Al}/M_{Al_2O_3}$."
+        },
+        {
+          "point_id": "2c_iii_percent",
+          "points": 1,
+          "description": "Calculates the percent aluminum by mass in the original $10.0\\,\\mathrm{g}$ mixture, about $29\\%$."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2015_FRQ3",
+    "frq_id": "2015_FRQ3",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2015,
+    "question_number": 3,
+    "question_type": "FRQ",
+    "text": "The structures of two compounds commonly found in food, lauric acid, $C_{12}H_{24}O_2$, and sucrose, $C_{12}H_{22}O_{11}$, are shown above.\n\n(a) Which compound, lauric acid or sucrose, is more soluble in water? Justify your answer in terms of the intermolecular forces present between water and each compound.\n\n(b) Assume that a $1.5\\,\\mathrm{g}$ sample of lauric acid is combusted and all of the heat energy released is transferred to a $325\\,\\mathrm{g}$ sample of water initially at $25^\\circ\\mathrm{C}$. Calculate the final temperature of the water if $\\Delta H_{combustion}$ of lauric acid is $-37\\,\\mathrm{kJ/g}$ and the specific heat of water is $4.18\\,\\mathrm{J/(g\\cdot K)}$.\n\n(c) A student places a $1.5\\,\\mathrm{g}$ sample of lauric acid in a ceramic dish underneath an aluminum can containing $325\\,\\mathrm{g}$ of water at $25^\\circ\\mathrm{C}$, ignites the sample, and records the highest water temperature.\n\n  i. The experiment is repeated using a copper can of the same mass. The specific heat of $Cu$ is $0.39\\,\\mathrm{J/(g\\cdot K)}$, and the specific heat of $Al$ is $0.90\\,\\mathrm{J/(g\\cdot K)}$. Will the final temperature of the water in the copper can be greater than, less than, or equal to the final temperature of the water in the aluminum can? Justify your answer.\n\n  ii. In both experiments, the measured final temperature of the water was less than the final temperature calculated in part (b). Identify one source of experimental error that might account for this discrepancy and explain why it would make the measured final temperature lower than predicted.\n\n(d) The experiment is repeated using a $1.5\\,\\mathrm{g}$ sample of sucrose. The combustion reaction for sucrose in air is represented below.\n\n$C_{12}H_{22}O_{11}(s)+12O_2(g)\\rightarrow12CO_2(g)+11H_2O(g)$\n\n  i. Even though $\\Delta G^\\circ$ for the combustion of sucrose in air is $-5837\\,\\mathrm{kJ/mol_{rxn}}$, the combustion reaction does not take place unless it is ignited. Explain.\n\n  ii. Predict the sign of $\\Delta S^\\circ$ for the reaction and justify your prediction.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [
+      "images/ap/chemistry/2015/2015_p056_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Thermodynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 3 scoring guideline: award points for comparing solubility from intermolecular forces, calculating water temperature from combustion heat, comparing copper and aluminum cans by heat capacity, identifying heat-loss error, explaining activation energy, and predicting entropy for sucrose combustion.",
+      "points": [
+        {
+          "point_id": "3a_choice",
+          "points": 1,
+          "description": "Identifies sucrose as more soluble in water."
+        },
+        {
+          "point_id": "3a_justification",
+          "points": 1,
+          "description": "Justifies the choice by noting that sucrose has many polar O-H groups that hydrogen bond strongly with water, whereas lauric acid has a long nonpolar hydrocarbon chain."
+        },
+        {
+          "point_id": "3b_heat",
+          "points": 1,
+          "description": "Calculates heat released by combusting $1.5\\,\\mathrm{g}$ lauric acid from $\\Delta H_{combustion}=-37\\,\\mathrm{kJ/g}$."
+        },
+        {
+          "point_id": "3b_temperature",
+          "points": 1,
+          "description": "Uses $q=mc\\Delta T$ for $325\\,\\mathrm{g}$ water to calculate the final water temperature."
+        },
+        {
+          "point_id": "3c_i_choice",
+          "points": 1,
+          "description": "Predicts that the final water temperature in the copper can will be greater than in the aluminum can."
+        },
+        {
+          "point_id": "3c_i_justification",
+          "points": 1,
+          "description": "Justifies that copper has a lower specific heat, so less heat is absorbed by the can and more heat warms the water."
+        },
+        {
+          "point_id": "3c_ii",
+          "points": 1,
+          "description": "Identifies a valid heat-loss or incomplete-combustion error and explains why it lowers the measured final water temperature."
+        },
+        {
+          "point_id": "3d_i",
+          "points": 1,
+          "description": "Explains that combustion does not occur without ignition because the reaction has an activation-energy barrier."
+        },
+        {
+          "point_id": "3d_ii_sign",
+          "points": 1,
+          "description": "Predicts that $\\Delta S^\\circ$ for sucrose combustion is positive."
+        },
+        {
+          "point_id": "3d_ii_justification",
+          "points": 1,
+          "description": "Justifies the entropy prediction by comparing the larger number of gaseous product particles to gaseous reactant particles."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2015_FRQ4",
+    "frq_id": "2015_FRQ4",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2015,
+    "question_number": 4,
+    "question_type": "FRQ",
+    "text": "The boiling points, dipole moments, and polarizabilities of three hydrogen halides are given in the table below.\n\n| Molecule | Boiling Point (K) | Dipole Moment (D) | Polarizability ($10^{-24}\\,\\mathrm{cm^3}$) |\n|---|---:|---:|---:|\n| $HCl$ | 188 | 1.05 | 2.63 |\n| $HBr$ | 207 | 0.80 | 3.61 |\n| $HI$ | 238 | 0.38 | 5.44 |\n\n(a) Based on the data in the table, what type of intermolecular force among $HCl(l)$, $HBr(l)$, and $HI(l)$ is able to account for the trend in boiling points? Justify your answer.\n\n(b) Based on the data in the table, a student predicts that the boiling point of $HF$ should be $174\\,\\mathrm{K}$. The observed boiling point of $HF$ is $293\\,\\mathrm{K}$. Explain the failure of the student's prediction in terms of the types and strengths of the intermolecular forces among $HF$ molecules.\n\n(c) A representation of five molecules of $HBr$ in the liquid state is shown in box 1 below. In box 2, draw a representation of the five molecules of $HBr$ after complete vaporization has occurred.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2015/2015_p060_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Intermolecular Forces and Properties",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 4 scoring guideline: award points for identifying the strongest H-X bond from bond enthalpy, explaining the trend in bond enthalpy or atomic size, drawing a particle representation consistent with HBr vaporization, and connecting vapor pressure to intermolecular forces.",
+      "points": [
+        {
+          "point_id": "4a",
+          "points": 1,
+          "description": "Identifies $HCl$ as having the strongest hydrogen-halogen bond using the bond enthalpy data."
+        },
+        {
+          "point_id": "4b",
+          "points": 1,
+          "description": "Explains the bond enthalpy trend in terms of increasing halogen atomic size and longer, weaker H-X bonds down the group."
+        },
+        {
+          "point_id": "4c",
+          "points": 1,
+          "description": "Draws or describes gaseous $HBr$ particles as separated intact molecules with no chemical bonds broken within each molecule."
+        },
+        {
+          "point_id": "4d",
+          "points": 1,
+          "description": "Explains the vapor-pressure comparison using the relative strengths of intermolecular forces among the hydrogen halides."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2015_FRQ5",
+    "frq_id": "2015_FRQ5",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2015,
+    "question_number": 5,
+    "question_type": "FRQ",
+    "text": "Answer the following questions about two isomers, methyl methanoate and ethanoic acid. The molecular formula of the compounds is $C_2H_4O_2$.\n\n(a) Complete the Lewis electron-dot diagram of methyl methanoate in the box below. Show all valence electrons.\n\nA student puts $0.020\\,\\mathrm{mol}$ of methyl methanoate into a previously evacuated rigid $1.0\\,\\mathrm{L}$ vessel at $450\\,\\mathrm{K}$. The pressure is measured to be $0.74\\,\\mathrm{atm}$. When the experiment is repeated using $0.020\\,\\mathrm{mol}$ of ethanoic acid instead, the measured pressure is lower because of the reversible reaction below.\n\n$CH_3COOH(g)+CH_3COOH(g)\\rightleftharpoons (CH_3COOH)_2(g)$\n\n(b) Assume that when equilibrium has been reached, $50.\\%$ of the ethanoic acid molecules have reacted.\n\n  i. Calculate the total pressure in the vessel at equilibrium at $450\\,\\mathrm{K}$.\n\n  ii. Calculate $K_p$ for the reaction at $450\\,\\mathrm{K}$.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2015/2015_p062_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "Molecular and Ionic Compound Structure and Properties",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 5 scoring guideline: award points for a valid Lewis electron-dot diagram, molecular geometry/polarity reasoning, explaining acid dimerization by intermolecular forces, and using particulate or equilibrium reasoning for the vapor-phase dimer.",
+      "points": [
+        {
+          "point_id": "5a",
+          "points": 1,
+          "description": "Completes a valid Lewis electron-dot diagram for methyl methanoate, including correct bonding and lone pairs on oxygen atoms."
+        },
+        {
+          "point_id": "5b",
+          "points": 1,
+          "description": "Identifies an appropriate molecular geometry or bond angle around the indicated carbon or oxygen atom and supports it with electron-domain reasoning."
+        },
+        {
+          "point_id": "5c",
+          "points": 1,
+          "description": "Explains that ethanoic acid molecules form dimers through hydrogen bonding between the carboxylic acid groups."
+        },
+        {
+          "point_id": "5d",
+          "points": 1,
+          "description": "Uses the given vapor-phase dimerization information to make a correct particle-level or equilibrium statement about monomers and dimers."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2015_FRQ6",
+    "frq_id": "2015_FRQ6",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2015,
+    "question_number": 6,
+    "question_type": "FRQ",
+    "text": "The complete photoelectron spectrum of an unknown element is shown above. The frequency ranges of different regions of the electromagnetic spectrum are given in the table below.\n\n| Region | Frequency Range ($s^{-1}$) |\n|---|---:|\n| Infrared (IR) | $1\\times10^{12}$ through $4\\times10^{14}$ |\n| Ultraviolet/visible (UV/vis) | $4\\times10^{14}$ through $5\\times10^{16}$ |\n| X-rays | $5\\times10^{16}$ through $1\\times10^{19}$ |\n| Gamma rays | greater than $1\\times10^{19}$ |\n\n(a) To generate the spectrum above, a source capable of producing electromagnetic radiation with an energy of $7\\times10^4\\,\\mathrm{kJ/mol}$ of photons was used. Such radiation is from which region of the electromagnetic spectrum? Justify your answer with a calculation.\n\n(b) A student examines the spectrum and proposes that the unknown element is Na. Explain why the student is incorrect.\n\n(c) Write the ground-state electron configuration of the unknown element.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2015/2015_p064_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U1",
+    "unit": "U1",
+    "unit_name": "Atomic Structure and Properties",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 6 scoring guideline: award points for interpreting photoelectron spectroscopy data, identifying the element or electron configuration, calculating energy from frequency, and explaining the relationship between binding energy and Coulombic attraction.",
+      "points": [
+        {
+          "point_id": "6a",
+          "points": 1,
+          "description": "Correctly interprets the PES peak pattern to identify the element or its electron configuration."
+        },
+        {
+          "point_id": "6b",
+          "points": 1,
+          "description": "Uses the number of electrons represented by the PES peaks to support the identification."
+        },
+        {
+          "point_id": "6c",
+          "points": 1,
+          "description": "Calculates photon energy or electron binding energy using $E=h\\nu$ with correct units."
+        },
+        {
+          "point_id": "6d",
+          "points": 1,
+          "description": "Explains that greater binding energy corresponds to stronger Coulombic attraction between the electron and the nucleus."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U1",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2015_FRQ7",
+    "frq_id": "2015_FRQ7",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2015,
+    "question_number": 7,
+    "question_type": "FRQ",
+    "text": "$HC_9H_7O_4(aq)+H_2O(l)\\rightleftharpoons H_3O^+(aq)+C_9H_7O_4^-(aq)$\n\nThe molecular formula of acetylsalicylic acid, also known as aspirin, is $HC_9H_7O_4$. The dissociation of $HC_9H_7O_4(aq)$ is represented above. The pH of $0.0100\\,\\mathrm{M}$ $HC_9H_7O_4(aq)$ is measured to be $2.78$.\n\n(a) Write the expression for the equilibrium constant, $K_a$, for the reaction above.\n\n(b) Calculate $K_a$ for acetylsalicylic acid.\n\n(c) An aqueous solution of aspirin is buffered to have equal concentrations of $HC_9H_7O_4(aq)$ and $C_9H_7O_4^-(aq)$. Calculate the pH of the solution.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 7 scoring guideline: award points for writing the acid dissociation expression for aspirin, using pH to determine hydronium concentration, setting up and using the equilibrium calculation, and making a correct conclusion about ionization or percent ionization.",
+      "points": [
+        {
+          "point_id": "7a",
+          "points": 1,
+          "description": "Writes the correct equilibrium expression for aspirin dissociation, $K_a=\\frac{[H_3O^+][A^-]}{[HA]}$."
+        },
+        {
+          "point_id": "7b",
+          "points": 1,
+          "description": "Uses the given pH to determine $[H_3O^+]$."
+        },
+        {
+          "point_id": "7c",
+          "points": 1,
+          "description": "Sets up and solves the equilibrium relationship consistently to determine the requested concentration or $K_a$-related quantity."
+        },
+        {
+          "point_id": "7d",
+          "points": 1,
+          "description": "Draws a correct conclusion about the extent of aspirin ionization, with reasoning consistent with the equilibrium calculation."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2016_FRQ1",
+    "frq_id": "2016_FRQ1",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2016,
+    "question_number": 1,
+    "question_type": "FRQ",
+    "text": "$CaO(s)+H_2O(l)\\rightarrow Ca(OH)_2(s)$, $\\Delta H^\\circ_{rxn}=-63.7\\,\\mathrm{kJ/mol_{rxn}}$\n\nCalcium oxide, $CaO(s)$, has been proposed as a substance that can be used to heat water quickly for portable heating packs or for cooking.\n\n(a) A student wants to design a heating pad that could heat a $150.0\\,\\mathrm{g}$ sample of water from $25.0^\\circ\\mathrm{C}$ to $60.0^\\circ\\mathrm{C}$.\n\n  i. Calculate the amount of heat, in joules, that the water must absorb. Assume that the specific heat capacity of water is $4.18\\,\\mathrm{J/(g\\cdot ^\\circ C)}$.\n\n  ii. Calculate the minimum mass of $CaO(s)$ needed to cause this temperature change.\n\n(b) The student hypothesizes that a greater mass of $CaO(s)$ could heat $150.0\\,\\mathrm{g}$ of water from $25.0^\\circ\\mathrm{C}$ to $90.0^\\circ\\mathrm{C}$.\n\n  i. Use the table below to determine $\\Delta S^\\circ_{rxn}$, in $\\mathrm{J/(K\\cdot mol_{rxn})}$.\n\n| Substance | Absolute Entropy at $25^\\circ\\mathrm{C}$ ($\\mathrm{J/(K\\cdot mol)}$) |\n|---|---:|\n| $CaO(s)$ | 83 |\n| $H_2O(l)$ | 70.0 |\n| $Ca(OH)_2(s)$ | 40.0 |\n\n  ii. Is the reaction thermodynamically favorable at $90.0^\\circ\\mathrm{C}$? Justify your answer with a calculation. Assume that both $\\Delta S^\\circ_{rxn}$ and $\\Delta H^\\circ_{rxn}$ are constant between $25.0^\\circ\\mathrm{C}$ and $90.0^\\circ\\mathrm{C}$.\n\nThe $Ca(OH)_2$ produced is relatively insoluble and dissolves according to the equation below.\n\n$Ca(OH)_2(s)\\rightleftharpoons Ca^{2+}(aq)+2OH^-(aq)$\n\n(c) A saturated solution of $Ca(OH)_2$ has $[Ca^{2+}]=0.011\\,\\mathrm{M}$. Calculate $K_{sp}$ for $Ca(OH)_2$.\n\n(d) The student wants to significantly increase the molar solubility of $Ca(OH)_2(s)$ and has access to $15\\,\\mathrm{mL}$ samples of distilled water, $1.0\\,\\mathrm{M}$ $KOH(aq)$, $1.0\\,\\mathrm{M}$ $CaCl_2(aq)$, and $1.0\\,\\mathrm{M}$ $HCl(aq)$. Which substance would increase the molar solubility most significantly? Justify your choice using equilibrium concepts.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Applications of Thermodynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 1 scoring guideline: award points for heat absorbed by water, mass of calcium oxide required, entropy change, Gibbs free energy at 90 degrees Celsius, Ksp calculation for calcium hydroxide, and identifying hydrochloric acid as the additive that most increases solubility with a valid equilibrium justification.",
+      "points": [
+        {
+          "point_id": "1a_i",
+          "points": 1,
+          "description": "Calculates the heat absorbed by water using $q=mc\\Delta T$, about $2.19\\times10^4\\,\\mathrm{J}$."
+        },
+        {
+          "point_id": "1a_ii_moles",
+          "points": 1,
+          "description": "Uses the reaction enthalpy to convert the required heat to moles of reaction or moles of $CaO$."
+        },
+        {
+          "point_id": "1a_ii_mass",
+          "points": 1,
+          "description": "Calculates the required mass of $CaO$, about $19.3\\,\\mathrm{g}$."
+        },
+        {
+          "point_id": "1b_i",
+          "points": 1,
+          "description": "Calculates $\\Delta S^\\circ_{rxn}=40.0-(83+70.0)=-113\\,\\mathrm{J/(K\\cdot mol_{rxn})}$."
+        },
+        {
+          "point_id": "1b_ii_favorability",
+          "points": 1,
+          "description": "Indicates that the reaction is thermodynamically favorable at $90.0^\\circ\\mathrm{C}$."
+        },
+        {
+          "point_id": "1b_ii_calculation",
+          "points": 1,
+          "description": "Calculates $\\Delta G^\\circ=\\Delta H^\\circ-T\\Delta S^\\circ$ and obtains a negative value at $363\\,\\mathrm{K}$."
+        },
+        {
+          "point_id": "1c_oh",
+          "points": 1,
+          "description": "Determines $[OH^-]=2[Ca^{2+}]=0.022\\,\\mathrm{M}$."
+        },
+        {
+          "point_id": "1c_ksp",
+          "points": 1,
+          "description": "Calculates $K_{sp}=[Ca^{2+}][OH^-]^2\\approx5.3\\times10^{-6}$."
+        },
+        {
+          "point_id": "1d_choice",
+          "points": 1,
+          "description": "Chooses $HCl(aq)$ as the substance that most significantly increases molar solubility."
+        },
+        {
+          "point_id": "1d_justification",
+          "points": 1,
+          "description": "Explains that $H^+$ removes $OH^-$, causing more $Ca(OH)_2$ to dissolve as the system shifts to restore equilibrium."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2016_FRQ2",
+    "frq_id": "2016_FRQ2",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2016,
+    "question_number": 2,
+    "question_type": "FRQ",
+    "text": "$2NaHCO_3(s)\\rightarrow Na_2CO_3(s)+CO_2(g)+H_2O(g)$\n\n$NaHCO_3(s)$ decomposes upon heating to produce $Na_2CO_3(s)$ and two gaseous products.\n\n(a) A student claims that the reaction is an oxidation-reduction reaction because the oxidation number of carbon changes. Do you agree? Include the oxidation number of carbon in each of the three carbon-containing species.\n\nA student conducts an experiment to determine the composition of a mixture of $NaHCO_3$ (molar mass $84.01\\,\\mathrm{g/mol}$) and $Na_2CO_3$ (molar mass $105.99\\,\\mathrm{g/mol}$). The sample is heated, and all water produced by the reaction is captured by a drying agent.\n\n| Measurement | Mass |\n|---|---:|\n| Empty test tube | $15.825\\,\\mathrm{g}$ |\n| Test tube and mixture before heating | $17.648\\,\\mathrm{g}$ |\n| Drying agent before reaction | $2.134\\,\\mathrm{g}$ |\n| Drying agent and water after reaction | $2.303\\,\\mathrm{g}$ |\n\n(b) Calculate the number of moles of $NaHCO_3(s)$ present before heating.\n\n(c) Determine the mass percent of $NaHCO_3(s)$ in the mixture.\n\n(d) If the student spills some of the mixture after weighing the test tube and mixture but before heating, how would this error affect the mass percent of $NaHCO_3$ calculated in part (c)? Justify your answer.\n\nWhen pure $Na_2CO_3$ is placed in distilled water, the pH increases significantly:\n\n$CO_3^{2-}(aq)+H_2O(l)\\rightleftharpoons HCO_3^-(aq)+OH^-(aq)$\n\n(e) The student prepares a $0.010\\,\\mathrm{M}$ $Na_2CO_3(aq)$ solution and measures the pH as 11.65.\n\n  i. Calculate $[OH^-]$.\n\n  ii. Write the expression for $K_b$ for the carbonate ion.\n\n  iii. Calculate $K_b$ for the carbonate ion.\n\n(f) The student adds $1.0\\,\\mathrm{M}$ $Sr(NO_3)_2(aq)$ to the $0.010\\,\\mathrm{M}$ $Na_2CO_3(aq)$ and observes a precipitate. Write the balanced net ionic equation for the reaction that produces the precipitate.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 2 scoring guideline: award points for recognizing no redox change, using water mass to find moles of sodium hydrogen carbonate, calculating mass percent, evaluating the spill error, calculating hydroxide concentration, writing and using Kb for carbonate, and writing the precipitation net ionic equation.",
+      "points": [
+        {
+          "point_id": "2a",
+          "points": 1,
+          "description": "States that the reaction is not redox because carbon has oxidation number $+4$ in $NaHCO_3$, $Na_2CO_3$, and $CO_2$."
+        },
+        {
+          "point_id": "2b_water_mass",
+          "points": 1,
+          "description": "Calculates the mass of water collected from the drying-agent mass change, $0.169\\,\\mathrm{g}$."
+        },
+        {
+          "point_id": "2b_moles",
+          "points": 1,
+          "description": "Uses the stoichiometry $2\\,\\mathrm{mol}\\,NaHCO_3$ per $1\\,\\mathrm{mol}\\,H_2O$ to calculate about $0.0188\\,\\mathrm{mol}\\,NaHCO_3$."
+        },
+        {
+          "point_id": "2c_mass",
+          "points": 1,
+          "description": "Converts moles of $NaHCO_3$ to mass, about $1.58\\,\\mathrm{g}$."
+        },
+        {
+          "point_id": "2c_percent",
+          "points": 1,
+          "description": "Calculates the mass percent of $NaHCO_3$ in the mixture, about $86.7\\%$."
+        },
+        {
+          "point_id": "2d",
+          "points": 1,
+          "description": "Explains that spilling sample before heating would lower the calculated mass percent because the initial sample mass would be too large relative to the water collected."
+        },
+        {
+          "point_id": "2e_i",
+          "points": 1,
+          "description": "Calculates $[OH^-]$ from pH 11.65, using $pOH=14.00-pH$."
+        },
+        {
+          "point_id": "2e_ii",
+          "points": 1,
+          "description": "Writes $K_b=\\frac{[HCO_3^-][OH^-]}{[CO_3^{2-}]}$."
+        },
+        {
+          "point_id": "2e_iii",
+          "points": 1,
+          "description": "Calculates $K_b$ for $CO_3^{2-}$ using the equilibrium concentrations."
+        },
+        {
+          "point_id": "2f",
+          "points": 1,
+          "description": "Writes the net ionic precipitation equation $Sr^{2+}(aq)+CO_3^{2-}(aq)\\rightarrow SrCO_3(s)$."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2016_FRQ3",
+    "frq_id": "2016_FRQ3",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2016,
+    "question_number": 3,
+    "question_type": "FRQ",
+    "text": "$H_3BO_3(aq)+4HF(g)\\rightarrow H_3O^+(aq)+BF_4^-(aq)+2H_2O(l)$\n\nTetrafluoroboric acid is a strong acid with the formula $HBF_4$. It can be prepared by reacting the weak acid $H_3BO_3$ (molar mass $61.83\\,\\mathrm{g/mol}$) with $HF$.\n\n(a) To prepare a solution of $BF_4^-(aq)$, $HF(g)$ is bubbled into a solution containing $50.0\\,\\mathrm{g}$ of $H_3BO_3$ in a $1\\,\\mathrm{L}$ reaction vessel.\n\n  i. Calculate the maximum number of moles of $BF_4^-(aq)$ that can be produced.\n\n  ii. Calculate the number of liters of $HF(g)$, measured at $273\\,\\mathrm{K}$ and $1.00\\,\\mathrm{atm}$, consumed if all the $H_3BO_3$ reacts.\n\n  iii. Will the pH increase, decrease, or remain the same during the reaction? Justify your answer.\n\nIn another experiment, a $0.150\\,\\mathrm{M}$ $BF_4^-(aq)$ solution is prepared by dissolving $NaBF_4(s)$ in distilled water. The $BF_4^-(aq)$ ions slowly react with water:\n\n$BF_4^-(aq)+H_2O(l)\\rightleftharpoons BF_3OH^-(aq)+HF(aq)$\n\nThe concentration of $HF$ is monitored over time, as shown in the graph below. The concentration reaches a constant value of $0.0174\\,\\mathrm{M}$ at equilibrium. For the forward reaction, $rate=k_f[BF_4^-]$, and $k_f=9.00\\times10^{-4}\\,\\mathrm{min^{-1}}$.\n\n(b) Calculate the rate of the forward reaction after $600.0\\,\\mathrm{min}$. Include units.\n\nThe rate law for the reverse reaction is $rate=k_r[BF_3OH^-][HF]$.\n\n(c) A student claims that the initial rate of the reverse reaction is zero. Do you agree or disagree? Justify your answer using the rate law.\n\n(d) At equilibrium the forward and reverse reaction rates are equal. Calculate $k_r$.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [
+      "images/ap/chemistry/2016/2016_p056_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 3 scoring guideline: award points for stoichiometric preparation of tetrafluoroborate, gas volume, pH reasoning, forward reaction rate at 600 minutes, reverse-rate reasoning at the initial time, and calculating the reverse rate constant at equilibrium.",
+      "points": [
+        {
+          "point_id": "3a_i",
+          "points": 1,
+          "description": "Calculates moles of $BF_4^-$ from $50.0\\,\\mathrm{g}$ $H_3BO_3$, about $0.809\\,\\mathrm{mol}$."
+        },
+        {
+          "point_id": "3a_ii_moles_hf",
+          "points": 1,
+          "description": "Uses the 4:1 stoichiometric ratio to calculate moles of $HF$ required."
+        },
+        {
+          "point_id": "3a_ii_volume",
+          "points": 1,
+          "description": "Calculates the volume of $HF(g)$ at $273\\,\\mathrm{K}$ and $1.00\\,\\mathrm{atm}$ using the ideal gas law or molar volume."
+        },
+        {
+          "point_id": "3a_iii_direction",
+          "points": 1,
+          "description": "Predicts that pH decreases during the reaction."
+        },
+        {
+          "point_id": "3a_iii_justification",
+          "points": 1,
+          "description": "Justifies the pH change by noting that the reaction produces $H_3O^+$."
+        },
+        {
+          "point_id": "3b_concentration",
+          "points": 1,
+          "description": "Determines the relevant $[BF_4^-]$ after 600 minutes from the initial concentration and the equilibrium amount of $HF$ formed."
+        },
+        {
+          "point_id": "3b_rate",
+          "points": 1,
+          "description": "Calculates the forward rate using $rate=k_f[BF_4^-]$ with correct units."
+        },
+        {
+          "point_id": "3c",
+          "points": 1,
+          "description": "Agrees that the initial reverse rate is zero because at least one product concentration in $rate=k_r[BF_3OH^-][HF]$ is initially zero."
+        },
+        {
+          "point_id": "3d_setup",
+          "points": 1,
+          "description": "Sets the forward and reverse rates equal at equilibrium using the equilibrium concentrations."
+        },
+        {
+          "point_id": "3d_value",
+          "points": 1,
+          "description": "Solves for $k_r$ with appropriate units."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2016_FRQ4",
+    "frq_id": "2016_FRQ4",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2016,
+    "question_number": 4,
+    "question_type": "FRQ",
+    "text": "White gold is a common alloy of gold and palladium. The atomic radii are listed below.\n\n| Element | Atomic Radius (pm) |\n|---|---:|\n| Au | 135 |\n| Pd | 140 |\n\n(a) A ring is made from an alloy that is 75 mole percent gold and 25 mole percent palladium. Draw a particle-level diagram of the solid alloy consisting of 12 atoms with a representative proportion of atom types. Your diagram should clearly indicate whether the alloy is interstitial or substitutional. Use empty circles for gold and shaded circles for palladium.\n\nWhite-gold jewelry is often coated with rhodium to modify the color and durability.\n\n(b) A student hypothesizes that placing the ring in a $1.0\\,\\mathrm{M}$ solution of $Rh(NO_3)_3(aq)$ will deposit $Rh$ metal on the ring. Based on the table below, calculate $E^\\circ$ for reactions that may occur between ions in solution and atoms in the ring, and indicate whether the student's hypothesis is correct.\n\n| Half-Reaction | $E^\\circ$ (V) |\n|---|---:|\n| $Au^{3+}(aq)+3e^-\\rightarrow Au(s)$ | 1.50 |\n| $Pd^{2+}(aq)+2e^-\\rightarrow Pd(s)$ | 0.92 |\n| $Rh^{3+}(aq)+3e^-\\rightarrow Rh(s)$ | 0.76 |",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2016/2016_p060_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 4 scoring guideline: award points for a substitutional alloy particle diagram with the correct atom ratio, calculating relevant standard cell potentials for rhodium deposition, and correctly evaluating whether rhodium will deposit on the white-gold ring.",
+      "points": [
+        {
+          "point_id": "4a_ratio",
+          "points": 1,
+          "description": "Draws 12 atoms with a representative 75 percent Au and 25 percent Pd ratio, such as 9 Au atoms and 3 Pd atoms."
+        },
+        {
+          "point_id": "4a_substitutional",
+          "points": 1,
+          "description": "Shows a substitutional alloy, consistent with the similar atomic radii of Au and Pd."
+        },
+        {
+          "point_id": "4b_potentials",
+          "points": 1,
+          "description": "Calculates the relevant standard cell potentials for reducing $Rh^{3+}$ while oxidizing atoms in the ring."
+        },
+        {
+          "point_id": "4b_conclusion",
+          "points": 1,
+          "description": "Correctly concludes whether rhodium deposition is thermodynamically favorable and supports the conclusion with the calculated potentials."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2016_FRQ5",
+    "frq_id": "2016_FRQ5",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2016,
+    "question_number": 5,
+    "question_type": "FRQ",
+    "text": "The first ionization energies for Na and K are given in the table below. Na metal reacts vigorously with water to form hydrogen gas and a metal hydroxide. K metal also reacts vigorously, producing a violet-colored flame.\n\n| Element | First Ionization Energy (J/mol) |\n|---|---:|\n| Na | $4.95\\times10^5$ |\n| K | $4.19\\times10^5$ |\n\n(a) Write the electron configuration for a $K^+$ ion.\n\n(b) Based on atomic structure, explain why the first ionization energy of K is lower than that of Na.\n\n(c) A student hypothesizes that the flame is violet because violet light consists of photons with enough energy to ionize K atoms. The wavelength of the violet light is $423\\,\\mathrm{nm}$.\n\n  i. Calculate the energy, in joules, of one photon of violet light with wavelength $423\\,\\mathrm{nm}$.\n\n  ii. Is the energy of one photon sufficient to ionize a K atom? Justify your answer.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 5 scoring guideline: award points for the potassium ion electron configuration, explaining the lower ionization energy of potassium compared with sodium, calculating photon energy for 423 nm light, and comparing that energy with the ionization energy per atom.",
+      "points": [
+        {
+          "point_id": "5a",
+          "points": 1,
+          "description": "Writes the electron configuration for $K^+$, such as $1s^2 2s^2 2p^6 3s^2 3p^6$ or $[Ar]$."
+        },
+        {
+          "point_id": "5b",
+          "points": 1,
+          "description": "Explains that potassium's valence electron is farther from the nucleus and more shielded than sodium's, so less energy is required to remove it."
+        },
+        {
+          "point_id": "5c_i",
+          "points": 1,
+          "description": "Calculates photon energy using $E=hc/\\lambda$ for $423\\,\\mathrm{nm}$."
+        },
+        {
+          "point_id": "5c_ii",
+          "points": 1,
+          "description": "Compares the energy of one photon with the ionization energy per potassium atom and concludes whether one photon is sufficient."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2016_FRQ6",
+    "frq_id": "2016_FRQ6",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2016,
+    "question_number": 6,
+    "question_type": "FRQ",
+    "text": "Propanoic acid, $C_2H_5COOH$, is an organic acid that is a liquid at room temperature.\n\n(a) An incomplete Lewis diagram for propanoic acid is provided below. Complete the diagram, showing how the remaining atoms in the molecule are arranged around the carbon atom marked with an asterisk. Your structure should minimize formal charge and include any lone pairs of electrons.\n\n(b) Identify the hybridization of the carbon atom marked with the asterisk.\n\n(c) Propanoic acid has a lower boiling point than butanoic acid, $C_3H_7COOH$.\n\n  i. Identify all types of intermolecular forces present among molecules in propanoic acid.\n\n  ii. Which type of intermolecular force identified in part (c)(i) is most responsible for the difference in boiling points of the two acids?",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2016/2016_p064_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 6 scoring guideline: award points for completing the Lewis structure of propanoic acid, identifying the hybridization of the marked carbon, listing intermolecular forces in propanoic acid, and identifying London dispersion forces as most responsible for the boiling point difference between propanoic and butanoic acid.",
+      "points": [
+        {
+          "point_id": "6a",
+          "points": 1,
+          "description": "Completes a valid Lewis structure for propanoic acid around the marked carbon, including the carboxylic acid group and lone pairs on oxygen."
+        },
+        {
+          "point_id": "6b",
+          "points": 1,
+          "description": "Identifies the marked carbon as $sp^2$ hybridized."
+        },
+        {
+          "point_id": "6c_i",
+          "points": 1,
+          "description": "Identifies London dispersion forces, dipole-dipole interactions, and hydrogen bonding among propanoic acid molecules."
+        },
+        {
+          "point_id": "6c_ii",
+          "points": 1,
+          "description": "Identifies London dispersion forces as most responsible for the boiling point difference because butanoic acid has a larger electron cloud."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2016_FRQ7",
+    "frq_id": "2016_FRQ7",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2016,
+    "question_number": 7,
+    "question_type": "FRQ",
+    "text": "A student has $100.0\\,\\mathrm{mL}$ of $0.400\\,\\mathrm{M}$ $CuSO_4(aq)$ and is asked to make $100.0\\,\\mathrm{mL}$ of $0.150\\,\\mathrm{M}$ $CuSO_4(aq)$ for a spectrophotometry experiment. Available equipment includes a centigram balance, weighing paper, funnel, $10\\,\\mathrm{mL}$ beaker, $150\\,\\mathrm{mL}$ beaker, $50\\,\\mathrm{mL}$ graduated cylinder, $100\\,\\mathrm{mL}$ volumetric flask, $50\\,\\mathrm{mL}$ buret, and distilled water.\n\n(a) Calculate the volume of $0.400\\,\\mathrm{M}$ $CuSO_4(aq)$ required.\n\n(b) Briefly describe the essential steps to most accurately prepare the $0.150\\,\\mathrm{M}$ $CuSO_4(aq)$ from the $0.400\\,\\mathrm{M}$ $CuSO_4(aq)$ using the listed equipment.\n\nThe student plans to conduct a spectrophotometric analysis to determine the concentration of $Cu^{2+}(aq)$ in a solution. The solution contains a small amount of $Co(NO_3)_2(aq)$ as a contaminant. The absorbance curves for aqueous $Co^{2+}$ and $Cu^{2+}$ solutions are shown below.\n\n(c) The student wants to select a wavelength for the analysis of $Cu^{2+}$ that gives the greatest sensitivity and minimizes interference from $Co^{2+}$. Which wavelength should the student use? Justify your choice.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2016/2016_p066_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 7 scoring guideline: award points for calculating the stock copper sulfate volume, describing accurate volumetric dilution steps, selecting a wavelength with strong copper absorbance and minimal cobalt interference, and justifying that choice from the absorbance curves.",
+      "points": [
+        {
+          "point_id": "7a",
+          "points": 1,
+          "description": "Calculates the required volume of $0.400\\,\\mathrm{M}$ $CuSO_4$ using $M_1V_1=M_2V_2$, giving $37.5\\,\\mathrm{mL}$."
+        },
+        {
+          "point_id": "7b_measure",
+          "points": 1,
+          "description": "Describes measuring the calculated stock volume accurately, such as with the buret or suitable volumetric transfer."
+        },
+        {
+          "point_id": "7b_dilute",
+          "points": 1,
+          "description": "Describes transferring to a $100\\,\\mathrm{mL}$ volumetric flask and diluting to the mark with distilled water, then mixing thoroughly."
+        },
+        {
+          "point_id": "7c",
+          "points": 1,
+          "description": "Selects a wavelength near the strong $Cu^{2+}$ absorbance and low $Co^{2+}$ absorbance region, with a justification based on sensitivity and minimal interference."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
+      "prompt_pages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rubric_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2018_FRQ1",
+    "frq_id": "2018_FRQ1",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2018,
+    "question_number": 1,
+    "question_type": "FRQ",
+    "text": "Elemental sulfur can exist as molecules with the formula $S_8$. The $S_8$ molecule is represented by the incomplete Lewis diagram above.\n\n(a) The diagram of $S_8$ shows only bonding pairs of electrons. How many lone pairs of electrons does each S atom in the molecule have?\n\n(b) Based on your answer to part (a), determine the expected value of the $S-S-S$ bond angles in the $S_8$ molecule.\n\n(c) Write the electron configuration for the S atom in its ground state.\n\n(d) The complete photoelectron spectrum for the element chlorine is represented below. Peak X in the spectrum corresponds to the binding energy of electrons in a certain orbital of chlorine atoms. The electrons in this orbital of chlorine have a binding energy of $273\\,\\mathrm{MJ/mol}$, while the electrons in the same orbital of sulfur atoms have a binding energy of $239\\,\\mathrm{MJ/mol}$.\n\n  i. Identify the orbital and explain the difference between the binding energies in terms of Coulombic forces.\n\n  ii. Peak Y corresponds to the electrons in certain orbitals of chlorine atoms. On the spectrum shown, carefully draw the peak that would correspond to the electrons in the same orbitals of sulfur atoms.\n\n$3S_8+8OH^-\\rightarrow8S_3^-+4HOOH$\n\nIn an experiment, a student studies the kinetics of the reaction represented above and obtains the data shown in the following table.\n\n| Experiment | Initial $[S_8]$ (M) | Initial $[OH^-]$ (M) | Initial Reaction Rate (M/s) |\n|---|---:|---:|---:|\n| Trial 1 | 0.100 | 0.0100 | 0.699 |\n| Trial 2 | 0.300 | 0.0100 | 2.10 |\n| Trial 3 | 0.300 | ? | 4.19 |\n\n(e) Use the data in the table to do the following.\n\n  i. Determine the order of the reaction with respect to $S_8$. Justify your answer.\n\n  ii. Determine the value of $[OH^-]$ that was used in trial 3, considering that the reaction is first order with respect to $OH^-$. Justify your answer.\n\nThe next day the student conducts trial 4 using the same concentrations of $S_8$ and $OH^-$ as in trial 1, but the reaction occurs at a much slower rate than the reaction in trial 1. The student observes that the temperature in the lab is lower than it was the day before.\n\n(f) Using particle-level reasoning, provide TWO explanations that help to account for the fact that the reaction rate is slower in trial 4.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [
+      "images/ap/chemistry/2018/2018_FRQ1_s8_diagram.png",
+      "images/ap/chemistry/2018/2018_FRQ1_pes_graph.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Kinetics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 1 scoring guideline: award points for two lone pairs on each sulfur atom; a valid S-S-S bond angle in the tetrahedral range; the ground-state electron configuration for sulfur; identifying peak X as 1s and explaining the larger chlorine binding energy by stronger Coulombic attraction; drawing the sulfur peak to the right of peak Y with the correct relative height; first-order kinetics with respect to S8 from trials 1 and 2; [OH-] = 0.0200 M for trial 3; and two particle-level explanations for the slower rate at lower temperature, one involving collision energy and one involving collision frequency.",
+      "points": [
+        {
+          "point_id": "1a",
+          "points": 1,
+          "description": "States that each sulfur atom has two lone pairs."
+        },
+        {
+          "point_id": "1b",
+          "points": 1,
+          "description": "Gives an S-S-S bond angle in the accepted tetrahedral range, about 104 degrees to 110 degrees."
+        },
+        {
+          "point_id": "1c",
+          "points": 1,
+          "description": "Writes the sulfur ground-state electron configuration, such as $1s^2 2s^2 2p^6 3s^2 3p^4$ or $[Ne]3s^2 3p^4$."
+        },
+        {
+          "point_id": "1d_i_orbital",
+          "points": 1,
+          "description": "Identifies peak X as the $1s$ orbital."
+        },
+        {
+          "point_id": "1d_i_explanation",
+          "points": 1,
+          "description": "Explains that chlorine has one more proton than sulfur, so its $1s$ electrons experience stronger Coulombic attraction and have greater binding energy."
+        },
+        {
+          "point_id": "1d_ii",
+          "points": 1,
+          "description": "Draws the sulfur peak corresponding to peak Y to the right of peak Y and with the correct relative height."
+        },
+        {
+          "point_id": "1e_i",
+          "points": 1,
+          "description": "Determines that the reaction is first order with respect to $S_8$ and justifies it using trials 1 and 2."
+        },
+        {
+          "point_id": "1e_ii",
+          "points": 1,
+          "description": "Determines $[OH^-]=0.0200\\,\\mathrm{M}$ for trial 3 and justifies it from the doubled rate at constant $[S_8]$."
+        },
+        {
+          "point_id": "1f_energy",
+          "points": 1,
+          "description": "Explains that the lower temperature gives particles lower kinetic energy, so fewer collisions have enough energy to react."
+        },
+        {
+          "point_id": "1f_frequency",
+          "points": 1,
+          "description": "Explains that lower particle speeds at lower temperature reduce the collision frequency."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
+      "prompt_pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "rubric_pages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2018_FRQ2",
+    "frq_id": "2018_FRQ2",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2018,
+    "question_number": 2,
+    "question_type": "FRQ",
+    "text": "Answer the following questions relating to $HCl$, $CH_3Cl$, and $CH_3Br$.\n\n(a) $HCl(g)$ can be prepared by the reaction of concentrated $H_2SO_4(aq)$ with $NaCl(s)$, as represented by the following equation.\n\n$H_2SO_4(aq)+2NaCl(s)\\rightarrow2HCl(g)+Na_2SO_4(aq)$\n\n  i. A student claims that the reaction is a redox reaction. Is the student correct? Justify your answer.\n\n  ii. Calculate the mass, in grams, of $NaCl(s)$ needed to react with excess $H_2SO_4(aq)$ to produce $3.00\\,\\mathrm{g}$ of $HCl(g)$. Assume that the reaction goes to completion.\n\n$HCl(g)$ can react with methanol vapor, $CH_3OH(g)$, to produce $CH_3Cl(g)$, as represented by the following equation.\n\n$CH_3OH(g)+HCl(g)\\rightleftharpoons CH_3Cl(g)+H_2O(g)$\n\n$K_p=4.7\\times10^3$ at $400\\,\\mathrm{K}$.\n\n(b) $CH_3OH(g)$ and $HCl(g)$ are combined in a $10.00\\,\\mathrm{L}$ sealed reaction vessel and allowed to reach equilibrium at $400\\,\\mathrm{K}$. The initial partial pressure of $CH_3OH(g)$ in the vessel is $0.250\\,\\mathrm{atm}$ and that of $HCl(g)$ is $0.600\\,\\mathrm{atm}$.\n\n  i. Does the total pressure in the vessel increase, decrease, or remain the same as equilibrium is approached? Justify your answer in terms of the reaction stoichiometry.\n\n  ii. Considering the value of $K_p$, calculate the final partial pressure of $HCl(g)$ after the system reaches equilibrium at $400\\,\\mathrm{K}$.\n\n  iii. The student claims that the final partial pressure of $CH_3OH(g)$ at equilibrium is very small but not exactly zero. Do you agree or disagree with the student's claim? Justify your answer.\n\n(c) The table below shows some data for the compounds $CH_3Cl$ and $CH_3Br$.\n\n| Compound | Molar Mass (g/mol) | Dipole Moment (D) | Boiling Point (K) | $\\Delta H^\\circ_{vap}$ (kJ/mol) |\n|---|---:|---:|---:|---:|\n| $CH_3Cl$ | 50.5 | 1.87 | 249 | 18.9 |\n| $CH_3Br$ | 94.9 | 1.81 | 277 | 22.8 |\n\n  i. Identify all the types of intermolecular forces that exist among molecules in $CH_3Cl(l)$.\n\n  ii. In terms of intermolecular forces, explain why the boiling point of $CH_3Br(l)$ is greater than that of $CH_3Cl(l)$.\n\n(d) A $2.00\\,\\mathrm{mL}$ sealed glass vial containing a $1.00\\,\\mathrm{g}$ sample of $CH_3Cl(l)$ is stored in a freezer at $233\\,\\mathrm{K}$.\n\n  i. Calculate the pressure in the vial at $298\\,\\mathrm{K}$ assuming that all the $CH_3Cl(l)$ vaporizes.\n\n  ii. Explain why it would be unsafe to remove the vial from the freezer and leave it on a lab bench at $298\\,\\mathrm{K}$.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Intermolecular Forces and Properties",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 2 scoring guideline: award points for recognizing that the HCl preparation is not redox because oxidation numbers do not change; calculating 4.81 g NaCl for 3.00 g HCl; explaining that total pressure remains the same because two moles of gaseous reactants produce two moles of gaseous products; using the large Kp to find final PHCl = 0.350 atm; agreeing that final PCH3OH is very small but not zero; identifying London dispersion and dipole-dipole forces in liquid CH3Cl; explaining the higher boiling point of CH3Br by stronger London dispersion forces from a larger, more polarizable electron cloud; calculating about 242 atm for vaporized CH3Cl in the vial; and explaining the safety risk from increased pressure when the liquid vaporizes.",
+      "points": [
+        {
+          "point_id": "2a_i",
+          "points": 1,
+          "description": "States that the reaction is not a redox reaction and justifies that no oxidation numbers change."
+        },
+        {
+          "point_id": "2a_ii_moles",
+          "points": 1,
+          "description": "Correctly determines the moles of $HCl$ produced from $3.00\\,\\mathrm{g}$."
+        },
+        {
+          "point_id": "2a_ii_mass",
+          "points": 1,
+          "description": "Calculates the required mass of $NaCl$ as about $4.81\\,\\mathrm{g}$."
+        },
+        {
+          "point_id": "2b_i",
+          "points": 1,
+          "description": "States that total pressure remains the same and justifies it from the equal number of gaseous moles on both sides of the equation."
+        },
+        {
+          "point_id": "2b_ii",
+          "points": 1,
+          "description": "Uses the large $K_p$ to determine the final partial pressure of $HCl(g)$ as about $0.350\\,\\mathrm{atm}$."
+        },
+        {
+          "point_id": "2b_iii",
+          "points": 1,
+          "description": "Agrees that the final partial pressure of $CH_3OH(g)$ is very small but not exactly zero, with a valid equilibrium justification."
+        },
+        {
+          "point_id": "2c_i",
+          "points": 1,
+          "description": "Identifies London dispersion forces and dipole-dipole forces among molecules in liquid $CH_3Cl$."
+        },
+        {
+          "point_id": "2c_ii",
+          "points": 1,
+          "description": "Explains that $CH_3Br$ has a larger, more polarizable electron cloud, producing stronger London dispersion forces and a higher boiling point than $CH_3Cl$."
+        },
+        {
+          "point_id": "2d_i",
+          "points": 1,
+          "description": "Calculates the pressure in the vial at $298\\,\\mathrm{K}$ as about $242\\,\\mathrm{atm}$, with appropriate units."
+        },
+        {
+          "point_id": "2d_ii",
+          "points": 1,
+          "description": "Explains that warming the vial is unsafe because vaporization greatly increases the pressure and may exceed the strength of the glass."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
+      "prompt_pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "rubric_pages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2018_FRQ3",
+    "frq_id": "2018_FRQ3",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2018,
+    "question_number": 3,
+    "question_type": "FRQ",
+    "text": "$3Cu^+(aq)+Au^{3+}(aq)\\rightarrow3Cu^{2+}(aq)+Au(s)$\n\nA student studying the reaction represented above constructs a voltaic cell as shown in the diagram below. The cell contains an $Au(s)$ electrode in a beaker containing $1.00\\,\\mathrm{M}$ $Au(NO_3)_3(aq)$ and a $Pt(s)$ electrode in a beaker containing $1.00\\,\\mathrm{M}$ $CuNO_3(aq)$ and $1.00\\,\\mathrm{M}$ $Cu(NO_3)_2(aq)$.\n\nThe standard reduction potentials associated with the cell are given in the following table.\n\n| Half-reaction | $E^\\circ$ (V) |\n|---|---:|\n| $Cu^{2+}(aq)+e^-\\rightarrow Cu^+(aq)$ | 0.16 |\n| $Au^{3+}(aq)+3e^-\\rightarrow Au(s)$ | 1.50 |\n\n(a) Calculate the value of the standard cell potential, $E^\\circ$.\n\n(b) Does the mass of the $Pt(s)$ electrode increase, decrease, or remain the same as the cell operates? Justify your answer.\n\nAn expanded view of the Au half-cell before the reaction occurs is shown in box A below. An expanded view of the Au electrode after the cell operates for a period of time is shown in box B below.\n\n(c) Assuming that the representation in box A is accurate, explain what is wrong with the stoichiometry represented in box B.\n\n(d) After the cell has operated for $30.0$ minutes, $0.185\\,\\mathrm{g}$ of $Au(s)$ is deposited on the Au electrode.\n\n  i. Calculate the number of moles of $Au(s)$ deposited.\n\n  ii. Calculate the average current that passed through the cell during the deposition of $Au(s)$.\n\nThe student adds some $NaCl(s)$ to the half-cell that contains $Cu^+(aq)$ and $Cu^{2+}(aq)$, and a precipitate forms.\n\n(e) Based on the information in the following table, determine the identity of the precipitate. Justify your answer with a calculation.\n\n| Compound | Solubility (mol/L) | $K_{sp}$ |\n|---|---:|---:|\n| $CuCl$ | ? | $1.7\\times10^{-7}$ |\n| $CuCl_2$ | $5.2$ | ? |\n\n(f) Write the net ionic equation for the formation of the precipitate.\n\n(g) The student predicts that the cell voltage will increase after the precipitate forms. Do you agree with the student's prediction? Justify your answer.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [
+      "images/ap/chemistry/2018/2018_FRQ3_cell.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Applications of Thermodynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 3 scoring guideline: award points for Edeg = 1.34 V; recognizing that the Pt electrode mass remains unchanged because Pt is inert and copper does not plate there; explaining the charge/stoichiometry error in box B; calculating 9.39e-4 mol Au; using three electrons per Au and calculating current about 0.151 A; calculating CuCl solubility about 4.1e-4 M and identifying CuCl as the precipitate; writing the net ionic precipitation equation; and disagreeing that the voltage increases because removing Cu+ increases Q toward K and decreases cell voltage.",
+      "points": [
+        {
+          "point_id": "3a",
+          "points": 1,
+          "description": "Calculates the standard cell potential as $E^\\circ=1.50\\,\\mathrm{V}-0.16\\,\\mathrm{V}=1.34\\,\\mathrm{V}$."
+        },
+        {
+          "point_id": "3b",
+          "points": 1,
+          "description": "States that the mass of the $Pt(s)$ electrode remains the same because platinum is inert and copper does not deposit on it."
+        },
+        {
+          "point_id": "3c",
+          "points": 1,
+          "description": "Explains that box B has incorrect stoichiometry or charge balance; electron loss and gain must balance, so the net charge representation is inconsistent."
+        },
+        {
+          "point_id": "3d_i",
+          "points": 1,
+          "description": "Calculates the amount of gold deposited as about $9.39\\times10^{-4}\\,\\mathrm{mol}\\,Au$."
+        },
+        {
+          "point_id": "3d_ii_electrons",
+          "points": 1,
+          "description": "Uses the correct electron stoichiometry, $3\\,\\mathrm{mol}\\,e^-$ per $1\\,\\mathrm{mol}\\,Au$."
+        },
+        {
+          "point_id": "3d_ii_current",
+          "points": 1,
+          "description": "Calculates the average current as about $0.151\\,\\mathrm{A}$."
+        },
+        {
+          "point_id": "3e_solubility",
+          "points": 1,
+          "description": "Calculates the solubility of $CuCl$ from $K_{sp}=x^2$ as about $4.1\\times10^{-4}\\,\\mathrm{M}$."
+        },
+        {
+          "point_id": "3e_identity",
+          "points": 1,
+          "description": "Identifies $CuCl(s)$ as the precipitate because it has lower solubility than $CuCl_2$."
+        },
+        {
+          "point_id": "3f",
+          "points": 1,
+          "description": "Writes the net ionic equation $Cu^+(aq)+Cl^-(aq)\\rightarrow CuCl(s)$."
+        },
+        {
+          "point_id": "3g",
+          "points": 1,
+          "description": "Disagrees with the prediction and justifies that forming the precipitate decreases $[Cu^+]$, increases $Q$ toward $K$, and decreases the cell voltage."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
+      "prompt_pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "rubric_pages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2018_FRQ4",
+    "frq_id": "2018_FRQ4",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2018,
+    "question_number": 4,
+    "question_type": "FRQ",
+    "text": "To spectrophotometrically determine the mass percent of cobalt in an ore containing cobalt and some inert materials, solutions with known molar concentration of $Co^{2+}$ are prepared and the absorbance of each solution is measured at the wavelength of optimum absorbance. The data are used to create the calibration plot shown below.\n\nA $0.630\\,\\mathrm{g}$ sample of the ore is completely dissolved in concentrated $HNO_3(aq)$. The mixture is diluted with water to a final volume of $50.00\\,\\mathrm{mL}$. Assume that all the cobalt in the ore sample is converted to $Co^{2+}(aq)$.\n\n(a) What is the molar concentration of $Co^{2+}$ in the solution if the absorbance of a sample of the solution is $0.74$?\n\n(b) Calculate the number of moles of $Co^{2+}(aq)$ in the $50.00\\,\\mathrm{mL}$ solution.\n\n(c) Calculate the mass percent of $Co$ in the $0.630\\,\\mathrm{g}$ sample of the ore.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2018/2018_p064_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Intermolecular Forces and Properties",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 4 scoring guideline: award points for reading the calibration curve to obtain approximately 0.0130 M Co2+ for absorbance 0.74; calculating moles of Co2+ in 50.00 mL; converting that amount to grams of cobalt; and calculating the mass percent of cobalt in the ore sample.",
+      "points": [
+        {
+          "point_id": "4a",
+          "points": 1,
+          "description": "Uses the calibration graph to determine $[Co^{2+}]$ as about $0.0130\\,\\mathrm{M}$, with an accepted range of roughly $0.0125$ to $0.0135\\,\\mathrm{M}$."
+        },
+        {
+          "point_id": "4b",
+          "points": 1,
+          "description": "Calculates the moles of $Co^{2+}$ in $50.00\\,\\mathrm{mL}$ of solution, about $6.50\\times10^{-4}\\,\\mathrm{mol}$ using $0.0130\\,\\mathrm{M}$."
+        },
+        {
+          "point_id": "4c_mass",
+          "points": 1,
+          "description": "Converts the moles of cobalt from part (b) to grams of cobalt, about $0.0383\\,\\mathrm{g}$."
+        },
+        {
+          "point_id": "4c_percent",
+          "points": 1,
+          "description": "Calculates the mass percent of cobalt in the $0.630\\,\\mathrm{g}$ ore sample, about $6.08\\%$, consistent with the previous parts."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
+      "prompt_pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "rubric_pages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2018_FRQ5",
+    "frq_id": "2018_FRQ5",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2018,
+    "question_number": 5,
+    "question_type": "FRQ",
+    "text": "$3Ag(s)+4HNO_3(aq)\\rightarrow3AgNO_3(aq)+NO(g)+2H_2O(l)$\n\nA student investigates the reaction between $Ag(s)$ and $HNO_3(aq)$ represented by the equation above.\n\n(a) Predict the sign of the entropy change, $\\Delta S^\\circ$, for the reaction. Justify your answer.\n\n(b) Use the information in the table below to calculate the value of $\\Delta H^\\circ_{rxn}$, the standard enthalpy change for the reaction, in kilojoules per mole of reaction.\n\n| Substance | $\\Delta H^\\circ_f$ (kJ/mol) |\n|---|---:|\n| $HNO_3(aq)$ | -207 |\n| $AgNO_3(aq)$ | -101 |\n| $NO(g)$ | 90.0 |\n| $H_2O(l)$ | -286 |\n\n(c) Based on your answers to parts (a) and (b), is the reaction more likely to be thermodynamically favorable at $25^\\circ\\mathrm{C}$ or at $95^\\circ\\mathrm{C}$? Justify your answer.\n\n(d) The student runs the reaction using a 3 to 4 mole ratio of $Ag(s)$ to $HNO_3(aq)$. Suggest a method the student can use to isolate solid $AgNO_3$ from the other products of the reaction.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Thermodynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 5 scoring guideline: award points for predicting a positive entropy change because gas is produced; calculating the standard enthalpy change of reaction as about +43 kJ/mol reaction; identifying 95 degrees Celsius as more favorable because the positive T Delta S term makes Delta G more likely to be negative at higher temperature; and suggesting a valid method such as evaporating water to isolate solid AgNO3.",
+      "points": [
+        {
+          "point_id": "5a",
+          "points": 1,
+          "description": "Predicts that $\\Delta S^\\circ$ is positive and justifies that the reaction produces gas from reactants with no gas."
+        },
+        {
+          "point_id": "5b",
+          "points": 1,
+          "description": "Correctly calculates $\\Delta H^\\circ_{rxn}$ as about $+43\\,\\mathrm{kJ/mol_{rxn}}$ from the standard heats of formation."
+        },
+        {
+          "point_id": "5c",
+          "points": 1,
+          "description": "Identifies $95^\\circ\\mathrm{C}$ as more favorable and explains using $\\Delta G^\\circ=\\Delta H^\\circ-T\\Delta S^\\circ$ with positive $\\Delta S^\\circ$."
+        },
+        {
+          "point_id": "5d",
+          "points": 1,
+          "description": "Suggests a valid method to isolate solid $AgNO_3$, such as evaporating the water."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
+      "prompt_pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "rubric_pages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2018_FRQ6",
+    "frq_id": "2018_FRQ6",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2018,
+    "question_number": 6,
+    "question_type": "FRQ",
+    "text": "A student is asked to determine what mass of butane, $C_4H_{10}(g)$, needs to burn in order to raise the temperature of a $1650\\,\\mathrm{g}$ beaker of sand by $180.0^\\circ\\mathrm{C}$. The student is provided with the equipment shown below.\n\n(a) Calculate the amount of heat energy needed to raise the temperature of the beaker of sand by $180.0^\\circ\\mathrm{C}$. Assume that all the heat energy from the burner is transferred to the beaker of sand and that the specific heat capacity of the beaker and sand together is $0.810\\,\\mathrm{J/(g\\cdot ^\\circ C)}$.\n\nThe student runs the experiment and collects the data shown in the table below.\n\n| Quantity | Value |\n|---|---:|\n| Mass of the beaker and sand | $1650\\,\\mathrm{g}$ |\n| Mass of butane burner before combustion | $25.26\\,\\mathrm{g}$ |\n| Mass of butane burner after combustion | $18.20\\,\\mathrm{g}$ |\n| Initial temperature of the beaker of sand | $20.0^\\circ\\mathrm{C}$ |\n| Final temperature of the beaker of sand | $200.0^\\circ\\mathrm{C}$ |\n\n(b) Calculate the number of moles of butane that was used in the experiment. Report your answer to the appropriate number of significant figures.\n\nThe combustion of butane is represented by the equation below.\n\n$C_4H_{10}(g)+\\frac{13}{2}O_2(g)\\rightarrow5H_2O(g)+4CO_2(g)$, $\\Delta H^\\circ_{rxn}=-2659\\,\\mathrm{kJ/mol_{rxn}}$.\n\n(c) Using the balanced equation for the combustion of butane and $\\Delta H^\\circ_{rxn}$, determine the amount of heat energy produced by the combustion of butane in the experiment.\n\n(d) The student claims that some of the heat energy produced by the combustion of butane was lost to the air surrounding the system. Do your answers to parts (a) and (c) support the student's claim? Explain.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Thermodynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 6 scoring guideline: award points for calculating 241 kJ needed to heat the beaker and sand; calculating 0.121 mol butane used with appropriate significant figures; calculating 322 kJ produced by butane combustion; and explaining that the larger heat produced than heat absorbed supports heat loss to the surroundings.",
+      "points": [
+        {
+          "point_id": "6a",
+          "points": 1,
+          "description": "Calculates the heat needed using $q=mc\\Delta T$: $1650\\,\\mathrm{g}\\times0.810\\,\\mathrm{J/(g\\cdot ^\\circ C)}\\times180.0^\\circ\\mathrm{C}\\approx241\\,\\mathrm{kJ}$."
+        },
+        {
+          "point_id": "6b",
+          "points": 1,
+          "description": "Calculates the amount of butane used from the mass difference and molar mass as about $0.121\\,\\mathrm{mol}$ with appropriate significant figures."
+        },
+        {
+          "point_id": "6c",
+          "points": 1,
+          "description": "Uses $\\Delta H^\\circ_{rxn}$ to determine that combustion of the butane produced about $322\\,\\mathrm{kJ}$ of heat."
+        },
+        {
+          "point_id": "6d",
+          "points": 1,
+          "description": "States that the results support heat loss to the surroundings because the heat produced by combustion is greater than the heat absorbed by the sand and beaker."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
+      "prompt_pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "rubric_pages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2018_FRQ7",
+    "frq_id": "2018_FRQ7",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2018,
+    "question_number": 7,
+    "question_type": "FRQ",
+    "text": "A student prepares three solutions, X, Y, and Z, as described in the table below.\n\n| Solution | Preparation |\n|---|---|\n| X | $100\\,\\mathrm{mL}$ of $0.10\\,\\mathrm{M}$ $NaOH(aq)$ is mixed with $100\\,\\mathrm{mL}$ of $0.10\\,\\mathrm{M}$ $HBr(aq)$. |\n| Y | $100\\,\\mathrm{mL}$ of $0.10\\,\\mathrm{M}$ $NaBr(aq)$ is mixed with $100\\,\\mathrm{mL}$ of $0.10\\,\\mathrm{M}$ $HBr(aq)$. |\n| Z | $100\\,\\mathrm{mL}$ of $0.10\\,\\mathrm{M}$ $HC_2H_3O_2(aq)$ is mixed with $100\\,\\mathrm{mL}$ of $0.10\\,\\mathrm{M}$ $NaC_2H_3O_2(aq)$. |\n\nThe values of $K_a$ for the acidic species in the solutions are given in the table below.\n\n| Species | $K_a$ |\n|---|---:|\n| $HBr(aq)$ | much greater than 1 |\n| $HC_2H_3O_2(aq)$ | $1.8\\times10^{-5}$ |\n\n(a) Rank the solutions in order of increasing pH. Write the letters of the solutions from lowest pH to highest pH, and explain your reasoning.\n\n(b) Does the pH of solution Y increase, decrease, or remain the same when $100\\,\\mathrm{mL}$ of water is added? Justify your answer.\n\n(c) The student adds $0.0010\\,\\mathrm{mol}$ of $NaOH(s)$ to solution Y and adds $0.0010\\,\\mathrm{mol}$ of $NaOH(s)$ to solution Z. Assume that the volume of each solution does not change when the $NaOH(s)$ is added. The pH of solution Y changes much more than the pH of solution Z changes. Explain this observation.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 7 scoring guideline: award points for ranking the solutions in increasing pH as Y < Z < X; explaining the ranking using strong acid, buffer, and neutral strong acid-strong base solution behavior; stating that diluting solution Y increases pH because [H+] decreases; and explaining that adding the same small amount of NaOH changes solution Y much more than solution Z because Z is a buffer and Y is not.",
+      "points": [
+        {
+          "point_id": "7a_order",
+          "points": 1,
+          "description": "Ranks the solutions in increasing pH as $Y<Z<X$."
+        },
+        {
+          "point_id": "7a_explanation",
+          "points": 1,
+          "description": "Explains the ranking: solution Y is strong acid, solution Z is an acetic acid/acetate buffer with pH near $pK_a$, and solution X is approximately neutral from equimolar strong acid and strong base."
+        },
+        {
+          "point_id": "7b",
+          "points": 1,
+          "description": "States that the pH of solution Y increases when water is added because dilution decreases $[H^+]$."
+        },
+        {
+          "point_id": "7c",
+          "points": 1,
+          "description": "Explains that solution Z changes less after adding $NaOH$ because it is a buffer containing a weak acid and its conjugate base, whereas solution Y is not a buffer."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
+      "prompt_pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "rubric_pages": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2019_FRQ1",
+    "frq_id": "2019_FRQ1",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2019,
+    "question_number": 1,
+    "question_type": "FRQ",
+    "text": "$C_2H_5OH(l)+3O_2(g)\\rightarrow2CO_2(g)+3H_2O(g)$, $\\Delta H^\\circ_{comb}=-1270\\,\\mathrm{kJ/mol_{rxn}}$\n\nEthanol, $C_2H_5OH$, will combust in air according to the equation above.\n\n(a) Is $O_2(g)$ oxidized in the reaction, or is it reduced? Justify your answer in terms of oxidation numbers.\n\n(b) When a sample of $C_2H_5OH$ was combusted, the volume of $CO_2(g)$ produced was $18.0\\,\\mathrm{L}$ when measured at $21.7^\\circ\\mathrm{C}$ and $1.03\\,\\mathrm{atm}$. Determine the number of moles of $CO_2(g)$ that was produced.\n\n(c) Determine the volume of $C_2H_5OH(l)$, in milliliters, that was combusted to produce the volume of $CO_2(g)$ collected in part (b). The density of $C_2H_5OH(l)$ is $0.79\\,\\mathrm{g/mL}$.\n\n(d) Determine the amount of heat, in kilojoules, that is released by the combustion reaction.\n\nThe combustion reaction occurred in a closed room containing $5.56\\times10^4\\,\\mathrm{g}$ of air originally at $21.7^\\circ\\mathrm{C}$. Assume that all of the heat produced by the reaction was absorbed by the air, whose specific heat is $1.005\\,\\mathrm{J/(g\\cdot ^\\circ C)}$.\n\n(e) Determine the final temperature of the air in the room after the combustion.\n\n(f) The boiling points of ethanol and dimethyl ether are provided in the following table. Identify the intermolecular force that is most responsible for the difference in boiling point. In terms of this force, explain why the boiling point of ethanol is higher than that of dimethyl ether.\n\n| Compound | Structural Formula | Boiling Point ($^\\circ\\mathrm{C}$) |\n|---|---|---:|\n| Ethanol | see structural formula image | 78 |\n| Dimethyl ether | see structural formula image | -24 |\n\nOne method of producing ethanol is by the reaction of ethene and water, as represented below.\n\n$C_2H_4(g)+H_2O(g)\\rightleftharpoons C_2H_5OH(g)$, $\\Delta H^\\circ=-45\\,\\mathrm{kJ/mol_{rxn}}$\n\n(g) A chemist wants to run the reaction and maximize the amount of $C_2H_5OH(g)$ produced. Identify two ways the chemist could change the reaction conditions, other than adding or removing any chemical species, to favor the formation of more product. Justify your answer.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [
+      "images/ap/chemistry/2019/2019_p043_img01.png",
+      "images/ap/chemistry/2019/2019_p043_img02.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 1 scoring guideline: award points for oxidation-number reasoning, gas-law moles of carbon dioxide, ethanol stoichiometry and volume, heat released, final air temperature, intermolecular-force explanation, and two justified equilibrium-condition changes that favor ethanol production.",
+      "points": [
+        {
+          "point_id": "1a",
+          "points": 1,
+          "description": "States that $O_2$ is reduced and justifies with oxidation number changing from 0 in $O_2$ to $-2$ in $CO_2$ and $H_2O$."
+        },
+        {
+          "point_id": "1b",
+          "points": 1,
+          "description": "Calculates $n=PV/RT$ for $CO_2$ and obtains about $0.766\\,\\mathrm{mol}$."
+        },
+        {
+          "point_id": "1c_stoich",
+          "points": 1,
+          "description": "Uses the stoichiometric ratio of 1 mol ethanol to 2 mol carbon dioxide."
+        },
+        {
+          "point_id": "1c_volume",
+          "points": 1,
+          "description": "Calculates the ethanol volume using molar mass and density, about $22\\,\\mathrm{mL}$."
+        },
+        {
+          "point_id": "1d",
+          "points": 1,
+          "description": "Calculates the heat released from the combustion enthalpy, about $486\\,\\mathrm{kJ}$ released."
+        },
+        {
+          "point_id": "1e",
+          "points": 1,
+          "description": "Uses $q=mc\\Delta T$ for the air and obtains a final temperature of about $30.4^\\circ\\mathrm{C}$."
+        },
+        {
+          "point_id": "1f_force",
+          "points": 1,
+          "description": "Identifies hydrogen bonding as the intermolecular force most responsible for the boiling-point difference."
+        },
+        {
+          "point_id": "1f_explain",
+          "points": 1,
+          "description": "Explains that ethanol molecules hydrogen bond with one another whereas dimethyl ether molecules do not, giving ethanol stronger intermolecular attractions and a higher boiling point."
+        },
+        {
+          "point_id": "1g_pressure",
+          "points": 1,
+          "description": "Identifies decreasing volume or increasing pressure and explains that the equilibrium shifts toward the side with fewer moles of gas, favoring ethanol."
+        },
+        {
+          "point_id": "1g_temperature",
+          "points": 1,
+          "description": "Identifies lowering temperature and explains that lower temperature favors the exothermic forward reaction."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
+      "prompt_pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "rubric_pages": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2019_FRQ2",
+    "frq_id": "2019_FRQ2",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2019,
+    "question_number": 2,
+    "question_type": "FRQ",
+    "text": "$2H_2O_2(aq)\\rightarrow2H_2O(l)+O_2(g)$\n\nHydrogen peroxide, $H_2O_2$, decomposes according to the equation above. This reaction is thermodynamically favorable at room temperature.\n\n(a) A particulate representation of the reactants is shown below in the box on the left. In the box below on the right, draw the particulate representation of all the molecules that would be produced from these four reactant molecules.\n\n(b) Shown below is a potential energy diagram for the uncatalyzed decomposition of $H_2O_2(aq)$.\n\n  i. According to the diagram, is the decomposition reaction exothermic or endothermic? Justify your answer.\n\n  ii. Manganese dioxide, $MnO_2(s)$, is an insoluble substance that acts as a catalyst for the decomposition reaction. On the diagram above, draw a curve to represent the reaction as it occurs in the presence of $MnO_2(s)$.\n\nA student investigates the decomposition reaction in the laboratory. The student prepares two small beakers, adding $20.0\\,\\mathrm{mL}$ of $9.77\\,\\mathrm{M}\\ H_2O_2(aq)$ to each one. Each beaker is placed on an electronic balance. The student adds $0.10\\,\\mathrm{g}$ of $MnO_2(s)$ to the second beaker and records the mass of each beaker and its contents at 10-second intervals for one minute. The beakers and the data are shown below.\n\n| Time (s) | Mass of Beaker 1 + $H_2O_2(aq)$ (g) | Mass of Beaker 2 + $H_2O_2(aq)$ + $MnO_2(s)$ (g) |\n|---:|---:|---:|\n| 0 | 43.09 | 43.19 |\n| 10 | 43.09 | 43.06 |\n| 20 | 43.09 | 42.94 |\n| 30 | 43.09 | 42.83 |\n| 40 | 43.09 | 42.73 |\n| 50 | 43.09 | 42.65 |\n| 60 | 43.09 | 42.58 |\n\n(c) For beaker 2 during the 60-second period, calculate the following.\n\n  i. The number of moles of $O_2$ gas that was produced.\n\n  ii. The mass of $H_2O_2(aq)$ that decomposed.\n\n(d) The student continues the experiment for an additional minute. For beaker 2, will the mass of $H_2O_2(aq)$ consumed during the second minute be greater than, less than, or equal to the mass of $H_2O_2(aq)$ consumed during the first minute? Explain your answer referring to the data in the table.\n\n(e) Based on the data, the student claims that the catalyzed reaction has zeroth-order kinetics. Do you agree with the student's claim? Justify your answer.\n\n(f) A second student did the experiment using larger volumes of $9.77\\,\\mathrm{M}\\ H_2O_2(aq)$. The reaction in beaker 2 proceeded extremely rapidly, causing some liquid to splash out of the beaker onto the lab table. The student claims that as a result of the loss of liquid from the beaker, the calculated number of moles of $O_2(g)$ produced is greater than the actual number of moles of $O_2(g)$ produced during the first 60 seconds. Do you agree with the student? Justify your answer.\n\n(g) The hydrogen peroxide used in this experiment can be prepared by the reaction of solid ammonium peroxydisulfate, $(NH_4)_2S_2O_8$, with water. The products are hydrogen peroxide, $H_2O_2$, and ammonium bisulfate, $NH_4HSO_4$. Write the balanced equation for the reaction.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [
+      "images/ap/chemistry/2019/2019_p046_img01.png",
+      "images/ap/chemistry/2019/2019_p046_img02.png",
+      "images/ap/chemistry/2019/2019_p047_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 2 scoring guideline: award points for product particle representation and atom balance, exothermic energy-diagram reasoning, catalyst curve, oxygen moles, hydrogen peroxide mass, rate-trend interpretation, zeroth-order claim evaluation, splash-loss error reasoning, and the balanced ammonium peroxydisulfate reaction.",
+      "points": [
+        {
+          "point_id": "2a_products",
+          "points": 1,
+          "description": "Represents products as $H_2O$ and $O_2$ molecules."
+        },
+        {
+          "point_id": "2a_balance",
+          "points": 1,
+          "description": "Conserves atoms in the particulate drawing."
+        },
+        {
+          "point_id": "2b_i",
+          "points": 1,
+          "description": "Identifies the reaction as exothermic because the products are at lower potential energy than the reactants."
+        },
+        {
+          "point_id": "2b_ii",
+          "points": 1,
+          "description": "Draws a catalyzed pathway with the same reactant and product energies but lower activation energy."
+        },
+        {
+          "point_id": "2c_i",
+          "points": 1,
+          "description": "Uses the beaker mass loss to calculate about $0.019\\,\\mathrm{mol}$ of $O_2$."
+        },
+        {
+          "point_id": "2c_ii",
+          "points": 1,
+          "description": "Uses the reaction stoichiometry to calculate about $1.3\\,\\mathrm{g}$ of $H_2O_2$ decomposed."
+        },
+        {
+          "point_id": "2d",
+          "points": 1,
+          "description": "States that less $H_2O_2$ is consumed during the second minute and supports this with the decreasing mass-loss trend."
+        },
+        {
+          "point_id": "2e",
+          "points": 1,
+          "description": "Disagrees with the zeroth-order claim because the rate of mass loss is not constant."
+        },
+        {
+          "point_id": "2f",
+          "points": 1,
+          "description": "Agrees that the calculated oxygen amount is too large because some mass loss is splashed liquid rather than escaped oxygen gas."
+        },
+        {
+          "point_id": "2g",
+          "points": 1,
+          "description": "Writes a correct balanced equation, such as $(NH_4)_2S_2O_8+2H_2O\\rightarrow H_2O_2+2NH_4HSO_4$."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
+      "prompt_pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "rubric_pages": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2019_FRQ3",
+    "frq_id": "2019_FRQ3",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2019,
+    "question_number": 3,
+    "question_type": "FRQ",
+    "text": "Sulfur trioxide, $SO_3$, is commercially produced on a massive scale for use in manufacturing. It is also produced as a by-product of burning fossil fuels and is an air pollutant involved in the formation of acid rain.\n\n(a) In the box below, complete one of the valid Lewis electron-dot diagrams for the $SO_3$ molecule. Be sure to include all valence electrons, including lone pairs.\n\n(b) Predict the shape of the $SO_3$ molecule based on the diagram you completed above.\n\nUnder some conditions, $SO_3(g)$ decomposes to produce $SO_2(g)$ and $O_2(g)$, as represented by the equation below.\n\n$2SO_3(g)\\rightleftharpoons2SO_2(g)+O_2(g)$, $\\Delta H^\\circ=180\\,\\mathrm{kJ/mol_{rxn}}$\n\n(c) Under what temperature conditions will the reaction be thermodynamically favored: high temperatures, low temperatures, all temperatures, or no temperatures? Justify your answer in terms of the change in enthalpy and the change in entropy during the reaction.\n\nA chemist fills a rigid vessel with $SO_3(g)$ at a certain temperature until the pressure of $SO_3(g)$ in the container is $0.83\\,\\mathrm{atm}$. The $SO_3(g)$ decomposes as the partial pressures of $SO_3(g)$, $SO_2(g)$, and $O_2(g)$ in the container are monitored over time, as shown in the graph. A change is made to the system at time $t_1$.\n\n(d) Answer the following based on the graph.\n\n  i. Draw an X on the time axis to show when the system first reached equilibrium.\n\n  ii. Describe the change that was made to the system at time $t_1$.\n\n  iii. After the change was made at time $t_1$, the partial pressure of $SO_3(g)$ increased while the partial pressure of $O_2(g)$ decreased. Explain this observation.\n\n(e) Use the information above to answer the following.\n\n  i. Write the expression for the equilibrium constant, $K_p$, for the reaction.\n\n  ii. Determine the value of $K_p$ for the reaction.",
+    "answer": "",
+    "points": 10,
+    "image_paths": [
+      "images/ap/chemistry/2019/2019_p051_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Applications of Thermodynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 10,
+      "official_text": "Question 3 scoring guideline: award points for a valid sulfur trioxide Lewis diagram, molecular shape, thermodynamic favorability at high temperature, graph interpretation, Le Chatelier reasoning, and the equilibrium constant expression and calculation.",
+      "points": [
+        {
+          "point_id": "3a",
+          "points": 1,
+          "description": "Completes a valid Lewis electron-dot diagram for $SO_3$ with all valence electrons, including an acceptable resonance form."
+        },
+        {
+          "point_id": "3b",
+          "points": 1,
+          "description": "Predicts trigonal planar shape, consistent with the Lewis diagram."
+        },
+        {
+          "point_id": "3c_enthalpy",
+          "points": 1,
+          "description": "Explains that positive $\\Delta H^\\circ$ makes the reaction unfavorable at low temperatures."
+        },
+        {
+          "point_id": "3c_entropy",
+          "points": 1,
+          "description": "Recognizes that $\\Delta S^\\circ$ is positive and explains that high temperature makes $T\\Delta S^\\circ$ large enough for $\\Delta G^\\circ$ to be negative."
+        },
+        {
+          "point_id": "3d_i",
+          "points": 1,
+          "description": "Marks the first equilibrium time at the initial plateau before $t_1$."
+        },
+        {
+          "point_id": "3d_ii",
+          "points": 1,
+          "description": "Identifies that additional $SO_2(g)$ was injected at $t_1$."
+        },
+        {
+          "point_id": "3d_iii",
+          "points": 1,
+          "description": "Explains that added $SO_2$ shifts the system in reverse, consuming $O_2$ and producing more $SO_3$."
+        },
+        {
+          "point_id": "3e_i",
+          "points": 1,
+          "description": "Writes $K_p=\\frac{(P_{SO_2})^2P_{O_2}}{(P_{SO_3})^2}$."
+        },
+        {
+          "point_id": "3e_ii_values",
+          "points": 1,
+          "description": "Substitutes appropriate equilibrium partial pressures from the graph."
+        },
+        {
+          "point_id": "3e_ii_calc",
+          "points": 1,
+          "description": "Calculates $K_p$ to be about $0.07$."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
+      "prompt_pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "rubric_pages": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2019_FRQ4",
+    "frq_id": "2019_FRQ4",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2019,
+    "question_number": 4,
+    "question_type": "FRQ",
+    "text": "$HClO(aq)+H_2O(l)\\rightleftharpoons H_3O^+(aq)+ClO^-(aq)$\n\nThe reaction between hypochlorous acid and water is represented above.\n\n(a) Identify one of the conjugate acid-base pairs in the reaction.\n\n(b) Shown in the graph below is the titration curve that results when $25.0\\,\\mathrm{mL}$ of $0.200\\,\\mathrm{M}\\ HClO$ is titrated with $0.200\\,\\mathrm{M}\\ NaOH$. Carefully draw a second curve on the graph that would result from the titration of $25.0\\,\\mathrm{mL}$ of $0.200\\,\\mathrm{M}\\ HClO_4$ with $0.200\\,\\mathrm{M}\\ NaOH$.\n\n(c) A student proposes creating a buffer by dissolving $0.010\\,\\mathrm{mol}$ of $NaClO_4(s)$ in $100.\\,\\mathrm{mL}$ of $0.100\\,\\mathrm{M}\\ HClO_4$. Explain why the resulting solution would not be a buffer.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2019/2019_p054_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 4 scoring guideline: award points for conjugate acid-base pair identification, strong-acid titration curve features, equivalence volume, and explaining why the proposed perchloric acid/perchlorate solution is not a buffer.",
+      "points": [
+        {
+          "point_id": "4a",
+          "points": 1,
+          "description": "Identifies a correct conjugate acid-base pair: $HClO/ClO^-$ or $H_2O/H_3O^+$."
+        },
+        {
+          "point_id": "4b_shape",
+          "points": 1,
+          "description": "Draws a strong-acid titration curve that starts below the $HClO$ curve and has the correct general titration shape ending above pH 7."
+        },
+        {
+          "point_id": "4b_equivalence",
+          "points": 1,
+          "description": "Shows the equivalence point at $25.0\\,\\mathrm{mL}$ of added $NaOH$."
+        },
+        {
+          "point_id": "4c",
+          "points": 1,
+          "description": "Explains that the solution is not a buffer because $HClO_4$ is a strong acid and $ClO_4^-$ is negligibly basic, so there is not a weak acid/conjugate base pair in significant amounts."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
+      "prompt_pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "rubric_pages": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2019_FRQ5",
+    "frq_id": "2019_FRQ5",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2019,
+    "question_number": 5,
+    "question_type": "FRQ",
+    "text": "In human cells a compound known as NADH is involved in a reaction that generates an electrical potential. The reaction is based on the two half-reactions shown in the table below. The balanced equation for the overall reaction is shown below.\n\n| Half-Reaction | $E^\\circ$ (V) |\n|---|---:|\n| $O_2+4H^++4e^-\\rightarrow2H_2O$ | +0.815 |\n| $NAD^+ + H^+ + 2e^-\\rightarrow NADH$ | -0.320 |\n\n$O_2+2H^+ +2NADH\\rightarrow2H_2O+2NAD^+$\n\n(a) How many moles of electrons are transferred for each mole of $O_2$ that reacts? Justify your answer in terms of the balanced equation and the change in oxidation number of oxygen.\n\n(b) Calculate the electrochemical potential of the overall reaction.\n\n(c) Calculate the value of $\\Delta G^\\circ$ for the overall reaction.\n\n(d) When the concentration of NADH increases while the concentration of $NAD^+$ decreases, will the electrochemical potential increase, decrease, or remain the same? Justify your answer.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Applications of Thermodynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 5 scoring guideline: award points for electron-transfer count, cell potential, standard Gibbs free energy, and the direction of cell-potential change when NADH increases and NAD+ decreases.",
+      "points": [
+        {
+          "point_id": "5a",
+          "points": 1,
+          "description": "States that 4 mol of electrons are transferred per mole of $O_2$, based on oxygen changing from oxidation state 0 to $-2$."
+        },
+        {
+          "point_id": "5b",
+          "points": 1,
+          "description": "Calculates $E^\\circ_{cell}=0.815-(-0.320)=1.135\\,\\mathrm{V}$."
+        },
+        {
+          "point_id": "5c",
+          "points": 1,
+          "description": "Calculates $\\Delta G^\\circ=-nFE^\\circ$, about $-4.38\\times10^5\\,\\mathrm{J/mol_{rxn}}$ or $-438\\,\\mathrm{kJ/mol_{rxn}}$."
+        },
+        {
+          "point_id": "5d",
+          "points": 1,
+          "description": "States that the electrochemical potential increases and justifies that increasing NADH while decreasing $NAD^+$ lowers $Q$, moving the system farther from equilibrium in the spontaneous direction."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
+      "prompt_pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "rubric_pages": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2019_FRQ6",
+    "frq_id": "2019_FRQ6",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2019,
+    "question_number": 6,
+    "question_type": "FRQ",
+    "text": "Some building materials contain small capsules filled with paraffin wax to improve the insulating properties of the materials. The melting and freezing of paraffin inside the capsules in the material helps to regulate temperature. Paraffin wax begins to melt at $37^\\circ\\mathrm{C}$.\n\n(a) While the wax is melting, is the net flow of thermal energy from the wax to the surroundings or from the surroundings to the wax? Justify your answer.\n\n(b) Calculate the amount of thermal energy, in kilojoules, that is required to melt $15.2\\,\\mathrm{g}$ of solid paraffin wax when the temperature of the surroundings is above the melting point of paraffin. The molar mass of paraffin is $282.62\\,\\mathrm{g/mol}$, and its molar heat of fusion is $48.78\\,\\mathrm{kJ/mol}$.\n\n(c) When paraffin wax melts, its density decreases. Provide a particle-level explanation of this observation.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Thermodynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 6 scoring guideline: award points for heat-flow direction during melting, heat of fusion calculation, and particle-level density explanation.",
+      "points": [
+        {
+          "point_id": "6a",
+          "points": 1,
+          "description": "States that thermal energy flows from the surroundings to the wax because melting is endothermic."
+        },
+        {
+          "point_id": "6b",
+          "points": 1,
+          "description": "Calculates the heat required using molar mass and molar heat of fusion, about $2.62\\,\\mathrm{kJ}$."
+        },
+        {
+          "point_id": "6c_distance",
+          "points": 1,
+          "description": "Explains that liquid paraffin has a greater average distance between molecules than solid paraffin."
+        },
+        {
+          "point_id": "6c_density",
+          "points": 1,
+          "description": "Relates the larger volume for the same number of molecules to decreased density."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
+      "prompt_pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "rubric_pages": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "override": true
+    }
+  },
+  {
+    "question_id": "2019_FRQ7",
+    "frq_id": "2019_FRQ7",
+    "subject": "AP Chemistry",
+    "subject_id": "chemistry",
+    "year": 2019,
+    "question_number": 7,
+    "question_type": "FRQ",
+    "text": "A student is given a solution of phenol red of unknown concentration. Solutions of phenol red are bright pink under basic conditions.\n\n(a) The student uses a pH probe and determines that the pH of the solution is 11.20. Calculate the hydrogen ion concentration, $[H^+]$, in the solution of phenol red.\n\nThe student analyzes a sample of the solution using a spectrophotometer set at a wavelength of $559\\,\\mathrm{nm}$, the wavelength of maximum absorbance for phenol red. The measured absorbance of the phenol red solution at $559\\,\\mathrm{nm}$ is 0.35.\n\n(b) Based on the calibration curve shown below, what is the concentration of the solution in micromoles per liter ($\\mu\\mathrm{M}$)?\n\n(c) If the student mixed $10\\,\\mathrm{mL}$ of distilled water with $10\\,\\mathrm{mL}$ of the sample, would this diluted solution have an absorbance greater than, less than, or equal to the absorbance of the original solution? Justify your answer.\n\n(d) If the student measured the absorbance of the solution at a wavelength of $650\\,\\mathrm{nm}$, would the absorbance be greater than, less than, or equal to the absorbance of the solution at $559\\,\\mathrm{nm}$? Justify your answer.",
+    "answer": "",
+    "points": 4,
+    "image_paths": [
+      "images/ap/chemistry/2019/2019_p060_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "Acids and Bases",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 4,
+      "official_text": "Question 7 scoring guideline: award points for hydrogen ion concentration from pH, concentration from the calibration curve, dilution effect on absorbance, and wavelength effect on absorbance.",
+      "points": [
+        {
+          "point_id": "7a",
+          "points": 1,
+          "description": "Calculates $[H^+]=10^{-11.20}\\approx6.3\\times10^{-12}\\,\\mathrm{M}$."
+        },
+        {
+          "point_id": "7b",
+          "points": 1,
+          "description": "Reads the calibration curve to obtain about $5.4\\,\\mu\\mathrm{M}$ phenol red, with values from about $5.2$ to $5.6\\,\\mu\\mathrm{M}$ acceptable."
+        },
+        {
+          "point_id": "7c",
+          "points": 1,
+          "description": "States that the diluted solution has lower absorbance because dilution lowers concentration and absorbance is proportional to concentration."
+        },
+        {
+          "point_id": "7d",
+          "points": 1,
+          "description": "States that absorbance at $650\\,\\mathrm{nm}$ is lower because $559\\,\\mathrm{nm}$ is the wavelength of maximum absorbance."
+        }
+      ]
+    },
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.35,
+      "evidence": "Structured override from visual PDF review.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
+      "prompt_pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "rubric_pages": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "override": true
+    }
+  }
+]

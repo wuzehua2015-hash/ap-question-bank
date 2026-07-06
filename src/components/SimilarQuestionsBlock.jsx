@@ -4,6 +4,7 @@ import { useSubject } from '../contexts/SubjectContext'
 import { loadSimilarityIndex, getSimilarQuestions } from '../utils/questionBank'
 import { startSimilarQuiz } from '../utils/quizSession'
 import { MathText } from './MathText'
+import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -119,6 +120,8 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3 }) {
           const q = item.question
           const isExpanded = expandedSimilarId === q.question_id
           const isShowAnswer = showAnswerId === q.question_id
+          const visibleImages = getQuestionImagePaths(q.image_paths || [], q.options, q.option_table_data)
+          const diagramOptionLayout = getDiagramOptionLayout(q.image_paths || [], q.options)
 
           return (
             <div key={q.question_id} className="bg-white rounded-lg border border-gray-200 overflow-hidden">
@@ -141,11 +144,9 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3 }) {
 
               {isExpanded && (
                 <div className="px-2 pb-2 border-t border-gray-100 bg-gray-50">
-                  {(q.image_paths || []).length > 0 && (
+                  {visibleImages.length > 0 && (
                     <div className="mb-2 mt-2">
-                      {(q.image_paths || [])
-                        .filter(img => !(q.option_table_data && /option_table/i.test(img)))
-                        .map((img, i) => (
+                      {visibleImages.map((img, i) => (
                           <img key={i} src={imageUrl(img)} alt="" className="max-w-full max-h-72 rounded border border-border" />
                         ))}
                     </div>
@@ -153,6 +154,8 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3 }) {
 
                   {q.option_table_data ? (
                     <SearchTableOptions tableData={q.option_table_data} />
+                  ) : diagramOptionLayout ? (
+                    <SimilarDiagramOptions diagramGroups={diagramOptionLayout} />
                   ) : (
                     <div className="space-y-1 mb-2">
                       {Object.entries(q.options || {}).map(([key, value]) => (
@@ -223,6 +226,31 @@ function SearchTableOptions({ tableData }) {
           ))}
         </div>
       ))}
+    </div>
+  )
+}
+
+function SimilarDiagramOptions({ diagramGroups }) {
+  return (
+    <div className="mb-2 grid gap-2 sm:grid-cols-2">
+      {diagramGroups.map((paths, idx) => {
+        const key = String.fromCharCode(65 + idx)
+        return (
+          <div key={`${key}-${paths.join('|')}`} className="rounded border border-border bg-white p-2">
+            <div className="mb-1 text-xs font-semibold text-text">{key}. Diagram {key}</div>
+            <div className="grid gap-1" style={{ gridTemplateColumns: paths.length > 1 ? 'repeat(2, minmax(0, 1fr))' : '1fr' }}>
+              {paths.map((path, imageIdx) => (
+                <img
+                  key={path}
+                  src={imageUrl(path)}
+                  alt={`Diagram ${key}${paths.length > 1 ? ` part ${imageIdx + 1}` : ''}`}
+                  className="mx-auto max-h-48 max-w-full"
+                />
+              ))}
+            </div>
+          </div>
+        )
+      })}
     </div>
   )
 }

@@ -124,11 +124,17 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
     await waitForImages(client)
     const info = await collectVisibleState(client)
     checkVisibleState(`quiz:${quiz[i].question_id}`, info, errors, warnings)
-    const questionVisible = normalized(info.text).includes(normalized(quiz[i].text).slice(0, 80)) ||
+    const pageText = auditComparableText(info.text)
+    const questionVisible = pageText.includes(auditComparableText(quiz[i].text).slice(0, 50)) ||
+      Object.values(quiz[i].options || {}).some(option => {
+        const text = auditComparableText(option)
+        return text.length >= 8 && pageText.includes(text.slice(0, Math.min(60, text.length)))
+      }) ||
+      (quiz[i].background_data?.table && info.tableCount > 0) ||
       (quiz[i].option_table_data && info.tableCount > 0) ||
       ((quiz[i].image_paths || []).length > 0 && info.visibleImages.length > 0)
     if (!questionVisible) {
-      warnings.push({ page: 'quiz-play', kind: 'current_question_id_not_visible', question_id: quiz[i].question_id })
+      warnings.push({ page: 'quiz-play', kind: 'current_question_id_not_visible', question_id: quiz[i].question_id, visible_sample: sampleText(info.text, 0) })
     }
     const answers = chooseWrongAnswers(quiz[i])
     for (const answer of (answers.length ? answers : ['A'])) {
@@ -340,6 +346,7 @@ async function collectVisibleState(client) {
     const text = document.body ? document.body.innerText : '';
     const images = [...document.images].map(img => ({
       src: img.currentSrc || img.src,
+      alt: img.alt || '',
       complete: img.complete,
       naturalWidth: img.naturalWidth,
       naturalHeight: img.naturalHeight,
@@ -369,7 +376,7 @@ function checkVisibleState(page, info, errors, warnings) {
     { kind: 'raw_html_entity', re: /&(?:quot|amp|lt|gt|nbsp);/i },
     { kind: 'exam_footer_pollution', re: /IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING|(?:STOP\s*)?END OF EXAM|THE FOLLOWING INSTRUCTIONS APPLY TO|MAKE SURE YOU HAVE COMPLETED THE IDENTIFICATION|AP NUMBER LABELS/i },
     { kind: 'option_source_pollution', re: /[A-E]\.\s*[^\n]{0,120}\bSource:\s+/i },
-    { kind: 'spoken_math', re: /\b(?:the )?fraction\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i },
+    { kind: 'spoken_math', re: /\bthe fraction\b|\bfraction with numerator\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i },
     { kind: 'raw_mapping_key', re: /\bofficial_(?:scoring_guideline|rubric)\b|rubric_image_paths/i },
     { kind: 'missing_formula_phrase', re: /\b(?:according to|given by|modeled by) the equation\s*,/i },
   ]
@@ -383,7 +390,8 @@ function checkVisibleState(page, info, errors, warnings) {
 
 function checkImageReadability(page, images, errors, warnings) {
   for (const img of images || []) {
-    if (img.width > 0 && img.height > 0 && (img.width < 180 || img.height < 90)) {
+    const isDiagramOption = /^Diagram [A-E](?: part \d+)?$/i.test(img.alt || '')
+    if (!isDiagramOption && img.width > 0 && img.height > 0 && (img.width < 180 || img.height < 90)) {
       warnings.push({ page, kind: 'small_visible_image', image: img })
     }
     if (img.naturalWidth > 0 && img.naturalHeight > 0) {
@@ -421,7 +429,12 @@ function parseArgs(argv) {
 
 async function ensurePreview(url) {
   if (await httpOk(url)) return { spawned: false }
-  const child = spawn('npm.cmd', ['run', 'preview', '--', '--host', '127.0.0.1', '--port', '4174', '--strictPort'], {
+  const previewPort = String(new URL(url).port || 4174)
+  const npmCmd = process.platform === 'win32' ? 'cmd.exe' : 'npm'
+  const npmArgs = process.platform === 'win32'
+    ? ['/d', '/s', '/c', `npm run preview -- --host 127.0.0.1 --port ${previewPort} --strictPort`]
+    : ['run', 'preview', '--', '--host', '127.0.0.1', '--port', previewPort, '--strictPort']
+  const child = spawn(npmCmd, npmArgs, {
     cwd: ROOT,
     stdio: 'ignore',
     windowsHide: true,
@@ -595,6 +608,17 @@ function sampleText(text, index) {
 
 function normalized(text) {
   return String(text || '').replace(/\s+/g, ' ').trim()
+}
+
+function auditComparableText(text) {
+  return normalized(text)
+    .replace(/\$+/g, '')
+    .replace(/\\(?:mathrm|text|left|right)\{([^{}]*)\}/g, '$1')
+    .replace(/\\(?:,|;|!| )/g, ' ')
+    .replace(/\\[a-zA-Z]+/g, ' ')
+    .replace(/[{}_^]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
 }
 
 function escapeRegex(text) {

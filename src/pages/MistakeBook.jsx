@@ -7,6 +7,9 @@ import {
 } from '../utils/storage'
 import { startWrongQuiz, startCustomQuiz } from '../utils/quizSession'
 import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
+import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
+
+const BASE_URL = import.meta.env.BASE_URL || '/'
 
 function MistakeBook() {
   const navigate = useNavigate()
@@ -173,6 +176,8 @@ function MistakeBook() {
           const hist = questionHistory[q.question_id]
           const totalAttempts = hist ? hist.correct_count + hist.wrong_count : 0
           const correctRate = totalAttempts > 0 ? Math.round((hist.correct_count / totalAttempts) * 100) : null
+          const visibleImages = getQuestionImagePaths(q.image_paths || [], q.options, q.option_table_data)
+          const diagramOptionLayout = getDiagramOptionLayout(q.image_paths || [], q.options)
           return (
             <div key={q.question_id} className="bg-surface rounded-xl border border-border overflow-hidden">
               <div className="p-4 hover:bg-gray-50 transition-colors">
@@ -204,12 +209,10 @@ function MistakeBook() {
               </div>
               {isExpanded && (
                 <div className="px-4 pb-4 border-t border-border bg-gray-50">
-                  {q.image_paths && q.image_paths.length > 0 && (
+                  {visibleImages.length > 0 && (
                     <div className="mb-3 mt-3">
-                      {q.image_paths
-                        .filter(img => !(q.option_table_data && /option_table/i.test(img)))
-                        .map((img, i) => (
-                        <img key={i} src={img} alt="" className="max-w-full max-h-60 rounded border border-border" />
+                      {visibleImages.map((img, i) => (
+                        <img key={i} src={BASE_URL + img.replace(/^\//, '')} alt="" className="max-w-full max-h-60 rounded border border-border" />
                       ))}
                     </div>
                   )}

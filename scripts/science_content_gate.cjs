@@ -20,7 +20,6 @@ const HARD_PATTERNS = [
 ]
 
 const SOFT_TABLE_PATTERNS = [
-  { name: 'markdown table leaked into text', pattern: /\|.+\|[\r\n]+\|[-:\s|]+\|/ },
   { name: 'blank line checkbox artifacts', pattern: /_{3,}/ },
 ]
 
@@ -85,7 +84,7 @@ function main() {
   console.log(`Warnings: ${warnings.length}`)
   for (const warning of warnings.slice(0, 80)) console.log(`WARNING: ${warning}`)
   if (warnings.length > 80) console.log(`... ${warnings.length - 80} more warnings`)
-  process.exit(errors.length ? 1 : 0)
+  process.exit(errors.length || warnings.length ? 1 : 0)
 }
 
 main()

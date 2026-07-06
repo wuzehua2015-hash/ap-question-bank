@@ -1,5 +1,7 @@
 ﻿import { MathText } from './MathText'
 
+import { getDiagramOptionLayout, getQuestionImagePaths, normalizeOptions } from '../utils/diagramOptions'
+
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
 function DisplayImage({ path, variant }) {
@@ -33,21 +35,6 @@ function DisplayImage({ path, variant }) {
   )
 }
 
-// Supports both array options ["(A)..."] and object options {A: "..."}.
-function normalizeOptions(options) {
-  if (!options) return {}
-  if (Array.isArray(options)) {
-    const result = {}
-    for (const opt of options) {
-      const m = opt.match(/^\(([A-E])\)\s*/)
-      const key = m ? m[1] : String(Object.keys(result).length)
-      result[key] = opt.replace(/^\([A-E]\)\s*/, '')  // strip prefix
-    }
-    return result
-  }
-  return options
-}
-
 function DisplayOptions({ options, variant }) {
   const opts = normalizeOptions(options)
   if (variant === 'pdf') {
@@ -75,19 +62,9 @@ function DisplayOptions({ options, variant }) {
   )
 }
 
-function isDiagramOptionSet(options) {
-  const opts = normalizeOptions(options)
-  const keys = Object.keys(opts).sort()
-  return keys.length >= 4 && keys.every(key => opts[key] === `Diagram ${key}`)
-}
-
 function DisplayDiagramOptionImages({ imagePaths, options, variant }) {
-  if (!isDiagramOptionSet(options)) return null
-
-  const optionCount = Object.keys(normalizeOptions(options)).length
-  const hasContextImage = imagePaths.length === optionCount + 1
-  const diagramImages = hasContextImage ? imagePaths.slice(1, optionCount + 1) : imagePaths.slice(0, optionCount)
-  if (diagramImages.length !== optionCount) return null
+  const diagramGroups = getDiagramOptionLayout(imagePaths, options)
+  if (!diagramGroups) return null
 
   const isPdf = variant === 'pdf'
   const getUrl = (path) => path.startsWith('/') ? BASE_URL + path.slice(1) : BASE_URL + path
@@ -104,11 +81,11 @@ function DisplayDiagramOptionImages({ imagePaths, options, variant }) {
         breakInside: 'avoid',
       } : {}}
     >
-      {diagramImages.map((path, idx) => {
+      {diagramGroups.map((paths, idx) => {
         const key = String.fromCharCode(65 + idx)
         return (
           <div
-            key={path}
+            key={`${key}-${paths.join('|')}`}
             className={isPdf ? '' : 'rounded-lg border border-border bg-white p-3'}
             style={isPdf ? { border: '1px solid #d1d5db', borderRadius: '6px', padding: '8px' } : {}}
           >
@@ -118,12 +95,24 @@ function DisplayDiagramOptionImages({ imagePaths, options, variant }) {
             >
               {key}. Diagram {key}
             </div>
-            <img
-              src={getUrl(path)}
-              alt={`Diagram ${key}`}
-              className={isPdf ? '' : 'mx-auto max-h-[260px] max-w-full'}
-              style={isPdf ? { maxWidth: '100%', maxHeight: '220px', display: 'block', margin: '0 auto' } : {}}
-            />
+            <div
+              className={isPdf ? '' : 'grid gap-2'}
+              style={isPdf ? {
+                display: 'grid',
+                gridTemplateColumns: paths.length > 1 ? 'repeat(2, minmax(0, 1fr))' : '1fr',
+                gap: '6px',
+              } : { gridTemplateColumns: paths.length > 1 ? 'repeat(2, minmax(0, 1fr))' : '1fr' }}
+            >
+              {paths.map((path, imageIdx) => (
+                <img
+                  key={path}
+                  src={getUrl(path)}
+                  alt={`Diagram ${key}${paths.length > 1 ? ` part ${imageIdx + 1}` : ''}`}
+                  className={isPdf ? '' : 'mx-auto max-h-[260px] max-w-full'}
+                  style={isPdf ? { maxWidth: '100%', maxHeight: '220px', display: 'block', margin: '0 auto' } : {}}
+                />
+              ))}
+            </div>
           </div>
         )
       })}
@@ -281,11 +270,10 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
   const tableData = question.option_table_data
   const backgroundTable = question.background_data?.table
   const isTableOptions = !!tableData
-  const hasDiagramOptionImages = isDiagramOptionSet(question.options) && imagePaths.length >= 5
+  const diagramOptionLayout = getDiagramOptionLayout(imagePaths, question.options)
+  const hasDiagramOptionImages = !!diagramOptionLayout
   const hasTableImage = imagePaths.some(path => /(?:^|[_/-])(table|payoff_matrix)(?:[_./-]|$)/i.test(path))
-  const displayImagePaths = imagePaths
-    .filter(path => !(isTableOptions && /option_table/i.test(path)))
-    .filter((_, index) => !(hasDiagramOptionImages && (imagePaths.length === Object.keys(normalizeOptions(question.options)).length + 1 ? index > 0 : index < Object.keys(normalizeOptions(question.options)).length)))
+  const displayImagePaths = getQuestionImagePaths(imagePaths, question.options, tableData)
 
   return (
     <div className={isPdf ? '' : 'bg-surface rounded-xl p-6 shadow-sm border border-border'}
