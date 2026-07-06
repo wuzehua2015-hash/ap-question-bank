@@ -244,73 +244,6 @@
       }
     },
     {
-      "id": "psychology",
-      "name": "AP Psychology",
-      "shortName": "Psych",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/psychology/question_bank.json",
-      "frqBank": "ap/psychology/frq_bank.json",
-      "similarityIndex": "ap/psychology/similarity_index.json",
-      "classificationConfig": "ap/psychology/classification_config.json",
-      "dataVersion": "local-1999-2004-2007-2012-2018-official-frq-2023-2025-v3",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Scientific Foundations of Psychology"
-        },
-        {
-          "id": "U2",
-          "name": "Biological Bases of Behavior"
-        },
-        {
-          "id": "U3",
-          "name": "Sensation and Perception"
-        },
-        {
-          "id": "U4",
-          "name": "Learning"
-        },
-        {
-          "id": "U5",
-          "name": "Cognitive Psychology"
-        },
-        {
-          "id": "U6",
-          "name": "Developmental Psychology"
-        },
-        {
-          "id": "U7",
-          "name": "Motivation, Emotion, and Personality"
-        },
-        {
-          "id": "U8",
-          "name": "Clinical Psychology"
-        },
-        {
-          "id": "U9",
-          "name": "Social Psychology"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 100,
-        "frqCount": 2,
-        "mcqTimeLimit": 4200,
-        "frqTimeLimit": 3000,
-        "unitDistribution": {
-          "U1": 13,
-          "U2": 10,
-          "U3": 7,
-          "U4": 9,
-          "U5": 16,
-          "U6": 9,
-          "U7": 15,
-          "U8": 13,
-          "U9": 8
-        }
-      }
-    },
-    {
       "id": "calculus-ab",
       "name": "AP Calculus AB",
       "shortName": "Calc AB",
@@ -482,6 +415,73 @@
       }
     },
     {
+      "id": "psychology",
+      "name": "AP Psychology",
+      "shortName": "Psych",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/psychology/question_bank.json",
+      "frqBank": "ap/psychology/frq_bank.json",
+      "similarityIndex": "ap/psychology/similarity_index.json",
+      "classificationConfig": "ap/psychology/classification_config.json",
+      "dataVersion": "local-1999-2004-2007-2012-2018-official-frq-2023-2025-v3",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Scientific Foundations of Psychology"
+        },
+        {
+          "id": "U2",
+          "name": "Biological Bases of Behavior"
+        },
+        {
+          "id": "U3",
+          "name": "Sensation and Perception"
+        },
+        {
+          "id": "U4",
+          "name": "Learning"
+        },
+        {
+          "id": "U5",
+          "name": "Cognitive Psychology"
+        },
+        {
+          "id": "U6",
+          "name": "Developmental Psychology"
+        },
+        {
+          "id": "U7",
+          "name": "Motivation, Emotion, and Personality"
+        },
+        {
+          "id": "U8",
+          "name": "Clinical Psychology"
+        },
+        {
+          "id": "U9",
+          "name": "Social Psychology"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 100,
+        "frqCount": 2,
+        "mcqTimeLimit": 4200,
+        "frqTimeLimit": 3000,
+        "unitDistribution": {
+          "U1": 13,
+          "U2": 10,
+          "U3": 7,
+          "U4": 9,
+          "U5": 16,
+          "U6": 9,
+          "U7": 15,
+          "U8": 13,
+          "U9": 8
+        }
+      }
+    },
+    {
       "id": "us-government-politics",
       "name": "AP United States Government and Politics",
       "shortName": "AP Gov",
@@ -491,7 +491,7 @@
       "frqBank": "ap/us-government-politics/frq_bank.json",
       "similarityIndex": "ap/us-government-politics/similarity_index.json",
       "classificationConfig": "ap/us-government-politics/classification_config.json",
-      "dataVersion": "local-2005-2008-2012-2013-2018-v1",
+      "dataVersion": "local-2005-2008-2012-2013-2018-2020-practice-v1",
       "units": [
         {
           "id": "U1",

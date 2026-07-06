@@ -28,7 +28,7 @@ const BAD_VISIBLE_PATTERNS = [
   { code: 'replacement_char', re: /\uFFFD/ },
   { code: 'raw_html_entity', re: /&(?:quot|amp|lt|gt|nbsp);/i },
   { code: 'visible_mojibake', re: /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7\u9354\u68f0\u93bc]/ },
-  { code: 'exam_footer', re: /IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING/i },
+  { code: 'exam_footer', re: /IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING|(?:STOP\s*)?END OF EXAM|THE FOLLOWING INSTRUCTIONS APPLY TO|MAKE SURE YOU HAVE COMPLETED THE IDENTIFICATION|AP NUMBER LABELS/i },
   { code: 'spoken_math', re: /\b(?:the )?fraction\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i },
   { code: 'missing_formula_phrase', re: /\b(?:according to|given by|modeled by) the equation\s*,/i },
   { code: 'missing_constants_phrase', re: /\bwhere\s+and\s+are\s+constants\b/i },
@@ -72,6 +72,12 @@ async function main() {
     })
     await navigate(client, routeUrl('#/'))
     await navigate(client, routeUrl('#/search'))
+    await evaluate(client, `window.location.hash = '#/search'`)
+    for (let i = 0; i < 60; i += 1) {
+      const ready = await evaluate(client, `location.hash.includes('/search') && Boolean(document.querySelector('input'))`).catch(() => false)
+      if (ready) break
+      await sleep(100)
+    }
     await sleep(500)
 
     const snapshots = []
@@ -110,7 +116,6 @@ async function main() {
 }
 
 async function captureSearchItem(client, item) {
-  await navigate(client, routeUrl(`#/search?qid=${encodeURIComponent(item.question_id)}`))
   const result = await evaluate(client, `window.__captureSearchItem(${JSON.stringify(item.question_id)})`)
   const findings = []
   if (!result.found) {
@@ -173,12 +178,13 @@ async function installSearchCaptureHelper(client) {
       if (!input) return { found: false, expanded: false, text: '', pageText: (document.body.innerText || '').slice(0, 1200), imageCount: 0, tableCount: 0, katexCount: 0, images: [], brokenImages: [] };
       const setter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set;
       setter.call(input, id);
-      input.dispatchEvent(new Event('input', { bubbles: true }));
+      input.dispatchEvent(new InputEvent('input', { bubbles: true, inputType: 'insertText', data: id }));
+      input.dispatchEvent(new Event('change', { bubbles: true }));
       let card = null;
-      for (let i = 0; i < 30; i += 1) {
+      for (let i = 0; i < 60; i += 1) {
         await sleep(100);
         card = document.querySelector('[data-question-id="' + CSS.escape(id) + '"]');
-        if (card || /0\\s/.test(document.body.innerText || '')) break;
+        if (card) break;
       }
       const found = Boolean(card);
       if (card && !window.__isExpandedSearchText(card.innerText || '')) {

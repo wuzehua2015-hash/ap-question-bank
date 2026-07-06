@@ -123,6 +123,13 @@ function validate(filePath, options = {}) {
     { name: 'physics unrendered ohm OCR leakage', pattern: /(?:resistance|resistor|resistors|load|connected to a)\s+[^"{}]{0,80}\b\d+(?:\.\d+)?\s*W\b|\bR\s*=\s*\d+(?:\.\d+)?\s*(?:W|Omega)\b/i },
     { name: 'physics bare epsilon OCR leakage', pattern: /(?:^|[^\\])\b(?:epsilon|e)\s*=\s*\d+(?:\.\d+)?\s*V\b|ε/ },
   ]
+  const frqRubricArtifactPatterns = [
+    { name: 'empty bullet line', pattern: /(?:^|\n)\s*[\u2022\u0083]\s*(?=\n|$)/ },
+    { name: 'continued page header', pattern: /\bQuestion\s+\d+\s+\(continued\)\b/i },
+    { name: 'scoring guideline continuation header', pattern: /\bScoring Guidelines for Question\s+\d+\s*(?:\(continued\))?\b/i },
+    { name: 'orphan page number before rubric section', pattern: /(?:^|\n)\s*\d{1,3}\s*(?=\n\s*(?:Question\s+\d+|Part\s+\([a-z]\)|Part\s+[A-Z]|Acceptable|A score|Note:|Notes:|[\u2022\u0083]))/i },
+    { name: 'bullet control character', pattern: /\u0083/ },
+  ]
   const structuredTableHeaderPatterns = [
     /Voltage across\s+Capacitor X\s+Voltage across\s+Capacitor Y\s+Voltage across\s+Capacitor Z/i,
     /Potential Difference\s+Across the Plates\s+Charge on\s+Positive Plate/i,
@@ -209,7 +216,10 @@ function validate(filePath, options = {}) {
     }
     // PDF boilerplate and extraction residue checks
     const pollutionPatterns = [
-      /STOP\s*END OF EXAM/i,
+      /(?:STOP\s*)?END OF EXAM/i,
+      /THE FOLLOWING INSTRUCTIONS APPLY TO/i,
+      /MAKE SURE YOU HAVE COMPLETED THE IDENTIFICATION/i,
+      /AP NUMBER LABELS/i,
       /THIS PAGE MAY BE USED FOR TAKING NOTES/i,
       /Unauthorized copying/i,
       /College Board\. Visit the College Board/i,
@@ -340,6 +350,13 @@ function validate(filePath, options = {}) {
       // FRQ prompt length check
       if (q.text && q.text.length < 50) {
         warnings.push(`${qid}: FRQ text very short (${q.text.length} chars), possible truncation`)
+      }
+      const rubricText = JSON.stringify(q.rubric || {})
+      for (const { name, pattern } of frqRubricArtifactPatterns) {
+        if (pattern.test(q.text || '') || pattern.test(rubricText)) {
+          errors.push(`${qid}: FRQ/rubric contains ${name}`)
+          break
+        }
       }
     }
   }

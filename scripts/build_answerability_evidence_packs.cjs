@@ -188,7 +188,7 @@ function detectMachineFindings(q, item) {
         message: `Option ${label} is empty or nearly empty.`,
       })
     }
-    if (/\bIF YOU FINISH BEFORE TIME IS CALLED\b|\bMAKE SURE YOU HAVE DONE THE FOLLOWING\b/i.test(option)) {
+    if (/\bIF YOU FINISH BEFORE TIME IS CALLED\b|\bMAKE SURE YOU HAVE DONE THE FOLLOWING\b|\bTHE FOLLOWING INSTRUCTIONS APPLY TO\b|\bMAKE SURE YOU HAVE COMPLETED THE IDENTIFICATION\b|\bAP NUMBER LABELS\b/i.test(option)) {
       findings.push({
         severity: 'P0',
         code: 'exam_footer_pollution',
@@ -212,6 +212,13 @@ function detectMachineFindings(q, item) {
   }
 
   if (item.type === 'FRQ') {
+    if (/\b(?:STOP\s*)?END OF EXAM\b|\bTHE FOLLOWING INSTRUCTIONS APPLY TO\b|\bMAKE SURE YOU HAVE COMPLETED THE IDENTIFICATION\b|\bAP NUMBER LABELS\b/i.test(text)) {
+      findings.push({
+        severity: 'P0',
+        code: 'exam_footer_pollution',
+        message: 'FRQ prompt contains exam footer/back-cover instruction pollution.',
+      })
+    }
     const rubricText = JSON.stringify(q.rubric || {})
     if (rubricText.length < 800) {
       findings.push({
