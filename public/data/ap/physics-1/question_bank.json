@@ -192,10 +192,10 @@
     "type": "MCQ",
     "text": "Questions 5-6 refer to the following material. \n\nThree identical blocks each take a different path from a height h to the ground. Block A is released from rest and \nfalls vertically. Block B is released from rest and slides down a frictionless incline. Block C is projected horizontally \nwith an initial speed v.\n\n5. Which block takes the longest time to reach the \nground?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "The blocks take the same time to reach the \nground."
+      "A": "Block A",
+      "B": "Block B",
+      "C": "Block C",
+      "D": "The blocks take the same time to reach the ground."
     },
     "answer": "B",
     "answers": [
@@ -215,13 +215,14 @@
     "classification": {
       "primary_unit": "U2",
       "secondary_units": [],
-      "confidence": 0.65,
-      "evidence": "Physics 1 source-pack keyword classification checked by strict year gate.",
+      "confidence": 0.85,
+      "evidence": "Structured override from visual PDF review.",
       "review_status": "reviewed"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf",
-      "raw_chunk_sha256": "30a8298feb8d5cbd9924727be21adabc913cdec6229c82c995de021e441117fa"
+      "raw_chunk_sha256": "30a8298feb8d5cbd9924727be21adabc913cdec6229c82c995de021e441117fa",
+      "override": true
     },
     "group_id": "2014_Q05_06",
     "group_members": [

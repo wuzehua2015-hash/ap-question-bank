@@ -250,7 +250,12 @@ function readJson(file) {
 
 async function ensurePreview(url) {
   if (await httpOk(url)) return
-  const child = spawn('npm.cmd', ['run', 'preview', '--', '--host', '127.0.0.1', '--port', '4174', '--strictPort'], {
+  const previewPort = String(new URL(url).port || 4174)
+  const npmCmd = process.platform === 'win32' ? 'cmd.exe' : 'npm'
+  const npmArgs = process.platform === 'win32'
+    ? ['/d', '/s', '/c', `npm run preview -- --host 127.0.0.1 --port ${previewPort} --strictPort`]
+    : ['run', 'preview', '--', '--host', '127.0.0.1', '--port', previewPort, '--strictPort']
+  const child = spawn(npmCmd, npmArgs, {
     cwd: ROOT,
     stdio: 'ignore',
     windowsHide: true,
