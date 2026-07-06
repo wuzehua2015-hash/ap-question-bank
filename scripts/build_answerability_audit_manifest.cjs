@@ -99,6 +99,22 @@ function collectSignals(q, type) {
     if (!hasVisualAsset(q)) signals.push('visual_reference_without_asset')
   }
 
+  if (/\binformation graphic above\b|\bgraphic above\b|\btable above\b|\bfollowing table\b|\bdata in the table\b/i.test(combined)) {
+    const hasStructuredTable = Boolean(q.background_data?.table || q.option_table_data)
+    const hasMarkdownTable = /^\s*\|.+\|\s*$/m.test(text)
+    if (!hasStructuredTable && !hasMarkdownTable && !((q.image_paths || q.images || []).length)) {
+      signals.push('information_graphic_or_table_without_rendered_asset')
+    }
+  }
+
+  if (type === 'FRQ') {
+    const percentCount = (text.match(/\b\d+(?:\.\d+)?%/g) || []).length
+    const compactLineCount = text.split(/\r?\n/).filter(line => line.trim().length > 0).length
+    if (percentCount >= 12 && compactLineCount >= 18 && !q.background_data?.table && !/^\s*\|.+\|\s*$/m.test(text) && !((q.image_paths || q.images || []).length)) {
+      signals.push('frq_numeric_table_flattened_as_text')
+    }
+  }
+
   if (/\bQuestions?\s+\d+\s*[-–]\s*\d+\b/i.test(text)) {
     signals.push('shared_question_group')
     if (!q.group_id && !q.group_context) signals.push('group_marker_without_structured_context')
@@ -149,6 +165,8 @@ function collectSignals(q, type) {
 function priority(signals) {
   const p0 = [
     'visual_reference_without_asset',
+    'information_graphic_or_table_without_rendered_asset',
+    'frq_numeric_table_flattened_as_text',
     'missing_formula_after_equation_phrase',
     'equation_sentence_without_math',
     'empty_or_nearly_empty_option',

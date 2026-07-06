@@ -331,6 +331,10 @@ async function auditMockPdf(client, mcq, frq, errors, warnings, artifacts) {
   if (info.brokenImages.length) {
     errors.push({ page: 'mock-pdf', kind: 'broken_images', images: info.brokenImages.slice(0, 10) })
   }
+  const expectedFrqTables = frq.filter(item => item.background_data?.table).length
+  if (info.tableCount < expectedFrqTables) {
+    errors.push({ page: 'mock-pdf', kind: 'missing_frq_background_tables', expectedFrqTables, actualTables: info.tableCount })
+  }
   await screenshot(client, `${subjectId}-mock-pdf.png`, artifacts)
   const mockRubricScroll = await scrollToText(client, /Free Response Rubric Reference|Scoring Rubric|Rubric/i)
   if (!mockRubricScroll.found) {
@@ -350,6 +354,10 @@ async function auditScorePage(client, mcq, frq, errors, warnings, artifacts) {
   checkPageInfo(info, errors, warnings)
   if (!/Scoring Rubric|Rubric/i.test(info.text)) {
     warnings.push({ page: 'score', kind: 'score_page_missing_frq_or_rubric_text' })
+  }
+  const expectedFrqTables = frq.filter(item => item.background_data?.table).length
+  if (info.tableCount < expectedFrqTables) {
+    errors.push({ page: 'score', kind: 'missing_frq_background_tables', expectedFrqTables, actualTables: info.tableCount })
   }
   await screenshot(client, `${subjectId}-score.png`, artifacts)
   const scoreRubricScroll = await scrollToText(client, /Scoring Rubric|Rubric/i)

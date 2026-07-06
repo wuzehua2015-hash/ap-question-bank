@@ -43,6 +43,17 @@ function normalizedText(value) {
 }
 
 function subjectSourceRoot(subjectId) {
+  const explicit = {
+    'us-government-politics': 'US-Government-and-Politics',
+    'physics-c-e-m': 'Physics-C-E-M',
+    'physics-c-mechanics': 'Physics-C-Mechanics',
+    'calculus-ab': 'Calculus-AB',
+    'calculus-bc': 'Calculus-BC',
+  }
+  if (explicit[subjectId]) {
+    const candidate = path.join(REPO_ROOT, 'subjects', 'AP', explicit[subjectId])
+    if (fs.existsSync(candidate)) return candidate
+  }
   const parts = subjectId.split('-').map(part => {
     if (part === 'ap') return 'AP'
     return part.charAt(0).toUpperCase() + part.slice(1)
@@ -120,6 +131,33 @@ function detectMachineFindings(q, item) {
         severity: 'P0',
         code: 'visual_reference_without_asset',
         message: 'Prompt references a visual but no image/group visual is attached.',
+      })
+    }
+  }
+
+  if (/\binformation graphic above\b|\bgraphic above\b|\btable above\b|\bfollowing table\b|\bdata in the table\b/i.test(combined)) {
+    const hasStructuredTable = Boolean(q.background_data?.table || q.option_table_data)
+    const hasMarkdownTable = /^\s*\|.+\|\s*$/m.test(text)
+    const imageCount = (q.image_paths || q.images || []).length
+    if (!hasStructuredTable && !hasMarkdownTable && imageCount === 0) {
+      findings.push({
+        severity: 'P0',
+        code: 'information_graphic_or_table_without_rendered_asset',
+        message: 'Prompt references an information graphic/table, but no image, structured table, or Markdown table is attached.',
+      })
+    }
+  }
+
+  if (item.type === 'FRQ') {
+    const percentCount = (text.match(/\b\d+(?:\.\d+)?%/g) || []).length
+    const compactLineCount = text.split(/\r?\n/).filter(line => line.trim().length > 0).length
+    const hasStructuredTable = Boolean(q.background_data?.table)
+    const hasMarkdownTable = /^\s*\|.+\|\s*$/m.test(text)
+    if (percentCount >= 12 && compactLineCount >= 18 && !hasStructuredTable && !hasMarkdownTable && !(q.image_paths || []).length) {
+      findings.push({
+        severity: 'P0',
+        code: 'frq_numeric_table_flattened_as_text',
+        message: 'FRQ prompt contains many percentages/numeric rows but no rendered table or image; likely flattened information graphic.',
       })
     }
   }
@@ -224,6 +262,7 @@ function makeEvidencePacket(subject, item, q, subjectRoot) {
       background_data: q.background_data || null,
       option_table_data: q.option_table_data || null,
       rubric: q.rubric || null,
+      provenance: q.provenance || null,
     },
     web_render_targets: item.web_routes_to_review,
     machine_findings: detectMachineFindings(q, item),

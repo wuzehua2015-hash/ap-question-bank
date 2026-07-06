@@ -7,6 +7,51 @@ import { PdfContainer, exportToPdf } from '../utils/pdfExport.jsx'
 import { useSubject } from '../contexts/SubjectContext'
 import { formatAnswer, isAnswerCorrect } from '../utils/questionBank'
 
+function ScoreBackgroundTable({ tableData }) {
+  if (!tableData?.headers?.length || !tableData?.rows?.length) return null
+  return (
+    <div style={{ margin: '12px 0', overflowX: 'auto' }}>
+      {tableData.title && (
+        <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#374151', marginBottom: '6px' }}>
+          <MathText text={tableData.title} />
+        </div>
+      )}
+      <table style={{ borderCollapse: 'collapse', width: '100%', fontSize: '14px', background: '#ffffff' }}>
+        <thead>
+          <tr>
+            {tableData.headers.map((header, index) => (
+              <th key={index} style={{ border: '1px solid #d1d5db', padding: '6px', background: '#f3f4f6', textAlign: 'center' }}>
+                <MathText text={header} />
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {tableData.rows.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              {row.map((cell, cellIndex) => (
+                <td key={cellIndex} style={{ border: '1px solid #d1d5db', padding: '6px', textAlign: cellIndex === 0 ? 'left' : 'center' }}>
+                  <MathText text={cell} />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {tableData.source && (
+        <div style={{ fontSize: '11px', color: '#6b7280', marginTop: '4px' }}>
+          <MathText text={`Source: ${tableData.source}`} />
+        </div>
+      )}
+      {Array.isArray(tableData.notes) && tableData.notes.length > 0 && (
+        <div style={{ fontSize: '11px', color: '#6b7280', marginTop: '4px' }}>
+          {tableData.notes.map((note, index) => <div key={index}><MathText text={note} /></div>)}
+        </div>
+      )}
+    </div>
+  )
+}
+
 function ScorePage() {
   const navigate = useNavigate()
   const { currentSubjectConfig } = useSubject()
@@ -269,6 +314,7 @@ function ScorePage() {
                   <p style={{ fontSize: '22px', color: '#4b5563', marginBottom: '12px', lineHeight: 1.5 }}>
                     <MathText text={q.text || q.question_text} />
                   </p>
+                  <ScoreBackgroundTable tableData={q.background_data?.table} />
                   {q.image_paths && q.image_paths.length > 0 && (
                     <div style={{ marginBottom: '12px' }}>
                       {q.image_paths

@@ -32,9 +32,10 @@ async function main() {
     : {}
   const errors = []
   const warnings = []
+  const notes = []
   const artifacts = []
 
-  validateDataBehavior(subject, mcq, frq, similarity, errors, warnings)
+  validateDataBehavior(subject, mcq, frq, similarity, errors, warnings, notes)
 
   const preview = await ensurePreview(baseUrl)
   const chrome = await launchChrome(port)
@@ -61,6 +62,7 @@ async function main() {
       generated_at: new Date().toISOString(),
       errors,
       warnings,
+      notes,
       artifacts,
     }
     const reportPath = path.join(WORKSPACE, `${subjectId}-student-flow-report.json`)
@@ -78,7 +80,7 @@ async function main() {
   }
 }
 
-function validateDataBehavior(subject, mcq, frq, similarity, errors, warnings) {
+function validateDataBehavior(subject, mcq, frq, similarity, errors, warnings, notes) {
   const unitSum = Object.values(subject.mockExam?.unitDistribution || {}).reduce((sum, value) => sum + Number(value || 0), 0)
   if (unitSum !== Number(subject.mockExam?.totalMCQ || 0)) {
     errors.push({ area: 'data', kind: 'mock_unit_distribution_sum', unitSum, totalMCQ: subject.mockExam?.totalMCQ })
@@ -105,7 +107,7 @@ function validateDataBehavior(subject, mcq, frq, similarity, errors, warnings) {
   if (subject.hasFRQ && frq.length < expectedFrq) {
     errors.push({ area: 'data', kind: 'frq_count_below_mock_requirement', count: frq.length, expectedFrq })
   } else if (subject.hasFRQ && frq.length !== expectedFrq) {
-    warnings.push({ area: 'data', kind: 'frq_count_note', count: frq.length, expectedFrq })
+    notes.push({ area: 'data', kind: 'frq_bank_larger_than_mock_requirement', count: frq.length, expectedFrq })
   }
 }
 
@@ -175,6 +177,9 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     const info = await collectVisibleState(client)
     checkVisibleState(`frq-player:${selectedFrq[i].question_id}`, info, errors, warnings)
     if (!/Free Response|FRQ/i.test(info.text)) errors.push({ page: 'frq-player', kind: 'frq_header_missing' })
+    if (selectedFrq[i].background_data?.table && info.tableCount < 1) {
+      errors.push({ page: 'frq-player', kind: 'missing_frq_background_table', question_id: selectedFrq[i].question_id })
+    }
     await clickCheckbox(client)
     if (i < selectedFrq.length - 1) await clickTextButton(client, /下一题|Next/i)
   }
@@ -187,6 +192,10 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
   }
   if (/rubric_image_paths|official_rubric|Official scoring guideline for FRQ/i.test(scorePage.text)) {
     errors.push({ page: 'frq-score', kind: 'raw_rubric_mapping_or_placeholder_visible' })
+  }
+  const expectedScoreTables = selectedFrq.filter(item => item.background_data?.table).length
+  if (scorePage.tableCount < expectedScoreTables) {
+    errors.push({ page: 'frq-score', kind: 'missing_frq_background_tables', expectedScoreTables, actualTables: scorePage.tableCount })
   }
   await screenshot(client, `${subjectId}-frq-score.png`, artifacts)
   await clickTextButton(client, /确认评分|查看成绩|Score/i)

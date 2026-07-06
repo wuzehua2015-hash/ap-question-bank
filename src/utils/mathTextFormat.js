@@ -54,6 +54,9 @@ function renderLatexSegments(text, options = {}) {
 
   while ((match = pattern.exec(protectedText)) !== null) {
     const token = match[0]
+    if (token.startsWith('$') && !token.startsWith('$$') && isLikelyCurrencyToken(token, protectedText, match.index)) {
+      continue
+    }
     if (token.startsWith('$') && !token.startsWith('$$') && !forceInlineLatex && !isLikelyInlineLatex(token, protectedText, match.index)) {
       continue
     }
@@ -76,6 +79,16 @@ function renderLatexSegments(text, options = {}) {
 
   parts.push(escapeHtml(protectedText.slice(lastIndex)))
   return parts.join('').replace(/@@HTML_TAG_(\d+)@@/g, (_, idx) => restoredHtml[Number(idx)] || '')
+}
+
+function isLikelyCurrencyToken(token, fullText, startIndex) {
+  const body = token.slice(1, -1).trim()
+  const after = fullText[startIndex + token.length] || ''
+  if (!body || !/^\d/.test(body)) return false
+  if (/^[\d,.]+$/.test(body) && /\d/.test(after)) return true
+  if (/^[\d,.]+(?:\s+(?:they|per|and|or|to|for|million|billion|trillion)\b|[A-Za-z])/.test(body)) return true
+  if (/\b(?:dollars?|cents?|price|cost|revenue|profit|wage|income|funds?|money|paid|give|earns?)\b/i.test(body)) return true
+  return false
 }
 
 function isLikelyInlineLatex(token, fullText, startIndex) {

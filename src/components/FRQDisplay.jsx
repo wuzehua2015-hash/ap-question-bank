@@ -60,6 +60,7 @@ function normalizePromptTextV2(text) {
     .replace(/(?<!\|)\n(?!(?:\s*(?:\||- \[ \]|\([a-z]\)|[A-F]\.|[ivx]+\.|Part\s+[A-Z]\b|Part\s+\([a-z]\)|Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+|\u2022)))/gi, ' ')
     .replace(new RegExp(`\\s*${paragraphToken}\\s*`, 'g'), '\n\n')
     .replace(/\s+(Part\s+[A-Z]\b)/g, '\n\n$1')
+    .replace(/(PRESIDENTS JOHNSON TO BUSH)\s+(Use the information graphic above)/gi, '$1\n\n$2')
     .replace(/\s+(\([a-z]\)\s+)/gi, '\n\n$1')
     .replace(/\s+([A-F]\.\s+(?=[A-Z]))/g, '\n$1')
     .replace(/\s+([ivx]+\.)\s+(?=[A-Z])/gi, '\n$1 ')
@@ -654,6 +655,79 @@ function FRQText({ text, isPdf }) {
   )
 }
 
+function FRQBackgroundTable({ tableData, isPdf }) {
+  if (!tableData || !Array.isArray(tableData.headers) || !Array.isArray(tableData.rows)) return null
+
+  const cols = tableData.headers.length
+  const gridTemplateColumns = tableData.firstColumnWide
+    ? `minmax(${isPdf ? '120px' : '160px'}, 1.4fr) repeat(${Math.max(0, cols - 1)}, minmax(0, 1fr))`
+    : `repeat(${cols}, minmax(0, 1fr))`
+
+  if (isPdf) {
+    return (
+      <div style={{
+        margin: '12px 0 16px',
+        border: '1px solid #cbd5e1',
+        borderRadius: '4px',
+        overflow: 'hidden',
+        fontSize: '11px',
+        lineHeight: 1.35,
+        ...BREAK_GUARD.BLOCK,
+      }}>
+        {tableData.title && (
+          <div style={{ padding: '8px', fontWeight: 700, textAlign: 'center', background: '#f8fafc' }}>
+            <MathText text={tableData.title} />
+          </div>
+        )}
+        <div style={{ display: 'grid', gridTemplateColumns }}>
+          {tableData.headers.map((header, idx) => (
+            <div key={`h-${idx}`} style={{ padding: '6px', fontWeight: 700, textAlign: 'center', background: '#e5e7eb', borderTop: '1px solid #cbd5e1', borderLeft: idx ? '1px solid #cbd5e1' : 0 }}>
+              <MathText text={header} forceInlineLatex />
+            </div>
+          ))}
+          {tableData.rows.map((row, rowIdx) => row.map((cell, cellIdx) => (
+            <div key={`${rowIdx}-${cellIdx}`} style={{ padding: '6px', textAlign: cellIdx === 0 ? 'left' : 'center', borderTop: '1px solid #cbd5e1', borderLeft: cellIdx ? '1px solid #cbd5e1' : 0 }}>
+              <MathText text={cell} forceInlineLatex />
+            </div>
+          )))}
+        </div>
+        {tableData.source && (
+          <div style={{ padding: '6px 8px', fontSize: '10px', color: '#64748b', borderTop: '1px solid #cbd5e1' }}>
+            <MathText text={tableData.source} />
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  return (
+    <div className="my-4 overflow-hidden rounded-lg border border-border bg-white">
+      {tableData.title && (
+        <div className="bg-gray-50 px-3 py-2 text-center text-sm font-semibold text-text">
+          <MathText text={tableData.title} />
+        </div>
+      )}
+      <div className="grid text-xs sm:text-sm" style={{ gridTemplateColumns }}>
+        {tableData.headers.map((header, idx) => (
+          <div key={`h-${idx}`} className={`bg-gray-100 p-2 text-center font-semibold text-text ${idx ? 'border-l border-border' : ''} border-t border-border`}>
+            <MathText text={header} forceInlineLatex />
+          </div>
+        ))}
+        {tableData.rows.map((row, rowIdx) => row.map((cell, cellIdx) => (
+          <div key={`${rowIdx}-${cellIdx}`} className={`${cellIdx ? 'border-l border-border' : ''} border-t border-border p-2 ${cellIdx === 0 ? 'text-left font-medium' : 'text-center'} text-text`}>
+            <MathText text={cell} forceInlineLatex />
+          </div>
+        )))}
+      </div>
+      {tableData.source && (
+        <div className="border-t border-border px-3 py-2 text-xs text-text-muted">
+          <MathText text={tableData.source} />
+        </div>
+      )}
+    </div>
+  )
+}
+
 function MissingGraphNotice({ isPdf }) {
   const text = 'Table or graph image is missing. Please contact an administrator to add this asset.'
 
@@ -691,6 +765,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
   const qNum = frq.question_number || frq.question_num || index || '?'
   const officialImagesFirst = frq.display_mode === 'official_images_first'
   const promptText = frq.text || frq.question_text
+  const backgroundTable = frq.background_data?.table
 
   const promptTextBlock = promptText && (
     isPdf ? (
@@ -707,6 +782,9 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
   const imageBlock = imagePaths.map((path, i) => (
     <DisplayImage key={i} path={path} variant={variant} />
   ))
+  const backgroundTableBlock = backgroundTable && (
+    <FRQBackgroundTable tableData={backgroundTable} isPdf={isPdf} />
+  )
 
   return (
     <div className={isPdf ? '' : framed ? 'bg-surface rounded-xl p-6 shadow-sm border border-border' : ''}>
@@ -746,6 +824,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
       {officialImagesFirst ? (
         <>
           {isPdf && promptTextBlock}
+          {isPdf && backgroundTableBlock}
           {imageBlock}
           {promptText && !isPdf && (
               <details className="mb-6 rounded-lg border border-border bg-gray-50 p-3 text-sm text-text-muted">
@@ -759,6 +838,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
       ) : (
         <>
           {promptTextBlock}
+          {backgroundTableBlock}
           {imageBlock}
         </>
       )}

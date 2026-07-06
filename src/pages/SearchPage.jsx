@@ -1,16 +1,13 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
 import { loadMCQBank, getSubjectUnits } from '../utils/questionBank'
-import {
-  getDoneQuestions, getWrongQuestions, getQuestionHistory
-} from '../utils/storage'
+import { getDoneQuestions, getQuestionHistory, getWrongQuestions } from '../utils/storage'
 import { startCustomQuiz } from '../utils/quizSession'
 import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
 import { MathText } from '../components/MathText'
 
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
-
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
 function SearchPage() {
@@ -34,15 +31,16 @@ function SearchPage() {
   }, [currentSubject])
 
   useEffect(() => {
+    setLoading(true)
     loadMCQBank(currentSubject).then(data => {
       setQuestions(data)
       setYearFilter('all')
-      setLoading(false)
       const qid = searchParams.get('qid')
       if (qid) {
         setKeyword(qid)
         setExpandedId(qid)
       }
+      setLoading(false)
     }).catch(() => setLoading(false))
   }, [currentSubject, searchParams])
 
@@ -103,11 +101,10 @@ function SearchPage() {
     navigate('/quiz-pdf')
   }
 
-  const getImageUrl = (path) => {
+  const imageUrl = (path) => {
+    if (!path) return ''
     if (path.startsWith('http')) return path
-    // Remove leading slash if present, then prepend BASE_URL
-    const cleanPath = path.startsWith('/') ? path.slice(1) : path
-    return `${BASE_URL}${cleanPath}`
+    return `${BASE_URL}${path.startsWith('/') ? path.slice(1) : path}`
   }
 
   if (loading) {
@@ -122,61 +119,26 @@ function SearchPage() {
     <div className="max-w-6xl mx-auto px-4 py-6">
       <h1 className="text-2xl font-bold text-brand mb-6">题目搜索</h1>
 
-      {/* 搜索框 */}
       <div className="mb-6">
         <input
           type="text"
-          placeholder="搜索题目关键词（如 inflation, aggregate demand, GDP...）"
+          placeholder="搜索题号或关键词，例如 2018_Q01、inflation、Congress..."
           value={keyword}
           onChange={e => setKeyword(e.target.value)}
           className="w-full p-3 border border-border rounded-lg bg-bg text-base"
         />
       </div>
 
-      {/* 筛选器 */}
       <div className="bg-surface rounded-xl p-4 shadow-sm border border-border mb-6">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          <div>
-            <label className="block text-xs font-medium text-text-muted mb-1">单元</label>
-            <select value={unitFilter} onChange={e => setUnitFilter(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
-              <option value="all">全部</option>
-              {units.map(u => <option key={u.id} value={u.id}>{u.id}</option>)}
-            </select>
-          </div>
-          <div>
-            <label className="block text-xs font-medium text-text-muted mb-1">年份</label>
-            <select value={yearFilter} onChange={e => setYearFilter(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
-              <option value="all">全部</option>
-              {years.map(y => <option key={y} value={y}>{y}</option>)}
-            </select>
-          </div>
-          <div>
-            <label className="block text-xs font-medium text-text-muted mb-1">难度</label>
-            <select value={difficultyFilter} onChange={e => setDifficultyFilter(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
-              <option value="all">全部</option>
-              {DIFFICULTIES.map(d => <option key={d} value={d}>{d}</option>)}
-            </select>
-          </div>
-          <div>
-            <label className="block text-xs font-medium text-text-muted mb-1">已做过</label>
-            <select value={doneFilter} onChange={e => setDoneFilter(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
-              <option value="all">全部</option>
-              <option value="yes">是</option>
-              <option value="no">否</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-xs font-medium text-text-muted mb-1">错题</label>
-            <select value={wrongFilter} onChange={e => setWrongFilter(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
-              <option value="all">全部</option>
-              <option value="yes">是</option>
-              <option value="no">否</option>
-            </select>
-          </div>
+          <FilterSelect label="单元" value={unitFilter} onChange={setUnitFilter} options={units.map(u => [u.id, u.id])} />
+          <FilterSelect label="年份" value={yearFilter} onChange={setYearFilter} options={years.map(y => [y, y])} />
+          <FilterSelect label="难度" value={difficultyFilter} onChange={setDifficultyFilter} options={DIFFICULTIES.map(d => [d, d])} />
+          <FilterSelect label="已做过" value={doneFilter} onChange={setDoneFilter} options={[['yes', '是'], ['no', '否']]} />
+          <FilterSelect label="错题" value={wrongFilter} onChange={setWrongFilter} options={[['yes', '是'], ['no', '否']]} />
         </div>
       </div>
 
-      {/* 结果统计 */}
       <div className="flex justify-between items-center mb-4">
         <span className="text-sm text-text-muted">共 {filtered.length} 道题</span>
         {filtered.length > 0 && filtered.length <= 60 && (
@@ -191,13 +153,12 @@ function SearchPage() {
               onClick={() => exportPdf(filtered)}
               className="border border-brand text-brand hover:bg-brand hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
             >
-              📄 导出 PDF
+              导出 PDF
             </button>
           </div>
         )}
       </div>
 
-      {/* 结果列表 */}
       <div className="space-y-3">
         {filtered.length === 0 && (
           <div className="text-center py-12 text-text-muted">没有符合条件的题目</div>
@@ -211,6 +172,7 @@ function SearchPage() {
           const isDone = doneIds.has(q.question_id)
           const isShowAnswer = showAnswerId === q.question_id
           const visibleImages = (q.image_paths || []).filter(img => !(q.option_table_data && /option_table/i.test(img)))
+
           return (
             <div key={q.question_id} data-question-id={q.question_id} className="bg-surface rounded-xl border border-border overflow-hidden">
               <div
@@ -222,45 +184,43 @@ function SearchPage() {
                 }}
               >
                 <div className="flex flex-wrap gap-2 mb-2">
-                  <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">{q.question_id}</span>
-                  <span className="bg-brand text-white text-xs px-2 py-1 rounded">{q.primary_unit}</span>
-                  <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">{q.year}</span>
-                  {q.difficulty && <span className={`text-xs px-2 py-1 rounded ${q.difficulty === 'Hard' ? 'bg-red-100 text-red-700' : q.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'}`}>{q.difficulty}</span>}
-                  {isDone && <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">已做</span>}
-                  {isWrong && <span className="bg-red-100 text-red-700 text-xs px-2 py-1 rounded">错题</span>}
-                  {correctRate !== null && (
-                    <span className={`text-xs px-2 py-1 rounded ${correctRate >= 70 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
-                      正确率 {correctRate}%
-                    </span>
-                  )}
+                  <Tag>{q.question_id}</Tag>
+                  <Tag tone="brand">{q.primary_unit}</Tag>
+                  <Tag>{q.year}</Tag>
+                  {q.difficulty && <Tag tone={q.difficulty}>{q.difficulty}</Tag>}
+                  {isDone && <Tag tone="done">已做</Tag>}
+                  {isWrong && <Tag tone="wrong">错题</Tag>}
+                  {correctRate !== null && <Tag tone={correctRate >= 70 ? 'done' : 'wrong'}>正确率 {correctRate}%</Tag>}
                 </div>
                 <div className={`text-sm text-text ${isExpanded ? '' : 'line-clamp-2'}`}>
                   <MathText text={q.text || q.question_text} />
                 </div>
               </div>
+
               {isExpanded && (
                 <div className="px-4 pb-4 border-t border-border bg-gray-50">
-                  {/* 图片 - 只在展开时展示 */}
+                  <BackgroundTable tableData={q.background_data?.table} />
+
                   {visibleImages.length > 0 && (
-                    <div className="mb-3 mt-3">
+                    <div className="mb-3 mt-3 space-y-3">
                       {visibleImages.map((img, i) => (
-                        <img key={i} src={getImageUrl(img)} alt="" className="max-w-full max-h-[520px] rounded border border-border" />
+                        <img key={i} src={imageUrl(img)} alt="" className="max-w-full max-h-[520px] rounded border border-border" />
                       ))}
                     </div>
                   )}
-                  {/* 选项 */}
+
                   {q.option_table_data ? (
-                    <SearchTableOptions tableData={q.option_table_data} />
+                    <OptionTable tableData={q.option_table_data} />
                   ) : (
                     <div className="space-y-1 mb-3">
                       {Object.entries(q.options || {}).map(([k, v]) => (
                         <div key={k} className="text-sm text-text">
-                          <span className="font-bold">{k}.</span> <MathText text={v} />
+                          <span className="font-bold">{k}.</span> <MathText text={v} forceInlineLatex />
                         </div>
                       ))}
                     </div>
                   )}
-                  {/* 答案 - 默认隐藏，需点击显示 */}
+
                   <div className="flex items-center gap-3 mb-2">
                     {isShowAnswer ? (
                       <div className="text-sm font-medium text-brand">
@@ -281,21 +241,14 @@ function SearchPage() {
                       </button>
                     )}
                   </div>
+
                   {hist && (
                     <div className="text-xs text-text-muted">
                       历史记录：{hist.correct_count} 次正确 / {hist.wrong_count} 次错误（共 {totalAttempts} 次）
                     </div>
                   )}
-                  {/* 相似题推荐 */}
-                  <SimilarQuestionsBlock
-                    questionId={q.question_id}
-                    allQuestions={questions}
-                    count={3}
-                  />
-                  <div className="mt-3 flex gap-2">
-                    {/* 单题练习功能已移除：搜索的核心是查找和浏览，不是练习。
-                        如需针对性练习，请使用错题本或 Quiz 功能。 */}
-                  </div>
+
+                  <SimilarQuestionsBlock questionId={q.question_id} allQuestions={questions} count={3} />
                 </div>
               )}
             </div>
@@ -306,45 +259,103 @@ function SearchPage() {
   )
 }
 
-function SearchTableOptions({ tableData }) {
-  const { headers, rows } = tableData
-  const numCols = headers.length
+function FilterSelect({ label, value, onChange, options }) {
+  return (
+    <div>
+      <label className="block text-xs font-medium text-text-muted mb-1">{label}</label>
+      <select value={value} onChange={e => onChange(e.target.value)} className="w-full p-2 border border-border rounded bg-bg text-sm">
+        <option value="all">全部</option>
+        {options.map(([optionValue, text]) => <option key={optionValue} value={optionValue}>{text}</option>)}
+      </select>
+    </div>
+  )
+}
 
+function Tag({ children, tone = 'default' }) {
+  const styles = {
+    default: 'bg-gray-100 text-gray-600',
+    brand: 'bg-brand text-white',
+    Easy: 'bg-green-100 text-green-700',
+    Medium: 'bg-yellow-100 text-yellow-700',
+    Hard: 'bg-red-100 text-red-700',
+    done: 'bg-green-100 text-green-700',
+    wrong: 'bg-red-100 text-red-700',
+  }
+  return <span className={`${styles[tone] || styles.default} text-xs px-2 py-1 rounded`}>{children}</span>
+}
+
+function BackgroundTable({ tableData }) {
+  if (!tableData?.headers || !tableData?.rows) return null
+  const rows = Array.isArray(tableData.rows) ? tableData.rows : Object.values(tableData.rows)
   const gridStyle = {
     display: 'grid',
-    gridTemplateColumns: `40px repeat(${numCols}, 1fr)`,
+    gridTemplateColumns: `repeat(${tableData.headers.length}, minmax(120px, 1fr))`,
     gap: '1px',
   }
 
   return (
-    <div className="border border-border rounded-lg overflow-hidden mb-3">
-      {/* 表头 */}
-      <div className="grid" style={gridStyle}>
-        <div className="bg-gray-100 p-2 text-sm font-medium text-text-muted"></div>
-        {headers.map((h, i) => (
-          <div key={i} className="bg-gray-100 p-2 text-sm font-medium text-text-muted text-center">
-            <MathText text={h} forceInlineLatex />
-          </div>
-        ))}
-      </div>
-
-      {/* 选项行 */}
-      {Object.entries(rows).map(([key, values]) => (
-        <div
-          key={key}
-          className="grid border-t border-border bg-surface"
-          style={gridStyle}
-        >
-          <div className="p-2 text-sm font-bold text-text flex items-center justify-center">
-            {key}.
-          </div>
-          {values.map((val, i) => (
-            <div key={i} className="p-2 text-sm text-text text-center flex items-center justify-center">
-              <MathText text={val} forceInlineLatex />
+    <div className="my-3 border border-border rounded-lg overflow-x-auto">
+      {tableData.title && (
+        <div className="bg-gray-100 p-2 text-sm font-semibold text-text">
+          <MathText text={tableData.title} forceInlineLatex />
+        </div>
+      )}
+      <div className="min-w-max">
+        <div className="grid" style={gridStyle}>
+          {tableData.headers.map((h, i) => (
+            <div key={i} className="bg-gray-100 p-2 text-sm font-semibold text-text text-center">
+              <MathText text={h} forceInlineLatex />
             </div>
           ))}
         </div>
+        {rows.map((row, ri) => (
+          <div key={ri} className="grid border-t border-border bg-white" style={gridStyle}>
+            {row.map((cell, ci) => (
+              <div key={ci} className="p-2 text-sm text-text text-center">
+                <MathText text={cell} forceInlineLatex />
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+      {tableData.source && <div className="p-2 text-xs text-text-muted">{tableData.source}</div>}
+      {Array.isArray(tableData.notes) && tableData.notes.map((note, i) => (
+        <div key={i} className="px-2 pb-1 text-xs text-text-muted">{note}</div>
       ))}
+    </div>
+  )
+}
+
+function OptionTable({ tableData }) {
+  const { headers, rows } = tableData
+  const gridStyle = {
+    display: 'grid',
+    gridTemplateColumns: `40px repeat(${headers.length}, minmax(100px, 1fr))`,
+    gap: '1px',
+  }
+
+  return (
+    <div className="border border-border rounded-lg overflow-x-auto mb-3">
+      <div className="min-w-max">
+        <div className="grid" style={gridStyle}>
+          <div className="bg-gray-100 p-2 text-sm font-medium text-text-muted"></div>
+          {headers.map((h, i) => (
+            <div key={i} className="bg-gray-100 p-2 text-sm font-medium text-text-muted text-center">
+              <MathText text={h} forceInlineLatex />
+            </div>
+          ))}
+        </div>
+        {Object.entries(rows).map(([key, values]) => (
+          <div key={key} className="grid border-t border-border bg-surface" style={gridStyle}>
+            <div className="p-2 text-sm font-bold text-text flex items-center justify-center">{key}.</div>
+            {values.map((val, i) => (
+              <div key={i} className="p-2 text-sm text-text text-center flex items-center justify-center">
+                <MathText text={val} forceInlineLatex />
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

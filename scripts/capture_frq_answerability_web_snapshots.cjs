@@ -12,15 +12,10 @@ const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
-const port = Number(args.port || 9444)
-const limit = args.limit ? Number(args.limit) : null
-const offset = args.offset ? Number(args.offset) : 0
-const onlyPriority = args.priority || null
-const onlyIds = args.ids ? new Set(String(args.ids).split(',').map(id => id.trim()).filter(Boolean)) : null
-const includeReviewed = args['include-reviewed'] === 'true' || args.includeReviewed === 'true'
+const port = Number(args.port || 9454)
 
 if (!subjectId) {
-  console.error('Usage: node scripts/capture_answerability_web_snapshots.cjs --subject <subject_id> [--priority P1_REVIEW] [--limit 50]')
+  console.error('Usage: node scripts/capture_frq_answerability_web_snapshots.cjs --subject <subject_id> [--url http://127.0.0.1:4174/ap-question-bank/] [--port 9454]')
   process.exit(1)
 }
 
@@ -30,15 +25,8 @@ const BAD_VISIBLE_PATTERNS = [
   { code: 'visible_mojibake', re: /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7\u9354\u68f0\u93bc]/ },
   { code: 'exam_footer', re: /IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING/i },
   { code: 'spoken_math', re: /\b(?:the )?fraction\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i },
-  { code: 'missing_formula_phrase', re: /\b(?:according to|given by|modeled by) the equation\s*,/i },
-  { code: 'missing_constants_phrase', re: /\bwhere\s+and\s+are\s+constants\b/i },
+  { code: 'raw_mapping_key', re: /\bofficial_(?:scoring_guideline|rubric)\b|rubric_image_paths/i },
 ]
-
-function isExpandedText(text) {
-  return /查看答案|正确答案|Hide Answer|Show Answer/.test(text || '') ||
-    /(^|\n)\s*A\.\s/m.test(text || '') ||
-    /(^|\n)\s*B\.\s/m.test(text || '')
-}
 
 main().catch(error => {
   console.error(error.stack || error.message || String(error))
@@ -46,22 +34,19 @@ main().catch(error => {
 })
 
 async function main() {
+  const subject = loadSubject(subjectId)
+  if (!subject.frqBank) throw new Error(`${subjectId}: subject has no frqBank`)
+  const mcq = subject.questionBank ? readJson(path.join(PUBLIC, 'data', subject.questionBank)) : []
+  const mcqStub = mcq.find(q => q.question_id && q.text && q.options && q.answer)
+  if (!mcqStub) throw new Error(`${subjectId}: no MCQ stub available for Mock PDF session`)
+  const frq = readJson(path.join(PUBLIC, 'data', subject.frqBank))
   const auditDir = path.join(OUT_ROOT, subjectId)
-  const manifest = readJson(path.join(auditDir, 'manifest.json'))
-  const review = fs.existsSync(path.join(auditDir, 'review_results.json'))
-    ? readJson(path.join(auditDir, 'review_results.json'))
-    : { items: [] }
-  const reviewed = new Set((review.items || []).filter(item => item.status === 'PASS').map(item => item.question_id))
-  let items = (manifest.items || []).filter(item => item.type === 'MCQ' && (includeReviewed || !reviewed.has(item.question_id)))
-  if (onlyPriority) items = items.filter(item => item.priority === onlyPriority)
-  if (onlyIds) items = items.filter(item => onlyIds.has(item.question_id))
-  if (offset || limit) items = items.slice(offset, limit ? offset + limit : undefined)
+  const outDir = path.join(auditDir, 'web_snapshots_frq')
+  fs.mkdirSync(outDir, { recursive: true })
 
   await ensurePreview(baseUrl)
   const chrome = await launchChrome(port)
   const client = await connectChrome(port)
-  const outDir = path.join(auditDir, 'web_snapshots')
-  fs.mkdirSync(outDir, { recursive: true })
 
   try {
     await client.send('Page.enable')
@@ -71,21 +56,15 @@ async function main() {
       source: `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`,
     })
     await navigate(client, routeUrl('#/'))
-    await navigate(client, routeUrl('#/search'))
-    await sleep(500)
 
     const snapshots = []
-    for (const item of items) {
-      const snapshot = await captureSearchItem(client, item)
-      snapshots.push(snapshot)
-      if (snapshot.findings.some(f => f.severity === 'P0')) {
-        await screenshot(client, path.join(outDir, `${item.question_id}.png`))
-      }
+    for (const item of frq) {
+      snapshots.push(await captureFrqItem(client, item, mcqStub, outDir))
     }
 
     const report = {
       subject_id: subjectId,
-      surface: 'search',
+      surface: 'frq_player/frq_score/mock_pdf_frq',
       generated_at: new Date().toISOString(),
       baseUrl,
       total_snapshots: snapshots.length,
@@ -93,7 +72,7 @@ async function main() {
       p1_count: snapshots.reduce((sum, s) => sum + s.findings.filter(f => f.severity === 'P1').length, 0),
       snapshots,
     }
-    const reportPath = path.join(auditDir, `web_snapshot_search_${Date.now()}.json`)
+    const reportPath = path.join(auditDir, `web_snapshot_frq_${Date.now()}.json`)
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2) + '\n')
     console.log(JSON.stringify({
       report: reportPath,
@@ -109,122 +88,133 @@ async function main() {
   }
 }
 
-async function captureSearchItem(client, item) {
-  await navigate(client, routeUrl(`#/search?qid=${encodeURIComponent(item.question_id)}`))
-  const result = await evaluate(client, `window.__captureSearchItem(${JSON.stringify(item.question_id)})`)
+async function captureFrqItem(client, item, mcqStub, outDir) {
+  await seedFrqSession(client, item, mcqStub)
+  const surfaces = []
+
+  await navigate(client, routeUrl('#/frq'))
+  await waitForImages(client)
+  surfaces.push(await collectSurface(client, 'frq_player', item))
+
+  await clickCompletionAndFinish(client)
+  await waitForImages(client)
+  surfaces.push(await collectSurface(client, 'frq_score', item))
+
+  await seedFrqSession(client, item, mcqStub)
+  await navigate(client, routeUrl('#/mock-pdf'))
+  await waitForImages(client)
+  surfaces.push(await collectSurface(client, 'mock_pdf_frq', item))
+
   const findings = []
-  if (!result.found) {
-    findings.push({ severity: 'P0', code: 'search_item_not_found', message: 'Search by question_id did not return one result.' })
-  }
-  if (!result.expanded) {
-    findings.push({ severity: 'P0', code: 'search_item_not_expanded', message: 'Question card did not expand.' })
-  }
-  if (result.brokenImages?.length) {
-    findings.push({ severity: 'P0', code: 'broken_image', message: 'One or more visible images failed to load.', details: result.brokenImages })
-  }
-  if ((item.data_evidence?.image_count || 0) > 0 && result.imageCount === 0) {
-    findings.push({ severity: 'P0', code: 'expected_images_not_visible', message: 'Manifest says the item has images, but none are visible in Search.' })
-  }
-  if (item.data_evidence?.has_background_data && result.tableCount === 0) {
-    findings.push({ severity: 'P0', code: 'expected_background_table_not_visible', message: 'Manifest says the item has background data/table, but no table is visible in Search.' })
-  }
-  if (item.data_evidence?.has_option_table && result.tableCount === 0) {
-    findings.push({ severity: 'P0', code: 'expected_option_table_not_visible', message: 'Manifest says the item has option table data, but no table is visible in Search.' })
-  }
-  for (const pattern of BAD_VISIBLE_PATTERNS) {
-    const match = pattern.re.exec(result.text || '')
-    if (match) {
-      findings.push({ severity: 'P0', code: pattern.code, message: 'Bad visible text pattern found.', sample: sampleText(result.text, match.index) })
-    }
-  }
-  if (item.risk_signals?.includes('references_visual_or_table') && result.imageCount === 0 && result.tableCount === 0 && !/table|momentum|kinetic energy/i.test(result.text || '')) {
-    findings.push({ severity: 'P1', code: 'visual_reference_needs_review', message: 'Risk signal references a visual/table, but no visual/table was visible in Search.' })
+  for (const surface of surfaces) findings.push(...surface.findings)
+  if (findings.some(f => f.severity === 'P0')) {
+    await screenshot(client, path.join(outDir, `${item.question_id}.png`))
   }
   return {
     question_id: item.question_id,
-    priority: item.priority,
-    risk_signals: item.risk_signals,
-    found: result.found,
-    expanded: result.expanded,
-    text: result.text,
-    imageCount: result.imageCount,
-    tableCount: result.tableCount,
-    katexCount: result.katexCount,
-    images: result.images,
-    debug: result.debug,
+    year: item.year,
+    question_number: item.question_number,
+    surfaces,
     findings,
   }
 }
 
-async function installSearchCaptureHelper(client) {
-  await evaluate(client, `(() => {
-    if (window.__captureSearchItem) return true;
-    window.__isExpandedSearchText = (text) => /查看答案|正确答案|Hide Answer|Show Answer/.test(text || '') ||
-      /(^|\\n)\\s*A\\.\\s/m.test(text || '') ||
-      /(^|\\n)\\s*B\\.\\s/m.test(text || '');
-    window.__captureSearchItem = async (id) => {
-      const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-      let input = null;
-      for (let i = 0; i < 50; i += 1) {
-        input = document.querySelector('input');
-        if (input && !/Loading|加载/.test(document.body.innerText || '')) break;
-        await sleep(100);
-      }
-      if (!input) return { found: false, expanded: false, text: '', pageText: (document.body.innerText || '').slice(0, 1200), imageCount: 0, tableCount: 0, katexCount: 0, images: [], brokenImages: [] };
-      const setter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set;
-      setter.call(input, id);
-      input.dispatchEvent(new Event('input', { bubbles: true }));
-      let card = null;
-      for (let i = 0; i < 30; i += 1) {
-        await sleep(100);
-        card = document.querySelector('[data-question-id="' + CSS.escape(id) + '"]');
-        if (card || /0\\s/.test(document.body.innerText || '')) break;
-      }
-      const found = Boolean(card);
-      if (card && !window.__isExpandedSearchText(card.innerText || '')) {
-        const clickable = card.querySelector('[data-question-toggle="' + CSS.escape(id) + '"]') || card.querySelector('.cursor-pointer') || card.firstElementChild;
-        clickable?.click();
-        await sleep(220);
-      }
-      let root = document.querySelector('[data-question-id="' + CSS.escape(id) + '"]') || card || document.body;
-      const debug = { hasToggle: Boolean(root?.querySelector('[data-question-toggle="' + CSS.escape(id) + '"]')), clicked: false };
-      if (root && !window.__isExpandedSearchText(root.innerText || '')) {
-        const clickable = root.querySelector('[data-question-toggle="' + CSS.escape(id) + '"]') || root.querySelector('.cursor-pointer') || root.firstElementChild;
-        if (clickable) {
-          HTMLElement.prototype.click.call(clickable);
-          debug.clicked = true;
-        }
-        await sleep(500);
-      }
-      root = document.querySelector('[data-question-id="' + CSS.escape(id) + '"]') || root;
-      for (let i = 0; i < 50; i += 1) {
-        const pending = [...root.querySelectorAll('img')].some(img => !img.complete || img.naturalWidth === 0);
-        if (!pending) break;
-        await sleep(100);
-      }
-      const imgs = [...root.querySelectorAll('img')].map(img => ({
-        src: img.currentSrc || img.src,
-        complete: img.complete,
-        naturalWidth: img.naturalWidth,
-        naturalHeight: img.naturalHeight,
-        width: img.clientWidth,
-        height: img.clientHeight,
-      }));
-      return {
-        found,
-        expanded: Boolean(root.innerText && (window.__isExpandedSearchText(root.innerText) || root.querySelector('img'))),
-        text: root.innerText || '',
-        pageText: found ? '' : (document.body.innerText || '').slice(0, 1200),
-        imageCount: imgs.length,
-        tableCount: root.querySelectorAll('table, [style*="grid-template-columns"]').length,
-        katexCount: root.querySelectorAll('.katex').length,
-        images: imgs,
-        brokenImages: imgs.filter(img => !img.complete || img.naturalWidth === 0),
-        debug,
-      };
+async function collectSurface(client, surface, item) {
+  const info = await evaluate(client, `(() => {
+    const text = document.body ? document.body.innerText : '';
+    const imgs = [...document.images].map(img => ({
+      src: img.currentSrc || img.src,
+      complete: img.complete,
+      naturalWidth: img.naturalWidth,
+      naturalHeight: img.naturalHeight,
+      width: img.clientWidth,
+      height: img.clientHeight,
+    }));
+    return {
+      url: location.href,
+      text,
+      textLength: text.length,
+      tableCount: document.querySelectorAll('table, [style*="grid-template-columns"]').length,
+      imageCount: imgs.length,
+      brokenImages: imgs.filter(img => !img.complete || img.naturalWidth === 0),
+      bodyHeight: document.body ? document.body.scrollHeight : 0,
     };
-    return true;
   })()`)
+  const findings = []
+  if (!info.textLength) findings.push({ severity: 'P0', surface, code: 'blank_page' })
+  if (info.brokenImages.length) findings.push({ severity: 'P0', surface, code: 'broken_images', details: info.brokenImages.slice(0, 5) })
+  if (!containsEnoughPrompt(info.text, item.text)) {
+    findings.push({ severity: 'P0', surface, code: 'frq_prompt_not_visible', message: 'FRQ prompt text is not visible enough on this surface.' })
+  }
+  if (surface !== 'frq_player' && !/Scoring|Rubric|评分标准/i.test(info.text || '')) {
+    findings.push({ severity: 'P0', surface, code: 'rubric_not_visible' })
+  }
+  if (item.background_data?.table && info.tableCount < 1) {
+    findings.push({ severity: 'P0', surface, code: 'background_table_not_visible' })
+  }
+  for (const pattern of BAD_VISIBLE_PATTERNS) {
+    const match = pattern.re.exec(info.text || '')
+    if (match) {
+      findings.push({ severity: 'P0', surface, code: pattern.code, sample: sampleText(info.text, match.index) })
+    }
+  }
+  return {
+    surface,
+    url: info.url,
+    textLength: info.textLength,
+    tableCount: info.tableCount,
+    imageCount: info.imageCount,
+    bodyHeight: info.bodyHeight,
+    findings,
+  }
+}
+
+function containsEnoughPrompt(visibleText, prompt) {
+  const cleanVisible = normalized(visibleText)
+  const words = normalized(prompt).split(/\s+/).filter(word => word.length > 2).slice(0, 20)
+  if (words.length < 5) return cleanVisible.length > 50
+  const hits = words.filter(word => cleanVisible.includes(word)).length
+  return hits >= Math.min(10, Math.ceil(words.length * 0.55))
+}
+
+async function seedFrqSession(client, item, mcqStub) {
+  const payload = Buffer.from(JSON.stringify({
+    subjectId,
+    mcq: [mcqStub],
+    frq: [item],
+    info: { isMock: true, mode: 'mock', requestedCount: 1, actualCount: 1 },
+    config: { subject: subjectId, unit: 'audit', count: 1, type: 'mock' },
+  }), 'utf8').toString('base64')
+  await evaluate(client, `(() => {
+    const raw = atob(${JSON.stringify(payload)});
+    const bytes = Uint8Array.from(raw, ch => ch.charCodeAt(0));
+    const payload = JSON.parse(new TextDecoder('utf-8').decode(bytes));
+    sessionStorage.clear();
+    localStorage.setItem('currentSubject', payload.subjectId);
+    sessionStorage.setItem('currentQuiz', JSON.stringify(payload.mcq));
+    sessionStorage.setItem('currentFRQ', JSON.stringify(payload.frq));
+    sessionStorage.setItem('quizConfig', JSON.stringify(payload.config));
+    sessionStorage.setItem('quizInfo', JSON.stringify(payload.info));
+  })()`)
+}
+
+async function clickCompletionAndFinish(client) {
+  await evaluate(client, `(() => {
+    const box = document.querySelector('input[type="checkbox"]');
+    if (box && !box.checked) box.click();
+    const buttons = [...document.querySelectorAll('button,a')];
+    const target = buttons.find(el => /完成 FRQ|进入.*成绩|Finish|Score/i.test(el.innerText || el.textContent || ''));
+    if (target) target.click();
+    return Boolean(target);
+  })()`)
+  await sleep(700)
+}
+
+function loadSubject(id) {
+  const config = readJson(path.join(PUBLIC, 'data', 'subjects.json'))
+  const subject = config.subjects.find(item => item.id === id)
+  if (!subject) throw new Error(`Subject not found: ${id}`)
+  return subject
 }
 
 function parseArgs(argv) {
@@ -274,7 +264,7 @@ function httpOk(url) {
 async function launchChrome(debugPort) {
   const browser = findChrome()
   if (!browser) throw new Error('Chrome/Edge not found. Set CHROME_PATH to chrome.exe and retry.')
-  const userDataDir = path.join(ROOT, '.workspace', 'answerability-audit', `chrome-profile-${debugPort}`)
+  const userDataDir = path.join(OUT_ROOT, subjectId, `chrome-profile-frq-${debugPort}`)
   fs.mkdirSync(userDataDir, { recursive: true })
   const argv = [
     '--headless=new',
@@ -370,7 +360,6 @@ async function navigate(client, url) {
     if (ready) break
   }
   await sleep(400)
-  await installSearchCaptureHelper(client)
 }
 
 function routeUrl(hash) {
@@ -385,13 +374,30 @@ async function setViewport(client, width, height) {
 
 async function evaluate(client, expression) {
   const result = await client.send('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true })
-  if (result.exceptionDetails) throw new Error(result.exceptionDetails.text || 'Runtime.evaluate failed')
+  if (result.exceptionDetails) throw new Error(result.exceptionDetails.exception?.description || result.exceptionDetails.text || 'Runtime.evaluate failed')
   return result.result?.value
+}
+
+async function waitForImages(client) {
+  await evaluate(client, `(() => new Promise(async resolve => {
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+    const deadline = Date.now() + 15000;
+    while (Date.now() < deadline) {
+      const pending = [...document.images].some(img => !img.complete || img.naturalWidth === 0);
+      if (!pending) break;
+      await sleep(250);
+    }
+    resolve(true);
+  }))()`)
 }
 
 async function screenshot(client, file) {
   const result = await client.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false })
   fs.writeFileSync(file, Buffer.from(result.data, 'base64'))
+}
+
+function normalized(text) {
+  return String(text || '').replace(/\s+/g, ' ').trim()
 }
 
 function sampleText(text, index) {
