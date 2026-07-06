@@ -49,6 +49,14 @@ async function main() {
   assert(htmlEntityText.includes('&quot;Do not laugh&quot;'), 'Decoded quotes should be escaped once for safe HTML output.')
   assert(!htmlEntityText.includes('&amp;quot;'), 'HTML entities from source data must not be double-escaped in rendered text.')
 
+  const chemReaction = formatMathText('$2NaHCO_3(s)\\rightarrow Na_2CO_3(s)+CO_2(g)+H_2O(g)$')
+  assert(hasKatex(chemReaction), 'Chemistry reactions that start with coefficients must render as KaTeX.')
+  assert(!chemReaction.includes('$2NaHCO_3'), 'Chemistry reactions must not remain raw dollar-delimited text.')
+
+  const chemIonic = formatMathText('$2Li(s)+2H^+(aq)+2OH^-(aq)\\rightarrow2Li^+(aq)+2OH^-(aq)+H_2(g)$')
+  assert(hasKatex(chemIonic), 'Chemistry ionic equations with charges and states must render as KaTeX.')
+  assert(!chemIonic.includes('\\rightarrow'), 'Rendered chemistry equations must not expose raw LaTeX commands.')
+
   const css = readText('src/index.css')
   assert(/\.katex\s*\{[^}]*white-space:\s*nowrap/s.test(css), 'KaTeX CSS must prevent formula wrapping in narrow cells.')
 

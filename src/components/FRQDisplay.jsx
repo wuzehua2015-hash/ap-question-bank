@@ -245,9 +245,9 @@ function RubricLine({ line, type, isPdf }) {
     if (isPdf) {
       return (
         <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start', padding: '4px 0', ...BREAK_GUARD.PARAGRAPH }}>
-          <div style={{ minWidth: '20px', fontWeight: '700', color: '#1e40af' }}>{score.score}</div>
+          <div style={{ minWidth: '20px', fontWeight: '700', color: '#1e40af' }}><MathText text={score.score} /></div>
           <div>
-            <span style={{ fontWeight: '700', color: '#111827' }}>{score.title}</span>
+            <span style={{ fontWeight: '700', color: '#111827' }}><MathText text={score.title} /></span>
             {score.rest && <span> <MathText text={score.rest} /></span>}
           </div>
         </div>
@@ -256,9 +256,9 @@ function RubricLine({ line, type, isPdf }) {
 
     return (
       <div className="flex gap-3 items-start py-1.5">
-        <span className="min-w-6 rounded bg-blue-100 text-blue-800 text-xs font-bold text-center px-1 py-0.5">{score.score}</span>
+        <span className="min-w-6 rounded bg-blue-100 text-blue-800 text-xs font-bold text-center px-1 py-0.5"><MathText text={score.score} /></span>
         <div className="text-sm leading-6 text-gray-700">
-          <span className="font-semibold text-gray-900">{score.title}</span>
+          <span className="font-semibold text-gray-900"><MathText text={score.title} /></span>
           {score.rest && <span> <MathText text={score.rest} /></span>}
         </div>
       </div>
@@ -305,7 +305,7 @@ function RubricLine({ line, type, isPdf }) {
           lineHeight: 1.55,
           ...BREAK_GUARD.PARAGRAPH,
         }}>
-          <div style={{ color: '#1e40af', fontWeight: '700', fontSize: '12px' }}>{numbered.number}</div>
+          <div style={{ color: '#1e40af', fontWeight: '700', fontSize: '12px' }}><MathText text={numbered.number} /></div>
           <div><MathText text={numbered.rest} /></div>
         </div>
       )
@@ -313,7 +313,7 @@ function RubricLine({ line, type, isPdf }) {
 
     return (
       <div className="grid grid-cols-[1.75rem_1fr] gap-2 py-1 text-sm leading-6 text-gray-700">
-        <span className="font-bold text-blue-700">{numbered.number}</span>
+        <span className="font-bold text-blue-700"><MathText text={numbered.number} /></span>
         <span><MathText text={numbered.rest} /></span>
       </div>
     )
@@ -358,7 +358,7 @@ function RubricLine({ line, type, isPdf }) {
           lineHeight: 1.55,
           ...BREAK_GUARD.PARAGRAPH,
         }}>
-          <div style={{ fontWeight: '700', color, fontSize: '12px' }}>{label}</div>
+          <div style={{ fontWeight: '700', color, fontSize: '12px' }}><MathText text={label} /></div>
           <div><MathText text={content} /></div>
         </div>
       )
@@ -374,7 +374,7 @@ function RubricLine({ line, type, isPdf }) {
 
     return (
       <div className="grid grid-cols-[2.25rem_1fr] gap-3 py-1.5 items-start">
-        <span className={`text-xs font-bold text-center rounded border px-1 py-0.5 ${badgeClass}`}>{label}</span>
+        <span className={`text-xs font-bold text-center rounded border px-1 py-0.5 ${badgeClass}`}><MathText text={label} /></span>
         <div className="text-sm leading-6 text-gray-700"><MathText text={content} /></div>
       </div>
     )
@@ -384,7 +384,7 @@ function RubricLine({ line, type, isPdf }) {
     if (isPdf) {
       return (
         <div style={{ lineHeight: 1.65, padding: '3px 0', fontWeight: '400', ...BREAK_GUARD.PARAGRAPH }}>
-          <span style={{ fontWeight: '700', color: '#1e40af' }}>{part.label}</span>
+          <span style={{ fontWeight: '700', color: '#1e40af' }}><MathText text={part.label} /></span>
           {part.rest && <span> <MathText text={part.rest} /></span>}
         </div>
       )
@@ -392,7 +392,7 @@ function RubricLine({ line, type, isPdf }) {
 
     return (
       <div className="text-sm leading-7 text-gray-700 font-normal">
-        <span className="font-semibold text-blue-800">{part.label}</span>
+        <span className="font-semibold text-blue-800"><MathText text={part.label} /></span>
         {part.rest && <span> <MathText text={part.rest} /></span>}
       </div>
     )

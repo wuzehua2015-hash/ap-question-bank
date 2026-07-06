@@ -85,6 +85,8 @@ function isLikelyCurrencyToken(token, fullText, startIndex) {
   const body = token.slice(1, -1).trim()
   const after = fullText[startIndex + token.length] || ''
   if (!body || !/^\d/.test(body)) return false
+  if (/[_^{}\\]/.test(body)) return false
+  if (isLikelyChemistryLatex(body)) return false
   if (/^[\d,.]+$/.test(body) && /\d/.test(after)) return true
   if (/^[\d,.]+(?:\s+(?:they|per|and|or|to|for|million|billion|trillion)\b|[A-Za-z])/.test(body)) return true
   if (/\b(?:dollars?|cents?|price|cost|revenue|profit|wage|income|funds?|money|paid|give|earns?)\b/i.test(body)) return true
@@ -95,9 +97,10 @@ function isLikelyInlineLatex(token, fullText, startIndex) {
   const body = token.slice(1, -1).trim()
   const before = fullText[startIndex - 1] || ''
   const after = fullText[startIndex + token.length] || ''
-  const hasExplicitMathSyntax = /\\[A-Za-z]+|[_^{}]|[=<>]/.test(body)
+  const hasExplicitMathSyntax = /\\(?:[A-Za-z]+|[%&,_^{}])|[_^{}]|[=<>]/.test(body)
 
   if (!body) return false
+  if (isLikelyChemistryLatex(body)) return true
   if (/^[+-]?[A-Za-z](?:_[A-Za-z0-9]+)?$/.test(body)) return true
   if (/^[+-]?\d+(?:\.\d+)?[A-Za-z](?:_[A-Za-z0-9]+)?$/.test(body)) return true
   if (/^[+-]?[A-Za-z0-9](?:_[A-Za-z0-9]+)?\/[A-Za-z0-9](?:_[A-Za-z0-9]+)?$/.test(body)) return true
@@ -112,6 +115,13 @@ function isLikelyInlineLatex(token, fullText, startIndex) {
   if (/^\s*(?:per|million|billion|trillion|and|or)\b/i.test(after)) return false
 
   return hasExplicitMathSyntax || /\b(?:frac|sum|int|lim|sqrt|left|right|le|ge|pi|theta|alpha|beta)\b/.test(body)
+}
+
+function isLikelyChemistryLatex(body) {
+  if (/\\(?:rightarrow|rightleftharpoons|Delta|mathrm|circ|times|cdot)\b/.test(body)) return true
+  if (/(?:^|[+\-\s(])(?:\d+)?[A-Z][a-z]?(?:_\{?\d+\}?|\^\{?[+\-\d]+\}?|[A-Z][a-z]?|\([a-z]+\))/i.test(body) && /(?:_\{?\d+\}?|\([a-z]+\)|\\rightarrow|\\rightleftharpoons|\+|=)/.test(body)) return true
+  if (/\b(?:aq|s|l|g)\b/.test(body) && /[A-Z][a-z]?/.test(body)) return true
+  return false
 }
 
 function isMarkdownTableSeparator(line) {

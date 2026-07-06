@@ -374,6 +374,8 @@ function checkVisibleState(page, info, errors, warnings) {
   const bad = [
     { kind: 'replacement_char', re: /\uFFFD/ },
     { kind: 'raw_html_entity', re: /&(?:quot|amp|lt|gt|nbsp);/i },
+    { kind: 'raw_latex_delimited_formula', re: /\$[^$\n]*(?:\\[A-Za-z]+|[_^{}])[^$\n]*\$/ },
+    { kind: 'raw_latex_command', re: /\\(?:rightarrow|rightleftharpoons|frac|sqrt|Delta|mathrm|circ|times|cdot)\b/ },
     { kind: 'exam_footer_pollution', re: /IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING|(?:STOP\s*)?END OF EXAM|THE FOLLOWING INSTRUCTIONS APPLY TO|MAKE SURE YOU HAVE COMPLETED THE IDENTIFICATION|AP NUMBER LABELS/i },
     { kind: 'option_source_pollution', re: /[A-E]\.\s*[^\n]{0,120}\bSource:\s+/i },
     { kind: 'spoken_math', re: /\bthe fraction\b|\bfraction with numerator\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i },

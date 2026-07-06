@@ -21,6 +21,8 @@ const BAD_TEXT_PATTERNS = [
   { name: 'mojibake_common', re: /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7]/ },
   { name: 'raw_html_entity', re: /&(?:quot|amp|lt|gt|nbsp);/i },
   { name: 'visible_mojibake_cjk', re: /[\u9354\u68f0\u93bc\u7edb\u95ff\u59dd\u7035\u6d93\u93c4\u935a\u9a9e\u95c5\u5bb8\u6ccc\u6d60\u9429\u5997\u6ad2\u704f]/ },
+  { name: 'raw_latex_delimited_formula', re: /\$[^$\n]*(?:\\[A-Za-z]+|[_^{}])[^$\n]*\$/ },
+  { name: 'raw_latex_command', re: /\\(?:rightarrow|rightleftharpoons|frac|sqrt|Delta|mathrm|circ|times|cdot)\b/ },
 ]
 
 const PHYSICS_TEXT_PATTERNS = [

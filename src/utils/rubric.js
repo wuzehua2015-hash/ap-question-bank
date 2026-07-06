@@ -1,7 +1,12 @@
 export function normalizeRubricPoints(rubric) {
   const rawPoints = rubric?.points || rubric?.parts || []
   return rawPoints.map((point, idx) => {
-    if (point.point_id !== undefined && point.description !== undefined) return point
+    if (point.point_id !== undefined && point.description !== undefined) {
+      return {
+        ...point,
+        value: point.value || point.points || 1,
+      }
+    }
 
     const criteria = Array.isArray(point.criteria)
       ? point.criteria.join('; ')
