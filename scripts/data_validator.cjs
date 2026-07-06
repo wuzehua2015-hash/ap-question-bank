@@ -351,6 +351,9 @@ function validate(filePath, options = {}) {
       if (q.text && q.text.length < 50) {
         warnings.push(`${qid}: FRQ text very short (${q.text.length} chars), possible truncation`)
       }
+      if (/[^\n][ \t]+[a-d]\.\s+(?:Describe|Explain|Define|Identify|Select|Calculate|Determine|Draw|State|Compare|Justify|Discuss|Evaluate|Provide|Write|For|Using)\b/.test(q.text || '')) {
+        errors.push(`${qid}: FRQ subpart marker appears inline; expected a line break before a./b./c./d.`)
+      }
       const rubricText = JSON.stringify(q.rubric || {})
       for (const { name, pattern } of frqRubricArtifactPatterns) {
         if (pattern.test(q.text || '') || pattern.test(rubricText)) {
