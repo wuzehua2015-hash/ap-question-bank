@@ -1,0 +1,1279 @@
+[
+  {
+    "question_id": "2014_FRQ1",
+    "frq_id": "2014_FRQ1",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2014,
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "The figure above represents two carts, with magnets attached, that make up a system. The mass of one cart and magnet is $1\\,\\mathrm{kg}$ and the mass of the other is $5\\,\\mathrm{kg}$. The carts are initially at rest on a frictionless track. They are released from rest and exert a repulsive force on each other. The track is not quite horizontal, with the right side slightly lower than the left side.\n\nThe speeds of the carts are measured over a $10\\,\\mathrm{s}$ interval. The graph below shows the momentum of the two carts as a function of time for this interval as they move along the $x$-axis.\n\n(a) Based on the graph, were the measurements started at the instant the carts were released? Justify your answer.\n\n(b) Calculate the magnitude of the external force exerted on the system.\n\n(c) Suppose the experiment is repeated with different carts, so that the masses of cart plus magnet are $2\\,\\mathrm{kg}$ and $4\\,\\mathrm{kg}$. Would your answer to part (b) be different with the new masses? Justify your answer.",
+    "answer": "",
+    "points": 7,
+    "image_paths": [
+      "images/ap/physics-1/2014/2014_p044_img02.png",
+      "images/ap/physics-1/2014/2014_p044_img03.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Linear Momentum",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 7,
+      "points": [
+        {
+          "point_id": "1a_motion",
+          "points": 1,
+          "description": "States that the measurements were not started at the release instant and justifies using the nonzero momentum at $t=0$."
+        },
+        {
+          "point_id": "1b_force_momentum",
+          "points": 1,
+          "description": "Uses $F=\\Delta p/\\Delta t$ or an equivalent Newton's-second-law relation with momentum."
+        },
+        {
+          "point_id": "1b_change",
+          "points": 1,
+          "description": "Recognizes that the external force causes a change in system momentum or velocity."
+        },
+        {
+          "point_id": "1b_values",
+          "points": 1,
+          "description": "Uses reasonable momentum values from the graph for the carts or the system."
+        },
+        {
+          "point_id": "1b_external_sum",
+          "points": 1,
+          "description": "Determines the external force from the net change in system momentum, approximately $0.06\\,\\mathrm{N}$."
+        },
+        {
+          "point_id": "1c_answer",
+          "points": 1,
+          "description": "States that the answer to part (b) would not be different with the new masses."
+        },
+        {
+          "point_id": "1c_justification",
+          "points": 1,
+          "description": "Justifies that the calculation accounts for the external effect on the whole system and the total mass is unchanged."
+        }
+      ],
+      "official_text": "Question 1 scoring awards 1 point for interpreting the initial motion, 4 points for calculating the external force from momentum data, and 2 points for explaining why changing to $2\\,\\mathrm{kg}$ and $4\\,\\mathrm{kg}$ carts does not change the external-force result."
+    },
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2014_FRQ2",
+    "frq_id": "2014_FRQ2",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2014,
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "A student hangs a $0.125\\,\\mathrm{kg}$ object on a spring, sets it into oscillation, and obtains the data for the position and velocity of the object as a function of time shown in the graphs below.\n\n(a) On the grid below, sketch the potential energy of the object-spring-Earth system as a function of time. Explicitly label any intercepts, asymptotes, maxima, or minima with numerical values, as appropriate.\n\n(b) On the axes below, sketch the acceleration of the object as a function of time. Explicitly label any intercepts, asymptotes, maxima, or minima with numerical values, as appropriate.\n\nNext the student is given a rubber band and asked to determine whether the relationship between the restoring force exerted by the rubber band and the amount it is stretched is the same as that of an ideal spring.\n\n(c) Describe an experimental procedure that the student could use to collect the necessary data, including all the equipment the student would need.\n\n(d) How should the student analyze the data to determine whether the relationship between the restoring force exerted by the rubber band and the amount it is stretched is the same as that of an ideal spring? What evidence from the analysis would be used to make the determination?",
+    "answer": "",
+    "points": 12,
+    "image_paths": [
+      "images/ap/physics-1/2014/2014_p046_img02.png",
+      "images/ap/physics-1/2014/2014_p046_img03.png",
+      "images/ap/physics-1/2014/2014_p046_img04.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 12,
+      "points": [
+        {
+          "point_id": "2a_shape",
+          "points": 1,
+          "description": "Draws a reasonable sine-squared potential-energy graph."
+        },
+        {
+          "point_id": "2a_maxima",
+          "points": 1,
+          "description": "Places potential-energy maxima at the appropriate labeled times."
+        },
+        {
+          "point_id": "2a_energy_range",
+          "points": 1,
+          "description": "Labels a maximum-minimum potential-energy difference of about $0.16\\,\\mathrm{J}$."
+        },
+        {
+          "point_id": "2b_shape",
+          "points": 1,
+          "description": "Draws acceleration as a sine or cosine curve."
+        },
+        {
+          "point_id": "2b_phase",
+          "points": 1,
+          "description": "Shows the correct phase relationship to the given position and velocity graphs, including positive maximum at $t=0$ and period about $1.0\\,\\mathrm{s}$."
+        },
+        {
+          "point_id": "2b_amplitude",
+          "points": 1,
+          "description": "Labels an acceleration amplitude of approximately $10\\,\\mathrm{m/s^2}$."
+        },
+        {
+          "point_id": "2c_setup",
+          "points": 1,
+          "description": "Describes a reasonable experimental setup that allows useful force-stretch measurements."
+        },
+        {
+          "point_id": "2c_measurements",
+          "points": 1,
+          "description": "Identifies all needed measurements, such as force or hanging mass and rubber-band stretch, with no extraneous measurements."
+        },
+        {
+          "point_id": "2c_trials",
+          "points": 1,
+          "description": "Includes multiple trials or multiple loads."
+        },
+        {
+          "point_id": "2d_linear_check",
+          "points": 1,
+          "description": "Analyzes the data by checking for a linear relationship between restoring force and stretch."
+        },
+        {
+          "point_id": "2d_characteristic",
+          "points": 1,
+          "description": "Identifies a linear graph or constant slope as evidence of spring-like behavior."
+        },
+        {
+          "point_id": "2d_hooke",
+          "points": 1,
+          "description": "States that a linear $F$ versus stretch relation indicates behavior like an ideal spring."
+        }
+      ],
+      "official_text": "Question 2 scoring awards 3 points for the potential-energy graph, 3 points for the acceleration graph, 3 points for experimental design, and 3 points for analyzing whether the rubber band obeys a linear restoring-force relation."
+    },
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2014_FRQ3",
+    "frq_id": "2014_FRQ3",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2014,
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "In a physics lab, students will compare the two circuits shown above. In one circuit, lightbulbs A and B will be connected to a battery in series. In the other circuit, lightbulbs C and D will be connected to an identical battery in parallel. All four lightbulbs are identical.\n\nStudent 1 predicts that the bulbs will be brighter in the series arrangement, while Student 2 disagrees and predicts that the bulbs will be brighter in the parallel arrangement. Their arguments are as follows.\n\nStudent 1: \"Bulbs A and B will be brighter than C and D because in the series circuit, each bulb gets all the current coming out of the battery. But in the parallel circuit each bulb gets only half the current.\"\n\nStudent 2: \"But you're not taking into account that bulb A uses up some of the current before it reaches bulb B, making the bulbs dimmer in the series circuit. And in the parallel circuit, the full voltage of the battery is across each bulb, so it's as if the other bulb weren't even there. So bulbs C and D will be brighter.\"\n\n(a) For part (a), ignore whether the students' predictions are correct or incorrect. Do not simply repeat the students' arguments as your answers.\n\n  i. Which aspects of Student 1's reasoning, if any, are correct? Explain your answer.\n\n  ii. Which aspects of Student 1's reasoning, if any, are incorrect? Explain your answer.\n\n  iii. Which aspects of Student 2's reasoning, if any, are correct? Explain your answer.\n\n  iv. Which aspects of Student 2's reasoning, if any, are incorrect? Explain your answer.\n\nTogether the students write the following equations to describe the two circuits.\n\nSeries arrangement:\n\nEquation 1: $I_S=I_A=I_B$\n\nEquation 2: $\\Delta V-I_AR_A-I_BR_B=0$\n\nParallel arrangement:\n\nEquation 3: $I_P=I_C+I_D$\n\nEquation 4: $\\Delta V-I_CR_C=\\Delta V-I_DR_D=0$\n\n(b) i. Indicate all of the equations above that support Student 1's reasoning, and explain how each equation provides support.\n\n  ii. Indicate all of the equations above that support Student 2's reasoning, and explain how each equation provides support.\n\n(c) Resolve the two lines of reasoning about the two circuits to conclude which arrangement will have brighter bulbs. Use the equations above and any other equations that you need, and explain how the equations support your conclusion.",
+    "answer": "",
+    "points": 12,
+    "image_paths": [
+      "images/ap/physics-1/2014/2014_p048_img02.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "Force and Translational Dynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 12,
+      "points": [
+        {
+          "point_id": "3a_i_series_current",
+          "points": 1,
+          "description": "States Student 1 is correct that bulbs A and B carry the total series current because there is only one loop."
+        },
+        {
+          "point_id": "3a_i_parallel_split",
+          "points": 1,
+          "description": "States Student 1 is correct that bulbs C and D share the current in the parallel circuit because of the junction rule."
+        },
+        {
+          "point_id": "3a_ii_total_current",
+          "points": 1,
+          "description": "Explains Student 1 is incorrect to compare the half-current in the parallel circuit with the series current without recognizing that the total current differs between circuits."
+        },
+        {
+          "point_id": "3a_iii_voltage",
+          "points": 1,
+          "description": "States Student 2 is correct that each parallel bulb has the full battery voltage across it."
+        },
+        {
+          "point_id": "3a_iv_current_used",
+          "points": 1,
+          "description": "Explains Student 2 is incorrect that current is used up by bulb A; the same current flows through all series elements."
+        },
+        {
+          "point_id": "3b_eq1",
+          "points": 1,
+          "description": "Identifies Equation 1 as supporting Student 1 because it shows both series bulbs carry the series current."
+        },
+        {
+          "point_id": "3b_eq3",
+          "points": 1,
+          "description": "Identifies Equation 3 as supporting Student 1 because it shows the parallel current splits between bulbs C and D."
+        },
+        {
+          "point_id": "3b_eq4",
+          "points": 1,
+          "description": "Identifies Equation 4 as supporting Student 2 because it shows each parallel bulb has the same battery voltage across it."
+        },
+        {
+          "point_id": "3c_quantity",
+          "points": 1,
+          "description": "Chooses a valid brightness comparison quantity such as power, current, or voltage."
+        },
+        {
+          "point_id": "3c_manipulation",
+          "points": 1,
+          "description": "Correctly manipulates the equations with identical bulb resistances to compare the circuits."
+        },
+        {
+          "point_id": "3c_conclusion",
+          "points": 1,
+          "description": "Concludes that the parallel bulbs C and D are brighter."
+        },
+        {
+          "point_id": "3c_explanation",
+          "points": 1,
+          "description": "Connects the chosen electrical quantity to power and therefore brightness."
+        }
+      ],
+      "official_text": "Question 3 scoring awards 5 points for evaluating the students' reasoning, 3 points for identifying the supporting equations, and 4 points for resolving the brightness comparison using valid circuit equations."
+    },
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2014_FRQ4",
+    "frq_id": "2014_FRQ4",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2014,
+    "question_number": 4,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "A string is held taut, with each of its ends fixed to an oscillator that creates wave pulses on the string. The figure above shows identical pulses at a particular instant when they are traveling toward each other on the string. The pulses have wavelength $\\lambda$ and amplitude $A$, and are equidistant from point $P$.\n\n(a) On the figure below, the dashed line at zero displacement represents the string with no pulses. On the figure, draw the shape of the string at the instant when the pulses overlap by $1/3$ of the length of each pulse.\n\n(b) On the axes below, sketch a graph of displacement as a function of time for point $P$, from time $t=0$ when the pulses just begin to overlap until $t=t_1$ when they once again do not overlap.\n\n(c) Next the oscillators are adjusted to create continuous waves of wavelength $\\lambda$, instead of the wave pulses shown. A standing wave is created on the string. What can be inferred about the length of the string? Justify your answer. Equations may be part of your reasoning, but equations alone are not sufficient justification.",
+    "answer": "",
+    "points": 7,
+    "image_paths": [
+      "images/ap/physics-1/2014/2014_p050_img02.png",
+      "images/ap/physics-1/2014/2014_p050_img03.png",
+      "images/ap/physics-1/2014/2014_p050_img04.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 7,
+      "points": [
+        {
+          "point_id": "4a_overlap",
+          "points": 1,
+          "description": "Shows the one-wavelength overlap segment with a displacement other than $A$."
+        },
+        {
+          "point_id": "4a_double",
+          "points": 1,
+          "description": "Shows amplitude $2A$ in the overlapping segment."
+        },
+        {
+          "point_id": "4a_sides",
+          "points": 1,
+          "description": "Shows two wavelength-length side regions with amplitude $A$."
+        },
+        {
+          "point_id": "4b_zero",
+          "points": 2,
+          "description": "Draws a straight line at zero displacement for point $P$ from $t=0$ to $t=t_1$."
+        },
+        {
+          "point_id": "4c_nodes",
+          "points": 1,
+          "description": "Explains that fixed ends are nodes of a standing wave."
+        },
+        {
+          "point_id": "4c_length",
+          "points": 1,
+          "description": "Concludes that the string length must be an integer multiple of $\\lambda/2$."
+        }
+      ],
+      "official_text": "Question 4 scoring awards 3 points for the superposition sketch, 2 points for the displacement-time graph of point $P$, and 2 points for inferring the allowed string lengths for a standing wave."
+    },
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2014_FRQ5",
+    "frq_id": "2014_FRQ5",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2014,
+    "question_number": 5,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "The figure above shows part of a system consisting of a block at the top of an inclined plane that rests on a table, which is located on Earth. The block and plane are at rest when the block is released. In trial 1 there is no friction between the block and the plane or between the plane and the table. In trial 2 the plane is fixed to the table so it cannot move, but there is still no friction between the block and the plane.\n\nIndicate whether the speed of the block relative to the table when the block reaches the bottom of the plane is greater in trial 1 or trial 2. Justify your answer in a clear, coherent, paragraph-length explanation.",
+    "answer": "",
+    "points": 7,
+    "image_paths": [
+      "images/ap/physics-1/2014/2014_p051_img02.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Work, Energy, and Power",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 7,
+      "points": [
+        {
+          "point_id": "5_energy_conversion",
+          "points": 1,
+          "description": "Mentions conversion of gravitational potential energy to kinetic energy."
+        },
+        {
+          "point_id": "5_same_pe",
+          "points": 1,
+          "description": "States that the same amount of potential energy is converted in each trial."
+        },
+        {
+          "point_id": "5_shared_ke",
+          "points": 1,
+          "description": "States that in trial 1 the kinetic energy is shared between the block and the movable plane."
+        },
+        {
+          "point_id": "5_block_ke",
+          "points": 1,
+          "description": "States that in trial 2 the block has all the kinetic energy because the plane is fixed."
+        },
+        {
+          "point_id": "5_plane_motion",
+          "points": 1,
+          "description": "Describes the motion of the plane in each trial."
+        },
+        {
+          "point_id": "5_forces_momentum",
+          "points": 1,
+          "description": "Uses momentum or Newton's third-law force reasoning to explain the plane's motion."
+        },
+        {
+          "point_id": "5_conclusion",
+          "points": 1,
+          "description": "Gives a coherent argument leading to the conclusion that the block's speed relative to the table is greater in trial 2."
+        }
+      ],
+      "official_text": "Question 5 scoring awards 7 points for a coherent energy, force, and momentum argument explaining why the block is faster relative to the table in trial 2."
+    },
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2015_FRQ1",
+    "frq_id": "2015_FRQ1",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2015,
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "Cart A has mass $M$ and is released from rest at a height $2H$ on a ramp making an angle $2\\theta$ with the horizontal, as shown above. Cart B has mass $2M$ and is released from rest at a height $H$ on a ramp making an angle $\\theta$ with the horizontal. The carts roll toward each other, have a head-on collision on the horizontal portion of the ramp, and stick together. The masses of the carts' wheels are negligible, as are any frictional or drag forces.\n\n(a) Indicate whether the carts remain at rest, move to the left, or move to the right after the collision. Explain how you arrived at your answer.\n\n(b) Consider the time interval from when the two carts are released until just after they collide.\n\n  i. For the system consisting of the two carts and Earth, indicate whether the total mechanical energy increases, decreases, or remains the same. Justify your answer.\n\n  ii. For the system consisting of only the two carts, indicate whether the total mechanical energy increases, decreases, or remains the same. Justify your answer.",
+    "answer": "",
+    "points": 7,
+    "image_paths": [
+      "images/ap/physics-1/2015/2015_p043_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Work, Energy, and Power",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 7,
+      "points": [
+        {
+          "point_id": "1a_energy",
+          "points": 1,
+          "description": "Applies conservation of energy to determine speeds before collision."
+        },
+        {
+          "point_id": "1a_both_carts",
+          "points": 1,
+          "description": "Correctly applies conservation of energy for each cart."
+        },
+        {
+          "point_id": "1a_momentum",
+          "points": 1,
+          "description": "Applies conservation of momentum and concludes the stuck carts move left."
+        },
+        {
+          "point_id": "1b_i_no_gain",
+          "points": 1,
+          "description": "For carts-Earth, indicates no energy is gained as the carts move down the ramps."
+        },
+        {
+          "point_id": "1b_i_collision_loss",
+          "points": 1,
+          "description": "For carts-Earth, accounts for energy dissipated in the inelastic collision."
+        },
+        {
+          "point_id": "1b_ii_external_work",
+          "points": 1,
+          "description": "For carts only, recognizes that gravity from Earth transfers energy into the cart system before collision."
+        },
+        {
+          "point_id": "1b_ii_collision",
+          "points": 1,
+          "description": "For carts only, justifies the net mechanical-energy change consistently through the collision."
+        }
+      ],
+      "official_text": "Question 1 scoring awards 3 points for the motion after collision and 4 points for the two system-energy analyses."
+    },
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2015_FRQ2",
+    "frq_id": "2015_FRQ2",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2015,
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "A car is stopped at a traffic light. The light turns green, and at time $t=0$ the car starts moving and travels with a constant acceleration. At that instant a truck traveling at constant speed $v_t$ is alongside the car, with the front of each vehicle at position $x=0$, as shown above. The truck passes the car, but the car later catches up to the truck in front of a house, such that at time $t_D$ the front of each vehicle is at position $x=D$.\n\n(a) On the axes below, sketch and label graphs of the velocity of the car and the velocity of the truck as a function of time. Indicate any important velocities or times.\n\n(b) Two students discuss how the speed of the car compares to the speed of the truck when both vehicles are in front of the house.\n\n  i. Which aspects of Student 1's reasoning, if any, are correct? Support your answer in terms of relevant features of your graphs in part (a).\n\n  ii. Which aspects of Student 2's reasoning, if any, are correct? Support your answer in terms of relevant features of your graphs in part (a).\n\n(c) Derive an expression for the acceleration of the car. Express your answer in terms of $D$ and $v_t$.\n\n(d) Determine the time at which the speed of the car is equal to the speed $v_t$ of the truck. Express your answer in terms of $t_D$. Justify your answer.",
+    "answer": "",
+    "points": 12,
+    "image_paths": [
+      "images/ap/physics-1/2015/2015_p045_img01.png",
+      "images/ap/physics-1/2015/2015_p045_img02.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U1",
+    "unit": "U1",
+    "unit_name": "Kinematics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 12,
+      "points": [
+        {
+          "point_id": "2a_truck",
+          "points": 1,
+          "description": "Draws a clearly labeled horizontal velocity-time line for the truck."
+        },
+        {
+          "point_id": "2a_car",
+          "points": 1,
+          "description": "Draws a clearly labeled straight line with positive slope for the car."
+        },
+        {
+          "point_id": "2a_final_speed",
+          "points": 1,
+          "description": "Shows the car ending with speed greater than the truck at the house time."
+        },
+        {
+          "point_id": "2b_i_distance_time",
+          "points": 1,
+          "description": "States Student 1 is correct that both vehicles travel the same distance in the same time."
+        },
+        {
+          "point_id": "2b_i_graph_area",
+          "points": 1,
+          "description": "Supports Student 1 using graph features such as equal areas under the curves."
+        },
+        {
+          "point_id": "2b_ii_faster",
+          "points": 1,
+          "description": "States Student 2 is correct that the car's speed is greater at the house."
+        },
+        {
+          "point_id": "2b_ii_graph_speed",
+          "points": 1,
+          "description": "Supports Student 2 with graph features such as the car's final speed being twice the truck speed."
+        },
+        {
+          "point_id": "2c_final_speed",
+          "points": 1,
+          "description": "Indicates the final speed of the car is $2v_t$."
+        },
+        {
+          "point_id": "2c_kinematics",
+          "points": 1,
+          "description": "Applies an appropriate kinematic relationship."
+        },
+        {
+          "point_id": "2c_acceleration",
+          "points": 1,
+          "description": "Solves for $a=2v_t^2/D$."
+        },
+        {
+          "point_id": "2d_time",
+          "points": 1,
+          "description": "Indicates the speeds are equal at $t_D/2$."
+        },
+        {
+          "point_id": "2d_justification",
+          "points": 1,
+          "description": "Justifies using graph intersection or the linear increase of the car's speed."
+        }
+      ],
+      "official_text": "Question 2 scoring awards 3 points for velocity graphs, 4 for evaluating the students' reasoning, 3 for acceleration, and 2 for the equal-speed time."
+    },
+    "classification": {
+      "primary_unit": "U1",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2015_FRQ3",
+    "frq_id": "2015_FRQ3",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2015,
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "You are given a long length of string and an oscillator that can shake one end of the string at any desired frequency. The oscillator has a display that indicates the frequency. You are asked to design an experiment to study how the velocity of waves on the string depends on the string's tension. You do not have any way to measure time with sufficient accuracy to help in your investigation.\n\n(a) Describe your experimental setup and procedure, including any additional pieces of equipment you would need and the kind of data you would record. Include enough detail that another student could follow and complete the experiment successfully.\n\n(b) Describe how you would analyze your data to obtain information about the wave velocity's dependence on tension.\n\n(c) A student performs the experiment and can see from the data table below that the velocity of the waves on the string increases when the tension in the string increases. The student claims that the velocity is directly proportional to the tension. Do the results support the student's claim? Explain in detail how you arrived at your answer.\n\n| Tension (N) | 2.0 | 4.0 | 6.0 | 8.0 | 10.0 |\n|---:|---:|---:|---:|---:|---:|\n| Velocity (m/s) | 17 | 24 | 29 | 34 | 38 |\n\n(d) After the experiment is completed, a student attaches a string to the wall and the other end of the string to an oscillator. The frequency of the oscillator is adjusted to make a standing wave. The string is allowed to vibrate in a standing wave with constant amplitude.\n\n  i. While the string is vibrating as a standing wave with constant amplitude, is the oscillator doing work on the string? Explain your reasoning.\n\n  ii. While the string is vibrating as a standing wave with constant amplitude, is the string gaining mechanical energy? Explain your reasoning.",
+    "answer": "",
+    "points": 12,
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 12,
+      "points": [
+        {
+          "point_id": "3a_tension",
+          "points": 1,
+          "description": "Describes a way to set and vary string tension, such as hanging known masses over a pulley."
+        },
+        {
+          "point_id": "3a_standing",
+          "points": 1,
+          "description": "Uses the oscillator to create standing waves by adjusting frequency or length."
+        },
+        {
+          "point_id": "3a_wavelength",
+          "points": 1,
+          "description": "Measures quantities needed to determine wavelength, such as string length and node count."
+        },
+        {
+          "point_id": "3b_speed",
+          "points": 1,
+          "description": "Calculates wave speed using frequency and wavelength."
+        },
+        {
+          "point_id": "3b_tension",
+          "points": 1,
+          "description": "Calculates or measures tension, such as $F_T=mg$."
+        },
+        {
+          "point_id": "3b_graph",
+          "points": 1,
+          "description": "Analyzes the relation by graphing wave velocity as a function of tension or an appropriate transformed variable."
+        },
+        {
+          "point_id": "3c_check",
+          "points": 1,
+          "description": "Makes a reasonable check of direct proportionality."
+        },
+        {
+          "point_id": "3c_conclusion",
+          "points": 1,
+          "description": "Concludes the data do not support direct proportionality, for example because doubling tension does not double velocity."
+        },
+        {
+          "point_id": "3d_i_force_distance",
+          "points": 2,
+          "description": "States the oscillator does work and explains that it applies force over distance, or equivalently supplies energy to offset losses at constant amplitude."
+        },
+        {
+          "point_id": "3d_ii_amplitude",
+          "points": 1,
+          "description": "States wave energy is related to amplitude."
+        },
+        {
+          "point_id": "3d_ii_no_gain",
+          "points": 1,
+          "description": "States the string is not gaining mechanical energy because the amplitude is constant."
+        }
+      ],
+      "official_text": "Question 3 scoring awards 3 points for experiment setup, 3 for analysis, 2 for evaluating proportionality, 2 for oscillator work, and 2 for mechanical energy of the string."
+    },
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2015_FRQ4",
+    "frq_id": "2015_FRQ4",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2015,
+    "question_number": 4,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "The circuit shown above contains two resistors, an ideal battery, and a switch. The resistance of resistor $R_1$ is less than the resistance of resistor $R_2$.\n\n(a) Indicate whether the current through resistor $R_2$ when the switch is open is greater than, less than, or equal to the current through resistor $R_2$ when the switch is closed. Briefly explain how you arrived at your answer.\n\n(b) Closing the switch creates a short circuit. Indicate whether the absolute value of the potential difference between points A and B when the switch is open is greater than, less than, or equal to the absolute value of the potential difference when the switch is closed. Explain your reasoning in a clear, coherent paragraph-length explanation that may also contain equations and/or drawings. Address the conditions before and after the switch is closed.",
+    "answer": "",
+    "points": 7,
+    "image_paths": [
+      "images/ap/physics-1/2015/2015_p049_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "Force and Translational Dynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 7,
+      "points": [
+        {
+          "point_id": "4a_current",
+          "points": 2,
+          "description": "Selects Less than and justifies that closing the switch reduces the total resistance, increasing the current through $R_2$."
+        },
+        {
+          "point_id": "4b_open_r1",
+          "points": 1,
+          "description": "For the open switch, indicates that there is a potential difference across $R_1$ because current flows through it."
+        },
+        {
+          "point_id": "4b_open_switch",
+          "points": 1,
+          "description": "For the open switch, states the potential difference across the switch equals that across $R_1$."
+        },
+        {
+          "point_id": "4b_closed_resistance",
+          "points": 1,
+          "description": "For the closed switch, recognizes the switch has zero or negligible resistance."
+        },
+        {
+          "point_id": "4b_closed_zero",
+          "points": 1,
+          "description": "For the closed switch, states the potential difference across the switch is zero or negligible."
+        },
+        {
+          "point_id": "4b_complete",
+          "points": 1,
+          "description": "Gives a complete explanation with no irrelevant statements and concludes the potential difference is greater when the switch is open."
+        }
+      ],
+      "official_text": "Question 4 scoring awards 2 points for the current comparison and 5 points for the paragraph explanation of potential difference before and after closing the switch."
+    },
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2015_FRQ5",
+    "frq_id": "2015_FRQ5",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2015,
+    "question_number": 5,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "A toy car coasts along the curved track shown above. The car has initial speed $v_A$ when it is at point A at the top of the track, and the car leaves the track at point B with speed $v_B$ at an angle $\\theta$ above the horizontal. Assume that the rotational kinetic energy of the car's wheels and energy losses due to friction are both negligible.\n\n(a) Suppose the toy car is released from rest at point A, so $v_A=0$.\n\n  i. After the car leaves the track and reaches the highest point in its trajectory it will be at a different height than it was at point A. Briefly explain why this is so.\n\n  ii. Determine the speed of the car when it is at the highest point in its trajectory after leaving the track, in terms of $v_B$ and $\\theta$. Briefly explain how you arrived at your answer.\n\n(b) Suppose the toy car is given an initial push so that it has nonzero speed at point A. Determine the speed $v_A$ of the car at point A such that the highest point in its trajectory after leaving the track is the same as its height at point A. Express your answer in terms of $v_B$ and $\\theta$. Explain how you arrived at your answer.",
+    "answer": "",
+    "points": 7,
+    "image_paths": [
+      "images/ap/physics-1/2015/2015_p050_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Work, Energy, and Power",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 7,
+      "points": [
+        {
+          "point_id": "5a_i_energy",
+          "points": 1,
+          "description": "Indicates the mechanical energy of the car-Earth system is constant from point A to the highest point."
+        },
+        {
+          "point_id": "5a_i_kinetic",
+          "points": 1,
+          "description": "Explains that the car still has kinetic energy at the highest point, so its gravitational potential energy and height must be lower than at A."
+        },
+        {
+          "point_id": "5a_ii_horizontal",
+          "points": 1,
+          "description": "States that the speed at the highest point equals the horizontal component of the velocity at B."
+        },
+        {
+          "point_id": "5a_ii_speed",
+          "points": 1,
+          "description": "Gives $v_B\\cos\\theta$."
+        },
+        {
+          "point_id": "5b_energy",
+          "points": 1,
+          "description": "Applies conservation of mechanical energy."
+        },
+        {
+          "point_id": "5b_same_height",
+          "points": 1,
+          "description": "Indicates the gravitational potential energy is the same at the beginning and final highest point."
+        },
+        {
+          "point_id": "5b_result",
+          "points": 1,
+          "description": "Concludes $v_A=v_B\\cos\\theta$, consistent with part (a)(ii)."
+        }
+      ],
+      "official_text": "Question 5 scoring awards 4 points for part (a) and 3 points for using energy in part (b)."
+    },
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2017_FRQ1",
+    "frq_id": "2017_FRQ1",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2017,
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "A student assembles a circuit with four resistors connected to a $15\\,\\mathrm{V}$ battery, as shown above. Let $I_1$ be the current through resistor $R_1$, $I_2$ be the current through resistor $R_2$, and so on. The ranking of the resistances of the resistors is $R_4>R_3>R_2>R_1$.\n\n(a) Rank the four currents $I_1$ through $I_4$ in order from greatest to least. If any of the currents are the same, indicate that explicitly. Briefly explain your reasoning.\n\n(b) The student connects a separate voltmeter across each resistor. Let $\\Delta V_1$, $\\Delta V_2$, $\\Delta V_3$, and $\\Delta V_4$ be the voltmeter readings across resistors $R_1$, $R_2$, $R_3$, and $R_4$, respectively. The student measures $\\Delta V_1=1\\,\\mathrm{V}$ and $\\Delta V_4=9\\,\\mathrm{V}$. Based on these measurements, determine $\\Delta V_2$ and $\\Delta V_3$. Briefly explain your reasoning.\n\n(c) The student now connects a wire from point A to point B. When this wire is connected, does the current $I_1$ in resistor $R_1$ increase, decrease, or stay the same? Select one and briefly explain your reasoning.",
+    "answer": "",
+    "points": 7,
+    "image_paths": [
+      "images/ap/physics-1/2017/2017_p044_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "Force and Translational Dynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 7,
+      "points": [
+        {
+          "point_id": "1a_ranking",
+          "points": 1,
+          "description": "Correctly ranks the currents as $I_3=I_4>I_1>I_2$."
+        },
+        {
+          "point_id": "1a_series_current",
+          "points": 1,
+          "description": "Indicates that resistors in series have the same current, so $I_3=I_4$."
+        },
+        {
+          "point_id": "1a_current_split",
+          "points": 1,
+          "description": "Explains that current splits in the parallel branch, so $I_1$ and $I_2$ are each smaller than $I_3$ and $I_4$."
+        },
+        {
+          "point_id": "1a_unequal_parallel",
+          "points": 1,
+          "description": "Explains that the smaller resistance branch has the larger current, so $I_1>I_2$."
+        },
+        {
+          "point_id": "1b_voltage",
+          "points": 2,
+          "description": "Determines $\\Delta V_2=1\\,\\mathrm{V}$ from the parallel connection and $\\Delta V_3=5\\,\\mathrm{V}$ using loop potential differences with the $15\\,\\mathrm{V}$ battery."
+        },
+        {
+          "point_id": "1c_short",
+          "points": 1,
+          "description": "Selects Increase and explains that the added wire provides a negligible-resistance path around $R_3$, reducing equivalent resistance and increasing the battery current and $I_1$."
+        }
+      ],
+      "official_text": "Question 1 scoring awards 4 points for the current ranking and explanation, 2 points for voltage readings across the circuit, and 1 point for the short-circuit effect on $I_1$."
+    },
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2017_FRQ2",
+    "frq_id": "2017_FRQ2",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2017,
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "A disk-shaped platform has a known rotational inertia. The platform is mounted on a fixed axle and rotates in a horizontal plane, as shown above. A student wishes to determine the frictional torque exerted on the platform by the axle as the platform rotates. The student has access to equipment that would usually be found in a school physics laboratory.\n\n(a) Describe an experimental procedure the student could use to collect the data needed to find the frictional torque exerted on the platform while it rotates.\n\n  i. What quantities would be measured?\n\n  ii. What equipment would be used for the measurements, and how would that equipment be used?\n\n  iii. Describe the overall procedure to be used, including any steps necessary to reduce experimental uncertainty. Give enough detail so that another student could replicate the experiment.\n\n(b) Describe how the data from the measurements could be analyzed to determine the frictional torque exerted on the rotating platform.\n\nIt is often assumed that the frictional force between two surfaces is independent of their relative speed. However, the details of the axle's construction are unknown, and it is possible that the frictional torque for the axle depends on the platform's angular speed.\n\n(c) Does the experiment described in parts (a) and (b) depend on the assumption that the frictional torque is independent of the platform's angular speed? Select Yes or No. Either answer may be correct, depending on the experimental design. If yes, describe which part of your analysis depends on this assumption. If no, explain how your analysis does not depend on this assumption.\n\n(d) Briefly describe how the experimental procedure described in parts (a) and (b) could be modified to determine whether the frictional torque stays constant as the angular speed changes. If no modification is necessary, state that explicitly. In either case, describe how the data could be analyzed to determine whether the frictional torque stays constant as the angular speed changes.",
+    "answer": "",
+    "points": 12,
+    "image_paths": [
+      "images/ap/physics-1/2017/2017_p046_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Torque and Rotational Dynamics",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 12,
+      "points": [
+        {
+          "point_id": "2a_quantities",
+          "points": 1,
+          "description": "Identifies valid measured quantities for determining rotational motion and frictional torque."
+        },
+        {
+          "point_id": "2a_equipment",
+          "points": 1,
+          "description": "Lists suitable equipment and explains how it measures the stated quantities."
+        },
+        {
+          "point_id": "2a_practical",
+          "points": 1,
+          "description": "Gives a practical procedure consistent with the measured quantities."
+        },
+        {
+          "point_id": "2a_torque_method",
+          "points": 1,
+          "description": "Describes a plausible procedure that can experimentally determine frictional torque."
+        },
+        {
+          "point_id": "2a_uncertainty",
+          "points": 1,
+          "description": "Includes a valid method to reduce experimental uncertainty."
+        },
+        {
+          "point_id": "2b_angular_quantity",
+          "points": 1,
+          "description": "Uses a valid angular quantity from the data, such as angular speed, angular displacement, or angular acceleration."
+        },
+        {
+          "point_id": "2b_acceleration",
+          "points": 1,
+          "description": "Relates the calculated angular quantity to angular acceleration."
+        },
+        {
+          "point_id": "2b_torque",
+          "points": 1,
+          "description": "Combines the rotational inertia and angular acceleration relation to determine frictional torque."
+        },
+        {
+          "point_id": "2c_assumption",
+          "points": 1,
+          "description": "Correctly connects the chosen procedure and analysis to whether the torque is assumed independent of angular speed."
+        },
+        {
+          "point_id": "2c_speed_dependence",
+          "points": 1,
+          "description": "Explains how the analysis does or does not depend on angular speed."
+        },
+        {
+          "point_id": "2d_modified_trials",
+          "points": 1,
+          "description": "Describes an added trial at a different angular speed or explicitly states that no modification is necessary when appropriate."
+        },
+        {
+          "point_id": "2d_analysis",
+          "points": 1,
+          "description": "Explains how the data can be analyzed to decide whether frictional torque stays constant as angular speed changes."
+        }
+      ],
+      "official_text": "Question 2 scoring awards 5 points for experimental design, 3 for data analysis to determine torque, 2 for the angular-speed-dependence assumption, and 2 for modifying or analyzing the experiment to test constancy of torque."
+    },
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2017_FRQ3",
+    "frq_id": "2017_FRQ3",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2017,
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "Food scientists have created a new oil. At room temperature, the oil is a liquid. As the oil gets colder, however, it stiffens into a sticky gel. To explore the properties of the oil, the scientists fill a container with the oil to a height $D$, as shown in the figure above on the left. They drop a small steel ball of mass $M$ from rest at the top of the oil. Using video to capture the ball's motion, the scientists calculate $E_{lost}$, the mechanical energy lost by the ball-Earth system from the time the ball enters the oil to the time just before the ball strikes the bottom of the container.\n\nThe scientists also define the stiffness $S$ of the oil as a quantity proportional to the force required to move a rod through the oil at a standard constant speed. The scientists calculate $E_{lost}$ and $S$ at several different temperatures. The graph above on the right shows $E_{lost}$ as a function of $S$ for the calculated data points and a best-fit curve.\n\n(a) Give a physical reason why the curve in the graph would not reach the vertical $E_{lost}$ axis even if the scientists had taken data over a broader range of temperatures.\n\n(b) As $S$ increases, $E_{lost}$ approaches a maximum value labeled $E_{max}$ on the graph above. Write an equation for $E_{max}$ in terms of $M$, $D$, and physical constants, as appropriate. Justify your answer.\n\n(c) One scientist writes $E_{lost}=CS^2$, where $C$ is a constant with appropriate units. Give two reasons why the equation cannot be correct.\n\n(d) The scientists write the equation $t=ZS$, where $Z$ is a constant with appropriate units, for the time $t$ the ball takes to fall through the oil. Is this equation plausible? Select Plausible or Not plausible and briefly explain.\n\n(e) $\\Delta K$ is the change in kinetic energy of the ball between the time it is released from rest and the time just before the ball strikes the bottom of the container. On the axes below, sketch $\\Delta K$ as a function of $S$.",
+    "answer": "",
+    "points": 12,
+    "image_paths": [
+      "images/ap/physics-1/2017/2017_p048_img01.png",
+      "images/ap/physics-1/2017/2017_p049_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Work, Energy, and Power",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 12,
+      "points": [
+        {
+          "point_id": "3a_axis",
+          "points": 2,
+          "description": "Explains that reaching the vertical axis would mean zero stiffness and that the oil has nonzero stiffness even at the lowest measured stiffness."
+        },
+        {
+          "point_id": "3b_equation",
+          "points": 1,
+          "description": "Gives $E_{max}=MgD$ or the equivalent signed expression."
+        },
+        {
+          "point_id": "3b_energy",
+          "points": 2,
+          "description": "Justifies the maximum lost energy using the initial gravitational potential energy and the fact that the maximum available energy is the system's initial energy."
+        },
+        {
+          "point_id": "3c_reasons",
+          "points": 2,
+          "description": "Gives two independent reasons $E_{lost}=CS^2$ cannot match the graph or physics, such as unbounded growth, wrong concavity, or exceeding available potential energy."
+        },
+        {
+          "point_id": "3d_plausibility",
+          "points": 2,
+          "description": "Selects Not plausible and explains that the equation implies smaller time for larger stiffness even though larger stiffness should make the ball take longer."
+        },
+        {
+          "point_id": "3e_shape",
+          "points": 3,
+          "description": "Sketches $\\Delta K$ with maximum value at the lowest graphed $S$, decreasing concave upward and approaching the horizontal axis for high $S$ without crossing it."
+        }
+      ],
+      "official_text": "Question 3 scoring awards 2 points for the nonzero stiffness explanation, 3 for $E_{max}$ and energy reasoning, 2 for rejecting $E_{lost}=CS^2$, 2 for the time model, and 3 for the graph of $\\Delta K$."
+    },
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2017_FRQ4",
+    "frq_id": "2017_FRQ4",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2017,
+    "question_number": 4,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "An archer tests various arrowheads by shooting arrows at a pumpkin that is suspended from a tree branch by a rope, as shown to the right. When struck head-on by the arrow, the pumpkin swings upward on the rope. The maximum angle $\\theta$ that the rope makes with the vertical is different for each arrowhead that the archer tests. Each arrow, including its arrowhead, has the same mass $m$ and is shot with the same velocity $v_0$ toward the right. The arrowheads are made of different materials and behave differently when they strike the pumpkin.\n\n- Embedded arrow: Strikes the pumpkin and remains embedded, while the pumpkin swings to angle $\\theta_{emb}$.\n- Pass arrow: Passes all the way through the pumpkin and continues traveling away from the archer, while the pumpkin swings to angle $\\theta_{pass}$.\n- Bounce arrow: Bounces off the pumpkin back toward the archer, while the pumpkin swings to angle $\\theta_{bounce}$.\n\n(a) Rank the three angles $\\theta_{emb}$, $\\theta_{pass}$, and $\\theta_{bounce}$ from greatest to least. Use 1 for the greatest angle, 2 for the next greatest, and so on. If any two or all three angles are the same, use the same number.\n\n(b) In a clear, coherent, paragraph-length response that may also contain figures and/or equations, justify your ranking.",
+    "answer": "",
+    "points": 7,
+    "image_paths": [
+      "images/ap/physics-1/2017/2017_p050_img01.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Linear Momentum",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 7,
+      "points": [
+        {
+          "point_id": "4a_ranking",
+          "points": 1,
+          "description": "Ranks $\\theta_{bounce}$ greatest, $\\theta_{emb}$ second, and $\\theta_{pass}$ least."
+        },
+        {
+          "point_id": "4b_momentum",
+          "points": 1,
+          "description": "Uses conservation of momentum for the arrow-pumpkin collision."
+        },
+        {
+          "point_id": "4b_change_momentum",
+          "points": 1,
+          "description": "States that the magnitude of the arrow's horizontal momentum change equals the magnitude of the momentum gained by the pumpkin."
+        },
+        {
+          "point_id": "4b_bounce",
+          "points": 1,
+          "description": "Explains why the bounce arrow transfers the most momentum."
+        },
+        {
+          "point_id": "4b_pass",
+          "points": 1,
+          "description": "Explains that the pass arrow transfers less momentum than the embedded arrow because it continues moving forward after the collision."
+        },
+        {
+          "point_id": "4b_energy_angle",
+          "points": 1,
+          "description": "Connects the pumpkin's speed after collision to the maximum angle using energy conservation."
+        },
+        {
+          "point_id": "4b_paragraph",
+          "points": 1,
+          "description": "Provides a logical, relevant, internally consistent paragraph-length response."
+        }
+      ],
+      "official_text": "Question 4 scoring awards 1 point for the ranking and 6 points for a coherent momentum-and-energy justification."
+    },
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  },
+  {
+    "question_id": "2017_FRQ5",
+    "frq_id": "2017_FRQ5",
+    "subject": "AP Physics 1: Algebra-Based",
+    "subject_id": "physics-1",
+    "year": 2017,
+    "question_number": 5,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "The right end of a long, flexible string is attached to a fixed point on a wall. The left end of the string is held by a student. The student creates a symmetric wave pulse traveling to the right, as shown in Figure 1 above. When the pulse reaches the wall, it inverts as it reflects from the wall, as shown in Figure 2 above. The figure below represents what the string looks like at the instant the peak of the pulse reaches the wall; at this instant the string is horizontal everywhere.\n\n(a) At the instant shown above, does the wave pulse carry energy? Select Yes or No and briefly explain.\n\n(b) The student then creates a second symmetric wave pulse traveling to the right on the same string. The amplitude of the second pulse is half the amplitude of the original pulse. Which pulse, if either, travels at a higher speed? Select the higher-amplitude pulse, the lower-amplitude pulse, or neither; both pulses travel at the same speed. Briefly explain.\n\n(c) The figure below shows an idealized wave pulse traveling to the right.\n\n  i. Consider the instant when the center of the pulse reaches the wall, which is also the instant when the right half of the pulse has reflected from the wall but the left half has not. On the grid below, sketch what the string looks like at that instant.\n\n  ii. Now consider an instant sometime after the entire pulse has reflected from the wall and is moving to the left. On the grid below, sketch what the string looks like at that instant.",
+    "answer": "",
+    "points": 7,
+    "image_paths": [
+      "images/ap/physics-1/2017/2017_p051_img01.png",
+      "images/ap/physics-1/2017/2017_p051_img02.png",
+      "images/ap/physics-1/2017/2017_p051_img03.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [],
+    "skills": [],
+    "difficulty": "medium",
+    "rubric": {
+      "total_points": 7,
+      "points": [
+        {
+          "point_id": "5a_energy",
+          "points": 1,
+          "description": "Selects Yes and explains using conservation of energy or the kinetic energy/motion of the string at the instant shown."
+        },
+        {
+          "point_id": "5b_speed",
+          "points": 1,
+          "description": "Selects Neither and explains that both pulses travel at the same speed because wave speed is a property of the same string."
+        },
+        {
+          "point_id": "5c_i_inverted",
+          "points": 1,
+          "description": "For part (c)(i), draws the entire wave pulse below the equilibrium position."
+        },
+        {
+          "point_id": "5c_i_amplitude",
+          "points": 1,
+          "description": "For part (c)(i), draws a pulse with amplitude $-3$ units."
+        },
+        {
+          "point_id": "5c_i_shape",
+          "points": 1,
+          "description": "For part (c)(i), draws a symmetric triangular pulse 2 units wide in the rightmost 2 units of the grid."
+        },
+        {
+          "point_id": "5c_ii_vertical",
+          "points": 1,
+          "description": "For part (c)(ii), draws a vertical inversion of the original pulse."
+        },
+        {
+          "point_id": "5c_ii_horizontal",
+          "points": 1,
+          "description": "For part (c)(ii), draws a horizontal inversion of the original pulse."
+        }
+      ],
+      "official_text": "Question 5 scoring awards 1 point for energy, 1 point for wave speed, 3 points for the sketch at the instant the midpoint reaches the wall, and 2 points for the later reflected pulse sketch."
+    },
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.85,
+      "evidence": "Structured from visual PDF review and official scoring guideline text.",
+      "review_status": "reviewed"
+    },
+    "provenance": {
+      "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+      "override": true,
+      "prompt_rubric_review": "structured_manual_v1"
+    }
+  }
+]

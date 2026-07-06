@@ -50,6 +50,7 @@ async function main() {
 
     const quizSample = selectQuizSample(mcq)
     const searchSample = selectSearchSample(mcq)
+    await auditMockGenerationFromSetup(client, errors, warnings, artifacts)
     await auditQuizPlay(client, quizSample, errors, warnings, artifacts)
     await auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts)
     await auditTargetSearchItems(client, searchSample.map(q => q.question_id), errors, warnings, artifacts)
@@ -109,6 +110,44 @@ function validateDataBehavior(subject, mcq, frq, similarity, errors, warnings, n
   } else if (subject.hasFRQ && frq.length !== expectedFrq) {
     notes.push({ area: 'data', kind: 'frq_bank_larger_than_mock_requirement', count: frq.length, expectedFrq })
   }
+}
+
+async function auditMockGenerationFromSetup(client, errors, warnings, artifacts) {
+  const expectedMcq = Number(activeSubject?.mockExam?.totalMCQ || 0)
+  const expectedFrq = Number(activeSubject?.mockExam?.frqCount || 0)
+  await navigate(client, routeUrl(`#/exam?subject=${encodeURIComponent(subjectId)}`))
+  await waitForImages(client)
+  const clicked = await evaluate(client, `(() => {
+    const buttons = [...document.querySelectorAll('button')];
+    const target = buttons.find(el => !el.disabled && /Mock Exam/i.test(el.innerText || el.textContent || '')) || buttons.find(el => !el.disabled);
+    if (!target) return false;
+    target.click();
+    return true;
+  })()`)
+  if (!clicked) {
+    errors.push({ page: 'mock-setup', kind: 'generate_button_not_found' })
+    return
+  }
+  const generated = await waitForGeneratedMockPreview(client)
+  if (!generated) {
+    const info = await collectVisibleState(client)
+    errors.push({ page: 'mock-setup', kind: 'generated_preview_not_visible', visible_sample: sampleText(info.text, 0) })
+    return
+  }
+  const info = await collectVisibleState(client)
+  checkVisibleState('mock-setup:generated', info, errors, warnings)
+  const counts = parseGeneratedMockCounts(info.text)
+  if (!counts) {
+    errors.push({ page: 'mock-setup', kind: 'generated_counts_not_parseable', visible_sample: sampleText(info.text, 0) })
+  } else {
+    if (expectedMcq && counts.mcq !== expectedMcq) {
+      errors.push({ page: 'mock-setup', kind: 'generated_mcq_count_mismatch', actual: counts.mcq, expected: expectedMcq })
+    }
+    if (activeSubject?.hasFRQ && counts.frq !== expectedFrq) {
+      errors.push({ page: 'mock-setup', kind: 'generated_frq_count_mismatch', actual: counts.frq, expected: expectedFrq })
+    }
+  }
+  await screenshot(client, `${subjectId}-mock-setup-generated.png`, artifacts)
 }
 
 async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
@@ -588,6 +627,21 @@ async function waitForImages(client) {
     }
     resolve(true);
   }))()`)
+}
+
+async function waitForGeneratedMockPreview(client) {
+  for (let i = 0; i < 80; i += 1) {
+    const text = await evaluate(client, `document.body ? document.body.innerText : ''`).catch(() => '')
+    if (parseGeneratedMockCounts(text)) return true
+    await sleep(250)
+  }
+  return false
+}
+
+function parseGeneratedMockCounts(text) {
+  const match = /(\d+)\s*[^\d\n]{0,20}\bMCQ\b\s*\+\s*(\d+)\s*[^\d\n]{0,20}\bFRQ\b/i.exec(String(text || ''))
+  if (!match) return null
+  return { mcq: Number(match[1]), frq: Number(match[2]) }
 }
 
 async function screenshot(client, name, artifacts) {

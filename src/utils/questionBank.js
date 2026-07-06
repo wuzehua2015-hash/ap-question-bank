@@ -359,7 +359,17 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
     mcq.push(...flattenBucketsToLimit(buckets, mockConfig.totalMCQ, { exact: true }))
   }
 
-  // FRQ: select a year, then a set if multiple sets exist for that year
+  // FRQ: select a year, then a set if multiple sets exist for that year,
+  // but always respect the subject's configured mock-exam FRQ count.
+  const frqCount = Number(mockConfig.frqCount || 0)
+  if (!frqCount || !Array.isArray(frqQuestions) || frqQuestions.length === 0) {
+    return {
+      quiz: mcq,
+      frq: [],
+      isMock: true,
+    }
+  }
+
   const yearGroups = {}
   for (const frq of frqQuestions) {
     const year = frq.year
@@ -384,6 +394,9 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
   const sets = Object.keys(yearSets[selectedYear])
   const selectedSet = sets[Math.floor(Math.random() * sets.length)]
   const frq = yearSets[selectedYear][selectedSet]
+    .slice()
+    .sort((a, b) => questionOrder(a) - questionOrder(b))
+    .slice(0, frqCount)
 
   return {
     quiz: mcq,

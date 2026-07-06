@@ -1,0 +1,65 @@
+{
+  "subject": "AP Physics 1: Algebra-Based",
+  "version": "ap_physics_1_2014_2015_2017_v1",
+  "units": [
+    {
+      "code": "U1",
+      "name": "Kinematics"
+    },
+    {
+      "code": "U2",
+      "name": "Force and Translational Dynamics"
+    },
+    {
+      "code": "U3",
+      "name": "Work, Energy, and Power"
+    },
+    {
+      "code": "U4",
+      "name": "Linear Momentum"
+    },
+    {
+      "code": "U5",
+      "name": "Torque and Rotational Dynamics"
+    },
+    {
+      "code": "U6",
+      "name": "Energy and Momentum of Rotating Systems"
+    },
+    {
+      "code": "U7",
+      "name": "Oscillations"
+    },
+    {
+      "code": "U8",
+      "name": "Fluids"
+    }
+  ],
+  "published_years": [
+    2014,
+    2015,
+    2017
+  ],
+  "mock_exam": {
+    "total_mcq": 40,
+    "frq_count": 4,
+    "mcq_time_limit": 4800,
+    "frq_time_limit": 6000,
+    "unit_distribution": {
+      "U1": 5,
+      "U2": 12,
+      "U3": 7,
+      "U4": 6,
+      "U5": 2,
+      "U6": 1,
+      "U7": 7,
+      "U8": 0
+    }
+  },
+  "notes": [
+    "Mock exam uses the current College Board AP Physics 1 structure: 40 MCQ in 80 minutes and 4 FRQ in 100 minutes.",
+    "2014 has 50 MCQ including multi-answer questions 46-50.",
+    "2015 excludes unscored item Q6 and publishes 35 scored MCQ.",
+    "Student-facing prompts and rubrics are structured text; images are diagrams, graphs, and tables only."
+  ]
+}
