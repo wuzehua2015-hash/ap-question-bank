@@ -187,6 +187,9 @@ function validate(filePath, options = {}) {
   for (const q of data) {
     const qid = q.question_id || 'UNKNOWN'
     const isNotScored = q.scoring_status === 'not_scored'
+    if (isNotScored) {
+      errors.push(`${qid}: unscored/not_scored items must be excluded before publishing`)
+    }
     
     // Required fields
     if (!q.question_id) errors.push('Missing question_id')

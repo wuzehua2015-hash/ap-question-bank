@@ -147,8 +147,7 @@ function validateMcq(mcq) {
     }
     if (q.scoring_status === 'not_scored') {
       notScoredCount += 1;
-      if (!q.text || !String(q.text).trim()) error(`${qid}: not_scored item must explain why it is present`);
-      validateImages(q);
+      error(`${qid}: not_scored items must be excluded before publishing`);
       continue;
     }
     validateText(q, 'MCQ');

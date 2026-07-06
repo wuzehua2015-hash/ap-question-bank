@@ -11,11 +11,12 @@ function run(cmd, args, options = {}) {
     encoding: options.encoding || 'utf8',
     stdio: options.stdio || ['ignore', 'pipe', 'pipe'],
     input: options.input,
+    maxBuffer: 64 * 1024 * 1024,
   }).trim()
 }
 
 function runBuffer(cmd, args) {
-  return execFileSync(cmd, args, { stdio: ['ignore', 'pipe', 'pipe'] })
+  return execFileSync(cmd, args, { stdio: ['ignore', 'pipe', 'pipe'], maxBuffer: 64 * 1024 * 1024 })
 }
 
 function git(args, options = {}) {
@@ -134,6 +135,7 @@ function localTreeEntries() {
 async function normalGitPush(branch) {
   const result = spawnSync('git', ['push', 'origin', `HEAD:${branch}`], {
     encoding: 'utf8',
+    maxBuffer: 64 * 1024 * 1024,
   })
   if (result.status === 0) {
     process.stdout.write(result.stdout)

@@ -2831,55 +2831,6 @@
     }
   },
   {
-    "question_id": "2012_Q14",
-    "question_number": 14,
-    "official_number": 14,
-    "question_type": "MCQ",
-    "year": 2012,
-    "source": "AP Statistics 2012 Practice Exam",
-    "text": "When conducting a large-sample test of $H_0: p=p_0$ for a single proportion, the test statistic is $z=\\frac{\\hat{p}-p_0}{\\sqrt{p_0(1-p_0)/n}}$, where $\\hat{p}$ is the sample proportion. Which of the following best explains the justification for the denominator of this test statistic?",
-    "options": {
-      "A": "The standard deviation of ˆp is known when the null hypothesis is true.",
-      "B": "The standard deviation of ˆp is known when the alternative hypothesis is true.",
-      "C": "The sample size is large and therefore the standard deviation of p is approximated well.",
-      "D": "The standard deviation of p is known when the null hypothesis is true.",
-      "E": "The standard deviation of p is known when the alternative hypothesis is true."
-    },
-    "answer": null,
-    "is_scored": false,
-    "primary_unit": "not_applicable",
-    "secondary_units": [],
-    "topics": [],
-    "skills": [],
-    "difficulty": "medium",
-    "has_graph": false,
-    "requires_graph": false,
-    "image_paths": [],
-    "provenance": {
-      "pdf": "subjects/AP/Statistics/01-exams/AP Stats 2012.pdf",
-      "answer_page": 86,
-      "notes": [
-        "Machine draft from text layer; page-image audit required before publishing.",
-        "Official answer key marks item 14 as not used in scoring."
-      ]
-    },
-    "scoring_status": "not_scored",
-    "excluded_from_similarity": true,
-    "pure_unit": false,
-    "classification": {
-      "review_status": "year_rule_reviewed",
-      "confidence": "not_applicable",
-      "evidence": [
-        "Classified from 2012 AP Statistics prompt and official scoring guideline using ap_statistics_legacy_9_unit_v1."
-      ],
-      "rejected_units": [],
-      "source_refs": [
-        "subjects/AP/Statistics/docs/source_pack.json"
-      ],
-      "classification_version": "ap_statistics_legacy_9_unit_v1"
-    }
-  },
-  {
     "question_id": "2012_Q15",
     "question_number": 15,
     "official_number": 15,
@@ -11721,58 +11672,6 @@
         "Classified from 2016 AP Statistics prompt and official scoring guideline using ap_statistics_legacy_9_unit_v1."
       ],
       "rejected_units": [],
-      "source_refs": [
-        "subjects/AP/Statistics/docs/source_pack.json"
-      ],
-      "classification_version": "ap_statistics_legacy_9_unit_v1"
-    }
-  },
-  {
-    "question_id": "2016_Q21",
-    "question_number": 21,
-    "official_number": 21,
-    "question_type": "MCQ",
-    "year": 2016,
-    "source": "AP Statistics 2016 Practice Exam",
-    "text": "Item 21 was not scored.",
-    "options": {},
-    "answer": null,
-    "is_scored": false,
-    "primary_unit": "not_applicable",
-    "secondary_units": [],
-    "topics": [],
-    "skills": [],
-    "difficulty": "not_applicable",
-    "has_graph": false,
-    "requires_graph": false,
-    "image_paths": [],
-    "provenance": {
-      "pdf": "subjects/AP/Statistics/01-exams/AP Stats 2016.pdf",
-      "answer_page": 86,
-      "notes": [
-        "Official answer key marks item 21 as not used in scoring."
-      ]
-    },
-    "scoring_status": "not_scored",
-    "pure_unit": true,
-    "excluded_from_similarity": true,
-    "classification": {
-      "review_status": "not_applicable",
-      "confidence": "high",
-      "evidence": [
-        "Official answer key marks question 21 as '*Item 21 was not used in scoring.'"
-      ],
-      "rejected_units": [
-        "U1",
-        "U2",
-        "U3",
-        "U4",
-        "U5",
-        "U6",
-        "U7",
-        "U8",
-        "U9"
-      ],
       "source_refs": [
         "subjects/AP/Statistics/docs/source_pack.json"
       ],
