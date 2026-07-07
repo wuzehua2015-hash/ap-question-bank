@@ -260,6 +260,7 @@ async function ensurePreview(url) {
     stdio: 'ignore',
     windowsHide: true,
   })
+  child.unref()
   for (let i = 0; i < 30; i += 1) {
     await sleep(500)
     if (await httpOk(url)) return

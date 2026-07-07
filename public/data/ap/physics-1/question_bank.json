@@ -4206,9 +4206,7 @@
     ],
     "answer_type": "single",
     "scoring_status": "scored",
-    "image_paths": [
-      "images/ap/physics-1/2017/2017_p020_img02.png"
-    ],
+    "image_paths": [],
     "primary_unit": "U4",
     "unit": "U4",
     "unit_name": "Linear Momentum",
@@ -4356,9 +4354,7 @@
     ],
     "answer_type": "single",
     "scoring_status": "scored",
-    "image_paths": [
-      "images/ap/physics-1/2017/2017_p021_img01.png"
-    ],
+    "image_paths": [],
     "primary_unit": "U3",
     "unit": "U3",
     "unit_name": "Work, Energy, and Power",
@@ -4554,7 +4550,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/physics-1/2017/2017_p022_img02.png"
+      "images/ap/physics-1/2017/2017_p022_img01.png"
     ],
     "primary_unit": "U7",
     "unit": "U7",
@@ -4607,9 +4603,7 @@
     ],
     "answer_type": "single",
     "scoring_status": "scored",
-    "image_paths": [
-      "images/ap/physics-1/2017/2017_p023_img02.png"
-    ],
+    "image_paths": [],
     "primary_unit": "U2",
     "unit": "U2",
     "unit_name": "Force and Translational Dynamics",
@@ -4699,8 +4693,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/physics-1/2017/2017_p024_img01.png",
-      "images/ap/physics-1/2017/2017_p024_img03.png"
+      "images/ap/physics-1/2017/2017_p024_img01.png"
     ],
     "primary_unit": "U3",
     "unit": "U3",
@@ -4838,8 +4831,7 @@
       "images/ap/physics-1/2017/2017_p025_img01.png",
       "images/ap/physics-1/2017/2017_p025_img02.png",
       "images/ap/physics-1/2017/2017_p025_img03.png",
-      "images/ap/physics-1/2017/2017_p025_img04.png",
-      "images/ap/physics-1/2017/2017_p025_img05.png"
+      "images/ap/physics-1/2017/2017_p025_img04.png"
     ],
     "primary_unit": "U7",
     "unit": "U7",
@@ -4971,8 +4963,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/physics-1/2017/2017_p026_img01.png",
-      "images/ap/physics-1/2017/2017_p026_img03.png"
+      "images/ap/physics-1/2017/2017_p026_img01.png"
     ],
     "primary_unit": "U4",
     "unit": "U4",
@@ -5050,7 +5041,7 @@
     "year": 2017,
     "question_number": 19,
     "type": "MCQ",
-    "text": "What is the current in the right branch of the\ncircuit?",
+    "text": "Questions 19-20 refer to the circuit shown above.\n\nWhat is the current in the right branch of the\ncircuit?",
     "options": {
       "A": "0.25 A",
       "B": "0.50 A",
@@ -5085,6 +5076,14 @@
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf",
       "raw_chunk_sha256": "aaabd28e108bc8a9dffd751db9232c04760349a53a93c81bb7bd1460698e3644"
     },
+    "group_id": "2017_Q19_20",
+    "group_members": [
+      "2017_Q19",
+      "2017_Q20"
+    ],
+    "group_role": "lead",
+    "requires_group_context": true,
+    "group_context": "Questions 19-20 refer to the circuit shown above.",
     "rubric_image_paths": []
   },
   {
@@ -5095,7 +5094,7 @@
     "year": 2017,
     "question_number": 20,
     "type": "MCQ",
-    "text": "Resistor $R_1$ and the $4\\,\\Omega$ resistor are now swapped. How does the current through the battery change, and why?",
+    "text": "Questions 19-20 refer to the circuit shown above.\n\nResistor $R_1$ and the $4\\,\\Omega$ resistor are now swapped. How does the current through the battery change, and why?",
     "options": {
       "A": "The current does not change, because the resistance does not change.",
       "B": "The current increases, because the total resistance will always decrease.",
@@ -5109,7 +5108,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/physics-1/2017/2017_p027_img02.png"
+      "images/ap/physics-1/2017/2017_p027_img01.png"
     ],
     "primary_unit": "U2",
     "unit": "U2",
@@ -5131,6 +5130,14 @@
       "raw_chunk_sha256": "77773ce67f3f6d2a2e422101d53c9e72005107a3f64bcaf212fe94a2d014638a",
       "override": true
     },
+    "group_id": "2017_Q19_20",
+    "group_members": [
+      "2017_Q19",
+      "2017_Q20"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "group_context": "Questions 19-20 refer to the circuit shown above.",
     "rubric_image_paths": []
   },
   {
@@ -5155,8 +5162,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/physics-1/2017/2017_p028_img01.png",
-      "images/ap/physics-1/2017/2017_p028_img02.png"
+      "images/ap/physics-1/2017/2017_p028_img01.png"
     ],
     "primary_unit": "U7",
     "unit": "U7",
@@ -5244,8 +5250,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/physics-1/2017/2017_p029_img01.png",
-      "images/ap/physics-1/2017/2017_p029_img03.png"
+      "images/ap/physics-1/2017/2017_p029_img01.png"
     ],
     "primary_unit": "U3",
     "unit": "U3",
@@ -5335,8 +5340,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/physics-1/2017/2017_p030_img01.png",
-      "images/ap/physics-1/2017/2017_p030_img02.png"
+      "images/ap/physics-1/2017/2017_p030_img01.png"
     ],
     "primary_unit": "U7",
     "unit": "U7",
@@ -5381,8 +5385,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/physics-1/2017/2017_p031_img01.png",
-      "images/ap/physics-1/2017/2017_p031_img03.png"
+      "images/ap/physics-1/2017/2017_p031_img01.png"
     ],
     "primary_unit": "U2",
     "unit": "U2",
@@ -5472,9 +5475,7 @@
     ],
     "answer_type": "single",
     "scoring_status": "scored",
-    "image_paths": [
-      "images/ap/physics-1/2017/2017_p032_img02.png"
-    ],
+    "image_paths": [],
     "primary_unit": "U4",
     "unit": "U4",
     "unit_name": "Linear Momentum",
@@ -5626,8 +5627,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/physics-1/2017/2017_p033_img01.png",
-      "images/ap/physics-1/2017/2017_p033_img06.png"
+      "images/ap/physics-1/2017/2017_p033_img01.png"
     ],
     "primary_unit": "U5",
     "unit": "U5",
@@ -5719,9 +5719,7 @@
     ],
     "answer_type": "single",
     "scoring_status": "scored",
-    "image_paths": [
-      "images/ap/physics-1/2017/2017_p034_img01.png"
-    ],
+    "image_paths": [],
     "primary_unit": "U1",
     "unit": "U1",
     "unit_name": "Kinematics",
@@ -5834,8 +5832,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/physics-1/2017/2017_p035_img01.png",
-      "images/ap/physics-1/2017/2017_p035_img03.png"
+      "images/ap/physics-1/2017/2017_p035_img01.png"
     ],
     "primary_unit": "U1",
     "unit": "U1",
