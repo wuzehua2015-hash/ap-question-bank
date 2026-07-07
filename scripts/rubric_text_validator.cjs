@@ -41,6 +41,19 @@ function rubricQualityFindings(file, record) {
   const result = []
   const relative = path.relative(ROOT, file)
   const subject = relative.split(path.sep).slice(-2, -1)[0]
+  if (subject === 'physics-1') {
+    const outline = String(record.rubric?.solution_outline || '').replace(/\s+/g, ' ').trim()
+    if (outline.length < 80) {
+      result.push({
+        file: relative,
+        question_id: record.question_id || record.id || 'unknown',
+        field: 'rubric.solution_outline',
+        rule: 'missing solution outline',
+        message: 'Physics 1 FRQ rubric must include a student-usable correct-answer / solution-outline layer before point rows.',
+        sample: outline,
+      })
+    }
+  }
   if (subject !== 'physics-c-e-m') return result
 
   const rubric = record.rubric

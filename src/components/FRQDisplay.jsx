@@ -541,10 +541,11 @@ function DisplayImage({ path, variant }) {
 
 export function RubricDisplay({ rubric, variant }) {
   const points = normalizeRubricPoints(rubric)
-  if (!rubric || points.length === 0) return null
+  if (!rubric || (points.length === 0 && !rubric.solution_outline)) return null
   const isSingleGuideline =
     points.length === 1 &&
     isOfficialWholeRubric(points[0], rubric)
+  const solutionOutline = String(rubric.solution_outline || '').trim()
 
   if (variant === 'pdf') {
     return (
@@ -556,6 +557,21 @@ export function RubricDisplay({ rubric, variant }) {
         }}>
           Scoring Rubric ({rubric.total_points} points)
         </div>
+        {solutionOutline && (
+          <div style={{
+            padding: '10px 12px',
+            marginBottom: '10px',
+            background: '#f0f9ff',
+            border: '1px solid #bae6fd',
+            borderRadius: '6px',
+            ...BREAK_GUARD.BLOCK,
+          }}>
+            <div style={{ fontSize: '13px', fontWeight: '700', color: '#075985', marginBottom: '6px' }}>
+              Correct Answer / Solution Outline
+            </div>
+            <RubricDescription text={solutionOutline} variant="pdf" />
+          </div>
+        )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
           {points.map((point, idx) => (
             <div key={idx} style={{
@@ -587,6 +603,12 @@ export function RubricDisplay({ rubric, variant }) {
       <div className="text-sm font-bold text-blue-800 mb-2 pb-1 border-b border-blue-100">
         Scoring Rubric ({rubric.total_points} points)
       </div>
+      {solutionOutline && (
+        <div className="mb-3 rounded-md border border-sky-200 bg-sky-50 px-3 py-3">
+          <div className="mb-2 text-sm font-bold text-sky-800">Correct Answer / Solution Outline</div>
+          <RubricDescription text={solutionOutline} variant="web" />
+        </div>
+      )}
       <div className="space-y-2">
         {points.map((point, idx) => (
           <div key={idx} className={`${isSingleGuideline ? '' : 'pl-3 border-l-2 border-blue-300'} py-2 bg-blue-50/50 rounded-r`}>

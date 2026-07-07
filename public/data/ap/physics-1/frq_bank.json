@@ -26,6 +26,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 7,
+      "solution_outline": "Correct answer / solution outline:\n\n(a) No. The carts already have nonzero momentum at $t=0$, so the measurements did not begin at the instant of release.\n\n(b) Use $F_{\\mathrm{ext}}=\\Delta p_{\\mathrm{system}}/\\Delta t$. From the graph, the system momentum changes by about $0.57\\,\\mathrm{kg\\cdot m/s}$ over $10\\,\\mathrm{s}$, so $F_{\\mathrm{ext}}\\approx0.057\\,\\mathrm{N}$, commonly rounded to about $0.06\\,\\mathrm{N}$.\n\n(c) No, the answer would not be different. The same external force is determined from the change in total system momentum over time; changing the individual cart masses to $2\\,\\mathrm{kg}$ and $4\\,\\mathrm{kg}$ does not change the net external effect measured from the system momentum graph.",
       "points": [
         {
           "point_id": "1a_motion",
@@ -106,6 +107,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 12,
+      "solution_outline": "Correct answer / solution outline:\n\n(a) The potential-energy graph should be proportional to $x^2$, so it is always nonnegative, has minima when $x=0$, and maxima when the magnitude of displacement is greatest. The maximum energy is about $0.16\\,\\mathrm{J}$.\n\n(b) The acceleration graph has the same period as the motion and is opposite in sign to displacement, with magnitude about $10\\,\\mathrm{m/s^2}$ at maximum displacement.\n\n(c)-(d) A valid experiment measures restoring force for different stretches of the rubber band. Plot force versus stretch. A straight line through the origin or constant slope supports ideal-spring behavior; a nonlinear graph does not.",
       "points": [
         {
           "point_id": "2a_shape",
@@ -209,6 +211,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 12,
+      "solution_outline": "Correct answer / solution outline:\n\nStudent 1 is correct that the same current flows through bulbs A and B in series and that the current splits between C and D in parallel. Student 1 is incorrect to compare the split branch current with the series current without finding the total current in each circuit.\n\nStudent 2 is correct that each parallel bulb has the full battery potential difference. Student 2 is incorrect that current is used up by bulb A.\n\nUsing identical bulb resistance $R$: in series, each bulb has current $I_S=\\Delta V/(2R)$ and power $P_S=I_S^2R=\\Delta V^2/(4R)$. In parallel, each bulb has $\\Delta V$ across it and power $P_P=\\Delta V^2/R$. Therefore bulbs C and D are brighter.",
       "points": [
         {
           "point_id": "3a_i_series_current",
@@ -314,6 +317,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 7,
+      "solution_outline": "Correct answer / solution outline:\n\n(a) Use superposition. Where the two identical pulses overlap, displacements add; the overlap region should reach $2A$, with the nonoverlap portions still at $A$.\n\n(b) Point $P$ stays at zero displacement during the interval because the two identical same-sign pulses reach it symmetrically and the string at that point remains on the equilibrium line in the specified setup.\n\n(c) Fixed ends must be nodes. A standing wave on a string fixed at both ends requires the string length to contain an integer number of half wavelengths, so $L=n\\lambda/2$ for integer $n$.",
       "points": [
         {
           "point_id": "4a_overlap",
@@ -387,6 +391,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 7,
+      "solution_outline": "Correct answer / solution outline:\n\nThe block is faster relative to the table in trial 2. In both trials the same gravitational potential energy is converted. In trial 1, the inclined plane can move, so some energy and momentum are associated with the plane's motion and less kinetic energy is in the block relative to the table. In trial 2, the plane is fixed, so the block receives the kinetic energy associated with the drop, giving a greater speed relative to the table.",
       "points": [
         {
           "point_id": "5_energy_conversion",
@@ -465,6 +470,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 7,
+      "solution_outline": "Correct answer / solution outline:\n\n(a) Both carts have the same kinetic energy at the bottom because cart A has mass $M$ and height $2H$, while cart B has mass $2M$ and height $H$. Thus $v_A=2\\sqrt{gH}$ and $v_B=\\sqrt{2gH}$. Momentum before collision is $M v_A$ to the right and $2M v_B$ to the left, so the leftward momentum is larger; after sticking together, the carts move left.\n\n(b)(i) For the carts-Earth system, mechanical energy decreases over the full interval because the inelastic collision dissipates energy.\n\n(b)(ii) For the system of only the two carts, mechanical energy increases from zero because gravity does positive external work on the carts before the collision, even though some energy is dissipated in the collision.",
       "points": [
         {
           "point_id": "1a_energy",
@@ -544,6 +550,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 12,
+      "solution_outline": "Correct answer / solution outline:\n\n(a) Truck: horizontal $v$-$t$ line at $v_t$. Car: straight line from zero with constant positive slope, ending at $2v_t$ at $t_D$.\n\n(b) Student 1 is correct that both travel the same distance in the same time; this means the areas under the velocity-time graphs are equal. Student 2 is correct that the car is moving faster at the house; since the car graph is triangular and has the same area as the truck rectangle, its final speed is $2v_t$.\n\n(c) With $v_f=2v_t$ and distance $D$, $a=v_f^2/(2D)=2v_t^2/D$.\n\n(d) The speeds are equal at $t_D/2$ because the car's velocity increases linearly from $0$ to $2v_t$.",
       "points": [
         {
           "point_id": "2a_truck",
@@ -645,6 +652,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 12,
+      "solution_outline": "Correct answer / solution outline:\n\n(a)-(b) A valid experiment varies the string tension, for example with hanging masses over a pulley, creates standing waves with the oscillator, measures wavelength from node spacing or string length and number of loops, and calculates $v=f\\lambda$. Analyze $v$ versus tension, or a transformed graph such as $v^2$ versus tension.\n\n(c) The data do not support direct proportionality between $v$ and tension. Doubling tension from $2\\,\\mathrm{N}$ to $4\\,\\mathrm{N}$ changes velocity from $17$ to $24\\,\\mathrm{m/s}$, not to $34\\,\\mathrm{m/s}$.\n\n(d)(i) Yes, the oscillator does work because it applies a force through displacement and supplies energy to maintain the wave against losses. (ii) No, the string is not gaining mechanical energy if the standing-wave amplitude is constant.",
       "points": [
         {
           "point_id": "3a_tension",
@@ -743,6 +751,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 7,
+      "solution_outline": "Correct answer / solution outline:\n\n(a) The current through $R_2$ is less when the switch is open than when it is closed. Closing the switch shorts part of the circuit, reduces equivalent resistance, and increases current through the battery and $R_2$.\n\n(b) The magnitude of the potential difference between A and B is greater when the switch is open. With the switch open, current through $R_1$ gives a nonzero potential difference across the open switch. With the switch closed, the wire has negligible resistance, so the potential difference across the wire is zero or negligible.",
       "points": [
         {
           "point_id": "4a_current",
@@ -816,6 +825,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 7,
+      "solution_outline": "Correct answer / solution outline:\n\n(a)(i) If the car starts from rest at A, it still has horizontal kinetic energy at the highest point after leaving B, so it cannot reach the same height as A; some energy remains kinetic.\n\n(a)(ii) At the highest point of projectile motion the vertical velocity is zero and the speed is the horizontal component, $v_B\\cos\\theta$.\n\n(b) For the highest point to be at the same height as A, the initial kinetic energy at A must equal the kinetic energy at the projectile's highest point. Therefore $v_A=v_B\\cos\\theta$.",
       "points": [
         {
           "point_id": "5a_i_energy",
@@ -894,6 +904,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 7,
+      "solution_outline": "Correct answer / solution outline:\n\n(a) $I_3=I_4>I_1>I_2$. Resistors $R_3$ and $R_4$ are in series with the battery and carry the total current. The current splits in the parallel branch, and since $R_1<R_2$, more current flows through $R_1$ than $R_2$.\n\n(b) $\\Delta V_2=1\\,\\mathrm{V}$ and $\\Delta V_3=5\\,\\mathrm{V}$. $R_1$ and $R_2$ are parallel, so they have the same potential difference. Around the loop, $15\\,\\mathrm{V}=\\Delta V_2+\\Delta V_3+\\Delta V_4=1+\\Delta V_3+9$.\n\n(c) $I_1$ increases. The wire shorts around $R_3$, reducing equivalent resistance and increasing circuit current.",
       "points": [
         {
           "point_id": "1a_ranking",
@@ -967,6 +978,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 12,
+      "solution_outline": "Correct answer / solution outline:\n\nA valid method measures quantities that determine angular acceleration or angular deceleration, such as angular speed at two times, angular displacement over time, platform radius, and any applied tangential force if used. The frictional torque can be found from $\\tau_f=I\\alpha$ for a freely slowing platform, or from the applied torque needed to maintain constant angular speed. To test whether frictional torque depends on angular speed, repeat or analyze trials at different angular speeds and compare the inferred torque values.",
       "points": [
         {
           "point_id": "2a_quantities",
@@ -1071,6 +1083,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 12,
+      "solution_outline": "Correct answer / solution outline:\n\n(a) The best-fit line should not be extended to zero stiffness as if the oil had no stiffness; the oil has nonzero stiffness outside the measured range.\n\n(b) The maximum possible energy loss is the initial gravitational potential energy, $E_{max}=MgD$.\n\n(c) The proposed $E_{lost}=CS^2$ is not supported if it predicts impossible behavior or fails to match the energy limit/data trend.\n\n(d) A reasonable model for time uses energy or kinematics consistently with the motion and lost energy.\n\n(e) The graph of $\\Delta K$ should reflect the relationship between lost energy and stiffness: kinetic-energy change is reduced by energy lost to the oil and should follow the trend justified from the model/data.",
       "points": [
         {
           "point_id": "3a_axis",
@@ -1144,6 +1157,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 7,
+      "solution_outline": "Correct answer / solution outline:\n\nThe ranking is $\\theta_{bounce}>\\theta_{emb}>\\theta_{pass}$. The pumpkin's maximum angle increases with its speed immediately after the interaction. The bouncing arrow reverses direction and has the largest change in momentum, transferring the most momentum to the pumpkin. The embedded arrow transfers more momentum than the pass-through arrow because the pass-through arrow continues forward and retains more momentum. Conservation of energy after the collision connects the pumpkin's kinetic energy to its maximum height/angle.",
       "points": [
         {
           "point_id": "4a_ranking",
@@ -1224,6 +1238,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 7,
+      "solution_outline": "Correct answer / solution outline:\n\n(a) Yes. Even at the instant the string is horizontal, the pulse carries energy because portions of the string are moving and the wave transports energy.\n\n(b) Neither pulse travels faster. For the same string under the same tension, wave speed is determined by string properties, not amplitude.\n\n(c)(i) When the center reaches the fixed wall, the reflected right half is inverted, so the whole pulse shown at that instant should be below the equilibrium line with the correct triangular shape and amplitude. (ii) After the entire pulse reflects, it travels left inverted relative to the incident pulse, with the same shape and width.",
       "points": [
         {
           "point_id": "5a_energy",
