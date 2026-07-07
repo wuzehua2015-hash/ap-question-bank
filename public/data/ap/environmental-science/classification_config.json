@@ -1,0 +1,68 @@
+{
+  "subject": "AP Environmental Science",
+  "version": "apes_2008_2016_v1",
+  "units": [
+    {
+      "code": "U1",
+      "name": "The Living World: Ecosystems"
+    },
+    {
+      "code": "U2",
+      "name": "The Living World: Biodiversity"
+    },
+    {
+      "code": "U3",
+      "name": "Populations"
+    },
+    {
+      "code": "U4",
+      "name": "Earth Systems and Resources"
+    },
+    {
+      "code": "U5",
+      "name": "Land and Water Use"
+    },
+    {
+      "code": "U6",
+      "name": "Energy Resources and Consumption"
+    },
+    {
+      "code": "U7",
+      "name": "Atmospheric Pollution"
+    },
+    {
+      "code": "U8",
+      "name": "Aquatic and Terrestrial Pollution"
+    },
+    {
+      "code": "U9",
+      "name": "Global Change"
+    }
+  ],
+  "published_years": [
+    2008,
+    2016
+  ],
+  "mock_exam": {
+    "total_mcq": 80,
+    "frq_count": 4,
+    "mcq_time_limit": 5400,
+    "frq_time_limit": 5400,
+    "unit_distribution": {
+      "U1": 14,
+      "U2": 2,
+      "U3": 10,
+      "U4": 3,
+      "U5": 3,
+      "U6": 15,
+      "U7": 6,
+      "U8": 18,
+      "U9": 9
+    }
+  },
+  "notes": [
+    "APES current structure uses 80 MCQ in 90 minutes and 4 FRQ in 90 minutes.",
+    "2008 and 2016 full released/practice exams are included.",
+    "Machine classification and figure crops require future teacher review before high-stakes external release."
+  ]
+}

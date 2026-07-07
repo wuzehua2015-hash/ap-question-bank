@@ -199,7 +199,9 @@ function detectMachineFindings(q, item, subject) {
         message: `Option ${label} contains exam footer pollution.`,
       })
     }
-    if (/\n\s*T\s*$|\sT$/.test(String(value || ''))) {
+    const rawOption = String(value || '')
+    const isLegitimatePointLabel = /^Point\s+[A-Z]$/i.test(option)
+    if (!isLegitimatePointLabel && (/\n\s*T\s*$|\sT$/.test(rawOption))) {
       findings.push({
         severity: 'P0',
         code: 'standalone_footer_t_pollution',
