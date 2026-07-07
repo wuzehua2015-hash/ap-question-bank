@@ -4,7 +4,7 @@ const path = require('path')
 const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 
-const SCIENCE_SUBJECT_RE = /^(chemistry|physics-|physics-c-|environmental-science)/
+const SCIENCE_SUBJECT_RE = /^(chemistry|physics-|physics-c-|environmental-science|biology)/
 const PHYSICS_SUBJECT_RE = /^(physics-|physics-c-)/
 
 const HARD_PATTERNS = [
