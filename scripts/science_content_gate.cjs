@@ -52,6 +52,40 @@ function questionLabel(q) {
   return q.question_id || q.frq_id || q.id || 'UNKNOWN'
 }
 
+function escapeRegex(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+function optionTableHeadersAtTextTail(q) {
+  const headers = (q.option_table_data?.headers || []).map(header => String(header || '').trim()).filter(Boolean)
+  const text = String(q.text || q.question_text || '')
+  if (!headers.length || !text) return false
+  const candidates = headerOrders(headers).map(order => order.map(escapeRegex).join('\\s+'))
+  return candidates.some(candidate => new RegExp('(?:\\s+|\\n)+' + candidate + '\\s*$', 'i').test(text))
+}
+
+function headerOrders(headers) {
+  if (headers.length > 4) return [headers]
+  const out = []
+  const used = Array(headers.length).fill(false)
+  function walk(current) {
+    if (current.length === headers.length) {
+      out.push(current.slice())
+      return
+    }
+    for (let i = 0; i < headers.length; i += 1) {
+      if (used[i]) continue
+      used[i] = true
+      current.push(headers[i])
+      walk(current)
+      current.pop()
+      used[i] = false
+    }
+  }
+  walk([])
+  return out
+}
+
 function validateBank(subject, relPath, errors, warnings) {
   const full = path.join(PUBLIC, 'data', relPath)
   if (!fs.existsSync(full)) return
@@ -72,6 +106,9 @@ function validateBank(subject, relPath, errors, warnings) {
     const diagramOptions = Object.values(q.options || {}).every(value => /^Diagram [A-E]$/.test(String(value || '').trim()))
     if (PHYSICS_SUBJECT_RE.test(subject.id) && /Sphere Y\s+Sphere Z|Left Sphere\s+Right Sphere|Speed\s+Direction|Voltage\s+Electric Field|Figure 1\s+Figure 2|Figure\s+1\s*\n\s*Figure\s+2/i.test(textBlob) && !q.option_table_data && !(diagramOptions && (q.image_paths || []).length)) {
       errors.push(`${label}: table-style options must use option_table_data`)
+    }
+    if (PHYSICS_SUBJECT_RE.test(subject.id) && optionTableHeadersAtTextTail(q)) {
+      errors.push(`${label}: option table headers are duplicated at the end of the question text`)
     }
     for (const imagePath of [...(q.image_paths || []), ...(q.rubric_image_paths || [])]) {
       if (/qr|qrcode/i.test(imagePath)) {
