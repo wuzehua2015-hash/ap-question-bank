@@ -10,10 +10,14 @@ const HARD_PATTERNS = [
   { name: 'unscored published item', pattern: /"scoring_status"\s*:\s*"not_scored"/i },
   { name: 'spoken decimal OCR', pattern: /\b(?:zero|one|two|three|four|five|six|seven|eight|nine|\d+)\s+d\s*ecimal\s+point\b|\b\d+\s+decimal\s+point\b/i },
   { name: 'spoken formula narration', pattern: /\b(?:open|close)\s+parenthesis\b|\bo\s*p\s*e\s*n\s+p\s*a\s*r\s*e\s*n\s*t\s*h\s*e\s*s\s*i\s*s\b|\bend\s+(?:subscript|fraction|bracket)\b|\bwith\s+numerator\b|\bthe\s+fraction\b/i },
+  { name: 'spoken subscript OCR', pattern: /\b(?:theta|t\s*heta|V|P|F|E|I|q|C|R)\s+sub\b/i },
+  { name: 'spoken sign OCR', pattern: /\bn\s+e\s+g\s+a\s+tive\b|\bne\s+g\s+a\s+tive\b|\bneg\s+a\s+tive\b/i },
   { name: 'spoken charge narration', pattern: /\bwith\s+a\s+(?:positive|negative)\s+(?:one|two|three|\d+)\s+charge\b/i },
-  { name: 'accessibility figure text leak', pattern: /\bThe figure (?:presents|shows)\b|\bThe diagram on\b/i },
+  { name: 'accessibility figure text leak', pattern: /\bThe figure presents\b|\bThe diagram on\b/i },
   { name: 'accessibility table narration leak', pattern: /\bRow\s+\d+\.\s+[A-Z]/i },
-  { name: 'PDF boilerplate', pattern: /Unauthorized copying|GO ON TO THE NEXT PAGE|END OF EXAM|IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING/i },
+  { name: 'PDF boilerplate', pattern: /Unauthorized copying|GO ON TO THE NEXT PAGE|END OF EXAM|IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING|Visit College Board on the web|Continue your response to QUESTION|Begin your response to QUESTION/i },
+  { name: 'generic rubric variable leak', pattern: /\b(?:official_scoring_guideline|official_rubric)\b/ },
+  { name: 'physics OCR comparison fragment', pattern: /(?:^|\n)\s*[A-Za-z]{1,2}\s*\n\s*[A-Za-z]{1,2}\s*\n\s*[A-Za-z]{1,2}\s*[<>=]|[<>=]\s*\n\s*[A-Za-z]{1,2}\s*\n/ },
   { name: 'raw sub/sup tag', pattern: /<\/?(?:sub|sup)>/i },
   { name: 'HTML entity leak', pattern: /&(quot|apos|amp|lt|gt|#34|#39|#x22|#x27);/i },
   { name: 'replacement/mojibake character', pattern: /\uFFFD|鈥|蔚|碌|¥/ },
@@ -58,6 +62,30 @@ function validateBank(subject, relPath, errors, warnings) {
       if (pattern.test(textBlob)) {
         warnings.push(`${label}: contains ${name}; verify structured table/list rendering`)
       }
+    }
+    const diagramOptions = Object.values(q.options || {}).every(value => /^Diagram [A-E]$/.test(String(value || '').trim()))
+    if (subject.id === 'physics-2' && /Sphere Y\s+Sphere Z|Left Sphere\s+Right Sphere|Speed\s+Direction|Voltage\s+Electric Field/i.test(textBlob) && !q.option_table_data && !(diagramOptions && (q.image_paths || []).length)) {
+      errors.push(`${label}: table-style options must use option_table_data`)
+    }
+    for (const imagePath of [...(q.image_paths || []), ...(q.rubric_image_paths || [])]) {
+      if (/qr|qrcode/i.test(imagePath)) {
+        errors.push(`${label}: image path looks like QR/footer pollution: ${imagePath}`)
+      }
+    }
+    for (const [optionKey, optionValue] of Object.entries(q.options || {})) {
+      const option = String(optionValue || '')
+      if (/Questions.{0,8}\d+\s*-\s*\d+.{0,30}refer/i.test(option)) {
+        errors.push(`${label}: option ${optionKey} contains next-question group intro pollution`)
+      }
+      if (/GO ON TO THE\s+N?\s*EXT PAGE|NEXT PAGE/i.test(option)) {
+        errors.push(`${label}: option ${optionKey} contains PDF page-transition pollution`)
+      }
+      if (/(?:Voltmeter\s+Reading|Ohmmeter\s+Reading|Wire\s+Current|theta\s+sub|t\s*heta\s+sub)/i.test(option) && !q.option_table_data) {
+        errors.push(`${label}: option ${optionKey} appears to contain flattened table/OCR spillover`)
+      }
+    }
+    if (subject.id === 'physics-2' && /\b(?:figures?|graph|table)\s+above\b/i.test(textBlob) && !(q.image_paths || []).length && !q.table_data && !q.option_table_data) {
+      errors.push(`${label}: references a figure/graph/table above but has no rendered asset or structured table`)
     }
   }
 }
