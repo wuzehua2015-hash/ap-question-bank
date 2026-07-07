@@ -1,0 +1,378 @@
+[
+  {
+    "question_id": "2015_FRQ1",
+    "frq_id": "2015_FRQ1",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "released",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "See the official free-response prompt image below for the full Java code and question.",
+    "image_paths": [
+      "images/ap/computer-science-a/2015/2015_frq1_p56.png",
+      "images/ap/computer-science-a/2015/2015_frq1_p57.png",
+      "images/ap/computer-science-a/2015/2015_frq1_p58.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "2D Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.62,
+      "evidence": "Keyword classification from CSA FRQ prompt.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "Question 1: Diverse Array Part (a) array Sum, all one word and capital S,– henceforth referred to as array Sum. 2 points Intent: Compute and return sum of elements in 1D array a r r, passed as parameter + one Accesses all elements of a r r, (no bounds errors on a r r) + one Initializes, computes, and returns sum of elements Part (b) row Sums, all one word and capital S – henceforth referred to as row Sums. 4 points Intent: Compute and return 1D array containing sums of each row in the 2D array a r r 2 D, passed as parameter + one Constructs correctly-sized 1D array of ints + one Accesses all rows in a r r 2 D (no bounds errors on a r r 2 D) + one Computes sum of row in a r r 2 D using array Sum and assigns to element in 1D array + one Returns 1D array where kth element is computed sum of corresponding row in 2D array for all rows Part (c) is Diverse, all one word and capital D – henceforth referred to as is Diverse. 3 points Intent: Determine whether a r r 2 D, passed as parameter, is diverse + one Computes and uses array of row sums from a r r 2 D using row Sums + one Compare all and only pairs of row sums for equality (No bounds errors on row sums array; point not awarded if no adjustment when compares any row sum with itself) + one Returns true if all compared row sums are different and false otherwise (point not awarded for immediate return) Question-Specific Penalties - 1 (g) Uses get Length, /, get Size. All one word and capital LS – henceforth referred to as get Length, /, get Size. for array size - 1 (y) Destruction of persistent data (a r r or a r r 2 D) 2015 CANONICAL SOLUTIONS These canonical solutions serve an expository role, depicting general approaches to solution. Each reflects only one instance from the infinite set of valid solutions. The solutions are presented in a coding style chosen to enhance readability and facilitate understanding. Question 1: Diverse Array Part (a): The code shown consists of 7 lines L ine 1: public stat ic int array Sum ( int [ ] a r r ) { Line 2: int, sum = zero ; Line 3: for ( int elem colon a r r ) { Line 4: sum + = elem ; Line 5: } Line 6: return sum ; Line 7: } Part (b): The code shown consists of 9 lines Li",
+      "official_text": "Question 1: Diverse Array\nPart (a)\narray Sum, all one word and capital S,– henceforth referred to as array Sum.\n2 points\nIntent: Compute and return sum of elements in 1D array a r r, passed as parameter\n+ one\nAccesses all elements of a r r, (no bounds errors on a r r)\n+ one\nInitializes, computes, and returns sum of elements\nPart (b)\nrow Sums, all one word and capital S – henceforth referred to as row Sums.\n4 points\nIntent: Compute and return 1D array containing sums of each row in the 2D array a r r 2 D, passed as\n parameter\n+ one\nConstructs correctly-sized 1D array of ints\n+ one\nAccesses all rows in a r r 2 D (no bounds errors on a r r 2 D)\n+ one\nComputes sum of row in a r r 2 D using array Sum and assigns to element in 1D array\n+ one\nReturns 1D array where kth element is computed sum of corresponding row in 2D array\nfor all rows\n\nPart (c)\nis Diverse, all one word and capital D – henceforth referred to as is Diverse.\n3 points\nIntent: Determine whether a r r 2 D, passed as parameter, is diverse\n+ one\nComputes and uses array of row sums from a r r 2 D using row Sums\n+ one\nCompare all and only pairs of row sums for equality (No bounds errors on row sums array;\npoint not awarded if no adjustment when compares any row sum with itself)\n+ one\nReturns true if all compared row sums are different and false otherwise\n(point not awarded for immediate return)\nQuestion-Specific Penalties\n- 1\n(g) Uses get Length, /, get Size. All one word and capital LS – henceforth referred to as get Length, /, get Size. for array size\n- 1\n(y) Destruction of persistent data (a r r or a r r 2 D)\n2015 CANONICAL SOLUTIONS\nThese canonical solutions serve an expository role, depicting general approaches to solution. Each reflects only one instance from the\ninfinite set of valid solutions. The solutions are presented in a coding style chosen to enhance readability and facilitate understanding.\n\nQuestion 1: Diverse Array\nPart (a):\nThe code shown consists of 7 lines\n\nL\nine 1: public stat\nic int array Sum ( int [\n] a r r\n ) {\nLine 2: int, sum = zero ;\nLine 3: for ( int elem colon a r r ) {\nLine 4: sum + = elem ;\nLine 5: }\nLine 6: return sum ;\nLine 7: }\nPart (b):\nThe code shown consists of 9 lines\n\nLine 1\n: public static int [ ] row Sums ( int [ ] [ ] a r\nr 2 D ) {\nLine 2: int [ ] sums = new int [ a r r 2 D dot length ], ;\nLine 3: in row Num, all one word and capital N – henceforth referred to as row Num, = zero ;\nLine 4: for ( in, [ ] row colon a r r 2 D ) {\nLine 5: sums [ row Num ] = array Sum ( row ) ;\nLine 6: row Num + + ;\nLine 7: }\nLine 8: return sums ;\nLine 9: }\nPart (c):\nThe code shown consists of 11 lines\n\nLine 1: p\nublic static boolean is Diverse ( int [ ] [ ] a r r 2 D ) {\nLi\nne\n 2\n: int [ ] sums = row Sums ( a r r 2 D ) ;\nLine 3: for ( int i = zero ; i less than sums dot length ; i + + ) {\nLine 4: for ( int j = i + 1 ; j less than sums dot length ; j + + ) {\nLine 5: if ( sums [ i ] = = sums [ j ] ) {\nLine 6: return false ;\nLine 7: }\nLine 8: }\nLine 9: }\nLine 10: return true, ;\nLine 11: }\n2015 SCORING GUIDELINES",
+      "points": [
+        {
+          "part": "official_guideline",
+          "points": 9,
+          "description": "Question 1: Diverse Array Part (a) array Sum, all one word and capital S,– henceforth referred to as array Sum. 2 points Intent: Compute and return sum of elements in 1D array a r r, passed as parameter + one Accesses all elements of a r r, (no bounds errors on a r r) + one Initializes, computes, and returns sum of elements Part (b) row Sums, all one word and capital S – henceforth referred to as row Sums. 4 points Intent: Compute and return 1D array containing sums of each row in the 2D array a r r 2 D, passed as parameter + one Constructs correctly-sized 1D array of ints + one Accesses all rows in a r r 2 D (no bounds errors on a r r 2 D) + one Computes sum of row in a r r 2 D using array Sum and assigns to element in 1D array + one Returns 1D array where kth element is computed sum of corresponding row in 2D array for all rows Part (c) is Diverse, all one word and capital D – henceforth referred to as is Diverse. 3 points Intent: Determine whether a r r 2 D, passed as parameter, is diverse + one Computes and uses array of row sums from a r r 2 D using row Sums + one Compare all and only pairs of row sums for equality (No bounds errors on row sums array; point not awarded if no"
+        }
+      ]
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
+      "source_page": 56
+    }
+  },
+  {
+    "question_id": "2015_FRQ2",
+    "frq_id": "2015_FRQ2",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "released",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "See the official free-response prompt image below for the full Java code and question.",
+    "image_paths": [
+      "images/ap/computer-science-a/2015/2015_frq2_p62.png",
+      "images/ap/computer-science-a/2015/2015_frq2_p63.png",
+      "images/ap/computer-science-a/2015/2015_frq2_p64.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "2D Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.62,
+      "evidence": "Keyword classification from CSA FRQ prompt.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "Question 2: Guessing Game Class: Hidden Word, all one word and capital H and W– henceforth referred to as Hidden WoWord 9 points Intent: Define implementation of class to represent hidden word in guessing game + one Uses correct class, constructor, and method headers + one Declares appropriate private instance variable + one Initializes instance variable within constructor using parameter + six Implement get Hint, all one word and capital H– henceforth referred to as get HiHint + one Accesses all letters in both guess and hidden word in loop (no bounds errors in either) + four Process letters within loop + one Extracts and compares corresponding single letters from guess and hidden word + one Tests whether guess letter occurs in same position in both guess and hidden word + one Tests whether guess letter occurs in hidden word but not in same position as in guess + one Adds correct character exactly once to the hint string based on the test result + one Declares, initializes, and returns constructed hint string Question-Specific Penalties - one (t) Uses get to access letters from strings - two (u) Consistently uses incorrect name instead of instance variable name for hidden word 2015 CANONICAL SOLUTIONS These canonical solutions serve an expository role, depicting general approaches to solution. Each reflects only one instance from the infinite set of valid solutions. The solutions are presented in a coding style chosen to enhance readability and facilitate understanding. Question 2: Guessing Game The code shown consists of 21 lines Line 1: public class Hidden Word Line 2: { Line 3: private S tring word ; Line 4: public Hidden Wor d ( capital String h Word, all one word and lowercase h and c apital W– henceforth referred to as h Word, ) Line 5: { Line 6: word = h Word ; Line 7: } L ine 8: pu blic String g et Hint ( String g uess ) { Line 9: String hint = open quote close quote ; Line 10: for ( int i = zero ; i less than guess dot length ( ) ; i + + ) { Line 11: if ( guess dot substring ( i comma i + 1 ) dot = ( word dot substring ( i comma i + 1 ) ) ) { Line 12: hint + = guess dot substring ( i comma i + 1 ) ; Line 13: } else if ( word dot index Of, all one",
+      "official_text": "Question 2: Guessing Game\nClass:\nHidden Word, all one word and capital H and W– henceforth referred to as Hidden WoWord\n9 points\nIntent: Define implementation of class to represent hidden word in guessing game\n+ one\nUses correct class, constructor, and method headers\n+ one\nDeclares appropriate private instance variable\n+ one\nInitializes instance variable within constructor using parameter\n+ six\nImplement get Hint, all one word and capital H– henceforth referred to as get HiHint\n+ one\nAccesses all letters in both guess and hidden word in loop\n(no bounds errors in either)\n+ four\nProcess letters within loop\n+ one\nExtracts and compares corresponding single letters from guess and\nhidden word\n+ one\nTests whether guess letter occurs in same position in both guess and\nhidden word\n+ one\nTests whether guess letter occurs in hidden word but not in same position\nas in guess\n+ one\nAdds correct character exactly once to the hint string based on the\ntest result\n+ one\nDeclares, initializes, and returns constructed hint string\nQuestion-Specific Penalties\n- one\n(t) Uses get to access letters from strings\n- two\n(u) Consistently uses incorrect name instead of instance variable name for hidden word\n2015 CANONICAL SOLUTIONS\nThese canonical solutions serve an expository role, depicting general approaches to solution. Each reflects only one instance from the\ninfinite set of valid solutions. The solutions are presented in a coding style chosen to enhance readability and facilitate understanding.\n\nQuestion 2: Guessing Game\nThe code shown consists\nof 21\n lines\n\nLine 1: public\nclass Hidden Word\nLine 2: {\nLine 3: private S\ntring\nword ;\nLine 4: public Hidden Wor\nd ( capital\n String h Word, all one word and lowercase h and c\napital W– henceforth referred to as h Word, )\nLine 5: {\nLine 6: word = h Word ;\nLine 7: }\nL\nine 8: pu\nblic String g\net\n Hint ( String g\nuess ) {\nLine 9: String hint = open quote close quote ;\nLine 10: for ( int i = zero ; i less than guess dot length ( ) ; i + + ) {\nLine 11: if ( guess dot substring ( i comma i + 1 ) dot = ( word dot substring ( i comma i + 1 ) ) ) {\nLine 12: hint + = guess dot substring ( i comma i + 1 ) ;\nLine 13: } else if ( word dot index Of, all one word and capital O– henceforth referred to as index Of, ( guess dot substring ( i comma i + 1 ) ) ! = negative 1 ) {\nLine 14: hint + = open quote + symbol close quote ;\nLine 15: } else {\nLine 16: hint + = open quote * close quote ;\nLine 17: }\nLine 18: }\nLine 19: return hint, ;\nLine 20: }\nLine 21: }\n2015 SCORING GUIDELINES",
+      "points": [
+        {
+          "part": "official_guideline",
+          "points": 9,
+          "description": "Question 2: Guessing Game Class: Hidden Word, all one word and capital H and W– henceforth referred to as Hidden WoWord 9 points Intent: Define implementation of class to represent hidden word in guessing game + one Uses correct class, constructor, and method headers + one Declares appropriate private instance variable + one Initializes instance variable within constructor using parameter + six Implement get Hint, all one word and capital H– henceforth referred to as get HiHint + one Accesses all letters in both guess and hidden word in loop (no bounds errors in either) + four Process letters within loop + one Extracts and compares corresponding single letters from guess and hidden word + one Tests whether guess letter occurs in same position in both guess and hidden word + one Tests whether guess letter occurs in hidden word but not in same position as in guess + one Adds correct character exactly once to the hint string based on the test result + one Declares, initializes, and returns constructed hint string Question-Specific Penalties - one (t) Uses get to access letters from strings - two (u) Consistently uses incorrect name instead of instance variable name for hidden word 201"
+        }
+      ]
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
+      "source_page": 62
+    }
+  },
+  {
+    "question_id": "2015_FRQ3",
+    "frq_id": "2015_FRQ3",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "released",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "See the official free-response prompt image below for the full Java code and question.",
+    "image_paths": [
+      "images/ap/computer-science-a/2015/2015_frq3_p64.png",
+      "images/ap/computer-science-a/2015/2015_frq3_p65.png",
+      "images/ap/computer-science-a/2015/2015_frq3_p66.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "2D Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.62,
+      "evidence": "Keyword classification from CSA FRQ prompt.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "Question 3: Sparse Array Part (a) get Value At, all one word and capital V and A – henceforth referred to as get Value AtAt 3 points Intent: Return the value at row index row and column index col in sparse array + one Accesses all necessary elements of entries (No bounds errors) + one Identifies element of entries at row index row and column index col, if exists + one Returns identified value or returns 0 if no entry exists in entries with row index row and column index col Part (b) remove Column, all one word and capital C– henceforth referred to as remove CoColumn 6 points Intent: Remove column col from sparse array + one Decrements num Cols, all one word and capital C– henceforth referred to as num CoCols exactly once + one Accesses all elements of entries (No bounds errors) + one Identifies and removes entry with column index col + two Process entries with column index greater than col within loop + one Creates new Sparse Array Entry, all one word and capital S, A, and E – henceforth referred to as Sparse Array EnEntry with current row index, column index - 1, current value + one Identifies and replaces entry with column index greater than col with created entry + one On exit: All and only entries with column index col have been removed and all and only entries with column index greater than col have been changed to have column index - 1. All other entries are unchanged. (Minor loop errors ok) Question-Specific Penalties - two (t) Consistently uses incorrect name instead of entries - one (u) Directly accesses private instance variables in Sparse Array Entry object 2015 CANONICAL SOLUTIONS These canonical solutions serve an expository role, depicting general approaches to solution. Each reflects only one instance from the infinite set of valid solutions. The solutions are presented in a coding style chosen to enhance readability and facilitate understanding. Question 3: Sparse Array Part (a): The code shown consists of 8 lines Lin e 1: public int get Value At ( int row comma int, col ) { Line 2: for ( Sparse A rray Entr y e colon entries ) { Line 3: if ( e dot get Row, all one word and capital R, ( ) = = row ampersand ampersand e d",
+      "official_text": "Question 3: Sparse Array\n\nPart (a)\n\nget Value At, all one word and capital V and A – henceforth referred to as get Value AtAt\n\n3 points\nIntent: Return the value at row index row and column index col in sparse array\n\n+ one\nAccesses all necessary elements of entries (No bounds errors)\n\n+ one\nIdentifies element of entries at row index row and column index col, if exists\n\n+ one\nReturns identified value or returns 0 if no entry exists in entries with row index row\nand column index col\n\nPart (b)\n\nremove Column, all one word and capital C– henceforth referred to as remove CoColumn\n\n6 points\nIntent: Remove column col from sparse array\n\n+ one\nDecrements num Cols, all one word and capital C– henceforth referred to as num CoCols exactly once\n\n+ one\nAccesses all elements of entries (No bounds errors)\n\n+ one\nIdentifies and removes entry with column index col\n\n+ two\nProcess entries with column index greater than col within loop\n\n+ one\nCreates new Sparse Array Entry, all one word and capital S, A, and E – henceforth referred to as Sparse Array EnEntry with current row index, column index - 1,\n\ncurrent value\n\n+ one\nIdentifies and replaces entry with column index greater than col with created entry\n\n+ one\nOn exit: All and only entries with column index col have been removed and all and only\n\nentries with column index greater than col have been changed to have column index - 1.\n\nAll other entries are unchanged. (Minor loop errors ok)\n\nQuestion-Specific Penalties\n\n- two\n(t) Consistently uses incorrect name instead of entries\n\n- one\n(u) Directly accesses private instance variables in Sparse Array\nEntry object\n2015 CANONICAL SOLUTIONS\n\nThese canonical solutions serve an expository role, depicting general approaches to solution. Each reflects only one instance from the\ninfinite set of valid solutions. The solutions are presented in a coding style chosen to enhance readability and facilitate understanding.\n\nQuestion 3: Sparse Array\n\nPart (a):\n\nThe code shown consists of 8 lines\n\nLin\ne 1: public int get Value At ( int row comma int, col ) {\nLine 2: for ( Sparse A\nrray Entr\ny e colon entries\n ) {\nLine 3: if ( e dot get Row, all one word and capital R, ( ) = = row ampersand ampersand e dot get Col, all one word and capital C, ( ) = = col ) {\nLine 4: return e dot get Value, all one word and capital V, ( ) ;\nLine 5: }\nLine 6: }\nLine 7: return zero, ;\nLine 8: }\n\nPart (b):\n\nThe code shown consists of 17 lines\n\nLine 1: publ\nic void remove Column ( int col ) {\n\nLine 2: int i = zero ;\n\nLine 3: while ( i\nless than entries dot size ( ) ) {\nLine 4\n: Sparse Array Entry e = entries dot get ( i ) ;\nLine 5: if, ( e, dot get C\nol, all one word and\ncapital C, ( ) = = co\nl, ), {\nLine 6: entries dot remove ( i ) ;\nLine 7: } else if ( e, dot get Col, all one word and capital C, ( ), greater than col, ), {\nLine 8: entries dot set ( i comma new Sparse Array Entry ( e dot get Row, all one word and capital R, ( ), comma\nLine 9: e dot get Col, all one word and capital C, ( ), - 1 comma\nLine 10: e dot get Value, all one word and capital V, ( ) ) ), ;\nLine 11: i + +, ;\nLine 12: } else {\nLine 13: i + + ;\nLine 14: }\nLine 15: }\nLine 16: num Cols, all one word and capital C, - - ;\nLine 17: }\n2015 SCORING GUIDELINES",
+      "points": [
+        {
+          "part": "official_guideline",
+          "points": 9,
+          "description": "Question 3: Sparse Array Part (a) get Value At, all one word and capital V and A – henceforth referred to as get Value AtAt 3 points Intent: Return the value at row index row and column index col in sparse array + one Accesses all necessary elements of entries (No bounds errors) + one Identifies element of entries at row index row and column index col, if exists + one Returns identified value or returns 0 if no entry exists in entries with row index row and column index col Part (b) remove Column, all one word and capital C– henceforth referred to as remove CoColumn 6 points Intent: Remove column col from sparse array + one Decrements num Cols, all one word and capital C– henceforth referred to as num CoCols exactly once + one Accesses all elements of entries (No bounds errors) + one Identifies and removes entry with column index col + two Process entries with column index greater than col within loop + one Creates new Sparse Array Entry, all one word and capital S, A, and E – henceforth referred to as Sparse Array EnEntry with current row index, column index - 1, current value + one Identifies and replaces entry with column index greater than col with created entry"
+        }
+      ]
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
+      "source_page": 64
+    }
+  },
+  {
+    "question_id": "2015_FRQ4",
+    "frq_id": "2015_FRQ4",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "released",
+    "question_number": 4,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "See the official free-response prompt image below for the full Java code and question.",
+    "image_paths": [
+      "images/ap/computer-science-a/2015/2015_frq4_p72.png",
+      "images/ap/computer-science-a/2015/2015_frq4_p73.png",
+      "images/ap/computer-science-a/2015/2015_frq4_p74.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Inheritance",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.62,
+      "evidence": "Keyword classification from CSA FRQ prompt.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "Question 4: Number Group Part (a) Interface: Number Group, all one word and capital N and G– henceforth referred to as Number GrGroup 2 points Intent: Define interface to represent a number group + one interface Number Group (point lost if visibility private) + one boolean containsopen parenthesis int, num ), ; (point lost if visibility not public or extraneous code present) Part (b) Class: Range 5 points Intent: Define implementation of Number Group representing a range of numbers + one class Range implements Number Group (point lost if visibility private) + one Declares appropriate private instance variable(s) + one Uses correct constructor header + one Initializes instance variables within constructor using parameters (point lost if bounds errors occur in container use) + one Computes and returns correct value from contains (point lost for incorrect method header) Part (c) contains 2 points Intent: Determine whether integer is part of any of the member number groups + one Calls contains on elements of group List, all one word and capital L– henceforth referred to as group LiList in context of loop (no bounds errors) + one Computes and returns correct value Question-Specific Penalties -1 (s) Inappropriate use of static 2015 CANONICAL SOLUTIONS These canonical solutions serve an expository role, depicting general approaches to solution. Each reflects only one instance from the infinite set of valid solutions. The solutions are presented in a coding style chosen to enhance readability and facilitate understanding. Question 4: Number Group Part (a): The code shown consists of 4 li nes. Line 1: public interfa ce Number Group. Line 2: {. Line 3: boolean contains ( int, num ), ;. Line 4: }. Part (b): The code shown consists of 13 lines Lin e 1: public class capit al Range implements N u mber Group Line 2: { L ine 3: private int min ; Line 4: pr ivate i nt max ; Line 5: public capit al Range ( int min comma i nt max ) Line 6: { Line 7: this dot min = min ; Line 8: this dot max = max ; Line 9: } Line 10: public boolean contains ( int num ) { Line 11: return num greater than or equal to min ampersand ampersand num less than or equal to max",
+      "official_text": "Question 4: Number Group\n\nPart (a)\nInterface: Number Group, all one word and capital N and G– henceforth referred to as Number GrGroup\n\n2 points\nIntent: Define interface to represent a number group\n\n+ one\ninterface Number Group (point lost if visibility private)\n\n+ one\nboolean containsopen parenthesis int, num ), ;\n\n(point lost if visibility not public or extraneous code present)\n\nPart (b)\nClass: Range\n\n5 points\nIntent: Define implementation of Number Group representing a range of numbers\n\n+ one\nclass Range implements Number Group (point lost if visibility private)\n\n+ one\nDeclares appropriate private instance variable(s)\n\n+ one\nUses correct constructor header\n\n+ one\nInitializes instance variables within constructor using parameters\n(point lost if bounds errors occur in container use)\n\n+ one\nComputes and returns correct value from contains\n(point lost for incorrect method header)\n\nPart (c)\n\ncontains\n\n2 points\nIntent: Determine whether integer is part of any of the member number groups\n\n+ one\nCalls contains on elements of group List, all one word and capital L– henceforth referred to as group LiList in context of loop (no bounds errors)\n\n+ one\nComputes and returns correct value\n\nQuestion-Specific Penalties\n\n-1\n(s) Inappropriate use of static\n2015 CANONICAL SOLUTIONS\n\nThese canonical solutions serve an expository role, depicting general approaches to solution. Each reflects only one instance from the\ninfinite set of valid solutions. The solutions are presented in a coding style chosen to enhance readability and facilitate understanding.\n\nQuestion 4: Number Group\n\nPart (a):\n\nThe code shown consists of 4\nli\nnes.\n\nLine 1: public interfa\nce Number Group.\nLine 2: {.\nLine 3: boolean contains ( int, num ), ;.\nLine 4: }.\n\nPart (b):\n\nThe code shown consists of 13 lines\n\nLin\ne\n1: public class capit\nal Range implements N\nu\nmber Group\nLine 2: {\nL\nine 3: private int min\n ;\nLine 4: pr\nivate\ni\nnt max ;\nLine 5: public capit\nal Range ( int min comma i\nnt max\n )\nLine 6: {\nLine 7: this dot min = min ;\nLine 8: this dot max = max ;\nLine 9: }\nLine 10: public boolean contains ( int num ) {\nLine 11: return num greater than or equal to min ampersand ampersand num less than or equal to max ;\nLine 12: }\nLine 13: }\nPart (c):\n\nThe code shown consists of 8 lines\n.\n\nLine 1: public boolean contains ( int num )\n{\nLine 2:\nfor, (\nNumber Group group co\nlon group List ) {\nLine 3: if ( group dot contains ( num ) ) {\nLine 4: return true, ;\nLine 5: }\nLine 6: }\nLine 7: return false, ;\nLine 8: }",
+      "points": [
+        {
+          "part": "official_guideline",
+          "points": 9,
+          "description": "Question 4: Number Group Part (a) Interface: Number Group, all one word and capital N and G– henceforth referred to as Number GrGroup 2 points Intent: Define interface to represent a number group + one interface Number Group (point lost if visibility private) + one boolean containsopen parenthesis int, num ), ; (point lost if visibility not public or extraneous code present) Part (b) Class: Range 5 points Intent: Define implementation of Number Group representing a range of numbers + one class Range implements Number Group (point lost if visibility private) + one Declares appropriate private instance variable(s) + one Uses correct constructor header + one Initializes instance variables within constructor using parameters (point lost if bounds errors occur in container use) + one Computes and returns correct value from contains (point lost for incorrect method header) Part (c) contains 2 points Intent: Determine whether integer is part of any of the member number groups + one Calls contains on elements of group List, all one word and capital L– henceforth referred to as group LiList in context of loop (no bounds errors) + one Computes and returns correct value Ques"
+        }
+      ]
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
+      "source_page": 72
+    }
+  },
+  {
+    "question_id": "gridworld_FRQ1",
+    "frq_id": "gridworld_FRQ1",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2008,
+    "source_set": "gridworld_practice",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "See the official free-response prompt image below for the full Java code and question.",
+    "image_paths": [
+      "images/ap/computer-science-a/gridworld/gridworld_frq1_p45.png",
+      "images/ap/computer-science-a/gridworld/gridworld_frq1_p46.png",
+      "images/ap/computer-science-a/gridworld/gridworld_frq1_p47.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.62,
+      "evidence": "Keyword classification from CSA FRQ prompt.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "Question 1: Word Scrambler Part A: recombine 4 points +1 extract first half of word1 +1/2 attempt (must call substring with 2 parameters) +1/2 correct +1 extract second half of word2 +1/2 attempt (must call substring with at least 1 parameter) +1/2 correct +1 concatenate +1/2 attempt +1/2 correct +1 return “combined” string Part B: mixedWords 5 points +1 create a result array of correct length +3 loop through words array to create mixed pairs of strings +1 attempt to loop over all pairs of strings in words +1/2 attempt +1/2 correct (loses for off-by-one pairing) +1 correctly combine pairs of strings (must use recombine) +1/2 attempt +1/2 correct +1 store all new string pairs in result array +1/2 attempt +1/2 correct +1 return result array Free-Response Scoring Guidelines",
+      "official_text": "Question 1: Word Scrambler\n\nPart A:\nrecombine\n\n4 points\n\n+1\nextract first half of word1\n\n+1/2\nattempt (must call substring with 2 parameters)\n\n+1/2\ncorrect\n\n+1\nextract second half of word2\n\n+1/2\nattempt (must call substring with at least 1 parameter)\n\n+1/2\ncorrect\n\n+1\nconcatenate\n\n+1/2\nattempt\n\n+1/2\ncorrect\n\n+1\nreturn “combined” string\n\nPart B:\nmixedWords\n\n5 points\n\n+1\ncreate a result array of correct length\n\n+3\nloop through words array to create mixed pairs of strings\n\n+1\nattempt to loop over all pairs of strings in words\n\n+1/2\nattempt\n\n+1/2\ncorrect (loses for off-by-one pairing)\n\n+1\ncorrectly combine pairs of strings (must use recombine)\n\n+1/2\nattempt\n\n+1/2\ncorrect\n\n+1\nstore all new string pairs in result array\n\n+1/2\nattempt\n\n+1/2\ncorrect\n\n+1\nreturn result array\nFree-Response Scoring Guidelines",
+      "points": [
+        {
+          "part": "official_guideline",
+          "points": 9,
+          "description": "Question 1: Word Scrambler Part A: recombine 4 points +1 extract first half of word1 +1/2 attempt (must call substring with 2 parameters) +1/2 correct +1 extract second half of word2 +1/2 attempt (must call substring with at least 1 parameter) +1/2 correct +1 concatenate +1/2 attempt +1/2 correct +1 return “combined” string Part B: mixedWords 5 points +1 create a result array of correct length +3 loop through words array to create mixed pairs of strings +1 attempt to loop over all pairs of strings in words +1/2 attempt +1/2 correct (loses for off-by-one pairing) +1 correctly combine pairs of strings (must use recombine) +1/2 attempt +1/2 correct +1 store all new string pairs in result array +1/2 attempt +1/2 correct +1 return result array Free-Response Scoring Guidelines"
+        }
+      ]
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
+      "source_page": 45
+    }
+  },
+  {
+    "question_id": "gridworld_FRQ2",
+    "frq_id": "gridworld_FRQ2",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2008,
+    "source_set": "gridworld_practice",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "See the official free-response prompt image below for the full Java code and question.",
+    "image_paths": [
+      "images/ap/computer-science-a/gridworld/gridworld_frq2_p47.png",
+      "images/ap/computer-science-a/gridworld/gridworld_frq2_p48.png",
+      "images/ap/computer-science-a/gridworld/gridworld_frq2_p49.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.62,
+      "evidence": "Keyword classification from CSA FRQ prompt.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "Question 2: Mountain Part A: getPeakIndex 4 points +2 loop over array +1/2 attempt to loop over array +1/2 access consecutive elements for comparison +1/2 access at least 3 values +1/2 correct loop boundaries for solution +1 compare for peak index +1/2 attempt to compare for peak index (must compare with at least 2 other indexes) +1/2 correctly compare for peak index + 1 return peak index +1/2 return correct peak index if found +1/2 return -1 if no peak is found Part B: isMountain 5 points +1 call getPeakIndex method +1/2 attempt +1/2 correct (has correct parameter and uses returned value correctly) +1 call isIncreasing and isDecreasing methods +1/2 attempt (must have some attempt at appropriate parameters) +1/2 correct (has correct parameters based on result of getPeakIndex) +1 correctly process returned value of -1 from call to getPeakIndex (should not call isIncreasing and isDecreasing) +1 correctly process results of getPeakIndex, isIncreasing, and isDecreasing +1 return correct boolean value Free-Response Scoring Guidelines",
+      "official_text": "Question 2: Mountain\n\nPart A:\ngetPeakIndex\n\n4 points\n\n+2\nloop over array\n\n+1/2\nattempt to loop over array\n\n+1/2\naccess consecutive elements for comparison\n\n+1/2\naccess at least 3 values\n\n+1/2\ncorrect loop boundaries for solution\n\n+1\ncompare for peak index\n+1/2\nattempt to compare for peak index (must compare with at least 2 other indexes)\n+1/2\ncorrectly compare for peak index\n\n+ 1\nreturn peak index\n+1/2\nreturn correct peak index if found\n+1/2\nreturn -1 if no peak is found\n\nPart B:\nisMountain\n\n5 points\n\n+1\ncall getPeakIndex method\n\n+1/2\nattempt\n\n+1/2\ncorrect (has correct parameter and uses returned value correctly)\n\n+1\ncall isIncreasing and isDecreasing methods\n\n+1/2\nattempt (must have some attempt at appropriate parameters)\n\n+1/2\ncorrect (has correct parameters based on result of getPeakIndex)\n\n+1\ncorrectly process returned value of -1 from call to getPeakIndex\n\n(should not call isIncreasing and isDecreasing)\n\n+1\ncorrectly process results of getPeakIndex, isIncreasing, and isDecreasing\n\n+1\nreturn correct boolean value\nFree-Response Scoring Guidelines",
+      "points": [
+        {
+          "part": "official_guideline",
+          "points": 9,
+          "description": "Question 2: Mountain Part A: getPeakIndex 4 points +2 loop over array +1/2 attempt to loop over array +1/2 access consecutive elements for comparison +1/2 access at least 3 values +1/2 correct loop boundaries for solution +1 compare for peak index +1/2 attempt to compare for peak index (must compare with at least 2 other indexes) +1/2 correctly compare for peak index + 1 return peak index +1/2 return correct peak index if found +1/2 return -1 if no peak is found Part B: isMountain 5 points +1 call getPeakIndex method +1/2 attempt +1/2 correct (has correct parameter and uses returned value correctly) +1 call isIncreasing and isDecreasing methods +1/2 attempt (must have some attempt at appropriate parameters) +1/2 correct (has correct parameters based on result of getPeakIndex) +1 correctly process returned value of -1 from call to getPeakIndex (should not call isIncreasing and isDecreasing) +1 correctly process results of getPeakIndex, isIncreasing, and isDecreasing +1 return correct boolean value Free-Response Scoring Guidelines"
+        }
+      ]
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
+      "source_page": 47
+    }
+  },
+  {
+    "question_id": "gridworld_FRQ3",
+    "frq_id": "gridworld_FRQ3",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2008,
+    "source_set": "gridworld_practice",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "See the official free-response prompt image below for the full Java code and question.",
+    "image_paths": [
+      "images/ap/computer-science-a/gridworld/gridworld_frq3_p50.png",
+      "images/ap/computer-science-a/gridworld/gridworld_frq3_p51.png",
+      "images/ap/computer-science-a/gridworld/gridworld_frq3_p52.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Inheritance",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.62,
+      "evidence": "Keyword classification from CSA FRQ prompt.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "Question 3: GrubCritter (GridWorld) Part A: getRandomDirection 1 point +1/2 correctly generate a random direction (must be one of the eight directions in the case study) +1/2 return result of attempt to generate a random direction Part B: getMoveLocations 5 points +1/2 call getRandomDirection method +1/2 create ArrayList to hold locations +3 add locations to ArrayList +1 loop maxDistance times (loop bounds) +1/2 attempt +1/2 correct +1 get next location in chosen direction +1/2 attempt +1/2 correct +1/2 verify that location is valid +1/2 correctly add location to ArrayList +1 return ArrayList of locations Part C: selectMoveLocation 3 points +1/2 correctly get random location from locs +2 1/2 return the appropriate location +1/2 return current location if locs is empty +1/2 attempt to get actor at location in grid +1/2 check chosen location for empty, flower, or other +1/2 return null if not empty or flower +1/2 return correct value in all cases Special Usage: -1 changes state of GrubCritter in either part (b) or part (c)—violation of postconditions Free-Response Scoring Guidelines",
+      "official_text": "Question 3: GrubCritter (GridWorld)\n\nPart A:\ngetRandomDirection\n1 point\n\n+1/2\ncorrectly generate a random direction (must be one of the eight directions in the case study)\n\n+1/2\nreturn result of attempt to generate a random direction\n\nPart B:\ngetMoveLocations\n5 points\n\n+1/2\ncall getRandomDirection method\n\n+1/2\ncreate ArrayList to hold locations\n\n+3\nadd locations to ArrayList\n\n+1\nloop maxDistance times (loop bounds)\n\n+1/2\nattempt\n\n+1/2\ncorrect\n\n+1\nget next location in chosen direction\n\n+1/2\nattempt\n\n+1/2\ncorrect\n\n+1/2\nverify that location is valid\n\n+1/2\ncorrectly add location to ArrayList\n\n+1\nreturn ArrayList of locations\n\nPart C:\nselectMoveLocation\n3 points\n\n+1/2\ncorrectly get random location from locs\n\n+2 1/2 return the appropriate location\n\n+1/2\nreturn current location if locs is empty\n\n+1/2\nattempt to get actor at location in grid\n\n+1/2\ncheck chosen location for empty, flower, or other\n\n+1/2\nreturn null if not empty or flower\n\n+1/2\nreturn correct value in all cases\n\nSpecial Usage:\n-1\nchanges state of GrubCritter in either part (b) or part (c)—violation of postconditions\nFree-Response Scoring Guidelines",
+      "points": [
+        {
+          "part": "official_guideline",
+          "points": 9,
+          "description": "Question 3: GrubCritter (GridWorld) Part A: getRandomDirection 1 point +1/2 correctly generate a random direction (must be one of the eight directions in the case study) +1/2 return result of attempt to generate a random direction Part B: getMoveLocations 5 points +1/2 call getRandomDirection method +1/2 create ArrayList to hold locations +3 add locations to ArrayList +1 loop maxDistance times (loop bounds) +1/2 attempt +1/2 correct +1 get next location in chosen direction +1/2 attempt +1/2 correct +1/2 verify that location is valid +1/2 correctly add location to ArrayList +1 return ArrayList of locations Part C: selectMoveLocation 3 points +1/2 correctly get random location from locs +2 1/2 return the appropriate location +1/2 return current location if locs is empty +1/2 attempt to get actor at location in grid +1/2 check chosen location for empty, flower, or other +1/2 return null if not empty or flower +1/2 return correct value in all cases Special Usage: -1 changes state of GrubCritter in either part (b) or part (c)—violation of postconditions Free-Response Scoring Guidelines"
+        }
+      ]
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
+      "source_page": 50
+    }
+  },
+  {
+    "question_id": "gridworld_FRQ4",
+    "frq_id": "gridworld_FRQ4",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2008,
+    "source_set": "gridworld_practice",
+    "question_number": 4,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "See the official free-response prompt image below for the full Java code and question.",
+    "image_paths": [
+      "images/ap/computer-science-a/gridworld/gridworld_frq4_p53.png",
+      "images/ap/computer-science-a/gridworld/gridworld_frq4_p54.png",
+      "images/ap/computer-science-a/gridworld/gridworld_frq4_p55.png"
+    ],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Inheritance",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.62,
+      "evidence": "Keyword classification from CSA FRQ prompt.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "Question 4: Score Statistics Part A: record 7 points +1 loop over scoreList +1/2 attempt +1/2 correct +3 add a ScoreInfo object to scoreList for a new unique score +1 find correct position for adding ScoreInfo object +1/2 attempt +1/2 correct +1 create a new ScoreInfo object containing score +1/2 attempt +1/2 correct +1 add ScoreInfo object to scoreList +1/2 attempt to add ScoreInfo object somewhere in scoreList +1/2 add new ScoreInfo object at correct position in all cases +2 update frequency of existing score in scoreList +1 find an existing ScoreInfo object containing score +1/2 attempt +1/2 correct +1 update frequency in ScoreInfo object containing score +1/2 attempt to call increment method +1/2 correct +1 return boolean value based on whether a new ScoreInfo object was added +1/2 attempt +1/2 correct Part B: recordScores 2 points +1 correctly loop over all scores in stuScores +1/2 attempt +1/2 correct +1 call record method with appropriate parameter +1/2 attempt +1/2 correct Free-Response Canonical Solutions Question 1: Word Scrambler PART A: private String recombine(String word1, String word2) { return word1.substring(0, word1.length() / 2) + word2.substring(word2.length() / 2); } PART B: private String[] mixedWords(String[] words) { String[] result = new String[words.length]; for (int k = 0; k < result.length; k = k + 2) { result[k] = recombine(words[k], words[k + 1]); result[k + 1] = recombine (words[k + 1], words[k]); } return result; } Free-Response Canonical Solutions Question 2: Mountain PART A: public static int getPeakIndex(int[] array) { for (int k = 1; k < array.length - 1; k++) { if (array[k - 1] < array[k] && array[k] > array[k + 1]) return k; } return -1; } PART B: public static boolean isMountain(int[] array) { int peak = getPeakIndex(array); return (peak != -1) && isIncreasing(array, peak) && isDecreasing(array, peak); } Free-Response Canonical Solutions Question 3: GrubCritter (GridWorld) PART A: public int getRandomDirection() { int turns = (int) (Math.random() * 8); return Location.NORTH + turns * Location.HALF_RIGHT; } Alternate solution public int getRandomDirection",
+      "official_text": "Question 4: Score Statistics\n\nPart A:\nrecord\n\n7 points\n\n+1\nloop over scoreList\n\n+1/2\nattempt\n\n+1/2\ncorrect\n\n+3\nadd a ScoreInfo object to scoreList for a new unique score\n\n+1\nfind correct position for adding ScoreInfo object\n\n+1/2\nattempt\n\n+1/2\ncorrect\n\n+1\ncreate a new ScoreInfo object containing score\n\n+1/2\nattempt\n\n+1/2\ncorrect\n\n+1\nadd ScoreInfo object to scoreList\n\n+1/2\nattempt to add ScoreInfo object somewhere in scoreList\n\n+1/2\nadd new ScoreInfo object at correct position in all cases\n\n+2\nupdate frequency of existing score in scoreList\n\n+1\nfind an existing ScoreInfo object containing score\n\n+1/2\nattempt\n\n+1/2\ncorrect\n\n+1\nupdate frequency in ScoreInfo object containing score\n\n+1/2\nattempt to call increment method\n\n+1/2\ncorrect\n\n+1\nreturn boolean value based on whether a new ScoreInfo object was added\n\n+1/2\nattempt\n\n+1/2\ncorrect\n\nPart B:\nrecordScores\n\n2 points\n\n+1\ncorrectly loop over all scores in stuScores\n\n+1/2\nattempt\n\n+1/2\ncorrect\n\n+1\ncall record method with appropriate parameter\n\n+1/2\nattempt\n\n+1/2\ncorrect\nFree-Response Canonical Solutions\n\nQuestion 1: Word Scrambler\n\nPART A:\n\nprivate String recombine(String word1, String word2)\n{\n return word1.substring(0, word1.length() / 2) +\n word2.substring(word2.length() / 2);\n}\n\nPART B:\n\nprivate String[] mixedWords(String[] words)\n{\n String[] result = new String[words.length];\n\n for (int k = 0; k < result.length; k = k + 2)\n {\n result[k] = recombine(words[k], words[k + 1]);\n result[k + 1] = recombine (words[k + 1], words[k]);\n }\n\n return result;\n}\nFree-Response Canonical Solutions\n\nQuestion 2: Mountain\n\nPART A:\n\npublic static int getPeakIndex(int[] array)\n{\n for (int k = 1; k < array.length - 1; k++)\n {\n if (array[k - 1] < array[k] && array[k] > array[k + 1])\n return k;\n }\n\n return -1;\n}\n\nPART B:\n\npublic static boolean isMountain(int[] array)\n{\n int peak = getPeakIndex(array);\n return (peak != -1) && isIncreasing(array, peak) &&\n isDecreasing(array, peak);\n}\nFree-Response Canonical Solutions\n\nQuestion 3: GrubCritter (GridWorld)\n\nPART A:\n\npublic int getRandomDirection()\n{\n int turns = (int) (Math.random() * 8);\n return Location.NORTH + turns * Location.HALF_RIGHT;\n}\n\nAlternate solution\n\npublic int getRandomDirection()\n{\n return 45 * (int) (Math.random() * 8);\n}\n\nPART B:\n\npublic ArrayList<Location> getMoveLocations()\n{\n Location loc = getLocation();\n ArrayList<Location> result = new ArrayList<Location>();\n int direction = getRandomDirection();\n\n for (int k = 0; k < maxDistance; k++)\n {\n loc = loc.getAdjacentLocation(direction);\n if (getGrid().isValid(loc))\n result.add(loc);\n }\n\n return result;\n}\n\nPART C:\n\npublic Location selectMoveLocation(ArrayList<Location> locs)\n{\n int n = locs.size();\n if (n == 0)\n return getLocation();\n\n int r = (int) (Math.random() * n);\n Location loc = locs.get(r);\n Actor actorAtLoc = getGrid().get(loc);\n if (actorAtLoc == null || actorAtLoc instanceof Flower)\n return loc;\n else\n return null;\n}\nFree-Response Canonical Solutions\n\nQuestion 4: Score Statistics\n\nPART A:\n\npublic boolean record(int score)\n{\n int k = 0;\n while (k < scoreList.size() && score > scoreList.get(k).getScore())\n {\n k++;\n }\n\n boolean found = k < scoreList.size() &&\n score == scoreList.get(k).getScore();\n if (found)\n scoreList.get(k).increment();\n else\n scoreList.add(k, new ScoreInfo(score));\n\n return found;\n}\n\nAlternate solution\n\npublic boolean record(int score)\n{\n for (int k = 0; k < scoreList.size(); k++)\n {\n if (score < scoreList.get(k).getScore())\n {\n scoreList.add(k, new ScoreInfo(score));\n return true;\n }\n else if (score == scoreList.get(k).getScore())\n {\n scoreList.get(k).increment();\n return false;\n }\n }\n\n scoreList.add(new ScoreInfo(score));\n return true;\n}\n\nPART B:\n\npublic void recordScores(int[] stuScores)\n{\n for (int score : stuScores)\n record(score);\n}",
+      "points": [
+        {
+          "part": "official_guideline",
+          "points": 9,
+          "description": "Question 4: Score Statistics Part A: record 7 points +1 loop over scoreList +1/2 attempt +1/2 correct +3 add a ScoreInfo object to scoreList for a new unique score +1 find correct position for adding ScoreInfo object +1/2 attempt +1/2 correct +1 create a new ScoreInfo object containing score +1/2 attempt +1/2 correct +1 add ScoreInfo object to scoreList +1/2 attempt to add ScoreInfo object somewhere in scoreList +1/2 add new ScoreInfo object at correct position in all cases +2 update frequency of existing score in scoreList +1 find an existing ScoreInfo object containing score +1/2 attempt +1/2 correct +1 update frequency in ScoreInfo object containing score +1/2 attempt to call increment method +1/2 correct +1 return boolean value based on whether a new ScoreInfo object was added +1/2 attempt +1/2 correct Part B: recordScores 2 points +1 correctly loop over all scores in stuScores +1/2 attempt +1/2 correct +1 call record method with appropriate parameter +1/2 attempt +1/2 correct Free-Response Canonical Solutions Question 1: Word Scrambler PART A: private String recombine(String word1, String word2) { return word1.substring(0, word1.length() /"
+        }
+      ]
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
+      "source_page": 53
+    }
+  }
+]

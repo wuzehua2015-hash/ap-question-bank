@@ -780,6 +780,78 @@
           "U9": 9
         }
       }
+    },
+    {
+      "id": "computer-science-a",
+      "name": "AP Computer Science A",
+      "shortName": "Computer Science A",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/computer-science-a/question_bank.json",
+      "frqBank": "ap/computer-science-a/frq_bank.json",
+      "similarityIndex": "ap/computer-science-a/similarity_index.json",
+      "classificationConfig": "ap/computer-science-a/classification_config.json",
+      "dataVersion": "csa-2015-gridworld-2014sample-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Primitive Types"
+        },
+        {
+          "id": "U2",
+          "name": "Using Objects"
+        },
+        {
+          "id": "U3",
+          "name": "Boolean Expressions and if Statements"
+        },
+        {
+          "id": "U4",
+          "name": "Iteration"
+        },
+        {
+          "id": "U5",
+          "name": "Writing Classes"
+        },
+        {
+          "id": "U6",
+          "name": "Array"
+        },
+        {
+          "id": "U7",
+          "name": "ArrayList"
+        },
+        {
+          "id": "U8",
+          "name": "2D Array"
+        },
+        {
+          "id": "U9",
+          "name": "Inheritance"
+        },
+        {
+          "id": "U10",
+          "name": "Recursion"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 42,
+        "frqCount": 4,
+        "mcqTimeLimit": 5400,
+        "frqTimeLimit": 5400,
+        "unitDistribution": {
+          "U1": 2,
+          "U2": 0,
+          "U3": 2,
+          "U4": 3,
+          "U5": 11,
+          "U6": 10,
+          "U7": 1,
+          "U8": 6,
+          "U9": 4,
+          "U10": 3
+        }
+      }
     }
   ]
 }
