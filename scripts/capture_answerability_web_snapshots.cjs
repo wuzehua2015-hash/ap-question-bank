@@ -12,7 +12,7 @@ const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
-const port = Number(args.port || 9444)
+const port = Number(args.port || defaultDebugPort(subjectId || 'audit'))
 const limit = args.limit ? Number(args.limit) : null
 const offset = args.offset ? Number(args.offset) : 0
 const onlyPriority = args.priority || null
@@ -52,7 +52,7 @@ async function main() {
     ? readJson(path.join(auditDir, 'review_results.json'))
     : { items: [] }
   const reviewed = new Set((review.items || []).filter(item => item.status === 'PASS').map(item => item.question_id))
-  let items = (manifest.items || []).filter(item => item.type === 'MCQ' && (includeReviewed || !reviewed.has(item.question_id)))
+  let items = (manifest.items || []).filter(item => item.type === 'MCQ' && (onlyIds || includeReviewed || !reviewed.has(item.question_id)))
   if (onlyPriority) items = items.filter(item => item.priority === onlyPriority)
   if (onlyIds) items = items.filter(item => onlyIds.has(item.question_id))
   if (offset || limit) items = items.slice(offset, limit ? offset + limit : undefined)
@@ -242,6 +242,12 @@ function parseArgs(argv) {
     out[key] = inline !== undefined ? inline : (argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[++i] : 'true')
   }
   return out
+}
+
+function defaultDebugPort(seed) {
+  let hash = 0
+  for (const ch of String(seed)) hash = (hash * 31 + ch.charCodeAt(0)) % 700
+  return 9444 + hash
 }
 
 function readJson(file) {

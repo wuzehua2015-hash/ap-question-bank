@@ -84,12 +84,26 @@ function renderLatexSegments(text, options = {}) {
 function isLikelyCurrencyToken(token, fullText, startIndex) {
   const body = token.slice(1, -1).trim()
   const after = fullText[startIndex + token.length] || ''
+  const beforeContext = fullText.slice(Math.max(0, startIndex - 80), startIndex)
+  const afterContext = fullText.slice(startIndex + token.length, startIndex + token.length + 80)
+  const context = `${beforeContext} ${afterContext}`
   if (!body || !/^\d/.test(body)) return false
   if (/[_^{}\\]/.test(body)) return false
   if (isLikelyChemistryLatex(body)) return false
+  if (isLikelyMathQuantityToken(body, context)) return false
   if (/^[\d,.]+$/.test(body) && /\d/.test(after)) return true
-  if (/^[\d,.]+(?:\s+(?:they|per|and|or|to|for|million|billion|trillion)\b|[A-Za-z])/.test(body)) return true
+  if (/^[\d,.]+(?:\s+(?:they|per|and|or|to|for|million|billion|trillion)\b)/.test(body)) return true
+  if (/^[\d,.]+[MBK]\b/.test(body) && /\b(?:dollars?|cents?|price|cost|revenue|profit|wage|income|funds?|money|paid|give|earns?|million|billion|thousand)\b/i.test(context)) return true
   if (/\b(?:dollars?|cents?|price|cost|revenue|profit|wage|income|funds?|money|paid|give|earns?)\b/i.test(body)) return true
+  return false
+}
+
+function isLikelyMathQuantityToken(body, context = '') {
+  if (/^\d+(?:\.\d+)?[A-Za-z](?:_[A-Za-z0-9]+)?$/.test(body)) return true
+  if (/^\d+(?:\.\d+)?\\(?:theta|alpha|beta|gamma|pi|mu|Delta|Omega)\b/.test(body)) return true
+  if (/^\d+(?:\.\d+)?(?:[A-Za-z](?:_[A-Za-z0-9]+)?){1,3}$/.test(body) && !/\b(?:dollars?|price|cost|revenue|profit|wage|income|funds?|money|paid|earns?|million|billion|thousand)\b/i.test(context)) {
+    return true
+  }
   return false
 }
 

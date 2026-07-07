@@ -5,6 +5,7 @@ const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 
 const SCIENCE_SUBJECT_RE = /^(chemistry|physics-|physics-c-)/
+const PHYSICS_SUBJECT_RE = /^(physics-|physics-c-)/
 
 const HARD_PATTERNS = [
   { name: 'unscored published item', pattern: /"scoring_status"\s*:\s*"not_scored"/i },
@@ -12,10 +13,15 @@ const HARD_PATTERNS = [
   { name: 'spoken formula narration', pattern: /\b(?:open|close)\s+parenthesis\b|\bo\s*p\s*e\s*n\s+p\s*a\s*r\s*e\s*n\s*t\s*h\s*e\s*s\s*i\s*s\b|\bend\s+(?:subscript|fraction|bracket)\b|\bwith\s+numerator\b|\bthe\s+fraction\b/i },
   { name: 'spoken subscript OCR', pattern: /\b(?:theta|t\s*heta|V|P|F|E|I|q|C|R)\s+sub\b/i },
   { name: 'spoken sign OCR', pattern: /\bn\s+e\s+g\s+a\s+tive\b|\bne\s+g\s+a\s+tive\b|\bneg\s+a\s+tive\b/i },
+  { name: 'split word OCR', pattern: /\b(?:p\s+ro\s+duce|pro\s+duc\s+e|rea\s+c\s+t|rea\s+c\s+ts|r\s+e\s+a\s+c\s+t\s+s)\b/i },
+  { name: 'split physics symbol OCR', pattern: /\bp\s+f\s*\n\s*i\s*\n\s*[+-]\s*p\b|\bp\s+f\s*\.\b|\bp\s*f\s+and\s+p\s*i\b|\bp\s*d\s+is\b|\bp\s+d\s*\n|\bp\s+f\s*\n/i },
+  { name: 'unrendered physics symbol', pattern: /\bmagnitude\s+p\s*i\b|\bmomentum\s+of\s+magnitude\s+p\s*f\b|\bpi\s+perpendicular\b/i },
+  { name: 'raw isotope OCR', pattern: /\b\d+[ \t]+\d+[ \t]*(?:He|U|Th|Pb|Be|Ac)\b|(?:^|\n)\s*-\s*b\s*(?:\n|$)/ },
+  { name: 'dirty rubric OCR formula/table', pattern: /\b0\s+i_s\s+s\b|\bObject Distance os\b|\bhose\s*\n\s*V_A\s*\n\s*vt\b|\bV_A\s*\n\s*vt\b|\bm\s+s_1\b|\bT_T\s*\n\s*new\b/i },
   { name: 'spoken charge narration', pattern: /\bwith\s+a\s+(?:positive|negative)\s+(?:one|two|three|\d+)\s+charge\b/i },
   { name: 'accessibility figure text leak', pattern: /\bThe figure presents\b|\bThe diagram on\b/i },
   { name: 'accessibility table narration leak', pattern: /\bRow\s+\d+\.\s+[A-Z]/i },
-  { name: 'PDF boilerplate', pattern: /Unauthorized copying|GO ON TO THE NEXT PAGE|END OF EXAM|IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING|Visit College Board on the web|Continue your response to QUESTION|Begin your response to QUESTION/i },
+  { name: 'PDF boilerplate', pattern: /\bUnauthorized\b|Unauthorized copying|GO ON TO THE NEXT PAGE|END OF EXAM|IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING|Visit College Board on the web|Continue your response to QUESTION|Begin your response to QUESTION|Physics 2 Practice Exam|Scoring Guidelines for Free-Response/i },
   { name: 'generic rubric variable leak', pattern: /\b(?:official_scoring_guideline|official_rubric)\b/ },
   { name: 'physics OCR comparison fragment', pattern: /(?:^|\n)\s*[A-Za-z]{1,2}\s*\n\s*[A-Za-z]{1,2}\s*\n\s*[A-Za-z]{1,2}\s*[<>=]|[<>=]\s*\n\s*[A-Za-z]{1,2}\s*\n/ },
   { name: 'raw sub/sup tag', pattern: /<\/?(?:sub|sup)>/i },
@@ -64,7 +70,7 @@ function validateBank(subject, relPath, errors, warnings) {
       }
     }
     const diagramOptions = Object.values(q.options || {}).every(value => /^Diagram [A-E]$/.test(String(value || '').trim()))
-    if (subject.id === 'physics-2' && /Sphere Y\s+Sphere Z|Left Sphere\s+Right Sphere|Speed\s+Direction|Voltage\s+Electric Field/i.test(textBlob) && !q.option_table_data && !(diagramOptions && (q.image_paths || []).length)) {
+    if (PHYSICS_SUBJECT_RE.test(subject.id) && /Sphere Y\s+Sphere Z|Left Sphere\s+Right Sphere|Speed\s+Direction|Voltage\s+Electric Field|Figure 1\s+Figure 2|Figure\s+1\s*\n\s*Figure\s+2/i.test(textBlob) && !q.option_table_data && !(diagramOptions && (q.image_paths || []).length)) {
       errors.push(`${label}: table-style options must use option_table_data`)
     }
     for (const imagePath of [...(q.image_paths || []), ...(q.rubric_image_paths || [])]) {
@@ -82,6 +88,9 @@ function validateBank(subject, relPath, errors, warnings) {
       }
       if (/(?:Voltmeter\s+Reading|Ohmmeter\s+Reading|Wire\s+Current|theta\s+sub|t\s*heta\s+sub)/i.test(option) && !q.option_table_data) {
         errors.push(`${label}: option ${optionKey} appears to contain flattened table/OCR spillover`)
+      }
+      if (/Resistance\s*\([^)]*\)|Potential Difference\s*\(|Current\s*\(/i.test(option) && !q.option_table_data) {
+        errors.push(`${label}: option ${optionKey} appears to contain next-table spillover`)
       }
     }
     if (subject.id === 'physics-2' && /\b(?:figures?|graph|table)\s+above\b/i.test(textBlob) && !(q.image_paths || []).length && !q.table_data && !q.option_table_data) {

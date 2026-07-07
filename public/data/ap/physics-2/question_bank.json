@@ -1056,10 +1056,10 @@
     "type": "MCQ",
     "text": "A scientist is studying the radioactive decay of\nan element and wants to determine the sign of\nsome of the particles emitted. The scientist lets\na beam of the particles, all with the same speed,\npass through an opening in a shield and enter the\nfield created by a wire carrying a constant current.\nPaths 1 and 2 represent the observed paths of the\nparticles. Based on the paths, which of the\nfollowing could be the types of particles?\n\nPath 1 Particle\nPath 2 Particle",
     "options": {
-      "A": "Electron\nAlpha",
-      "B": "Alpha\nElectron",
-      "C": "Positron\nAlpha",
-      "D": "Alpha\nPositron"
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
     },
     "answer": "C",
     "answers": [
@@ -1067,7 +1067,9 @@
     ],
     "answer_type": "single",
     "scoring_status": "scored",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-2/2014/2014_p021_img05.png"
+    ],
     "primary_unit": "U7",
     "unit": "U7",
     "unit_name": "Quantum, Atomic, and Nuclear Physics",
@@ -1087,7 +1089,31 @@
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2014_Practice_Exam_FLibrary.pdf",
       "raw_chunk_sha256": "5fa5f44f0e20b4b74727b0db6635ece0304811f49a0ff4fba8f962f5a57853dc"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Path 1 Particle",
+        "Path 2 Particle"
+      ],
+      "rows": {
+        "A": [
+          "Electron",
+          "Alpha"
+        ],
+        "B": [
+          "Alpha",
+          "Electron"
+        ],
+        "C": [
+          "Positron",
+          "Alpha"
+        ],
+        "D": [
+          "Alpha",
+          "Positron"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q23",
@@ -1102,7 +1128,7 @@
       "A": "5 to 4",
       "B": "4 to 3",
       "C": "3 to 2",
-      "D": "2 to 1\n\n92U"
+      "D": "2 to 1"
     },
     "answer": "B",
     "answers": [
@@ -1142,7 +1168,7 @@
     "year": 2014,
     "question_number": 24,
     "type": "MCQ",
-    "text": "A nucleus of\n undergoes a series of decays\nin which it emits eight 4\n2He nuclei and some\n-\nb\n82Pb\nparticles to produce the nucleus\n. How\n-\nb\nmany\n particles are emitted in the process?",
+    "text": "A nucleus of ${}^{238}_{92}\\mathrm{U}$ undergoes a series of decays in which it emits eight ${}^{4}_{2}\\mathrm{He}$ nuclei and some $\\beta^-$ particles to produce the nucleus ${}^{206}_{82}\\mathrm{Pb}$. How many $\\beta^-$ particles are emitted in the process?",
     "options": {
       "A": "10",
       "B": "8",
@@ -1540,12 +1566,12 @@
     "year": 2014,
     "question_number": 33,
     "type": "MCQ",
-    "text": "Which of the following indicates the particles\nwith charges of the greatest and the least\nmagnitude?\n\nGreatest\nLeast",
+    "text": "Which of the following indicates the particles with charges of the greatest and the least magnitude?",
     "options": {
       "A": "Diagram A",
       "B": "Diagram B",
       "C": "Diagram C",
-      "D": "Physics 2 Practice Exam"
+      "D": "Diagram D"
     },
     "answer": "D",
     "answers": [
@@ -3729,12 +3755,12 @@
     "year": 2016,
     "question_number": 30,
     "type": "MCQ",
-    "text": "The Sun’s energy production is due to the fusion\nof 1H into 4He . How does the mass of\nfour 1H nuclei (4mH ) compare with the\nmass of one 4He nucleus (mHe ) ?",
+    "text": "The Sun's energy production is due to the fusion of ${}^{1}\\mathrm{H}$ into ${}^{4}\\mathrm{He}$. How does the mass of four ${}^{1}\\mathrm{H}$ nuclei $(4m_H)$ compare with the mass of one ${}^{4}\\mathrm{He}$ nucleus $(m_{He})$?",
     "options": {
-      "A": "4m = m\nH\n He",
-      "B": "4m < m\nH\n He",
-      "C": "4m > m\nH\n He",
-      "D": "It cannot be determined without knowing the\namount of energy released."
+      "A": "$4m_H = m_{He}$",
+      "B": "$4m_H < m_{He}$",
+      "C": "$4m_H > m_{He}$",
+      "D": "It cannot be determined without knowing the amount of energy released."
     },
     "answer": "C",
     "answers": [
@@ -4780,7 +4806,7 @@
       "A": "Diagram A",
       "B": "Diagram B",
       "C": "Diagram C",
-      "D": "0.5 W to 15 W\n\nResistance ( )\nW\n\n1.0\n\n1.6\n\n2.3\n\n3.4\n\n3.6\n\n3.7\n\n3.8"
+      "D": "Diagram D"
     },
     "answer": "D",
     "answers": [
@@ -4975,12 +5001,12 @@
     "year": 2017,
     "question_number": 17,
     "type": "MCQ",
-    "text": "Questions 17-19 refer to the following material.\nAn atom of polonium ( Po-216 ) is moving slowly\nenough that it can be considered to be at rest. The\nPo-216 undergoes alpha decay and becomes lead\n216Po Æ\nPb + a\n( Pb-212 ), via the reaction\n .\nAfter the decay, the lead atom is moving to the left\nwith speed vPb , and the alpha particle is moving to\nthe right with speed va . The masses of the three\nisotopes involved in the decay are given below.\n\n17. How do the momentum and kinetic energy of the\npolonium atom compare with the total momentum\nand kinetic energy of the decay products?\nPolonium\nMomentum\nPolonium\nKinetic Energy",
+    "text": "Questions 17-19 refer to the following material.\n\nAn atom of polonium (${}^{216}_{84}\\mathrm{Po}$) is moving slowly enough that it can be considered to be at rest. The ${}^{216}_{84}\\mathrm{Po}$ undergoes alpha decay and becomes lead (${}^{212}_{82}\\mathrm{Pb}$), via the reaction ${}^{216}_{84}\\mathrm{Po}\\rightarrow{}^{212}_{82}\\mathrm{Pb}+{}^{4}_{2}\\alpha$.\n\nAfter the decay, the lead atom is moving to the left with speed $v_{Pb}$, and the alpha particle is moving to the right with speed $v_{\\alpha}$. The masses of the three isotopes involved in the decay are:\n\n$M_{Po-216}=216.001915\\,\\mathrm{u}$\n\n$M_{\\alpha}=4.002603\\,\\mathrm{u}$\n\n$M_{Pb-212}=211.991898\\,\\mathrm{u}$\n\n17. How do the momentum and kinetic energy of the polonium atom compare with the total momentum and kinetic energy of the decay products?",
     "options": {
-      "A": "Different\nDifferent",
-      "B": "Different\nThe same",
-      "C": "The same\nDifferent",
-      "D": "The same\nThe same"
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
     },
     "answer": "C",
     "answers": [
@@ -5016,8 +5042,32 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "Questions 17-19 refer to the following material.\nAn atom of polonium ( Po-216 ) is moving slowly\nenough that it can be considered to be at rest. The\nPo-216 undergoes alpha decay and becomes lead\n216Po Æ\nPb + a\n( Pb-212 ), via the reaction\n .\nAfter the decay, the lead atom is moving to the left\nwith speed vPb , and the alpha particle is moving to\nthe right with speed va . The masses of the three\nisotopes involved in the decay are given below.",
-    "rubric_image_paths": []
+    "group_context": "Questions 17-19 refer to the following material.\n\nAn atom of polonium (${}^{216}_{84}\\mathrm{Po}$) is moving slowly enough that it can be considered to be at rest. The ${}^{216}_{84}\\mathrm{Po}$ undergoes alpha decay and becomes lead (${}^{212}_{82}\\mathrm{Pb}$), via the reaction ${}^{216}_{84}\\mathrm{Po}\\rightarrow{}^{212}_{82}\\mathrm{Pb}+{}^{4}_{2}\\alpha$.\n\nAfter the decay, the lead atom is moving to the left with speed $v_{Pb}$, and the alpha particle is moving to the right with speed $v_{\\alpha}$. The masses of the three isotopes involved in the decay are:\n\n$M_{Po-216}=216.001915\\,\\mathrm{u}$\n\n$M_{\\alpha}=4.002603\\,\\mathrm{u}$\n\n$M_{Pb-212}=211.991898\\,\\mathrm{u}$",
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Polonium Momentum",
+        "Polonium Kinetic Energy"
+      ],
+      "rows": {
+        "A": [
+          "Different",
+          "Different"
+        ],
+        "B": [
+          "Different",
+          "The same"
+        ],
+        "C": [
+          "The same",
+          "Different"
+        ],
+        "D": [
+          "The same",
+          "The same"
+        ]
+      }
+    }
   },
   {
     "question_id": "2017_Q18",
@@ -5027,7 +5077,7 @@
     "year": 2017,
     "question_number": 18,
     "type": "MCQ",
-    "text": "Questions 17-19 refer to the following material.\nAn atom of polonium ( Po-216 ) is moving slowly\nenough that it can be considered to be at rest. The\nPo-216 undergoes alpha decay and becomes lead\n216Po Æ\nPb + a\n( Pb-212 ), via the reaction\n .\nAfter the decay, the lead atom is moving to the left\nwith speed vPb , and the alpha particle is moving to\nthe right with speed va . The masses of the three\nisotopes involved in the decay are given below.\n\n18. How much energy is released in the decay?",
+    "text": "Questions 17-19 refer to the following material.\n\nAn atom of polonium (${}^{216}_{84}\\mathrm{Po}$) is moving slowly enough that it can be considered to be at rest. The ${}^{216}_{84}\\mathrm{Po}$ undergoes alpha decay and becomes lead (${}^{212}_{82}\\mathrm{Pb}$), via the reaction ${}^{216}_{84}\\mathrm{Po}\\rightarrow{}^{212}_{82}\\mathrm{Pb}+{}^{4}_{2}\\alpha$.\n\nAfter the decay, the lead atom is moving to the left with speed $v_{Pb}$, and the alpha particle is moving to the right with speed $v_{\\alpha}$. The masses of the three isotopes involved in the decay are:\n\n$M_{Po-216}=216.001915\\,\\mathrm{u}$\n\n$M_{\\alpha}=4.002603\\,\\mathrm{u}$\n\n$M_{Pb-212}=211.991898\\,\\mathrm{u}$\n\n18. How much energy is released in the decay?",
     "options": {
       "A": "None",
       "B": "$0.00741\\,\\mathrm{MeV}$",
@@ -5069,7 +5119,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 17-19 refer to the following material.\nAn atom of polonium ( Po-216 ) is moving slowly\nenough that it can be considered to be at rest. The\nPo-216 undergoes alpha decay and becomes lead\n216Po Æ\nPb + a\n( Pb-212 ), via the reaction\n .\nAfter the decay, the lead atom is moving to the left\nwith speed vPb , and the alpha particle is moving to\nthe right with speed va . The masses of the three\nisotopes involved in the decay are given below.",
+    "group_context": "Questions 17-19 refer to the following material.\n\nAn atom of polonium (${}^{216}_{84}\\mathrm{Po}$) is moving slowly enough that it can be considered to be at rest. The ${}^{216}_{84}\\mathrm{Po}$ undergoes alpha decay and becomes lead (${}^{212}_{82}\\mathrm{Pb}$), via the reaction ${}^{216}_{84}\\mathrm{Po}\\rightarrow{}^{212}_{82}\\mathrm{Pb}+{}^{4}_{2}\\alpha$.\n\nAfter the decay, the lead atom is moving to the left with speed $v_{Pb}$, and the alpha particle is moving to the right with speed $v_{\\alpha}$. The masses of the three isotopes involved in the decay are:\n\n$M_{Po-216}=216.001915\\,\\mathrm{u}$\n\n$M_{\\alpha}=4.002603\\,\\mathrm{u}$\n\n$M_{Pb-212}=211.991898\\,\\mathrm{u}$",
     "rubric_image_paths": []
   },
   {
@@ -5080,7 +5130,7 @@
     "year": 2017,
     "question_number": 19,
     "type": "MCQ",
-    "text": "Questions 17-19 refer to the following material.\nAn atom of polonium ( Po-216 ) is moving slowly\nenough that it can be considered to be at rest. The\nPo-216 undergoes alpha decay and becomes lead\n216Po Æ\nPb + a\n( Pb-212 ), via the reaction\n .\nAfter the decay, the lead atom is moving to the left\nwith speed vPb , and the alpha particle is moving to\nthe right with speed va . The masses of the three\nisotopes involved in the decay are given below.\n\n19. The half-life of\ns . What is th\n\ne\nprobability that any particular Po-216 atom will\ndecay within one second?",
+    "text": "Questions 17-19 refer to the following material.\n\nAn atom of polonium (${}^{216}_{84}\\mathrm{Po}$) is moving slowly enough that it can be considered to be at rest. The ${}^{216}_{84}\\mathrm{Po}$ undergoes alpha decay and becomes lead (${}^{212}_{82}\\mathrm{Pb}$), via the reaction ${}^{216}_{84}\\mathrm{Po}\\rightarrow{}^{212}_{82}\\mathrm{Pb}+{}^{4}_{2}\\alpha$.\n\nAfter the decay, the lead atom is moving to the left with speed $v_{Pb}$, and the alpha particle is moving to the right with speed $v_{\\alpha}$. The masses of the three isotopes involved in the decay are:\n\n$M_{Po-216}=216.001915\\,\\mathrm{u}$\n\n$M_{\\alpha}=4.002603\\,\\mathrm{u}$\n\n$M_{Pb-212}=211.991898\\,\\mathrm{u}$\n\n19. The half-life of ${}^{216}\\mathrm{Po}$ is $1/7\\,\\mathrm{s}$. What is the probability that any particular ${}^{216}\\mathrm{Po}$ atom will decay within one second?",
     "options": {
       "A": "0 %",
       "B": "7 %",
@@ -5121,7 +5171,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 17-19 refer to the following material.\nAn atom of polonium ( Po-216 ) is moving slowly\nenough that it can be considered to be at rest. The\nPo-216 undergoes alpha decay and becomes lead\n216Po Æ\nPb + a\n( Pb-212 ), via the reaction\n .\nAfter the decay, the lead atom is moving to the left\nwith speed vPb , and the alpha particle is moving to\nthe right with speed va . The masses of the three\nisotopes involved in the decay are given below.",
+    "group_context": "Questions 17-19 refer to the following material.\n\nAn atom of polonium (${}^{216}_{84}\\mathrm{Po}$) is moving slowly enough that it can be considered to be at rest. The ${}^{216}_{84}\\mathrm{Po}$ undergoes alpha decay and becomes lead (${}^{212}_{82}\\mathrm{Pb}$), via the reaction ${}^{216}_{84}\\mathrm{Po}\\rightarrow{}^{212}_{82}\\mathrm{Pb}+{}^{4}_{2}\\alpha$.\n\nAfter the decay, the lead atom is moving to the left with speed $v_{Pb}$, and the alpha particle is moving to the right with speed $v_{\\alpha}$. The masses of the three isotopes involved in the decay are:\n\n$M_{Po-216}=216.001915\\,\\mathrm{u}$\n\n$M_{\\alpha}=4.002603\\,\\mathrm{u}$\n\n$M_{Pb-212}=211.991898\\,\\mathrm{u}$",
     "rubric_image_paths": []
   },
   {
@@ -7177,10 +7227,10 @@
     "type": "MCQ",
     "text": "The figures above represent three metal spheres\non insulating stands. Initially sphere A has\ncharge positive Q , and spheres B and C are uncharged.\nSpheres B and C are in contact when sphere A\nis brought near sphere B but does not touch it,\nas shown on the left. Sphere C is then separated\nfrom sphere B, as shown on the right. Which of\nthe following best describes the final charges on\nspheres B and C ?\nSphere B\nSphere C",
     "options": {
-      "A": "Positive\nUncharged",
-      "B": "Positive\nNegative",
-      "C": "Uncharged\nPositive",
-      "D": "Negative\nPositive"
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
     },
     "answer": "D",
     "answers": [
@@ -7210,7 +7260,31 @@
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2019_Full_Exam_Aliyun.pdf",
       "raw_chunk_sha256": "754f9dd846ba37b7b206a971b1e73950adc5e7619e3af500bcfa6ad3fa0ce737"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Sphere B",
+        "Sphere C"
+      ],
+      "rows": {
+        "A": [
+          "Positive",
+          "Uncharged"
+        ],
+        "B": [
+          "Positive",
+          "Negative"
+        ],
+        "C": [
+          "Uncharged",
+          "Positive"
+        ],
+        "D": [
+          "Negative",
+          "Positive"
+        ]
+      }
+    }
   },
   {
     "question_id": "2019_Q25",
@@ -7386,10 +7460,10 @@
     "type": "MCQ",
     "text": "A student holds a lens $40\\,\\mathrm{cm}$ from an object and\nobserves an enlarged image on a screen on the\nopposite side of the lens. Which of the following\ncould be the type of lens and its focal length?\nType of Lens\nFocal Length",
     "options": {
-      "A": "Diverging\n $30\\,\\mathrm{cm}$",
-      "B": "Diverging\n $50\\,\\mathrm{cm}$",
-      "C": "Converging\n $30\\,\\mathrm{cm}$",
-      "D": "Converging\n $50\\,\\mathrm{cm}$"
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
     },
     "answer": "C",
     "answers": [
@@ -7417,7 +7491,31 @@
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2019_Full_Exam_Aliyun.pdf",
       "raw_chunk_sha256": "6f9551650d32a31e1fd728a3b34664c3b1372225566d4afbc06b7e43b8955240"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Type of Lens",
+        "Focal Length"
+      ],
+      "rows": {
+        "A": [
+          "Diverging",
+          "$30\\,\\mathrm{cm}$"
+        ],
+        "B": [
+          "Diverging",
+          "$50\\,\\mathrm{cm}$"
+        ],
+        "C": [
+          "Converging",
+          "$30\\,\\mathrm{cm}$"
+        ],
+        "D": [
+          "Converging",
+          "$50\\,\\mathrm{cm}$"
+        ]
+      }
+    }
   },
   {
     "question_id": "2019_Q29",
@@ -7923,12 +8021,12 @@
     "year": 2019,
     "question_number": 133,
     "type": "MCQ",
-    "text": "Which of the following proposed reactions are\nallowed by the law of conservation of electric\ncharge? Select two answers.",
+    "text": "Which of the following proposed reactions are allowed by the law of conservation of electric charge? Select two answers.",
     "options": {
-      "A": "n\n\nr\ne\na\nc\nt\ns\n\nto p ro duce one proton, plus one electron, plus nu",
-      "B": "H\n,\n p\nl\nus 4 2 H e, rea\nc\nt\nto produce, 7 4 B e, plus gamma",
-      "C": "2 U,\n rea\nc\nts t\no pro duc\ne,\n 90 T h, plus 4 2 H e",
-      "D": "T h\n, re\na\ncts\nt\no produ ce,\n4 89 A c, plus one electron, plus nu"
+      "A": "$n \\rightarrow p^+ + e^- + \\nu$",
+      "B": "${}^{3}_{1}\\mathrm{H} + {}^{4}_{2}\\mathrm{He} \\rightarrow {}^{7}_{4}\\mathrm{Be} + \\gamma$",
+      "C": "${}^{238}_{92}\\mathrm{U} \\rightarrow {}^{234}_{90}\\mathrm{Th} + {}^{4}_{2}\\mathrm{He}$",
+      "D": "${}^{234}_{90}\\mathrm{Th} \\rightarrow {}^{234}_{89}\\mathrm{Ac} + e^- + \\nu$"
     },
     "answer": "A,C",
     "answers": [

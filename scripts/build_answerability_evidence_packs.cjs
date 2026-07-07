@@ -7,6 +7,7 @@ const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 const WORKSPACE_ROOT = path.join(ROOT, '.workspace', 'answerability-audit')
 const REPO_ROOT = path.resolve(ROOT, '..', '..')
+const PHYSICS_SUBJECT_RE = /^(physics-|physics-c-)/
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'))
@@ -81,7 +82,7 @@ function pageImagesForYear(subjectRoot, year) {
   return (manifest.rendered_pages || []).map(ref => path.resolve(REPO_ROOT, ref))
 }
 
-function detectMachineFindings(q, item) {
+function detectMachineFindings(q, item, subject) {
   const text = textOfQuestion(q)
   const options = optionEntries(q)
   const optionText = options.map(([, value]) => String(value || '')).join('\n')
@@ -136,7 +137,7 @@ function detectMachineFindings(q, item) {
   }
 
   if (/\binformation graphic above\b|\bgraphic above\b|\btable above\b|\bfollowing table\b|\bdata in the table\b/i.test(combined)) {
-    const hasStructuredTable = Boolean(q.background_data?.table || q.option_table_data)
+    const hasStructuredTable = Boolean(q.background_data?.table || q.option_table_data || q.table_data)
     const hasMarkdownTable = /^\s*\|.+\|\s*$/m.test(text)
     const imageCount = (q.image_paths || q.images || []).length
     if (!hasStructuredTable && !hasMarkdownTable && imageCount === 0) {
@@ -151,7 +152,7 @@ function detectMachineFindings(q, item) {
   if (item.type === 'FRQ') {
     const percentCount = (text.match(/\b\d+(?:\.\d+)?%/g) || []).length
     const compactLineCount = text.split(/\r?\n/).filter(line => line.trim().length > 0).length
-    const hasStructuredTable = Boolean(q.background_data?.table)
+    const hasStructuredTable = Boolean(q.background_data?.table || q.table_data)
     const hasMarkdownTable = /^\s*\|.+\|\s*$/m.test(text)
     if (percentCount >= 12 && compactLineCount >= 18 && !hasStructuredTable && !hasMarkdownTable && !(q.image_paths || []).length) {
       findings.push({
@@ -170,10 +171,13 @@ function detectMachineFindings(q, item) {
     })
   }
 
-  const tableLikeOptions = options.filter(([, value]) => /\b(?:speed|direction|magnitude|voltage|electric field|energy|column|row)\b/i.test(String(value || '')))
+  const tableLikeOptions = options.filter(([, value]) => {
+    const lines = String(value || '').split(/\r?\n/).map(line => line.trim()).filter(Boolean)
+    return lines.length >= 2 && lines.length <= 3 && lines.every(line => line.length <= 36 && !/[.;:]/.test(line))
+  })
   if (tableLikeOptions.length >= 3 && !q.option_table_data && !q.option_table) {
     findings.push({
-      severity: 'P1',
+      severity: PHYSICS_SUBJECT_RE.test(subject.id || '') ? 'P0' : 'P1',
       code: 'possible_option_table_flattened',
       message: 'Options look like a table flattened into plain text; compare with official source visual.',
     })
@@ -181,7 +185,7 @@ function detectMachineFindings(q, item) {
 
   for (const [label, value] of options) {
     const option = normalizedText(value)
-    if (!option || (option === label && !(q.image_paths || []).length)) {
+    if (!option || (option === label && !(q.image_paths || []).length && !q.option_table_data)) {
       findings.push({
         severity: 'P0',
         code: 'empty_option',
@@ -227,7 +231,8 @@ function detectMachineFindings(q, item) {
         message: 'FRQ rubric text is short; verify it contains all scoring criteria, not a summary.',
       })
     }
-    if ((q.rubric_image_paths || []).length) {
+    const hasUsableRubricText = rubricText.length >= 800 && ((q.rubric?.points || []).length || /point|score|award|response|correct|justify/i.test(rubricText))
+    if ((q.rubric_image_paths || []).length && !hasUsableRubricText) {
       findings.push({
         severity: 'P0',
         code: 'rubric_image_fallback_not_allowed',
@@ -272,7 +277,7 @@ function makeEvidencePacket(subject, item, q, subjectRoot) {
       provenance: q.provenance || null,
     },
     web_render_targets: item.web_routes_to_review,
-    machine_findings: detectMachineFindings(q, item),
+    machine_findings: detectMachineFindings(q, item, subject),
     answerability_standard: item.independent_review_required,
   }
 }

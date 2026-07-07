@@ -12,9 +12,15 @@ const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject || 'physics-c-e-m'
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
 const headless = args.headless !== 'false'
-const port = Number(args.port || 9333)
+const port = Number(args.port || defaultDebugPort(subjectId))
 
 fs.mkdirSync(WORKSPACE, { recursive: true })
+
+function defaultDebugPort(seed) {
+  let hash = 0
+  for (const ch of String(seed)) hash = (hash * 31 + ch.charCodeAt(0)) % 700
+  return 11333 + hash
+}
 
 const BAD_TEXT_PATTERNS = [
   { name: 'replacement_char', re: /\uFFFD/ },

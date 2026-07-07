@@ -12,10 +12,16 @@ const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject || 'physics-c-mechanics'
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
-const port = Number(args.port || 9555)
+const port = Number(args.port || defaultDebugPort(subjectId))
 let activeSubject = null
 
 fs.mkdirSync(WORKSPACE, { recursive: true })
+
+function defaultDebugPort(seed) {
+  let hash = 0
+  for (const ch of String(seed)) hash = (hash * 31 + ch.charCodeAt(0)) % 700
+  return 10955 + hash
+}
 
 main().catch(error => {
   console.error(error.stack || error.message || String(error))

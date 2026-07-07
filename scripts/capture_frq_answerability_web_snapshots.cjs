@@ -12,7 +12,7 @@ const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
-const port = Number(args.port || 9454)
+const port = Number(args.port || defaultDebugPort(subjectId || 'frq-audit'))
 
 if (!subjectId) {
   console.error('Usage: node scripts/capture_frq_answerability_web_snapshots.cjs --subject <subject_id> [--url http://127.0.0.1:4174/ap-question-bank/] [--port 9454]')
@@ -226,6 +226,12 @@ function parseArgs(argv) {
     out[key] = inline !== undefined ? inline : (argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[++i] : 'true')
   }
   return out
+}
+
+function defaultDebugPort(seed) {
+  let hash = 0
+  for (const ch of String(seed)) hash = (hash * 31 + ch.charCodeAt(0)) % 700
+  return 10154 + hash
 }
 
 function readJson(file) {

@@ -432,12 +432,12 @@
     "year": 2014,
     "question_number": 10,
     "type": "MCQ",
-    "text": "A thin rod of length d on a frictionless surface is \npivoted about one end, as shown above, and can \nrotate freely. The rod is at rest when it is struck by \na sphere with linear momentum of magnitude pi \nperpendicular to the rod. The sphere rebounds \nalong its original line of motion with momentum \nof magnitude p f . What is the magnitude of the \nangular momentum of the rod immediately after \nthe collision?",
+    "text": "A thin rod of length $d$ on a frictionless surface is pivoted about one end, as shown above, and can rotate freely. The rod is at rest when it is struck by a sphere with linear momentum of magnitude $p_i$ perpendicular to the rod. The sphere rebounds along its original line of motion with momentum of magnitude $p_f$. What is the magnitude of the angular momentum of the rod immediately after the collision?",
     "options": {
-      "A": "p f\ni\n- p",
-      "B": "p f\ni\n+ p",
-      "C": "(p f\ni\n- p d \n)",
-      "D": "(p f\ni\n+ p d \n)"
+      "A": "$(p_f - p_i)d$",
+      "B": "$(p_f + p_i)$",
+      "C": "$(p_f - p_i)$",
+      "D": "$(p_f + p_i)d$"
     },
     "answer": "D",
     "answers": [
@@ -3088,12 +3088,12 @@
     "year": 2015,
     "question_number": 15,
     "type": "MCQ",
-    "text": "A pendulum consisting of a sphere suspended from a light\nstring is oscillating with a small angle with respect to the\nvertical. The sphere is then replaced with a new sphere of\nthe same size but greater density and is set into oscillation\nwith the same angle. How do the period, maximum kinetic\nenergy, and maximum acceleration of the new pendulum\ncompare to those of the original pendulum?\nMaximum\nKinetic Energy\nPeriod",
+    "text": "A pendulum consisting of a sphere suspended from a light string is oscillating with a small angle with respect to the vertical. The sphere is then replaced with a new sphere of the same size but greater density and is set into oscillation with the same angle. How do the period, maximum kinetic energy, and maximum acceleration of the new pendulum compare to those of the original pendulum?",
     "options": {
-      "A": "Larger\nLarger\nSmaller",
-      "B": "Smaller\nLarger\nSmaller",
-      "C": "The same\nThe same\nThe same",
-      "D": "The same\nLarger\nThe same"
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
     },
     "answer": "D",
     "answers": [
@@ -3120,6 +3120,35 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf",
       "raw_chunk_sha256": "8228d351225b433af2e7a0955703b4a0598f3459ba45790bf3345a172f3eaf37"
+    },
+    "option_table_data": {
+      "headers": [
+        "Period",
+        "Maximum Kinetic Energy",
+        "Maximum Acceleration"
+      ],
+      "rows": {
+        "A": [
+          "Larger",
+          "Larger",
+          "Smaller"
+        ],
+        "B": [
+          "Smaller",
+          "Larger",
+          "Smaller"
+        ],
+        "C": [
+          "The same",
+          "The same",
+          "The same"
+        ],
+        "D": [
+          "The same",
+          "Larger",
+          "The same"
+        ]
+      }
     },
     "rubric_image_paths": []
   },
@@ -5818,12 +5847,12 @@
     "year": 2017,
     "question_number": 35,
     "type": "MCQ",
-    "text": "Two astronauts are connected by a taut cable and\nare initially at rest with respect to a nearby space\nstation. Astronaut X throws a large container to\nAstronaut Y. Figure 1 above shows the astronauts\nimmediately after the container is thrown by\nAstronaut X, and Figure 2 shows the astronauts\nimmediately after the container is caught by\nAstronaut Y. Which of the following describes\nthe motion of Astronaut Y in Figures 1 and 2 ?\nFigure 1\nFigure 2",
+    "text": "Two astronauts are connected by a taut cable and are initially at rest with respect to a nearby space station. Astronaut X throws a large container to Astronaut Y. Figure 1 above shows the astronauts immediately after the container is thrown by Astronaut X, and Figure 2 shows the astronauts immediately after the container is caught by Astronaut Y. Which of the following describes the motion of Astronaut Y in Figures 1 and 2?",
     "options": {
-      "A": "Does not move\nMoves to the right",
-      "B": "Moves to the left\nMoves to the right",
-      "C": "Does not move\nDoes not move",
-      "D": "Moves to the left\nDoes not move"
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
     },
     "answer": "D",
     "answers": [
@@ -5852,6 +5881,30 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf",
       "raw_chunk_sha256": "2cbec35b3e6e3017b974a1932bfd0c8ef9e72bdecd264aa79a8b2bf7bf2bd782"
+    },
+    "option_table_data": {
+      "headers": [
+        "Figure 1",
+        "Figure 2"
+      ],
+      "rows": {
+        "A": [
+          "Does not move",
+          "Moves to the right"
+        ],
+        "B": [
+          "Moves to the left",
+          "Moves to the right"
+        ],
+        "C": [
+          "Does not move",
+          "Does not move"
+        ],
+        "D": [
+          "Moves to the left",
+          "Does not move"
+        ]
+      }
     },
     "rubric_image_paths": []
   },
