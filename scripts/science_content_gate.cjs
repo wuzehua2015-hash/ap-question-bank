@@ -9,7 +9,7 @@ const SCIENCE_SUBJECT_RE = /^(chemistry|physics-|physics-c-)/
 const HARD_PATTERNS = [
   { name: 'unscored published item', pattern: /"scoring_status"\s*:\s*"not_scored"/i },
   { name: 'spoken decimal OCR', pattern: /\b(?:zero|one|two|three|four|five|six|seven|eight|nine|\d+)\s+d\s*ecimal\s+point\b|\b\d+\s+decimal\s+point\b/i },
-  { name: 'spoken formula narration', pattern: /\b(?:open|close)\s+parenthesis\b|\bend\s+(?:subscript|fraction|bracket)\b|\bwith\s+numerator\b|\bthe\s+fraction\b/i },
+  { name: 'spoken formula narration', pattern: /\b(?:open|close)\s+parenthesis\b|\bo\s*p\s*e\s*n\s+p\s*a\s*r\s*e\s*n\s*t\s*h\s*e\s*s\s*i\s*s\b|\bend\s+(?:subscript|fraction|bracket)\b|\bwith\s+numerator\b|\bthe\s+fraction\b/i },
   { name: 'spoken charge narration', pattern: /\bwith\s+a\s+(?:positive|negative)\s+(?:one|two|three|\d+)\s+charge\b/i },
   { name: 'accessibility figure text leak', pattern: /\bThe figure (?:presents|shows)\b|\bThe diagram on\b/i },
   { name: 'accessibility table narration leak', pattern: /\bRow\s+\d+\.\s+[A-Z]/i },
