@@ -262,6 +262,35 @@ function DisplayBackgroundTable({ tableData, variant }) {
   )
 }
 
+function DisplayGroupContext({ text, variant }) {
+  const value = String(text || '').trim()
+  if (!value) return null
+
+  if (variant === 'pdf') {
+    return (
+      <div style={{
+        margin: '0 0 10px',
+        padding: '8px 10px',
+        background: '#f8fafc',
+        borderLeft: '3px solid #2563eb',
+        fontSize: '13px',
+        color: '#374151',
+        lineHeight: 1.5,
+        pageBreakInside: 'avoid',
+        breakInside: 'avoid',
+      }}>
+        <MathText text={value} />
+      </div>
+    )
+  }
+
+  return (
+    <div className="mb-4 rounded-md border-l-4 border-brand bg-gray-50 px-3 py-2 text-sm leading-relaxed text-text">
+      <MathText text={value} />
+    </div>
+  )
+}
+
 function QuestionDisplay({ question, variant = 'web', showAnswer = false, index: _index }) {
   if (!question) return null
 
@@ -292,6 +321,9 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
           <span className="bg-brand text-white text-xs px-2 py-1 rounded">{question.primary_unit}</span>
         </div>
       )}
+
+      {/* Shared prompt for grouped questions */}
+      <DisplayGroupContext text={question.group_context} variant={variant} />
 
       {/* Question text */}
       {isPdf ? (

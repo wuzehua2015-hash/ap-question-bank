@@ -133,6 +133,22 @@ function validateBank(subject, relPath, errors, warnings) {
     if (subject.id === 'physics-2' && /\b(?:figures?|graph|table)\s+above\b/i.test(textBlob) && !(q.image_paths || []).length && !q.table_data && !q.option_table_data) {
       errors.push(`${label}: references a figure/graph/table above but has no rendered asset or structured table`)
     }
+    if (subject.id === 'environmental-science') {
+      if (/\bThe (?:figure|diagram|graph|table|map) (?:shows|presents|illustrates|depicts|contains|is)\b|\bOption [A-E] presents\b/i.test(textBlob)) {
+        errors.push(`${label}: APES accessibility figure/table prose leaked into student-visible text`)
+      }
+      if (/\bd\s+o\s+l\s+l\s+a\s+r\b|\bpe\s+r\s+h\s*ect\s*are\b|\bpl\s+u\s+s\b|\be\s+quals\b|\bM\s*S\s*Wcreation\b|\bS\s*T\s*O\s*P\b|\bhe\s+ctares?\b|\btim\s+es\b|\bkiloca\s+lories?\b|\bkilocalorie\s+s\b|\bN\s+P\s+P\b|\bp\s+H\b|\bm\s+p\s+g\b|\bp\s+p\s+b\b|\bC\s+A\s+F\s+E\b|\bC\s+F\s+C\s*s\b|\bV\s+O\s+C\s*s\b|\bP\s+C\s+B\s*s\b|\bN\s+O\b|\bN\s+T\s+U\b/i.test(textBlob)) {
+        errors.push(`${label}: APES split OCR/science abbreviation text remains`)
+      }
+      if (/\b(?:CO2|CH4|H2O|O3|CCl2F2|NOx|SOx|SO2|NO3|NO2|NH4|NH3|N2)\b|\bH\+(?=\s|$)/.test(textBlob)) {
+        errors.push(`${label}: APES chemical notation should be rendered with math subscript markup`)
+      }
+      const imageSources = q.provenance && Array.isArray(q.provenance.image_sources) ? q.provenance.image_sources : []
+      const imagePaths = Array.isArray(q.image_paths) ? q.image_paths : []
+      if (imageSources.length && imageSources.length !== imagePaths.length) {
+        errors.push(`${label}: provenance.image_sources count does not match final image_paths count`)
+      }
+    }
   }
 }
 
