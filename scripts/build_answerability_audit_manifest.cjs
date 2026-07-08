@@ -41,12 +41,15 @@ function hasMath(text) {
 }
 
 function hasVisualAsset(q) {
+  const text = textOfQuestion(q)
+  const hasMarkdownTable = /^\s*\|.+\|\s*$/m.test(text)
   return Boolean(
     (q.image_paths && q.image_paths.length) ||
     (q.images && q.images.length) ||
     q.option_table_data ||
     q.background_data ||
-    q.group_context
+    q.group_context ||
+    hasMarkdownTable
   )
 }
 

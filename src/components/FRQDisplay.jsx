@@ -26,18 +26,32 @@ function normalizePromptTables(text) {
 
 function normalizePromptTextV2(text) {
   const tableBlocks = []
+  const codeBlocks = []
   const isTableRow = (value) => /^\s*\|.*\|\s*$/.test(value || '')
   const isSeparator = (value) => {
     const cells = String(value || '').trim().split('|').filter(Boolean).map(cell => cell.trim())
     return cells.length > 1 && cells.every(cell => /^:?-{3,}:?$/.test(cell))
   }
+  const isFence = (value) => /^\s*```[A-Za-z0-9_-]*\s*$/.test(value || '')
+  const isClosingFence = (value) => /^\s*```\s*$/.test(value || '')
 
   const lines = String(text || '').replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n')
   const protectedLines = []
 
   for (let idx = 0; idx < lines.length; idx += 1) {
     const line = lines[idx]
-    if (isTableRow(line) && isSeparator(lines[idx + 1])) {
+    if (isFence(line)) {
+      const code = [line]
+      idx += 1
+      while (idx < lines.length) {
+        code.push(lines[idx])
+        if (isClosingFence(lines[idx])) break
+        idx += 1
+      }
+      const token = `@@FRQ_CODE_${codeBlocks.length}@@`
+      codeBlocks.push(code.join('\n'))
+      protectedLines.push(token)
+    } else if (isTableRow(line) && isSeparator(lines[idx + 1])) {
       const table = [line, lines[idx + 1]]
       idx += 2
       while (idx < lines.length && isTableRow(lines[idx])) {
@@ -67,6 +81,7 @@ function normalizePromptTextV2(text) {
     .replace(/\s+(- \[ \]\s+)/g, '\n$1')
     .replace(/\s+(Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+)\s+/g, '\n\n$1\n')
     .replace(/\s*\u2022\s*/g, '\n\u2022 ')
+    .replace(/@@FRQ_CODE_(\d+)@@/g, (_, idx) => `\n\n${codeBlocks[Number(idx)] || ''}\n\n`)
     .replace(/@@FRQ_TABLE_(\d+)@@/g, (_, idx) => `\n\n${tableBlocks[Number(idx)] || ''}\n\n`)
     .replace(/\n{3,}/g, '\n\n')
     .trim()
@@ -633,7 +648,10 @@ function FRQText({ text, isPdf }) {
   const renderBlockText = (block) => {
     const blockText = block.lines.join('\n')
     const hasTable = /^\s*\|.*\|\s*$/m.test(blockText)
+    const hasCode = /^\s*```[A-Za-z0-9_-]*\s*$/m.test(blockText)
     return hasTable ? (
+      <MathText text={blockText} as="div" />
+    ) : hasCode ? (
       <MathText text={blockText} as="div" />
     ) : (
       <div style={{ whiteSpace: 'pre-wrap' }}>

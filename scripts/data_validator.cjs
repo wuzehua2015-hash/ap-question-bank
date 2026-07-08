@@ -386,6 +386,9 @@ function validate(filePath, options = {}) {
       if (!isFRQ && q.options && Object.entries(q.options).every(([key, value]) => String(value).trim() === key)) {
         errors.push(`${qid}: CSA options are bare letters; option text/code must be structured`)
       }
+      if (!isFRQ && Array.isArray(q.image_paths) && q.image_paths.length > 0) {
+        errors.push(`${qid}: CSA MCQ must not render prompt screenshots; rebuild prompt/options/code as structured content`)
+      }
       for (const { name, pattern } of csaSpokenCodePatterns) {
         if (pattern.test(textBlob)) {
           errors.push(`${qid}: CSA contains ${name}`)
@@ -395,8 +398,14 @@ function validate(filePath, options = {}) {
       if (/```java/i.test(textBlob) && !/```java[\s\S]{12,}?```/i.test(textBlob)) {
         errors.push(`${qid}: CSA Java code block is empty or malformed`)
       }
-      if (!/```java/i.test(textBlob) && /\b(?:Consider the following|code segment|method|class declaration|interface|constructor)\b/i.test(textBlob) && !(q.image_paths || []).length) {
-        errors.push(`${qid}: CSA code-heavy item lacks both Java code block and official visual evidence`)
+      if (!/```java/i.test(textBlob) && /\b(?:code segment|following method|following class declaration|following interface|constructor declaration|incomplete method)\b/i.test(textBlob)) {
+        errors.push(`${qid}: CSA code-heavy item lacks fenced Java code`)
+      }
+      if (/\b(?:Lin e|Li ne|space space|open quote|close quote|bina ry|Str ing|s t r|List Of|list Of [A-Z]\w*|size Of|Answers to Computer)\b/.test(textBlob)) {
+        errors.push(`${qid}: CSA contains residual OCR/accessibility prose or answer-key pollution`)
+      }
+      if (Object.values(q.options || {}).some(value => /\s\d{2}\s*$/.test(String(value)) || /Answers to Computer/i.test(String(value)))) {
+        errors.push(`${qid}: CSA option appears to contain trailing page number or answer-key pollution`)
       }
     }
   }
