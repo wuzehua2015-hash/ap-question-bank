@@ -782,7 +782,7 @@
     "source_set": "released",
     "question_number": 19,
     "type": "MCQ",
-    "text": "Consider the following code segment.\n\n```java\nint x = 1;\nwhile (/* condition */)\n{\n  if (x % 2 == 0)\n  {\n    System.out.print(x + \" \");\n  }\n  x = x + 2;\n}\n```\n\nThe following conditions have been proposed to replace `/* condition */` in the code segment.\n\nI. `x < 0`\nII. `x <= 1`\nIII. `x < 10`\n\nFor which of the conditions will nothing be printed?",
+    "text": "Consider the following code segment.\n\n```java\nint x = 1;\nwhile (/* condition */)\n{\n  if (x % 2 == 0)\n  {\n    System.out.print(x + \" \");\n  }\n  x = x + 2;\n}\n```\n\nThe following conditions have been proposed to replace `/* condition */` in the code segment.\n\n| Condition | Code |\n|---|---|\n| I | `x < 0` |\n| II | `x <= 1` |\n| III | `x < 10` |\n\nFor which of the conditions will nothing be printed?",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -2077,7 +2077,7 @@
     "source_set": "gridworld_practice",
     "question_number": 8,
     "type": "MCQ",
-    "text": "Consider the following class declaration.\n\n```java\npublic class Student\n{\n  private String myName;\n  private int myAge;\n\n  public Student()\n  {  /* implementation not shown */  }\n\n  public Student(String name, int age)\n  {  /* implementation not shown */  }\n\n  // No other constructors\n}\n```\n\nWhich of the following declarations will compile without error?\n\nI. `Student a = new Student();`\nII. `Student b = new Student(\"Juan\", 15);`\nIII. `Student c = new Student(\"Juan\", \"15\");`",
+    "text": "Consider the following class declaration.\n\n```java\npublic class Student\n{\n  private String myName;\n  private int myAge;\n\n  public Student()\n  {  /* implementation not shown */  }\n\n  public Student(String name, int age)\n  {  /* implementation not shown */  }\n\n  // No other constructors\n}\n```\n\nWhich of the following declarations will compile without error?\n\n| Declaration | Code |\n|---|---|\n| I | `Student a = new Student();` |\n| II | `Student b = new Student(\"Juan\", 15);` |\n| III | `Student c = new Student(\"Juan\", \"15\");` |",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -2781,7 +2781,7 @@
     "source_set": "gridworld_practice",
     "question_number": 24,
     "type": "MCQ",
-    "text": "A `ColorChangingCritter` behaves like a `ChameleonCritter` but does not turn when it moves. A partial declaration for the `ColorChangingCritter` class is as follows.\n\n```java\npublic class ColorChangingCritter extends ChameleonCritter\n{\n  public void makeMove(Location loc)\n  {\n    /* missing code */\n  }\n}\n```\n\nWhich of the following replacements for `/* missing code */` will correctly implement the desired behavior?\n\nI. `moveTo(loc);`\nII. `super.super.makeMove(loc);`\nIII. `int dir = getDirection(); super.makeMove(loc); setDirection(dir);`",
+    "text": "A `ColorChangingCritter` behaves like a `ChameleonCritter` but does not turn when it moves. A partial declaration for the `ColorChangingCritter` class is as follows.\n\n```java\npublic class ColorChangingCritter extends ChameleonCritter\n{\n  public void makeMove(Location loc)\n  {\n    /* missing code */\n  }\n}\n```\n\nWhich of the following replacements for `/* missing code */` will correctly implement the desired behavior?\n\n| Replacement | Code |\n|---|---|\n| I | `moveTo(loc);` |\n| II | `super.super.makeMove(loc);` |\n| III | `int dir = getDirection(); super.makeMove(loc); setDirection(dir);` |",
     "options": {
       "A": "I only",
       "B": "III only",
@@ -3227,7 +3227,7 @@
     "source_set": "gridworld_practice",
     "question_number": 34,
     "type": "MCQ",
-    "text": "Consider the following class declarations.\n\n```java\npublic class Point\n{\n  private double x;  // x-coordinate\n  private double y;  // y-coordinate\n\n  public Point()\n  {  x = 0; y = 0;  }\n\n  public Point(double a, double b)\n  {  x = a; y = b;  }\n\n  // There may be instance variables, constructors, and methods that are not shown.\n}\n\npublic class Circle\n{\n  private Point center;\n  private double radius;\n\n  /** Constructs a circle where (a, b) is the center and r is the radius. */\n  public Circle(double a, double b, double r)\n  {\n    /* missing code */\n  }\n}\n```\n\nWhich of the following replacements for `/* missing code */` will correctly implement the `Circle` constructor?\n\nI. `center = new Point(); radius = r;`\nII. `center = new Point(a, b); radius = r;`\nIII. `center = new Point(); center.x = a; center.y = b; radius = r;`",
+    "text": "Consider the following class declarations.\n\n```java\npublic class Point\n{\n  private double x;  // x-coordinate\n  private double y;  // y-coordinate\n\n  public Point()\n  {  x = 0; y = 0;  }\n\n  public Point(double a, double b)\n  {  x = a; y = b;  }\n\n  // There may be instance variables, constructors, and methods that are not shown.\n}\n\npublic class Circle\n{\n  private Point center;\n  private double radius;\n\n  /** Constructs a circle where (a, b) is the center and r is the radius. */\n  public Circle(double a, double b, double r)\n  {\n    /* missing code */\n  }\n}\n```\n\nWhich of the following replacements for `/* missing code */` will correctly implement the `Circle` constructor?\n\n| Replacement | Code |\n|---|---|\n| I | `center = new Point(); radius = r;` |\n| II | `center = new Point(a, b); radius = r;` |\n| III | `center = new Point(); center.x = a; center.y = b; radius = r;` |",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -3657,7 +3657,7 @@
     "source_set": "college_board_sample",
     "question_number": 4,
     "type": "MCQ",
-    "text": "At a certain high school students receive letter grades based on the following\nscale.\nInteger Score\nLetter Grade\n93 or above\nA\nFrom 84 to 92 inclusive\nB\nFrom 75 to 83 inclusive\nC\nBelow 75\nF Which of the following code segments will assign the correct string to grade\nfor a given integer score ?",
+    "text": "At a certain high school students receive letter grades based on the following scale.\n\n| Integer Score | Letter Grade |\n|---|---|\n| 93 or above | A |\n| From 84 to 92 inclusive | B |\n| From 75 to 83 inclusive | C |\n| Below 75 | F |\n\nWhich of the following code segments will assign the correct string to `grade` for a given integer `score`?",
     "options": {
       "A": "II only",
       "B": "III only",
@@ -3786,7 +3786,7 @@
     "source_set": "college_board_sample",
     "question_number": 7,
     "type": "MCQ",
-    "text": "Consider the following declarations.\n\n```java\npublic interface Shape\n{\n  int isLargerThan(Shape other);\n  // Other methods not shown\n}\n\npublic class Circle implements Shape\n{\n  // Other methods not shown\n}\n```\n\nWhich of the following method headings of `isLargerThan` can be added to the declaration of the `Circle` class so that it will satisfy the `Shape` interface?\n\nI. `public int isLargerThan(Shape other)`\nII. `public int isLargerThan(Circle other)`\nIII. `public boolean isLargerThan(Object other)`",
+    "text": "Consider the following declarations.\n\n```java\npublic interface Shape\n{\n  int isLargerThan(Shape other);\n  // Other methods not shown\n}\n\npublic class Circle implements Shape\n{\n  // Other methods not shown\n}\n```\n\nWhich of the following method headings of `isLargerThan` can be added to the declaration of the `Circle` class so that it will satisfy the `Shape` interface?\n\n| Method heading | Code |\n|---|---|\n| I | `public int isLargerThan(Shape other)` |\n| II | `public int isLargerThan(Circle other)` |\n| III | `public boolean isLargerThan(Object other)` |",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -3997,7 +3997,7 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "Questions11–12 refer to the following information. Consider the following instance variable nums and method findLongest with line numbers added for reference. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example, if the array nums contains the values[7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the length of the longest consecutive block of 10s. 28",
+    "group_context": "Questions11–12 refer to the following information. Consider the following instance variable nums and method findLongest with line numbers added for reference. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example, if the array nums contains the values[7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the length of the longest consecutive block of 10s. 28 © 2014 The College Board.",
     "rubric_image_paths": []
   },
   {
@@ -4048,7 +4048,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions11–12 refer to the following information. Consider the following instance variable nums and method findLongest with line numbers added for reference. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example, if the array nums contains the values[7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the length of the longest consecutive block of 10s. 28",
+    "group_context": "Questions11–12 refer to the following information. Consider the following instance variable nums and method findLongest with line numbers added for reference. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example, if the array nums contains the values[7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the length of the longest consecutive block of 10s. 28 © 2014 The College Board.",
     "rubric_image_paths": []
   },
   {

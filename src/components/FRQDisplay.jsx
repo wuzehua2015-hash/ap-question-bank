@@ -561,6 +561,7 @@ export function RubricDisplay({ rubric, variant }) {
     points.length === 1 &&
     isOfficialWholeRubric(points[0], rubric)
   const solutionOutline = String(rubric.solution_outline || '').trim()
+  const referenceSolution = String(rubric.reference_solution || '').trim()
 
   if (variant === 'pdf') {
     return (
@@ -572,6 +573,21 @@ export function RubricDisplay({ rubric, variant }) {
         }}>
           Scoring Rubric ({rubric.total_points} points)
         </div>
+        {referenceSolution && (
+          <div style={{
+            padding: '10px 12px',
+            marginBottom: '10px',
+            background: '#f8fafc',
+            border: '1px solid #cbd5e1',
+            borderRadius: '6px',
+            ...BREAK_GUARD.BLOCK,
+          }}>
+            <div style={{ fontSize: '13px', fontWeight: '700', color: '#334155', marginBottom: '6px' }}>
+              Reference Implementation
+            </div>
+            <MathText text={referenceSolution} as="div" />
+          </div>
+        )}
         {solutionOutline && (
           <div style={{
             padding: '10px 12px',
@@ -618,6 +634,12 @@ export function RubricDisplay({ rubric, variant }) {
       <div className="text-sm font-bold text-blue-800 mb-2 pb-1 border-b border-blue-100">
         Scoring Rubric ({rubric.total_points} points)
       </div>
+      {referenceSolution && (
+        <div className="mb-3 rounded-md border border-slate-200 bg-slate-50 px-3 py-3">
+          <div className="mb-2 text-sm font-bold text-slate-800">Reference Implementation</div>
+          <MathText text={referenceSolution} as="div" />
+        </div>
+      )}
       {solutionOutline && (
         <div className="mb-3 rounded-md border border-sky-200 bg-sky-50 px-3 py-3">
           <div className="mb-2 text-sm font-bold text-sky-800">Correct Answer / Solution Outline</div>

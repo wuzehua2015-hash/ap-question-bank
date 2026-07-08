@@ -379,6 +379,7 @@ function validate(filePath, options = {}) {
         q.group_context || '',
         ...Object.values(q.options || {}),
         q.rubric?.solution_outline || '',
+        q.rubric?.reference_solution || '',
       ].join('\n')
       if (/See the official (?:prompt|free-response prompt) image below/i.test(textBlob)) {
         errors.push(`${qid}: CSA prompt uses official-image placeholder instead of structured text/code`)
@@ -406,6 +407,21 @@ function validate(filePath, options = {}) {
       }
       if (Object.values(q.options || {}).some(value => /\s\d{2}\s*$/.test(String(value)) || /Answers to Computer/i.test(String(value)))) {
         errors.push(`${qid}: CSA option appears to contain trailing page number or answer-key pollution`)
+      }
+      if (!isFRQ && /\bInteger Score\s+Letter Grade\b/i.test(textBlob)) {
+        errors.push(`${qid}: CSA grading scale appears flattened; render it as a markdown table`)
+      }
+      if (!isFRQ && /\nI\.\s*`[^`\n]+`\s*\nII\.\s*`[^`\n]+`\s*\nIII\.\s*`[^`\n]+`/i.test(q.text || q.question_text || '')) {
+        errors.push(`${qid}: CSA inline I/II/III code candidates should be a structured markdown table`)
+      }
+      if (isFRQ) {
+        const reference = String(q.rubric?.reference_solution || '')
+        if (!/```java[\s\S]{40,}?```/i.test(reference)) {
+          errors.push(`${qid}: CSA FRQ rubric missing fenced Java reference_solution`)
+        }
+        if (!q.rubric?.solution_outline || String(q.rubric.solution_outline).replace(/\s+/g, ' ').trim().length < 120) {
+          errors.push(`${qid}: CSA FRQ rubric missing student-usable solution_outline`)
+        }
       }
     }
   }
