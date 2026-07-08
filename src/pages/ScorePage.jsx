@@ -317,6 +317,19 @@ function ScorePage() {
                   <p style={{ fontSize: '22px', color: '#4b5563', marginBottom: '12px', lineHeight: 1.5 }}>
                     <MathText text={q.text || q.question_text} />
                   </p>
+                  {q.group_context && (
+                    <div style={{
+                      marginBottom: '12px',
+                      padding: '8px 10px',
+                      background: '#f8fafc',
+                      borderLeft: '4px solid #2563eb',
+                      fontSize: '16px',
+                      color: '#374151',
+                      lineHeight: 1.5,
+                    }}>
+                      <MathText text={q.group_context} />
+                    </div>
+                  )}
                   <ScoreBackgroundTable tableData={q.background_data?.table} />
                   {visibleImages.length > 0 && (
                     <div style={{ marginBottom: '12px' }}>

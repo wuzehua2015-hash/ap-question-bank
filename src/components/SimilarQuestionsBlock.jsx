@@ -144,6 +144,12 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3 }) {
 
               {isExpanded && (
                 <div className="px-2 pb-2 border-t border-gray-100 bg-gray-50">
+                  {q.group_context && (
+                    <div className="mb-2 mt-2 rounded border-l-4 border-brand bg-white px-2 py-1.5 text-xs leading-relaxed text-text">
+                      <MathText text={q.group_context} />
+                    </div>
+                  )}
+
                   {visibleImages.length > 0 && (
                     <div className="mb-2 mt-2">
                       {visibleImages.map((img, i) => (

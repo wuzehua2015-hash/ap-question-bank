@@ -7,6 +7,7 @@ import {
 } from '../utils/storage'
 import { startWrongQuiz, startCustomQuiz } from '../utils/quizSession'
 import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
+import { MathText } from '../components/MathText'
 import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
@@ -191,7 +192,7 @@ function MistakeBook() {
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-text mb-2">{q.text || q.question_text}</p>
+                <p className="text-sm text-text mb-2"><MathText text={q.text || q.question_text} /></p>
                 <div className="flex gap-2">
                   <button
                     onClick={() => setExpandedId(isExpanded ? null : q.question_id)}
@@ -209,6 +210,11 @@ function MistakeBook() {
               </div>
               {isExpanded && (
                 <div className="px-4 pb-4 border-t border-border bg-gray-50">
+                  {q.group_context && (
+                    <div className="mb-3 mt-3 rounded-md border-l-4 border-brand bg-white px-3 py-2 text-sm leading-relaxed text-text">
+                      <MathText text={q.group_context} />
+                    </div>
+                  )}
                   {visibleImages.length > 0 && (
                     <div className="mb-3 mt-3">
                       {visibleImages.map((img, i) => (
