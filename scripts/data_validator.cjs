@@ -140,6 +140,14 @@ function validate(filePath, options = {}) {
   ]
   const byId = new Map()
   const isPhysicsEM = /physics-c-e-m/i.test(filePath)
+  const isComputerScienceA = /computer-science-a/i.test(filePath)
+  const csaSpokenCodePatterns = [
+    { name: 'spoken parenthesis', pattern: /\b(?:open|close)\s+parenthesis\b/i },
+    { name: 'spoken bracket', pattern: /\b(?:open|close)\s+(?:curly\s+)?bracket\b/i },
+    { name: 'spoken operator', pattern: /\b(?:equals equals|plus plus|minus minus|percent|semicolon|comma|dot|open parenthesis|close parenthesis)\b|(?:open|close)\s*parenthesis/i },
+    { name: 'letter-spaced identifier', pattern: /\b(?:a r r|a r g|s 1|s 2|s 3|max Val|input Val|Student In f o|Student Info|Number GrGroup|Hidden WoWord)\b/i },
+    { name: 'screen-reader method description', pattern: /\ball\s+(?:one|1)\s+word\b|\bhence(?:forth)?\s+referr?ed\s+to\s+as\b|\binitial capital on\b/i },
+  ]
 
   function findHiddenControlChars(value, currentPath, out) {
     if (typeof value === 'string') {
@@ -363,6 +371,32 @@ function validate(filePath, options = {}) {
           errors.push(`${qid}: FRQ/rubric contains ${name}`)
           break
         }
+      }
+    }
+    if (isComputerScienceA) {
+      const textBlob = [
+        q.text || q.question_text || '',
+        q.group_context || '',
+        ...Object.values(q.options || {}),
+        q.rubric?.solution_outline || '',
+      ].join('\n')
+      if (/See the official (?:prompt|free-response prompt) image below/i.test(textBlob)) {
+        errors.push(`${qid}: CSA prompt uses official-image placeholder instead of structured text/code`)
+      }
+      if (!isFRQ && q.options && Object.entries(q.options).every(([key, value]) => String(value).trim() === key)) {
+        errors.push(`${qid}: CSA options are bare letters; option text/code must be structured`)
+      }
+      for (const { name, pattern } of csaSpokenCodePatterns) {
+        if (pattern.test(textBlob)) {
+          errors.push(`${qid}: CSA contains ${name}`)
+          break
+        }
+      }
+      if (/```java/i.test(textBlob) && !/```java[\s\S]{12,}?```/i.test(textBlob)) {
+        errors.push(`${qid}: CSA Java code block is empty or malformed`)
+      }
+      if (!/```java/i.test(textBlob) && /\b(?:Consider the following|code segment|method|class declaration|interface|constructor)\b/i.test(textBlob) && !(q.image_paths || []).length) {
+        errors.push(`${qid}: CSA code-heavy item lacks both Java code block and official visual evidence`)
       }
     }
   }

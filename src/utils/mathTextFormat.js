@@ -182,6 +182,31 @@ function renderMarkdownTable(lines, startIndex) {
   return { html, nextIndex: index }
 }
 
+function renderFencedCode(lines, startIndex) {
+  const opening = lines[startIndex].trim()
+  const match = opening.match(/^```([A-Za-z0-9_-]*)\s*$/)
+  if (!match) return null
+
+  const body = []
+  let index = startIndex + 1
+  while (index < lines.length && !/^```\s*$/.test(lines[index].trim())) {
+    body.push(lines[index])
+    index += 1
+  }
+  if (index >= lines.length) return null
+
+  const language = match[1] || 'text'
+  const languageLabel = language.toLowerCase() === 'java' ? 'Java' : language
+  const html = [
+    '<div class="code-block-wrap">',
+    language ? `<div class="code-block-label">${escapeHtml(languageLabel)}</div>` : '',
+    `<pre class="code-block"><code>${escapeHtml(body.join('\n'))}</code></pre>`,
+    '</div>',
+  ].join('')
+
+  return { html, nextIndex: index + 1 }
+}
+
 function renderTextWithMarkdownTables(text, options = {}) {
   const lines = text.split('\n')
   const parts = []
@@ -194,8 +219,13 @@ function renderTextWithMarkdownTables(text, options = {}) {
   }
 
   for (let i = 0; i < lines.length;) {
-    const table = renderMarkdownTable(lines, i)
-    if (table) {
+    const code = renderFencedCode(lines, i)
+    const table = code ? null : renderMarkdownTable(lines, i)
+    if (code) {
+      flushBuffer()
+      parts.push(code.html)
+      i = code.nextIndex
+    } else if (table) {
       flushBuffer()
       parts.push(table.html)
       i = table.nextIndex

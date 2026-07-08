@@ -8,13 +8,13 @@
     "source_set": "released",
     "question_number": 1,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following incomplete method, which is intended to return the number of integers that evenly divide the integer `inputVal`. Assume that `inputVal` is greater than 0.\n\n```java\npublic static int numDivisors(int inputVal)\n{\n  int count = 0;\n  for (int k = 1; k <= inputVal; k++)\n  {\n    if (/* condition */)\n    {\n      count++;\n    }\n  }\n  return count;\n}\n```\n\nWhich of the following can be used to replace `/* condition */` so that `numDivisors` will work as intended?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "inputVal % k == 0",
+      "B": "k % inputVal == 0",
+      "C": "inputVal % k != 0",
+      "D": "inputVal / k == 0",
+      "E": "k / inputVal > 0"
     },
     "answer": "A",
     "answers": [
@@ -53,13 +53,13 @@
     "source_set": "released",
     "question_number": 2,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. The code shown consists of 1\n3\nlines for(in\nt r = 3; r gr\neate\nr than 0; r --){int c; for(c = 1; c < r; c ++){System.out.print(\"dash\");} for(c = r; c <= 3; c ++){System.out.print(\"*\");} System.out.println();} What is printed as a result of executing the code segment?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Lin e 1 : dash dash * dash * * * * *",
+      "B": "Lin e 1 : * dash dash * * dash * * *",
+      "C": "Lin e 1 : * * * dash * * dash dash *",
+      "D": "Lin e 1 : * * * * * dash * dash dash",
+      "E": "Lin e 1 : dash dash * * * * dash dash *"
     },
     "answer": "A",
     "answers": [
@@ -98,13 +98,13 @@
     "source_set": "released",
     "question_number": 3,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following 2 classes. The code shown\nco\nnsists of 14 lines Lin\ne 1: public class A Li\nne 2\n:{Lin\ne\n3: public void show(){System.out.print(\"A\");}} public class B extends A.{public void show(){System.out.print(\"B\");}} What is printed as a result of executing the following code segment? The code shown c\nonsists of 2 lines A obj = new B(); obj. show();",
     "options": {
       "A": "A",
       "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "C": "A B",
+      "D": "B A",
+      "E": "The code results in a runtime error."
     },
     "answer": "B",
     "answers": [
@@ -143,13 +143,13 @@
     "source_set": "released",
     "question_number": 4,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following instance variable and method.\n\n```java\nprivate int[] arr;\n\n/** Precondition: arr.length > 0\n *  @return the largest value in array arr\n */\npublic int findMax()\n{\n  int maxVal = 0;\n\n  for (int val : arr)\n  {\n    if (val > maxVal)\n    {\n      maxVal = val;\n    }\n  }\n\n  return maxVal;\n}\n```\n\nMethod `findMax` is intended to return the largest value in the array `arr`. Which of the following best describes the conditions under which the method `findMax` will not work as intended?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "The largest value in arr occurs only once and is in arr[0].",
+      "B": "The largest value in arr occurs only once and is in arr[arr.length - 1].",
+      "C": "The largest value in arr is negative.",
+      "D": "The largest value in arr is 0.",
+      "E": "The largest value in arr occurs more than once."
     },
     "answer": "C",
     "answers": [
@@ -188,13 +188,13 @@
     "source_set": "released",
     "question_number": 5,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Assume that x and y are boolean variables and have been properly initialized.(x || y) && x Which of the following always evaluates to the same value as the expression above?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "x",
+      "B": "y",
+      "C": "x && y",
+      "D": "x || y",
+      "E": "x != y"
     },
     "answer": "A",
     "answers": [
@@ -233,13 +233,13 @@
     "source_set": "released",
     "question_number": 6,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method, which is intended to return `true` if at least one of the three strings `s1`, `s2`, or `s3` contains the substring `\"art\"`. Otherwise, the method should return `false`.\n\n```java\npublic static boolean containsArt(String s1, String s2, String s3)\n{\n  String all = s1 + s2 + s3;\n  return (all.indexOf(\"art\") != -1);\n}\n```\n\nWhich of the following method calls demonstrates that the method does not work as intended?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "containsArt(\"rattrap\", \"similar\", \"today\")",
+      "B": "containsArt(\"start\", \"article\", \"Bart\")",
+      "C": "containsArt(\"harm\", \"chortle\", \"crowbar\")",
+      "D": "containsArt(\"matriculate\", \"carat\", \"arbitrary\")",
+      "E": "containsArt(\"darkroom\", \"cartoon\", \"articulate\")"
     },
     "answer": "A",
     "answers": [
@@ -278,13 +278,13 @@
     "source_set": "released",
     "question_number": 7,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. Li\nne 1: for(int outer = 1; outer < or eq\nual to 6; outer ++){for(int inner = outer; inner <= 6; inner ++){if(inner % 2 == 0){System.out.print(inner + \"space space\");}} System.out.println();} What will be printed as a result of executing the code segment?Each option shows rows of numbers.",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Row 1: 2 spac e space 4 space space 6 space space Row 2: 4 space space 6 space space Row 3: 6 space space",
+      "B": "Row 1: 2 space space 4 space space 6 space space Row 2: 2 space space 4 space space 6 space space Row 3: 2 space space 4 space space 6 space space",
+      "C": "Row 1: 2 space spac e 4 s pa ce space 6 space space Row 2: 2 space space 4 space space 6 space space Row 3: 4 space space 6 space space Row 4: 4 space space 6 space space Row 5: 6 space space Row 6: 6 space space",
+      "D": "Row 1: 2 space s pace 4 s pace spa ce 6 spa ce space Row 2: 2 space space 4 space space 6 space space Row 3: 2 space space 4 space space 6 space space Row 4: 2 space space 4 space space 6 space space Row 5: 2 space space 4 space space 6 space space Row 6: 2 space space 4 space space 6 space space",
+      "E": "Row 1: 2 s pace space 4 space space Row 2: 2 space space 4 space space Row 3: 4 space space Row 4: 4 space space"
     },
     "answer": "C",
     "answers": [
@@ -323,13 +323,13 @@
     "source_set": "released",
     "question_number": 8,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. pub\nli\nc static int[] o\np\neration(int[][] matrix com\nma i\nnt r, int c){int[] result = new int[matrix.length],; for(int j = 0; j < matrix.length; j ++){result,[j], = matrix[r][j] * matrix[j][c];} return result,;} The following code segment appears in another method in the same class. The code segment shown consis\nts of 5 lines of code int[][] mat ={{3, 2, 1, 4},{1, 2, 3, 4},{2, 2, 1, 2},{1, 1, 1, 1}}; int[] arr = operation(mat, 1, 2); Which of the following represents the contents of arr as a result of executing the code segment?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "{6, 4, 2, 4}",
+      "B": "{1, 6, 3, 4}",
+      "C": "{4, 3, 6, 1}",
+      "D": "{4, 4, 2, 2}",
+      "E": "{2, 2, 4, 4}"
     },
     "answer": "B",
     "answers": [
@@ -368,13 +368,13 @@
     "source_set": "released",
     "question_number": 9,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "A pair of number cubes is used in a game of chance. Each number cube has 6 sides, numbered from 1 to 6,\ninclusive, and there is an equal probability for each of the numbers to appear on the top side(indicating the\ncube's value) when the number cube is rolled. The following incomplete statement appears in a program that\ncomputes the sum of the values produced by rolling 2 number cubes. int sum = /* missing code */;. Which of the following replacements for /* missing code */ would best simulate the value produced as a\nresult of rolling 2 number cubes?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "2 *(int)(Math. random() * 6)",
+      "B": "2 *(int,)(Math. random() * 7)",
+      "C": "(int)(Math. random() * 6) +(int)(Math. random() * 6)",
+      "D": "(int)(Math. random() * 13)",
+      "E": "2 +(int)(Math. random() * 6) +(int)(Math. random() * 6)"
     },
     "answer": "E",
     "answers": [
@@ -385,14 +385,14 @@
     "image_paths": [
       "images/ap/computer-science-a/2015/2015_q09_prompt.png"
     ],
-    "primary_unit": "U1",
-    "unit": "U1",
-    "unit_name": "Primitive Types",
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "Using Objects",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U1",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.6,
       "evidence": "Keyword classification from CSA prompt/code.",
@@ -413,13 +413,13 @@
     "source_set": "released",
     "question_number": 10,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following interface and class declarations. The code shown consists o\nf 6 lines public interface capital Student{/* implementation not shown */,} public class capital Athlete{/* implementation not shown */} public class Tennis Player extends Athlete implements Student{/* implementation not shown */} Assume that each class has a 0-parameter constructor. Which of the following is NOT a valid declaration?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Student a = new Tennis Player();",
+      "B": "Tennis Player b = new Tennis Player();",
+      "C": "Athlete c = new Tennis Player();",
+      "D": "Student d = new Athlete();",
+      "E": "Athlete e = new Athlete();"
     },
     "answer": "D",
     "answers": [
@@ -458,13 +458,13 @@
     "source_set": "released",
     "question_number": 11,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. The method shown consists of 9 lines of co\nde public s\nt\natic boolean mystery(Str\ning\ns t r){String temp = \"\"; for(int k = s t r.length(); k > 0; k --){temp = temp + s t r. substring(k - 1, k),;} return temp. =(s t r);} Which of the following calls to mystery will return true ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "mystery(\"no\")",
+      "B": "mystery(\"on\")",
+      "C": "mystery(\"nnoo\")",
+      "D": "mystery(\"nono\")",
+      "E": "mystery(\"noon\")"
     },
     "answer": "E",
     "answers": [
@@ -503,13 +503,13 @@
     "source_set": "released",
     "question_number": 12,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Assume that x and y are boolean variables and have been properly initialized.(x && y) && !(x || y) Which of the following best describes the result of evaluating the expression above?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "true always",
+      "B": "false always",
+      "C": "true only when x is true and y is true",
+      "D": "true only when x and y have the same value",
+      "E": "true only when x and y have different values"
     },
     "answer": "B",
     "answers": [
@@ -548,13 +548,13 @@
     "source_set": "released",
     "question_number": 13,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following instance variable and method. The method shown consis\nt\ns of 8 lines of code Lin\ne\n1: private int[] numbers; public void mystery(int x){for(int k = 1; k < numbers.length; k = k + x){numbers[k] = numbers[k - 1] + x;}} Assume that numbers has been initialized with the following values.{17, 34, 21, 42, 15, 69, 48, 25, 39} Which of the following represents the order of the values in numbers as a result of the call mystery(3) ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "{17, 20, 21, 42, 45, 69, 48, 51, 39}",
+      "B": "{17, 20, 23, 26, 29, 32, 35, 38, 41}",
+      "C": "{17, 37, 21, 42, 18, 69, 48, 28, 39}",
+      "D": "{20, 23, 21, 42, 45, 69, 51, 54, 39}",
+      "E": "{20, 34, 21, 45, 15, 69, 51, 25, 39}"
     },
     "answer": "A",
     "answers": [
@@ -565,14 +565,14 @@
     "image_paths": [
       "images/ap/computer-science-a/2015/2015_q13_prompt.png"
     ],
-    "primary_unit": "U5",
-    "unit": "U5",
-    "unit_name": "Writing Classes",
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U5",
+      "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.6,
       "evidence": "Keyword classification from CSA prompt/code.",
@@ -593,13 +593,13 @@
     "source_set": "released",
     "question_number": 14,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method, biggest, which is intended to return the greatest of 3 integers. It does\nnot always work as intended. public static int\nbigg\nest(int a, int b, int\nc){Li\nne 3: if((a > b) &&(a > c)){return a;} else if((b > a) &&(b > c)){return b;} else{return c;}} Which of the following best describes the error in the method?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "biggest always returns the value of a.",
+      "B": "biggest may not work correctly when c has the greatest value.",
+      "C": "biggest may not work correctly when a and b have equal values.",
+      "D": "biggest may not work correctly when a and c have equal values.",
+      "E": "biggest may not work correctly when b and c have equal values."
     },
     "answer": "C",
     "answers": [
@@ -638,13 +638,13 @@
     "source_set": "released",
     "question_number": 15,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method.\n\n```java\npublic static void showMe(int arg)\n{\n  if (arg < 10)\n  {\n    showMe(arg + 1);\n  }\n  else\n  {\n    System.out.print(arg + \" \");\n  }\n}\n```\n\nWhat will be printed as a result of the call `showMe(0)`?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "`10`",
+      "B": "`11`",
+      "C": "`0 1 2 3 4 5 6 7 8 9`",
+      "D": "`9 8 7 6 5 4 3 2 1 0`",
+      "E": "`0 1 2 3 4 5 6 7 8 9 10`"
     },
     "answer": "A",
     "answers": [
@@ -683,13 +683,13 @@
     "source_set": "released",
     "question_number": 16,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. /* * Prec\non\ndition : values has at l\neast 1 row */ publ\nic static int calculate(int[][] values){int found = values[0][0]; int result = 0; for(int[] row : values){for,(int y = 0; y < row.length; y ++){if(row[y] > found){found = row[y]; result = y;}}} return result;} Which of the following best describes what is returned by the calculate method?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "The largest value in the 2-dimensional array",
+      "B": "The smallest value in the 2-dimensional array",
+      "C": "The row indexOf an element with the largest value in the 2-dimensional array",
+      "D": "The row indexOf an element with the smallest value in the 2-dimensional array",
+      "E": "The column indexOf an element with the largest value in the 2-dimensional array"
     },
     "answer": "E",
     "answers": [
@@ -728,13 +728,13 @@
     "source_set": "released",
     "question_number": 17,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. / /* Precondition : num > ze\nro,\n*/ publ\nic static int do What(int num){int var = 0; for(int loop = 1; loop <= num; loop = loop + 2){var + = loop;} return var;} Which of the following best describes the value returned from a call to do What ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "num",
+      "B": "The sum of all integers between 1 and num, inclusive",
+      "C": "The sum of all even integers between 1 and num, inclusive",
+      "D": "The sum of all odd integers between 1 and num, inclusive",
+      "E": "No value is returned because of an infinite loop."
     },
     "answer": "D",
     "answers": [
@@ -773,13 +773,13 @@
     "source_set": "released",
     "question_number": 18,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "What is printed as a result of executing the following statement? System.out.println(404 / 10 * 10 + 1);",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "4",
+      "B": "5",
+      "C": "41",
+      "D": "401",
+      "E": "405"
     },
     "answer": "D",
     "answers": [
@@ -818,13 +818,13 @@
     "source_set": "released",
     "question_number": 19,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment.\n\n```java\nint x = 1;\nwhile (/* condition */)\n{\n  if (x % 2 == 0)\n  {\n    System.out.print(x + \" \");\n  }\n  x = x + 2;\n}\n```\n\nThe following conditions have been proposed to replace `/* condition */` in the code segment.\n\nI. `x < 0`\nII. `x <= 1`\nIII. `x < 10`\n\nFor which of the conditions will nothing be printed?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "I and II only",
+      "D": "I and III only",
+      "E": "I, II, and III"
     },
     "answer": "E",
     "answers": [
@@ -863,13 +863,13 @@
     "source_set": "released",
     "question_number": 20,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method.\n\n```java\n/** Precondition: arr.length > 0 */\npublic static int mystery(int[] arr)\n{\n  int index = 0;\n  int count = 0;\n  int m = -1;\n\n  for (int outer = 0; outer < arr.length; outer++)\n  {\n    count = 0;\n    for (int inner = outer + 1; inner < arr.length; inner++)\n    {\n      if (arr[outer] == arr[inner])\n      {\n        count++;\n      }\n    }\n\n    if (count > m)\n    {\n      index = outer;\n      m = count;\n    }\n  }\n\n  return index;\n}\n```\n\nAssume that `nums` has been declared and initialized as an array of integer values. Which of the following best describes the value returned by the call `mystery(nums)`?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "The maximum value that occurs in `nums`",
+      "B": "An index of the maximum value that occurs in `nums`",
+      "C": "The number of times that the maximum value occurs in `nums`",
+      "D": "A value that occurs most often in `nums`",
+      "E": "An index of a value that occurs most often in `nums`"
     },
     "answer": "E",
     "answers": [
@@ -908,13 +908,13 @@
     "source_set": "released",
     "question_number": 21,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following recursive method. The method shown consists of 10 lines of\nco\nde public stati\nc void, whats I\nt Do – hencefor\nth referred to as whats It Do,(Str\ning\ns t r){int len = s t r.length(); if(len > 1){String temp = s t r. substring(0, len - 1); System.out.println(temp); whats It Do(temp);}} What is printed as a result of the call whats It Do(\"all capital WATCH\")?Each option shows1 or more rows of capitalized letters",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "H",
+      "B": "Row 1: W A T C",
+      "C": "Row 1 : A T C H Row 2: A T C Row 3: A T Row 4: A",
+      "D": "Row 1 : W A T C Row 2: W A T Row 3: W A Row 4: W",
+      "E": "Row 1: W A T C H Row 2: W A T C Row 3: W A T Row 4: W A"
     },
     "answer": "D",
     "answers": [
@@ -953,13 +953,13 @@
     "source_set": "released",
     "question_number": 22,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following definition. int[][] numbers ={{1, 2, 3},{4, 5, 6}}; Which of the following code segments produces the output 1 2 3 4 5 6 ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "fo r(int[] row : numbers){for(int n : row){System.out.print(n),;}}",
+      "B": "fo r(int[] row : numbers){for(int n : row){System.out.print(row[n]);}}",
+      "C": "for(int r c = 0; r c < numbers.length; r c ++){System.out.print(numbers[r c]);}",
+      "D": "f or(int r = 0; r < numbers[zer o].length; r ++){for(int c = 0; c < numbers.length; c ++){System.out.print(numbers[r][c]);}}",
+      "E": "for(int c = 0; c < numbers[zer o].length; c ++){for,(int r = 0; r < numbers.length; r ++){System.out.print(numbers[r][c]);}}"
     },
     "answer": "A",
     "answers": [
@@ -998,13 +998,13 @@
     "source_set": "released",
     "question_number": 23,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment from an insertion sort program. for,(int j = 1; j < arr.length; j ++) Li\nn\ne 2:{Li\nn\ne 3: int insert Item, ca\npital at Item only and no space between = arr[j]; int k = j - 1; while(k >= 0 && insert Item < arr[k]){arr[k + 1] = arr[k]; k --,;} arr[k + 1] = insert Item; /* end of for loop */} Assume that array arr has been defined and initialized with the values{5, 4, 3, 2, 1}. What are\nthe values in array arr after 2 passes of the for loop(i.e., when j = 2 at the point indicated by\n/* end of for loop */) ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "{2, 3, 4, 5, 1}",
+      "B": "{3, 2, 1, 4, 5}",
+      "C": "{3, 4, 5, 2, 1}",
+      "D": "{3, 5, 2, 3, 1}",
+      "E": "{5, 3, 4, 2, 1}"
     },
     "answer": "C",
     "answers": [
@@ -1043,13 +1043,13 @@
     "source_set": "released",
     "question_number": 24,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following class.\n\n```java\npublic class SomeMethods\n{\n  public void one(int first)\n  {  /* implementation not shown */  }\n\n  public void one(int first, int second)\n  {  /* implementation not shown */  }\n\n  public void one(int first, String second)\n  {  /* implementation not shown */  }\n}\n```\n\nWhich of the following methods can be added to the `SomeMethods` class without causing a compile-time error?\n\nI.\n```java\npublic void one(int value)\n{  /* implementation not shown */  }\n```\n\nII.\n```java\npublic void one(String first, int second)\n{  /* implementation not shown */  }\n```\n\nIII.\n```java\npublic void one(int first, int second, int third)\n{  /* implementation not shown */  }\n```",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "I and II only",
+      "C": "I and III only",
+      "D": "II and III only",
+      "E": "I, II, and III"
     },
     "answer": "D",
     "answers": [
@@ -1088,13 +1088,13 @@
     "source_set": "released",
     "question_number": 25,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. The code shown\nc\nonsists of 9 lines int count = 0,; for(int x = 0; x < 4; x ++){for(int y = x; y < 4; y ++){count ++;}} System.out.println(count); What is printed as a result of executing the code segment?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "4",
+      "B": "8",
+      "C": "10",
+      "D": "16",
+      "E": "20"
     },
     "answer": "C",
     "answers": [
@@ -1133,13 +1133,13 @@
     "source_set": "released",
     "question_number": 26,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following two methods, which appear within a single class.\n\n```java\npublic static void changeIt(int[] arr, int val, String word)\n{\n  arr = new int[5];\n  val = 0;\n  word = word.substring(0, 5);\n\n  for (int k = 0; k < arr.length; k++)\n  {\n    arr[k] = 0;\n  }\n}\n\npublic static void start()\n{\n  int[] nums = {1, 2, 3, 4, 5};\n  int value = 6;\n  String name = \"blackboard\";\n\n  changeIt(nums, value, name);\n\n  for (int k = 0; k < nums.length; k++)\n  {\n    System.out.print(nums[k] + \" \");\n  }\n\n  System.out.print(value + \" \");\n  System.out.print(name);\n}\n```\n\nWhat is printed as a result of the call `start()`?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "`0 0 0 0 0 0 black`",
+      "B": "`0 0 0 0 0 6 blackboard`",
+      "C": "`1 2 3 4 5 6 black`",
+      "D": "`1 2 3 4 5 0 black`",
+      "E": "`1 2 3 4 5 6 blackboard`"
     },
     "answer": "E",
     "answers": [
@@ -1150,14 +1150,14 @@
     "image_paths": [
       "images/ap/computer-science-a/2015/2015_q26_prompt.png"
     ],
-    "primary_unit": "U5",
-    "unit": "U5",
-    "unit_name": "Writing Classes",
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U5",
+      "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.6,
       "evidence": "Keyword classification from CSA prompt/code.",
@@ -1178,13 +1178,13 @@
     "source_set": "released",
     "question_number": 27,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Assume that sort is called with the array{6, 3, 2, 5, 4, 1}. What will the value of data be\nafter 3 passes of the outer loop(i.e., when j = 2 at the point indicated by /* End of outer loop */) ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "{1, 2, 3, 4, 5, 6}",
+      "B": "{1, 2, 3, 5, 4, 6}",
+      "C": "{1, 2, 3, 6, 5, 4}",
+      "D": "{1, 3, 2, 4, 5, 6}",
+      "E": "{1, 2, 3, 4, 5, 6}"
     },
     "answer": "B",
     "answers": [
@@ -1219,7 +1219,7 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "Questions 27-28 refer to the following information. Consider the following sort method. This method correctly sorts the elements of array data into increasing order. The code shown consists of 18 lines Line 1: public static void sort ( int [ ] data ) Lin e 2: { Line 3: for ( int j = zero ; j less t han da ta dot length - 1 ; j + + ) Line 4: { Line 5 : int m = j ; Line 6: for ( int k = j + 1 ; k less than data dot length ; k + + ) Line 7: { Line 8: if ( data [ k ] less than data [ m ] ) / * Compare values * / Line 9: { Line 10: m = k ; Line 11: } Line 12: } Line 13: int temp = data [ m ] ; / * Assign to temp * / Line 14: data [ m ] = data [ j ] ; Line 15: data [ j ] = temp ; Line 16: / * End of outer loop * / Line 17: } Line 18: }",
+    "group_context": "Questions27-28 refer to the following information. Consider the following sort method. This method correctly sorts the elements of array data into increasing order. public static void sort(int[] data) Lin e 2:{for(int j = 0; j less t han da ta.length - 1; j ++){int m = j; for(int k = j + 1; k < data.length; k ++){if(data[k] < data[m]) /* Compare values */{m = k;}} int temp = data[m]; /* Assign to temp */ data[m] = data[j]; data[j] = temp; /* End of outer loop */}}",
     "rubric_image_paths": []
   },
   {
@@ -1231,13 +1231,13 @@
     "source_set": "released",
     "question_number": 28,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Assume that sort is called with the array{1, 2, 3, 4, 5, 6}. How many * will the expression\nindicated by /* Compare values */ and the statement indicated by /* Assign to temp */ execute? Compare values\nAssign to temp",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "15 0",
+      "B": "15 5",
+      "C": "15 6",
+      "D": "21 5",
+      "E": "21 6"
     },
     "answer": "B",
     "answers": [
@@ -1272,7 +1272,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 27-28 refer to the following information. Consider the following sort method. This method correctly sorts the elements of array data into increasing order. The code shown consists of 18 lines Line 1: public static void sort ( int [ ] data ) Lin e 2: { Line 3: for ( int j = zero ; j less t han da ta dot length - 1 ; j + + ) Line 4: { Line 5 : int m = j ; Line 6: for ( int k = j + 1 ; k less than data dot length ; k + + ) Line 7: { Line 8: if ( data [ k ] less than data [ m ] ) / * Compare values * / Line 9: { Line 10: m = k ; Line 11: } Line 12: } Line 13: int temp = data [ m ] ; / * Assign to temp * / Line 14: data [ m ] = data [ j ] ; Line 15: data [ j ] = temp ; Line 16: / * End of outer loop * / Line 17: } Line 18: }",
+    "group_context": "Questions27-28 refer to the following information. Consider the following sort method. This method correctly sorts the elements of array data into increasing order. public static void sort(int[] data) Lin e 2:{for(int j = 0; j less t han da ta.length - 1; j ++){int m = j; for(int k = j + 1; k < data.length; k ++){if(data[k] < data[m]) /* Compare values */{m = k;}} int temp = data[m]; /* Assign to temp */ data[m] = data[j]; data[j] = temp; /* End of outer loop */}}",
     "rubric_image_paths": []
   },
   {
@@ -1284,13 +1284,13 @@
     "source_set": "released",
     "question_number": 29,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following recursive method. /* *\nPrec\nondition : num greate\nr th\nan or equal to 0 */ public static int what(int num){if,(num < 10){return 1;} else{return 1 + what(num / 10);}} Assume that int val has been declared and initialized with a value that satisfies the precondition of the\nmethod. Which of the following best describes the value returned by the call what(val) ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "The number of digits in the decimal representation of val is returned.",
+      "B": "The sum of the digits in the decimal representation of val is returned.",
+      "C": "Nothing is returned. A run-time error occurs because of infinite recursion.",
+      "D": "The value 1 is returned.",
+      "E": "The value val / 10 is returned."
     },
     "answer": "A",
     "answers": [
@@ -1329,13 +1329,13 @@
     "source_set": "released",
     "question_number": 30,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "The price per box of ink pens advertised in an office supply catalog is based on the number of boxes ordered.\n\n| Number of Boxes | Price per Box |\n|---|---:|\n| 1 up to but not including 5 | $5.00 |\n| 5 up to but not including 10 | $3.00 |\n| 10 or more | $1.50 |\n\nThe following incomplete method is intended to return the total cost of an order based on the value of the parameter `numBoxes`.\n\n```java\n/** Precondition: numBoxes > 0 */\npublic static double getCost(int numBoxes)\n{\n  double totalCost = 0.0;\n\n  /* missing code */\n\n  return totalCost;\n}\n```\n\nWhich of the following code segments can be used to replace `/* missing code */` so that method `getCost` will work as intended?\n\nI.\n```java\nif (numBoxes >= 10)\n{\n  totalCost = numBoxes * 1.50;\n}\nif (numBoxes >= 5)\n{\n  totalCost = numBoxes * 3.00;\n}\nif (numBoxes > 0)\n{\n  totalCost = numBoxes * 5.00;\n}\n```\n\nII.\n```java\nif (numBoxes >= 10)\n{\n  totalCost = numBoxes * 1.50;\n}\nelse if (numBoxes >= 5)\n{\n  totalCost = numBoxes * 3.00;\n}\nelse\n{\n  totalCost = numBoxes * 5.00;\n}\n```\n\nIII.\n```java\nif (numBoxes > 0)\n{\n  totalCost = numBoxes * 5.00;\n}\nelse if (numBoxes >= 5)\n{\n  totalCost = numBoxes * 3.00;\n}\nelse if (numBoxes >= 10)\n{\n  totalCost = numBoxes * 1.50;\n}\n```",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "III only",
+      "D": "I and II",
+      "E": "II and III"
     },
     "answer": "B",
     "answers": [
@@ -1344,7 +1344,8 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/computer-science-a/2015/2015_q30_prompt.png"
+      "images/ap/computer-science-a/2015/2015_q30_prompt.png",
+      "images/ap/computer-science-a/2015/2015_q30_prompt_p40.png"
     ],
     "primary_unit": "U5",
     "unit": "U5",
@@ -1374,13 +1375,13 @@
     "source_set": "released",
     "question_number": 31,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment.\n\n```java\nString[][] board = new String[5][5];\n\nfor (int row = 0; row < 5; row++)\n{\n  for (int col = 0; col < 5; col++)\n  {\n    board[row][col] = \"O\";\n  }\n}\n\nfor (int val = 0; val < 5; val++)\n{\n  if (val % 2 == 1)\n  {\n    int row = val;\n    int col = 0;\n    while (col < 5 && row >= 0)\n    {\n      board[row][col] = \"X\";\n      col++;\n      row--;\n    }\n  }\n}\n```\n\nWhich of the following represents `board` after this code segment is executed?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Row 0: X, O, X, O, X; Row 1: O, X, O, X, O; Row 2: X, O, X, O, X; Row 3: O, X, O, X, O; Row 4: X, O, X, O, X",
+      "B": "Row 0: O, X, O, X, O; Row 1: X, O, X, O, X; Row 2: O, X, O, X, O; Row 3: X, O, X, O, X; Row 4: O, X, O, X, O",
+      "C": "Row 0: X, O, O, O, X; Row 1: O, X, O, X, O; Row 2: O, O, X, O, O; Row 3: O, X, O, X, O; Row 4: X, O, O, O, X",
+      "D": "Row 0: O, X, O, O, O; Row 1: O, O, X, O, O; Row 2: X, O, O, X, O; Row 3: O, X, O, O, X; Row 4: O, O, X, O, O",
+      "E": "Row 0: O, X, O, X, O; Row 1: X, O, X, O, O; Row 2: O, X, O, O, O; Row 3: X, O, O, O, O; Row 4: O, O, O, O, O"
     },
     "answer": "E",
     "answers": [
@@ -1389,7 +1390,8 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/computer-science-a/2015/2015_q31_prompt.png"
+      "images/ap/computer-science-a/2015/2015_q31_prompt.png",
+      "images/ap/computer-science-a/2015/2015_q31_prompt_p42.png"
     ],
     "primary_unit": "U8",
     "unit": "U8",
@@ -1419,13 +1421,13 @@
     "source_set": "released",
     "question_number": 32,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following class declaration.\n\n```java\npublic class StudentInfo\n{\n  private String major;\n  private int age;\n\n  public String getMajor()\n  {  return major;  }\n\n  public int getAge()\n  {  return age;  }\n\n  // There may be instance variables, constructors, and methods that are not shown.\n}\n```\n\nThe following instance variable and method appear in another class.\n\n```java\nprivate List<StudentInfo> students;\n\n/** @return the average age of students with the given major;\n *          -1.0 if no such students exist\n */\npublic double averageAgeInMajor(String theMajor)\n{\n  double sum = 0.0;\n  int count = 0;\n  for (StudentInfo k : students)\n  {\n    /* missing code */\n  }\n\n  if (count > 0)\n  {\n    return sum / count;\n  }\n  else\n  {\n    return -1.0;\n  }\n}\n```\n\nWhich of the following could be used to replace `/* missing code */` so that `averageAgeInMajor` will compile without error?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "`if (theMajor.equals(k.major)) { sum += k.age; count++; }`",
+      "B": "`if (theMajor.equals(k.getMajor())) { sum += k.getAge(); count++; }`",
+      "C": "`if (theMajor.equals(k.major)) { sum += k.getAge(); count++; }`",
+      "D": "`if (theMajor.equals(students[k].getMajor())) { sum += students[k].getAge(); count++; }`",
+      "E": "`if (theMajor.equals(getMajor(k))) { sum += getAge(k); count++; }`"
     },
     "answer": "B",
     "answers": [
@@ -1434,7 +1436,8 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/computer-science-a/2015/2015_q32_prompt.png"
+      "images/ap/computer-science-a/2015/2015_q32_prompt.png",
+      "images/ap/computer-science-a/2015/2015_q32_prompt_p44.png"
     ],
     "primary_unit": "U5",
     "unit": "U5",
@@ -1464,13 +1467,13 @@
     "source_set": "released",
     "question_number": 33,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Which of the following statements regarding interfaces is FALSE?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "All methods in an interface are public.",
+      "B": "An interface cannot be instantiated.",
+      "C": "An interface can declare an instance variable.",
+      "D": "A non-abstract class can implement an interface.",
+      "E": "An abstract class can implement an interface."
     },
     "answer": "C",
     "answers": [
@@ -1509,13 +1512,13 @@
     "source_set": "released",
     "question_number": 34,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the problem of finding the maximum value in an array of integers. The following code segments are proposed solutions to the problem. Assume that the variable `arr` has been defined as an array of `int` values and has been initialized with one or more values.\n\nI.\n```java\nint max = Integer.MIN_VALUE;\nfor (int value : arr)\n{\n  if (max < value)\n  {\n    max = value;\n  }\n}\n```\n\nII.\n```java\nint max = 0;\nboolean first = true;\nfor (int value : arr)\n{\n  if (first)\n  {\n    max = value;\n    first = false;\n  }\n  else if (max < value)\n  {\n    max = value;\n  }\n}\n```\n\nIII.\n```java\nint max = arr[0];\nfor (int k = 1; k < arr.length; k++)\n{\n  if (max < arr[k])\n  {\n    max = arr[k];\n  }\n}\n```\n\nWhich of the code segments will always correctly assign the maximum element of the array to the variable `max`?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "III only",
+      "D": "II and III only",
+      "E": "I, II, and III"
     },
     "answer": "E",
     "answers": [
@@ -1554,13 +1557,13 @@
     "source_set": "released",
     "question_number": 35,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following instance variable and method. Method words With Commas\nstring containing all the words in list Of Words separated by commas and enclosed in braces.\nFor example, if list Of\nWords contains[\"1\", \"2\", \"3\"], the string returned by the call\nwords With Commas() should be \"{1, 2, 3}\". s private List less th\nan symbol String greater\nt\nhan symbol list Of Words;\nLi\nn\ne 2: public String words With Commas(){Str\ning re\nsult = open quote{close quote; int size O\nf List = /* expression */; for(int k = 0; k < size Of List; k ++){result = result + list Of Words. get(k); if(/* condition */){result = result + \", space\";}} result = result + \"}\"; return result;}\nWhich of the following can be used to replace /* expression */ and /* condition */ so that\nwords With\nCommas will work as intended?\n/*, expression, * forward slashforward slash *, expression, */\n/*, condition, * forward slashforward slash *, condition, */",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "list Of Words.size,(), - 1 k, !=, 0",
+      "B": "list Of Words.size,() k, !=, 0",
+      "C": "list Of Words.size,(), - 1 k, !=, size Of List - 1",
+      "D": "list Of Words.size,() k, !=, size Of List - 1",
+      "E": "result.length,() k, !=, 0"
     },
     "answer": "D",
     "answers": [
@@ -1599,13 +1602,13 @@
     "source_set": "released",
     "question_number": 36,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. Li\nne 1: int[] values ={1, 2, 3, 4, 5, 8, 8, 8}; int target = 8; What value is returned by the call binary Search(values, target) ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "-1",
+      "B": "3",
+      "C": "5",
+      "D": "6",
+      "E": "8"
     },
     "answer": "C",
     "answers": [
@@ -1616,14 +1619,14 @@
     "image_paths": [
       "images/ap/computer-science-a/2015/2015_q36_prompt.png"
     ],
-    "primary_unit": "U5",
-    "unit": "U5",
-    "unit_name": "Writing Classes",
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U5",
+      "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.6,
       "evidence": "Keyword classification from CSA prompt/code.",
@@ -1640,7 +1643,7 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "Questions 36-37 refer to the following information. Consider the following binary Search, all one word and capital S – henceforth referred to as binary Search. method. The method correctly performs a binary search. The code shown consists of 23 lines Line 1: / * * Precondition colon data is sorted i n increasing orde r * / Lin e 2: public static int bina ry Search ( int [ ] data comma int target ) Line 3: { Line 4: int start = zero ; Line 5: int end = data dot length - 1 ; Line 6: while ( start less than or equal to end ) Line 7: { Line 8: int mid = ( start + end ) / 2 ; / * Calculate midpoint * / Line 9: if ( target less than data [ mid ] ) Line 10: { Line 11: end = mid - 1 ; Line 12: } Line 13: else if ( target greater than data [ mid ] ) Line 14: { Line 15: start = mid + 1 ; Line 16: } Line 17: else Line 18: { Line 19: return mid, ; Line 20: } Line 21: } Line 22: return negative 1 ; Line 23: }",
+    "group_context": "Questions36-37 refer to the following information. Consider the following binary Search method. The method correctly performs a binary search. /* * Precondition : data is sorted i n increasing orde r */ Lin e 2: public static int bina ry Search(int[] data, int target){int start = 0; int end = data. length - 1; while(start <= end){int mid =(start + end) / 2; /* Calculate midpoint */ if(target < data[mid]){end = mid - 1;} else if(target > data[mid]){start = mid + 1;} else{return mid,;}} return -1;}",
     "rubric_image_paths": []
   },
   {
@@ -1652,13 +1655,13 @@
     "source_set": "released",
     "question_number": 37,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Suppose the binary Search method is called with an array containing 2,000 elements sorted in increasing\norder. What is the maximum number of * that the statement indicated by /* Calculate midpoint */\ncould execute?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "2,000",
+      "B": "1,000",
+      "C": "20",
+      "D": "11",
+      "E": "1"
     },
     "answer": "D",
     "answers": [
@@ -1693,7 +1696,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 36-37 refer to the following information. Consider the following binary Search, all one word and capital S – henceforth referred to as binary Search. method. The method correctly performs a binary search. The code shown consists of 23 lines Line 1: / * * Precondition colon data is sorted i n increasing orde r * / Lin e 2: public static int bina ry Search ( int [ ] data comma int target ) Line 3: { Line 4: int start = zero ; Line 5: int end = data dot length - 1 ; Line 6: while ( start less than or equal to end ) Line 7: { Line 8: int mid = ( start + end ) / 2 ; / * Calculate midpoint * / Line 9: if ( target less than data [ mid ] ) Line 10: { Line 11: end = mid - 1 ; Line 12: } Line 13: else if ( target greater than data [ mid ] ) Line 14: { Line 15: start = mid + 1 ; Line 16: } Line 17: else Line 18: { Line 19: return mid, ; Line 20: } Line 21: } Line 22: return negative 1 ; Line 23: }",
+    "group_context": "Questions36-37 refer to the following information. Consider the following binary Search method. The method correctly performs a binary search. /* * Precondition : data is sorted i n increasing orde r */ Lin e 2: public static int bina ry Search(int[] data, int target){int start = 0; int end = data. length - 1; while(start <= end){int mid =(start + end) / 2; /* Calculate midpoint */ if(target < data[mid]){end = mid - 1;} else if(target > data[mid]){start = mid + 1;} else{return mid,;}} return -1;}",
     "rubric_image_paths": []
   },
   {
@@ -1705,13 +1708,13 @@
     "source_set": "released",
     "question_number": 38,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following incomplete method that is intended to return a string formed by concatenating elements from the parameter `words`. The elements to be concatenated start with `startIndex` and continue through the last element of `words` and should appear in reverse order in the resulting string.\n\n```java\n/** Precondition: words.length > 0;\n *                startIndex >= 0\n */\npublic static String concatWords(String[] words, int startIndex)\n{\n  String result = \"\";\n\n  /* missing code */\n\n  return result;\n}\n```\n\nFor example, the following code segment uses a call to the `concatWords` method.\n\n```java\nString[] things = {\"Bear\", \"Apple\", \"Gorilla\", \"House\", \"Car\"};\nSystem.out.println(concatWords(things, 2));\n```\n\nWhen the code segment is executed, the string `\"CarHouseGorilla\"` is printed.\n\nThe following three code segments have been proposed as replacements for `/* missing code */`.\n\nI.\n```java\nfor (int k = startIndex; k < words.length; k++)\n{\n  result += words[k] + words[words.length - k - 1];\n}\n```\n\nII.\n```java\nint k = words.length - 1;\nwhile (k >= startIndex)\n{\n  result += words[k];\n  k--;\n}\n```\n\nIII.\n```java\nString[] temp = new String[words.length];\nfor (int k = 0; k <= words.length / 2; k++)\n{\n  temp[k] = words[words.length - k - 1];\n  temp[words.length - k - 1] = words[k];\n}\nfor (int k = 0; k < temp.length - startIndex; k++)\n{\n  result += temp[k];\n}\n```\n\nWhich of these code segments can be used to replace `/* missing code */` so that `concatWords` will work as intended?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "III only",
+      "D": "I and II",
+      "E": "II and III"
     },
     "answer": "E",
     "answers": [
@@ -1720,16 +1723,17 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [
-      "images/ap/computer-science-a/2015/2015_q38_prompt.png"
+      "images/ap/computer-science-a/2015/2015_q38_prompt.png",
+      "images/ap/computer-science-a/2015/2015_q38_prompt_p50.png"
     ],
-    "primary_unit": "U5",
-    "unit": "U5",
-    "unit_name": "Writing Classes",
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U5",
+      "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.6,
       "evidence": "Keyword classification from CSA prompt/code.",
@@ -1750,13 +1754,13 @@
     "source_set": "released",
     "question_number": 39,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. The method shown consists of 17 lines /* * Precondition : 0 l\nes\ns than num Va\nls –\nhenc\neforth refe\nrred to as num Vals, less tha\nn or equal to\nnums. len\ngth\n*/ public static\nint\nmystery(int[] nums, int v, int num Vals){int k = 0; if(v == nums[num Vals - 1]){k = 1;} if(num Vals == 1){return k;} else{return k + mystery(nums, v, num Vals - 1);}} Which of the following best describes what the call mystery(numbers, val, numbers.length)\ndoes? You may assume that variables numbers and val have been declared and initialized.",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Returns1 if the last element in numbers is equal to val; otherwise, returns 0",
+      "B": "Returns the indexOf the last element in numbers that is equal to val",
+      "C": "Returns the number of elements in numbers that are equal to val",
+      "D": "Returns the number of elements in numbers that are not equal to val",
+      "E": "Returns the maximum number of adjacent elements that are not equal to val"
     },
     "answer": "C",
     "answers": [
@@ -1767,14 +1771,14 @@
     "image_paths": [
       "images/ap/computer-science-a/2015/2015_q39_prompt.png"
     ],
-    "primary_unit": "U5",
-    "unit": "U5",
-    "unit_name": "Writing Classes",
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U5",
+      "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.6,
       "evidence": "Keyword classification from CSA prompt/code.",
@@ -1795,13 +1799,13 @@
     "source_set": "released",
     "question_number": 40,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. Li\ns\nt < symbol Str\ning > symb\nol students = new Array List < symbol String greater t\nhan symbol(); students. add(open qu\not\ne Alex close quote); students. add(\"Bob\"); students. add(\"Carl\"); for(int k = 0; k < students.size(); k ++){System.out.print(students. set(k, \"Alex\") + \"space space\");} System.out.println(); for(String s t r : students){System.out.print(s t r + \"space space\");} What is printed as a result of executing the code segment?Options A through D show 2 rows of text.",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Row 1: Alex space space Alex space space Alex space space Row 2: Alex space space Alex space space Alex space space",
+      "B": "Row 1: Alex spac e space Alex space space Alex space space Row 2: Alex space space Bob space space Carl space space",
+      "C": "Row 1: Alex spac e space Bob space space Carl space space Row 2: Alex space space Alex space space Alex space space",
+      "D": "Row 1: Alex spac e space Bob space space Carl space space Row 2: Alex space space Bob space space Carl space space",
+      "E": "Nothing is printed because the first print statement will cause a runtime exception to be thrown."
     },
     "answer": "C",
     "answers": [
@@ -1840,13 +1844,13 @@
     "source_set": "gridworld_practice",
     "question_number": 1,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. public static int mystery(int[] arr){int x = 0; for(int k = 0; k < arr.length; k = k + 2) x = x + arr[k]; return x;} Assume that the array nums has been declared and initialized as follows. int[] nums ={3, 6, 1, 0, 1, 4, 2}; What value will be returned as a result of the call mystery(nums) ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "5",
+      "B": "6",
+      "C": "7",
+      "D": "10",
+      "E": "17"
     },
     "answer": "C",
     "answers": [
@@ -1885,13 +1889,13 @@
     "source_set": "gridworld_practice",
     "question_number": 2,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "The following declaration appears in another class. SomeClass obj = new SomeClass(); Which of the following code segments will compile without error?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "int x = obj.getA();",
+      "B": "int x; obj.getA(x);",
+      "C": "int x = obj.myA;",
+      "D": "int x = SomeClass.getA();",
+      "E": "int x = getA(obj);"
     },
     "answer": "A",
     "answers": [
@@ -1926,7 +1930,7 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "Questions 2-3 refer to the following information. Consider the following partial class declaration. public class SomeClass { private int myA; private int myB; private int myC; // Constructor(s) not shown public int getA() { return myA; } public void setB(int value) { myB = value; } }",
+    "group_context": "Questions2-3 refer to the following information. Consider the following partial class declaration. public class SomeClass{private int myA; private int myB; private int myC; // Constructor(s) not shown public int getA(){return myA;} public void setB(int value){myB = value;}}",
     "rubric_image_paths": []
   },
   {
@@ -1938,13 +1942,13 @@
     "source_set": "gridworld_practice",
     "question_number": 3,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Which of the following changes to SomeClass will allow other classes to access but not modify the value\nof myC ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Make myC public.",
+      "B": "Include the method: public int getC(){return myC;}",
+      "C": "Include the method: private int getC(){return myC;}",
+      "D": "Include the method: public void getC(int x){x = myC;}",
+      "E": "Include the method: private void getC(int x){x = myC;}"
     },
     "answer": "B",
     "answers": [
@@ -1979,7 +1983,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 2-3 refer to the following information. Consider the following partial class declaration. public class SomeClass { private int myA; private int myB; private int myC; // Constructor(s) not shown public int getA() { return myA; } public void setB(int value) { myB = value; } }",
+    "group_context": "Questions2-3 refer to the following information. Consider the following partial class declaration. public class SomeClass{private int myA; private int myB; private int myC; // Constructor(s) not shown public int getA(){return myA;} public void setB(int value){myB = value;}}",
     "rubric_image_paths": []
   },
   {
@@ -1991,13 +1995,13 @@
     "source_set": "gridworld_practice",
     "question_number": 4,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. int x = 7;\nint y = 3; if((x < 10) &&(y < 0)) System.out.println(\"Value is: \" + x * y);\nelse System.out.println(\"Value is: \" + x / y); What is printed as a result of executing the code segment?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Value is: 21",
+      "B": "Value is: 2.3333333",
+      "C": "Value is: 2",
+      "D": "Value is: 0",
+      "E": "Value is: 1"
     },
     "answer": "C",
     "answers": [
@@ -2036,13 +2040,13 @@
     "source_set": "gridworld_practice",
     "question_number": 5,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. public ArrayList<Integer> mystery(int n){ArrayList<Integer> seq = new ArrayList<Integer>(); for(int k = 1; k <= n; k++) seq.add(new Integer(k * k + 3)); return seq;} Which of the following is printed as a result of executing the following statement?\nSystem.out.println(mystery(6));",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "[3, 4, 7, 12, 19, 28]",
+      "B": "[3, 4, 7, 12, 19, 28, 39]",
+      "C": "[4, 7, 12, 19, 28, 39]",
+      "D": "[39, 28, 19, 12, 7, 4]",
+      "E": "[39, 28, 19, 12, 7, 4, 3]"
     },
     "answer": "C",
     "answers": [
@@ -2081,13 +2085,13 @@
     "source_set": "gridworld_practice",
     "question_number": 6,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method that is intended to determine if the double values d1 and d2 are close\nenough to be considered equal. For example, given a tolerance of 0.001, the values 54.32271 and\n54.32294 would be considered equal. /** @return true if d1 and d2 are within the specified tolerance, * false otherwise */\npublic boolean almostEqual(double d1, double d2, double tolerance){/* missing code */} Which of the following should replace /* missing code */ so that almostEqual will work as\nintended?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "return(d1 - d2) <= tolerance;",
+      "B": "return((d1 + d2) / 2) <= tolerance;",
+      "C": "return(d1 - d2) >= tolerance;",
+      "D": "return((d1 + d2) / 2) >= tolerance;",
+      "E": "return Math.abs(d1 - d2) <= tolerance;"
     },
     "answer": "E",
     "answers": [
@@ -2126,13 +2130,13 @@
     "source_set": "gridworld_practice",
     "question_number": 7,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following class declaration. public class Person{private String myName; private int myYearOfBirth; public Person(String name, int yearOfBirth){myName = name; myYearOfBirth = yearOfBirth;} public String getName(){return myName;} public void setName(String name){myName = name;} // There may be instance variables, constructors, and methods that are not shown.} Assume that the following declaration has been made. Person student = new Person(\"Thomas\", 1995); Which of the following statements is the most appropriate for changing the name of student from\n\"Thomas\" to \"Tom\" ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "student = new Person(\"Tom\", 1995);",
+      "B": "student.myName = \"Tom\";",
+      "C": "student.getName(\"Tom\");",
+      "D": "student.setName(\"Tom\");",
+      "E": "Person.setName(\"Tom\");"
     },
     "answer": "D",
     "answers": [
@@ -2171,13 +2175,13 @@
     "source_set": "gridworld_practice",
     "question_number": 8,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following class declaration. public class Student{private String myName; private int myAge; public Student(){/* implementation not shown */} public Student(String name, int age){/* implementation not shown */} // No other constructors} Which of the following declarations will compile without error? I.\nStudent a = new Student(); II.\nStudent b = new Student(\"Juan\", 15); III.\nStudent c = new Student(\"Juan\", \"15\");",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "I and II only",
+      "D": "I and III only",
+      "E": "I, II, and III"
     },
     "answer": "C",
     "answers": [
@@ -2216,13 +2220,13 @@
     "source_set": "gridworld_practice",
     "question_number": 9,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method that is intended to return the sum of the elements in the array key. public static int sumArray(int[] key){int sum = 0; for(int i = 1; i <= key.length; i++){/* missing code */} return sum;} Which of the following statements should be used to replace /* missing code */ so that sumArray\nwill work as intended?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "sum = key[i];",
+      "B": "sum += key[i - 1];",
+      "C": "sum += key[i];",
+      "D": "sum += sum + key[i - 1];",
+      "E": "sum += sum + key[i];"
     },
     "answer": "B",
     "answers": [
@@ -2261,13 +2265,13 @@
     "source_set": "gridworld_practice",
     "question_number": 10,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "For which of the following test cases will the call seqSearchRec(5) always result in an error? I.\ndata contains only 1 element. II.\ndata does not contain the value 5. III.\ndata contains the value 5 multiple *.",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "III only",
+      "D": "I and II only",
+      "E": "I, II, and III"
     },
     "answer": "B",
     "answers": [
@@ -2302,7 +2306,7 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "Questions 10-11 refer to the following information. Consider the following instance variable and methods. You may assume that data has been initialized with length > 0. The methods are intended to return the index of an array element equal to target, or -1 if no such element exists. private int[] data; public int seqSearchRec(int target) { return seqSearchRecHelper(target, data.length - 1); } private int seqSearchRecHelper(int target, int last) { // Line 1 if (data[last] == target) return last; else return seqSearchRecHelper(target, last - 1); }",
+    "group_context": "Questions10-11 refer to the following information. Consider the following instance variable and methods. You may assume that data has been initialized with length > 0. The methods are intended to return the indexOf an array element equal to target, or -1 if no such element exists. private int[] data; public int seqSearchRec(int target){return seqSearchRecHelper(target, data.length - 1);} private int seqSearchRecHelper(int target, int last){// Line 1 if(data[last] == target) return last; else return seqSearchRecHelper(target, last - 1);}",
     "rubric_image_paths": []
   },
   {
@@ -2314,13 +2318,13 @@
     "source_set": "gridworld_practice",
     "question_number": 11,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Which of the following should be used to replace // Line 1 in seqSearchRecHelper so that\nseqSearchRec will work as intended?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "if(last <= 0) return -1;",
+      "B": "if(last < 0) return -1;",
+      "C": "if(last < data.length) return -1;",
+      "D": "while(last < data.length)",
+      "E": "while(last >= 0)"
     },
     "answer": "B",
     "answers": [
@@ -2355,7 +2359,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 10-11 refer to the following information. Consider the following instance variable and methods. You may assume that data has been initialized with length > 0. The methods are intended to return the index of an array element equal to target, or -1 if no such element exists. private int[] data; public int seqSearchRec(int target) { return seqSearchRecHelper(target, data.length - 1); } private int seqSearchRecHelper(int target, int last) { // Line 1 if (data[last] == target) return last; else return seqSearchRecHelper(target, last - 1); }",
+    "group_context": "Questions10-11 refer to the following information. Consider the following instance variable and methods. You may assume that data has been initialized with length > 0. The methods are intended to return the indexOf an array element equal to target, or -1 if no such element exists. private int[] data; public int seqSearchRec(int target){return seqSearchRecHelper(target, data.length - 1);} private int seqSearchRecHelper(int target, int last){// Line 1 if(data[last] == target) return last; else return seqSearchRecHelper(target, last - 1);}",
     "rubric_image_paths": []
   },
   {
@@ -2367,13 +2371,13 @@
     "source_set": "gridworld_practice",
     "question_number": 12,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. public String mystery(String input){String output = \"\"; for(int k = 1; k < input.length(); k = k + 2){output += input.substring(k, k + 1);} return output;} What is returned as a result of the call mystery(\"computer\") ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "\"computer\"",
+      "B": "\"cmue\"",
+      "C": "\"optr\"",
+      "D": "\"ompute\"",
+      "E": "Nothing is returned because an IndexOutOfBoundsException is thrown."
     },
     "answer": "C",
     "answers": [
@@ -2412,13 +2416,13 @@
     "source_set": "gridworld_practice",
     "question_number": 13,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. int[] arr ={7, 2, 5, 3, 0, 10};\nfor(int k = 0; k < arr.length - 1; k++){if(arr[k] > arr[k + 1]) System.out.print(k + \" \" + arr[k] + \" \");} What will be printed as a result of executing the code segment?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "0 2 2 3 3 0",
+      "B": "0 7 2 5 3 3",
+      "C": "0 7 2 5 5 10",
+      "D": "1 7 3 5 4 3",
+      "E": "7 2 5 3 3 0"
     },
     "answer": "B",
     "answers": [
@@ -2457,13 +2461,13 @@
     "source_set": "gridworld_practice",
     "question_number": 14,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following interface and class declarations. public interface Vehicle{/** @return the mileage traveled by this Vehicle */ double getMileage();} public class Fleet{private ArrayList<Vehicle> myVehicles; /** @return the mileage traveled by all vehicles in this Fleet */ public double getTotalMileage(){double sum = 0.0; for(Vehicle v : myVehicles){sum += /* expression */;} return sum;} // There may be instance variables, constructors, and methods that are not shown.} Which of the following can be used to replace /* expression */ so that getTotalMileage returns\nthe total of the miles traveled for all vehicles in the fleet?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "getMileage(v)",
+      "B": "myVehicles[v].getMileage()",
+      "C": "Vehicle.get(v).getMileage()",
+      "D": "myVehicles.get(v).getMileage()",
+      "E": "v.getMileage()"
     },
     "answer": "E",
     "answers": [
@@ -2502,13 +2506,13 @@
     "source_set": "gridworld_practice",
     "question_number": 15,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method, isSorted, which is intended to return true if an array of integers is\nsorted in nondecreasing order and to return false otherwise. /** @param data an array of integers * @return true if the values in the array appear in sorted(nondecreasing) order */\npublic static boolean isSorted(int[] data){/* missing code */} Which of the following can be used to replace /* missing code */ so that isSorted will work\nas intended? I.\nfor(int k = 1; k < data.length; k++){if(data[k - 1] > data[k]) return false;}\nreturn true; II.\nfor(int k = 0; k < data.length; k++){if(data[k] > data[k + 1]) return false;}\nreturn true; III.\nfor(int k = 0; k < data.length - 1; k++){if(data[k] > data[k + 1]) return false; else return true;}\nreturn true;",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "III only",
+      "D": "I and II only",
+      "E": "I and III only"
     },
     "answer": "A",
     "answers": [
@@ -2547,13 +2551,13 @@
     "source_set": "gridworld_practice",
     "question_number": 16,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following incomplete method that is intended to return an array that contains the contents of its first\narray parameter followed by the contents of its second array parameter. public static int[] append(int[] a1, int[] a2){int[] result = new int[a1.length + a2.length]; for(int j = 0; j < a1.length; j++) result[j] = a1[j]; for(int k = 0; k < a2.length; k++) result[/* index */] = a2[k]; return result;} Which of the following expressions can be used to replace /* index */ so that append will work as\nintended?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "j",
+      "B": "k",
+      "C": "k + a1.length - 1",
+      "D": "k + a1.length",
+      "E": "k + a1.length + 1"
     },
     "answer": "D",
     "answers": [
@@ -2592,13 +2596,13 @@
     "source_set": "gridworld_practice",
     "question_number": 17,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. int[] arr ={1, 2, 3, 4, 5, 6, 7}; for(int k = 3; k < arr.length - 1; k++) arr[k] = arr[k + 1]; Which of the following represents the contents of arr as a result of executing the code segment?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "{1, 2, 3, 4, 5, 6, 7}",
+      "B": "{1, 2, 3, 5, 6, 7}",
+      "C": "{1, 2, 3, 5, 6, 7, 7}",
+      "D": "{1, 2, 3, 5, 6, 7, 8}",
+      "E": "{2, 3, 4, 5, 6, 7, 7}"
     },
     "answer": "C",
     "answers": [
@@ -2637,13 +2641,13 @@
     "source_set": "gridworld_practice",
     "question_number": 18,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Assume that myList is an ArrayList that has been correctly constructed and populated with objects.\nWhich of the following expressions produces a valid random index for myList ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "(int)(Math.random() * myList.size()) - 1",
+      "B": "(int)(Math.random() * myList.size())",
+      "C": "(int)(Math.random() * myList.size()) + 1",
+      "D": "(int)(Math.random() *(myList.size() + 1))",
+      "E": "Math.random(myList.size())"
     },
     "answer": "B",
     "answers": [
@@ -2682,13 +2686,13 @@
     "source_set": "gridworld_practice",
     "question_number": 19,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Assume that a and b have been defined and initialized as int values. The expression !(!(a != b) &&(b > 7)) is equivalent to which of the following?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "(a != b) ||(b < 7)",
+      "B": "(a != b) ||(b <= 7)",
+      "C": "(a == b) ||(b <= 7)",
+      "D": "(a != b) &&(b <= 7)",
+      "E": "(a == b) &&(b > 7)"
     },
     "answer": "B",
     "answers": [
@@ -2727,13 +2731,13 @@
     "source_set": "gridworld_practice",
     "question_number": 20,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. public static void arrayMethod(int nums[]){int j = 0; int k = nums.length - 1; while(j < k){int x = nums[j]; nums[j] = nums[k]; nums[k] = x; j++; k--;}} Which of the following describes what the method arrayMethod() does to the array nums?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "The array nums is unchanged.",
+      "B": "The first value in nums is copied to every location in the array.",
+      "C": "The last value in nums is copied to every location in the array.",
+      "D": "The method generates an ArrayIndexOutOfBoundsException.",
+      "E": "The contents of the array nums are reversed."
     },
     "answer": "E",
     "answers": [
@@ -2772,13 +2776,13 @@
     "source_set": "gridworld_practice",
     "question_number": 21,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the design of a Grasshopper class that extends Bug. When asked to move, a Grasshopper\nmoves to a randomly chosen empty adjacent location that is within the grid. If there is no empty adjacent\nlocation that is within the grid, the Grasshopper does not move, but turns 45 degrees to the right without\nchanging its location. Which method(s) of the Bug class should the Grasshopper class override so that a Grasshopper can\nbehave as described above? I.\nact() II.\nmove() III.\ncanMove()",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "I and II only",
+      "D": "II and III only",
+      "E": "I, II, and III"
     },
     "answer": "D",
     "answers": [
@@ -2817,13 +2821,13 @@
     "source_set": "gridworld_practice",
     "question_number": 22,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Assume that gus has been defined and initialized as a Bug object in a class that contains the following code\nsegment. int numTurnsMade = 0;\nfor(int k = 1; k <= 100; k++){int dir = gus.getDirection(); int dirTurn = dir + Location.HALF_RIGHT; gus.act(); if(/* expression */) numTurnsMade++;} Which of the following could be used to replace /* expression */ so that the variable\nnumTurnsMade accurately stores the number of * that gus turns 45 degrees to the right?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "dir == dirTurn",
+      "B": "dir == gus.getDirection()",
+      "C": "dirTurn == Location.HALF_RIGHT",
+      "D": "dirTurn == gus.getDirection()",
+      "E": "Location.HALF_RIGHT == gus.getDirection()"
     },
     "answer": "D",
     "answers": [
@@ -2862,13 +2866,13 @@
     "source_set": "gridworld_practice",
     "question_number": 23,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method that is intended to return an ArrayList of all the locations in grd that\ncontain actors facing in direction dir. public ArrayList<Location> findLocsFacingDir(int dir, Grid<Actor> grd){ArrayList<Location> desiredLocs = new ArrayList<Location>(); for(Location loc : grd.getOccupiedLocations()){if(/* expression */ == dir) desiredLocs.add(loc);} return desiredLocs;} Which of the following can be used to replace /* expression */ so that findLocsFacingDir will\nwork as intended?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "loc.getDirection()",
+      "B": "getDirection(loc)",
+      "C": "((Actor) loc).getDirection()",
+      "D": "grd(loc).getDirection()",
+      "E": "grd.get(loc).getDirection()"
     },
     "answer": "E",
     "answers": [
@@ -2907,13 +2911,13 @@
     "source_set": "gridworld_practice",
     "question_number": 24,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "A ColorChangingCritter behaves like a ChameleonCritter but does not turn when it moves.\nA partial declaration for the ColorChangingCritter class is as follows. public class ColorChangingCritter extends ChameleonCritter{public void makeMove(Location loc){/* missing code */}} Which of the following replacements for /* missing code */ will correctly implement the desired\nbehavior? I.\nmoveTo(loc); II.\nsuper.super.makeMove(loc); III.\nint dir = getDirection();\nsuper.makeMove(loc);\nsetDirection(dir);",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "III only",
+      "C": "I and II only",
+      "D": "I and III only",
+      "E": "I, II, and III"
     },
     "answer": "D",
     "answers": [
@@ -2952,13 +2956,13 @@
     "source_set": "gridworld_practice",
     "question_number": 25,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "A MunchingCritter acts by selecting 1 adjacent actor of any type, eating it(removing it from the grid),\nand moving to occupy its location. If there is no adjacent actor, the MunchingCritter moves like a normal\ncritter. Consider the following 3 implementations of MunchingCritter. Implementation I\npublic class MunchingCritter extends Critter{private Location eatLoc; // Remember location of critter that was eaten public void processActors(ArrayList<Actor> actors){if(actors.size() == 0) eatLoc = null; else{Actor selected = actors.get(0); eatLoc = selected.getLocation(); selected.removeSelfFromGrid();}} public Location selectMoveLocation(ArrayList<Location> locs){if(eatLoc == null) return super.selectMoveLocation(locs); else return eatLoc;}} Implementation II\npublic class MunchingCritter extends Critter{private Location eatLoc; // Remember location of critter that was eaten public void processActors(ArrayList<Actor> actors){if(actors.size() == 0) eatLoc = null; else{Actor selected = actors.get(0); eatLoc = selected.getLocation(); selected.removeSelfFromGrid();}} public void makeMove(Location loc){if(eatLoc == null) moveTo(loc); else moveTo(eatLoc);}} Implementation III\npublic class MunchingCritter extends Critter{private boolean hasEaten; // Remember if this critter ate something during this step public void processActors(ArrayList<Actor> actors){if(actors.size() == 0) hasEaten = false; else{Actor selected = actors.get(0); Location moveLoc = selected.getLocation(); selected.removeSelfFromGrid(); moveTo(moveLoc); hasEaten = true;}} public void makeMove(Location loc){if(!hasEaten) moveTo(loc);}} Which of the implementations would be considered to be well designed, in that they satisfy the postconditions in\nCritter.java ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "III only",
+      "D": "I and II only",
+      "E": "I, II, and III"
     },
     "answer": "A",
     "answers": [
@@ -2997,13 +3001,13 @@
     "source_set": "gridworld_practice",
     "question_number": 26,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Assume that the array arr has been defined and initialized as follows. int[] arr = /* initial values for the array */; Which of the following will correctly print all of the odd integers contained in arr but none of the even\nintegers contained in arr ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "for(int x : arr) if(x % 2 == 1) System.out.println(x);",
+      "B": "for(int k = 1; k < arr.length; k++) if(arr[k] % 2 == 1) System.out.println(arr[k]);",
+      "C": "for(int x : arr) if(x % 2 == 1) System.out.println(arr[x]);",
+      "D": "for(int k = 0; k < arr.length; k++) if(arr[k] % 2 == 1) System.out.println(k);",
+      "E": "for(int x : arr) if(arr[x] % 2 == 1) System.out.println(arr[x]);"
     },
     "answer": "A",
     "answers": [
@@ -3042,13 +3046,13 @@
     "source_set": "gridworld_practice",
     "question_number": 27,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "What value is returned as a result of the call mystery(6) ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "1",
+      "B": "5",
+      "C": "6",
+      "D": "8",
+      "E": "13"
     },
     "answer": "D",
     "answers": [
@@ -3087,13 +3091,13 @@
     "source_set": "gridworld_practice",
     "question_number": 28,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Which of the following is true of method mystery ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "x will sometimes be 1 at // Point B.",
+      "B": "x will never be 1 at // Point C.",
+      "C": "n will never be > 2 at // Point A.",
+      "D": "n will sometimes be > 2 at // Point C.",
+      "E": "n will always be > 2 at // Point B."
     },
     "answer": "E",
     "answers": [
@@ -3132,13 +3136,13 @@
     "source_set": "gridworld_practice",
     "question_number": 29,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. for(int k = 1; k <= 100; k++) if((k % 4) == 0) System.out.println(k); Which of the following code segments will produce the same output as the code segment above?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "for(int k = 1; k <= 25; k++) System.out.println(k);",
+      "B": "for(int k = 1; k <= 100; k = k + 4) System.out.println(k);",
+      "C": "for(int k = 1; k <= 100; k++) System.out.println(k % 4);",
+      "D": "for(int k = 4; k <= 25; k = 4 * k) System.out.println(k);",
+      "E": "for(int k = 4; k <= 100; k = k + 4) System.out.println(k);"
     },
     "answer": "E",
     "answers": [
@@ -3177,13 +3181,13 @@
     "source_set": "gridworld_practice",
     "question_number": 30,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. public static String scramble(String word, int howFar){return word.substring(howFar + 1, word.length()) + word.substring(0, howFar);} What value is returned as a result of the call scramble(\"compiler\", 3)?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "\"compiler\"",
+      "B": "\"pilercom\"",
+      "C": "\"ilercom\"",
+      "D": "\"ilercomp\"",
+      "E": "No value is returned because an IndexOutOfBoundsException will be thrown."
     },
     "answer": "C",
     "answers": [
@@ -3222,13 +3226,13 @@
     "source_set": "gridworld_practice",
     "question_number": 31,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. public void mystery(int[] data){for(int k = 0; k < data.length - 1; k++) data[k + 1] = data[k] + data[k + 1];} The following code segment appears in another method in the same class. int[] values ={5, 2, 1, 3, 8};\nmystery(values);\nfor(int v : values) System.out.print(v + \" \");\nSystem.out.println(); What is printed as a result of executing the code segment?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "5 2 1 3 8",
+      "B": "5 7 3 4 11",
+      "C": "5 7 8 11 19",
+      "D": "7 3 4 11 8",
+      "E": "Nothing is printed because an ArrayIndexOutOfBoundsException is thrown during the execution of method mystery."
     },
     "answer": "C",
     "answers": [
@@ -3267,13 +3271,13 @@
     "source_set": "gridworld_practice",
     "question_number": 32,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. public int compute(int n, int k){int answer = 1; for(int i = 1; i <= k; i++) answer *= n; return answer;} Which of the following represents the value returned as a result of the call compute(n, k) ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "* n k",
+      "B": "! n",
+      "C": "k n",
+      "D": "k 2",
+      "E": "n k"
     },
     "answer": "C",
     "answers": [
@@ -3312,13 +3316,13 @@
     "source_set": "gridworld_practice",
     "question_number": 33,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. int sum = 0;\nint k = 1;\nwhile(sum < 12 || k < 4) sum += k; System.out.println(sum); What is printed as a result of executing the code segment?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "6",
+      "B": "10",
+      "C": "12",
+      "D": "15",
+      "E": "Nothing is printed due to an infinite loop."
     },
     "answer": "E",
     "answers": [
@@ -3357,13 +3361,13 @@
     "source_set": "gridworld_practice",
     "question_number": 34,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following class declarations. public class Point{private double x; // x-coordinate private double y; // y-coordinate public Point(){x = 0; y = 0;} public Point(double a, double b){x = a; y = b;} // There may be instance variables, constructors, and methods that are not shown.} public class Circle{private Point center; private double radius; /** Constructs a circle where(a, b) is the center and r is the radius. */ public Circle(double a, double b, double r){/* missing code */}} Which of the following replacements for /* missing code */ will correctly implement the Circle\nconstructor? I.\ncenter = new Point();\nradius = r; II.\ncenter = new Point(a, b);\nradius = r; III.\ncenter = new Point();\ncenter.x = a;\ncenter.y = b;\nradius = r;",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "III only",
+      "D": "II and III only",
+      "E": "I, II, and III"
     },
     "answer": "B",
     "answers": [
@@ -3402,13 +3406,13 @@
     "source_set": "gridworld_practice",
     "question_number": 35,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. int num = 2574;\nint result = 0; while(num > 0){result = result * 10 + num % 10; num /= 10;}\nSystem.out.println(result); What is printed as a result of executing the code segment?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "2",
+      "B": "4",
+      "C": "18",
+      "D": "2574",
+      "E": "4752"
     },
     "answer": "E",
     "answers": [
@@ -3447,13 +3451,13 @@
     "source_set": "gridworld_practice",
     "question_number": 36,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. public void test(int x){int y; if(x % 2 == 0) y = 3; else if(x > 9) y = 5; else y = 1; System.out.println(\"y = \" + y);} Which of the following test data sets would test each possible output for the method?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "8, 9, 12",
+      "B": "7, 9, 11",
+      "C": "8, 9, 11",
+      "D": "8, 11, 13",
+      "E": "7, 9, 10"
     },
     "answer": "C",
     "answers": [
@@ -3492,13 +3496,13 @@
     "source_set": "gridworld_practice",
     "question_number": 37,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. int x = 1;\nwhile(/* missing code */){System.out.print(x + \" \"); x = x + 2;} Consider the following possible replacements for /* missing code */. I.\nx < 6 II.\nx != 6 III.\nx < 7 Which of the proposed replacements for /* missing code */ will cause the code segment to print only\nthe values1 3 5 ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "I and II only",
+      "D": "I and III only",
+      "E": "I, II, and III"
     },
     "answer": "D",
     "answers": [
@@ -3537,13 +3541,13 @@
     "source_set": "gridworld_practice",
     "question_number": 38,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Assume that x and y have been declared and initialized with int values. Consider the following Java\nexpression.(y > 10000) ||(x > 1000 && x < 1500) Which of the following is equivalent to the expression given above?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "(y > 10000 || x > 1000) &&(y > 10000 || x < 1500)",
+      "B": "(y > 10000 || x > 1000) ||(y > 10000 || x < 1500)",
+      "C": "(y > 10000) &&(x > 1000 || x < 1500)",
+      "D": "(y > 10000 && x > 1000) ||(y > 10000 && x < 1500)",
+      "E": "(y > 10000 && x > 1000) &&(y > 10000 && x < 1500)"
     },
     "answer": "A",
     "answers": [
@@ -3582,13 +3586,13 @@
     "source_set": "gridworld_practice",
     "question_number": 39,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following recursive method. public int recur(int n){if(n <= 10) return n * 2; else return recur(recur(n / 3));} What value is returned as a result of the call recur(27) ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "8",
+      "B": "9",
+      "C": "12",
+      "D": "16",
+      "E": "18"
     },
     "answer": "D",
     "answers": [
@@ -3627,13 +3631,13 @@
     "source_set": "gridworld_practice",
     "question_number": 40,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following recursive method. public static void whatsItDo(String str){int len = str.length(); if(len > 1){String temp = str.substring(0, len – 1); whatsItDo(temp); System.out.println(temp);}} What is printed as a result of the call whatsItDo(\"WATCH\") ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "WATC WAT WA W",
+      "B": "WATCH WATC WAT WA",
+      "C": "W WA WAT WATC",
+      "D": "W WA WAT WATC WATCH",
+      "E": "WATCH WATC WAT WA W WA WAT WATC WATCH"
     },
     "answer": "C",
     "answers": [
@@ -3672,13 +3676,13 @@
     "source_set": "college_board_sample",
     "question_number": 1,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. What is printed as a result of executing the code segment?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "4 16",
+      "B": "4 10 16",
+      "C": "0 6 12 18",
+      "D": "1 4 7 10 13 16 19",
+      "E": "0 2 4 6 8 10 12 14 16 18"
     },
     "answer": "B",
     "answers": [
@@ -3717,13 +3721,13 @@
     "source_set": "college_board_sample",
     "question_number": 2,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. What is printed as a result of executing the code segment?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "[dog, fish, cat]",
+      "B": "[dog, fish, lizard]",
+      "C": "[dog, lizard, fish]",
+      "D": "[fish, dog, cat]",
+      "E": "The code throws an ArrayIndexOutOfBoundsException exception. 20"
     },
     "answer": "A",
     "answers": [
@@ -3762,13 +3766,13 @@
     "source_set": "college_board_sample",
     "question_number": 3,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. Assume that a List<Integer> values initially contains the following\nInteger values.[0, 0, 4, 2, 5, 0, 3, 0] What will values contain as a result of executing mystery(values) ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "[0, 0, 4, 2, 5, 0, 3, 0]",
+      "B": "[4, 2, 5, 3]",
+      "C": "[0, 0, 0, 0, 4, 2, 5, 3]",
+      "D": "[0, 4, 2, 5, 3]",
+      "E": "The code throws an ArrayIndexOutOfBoundsException exception. 21"
     },
     "answer": "D",
     "answers": [
@@ -3807,13 +3811,13 @@
     "source_set": "college_board_sample",
     "question_number": 4,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "At a certain high school students receive letter grades based on the following\nscale.\nInteger Score\nLetter Grade\n93 or above\nA\nFrom 84 to 92 inclusive\nB\nFrom 75 to 83 inclusive\nC\nBelow 75\nF Which of the following code segments will assign the correct string to grade\nfor a given integer score ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "II only",
+      "B": "III only",
+      "C": "I and II only",
+      "D": "I and III only",
+      "E": "I, II, and III 22"
     },
     "answer": "D",
     "answers": [
@@ -3852,13 +3856,13 @@
     "source_set": "college_board_sample",
     "question_number": 5,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following output.\n1 1 1 1 1\n2 2 2 2\n3 3 3\n4 4\n5 Which of the following code segments will produce this output?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "for(int j = 1; j <= 5; j++){for(int k = 1; k <= 5; k++){System.out.print(j + \" \");} System.out.println();}",
+      "B": "for(int j = 1; j <= 5; j++){for(int k = 1; k <= j; k++){System.out.print(j + \" \");} System.out.println();}",
+      "C": "for(int j = 1; j <= 5; j++){for(int k = 5; k >= 1; k--){System.out.print(j + \" \");} System.out.println();}",
+      "D": "for(int j = 1; j <= 5; j++){for(int k = 5; k >= j; k--){System.out.print(j + \" \");} System.out.println();}",
+      "E": "for(int j = 1; j <= 5; j++){for(int k = j; k <= 5; k++){System.out.print(k + \" \");} System.out.println();} 23"
     },
     "answer": "D",
     "answers": [
@@ -3897,13 +3901,13 @@
     "source_set": "college_board_sample",
     "question_number": 6,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "A car dealership needs a program to store information about the cars for sale. For\neach car, they want to keep track of the following information: number of doors(2 or 4), whether the car has air conditioning, and its average number of miles\nper gallon. Which of the following is the best object-oriented program design?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Use 1 class, Car, with 3 instance variables: int numDoors, boolean hasAir, and double milesPerGallon.",
+      "B": "Use 4 unrelated classes: Car, Doors, AirConditioning, and MilesPerGallon.",
+      "C": "Use a class Car with 3 subclasses: Doors, AirConditioning, and MilesPerGallon.",
+      "D": "Use a class Car, with a subclass Doors, with a subclass AirConditioning, with a subclass MilesPerGallon.",
+      "E": "Use 3 classes: Doors, AirConditioning, and MilesPerGallon, each with a subclass Car."
     },
     "answer": "A",
     "answers": [
@@ -3914,14 +3918,14 @@
     "image_paths": [
       "images/ap/computer-science-a/2014_sample/2014_sample_q06_prompt.png"
     ],
-    "primary_unit": "U5",
-    "unit": "U5",
-    "unit_name": "Writing Classes",
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Inheritance",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U5",
+      "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.6,
       "evidence": "Keyword classification from CSA prompt/code.",
@@ -3942,13 +3946,13 @@
     "source_set": "college_board_sample",
     "question_number": 7,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following declarations. public interface Shape{int isLargerThan(Shape other); // Other methods not shown}\npublic class Circle implements Shape{// Other methods not shown} Which of the following method headings of isLargerThan can be added to the\ndeclaration of the Circle class so that it will satisfy the Shape interface? I. public int isLargerThan(Shape other) II. public int isLargerThan(Circle other)\nIII. public boolean isLargerThan(Object other)",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "III only",
+      "D": "I and II only",
+      "E": "I, II, and III 24 public class TimeRecord{private int hours; private int minutes; // 0 < minutes < 60 /** Constructs a TimeRecord object. * @param h the number of hours * Precondition: h > 0 * @param m the number of minutes * Precondition: 0 < m < 60 */ public TimeRecord(int h, int m){hours = h; minutes = m;} /** @return the number of hours */ public int getHours(){/* implementation not shown */} /** @return the number of minutes * Postcondition: 0 < minutes < 60 */ public int getMinutes(){/* implementation not shown */} /** Adds h hours and m minutes to this TimeRecord. * @param h the number of hours * Precondition: h > 0 * @param m the number of minutes * Precondition: m > 0 */ public void advance(int h, int m){hours = hours + h; minutes = minutes + m; /* missing code */} // Other methods not shown}"
     },
     "answer": "A",
     "answers": [
@@ -3987,13 +3991,13 @@
     "source_set": "college_board_sample",
     "question_number": 8,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Which of the following can be used to replace /* missing code */ so that advance\nwill correctly update the time?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "minutes = minutes % 60;",
+      "B": "minutes = minutes + hours % 60;",
+      "C": "hours = hours + minutes / 60; minutes = minutes % 60;",
+      "D": "hours = hours + minutes % 60; minutes = minutes / 60;",
+      "E": "hours = hours + minutes / 60;"
     },
     "answer": "C",
     "answers": [
@@ -4032,13 +4036,13 @@
     "source_set": "college_board_sample",
     "question_number": 9,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following declaration that appears in a class other than TimeRecord.\nTimeRecord[] timeCards = new TimeRecord[100]; Assume that timeCards has been initialized with TimeRecord objects.\nConsider the following code segment that is intended to compute the total of all\nthe * stored in timeCards.\nTimeRecord total = new TimeRecord(0,0);\nfor(int k = 0; k < timeCards.length; k++){/* missing expression */;} Which of the following can be used to replace /* missing expression */ so that\nthe code segment will work as intended?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "timeCards[k].advance()",
+      "B": "total += timeCards[k].advance()",
+      "C": "total.advance(timeCards[k].hours, timeCards[k].minutes)",
+      "D": "total.advance(timeCards[k].getHours(), timeCards[k].getMinutes())",
+      "E": "timeCards[k].advance(timeCards[k].getHours(), timeCards[k].getMinutes()) 26 private int[] arr; /** Precondition: arr contains no duplicates; * the elements in arr are in ascending order. * @param low an int value such that 0 < low < arr.length * @param high an int value such that low - 1 < high < arr.length * @param num an int value */ public int mystery(int low, int high, int num){int mid =(low + high) / 2; if(low > high){return low;} else if(arr[mid] < num){return mystery(mid + 1, high, num);} else if(arr[mid] > num){return mystery(low, mid − 1, num);} else // arr[mid] == num{return mid;}}"
     },
     "answer": "D",
     "answers": [
@@ -4077,13 +4081,13 @@
     "source_set": "college_board_sample",
     "question_number": 10,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following instance variable and method. What is returned by the call mystery(0, arr.length − 1, num)?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "The number of elements in arr that are < num",
+      "B": "The number of elements in arr that are <= num",
+      "C": "The number of elements in arr that are equal to num",
+      "D": "The number of elements in arr that are > num",
+      "E": "The indexOf the middle element in arr 27"
     },
     "answer": "A",
     "answers": [
@@ -4122,13 +4126,13 @@
     "source_set": "college_board_sample",
     "question_number": 11,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "The method findLongest does not work as intended. Which of the following\nbest describes the value returned by a call to findLongest ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "It is the length of the shortest consecutive block of the value target in nums.",
+      "B": "It is the length of the array nums.",
+      "C": "It is the number of occurrences of the value target in nums.",
+      "D": "It is the length of the first consecutive block of the value target in nums.",
+      "E": "It is the length of the last consecutive block of the value target in nums."
     },
     "answer": "C",
     "answers": [
@@ -4163,7 +4167,7 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "Questions 11–12 refer to the following information. Consider the following instance variable nums and method findLongest with line numbers added for reference. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the length of the longest consecutive block of 10s. 28",
+    "group_context": "Questions11–12 refer to the following information. Consider the following instance variable nums and method findLongest with line numbers added for reference. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example, if the array nums contains the values[7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the length of the longest consecutive block of 10s. 28",
     "rubric_image_paths": []
   },
   {
@@ -4175,13 +4179,13 @@
     "source_set": "college_board_sample",
     "question_number": 12,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Which of the following changes should be made so that method findLongest\nwill work as intended?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Insert the statement lenCount = 0; between lines2 and 3.",
+      "B": "Insert the statement lenCount = 0; between lines 8 and 9.",
+      "C": "Insert the statement lenCount = 0; between lines10 and 11.",
+      "D": "Insert the statement lenCount = 0; between lines11 and 12.",
+      "E": "Insert the statement lenCount = 0; between lines12 and 13. 29"
     },
     "answer": "E",
     "answers": [
@@ -4216,7 +4220,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 11–12 refer to the following information. Consider the following instance variable nums and method findLongest with line numbers added for reference. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the length of the longest consecutive block of 10s. 28",
+    "group_context": "Questions11–12 refer to the following information. Consider the following instance variable nums and method findLongest with line numbers added for reference. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example, if the array nums contains the values[7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the length of the longest consecutive block of 10s. 28",
     "rubric_image_paths": []
   },
   {
@@ -4228,13 +4232,13 @@
     "source_set": "college_board_sample",
     "question_number": 13,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following instance variable and method. private int[] numbers;\n/** Precondition: numbers contains int values in no particular order. */\npublic int mystery(int num){for(int k = numbers.length − 1; k >= 0; k−−){if(numbers[k] < num){return k;}} return -1;} Which of the following best describes the contents of numbers after the\nfollowing statement has been executed? int m = mystery(n);",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "All values in positions 0 through m are < n.",
+      "B": "All values in positions m+1 through numbers.length-1 are < n.",
+      "C": "All values in positions m+1 through numbers.length-1 are > or equal to n.",
+      "D": "The smallest value is at position m.",
+      "E": "The largest value that is smaller than n is at position m. 30"
     },
     "answer": "C",
     "answers": [
@@ -4273,13 +4277,13 @@
     "source_set": "college_board_sample",
     "question_number": 14,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. /** @param x an int value such that x >= 0 */\npublic void mystery(int x){System.out.print(x % 10); if((x / 10) != 0){mystery(x / 10);} System.out.print(x % 10);} Which of the following is printed as a result of the call mystery(1234)?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "1234",
+      "B": "4321",
+      "C": "12344321",
+      "D": "43211234",
+      "E": "Many digits are printed due to infinite recursion. 31"
     },
     "answer": "D",
     "answers": [
@@ -4318,13 +4322,13 @@
     "source_set": "college_board_sample",
     "question_number": 15,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following 2 classes. public class Dog{public void act(){System.out.print(\"run \"); eat();} public void eat(){System.out.print(\"eat \");}}\npublic class UnderDog extends Dog{public void act(){super.act(); System.out.print(\"sleep \");} public void eat(){super.eat(); System.out.print(\"bark \");}} Assume that the following declaration appears in a class other than Dog. Dog fido = new UnderDog(); What is printed as a result of the call fido.act() ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "run eat",
+      "B": "run eat sleep",
+      "C": "run eat sleep bark",
+      "D": "run eat bark sleep",
+      "E": "Nothing is printed due to infinite recursion. 32"
     },
     "answer": "D",
     "answers": [
@@ -4363,13 +4367,13 @@
     "source_set": "college_board_sample",
     "question_number": 16,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following recursive method. public static int mystery(int n){if(n <= 1){return 0;} else{return 1 + mystery(n / 2);}} Assuming that k is a nonnegative integer and m = 2k, what value is returned as a\nresult of the call mystery(m) ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "0",
+      "B": "k",
+      "C": "m",
+      "D": "m 2 1 +",
+      "E": "k 2 1 + 33"
     },
     "answer": "B",
     "answers": [
@@ -4408,13 +4412,13 @@
     "source_set": "college_board_sample",
     "question_number": 17,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following instance variable and method. private int[] array;\n/** Precondition: array.length > 0 */\npublic int checkArray(){int loc = array.length / 2; for(int k = 0; k < array.length; k++){if(array[k] > array[loc]){loc = k;}} return loc;} Which of the following is the best postcondition for checkArray ?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Returns the indexOf the first element in array array whose value is > array[loc]",
+      "B": "Returns the indexOf the last element in array array whose value is > array[loc]",
+      "C": "Returns the largest value in array array",
+      "D": "Returns the indexOf the largest value in array array",
+      "E": "Returns the indexOf the largest value in the second half of array array 34 s n world 6"
     },
     "answer": "D",
     "answers": [
@@ -4453,13 +4457,13 @@
     "source_set": "college_board_sample",
     "question_number": 18,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following methods.\n\n```java\npublic void changer(String x, int y)\n{\n  x = x + \"peace\";\n  y = y * 2;\n}\n\npublic void test()\n{\n  String s = \"world\";\n  int n = 6;\n  changer(s, n);\n\n  /* End of method */\n}\n```\n\nWhen the call `test()` is executed, what are the values of `s` and `n` at the point indicated by `/* End of method */`?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "`s` is `world`; `n` is `6`",
+      "B": "`s` is `worldpeace`; `n` is `6`",
+      "C": "`s` is `world`; `n` is `12`",
+      "D": "`s` is `worldpeace`; `n` is `12`",
+      "E": "`s` is `peace`; `n` is `12`"
     },
     "answer": "A",
     "answers": [
@@ -4498,13 +4502,13 @@
     "source_set": "college_board_sample",
     "question_number": 19,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following code segment. int[][] mat = new int[3][4];\nfor(int row = 0; row < mat.length; row++){for(int col = 0; col < mat[0].length; col++){if(row < col){mat[row][col] = 1;} else if(row == col){mat[row][col] = 2;} else{mat[row][col] = 3;}}} What are the contents of mat after the code segment has been executed?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "{{2, 1, 1},{3, 2, 1},{3, 3, 2},{3, 3, 3}}",
+      "B": "{{2, 3, 3},{1, 2, 3},{1, 1, 2},{1, 1, 1}}",
+      "C": "{{2, 3, 3, 3},{1, 2, 3, 3},{1, 1, 2, 3}}",
+      "D": "{{2, 1, 1, 1},{3, 2, 1, 1},{3, 3, 2, 1}}",
+      "E": "{{1, 1, 1, 1},{2, 2, 2, 2},{3, 3, 3, 3}} 36 Value of Executions of Executions of lim Statement S Statement T I. 5 0 5 II. 7 4 9 III. 3 5 2"
     },
     "answer": "D",
     "answers": [
@@ -4543,13 +4547,13 @@
     "source_set": "college_board_sample",
     "question_number": 20,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following method. /** Precondition: arr contains only positive values. */\npublic static void doSome(int[] arr, int lim){int v = 0; int k = 0; while(k < arr.length && arr[k] < lim){if(arr[k] > v){v = arr[k]; /* Statement S */} k++; /* Statement T */}} Assume that doSome is called and executes without error. Which of the\nfollowing are possible combinations for the value of lim, the number of *\nStatement S is executed, and the number of * Statement T is executed?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "III only",
+      "D": "I and III only",
+      "E": "II and III only 37"
     },
     "answer": "B",
     "answers": [
@@ -4588,13 +4592,13 @@
     "source_set": "college_board_sample",
     "question_number": 21,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following instance variable, arr, and incomplete method,\npartialSum. The method is intended to return an integer arraySum such that\nfor all k, sum[k] is equal to arr[0] + arr[1] +... + arr[k]. For\ninstance, if arr contains the values{1, 4, 1, 3}, the arraySum will\ncontain the values{1, 5, 6, 9}. private int[] arr;\npublic int[] partialSum(){int[] sum = new int[arr.length]; for(int j = 0; j < sum.length; j++){sum[j] = 0;} /* missing code */ return sum;} The following 2 implementations of /* missing code */ are proposed so that\npartialSum will work as intended. Implementation 1 for(int j = 0; j < arr.length; j++){sum[j] = sum[j - 1] + arr[j];} Implementation 2 for(int j = 0; j < arr.length; j++){for(int k = 0; k <= j; k++){sum[j] = sum[j] + arr[k];}} Which of the following statements is true?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Both implementations work as intended, but implementation 1 is faster than implementation 2.",
+      "B": "Both implementations work as intended, but implementation 2 is faster than implementation 1.",
+      "C": "Both implementations work as intended and are equally fast.",
+      "D": "Implementation 1 does not work as intended, because it will cause an ArrayIndexOutOfBoundsException.",
+      "E": "Implementation 2 does not work as intended, because it will cause an ArrayIndexOutOfBoundsException. 38"
     },
     "answer": "D",
     "answers": [
@@ -4633,13 +4637,13 @@
     "source_set": "college_board_sample",
     "question_number": 22,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following declaration for a class that will be used to represent points\nin the xy-coordinate plane. public class Point{private int x; // x-coordinate of the point private int y; // y-coordinate of the point public Point(){x = 0; y = 0;} public Point(int a, int b){x = a; y = b;} // Other methods not shown} The following incomplete class declaration is intended to extend the above class\nso that points can be named. public class NamedPoint extends Point{private String name; // name of point // Constructors go here // Other methods not shown} 39 Consider the following proposed constructors for this class. I.\npublic NamedPoint(){name = \"\";} II.\npublic NamedPoint(int d1, int d2, String pointName){x = d1; y = d2; name = pointName;} III.\npublic NamedPoint(int d1, int d2, String pointName){super(d1, d2); name = pointName;} Which of these constructors would be legal for the NamedPoint class?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "III only",
+      "D": "I and III only",
+      "E": "II and III only 40"
     },
     "answer": "D",
     "answers": [
@@ -4678,13 +4682,13 @@
     "source_set": "college_board_sample",
     "question_number": 23,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider a shuffle method that is intended to return a new array that contains\nall the elements from nums, but in a different order. Let n be the number of\nelements in nums. The shuffle method should alternate the elements from\nnums[0] … nums[n / 2 – 1] with the elements from nums[n / 2] …\nnums[n – 1], as illustrated in the following examples. Example 1\n0\n1\n2\n3\n4\n5\n6\n7 nums\n10\n20\n30\n40\n50\n60\n70\n80\n0\n1\n2\n3\n4\n5\n6\n7 result\n10\n50\n20\n60\n30\n70\n40\n80 Example 2\n0\n1\n2\n3\n4\n5\n6 nums\n10\n20\n30\n40\n50\n60\n70\n0\n1\n2\n3\n4\n5\n6 result\n10\n40\n20\n50\n30\n60\n70 The following implementation of the shuffle method does not work as intended. public static int[] shuffle(int[] nums){int n = nums.length; int[] result = new int[n]; for(int j = 0; j < n / 2; j++){result[j * 2] = nums[j]; result[j * 2 + 1] = nums[j + n / 2];} return result;} Which of the following best describes the problem with the given implementation of\nthe shuffle method?",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "Executing shuffle may cause an ArrayIndexOutOfBoundsException.",
+      "B": "The first element of the returned array(result[0]) may not have the correct value.",
+      "C": "The last element of the returned array(result[result.length − 1]) may not have the correct value.",
+      "D": "1 or more of nums[0] … nums[nums.length / 2 − 1] may have been copied to the wrong position(s) in the returned array.",
+      "E": "1 or more of nums[nums.length / 2] … nums[nums.length − 1] may have been copied to the wrong position(s) in the returned array. 41"
     },
     "answer": "C",
     "answers": [
@@ -4723,13 +4727,13 @@
     "source_set": "college_board_sample",
     "question_number": 24,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "Consider the following Util class, which contains2 methods. The completed\nsum1D method returns the sum of all the elements of the 1-dimensional array a.\nThe incomplete sum2D method is intended to return the sum of all the elements\nof the 2-dimensional array m. public class Util{/** Returns the sum of the elements of the 1-dimensional array a */ public static int sum1D(int[] a){/* implementation not shown */} /** Returns the sum of the elements of the 2-dimensional array m */ public static int sum2D(int[][] m){int sum = 0; /* missing code */ return sum;}} Assume that sum1D works correctly. Which of the following can replace\n/* missing code */ so that the sum2D method works correctly? I. for(int k = 0; k < m.length; k++){sum += sum1D(m[k]);}\nII. for(int[] row : m){sum += sum1D(row);}\nII. for(int[] row : m){for(int v : row){sum += v;}} I",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "I and II only",
+      "D": "II and III only",
+      "E": "I, II, and III 42"
     },
     "answer": "E",
     "answers": [
@@ -4768,13 +4772,13 @@
     "source_set": "college_board_sample",
     "question_number": 25,
     "type": "MCQ",
-    "text": "See the official prompt image below for the full Java code and question.",
+    "text": "The following sort method correctly sorts the integers in elements into\nascending order. public static void sort(int[] elements){for(int j = 0; j < elements.length - 1; j++){Line 5. int index = j; for(int k = j + 1; k < elements.length; k++){if(elements[k] < elements[index]){index = k;}} int temp = elements[j]; elements[j] = elements[index]; elements[index] = temp;}} 43 Which of the following changes to the sort method would correctly sort the\nintegers in elements into descending order? I. Replace line 9 with: if(elements[k] > elements[index]) II. Replace lines15–17 with: int temp = elements[index]; elements[index] = elements[j]; elements[j] = temp; III. Replace line 3 with: for(int j = elements.length − 1; j > 0; j−−)\nand replace line 7 with: for(int k = 0; k < j; k++)",
     "options": {
-      "A": "A",
-      "B": "B",
-      "C": "C",
-      "D": "D",
-      "E": "E"
+      "A": "I only",
+      "B": "II only",
+      "C": "I and II only",
+      "D": "I and III only",
+      "E": "I, II, and III Answers to Computer Science A Multiple-Choice Questions1 – b 6 – a 11 – c 16 – b 21 – d 2 – a 7 – a 12 – e 17 – d 22 – d 3 – d 4 – d 5 – d 8 – c 9 – d 10 – a 13 – c 14 – d 15 – d 18 – a 19 – d 20 – b 23 – c 24 – e 25 – d"
     },
     "answer": "D",
     "answers": [
