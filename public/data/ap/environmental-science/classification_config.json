@@ -1,6 +1,6 @@
 {
   "subject": "AP Environmental Science",
-  "version": "apes_2008_2016_v1",
+  "version": "apes_2008_2016_v2",
   "units": [
     {
       "code": "U1",
@@ -49,20 +49,19 @@
     "mcq_time_limit": 5400,
     "frq_time_limit": 5400,
     "unit_distribution": {
-      "U1": 14,
+      "U1": 12,
       "U2": 2,
       "U3": 10,
       "U4": 3,
       "U5": 3,
-      "U6": 15,
+      "U6": 16,
       "U7": 6,
-      "U8": 18,
+      "U8": 19,
       "U9": 9
     }
   },
   "notes": [
-    "APES current structure uses 80 MCQ in 90 minutes and 4 FRQ in 90 minutes.",
-    "2008 and 2016 full released/practice exams are included.",
-    "Machine classification and figure crops require future teacher review before high-stakes external release."
+    "APES v2 uses PDF bbox crops for precise visuals and structured option tables/diagram options.",
+    "2008 and 2016 full released/practice exams are included."
   ]
 }
