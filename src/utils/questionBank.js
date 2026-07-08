@@ -389,14 +389,20 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
     yearSets[year] = sets
   }
 
-  const years = Object.keys(yearSets)
-  const selectedYear = years[Math.floor(Math.random() * years.length)]
-  const sets = Object.keys(yearSets[selectedYear])
-  const selectedSet = sets[Math.floor(Math.random() * sets.length)]
-  const frq = yearSets[selectedYear][selectedSet]
-    .slice()
-    .sort((a, b) => questionOrder(a) - questionOrder(b))
-    .slice(0, frqCount)
+  const candidates = []
+  for (const year of Object.keys(yearSets)) {
+    for (const set of Object.keys(yearSets[year])) {
+      const questions = yearSets[year][set]
+        .slice()
+        .sort((a, b) => questionOrder(a) - questionOrder(b))
+      if (questions.length >= frqCount) candidates.push(questions)
+    }
+  }
+
+  const source = candidates.length
+    ? candidates[Math.floor(Math.random() * candidates.length)]
+    : frqQuestions.slice().sort((a, b) => questionOrder(a) - questionOrder(b))
+  const frq = source.slice(0, frqCount)
 
   return {
     quiz: mcq,

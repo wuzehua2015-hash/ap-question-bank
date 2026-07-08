@@ -149,6 +149,51 @@ function validateBank(subject, relPath, errors, warnings) {
         errors.push(`${label}: provenance.image_sources count does not match final image_paths count`)
       }
     }
+    if (subject.id === 'biology') {
+      const isFrq = q.type === 'FRQ' || q.question_type === 'FRQ' || q.rubric
+      if (!isFrq) {
+        const bareOptions = Object.entries(q.options || {})
+          .filter(([key, value]) => String(value || '').trim() === key)
+          .map(([key]) => key)
+        if (bareOptions.length) {
+          errors.push(`${label}: Biology MCQ options are bare letters: ${bareOptions.join(', ')}`)
+        }
+        if (/\bDirections:\b|\bQuestions\s+\d+\s*-\s*\d+\b/i.test(String(q.text || q.question_text || ''))) {
+          errors.push(`${label}: Biology MCQ stem contains directions/group-marker pollution`)
+        }
+        if (/2008_Q(?:5[7-9]|6[0-9]|7[0-6])$/.test(questionLabel(q)) && !String(q.group_context || '').trim()) {
+          errors.push(`${label}: Biology grouped matching item is missing group_context`)
+        }
+        if (/\btable below\b/i.test(String(q.text || q.question_text || '')) && !q.background_data?.table && !(q.image_paths || []).length) {
+          errors.push(`${label}: Biology table reference requires background_data.table or precise image evidence`)
+        }
+        if (/\bFigure\s+\d+\b/i.test(String(q.text || q.question_text || '')) && !(q.image_paths || []).length) {
+          errors.push(`${label}: Biology numbered figure reference requires precise image evidence`)
+        }
+        if (/\bdata are as follows\b/i.test(String(q.text || q.question_text || '')) && !q.background_data?.table) {
+          errors.push(`${label}: Biology inline data table must be rendered as background_data.table`)
+        }
+        if (q.background_data?.table && /\bTrait\s+Species\s+1\s+2\s+3\s+4\s+5\b/i.test(String(q.text || q.question_text || ''))) {
+          errors.push(`${label}: Biology structured table is duplicated as flattened text in the stem`)
+        }
+      } else {
+        const rubric = q.rubric || {}
+        const rubricText = JSON.stringify(rubric)
+        if (/College Board|Visit the College Board|Unauthorized/i.test(rubricText)) {
+          errors.push(`${label}: Biology FRQ rubric contains footer/legal residue`)
+        }
+        if (/Question\s+\d+\b(?!\s*\(continued\))[\s\S]{120,}Question\s+\d+\b(?!\s*\(continued\))/i.test(String(rubric.official_text || ''))) {
+          errors.push(`${label}: Biology FRQ rubric likely contains another question`)
+        }
+        const weakPoint = (rubric.points || []).find(point => /^1 point$/i.test(String(point.description || '').trim()) || /^Examples of acceptable responses/i.test(String(point.description || '').trim()))
+        if (weakPoint) {
+          errors.push(`${label}: Biology FRQ rubric has non-criterion scoring row: ${String(weakPoint.description || '').slice(0, 80)}`)
+        }
+        if (!String(rubric.solution_outline || '').trim() || String(rubric.solution_outline || '').trim().length < 120) {
+          errors.push(`${label}: Biology FRQ rubric is missing a usable solution_outline`)
+        }
+      }
+    }
   }
 }
 

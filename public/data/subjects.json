@@ -336,6 +336,73 @@
       }
     },
     {
+      "id": "environmental-science",
+      "name": "AP Environmental Science",
+      "shortName": "Environmental Science",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/environmental-science/question_bank.json",
+      "frqBank": "ap/environmental-science/frq_bank.json",
+      "similarityIndex": "ap/environmental-science/similarity_index.json",
+      "classificationConfig": "ap/environmental-science/classification_config.json",
+      "dataVersion": "structured-2008-2016-v2",
+      "units": [
+        {
+          "id": "U1",
+          "name": "The Living World: Ecosystems"
+        },
+        {
+          "id": "U2",
+          "name": "The Living World: Biodiversity"
+        },
+        {
+          "id": "U3",
+          "name": "Populations"
+        },
+        {
+          "id": "U4",
+          "name": "Earth Systems and Resources"
+        },
+        {
+          "id": "U5",
+          "name": "Land and Water Use"
+        },
+        {
+          "id": "U6",
+          "name": "Energy Resources and Consumption"
+        },
+        {
+          "id": "U7",
+          "name": "Atmospheric Pollution"
+        },
+        {
+          "id": "U8",
+          "name": "Aquatic and Terrestrial Pollution"
+        },
+        {
+          "id": "U9",
+          "name": "Global Change"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 80,
+        "frqCount": 4,
+        "mcqTimeLimit": 5400,
+        "frqTimeLimit": 5400,
+        "unitDistribution": {
+          "U1": 12,
+          "U2": 2,
+          "U3": 10,
+          "U4": 3,
+          "U5": 3,
+          "U6": 16,
+          "U7": 6,
+          "U8": 19,
+          "U9": 9
+        }
+      }
+    },
+    {
       "id": "macro",
       "name": "AP Macroeconomics",
       "shortName": "Macro",
@@ -845,73 +912,6 @@
           "U3": 9,
           "U4": 8,
           "U5": 11
-        }
-      }
-    },
-    {
-      "id": "environmental-science",
-      "name": "AP Environmental Science",
-      "shortName": "Environmental Science",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/environmental-science/question_bank.json",
-      "frqBank": "ap/environmental-science/frq_bank.json",
-      "similarityIndex": "ap/environmental-science/similarity_index.json",
-      "classificationConfig": "ap/environmental-science/classification_config.json",
-      "dataVersion": "structured-2008-2016-v2",
-      "units": [
-        {
-          "id": "U1",
-          "name": "The Living World: Ecosystems"
-        },
-        {
-          "id": "U2",
-          "name": "The Living World: Biodiversity"
-        },
-        {
-          "id": "U3",
-          "name": "Populations"
-        },
-        {
-          "id": "U4",
-          "name": "Earth Systems and Resources"
-        },
-        {
-          "id": "U5",
-          "name": "Land and Water Use"
-        },
-        {
-          "id": "U6",
-          "name": "Energy Resources and Consumption"
-        },
-        {
-          "id": "U7",
-          "name": "Atmospheric Pollution"
-        },
-        {
-          "id": "U8",
-          "name": "Aquatic and Terrestrial Pollution"
-        },
-        {
-          "id": "U9",
-          "name": "Global Change"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 80,
-        "frqCount": 4,
-        "mcqTimeLimit": 5400,
-        "frqTimeLimit": 5400,
-        "unitDistribution": {
-          "U1": 12,
-          "U2": 2,
-          "U3": 10,
-          "U4": 3,
-          "U5": 3,
-          "U6": 16,
-          "U7": 6,
-          "U8": 19,
-          "U9": 9
         }
       }
     }
