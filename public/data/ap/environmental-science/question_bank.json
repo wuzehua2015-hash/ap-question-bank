@@ -213,11 +213,11 @@
     "type": "MCQ",
     "text": "The most abundant nonanthropogenic greenhouse gas",
     "options": {
-      "A": "$H_2O$",
-      "B": "$CO_2$",
-      "C": "$CH_4$",
-      "D": "$O_3$",
-      "E": "$CCl_2F_2$"
+      "A": "$\\mathrm{H}_2\\mathrm{O}$",
+      "B": "$\\mathrm{CO}_2$",
+      "C": "$\\mathrm{CH}_4$",
+      "D": "$\\mathrm{O}_3$",
+      "E": "$\\mathrm{CCl}_2\\mathrm{F}_2$"
     },
     "answer": "A",
     "answers": [
@@ -268,11 +268,11 @@
     "type": "MCQ",
     "text": "A greenhouse gas that is exclusively anthropogenic",
     "options": {
-      "A": "$H_2O$",
-      "B": "$CO_2$",
-      "C": "$CH_4$",
-      "D": "$O_3$",
-      "E": "$CCl_2F_2$"
+      "A": "$\\mathrm{H}_2\\mathrm{O}$",
+      "B": "$\\mathrm{CO}_2$",
+      "C": "$\\mathrm{CH}_4$",
+      "D": "$\\mathrm{O}_3$",
+      "E": "$\\mathrm{CCl}_2\\mathrm{F}_2$"
     },
     "answer": "E",
     "answers": [
@@ -323,11 +323,11 @@
     "type": "MCQ",
     "text": "A greenhouse gas that, in the lower troposphere, is formed by photochemical reactions",
     "options": {
-      "A": "$H_2O$",
-      "B": "$CO_2$",
-      "C": "$CH_4$",
-      "D": "$O_3$",
-      "E": "$CCl_2F_2$"
+      "A": "$\\mathrm{H}_2\\mathrm{O}$",
+      "B": "$\\mathrm{CO}_2$",
+      "C": "$\\mathrm{CH}_4$",
+      "D": "$\\mathrm{O}_3$",
+      "E": "$\\mathrm{CCl}_2\\mathrm{F}_2$"
     },
     "answer": "D",
     "answers": [
@@ -1248,7 +1248,7 @@
     "year": 2008,
     "question_number": 22,
     "type": "MCQ",
-    "text": "The concentration of $H^+$ ions in a solution with a pH value of 4 is how many times as great as the concentration of $H^+$ ions in a solution with a pH value of 7?",
+    "text": "The concentration of $\\mathrm{H}^+$ ions in a solution with a pH value of 4 is how many times as great as the concentration of $\\mathrm{H}^+$ ions in a solution with a pH value of 7?",
     "options": {
       "A": "1",
       "B": "10",
@@ -1502,7 +1502,7 @@
     "text": "What is the main purpose for the experiment?",
     "options": {
       "A": "To determine how much O2 the algae can produce",
-      "B": "To show how much $CO_2$ is consumed by decomposition",
+      "B": "To show how much $\\mathrm{CO}_2$ is consumed by decomposition",
       "C": "To collect data to determine how waste in water can be useful",
       "D": "To demonstrate that initial DO is not important",
       "E": "To observe the effect of organic waste on DO"
@@ -1536,6 +1536,44 @@
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
     },
+    "background_data": {
+      "table": {
+        "headers": [
+          "Tank",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "rows": [
+          [
+            "Initial DO",
+            "10 ppm",
+            "10 ppm",
+            "10 ppm",
+            "10 ppm",
+            "10 ppm"
+          ],
+          [
+            "Amount of organic waste added",
+            "0 g",
+            "10 g",
+            "20 g",
+            "30 g",
+            "40 g"
+          ],
+          [
+            "DO after one week",
+            "10 ppm",
+            "10 ppm",
+            "8 ppm",
+            "5 ppm",
+            "0 ppm"
+          ]
+        ]
+      }
+    },
     "group_id": "2008_Q27_29",
     "group_members": [
       "2008_Q27",
@@ -1544,7 +1582,7 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "Questions 27-29 A laboratory experiment was done to show the effects of organic waste on the dissolved oxygen (DO) content in water. Five tanks were set up, each containing fresh water and a small amount of single-celled green algae. Specified amounts of organic waste were added to the tanks. The results below show the amount of DO in each tank after a period of one week. Tank 1 Tank 2 Tank 3 Tank 4 Tank 5 Initial DO 10 ppm 10 ppm 10 ppm 10 ppm 10 ppm Amount of organic waste added 0 g 10 g 20 g 30 g 40 g DO after one week 10 ppm 10 ppm 8 ppm 5 ppm 0 ppm"
+    "group_context": "Questions 27-29 refer to a laboratory experiment testing the effect of organic waste on dissolved oxygen."
   },
   {
     "question_id": "2008_Q28",
@@ -1559,7 +1597,7 @@
       "A": "The algae could not consume the waste fast enough.",
       "B": "The turbidity of the water increased, and the algae population increased.",
       "C": "The algae multiplied and then died and decomposed.",
-      "D": "The $CO_2$ increased due to algal respiration.",
+      "D": "The $\\mathrm{CO}_2$ increased due to algal respiration.",
       "E": "The oxygen came out of solution into the air in the laboratory."
     },
     "answer": "C",
@@ -1591,6 +1629,44 @@
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
     },
+    "background_data": {
+      "table": {
+        "headers": [
+          "Tank",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "rows": [
+          [
+            "Initial DO",
+            "10 ppm",
+            "10 ppm",
+            "10 ppm",
+            "10 ppm",
+            "10 ppm"
+          ],
+          [
+            "Amount of organic waste added",
+            "0 g",
+            "10 g",
+            "20 g",
+            "30 g",
+            "40 g"
+          ],
+          [
+            "DO after one week",
+            "10 ppm",
+            "10 ppm",
+            "8 ppm",
+            "5 ppm",
+            "0 ppm"
+          ]
+        ]
+      }
+    },
     "group_id": "2008_Q27_29",
     "group_members": [
       "2008_Q27",
@@ -1599,7 +1675,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 27-29 A laboratory experiment was done to show the effects of organic waste on the dissolved oxygen (DO) content in water. Five tanks were set up, each containing fresh water and a small amount of single-celled green algae. Specified amounts of organic waste were added to the tanks. The results below show the amount of DO in each tank after a period of one week. Tank 1 Tank 2 Tank 3 Tank 4 Tank 5 Initial DO 10 ppm 10 ppm 10 ppm 10 ppm 10 ppm Amount of organic waste added 0 g 10 g 20 g 30 g 40 g DO after one week 10 ppm 10 ppm 8 ppm 5 ppm 0 ppm"
+    "group_context": "Questions 27-29 refer to a laboratory experiment testing the effect of organic waste on dissolved oxygen."
   },
   {
     "question_id": "2008_Q29",
@@ -1646,6 +1722,44 @@
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
     },
+    "background_data": {
+      "table": {
+        "headers": [
+          "Tank",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "rows": [
+          [
+            "Initial DO",
+            "10 ppm",
+            "10 ppm",
+            "10 ppm",
+            "10 ppm",
+            "10 ppm"
+          ],
+          [
+            "Amount of organic waste added",
+            "0 g",
+            "10 g",
+            "20 g",
+            "30 g",
+            "40 g"
+          ],
+          [
+            "DO after one week",
+            "10 ppm",
+            "10 ppm",
+            "8 ppm",
+            "5 ppm",
+            "0 ppm"
+          ]
+        ]
+      }
+    },
     "group_id": "2008_Q27_29",
     "group_members": [
       "2008_Q27",
@@ -1654,7 +1768,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 27-29 A laboratory experiment was done to show the effects of organic waste on the dissolved oxygen (DO) content in water. Five tanks were set up, each containing fresh water and a small amount of single-celled green algae. Specified amounts of organic waste were added to the tanks. The results below show the amount of DO in each tank after a period of one week. Tank 1 Tank 2 Tank 3 Tank 4 Tank 5 Initial DO 10 ppm 10 ppm 10 ppm 10 ppm 10 ppm Amount of organic waste added 0 g 10 g 20 g 30 g 40 g DO after one week 10 ppm 10 ppm 8 ppm 5 ppm 0 ppm"
+    "group_context": "Questions 27-29 refer to a laboratory experiment testing the effect of organic waste on dissolved oxygen."
   },
   {
     "question_id": "2008_Q30",
@@ -1701,6 +1815,54 @@
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
     },
+    "background_data": {
+      "table": {
+        "headers": [
+          "Country",
+          "Population (millions)",
+          "Approximate Total Land Area (million km2)",
+          "Total Annual Electricity Usage (10^10 kWh)"
+        ],
+        "rows": [
+          [
+            "Australia",
+            "19.7",
+            "8.2",
+            "22"
+          ],
+          [
+            "Bangladesh",
+            "144",
+            "0.14",
+            "1.6"
+          ],
+          [
+            "China",
+            "1,295",
+            "9.6",
+            "150"
+          ],
+          [
+            "Ethiopia",
+            "70",
+            "1.12",
+            "0.20"
+          ],
+          [
+            "India",
+            "1,000",
+            "3.29",
+            "60"
+          ],
+          [
+            "United States",
+            "300",
+            "9.63",
+            "400"
+          ]
+        ]
+      }
+    },
     "group_id": "2008_Q30_32",
     "group_members": [
       "2008_Q30",
@@ -1709,7 +1871,7 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "Questions 30-32 refer to the table below, which shows population, area, and energy use of several countries. Country Population (millions) Approximate Total Land Area (million km2) Total Annual Electricity Usage (1010 kWh) Australia 19.7 8.2 22 Bangladesh 144 0.14 1.6 China 1,295 9.6 150 Ethiopia 70 1.12 0.20 India 1,000 3.29 60 United States 300 9.63 400"
+    "group_context": "Questions 30-32 refer to the population, area, and energy-use data in the table."
   },
   {
     "question_id": "2008_Q31",
@@ -1756,6 +1918,54 @@
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
     },
+    "background_data": {
+      "table": {
+        "headers": [
+          "Country",
+          "Population (millions)",
+          "Approximate Total Land Area (million km2)",
+          "Total Annual Electricity Usage (10^10 kWh)"
+        ],
+        "rows": [
+          [
+            "Australia",
+            "19.7",
+            "8.2",
+            "22"
+          ],
+          [
+            "Bangladesh",
+            "144",
+            "0.14",
+            "1.6"
+          ],
+          [
+            "China",
+            "1,295",
+            "9.6",
+            "150"
+          ],
+          [
+            "Ethiopia",
+            "70",
+            "1.12",
+            "0.20"
+          ],
+          [
+            "India",
+            "1,000",
+            "3.29",
+            "60"
+          ],
+          [
+            "United States",
+            "300",
+            "9.63",
+            "400"
+          ]
+        ]
+      }
+    },
     "group_id": "2008_Q30_32",
     "group_members": [
       "2008_Q30",
@@ -1764,7 +1974,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 30-32 refer to the table below, which shows population, area, and energy use of several countries. Country Population (millions) Approximate Total Land Area (million km2) Total Annual Electricity Usage (1010 kWh) Australia 19.7 8.2 22 Bangladesh 144 0.14 1.6 China 1,295 9.6 150 Ethiopia 70 1.12 0.20 India 1,000 3.29 60 United States 300 9.63 400"
+    "group_context": "Questions 30-32 refer to the population, area, and energy-use data in the table."
   },
   {
     "question_id": "2008_Q32",
@@ -1811,6 +2021,54 @@
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
     },
+    "background_data": {
+      "table": {
+        "headers": [
+          "Country",
+          "Population (millions)",
+          "Approximate Total Land Area (million km2)",
+          "Total Annual Electricity Usage (10^10 kWh)"
+        ],
+        "rows": [
+          [
+            "Australia",
+            "19.7",
+            "8.2",
+            "22"
+          ],
+          [
+            "Bangladesh",
+            "144",
+            "0.14",
+            "1.6"
+          ],
+          [
+            "China",
+            "1,295",
+            "9.6",
+            "150"
+          ],
+          [
+            "Ethiopia",
+            "70",
+            "1.12",
+            "0.20"
+          ],
+          [
+            "India",
+            "1,000",
+            "3.29",
+            "60"
+          ],
+          [
+            "United States",
+            "300",
+            "9.63",
+            "400"
+          ]
+        ]
+      }
+    },
     "group_id": "2008_Q30_32",
     "group_members": [
       "2008_Q30",
@@ -1819,7 +2077,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 30-32 refer to the table below, which shows population, area, and energy use of several countries. Country Population (millions) Approximate Total Land Area (million km2) Total Annual Electricity Usage (1010 kWh) Australia 19.7 8.2 22 Bangladesh 144 0.14 1.6 China 1,295 9.6 150 Ethiopia 70 1.12 0.20 India 1,000 3.29 60 United States 300 9.63 400"
+    "group_context": "Questions 30-32 refer to the population, area, and energy-use data in the table."
   },
   {
     "question_id": "2008_Q33",
@@ -2059,7 +2317,7 @@
     "year": 2008,
     "question_number": 38,
     "type": "MCQ",
-    "text": "Which of the following is used to reduce $SO_2$ emissions from coal-burning power plants?",
+    "text": "Which of the following is used to reduce $\\mathrm{SO}_2$ emissions from coal-burning power plants?",
     "options": {
       "A": "Catalytic converters",
       "B": "Ultrafine mechanical filters",
@@ -2302,12 +2560,12 @@
     "year": 2008,
     "question_number": 43,
     "type": "MCQ",
-    "text": "Although levels of CFCs in the atmosphere are much lower than those of $CO_2$, CFCs are still potent greenhouse gases because they",
+    "text": "Although levels of CFCs in the atmosphere are much lower than those of $\\mathrm{CO}_2$, CFCs are still potent greenhouse gases because they",
     "options": {
       "A": "remain in the atmosphere for only a brief time",
       "B": "lack natural sources",
       "C": "are much more efficient at absorbing thermal radiation",
-      "D": "circulate through the troposphere more easily than $CO_2$ does",
+      "D": "circulate through the troposphere more easily than $\\mathrm{CO}_2$ does",
       "E": "are more difficult to remove from smokestacks and tailpipes"
     },
     "answer": "C",
@@ -2811,9 +3069,9 @@
     "text": "Which of the following is true of the Clean Air Act?",
     "options": {
       "A": "It was passed by Congress during the early 1950s.",
-      "B": "It regulates the amount of $CO_2$ emitted by power plants.",
+      "B": "It regulates the amount of $\\mathrm{CO}_2$ emitted by power plants.",
       "C": "It has remained largely unmodified since it was originally signed into law.",
-      "D": "It established a cap-and-trade program for $SO_2$ in 1990.",
+      "D": "It established a cap-and-trade program for $\\mathrm{SO}_2$ in 1990.",
       "E": "It is set to expire in 2015."
     },
     "answer": "D",
@@ -2983,6 +3241,36 @@
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
     },
+    "background_data": {
+      "table": {
+        "headers": [
+          "Town",
+          "Population Growth Rate",
+          "Population Size",
+          "Per Capita Power Demand"
+        ],
+        "rows": [
+          [
+            "East Fremont",
+            "Zero",
+            "50,000",
+            "10 kW"
+          ],
+          [
+            "West Fremont",
+            "1.75% per year",
+            "75,000",
+            "4 kW"
+          ],
+          [
+            "Fremont Center",
+            "3.5% per year",
+            "200,000",
+            "5 kW"
+          ]
+        ]
+      }
+    },
     "group_id": "2008_Q57_59",
     "group_members": [
       "2008_Q57",
@@ -2991,7 +3279,7 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "Questions 57-59 refer to the following. The town of Fremont Center shares its power plant with the towns of West Fremont and East Fremont. Information about the three towns is shown in the table below. The maximum capacity of the existing power plant is 2,000 MW. POPULATION AND ELECTRIC POWER DEMAND IN THE FREMONTS Town Population Growth Rate Population Size Per Capita Power Demand East Fremont Zero 50,000 10 kW West Fremont 1.75% per year 75,000 4 kW Fremont Center 3.5% per year 200,000 5 kW"
+    "group_context": "Questions 57-59 refer to the population and electric power demand data for the Fremont towns. The existing power plant has a maximum capacity of 2,000 MW."
   },
   {
     "question_id": "2008_Q58",
@@ -3038,6 +3326,36 @@
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
     },
+    "background_data": {
+      "table": {
+        "headers": [
+          "Town",
+          "Population Growth Rate",
+          "Population Size",
+          "Per Capita Power Demand"
+        ],
+        "rows": [
+          [
+            "East Fremont",
+            "Zero",
+            "50,000",
+            "10 kW"
+          ],
+          [
+            "West Fremont",
+            "1.75% per year",
+            "75,000",
+            "4 kW"
+          ],
+          [
+            "Fremont Center",
+            "3.5% per year",
+            "200,000",
+            "5 kW"
+          ]
+        ]
+      }
+    },
     "group_id": "2008_Q57_59",
     "group_members": [
       "2008_Q57",
@@ -3046,7 +3364,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 57-59 refer to the following. The town of Fremont Center shares its power plant with the towns of West Fremont and East Fremont. Information about the three towns is shown in the table below. The maximum capacity of the existing power plant is 2,000 MW. POPULATION AND ELECTRIC POWER DEMAND IN THE FREMONTS Town Population Growth Rate Population Size Per Capita Power Demand East Fremont Zero 50,000 10 kW West Fremont 1.75% per year 75,000 4 kW Fremont Center 3.5% per year 200,000 5 kW"
+    "group_context": "Questions 57-59 refer to the population and electric power demand data for the Fremont towns. The existing power plant has a maximum capacity of 2,000 MW."
   },
   {
     "question_id": "2008_Q59",
@@ -3093,6 +3411,36 @@
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
     },
+    "background_data": {
+      "table": {
+        "headers": [
+          "Town",
+          "Population Growth Rate",
+          "Population Size",
+          "Per Capita Power Demand"
+        ],
+        "rows": [
+          [
+            "East Fremont",
+            "Zero",
+            "50,000",
+            "10 kW"
+          ],
+          [
+            "West Fremont",
+            "1.75% per year",
+            "75,000",
+            "4 kW"
+          ],
+          [
+            "Fremont Center",
+            "3.5% per year",
+            "200,000",
+            "5 kW"
+          ]
+        ]
+      }
+    },
     "group_id": "2008_Q57_59",
     "group_members": [
       "2008_Q57",
@@ -3101,7 +3449,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "Questions 57-59 refer to the following. The town of Fremont Center shares its power plant with the towns of West Fremont and East Fremont. Information about the three towns is shown in the table below. The maximum capacity of the existing power plant is 2,000 MW. POPULATION AND ELECTRIC POWER DEMAND IN THE FREMONTS Town Population Growth Rate Population Size Per Capita Power Demand East Fremont Zero 50,000 10 kW West Fremont 1.75% per year 75,000 4 kW Fremont Center 3.5% per year 200,000 5 kW"
+    "group_context": "Questions 57-59 refer to the population and electric power demand data for the Fremont towns. The existing power plant has a maximum capacity of 2,000 MW."
   },
   {
     "question_id": "2008_Q60",
@@ -3675,10 +4023,10 @@
     "text": "Which of the following are direct products of the use of hydrocarbon fuels in automobile engines?",
     "options": {
       "A": "O, N, and CO",
-      "B": "CO, Ar, and $O_3$",
-      "C": "$CO_2$, $H_2O$, and $O_3$",
-      "D": "$CO_2$, $O_3$, and Pb",
-      "E": "$CO_2$, $NO_x$, and VOCs"
+      "B": "CO, Ar, and $\\mathrm{O}_3$",
+      "C": "$\\mathrm{CO}_2$, $\\mathrm{H}_2\\mathrm{O}$, and $\\mathrm{O}_3$",
+      "D": "$\\mathrm{CO}_2$, $\\mathrm{O}_3$, and Pb",
+      "E": "$\\mathrm{CO}_2$, $\\mathrm{NO}_x$, and VOCs"
     },
     "answer": "E",
     "answers": [
@@ -4921,7 +5269,7 @@
       "B": "Increased cloudiness caused by more moisture in the atmosphere",
       "C": "Melting of Arctic sea ice",
       "D": "Increased acidity of seawater",
-      "E": "Increased growth of $CO_2$ -absorbing trees and grasses"
+      "E": "Increased growth of $\\mathrm{CO}_2$ -absorbing trees and grasses"
     },
     "answer": "C",
     "answers": [
@@ -8078,7 +8426,7 @@
       "B": "There is a limitless supply of the raw material needed for the process of generating energy.",
       "C": "Nuclear power plants are inexpensive to build and maintain.",
       "D": "There is no potential for thermal pollution.",
-      "E": "There is no $CO_2$ emitted from the nuclear reaction."
+      "E": "There is no $\\mathrm{CO}_2$ emitted from the nuclear reaction."
     },
     "answer": "E",
     "answers": [
@@ -8379,9 +8727,9 @@
     "text": "If technology that reduces the hydrocarbon concentration had been utilized, which of the following would have been the most likely result?",
     "options": {
       "A": "The concentration of NO would have been higher.",
-      "B": "The concentration of $CO_2$ would have been lower.",
-      "C": "The concentration of $O_3$ would have been higher.",
-      "D": "The concentration of $O_3$ would have been lower.",
+      "B": "The concentration of $\\mathrm{CO}_2$ would have been lower.",
+      "C": "The concentration of $\\mathrm{O}_3$ would have been higher.",
+      "D": "The concentration of $\\mathrm{O}_3$ would have been lower.",
       "E": "The concentration of aldehydes would have been higher."
     },
     "answer": "D",
@@ -9352,7 +9700,7 @@
     "type": "MCQ",
     "text": "A major limitation of using photovoltaic cells to generate electricity is that they",
     "options": {
-      "A": "do not produce as much $CO_2$ as other energy sources do",
+      "A": "do not produce as much $\\mathrm{CO}_2$ as other energy sources do",
       "B": "do not produce as much electricity on cloudy days",
       "C": "have no moving parts",
       "D": "present a danger to birds and bats",
@@ -9442,7 +9790,7 @@
     "year": 2016,
     "question_number": 69,
     "type": "MCQ",
-    "text": "Burning one gallon of gasoline in a car releases approximately 20 pounds of $CO_2$ into the atmosphere. One person drives 60,000 miles in a car that averages 30 miles per gallon mpg, while another person drives 60,000 miles in a car that averages 20 mpg. Over the course of the 60,000 miles, how many fewer pounds of $CO_2$ are released by the 30 mpg car than by the 20 mpg car?",
+    "text": "Burning one gallon of gasoline in a car releases approximately 20 pounds of $\\mathrm{CO}_2$ into the atmosphere. One person drives 60,000 miles in a car that averages 30 miles per gallon mpg, while another person drives 60,000 miles in a car that averages 20 mpg. Over the course of the 60,000 miles, how many fewer pounds of $\\mathrm{CO}_2$ are released by the 30 mpg car than by the 20 mpg car?",
     "options": {
       "A": "2,000",
       "B": "8,000",
@@ -9536,11 +9884,11 @@
     "type": "MCQ",
     "text": "Which of the following is true about the Clean Air Act Amendments of 1990?",
     "options": {
-      "A": "They allowed power plants to buy and sell $SO_2$ pollution allowances.",
+      "A": "They allowed power plants to buy and sell $\\mathrm{SO}_2$ pollution allowances.",
       "B": "They decreased the CAFE (corporate average fuel economy) standards for light trucks from 29 mpg to 12 mpg.",
       "C": "They regulated the concentration of eleven common pollutants inside homes.",
       "D": "They increased the allowable level of tropospheric ozone from 80 ppb to 100 ppb.",
-      "E": "They regulated the emission of $CO_2$ by power plants."
+      "E": "They regulated the emission of $\\mathrm{CO}_2$ by power plants."
     },
     "answer": "A",
     "answers": [
@@ -10548,7 +10896,7 @@
       "B": "Both carbon dioxide and aerosols contribute to global warming.",
       "C": "Carbon dioxide contributes to global warming, and aerosols have no effect on global climate.",
       "D": "Carbon dioxide reacts to form aerosols, leading to decreased global warming.",
-      "E": "U V radiation causes carbon dioxide to break down, leading to increased stratospheric cooling."
+      "E": "UV radiation causes carbon dioxide to break down, leading to increased stratospheric cooling."
     },
     "answer": "A",
     "answers": [
@@ -10640,7 +10988,7 @@
       "B": "does not absorb energy",
       "C": "has a short residence time in the atmosphere",
       "D": "does not contain carbon",
-      "E": "has no global-warming potential G W P"
+      "E": "has no global-warming potential GWP"
     },
     "answer": "C",
     "answers": [
@@ -10831,7 +11179,7 @@
     "year": 2016,
     "question_number": 97,
     "type": "MCQ",
-    "text": "Increased atmospheric $CO_2$ concentration over the next 50 years is expected to cause which of the following global changes?",
+    "text": "Increased atmospheric $\\mathrm{CO}_2$ concentration over the next 50 years is expected to cause which of the following global changes?",
     "options": {
       "A": "Per capita meat consumption in Africa will increase as the population in Africa increases.",
       "B": "North American meat production is expected to decrease as population increases.",
@@ -10952,7 +11300,7 @@
       "A": "Increase in respiratory irritation due to increased levels of fine airborne particulates",
       "B": "Increase in skin cancer due to increased ozone levels",
       "C": "Increase in allergies due to increased household mold",
-      "D": "Increase in infant mortality due to increased atmospheric $CO_2$ levels",
+      "D": "Increase in infant mortality due to increased atmospheric $\\mathrm{CO}_2$ levels",
       "E": "Increase in heart attacks due to increased barometric pressure"
     },
     "answer": "A",
