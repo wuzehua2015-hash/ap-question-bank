@@ -38,7 +38,7 @@ function renderLatex(source, displayMode) {
   }
 }
 
-function renderLatexSegments(text, options = {}) {
+function renderLatexSegmentsRaw(text, options = {}) {
   const { forceInlineLatex = false } = options
   const restoredHtml = []
   const protectedText = String(text).replace(/<\/?(?:sub|sup)>|&lt;(\/?(?:sub|sup))&gt;/gi, (raw, escapedTag) => {
@@ -79,6 +79,28 @@ function renderLatexSegments(text, options = {}) {
 
   parts.push(escapeHtml(protectedText.slice(lastIndex)))
   return parts.join('').replace(/@@HTML_TAG_(\d+)@@/g, (_, idx) => restoredHtml[Number(idx)] || '')
+}
+
+function renderLatexSegments(text, options = {}) {
+  const source = String(text)
+  const pattern = /`([^`\n]+?)`/g
+  const parts = []
+  let lastIndex = 0
+  let match
+
+  while ((match = pattern.exec(source)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(renderLatexSegmentsRaw(source.slice(lastIndex, match.index), options))
+    }
+    parts.push(`<code class="inline-code">${escapeHtml(match[1])}</code>`)
+    lastIndex = pattern.lastIndex
+  }
+
+  if (lastIndex < source.length) {
+    parts.push(renderLatexSegmentsRaw(source.slice(lastIndex), options))
+  }
+
+  return parts.join('')
 }
 
 function isLikelyCurrencyToken(token, fullText, startIndex) {

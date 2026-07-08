@@ -157,9 +157,9 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
       )}
 
       {/* Question text */}
-      <h3 className="text-lg font-medium text-text mb-4 leading-relaxed">
+      <div className="text-lg font-medium text-text mb-4 leading-relaxed">
         <MathText text={question.text || question.question_text} />
-      </h3>
+      </div>
 
       {/* Images */}
       <BackgroundTable tableData={hasTableImage ? null : backgroundTable} />

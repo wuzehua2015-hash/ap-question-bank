@@ -11,6 +11,15 @@ import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramO
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
+function makeQuestionPreview(text) {
+  return String(text || '')
+    .replace(/```[\s\S]*?```/g, ' code segment ')
+    .replace(/^\|.*\|$/gm, ' ')
+    .replace(/`([^`\n]+?)`/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 function SearchPage() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
@@ -195,7 +204,11 @@ function SearchPage() {
                   {correctRate !== null && <Tag tone={correctRate >= 70 ? 'done' : 'wrong'}>正确率 {correctRate}%</Tag>}
                 </div>
                 <div className={`text-sm text-text ${isExpanded ? '' : 'line-clamp-2'}`}>
-                  <MathText text={q.text || q.question_text} />
+                  {isExpanded ? (
+                    <MathText text={q.text || q.question_text} />
+                  ) : (
+                    makeQuestionPreview(q.text || q.question_text)
+                  )}
                 </div>
               </div>
 

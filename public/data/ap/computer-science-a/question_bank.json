@@ -3356,7 +3356,7 @@
     "source_set": "gridworld_practice",
     "question_number": 37,
     "type": "MCQ",
-    "text": "Consider the following code segment.\n\n```java\nint x = 1;\n\nwhile (/* missing code */)\n{\n  System.out.print(x + \" \");\n  x = x + 2;\n}\n```\n\nConsider the following possible replacements for `/* missing code */`.\n\nI. `x < 6`\nII. `x != 6`\nIII. `x < 7`\n\nWhich of the proposed replacements for `/* missing code */` will cause the code segment to print only the values `1 3 5`?",
+    "text": "Consider the following code segment.\n\n```java\nint x = 1;\n\nwhile (/* missing code */)\n{\n  System.out.print(x + \" \");\n  x = x + 2;\n}\n```\n\nConsider the following possible replacements for `/* missing code */`.\n\n| Replacement | Code |\n|---|---|\n| I | `x < 6` |\n| II | `x != 6` |\n| III | `x < 7` |\n\nWhich of the proposed replacements for `/* missing code */` will cause the code segment to print only the values `1 3 5`?",
     "options": {
       "A": "I only",
       "B": "II only",
