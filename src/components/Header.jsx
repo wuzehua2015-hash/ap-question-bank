@@ -11,13 +11,13 @@ function Header() {
   const currentSubjectConfig = mySubjects.find(s => s.id === currentSubject)
 
   const items = [
-    { path: '/', label: 'Home' },
+    { path: '/', label: '首页' },
     { path: '/quiz', label: 'Quiz' },
     { path: '/exam', label: 'Mock Exam' },
-    { path: '/search', label: 'Search' },
-    { path: '/mistakes', label: 'Mistakes' },
-    { path: '/history', label: 'History' },
-    { path: '/settings', label: 'Settings' },
+    { path: '/search', label: '搜索' },
+    { path: '/mistakes', label: '错题本' },
+    { path: '/history', label: '记录' },
+    { path: '/settings', label: '设置' },
   ]
 
   const isActive = (path) => location.pathname === path
@@ -25,7 +25,7 @@ function Header() {
   return (
     <header className="bg-brand text-white shadow-lg">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="text-xl font-bold tracking-tight">LynkEdu</Link>
+        <Link to="/" className="text-xl font-bold tracking-tight">翎英教育 LynkEdu</Link>
 
         <nav className="hidden md:flex items-center gap-6">
           <div className="relative">
@@ -33,7 +33,7 @@ function Header() {
               onClick={() => mySubjects.length > 1 && setSubjectDropdownOpen(!subjectDropdownOpen)}
               className={`flex items-center gap-1 text-sm font-medium px-3 py-1.5 rounded-md transition-colors ${mySubjects.length > 1 ? 'hover:bg-white/10 cursor-pointer' : 'cursor-default'}`}
             >
-              {currentSubjectConfig?.shortName || 'Select Subject'}
+              {currentSubjectConfig?.shortName || '选择科目'}
               {mySubjects.length > 1 && (
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -60,7 +60,7 @@ function Header() {
                   onClick={() => setSubjectDropdownOpen(false)}
                   className="block px-4 py-2 text-sm text-accent hover:bg-gray-100 border-t border-gray-100"
                 >
-                  Manage subjects
+                  管理科目
                 </Link>
               </div>
             )}
@@ -82,7 +82,7 @@ function Header() {
         <button
           className="md:hidden p-2"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
+          aria-label="菜单"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {menuOpen ? (
@@ -97,8 +97,8 @@ function Header() {
       {menuOpen && (
         <nav className="md:hidden border-t border-white/20">
           <div className="px-4 py-3 border-b border-white/10">
-            <span className="text-xs text-white/60 uppercase tracking-wider">Current subject</span>
-            <div className="text-sm font-medium mt-1">{currentSubjectConfig?.name || 'Select a subject'}</div>
+            <span className="text-xs text-white/60 uppercase tracking-wider">当前科目</span>
+            <div className="text-sm font-medium mt-1">{currentSubjectConfig?.name || '选择科目'}</div>
           </div>
           {items.map(item => (
             <Link

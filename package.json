@@ -30,8 +30,9 @@
     "validate:rubrics": "node scripts/rubric_text_validator.cjs",
     "validate:groups": "node scripts/grouped_quiz_audit.mjs",
     "validate:science": "node scripts/science_content_gate.cjs",
+    "validate:copy": "node scripts/chinese_copy_gate.cjs",
     "validate:regression": "node scripts/cross_subject_regression.cjs",
-    "validate": "npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:groups && npm run validate:science && npm run validate:regression",
+    "validate": "npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:groups && npm run validate:science && npm run validate:copy && npm run validate:regression",
     "prebuild": "npm run validate",
     "predev": "npm run validate"
   },

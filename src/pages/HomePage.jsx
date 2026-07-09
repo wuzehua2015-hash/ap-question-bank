@@ -37,15 +37,15 @@ function HomePage() {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12">
         <section className="bg-surface border border-border rounded-lg p-8">
-          <h1 className="text-2xl font-bold text-brand mb-3">Choose your study subjects</h1>
+          <h1 className="text-2xl font-bold text-brand mb-3">选择你的学习科目</h1>
           <p className="text-text-muted mb-6">
-            Select the AP subjects you are currently studying. Your home page and subject switcher will stay focused on that list.
+            先选择你正在学习的 AP 科目。首页和顶部科目切换器只会展示这些科目。
           </p>
           <Link
             to="/settings"
             className="inline-flex items-center bg-accent hover:bg-accent-light text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
           >
-            Open settings
+            去设置
           </Link>
         </section>
       </div>
@@ -56,12 +56,12 @@ function HomePage() {
     <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
       <section className="mb-10 sm:mb-16">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-6">
-          <h1 className="text-2xl font-bold text-brand">My Subjects</h1>
+          <h1 className="text-2xl font-bold text-brand">我的科目</h1>
           <Link
             to="/settings"
             className="inline-flex items-center justify-center border border-border bg-surface hover:bg-gray-50 text-text text-sm font-medium px-4 py-2 rounded-lg transition-colors"
           >
-            Manage subjects
+            管理科目
           </Link>
         </div>
 
@@ -78,7 +78,7 @@ function HomePage() {
                 <div className="flex items-start justify-between gap-3 mb-4">
                   <h2 className="text-lg font-bold text-text leading-snug">{subject.name}</h2>
                   {isActive && (
-                    <span className="shrink-0 text-xs bg-accent/10 text-accent px-2 py-0.5 rounded-full">Current</span>
+                    <span className="shrink-0 text-xs bg-accent/10 text-accent px-2 py-0.5 rounded-full">当前</span>
                   )}
                 </div>
 
@@ -107,14 +107,14 @@ function HomePage() {
                     onClick={() => setSubject(subject.id)}
                     className="inline-flex items-center bg-surface border border-border hover:bg-gray-50 text-text text-sm font-medium px-4 py-2 rounded-lg transition-colors"
                   >
-                    Search
+                    搜索
                   </Link>
                   <Link
                     to="/mistakes"
                     onClick={() => setSubject(subject.id)}
                     className="inline-flex items-center bg-surface border border-border hover:bg-gray-50 text-text text-sm font-medium px-4 py-2 rounded-lg transition-colors"
                   >
-                    Mistakes
+                    错题
                   </Link>
                 </div>
               </div>
@@ -124,13 +124,13 @@ function HomePage() {
       </section>
 
       <section>
-        <h2 className="text-xl font-bold text-brand mb-4">Quick Access</h2>
+        <h2 className="text-xl font-bold text-brand mb-4">快捷入口</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Link to="/history" className="bg-surface rounded-lg p-5 sm:p-6 shadow-sm border border-border hover:shadow-md transition-shadow flex items-center gap-4">
             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-xl">H</div>
             <div>
-              <div className="text-lg font-semibold text-text">Study History</div>
-              <div className="text-sm text-text-muted">Review accuracy trends and unit performance.</div>
+              <div className="text-lg font-semibold text-text">学习记录</div>
+              <div className="text-sm text-text-muted">查看正确率趋势和单元表现。</div>
             </div>
           </Link>
         </div>

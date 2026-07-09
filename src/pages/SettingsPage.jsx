@@ -22,17 +22,17 @@ function SettingsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-brand mb-2">Subject Settings</h1>
+        <h1 className="text-2xl font-bold text-brand mb-2">科目设置</h1>
         <p className="text-text-muted">
-          Choose the subjects you are studying. The home page and subject switcher will only show this selected set.
+          选择你正在学习的科目。首页和顶部科目切换器只会展示已选择的科目。
         </p>
       </div>
 
       <section className="mb-10">
-        <h2 className="text-lg font-bold text-text mb-4">My Subjects</h2>
+        <h2 className="text-lg font-bold text-text mb-4">我的科目</h2>
         {mySubjectIds.length === 0 ? (
           <div className="bg-surface border border-border rounded-lg p-5 text-text-muted">
-            No subjects selected yet.
+            还没有选择科目。
           </div>
         ) : (
           <div className="flex flex-wrap gap-2">
@@ -56,7 +56,7 @@ function SettingsPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-text mb-4">Available Subjects</h2>
+        <h2 className="text-lg font-bold text-text mb-4">可选科目</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {availableSubjects.map(subject => {
             const isSelected = selected.has(subject.id)
@@ -78,13 +78,13 @@ function SettingsPage() {
                     checked={isSelected}
                     onChange={() => toggleSubject(subject.id)}
                     className="mt-1 h-4 w-4 accent-[var(--color-accent)]"
-                    aria-label={`Select ${subject.name}`}
+                    aria-label={`选择 ${subject.name}`}
                   />
                 </div>
 
                 <div className="flex gap-4 mb-4 text-sm text-text-muted">
-                  <div>{subject.mockExam?.totalMCQ || 0} MCQ mock</div>
-                  {subject.hasFRQ && <div>{subject.mockExam?.frqCount || 0} FRQ mock</div>}
+                  <div>{subject.mockExam?.totalMCQ || 0} 道 MCQ 模考</div>
+                  {subject.hasFRQ && <div>{subject.mockExam?.frqCount || 0} 道 FRQ 模考</div>}
                 </div>
 
                 <div className="flex flex-wrap gap-2">
@@ -97,7 +97,7 @@ function SettingsPage() {
                         : 'bg-accent hover:bg-accent-light text-white'
                     }`}
                   >
-                    {isSelected ? 'Remove' : 'Add'}
+                    {isSelected ? '移除' : '添加'}
                   </button>
                   {isSelected && (
                     <button
@@ -109,7 +109,7 @@ function SettingsPage() {
                           : 'border-border bg-surface hover:bg-gray-50 text-text'
                       }`}
                     >
-                      {isCurrent ? 'Current' : 'Set current'}
+                      {isCurrent ? '当前' : '设为当前'}
                     </button>
                   )}
                 </div>
