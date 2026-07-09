@@ -541,83 +541,6 @@
       }
     },
     {
-      "id": "physics-2",
-      "name": "AP Physics 2: Algebra-Based",
-      "shortName": "Physics 2",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/physics-2/question_bank.json",
-      "frqBank": "ap/physics-2/frq_bank.json",
-      "similarityIndex": "ap/physics-2/similarity_index.json",
-      "classificationConfig": "ap/physics-2/classification_config.json",
-      "dataVersion": "structured-2014-2016-2017-2019-frq-2023-2025-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Fluids"
-        },
-        {
-          "id": "U2",
-          "name": "Thermodynamics"
-        },
-        {
-          "id": "U3",
-          "name": "Electric Force, Field, and Potential"
-        },
-        {
-          "id": "U4",
-          "name": "Electric Circuits"
-        },
-        {
-          "id": "U5",
-          "name": "Magnetism and Electromagnetic Induction"
-        },
-        {
-          "id": "U6",
-          "name": "Geometric and Physical Optics"
-        },
-        {
-          "id": "U7",
-          "name": "Quantum, Atomic, and Nuclear Physics"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 40,
-        "frqCount": 4,
-        "mcqTimeLimit": 4800,
-        "frqTimeLimit": 6000,
-        "unitDistribution": {
-          "U1": 3,
-          "U2": 5,
-          "U3": 8,
-          "U4": 5,
-          "U5": 4,
-          "U6": 8,
-          "U7": 7
-        }
-      },
-      "releaseStatus": "content-risk",
-      "visibility": "internal",
-      "readiness": {
-        "status": "red",
-        "updatedAt": "2026-07-09",
-        "p0": 8,
-        "p1": 0,
-        "contentRiskCodes": [
-          "flattened_frq_tables",
-          "frq_prompt_page_number_residue",
-          "frq_solution_outline_duplicates_criteria",
-          "frq_visual_asset_contract_missing",
-          "weak_frq_rubrics"
-        ],
-        "mechanismCodes": [
-          "missing_delivery_contract",
-          "missing_delivery_review",
-          "missing_frq_browser_review"
-        ]
-      }
-    },
-    {
       "id": "physics-c-e-m",
       "name": "AP Physics C: Electricity and Magnetism",
       "shortName": "Physics C E&M",
@@ -1174,6 +1097,65 @@
           "U6": 1,
           "U7": 7,
           "U8": 0
+        }
+      }
+    },
+    {
+      "id": "physics-2",
+      "name": "AP Physics 2: Algebra-Based",
+      "shortName": "Physics 2",
+      "active": true,
+      "releaseStatus": "certified",
+      "visibility": "internal",
+      "hasFRQ": true,
+      "questionBank": "ap/physics-2/question_bank.json",
+      "frqBank": "ap/physics-2/frq_bank.json",
+      "similarityIndex": "ap/physics-2/similarity_index.json",
+      "classificationConfig": "ap/physics-2/classification_config.json",
+      "dataVersion": "structured-2014-2016-2017-2019-frq-2023-2025-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Fluids"
+        },
+        {
+          "id": "U2",
+          "name": "Thermodynamics"
+        },
+        {
+          "id": "U3",
+          "name": "Electric Force, Field, and Potential"
+        },
+        {
+          "id": "U4",
+          "name": "Electric Circuits"
+        },
+        {
+          "id": "U5",
+          "name": "Magnetism and Electromagnetic Induction"
+        },
+        {
+          "id": "U6",
+          "name": "Geometric and Physical Optics"
+        },
+        {
+          "id": "U7",
+          "name": "Quantum, Atomic, and Nuclear Physics"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 40,
+        "frqCount": 4,
+        "mcqTimeLimit": 4800,
+        "frqTimeLimit": 6000,
+        "unitDistribution": {
+          "U1": 3,
+          "U2": 5,
+          "U3": 8,
+          "U4": 5,
+          "U5": 4,
+          "U6": 8,
+          "U7": 7
         }
       }
     }
