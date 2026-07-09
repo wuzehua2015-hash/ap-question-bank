@@ -107,7 +107,13 @@ export function formatAnswer(value) {
 }
 
 export function adaptFRQ(raw) {
-  const rubric = raw.rubric || null
+  const rawRubric = raw.rubric || null
+  const rubric = rawRubric
+    ? {
+        ...rawRubric,
+        total_points: Number(rawRubric.total_points ?? rawRubric.max_score ?? raw.total_points ?? raw.max_score ?? 0),
+      }
+    : null
   
   return {
     question_id: raw.question_id || raw.id || '',
@@ -400,6 +406,10 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
   const playableQuestions = questions.filter(isPlayableMCQ)
 
   const mcq = []
+  if (mockConfig.preserveGroupsOnly) {
+    const buckets = makeQuestionBuckets(playableQuestions).sort(() => Math.random() - 0.5)
+    mcq.push(...flattenBucketsToLimit(buckets, mockConfig.totalMCQ, { exact: true }))
+  } else {
   const unitDistribution = mockConfig.unitDistribution || {}
   const configTotal = Object.values(unitDistribution).reduce((a, b) => a + b, 0)
   if (configTotal > 0 && configTotal !== mockConfig.totalMCQ) {
@@ -427,6 +437,7 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
   } else {
     const buckets = makeQuestionBuckets(playableQuestions).sort(() => Math.random() - 0.5)
     mcq.push(...flattenBucketsToLimit(buckets, mockConfig.totalMCQ, { exact: true }))
+  }
   }
 
   // FRQ: sample from the full subject FRQ pool. Released-year sets are useful

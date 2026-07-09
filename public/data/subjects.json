@@ -914,6 +914,57 @@
           "U5": 11
         }
       }
+    },
+    {
+      "id": "english-language",
+      "name": "AP English Language and Composition",
+      "shortName": "English Lang",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/english-language/question_bank.json",
+      "frqBank": "ap/english-language/frq_bank.json",
+      "similarityIndex": "ap/english-language/similarity_index.json",
+      "classificationConfig": "ap/english-language/classification_config.json",
+      "dataVersion": "local-2012-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Rhetorical Situation"
+        },
+        {
+          "id": "U2",
+          "name": "Claims and Evidence"
+        },
+        {
+          "id": "U3",
+          "name": "Reasoning and Organization"
+        },
+        {
+          "id": "U4",
+          "name": "Style"
+        },
+        {
+          "id": "U5",
+          "name": "Synthesis and Source Use"
+        },
+        {
+          "id": "U6",
+          "name": "Argument Development"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 55,
+        "frqCount": 3,
+        "mcqTimeLimit": 3600,
+        "frqTimeLimit": 8100,
+        "preserveGroupsOnly": true,
+        "unitDistribution": {
+          "U1": 8,
+          "U2": 9,
+          "U3": 14,
+          "U4": 24
+        }
+      }
     }
   ]
 }

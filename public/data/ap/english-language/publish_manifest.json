@@ -1,0 +1,28 @@
+{
+  "published_years": [
+    {
+      "year": 2012,
+      "mcq": 55,
+      "frq": 3,
+      "pdf": "AP Language 2012.pdf"
+    }
+  ],
+  "excluded_sources": [
+    {
+      "pdf": "AP Language 2007.pdf",
+      "reason": "PyMuPDF cannot open the local file due to PDF syntax errors; excluded until repaired or converted."
+    },
+    {
+      "pdf": "AP Language 2013.pdf",
+      "reason": "Candidate source opens, but MCQ text layer cross-column ordering drops or merges question stems; excluded until a subject-specific word-coordinate reconstruction pass is completed."
+    },
+    {
+      "pdf": "AP_English_Language_2015_Full_Exam.pdf",
+      "reason": "Candidate source opens, but MCQ text layer cross-column ordering drops or merges question stems; excluded until a subject-specific word-coordinate reconstruction pass is completed."
+    },
+    {
+      "pdf": "AP Language 2016.pdf",
+      "reason": "Candidate source opens, but MCQ text layer cross-column ordering drops or merges question stems; excluded until a subject-specific word-coordinate reconstruction pass is completed."
+    }
+  ]
+}

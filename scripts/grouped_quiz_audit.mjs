@@ -67,6 +67,9 @@ function generateQuizLocal(questions, { unit = 'all', count = 10 } = {}) {
 function generateMockLocal(questions, subject) {
   const playable = questions.filter(q => q.scoring_status !== 'not_scored' && q.answer && Object.keys(q.options || {}).length > 0)
   const mcq = []
+  if (subject.mockExam?.preserveGroupsOnly) {
+    return flattenBucketsToLimit(makeQuestionBuckets(playable).sort(() => Math.random() - 0.5), Number(subject.mockExam?.totalMCQ || 0), { exact: true })
+  }
   const selected = new Set()
   for (const [unit, count] of Object.entries(subject.mockExam?.unitDistribution || {})) {
     const buckets = makeQuestionBuckets(playable)

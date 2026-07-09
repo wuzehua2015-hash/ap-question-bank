@@ -18,6 +18,7 @@ const offset = args.offset ? Number(args.offset) : 0
 const onlyPriority = args.priority || null
 const onlyIds = args.ids ? new Set(String(args.ids).split(',').map(id => id.trim()).filter(Boolean)) : null
 const includeReviewed = args['include-reviewed'] === 'true' || args.includeReviewed === 'true'
+const spokenMathCheckEnabled = !isHumanitiesSubject(subjectId)
 
 if (!subjectId) {
   console.error('Usage: node scripts/capture_answerability_web_snapshots.cjs --subject <subject_id> [--priority P1_REVIEW] [--limit 50]')
@@ -29,10 +30,14 @@ const BAD_VISIBLE_PATTERNS = [
   { code: 'raw_html_entity', re: /&(?:quot|amp|lt|gt|nbsp);/i },
   { code: 'visible_mojibake', re: /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7\u9354\u68f0\u93bc]/ },
   { code: 'exam_footer', re: /IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING|(?:STOP\s*)?END OF EXAM|THE FOLLOWING INSTRUCTIONS APPLY TO|MAKE SURE YOU HAVE COMPLETED THE IDENTIFICATION|AP NUMBER LABELS/i },
-  { code: 'spoken_math', re: /\b(?:the )?fraction\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i },
+  ...(spokenMathCheckEnabled ? [{ code: 'spoken_math', re: /\b(?:the )?fraction\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i }] : []),
   { code: 'missing_formula_phrase', re: /\b(?:according to|given by|modeled by) the equation\s*,/i },
   { code: 'missing_constants_phrase', re: /\bwhere\s+and\s+are\s+constants\b/i },
 ]
+
+function isHumanitiesSubject(id) {
+  return /english|literature|history|government|psychology|human-geography/.test(String(id || ''))
+}
 
 function isExpandedText(text) {
   return /查看答案|正确答案|Hide Answer|Show Answer/.test(text || '') ||

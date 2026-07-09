@@ -13,6 +13,7 @@ const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
 const port = Number(args.port || defaultDebugPort(subjectId || 'frq-audit'))
+const spokenMathCheckEnabled = !isHumanitiesSubject(subjectId)
 
 if (!subjectId) {
   console.error('Usage: node scripts/capture_frq_answerability_web_snapshots.cjs --subject <subject_id> [--url http://127.0.0.1:4174/ap-question-bank/] [--port 9454]')
@@ -24,9 +25,13 @@ const BAD_VISIBLE_PATTERNS = [
   { code: 'raw_html_entity', re: /&(?:quot|amp|lt|gt|nbsp);/i },
   { code: 'visible_mojibake', re: /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7\u9354\u68f0\u93bc]/ },
   { code: 'exam_footer', re: /IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING|(?:STOP\s*)?END OF EXAM|THE FOLLOWING INSTRUCTIONS APPLY TO|MAKE SURE YOU HAVE COMPLETED THE IDENTIFICATION|AP NUMBER LABELS/i },
-  { code: 'spoken_math', re: /\b(?:the )?fraction\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i },
+  ...(spokenMathCheckEnabled ? [{ code: 'spoken_math', re: /\b(?:the )?fraction\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i }] : []),
   { code: 'raw_mapping_key', re: /\bofficial_(?:scoring_guideline|rubric)\b|rubric_image_paths/i },
 ]
+
+function isHumanitiesSubject(id) {
+  return /english|literature|history|government|psychology|human-geography/.test(String(id || ''))
+}
 
 main().catch(error => {
   console.error(error.stack || error.message || String(error))
