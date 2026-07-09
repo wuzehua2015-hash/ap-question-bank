@@ -554,6 +554,99 @@ function DisplayImage({ path, variant }) {
   )
 }
 
+function FigureBlock({ block, variant }) {
+  const isPdf = variant === 'pdf'
+  const title = [block.figure_id, block.caption].filter(Boolean).join('. ')
+  const images = block.image_paths || block.images || []
+  const subcaptions = block.subcaptions || []
+
+  if (isPdf) {
+    return (
+      <div style={{ margin: '14px 0 18px', ...BREAK_GUARD.BLOCK }}>
+        {title && (
+          <div style={{ fontSize: '13px', fontWeight: 700, color: '#1f2937', marginBottom: '6px' }}>
+            <MathText text={title} />
+          </div>
+        )}
+        {subcaptions.length > 0 && (
+          <div style={{ fontSize: '12px', color: '#475569', marginBottom: '6px' }}>
+            {subcaptions.map((caption, idx) => (
+              <div key={idx}><MathText text={caption} /></div>
+            ))}
+          </div>
+        )}
+        {images.map((path, idx) => <DisplayImage key={idx} path={path} variant={variant} />)}
+      </div>
+    )
+  }
+
+  return (
+    <figure className="my-5 rounded-lg border border-border bg-white p-3">
+      {title && (
+        <figcaption className="mb-2 text-sm font-semibold text-text">
+          <MathText text={title} />
+        </figcaption>
+      )}
+      {subcaptions.length > 0 && (
+        <div className="mb-3 space-y-1 text-sm text-text-muted">
+          {subcaptions.map((caption, idx) => (
+            <div key={idx}><MathText text={caption} /></div>
+          ))}
+        </div>
+      )}
+      {images.map((path, idx) => <DisplayImage key={idx} path={path} variant={variant} />)}
+    </figure>
+  )
+}
+
+function ContentBlocks({ blocks, variant }) {
+  const isPdf = variant === 'pdf'
+  if (!Array.isArray(blocks) || blocks.length === 0) return null
+
+  if (isPdf) {
+    return (
+      <div style={{
+        fontFamily: "'Times New Roman', 'Georgia', 'Songti SC', 'SimSun', serif",
+        fontSize: '16px',
+        lineHeight: 1.8,
+        color: '#1f2937',
+      }}>
+        {blocks.map((block, idx) => {
+          if (block.type === 'figure') return <FigureBlock key={idx} block={block} variant={variant} />
+          if (block.type === 'table') return <FRQBackgroundTable key={idx} tableData={block.table || block.data} isPdf={true} />
+          const text = block.text || ''
+          const label = block.label || block.part || ''
+          const marginLeft = block.type === 'part' ? '24px' : '0'
+          return (
+            <div key={idx} style={{ marginLeft, marginTop: block.type === 'part' ? '8px' : '0', ...BREAK_GUARD.BLOCK }}>
+              {label && <span style={{ fontWeight: 700, color: '#1e40af', marginRight: '8px' }}><MathText text={label} /> </span>}
+              <MathText text={text} />
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+
+  return (
+    <div className="text-base text-text leading-relaxed">
+      {blocks.map((block, idx) => {
+        if (block.type === 'figure') return <FigureBlock key={idx} block={block} variant={variant} />
+        if (block.type === 'table') return <FRQBackgroundTable key={idx} tableData={block.table || block.data} isPdf={false} />
+        const text = block.text || ''
+        const label = block.label || block.part || ''
+        const isPart = block.type === 'part'
+        return (
+          <div key={idx} className={isPart ? 'ml-6 mt-3' : 'mb-3'}>
+            {label && <span className="mr-2 inline-block font-semibold text-blue-800"><MathText text={label} /> </span>}
+            <MathText text={text} />
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 export function RubricDisplay({ rubric, variant }) {
   const points = normalizeRubricPoints(rubric)
   if (!rubric || (points.length === 0 && !rubric.solution_outline)) return null
@@ -827,9 +920,20 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
   const qNum = frq.question_number || frq.question_num || index || '?'
   const officialImagesFirst = frq.display_mode === 'official_images_first'
   const promptText = frq.text || frq.question_text
+  const contentBlocks = Array.isArray(frq.content_blocks) ? frq.content_blocks : null
   const backgroundTable = frq.background_data?.table
 
-  const promptTextBlock = promptText && (
+  const promptTextBlock = contentBlocks ? (
+    isPdf ? (
+      <div style={{ marginBottom: '16px' }}>
+        <ContentBlocks blocks={contentBlocks} variant={variant} />
+      </div>
+    ) : (
+      <div className="mb-6 bg-gray-50 rounded-lg p-4">
+        <ContentBlocks blocks={contentBlocks} variant={variant} />
+      </div>
+    )
+  ) : promptText && (
     isPdf ? (
       <div style={{ marginBottom: '16px' }}>
         <FRQText text={promptText} isPdf={true} />
@@ -841,10 +945,10 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
     )
   )
 
-  const imageBlock = imagePaths.map((path, i) => (
+  const imageBlock = contentBlocks ? [] : imagePaths.map((path, i) => (
     <DisplayImage key={i} path={path} variant={variant} />
   ))
-  const backgroundTableBlock = backgroundTable && (
+  const backgroundTableBlock = !contentBlocks && backgroundTable && (
     <FRQBackgroundTable tableData={backgroundTable} isPdf={isPdf} />
   )
 

@@ -77,7 +77,38 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Kangaroo rats, like other organisms, show specific adaptations to the environments in which they live. Kangaroo rats can survive in the desert with no free water. They can survive by obtaining water from dry seeds and grass that they eat, and have specialized kidneys that allow them to excrete urea with very little output of water. The graph shows the average body mass for kangaroo rats at twelve locations throughout the southwestern United States as a function of mean annual precipitation at each location."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2008/2008_frq1_body_mass_precipitation.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe the trends shown in the graph."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Develop a hypothesis that would explain the data and design an experiment that would test the hypothesis."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Discuss TWO evolutionary adaptations, other than those described above, found among other desert organisms that help to conserve water."
+      }
+    ]
   },
   {
     "question_id": "2008_FRQ2",
@@ -140,7 +171,28 @@
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2008_Full_Exam.pdf"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Environmental factors have a profound effect on the size and growth rate of populations of living organisms."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe r- and K-life-history strategies."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "For EACH of the following, identify the life-history strategy, and describe the population growth curve and limiting factor. • Yeast cells growing in a closed flask with an initial volume of nutrient broth • A blue whale (the largest baleen whale) living in the ocean"
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Describe the growth of the global human population for the last 10,000 years (you may want to include a labeled graph as part of your discussion). Discuss TWO factors that affect human population growth."
+      }
+    ]
   },
   {
     "question_id": "2008_FRQ3",
@@ -218,7 +270,23 @@
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2008_Full_Exam.pdf"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Eukaryotes depend on energy stored in biological molecules."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Compare and contrast how ATP is produced in the following two pathways. • Oxidative phosphorylation in mitochondria • Photophosphorylation in chloroplasts"
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "For THREE of the following, describe the specific role of ATP. • Muscle contraction in animals • Transport of water into root hairs • Movement of chromosomes during anaphase • DNA replication"
+      }
+    ]
   },
   {
     "question_id": "2008_FRQ4",
@@ -303,7 +371,43 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Certain human conditions result from changes in the DNA sequence. The following is a segment of the template strand of an open reading frame of a functional gene. 3'... GTT CAT CTA ACC CCT GAG GAG... 5'"
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2008/2008_frq4_codon_table.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Using the segment shown above, determine the sequence of the corresponding mRNA sequence. Indicate the 5' and 3' ends."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Using the table provided, determine the amino acid sequence of the polypeptide fragment."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The mutation results in the following sequence: 3'... GTT CAT CTA ACC CCT GTG GAG... 5' Determine the change in the primary structure of the protein due to this mutation, and explain how this change may lead to a change in the function of the protein."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Describe ONE common human genetic condition that is caused by this type of mutation, including the effect of the change in protein function on the health of the affected individual. (e) Describe TWO techniques that can be used to identify the presence of this type of genetic change."
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ1",
@@ -419,7 +523,67 @@
         ],
         "firstColumnWide": true
       }
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "In an investigation of fruit-fly behavior, a covered choice chamber is used to test whether the spatial distribution of flies is affected by the presence of a substance placed at one end of the chamber. To test the flies' preference for glucose, 60 flies are introduced into the middle of the choice chamber at the insertion point indicated by the arrow in the figure above. A cotton ball soaked with a 10% glucose solution is placed at one end of the chamber, and a dry cotton ball with no solution is placed at the other end. The positions of flies are observed and recorded every minute for 10 minutes."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2013/2013_frq1_choice_chamber.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "table",
+        "table_id": "Distribution of flies in choice chamber",
+        "table": {
+          "title": "Distribution of flies in choice chamber",
+          "headers": [
+            "Time (minutes)",
+            "End with ripe banana",
+            "Middle",
+            "End with unripe banana"
+          ],
+          "rows": [
+            [
+              "1",
+              "21",
+              "18",
+              "21"
+            ],
+            [
+              "10",
+              "45",
+              "3",
+              "12"
+            ]
+          ],
+          "firstColumnWide": true
+        },
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Predict the distribution of flies in the chamber after 10 minutes and justify your prediction."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Propose ONE specific improvement to each of the following parts of the experimental design and explain how the modification will affect the experiment. i Experimental control i Environmental factors"
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The experiment described above is repeated with ripe bananas at one end and unripe bananas at the other end. Once again the positions of the flies are observed and recorded every minute for 10 minutes. The positions of flies after 1 minute and after 10 minutes are shown in the table below."
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ2",
@@ -499,7 +663,38 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "An absorption spectrum indicates the relative amount of light absorbed across a range of wavelengths. The graphs above represent the absorption spectra of individual pigments isolated from two different organisms. One of the pigments is chlorophyll a, commonly found in green plants. The other pigment is bacteriorhodopsin, commonly found in purple photosynthetic bacteria. The table above shows the approximate ranges of wavelengths of different colors in the visible light spectrum."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2013/2013_frq2_absorption_spectra.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Identify the pigment (chlorophyll a or bacteriorhodopsin) used to generate the absorption spectrum in each of the graphs above. Explain and justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "In an experiment, identical organisms containing the pigment from Graph II as the predominant light- capturing pigment are separated into three groups. The organisms in each group are illuminated with light of a single wavelength (650 nm for the first group, 550 nm for the second group, and 430 nm for the third group). The three light sources are of equal intensity, and all organisms are illuminated for equal lengths of time. Predict the relative rate of photosynthesis in each of the three groups. Justify your predictions."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Bacteriorhodopsin has been found in aquatic organisms whose ancestors existed before the ancestors of plants evolved in the same environment. Propose a possible evolutionary history of plants that could have resulted in a predominant photosynthetic system that uses only some of the colors of the visible light spectrum."
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ3",
@@ -557,7 +752,23 @@
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2013_Practice_Exam.pdf"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Fossils of lobe-finned fishes, which are ancestors of amphibians, are found in rocks that are at least 380 million years old. Fossils of the oldest amphibian-like vertebrate animals with true legs and lungs are found in rocks that are approximately 363 million years old. Three samples of rocks are available that might contain fossils of a transitional species between lobe-finned fishes and amphibians: one rock sample that is 350 million years old, one that is 370 million years old, and one that is 390 million years old."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Select the most appropriate sample of rocks in which to search for a transitional species between lobe-finned fishes and amphibians. Justify your selection."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Describe TWO pieces of evidence provided by fossils of a transitional species that would support a hypothesis that amphibians evolved from lobe-finned fishes."
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ4",
@@ -637,7 +848,33 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Matter continuously cycles through an ecosystem. A simplified carbon cycle is depicted below."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2013/2013_frq4_carbon_cycle.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Identify the key metabolic process for step I and the key metabolic process for step II, and briefly explain how each process promotes movement of carbon through the cycle. For each process, your explanation should focus on the role of energy in the movement of carbon."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Identify an organism that carries out both processes."
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ5",
@@ -768,7 +1005,99 @@
         ],
         "firstColumnWide": true
       }
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The table below shows the amino acid sequence of the carboxyl-terminal segment of a conserved polypeptide from four different, but related, species. Each amino acid is represented by a three-letter abbreviation, and the amino acid residues in the polypeptide chains are numbered from the amino end to the carboxyl end. Empty cells indicate no amino acid is present."
+      },
+      {
+        "type": "table",
+        "table_id": "Relative Amino Acid Position",
+        "table": {
+          "title": "Relative Amino Acid Position",
+          "headers": [
+            "Species",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "rows": [
+            [
+              "I",
+              "Val",
+              "His",
+              "Leu",
+              "Val",
+              "Glu",
+              "Glu",
+              "His",
+              "Val",
+              "Glu",
+              "His"
+            ],
+            [
+              "II",
+              "Val",
+              "His",
+              "Leu",
+              "Lys",
+              "Glu",
+              "Glu",
+              "His",
+              "Val",
+              "Glu",
+              "His"
+            ],
+            [
+              "III",
+              "Val",
+              "His",
+              "Leu",
+              "Val",
+              "Glu",
+              "Glu",
+              "His",
+              "Val",
+              "",
+              ""
+            ],
+            [
+              "IV",
+              "Val",
+              "His",
+              "Leu",
+              "Val",
+              "Arg",
+              "Trp",
+              "Ala",
+              "Cys",
+              "Met",
+              "Asp"
+            ]
+          ],
+          "firstColumnWide": true
+        },
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Assuming that species I is the ancestral species of the group, explain the most likely genetic change that produced the polypeptide in species II and the most likely genetic change that produced the polypeptide in species III."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Predict the effects of the mutation on the structure and function of the resulting protein in species IV. Justify your prediction."
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ6",
@@ -866,7 +1195,56 @@
         ],
         "firstColumnWide": true
       }
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The following data were collected by observing subcellular structures of three different types of eukaryotic cells. Based on an analysis of the data, identify a likely primary function of each cell type and explain how the data support the identification."
+      },
+      {
+        "type": "table",
+        "table_id": "Relative amounts of organelles in three cell types",
+        "table": {
+          "title": "Relative amounts of organelles in three cell types",
+          "headers": [
+            "Cell Type",
+            "Smooth ER",
+            "Rough ER",
+            "Mitochondria",
+            "Cilia",
+            "Golgi Bodies"
+          ],
+          "rows": [
+            [
+              "X",
+              "Small amount",
+              "Small amount",
+              "Large number",
+              "Present",
+              "Small amount"
+            ],
+            [
+              "Y",
+              "Large amount",
+              "Large amount",
+              "Moderate number",
+              "Absent",
+              "Large amount"
+            ],
+            [
+              "Z",
+              "Absent",
+              "Absent",
+              "Absent",
+              "Absent",
+              "Absent"
+            ]
+          ],
+          "firstColumnWide": true
+        },
+        "used_by_parts": []
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ7",
@@ -944,7 +1322,51 @@
         ],
         "firstColumnWide": true
       }
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "In an experiment, rats averaging 300 g of body mass were tested several times over a three-month period. For each individual rat, urine was collected over a three-hour period after ingestion of 10 mL of liquid (water, 1% ethyl alcohol solution, or 5% ethyl alcohol solution). The volume of urine was then measured, and the results were averaged for all individuals within each experimental group. The data are shown in the table below."
+      },
+      {
+        "type": "table",
+        "table_id": "Three-hour urine output following fluid ingestion",
+        "table": {
+          "title": "Three-hour urine output following fluid ingestion",
+          "headers": [
+            "Fluid ingested (10 mL)",
+            "Water",
+            "1% Ethyl Alcohol",
+            "5% Ethyl Alcohol"
+          ],
+          "rows": [
+            [
+              "Average urine output (mL)",
+              "3.5",
+              "3.8",
+              "4.7"
+            ]
+          ],
+          "firstColumnWide": true
+        },
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Pose ONE scientific question that the researchers were most likely investigating with the experiment."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "State a hypothesis that could be tested to address the question you posed in part (a)."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Using the data in the table, describe the effect of ethyl alcohol on urine production."
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ8",
@@ -1024,7 +1446,23 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The figure above represents a generalized hormone-signaling pathway. Briefly explain the role of each numbered step in regulating target gene expression."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2013/2013_frq8_hormone_signaling_pathway.png"
+        ],
+        "used_by_parts": []
+      }
+    ]
   },
   {
     "question_id": "2023_FRQ1",
@@ -1171,7 +1609,97 @@
         "firstColumnWide": true,
         "source": "Values are reported with +/- 2SE_x."
       }
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "In eukaryotic microorganisms, the PHO signaling pathway regulates the expression of certain genes. These genes, Pho target genes, encode proteins involved in regulating phosphate homeostasis. When the level of extracellular inorganic phosphate (Pi) is high, a transcriptional activator Pho4 is phosphorylated by a complex of two proteins, Pho80–Pho85. As a result, the Pho target genes are not expressed. When the level of extracellular Pi is low, the activity of the Pho80–Pho85 complex is inhibited by another protein, Pho81, enabling Pho4 to induce the expression of these target genes. A simplified model of this pathway is shown in Figure 1. Figure 1. A simplified model of the regulation of expression of Pho target genes in"
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2023/2023_frq1_pho_pathway_model.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "table",
+        "table_id": "APase activity and relative amounts of PHO1 mRNA in wild-type and mutant strains of yeast",
+        "table": {
+          "title": "APase activity and relative amounts of PHO1 mRNA in wild-type and mutant strains of yeast",
+          "headers": [
+            "Yeast strain",
+            "Mutation",
+            "APase high-Pi",
+            "APase low-Pi",
+            "PHO1 mRNA high-Pi",
+            "PHO1 mRNA low-Pi"
+          ],
+          "rows": [
+            [
+              "Wild-type",
+              "None",
+              "0.5 +/- 0.1",
+              "17.3 +/- 0.9",
+              "0.1 +/- 0.0",
+              "10 +/- 2.0"
+            ],
+            [
+              "pho81mt",
+              "Nonfunctional Pho81",
+              "0.4 +/- 0.1",
+              "0.6 +/- 0.1",
+              "0.7 +/- 0.2",
+              "0.9 +/- 0.8"
+            ],
+            [
+              "pho4mt",
+              "Nonfunctional Pho4",
+              "0.5 +/- 0.0",
+              "0.8 +/- 0.2",
+              "0.6 +/- 0.4",
+              "0.3 +/- 0.1"
+            ]
+          ],
+          "firstColumnWide": true,
+          "source": "Values are reported with +/- 2SE_x."
+        },
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(A)",
+        "text": "a high-phosphate (high-Pi) environment and"
+      },
+      {
+        "type": "part",
+        "label": "(B)",
+        "text": "a low-phosphate (low-Pi) environment To study the role of the different proteins in the PHO pathway, researchers used a wild-type strain of yeast to create a strain with a mutant form of Pho81 (pho81mt) and a strain with a mutant form of Pho4 (pho4mt). In each of these mutant strains, researchers measured the activity of a particular enzyme, APase, which removes phosphates from its substrates and is encoded by PHO1, a Pho target gene (Table 1). They then determined the level of PHO1 mRNA relative to that of the wild-type yeast strain, which was set to 10."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe the effect that the addition of a charged phosphate group can have on a protein that would cause the protein to become inactive. Explain how a signal can be amplified during signal transduction in a pathway such as the PHO signaling pathway."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Based on Table 1, identify a dependent variable in the researchers' experiment. Justify the researchers' using the wild-type strain for the creation of the mutant strains. Justify the researchers' using mutant strains in which only a single component of the pathway was mutated in each strain."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Based on the data in Table 1, identify the yeast strain and growth conditions that lead to the highest relative amount of PHO1 mRNA. Calculate the percent change in APase activity in wild-type yeast cells in a high-Pi environment compared with that of wild-type cells in a low-Pi environment."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "In a follow-up experiment, researchers created a strain of yeast with a mutation that resulted in a nonfunctional Pho85 protein. Based on Figure 1, predict the effects of this mutation on PHO1 expression in the mutant strain in a high-Pi environment. Provide reasoning to justify your prediction."
+      }
+    ]
   },
   {
     "question_id": "2023_FRQ2",
@@ -1299,7 +1827,80 @@
         "firstColumnWide": true,
         "source": "Values are per 100 micrometer^2 of cell area with +/- 2SE_x."
       }
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Elevated levels of CO2 increase the rate of photosynthesis and growth in plants. Scientists studying the mechanisms involved in these increases examined a variety of species and found that when plants are exposed to elevated levels of CO2, there is an increase in the number of chloroplasts per cell. To investigate whether the elevated levels of CO2 have a similar effect on the number of mitochondria in plant cells, the scientists then selected six of these species to quantify the number of mitochondria per cell when the plants were exposed to both normal and elevated levels of CO2 (Table 1)."
+      },
+      {
+        "type": "table",
+        "table_id": "Average number of mitochondria in plants exposed to normal and elevated levels of CO2",
+        "table": {
+          "title": "Average number of mitochondria in plants exposed to normal and elevated levels of CO2",
+          "headers": [
+            "Species",
+            "Normal CO2",
+            "Elevated CO2"
+          ],
+          "rows": [
+            [
+              "1",
+              "1.0 +/- 0.10",
+              "1.6 +/- 0.10"
+            ],
+            [
+              "2",
+              "0.4 +/- 0.05",
+              "0.9 +/- 0.08"
+            ],
+            [
+              "3",
+              "0.5 +/- 0.07",
+              "0.9 +/- 0.10"
+            ],
+            [
+              "4",
+              "0.3 +/- 0.03",
+              "0.6 +/- 0.06"
+            ],
+            [
+              "5",
+              "0.7 +/- 0.06",
+              "1.5 +/- 0.22"
+            ],
+            [
+              "6",
+              "1.3 +/- 0.15",
+              "2.4 +/- 0.22"
+            ]
+          ],
+          "firstColumnWide": true,
+          "source": "Values are per 100 micrometer^2 of cell area with +/- 2SE_x."
+        },
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe the role of the inner mitochondrial membrane in cellular respiration."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Using the template in the space provided for your response, construct an appropriately labeled graph that represents the data in"
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Based on the data in Table 1, describe the relationship between the level of CO2 and the average number of mitochondria per unit area of a cell."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The leaves of a particular plant species are typically green, but scientists notice a plant in which the leaves have white stripes. They determine that the stripes result from a mutation in mitochondrial DNA that interferes with the development of chloroplasts. The scientists crossed plants using pollen from the plant with white-striped leaves and ovules from a plant with green leaves. Predict the phenotype(s) of the leaves of offspring produced from this cross. Provide reasoning to justify your prediction. Explain why plants with the same genotype are able to differ in the structure and/or number of certain organelles in response to changes in atmospheric levels of CO2."
+      }
+    ]
   },
   {
     "question_id": "2023_FRQ3",
@@ -1358,7 +1959,33 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2023_FRQ.pdf",
       "rubric_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2023_Scoring_Guidelines.pdf"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Sand lances of the genus Ammodytes are small fish that function as keystone organisms in several coastal ecosystems. These sand lances are prey fish that support organisms at higher trophic levels. Scientists performed experiments to examine how sand lance populations are likely to be affected by the rising temperatures and CO2 levels associated with climate change. Sand lance embryos typically develop and mature into adult fish at low temperatures (approximately 5°C) and stable, low CO2 levels (approximately 400 μatm). Over the course of two years, the scientists measured the survival rate of sand lance embryos allowed to develop and mature in a laboratory at three different temperatures, 5°C, 7°C, and 10°C, with the level of CO2 maintained at 400 μatm, 1,000 μatm, and 2,100 μatm for each temperature."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe the effect of increased biodiversity on the resilience of an ecosystem in a changing environment."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Justify the scientists' selecting 5°C as the lowest temperature and 400 μatm as the lowest CO2 level in their study of sand lance embryo survival."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "State a null hypothesis for the experiment."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The scientists claim that a reduction in the population size of the Ammodytes sand lances will affect the stability of the entire coastal ecosystem. Provide reasoning to support the scientists' claim."
+      }
+    ]
   },
   {
     "question_id": "2023_FRQ4",
@@ -1439,7 +2066,43 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Noncyclic electron flow and cyclic electron flow are two major pathways of the light-dependent reactions of photosynthesis. In noncyclic electron flow, electrons pass through photosystem II, then components of a + NADP chloroplast electron transport chain, and then photosystem I before finally reducing to NADPH. In cyclic electron flow, electrons cycle through photosystem I and some components of the electron transport chain (Figure 1). Figure 1. The pathways of noncyclic and cyclic (heavy arrows) electron flow. The cytochrome complex is a component of the electron transport chain between the two photosystems."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2023/2023_frq4_electron_flow_model.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe the role of chlorophyll in the photosystems of plant cells."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Based on Figure 1, explain why an increase in the ratio of NADPH to NADP+ will cause an increase in the flow of electrons through the cyclic pathway."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Using rice plants, scientists examined the effect of a mutation that results in the loss of the protein CRR6. CRR6 is a part of the photosystem I complex, and its absence reduces the activity of photosystem I. Predict the effect of the mutation on the rate of biomass (dry weight) accumulation."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Justify your prediction in part (c)."
+      }
+    ]
   },
   {
     "question_id": "2023_FRQ5",
@@ -1568,7 +2231,104 @@
         ],
         "firstColumnWide": true
       }
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Ruminants are hoofed animals, including cattle and sheep, that have a unique four-chambered stomach specialized to digest tough, fiber-filled grasses. Researchers studying ruminants are investigating the morphological and molecular characteristics of different ruminant families in order to determine the evolutionary relationships among the families. Cladograms of several ruminant families were constructed based on morphological data (Figure 1A) and molecular data (Figure 1B). Table 1 shows a sample of the morphological characteristics present in each family used to construct the cladogram in Figure 1A. Figure 1. Cladogram of six ruminant families based on"
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2023/2023_frq5_ruminant_cladograms.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "table",
+        "table_id": "Morphological characteristics found in each ruminant family",
+        "table": {
+          "title": "Morphological characteristics found in each ruminant family",
+          "headers": [
+            "Characteristic number",
+            "Morphological characteristic",
+            "Tragulidae",
+            "Giraffidae",
+            "Bovidae",
+            "Moschidae",
+            "Antilocapridae",
+            "Cervidae"
+          ],
+          "rows": [
+            [
+              "1",
+              "Extra tooth material",
+              "",
+              "",
+              "X",
+              "",
+              "X",
+              ""
+            ],
+            [
+              "2",
+              "Third stomach",
+              "",
+              "X",
+              "X",
+              "X",
+              "X",
+              "X"
+            ],
+            [
+              "3",
+              "Double opening for tear ducts",
+              "",
+              "X",
+              "",
+              "",
+              "",
+              "X"
+            ]
+          ],
+          "firstColumnWide": true
+        },
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(A)",
+        "text": "morphological data and"
+      },
+      {
+        "type": "part",
+        "label": "(B)",
+        "text": "molecular data"
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe how a scientist would use a comparison of the DNA sequences of different organisms to suggest the most likely evolutionary relationship among the organisms."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Based on Figure 1, explain why Bovidae is likely to be more closely related to Moschidae than it is to Giraffidae."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Using the template in the space provided for your response, represent the point(s) at which characteristic 1, listed in Table 1, evolved by marking \"X\" on the line(s) of the cladogram in the correct location(s)."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Based on Figure 1A, explain why a characteristic found only in the Cervidae and Bovidae families is more likely evidence of convergent evolution than it is of common ancestry."
+      }
+    ]
   },
   {
     "question_id": "2023_FRQ6",
@@ -1649,7 +2409,43 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Housekeeping genes encode proteins involved in universally important processes such as transcription, translation, and glycolysis. Because these genes appear to be expressed in all cells at constant levels, the expression of housekeeping genes is often used as a control when comparing how the expression of other genes varies under different conditions. Researchers studying the effect of pesticides on declining bee populations wanted to determine whether the expression of four housekeeping genes (GAPDH, RPL32, RPS5, and TBP-AF) was in fact constant in bees across different variables. The researchers collected samples of mRNA for each of the four genes and compared how their expression varied across the developmental stage of the bee, the sex of the bee, and the cell type from which the sample was taken. The mRNA from the samples was reverse transcribed to produce DNA copies of each gene. PCR was then used to amplify the DNA, and the Cq value was determined. The Cq value is the number of PCR cycles needed to produce a specified number of DNA copies. A high Cq value for a sample indicates the gene was expressed at a low level. To analyze whether any of the examined variables affected expression of the housekeeping genes, researchers examined the range of Cq values for each gene in response to each variable. Genes with a wide range of Cq values were determined to be affected by the variable, while genes with a narrow range of Cq values were determined to be unaffected by the variable. Figure 1. The effect of developmental stage, sex, and cell type on the Cq value of four housekeeping genes"
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2023/2023_frq6_cq_distributions.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Based on the data in Figure 1, identify the gene that had the lowest median Cq value when bees of different developmental stages were compared."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "The Cq value is inversely proportional to the amount of mRNA from that gene in the starting sample. Based on the data in Figure 1, identify the gene that has the lowest level of gene expression regardless of variable."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The scientists investigated the effect of pesticides on the expression of other genes in one cell type of a group of bees containing males and females of the same developmental stage. They hypothesized that TBP-AF would serve as the best control gene for this experiment. Use the data to evaluate their hypothesis."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Explain how expression of a gene such as GAPDH can vary from one cell type to another within the same bee."
+      }
+    ]
   },
   {
     "question_id": "2024_FRQ1",
@@ -1661,7 +2457,7 @@
     "question_type": "FRQ",
     "type": "FRQ",
     "source_set": "official_frq_only",
-    "text": "Crossing over in meiosis I is required for homologous chromosomes to properly align during metaphase and segregate during the first cell division. (a) (i) Describe the function of S phase of interphase. Some regions of a chromosome called hotspots display a higher frequency of crossing over than other regions do. Crossing over is suppressed in chromosomal regions near the centromeres. The centromere region of a duplicated chromosome includes a collection of proteins that form a structure called the kinetochore. Scientists hypothesized that one or more of these kinetochore proteins are responsible for suppressing crossing over around the centromere. To investigate their hypothesis, scientists modified chromosome 8 in yeast such that, in each cell, one chromosome from the pair of homologous chromosome 8s contained the gene encoding red fluorescent protein (RFP), while the other chromosome from the pair contained the gene encoding green fluorescent protein (GFP). Cells expressing RFP emit (give off) red light, and cells expressing GFP emit green light. Models of the modified chromosome 8 both before and after crossing over are shown in Figure 1. Figure 1. Models of modified chromosome 8 used in the experiment (A) before and (B) after crossing over occurs at the hotspot (ii) Explain why some haploid cells formed after meiosis in this experiment will have only one fluorescent marker. 5 The scientists then investigated whether attaching individual kinetochore proteins to a specific DNA sequence present in a known crossing-over hotspot on chromosome 8 affected the frequency of crossing over at this location. In their first experiment, they examined three groups of yeast cells containing the modified chromosome 8. Group 1 contained no kinetochore proteins attached to the hotspot, group 2 contained the kinetochore protein CTF attached to the hotspot, and group 3 contained the kinetochore protein IML attached to the hotspot. For each group, the scientists determined the frequency of crossing over between the RFP and GFP genes. To determine the frequency, the scientists added the number of cells emitting both red and green light to the number of cells that emitted no light and divided by the total number of cells (Figure 2). Figure 2. The frequency of crossing over in a hotspot on yeast chromosome 8 for cell groups treated with different kinetochore proteins. Error bars represent ±2SE x. (b) (i) Identify the control group for the scientists' first experiment, shown in Figure 2. (ii) In a follow-up experiment, the scientists created a modified version of CTF in which the DNA-binding portion had been removed. They compared the frequency of crossing over in yeast cells in the presence and absence of unmodified CTF with that in yeast cells in the presence and absence of the modified CTF protein (data not shown). In the follow-up experiment, justify why the scientists used a modified CTF protein that is unable to bind to DNA as a control. (iii) Identify the independent variable in the follow-up experiment. (c) Based on Figure 2, describe the effect on the frequency of crossing over when CTF is attached to the chromosome 8 hotspot compared with the effect when IML is attached to the hotspot. (d) (i) Predict the effect on the number of copies of chromosome 8 likely to be present in the resulting daughter cells when CTF is attached to the hotspot. (ii) Provide reasoning to justify your prediction. (iii) Explain how the presence of hotspots (Figure 1) could increase the likelihood that a population will survive in the presence of selective pressures.",
+    "text": "Crossing over in meiosis I is required for homologous chromosomes to properly align during metaphase and segregate during the first cell division. (a) (i) Describe the function of S phase of interphase. Some regions of a chromosome called hotspots display a higher frequency of crossing over than other regions do. Crossing over is suppressed in chromosomal regions near the centromeres. The centromere region of a duplicated chromosome includes a collection of proteins that form a structure called the kinetochore. Scientists hypothesized that one or more of these kinetochore proteins are responsible for suppressing crossing over around the centromere. To investigate their hypothesis, scientists modified chromosome 8 in yeast such that, in each cell, one chromosome from the pair of homologous chromosome 8s contained the gene encoding red fluorescent protein (RFP), while the other chromosome from the pair contained the gene encoding green fluorescent protein (GFP). Cells expressing RFP emit (give off) red light, and cells expressing GFP emit green light. Models of the modified chromosome 8 both before and after crossing over are shown in Figure 1. Figure 1. Models of modified chromosome 8 used in the experiment (A) before and (B) after crossing over occurs at the hotspot (ii) Explain why some haploid cells formed after meiosis in this experiment will have only one fluorescent marker. The scientists then investigated whether attaching individual kinetochore proteins to a specific DNA sequence present in a known crossing-over hotspot on chromosome 8 affected the frequency of crossing over at this location. In their first experiment, they examined three groups of yeast cells containing the modified chromosome 8. Group 1 contained no kinetochore proteins attached to the hotspot, group 2 contained the kinetochore protein CTF attached to the hotspot, and group 3 contained the kinetochore protein IML attached to the hotspot. For each group, the scientists determined the frequency of crossing over between the RFP and GFP genes. To determine the frequency, the scientists added the number of cells emitting both red and green light to the number of cells that emitted no light and divided by the total number of cells (Figure 2). Figure 2. The frequency of crossing over in a hotspot on yeast chromosome 8 for cell groups treated with different kinetochore proteins. Error bars represent ±2SE x. (b) (i) Identify the control group for the scientists' first experiment, shown in Figure 2. (ii) In a follow-up experiment, the scientists created a modified version of CTF in which the DNA-binding portion had been removed. They compared the frequency of crossing over in yeast cells in the presence and absence of unmodified CTF with that in yeast cells in the presence and absence of the modified CTF protein (data not shown). In the follow-up experiment, justify why the scientists used a modified CTF protein that is unable to bind to DNA as a control. (iii) Identify the independent variable in the follow-up experiment. (c) Based on Figure 2, describe the effect on the frequency of crossing over when CTF is attached to the chromosome 8 hotspot compared with the effect when IML is attached to the hotspot. (d) (i) Predict the effect on the number of copies of chromosome 8 likely to be present in the resulting daughter cells when CTF is attached to the hotspot. (ii) Provide reasoning to justify your prediction. (iii) Explain how the presence of hotspots (Figure 1) could increase the likelihood that a population will survive in the presence of selective pressures.",
     "image_paths": [
       "images/ap/biology/2024/2024_frq1_chromosome_model.png",
       "images/ap/biology/2024/2024_frq1_crossing_over_frequency.png"
@@ -1759,7 +2555,99 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Crossing over in meiosis I is required for homologous chromosomes to properly align during metaphase and segregate during the first cell division."
+      },
+      {
+        "type": "part",
+        "label": "(a)(i)",
+        "text": "Describe the function of S phase of interphase."
+      },
+      {
+        "type": "paragraph",
+        "text": "Some regions of a chromosome called hotspots display a higher frequency of crossing over than other regions do. Crossing over is suppressed in chromosomal regions near the centromeres. The centromere region of a duplicated chromosome includes a collection of proteins that form a structure called the kinetochore. Scientists hypothesized that one or more of these kinetochore proteins are responsible for suppressing crossing over around the centromere. To investigate their hypothesis, scientists modified chromosome 8 in yeast such that, in each cell, one chromosome from the pair of homologous chromosome 8s contained the gene encoding red fluorescent protein (RFP), while the other chromosome from the pair contained the gene encoding green fluorescent protein (GFP). Cells expressing RFP emit (give off) red light, and cells expressing GFP emit green light."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": "Models of modified chromosome 8 used in the experiment",
+        "subcaptions": [
+          "(A) Before crossing over",
+          "(B) After crossing over occurs at the hotspot"
+        ],
+        "image_paths": [
+          "images/ap/biology/2024/2024_frq1_chromosome_model.png"
+        ],
+        "used_by_parts": [
+          "(a)(ii)",
+          "(d)(iii)"
+        ]
+      },
+      {
+        "type": "part",
+        "label": "(a)(ii)",
+        "text": "Explain why some haploid cells formed after meiosis in this experiment will have only one fluorescent marker."
+      },
+      {
+        "type": "paragraph",
+        "text": "The scientists then investigated whether attaching individual kinetochore proteins to a specific DNA sequence present in a known crossing-over hotspot on chromosome 8 affected the frequency of crossing over at this location. In their first experiment, they examined three groups of yeast cells containing the modified chromosome 8. Group 1 contained no kinetochore proteins attached to the hotspot, group 2 contained the kinetochore protein CTF attached to the hotspot, and group 3 contained the kinetochore protein IML attached to the hotspot. For each group, the scientists determined the frequency of crossing over between the RFP and GFP genes. To determine the frequency, the scientists added the number of cells emitting both red and green light to the number of cells that emitted no light and divided by the total number of cells (Figure 2)."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": "Frequency of crossing over in a hotspot on yeast chromosome 8 for cell groups treated with different kinetochore proteins",
+        "subcaptions": [
+          "Error bars represent +/- 2SE_x."
+        ],
+        "image_paths": [
+          "images/ap/biology/2024/2024_frq1_crossing_over_frequency.png"
+        ],
+        "used_by_parts": [
+          "(b)(i)",
+          "(c)",
+          "(d)(i)",
+          "(d)(ii)"
+        ]
+      },
+      {
+        "type": "part",
+        "label": "(b)(i)",
+        "text": "Identify the control group for the scientists' first experiment, shown in Figure 2."
+      },
+      {
+        "type": "part",
+        "label": "(b)(ii)",
+        "text": "In a follow-up experiment, the scientists created a modified version of CTF in which the DNA-binding portion had been removed. They compared the frequency of crossing over in yeast cells in the presence and absence of unmodified CTF with that in yeast cells in the presence and absence of the modified CTF protein (data not shown). In the follow-up experiment, justify why the scientists used a modified CTF protein that is unable to bind to DNA as a control."
+      },
+      {
+        "type": "part",
+        "label": "(b)(iii)",
+        "text": "Identify the independent variable in the follow-up experiment."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Based on Figure 2, describe the effect on the frequency of crossing over when CTF is attached to the chromosome 8 hotspot compared with the effect when IML is attached to the hotspot."
+      },
+      {
+        "type": "part",
+        "label": "(d)(i)",
+        "text": "Predict the effect on the number of copies of chromosome 8 likely to be present in the resulting daughter cells when CTF is attached to the hotspot."
+      },
+      {
+        "type": "part",
+        "label": "(d)(ii)",
+        "text": "Provide reasoning to justify your prediction."
+      },
+      {
+        "type": "part",
+        "label": "(d)(iii)",
+        "text": "Explain how the presence of hotspots (Figure 1) could increase the likelihood that a population will survive in the presence of selective pressures."
+      }
+    ]
   },
   {
     "question_id": "2024_FRQ2",
@@ -1860,7 +2748,73 @@
         "firstColumnWide": true,
         "source": "Rates are nmol/min/mg mitochondrial protein with +/- 2SE_x."
       }
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "To investigate how increases in environmental temperatures affect the metabolism of certain organisms, researchers incubated liver cells from toads at different temperatures and measured two markers of metabolic activity (Table 1): the rate of oxygen consumption and the rate of ATP synthesis."
+      },
+      {
+        "type": "table",
+        "table_id": "Rate of oxygen consumption and ATP synthesis at different temperatures",
+        "table": {
+          "title": "Rate of oxygen consumption and ATP synthesis at different temperatures",
+          "headers": [
+            "Metabolic marker",
+            "20 C",
+            "25 C",
+            "30 C"
+          ],
+          "rows": [
+            [
+              "Rate of oxygen consumption",
+              "12.8 +/- 2.2",
+              "16.5 +/- 2.0",
+              "22.1 +/- 0.7"
+            ],
+            [
+              "Rate of ATP synthesis",
+              "12.6 +/- 1.6",
+              "16.8 +/- 2.0",
+              "21.07 +/- 0.8"
+            ]
+          ],
+          "firstColumnWide": true,
+          "source": "Rates are nmol/min/mg mitochondrial protein with +/- 2SE_x."
+        },
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe the role of water in the hydrolysis of ATP."
+      },
+      {
+        "type": "part",
+        "label": "(b)(i)",
+        "text": "Using the template in the space provided for your response, construct a bar graph that represents the data shown in"
+      },
+      {
+        "type": "part",
+        "label": "(c)(i)",
+        "text": "Based on the data in Table 1, describe the effect of temperature on the rate of ATP synthesis in liver cells from toads."
+      },
+      {
+        "type": "part",
+        "label": "(c)(ii)",
+        "text": "Based on the data in Table 1, calculate the average amount of oxygen consumed, in nmol, for 10 mg of mitochondrial protein after 10 minutes at 25 C °."
+      },
+      {
+        "type": "part",
+        "label": "(d)(i)",
+        "text": "Oligomycin is a compound that can block the channel protein function of ATP synthase. Predict the effects of using oligomycin on the proton gradient across the inner mitochondrial membrane."
+      },
+      {
+        "type": "part",
+        "label": "(d)(ii)",
+        "text": "Justify your prediction."
+      }
+    ]
   },
   {
     "question_id": "2024_FRQ3",
@@ -1919,7 +2873,33 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2024_FRQ.pdf",
       "rubric_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2024_Scoring_Guidelines.pdf"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "To investigate whether red blood cells of animals lose the ability to take in glucose from their environment as they age, scientists collected red blood cells from guinea pigs that ranged in age from one day old to seven months old. Scientists incubated an equal number of red blood cells in separate culture dishes that contained a 300 nM solution of radioactively labeled glucose. The amount of radioactively labeled glucose present inside the red blood cells of each group was measured over time."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe a difference between passive transport and active transport."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Justify why the scientists used an equal number of red blood cells in each culture dish as a control."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Glucose transporters are required for the facilitated diffusion of glucose into red blood cells. The scientists claim that the expression of the gene encoding these transporters decreases as guinea pigs age. If the scientists' claim is supported by experimental data, predict the effect of increased age on the amount of radioactively labeled glucose present inside the cells of each group."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Justify your prediction in part (c)."
+      }
+    ]
   },
   {
     "question_id": "2024_FRQ4",
@@ -1978,7 +2958,33 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2024_FRQ.pdf",
       "rubric_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2024_Scoring_Guidelines.pdf"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The common wild oat is native to regions of Europe and Asia but is an invasive species in central California grasslands. In California, the common wild oat has almost completely replaced some species of native bunchgrass. Researchers found that aphids, a type of small insect that often carries plant viruses, have a much higher reproductive rate in grasslands that include the common wild oat than in grasslands composed of only native bunchgrass species. Additionally, the viruses carried by the aphids appear to affect only the native bunchgrasses and not the common wild oat. Native bunchgrasses infected by the virus have much higher death rates than do native bunchgrasses that are not infected."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe the change in the resilience of an ecosystem when there is a decrease in the number of species."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Explain how the addition of the common wild oat affects the number of native bunchgrass plants that can be supported by the California grasslands ecosystem."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Researchers suggest adding ladybugs, predators of aphids, to the California grasslands. Predict the effect of adding ladybugs on the abundance of the native bunchgrass population."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Justify your prediction in part (c)."
+      }
+    ]
   },
   {
     "question_id": "2024_FRQ5",
@@ -2068,7 +3074,44 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Researchers study mechanisms that enable or prevent speciation."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2024/2024_frq5_ag_gene_structure.png",
+          "images/ap/biology/2024/2024_frq5_ag_gene_phylogeny.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe a post-zygotic mechanism that prevents gene flow and thus enables speciation. New genes can evolve from noncoding regions of DNA. It is not until certain regulatory elements are present in the DNA that a noncoding region becomes a new, functional gene that encodes a protein. These regulatory elements include a promoter, a 5' untranslated region (UTR) followed by a start codon, and a 3' UTR following a stop codon (Figure 1). Figure 1. Basic structure of a functional ag gene Researchers studied the evolution of the family of antifreeze-glycoprotein (AG) encoding genes in Gadidae, a family of marine fish known as cods. When present in the fish, these glycoproteins reduce the freezing temperature of the fish. The researchers compared genomic sequences in nine cod species and one non-cod fish species, B. brosme. They recorded the presence or absence of the elements of functional ag genes as well as ag-like sequences that are similar to a functional gene but have undergone mutation and do not contain all the elements required to enable protein production (Figure 2). Figure 2. Phylogenetic tree showing the evolution of ag genes"
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Based on the data in Figure 2, explain how changes to the genome enabled cods to survive and reproduce after a period of freezing temperatures between 10 and 15 million years ago."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Using the template in the space provided for your response, place an \"X\" on the phylogenetic tree to represent the origin of the functional ag gene."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Based on Figure 2, explain how genetic differences among the species in the Gadidae family determine the habitats in which they can survive."
+      }
+    ]
   },
   {
     "question_id": "2024_FRQ6",
@@ -2149,7 +3192,58 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Scientists can quantify the rate of translation as ribosomes move along an mRNA from one codon to the next. Using a procedure called ribosome profiling, the scientists measured how long a ribosome remains stationary at each codon of each mRNA. They determined the average translation rate across all codons is 5.2 amino acids per second but that the average translation rate for specific codons in different mRNA sequences can vary widely. These variations in translation rates are thought to facilitate correct folding of the protein being produced. The rate at which three different codons were translated was measured in 100 different mRNAs. The scientists determined the distribution of rate (number of times each rate was recorded) for each of the three codons: GAC (Figure 1A), AUU (Figure 1B), and UGG (Figure 1C). Figure 1. The distribution of translation rates for three different codons"
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2024/2024_frq6_translation_rate_distribution.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(A)",
+        "text": "GAC,"
+      },
+      {
+        "type": "part",
+        "label": "(B)",
+        "text": "AUU, and"
+      },
+      {
+        "type": "part",
+        "label": "(C)",
+        "text": "UGG"
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Using the data in Figure 1, graph A, identify the rate (in ms/codon) that was recorded the greatest number of times for the GAC codon."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Using the data in Figure 1, graphs B and C, describe the variation in translation rate of the AUU codon compared with that of the UGG codon."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Scientists hypothesize that tRNA molecules that bind to UGG codons are available in lower abundance than are tRNAs that bind to AUU codons. Support the scientists' hypothesis using the data in Figure 1."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Amino acids can be encoded by multiple codons. In many organisms, certain codons for the same amino acid occur more frequently in an mRNA than do other codons. Based on the data provided, explain why the use of one codon over another for the same amino acid might result in increased levels of protein production from a particular mRNA."
+      }
+    ]
   },
   {
     "question_id": "2025_FRQ1",
@@ -2269,7 +3363,24 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Most proteins that are secreted from a cell must be transported to the endoplasmic reticulum (ER) either during translation or after translation. A. Describe the function of ribosomes. For proteins transported during translation, this process begins in the cytosol and pauses when a specific sequence of amino acids is translated. The translation complex is then transported to the surface of the ER where translation continues. Proteins that are transported after translation are translated entirely in the cytosol and then transported to the ER. In both instances, the translated proteins enter the ER through a protein channel in the membrane of the ER. Researchers studying the two types of protein transport identified that the ER membrane protein SR is necessary for transport during translation, while the ER membrane protein Sec62 is necessary for transport after translation. To investigate which transport mechanism is used for different proteins, researchers first created small interfering RNAs (siRNAs) that reduce expression of either SR or Sec62. They then treated groups of cells with either the SR siRNA or the Sec62 siRNA and determined the relative amount of SR and Sec62 protein in each group of cells compared with cells treated with a control siRNA (Figure 1). Figure 1. Average relative amounts of Sec62 and SR proteins in cells treated with control siRNA, Sec62 siRNA, or SR siRNA. Error bars represent ±$SE_x$. B. i. Identify the dependent variable in the experiments shown in Figure 1. ii. Justify why the researchers included the control of measuring the relative amounts of both Sec62 and SR proteins in cells that were treated with Sec62 siRNA only (data shown in Figure 1). iii. Based on Figure 1, describe the effect on the production of SR protein when cells are treated with Sec62 siRNA. 4 The researchers then measured the amount of each of three different proteins that was transported to the ER in cells treated with Sec62 siRNA or SR siRNA. The researchers calculated the percent transported relative to the cells treated with control siRNA (Figure 2). Figure 2. Average relative amounts of three proteins that were transported to the ER when treated with control siRNA, Sec62 siRNA, or SR siRNA. Error bars represent ±$SE_x$. C. i. Identify the independent variable in the researchers' second experiment (data shown in Figure 2). ii. Based on Figure 2, identify the protein(s) that when treated with Sec62 siRNA showed an increase in percent transport to the ER compared with the control. iii. Protein 1 is encoded by 234 nucleotides, while protein 2 is encoded by 495 nucleotides. Assuming all nucleotides for both proteins encode amino acids, calculate the difference in the number of amino acids between the two proteins. D. i. Researchers claim that protein 1 is the only tested protein that is transported to the ER following its complete translation in the cytosol. Using data from Figure 2, support the researchers' claim. ii. For any protein that enters the ER, researchers claim that amino acids close to the protein's amino terminus determine how likely the protein is to pass through the protein channel within the ER membrane. Justify the researchers' claim based on your understanding of factors that affect the transport of proteins across membranes."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2025/2025_frq1_sec62_sr_protein_amounts.png",
+          "images/ap/biology/2025/2025_frq1_er_transport_amounts.png"
+        ],
+        "used_by_parts": []
+      }
+    ]
   },
   {
     "question_id": "2025_FRQ2",
@@ -2405,7 +3516,50 @@
         "firstColumnWide": true,
         "source": "General activity is percent of total time observed; oriented activity is percent of general activity. Values are average +/- 2SE_x."
       }
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Many insects rely on pheromones (chemical signals) that are released by the females to find mating partners. Scientists hypothesize that, in a certain type of moth, the behavior of male moths in response to pheromones is regulated by the extracellular signaling molecule 20E. A. Many receptors are embedded in the plasma membrane. Describe the polarity of the portion of the receptor that is inside the membrane. To investigate whether the binding of 20E to its receptor, DopEcR, affects behavior in moths, scientists injected male moths with saline (control solution) or with small interfering RNA molecules (siRNAs) that inhibit the expression of the gene encoding DopEcR. The scientists then exposed the moths to the pheromone and determined the percent of total time observed that the moths engaged in general activity, defined as movement in any direction. The scientists also determined the percent of the general activity time that the moths spent in oriented activity, defined as movement toward an area of high pheromone concentration (Table 1). DopEcR 90 8 ± 25 6 ± DopEcR is a G protein-coupled receptor. When 20E binds to DopEcR, GTP displaces the GDP bound to the G protein, and a signaling pathway is activated. The scientists hypothesize that this leads to the transcription of genes associated with the oriented activity observed in the male moths (Figure 1). 6 Figure 1. A simplified model of a signaling pathway activated by the binding of 20E to its receptor, DopEcR B. i. Using the template in the space provided for your response, construct an appropriate type of graph that represents the data in DopEcR receptor. C. i. Based on Table 1, identify the treatment group in which the oriented activity was greater than 50% of the general activity. ii. The scientists studied some moths with a mutation in the gene encoding the G protein. The mutation prevents GTP from displacing the GDP bound to the G protein. Based on Figure 1, predict the effect of this mutation on the oriented activity in male moths exposed to the pheromone. Expression of the gene encoding DopEcR is low in the male moths during their first few days as adults, when they are sexually immature. Gene expression rapidly increases as the moths reach sexual maturity. The scientists claim that this increase in gene expression increases the likelihood of males finding females with whom to mate. D. i. Use evidence from the information provided to support the scientists' claim. ii. Based on Figure 1, explain how an inhibitor of the DopEcR pathway might serve as an effective chemical to protect crops from moth damage."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2025/2025_frq2_dopecr_pathway_model.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "table",
+        "table_id": "Average general and oriented activity in male moths injected with saline or siRNA molecules",
+        "table": {
+          "title": "Average general and oriented activity in male moths injected with saline or siRNA molecules",
+          "headers": [
+            "Treatment",
+            "General activity",
+            "Oriented activity"
+          ],
+          "rows": [
+            [
+              "Male moths injected with saline (control solution)",
+              "95 +/- 5",
+              "60 +/- 4"
+            ],
+            [
+              "Male moths injected with siRNAs that inhibit expression of DopEcR",
+              "90 +/- 8",
+              "25 +/- 6"
+            ]
+          ],
+          "firstColumnWide": true,
+          "source": "General activity is percent of total time observed; oriented activity is percent of general activity. Values are average +/- 2SE_x."
+        },
+        "used_by_parts": []
+      }
+    ]
   },
   {
     "question_id": "2025_FRQ3",
@@ -2464,7 +3618,13 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2025_FRQ.pdf",
       "rubric_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2025_Scoring_Guidelines.pdf"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Buffelgrass, an invasive grass species in southwestern desert ecosystems, is threatening the saguaro cactus, a keystone species in these ecosystems. Buffelgrass is drought-tolerant and can survive wildfires. However, the dry buffelgrass also acts as fuel for wildfires, causing the fires to be more severe. Older saguaro cacti can survive wildfires; however, many of the young cacti cannot. Scientists conducted an experiment to determine whether they could control the abundance of the buffelgrass population. The scientists identified several native grass species that, when grown with buffelgrass, might reduce the abundance of buffelgrass. They grew buffelgrass in the presence of several different native grass species in greenhouses, in either nondrought (watered every 3 days) or drought (watered every 9 days) conditions. After twelve weeks, they measured the height and dry weight of the buffelgrass in each treatment group. A. Describe the effect that removing a keystone species will have on an ecosystem. B. Identify a control group the scientists should include in their experiment. C. State the null hypothesis of the experiment in which buffelgrass is grown in the presence of native grass species. D. Scientists have found that the population growth rates of native grasses are much slower than the population growth rate of buffelgrass following a wildfire. The scientists claim that wildfires will therefore increase the abundance of buffelgrass plants in the ecosystem. Based on the information given, justify the scientists' claim."
+      }
+    ]
   },
   {
     "question_id": "2025_FRQ4",
@@ -2523,7 +3683,13 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2025_FRQ.pdf",
       "rubric_pdf": "subjects\\AP\\Biology\\01-exams\\AP_Biology_2025_Scoring_Guidelines.pdf"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Twenty million years ago the Caribbean Sea and Pacific Ocean were connected, and water flowed freely between the two bodies of water. Many of the same marine species were found in both areas. Over millions of years, the land referred to as the Isthmus of Panama formed, eventually closing off the connection between the Caribbean Sea and Pacific Ocean and creating two separate bodies of water. The ecology of these two marine habitats was dramatically altered by this land formation. The warmer Caribbean water could no longer flow west, so the Pacific water cooled and became more nutrient-rich, while the Caribbean water became warmer. A. Describe the genetic evidence that evolution is occurring in a population. B. Explain how the isolation of marine species by the formation of a land barrier can lead to divergent evolution of those species. The formation of the Isthmus of Panama connected two continents, North America and South America. Many North American land animal species migrated to South America after the formation of the isthmus and occupied similar niches as South American species. C. Predict the effect the formation of the isthmus had on resource availability for South American species. D. Justify your prediction in part C."
+      }
+    ]
   },
   {
     "question_id": "2025_FRQ5",
@@ -2609,7 +3775,23 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Figure 1 shows the reactions of the metabolic pathway used to synthesize amino acid B from amino acid A in cells. Figure 1. Synthesis of amino acid B from amino acid A A. Describe a characteristic of an enzyme's active site that allows it to catalyze a specific chemical reaction. B. Based on Figure 1, explain how the binding of amino acid A to enzyme 1 is regulated by amino acid B. C. Using the information in Figure 1, identify the product of the reaction catalyzed by enzyme 2: intermediate X, intermediate Y, or amino acid B. D. Based on Figure 1, explain how a change in pH could affect enzyme 3 in such a way that amino acid B cannot be produced."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2025/2025_frq5_amino_acid_pathway.png"
+        ],
+        "used_by_parts": []
+      }
+    ]
   },
   {
     "question_id": "2025_FRQ6",
@@ -2695,6 +3877,32 @@
         "required_labels_visible",
         "student_surface_readable"
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The ald gene of fruit flies encodes the ALD protein, which is associated with both the centromeres of chromosomes and protein filaments produced during meiosis. In the absence of functional ALD proteins, gamete-producing cells enter anaphase I before homologous chromosomes are correctly aligned. As a result, the gametes produced do not contain the correct numbers of chromosomes. Scientists generated four mutations in the ald gene: ald1, ald3, ald23, and del, which was a deletion of the gene. To study the role of the ALD protein in meiosis, scientists used gameteforming metaphase cells from groups of flies with different ald genotypes. Some of the flies were homozygous for the wild-type allele of ald: WT/WT. Other flies were heterozygous for different ald alleles: WT/del; ald1/del; ald3/ald23; ald23/del. The scientists measured the percent of metaphase cells that contained ALD-associated filaments (Figure 1A) and the amount of ALD protein produced by each of the cell types (Figure 1B). Figure 1."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/biology/2025/2025_frq6_ald_metaphase_data.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(A)",
+        "text": "The average percent of gamete-forming metaphase cells that contained filaments associated with ALD and"
+      },
+      {
+        "type": "part",
+        "label": "(B)",
+        "text": "the amount of ALD protein produced by each cell type. A thicker band indicates a greater amount of ALD protein. A. Based on Figure 1A, identify the fly genotype in which the average percent of metaphase cells with ALD-associated filaments is close to 12%. B. Based on Figure 1B, describe the difference in ALD protein production between gamete- forming metaphase cells of flies with the genotype ald3/ald23 and flies with the genotype ald23/del. C. Scientists hypothesize that gamete-forming metaphase cells can produce a normal amount of ALD-associated filaments even when they produce about half as much ALD protein as the wild-type cells produce. Use the data in Figures 1A and 1B to support the scientists' hypothesis. 11 D. For gamete-forming metaphase cells of the WT/del and ald1/del flies, explain why the phenotypes observed in Figure 1A differ even though the amount of ALD protein produced (Figure 1B) does not."
+      }
+    ]
   }
 ]

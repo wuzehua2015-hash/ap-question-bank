@@ -112,6 +112,7 @@ export function adaptFRQ(raw) {
   return {
     question_id: raw.question_id || raw.id || '',
     text: raw.question_text || raw.text || '',
+    content_blocks: raw.content_blocks || raw.contentBlocks || null,
     question_number: raw.question_number || raw.question_num || 0,
     year: raw.year || 0,
     image_paths: raw.image_paths || raw.images || [],
