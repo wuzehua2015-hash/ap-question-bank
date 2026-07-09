@@ -405,38 +405,41 @@ function validate(filePath, options = {}) {
 
     if (!isFRQ && q.options && Array.isArray(q.image_paths) && q.image_paths.length > 0) {
       const optionValues = Object.values(q.options || {}).map(value => String(value || '').trim())
-      const diagramOptions = optionValues.filter(value => /^Diagram [A-D]$/i.test(value))
-      if (diagramOptions.length === 4) {
+      const diagramOptions = optionValues.filter(value => /^Diagram [A-E]$/i.test(value))
+      if (diagramOptions.length >= 4) {
+        const expectedOptionLetters = ['A', 'B', 'C', 'D', 'E'].slice(0, diagramOptions.length)
+        const optionLetterPattern = diagramOptions.length === 5 ? /^[A-E]$/ : /^[A-D]$/
+        const optionLabel = diagramOptions.length === 5 ? 'A-E' : 'A-D'
         const reportOptionImageIssue = (message) => {
           if (strictOptionImageBinding) errors.push(message)
           else warnings.push(message)
         }
         const imageSources = q.visual_asset_review?.image_sources || q.asset_review?.image_sources || []
-        const optionSources = imageSources.filter(source => /^[A-D]$/.test(String(source.option || '')))
-        const combinedOptionSources = imageSources.filter(source => source.asset_type === 'combined_option_image' && String(source.option || '') === 'A-D')
-        const multiImageOptionSources = imageSources.filter(source => /^[A-D]$/.test(String(source.option || '')) && source.binding === 'two_images_per_option_in_source_order')
+        const optionSources = imageSources.filter(source => optionLetterPattern.test(String(source.option || '')))
+        const combinedOptionSources = imageSources.filter(source => source.asset_type === 'combined_option_image' && String(source.option || '') === optionLabel)
+        const multiImageOptionSources = imageSources.filter(source => optionLetterPattern.test(String(source.option || '')) && source.binding === 'two_images_per_option_in_source_order')
         const contextSources = imageSources.filter(source => source.asset_type === 'prompt_context_image')
-        const hasStandardFourOptionSources = q.image_paths.length === 4 && optionSources.length === 4
-        const hasPromptPlusFourOptionSources = q.image_paths.length === 5 && contextSources.length === 1 && optionSources.length === 4
-        const hasTwoImagesPerOptionSources = q.image_paths.length === 8 && multiImageOptionSources.length === 8
+        const hasStandardOptionSources = q.image_paths.length === expectedOptionLetters.length && optionSources.length === expectedOptionLetters.length
+        const hasPromptPlusOptionSources = q.image_paths.length === expectedOptionLetters.length + 1 && contextSources.length === 1 && optionSources.length === expectedOptionLetters.length
+        const hasTwoImagesPerOptionSources = q.image_paths.length === expectedOptionLetters.length * 2 && multiImageOptionSources.length === expectedOptionLetters.length * 2
         const hasCombinedOptionRegion = q.image_paths.length === 1 && combinedOptionSources.length === 1
         const supportedDiagramBinding =
-          hasStandardFourOptionSources ||
-          hasPromptPlusFourOptionSources ||
+          hasStandardOptionSources ||
+          hasPromptPlusOptionSources ||
           hasTwoImagesPerOptionSources ||
           hasCombinedOptionRegion
         if (!supportedDiagramBinding) {
-          reportOptionImageIssue(`${qid}: Diagram A-D options require explicit option image ownership metadata`)
+          reportOptionImageIssue(`${qid}: Diagram ${optionLabel} options require explicit option image ownership metadata`)
         }
-        if (!supportedDiagramBinding && q.image_paths.length !== 4) {
-          reportOptionImageIssue(`${qid}: Diagram A-D options require exactly four option images`)
+        if (!supportedDiagramBinding && q.image_paths.length !== expectedOptionLetters.length) {
+          reportOptionImageIssue(`${qid}: Diagram ${optionLabel} options require exactly ${expectedOptionLetters.length} option images`)
         }
-        if (!supportedDiagramBinding && optionSources.length !== 4) {
-          reportOptionImageIssue(`${qid}: Diagram A-D option images require four source records with option letters`)
+        if (!supportedDiagramBinding && optionSources.length !== expectedOptionLetters.length) {
+          reportOptionImageIssue(`${qid}: Diagram ${optionLabel} option images require ${expectedOptionLetters.length} source records with option letters`)
         }
         const optionSet = new Set(optionSources.map(source => source.option))
         if (!supportedDiagramBinding || optionSources.length) {
-          for (const key of ['A', 'B', 'C', 'D']) {
+          for (const key of expectedOptionLetters) {
             if (!optionSet.has(key) && !hasCombinedOptionRegion) reportOptionImageIssue(`${qid}: Diagram option ${key} lacks source ownership metadata`)
           }
         }

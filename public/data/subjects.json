@@ -399,94 +399,6 @@
       }
     },
     {
-      "id": "environmental-science",
-      "name": "AP Environmental Science",
-      "shortName": "Environmental Science",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/environmental-science/question_bank.json",
-      "frqBank": "ap/environmental-science/frq_bank.json",
-      "similarityIndex": "ap/environmental-science/similarity_index.json",
-      "classificationConfig": "ap/environmental-science/classification_config.json",
-      "dataVersion": "structured-2008-2016-v2",
-      "units": [
-        {
-          "id": "U1",
-          "name": "The Living World: Ecosystems"
-        },
-        {
-          "id": "U2",
-          "name": "The Living World: Biodiversity"
-        },
-        {
-          "id": "U3",
-          "name": "Populations"
-        },
-        {
-          "id": "U4",
-          "name": "Earth Systems and Resources"
-        },
-        {
-          "id": "U5",
-          "name": "Land and Water Use"
-        },
-        {
-          "id": "U6",
-          "name": "Energy Resources and Consumption"
-        },
-        {
-          "id": "U7",
-          "name": "Atmospheric Pollution"
-        },
-        {
-          "id": "U8",
-          "name": "Aquatic and Terrestrial Pollution"
-        },
-        {
-          "id": "U9",
-          "name": "Global Change"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 80,
-        "frqCount": 4,
-        "mcqTimeLimit": 5400,
-        "frqTimeLimit": 5400,
-        "unitDistribution": {
-          "U1": 12,
-          "U2": 2,
-          "U3": 10,
-          "U4": 3,
-          "U5": 3,
-          "U6": 16,
-          "U7": 6,
-          "U8": 19,
-          "U9": 9
-        }
-      },
-      "releaseStatus": "content-risk",
-      "visibility": "internal",
-      "readiness": {
-        "status": "red",
-        "updatedAt": "2026-07-09",
-        "p0": 9,
-        "p1": 0,
-        "contentRiskCodes": [
-          "flattened_frq_tables",
-          "frq_internal_rubric_ids",
-          "frq_prompt_page_number_residue",
-          "frq_solution_outline_duplicates_criteria",
-          "frq_visual_asset_contract_missing",
-          "weak_frq_rubrics"
-        ],
-        "mechanismCodes": [
-          "missing_delivery_contract",
-          "missing_delivery_review",
-          "missing_frq_browser_review"
-        ]
-      }
-    },
-    {
       "id": "macro",
       "name": "AP Macroeconomics",
       "shortName": "Macro",
@@ -1210,6 +1122,75 @@
         "p1": 0,
         "contentRiskCodes": [],
         "mechanismCodes": []
+      }
+    },
+    {
+      "id": "environmental-science",
+      "name": "AP Environmental Science",
+      "shortName": "Environmental Science",
+      "active": true,
+      "releaseStatus": "certified",
+      "visibility": "internal",
+      "hasFRQ": true,
+      "questionBank": "ap/environmental-science/question_bank.json",
+      "frqBank": "ap/environmental-science/frq_bank.json",
+      "similarityIndex": "ap/environmental-science/similarity_index.json",
+      "classificationConfig": "ap/environmental-science/classification_config.json",
+      "dataVersion": "structured-2008-2016-v2",
+      "units": [
+        {
+          "id": "U1",
+          "name": "The Living World: Ecosystems"
+        },
+        {
+          "id": "U2",
+          "name": "The Living World: Biodiversity"
+        },
+        {
+          "id": "U3",
+          "name": "Populations"
+        },
+        {
+          "id": "U4",
+          "name": "Earth Systems and Resources"
+        },
+        {
+          "id": "U5",
+          "name": "Land and Water Use"
+        },
+        {
+          "id": "U6",
+          "name": "Energy Resources and Consumption"
+        },
+        {
+          "id": "U7",
+          "name": "Atmospheric Pollution"
+        },
+        {
+          "id": "U8",
+          "name": "Aquatic and Terrestrial Pollution"
+        },
+        {
+          "id": "U9",
+          "name": "Global Change"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 80,
+        "frqCount": 4,
+        "mcqTimeLimit": 5400,
+        "frqTimeLimit": 5400,
+        "unitDistribution": {
+          "U1": 12,
+          "U2": 2,
+          "U3": 10,
+          "U4": 3,
+          "U5": 3,
+          "U6": 16,
+          "U7": 6,
+          "U8": 19,
+          "U9": 9
+        }
       }
     }
   ]

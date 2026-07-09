@@ -33,22 +33,28 @@
       "official_text": "Question 1\n\n(a) One point is earned for an acceptable environmental benefit including, but not limited to, the following.\n•\nLess pollution produced from transporting waste (separate from fuel cost).\n•\nFremont can apply its own stringent standards for design and maintenance of landfill.\n•\nCan start from scratch—building a state-of-the-art landfill with emphasis on educating Fremont residents\nabout recycling, reduction, and reuse.\n•\nLess chance of leakage during transport.\n\nOne point is earned for an acceptable economic benefit including, but not limited to, the following.\n•\nLower fuel costs for transporting waste.\n•\nAvoids costly dumping (tipping) fees.\n•\nOpportunity to capture methane for municipal use.\n•\nOpportunity to burn solid waste for generation of electricity.\n•\nProvides jobs for Fremont residents to work at landfill and recycling center.\n\n(b) One point is earned for each of two acceptable methods including, but not limited to, the following.\n•\nSecurely fenced to prevent trespassing and/or illegal dumping.\n•\nCovered daily with sufficient clean fill to reduce odor and pests.\n•\nVent for methane exhaust.\n•\nLocated a safe distance from streams/aquifers.\n•\nLined with impermeable clay (and/or multiple poly/clay) layer to prevent leachate from exiting\nlandfill/polluting ground water.\n•\nPeripheral monitoring wells to ensure safety of groundwater.\n•\nTreed buffer zone to minimize negative visual impact.\n•\nLeachate collected and treated on site.\n\n(c) Two points are earned for indicating that the site for the landfill should be tract A. One additional point is\nearned for an appropriate economic justification (such as necessary access roads can be shorter, reduced\nemployee work hours due to shortened waste transport distance), and a second additional point is earned for\nan appropriate environmental justification (such as not fragmenting turtle habitat) and/or minimizing\nturtle/vehicle collisions.\n\nOne point is earned for indicating that the site for the landfill should be tract C. One additional point is earned\nfor an appropriate economic justification (such as tract C is less valuable land because it has no road\nfrontage), and a second additional point is earned for an appropriate environmental justification (such as\nkeeping preserve unfragmented by building fences and under-highway corridors for turtle movement between\ntracts).\n\nNo point is earned for indicating that the site for the landfill should be tract B; however, 1 point can be earned\nfor an appropriate economic justification (such as necessary access roads can be shorter), and a second point\ncan be earned for appropriate environmental justification (such as maintenance of two breeding populations in\ncase of a catastrophic loss of one of the populations).\n\n(d) One point is earned for identification of a relevant law or treaty (such as Endangered Species Act, Clean\nWater Act, Clean Air Act, RCRA), and 1 point is earned for explaining how the act applies to this situation.\nAP®\nFree-Response Scoring Guidelines",
       "points": [
         {
-          "point_id": "criterion_1",
-          "part": "criterion_1",
-          "points": 1,
-          "description": "(a) One point is earned for an acceptable environmental benefit including, but not limited to, the following. - Less pollution produced from transporting waste (separate from fuel cost). - Fremont can apply its own stringent standards for design and maintenance of landfill. - Can start from scratch—building a state-of-the-art landfill with emphasis on educating Fremont residents about recycling, reduction, and reuse. - Less chance of leakage during transport. One point is earned for an acceptable economic benefit including, but not limited to, the following. - Lower fuel costs for transporting waste. - Avoids costly dumping (tipping) fees. - Opportunity to capture methane for municipal use. - Opportunity to burn solid waste for generation of electricity. - Provides jobs for Fremont residents to work at landfill and recycling center."
+          "point_id": "2008_FRQ1_a",
+          "part": "(a)",
+          "points": 2,
+          "description": "Award points for one acceptable environmental benefit and one acceptable economic benefit of a Fremont landfill."
         },
         {
-          "point_id": "criterion_2",
-          "part": "criterion_2",
-          "points": 1,
-          "description": "(b) One point is earned for each of two acceptable methods including, but not limited to, the following. - Securely fenced to prevent trespassing and/or illegal dumping. - Covered daily with sufficient clean fill to reduce odor and pests. - Vent for methane exhaust. - Located a safe distance from streams/aquifers. - Lined with impermeable clay (and/or multiple poly/clay) layer to prevent leachate from exiting landfill/polluting ground water. - Peripheral monitoring wells to ensure safety of groundwater. - Treed buffer zone to minimize negative visual impact. - Leachate collected and treated on site."
+          "point_id": "2008_FRQ1_b",
+          "part": "(b)",
+          "points": 2,
+          "description": "Award points for two practical landfill design or management methods that improve effectiveness, safety, or aesthetics."
         },
         {
-          "point_id": "criterion_3",
-          "part": "criterion_3",
-          "points": 1,
-          "description": "(c) Two points are earned for indicating that the site for the landfill should be tract A. One additional point is earned for an appropriate economic justification (such as necessary access roads can be shorter, reduced employee work hours due to shortened waste transport distance), and a second additional point is earned for an appropriate environmental justification (such as not fragmenting turtle habitat) and/or minimizing turtle/vehicle collisions. One point is earned for indicating that the site for the landfill should be tract C. One additional point is earned for an appropriate economic justification (such as tract C is less valuable land because it has no road frontage), and a second additional point is earned for an appropriate environmental justification (such as keeping preserve unfragmented by building fences and under-highway corridors for turtle movement between tracts). No point is earned for indicating that the site for the landfill should be tract B; however, 1 point can be earned for an appropriate economic justification (such as necessary access roads can be shorter), and a second point can be e"
+          "point_id": "2008_FRQ1_c",
+          "part": "(c)",
+          "points": 4,
+          "description": "Award site-selection credit for tract A or C with appropriate economic and environmental justifications."
+        },
+        {
+          "point_id": "2008_FRQ1_d",
+          "part": "(d)",
+          "points": 2,
+          "description": "Award points for naming a relevant law or treaty and explaining how it applies to the land-use decision."
         }
       ]
     },
@@ -65,6 +71,30 @@
             501.1
           ],
           "kind": "image"
+        }
+      ]
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-apes-contract",
+      "method": "pipeline_bbox_crop_plus_student_surface_review",
+      "image_sources": [
+        {
+          "path": "ap/environmental-science/2008/2008_frq1_p026_image01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "page": 26,
+            "bbox": [
+              48.0,
+              198.5,
+              564.1,
+              501.1
+            ],
+            "kind": "image"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2008_FRQ1 APES FRQ visual is a local figure or graph crop required by the prompt."
         }
       ]
     }
@@ -103,34 +133,34 @@
       "official_text": "Question 2\n\n(a) Earn 1 point for an appropriate setup and 1 point for the correct answer. Expected answer: $4.0 \\times 10^{-3}$ cubic meters of gold.\n\n(b) Earn 1 point for an appropriate setup and 1 point for the correct answer. Expected answer: $(4.0 \\times 10^{-3} / 4000) \\times 100 = 1.0 \\times 10^{-4}$ percent gold.\n\n(c) Earn credit for converting the gold volume to mass and calculating the break-even price. $4.0 \\times 10^{-3}$ cubic meters = 4000 cubic centimeters; $4000 \\times 19 = 76,000$ grams; $1,520,000 / 76,000 = 20$ dollars per gram.\n\n(d) Acceptable uses of mine waste include construction fill, road base, concrete/asphalt aggregate, landscaping material, or backfilling/recontouring the mine.\n\n(e) Acceptable environmental problems include acid mine drainage, heavy-metal leaching, erosion and sedimentation, habitat destruction, dust/particulate pollution, or unstable slopes/subsidence.",
       "points": [
         {
-          "point_id": "criterion_1",
-          "part": "criterion_1",
-          "points": 1,
-          "description": "(a) Earn 1 point for an appropriate setup and 1 point for the correct answer. Expected answer: $4.0 \\times 10^{-3}$ cubic meters of gold."
+          "point_id": "2008_FRQ2_a",
+          "part": "(a)",
+          "points": 2,
+          "description": "Award setup and answer credit for calculating the total volume of gold in the 20-block excavation."
         },
         {
-          "point_id": "criterion_2",
-          "part": "criterion_2",
-          "points": 1,
-          "description": "(b) Earn 1 point for an appropriate setup and 1 point for the correct answer. Expected answer: $(4.0 \\times 10^{-3} / 4000) \\times 100 = 1.0 \\times 10^{-4}$ percent gold."
+          "point_id": "2008_FRQ2_b",
+          "part": "(b)",
+          "points": 2,
+          "description": "Award setup and answer credit for calculating the percentage of gold in the excavated material."
         },
         {
-          "point_id": "criterion_3",
-          "part": "criterion_3",
-          "points": 1,
-          "description": "(c) Earn credit for converting the gold volume to mass and calculating the break-even price. $4.0 \\times 10^{-3}$ cubic meters = 4000 cubic centimeters; $4000 \\times 19 = 76,000$ grams; $1,520,000 / 76,000 = 20$ dollars per gram."
+          "point_id": "2008_FRQ2_c",
+          "part": "(c)",
+          "points": 2,
+          "description": "Award calculation credit for converting volume to mass and determining the break-even selling price."
         },
         {
-          "point_id": "criterion_4",
-          "part": "criterion_4",
-          "points": 1,
-          "description": "(d) Acceptable uses of mine waste include construction fill, road base, concrete/asphalt aggregate, landscaping material, or backfilling/recontouring the mine."
+          "point_id": "2008_FRQ2_d",
+          "part": "(d)",
+          "points": 2,
+          "description": "Award points for two realistic uses of mine waste after gold extraction."
         },
         {
-          "point_id": "criterion_5",
-          "part": "criterion_5",
-          "points": 1,
-          "description": "(e) Acceptable environmental problems include acid mine drainage, heavy-metal leaching, erosion and sedimentation, habitat destruction, dust/particulate pollution, or unstable slopes/subsidence."
+          "point_id": "2008_FRQ2_e",
+          "part": "(e)",
+          "points": 2,
+          "description": "Award points for two likely environmental problems at an abandoned mine site."
         }
       ]
     },
@@ -147,6 +177,30 @@
             202.1
           ],
           "kind": "image"
+        }
+      ]
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-apes-contract",
+      "method": "pipeline_bbox_crop_plus_student_surface_review",
+      "image_sources": [
+        {
+          "path": "ap/environmental-science/2008/2008_frq2_p027_image01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "page": 27,
+            "bbox": [
+              106.9,
+              54.5,
+              505.3,
+              202.1
+            ],
+            "kind": "image"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2008_FRQ2 APES FRQ visual is a local figure or graph crop required by the prompt."
         }
       ]
     }
@@ -183,40 +237,40 @@
       "official_text": "Question 3\n\n(a) One point is earned for each of two social conditions including, but not limited to, the following.\n•\nLarge families are needed to provide agricultural workers.\n•\nLarge families are needed to ensure security of elders (no government social networks).\n•\nHigh fertility rate is a reaction to high infant mortality.\n•\nLow education and limited access to family planning for women.\n•\nFewer economic opportunities for women.\n•\nPopulation is less urbanized in LDCs.\n•\nPopulation contains a higher percentage of women of reproductive age.\n\n One additional elaboration point may be earned for a more detailed description of social conditions\n\n in particular countries.\n\n(b)(i) One point is earned for an appropriate setup and a second point for the correct answer.\n\n17\n17\n17\n5.2\n10\n BTU\n1.3\n10\n BTU = 3.9\n10\n BTU\n×\n-\n×\n×\n increase\n17\n17\n3.0\n10\nBTU × 100% = 300 % increase\n1.3\n10\nBTU\n×\n×\n\n(b)(ii) One point is earned for an appropriate setup and a second point for the correct answer.\n\n17\n17\n17\n3.0\n10\n BTU\n2.5\n10\n BTU = 0.5\n10\n BTU\n×\n-\n×\n×\n increase\n\n17\n17\n0.5\n10\nBTU × 100% = 20 % increase\n2.5\n10\nBTU\n×\n×\n\n(c) One point is earned for identifying that the standard of living is increasing. By 2050, MDCs may\n\n increasingly use energy-conservation technologies. Also, energy-conservation incentives and the price\n\n of energy will likely cause decreased consumption in MDCs.\n\n One point is earned for identifying faster growth of population in LDCs.\n\n(d) Up to 3 points can be earned, 1 each for the following steps.\n\n 1) Fuel is burned.\n\n 2) Water is heated to steam.\n\n 3) Steam pushes turbine blades.\n\n 4) Spinning turbines rotate coils through magnetic field in generators.\n\n 5) Current is induced in coils as they spin, producing electrical energy.\nAP®\nFree-Response Scoring Guidelines\n\n(e) One point is earned for each of two sustainable methods including, but not limited to, the following.\n•\nWindmill-driven generators.\n•\nUse of sustainably produced biomass such as switch grass, algae.\n•\nGreater use of geothermal/heat pumps.\n•\nTidal power or wave-generated power.\n•\nPhotovoltaic cells.\n•\nPassive solar for heating buildings.\n•\nHydroelectric.\n\nOne additional elaboration point may be earned for a more detailed description of a sustainable method of\nenergy generation.\nAP®\nFree-Response Scoring Guidelines",
       "points": [
         {
-          "point_id": "criterion_1",
-          "part": "criterion_1",
-          "points": 1,
-          "description": "(a) One point is earned for each of two social conditions including, but not limited to, the following. - Large families are needed to provide agricultural workers. - Large families are needed to ensure security of elders (no government social networks). - High fertility rate is a reaction to high infant mortality. - Low education and limited access to family planning for women. - Fewer economic opportunities for women. - Population is less urbanized in LDCs. - Population contains a higher percentage of women of reproductive age. One additional elaboration point may be earned for a more detailed description of social conditions in particular countries. (b)"
+          "point_id": "2008_FRQ3_a",
+          "part": "(a)",
+          "points": 2,
+          "description": "Award points for two social conditions that explain higher projected population growth in LDCs."
         },
         {
-          "point_id": "criterion_2",
-          "part": "criterion_2",
-          "points": 1,
-          "description": "(i) One point is earned for an appropriate setup and a second point for the correct answer. 17 17 17 5.2 10 BTU 1.3 10 BTU = 3.9 10 BTU × - × × increase 17 17 3.0 10 BTU × 100% = 300 % increase 1.3 10 BTU × × (b)"
+          "point_id": "2008_FRQ3_b_i",
+          "part": "(b)(i)",
+          "points": 2,
+          "description": "Award setup and answer credit for the projected percent increase in LDC energy consumption."
         },
         {
-          "point_id": "criterion_3",
-          "part": "criterion_3",
-          "points": 1,
-          "description": "(ii) One point is earned for an appropriate setup and a second point for the correct answer. 17 17 17 3.0 10 BTU 2.5 10 BTU = 0.5 10 BTU × - × × increase 17 17 0.5 10 BTU × 100% = 20 % increase 2.5 10 BTU × ×"
+          "point_id": "2008_FRQ3_b_ii",
+          "part": "(b)(ii)",
+          "points": 2,
+          "description": "Award setup and answer credit for the projected percent increase in MDC energy consumption."
         },
         {
-          "point_id": "criterion_4",
-          "part": "criterion_4",
-          "points": 1,
-          "description": "(c) One point is earned for identifying that the standard of living is increasing. By 2050, MDCs may increasingly use energy-conservation technologies. Also, energy-conservation incentives and the price of energy will likely cause decreased consumption in MDCs. One point is earned for identifying faster growth of population in LDCs."
+          "point_id": "2008_FRQ3_c",
+          "part": "(c)",
+          "points": 2,
+          "description": "Award points for reasons the LDC and MDC energy-consumption changes differ."
         },
         {
-          "point_id": "criterion_5",
-          "part": "criterion_5",
+          "point_id": "2008_FRQ3_d",
+          "part": "(d)",
           "points": 1,
-          "description": "(d) Up to 3 points can be earned, 1 each for the following steps. 1) Fuel is burned. 2) Water is heated to steam. 3) Steam pushes turbine blades. 4) Spinning turbines rotate coils through magnetic field in generators. 5) Current is induced in coils as they spin, producing electrical energy. AP® Free-Response Scoring Guidelines"
+          "description": "Award process credit for explaining how fossil fuels are converted into electrical energy."
         },
         {
-          "point_id": "criterion_6",
-          "part": "criterion_6",
+          "point_id": "2008_FRQ3_e",
+          "part": "(e)",
           "points": 1,
-          "description": "(e) One point is earned for each of two sustainable methods including, but not limited to, the following. - Windmill-driven generators. - Use of sustainably produced biomass such as switch grass, algae. - Greater use of geothermal/heat pumps. - Tidal power or wave-generated power. - Photovoltaic cells. - Passive solar for heating buildings. - Hydroelectric. One additional elaboration point may be earned for a more detailed description of a sustainable method of energy generation. AP® Free-Response Scoring Guidelines"
+          "description": "Award credit for sustainable energy-production methods that could meet future demand."
         }
       ]
     },
@@ -224,6 +278,38 @@
       "source_pdf": "subjects\\AP\\Environmental-Science\\01-exams\\AP_Environmental_Science_2008_Full_Exam.pdf",
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
+    },
+    "background_data": {
+      "table": {
+        "caption": "Projected population and total energy consumption for LDCs and MDCs",
+        "headers": [
+          "Projection",
+          "Present",
+          "2050"
+        ],
+        "rows": [
+          [
+            "Total Population: LDCs",
+            "5.1 x 10^9",
+            "7.8 x 10^9"
+          ],
+          [
+            "Total Population: MDCs",
+            "1.2 x 10^9",
+            "1.3 x 10^9"
+          ],
+          [
+            "Total Energy Consumption: LDCs",
+            "1.3 x 10^17 Btu",
+            "5.2 x 10^17 Btu"
+          ],
+          [
+            "Total Energy Consumption: MDCs",
+            "2.5 x 10^17 Btu",
+            "3.0 x 10^17 Btu"
+          ]
+        ]
+      }
     }
   },
   {
@@ -235,7 +321,7 @@
     "question_number": 4,
     "question_type": "FRQ",
     "type": "FRQ",
-    "text": "Matter is continually recycled between the biotic and abiotic components of Earth’s ecosystems in biogeochemical cycles. The various cycles differ from one another in several key aspects of their storage, conversion, and modes of transport.\n\n(a) Describe the critical processes by which nitrogen is cycled through the biotic and abiotic components of Earth’s ecosystems and identify the primary storage sink for nitrogen.\n\n(b) Explain ONE major way in which the phosphorus cycle differs from the nitrogen cycle.\n\n(c) Identify EITHER one nitrogen compound OR one phosphorus compound that is considered a pollutant when released by human activity into the environment. For the compound you identified, describe the human activity and a specific environmental problem that results.\n\n(d) Describe ONE way in which humans have disrupted the natural cycling of carbon and TWO major environmental consequences of that disruption. Name: AP® Student Answer Sheet for Multiple-Choice Section No. Answer No. Answer No. Answer No. Answer 1 31 61 91 2 32 62 92 3 33 63 93 4 34 64 94 5 35 65 95 6 36 66 96 7 37 67 97 8 38 68 98 9 39 69 99 10 40 70 100 11 41 71 12 42 72 13 43 73 14 44 74 15 45 75 16 46 76 17 47 77 18 48 78 19 49 79 20 50 80 21 51 81 22 52 82 23 53 83 24 54 84 25 55 85 26 56 86 27 57 87 28 58 88 29 59 89 30 60 90",
+    "text": "Matter is continually recycled between the biotic and abiotic components of Earth’s ecosystems in biogeochemical cycles. The various cycles differ from one another in several key aspects of their storage, conversion, and modes of transport.\n\n(a) Describe the critical processes by which nitrogen is cycled through the biotic and abiotic components of Earth’s ecosystems and identify the primary storage sink for nitrogen.\n\n(b) Explain ONE major way in which the phosphorus cycle differs from the nitrogen cycle.\n\n(c) Identify EITHER one nitrogen compound OR one phosphorus compound that is considered a pollutant when released by human activity into the environment. For the compound you identified, describe the human activity and a specific environmental problem that results.\n\n(d) Describe ONE way in which humans have disrupted the natural cycling of carbon and TWO major environmental consequences of that disruption.",
     "image_paths": [],
     "rubric_image_paths": [],
     "requires_graph": false,
@@ -258,28 +344,28 @@
       "official_text": "Question 4\n\n(a) One point is earned for identification of atmosphere as the primary sink for nitrogen, $\\mathrm{N}_2$.\n\nUp to 3 more points can be earned, 1 each for the following steps.\n1) Atmospheric nitrogen is fixed by bacteria in soil and in root nodules to produce ammonia/ammonium\n(some by lightning).\n2) Ammonia is oxidized in soil by nitrifying bacteria to nitrites and then to nitrates.\n3) Plants take up soluble nitrogen compounds through roots.\n4) In plants, nitrogen compounds are used to produce biochemicals like protein, DNA, chlorophyll.\n5) Denitrifying bacteria break down nitrogen compounds in the process of decomposition and release\nelemental nitrogen back into the atmosphere; or nitrifying decomposers break down organic nitrogen\ncompounds, making them available to plants again in the form of nitrates.\n\n(b) One point is earned for explaining that the phosphorus cycle does not involve any gaseous P compounds, or\nthat the major sink in the phosphorus cycle is the lithosphere, or that bacteria are not as pivotal in the\nphosphorous cycle as they are in the nitrogen cycle.\n\n(c) One point is earned for identification of one N or one P compound (such as nitrates in commercial\nfertilizers or phosphates in cleaning agents).\n\nOne point is earned for a description of a human activity that results in the release of the compound (such as\napplication of fertilizer in farming and subsequent runoff, or release of gray water from improper wastewater\ntreatment or cleaning operations).\n\nOne point is earned for describing a specific environmental problem that results from the release of the\nidentified compound (such as altered DO, cultural eutrophication, dead zones).\n\n(d) One point is earned for identifying one disruption caused by humans (such as burning of fossil fuels,\ndeforestation/slash and burn).\n\nOne point each is earned for two environmental consequences of the disruption (such as global warming,\nincreased rates of photosynthesis, ocean acidification, sea-level rise, and weather disruptions resulting from\nglobal warming—for example, flooding, drought, heat waves, intensification of storms).\n\nNote: No points are earned for acid rain or any other noncarbon-related environmental problems.\n\n One additional elaboration point may be earned for a more detailed description of a sustainable method.",
       "points": [
         {
-          "point_id": "criterion_1",
-          "part": "criterion_1",
-          "points": 1,
-          "description": "(a) One point is earned for identification of atmosphere as the primary sink for nitrogen, $\\mathrm{N}_2$. Up to 3 more points can be earned, 1 each for the following steps. 1) Atmospheric nitrogen is fixed by bacteria in soil and in root nodules to produce ammonia/ammonium (some by lightning). 2) Ammonia is oxidized in soil by nitrifying bacteria to nitrites and then to nitrates. 3) Plants take up soluble nitrogen compounds through roots. 4) In plants, nitrogen compounds are used to produce biochemicals like protein, DNA, chlorophyll. 5) Denitrifying bacteria break down nitrogen compounds in the process of decomposition and release elemental nitrogen back into the atmosphere; or nitrifying decomposers break down organic nitrogen compounds, making them available to plants again in the form of nitrates."
+          "point_id": "2008_FRQ4_a",
+          "part": "(a)",
+          "points": 4,
+          "description": "Award points for nitrogen-cycle processes and for identifying the atmospheric nitrogen sink."
         },
         {
-          "point_id": "criterion_2",
-          "part": "criterion_2",
+          "point_id": "2008_FRQ4_b",
+          "part": "(b)",
           "points": 1,
-          "description": "(b) One point is earned for explaining that the phosphorus cycle does not involve any gaseous P compounds, or that the major sink in the phosphorus cycle is the lithosphere, or that bacteria are not as pivotal in the phosphorous cycle as they are in the nitrogen cycle."
+          "description": "Award credit for a major difference between the phosphorus and nitrogen cycles."
         },
         {
-          "point_id": "criterion_3",
-          "part": "criterion_3",
-          "points": 1,
-          "description": "(c) One point is earned for identification of one N or one P compound (such as nitrates in commercial fertilizers or phosphates in cleaning agents). One point is earned for a description of a human activity that results in the release of the compound (such as application of fertilizer in farming and subsequent runoff, or release of gray water from improper wastewater treatment or cleaning operations). One point is earned for describing a specific environmental problem that results from the release of the identified compound (such as altered DO, cultural eutrophication, dead zones)."
+          "point_id": "2008_FRQ4_c",
+          "part": "(c)",
+          "points": 2,
+          "description": "Award points for a nitrogen or phosphorus pollutant, the human source, and an environmental effect."
         },
         {
-          "point_id": "criterion_4",
-          "part": "criterion_4",
-          "points": 1,
-          "description": "(d) One point is earned for identifying one disruption caused by humans (such as burning of fossil fuels, deforestation/slash and burn). One point each is earned for two environmental consequences of the disruption (such as global warming, increased rates of photosynthesis, ocean acidification, sea-level rise, and weather disruptions resulting from global warming—for example, flooding, drought, heat waves, intensification of storms). Note: No points are earned for acid rain or any other noncarbon-related environmental problems. One additional elaboration point may be earned for a more detailed description of a sustainable method."
+          "point_id": "2008_FRQ4_d",
+          "part": "(d)",
+          "points": 3,
+          "description": "Award points for a human disruption of the carbon cycle and two environmental consequences."
         }
       ]
     },
@@ -323,28 +409,40 @@
       "official_text": "Question 1\nRead the following article from the Fremont New Tribune.\n (a) Diseases can devastate populations; however, most diseases do not drive their host to extinction.\nProvide one explanation for why diseases seldom cause extinction.\n(1 point for a correct explanation for why diseases seldom cause extinction)\n •\nGenetic diversity in wild populations enables some resistant organisms to survive and\nreproduce.\nDisease organisms often co-evolve with their hosts, allowing the host to evolve adaptations that\nresist the disease.\nDisease organisms/pathogens that cause the extinction of their host population jeopardize their\nown survival.\nInitial deaths thin (reduce density of) populations and make the disease less likely to spread.\n(b) Dr. Serach suggests that even if the impact of WNS on little brown bat populations can be reduced\nand the extinction of the species avoided, the bat populations are likely to remain alarmingly small.\n(i) Describe TWO threats (other than WNS) to the survival of the bat species if the total number of\n bats becomes very small.\n(2 points: 1 point for each description of a threat. Only the first two descriptions can earn a\npoint.)\n •\nDifficulty finding mates when populations are small, widely dispersed, or have a skewed sex\nratio\nCompetition from other species with a similar niche (e.g., nesting sites, food)\nProblems associated with a reduction of genetic diversity (small gene pool, lack of hybrid vigor,\ndiseases that affect one will affect all members of the population, bottle-neck, etc.)\nSusceptibility to reduced fitness as a result of decreased protection by the group (e.g., not\nenough individuals to create heat, less protection by group members, increase in probability of\nbecoming prey without the advantage conferred by group size)\nIncreased vulnerability to environmental disturbances (need to name specific disturbance)\n(ii) If the little brown bat species does not become extinct and can potentially recover, the rate of\nrecovery is likely to be slow. Discuss one aspect of bat biology that might slow the recovery of\nlittle brown bat populations to pre-WNS numbers.\n(1 point for a correct discussion of a correct aspect of bat biology that might slow their recovery)\n •\n\nLow fecundity/ few babies per year\nLong generation times in bats\n •\nAdvanced age at first reproduction\nIncreased parental care\n (c) Bats are found in ecosystems around the world. Describe TWO ways in which other organisms in\nan ecosystem could be affected by a decline in a bat population.\n(2 points: 1 point for each correct description. Only the first two descriptions can earn a point.)\nAP®\n2016 SCORING GUIDELINES\n© 2016 The College Board.\n\n •\nIncrease in bat food sources\nIncrease in West Nile and other insect-\nborne diseases\nDecrease in the spread of rabies\nDecrease in fungus that causes WNS\nDecrease in bat guano (tied to organism)\n •\nDecline in plants pollinated or dispersed\nby bats\nDecline in bat predators due to\ndecreased food supply.\nIncrease in numbers of animals with\nsimilar food and habitat needs\nCauses a trophic cascade\n (d) The Eastern deciduous forest, in which the little brown bats live, is an important ecosystem.\nIdentify TWO ecosystem services that forests provide, and explain how each service benefits\nhuman society.\n(2 points: 1 point for each correct ecosystem service with an explanation of how the service\nbenefits human society)\nAcceptable responses may include the following:\nEcosystem Service\nBenefit to Humans\nResource material (tree/forest)\nLumber, building materials, fuel, paper, food\nOxygen production\nHuman respiration\nSoil formation/protection\nForestry, agriculture, flood control, water quality\nProtection of water supplies\nDrinking water, recreation, irrigation, fishing\nHabitat (e.g. specify shade,\ntemperature moderation, etc.)\n Animals or plants desired by humans for\n fishing, hunting, food\nBiodiversity\nFood, medicine, gene diversity, breeding stock\nCarbon sink (sequestering)\nSlows climate change\nAesthetics/cultural/social\nConnection with nature (inspiration for art, music,\npoetry, etc.), research, education, recreation,\ntourism\nWNS is an emerging disease in bats. Humans are also subject to emerging diseases, such as Ebola.\nA recent study suggests that the number of emerging infectious diseases affecting human\npopulations has been steadily increasing in recent decades.\n(e) Provide a likely reason for the increase in emerging infectious diseases affecting human\npopulations. Include an explanation for the reason you provided.\n(2 points: 1 point for a correct reason for the increase in emerging infectious diseases. 1 point for a\ncorrect explanation of how the reason likely increases the emerging diseases affecting human\npopulations.)\nAcceptable responses may include the following:\nAP®\n2016 SCORING GUIDELINES\n© 2016 The College Board.\n\nReason for Increase\nExplanation\nClimate change, global\nwarming\nAllows pathogens and disease vectors to survive in places that\nwere previously too cold or dry\nIncrease in global travel\nIncreased likelihood of contracting/spreading disease\nIncreased exposure to\nanimals (zoonotic)\nChanges in agricultural practices increase rodents, etc; trade in\nexotic species, intrusion into wild habitats, urban sprawl\nIncrease in population\ndensity/distribution\nIncreased likelihood of contracting /spreading disease from\nothers\nLack of vaccinations\nIncrease human susceptibility to disease, reduce herd immunity\nAntibiotic resistance\nNew disease strains evolve\nDecrease in medical\ncare/public health\nPoverty, war, migration, human behavior (refusing to use\ncondoms/sharing needles/refusing aid)\nAP®\n2016 SCORING GUIDELINES\n© 2016 The College Board.",
       "points": [
         {
-          "point_id": "criterion_1",
-          "part": "criterion_1",
+          "point_id": "2016_FRQ1_a",
+          "part": "(a)",
           "points": 1,
-          "description": "(a) Diseases can devastate populations; however, most diseases do not drive their host to extinction. Provide one explanation for why diseases seldom cause extinction. (1 point for a correct explanation for why diseases seldom cause extinction) - Genetic diversity in wild populations enables some resistant organisms to survive and reproduce. Disease organisms often co-evolve with their hosts, allowing the host to evolve adaptations that resist the disease. Disease organisms/pathogens that cause the extinction of their host population jeopardize their own survival. Initial deaths thin (reduce density of) populations and make the disease less likely to spread."
+          "description": "Award credit for explaining why diseases seldom cause extinction of host species."
         },
         {
-          "point_id": "criterion_2",
-          "part": "criterion_2",
-          "points": 1,
-          "description": "(i) Describe TWO threats (other than WNS) to the survival of the bat species if the total number of bats becomes very small. (2 points: 1 point for each description of a threat. Only the first two descriptions can earn a point.) - Difficulty finding mates when populations are small, widely dispersed, or have a skewed sex ratio Competition from other species with a similar niche (e.g., nesting sites, food) Problems associated with a reduction of genetic diversity (small gene pool, lack of hybrid vigor, diseases that affect one will affect all members of the population, bottle-neck, etc.) Susceptibility to reduced fitness as a result of decreased protection by the group (e.g., not enough individuals to create heat, less protection by group members, increase in probability of becoming prey without the advantage conferred by group size) Increased vulnerability to environmental disturbances (need to name specific disturbance)"
+          "point_id": "2016_FRQ1_b_i",
+          "part": "(b)(i)",
+          "points": 2,
+          "description": "Award points for two threats to very small little brown bat populations other than WNS."
         },
         {
-          "point_id": "criterion_3",
-          "part": "criterion_3",
+          "point_id": "2016_FRQ1_b_ii",
+          "part": "(b)(ii)",
           "points": 1,
-          "description": "(ii) If the little brown bat species does not become extinct and can potentially recover, the rate of recovery is likely to be slow. Discuss one aspect of bat biology that might slow the recovery of little brown bat populations to pre-WNS numbers. (1 point for a correct discussion of a correct aspect of bat biology that might slow their recovery) - Low fecundity/ few babies per year Long generation times in bats - Advanced age at first reproduction Increased parental care"
+          "description": "Award credit for a bat life-history trait that would slow population recovery."
         },
         {
-          "point_id": "criterion_4",
-          "part": "criterion_4",
-          "points": 1,
-          "description": "(c) Bats are found in ecosystems around the world. Describe TWO ways in which other organisms in an ecosystem could be affected by a decline in a bat population. (2 points: 1 point for each correct description. Only the first two descriptions can"
+          "point_id": "2016_FRQ1_c",
+          "part": "(c)",
+          "points": 2,
+          "description": "Award points for two ecosystem effects of a bat population decline."
+        },
+        {
+          "point_id": "2016_FRQ1_d",
+          "part": "(d)",
+          "points": 2,
+          "description": "Award points for two forest ecosystem services and their benefits to human society."
+        },
+        {
+          "point_id": "2016_FRQ1_e",
+          "part": "(e)",
+          "points": 2,
+          "description": "Award points for a likely reason for increasing emerging infectious diseases and an explanation."
         }
       ]
     },
@@ -361,6 +459,30 @@
             516.6
           ],
           "kind": "image"
+        }
+      ]
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-apes-contract",
+      "method": "pipeline_bbox_crop_plus_student_surface_review",
+      "image_sources": [
+        {
+          "path": "ap/environmental-science/2016/2016_frq1_p041_image01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "page": 41,
+            "bbox": [
+              69.1,
+              242.1,
+              542.9,
+              516.6
+            ],
+            "kind": "image"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2016_FRQ1 APES FRQ visual is a local figure or graph crop required by the prompt."
         }
       ]
     }
@@ -397,40 +519,46 @@
       "official_text": "Question 2\n(a) Use the data below to respond to the following. For each calculation, show all your work.\n (i) Calculate the weight (in tons) of rock waste produced globally each year when iron ore is\nconverted to pig iron.\n(1 point for the correct answer with work shown)\n1.6 billion tons of iron ore - 1.2 billion tons of pig iron = 0.4 billion tons of waste, or 4 x 10^8 tons.\n(ii) Calculate the weight (in tons) of pig iron that could be produced if all of the estimated global iron\nore reserves were used for pig iron production.\n(2 points: 1 point for the correct setup and 1 point for the correct answer)\n(1.2 billion tons pig iron / 1.6 billion tons iron ore) x 800 billion tons iron ore = 600 billion tons pig iron. Equivalent setups such as 1.2/1.6 = 0.75 and 0.75 x 800 billion = 600 billion are acceptable.\n(iii) Calculate the weight (in tons) of the current global iron ore reserves that would be used to make\nsteel if the current trends continue.\n(1 point for the correct answer with work shown)\n0.95 x 800 billion tons of iron ore = 760 billion tons of iron ore used to make steel, or 7.6 x 10^11 tons.\n(b) Calculate the weight (in tons) of coal that is conserved each year in North America by recycling steel.\n(1 point for a correct answer with work shown)\n0.7 fewer tons coal used per ton steel recycled x 80 million tons steel recycled = 56 million tons coal saved per year in North America, or 5.6 x 10^7 tons.\nAP®\n2016 SCORING GUIDELINES\n© 2016 The College Board.\n\n(c) Describe TWO environmental problems that are associated with abandoned coal mine sites.\n(2 points: 1 point for each correct description of an environmental problem. Only the first two descriptions\ncan earn a point.)\n \nSubsidence/sinkholes as shafts collapse\nHabitat destruction/slow to recover\nStream/water quality degradation\nAcid mine drainage\nHeavy metal runoff\nTailings alter landscape and drainage patterns\nIncreased soil erosion\nParticulate/dust pollution\nAnimals fall in\nMethane release\nUnderground fires difficult to extinguish\n(d) Describe one method that can be used to mitigate one of the problems you identified in part (c).\n(1 point for a correct description of a mitigation method for one of the two environmental problems\ndescribed in part (c))\n \nPlant trees or other plants to restore cover/reduce erosion\nFill in/fence off abandoned shafts to\nAP®\n2016 SCORING GUIDELINES\n© 2016 The College Board.",
       "points": [
         {
-          "point_id": "criterion_1",
-          "part": "criterion_1",
+          "point_id": "2016_FRQ2_a_i",
+          "part": "(a)(i)",
           "points": 1,
-          "description": "(i) Calculate the weight (in tons) of rock waste produced globally each year when iron ore is converted to pig iron. (1 point for the correct answer with work shown) 1.6 billion tons of iron ore - 1.2 billion tons of pig iron = 0.4 billion tons of waste, or 4 x 10^8 tons."
+          "description": "Credit the difference $1.6 - 1.2 = 0.4$ billion tons, reported as $4 x 10^8$ tons of waste."
         },
         {
-          "point_id": "criterion_2",
-          "part": "criterion_2",
-          "points": 1,
-          "description": "(ii) Calculate the weight (in tons) of pig iron that could be produced if all of the estimated global iron ore reserves were used for pig iron production. (2 points: 1 point for the correct setup and 1 point for the correct answer) (1.2 billion tons pig iron / 1.6 billion tons iron ore) x 800 billion tons iron ore = 600 billion tons pig iron. Equivalent setups such as 1.2/1.6 = 0.75 and 0.75 x 800 billion = 600 billion are acceptable."
+          "point_id": "2016_FRQ2_a_ii",
+          "part": "(a)(ii)",
+          "points": 2,
+          "description": "Credit the reserve proportion setup $1.2/1.6$ and the answer of about 600 billion tons of pig iron."
         },
         {
-          "point_id": "criterion_3",
-          "part": "criterion_3",
-          "points": 1,
-          "description": "(iii) Calculate the weight (in tons) of the current global iron ore reserves that would be used to make steel if the current trends continue. (1 point for the correct answer with work shown) 0.95 x 800 billion tons of iron ore = 760 billion tons of iron ore used to make steel, or 7.6 x 10^11 tons."
+          "point_id": "2016_FRQ2_a_iii",
+          "part": "(a)(iii)",
+          "points": 2,
+          "description": "Credit applying the 95 percent steel-production share to 800 billion tons for about $7.6 x 10^11$ tons."
         },
         {
-          "point_id": "criterion_4",
-          "part": "criterion_4",
+          "point_id": "2016_FRQ2_b",
+          "part": "(b)",
           "points": 1,
-          "description": "(b) Calculate the weight (in tons) of coal that is conserved each year in North America by recycling steel. (1 point for a correct answer with work shown) 0.7 fewer tons coal used per ton steel recycled x 80 million tons steel recycled = 56 million tons coal saved per year in North America, or 5.6 x 10^7 tons. AP® 2016 SCORING GUIDELINES © 2016 The College Board."
+          "description": "Credit multiplying 0.7 tons of coal saved by 80 million tons of recycled steel for $5.6 x 10^7$ tons."
         },
         {
-          "point_id": "criterion_5",
-          "part": "criterion_5",
-          "points": 1,
-          "description": "(c) Describe TWO environmental problems that are associated with abandoned coal mine sites. (2 points: 1 point for each correct description of an environmental problem. Only the first two descriptions can earn a point.) - Subsidence/sinkholes as shafts collapse Habitat destruction/slow to recover Stream/water quality degradation Acid mine drainage Heavy metal runoff Tailings alter landscape and drainage patterns Increased soil erosion Particulate/dust pollution Animals fall in Methane release Underground fires difficult to extinguish"
+          "point_id": "2016_FRQ2_c",
+          "part": "(c)",
+          "points": 2,
+          "description": "Credit two mine-site impacts such as acid mine drainage, erosion, subsidence, habitat loss, or toxic runoff."
         },
         {
-          "point_id": "criterion_6",
-          "part": "criterion_6",
+          "point_id": "2016_FRQ2_d",
+          "part": "(d)",
           "points": 1,
-          "description": "(d) Describe one method that can be used to mitigate one of the problems you identified in part (c). (1 point for a correct description of a mitigation method for one of the two environmental problems described in part (c)) - Plant trees or other plants to restore cover/reduce erosion Fill in/fence off abandoned shafts to AP® 2016 SCORING GUIDELINES © 2016 The College Board."
+          "description": "Credit a matched remediation action such as regrading, revegetation, water treatment, or sealing mine drainage."
+        },
+        {
+          "point_id": "2016_FRQ2_e",
+          "part": "(e)",
+          "points": 1,
+          "description": "Credit a cost explanation based on easier access, less tunneling, less labor, or simpler equipment requirements."
         }
       ]
     },
@@ -438,6 +566,45 @@
       "source_pdf": "subjects\\AP\\Environmental-Science\\01-exams\\AP_Environmental_Science_2016_Full_Exam.pdf",
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
+    },
+    "background_data": {
+      "table": {
+        "caption": "Global iron and steel data",
+        "headers": [
+          "Metric",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Iron ore used yearly to make pig iron",
+            "1.6 billion tons"
+          ],
+          [
+            "Pig iron produced each year",
+            "1.2 billion tons"
+          ],
+          [
+            "Estimated iron ore reserves",
+            "800 billion tons"
+          ],
+          [
+            "Mined iron ore used in steel production",
+            "95%"
+          ],
+          [
+            "Iron ore not mined per ton of steel recycled",
+            "1.25 tons"
+          ],
+          [
+            "Coal not mined per ton of steel recycled",
+            "0.7 tons"
+          ],
+          [
+            "Steel recycled yearly in North America",
+            "80 million tons"
+          ]
+        ]
+      }
     }
   },
   {
@@ -474,52 +641,52 @@
       "official_text": "Question 3\nMunicipal solid waste (MSW) is trash collected from households and businesses.\n\n(a)(i) Earn 1 point for a plausible explanation for the decrease in per capita waste generation from 2000 to 2012, such as refuse/reduce/reuse/recycle/repurpose behavior, lighter packaging, less material used in products, digital media replacing paper, or economic recession reducing consumption.\n\n(a)(ii) Earn 1 point for the correct percent-increase setup and answer: $((250 - 150) / 150) \\times 100 = 66$ to $67$ percent.\n\n(b)(i) Acceptable disadvantages of incineration include air pollution, greenhouse gas emissions, toxic ash, high cost, or public health risk.\n\n(b)(ii) Acceptable disadvantages of landfill disposal include leachate, methane production, land use, odor, pests, groundwater contamination, or slow decomposition.\n\n(c) Earn credit for describing methane generation by anaerobic decomposition, collection of landfill gas, combustion of methane, and use of heat/steam or a turbine-generator to produce electricity.\n\n(d) Acceptable human health problems from tire piles include mosquito-borne disease, fires producing toxic smoke, injury hazards, or habitat for disease vectors.\n\n(e)(i) Acceptable advantages of composting include soil amendment, nutrient recycling, reduced fertilizer use, reduced methane from landfills, or improved soil water-holding capacity.\n\n(e)(ii) Acceptable disadvantages include odor, pests, space/labor requirements, slow processing, contaminants, or greenhouse gas emissions if poorly managed.",
       "points": [
         {
-          "point_id": "criterion_1",
-          "part": "criterion_1",
+          "point_id": "2016_FRQ3_a_i",
+          "part": "(a)(i)",
           "points": 1,
-          "description": "(a)(i) Earn 1 point for a plausible explanation for the decrease in per capita waste generation from 2000 to 2012, such as refuse/reduce/reuse/recycle/repurpose behavior, lighter packaging, less material used in products, digital media replacing paper, or economic recession reducing consumption."
+          "description": "Award credit for a probable cause of the per capita MSW generation decrease from 2000 to 2012."
         },
         {
-          "point_id": "criterion_2",
-          "part": "criterion_2",
+          "point_id": "2016_FRQ3_a_ii",
+          "part": "(a)(ii)",
           "points": 1,
-          "description": "(a)(ii) Earn 1 point for the correct percent-increase setup and answer: $((250 - 150) / 150) \\times 100 = 66$ to $67$ percent."
+          "description": "Award calculation credit for the percent increase in total MSW generation from 1980 to 2012."
         },
         {
-          "point_id": "criterion_3",
-          "part": "criterion_3",
+          "point_id": "2016_FRQ3_b_i",
+          "part": "(b)(i)",
           "points": 1,
-          "description": "(b)(i) Acceptable disadvantages of incineration include air pollution, greenhouse gas emissions, toxic ash, high cost, or public health risk."
+          "description": "Award credit for one disadvantage of waste incineration."
         },
         {
-          "point_id": "criterion_4",
-          "part": "criterion_4",
+          "point_id": "2016_FRQ3_b_ii",
+          "part": "(b)(ii)",
           "points": 1,
-          "description": "(b)(ii) Acceptable disadvantages of landfill disposal include leachate, methane production, land use, odor, pests, groundwater contamination, or slow decomposition."
+          "description": "Award credit for one disadvantage of landfill disposal."
         },
         {
-          "point_id": "criterion_5",
-          "part": "criterion_5",
-          "points": 1,
-          "description": "(c) Earn credit for describing methane generation by anaerobic decomposition, collection of landfill gas, combustion of methane, and use of heat/steam or a turbine-generator to produce electricity."
+          "point_id": "2016_FRQ3_c",
+          "part": "(c)",
+          "points": 2,
+          "description": "Award process credit for producing electricity from methane generated by buried landfill waste."
         },
         {
-          "point_id": "criterion_6",
-          "part": "criterion_6",
+          "point_id": "2016_FRQ3_d",
+          "part": "(d)",
           "points": 1,
-          "description": "(d) Acceptable human health problems from tire piles include mosquito-borne disease, fires producing toxic smoke, injury hazards, or habitat for disease vectors."
+          "description": "Award credit for a human health problem associated with discarded tire piles."
         },
         {
-          "point_id": "criterion_7",
-          "part": "criterion_7",
+          "point_id": "2016_FRQ3_e_i",
+          "part": "(e)(i)",
           "points": 1,
-          "description": "(e)(i) Acceptable advantages of composting include soil amendment, nutrient recycling, reduced fertilizer use, reduced methane from landfills, or improved soil water-holding capacity."
+          "description": "Award credit for one advantage of composting other than reducing landfill volume."
         },
         {
-          "point_id": "criterion_8",
-          "part": "criterion_8",
+          "point_id": "2016_FRQ3_e_ii",
+          "part": "(e)(ii)",
           "points": 1,
-          "description": "(e)(ii) Acceptable disadvantages include odor, pests, space/labor requirements, slow processing, contaminants, or greenhouse gas emissions if poorly managed."
+          "description": "Award credit for one disadvantage of composting."
         }
       ]
     },
@@ -538,6 +705,30 @@
           "kind": "image"
         }
       ]
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-apes-contract",
+      "method": "pipeline_bbox_crop_plus_student_surface_review",
+      "image_sources": [
+        {
+          "path": "ap/environmental-science/2016/2016_frq3_p044_image01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "page": 44,
+            "bbox": [
+              110.0,
+              98.9,
+              502.1,
+              309.2
+            ],
+            "kind": "image"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2016_FRQ3 APES FRQ visual is a local figure or graph crop required by the prompt."
+        }
+      ]
     }
   },
   {
@@ -549,7 +740,7 @@
     "question_number": 4,
     "question_type": "FRQ",
     "type": "FRQ",
-    "text": "Soil is a complex mixture of living organisms and organic material, along with minerals and other abiotic components. Soils help sustain life and support ecosystem functions.",
+    "text": "Soil is a complex mixture of living organisms and organic material, along with minerals and other abiotic components. Soils help sustain life and support ecosystem functions.\n\n(a) Describe how TWO climate factors affect the rate of soil formation.\n\n(b) As soils form, distinct layers known as horizons develop over time. One of these is the A horizon.\n(i) Identify one specific biotic component of the A horizon.\n(ii) Identify one abiotic component of the A horizon. Resources such as soil and water can be degraded by human activities.\n\n(c) Nitrate levels exceeding the United States Environmental Protection Agency’s primary drinking water standard have been found in the groundwater of areas with intensive agriculture.\n(i) Identify one agricultural practice that can lead to elevated nitrate levels in groundwater.\n(ii) Describe how the practice you identified in (c)\n(i) leads to elevated nitrate levels in groundwater.\n\n(d) Acid deposition has affected soil quality in many parts of the northeastern United States.\n(i) Explain one way acid deposition onto soil can affect plant health.\n(ii) Describe one method for remediating soil affected by acid deposition.\n\n(e) Climate change is causing far-reaching ecosystem changes, including soil degradation in many of the world’s biomes. Describe TWO ways that climate change can degrade soil.",
     "image_paths": [],
     "rubric_image_paths": [],
     "requires_graph": false,
@@ -572,46 +763,52 @@
       "official_text": "Question 4\n\n(a) Earn 1 point for each correct description of how a climate factor affects soil formation. Temperature can increase or decrease biological activity, decomposition, chemical weathering, and freeze-thaw weathering. Precipitation can increase chemical weathering, leaching, erosion, and biological activity, while very low precipitation slows soil formation.\n\n(b)(i) Acceptable biotic components of the A horizon include organisms, roots, bacteria, fungi, earthworms, insects, or humus/organic matter.\n\n(b)(ii) Acceptable abiotic components include minerals, sand, silt, clay, water, air, or weathered rock particles.\n\n(c)(i) Acceptable agricultural practices include fertilizer application, manure application, concentrated animal feeding, irrigation that mobilizes nitrates, or overapplication of nitrogen.\n\n(c)(ii) Earn credit for explaining that nitrate dissolves in water and can leach or run off into groundwater.\n\n(d)(i) Acid deposition can leach soil nutrients, mobilize toxic aluminum or metals, lower soil pH, damage roots, or reduce microbial activity.\n\n(d)(ii) Acceptable remediation methods include liming, adding organic matter, reducing acid-forming emissions, or replacing/remediating affected soil.\n\n(e) Acceptable soil-degradation effects from climate change include increased erosion from intense storms, drought reducing vegetation cover, desertification, loss of organic matter, salinization from irrigation/sea-level rise, permafrost thaw, and increased wildfire damage.",
       "points": [
         {
-          "point_id": "criterion_1",
-          "part": "criterion_1",
-          "points": 1,
-          "description": "(a) Earn 1 point for each correct description of how a climate factor affects soil formation. Temperature can increase or decrease biological activity, decomposition, chemical weathering, and freeze-thaw weathering. Precipitation can increase chemical weathering, leaching, erosion, and biological activity, while very low precipitation slows soil formation."
+          "point_id": "2016_FRQ4_a",
+          "part": "(a)",
+          "points": 2,
+          "description": "Award points for describing how two climate factors affect soil formation."
         },
         {
-          "point_id": "criterion_2",
-          "part": "criterion_2",
+          "point_id": "2016_FRQ4_b_i",
+          "part": "(b)(i)",
           "points": 1,
-          "description": "(b)(i) Acceptable biotic components of the A horizon include organisms, roots, bacteria, fungi, earthworms, insects, or humus/organic matter."
+          "description": "Award credit for identifying a specific biotic component of the A horizon."
         },
         {
-          "point_id": "criterion_3",
-          "part": "criterion_3",
+          "point_id": "2016_FRQ4_b_ii",
+          "part": "(b)(ii)",
           "points": 1,
-          "description": "(b)(ii) Acceptable abiotic components include minerals, sand, silt, clay, water, air, or weathered rock particles."
+          "description": "Award credit for identifying an abiotic component of the A horizon."
         },
         {
-          "point_id": "criterion_4",
-          "part": "criterion_4",
+          "point_id": "2016_FRQ4_c_i",
+          "part": "(c)(i)",
           "points": 1,
-          "description": "(c)(i) Acceptable agricultural practices include fertilizer application, manure application, concentrated animal feeding, irrigation that mobilizes nitrates, or overapplication of nitrogen."
+          "description": "Award credit for an agricultural practice that can raise nitrate levels in groundwater."
         },
         {
-          "point_id": "criterion_5",
-          "part": "criterion_5",
+          "point_id": "2016_FRQ4_c_ii",
+          "part": "(c)(ii)",
           "points": 1,
-          "description": "(c)(ii) Earn credit for explaining that nitrate dissolves in water and can leach or run off into groundwater."
+          "description": "Award credit for explaining how the practice causes nitrate leaching or runoff."
         },
         {
-          "point_id": "criterion_6",
-          "part": "criterion_6",
+          "point_id": "2016_FRQ4_d_i",
+          "part": "(d)(i)",
           "points": 1,
-          "description": "(d)(ii) Acceptable remediation methods include liming, adding organic matter, reducing acid-forming emissions, or replacing/remediating affected soil."
+          "description": "Award credit for explaining how acid deposition on soil can affect plant health."
         },
         {
-          "point_id": "criterion_7",
-          "part": "criterion_7",
+          "point_id": "2016_FRQ4_d_ii",
+          "part": "(d)(ii)",
           "points": 1,
-          "description": "(e) Acceptable soil-degradation effects from climate change include increased erosion from intense storms, drought reducing vegetation cover, desertification, loss of organic matter, salinization from irrigation/sea-level rise, permafrost thaw, and increased wildfire damage."
+          "description": "Award credit for a remediation method for soil affected by acid deposition."
+        },
+        {
+          "point_id": "2016_FRQ4_e",
+          "part": "(e)",
+          "points": 2,
+          "description": "Award points for two ways climate change can degrade soil."
         }
       ]
     },
