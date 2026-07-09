@@ -181,7 +181,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 5,
     "type": "MCQ",
-    "text": "The algorithm below is used to simulate the results of flipping a coin 4 times. Consider the goal of determining\nwhether the simulation resulted in an equal number of heads and tails.\nStep 1 :\nInitialize the variables heads_counter and flip_counter to 0.\nStep 2 :\nA variable coin_flip is randomly assigned a value of either 0 or 1.\nIf coin_flip has the value 0, the coin flip result is heads,\nso heads_counter is incremented by 1.\nStep 3 :\nIncrement the value of flip_counter by 1.\nStep 4 :\nRepeat steps 2 and 3 until flip_counter equals 4.\nFollowing execution of the algorithm, which of the following expressions indicates that the\nsimulation resulted in an equal number of heads and tails?",
+    "text": "The algorithm below is used to simulate the results of flipping a coin 4 times. Consider the goal of determining whether the simulation resulted in an equal number of heads and tails.\n\nFollowing execution of the algorithm, which of the following expressions indicates that the simulation resulted in an equal number of heads and tails?",
     "options": {
       "A": "coin_flip = 1",
       "B": "flip_counter = 1",
@@ -212,7 +212,34 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2016.pdf",
       "source_page": 18
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "table": {
+        "title": "Coin-flip simulation algorithm",
+        "headers": [
+          "Step",
+          "Action"
+        ],
+        "rows": [
+          [
+            "1",
+            "Initialize the variables `heads_counter` and `flip_counter` to 0."
+          ],
+          [
+            "2",
+            "A variable `coin_flip` is randomly assigned a value of either 0 or 1. If `coin_flip` has the value 0, the coin flip result is heads, so `heads_counter` is incremented by 1."
+          ],
+          [
+            "3",
+            "Increment the value of `flip_counter` by 1."
+          ],
+          [
+            "4",
+            "Repeat steps 2 and 3 until `flip_counter` equals 4."
+          ]
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q06",
@@ -611,7 +638,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 15,
     "type": "MCQ",
-    "text": "In the program below, the initial value of x is 5 and the initial value of y is 10.\n\nWhat is displayed as a result of running the program?",
+    "text": "In the program below, the initial value of `x` is 5 and the initial value of `y` is 10.\n\n```text\nIF (x < 0)\n{\n  DISPLAY(\"Foxtrot\")\n}\nELSE\n{\n  IF (x > y)\n  {\n    DISPLAY(\"Hotel\")\n  }\n  ELSE\n  {\n    IF (y > 0)\n    {\n      DISPLAY(\"November\")\n    }\n    ELSE\n    {\n      DISPLAY(\"Yankee\")\n    }\n  }\n}\n```\n\nWhat is displayed as a result of running the program?",
     "options": {
       "A": "Foxtrot",
       "B": "Hotel",
@@ -841,12 +868,12 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 19,
     "type": "MCQ",
-    "text": "The code fragment below is intended to display \"odd\" if the positive number num is odd.\nWhich of the following can be used to replace <MISSING CONDITION> so that the code fragment will work as\nintended?",
+    "text": "The code fragment below is intended to display `\"odd\"` if the positive number `num` is odd.\n\n```text\nIF (<MISSING CONDITION>)\n{\n  DISPLAY(\"odd\")\n}\n```\n\nWhich of the following can be used to replace `<MISSING CONDITION>` so that the code fragment will work as intended?",
     "options": {
-      "A": "(num MOD 1) = 0",
-      "B": "(num MOD 1) = 1",
-      "C": "(num MOD 2) = 0",
-      "D": "(num MOD 2) = 1"
+      "A": "`(num MOD 1) = 0`",
+      "B": "`(num MOD 1) = 1`",
+      "C": "`(num MOD 2) = 0`",
+      "D": "`(num MOD 2) = 1`"
     },
     "answer": "D",
     "answers": [
@@ -1393,12 +1420,12 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 28,
     "type": "MCQ",
-    "text": "Consider the code segment below.\n0\n0\n\nWhich of the following changes will NOT affect the results when the code segment is executed?",
+    "text": "Consider the code segment below.\n\n```text\nLine 1: IF (a = 0)\nLine 2: {\nLine 3:   b <- a + 10\nLine 4: }\nLine 5: ELSE\nLine 6: {\nLine 7:   b <- a + 20\nLine 8: }\n```\n\nWhich of the following changes will NOT affect the results when the code segment is executed?",
     "options": {
-      "A": "Changing line 3 to",
-      "B": "Changing line 3 to\n<-\n0",
-      "C": "Changing line 7 to",
-      "D": "Changing line 7 to\n0"
+      "A": "Changing line 3 to `b <- 10`",
+      "B": "Changing line 3 to `a <- b + 10`",
+      "C": "Changing line 7 to `b <- 20`",
+      "D": "Changing line 7 to `a <- b + 20`"
     },
     "answer": "A",
     "answers": [
@@ -1436,7 +1463,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 29,
     "type": "MCQ",
-    "text": "A programmer wrote the program below. The program uses a list of numbers called numList. The program is\nintended to display the sum of the numbers in the list.\nIn order to test the program, the programmer initializes numList to [0, 1, 4, 5]. The program\ndisplays 10, and the programmer concludes that the program works as intended. Which of the following is true?",
+    "text": "A programmer wrote the program below. The program uses a list of numbers called `numList`. The program is intended to display the sum of the numbers in the list.\n\n```text\nsum <- numList[1]\nFOR EACH value IN numList\n{\n  sum <- sum + value\n}\nDISPLAY(sum)\n```\n\nIn order to test the program, the programmer initializes `numList` to `[0, 1, 4, 5]`. The program displays `10`, and the programmer concludes that the program works as intended. Which of the following is true?",
     "options": {
       "A": "The conclusion is correct; the program works as intended.",
       "B": "The conclusion is incorrect; the program does not display the correct value for the test case\n[0, 1, 4, 5].",
@@ -1952,12 +1979,12 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 41,
     "type": "MCQ",
-    "text": "An algorithm will be used to identify the maximum value in a list of one or more integers. Consider the two\nversions of the algorithm below.\nAlgorithm I :\n\nAlgorithm II : Set the value of a variable max to the first data value. Iterate through the\nremaining values in the list of integers. If a data value is greater than the value\nof the variable max, set max to the data value.\nWhich of the following statements best describes the behavior of the two algorithms?",
+    "text": "An algorithm will be used to identify the maximum value in a list of one or more integers. Consider the two versions of the algorithm below.\n\nWhich of the following statements best describes the behavior of the two algorithms?",
     "options": {
       "A": "Both algorithms work correctly on all input values.",
-      "B": "Algorithm I always works correctly, but Algorithm II only works correctly when the maximum value is not\nthe first value in the list.",
-      "C": "Algorithm II always works correctly, but Algorithm I only works correctly when the maximum value is\ngreater than or equal to −",
-      "D": "Neither algorithm will correctly identify the maximum value when the input contains both positive and\nnegative input values.\n\n39"
+      "B": "Algorithm I always works correctly, but Algorithm II only works correctly when the maximum value is not the first value in the list.",
+      "C": "Algorithm II always works correctly, but Algorithm I only works correctly when the maximum value is greater than or equal to `-1`.",
+      "D": "Neither algorithm will correctly identify the maximum value when the input contains both positive and negative input values."
     },
     "answer": "C",
     "answers": [
@@ -1983,7 +2010,26 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2016.pdf",
       "source_page": 39
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "table": {
+        "title": "Maximum-value algorithms",
+        "headers": [
+          "Algorithm",
+          "Description"
+        ],
+        "rows": [
+          [
+            "I",
+            "Set the value of a variable `max` to `-1`. Iterate through the list of integer values. If a data value is greater than the value of the variable `max`, set `max` to the data value."
+          ],
+          [
+            "II",
+            "Set the value of a variable `max` to the first data value. Iterate through the remaining values in the list of integers. If a data value is greater than the value of the variable `max`, set `max` to the data value."
+          ]
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q42",
@@ -2597,7 +2643,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 56,
     "type": "MCQ",
-    "text": "A programmer wrote the code segment below to display the average of all the elements in a list called numbers.\nThere is always at least one number in the list.\n\nThe programmer wants to reduce the number of operations that are performed when the program is run. Which\nchange will result in a correct program with a reduced number of operations performed?",
+    "text": "A programmer wrote the code segment below to display the average of all the elements in a list called `numbers`. There is always at least one number in the list.\n\n```text\nLine 1: count <- 0\nLine 2: sum <- 0\nLine 3: FOR EACH value IN numbers\nLine 4: {\nLine 5:   count <- count + 1\nLine 6:   sum <- sum + value\nLine 7:   average <- sum / count\nLine 8: }\nLine 9: DISPLAY(average)\n```\n\nThe programmer wants to reduce the number of operations that are performed when the program is run. Which change will result in a correct program with a reduced number of operations performed?",
     "options": {
       "A": "Interchanging line 1 and line 2",
       "B": "Interchanging line 5 and line 6",
@@ -3160,7 +3206,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 66,
     "type": "MCQ",
-    "text": "In the program below, y is a positive integer (e.g., 1, 2, 3, …).\nWhat is the value of result after running the program?",
+    "text": "In the program below, `y` is a positive integer (e.g., 1, 2, 3, ...).\n\n```text\nresult <- 0\nREPEAT 3 TIMES\n{\n  REPEAT y TIMES\n  {\n    result <- result + 1\n  }\n}\n```\n\nWhat is the value of `result` after running the program?",
     "options": {
       "A": "`y + 3`",
       "B": "`3y`",
@@ -3511,7 +3557,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 74,
     "type": "MCQ",
-    "text": "In a certain district, 20 percent of the voters are expected to vote for Candidate A in an election. The computer\nprogram below is intended to simulate the result of the election with n voters, and display the number of votes\nreceived by Candidate A.\n←\n\nWhich of the following can be used to replace <MISSING CONDITION> in line 4 so that the program works as\nintended?\nSelect two answers.\n\n",
+    "text": "In a certain district, 20 percent of the voters are expected to vote for Candidate A in an election. The computer program below is intended to simulate the result of the election with `n` voters, and display the number of votes received by Candidate A.\n\n```text\nLine 1: sum <- 0\nLine 2: REPEAT n TIMES\nLine 3: {\nLine 4:   IF (<MISSING CONDITION>)\nLine 5:   {\nLine 6:     sum <- sum + 1\nLine 7:   }\nLine 8: }\nLine 9: DISPLAY(sum)\n```\n\nWhich of the following can be used to replace `<MISSING CONDITION>` in line 4 so that the program works as intended?\n\nSelect two answers.",
     "options": {
       "A": "`RANDOM(1, 5) = 1`",
       "B": "`RANDOM(1, 5) <= 2`",
@@ -5221,7 +5267,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 30,
     "type": "MCQ",
-    "text": "A student wrote the following code for a guessing game.\nWhile debugging the code, the student realizes that the loop never terminates. The student plans to insert the\ninstruction\n←\n\n be inserted so that the\ncode segment works as intended?",
+    "text": "A student wrote the following code for a guessing game.\n\n```text\nLine 1: secretNumber <- RANDOM(1, 100)\nLine 2: win <- false\nLine 3: REPEAT UNTIL (win)\nLine 4: {\nLine 5:   DISPLAY(\"Guess a number.\")\nLine 6:   guess <- INPUT()\nLine 7:   IF (guess = secretNumber)\nLine 8:   {\nLine 9:     DISPLAY(\"You got it right!\")\nLine 10:  }\nLine 11:  ELSE\nLine 12:  {\nLine 13:    IF (guess > secretNumber)\nLine 14:    {\nLine 15:      DISPLAY(\"Your guess is too high.\")\nLine 16:    }\nLine 17:    ELSE\nLine 18:    {\nLine 19:      DISPLAY(\"Your guess is too low.\")\nLine 20:    }\nLine 21:  }\nLine 22: }\n```\n\nWhile debugging the code, the student realizes that the loop never terminates. The student plans to insert the instruction `win <- true` somewhere in the code. Where could `win <- true` be inserted so that the code segment works as intended?",
     "options": {
       "A": "Between line 6 and line 7",
       "B": "Between line 9 and line 10",
@@ -5401,7 +5447,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 33,
     "type": "MCQ",
-    "text": "A video-streaming service maintains a database of information about its customers and the videos they have\nwatched.\nThe program below analyzes the data in the database and compares the number of viewers of science fiction\nvideos to the number of viewers of videos of other genres. It uses the procedure Analysis (category),\nwhich returns the number of unique users who viewed videos of a given category in the past year. The\nAnalysis procedure takes approximately 1 hour to return a result, regardless of the number of videos of the\ngiven genre. All other operations happen nearly instantaneously.\nWhich of the following best approximates the amount of time it takes the program to execute?",
+    "text": "A video-streaming service maintains a database of information about its customers and the videos they have watched.\n\nThe program below analyzes the data in the database and compares the number of viewers of science fiction videos to the number of viewers of videos of other genres. It uses the procedure `Analysis(category)`, which returns the number of unique users who viewed videos of a given category in the past year. The `Analysis` procedure takes approximately 1 hour to return a result, regardless of the number of videos of the given genre. All other operations happen nearly instantaneously.\n\n```text\nsciFiFans <- Analysis(\"science fiction\")\ngenreList <- [\"comedy\", \"drama\", \"mystery\", \"romance\"]\nFOR EACH genre IN genreList\n{\n  IF (Analysis(genre) > sciFiFans)\n  {\n    DISPLAY(genre)\n  }\n}\n```\n\nWhich of the following best approximates the amount of time it takes the program to execute?",
     "options": {
       "A": "1 hour",
       "B": "2 hours",
@@ -6312,12 +6358,12 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 53,
     "type": "MCQ",
-    "text": "In a certain science experiment, 75 percent of trials are expected to be successful and 25 percent of trials are\nexpected to be unsuccessful. The program below is intended to simulate the results of repeated trials of the\nexperiment.\nWhich of the following can be used to replace <MISSING CODE> so that the simulation works as intended?",
+    "text": "In a certain science experiment, 75 percent of trials are expected to be successful and 25 percent of trials are expected to be unsuccessful. The program below is intended to simulate the results of repeated trials of the experiment.\n\n```text\nsuccessful <- 0\nunsuccessful <- 0\nREPEAT 1000 TIMES\n{\n  IF (<MISSING CODE>)\n  {\n    successful <- successful + 1\n  }\n  ELSE\n  {\n    unsuccessful <- unsuccessful + 1\n  }\n}\nDISPLAY(successful)\nDISPLAY(\"trials were successful,\")\nDISPLAY(unsuccessful)\nDISPLAY(\"trials were unsuccessful.\")\n```\n\nWhich of the following can be used to replace `<MISSING CODE>` so that the simulation works as intended?",
     "options": {
-      "A": "RANDOM (1, 100) = 25",
-      "B": "RANDOM (1, 100) ≤ 25",
-      "C": "RANDOM (1, 100) = 75",
-      "D": "RANDOM (1, 100) ≤ 75"
+      "A": "`RANDOM(1, 100) = 25`",
+      "B": "`RANDOM(1, 100) <= 25`",
+      "C": "`RANDOM(1, 100) = 75`",
+      "D": "`RANDOM(1, 100) <= 75`"
     },
     "answer": "D",
     "answers": [
@@ -7090,7 +7136,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 71,
     "type": "MCQ",
-    "text": "The program below is intended to count the number of prime numbers in a list called numbers and display\nthe result. The program uses the procedure isPrime (n), which returns true if n is a prime number\nand false otherwise.\nThe program does not work as intended.\nWhich two lines of code should be removed so that the program will work as intended?\nSelect two answers.\n\n",
+    "text": "The program below is intended to count the number of prime numbers in a list called `numbers` and display the result. The program uses the procedure `isPrime(n)`, which returns `true` if `n` is a prime number and `false` otherwise.\n\n```text\nLine 1: count <- 0\nLine 2: FOR EACH value IN numbers\nLine 3: {\nLine 4:   count <- 0\nLine 5:   IF (isPrime(value))\nLine 6:   {\nLine 7:     count <- count + 1\nLine 8:   }\nLine 9:   count <- count + 1\nLine 10: }\nLine 11: DISPLAY(count)\n```\n\nThe program does not work as intended.\n\nWhich two lines of code should be removed so that the program will work as intended?\n\nSelect two answers.",
     "options": {
       "A": "Line 1",
       "B": "Line 4",

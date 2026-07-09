@@ -430,6 +430,12 @@ function validate(filePath, options = {}) {
       if (/\bDay and Date\s+Movie Title\s+City\s+Number of Times Purchased\b/i.test(cspText.replace(/\s+/g, ' '))) {
         errors.push(`${qid}: CSP sample database appears flattened in question text`)
       }
+      if (/\b(?:computer program|program|code segment|code fragment|algorithm) below\b/i.test(cspText) && !/```/.test(cspText) && !q.background_data?.table && !(q.image_paths || []).length) {
+        errors.push(`${qid}: CSP prompt references code/algorithm below but has no structured code block, table, or precise image evidence`)
+      }
+      if (/^\s*←\s*$/m.test(cspText)) {
+        errors.push(`${qid}: CSP prompt contains orphan arrow glyph; likely missing pseudocode`)
+      }
     }
     if (isComputerScienceA) {
       const textBlob = [
