@@ -58,7 +58,11 @@ async function main() {
     const searchSample = selectSearchSample(mcq)
     await auditMockGenerationFromSetup(client, errors, warnings, artifacts)
     await auditQuizPlay(client, quizSample, errors, warnings, artifacts)
-    await auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts)
+    if (subject.hasFRQ && Number(subject.mockExam?.frqCount || 0) > 0) {
+      await auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts)
+    } else {
+      await auditMockMcqOnlyFlow(client, mcq, errors, warnings, artifacts)
+    }
     await auditTargetSearchItems(client, searchSample.map(q => q.question_id), errors, warnings, artifacts)
 
     const report = {
@@ -257,6 +261,41 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     errors.push({ page: 'score-final', kind: 'final_score_page_not_reached' })
   }
   await screenshot(client, `${subjectId}-score-final.png`, artifacts)
+}
+
+async function auditMockMcqOnlyFlow(client, mcq, errors, warnings, artifacts) {
+  const totalMcq = Number(activeSubject?.mockExam?.totalMCQ || mcq.length || 0)
+  const selectedMcq = mcq.slice(0, totalMcq || mcq.length)
+  await navigate(client, routeUrl('#/'))
+  await seedSession(client, selectedMcq, [], {
+    isMock: true,
+    mode: 'mock',
+    requestedCount: selectedMcq.length,
+    actualCount: selectedMcq.length,
+    mcqTimeLimit: activeSubject?.mockExam?.mcqTimeLimit,
+    frqTimeLimit: 0,
+    frqCount: 0,
+  })
+  await navigate(client, routeUrl('#/play'))
+  for (let i = 0; i < selectedMcq.length; i += 1) {
+    await waitForImages(client)
+    const answers = chooseWrongAnswers(selectedMcq[i])
+    for (const answer of (answers.length ? answers : ['A'])) {
+      await clickOption(client, answer)
+    }
+    if (i < selectedMcq.length - 1) await clickTextButton(client, /下一题|Next/i)
+  }
+  await clickTextButton(client, /提交|Submit|Finish/i)
+  await sleep(1200)
+  const finalScore = await collectVisibleState(client)
+  checkVisibleState('mock-mcq-only-score-final', finalScore, errors, warnings)
+  if (!/Mock Exam|鎴愮哗|Report/i.test(finalScore.text)) {
+    errors.push({ page: 'mock-mcq-only-score-final', kind: 'final_score_page_not_reached' })
+  }
+  if (/Free Response|FRQ|Section II/i.test(finalScore.text)) {
+    errors.push({ page: 'mock-mcq-only-score-final', kind: 'frq_section_visible_for_mcq_only_subject' })
+  }
+  await screenshot(client, `${subjectId}-mock-mcq-only-score-final.png`, artifacts)
 }
 
 async function auditTargetSearchItems(client, ids, errors, warnings, artifacts) {
@@ -649,9 +688,12 @@ async function waitForGeneratedMockPreview(client) {
 }
 
 function parseGeneratedMockCounts(text) {
-  const match = /(\d+)\s*[^\d\n]{0,20}\bMCQ\b\s*\+\s*(\d+)\s*[^\d\n]{0,20}\bFRQ\b/i.exec(String(text || ''))
-  if (!match) return null
-  return { mcq: Number(match[1]), frq: Number(match[2]) }
+  const value = String(text || '')
+  const full = /(\d+)\s*[^\d\n]{0,20}\bMCQ\b\s*\+\s*(\d+)\s*[^\d\n]{0,20}\bFRQ\b/i.exec(value)
+  if (full) return { mcq: Number(full[1]), frq: Number(full[2]) }
+  const mcqOnly = /(?:已生成|Generated)?\s*(\d+)\s*[^\d\n]{0,20}\bMCQ\b(?!\s*\+)/i.exec(value)
+  if (mcqOnly && !(activeSubject?.hasFRQ)) return { mcq: Number(mcqOnly[1]), frq: 0 }
+  return null
 }
 
 async function screenshot(client, name, artifacts) {

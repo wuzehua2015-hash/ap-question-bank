@@ -139,12 +139,15 @@ function QuizPlayer() {
     })
     setQuizHistory(subject, history.slice(-20))
 
-    if (quizInfo && quizInfo.isMock) {
+    const frqCount = Number(quizInfo?.frqCount || 0)
+    if (quizInfo && quizInfo.isMock && frqCount > 0) {
       setPhase('frqTransition')
+    } else if (quizInfo && quizInfo.isMock) {
+      navigate('/score')
     } else {
       setPhase('submitted')
     }
-  }, [quiz, answers, quizInfo, subject])
+  }, [quiz, answers, quizInfo, subject, navigate])
 
   const handleTimerTimeout = useCallback(() => {
     submitQuiz(true)

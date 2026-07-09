@@ -914,6 +914,53 @@
           "U5": 11
         }
       }
+    },
+    {
+      "id": "computer-science-principles",
+      "name": "AP Computer Science Principles",
+      "shortName": "CSP",
+      "active": true,
+      "hasFRQ": false,
+      "questionBank": "ap/computer-science-principles/question_bank.json",
+      "similarityIndex": "ap/computer-science-principles/similarity_index.json",
+      "classificationConfig": "ap/computer-science-principles/classification_config.json",
+      "dataVersion": "local-2016-2018-practice-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Creative Development"
+        },
+        {
+          "id": "U2",
+          "name": "Data"
+        },
+        {
+          "id": "U3",
+          "name": "Algorithms and Programming"
+        },
+        {
+          "id": "U4",
+          "name": "Computer Systems and Networks"
+        },
+        {
+          "id": "U5",
+          "name": "Impact of Computing"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 70,
+        "frqCount": 0,
+        "mcqTimeLimit": 7200,
+        "frqTimeLimit": 0,
+        "unitDistribution": {
+          "U1": 0,
+          "U2": 11,
+          "U3": 50,
+          "U4": 7,
+          "U5": 2
+        },
+        "scopeNote": "MCQ-only practice generated from local 2016/2018 legacy 74-question CSP practice exams; current AP CSP also includes Create written-response components."
+      }
     }
   ]
 }

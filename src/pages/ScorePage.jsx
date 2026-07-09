@@ -88,8 +88,9 @@ function ScorePage() {
 
   const totalFrqScore = Object.values(frqScores).reduce((a, b) => a + b, 0)
   const totalFrqMax = frqs.reduce((sum, f) => sum + (f.rubric?.total_points || 0), 0)
+  const totalMcqMax = quiz.length || 0
   const totalScore = mcqScore + totalFrqScore
-  const totalMax = 60 + totalFrqMax
+  const totalMax = totalMcqMax + totalFrqMax
 
   const estimateAPScore = (rawScore, maxScore) => {
     const pct = rawScore / maxScore
@@ -214,13 +215,13 @@ function ScorePage() {
           <div style={{ display: 'flex', gap: '14px', marginBottom: '28px' }}>
             <div style={{ flex: 1, background: '#f3f4f6', borderRadius: '10px', padding: '18px' }}>
               <div style={{ fontSize: '22px', color: '#6b7280', marginBottom: '4px' }}>Section I</div>
-              <div style={{ fontSize: '44px', fontWeight: 'bold', color: '#1e40af' }}>{mcqScore} / 60</div>
+              <div style={{ fontSize: '44px', fontWeight: 'bold', color: '#1e40af' }}>{mcqScore} / {totalMcqMax}</div>
               <div style={{ fontSize: '22px', color: '#9ca3af' }}>Multiple Choice</div>
               <div style={{ fontSize: '24px', color: '#4b5563', marginTop: '6px' }}>
-                {Math.round((mcqScore / 60) * 100)}% 正确率
+                {Math.round((mcqScore / Math.max(1, totalMcqMax)) * 100)}% 正确率
               </div>
             </div>
-            <div style={{ flex: 1, background: '#f3f4f6', borderRadius: '10px', padding: '18px' }}>
+            {frqs.length > 0 && <div style={{ flex: 1, background: '#f3f4f6', borderRadius: '10px', padding: '18px' }}>
               <div style={{ fontSize: '22px', color: '#6b7280', marginBottom: '4px' }}>Section II</div>
               <div style={{ fontSize: '44px', fontWeight: 'bold', color: '#1e40af' }}>
                 {totalFrqScore} / {totalFrqMax}
@@ -229,7 +230,7 @@ function ScorePage() {
               <div style={{ fontSize: '24px', color: '#4b5563', marginTop: '6px' }}>
                 自评得分
               </div>
-            </div>
+            </div>}
           </div>
 
           <div style={{ marginBottom: '20px' }}>
@@ -339,7 +340,7 @@ function ScorePage() {
                             key={i}
                             src={import.meta.env.BASE_URL + imgPath.replace(/^\//, '')}
                             alt=""
-                            style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '4px' }}
+                            style={{ maxWidth: '100%', maxHeight: '420px', borderRadius: '4px' }}
                           />
                         ))}
                     </div>

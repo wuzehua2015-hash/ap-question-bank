@@ -23,7 +23,7 @@ function makeQuestionPreview(text) {
 function SearchPage() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
-  const { currentSubject } = useSubject()
+  const { currentSubject, setSubject } = useSubject()
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(true)
   const [keyword, setKeyword] = useState('')
@@ -41,6 +41,11 @@ function SearchPage() {
   }, [currentSubject])
 
   useEffect(() => {
+    const subjectFromUrl = searchParams.get('subject')
+    if (subjectFromUrl && subjectFromUrl !== currentSubject) {
+      setSubject(subjectFromUrl)
+      return
+    }
     setLoading(true)
     loadMCQBank(currentSubject).then(data => {
       setQuestions(data)
@@ -52,7 +57,7 @@ function SearchPage() {
       }
       setLoading(false)
     }).catch(() => setLoading(false))
-  }, [currentSubject, searchParams])
+  }, [currentSubject, searchParams, setSubject])
 
   useEffect(() => {
     const qid = searchParams.get('qid')

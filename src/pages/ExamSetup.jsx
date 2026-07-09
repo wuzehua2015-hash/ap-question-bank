@@ -44,6 +44,7 @@ function ExamSetup() {
         info: {
           mcqTimeLimit: currentMockConfig.mcqTimeLimit,
           frqTimeLimit: currentMockConfig.frqTimeLimit,
+          frqCount: currentMockConfig.frqCount || 0,
         },
       })
     } catch (err) {
@@ -75,8 +76,17 @@ function ExamSetup() {
       <h1 className="text-2xl font-bold text-brand mb-6">Mock Exam</h1>
       <div className="bg-surface rounded-xl p-6 shadow-sm border border-border space-y-6">
         <div className="text-sm text-text-muted">
-          <p>模拟真实考试环境，包含 {mcqCount} 道 MCQ 和 {frqCount} 道 FRQ。</p>
-          <p>MCQ 限时 {mcqMinutes} 分钟，FRQ 限时 {frqMinutes} 分钟。</p>
+          {frqCount > 0 ? (
+            <>
+              <p>模拟真实考试环境，包含 {mcqCount} 道 MCQ 和 {frqCount} 道 FRQ。</p>
+              <p>MCQ 限时 {mcqMinutes} 分钟，FRQ 限时 {frqMinutes} 分钟。</p>
+            </>
+          ) : (
+            <>
+              <p>模拟考试练习包含 {mcqCount} 道 MCQ。</p>
+              <p>MCQ 限时 {mcqMinutes} 分钟。</p>
+            </>
+          )}
         </div>
 
         {error && (
@@ -96,7 +106,9 @@ function ExamSetup() {
         ) : (
           <div className="space-y-4">
             <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
-              已生成 {preview.mcq.length} 道 MCQ + {preview.frq.length} 道 FRQ
+              {preview.frq.length > 0
+                ? `已生成 ${preview.mcq.length} 道 MCQ + ${preview.frq.length} 道 FRQ`
+                : `已生成 ${preview.mcq.length} 道 MCQ`}
             </div>
             <div className="flex gap-3">
               <button

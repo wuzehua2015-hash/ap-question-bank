@@ -75,11 +75,11 @@ async function main() {
     await client.send('Page.addScriptToEvaluateOnNewDocument', {
       source: `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`,
     })
-    await navigate(client, routeUrl('#/'))
-    await navigate(client, routeUrl('#/search'))
-    await evaluate(client, `window.location.hash = '#/search'`)
+    await navigate(client, routeUrl(`#/search?subject=${encodeURIComponent(subjectId)}`))
+    await evaluate(client, `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`)
+    await navigate(client, routeUrl(`#/search?subject=${encodeURIComponent(subjectId)}`))
     for (let i = 0; i < 60; i += 1) {
-      const ready = await evaluate(client, `location.hash.includes('/search') && Boolean(document.querySelector('input'))`).catch(() => false)
+      const ready = await evaluate(client, `location.hash.includes('/search') && localStorage.getItem('currentSubject') === ${JSON.stringify(subjectId)} && Boolean(document.querySelector('input'))`).catch(() => false)
       if (ready) break
       await sleep(100)
     }
