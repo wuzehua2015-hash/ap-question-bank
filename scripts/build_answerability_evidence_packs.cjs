@@ -90,9 +90,9 @@ function detectMachineFindings(q, item, subject) {
   const findings = []
 
   const spokenMathPatterns = [
-    /\b(?:the )?fraction\b/i,
     /\bend fraction\b/i,
     /\b(?:s|v|x|t|c)\s+u\s+b\b/i,
+    /\b[A-Za-z]\s+s\s+u\s+b\b/i,
     /\bsub\s+(?:[A-Za-z0-9]|one|two|max|min|half)\b/i,
     /\b(?:fraction|quantity|expression|ratio|square root|integral)\s+[^.]{0,40}\bover\b/i,
     /\be raised to\b/i,
@@ -100,6 +100,7 @@ function detectMachineFindings(q, item, subject) {
     /\bclose parenthesis\b/i,
     /\bone half\b/i,
     /\btwo thirds\b/i,
+    /\b(?:the )?fraction\s+\d+|\b(?:the )?fraction\s+[A-Za-z]\s+over\b/i,
   ]
   if (spokenMathPatterns.some(pattern => pattern.test(combined))) {
     findings.push({
@@ -243,6 +244,14 @@ function detectMachineFindings(q, item, subject) {
     }
   }
 
+  if (q.source_review?.status === 'NEEDS_SOURCE_ASSET') {
+    findings.push({
+      severity: 'P0',
+      code: 'source_visual_asset_missing_after_review',
+      message: q.source_review.reason || 'Source review identified a missing required visual asset.',
+    })
+  }
+
   return findings
 }
 
@@ -277,6 +286,7 @@ function makeEvidencePacket(subject, item, q, subjectRoot) {
       option_table_data: q.option_table_data || null,
       rubric: q.rubric || null,
       provenance: q.provenance || null,
+      source_review: q.source_review || null,
     },
     web_render_targets: item.web_routes_to_review,
     machine_findings: detectMachineFindings(q, item, subject),

@@ -411,19 +411,37 @@ function validate(filePath, options = {}) {
           if (strictOptionImageBinding) errors.push(message)
           else warnings.push(message)
         }
-        if (q.image_paths.length !== 4) {
-          reportOptionImageIssue(`${qid}: Diagram A-D options require exactly four option images`)
-        }
         const imageSources = q.visual_asset_review?.image_sources || q.asset_review?.image_sources || []
         const optionSources = imageSources.filter(source => /^[A-D]$/.test(String(source.option || '')))
-        if (optionSources.length !== 4) {
+        const combinedOptionSources = imageSources.filter(source => source.asset_type === 'combined_option_image' && String(source.option || '') === 'A-D')
+        const multiImageOptionSources = imageSources.filter(source => /^[A-D]$/.test(String(source.option || '')) && source.binding === 'two_images_per_option_in_source_order')
+        const contextSources = imageSources.filter(source => source.asset_type === 'prompt_context_image')
+        const hasStandardFourOptionSources = q.image_paths.length === 4 && optionSources.length === 4
+        const hasPromptPlusFourOptionSources = q.image_paths.length === 5 && contextSources.length === 1 && optionSources.length === 4
+        const hasTwoImagesPerOptionSources = q.image_paths.length === 8 && multiImageOptionSources.length === 8
+        const hasCombinedOptionRegion = q.image_paths.length === 1 && combinedOptionSources.length === 1
+        const supportedDiagramBinding =
+          hasStandardFourOptionSources ||
+          hasPromptPlusFourOptionSources ||
+          hasTwoImagesPerOptionSources ||
+          hasCombinedOptionRegion
+        if (!supportedDiagramBinding) {
+          reportOptionImageIssue(`${qid}: Diagram A-D options require explicit option image ownership metadata`)
+        }
+        if (!supportedDiagramBinding && q.image_paths.length !== 4) {
+          reportOptionImageIssue(`${qid}: Diagram A-D options require exactly four option images`)
+        }
+        if (!supportedDiagramBinding && optionSources.length !== 4) {
           reportOptionImageIssue(`${qid}: Diagram A-D option images require four source records with option letters`)
         }
         const optionSet = new Set(optionSources.map(source => source.option))
-        for (const key of ['A', 'B', 'C', 'D']) {
-          if (!optionSet.has(key)) reportOptionImageIssue(`${qid}: Diagram option ${key} lacks source ownership metadata`)
+        if (!supportedDiagramBinding || optionSources.length) {
+          for (const key of ['A', 'B', 'C', 'D']) {
+            if (!optionSet.has(key) && !hasCombinedOptionRegion) reportOptionImageIssue(`${qid}: Diagram option ${key} lacks source ownership metadata`)
+          }
         }
-        if (optionSources.some(source => source.binding && source.binding !== 'option_label_nearest_image')) {
+        const supportedBindings = new Set(['option_label_nearest_image', 'two_images_per_option_in_source_order'])
+        if (optionSources.some(source => source.binding && !supportedBindings.has(source.binding))) {
           reportOptionImageIssue(`${qid}: Diagram option image source uses unsupported binding metadata`)
         }
         const dimensions = []
@@ -437,7 +455,8 @@ function validate(filePath, options = {}) {
         if (dimensions.length === 4) {
           const widths = dimensions.map(dim => dim.width)
           const heights = dimensions.map(dim => dim.height)
-          if (Math.max(...widths) / Math.max(1, Math.min(...widths)) > 1.75 || Math.max(...heights) / Math.max(1, Math.min(...heights)) > 1.75) {
+          const dimensionVarianceReviewed = q.visual_asset_review?.dimension_variance_reviewed === true || q.asset_review?.dimension_variance_reviewed === true
+          if (!dimensionVarianceReviewed && (Math.max(...widths) / Math.max(1, Math.min(...widths)) > 1.75 || Math.max(...heights) / Math.max(1, Math.min(...heights)) > 1.75)) {
             reportOptionImageIssue(`${qid}: Diagram option images have inconsistent dimensions; possible prompt/option image mix-up`)
           }
         }

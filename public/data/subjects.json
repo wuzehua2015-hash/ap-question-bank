@@ -252,7 +252,7 @@
       "frqBank": "ap/chemistry/frq_bank.json",
       "similarityIndex": "ap/chemistry/similarity_index.json",
       "classificationConfig": "ap/chemistry/classification_config.json",
-      "dataVersion": "strict-gated-2014-2015-2016-2018-2019-v1",
+      "dataVersion": "strict-gated-2014-2015-2016-2018-2019-v2",
       "units": [
         {
           "id": "U1",
@@ -308,23 +308,12 @@
           "U9": 4
         }
       },
-      "releaseStatus": "content-risk",
+      "releaseStatus": "certified",
       "visibility": "internal",
       "readiness": {
-        "status": "red",
-        "updatedAt": "2026-07-09",
-        "p0": 6,
-        "p1": 0,
-        "contentRiskCodes": [
-          "flattened_frq_tables",
-          "frq_visual_asset_contract_missing",
-          "weak_frq_rubrics"
-        ],
-        "mechanismCodes": [
-          "missing_delivery_contract",
-          "missing_delivery_review",
-          "missing_frq_browser_review"
-        ]
+        "status": "green",
+        "updatedAt": "2026-07-09T16:00:00.000Z",
+        "notes": "Certified internally after Chemistry pre-launch repair: 250 MCQ, 35 FRQ, FRQ solution outlines, structured tables, visual asset review, delivery contract, student-flow, render audit, validate, and build."
       }
     },
     {

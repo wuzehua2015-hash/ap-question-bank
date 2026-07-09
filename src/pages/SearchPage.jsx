@@ -212,7 +212,7 @@ function SearchPage() {
                   {isExpanded ? (
                     <MathText text={q.text || q.question_text} />
                   ) : (
-                    makeQuestionPreview(q.text || q.question_text)
+                    <MathText text={makeQuestionPreview(q.text || q.question_text)} />
                   )}
                 </div>
               </div>

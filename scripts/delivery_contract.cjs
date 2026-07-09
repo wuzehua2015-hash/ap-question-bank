@@ -193,7 +193,7 @@ function requiredChecksForRisks(risks, type) {
 function groupKeyFor(q) {
   const text = String(q.group_context || q.shared_context || '').trim()
   if (!text) return null
-  const range = text.match(/Questions?\s+(\d+)\s*[-–]\s*(\d+)/i)
+  const range = text.match(/Questions?\s+(\d+)\s*[-\u2013\u2014]\s*(\d+)/i)
   if (range) return `${q.year || 'year'}:${range[1]}-${range[2]}`
   return `${q.year || 'year'}:${text.toLowerCase().replace(/\s+/g, ' ').slice(0, 80)}`
 }

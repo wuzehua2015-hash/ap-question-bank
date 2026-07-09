@@ -312,7 +312,21 @@
       "raw_chunk_sha256": "4b9ff2502a87e25be1797919ac30753ef32b5af27becc503205e9b2477403cf2",
       "override": true
     },
-    "source_page": 21
+    "source_page": 21,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p021_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p021_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q08",
@@ -323,7 +337,7 @@
     "question_number": 8,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 8-10 refer to the following.\n\n$M^+$ is an unknown metal cation with a +1 charge. A student dissolves the chloride of the unknown metal, $MCl$, in enough water to make $100.0\\,\\mathrm{mL}$ of solution. The student then mixes the solution with excess $AgNO_3$ solution, causing $AgCl$ to precipitate. The student collects the precipitate by filtration, dries it, and records the data shown below. The molar mass of $AgCl$ is $143\\,\\mathrm{g/mol}$.\n\n| Measurement | Mass |\n|---|---:|\n| Mass of unknown chloride, $MCl$ | $0.74\\,\\mathrm{g}$ |\n| Mass of filter paper | $0.80\\,\\mathrm{g}$ |\n| Mass of filter paper plus $AgCl$ precipitate | $2.23\\,\\mathrm{g}$ |\n\nWhat is the identity of the metal chloride?",
+    "text": "$M^+$ is an unknown metal cation with a +1 charge. A student dissolves the chloride of the unknown metal, $MCl$, in enough water to make $100.0\\,\\mathrm{mL}$ of solution. The student then mixes the solution with excess $AgNO_3$ solution, causing $AgCl$ to precipitate. The student collects the precipitate by filtration, dries it, and records the data shown below. The molar mass of $AgCl$ is $143\\,\\mathrm{g/mol}$.\n\n| Measurement | Mass |\n|---|---:|\n| Mass of unknown chloride, $MCl$ | $0.74\\,\\mathrm{g}$ |\n| Mass of filter paper | $0.80\\,\\mathrm{g}$ |\n| Mass of filter paper plus $AgCl$ precipitate | $2.23\\,\\mathrm{g}$ |\n\nWhat is the identity of the metal chloride?",
     "options": {
       "A": "$NaCl$",
       "B": "$KCl$",
@@ -353,7 +367,16 @@
       "override": true,
       "override_reason": "missing_from_extracted_chunks"
     },
-    "source_page": 22
+    "source_page": 22,
+    "group_id": "2014_Q08-Q10",
+    "group_context": "Questions 8-10 refer to the following.\n\n$M^+$ is an unknown metal cation with a +1 charge. A student dissolves the chloride of the unknown metal, $MCl$, in enough water to make $100.0\\,\\mathrm{mL}$ of solution. The student then mixes the solution with excess $AgNO_3$ solution, causing $AgCl$ to precipitate. The student collects the precipitate by filtration, dries it, and records the data shown below. The molar mass of $AgCl$ is $143\\,\\mathrm{g/mol}$.\n\n| Measurement | Mass |\n|---|---:|\n| Mass of unknown chloride, $MCl$ | $0.74\\,\\mathrm{g}$ |\n| Mass of filter paper | $0.80\\,\\mathrm{g}$ |\n| Mass of filter paper plus $AgCl$ precipitate | $2.23\\,\\mathrm{g}$ |\n\nWhat is the identity of the metal chloride?",
+    "group_members": [
+      "2014_Q08",
+      "2014_Q09",
+      "2014_Q10"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2014_Q09",
@@ -394,7 +417,16 @@
       "raw_chunk_sha256": "186f83c3d01f75f991f9a91656dc1ceaedf83d267ba9d0425eafae0fde0d41a6",
       "override": true
     },
-    "source_page": 22
+    "source_page": 22,
+    "group_id": "2014_Q08-Q10",
+    "group_context": "Questions 8-10 refer to the following.\n\n$M^+$ is an unknown metal cation with a +1 charge. A student dissolves the chloride of the unknown metal, $MCl$, in enough water to make $100.0\\,\\mathrm{mL}$ of solution. The student then mixes the solution with excess $AgNO_3$ solution, causing $AgCl$ to precipitate. The student collects the precipitate by filtration, dries it, and records the data shown below. The molar mass of $AgCl$ is $143\\,\\mathrm{g/mol}$.\n\n| Measurement | Mass |\n|---|---:|\n| Mass of unknown chloride, $MCl$ | $0.74\\,\\mathrm{g}$ |\n| Mass of filter paper | $0.80\\,\\mathrm{g}$ |\n| Mass of filter paper plus $AgCl$ precipitate | $2.23\\,\\mathrm{g}$ |\n\nWhat is the identity of the metal chloride?",
+    "group_members": [
+      "2014_Q08",
+      "2014_Q09",
+      "2014_Q10"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2014_Q10",
@@ -440,7 +472,58 @@
       "raw_chunk_sha256": "bb83904d1dac0cb743f58cb6a0f2585c2be061bdd1370d86876e775dd44c0a3e",
       "override": true
     },
-    "source_page": 23
+    "source_page": 23,
+    "group_id": "2014_Q08-Q10",
+    "group_context": "Questions 8-10 refer to the following.\n\n$M^+$ is an unknown metal cation with a +1 charge. A student dissolves the chloride of the unknown metal, $MCl$, in enough water to make $100.0\\,\\mathrm{mL}$ of solution. The student then mixes the solution with excess $AgNO_3$ solution, causing $AgCl$ to precipitate. The student collects the precipitate by filtration, dries it, and records the data shown below. The molar mass of $AgCl$ is $143\\,\\mathrm{g/mol}$.\n\n| Measurement | Mass |\n|---|---:|\n| Mass of unknown chloride, $MCl$ | $0.74\\,\\mathrm{g}$ |\n| Mass of filter paper | $0.80\\,\\mathrm{g}$ |\n| Mass of filter paper plus $AgCl$ precipitate | $2.23\\,\\mathrm{g}$ |\n\nWhat is the identity of the metal chloride?",
+    "group_members": [
+      "2014_Q08",
+      "2014_Q09",
+      "2014_Q10"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p023_img02.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2014_p023_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p023_img03.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2014_p023_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p023_img04.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2014_p023_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p023_img05.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2014_p023_img05.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q11",
@@ -615,7 +698,7 @@
     "question_number": 14,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 14-16 refer to the following.\n\nThe table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.\n\n| Container | Gas | Pressure (atm) | Mass of Sample (g) |\n|---:|---|---:|---:|\n| 1 | He | 2.00 | ? |\n| 2 | Ne | 2.00 | ? |\n| 3 | ? | 2.00 | 16.0 |\n| 4 | $SO_2$ | 1.96 | 64.1 |\n\nOn the basis of the data provided above, the gas in container 3 could be",
+    "text": "The table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.\n\n| Container | Gas | Pressure (atm) | Mass of Sample (g) |\n|---:|---|---:|---:|\n| 1 | He | 2.00 | ? |\n| 2 | Ne | 2.00 | ? |\n| 3 | ? | 2.00 | 16.0 |\n| 4 | $SO_2$ | 1.96 | 64.1 |\n\nOn the basis of the data provided above, the gas in container 3 could be",
     "options": {
       "A": "$CH_4$",
       "B": "$O_2$",
@@ -645,7 +728,16 @@
       "raw_chunk_sha256": "d22c7931dc22c63cea993e8761411adff86022dc67e04dca6dd77fc96b7a8c5d",
       "override": true
     },
-    "source_page": 25
+    "source_page": 25,
+    "group_id": "2014_Q14-Q16",
+    "group_context": "Questions 14-16 refer to the following.\n\nThe table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.\n\n| Container | Gas | Pressure (atm) | Mass of Sample (g) |\n|---:|---|---:|---:|\n| 1 | He | 2.00 | ? |\n| 2 | Ne | 2.00 | ? |\n| 3 | ? | 2.00 | 16.0 |\n| 4 | $SO_2$ | 1.96 | 64.1 |\n\nOn the basis of the data provided above, the gas in container 3 could be",
+    "group_members": [
+      "2014_Q14",
+      "2014_Q15",
+      "2014_Q16"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2014_Q15",
@@ -712,7 +804,16 @@
           ]
         ]
       }
-    }
+    },
+    "group_id": "2014_Q14-Q16",
+    "group_context": "Questions 14-16 refer to the following.\n\nThe table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.\n\n| Container | Gas | Pressure (atm) | Mass of Sample (g) |\n|---:|---|---:|---:|\n| 1 | He | 2.00 | ? |\n| 2 | Ne | 2.00 | ? |\n| 3 | ? | 2.00 | 16.0 |\n| 4 | $SO_2$ | 1.96 | 64.1 |\n\nOn the basis of the data provided above, the gas in container 3 could be",
+    "group_members": [
+      "2014_Q14",
+      "2014_Q15",
+      "2014_Q16"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2014_Q16",
@@ -789,7 +890,16 @@
           ]
         ]
       }
-    }
+    },
+    "group_id": "2014_Q14-Q16",
+    "group_context": "Questions 14-16 refer to the following.\n\nThe table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.\n\n| Container | Gas | Pressure (atm) | Mass of Sample (g) |\n|---:|---|---:|---:|\n| 1 | He | 2.00 | ? |\n| 2 | Ne | 2.00 | ? |\n| 3 | ? | 2.00 | 16.0 |\n| 4 | $SO_2$ | 1.96 | 64.1 |\n\nOn the basis of the data provided above, the gas in container 3 could be",
+    "group_members": [
+      "2014_Q14",
+      "2014_Q15",
+      "2014_Q16"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2014_Q17",
@@ -861,6 +971,20 @@
           "$N_2$"
         ]
       }
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p026_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p026_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -1025,7 +1149,7 @@
     "question_number": 21,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 21-24 refer to the following information.\n\n$CO(g)+2H_2(g)\\rightleftharpoons CH_3OH(g)$, $\\Delta H<0$\n\nThe synthesis of $CH_3OH(g)$ from $CO(g)$ and $H_2(g)$ is represented by the equation above. The value of $K_c$ for the reaction at $483\\,\\mathrm{K}$ is 14.5.\n\nWhich of the following explains the effect on the equilibrium constant, $K_c$, when the temperature of the reaction system is increased to $650\\,\\mathrm{K}$?",
+    "text": "$CO(g)+2H_2(g)\\rightleftharpoons CH_3OH(g)$, $\\Delta H<0$\n\nThe synthesis of $CH_3OH(g)$ from $CO(g)$ and $H_2(g)$ is represented by the equation above. The value of $K_c$ for the reaction at $483\\,\\mathrm{K}$ is 14.5.\n\nWhich of the following explains the effect on the equilibrium constant, $K_c$, when the temperature of the reaction system is increased to $650\\,\\mathrm{K}$?",
     "options": {
       "A": "$K_c$ will increase because the activation energy of the forward reaction increases more than that of the reverse reaction.",
       "B": "$K_c$ will increase because there are more reactant molecules than product molecules.",
@@ -1055,7 +1179,17 @@
       "override": true,
       "override_reason": "missing_from_extracted_chunks"
     },
-    "source_page": 28
+    "source_page": 28,
+    "group_id": "2014_Q21-Q24",
+    "group_context": "Questions 21-24 refer to the following information.\n\n$CO(g)+2H_2(g)\\rightleftharpoons CH_3OH(g)$, $\\Delta H<0$\n\nThe synthesis of $CH_3OH(g)$ from $CO(g)$ and $H_2(g)$ is represented by the equation above. The value of $K_c$ for the reaction at $483\\,\\mathrm{K}$ is 14.5.\n\nWhich of the following explains the effect on the equilibrium constant, $K_c$, when the temperature of the reaction system is increased to $650\\,\\mathrm{K}$?",
+    "group_members": [
+      "2014_Q21",
+      "2014_Q22",
+      "2014_Q23",
+      "2014_Q24"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2014_Q22",
@@ -1096,7 +1230,17 @@
       "override": true,
       "override_reason": "missing_from_extracted_chunks"
     },
-    "source_page": 28
+    "source_page": 28,
+    "group_id": "2014_Q21-Q24",
+    "group_context": "Questions 21-24 refer to the following information.\n\n$CO(g)+2H_2(g)\\rightleftharpoons CH_3OH(g)$, $\\Delta H<0$\n\nThe synthesis of $CH_3OH(g)$ from $CO(g)$ and $H_2(g)$ is represented by the equation above. The value of $K_c$ for the reaction at $483\\,\\mathrm{K}$ is 14.5.\n\nWhich of the following explains the effect on the equilibrium constant, $K_c$, when the temperature of the reaction system is increased to $650\\,\\mathrm{K}$?",
+    "group_members": [
+      "2014_Q21",
+      "2014_Q22",
+      "2014_Q23",
+      "2014_Q24"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2014_Q23",
@@ -1137,7 +1281,17 @@
       "raw_chunk_sha256": "355819be3e1c85a8dc86fb06e89128b18ec4e52fcc2f87404aaa85bc54cdfd27",
       "override": true
     },
-    "source_page": 28
+    "source_page": 28,
+    "group_id": "2014_Q21-Q24",
+    "group_context": "Questions 21-24 refer to the following information.\n\n$CO(g)+2H_2(g)\\rightleftharpoons CH_3OH(g)$, $\\Delta H<0$\n\nThe synthesis of $CH_3OH(g)$ from $CO(g)$ and $H_2(g)$ is represented by the equation above. The value of $K_c$ for the reaction at $483\\,\\mathrm{K}$ is 14.5.\n\nWhich of the following explains the effect on the equilibrium constant, $K_c$, when the temperature of the reaction system is increased to $650\\,\\mathrm{K}$?",
+    "group_members": [
+      "2014_Q21",
+      "2014_Q22",
+      "2014_Q23",
+      "2014_Q24"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2014_Q24",
@@ -1178,7 +1332,17 @@
       "override": true,
       "override_reason": "missing_from_extracted_chunks"
     },
-    "source_page": 28
+    "source_page": 28,
+    "group_id": "2014_Q21-Q24",
+    "group_context": "Questions 21-24 refer to the following information.\n\n$CO(g)+2H_2(g)\\rightleftharpoons CH_3OH(g)$, $\\Delta H<0$\n\nThe synthesis of $CH_3OH(g)$ from $CO(g)$ and $H_2(g)$ is represented by the equation above. The value of $K_c$ for the reaction at $483\\,\\mathrm{K}$ is 14.5.\n\nWhich of the following explains the effect on the equilibrium constant, $K_c$, when the temperature of the reaction system is increased to $650\\,\\mathrm{K}$?",
+    "group_members": [
+      "2014_Q21",
+      "2014_Q22",
+      "2014_Q23",
+      "2014_Q24"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2014_Q25",
@@ -1262,7 +1426,21 @@
       "raw_chunk_sha256": "b2bf459234de6004ae1e625805d513fe5c749870bbc7761b152f7fa3a7c70222",
       "override": true
     },
-    "source_page": 30
+    "source_page": 30,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p030_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p030_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q27",
@@ -1305,7 +1483,21 @@
       "raw_chunk_sha256": "de179ac399fc71baf5978ffcb36ea30f7d063c9b5ed60c6a157cf8e0a4085f22",
       "override": true
     },
-    "source_page": 30
+    "source_page": 30,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p030_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p030_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q28",
@@ -1433,7 +1625,49 @@
       "raw_chunk_sha256": "b658c95cf6d44391efb1f4c8bd726d30a0d944e6ba1c91e6dbb7ea2b5281a450",
       "override": true
     },
-    "source_page": 32
+    "source_page": 32,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p032_img01.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2014_p032_img01.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p032_img02.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2014_p032_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p032_img03.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2014_p032_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p032_img04.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2014_p032_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q31",
@@ -1476,7 +1710,21 @@
       "raw_chunk_sha256": "a011d04bc0a4ec215c171e895d4b10146515cc6afbe36ae84528de8964bd2bb0",
       "override": true
     },
-    "source_page": 33
+    "source_page": 33,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p033_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p033_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q32",
@@ -1487,7 +1735,7 @@
     "question_number": 32,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 32-34 refer to the following.\n\n$5H_2O_2(aq)+2MnO_4^-(aq)+6H^+(aq)\\rightarrow2Mn^{2+}(aq)+8H_2O(l)+5O_2(g)$\n\nIn a titration experiment, $H_2O_2(aq)$ reacts with $MnO_4^-(aq)$ as represented by the equation above. The dark purple $KMnO_4$ solution is added from a buret to a colorless, acidified solution of $H_2O_2(aq)$ in an Erlenmeyer flask. At the endpoint of the titration, the solution is pale pink.\n\nAt a certain time during the titration, the rate of appearance of $O_2(g)$ was $1.0\\times10^{-3}\\,\\mathrm{mol/(L\\cdot s)}$. What was the rate of disappearance of $MnO_4^-$ at the same time?",
+    "text": "$5H_2O_2(aq)+2MnO_4^-(aq)+6H^+(aq)\\rightarrow2Mn^{2+}(aq)+8H_2O(l)+5O_2(g)$\n\nIn a titration experiment, $H_2O_2(aq)$ reacts with $MnO_4^-(aq)$ as represented by the equation above. The dark purple $KMnO_4$ solution is added from a buret to a colorless, acidified solution of $H_2O_2(aq)$ in an Erlenmeyer flask. At the endpoint of the titration, the solution is pale pink.\n\nAt a certain time during the titration, the rate of appearance of $O_2(g)$ was $1.0\\times10^{-3}\\,\\mathrm{mol/(L\\cdot s)}$. What was the rate of disappearance of $MnO_4^-$ at the same time?",
     "options": {
       "A": "$6.0\\times10^{-3}\\,\\mathrm{mol/(L\\cdot s)}$",
       "B": "$4.0\\times10^{-3}\\,\\mathrm{mol/(L\\cdot s)}$",
@@ -1517,7 +1765,16 @@
       "override": true,
       "override_reason": "missing_from_extracted_chunks"
     },
-    "source_page": 34
+    "source_page": 34,
+    "group_id": "2014_Q32-Q34",
+    "group_context": "Questions 32-34 refer to the following.\n\n$5H_2O_2(aq)+2MnO_4^-(aq)+6H^+(aq)\\rightarrow2Mn^{2+}(aq)+8H_2O(l)+5O_2(g)$\n\nIn a titration experiment, $H_2O_2(aq)$ reacts with $MnO_4^-(aq)$ as represented by the equation above. The dark purple $KMnO_4$ solution is added from a buret to a colorless, acidified solution of $H_2O_2(aq)$ in an Erlenmeyer flask. At the endpoint of the titration, the solution is pale pink.\n\nAt a certain time during the titration, the rate of appearance of $O_2(g)$ was $1.0\\times10^{-3}\\,\\mathrm{mol/(L\\cdot s)}$. What was the rate of disappearance of $MnO_4^-$ at the same time?",
+    "group_members": [
+      "2014_Q32",
+      "2014_Q33",
+      "2014_Q34"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2014_Q33",
@@ -1558,7 +1815,16 @@
       "override": true,
       "override_reason": "missing_from_extracted_chunks"
     },
-    "source_page": 34
+    "source_page": 34,
+    "group_id": "2014_Q32-Q34",
+    "group_context": "Questions 32-34 refer to the following.\n\n$5H_2O_2(aq)+2MnO_4^-(aq)+6H^+(aq)\\rightarrow2Mn^{2+}(aq)+8H_2O(l)+5O_2(g)$\n\nIn a titration experiment, $H_2O_2(aq)$ reacts with $MnO_4^-(aq)$ as represented by the equation above. The dark purple $KMnO_4$ solution is added from a buret to a colorless, acidified solution of $H_2O_2(aq)$ in an Erlenmeyer flask. At the endpoint of the titration, the solution is pale pink.\n\nAt a certain time during the titration, the rate of appearance of $O_2(g)$ was $1.0\\times10^{-3}\\,\\mathrm{mol/(L\\cdot s)}$. What was the rate of disappearance of $MnO_4^-$ at the same time?",
+    "group_members": [
+      "2014_Q32",
+      "2014_Q33",
+      "2014_Q34"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2014_Q34",
@@ -1599,7 +1865,16 @@
       "raw_chunk_sha256": "5c992f608d619704e230796abef65ce9e7636a821b6cb749ce94025d511f5c0f",
       "override": true
     },
-    "source_page": 34
+    "source_page": 34,
+    "group_id": "2014_Q32-Q34",
+    "group_context": "Questions 32-34 refer to the following.\n\n$5H_2O_2(aq)+2MnO_4^-(aq)+6H^+(aq)\\rightarrow2Mn^{2+}(aq)+8H_2O(l)+5O_2(g)$\n\nIn a titration experiment, $H_2O_2(aq)$ reacts with $MnO_4^-(aq)$ as represented by the equation above. The dark purple $KMnO_4$ solution is added from a buret to a colorless, acidified solution of $H_2O_2(aq)$ in an Erlenmeyer flask. At the endpoint of the titration, the solution is pale pink.\n\nAt a certain time during the titration, the rate of appearance of $O_2(g)$ was $1.0\\times10^{-3}\\,\\mathrm{mol/(L\\cdot s)}$. What was the rate of disappearance of $MnO_4^-$ at the same time?",
+    "group_members": [
+      "2014_Q32",
+      "2014_Q33",
+      "2014_Q34"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2014_Q35",
@@ -1787,6 +2062,20 @@
           "$0.10\\,\\mathrm{M}$"
         ]
       }
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p036_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p036_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -1798,7 +2087,7 @@
     "question_number": 39,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 39-41 refer to the following graph, which shows the heating curve for methane, $CH_4$.\n\nHow much energy is required to melt $64\\,\\mathrm{g}$ of methane at $90\\,\\mathrm{K}$? The molar mass of methane is $16\\,\\mathrm{g/mol}$.",
+    "text": "How much energy is required to melt $64\\,\\mathrm{g}$ of methane at $90\\,\\mathrm{K}$? The molar mass of methane is $16\\,\\mathrm{g/mol}$.",
     "options": {
       "A": "$0.24\\,\\mathrm{kJ}$",
       "B": "$3.8\\,\\mathrm{kJ}$",
@@ -1830,7 +2119,30 @@
       "raw_chunk_sha256": "1364f5bf83390d19ea84e2a3d3ac23d508a09f5db44d3147c8bf41919e246a4d",
       "override": true
     },
-    "source_page": 37
+    "source_page": 37,
+    "group_id": "2014_Q39-Q41",
+    "group_context": "Questions 39-41 refer to the following graph, which shows the heating curve for methane, $CH_4$.\n\nHow much energy is required to melt $64\\,\\mathrm{g}$ of methane at $90\\,\\mathrm{K}$? The molar mass of methane is $16\\,\\mathrm{g/mol}$.",
+    "group_members": [
+      "2014_Q39",
+      "2014_Q40",
+      "2014_Q41"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p037_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p037_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q40",
@@ -1873,7 +2185,30 @@
       "override": true,
       "override_reason": "missing_from_extracted_chunks"
     },
-    "source_page": 37
+    "source_page": 37,
+    "group_id": "2014_Q39-Q41",
+    "group_context": "Questions 39-41 refer to the following graph, which shows the heating curve for methane, $CH_4$.\n\nHow much energy is required to melt $64\\,\\mathrm{g}$ of methane at $90\\,\\mathrm{K}$? The molar mass of methane is $16\\,\\mathrm{g/mol}$.",
+    "group_members": [
+      "2014_Q39",
+      "2014_Q40",
+      "2014_Q41"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p037_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p037_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q41",
@@ -1916,7 +2251,30 @@
       "raw_chunk_sha256": "1bc2f4b485d368b384d6ad68b17a5d56f80940ecefcaeb444a83efff7ddeb0e3",
       "override": true
     },
-    "source_page": 37
+    "source_page": 37,
+    "group_id": "2014_Q39-Q41",
+    "group_context": "Questions 39-41 refer to the following graph, which shows the heating curve for methane, $CH_4$.\n\nHow much energy is required to melt $64\\,\\mathrm{g}$ of methane at $90\\,\\mathrm{K}$? The molar mass of methane is $16\\,\\mathrm{g/mol}$.",
+    "group_members": [
+      "2014_Q39",
+      "2014_Q40",
+      "2014_Q41"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p037_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p037_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q42",
@@ -1963,7 +2321,57 @@
       "raw_chunk_sha256": "d9809cf8f21e7ac10e408f0465078d953f133daea3c45e66aeea581691797080",
       "override": true
     },
-    "source_page": 38
+    "source_page": 38,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p038_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": "2014_p038_img01.png",
+          "binding": "prompt_context_precedes_option_images",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p038_img02.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2014_p038_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p038_img03.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2014_p038_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p038_img04.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2014_p038_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p038_img05.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2014_p038_img05.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q43",
@@ -2006,7 +2414,21 @@
       "raw_chunk_sha256": "11f85ea4967e5c3ac3485aae0f73c5a18df9eb91ade5a5ca8daeb4145a1cbd95",
       "override": true
     },
-    "source_page": 39
+    "source_page": 39,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p039_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p039_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q44",
@@ -2017,7 +2439,7 @@
     "question_number": 44,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 44-46 relate to the following information.\n\n$XY_2\\rightarrow X+Y_2$\n\nThe equation above represents the decomposition of a compound $XY_2$. The diagram below shows two reaction profiles, path one and path two, for the decomposition of $XY_2$.\n\nWhich of the following most likely accounts for the difference between reaction path one and reaction path two?",
+    "text": "$XY_2\\rightarrow X+Y_2$\n\nThe equation above represents the decomposition of a compound $XY_2$. The diagram below shows two reaction profiles, path one and path two, for the decomposition of $XY_2$.\n\nWhich of the following most likely accounts for the difference between reaction path one and reaction path two?",
     "options": {
       "A": "A higher temperature in path one",
       "B": "A higher temperature in path two",
@@ -2049,7 +2471,30 @@
       "raw_chunk_sha256": "398451485364b9a315864ab5b8f58a0d378e4a88ab6b8292fdefe407f144a42a",
       "override": true
     },
-    "source_page": 40
+    "source_page": 40,
+    "group_id": "2014_Q44-Q46",
+    "group_context": "Questions 44-46 relate to the following information.\n\n$XY_2\\rightarrow X+Y_2$\n\nThe equation above represents the decomposition of a compound $XY_2$. The diagram below shows two reaction profiles, path one and path two, for the decomposition of $XY_2$.\n\nWhich of the following most likely accounts for the difference between reaction path one and reaction path two?",
+    "group_members": [
+      "2014_Q44",
+      "2014_Q45",
+      "2014_Q46"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p040_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p040_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q45",
@@ -2092,7 +2537,30 @@
       "override": true,
       "override_reason": "missing_from_extracted_chunks"
     },
-    "source_page": 40
+    "source_page": 40,
+    "group_id": "2014_Q44-Q46",
+    "group_context": "Questions 44-46 relate to the following information.\n\n$XY_2\\rightarrow X+Y_2$\n\nThe equation above represents the decomposition of a compound $XY_2$. The diagram below shows two reaction profiles, path one and path two, for the decomposition of $XY_2$.\n\nWhich of the following most likely accounts for the difference between reaction path one and reaction path two?",
+    "group_members": [
+      "2014_Q44",
+      "2014_Q45",
+      "2014_Q46"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p040_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p040_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q46",
@@ -2135,7 +2603,30 @@
       "raw_chunk_sha256": "22bd86082adb913f8213eff52d772d3d11c230091c5a66f1dbe157d6aeeba022",
       "override": true
     },
-    "source_page": 40
+    "source_page": 40,
+    "group_id": "2014_Q44-Q46",
+    "group_context": "Questions 44-46 relate to the following information.\n\n$XY_2\\rightarrow X+Y_2$\n\nThe equation above represents the decomposition of a compound $XY_2$. The diagram below shows two reaction profiles, path one and path two, for the decomposition of $XY_2$.\n\nWhich of the following most likely accounts for the difference between reaction path one and reaction path two?",
+    "group_members": [
+      "2014_Q44",
+      "2014_Q45",
+      "2014_Q46"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p040_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p040_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q47",
@@ -2183,6 +2674,84 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
       "source_page": 41,
       "raw_chunk_sha256": "257f36725f3bb29b5de2e457a4ff2828d71a8b61fccff0905a61062833cc6571"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p041_img01.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2014_p041_img01.png",
+          "binding": "two_images_per_option_in_source_order",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p041_img02.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2014_p041_img02.png",
+          "binding": "two_images_per_option_in_source_order",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p041_img03.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2014_p041_img03.png",
+          "binding": "two_images_per_option_in_source_order",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p041_img04.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2014_p041_img04.png",
+          "binding": "two_images_per_option_in_source_order",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p041_img05.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2014_p041_img05.png",
+          "binding": "two_images_per_option_in_source_order",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p041_img06.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2014_p041_img06.png",
+          "binding": "two_images_per_option_in_source_order",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p041_img07.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2014_p041_img07.png",
+          "binding": "two_images_per_option_in_source_order",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p041_img08.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2014_p041_img08.png",
+          "binding": "two_images_per_option_in_source_order",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -2228,7 +2797,37 @@
       "raw_chunk_sha256": "5f23442361b5e0b63385fcb5dec52c9b02890c50a66b18ed4d52366e5a17525b",
       "override": true
     },
-    "source_page": 42
+    "source_page": 42,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p042_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p042_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p042_img02.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p042_img02.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p042_img03.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p042_img03.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2014_Q49",
@@ -2295,6 +2894,36 @@
           ]
         ]
       }
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2014/2014_p042_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p042_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p042_img02.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p042_img02.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2014/2014_p042_img03.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2014_p042_img03.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -2459,7 +3088,21 @@
       "raw_chunk_sha256": "1932b8c557b57eed4fd820c3094ca65f0609e3edf0a4503341666f7d8d12af7c",
       "override": true
     },
-    "source_page": 21
+    "source_page": 21,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p021_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p021_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2015_Q04",
@@ -2503,6 +3146,48 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
       "source_page": 21,
       "raw_chunk_sha256": "e4bd2f078c96a069ec68f7ab1ef930b4cbec9c5b0f846c9ec1838f1937b416c0"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p021_img02.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2015_p021_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2015/2015_p021_img03.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2015_p021_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2015/2015_p021_img04.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2015_p021_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2015/2015_p021_img05.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2015_p021_img05.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -2592,7 +3277,7 @@
     "question_number": 7,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 7-9 refer to five identical rigid $2.0\\,\\mathrm{L}$ vessels filled with $N_2(g)$ at $27^\\circ\\mathrm{C}$ and sealed. Four vessels also contain a $0.050\\,\\mathrm{mol}$ sample of $NaHCO_3(s)$, $NaBr(s)$, $Cu(s)$, or $I_2(s)$. All four vessels are heated to $127^\\circ\\mathrm{C}$ and allowed to reach a constant pressure.\n\nAt $127^\\circ\\mathrm{C}$, the pressure in vessel 1 is found to be higher than that in vessel 2. Which of the following reactions best accounts for the observation?",
+    "text": "At $127^\\circ\\mathrm{C}$, the pressure in vessel 1 is found to be higher than that in vessel 2. Which of the following reactions best accounts for the observation?",
     "options": {
       "A": "$NaHCO_3(s)\\rightarrow Na(s)+HCO_3(s)$",
       "B": "$NaHCO_3(s)\\rightarrow NaH(s)+CO_3(s)$",
@@ -2622,7 +3307,16 @@
       "raw_chunk_sha256": "d2a08223b8b602970128e01c55ce989a37b7d30fe357c7eeb258ae5c7c87bc37",
       "override": true
     },
-    "source_page": 23
+    "source_page": 23,
+    "group_id": "2015_Q07-Q09",
+    "group_context": "Questions 7-9 refer to five identical rigid $2.0\\,\\mathrm{L}$ vessels filled with $N_2(g)$ at $27^\\circ\\mathrm{C}$ and sealed. Four vessels also contain a $0.050\\,\\mathrm{mol}$ sample of $NaHCO_3(s)$, $NaBr(s)$, $Cu(s)$, or $I_2(s)$. All four vessels are heated to $127^\\circ\\mathrm{C}$ and allowed to reach a constant pressure.\n\nAt $127^\\circ\\mathrm{C}$, the pressure in vessel 1 is found to be higher than that in vessel 2. Which of the following reactions best accounts for the observation?",
+    "group_members": [
+      "2015_Q07",
+      "2015_Q08",
+      "2015_Q09"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2015_Q08",
@@ -2665,7 +3359,30 @@
       "raw_chunk_sha256": "230640d197133f38da707b48250727bf5888c419326c4edd67f651a6fe263922",
       "override": true
     },
-    "source_page": 24
+    "source_page": 24,
+    "group_id": "2015_Q07-Q09",
+    "group_context": "Questions 7-9 refer to five identical rigid $2.0\\,\\mathrm{L}$ vessels filled with $N_2(g)$ at $27^\\circ\\mathrm{C}$ and sealed. Four vessels also contain a $0.050\\,\\mathrm{mol}$ sample of $NaHCO_3(s)$, $NaBr(s)$, $Cu(s)$, or $I_2(s)$. All four vessels are heated to $127^\\circ\\mathrm{C}$ and allowed to reach a constant pressure.\n\nAt $127^\\circ\\mathrm{C}$, the pressure in vessel 1 is found to be higher than that in vessel 2. Which of the following reactions best accounts for the observation?",
+    "group_members": [
+      "2015_Q07",
+      "2015_Q08",
+      "2015_Q09"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p023_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p023_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2015_Q09",
@@ -2709,6 +3426,57 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
       "source_page": 24,
       "raw_chunk_sha256": "a0e8e9015b525c3066ccac0bcea8a29d99d8fa4fe37d047e4b283550aa9e57a0"
+    },
+    "group_id": "2015_Q07-Q09",
+    "group_context": "Questions 7-9 refer to five identical rigid $2.0\\,\\mathrm{L}$ vessels filled with $N_2(g)$ at $27^\\circ\\mathrm{C}$ and sealed. Four vessels also contain a $0.050\\,\\mathrm{mol}$ sample of $NaHCO_3(s)$, $NaBr(s)$, $Cu(s)$, or $I_2(s)$. All four vessels are heated to $127^\\circ\\mathrm{C}$ and allowed to reach a constant pressure.\n\nAt $127^\\circ\\mathrm{C}$, the pressure in vessel 1 is found to be higher than that in vessel 2. Which of the following reactions best accounts for the observation?",
+    "group_members": [
+      "2015_Q07",
+      "2015_Q08",
+      "2015_Q09"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p024_img02.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2015_p024_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2015/2015_p024_img03.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2015_p024_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2015/2015_p024_img04.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2015_p024_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2015/2015_p024_img05.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2015_p024_img05.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -2981,7 +3749,21 @@
       "raw_chunk_sha256": "2a0e8474bf2ca9e02a4a6b40878328b39e3b97a2ecbd86ee1e955f9d24248740",
       "override": true
     },
-    "source_page": 26
+    "source_page": 26,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p026_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p026_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2015_Q15",
@@ -3063,6 +3845,20 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
       "source_page": 27,
       "raw_chunk_sha256": "acdefe0f681706a18ed432ebb246383d8aa700010c436d02cd3cfa6a88b49610"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p027_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p027_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -3184,7 +3980,21 @@
       "raw_chunk_sha256": "ccc4153d02c2b9da6e191f69724970f11e8c1b5cefa00e7f50b24cbf4fad3b4d",
       "override": true
     },
-    "source_page": 28
+    "source_page": 28,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p027_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p027_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2015_Q20",
@@ -3268,7 +4078,21 @@
       "raw_chunk_sha256": "198bb5edba6dc223007cad295e5f649dacc2fd2f89e102db97b78d390466bf3a",
       "override": true
     },
-    "source_page": 29
+    "source_page": 29,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p029_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p029_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2015_Q22",
@@ -3412,7 +4236,21 @@
       "raw_chunk_sha256": "a6fc99cd5507588c6eb01b7b3be3fac1bfba75b3f95cfb3f33f2b6fede32a82e",
       "override": true
     },
-    "source_page": 30
+    "source_page": 30,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p030_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p030_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2015_Q25",
@@ -3782,7 +4620,7 @@
     "question_number": 34,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 34-36 refer to the reactions represented below, which are involved in a demonstration commonly known as underwater fireworks.\n\nReaction 1: $CaC_2(s)+2H_2O(l)\\rightarrow C_2H_2(g)+Ca(OH)_2(s)$\n\nReaction 2: $NaOCl(aq)+2HCl(aq)\\rightarrow Cl_2(g)+NaCl(aq)+H_2O(l)$\n\nReaction 3: $C_2H_2(g)+Cl_2(g)\\rightarrow C_2H_2Cl_2(g)$\n\n$Ca(OH)_2(s)$ precipitates when a $1.0\\,\\mathrm{g}$ sample of $CaC_2(s)$ is added to $1.0\\,\\mathrm{L}$ of distilled water at room temperature. If a $0.064\\,\\mathrm{g}$ sample of $CaC_2(s)$ is used instead and all of it reacts, which of the following will occur and why? The molar mass of $CaC_2$ is $64\\,\\mathrm{g/mol}$, and $K_{sp}$ for $Ca(OH)_2$ is $8.0\\times10^{-8}$.",
+    "text": "Reaction 1: $CaC_2(s)+2H_2O(l)\\rightarrow C_2H_2(g)+Ca(OH)_2(s)$\n\nReaction 2: $NaOCl(aq)+2HCl(aq)\\rightarrow Cl_2(g)+NaCl(aq)+H_2O(l)$\n\nReaction 3: $C_2H_2(g)+Cl_2(g)\\rightarrow C_2H_2Cl_2(g)$\n\n$Ca(OH)_2(s)$ precipitates when a $1.0\\,\\mathrm{g}$ sample of $CaC_2(s)$ is added to $1.0\\,\\mathrm{L}$ of distilled water at room temperature. If a $0.064\\,\\mathrm{g}$ sample of $CaC_2(s)$ is used instead and all of it reacts, which of the following will occur and why? The molar mass of $CaC_2$ is $64\\,\\mathrm{g/mol}$, and $K_{sp}$ for $Ca(OH)_2$ is $8.0\\times10^{-8}$.",
     "options": {
       "A": "$Ca(OH)_2$ will precipitate because $Q>K_{sp}$.",
       "B": "$Ca(OH)_2$ will precipitate because $Q<K_{sp}$.",
@@ -3812,7 +4650,16 @@
       "raw_chunk_sha256": "4055db8352c088a79a72c276150689c57005fafc9a0f89aae6c9708e2bcf2b1a",
       "override": true
     },
-    "source_page": 33
+    "source_page": 33,
+    "group_id": "2015_Q34-Q36",
+    "group_context": "Questions 34-36 refer to the reactions represented below, which are involved in a demonstration commonly known as underwater fireworks.\n\nReaction 1: $CaC_2(s)+2H_2O(l)\\rightarrow C_2H_2(g)+Ca(OH)_2(s)$\n\nReaction 2: $NaOCl(aq)+2HCl(aq)\\rightarrow Cl_2(g)+NaCl(aq)+H_2O(l)$\n\nReaction 3: $C_2H_2(g)+Cl_2(g)\\rightarrow C_2H_2Cl_2(g)$\n\n$Ca(OH)_2(s)$ precipitates when a $1.0\\,\\mathrm{g}$ sample of $CaC_2(s)$ is added to $1.0\\,\\mathrm{L}$ of distilled water at room temperature. If a $0.064\\,\\mathrm{g}$ sample of $CaC_2(s)$ is used instead and all of it reacts, which of the following will occur and why? The molar mass of $CaC_2$ is $64\\,\\mathrm{g/mol}$, and $K_{sp}$ for $Ca(OH)_2$ is $8.0\\times10^{-8}$.",
+    "group_members": [
+      "2015_Q34",
+      "2015_Q35",
+      "2015_Q36"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2015_Q35",
@@ -3853,7 +4700,16 @@
       "raw_chunk_sha256": "505bfdd0122adf6ace6cc85e99d813c96b9a9912811ca4e0947ac4b77e0d0069",
       "override": true
     },
-    "source_page": 33
+    "source_page": 33,
+    "group_id": "2015_Q34-Q36",
+    "group_context": "Questions 34-36 refer to the reactions represented below, which are involved in a demonstration commonly known as underwater fireworks.\n\nReaction 1: $CaC_2(s)+2H_2O(l)\\rightarrow C_2H_2(g)+Ca(OH)_2(s)$\n\nReaction 2: $NaOCl(aq)+2HCl(aq)\\rightarrow Cl_2(g)+NaCl(aq)+H_2O(l)$\n\nReaction 3: $C_2H_2(g)+Cl_2(g)\\rightarrow C_2H_2Cl_2(g)$\n\n$Ca(OH)_2(s)$ precipitates when a $1.0\\,\\mathrm{g}$ sample of $CaC_2(s)$ is added to $1.0\\,\\mathrm{L}$ of distilled water at room temperature. If a $0.064\\,\\mathrm{g}$ sample of $CaC_2(s)$ is used instead and all of it reacts, which of the following will occur and why? The molar mass of $CaC_2$ is $64\\,\\mathrm{g/mol}$, and $K_{sp}$ for $Ca(OH)_2$ is $8.0\\times10^{-8}$.",
+    "group_members": [
+      "2015_Q34",
+      "2015_Q35",
+      "2015_Q36"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2015_Q36",
@@ -3894,7 +4750,16 @@
       "override": true,
       "override_reason": "missing_from_extracted_chunks"
     },
-    "source_page": 33
+    "source_page": 33,
+    "group_id": "2015_Q34-Q36",
+    "group_context": "Questions 34-36 refer to the reactions represented below, which are involved in a demonstration commonly known as underwater fireworks.\n\nReaction 1: $CaC_2(s)+2H_2O(l)\\rightarrow C_2H_2(g)+Ca(OH)_2(s)$\n\nReaction 2: $NaOCl(aq)+2HCl(aq)\\rightarrow Cl_2(g)+NaCl(aq)+H_2O(l)$\n\nReaction 3: $C_2H_2(g)+Cl_2(g)\\rightarrow C_2H_2Cl_2(g)$\n\n$Ca(OH)_2(s)$ precipitates when a $1.0\\,\\mathrm{g}$ sample of $CaC_2(s)$ is added to $1.0\\,\\mathrm{L}$ of distilled water at room temperature. If a $0.064\\,\\mathrm{g}$ sample of $CaC_2(s)$ is used instead and all of it reacts, which of the following will occur and why? The molar mass of $CaC_2$ is $64\\,\\mathrm{g/mol}$, and $K_{sp}$ for $Ca(OH)_2$ is $8.0\\times10^{-8}$.",
+    "group_members": [
+      "2015_Q34",
+      "2015_Q35",
+      "2015_Q36"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2015_Q37",
@@ -3955,6 +4820,20 @@
           ]
         ]
       }
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p034_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p034_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -3998,7 +4877,21 @@
       "raw_chunk_sha256": "12f84c1b20414c3233bd0a1fabce39abc08bae685db4245db1c0a36fbfa403e3",
       "override": true
     },
-    "source_page": 34
+    "source_page": 34,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p034_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p034_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2015_Q39",
@@ -4158,7 +5051,7 @@
     "question_number": 42,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 42-44 refer to the following information.\n\nWhen free $Cl(g)$ atoms encounter $O_3(g)$ molecules in the upper atmosphere, the following reaction mechanism is proposed to occur.\n\nSlow step: $Cl(g)+O_3(g)\\rightarrow ClO(g)+O_2(g)$\n\nFast step: $ClO(g)+O_3(g)\\rightarrow Cl(g)+2O_2(g)$\n\nOverall reaction: $2O_3(g)\\rightarrow3O_2(g)$, $\\Delta H=-285\\,\\mathrm{kJ/mol_{rxn}}$.\n\nWhich of the following rate laws for the overall reaction corresponds to the proposed mechanism?",
+    "text": "When free $Cl(g)$ atoms encounter $O_3(g)$ molecules in the upper atmosphere, the following reaction mechanism is proposed to occur.\n\nSlow step: $Cl(g)+O_3(g)\\rightarrow ClO(g)+O_2(g)$\n\nFast step: $ClO(g)+O_3(g)\\rightarrow Cl(g)+2O_2(g)$\n\nOverall reaction: $2O_3(g)\\rightarrow3O_2(g)$, $\\Delta H=-285\\,\\mathrm{kJ/mol_{rxn}}$.\n\nWhich of the following rate laws for the overall reaction corresponds to the proposed mechanism?",
     "options": {
       "A": "$rate=k[ClO][O_3]^2$",
       "B": "$rate=k[Cl][O_3]$",
@@ -4188,7 +5081,16 @@
       "raw_chunk_sha256": "526221a3cd3e8d90a2b53339accb1046ec7cde69424c1321dcb0cab689217c27",
       "override": true
     },
-    "source_page": 35
+    "source_page": 35,
+    "group_id": "2015_Q42-Q44",
+    "group_context": "Questions 42-44 refer to the following information.\n\nWhen free $Cl(g)$ atoms encounter $O_3(g)$ molecules in the upper atmosphere, the following reaction mechanism is proposed to occur.\n\nSlow step: $Cl(g)+O_3(g)\\rightarrow ClO(g)+O_2(g)$\n\nFast step: $ClO(g)+O_3(g)\\rightarrow Cl(g)+2O_2(g)$\n\nOverall reaction: $2O_3(g)\\rightarrow3O_2(g)$, $\\Delta H=-285\\,\\mathrm{kJ/mol_{rxn}}$.\n\nWhich of the following rate laws for the overall reaction corresponds to the proposed mechanism?",
+    "group_members": [
+      "2015_Q42",
+      "2015_Q43",
+      "2015_Q44"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2015_Q43",
@@ -4234,7 +5136,58 @@
       "raw_chunk_sha256": "71f54a8a757a40718190ff4408d1e6557996c7325f8077b2946a6179be2160f4",
       "override": true
     },
-    "source_page": 36
+    "source_page": 36,
+    "group_id": "2015_Q42-Q44",
+    "group_context": "Questions 42-44 refer to the following information.\n\nWhen free $Cl(g)$ atoms encounter $O_3(g)$ molecules in the upper atmosphere, the following reaction mechanism is proposed to occur.\n\nSlow step: $Cl(g)+O_3(g)\\rightarrow ClO(g)+O_2(g)$\n\nFast step: $ClO(g)+O_3(g)\\rightarrow Cl(g)+2O_2(g)$\n\nOverall reaction: $2O_3(g)\\rightarrow3O_2(g)$, $\\Delta H=-285\\,\\mathrm{kJ/mol_{rxn}}$.\n\nWhich of the following rate laws for the overall reaction corresponds to the proposed mechanism?",
+    "group_members": [
+      "2015_Q42",
+      "2015_Q43",
+      "2015_Q44"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p036_img01.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2015_p036_img01.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2015/2015_p036_img02.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2015_p036_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2015/2015_p036_img03.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2015_p036_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2015/2015_p036_img04.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2015_p036_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2015_Q44",
@@ -4245,7 +5198,7 @@
     "question_number": 44,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "The proposed mechanism can be written in a more general form, as shown above. Species other than $Cl$ can also decompose $O_3$ through the same mechanism. Which of the following chemical species is most likely to decompose $O_3$ in the upper atmosphere through the above mechanism?",
+    "text": "In the proposed mechanism described for Questions 42-44, species other than $Cl$ can also decompose $O_3$ through the same two-step process. Which of the following chemical species is most likely to decompose $O_3$ in the upper atmosphere through that mechanism?",
     "options": {
       "A": "$He$",
       "B": "$Br$",
@@ -4275,7 +5228,16 @@
       "raw_chunk_sha256": "9e24fb0b853703f41fa1866e8941a67f45e1f919bf8563a03e2cf629e0d7cd8d",
       "override": true
     },
-    "source_page": 36
+    "source_page": 36,
+    "group_id": "2015_Q42-Q44",
+    "group_context": "Questions 42-44 refer to the following information.\n\nWhen free $Cl(g)$ atoms encounter $O_3(g)$ molecules in the upper atmosphere, the following reaction mechanism is proposed to occur.\n\nSlow step: $Cl(g)+O_3(g)\\rightarrow ClO(g)+O_2(g)$\n\nFast step: $ClO(g)+O_3(g)\\rightarrow Cl(g)+2O_2(g)$\n\nOverall reaction: $2O_3(g)\\rightarrow3O_2(g)$, $\\Delta H=-285\\,\\mathrm{kJ/mol_{rxn}}$.\n\nWhich of the following rate laws for the overall reaction corresponds to the proposed mechanism?",
+    "group_members": [
+      "2015_Q42",
+      "2015_Q43",
+      "2015_Q44"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2015_Q45",
@@ -4400,7 +5362,21 @@
       "raw_chunk_sha256": "52ed002d5c82f050df7bfa6aa9e031bbf4f41d719457ac07b5cc6530d5bd9970",
       "override": true
     },
-    "source_page": 38
+    "source_page": 38,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p038_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p038_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2015_Q48",
@@ -4443,7 +5419,21 @@
       "raw_chunk_sha256": "02b64d8916d04a6992db265a8b4aea2b5c85572f6b673357e070a148430daf76",
       "override": true
     },
-    "source_page": 39
+    "source_page": 39,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p039_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p039_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2015_Q49",
@@ -4486,7 +5476,21 @@
       "raw_chunk_sha256": "d9685a50da3b241f6775745a4b41df8f475bba158a1f9b03c93cdc7de6f3ab2b",
       "override": true
     },
-    "source_page": 39
+    "source_page": 39,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p039_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p039_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2015_Q50",
@@ -4558,6 +5562,20 @@
           "Molecular rotation"
         ]
       }
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2015/2015_p040_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2015_p040_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -4983,7 +6001,21 @@
       "raw_chunk_sha256": "6fdd6b3b96c0325729518a0e90395a5c26098e3624f905b50d11f1556c622943",
       "override": true
     },
-    "source_page": 23
+    "source_page": 23,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p023_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2016_p023_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2016_Q10",
@@ -5026,7 +6058,21 @@
       "raw_chunk_sha256": "6aaf93db3592a1d4e9fa40ed90477a819d8ee57bd28ca1a32022a7c6bf318771",
       "override": true
     },
-    "source_page": 24
+    "source_page": 24,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p024_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2016_p024_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2016_Q11",
@@ -5181,7 +6227,57 @@
       "raw_chunk_sha256": "117b59195f3a6c32bcfe819bb9db271c1b04cee86c3a974c454cd0613da2edc8",
       "override": true
     },
-    "source_page": 25
+    "source_page": 25,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p025_img02.png",
+          "asset_type": "prompt_context_image",
+          "source_block": "2016_p025_img02.png",
+          "binding": "prompt_context_precedes_option_images",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p025_img03.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2016_p025_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p025_img04.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2016_p025_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p025_img05.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2016_p025_img05.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p025_img06.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2016_p025_img06.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2016_Q14",
@@ -5192,7 +6288,7 @@
     "question_number": 14,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 14-15 refer to the following information.\n\n$2H_2O_2(aq)\\rightarrow2H_2O(l)+O_2(g)$, $E^\\circ=0.55\\,\\mathrm{V}$\n\nThe equation and standard cell potential for the decomposition of $H_2O_2(aq)$ in acidic solution at $25^\\circ\\mathrm{C}$ are given above. The reduction half-reactions for the process are listed below.\n\n$O_2(g)+4H^+(aq)+4e^-\\rightarrow2H_2O(l)$, $E^\\circ=1.23\\,\\mathrm{V}$\n\n$O_2(g)+2H^+(aq)+2e^-\\rightarrow H_2O_2(aq)$, $E^\\circ=?$\n\nWhat is the standard reduction potential for the half-reaction represented above?",
+    "text": "$2H_2O_2(aq)\\rightarrow2H_2O(l)+O_2(g)$, $E^\\circ=0.55\\,\\mathrm{V}$\n\nThe equation and standard cell potential for the decomposition of $H_2O_2(aq)$ in acidic solution at $25^\\circ\\mathrm{C}$ are given above. The reduction half-reactions for the process are listed below.\n\n$O_2(g)+4H^+(aq)+4e^-\\rightarrow2H_2O(l)$, $E^\\circ=1.23\\,\\mathrm{V}$\n\n$O_2(g)+2H^+(aq)+2e^-\\rightarrow H_2O_2(aq)$, $E^\\circ=?$\n\nWhat is the standard reduction potential for the half-reaction represented above?",
     "options": {
       "A": "$-1.78\\,\\mathrm{V}$",
       "B": "$-0.68\\,\\mathrm{V}$",
@@ -5222,7 +6318,15 @@
       "raw_chunk_sha256": "32cddc663b45485caf24bd8b2f807361f3775944d9681d6ffa978aed64727b90",
       "override": true
     },
-    "source_page": 26
+    "source_page": 26,
+    "group_id": "2016_Q14-Q15",
+    "group_context": "Questions 14-15 refer to the following information.\n\n$2H_2O_2(aq)\\rightarrow2H_2O(l)+O_2(g)$, $E^\\circ=0.55\\,\\mathrm{V}$\n\nThe equation and standard cell potential for the decomposition of $H_2O_2(aq)$ in acidic solution at $25^\\circ\\mathrm{C}$ are given above. The reduction half-reactions for the process are listed below.\n\n$O_2(g)+4H^+(aq)+4e^-\\rightarrow2H_2O(l)$, $E^\\circ=1.23\\,\\mathrm{V}$\n\n$O_2(g)+2H^+(aq)+2e^-\\rightarrow H_2O_2(aq)$, $E^\\circ=?$\n\nWhat is the standard reduction potential for the half-reaction represented above?",
+    "group_members": [
+      "2016_Q14",
+      "2016_Q15"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2016_Q15",
@@ -5263,7 +6367,15 @@
       "raw_chunk_sha256": "c50ebea4ba8bfbbff64ade7e8a1036f4c942c40373b4efdef88a62e2d9977422",
       "override": true
     },
-    "source_page": 26
+    "source_page": 26,
+    "group_id": "2016_Q14-Q15",
+    "group_context": "Questions 14-15 refer to the following information.\n\n$2H_2O_2(aq)\\rightarrow2H_2O(l)+O_2(g)$, $E^\\circ=0.55\\,\\mathrm{V}$\n\nThe equation and standard cell potential for the decomposition of $H_2O_2(aq)$ in acidic solution at $25^\\circ\\mathrm{C}$ are given above. The reduction half-reactions for the process are listed below.\n\n$O_2(g)+4H^+(aq)+4e^-\\rightarrow2H_2O(l)$, $E^\\circ=1.23\\,\\mathrm{V}$\n\n$O_2(g)+2H^+(aq)+2e^-\\rightarrow H_2O_2(aq)$, $E^\\circ=?$\n\nWhat is the standard reduction potential for the half-reaction represented above?",
+    "group_members": [
+      "2016_Q14",
+      "2016_Q15"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2016_Q16",
@@ -5350,7 +6462,51 @@
       "raw_chunk_sha256": "10e5950f8638284e4d1bb866969292df5824f7e143bda2de684069b3f520c34c",
       "override": true
     },
-    "source_page": 27
+    "source_page": 27,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p027_img01.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2016_p027_img01.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p027_img02.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2016_p027_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p027_img03.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2016_p027_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p027_img04.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2016_p027_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions.",
+      "dimension_variance_reviewed": true,
+      "dimension_variance_note": "Official option structures have naturally different visual extents; source blocks were checked against the Chemistry option layout."
+    }
   },
   {
     "question_id": "2016_Q18",
@@ -5546,7 +6702,7 @@
     "question_number": 22,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 22-25 refer to the following information.\n\n$NaOH(aq)+HCl(aq)\\rightarrow NaCl(aq)+H_2O(l)$\n\nTo determine the concentration of a $NaOH(aq)$ solution, a student titrated a $50.0\\,\\mathrm{mL}$ sample with $0.10\\,\\mathrm{M}$ $HCl(aq)$. The titration was monitored using a pH meter, and the experimental results are plotted in the graph below.\n\nAt the point labeled R on the pH curve, which of the following ions are present in the reaction mixture at a concentration greater than $0.01\\,\\mathrm{M}$?",
+    "text": "$NaOH(aq)+HCl(aq)\\rightarrow NaCl(aq)+H_2O(l)$\n\nTo determine the concentration of a $NaOH(aq)$ solution, a student titrated a $50.0\\,\\mathrm{mL}$ sample with $0.10\\,\\mathrm{M}$ $HCl(aq)$. The titration was monitored using a pH meter, and the experimental results are plotted in the graph below.\n\nAt the point labeled R on the pH curve, which of the following ions are present in the reaction mixture at a concentration greater than $0.01\\,\\mathrm{M}$?",
     "options": {
       "A": "$Na^+$ and $Cl^-$ only.",
       "B": "$Na^+$, $Cl^-$, and $H^+$ only.",
@@ -5578,7 +6734,31 @@
       "raw_chunk_sha256": "6ddc62e7fcbd184295c1b61a3b5fac2187423a990403f6b2ee8f7f42884d9b1e",
       "override": true
     },
-    "source_page": 29
+    "source_page": 29,
+    "group_id": "2016_Q22-Q25",
+    "group_context": "Questions 22-25 refer to the following information.\n\n$NaOH(aq)+HCl(aq)\\rightarrow NaCl(aq)+H_2O(l)$\n\nTo determine the concentration of a $NaOH(aq)$ solution, a student titrated a $50.0\\,\\mathrm{mL}$ sample with $0.10\\,\\mathrm{M}$ $HCl(aq)$. The titration was monitored using a pH meter, and the experimental results are plotted in the graph below.\n\nOne student titrated the $NaOH(aq)$ with $1.0\\,\\mathrm{M}$ $HCl(aq)$ instead of $0.10\\,\\mathrm{M}$ $HCl(aq)$. How would the student's titration curve differ from the original curve?",
+    "group_members": [
+      "2016_Q22",
+      "2016_Q23",
+      "2016_Q24",
+      "2016_Q25"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p029_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2016_p029_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2016_Q23",
@@ -5621,7 +6801,31 @@
       "raw_chunk_sha256": "0b5a31b8fcdceb2c6d9fe0d7a8634d3b5b886bdd85ce7c8680eb31caea08cbe6",
       "override": true
     },
-    "source_page": 29
+    "source_page": 29,
+    "group_id": "2016_Q22-Q25",
+    "group_context": "Questions 22-25 refer to the following information.\n\n$NaOH(aq)+HCl(aq)\\rightarrow NaCl(aq)+H_2O(l)$\n\nTo determine the concentration of a $NaOH(aq)$ solution, a student titrated a $50.0\\,\\mathrm{mL}$ sample with $0.10\\,\\mathrm{M}$ $HCl(aq)$. The titration was monitored using a pH meter, and the experimental results are plotted in the graph below.\n\nOne student titrated the $NaOH(aq)$ with $1.0\\,\\mathrm{M}$ $HCl(aq)$ instead of $0.10\\,\\mathrm{M}$ $HCl(aq)$. How would the student's titration curve differ from the original curve?",
+    "group_members": [
+      "2016_Q22",
+      "2016_Q23",
+      "2016_Q24",
+      "2016_Q25"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p029_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2016_p029_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2016_Q24",
@@ -5686,7 +6890,17 @@
           ]
         ]
       }
-    }
+    },
+    "group_id": "2016_Q22-Q25",
+    "group_context": "Questions 22-25 refer to the following information.\n\n$NaOH(aq)+HCl(aq)\\rightarrow NaCl(aq)+H_2O(l)$\n\nTo determine the concentration of a $NaOH(aq)$ solution, a student titrated a $50.0\\,\\mathrm{mL}$ sample with $0.10\\,\\mathrm{M}$ $HCl(aq)$. The titration was monitored using a pH meter, and the experimental results are plotted in the graph below.\n\nOne student titrated the $NaOH(aq)$ with $1.0\\,\\mathrm{M}$ $HCl(aq)$ instead of $0.10\\,\\mathrm{M}$ $HCl(aq)$. How would the student's titration curve differ from the original curve?",
+    "group_members": [
+      "2016_Q22",
+      "2016_Q23",
+      "2016_Q24",
+      "2016_Q25"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2016_Q25",
@@ -5727,7 +6941,17 @@
       "raw_chunk_sha256": "12cffcd4f23ec12cb88630b5885504ec8a53cfc0d5324136b314e43177d128a5",
       "override": true
     },
-    "source_page": 30
+    "source_page": 30,
+    "group_id": "2016_Q22-Q25",
+    "group_context": "Questions 22-25 refer to the following information.\n\n$NaOH(aq)+HCl(aq)\\rightarrow NaCl(aq)+H_2O(l)$\n\nTo determine the concentration of a $NaOH(aq)$ solution, a student titrated a $50.0\\,\\mathrm{mL}$ sample with $0.10\\,\\mathrm{M}$ $HCl(aq)$. The titration was monitored using a pH meter, and the experimental results are plotted in the graph below.\n\nOne student titrated the $NaOH(aq)$ with $1.0\\,\\mathrm{M}$ $HCl(aq)$ instead of $0.10\\,\\mathrm{M}$ $HCl(aq)$. How would the student's titration curve differ from the original curve?",
+    "group_members": [
+      "2016_Q22",
+      "2016_Q23",
+      "2016_Q24",
+      "2016_Q25"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2016_Q26",
@@ -5812,6 +7036,50 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
       "source_page": 31,
       "raw_chunk_sha256": "7e306a2bba1adffd5a4a88d2dadc0bb7ec88839dd49477d95959fb7f86962a8b"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p031_img01.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2016_p031_img01.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p031_img02.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2016_p031_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p031_img03.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2016_p031_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p031_img04.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2016_p031_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions.",
+      "dimension_variance_reviewed": true,
+      "dimension_variance_note": "Official option structures have naturally different visual extents; source blocks were checked against the Chemistry option layout."
     }
   },
   {
@@ -5856,7 +7124,29 @@
       "override": true,
       "override_reason": "missing_from_extracted_chunks"
     },
-    "source_page": 32
+    "source_page": 32,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p032_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2016_p032_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p032_img02.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2016_p032_img02.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2016_Q29",
@@ -5867,7 +7157,7 @@
     "question_number": 29,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 29-31 refer to the investigation described below.\n\n$C_{25}H_{30}N_3^+(aq)$, which has a violet color, reacts with $OH^-(aq)$ to form $C_{25}H_{30}N_3OH(aq)$, which is colorless. The reaction is first order with respect to $C_{25}H_{30}N_3^+$ in the presence of excess $OH^-$. A $10.0\\,\\mathrm{mL}$ sample of $0.10\\,\\mathrm{M}$ $NaOH(aq)$ is mixed with a $10.0\\,\\mathrm{mL}$ sample of $2.5\\times10^{-5}\\,\\mathrm{M}$ $C_{25}H_{30}N_3^+(aq)$. A $5.0\\,\\mathrm{mL}$ sample of the mixture is quickly transferred to a clean cuvette and placed in a spectrophotometer. The data are given in the table below.\n\nApproximately how long did it take for 75 percent of the initial amount of $C_{25}H_{30}N_3^+(aq)$ to react?",
+    "text": "$C_{25}H_{30}N_3^+(aq)$, which has a violet color, reacts with $OH^-(aq)$ to form $C_{25}H_{30}N_3OH(aq)$, which is colorless. The reaction is first order with respect to $C_{25}H_{30}N_3^+$ in the presence of excess $OH^-$. A $10.0\\,\\mathrm{mL}$ sample of $0.10\\,\\mathrm{M}$ $NaOH(aq)$ is mixed with a $10.0\\,\\mathrm{mL}$ sample of $2.5\\times10^{-5}\\,\\mathrm{M}$ $C_{25}H_{30}N_3^+(aq)$. A $5.0\\,\\mathrm{mL}$ sample of the mixture is quickly transferred to a clean cuvette and placed in a spectrophotometer. The data are given in the table below.\n\nApproximately how long did it take for 75 percent of the initial amount of $C_{25}H_{30}N_3^+(aq)$ to react?",
     "options": {
       "A": "75 s",
       "B": "225 s",
@@ -5951,7 +7241,16 @@
           ]
         ]
       }
-    }
+    },
+    "group_id": "2016_Q29-Q31",
+    "group_context": "Questions 29-31 refer to the investigation described below.\n\n$C_{25}H_{30}N_3^+(aq)$, which has a violet color, reacts with $OH^-(aq)$ to form $C_{25}H_{30}N_3OH(aq)$, which is colorless. The reaction is first order with respect to $C_{25}H_{30}N_3^+$ in the presence of excess $OH^-$. A $10.0\\,\\mathrm{mL}$ sample of $0.10\\,\\mathrm{M}$ $NaOH(aq)$ is mixed with a $10.0\\,\\mathrm{mL}$ sample of $2.5\\times10^{-5}\\,\\mathrm{M}$ $C_{25}H_{30}N_3^+(aq)$. A $5.0\\,\\mathrm{mL}$ sample of the mixture is quickly transferred to a clean cuvette and placed in a spectrophotometer. The data are given in the table below.\n\nApproximately how long did it take for 75 percent of the initial amount of $C_{25}H_{30}N_3^+(aq)$ to react?",
+    "group_members": [
+      "2016_Q29",
+      "2016_Q30",
+      "2016_Q31"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2016_Q30",
@@ -5992,7 +7291,16 @@
       "raw_chunk_sha256": "9d7281e85b05ccf273d5b2fac6d5b057818af257cb22504f0e92ff58cdf3377a",
       "override": true
     },
-    "source_page": 33
+    "source_page": 33,
+    "group_id": "2016_Q29-Q31",
+    "group_context": "Questions 29-31 refer to the investigation described below.\n\n$C_{25}H_{30}N_3^+(aq)$, which has a violet color, reacts with $OH^-(aq)$ to form $C_{25}H_{30}N_3OH(aq)$, which is colorless. The reaction is first order with respect to $C_{25}H_{30}N_3^+$ in the presence of excess $OH^-$. A $10.0\\,\\mathrm{mL}$ sample of $0.10\\,\\mathrm{M}$ $NaOH(aq)$ is mixed with a $10.0\\,\\mathrm{mL}$ sample of $2.5\\times10^{-5}\\,\\mathrm{M}$ $C_{25}H_{30}N_3^+(aq)$. A $5.0\\,\\mathrm{mL}$ sample of the mixture is quickly transferred to a clean cuvette and placed in a spectrophotometer. The data are given in the table below.\n\nApproximately how long did it take for 75 percent of the initial amount of $C_{25}H_{30}N_3^+(aq)$ to react?",
+    "group_members": [
+      "2016_Q29",
+      "2016_Q30",
+      "2016_Q31"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2016_Q31",
@@ -6035,7 +7343,30 @@
       "raw_chunk_sha256": "92f346e620cc2908609e5136ce23eb697467f1a9a081705454ca5757342b69bc",
       "override": true
     },
-    "source_page": 34
+    "source_page": 34,
+    "group_id": "2016_Q29-Q31",
+    "group_context": "Questions 29-31 refer to the investigation described below.\n\n$C_{25}H_{30}N_3^+(aq)$, which has a violet color, reacts with $OH^-(aq)$ to form $C_{25}H_{30}N_3OH(aq)$, which is colorless. The reaction is first order with respect to $C_{25}H_{30}N_3^+$ in the presence of excess $OH^-$. A $10.0\\,\\mathrm{mL}$ sample of $0.10\\,\\mathrm{M}$ $NaOH(aq)$ is mixed with a $10.0\\,\\mathrm{mL}$ sample of $2.5\\times10^{-5}\\,\\mathrm{M}$ $C_{25}H_{30}N_3^+(aq)$. A $5.0\\,\\mathrm{mL}$ sample of the mixture is quickly transferred to a clean cuvette and placed in a spectrophotometer. The data are given in the table below.\n\nApproximately how long did it take for 75 percent of the initial amount of $C_{25}H_{30}N_3^+(aq)$ to react?",
+    "group_members": [
+      "2016_Q29",
+      "2016_Q30",
+      "2016_Q31"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p034_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2016_p034_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2016_Q32",
@@ -6187,15 +7518,17 @@
     "question_number": 35,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "The photoelectron spectra of the 1 s electrons of\ntwo isoelectronic species, $Ca$ with a $+2$ charge and A r , are shown above. Which of the following correctly identifies the species associated with peak X and provides a valid justification?",
+    "text": "The photoelectron spectra of the $1s$ electrons of two isoelectronic species, $Ca^{2+}$ and $Ar$, are shown above. Which of the following correctly identifies the species associated with peak X and provides a valid justification?",
     "options": {
-      "A": "A r, because it has completely filled energy\nlevels",
-      "B": "A r, because its radius is smaller than the\nradius of $Ca$ with a $+2$ charge",
-      "C": "$Ca$ with a $+2$ charge , because its nuclear mass is greater than\nthat of A r",
-      "D": "$Ca$ with a $+2$ charge , because its nucleus has two more\nprotons than the nucleus of A r has"
+      "A": "$Ar$, because it has completely filled energy levels",
+      "B": "$Ar$, because its radius is smaller than the radius of $Ca^{2+}$",
+      "C": "$Ca^{2+}$, because its nuclear mass is greater than that of $Ar$",
+      "D": "$Ca^{2+}$, because its nucleus has two more protons than the nucleus of $Ar$ has"
     },
     "answer": "D",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/chemistry/2016/2016_p036_img01.png"
+    ],
     "primary_unit": "U8",
     "unit": "U8",
     "unit_name": "Acids and Bases",
@@ -6215,6 +7548,24 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
       "source_page": 36,
       "raw_chunk_sha256": "637804b0975b46fa633b169f2e78c004dc31067ef3e235cf342723365c4c3c06"
+    },
+    "source_review": {
+      "status": "PASS",
+      "reason": "Recovered from 2016 workspace image_blocks and bound to the PES prompt visual."
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p036_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2016_p036_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -6265,7 +7616,7 @@
     "question_number": 37,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 37-39 refer to the following information.\n\nWhen water is added to a mixture of $Na_2O_2(s)$ and $S(s)$, a redox reaction occurs:\n\n$2Na_2O_2(s)+S(s)+2H_2O(l)\\rightarrow4NaOH(aq)+SO_2(aq)$\n\n$\\Delta H^\\circ_{298}=-610\\,\\mathrm{kJ/mol_{rxn}}$ and $\\Delta S^\\circ_{298}=-7.3\\,\\mathrm{J/(K\\cdot mol_{rxn})}$.\n\nTwo trials are run using excess water. In the first trial, $7.8\\,\\mathrm{g}$ of $Na_2O_2(s)$ and $3.2\\,\\mathrm{g}$ of $S(s)$ are mixed. In the second trial, $7.8\\,\\mathrm{g}$ of $Na_2O_2(s)$ and $6.4\\,\\mathrm{g}$ of $S(s)$ are mixed. The reactants react as completely as possible. Both trials yield the same amount of $SO_2(aq)$. Which of the following identifies the limiting reactant and the heat released, q, for the two trials at 298 K?",
+    "text": "When water is added to a mixture of $Na_2O_2(s)$ and $S(s)$, a redox reaction occurs:\n\n$2Na_2O_2(s)+S(s)+2H_2O(l)\\rightarrow4NaOH(aq)+SO_2(aq)$\n\n$\\Delta H^\\circ_{298}=-610\\,\\mathrm{kJ/mol_{rxn}}$ and $\\Delta S^\\circ_{298}=-7.3\\,\\mathrm{J/(K\\cdot mol_{rxn})}$.\n\nTwo trials are run using excess water. In the first trial, $7.8\\,\\mathrm{g}$ of $Na_2O_2(s)$ and $3.2\\,\\mathrm{g}$ of $S(s)$ are mixed. In the second trial, $7.8\\,\\mathrm{g}$ of $Na_2O_2(s)$ and $6.4\\,\\mathrm{g}$ of $S(s)$ are mixed. The reactants react as completely as possible. Both trials yield the same amount of $SO_2(aq)$. Which of the following identifies the limiting reactant and the heat released, q, for the two trials at 298 K?",
     "options": {
       "A": "S | $30.0\\,\\mathrm{kJ}$",
       "B": "S | $61\\,\\mathrm{kJ}$",
@@ -6319,7 +7670,16 @@
           "$61\\,\\mathrm{kJ}$"
         ]
       }
-    }
+    },
+    "group_id": "2016_Q37-Q39",
+    "group_context": "Questions 37-39 refer to the following information.\n\nWhen water is added to a mixture of $Na_2O_2(s)$ and $S(s)$, a redox reaction occurs:\n\n$2Na_2O_2(s)+S(s)+2H_2O(l)\\rightarrow4NaOH(aq)+SO_2(aq)$\n\n$\\Delta H^\\circ_{298}=-610\\,\\mathrm{kJ/mol_{rxn}}$ and $\\Delta S^\\circ_{298}=-7.3\\,\\mathrm{J/(K\\cdot mol_{rxn})}$.\n\nTwo trials are run using excess water. In the first trial, $7.8\\,\\mathrm{g}$ of $Na_2O_2(s)$ and $3.2\\,\\mathrm{g}$ of $S(s)$ are mixed. In the second trial, $7.8\\,\\mathrm{g}$ of $Na_2O_2(s)$ and $6.4\\,\\mathrm{g}$ of $S(s)$ are mixed. The reactants react as completely as possible. Both trials yield the same amount of $SO_2(aq)$. Which of the following identifies the limiting reactant and the heat released, q, for the two trials at 298 K?",
+    "group_members": [
+      "2016_Q37",
+      "2016_Q38",
+      "2016_Q39"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2016_Q38",
@@ -6360,7 +7720,16 @@
       "raw_chunk_sha256": "9d627cdff31c7d640fed7d4d60408bf609295f115a11ef825ca18f2c7e820252",
       "override": true
     },
-    "source_page": 37
+    "source_page": 37,
+    "group_id": "2016_Q37-Q39",
+    "group_context": "Questions 37-39 refer to the following information.\n\nWhen water is added to a mixture of $Na_2O_2(s)$ and $S(s)$, a redox reaction occurs:\n\n$2Na_2O_2(s)+S(s)+2H_2O(l)\\rightarrow4NaOH(aq)+SO_2(aq)$\n\n$\\Delta H^\\circ_{298}=-610\\,\\mathrm{kJ/mol_{rxn}}$ and $\\Delta S^\\circ_{298}=-7.3\\,\\mathrm{J/(K\\cdot mol_{rxn})}$.\n\nTwo trials are run using excess water. In the first trial, $7.8\\,\\mathrm{g}$ of $Na_2O_2(s)$ and $3.2\\,\\mathrm{g}$ of $S(s)$ are mixed. In the second trial, $7.8\\,\\mathrm{g}$ of $Na_2O_2(s)$ and $6.4\\,\\mathrm{g}$ of $S(s)$ are mixed. The reactants react as completely as possible. Both trials yield the same amount of $SO_2(aq)$. Which of the following identifies the limiting reactant and the heat released, q, for the two trials at 298 K?",
+    "group_members": [
+      "2016_Q37",
+      "2016_Q38",
+      "2016_Q39"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2016_Q39",
@@ -6401,7 +7770,16 @@
       "raw_chunk_sha256": "537825c92432d3a2557558207bab8fc048b5f25025a33cdc104157f14e4c4d31",
       "override": true
     },
-    "source_page": 37
+    "source_page": 37,
+    "group_id": "2016_Q37-Q39",
+    "group_context": "Questions 37-39 refer to the following information.\n\nWhen water is added to a mixture of $Na_2O_2(s)$ and $S(s)$, a redox reaction occurs:\n\n$2Na_2O_2(s)+S(s)+2H_2O(l)\\rightarrow4NaOH(aq)+SO_2(aq)$\n\n$\\Delta H^\\circ_{298}=-610\\,\\mathrm{kJ/mol_{rxn}}$ and $\\Delta S^\\circ_{298}=-7.3\\,\\mathrm{J/(K\\cdot mol_{rxn})}$.\n\nTwo trials are run using excess water. In the first trial, $7.8\\,\\mathrm{g}$ of $Na_2O_2(s)$ and $3.2\\,\\mathrm{g}$ of $S(s)$ are mixed. In the second trial, $7.8\\,\\mathrm{g}$ of $Na_2O_2(s)$ and $6.4\\,\\mathrm{g}$ of $S(s)$ are mixed. The reactants react as completely as possible. Both trials yield the same amount of $SO_2(aq)$. Which of the following identifies the limiting reactant and the heat released, q, for the two trials at 298 K?",
+    "group_members": [
+      "2016_Q37",
+      "2016_Q38",
+      "2016_Q39"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2016_Q40",
@@ -6469,6 +7847,48 @@
           ]
         ]
       }
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p038_img01.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2016_p038_img01.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p038_img02.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2016_p038_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p038_img03.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2016_p038_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p038_img04.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2016_p038_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -6649,6 +8069,28 @@
           "Positive"
         ]
       }
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2016/2016_p039_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2016_p039_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2016/2016_p039_img02.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2016_p039_img02.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -6688,7 +8130,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
       "source_page": 40,
       "raw_chunk_sha256": "94cb0302886a2f519669cf7217cb0f579cf556c790100cde181114669fef1d1e"
-    }
+    },
+    "group_id": "2016_Q44-Q47",
+    "group_context": "Questions 44-47 refer to the following reaction.\n\n$CH_3OH(g)\\rightarrow CO(g)+2H_2(g)$, $\\Delta H^\\circ=+91\\,\\mathrm{kJ/mol_{rxn}}$\n\nWhich of the following statements about the bonds in the reactants and products is most accurate?",
+    "group_members": [
+      "2016_Q44",
+      "2016_Q45",
+      "2016_Q46",
+      "2016_Q47"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2016_Q45",
@@ -6727,7 +8179,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
       "source_page": 40,
       "raw_chunk_sha256": "a39c119466ace422a800c5955c61061f6c01b01439abd238d8682801f51d9570"
-    }
+    },
+    "group_id": "2016_Q44-Q47",
+    "group_context": "Questions 44-47 refer to the following reaction.\n\n$CH_3OH(g)\\rightarrow CO(g)+2H_2(g)$, $\\Delta H^\\circ=+91\\,\\mathrm{kJ/mol_{rxn}}$\n\nWhich of the following statements about the bonds in the reactants and products is most accurate?",
+    "group_members": [
+      "2016_Q44",
+      "2016_Q45",
+      "2016_Q46",
+      "2016_Q47"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2016_Q46",
@@ -6766,7 +8228,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
       "source_page": 40,
       "raw_chunk_sha256": "666286ee8bc101c355337a4fefe9dfd6a90974c47ab2b87308b2bcf1888b2a30"
-    }
+    },
+    "group_id": "2016_Q44-Q47",
+    "group_context": "Questions 44-47 refer to the following reaction.\n\n$CH_3OH(g)\\rightarrow CO(g)+2H_2(g)$, $\\Delta H^\\circ=+91\\,\\mathrm{kJ/mol_{rxn}}$\n\nWhich of the following statements about the bonds in the reactants and products is most accurate?",
+    "group_members": [
+      "2016_Q44",
+      "2016_Q45",
+      "2016_Q46",
+      "2016_Q47"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2016_Q47",
@@ -6807,7 +8279,17 @@
       "raw_chunk_sha256": "fc23c23e55622553f4662a54b16067ce076f275a1fc3026c41fa1f0f651710de",
       "override": true
     },
-    "source_page": 40
+    "source_page": 40,
+    "group_id": "2016_Q44-Q47",
+    "group_context": "Questions 44-47 refer to the following reaction.\n\n$CH_3OH(g)\\rightarrow CO(g)+2H_2(g)$, $\\Delta H^\\circ=+91\\,\\mathrm{kJ/mol_{rxn}}$\n\nWhich of the following statements about the bonds in the reactants and products is most accurate?",
+    "group_members": [
+      "2016_Q44",
+      "2016_Q45",
+      "2016_Q46",
+      "2016_Q47"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2016_Q48",
@@ -6999,6 +8481,56 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 20,
       "raw_chunk_sha256": "4a8fa072f19ff5ef3b0ae94294ce4efc43297fd5ac5fc01ef5a95904e3bae129"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2018/2018_p020_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": "2018_p020_img01.png",
+          "binding": "prompt_context_precedes_option_images",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2018/2018_p020_img02.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2018_p020_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2018/2018_p020_img03.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2018_p020_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2018/2018_p020_img04.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2018_p020_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2018/2018_p020_img05.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2018_p020_img05.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -7180,6 +8712,20 @@
       "source_page": 22,
       "raw_chunk_sha256": "e068fe9428874499774aa8429ae2107f935dfa2076f65cf347c5415d29c71d5c",
       "override": true
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2018/2018_Q04_compound_table.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2018_Q04_compound_table.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -7191,12 +8737,12 @@
     "question_number": 5,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "A\n$1.0\\,\\mathrm{L}$ sample of a pure gas is found to have a lower pressure than that predicted by the ideal gas law. The best explanation for the observation is that the molecules of the gas",
+    "text": "$1.0\\,\\mathrm{L}$ sample of a pure gas is found to have a lower pressure than that predicted by the ideal gas law. The best explanation for the observation is that the molecules of the gas",
     "options": {
       "A": "have a combined volume that is too large to be considered negligible when compared to the volume of the container",
       "B": "have a low molecular mass and therefore do not strike the container walls with as much force as expected",
       "C": "are attracted to each other and do not exert as much force on the container walls as they would if they had no mutual attractions",
-      "D": "are attracted to the sides of the container and strike the container walls with more force than expected T"
+      "D": "are attracted to the sides of the container and strike the container walls with more force than expected"
     },
     "answer": "C",
     "image_paths": [],
@@ -7261,6 +8807,20 @@
       "source_page": 23,
       "raw_chunk_sha256": "5ec5c3dc7d0e179ed37556b0827abb67e3fafbf8836699dcc6ae89f5ea7fe258",
       "override": true
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2018/2018_Q06_vessels.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2018_Q06_vessels.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -7343,6 +8903,20 @@
       "source_page": 25,
       "raw_chunk_sha256": "7c2dbd794f0760503661b795a62cbc60319da84a2152c0751d570fedbb7537f5",
       "override": true
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2018/2018_p025_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2018_p025_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -7499,12 +9073,12 @@
     "question_number": 12,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "The equation above represents an elementary step in a chemical reaction. Which of the following is the correct expression for the rate law of the elementary step?\nat e equal s , lower case k times the molar concentration of $NO$ B r, raised to the one half power",
+    "text": "$2NOBr(g)\\rightarrow2NO(g)+Br_2(g)$\n\nThe equation above represents an elementary step in a chemical reaction. Which of the following is the correct expression for the rate law of the elementary step?",
     "options": {
-      "A": "R",
-      "B": "Rate eq u als, lowercase k times the molar concentration of $NO$ B r",
-      "C": "Rate eq u als, l owercase k times the molar concentration of $NO$ B r, squared",
-      "D": "Rate eq u als, lowercase k times the molar concentration of $NO$, squared, times the molar concentration of B r 2"
+      "A": "$rate=k[NOBr]^{1/2}$",
+      "B": "$rate=k[NOBr]$",
+      "C": "$rate=k[NOBr]^2$",
+      "D": "$rate=k[NO]^2[Br_2]$"
     },
     "answer": "C",
     "image_paths": [],
@@ -7767,6 +9341,50 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 31,
       "raw_chunk_sha256": "c7d90d37d491287000d6741167d491c28615d846f912dfb46cd1a3f899dbb8cb"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2018/2018_p031_img01.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2018_p031_img01.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2018/2018_p031_img02.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2018_p031_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2018/2018_p031_img03.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2018_p031_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2018/2018_p031_img04.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2018_p031_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions.",
+      "dimension_variance_reviewed": true,
+      "dimension_variance_note": "Official option structures have naturally different visual extents; source blocks were checked against the Chemistry option layout."
     }
   },
   {
@@ -8098,6 +9716,20 @@
       "source_page": 35,
       "raw_chunk_sha256": "08788d525b0e6b1a45571382a82a8b6e93758e0cf7efecb616e71b73b8f2a68b",
       "override": true
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2018/2018_Q25_solid_diagram.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2018_Q25_solid_diagram.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -8157,7 +9789,9 @@
       "D": "It cannot be determined unless the pressure of each sample is known."
     },
     "answer": "A",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/chemistry/2018/2018_p035_img02.png"
+    ],
     "primary_unit": "U3",
     "unit": "U3",
     "unit_name": "Intermolecular Forces and Properties",
@@ -8177,6 +9811,20 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 35,
       "raw_chunk_sha256": "1ce3f8354649ecea436ec8c06395f16063457f9e9e850d5d5ad80a88a0d5909f"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2018/2018_p035_img02.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2018_p035_img02.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -8712,8 +10360,8 @@
     "type": "MCQ",
     "text": "A student studied the kinetics of the reaction represented above by measuring the concentration of the reactant, X, over time. The data are plotted in the graph below.\nWhich of the following procedures will allow the student to determine the rate constant, k , for the reaction?",
     "options": {
-      "A": "Plot t he natural log of the molar concentration of X versus time and determine the magnitude of the slope.",
-      "B": "Plot t he fraction 1 over the molar concentration of X versus time and determine the magnitude of\nthe slope.",
+      "A": "Plot $\\ln[X]$ versus time and determine the magnitude of the slope.",
+      "B": "Plot $1/[X]$ versus time and determine the magnitude of the slope.",
       "C": "Run another trial of the experiment with a different initial concentration, plot the data on the same graph, and see where the curves intersect.",
       "D": "Run another trial of the experiment at a different temperature, plot the data on the same graph, and see where the curves have the same slope."
     },
@@ -8740,6 +10388,20 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 40,
       "raw_chunk_sha256": "96c9cff2f3616bd4bc49ff6931e0cf81f983a2406e03f7440be3a8099180b084"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2018/2018_p040_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2018_p040_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -9018,6 +10680,21 @@
       "source_page": 43,
       "raw_chunk_sha256": "ea6aed03e3a03580799c8657f7d686538417f1d4940a5d668d037a34ff7fab7d",
       "override": true
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2018/2018_Q47_collision_orientations.png",
+          "option": "A-D",
+          "asset_type": "combined_option_image",
+          "source_block": "2018_Q47_collision_orientations.png",
+          "binding": "combined_labeled_option_region",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -9103,6 +10780,48 @@
       "source_page": 44,
       "raw_chunk_sha256": "ea8f63bbe4624a7a89926fcc619b13c649d610d4c01b66cf49d4cfb93047021c",
       "override": true
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2018/2018_p044_img01.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2018_p044_img01.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2018/2018_p044_img02.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2018_p044_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2018/2018_p044_img03.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2018_p044_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2018/2018_p044_img04.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2018_p044_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -9397,7 +11116,21 @@
       "raw_chunk_sha256": "ee9b91d519ae48cadfb826f048c9cfb565b91a5f1b25a8aa8228104e3de67c8f",
       "override": true
     },
-    "source_page": 15
+    "source_page": 15,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p016_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p016_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q06",
@@ -9588,7 +11321,49 @@
       "raw_chunk_sha256": "f1419f4f6494805dd7a8be07bae36075f6ba63ec32fe2603c838c6334f435377",
       "override": true
     },
-    "source_page": 16
+    "source_page": 16,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p017_img01.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2019_p017_img01.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2019/2019_p017_img02.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2019_p017_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2019/2019_p017_img03.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2019_p017_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2019/2019_p017_img04.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2019_p017_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q10",
@@ -9599,7 +11374,7 @@
     "question_number": 10,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 10-11 refer to the following information.\n\nStandard reduction potentials for the half-reactions associated with the electrochemical cell shown above are given in the table below. Which of the following is the net ionic equation for the overall reaction that occurs as the cell operates?",
+    "text": "Standard reduction potentials for the half-reactions associated with the electrochemical cell shown above are given in the table below. Which of the following is the net ionic equation for the overall reaction that occurs as the cell operates?",
     "options": {
       "A": "$Ag(s)+Zn^{2+}(aq)\\rightarrow Ag^{2+}(aq)+Zn(s)$",
       "B": "$Ag^+(aq)+Zn^{2+}(aq)+3e^-\\rightarrow AgZn(s)$",
@@ -9649,6 +11424,28 @@
           ]
         ]
       }
+    },
+    "group_id": "2019_Q10-Q11",
+    "group_context": "Questions 10-11 refer to the following information.\n\nStandard reduction potentials for the half-reactions associated with the electrochemical cell shown above are given in the table below. Which of the following is the net ionic equation for the overall reaction that occurs as the cell operates?",
+    "group_members": [
+      "2019_Q10",
+      "2019_Q11"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p018_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p018_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -9710,6 +11507,28 @@
           ]
         ]
       }
+    },
+    "group_id": "2019_Q10-Q11",
+    "group_context": "Questions 10-11 refer to the following information.\n\nStandard reduction potentials for the half-reactions associated with the electrochemical cell shown above are given in the table below. Which of the following is the net ionic equation for the overall reaction that occurs as the cell operates?",
+    "group_members": [
+      "2019_Q10",
+      "2019_Q11"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p018_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p018_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -9871,7 +11690,21 @@
       "raw_chunk_sha256": "d5ddca5ce761b55adb6d8ad3620e48a781a9b2b069cca3e8e61e55a4e3a1c9ad",
       "override": true
     },
-    "source_page": 20
+    "source_page": 20,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p021_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p021_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q15",
@@ -9942,7 +11775,18 @@
           ]
         ]
       }
-    }
+    },
+    "group_id": "2019_Q15-Q19",
+    "group_context": "Questions 15-19 are based on the information in the table below. In an experiment, $30.0\\,\\mathrm{g}$ of ethane and $30.0\\,\\mathrm{g}$ of propanol are placed in separate reaction vessels. Each compound undergoes complete combustion with excess $O_2(g)$. Which of the following best compares the quantity of heat released in each combustion reaction?",
+    "group_members": [
+      "2019_Q15",
+      "2019_Q16",
+      "2019_Q17",
+      "2019_Q18",
+      "2019_Q19"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2019_Q16",
@@ -10013,7 +11857,18 @@
           ]
         ]
       }
-    }
+    },
+    "group_id": "2019_Q15-Q19",
+    "group_context": "Questions 15-19 are based on the information in the table below. In an experiment, $30.0\\,\\mathrm{g}$ of ethane and $30.0\\,\\mathrm{g}$ of propanol are placed in separate reaction vessels. Each compound undergoes complete combustion with excess $O_2(g)$. Which of the following best compares the quantity of heat released in each combustion reaction?",
+    "group_members": [
+      "2019_Q15",
+      "2019_Q16",
+      "2019_Q17",
+      "2019_Q18",
+      "2019_Q19"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2019_Q17",
@@ -10057,7 +11912,40 @@
       "raw_chunk_sha256": "773ef46430d0885c6b1dedaa103b55e0a87073ffaec12da3be14cd4dcb8ab824",
       "override": true
     },
-    "source_page": 22
+    "source_page": 22,
+    "group_id": "2019_Q15-Q19",
+    "group_context": "Questions 15-19 are based on the information in the table below. In an experiment, $30.0\\,\\mathrm{g}$ of ethane and $30.0\\,\\mathrm{g}$ of propanol are placed in separate reaction vessels. Each compound undergoes complete combustion with excess $O_2(g)$. Which of the following best compares the quantity of heat released in each combustion reaction?",
+    "group_members": [
+      "2019_Q15",
+      "2019_Q16",
+      "2019_Q17",
+      "2019_Q18",
+      "2019_Q19"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p022_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p022_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2019/2019_p022_img02.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p022_img02.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q18",
@@ -10122,7 +12010,18 @@
           ]
         ]
       }
-    }
+    },
+    "group_id": "2019_Q15-Q19",
+    "group_context": "Questions 15-19 are based on the information in the table below. In an experiment, $30.0\\,\\mathrm{g}$ of ethane and $30.0\\,\\mathrm{g}$ of propanol are placed in separate reaction vessels. Each compound undergoes complete combustion with excess $O_2(g)$. Which of the following best compares the quantity of heat released in each combustion reaction?",
+    "group_members": [
+      "2019_Q15",
+      "2019_Q16",
+      "2019_Q17",
+      "2019_Q18",
+      "2019_Q19"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2019_Q19",
@@ -10181,7 +12080,18 @@
           ]
         ]
       }
-    }
+    },
+    "group_id": "2019_Q15-Q19",
+    "group_context": "Questions 15-19 are based on the information in the table below. In an experiment, $30.0\\,\\mathrm{g}$ of ethane and $30.0\\,\\mathrm{g}$ of propanol are placed in separate reaction vessels. Each compound undergoes complete combustion with excess $O_2(g)$. Which of the following best compares the quantity of heat released in each combustion reaction?",
+    "group_members": [
+      "2019_Q15",
+      "2019_Q16",
+      "2019_Q17",
+      "2019_Q18",
+      "2019_Q19"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2019_Q20",
@@ -10310,7 +12220,57 @@
       "raw_chunk_sha256": "675856310c873fa577dc1b45b2779beba32e96b71df4eeb37ef213cf75ac1771",
       "override": true
     },
-    "source_page": 23
+    "source_page": 23,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p024_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": "2019_p024_img01.png",
+          "binding": "prompt_context_precedes_option_images",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2019/2019_p024_img02.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "source_block": "2019_p024_img02.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2019/2019_p024_img03.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "source_block": "2019_p024_img03.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2019/2019_p024_img04.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "source_block": "2019_p024_img04.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/chemistry/2019/2019_p024_img05.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "source_block": "2019_p024_img05.png",
+          "binding": "option_label_nearest_image",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q23",
@@ -10394,7 +12354,21 @@
       "raw_chunk_sha256": "d3444d98a7254d8a284cd8b222b2d91b0aaa7178b8c9c8db5ee6196966957aec",
       "override": true
     },
-    "source_page": 24
+    "source_page": 24,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p025_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p025_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q25",
@@ -10437,7 +12411,21 @@
       "raw_chunk_sha256": "0e00bf1e9790b1e9d15920a4c28ebde1745b56cd0263a92048e1d3f401428e9a",
       "override": true
     },
-    "source_page": 24
+    "source_page": 24,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p025_img02.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p025_img02.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q26",
@@ -10448,7 +12436,7 @@
     "question_number": 26,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 26-28 are based on the following information.\n\nThe structure of haloacetic acids, $XCH_2COOH$ (where $X$ is either F, Cl, Br, or I), is shown above. The dissociation constants and molar masses of four haloacetic acids are listed in the table below.\n\nWhich compound, chloroacetic acid or iodoacetic acid, most likely has the lower boiling point, and why?",
+    "text": "The structure of haloacetic acids, $XCH_2COOH$ (where $X$ is either F, Cl, Br, or I), is shown above. The dissociation constants and molar masses of four haloacetic acids are listed in the table below.\n\nWhich compound, chloroacetic acid or iodoacetic acid, most likely has the lower boiling point, and why?",
     "options": {
       "A": "Chloroacetic acid, because the London dispersion forces among its molecules are weaker.",
       "B": "Chloroacetic acid, because the dipole-dipole forces among its molecules are weaker.",
@@ -10516,6 +12504,29 @@
           ]
         ]
       }
+    },
+    "group_id": "2019_Q26-Q28",
+    "group_context": "Questions 26-28 are based on the following information.\n\nThe structure of haloacetic acids, $XCH_2COOH$ (where $X$ is either F, Cl, Br, or I), is shown above. The dissociation constants and molar masses of four haloacetic acids are listed in the table below.\n\nAn aqueous solution contains small but equal concentrations of both chloroacetic and fluoroacetic acids. Which statement comparing the percent ionizations of the two acids in the solution is true?",
+    "group_members": [
+      "2019_Q26",
+      "2019_Q27",
+      "2019_Q28"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p026_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p026_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -10595,6 +12606,29 @@
           ]
         ]
       }
+    },
+    "group_id": "2019_Q26-Q28",
+    "group_context": "Questions 26-28 are based on the following information.\n\nThe structure of haloacetic acids, $XCH_2COOH$ (where $X$ is either F, Cl, Br, or I), is shown above. The dissociation constants and molar masses of four haloacetic acids are listed in the table below.\n\nAn aqueous solution contains small but equal concentrations of both chloroacetic and fluoroacetic acids. Which statement comparing the percent ionizations of the two acids in the solution is true?",
+    "group_members": [
+      "2019_Q26",
+      "2019_Q27",
+      "2019_Q28"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p026_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p026_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -10650,7 +12684,16 @@
           ]
         ]
       }
-    }
+    },
+    "group_id": "2019_Q26-Q28",
+    "group_context": "Questions 26-28 are based on the following information.\n\nThe structure of haloacetic acids, $XCH_2COOH$ (where $X$ is either F, Cl, Br, or I), is shown above. The dissociation constants and molar masses of four haloacetic acids are listed in the table below.\n\nAn aqueous solution contains small but equal concentrations of both chloroacetic and fluoroacetic acids. Which statement comparing the percent ionizations of the two acids in the solution is true?",
+    "group_members": [
+      "2019_Q26",
+      "2019_Q27",
+      "2019_Q28"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2019_Q29",
@@ -10922,7 +12965,21 @@
       "raw_chunk_sha256": "d7d1ef130ec972849ce2f34a7d477b964b6295a83622104d04096845d66f0c39",
       "override": true
     },
-    "source_page": 26
+    "source_page": 26,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p027_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p027_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q35",
@@ -10933,7 +12990,7 @@
     "question_number": 35,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 35-38 refer to the following information.\n\nAn experiment is performed to measure the mass percent of $CaCO_3(s)$ in eggshells. Five different samples of $CaCO_3(s)$ of known mass react with an excess of $2.0\\,\\mathrm{M}\\ HCl(aq)$ in identical sealed, rigid reaction vessels. The pressure of the gas produced is measured with a pressure gauge attached to the reaction vessel. Since the reaction is exothermic, the reaction system is cooled to its original temperature before the pressure is recorded. The experimental data are used to create the calibration line below. The experiment is repeated with an eggshell sample, and the experimental data are recorded in the table below.\n\nWhich of the following equations best represents the species that react and the species that are produced when $CaCO_3(s)$ and $HCl(aq)$ are combined?",
+    "text": "An experiment is performed to measure the mass percent of $CaCO_3(s)$ in eggshells. Five different samples of $CaCO_3(s)$ of known mass react with an excess of $2.0\\,\\mathrm{M}\\ HCl(aq)$ in identical sealed, rigid reaction vessels. The pressure of the gas produced is measured with a pressure gauge attached to the reaction vessel. Since the reaction is exothermic, the reaction system is cooled to its original temperature before the pressure is recorded. The experimental data are used to create the calibration line below. The experiment is repeated with an eggshell sample, and the experimental data are recorded in the table below.\n\nWhich of the following equations best represents the species that react and the species that are produced when $CaCO_3(s)$ and $HCl(aq)$ are combined?",
     "options": {
       "A": "$2H^+(aq)+CaCO_3(s)\\rightarrow Ca^{2+}(aq)+CO_3^{2-}(aq)+H_2(g)$",
       "B": "$2H^+(aq)+CaCO_3(s)\\rightarrow Ca^{2+}(aq)+H_2O(l)+CO_2(g)$",
@@ -10987,6 +13044,30 @@
           ]
         ]
       }
+    },
+    "group_id": "2019_Q35-Q38",
+    "group_context": "Questions 35-38 refer to the following information.\n\nAn experiment is performed to measure the mass percent of $CaCO_3(s)$ in eggshells. Five different samples of $CaCO_3(s)$ of known mass react with an excess of $2.0\\,\\mathrm{M}\\ HCl(aq)$ in identical sealed, rigid reaction vessels. The pressure of the gas produced is measured with a pressure gauge attached to the reaction vessel. Since the reaction is exothermic, the reaction system is cooled to its original temperature before the pressure is recorded. The experimental data are used to create the calibration line below. The experiment is repeated with an eggshell sample, and the experimental data are recorded in the table below.\n\nWhich of the following equations best represents the species that react and the species that are produced when $CaCO_3(s)$ and $HCl(aq)$ are combined?",
+    "group_members": [
+      "2019_Q35",
+      "2019_Q36",
+      "2019_Q37",
+      "2019_Q38"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p028_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p028_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -11052,6 +13133,30 @@
           ]
         ]
       }
+    },
+    "group_id": "2019_Q35-Q38",
+    "group_context": "Questions 35-38 refer to the following information.\n\nAn experiment is performed to measure the mass percent of $CaCO_3(s)$ in eggshells. Five different samples of $CaCO_3(s)$ of known mass react with an excess of $2.0\\,\\mathrm{M}\\ HCl(aq)$ in identical sealed, rigid reaction vessels. The pressure of the gas produced is measured with a pressure gauge attached to the reaction vessel. Since the reaction is exothermic, the reaction system is cooled to its original temperature before the pressure is recorded. The experimental data are used to create the calibration line below. The experiment is repeated with an eggshell sample, and the experimental data are recorded in the table below.\n\nWhich of the following equations best represents the species that react and the species that are produced when $CaCO_3(s)$ and $HCl(aq)$ are combined?",
+    "group_members": [
+      "2019_Q35",
+      "2019_Q36",
+      "2019_Q37",
+      "2019_Q38"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p028_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p028_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
     }
   },
   {
@@ -11095,7 +13200,31 @@
       "raw_chunk_sha256": "a1a1f5c17fd17f45ad1836c0cea8809fb2ea3e74e5cb817c0f4c4c1a3fbe6104",
       "override": true
     },
-    "source_page": 28
+    "source_page": 28,
+    "group_id": "2019_Q35-Q38",
+    "group_context": "Questions 35-38 refer to the following information.\n\nAn experiment is performed to measure the mass percent of $CaCO_3(s)$ in eggshells. Five different samples of $CaCO_3(s)$ of known mass react with an excess of $2.0\\,\\mathrm{M}\\ HCl(aq)$ in identical sealed, rigid reaction vessels. The pressure of the gas produced is measured with a pressure gauge attached to the reaction vessel. Since the reaction is exothermic, the reaction system is cooled to its original temperature before the pressure is recorded. The experimental data are used to create the calibration line below. The experiment is repeated with an eggshell sample, and the experimental data are recorded in the table below.\n\nWhich of the following equations best represents the species that react and the species that are produced when $CaCO_3(s)$ and $HCl(aq)$ are combined?",
+    "group_members": [
+      "2019_Q35",
+      "2019_Q36",
+      "2019_Q37",
+      "2019_Q38"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p028_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p028_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q38",
@@ -11136,7 +13265,17 @@
       "raw_chunk_sha256": "46e135084e3d448300fb28482184cde97c645e5a62ba3ba848b141a17b2082c9",
       "override": true
     },
-    "source_page": 28
+    "source_page": 28,
+    "group_id": "2019_Q35-Q38",
+    "group_context": "Questions 35-38 refer to the following information.\n\nAn experiment is performed to measure the mass percent of $CaCO_3(s)$ in eggshells. Five different samples of $CaCO_3(s)$ of known mass react with an excess of $2.0\\,\\mathrm{M}\\ HCl(aq)$ in identical sealed, rigid reaction vessels. The pressure of the gas produced is measured with a pressure gauge attached to the reaction vessel. Since the reaction is exothermic, the reaction system is cooled to its original temperature before the pressure is recorded. The experimental data are used to create the calibration line below. The experiment is repeated with an eggshell sample, and the experimental data are recorded in the table below.\n\nWhich of the following equations best represents the species that react and the species that are produced when $CaCO_3(s)$ and $HCl(aq)$ are combined?",
+    "group_members": [
+      "2019_Q35",
+      "2019_Q36",
+      "2019_Q37",
+      "2019_Q38"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2019_Q39",
@@ -11270,7 +13409,7 @@
     "question_number": 42,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 42-44 refer to the following.\n\nThe structural formula of the glycinium cation is shown above. Arrows indicate the $pK_a$ values for the labile protons in the molecule. What is the approximate H-O-C bond angle in the glycinium cation?",
+    "text": "The structural formula of the glycinium cation is shown above. Arrows indicate the $pK_a$ values for the labile protons in the molecule. What is the approximate H-O-C bond angle in the glycinium cation?",
     "options": {
       "A": "$180^\\circ$",
       "B": "$120^\\circ$",
@@ -11302,7 +13441,30 @@
       "raw_chunk_sha256": "ac4179f3d20c39c90f5d4bda2a5f4caa26938e339bd5aa0233dacab224a40f29",
       "override": true
     },
-    "source_page": 31
+    "source_page": 31,
+    "group_id": "2019_Q42-Q44",
+    "group_context": "Questions 42-44 refer to the following.\n\nThe structural formula of the glycinium cation is shown above. Arrows indicate the $pK_a$ values for the labile protons in the molecule. Which of the following is true about the geometry of the glycinium cation?",
+    "group_members": [
+      "2019_Q42",
+      "2019_Q43",
+      "2019_Q44"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p032_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p032_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q43",
@@ -11345,7 +13507,30 @@
       "raw_chunk_sha256": "94656908b1b2380e6055416cf15177b7f56d887f2e863a628716daaba041ff75",
       "override": true
     },
-    "source_page": 31
+    "source_page": 31,
+    "group_id": "2019_Q42-Q44",
+    "group_context": "Questions 42-44 refer to the following.\n\nThe structural formula of the glycinium cation is shown above. Arrows indicate the $pK_a$ values for the labile protons in the molecule. Which of the following is true about the geometry of the glycinium cation?",
+    "group_members": [
+      "2019_Q42",
+      "2019_Q43",
+      "2019_Q44"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p032_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p032_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q44",
@@ -11388,7 +13573,30 @@
       "raw_chunk_sha256": "7bcf9855d4ea481c89d7d1c4389fa27ca26c9bea7f18b4607585feeafb14f783",
       "override": true
     },
-    "source_page": 31
+    "source_page": 31,
+    "group_id": "2019_Q42-Q44",
+    "group_context": "Questions 42-44 refer to the following.\n\nThe structural formula of the glycinium cation is shown above. Arrows indicate the $pK_a$ values for the labile protons in the molecule. Which of the following is true about the geometry of the glycinium cation?",
+    "group_members": [
+      "2019_Q42",
+      "2019_Q43",
+      "2019_Q44"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p032_img02.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p032_img02.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q45",
@@ -11431,7 +13639,21 @@
       "raw_chunk_sha256": "0fcb22741d3878cbdc74e85eff4475bf7423ec5eff08748a22d02b1b7063a7f9",
       "override": true
     },
-    "source_page": 32
+    "source_page": 32,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p033_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p033_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q46",
@@ -11483,7 +13705,7 @@
     "question_number": 47,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "$X_2(g)+Y_2(g)\\rightleftharpoons2XY(g)$, $K_c=3.0$\n\nA mixture of $X_2(g)$, $Y_2(g)$, and $XY(g)$ is placed in a previously evacuated, rigid container and allowed to reach equilibrium at a constant temperature, as shown above. Which of the following sets of initial concentrations would lead to the formation of more product as the system moves toward equilibrium?",
+    "text": "$X_2(g)+Y_2(g)\\rightleftharpoons2XY(g)$, $K_c=3.0$\n\nA mixture of $X_2(g)$, $Y_2(g)$, and $XY(g)$ is placed in a previously evacuated, rigid container and allowed to reach equilibrium at a constant temperature. Which of the following sets of initial concentrations would lead to the formation of more product as the system moves toward equilibrium?",
     "options": {
       "A": "$[X_2]=0.40\\,\\mathrm{M}$, $[Y_2]=0.40\\,\\mathrm{M}$, $[XY]=0.20\\,\\mathrm{M}$",
       "B": "$[X_2]=0.30\\,\\mathrm{M}$, $[Y_2]=0.30\\,\\mathrm{M}$, $[XY]=0.90\\,\\mathrm{M}$",
@@ -11585,7 +13807,21 @@
       "raw_chunk_sha256": "71ceb80f8e1ec13afbc70ea0975e88309155f09e00f5bb91ce71654b34179a21",
       "override": true
     },
-    "source_page": 33
+    "source_page": 33,
+    "visual_asset_review": {
+      "status": "PASS",
+      "image_sources": [
+        {
+          "path": "images/ap/chemistry/2019/2019_p034_img01.png",
+          "asset_type": "prompt_visual",
+          "source_block": "2019_p034_img01.png",
+          "binding": "prompt_owned_image_block",
+          "tight_crop": true,
+          "review_status": "PASS"
+        }
+      ],
+      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    }
   },
   {
     "question_id": "2019_Q49",
