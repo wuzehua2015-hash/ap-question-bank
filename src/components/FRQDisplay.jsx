@@ -652,6 +652,9 @@ export function RubricDisplay({ rubric, variant }) {
     isOfficialWholeRubric(points[0], rubric)
   const solutionOutline = String(rubric.solution_outline || '').trim()
   const referenceSolution = String(rubric.reference_solution || '').trim()
+  const isCspCreateRubric = rubric.rubric_type === 'csp_create_written_response'
+  const outlineTitle = isCspCreateRubric ? 'Scoring Approach' : 'Correct Answer / Solution Outline'
+  const rubricTitle = isCspCreateRubric ? 'Written-Response Scoring Criteria' : 'Scoring Rubric'
 
   if (variant === 'pdf') {
     return (
@@ -661,7 +664,7 @@ export function RubricDisplay({ rubric, variant }) {
           marginBottom: '8px', paddingBottom: '4px',
           borderBottom: '1px solid #dbeafe',
         }}>
-          Scoring Rubric ({rubric.total_points} points)
+          {rubricTitle} ({rubric.total_points} points)
         </div>
         {referenceSolution && (
           <div style={{
@@ -688,7 +691,7 @@ export function RubricDisplay({ rubric, variant }) {
             ...BREAK_GUARD.BLOCK,
           }}>
             <div style={{ fontSize: '13px', fontWeight: '700', color: '#075985', marginBottom: '6px' }}>
-              Correct Answer / Solution Outline
+              {outlineTitle}
             </div>
             <RubricDescription text={solutionOutline} variant="pdf" />
           </div>
@@ -722,7 +725,7 @@ export function RubricDisplay({ rubric, variant }) {
   return (
     <div className="mt-4">
       <div className="text-sm font-bold text-blue-800 mb-2 pb-1 border-b border-blue-100">
-        Scoring Rubric ({rubric.total_points} points)
+        {rubricTitle} ({rubric.total_points} points)
       </div>
       {referenceSolution && (
         <div className="mb-3 rounded-md border border-slate-200 bg-slate-50 px-3 py-3">
@@ -732,7 +735,7 @@ export function RubricDisplay({ rubric, variant }) {
       )}
       {solutionOutline && (
         <div className="mb-3 rounded-md border border-sky-200 bg-sky-50 px-3 py-3">
-          <div className="mb-2 text-sm font-bold text-sky-800">Correct Answer / Solution Outline</div>
+          <div className="mb-2 text-sm font-bold text-sky-800">{outlineTitle}</div>
           <RubricDescription text={solutionOutline} variant="web" />
         </div>
       )}

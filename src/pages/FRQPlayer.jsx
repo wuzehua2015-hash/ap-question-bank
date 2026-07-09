@@ -46,7 +46,7 @@ function FRQPlayer() {
   if (phase === 'loading') {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
-        <p className="text-text-muted">加载中...</p>
+        <p className="text-text-muted">Loading...</p>
       </div>
     )
   }
@@ -56,9 +56,9 @@ function FRQPlayer() {
       <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
         <div className="flex justify-between items-start gap-4">
           <div>
-            <h2 className="text-lg font-bold text-blue-800 mb-2">Free Response Questions（FRQ）</h2>
+            <h2 className="text-lg font-bold text-blue-800 mb-2">Free Response Questions (FRQ)</h2>
             <p className="text-sm text-blue-700">
-              共 {frqs.length} 道大题。请使用草稿纸作答，系统不会自动批改。完成后请对照官方评分标准自评。
+              {frqs.length} questions. Write your responses separately, then use the scoring criteria to self-score.
             </p>
           </div>
           {quizInfo && quizInfo.isMock && quizInfo.frqTimeLimit && phase === 'playing' && (
@@ -74,8 +74,8 @@ function FRQPlayer() {
 
       <div className="mb-4">
         <div className="flex justify-between text-sm text-text-muted mb-1">
-          <span>FRQ 第 {currentIndex + 1} / {frqs.length} 题</span>
-          <span>{doneCount}/{frqs.length} 已标记完成</span>
+          <span>FRQ {currentIndex + 1} / {frqs.length}</span>
+          <span>{doneCount}/{frqs.length} marked complete</span>
         </div>
         <div className="w-full bg-border rounded-full h-2">
           <div className="bg-accent h-2 rounded-full transition-all" style={{ width: `${progress}%` }} />
@@ -95,7 +95,7 @@ function FRQPlayer() {
                 className="w-5 h-5 rounded border-border text-brand focus:ring-brand"
               />
               <span className="text-sm text-text">
-                我已经在草稿纸上完成本题作答
+                I have completed my response for this question.
               </span>
             </label>
           </div>
@@ -108,7 +108,7 @@ function FRQPlayer() {
           disabled={currentIndex === 0}
           className="px-4 py-2 rounded-lg border border-border bg-surface disabled:opacity-30"
         >
-          上一题
+          Previous
         </button>
 
         <div className="flex gap-2">
@@ -120,8 +120,8 @@ function FRQPlayer() {
                 idx === currentIndex
                   ? 'bg-brand text-white'
                   : acknowledged[idx]
-                  ? 'bg-green-100 text-green-700 border border-green-300'
-                  : 'bg-gray-100 text-gray-500 border border-border'
+                    ? 'bg-green-100 text-green-700 border border-green-300'
+                    : 'bg-gray-100 text-gray-500 border border-border'
               }`}
             >
               {idx + 1}
@@ -134,7 +134,7 @@ function FRQPlayer() {
           disabled={currentIndex === frqs.length - 1}
           className="px-4 py-2 rounded-lg border border-border bg-surface disabled:opacity-30"
         >
-          下一题
+          Next
         </button>
       </div>
 
@@ -149,14 +149,14 @@ function FRQPlayer() {
           }`}
         >
           {allAcknowledged
-            ? '完成 FRQ，进入成绩页面'
-            : `还有 ${frqs.length - doneCount} 题未标记完成`}
+            ? 'Finish FRQ and continue to scoring'
+            : `${frqs.length - doneCount} question(s) still need confirmation`}
         </button>
       </div>
 
       {!allAcknowledged && (
         <p className="text-center text-sm text-text-muted mt-3">
-          请确认每道题都已经在草稿纸上作答，然后勾选“我已经在草稿纸上完成本题作答”。
+          Confirm each response before continuing to the scoring page.
         </p>
       )}
     </div>
