@@ -69,6 +69,17 @@ body {
   font-weight: 650;
 }
 
+.math-bullet-list {
+  margin: 0.65rem 0 0.85rem 1.25rem;
+  padding-left: 0.75rem;
+  list-style: disc;
+}
+
+.math-bullet-list li {
+  margin: 0.22rem 0;
+  line-height: 1.45;
+}
+
 .inline-code {
   display: inline-block;
   padding: 0.08rem 0.28rem;

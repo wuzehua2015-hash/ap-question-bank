@@ -1163,7 +1163,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 25,
     "type": "MCQ",
-    "text": "A cable television company stores information about movie purchases made by subscribers. Each day, the\nfollowing information is summarized and stored in a publicly available database.\n• The day and date each movie was purchased\n• The title of each movie purchased\n• The cities where subscribers purchased each movie\n• The number of times each movie was purchased by subscribers in a given city\nA sample portion of the database is shown below. The database is sorted by date and movie title.\nDay and Date\nMovie Title\nCity\nNumber of Times Purchased\nSat 01 / 05 / 2014\nMovie A\nHouston, Texas\n1\nSat 01 / 05 / 2014\nMovie A\nDetroit, Michigan\n2\nSat 01 / 05 / 2014\nMovie B\nHouston, Texas\n1\nSat 01 / 05 / 2014\nMovie C\nAnchorage, Alaska\n1\nSun 01 / 06 / 2014\nMovie A\nWichita, Kansas\n3\nWhich of the following CANNOT be determined using only the information in the database?",
+    "text": "A cable television company stores information about movie purchases made by subscribers. Each day, the following information is summarized and stored in a publicly available database.\n\n- The day and date each movie was purchased\n- The title of each movie purchased\n- The cities where subscribers purchased each movie\n- The number of times each movie was purchased by subscribers in a given city\n\nA sample portion of the database is shown below. The database is sorted by date and movie title.\n\nWhich of the following CANNOT be determined using only the information in the database?",
     "options": {
       "A": "The date when a certain movie was purchased the greatest number of times",
       "B": "The number of movies purchased by an individual subscriber for a particular month",
@@ -1194,7 +1194,50 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2016.pdf",
       "source_page": 29
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "table": {
+        "title": "Sample portion of the movie-purchase database",
+        "headers": [
+          "Day and Date",
+          "Movie Title",
+          "City",
+          "Number of Times Purchased"
+        ],
+        "rows": [
+          [
+            "Sat 01 / 05 / 2014",
+            "Movie A",
+            "Houston, Texas",
+            "1"
+          ],
+          [
+            "Sat 01 / 05 / 2014",
+            "Movie A",
+            "Detroit, Michigan",
+            "2"
+          ],
+          [
+            "Sat 01 / 05 / 2014",
+            "Movie B",
+            "Houston, Texas",
+            "1"
+          ],
+          [
+            "Sat 01 / 05 / 2014",
+            "Movie C",
+            "Anchorage, Alaska",
+            "1"
+          ],
+          [
+            "Sun 01 / 06 / 2014",
+            "Movie A",
+            "Wichita, Kansas",
+            "3"
+          ]
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q26",
@@ -1737,7 +1780,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 37,
     "type": "MCQ",
-    "text": "A large data set contains information about all students majoring in computer science in colleges across the United\nStates. The data set contains the following information about each student.\n• The student’s gender\n• The state in which the student attends college\n• The student’s grade point average on a 4.0 scale\nWhich of the following questions could be answered by analyzing only information in the data set?",
+    "text": "A large data set contains information about all students majoring in computer science in colleges across the United States. The data set contains the following information about each student.\n\n- The student's gender\n- The state in which the student attends college\n- The student's grade point average on a 4.0 scale\n\nWhich of the following questions could be answered by analyzing only information in the data set?",
     "options": {
       "A": "Do students majoring in computer science tend to have higher grade point averages than students majoring in\nother subjects?",
       "B": "How many states have a higher percentage of female computer science majors than male computer science\nmajors attending college in that state?",
@@ -1995,7 +2038,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 43,
     "type": "MCQ",
-    "text": "A retailer that sells footwear maintains a single database containing records with the following information about\neach item for sale in the retailer’s store.\n• Item identification number\n• Footwear type (sneakers, boots, sandals, etc.)\n• Selling price (in dollars)\n• Size\n• Color\n• Quantity available\nUsing only the database, which of the following can be determined?",
+    "text": "A retailer that sells footwear maintains a single database containing records with the following information about each item for sale in the retailer's store.\n\n- Item identification number\n- Footwear type (sneakers, boots, sandals, etc.)\n- Selling price (in dollars)\n- Size\n- Color\n- Quantity available\n\nUsing only the database, which of the following can be determined?",
     "options": {
       "A": "Which items listed in the database are not currently in the store",
       "B": "Which colors are more popular among men than women",

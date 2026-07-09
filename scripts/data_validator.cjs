@@ -419,6 +419,18 @@ function validate(filePath, options = {}) {
         }
       }
     }
+    if (subjectId === 'computer-science-principles' && !isFRQ) {
+      const cspText = q.text || q.question_text || ''
+      if (/\b(?:sample portion of the database|database is shown below|database is sorted|table below)\b/i.test(cspText) && !q.background_data?.table && !(q.image_paths || []).length) {
+        errors.push(`${qid}: CSP database/table prompt must use background_data.table or precise image evidence`)
+      }
+      if (/\bfollowing information\b/i.test(cspText) && /(?:^|\n)\s*\u2022\s+/u.test(cspText)) {
+        errors.push(`${qid}: CSP field list uses raw bullet glyphs; use markdown list lines for structured rendering`)
+      }
+      if (/\bDay and Date\s+Movie Title\s+City\s+Number of Times Purchased\b/i.test(cspText.replace(/\s+/g, ' '))) {
+        errors.push(`${qid}: CSP sample database appears flattened in question text`)
+      }
+    }
     if (isComputerScienceA) {
       const textBlob = [
         q.text || q.question_text || '',

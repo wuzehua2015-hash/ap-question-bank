@@ -233,6 +233,7 @@ function renderTextWithMarkdownTables(text, options = {}) {
   const lines = text.split('\n')
   const parts = []
   let buffer = []
+  let listBuffer = []
 
   const flushBuffer = () => {
     if (!buffer.length) return
@@ -240,28 +241,43 @@ function renderTextWithMarkdownTables(text, options = {}) {
     buffer = []
   }
 
+  const flushList = () => {
+    if (!listBuffer.length) return
+    parts.push(`<ul class="math-bullet-list">${listBuffer.map(item => `<li>${renderLatexSegments(item, options)}</li>`).join('')}</ul>`)
+    listBuffer = []
+  }
+
   for (let i = 0; i < lines.length;) {
     const code = renderFencedCode(lines, i)
     const table = code ? null : renderMarkdownTable(lines, i)
     if (code) {
       flushBuffer()
+      flushList()
       parts.push(code.html)
       i = code.nextIndex
     } else if (table) {
       flushBuffer()
+      flushList()
       parts.push(table.html)
       i = table.nextIndex
     } else if (/^\s*- \[ \]\s+/.test(lines[i])) {
       flushBuffer()
+      flushList()
       const label = lines[i].replace(/^\s*- \[ \]\s+/, '').trim()
       parts.push(`<div class="math-check-option"><span class="math-check-box"></span>${renderLatexSegments(label, { ...options, forceInlineLatex: true })}</div>`)
       i += 1
+    } else if (/^\s*(?:[-*]|\u2022)\s+/.test(lines[i])) {
+      flushBuffer()
+      listBuffer.push(lines[i].replace(/^\s*(?:[-*]|\u2022)\s+/, '').trim())
+      i += 1
     } else {
+      flushList()
       buffer.push(lines[i])
       i += 1
     }
   }
 
+  flushList()
   flushBuffer()
   return parts.join('')
 }
