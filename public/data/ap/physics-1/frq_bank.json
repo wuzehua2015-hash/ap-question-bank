@@ -77,6 +77,35 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p044_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ1 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p044_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ1 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -183,6 +212,46 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p046_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ2 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p046_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ2 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p046_img04.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ2 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -211,7 +280,7 @@
     "difficulty": "medium",
     "rubric": {
       "total_points": 12,
-      "solution_outline": "Correct answer / solution outline:\n\nStudent 1 is correct that the same current flows through bulbs A and B in series and that the current splits between C and D in parallel. Student 1 is incorrect to compare the split branch current with the series current without finding the total current in each circuit.\n\nStudent 2 is correct that each parallel bulb has the full battery potential difference. Student 2 is incorrect that current is used up by bulb A.\n\nUsing identical bulb resistance $R$: in series, each bulb has current $I_S=\\Delta V/(2R)$ and power $P_S=I_S^2R=\\Delta V^2/(4R)$. In parallel, each bulb has $\\Delta V$ across it and power $P_P=\\Delta V^2/R$. Therefore bulbs C and D are brighter.",
+      "solution_outline": "Correct answer / solution outline:\n\nThe parallel circuit has the brighter bulbs. In series, identical bulbs share the battery potential difference and each bulb dissipates less power. In parallel, each bulb is connected across the full battery potential difference, so each bulb dissipates more power.\n\nStudent 1 correctly recognizes that series bulbs carry the same current and that the parallel current splits, but the current split alone does not determine brightness. Student 2 correctly uses the full voltage across each parallel bulb, but current is not used up in a series circuit.",
       "points": [
         {
           "point_id": "3a_i_series_current",
@@ -287,6 +356,24 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p048_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ3 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -363,6 +450,46 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p050_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ4 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p050_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ4 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p050_img04.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ4 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -442,6 +569,24 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p051_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ5 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -521,6 +666,24 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2015/2015_p043_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2015_FRQ1 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -626,6 +789,35 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2015/2015_p045_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2015_FRQ2 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p045_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2015_FRQ2 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -723,6 +915,29 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Wave velocity as a function of string tension",
+        "headers": [
+          "Tension (N)",
+          "2.0",
+          "4.0",
+          "6.0",
+          "8.0",
+          "10.0"
+        ],
+        "rows": [
+          [
+            "Velocity (m/s)",
+            "17",
+            "24",
+            "29",
+            "34",
+            "38"
+          ]
+        ]
+      }
     }
   },
   {
@@ -797,6 +1012,24 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2015/2015_p049_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2015_FRQ4 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -876,6 +1109,24 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2015/2015_p050_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2015_FRQ5 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -950,6 +1201,24 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2017/2017_p044_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ1 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1054,6 +1323,24 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2017/2017_p046_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ2 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1129,6 +1416,35 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2017/2017_p048_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ3 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-1/2017/2017_p049_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ3 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1208,6 +1524,24 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2017/2017_p050_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ4 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1289,6 +1623,46 @@
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
       "override": true,
       "prompt_rubric_review": "structured_manual_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2017/2017_p051_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ5 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-1/2017/2017_p051_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ5 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-1/2017/2017_p051_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ5 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
+        }
+      ]
     }
   }
 ]

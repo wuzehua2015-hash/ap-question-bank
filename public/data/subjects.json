@@ -541,86 +541,6 @@
       }
     },
     {
-      "id": "physics-1",
-      "name": "AP Physics 1: Algebra-Based",
-      "shortName": "Physics 1",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/physics-1/question_bank.json",
-      "frqBank": "ap/physics-1/frq_bank.json",
-      "similarityIndex": "ap/physics-1/similarity_index.json",
-      "classificationConfig": "ap/physics-1/classification_config.json",
-      "dataVersion": "structured-2014-2015-2017-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Kinematics"
-        },
-        {
-          "id": "U2",
-          "name": "Force and Translational Dynamics"
-        },
-        {
-          "id": "U3",
-          "name": "Work, Energy, and Power"
-        },
-        {
-          "id": "U4",
-          "name": "Linear Momentum"
-        },
-        {
-          "id": "U5",
-          "name": "Torque and Rotational Dynamics"
-        },
-        {
-          "id": "U6",
-          "name": "Energy and Momentum of Rotating Systems"
-        },
-        {
-          "id": "U7",
-          "name": "Oscillations"
-        },
-        {
-          "id": "U8",
-          "name": "Fluids"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 40,
-        "frqCount": 4,
-        "mcqTimeLimit": 4800,
-        "frqTimeLimit": 6000,
-        "unitDistribution": {
-          "U1": 5,
-          "U2": 12,
-          "U3": 7,
-          "U4": 6,
-          "U5": 2,
-          "U6": 1,
-          "U7": 7,
-          "U8": 0
-        }
-      },
-      "releaseStatus": "content-risk",
-      "visibility": "internal",
-      "readiness": {
-        "status": "red",
-        "updatedAt": "2026-07-09",
-        "p0": 6,
-        "p1": 0,
-        "contentRiskCodes": [
-          "flattened_frq_tables",
-          "frq_solution_outline_duplicates_criteria",
-          "frq_visual_asset_contract_missing"
-        ],
-        "mechanismCodes": [
-          "missing_delivery_contract",
-          "missing_delivery_review",
-          "missing_frq_browser_review"
-        ]
-      }
-    },
-    {
       "id": "physics-2",
       "name": "AP Physics 2: Algebra-Based",
       "shortName": "Physics 2",
@@ -1190,6 +1110,70 @@
           "U7": 6,
           "U8": 19,
           "U9": 9
+        }
+      }
+    },
+    {
+      "id": "physics-1",
+      "name": "AP Physics 1: Algebra-Based",
+      "shortName": "Physics 1",
+      "active": true,
+      "releaseStatus": "certified",
+      "visibility": "internal",
+      "hasFRQ": true,
+      "questionBank": "ap/physics-1/question_bank.json",
+      "frqBank": "ap/physics-1/frq_bank.json",
+      "similarityIndex": "ap/physics-1/similarity_index.json",
+      "classificationConfig": "ap/physics-1/classification_config.json",
+      "dataVersion": "structured-2014-2015-2017-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Kinematics"
+        },
+        {
+          "id": "U2",
+          "name": "Force and Translational Dynamics"
+        },
+        {
+          "id": "U3",
+          "name": "Work, Energy, and Power"
+        },
+        {
+          "id": "U4",
+          "name": "Linear Momentum"
+        },
+        {
+          "id": "U5",
+          "name": "Torque and Rotational Dynamics"
+        },
+        {
+          "id": "U6",
+          "name": "Energy and Momentum of Rotating Systems"
+        },
+        {
+          "id": "U7",
+          "name": "Oscillations"
+        },
+        {
+          "id": "U8",
+          "name": "Fluids"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 40,
+        "frqCount": 4,
+        "mcqTimeLimit": 4800,
+        "frqTimeLimit": 6000,
+        "unitDistribution": {
+          "U1": 5,
+          "U2": 12,
+          "U3": 7,
+          "U4": 6,
+          "U5": 2,
+          "U6": 1,
+          "U7": 7,
+          "U8": 0
         }
       }
     }

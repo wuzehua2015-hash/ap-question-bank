@@ -423,11 +423,13 @@ function validate(filePath, options = {}) {
         const hasPromptPlusOptionSources = q.image_paths.length === expectedOptionLetters.length + 1 && contextSources.length === 1 && optionSources.length === expectedOptionLetters.length
         const hasTwoImagesPerOptionSources = q.image_paths.length === expectedOptionLetters.length * 2 && multiImageOptionSources.length === expectedOptionLetters.length * 2
         const hasCombinedOptionRegion = q.image_paths.length === 1 && combinedOptionSources.length === 1
+        const hasPromptPlusCombinedOptionRegion = q.image_paths.length === 2 && contextSources.length === 1 && combinedOptionSources.length === 1
         const supportedDiagramBinding =
           hasStandardOptionSources ||
           hasPromptPlusOptionSources ||
           hasTwoImagesPerOptionSources ||
-          hasCombinedOptionRegion
+          hasCombinedOptionRegion ||
+          hasPromptPlusCombinedOptionRegion
         if (!supportedDiagramBinding) {
           reportOptionImageIssue(`${qid}: Diagram ${optionLabel} options require explicit option image ownership metadata`)
         }

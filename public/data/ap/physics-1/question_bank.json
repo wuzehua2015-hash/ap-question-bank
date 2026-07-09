@@ -43,7 +43,25 @@
       "raw_chunk_sha256": "9869aaea703c94fbb752fdd56e5052348b30075543582d74fb0dde3f9c1cd40c",
       "override": true
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_Q01_options.png",
+          "option": "A-D",
+          "asset_type": "combined_option_image",
+          "binding": "combined_option_region",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_Q02",
@@ -180,7 +198,33 @@
       "raw_chunk_sha256": "d53dd322ff3c2b75bb4d860bea511ed3ef0d10c58be6f6266014408fd535126b",
       "override": true
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p015_img02.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_Q04_options.png",
+          "option": "A-D",
+          "asset_type": "combined_option_image",
+          "binding": "combined_option_region",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_Q05",
@@ -378,7 +422,63 @@
       "raw_chunk_sha256": "b2daa3c20291f73f964c985b300ab098dee614b82ab585287e6c424516d7a998",
       "override": true
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p017_img02.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p017_img03.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p017_img04.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p017_img05.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p017_img06.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_Q09",
@@ -560,7 +660,63 @@
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf",
       "raw_chunk_sha256": "24a1dd354eedd2833f46d0746aeb8d667999e26b2f30c812dad5fcfe83a2a121"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p019_img02.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p019_img03.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p019_img04.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p019_img05.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p019_img06.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_Q13",
@@ -609,7 +765,63 @@
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf",
       "raw_chunk_sha256": "246e8c6bdbf6617d72e71a1773c6667fde23c9e19ca0253fe04859ae285b748c"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p020_img02.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p020_img03.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p020_img04.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p020_img05.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p020_img06.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_Q14",
@@ -790,7 +1002,63 @@
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf",
       "raw_chunk_sha256": "48e981eee95b4422bbf9b7db93a992fa6114f181c64c4494572767eb43fec0b9"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p022_img02.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p022_img03.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p022_img04.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p022_img05.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p022_img06.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_Q18",
@@ -1336,7 +1604,63 @@
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf",
       "raw_chunk_sha256": "601e758c3c6ab95ab2590edf5f8b70c36d9b65ba5ecc8c64f3a6db513044dec3"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p027_img02.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p027_img03.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p027_img04.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p027_img05.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p027_img06.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_Q28",
@@ -1562,7 +1886,55 @@
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf",
       "raw_chunk_sha256": "ad8866c8db6e61de52377baf24951ec407463ca4fc2db1d8dceb9c50479c9106"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p030_img03.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p030_img04.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p030_img05.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p030_img06.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_Q33",
@@ -1861,7 +2233,63 @@
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf",
       "raw_chunk_sha256": "ddeb9b26c5b6541d2c7bd119bf0044e9e9c4dbe90ab82e60ef0a7641a2e86df4"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p033_img03.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p033_img04.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p033_img05.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p033_img06.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p033_img07.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_Q39",
@@ -2020,7 +2448,63 @@
     "group_role": "member",
     "requires_group_context": true,
     "group_context": "Questions 40-42 refer to the following material. ",
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2014/2014_p035_img02.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p035_img03.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p035_img04.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p035_img05.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2014/2014_p035_img06.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2014.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_Q42",
@@ -3559,7 +4043,63 @@
       "raw_chunk_sha256": "067269a5a7411e34225f3bb5c510fa83e519856c3c5a94fe91df6bf9061eae7a",
       "override": true
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2015/2015_p027_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p027_img02.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p027_img03.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p027_img04.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p027_img05.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2015_Q25",
@@ -3654,7 +4194,63 @@
       "raw_chunk_sha256": "9b495ffb3d54dac907072cc54e74219aea3d660b22c466d7476aec7ad7a5d02d",
       "override": true
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2015/2015_p028_img02.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p028_img03.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p028_img04.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p028_img05.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p028_img06.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2015_Q27",
@@ -4012,7 +4608,63 @@
       "raw_chunk_sha256": "034dd8735fd524673282ec3a5a44ca5417e0aa203889d4907d804a2ffcdb6c5f",
       "override": true
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2015/2015_p032_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p032_img02.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p032_img03.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p032_img04.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2015/2015_p032_img05.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2015_Q34",
@@ -4169,7 +4821,25 @@
     "group_role": "member",
     "requires_group_context": true,
     "group_context": "Does at least one of the ships have its engine\nturned on during the time interval shown, and\nwhat evidence indicates so?",
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2015/2015_p034_img01.png",
+          "option": "A-D",
+          "asset_type": "combined_option_image",
+          "binding": "combined_option_region",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2017_Q01",
@@ -4881,7 +5551,55 @@
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf",
       "raw_chunk_sha256": "54db4605f323d825b2001b3e16fb8348e6645f424252ec4130584f5adc319c9d"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2017/2017_p025_img01.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2017/2017_p025_img02.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2017/2017_p025_img03.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2017/2017_p025_img04.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2017_Q15",
@@ -5725,7 +6443,55 @@
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf",
       "raw_chunk_sha256": "ea67ca425c523dbd43d040b95978a84a62fab1166d83f9a916290e7e1220134f"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics1-contract",
+      "method": "diagram_option_binding_from_published_assets",
+      "dimension_variance_reviewed": true,
+      "image_sources": [
+        {
+          "path": "images/ap/physics-1/2017/2017_p033_img02.png",
+          "option": "A",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2017/2017_p033_img03.png",
+          "option": "B",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2017/2017_p033_img04.png",
+          "option": "C",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-1/2017/2017_p033_img05.png",
+          "option": "D",
+          "asset_type": "option_image",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2017.pdf"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    }
   },
   {
     "question_id": "2017_Q33",
