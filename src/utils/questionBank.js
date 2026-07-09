@@ -208,18 +208,41 @@ function selectMockFRQ(frqQuestions, frqCount, subjectId) {
     return pool.slice().sort((a, b) => questionOrder(a) - questionOrder(b))
   }
 
+  const byQuestionNumber = new Map()
+  for (const frq of pool) {
+    const number = questionOrder(frq)
+    if (!number) continue
+    if (!byQuestionNumber.has(number)) byQuestionNumber.set(number, [])
+    byQuestionNumber.get(number).push(frq)
+  }
+  const slots = [...byQuestionNumber.keys()]
+    .sort((a, b) => a - b)
+    .slice(0, frqCount)
+
+  if (slots.length < frqCount) {
+    return shuffleCopy(pool)
+      .slice(0, frqCount)
+      .sort((a, b) => {
+        const orderDiff = questionOrder(a) - questionOrder(b)
+        return orderDiff || Number(a.year || 0) - Number(b.year || 0)
+      })
+  }
+
   const lastSignature = readLastMockFrqSignature(subjectId)
   let selected = []
   for (let attempt = 0; attempt < 20; attempt += 1) {
-    selected = shuffleCopy(pool).slice(0, frqCount)
+    selected = slots.map(number => {
+      const candidates = byQuestionNumber.get(number) || []
+      return shuffleCopy(candidates)[0]
+    }).filter(Boolean)
     if (mockFrqSignature(selected) !== lastSignature) break
   }
 
   selected = selected
     .slice(0, frqCount)
     .sort((a, b) => {
-      const yearDiff = Number(a.year || 0) - Number(b.year || 0)
-      return yearDiff || questionOrder(a) - questionOrder(b)
+      const orderDiff = questionOrder(a) - questionOrder(b)
+      return orderDiff || Number(a.year || 0) - Number(b.year || 0)
     })
   writeLastMockFrqSignature(subjectId, mockFrqSignature(selected))
   return selected

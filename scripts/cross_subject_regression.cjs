@@ -67,6 +67,7 @@ async function main() {
   const questionBank = readText('src/utils/questionBank.js')
   assert(questionBank.includes('selectMockFRQ'), 'Mock exam FRQ selection must use the shared FRQ sampling helper.')
   assert(questionBank.includes('_lastMockFRQSignature'), 'Mock exam FRQ selection must remember the previous FRQ set to avoid immediate repeats.')
+  assert(questionBank.includes('byQuestionNumber'), 'Mock exam FRQ selection must sample by question number because FRQ numbers represent distinct task types.')
   assert(!/candidates\.push\(questions\)[\s\S]*source\.slice\(0,\s*frqCount\)/.test(questionBank), 'Mock exam FRQ selection must not choose a fixed year/set and then take the first configured FRQs.')
 
   const tableRenderFiles = [
