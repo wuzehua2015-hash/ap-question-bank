@@ -559,20 +559,19 @@ function FigureBlock({ block, variant }) {
   const title = [block.figure_id, block.caption].filter(Boolean).join('. ')
   const images = block.image_paths || block.images || []
   const subcaptions = block.subcaptions || []
+  const subcaptionText = subcaptions.join('; ')
 
   if (isPdf) {
     return (
       <div style={{ margin: '14px 0 18px', ...BREAK_GUARD.BLOCK }}>
         {title && (
-          <div style={{ fontSize: '13px', fontWeight: 700, color: '#1f2937', marginBottom: '6px' }}>
+          <div style={{ fontSize: '13px', fontWeight: 700, color: '#1f2937', marginBottom: '3px' }}>
             <MathText text={title} />
           </div>
         )}
-        {subcaptions.length > 0 && (
+        {subcaptionText && (
           <div style={{ fontSize: '12px', color: '#475569', marginBottom: '6px' }}>
-            {subcaptions.map((caption, idx) => (
-              <div key={idx}><MathText text={caption} /></div>
-            ))}
+            <MathText text={subcaptionText} />
           </div>
         )}
         {images.map((path, idx) => <DisplayImage key={idx} path={path} variant={variant} />)}
@@ -583,15 +582,13 @@ function FigureBlock({ block, variant }) {
   return (
     <figure className="my-5 rounded-lg border border-border bg-white p-3">
       {title && (
-        <figcaption className="mb-2 text-sm font-semibold text-text">
+        <figcaption className="text-sm font-semibold text-text">
           <MathText text={title} />
         </figcaption>
       )}
-      {subcaptions.length > 0 && (
-        <div className="mb-3 space-y-1 text-sm text-text-muted">
-          {subcaptions.map((caption, idx) => (
-            <div key={idx}><MathText text={caption} /></div>
-          ))}
+      {subcaptionText && (
+        <div className="mb-3 mt-1 text-sm text-text-muted">
+          <MathText text={subcaptionText} />
         </div>
       )}
       {images.map((path, idx) => <DisplayImage key={idx} path={path} variant={variant} />)}

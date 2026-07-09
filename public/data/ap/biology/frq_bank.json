@@ -1613,7 +1613,7 @@
     "content_blocks": [
       {
         "type": "paragraph",
-        "text": "In eukaryotic microorganisms, the PHO signaling pathway regulates the expression of certain genes. These genes, Pho target genes, encode proteins involved in regulating phosphate homeostasis. When the level of extracellular inorganic phosphate (Pi) is high, a transcriptional activator Pho4 is phosphorylated by a complex of two proteins, Pho80–Pho85. As a result, the Pho target genes are not expressed. When the level of extracellular Pi is low, the activity of the Pho80–Pho85 complex is inhibited by another protein, Pho81, enabling Pho4 to induce the expression of these target genes. A simplified model of this pathway is shown in Figure 1. Figure 1. A simplified model of the regulation of expression of Pho target genes in"
+        "text": "In eukaryotic microorganisms, the PHO signaling pathway regulates the expression of certain genes. These genes, Pho target genes, encode proteins involved in regulating phosphate homeostasis. When the level of extracellular inorganic phosphate (Pi) is high, a transcriptional activator Pho4 is phosphorylated by a complex of two proteins, Pho80–Pho85. As a result, the Pho target genes are not expressed. When the level of extracellular Pi is low, the activity of the Pho80–Pho85 complex is inhibited by another protein, Pho81, enabling Pho4 to induce the expression of these target genes. A simplified model of this pathway is shown in Figure 1. Figure 1. A simplified model of the regulation of expression of Pho target genes in (A) a high-phosphate (high-Pi) environment and (B) a low-phosphate (low-Pi) environment To study the role of the different proteins in the PHO pathway, researchers used a wild-type strain of yeast to create a strain with a mutant form of Pho81 (pho81mt) and a strain with a mutant form of Pho4 (pho4mt). In each of these mutant strains, researchers measured the activity of a particular enzyme, APase, which removes phosphates from its substrates and is encoded by PHO1, a Pho target gene (Table 1). They then determined the level of PHO1 mRNA relative to that of the wild-type yeast strain, which was set to 10."
       },
       {
         "type": "figure",
@@ -1668,16 +1668,6 @@
           "source": "Values are reported with +/- 2SE_x."
         },
         "used_by_parts": []
-      },
-      {
-        "type": "part",
-        "label": "(A)",
-        "text": "a high-phosphate (high-Pi) environment and"
-      },
-      {
-        "type": "part",
-        "label": "(B)",
-        "text": "a low-phosphate (low-Pi) environment To study the role of the different proteins in the PHO pathway, researchers used a wild-type strain of yeast to create a strain with a mutant form of Pho81 (pho81mt) and a strain with a mutant form of Pho4 (pho4mt). In each of these mutant strains, researchers measured the activity of a particular enzyme, APase, which removes phosphates from its substrates and is encoded by PHO1, a Pho target gene (Table 1). They then determined the level of PHO1 mRNA relative to that of the wild-type yeast strain, which was set to 10."
       },
       {
         "type": "part",
@@ -2235,7 +2225,7 @@
     "content_blocks": [
       {
         "type": "paragraph",
-        "text": "Ruminants are hoofed animals, including cattle and sheep, that have a unique four-chambered stomach specialized to digest tough, fiber-filled grasses. Researchers studying ruminants are investigating the morphological and molecular characteristics of different ruminant families in order to determine the evolutionary relationships among the families. Cladograms of several ruminant families were constructed based on morphological data (Figure 1A) and molecular data (Figure 1B). Table 1 shows a sample of the morphological characteristics present in each family used to construct the cladogram in Figure 1A. Figure 1. Cladogram of six ruminant families based on"
+        "text": "Ruminants are hoofed animals, including cattle and sheep, that have a unique four-chambered stomach specialized to digest tough, fiber-filled grasses. Researchers studying ruminants are investigating the morphological and molecular characteristics of different ruminant families in order to determine the evolutionary relationships among the families. Cladograms of several ruminant families were constructed based on morphological data (Figure 1A) and molecular data (Figure 1B). Table 1 shows a sample of the morphological characteristics present in each family used to construct the cladogram in Figure 1A. Figure 1. Cladogram of six ruminant families based on (A) morphological data and (B) molecular data"
       },
       {
         "type": "figure",
@@ -2297,16 +2287,6 @@
           "firstColumnWide": true
         },
         "used_by_parts": []
-      },
-      {
-        "type": "part",
-        "label": "(A)",
-        "text": "morphological data and"
-      },
-      {
-        "type": "part",
-        "label": "(B)",
-        "text": "molecular data"
       },
       {
         "type": "part",
@@ -3196,32 +3176,26 @@
     "content_blocks": [
       {
         "type": "paragraph",
-        "text": "Scientists can quantify the rate of translation as ribosomes move along an mRNA from one codon to the next. Using a procedure called ribosome profiling, the scientists measured how long a ribosome remains stationary at each codon of each mRNA. They determined the average translation rate across all codons is 5.2 amino acids per second but that the average translation rate for specific codons in different mRNA sequences can vary widely. These variations in translation rates are thought to facilitate correct folding of the protein being produced. The rate at which three different codons were translated was measured in 100 different mRNAs. The scientists determined the distribution of rate (number of times each rate was recorded) for each of the three codons: GAC (Figure 1A), AUU (Figure 1B), and UGG (Figure 1C). Figure 1. The distribution of translation rates for three different codons"
+        "text": "Scientists can quantify the rate of translation as ribosomes move along an mRNA from one codon to the next. Using a procedure called ribosome profiling, the scientists measured how long a ribosome remains stationary at each codon of each mRNA. They determined the average translation rate across all codons is 5.2 amino acids per second but that the average translation rate for specific codons in different mRNA sequences can vary widely. These variations in translation rates are thought to facilitate correct folding of the protein being produced. The rate at which three different codons were translated was measured in 100 different mRNAs. The scientists determined the distribution of rate (number of times each rate was recorded) for each of the three codons: GAC (Figure 1A), AUU (Figure 1B), and UGG (Figure 1C)."
       },
       {
         "type": "figure",
-        "figure_id": null,
-        "caption": null,
-        "subcaptions": [],
+        "figure_id": "Figure 1",
+        "caption": "Distribution of translation rates for three different codons",
+        "subcaptions": [
+          "(A) GAC",
+          "(B) AUU",
+          "(C) UGG"
+        ],
         "image_paths": [
           "images/ap/biology/2024/2024_frq6_translation_rate_distribution.png"
         ],
-        "used_by_parts": []
-      },
-      {
-        "type": "part",
-        "label": "(A)",
-        "text": "GAC,"
-      },
-      {
-        "type": "part",
-        "label": "(B)",
-        "text": "AUU, and"
-      },
-      {
-        "type": "part",
-        "label": "(C)",
-        "text": "UGG"
+        "used_by_parts": [
+          "(a)",
+          "(b)",
+          "(c)",
+          "(d)"
+        ]
       },
       {
         "type": "part",
@@ -3367,7 +3341,7 @@
     "content_blocks": [
       {
         "type": "paragraph",
-        "text": "Most proteins that are secreted from a cell must be transported to the endoplasmic reticulum (ER) either during translation or after translation. A. Describe the function of ribosomes. For proteins transported during translation, this process begins in the cytosol and pauses when a specific sequence of amino acids is translated. The translation complex is then transported to the surface of the ER where translation continues. Proteins that are transported after translation are translated entirely in the cytosol and then transported to the ER. In both instances, the translated proteins enter the ER through a protein channel in the membrane of the ER. Researchers studying the two types of protein transport identified that the ER membrane protein SR is necessary for transport during translation, while the ER membrane protein Sec62 is necessary for transport after translation. To investigate which transport mechanism is used for different proteins, researchers first created small interfering RNAs (siRNAs) that reduce expression of either SR or Sec62. They then treated groups of cells with either the SR siRNA or the Sec62 siRNA and determined the relative amount of SR and Sec62 protein in each group of cells compared with cells treated with a control siRNA (Figure 1). Figure 1. Average relative amounts of Sec62 and SR proteins in cells treated with control siRNA, Sec62 siRNA, or SR siRNA. Error bars represent ±$SE_x$. B. i. Identify the dependent variable in the experiments shown in Figure 1. ii. Justify why the researchers included the control of measuring the relative amounts of both Sec62 and SR proteins in cells that were treated with Sec62 siRNA only (data shown in Figure 1). iii. Based on Figure 1, describe the effect on the production of SR protein when cells are treated with Sec62 siRNA. 4 The researchers then measured the amount of each of three different proteins that was transported to the ER in cells treated with Sec62 siRNA or SR siRNA. The researchers calculated the percent transported relative to the cells treated with control siRNA (Figure 2). Figure 2. Average relative amounts of three proteins that were transported to the ER when treated with control siRNA, Sec62 siRNA, or SR siRNA. Error bars represent ±$SE_x$. C. i. Identify the independent variable in the researchers' second experiment (data shown in Figure 2). ii. Based on Figure 2, identify the protein(s) that when treated with Sec62 siRNA showed an increase in percent transport to the ER compared with the control. iii. Protein 1 is encoded by 234 nucleotides, while protein 2 is encoded by 495 nucleotides. Assuming all nucleotides for both proteins encode amino acids, calculate the difference in the number of amino acids between the two proteins. D. i. Researchers claim that protein 1 is the only tested protein that is transported to the ER following its complete translation in the cytosol. Using data from Figure 2, support the researchers' claim. ii. For any protein that enters the ER, researchers claim that amino acids close to the protein's amino terminus determine how likely the protein is to pass through the protein channel within the ER membrane. Justify the researchers' claim based on your understanding of factors that affect the transport of proteins across membranes."
+        "text": "Most proteins that are secreted from a cell must be transported to the endoplasmic reticulum (ER) either during translation or after translation."
       },
       {
         "type": "figure",
@@ -3379,6 +3353,26 @@
           "images/ap/biology/2025/2025_frq1_er_transport_amounts.png"
         ],
         "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe the function of ribosomes. For proteins transported during translation, this process begins in the cytosol and pauses when a specific sequence of amino acids is translated. The translation complex is then transported to the surface of the ER where translation continues. Proteins that are transported after translation are translated entirely in the cytosol and then transported to the ER. In both instances, the translated proteins enter the ER through a protein channel in the membrane of the ER. Researchers studying the two types of protein transport identified that the ER membrane protein SR is necessary for transport during translation, while the ER membrane protein Sec62 is necessary for transport after translation. To investigate which transport mechanism is used for different proteins, researchers first created small interfering RNAs (siRNAs) that reduce expression of either SR or Sec62. They then treated groups of cells with either the SR siRNA or the Sec62 siRNA and determined the relative amount of SR and Sec62 protein in each group of cells compared with cells treated with a control siRNA (Figure 1). Figure 1. Average relative amounts of Sec62 and SR proteins in cells treated with control siRNA, Sec62 siRNA, or SR siRNA. Error bars represent ±$SE_x$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "i. Identify the dependent variable in the experiments shown in Figure 1. ii. Justify why the researchers included the control of measuring the relative amounts of both Sec62 and SR proteins in cells that were treated with Sec62 siRNA only (data shown in Figure 1). iii. Based on Figure 1, describe the effect on the production of SR protein when cells are treated with Sec62 siRNA. 4 The researchers then measured the amount of each of three different proteins that was transported to the ER in cells treated with Sec62 siRNA or SR siRNA. The researchers calculated the percent transported relative to the cells treated with control siRNA (Figure 2). Figure 2. Average relative amounts of three proteins that were transported to the ER when treated with control siRNA, Sec62 siRNA, or SR siRNA. Error bars represent ±$SE_x$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "i. Identify the independent variable in the researchers' second experiment (data shown in Figure 2). ii. Based on Figure 2, identify the protein(s) that when treated with Sec62 siRNA showed an increase in percent transport to the ER compared with the control. iii. Protein 1 is encoded by 234 nucleotides, while protein 2 is encoded by 495 nucleotides. Assuming all nucleotides for both proteins encode amino acids, calculate the difference in the number of amino acids between the two proteins."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "i. Researchers claim that protein 1 is the only tested protein that is transported to the ER following its complete translation in the cytosol. Using data from Figure 2, support the researchers' claim. ii. For any protein that enters the ER, researchers claim that amino acids close to the protein's amino terminus determine how likely the protein is to pass through the protein channel within the ER membrane. Justify the researchers' claim based on your understanding of factors that affect the transport of proteins across membranes."
       }
     ]
   },
@@ -3520,7 +3514,7 @@
     "content_blocks": [
       {
         "type": "paragraph",
-        "text": "Many insects rely on pheromones (chemical signals) that are released by the females to find mating partners. Scientists hypothesize that, in a certain type of moth, the behavior of male moths in response to pheromones is regulated by the extracellular signaling molecule 20E. A. Many receptors are embedded in the plasma membrane. Describe the polarity of the portion of the receptor that is inside the membrane. To investigate whether the binding of 20E to its receptor, DopEcR, affects behavior in moths, scientists injected male moths with saline (control solution) or with small interfering RNA molecules (siRNAs) that inhibit the expression of the gene encoding DopEcR. The scientists then exposed the moths to the pheromone and determined the percent of total time observed that the moths engaged in general activity, defined as movement in any direction. The scientists also determined the percent of the general activity time that the moths spent in oriented activity, defined as movement toward an area of high pheromone concentration (Table 1). DopEcR 90 8 ± 25 6 ± DopEcR is a G protein-coupled receptor. When 20E binds to DopEcR, GTP displaces the GDP bound to the G protein, and a signaling pathway is activated. The scientists hypothesize that this leads to the transcription of genes associated with the oriented activity observed in the male moths (Figure 1). 6 Figure 1. A simplified model of a signaling pathway activated by the binding of 20E to its receptor, DopEcR B. i. Using the template in the space provided for your response, construct an appropriate type of graph that represents the data in DopEcR receptor. C. i. Based on Table 1, identify the treatment group in which the oriented activity was greater than 50% of the general activity. ii. The scientists studied some moths with a mutation in the gene encoding the G protein. The mutation prevents GTP from displacing the GDP bound to the G protein. Based on Figure 1, predict the effect of this mutation on the oriented activity in male moths exposed to the pheromone. Expression of the gene encoding DopEcR is low in the male moths during their first few days as adults, when they are sexually immature. Gene expression rapidly increases as the moths reach sexual maturity. The scientists claim that this increase in gene expression increases the likelihood of males finding females with whom to mate. D. i. Use evidence from the information provided to support the scientists' claim. ii. Based on Figure 1, explain how an inhibitor of the DopEcR pathway might serve as an effective chemical to protect crops from moth damage."
+        "text": "Many insects rely on pheromones (chemical signals) that are released by the females to find mating partners. Scientists hypothesize that, in a certain type of moth, the behavior of male moths in response to pheromones is regulated by the extracellular signaling molecule 20E."
       },
       {
         "type": "figure",
@@ -3558,6 +3552,26 @@
           "source": "General activity is percent of total time observed; oriented activity is percent of general activity. Values are average +/- 2SE_x."
         },
         "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Many receptors are embedded in the plasma membrane. Describe the polarity of the portion of the receptor that is inside the membrane. To investigate whether the binding of 20E to its receptor, DopEcR, affects behavior in moths, scientists injected male moths with saline (control solution) or with small interfering RNA molecules (siRNAs) that inhibit the expression of the gene encoding DopEcR. The scientists then exposed the moths to the pheromone and determined the percent of total time observed that the moths engaged in general activity, defined as movement in any direction. The scientists also determined the percent of the general activity time that the moths spent in oriented activity, defined as movement toward an area of high pheromone concentration (Table 1). DopEcR 90 8 ± 25 6 ± DopEcR is a G protein-coupled receptor. When 20E binds to DopEcR, GTP displaces the GDP bound to the G protein, and a signaling pathway is activated. The scientists hypothesize that this leads to the transcription of genes associated with the oriented activity observed in the male moths (Figure 1). 6 Figure 1. A simplified model of a signaling pathway activated by the binding of 20E to its receptor, DopEcR"
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "i. Using the template in the space provided for your response, construct an appropriate type of graph that represents the data in DopEcR receptor."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "i. Based on Table 1, identify the treatment group in which the oriented activity was greater than 50% of the general activity. ii. The scientists studied some moths with a mutation in the gene encoding the G protein. The mutation prevents GTP from displacing the GDP bound to the G protein. Based on Figure 1, predict the effect of this mutation on the oriented activity in male moths exposed to the pheromone. Expression of the gene encoding DopEcR is low in the male moths during their first few days as adults, when they are sexually immature. Gene expression rapidly increases as the moths reach sexual maturity. The scientists claim that this increase in gene expression increases the likelihood of males finding females with whom to mate."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "i. Use evidence from the information provided to support the scientists' claim. ii. Based on Figure 1, explain how an inhibitor of the DopEcR pathway might serve as an effective chemical to protect crops from moth damage."
       }
     ]
   },
@@ -3622,7 +3636,27 @@
     "content_blocks": [
       {
         "type": "paragraph",
-        "text": "Buffelgrass, an invasive grass species in southwestern desert ecosystems, is threatening the saguaro cactus, a keystone species in these ecosystems. Buffelgrass is drought-tolerant and can survive wildfires. However, the dry buffelgrass also acts as fuel for wildfires, causing the fires to be more severe. Older saguaro cacti can survive wildfires; however, many of the young cacti cannot. Scientists conducted an experiment to determine whether they could control the abundance of the buffelgrass population. The scientists identified several native grass species that, when grown with buffelgrass, might reduce the abundance of buffelgrass. They grew buffelgrass in the presence of several different native grass species in greenhouses, in either nondrought (watered every 3 days) or drought (watered every 9 days) conditions. After twelve weeks, they measured the height and dry weight of the buffelgrass in each treatment group. A. Describe the effect that removing a keystone species will have on an ecosystem. B. Identify a control group the scientists should include in their experiment. C. State the null hypothesis of the experiment in which buffelgrass is grown in the presence of native grass species. D. Scientists have found that the population growth rates of native grasses are much slower than the population growth rate of buffelgrass following a wildfire. The scientists claim that wildfires will therefore increase the abundance of buffelgrass plants in the ecosystem. Based on the information given, justify the scientists' claim."
+        "text": "Buffelgrass, an invasive grass species in southwestern desert ecosystems, is threatening the saguaro cactus, a keystone species in these ecosystems. Buffelgrass is drought-tolerant and can survive wildfires. However, the dry buffelgrass also acts as fuel for wildfires, causing the fires to be more severe. Older saguaro cacti can survive wildfires; however, many of the young cacti cannot. Scientists conducted an experiment to determine whether they could control the abundance of the buffelgrass population. The scientists identified several native grass species that, when grown with buffelgrass, might reduce the abundance of buffelgrass. They grew buffelgrass in the presence of several different native grass species in greenhouses, in either nondrought (watered every 3 days) or drought (watered every 9 days) conditions. After twelve weeks, they measured the height and dry weight of the buffelgrass in each treatment group."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe the effect that removing a keystone species will have on an ecosystem."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Identify a control group the scientists should include in their experiment."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "State the null hypothesis of the experiment in which buffelgrass is grown in the presence of native grass species."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Scientists have found that the population growth rates of native grasses are much slower than the population growth rate of buffelgrass following a wildfire. The scientists claim that wildfires will therefore increase the abundance of buffelgrass plants in the ecosystem. Based on the information given, justify the scientists' claim."
       }
     ]
   },
@@ -3687,7 +3721,27 @@
     "content_blocks": [
       {
         "type": "paragraph",
-        "text": "Twenty million years ago the Caribbean Sea and Pacific Ocean were connected, and water flowed freely between the two bodies of water. Many of the same marine species were found in both areas. Over millions of years, the land referred to as the Isthmus of Panama formed, eventually closing off the connection between the Caribbean Sea and Pacific Ocean and creating two separate bodies of water. The ecology of these two marine habitats was dramatically altered by this land formation. The warmer Caribbean water could no longer flow west, so the Pacific water cooled and became more nutrient-rich, while the Caribbean water became warmer. A. Describe the genetic evidence that evolution is occurring in a population. B. Explain how the isolation of marine species by the formation of a land barrier can lead to divergent evolution of those species. The formation of the Isthmus of Panama connected two continents, North America and South America. Many North American land animal species migrated to South America after the formation of the isthmus and occupied similar niches as South American species. C. Predict the effect the formation of the isthmus had on resource availability for South American species. D. Justify your prediction in part C."
+        "text": "Twenty million years ago the Caribbean Sea and Pacific Ocean were connected, and water flowed freely between the two bodies of water. Many of the same marine species were found in both areas. Over millions of years, the land referred to as the Isthmus of Panama formed, eventually closing off the connection between the Caribbean Sea and Pacific Ocean and creating two separate bodies of water. The ecology of these two marine habitats was dramatically altered by this land formation. The warmer Caribbean water could no longer flow west, so the Pacific water cooled and became more nutrient-rich, while the Caribbean water became warmer."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe the genetic evidence that evolution is occurring in a population."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Explain how the isolation of marine species by the formation of a land barrier can lead to divergent evolution of those species. The formation of the Isthmus of Panama connected two continents, North America and South America. Many North American land animal species migrated to South America after the formation of the isthmus and occupied similar niches as South American species."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Predict the effect the formation of the isthmus had on resource availability for South American species."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Justify your prediction in part C."
       }
     ]
   },
@@ -3779,7 +3833,7 @@
     "content_blocks": [
       {
         "type": "paragraph",
-        "text": "Figure 1 shows the reactions of the metabolic pathway used to synthesize amino acid B from amino acid A in cells. Figure 1. Synthesis of amino acid B from amino acid A A. Describe a characteristic of an enzyme's active site that allows it to catalyze a specific chemical reaction. B. Based on Figure 1, explain how the binding of amino acid A to enzyme 1 is regulated by amino acid B. C. Using the information in Figure 1, identify the product of the reaction catalyzed by enzyme 2: intermediate X, intermediate Y, or amino acid B. D. Based on Figure 1, explain how a change in pH could affect enzyme 3 in such a way that amino acid B cannot be produced."
+        "text": "Figure 1 shows the reactions of the metabolic pathway used to synthesize amino acid B from amino acid A in cells. Figure 1. Synthesis of amino acid B from amino acid A"
       },
       {
         "type": "figure",
@@ -3790,6 +3844,26 @@
           "images/ap/biology/2025/2025_frq5_amino_acid_pathway.png"
         ],
         "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe a characteristic of an enzyme's active site that allows it to catalyze a specific chemical reaction."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Based on Figure 1, explain how the binding of amino acid A to enzyme 1 is regulated by amino acid"
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "C. Using the information in Figure 1, identify the product of the reaction catalyzed by enzyme 2: intermediate X, intermediate Y, or amino acid"
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "D. Based on Figure 1, explain how a change in pH could affect enzyme 3 in such a way that amino acid B cannot be produced."
       }
     ]
   },
@@ -3881,7 +3955,7 @@
     "content_blocks": [
       {
         "type": "paragraph",
-        "text": "The ald gene of fruit flies encodes the ALD protein, which is associated with both the centromeres of chromosomes and protein filaments produced during meiosis. In the absence of functional ALD proteins, gamete-producing cells enter anaphase I before homologous chromosomes are correctly aligned. As a result, the gametes produced do not contain the correct numbers of chromosomes. Scientists generated four mutations in the ald gene: ald1, ald3, ald23, and del, which was a deletion of the gene. To study the role of the ALD protein in meiosis, scientists used gameteforming metaphase cells from groups of flies with different ald genotypes. Some of the flies were homozygous for the wild-type allele of ald: WT/WT. Other flies were heterozygous for different ald alleles: WT/del; ald1/del; ald3/ald23; ald23/del. The scientists measured the percent of metaphase cells that contained ALD-associated filaments (Figure 1A) and the amount of ALD protein produced by each of the cell types (Figure 1B). Figure 1."
+        "text": "The ald gene of fruit flies encodes the ALD protein, which is associated with both the centromeres of chromosomes and protein filaments produced during meiosis. In the absence of functional ALD proteins, gamete-producing cells enter anaphase I before homologous chromosomes are correctly aligned. As a result, the gametes produced do not contain the correct numbers of chromosomes. Scientists generated four mutations in the ald gene: ald1, ald3, ald23, and del, which was a deletion of the gene. To study the role of the ALD protein in meiosis, scientists used gameteforming metaphase cells from groups of flies with different ald genotypes. Some of the flies were homozygous for the wild-type allele of ald: WT/WT. Other flies were heterozygous for different ald alleles: WT/del; ald1/del; ald3/ald23; ald23/del. The scientists measured the percent of metaphase cells that contained ALD-associated filaments (Figure 1A) and the amount of ALD protein produced by each of the cell types (Figure 1B). Figure 1. (A) The average percent of gamete-forming metaphase cells that contained filaments associated with ALD and (B) the amount of ALD protein produced by each cell type. A thicker band indicates a greater amount of ALD protein."
       },
       {
         "type": "figure",
@@ -3895,13 +3969,23 @@
       },
       {
         "type": "part",
-        "label": "(A)",
-        "text": "The average percent of gamete-forming metaphase cells that contained filaments associated with ALD and"
+        "label": "(a)",
+        "text": "Based on Figure 1A, identify the fly genotype in which the average percent of metaphase cells with ALD-associated filaments is close to 12%."
       },
       {
         "type": "part",
-        "label": "(B)",
-        "text": "the amount of ALD protein produced by each cell type. A thicker band indicates a greater amount of ALD protein. A. Based on Figure 1A, identify the fly genotype in which the average percent of metaphase cells with ALD-associated filaments is close to 12%. B. Based on Figure 1B, describe the difference in ALD protein production between gamete- forming metaphase cells of flies with the genotype ald3/ald23 and flies with the genotype ald23/del. C. Scientists hypothesize that gamete-forming metaphase cells can produce a normal amount of ALD-associated filaments even when they produce about half as much ALD protein as the wild-type cells produce. Use the data in Figures 1A and 1B to support the scientists' hypothesis. 11 D. For gamete-forming metaphase cells of the WT/del and ald1/del flies, explain why the phenotypes observed in Figure 1A differ even though the amount of ALD protein produced (Figure 1B) does not."
+        "label": "(b)",
+        "text": "Based on Figure 1B, describe the difference in ALD protein production between gamete- forming metaphase cells of flies with the genotype ald3/ald23 and flies with the genotype ald23/del."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Scientists hypothesize that gamete-forming metaphase cells can produce a normal amount of ALD-associated filaments even when they produce about half as much ALD protein as the wild-type cells produce. Use the data in Figures 1A and 1B to support the scientists' hypothesis. 11"
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "For gamete-forming metaphase cells of the WT/del and ald1/del flies, explain why the phenotypes observed in Figure 1A differ even though the amount of ALD protein produced (Figure 1B) does not."
       }
     ]
   }
