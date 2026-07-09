@@ -174,7 +174,7 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
     const info = await collectVisibleState(client)
     checkVisibleState(`quiz:${quiz[i].question_id}`, info, errors, warnings)
     const pageText = auditComparableText(info.text)
-    const questionVisible = pageText.includes(auditComparableText(quiz[i].text).slice(0, 50)) ||
+    const questionVisible = questionContentVisible(pageText, quiz[i].text) ||
       Object.values(quiz[i].options || {}).some(option => {
         const text = auditComparableText(option)
         return text.length >= 8 && pageText.includes(text.slice(0, Math.min(60, text.length)))
@@ -183,7 +183,7 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
       (quiz[i].option_table_data && info.tableCount > 0) ||
       ((quiz[i].image_paths || []).length > 0 && info.visibleImages.length > 0)
     if (!questionVisible) {
-      warnings.push({ page: 'quiz-play', kind: 'current_question_id_not_visible', question_id: quiz[i].question_id, visible_sample: sampleText(info.text, 0) })
+      errors.push({ page: 'quiz-play', kind: 'current_question_content_not_visible', question_id: quiz[i].question_id, visible_sample: sampleText(info.text, 0) })
     }
     const answers = chooseWrongAnswers(quiz[i])
     for (const answer of (answers.length ? answers : ['A'])) {
@@ -727,6 +727,22 @@ function auditComparableText(text) {
     .replace(/[{}_^]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
+}
+
+function questionContentVisible(pageText, questionText) {
+  const cleanQuestion = auditComparableText(questionText)
+  if (!cleanQuestion) return false
+  const direct = cleanQuestion.slice(0, Math.min(80, cleanQuestion.length))
+  if (direct.length >= 24 && pageText.includes(direct)) return true
+  const words = cleanQuestion
+    .split(/\s+/)
+    .map(word => word.replace(/[^A-Za-z0-9]+/g, ''))
+    .filter(word => word.length >= 4)
+    .slice(0, 28)
+  if (words.length < 5) return pageText.includes(cleanQuestion.slice(0, Math.min(24, cleanQuestion.length)))
+  const pageWords = new Set(pageText.split(/\s+/).map(word => word.replace(/[^A-Za-z0-9]+/g, '')).filter(Boolean))
+  const hits = words.filter(word => pageWords.has(word)).length
+  return hits >= Math.min(10, Math.ceil(words.length * 0.55))
 }
 
 function escapeRegex(text) {

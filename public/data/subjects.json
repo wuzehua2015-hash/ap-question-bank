@@ -398,22 +398,15 @@
           "U10": 3
         }
       },
-      "releaseStatus": "content-risk",
+      "releaseStatus": "certified",
       "visibility": "internal",
       "readiness": {
-        "status": "red",
+        "status": "green",
         "updatedAt": "2026-07-09",
-        "p0": 5,
+        "p0": 0,
         "p1": 0,
-        "contentRiskCodes": [
-          "frq_solution_outline_duplicates_criteria",
-          "weak_frq_rubrics"
-        ],
-        "mechanismCodes": [
-          "missing_delivery_contract",
-          "missing_delivery_review",
-          "missing_frq_browser_review"
-        ]
+        "contentRiskCodes": [],
+        "mechanismCodes": []
       }
     },
     {

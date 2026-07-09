@@ -306,7 +306,8 @@ function selectAuditFrq(frq) {
 }
 
 async function auditSearch(client, errors, warnings, artifacts) {
-  await navigate(client, routeUrl('#/search'))
+  await navigate(client, routeUrl(`#/search?subject=${encodeURIComponent(subjectId)}`))
+  await waitForSubjectLock(client, 'search', errors)
   await waitForImages(client)
   const info = await collectPageInfo(client, 'search')
   checkPageInfo(info, errors, warnings)
@@ -378,6 +379,32 @@ async function auditScorePage(client, mcq, frq, errors, warnings, artifacts) {
     errors.push({ page: 'score', kind: 'rubric_scroll_target_not_found' })
   }
   await screenshot(client, `${subjectId}-score-rubric.png`, artifacts)
+}
+
+async function waitForSubjectLock(client, page, errors) {
+  for (let i = 0; i < 40; i += 1) {
+    const state = await evaluate(client, `(() => ({
+      currentSubject: localStorage.getItem('currentSubject'),
+      url: location.href,
+      hasInput: Boolean(document.querySelector('input')),
+      loading: /Loading|加载|鍔犺浇/.test(document.body?.innerText || '')
+    }))()`)
+    if (state.currentSubject === subjectId && state.hasInput && !state.loading) return
+    await sleep(150)
+  }
+  const state = await evaluate(client, `(() => ({
+    currentSubject: localStorage.getItem('currentSubject'),
+    url: location.href,
+    text: (document.body?.innerText || '').slice(0, 240)
+  }))()`)
+  errors.push({
+    page,
+    kind: 'subject_not_locked',
+    expectedSubject: subjectId,
+    actualSubject: state.currentSubject || null,
+    url: state.url,
+    sample: state.text,
+  })
 }
 
 function routeUrl(hash) {

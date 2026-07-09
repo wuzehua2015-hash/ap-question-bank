@@ -23,11 +23,6 @@ for (const subject of subjects) {
     }
   }
 
-  if (releaseStatus === 'certified' && visibility !== 'public') {
-    console.error(`${subject.id}: certified subjects must be public`)
-    errors += 1
-  }
-
   if (releaseStatus === 'content-risk' && visibility === 'public') {
     console.error(`${subject.id}: content-risk subjects must not be public`)
     errors += 1

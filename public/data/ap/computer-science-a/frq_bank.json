@@ -179,7 +179,7 @@
     },
     "rubric": {
       "total_points": 9,
-      "solution_outline": "NumberGroup should be an interface with a public boolean contains(int num) method. Range should implement NumberGroup, store minimum and maximum bounds, initialize them in the constructor, and return whether num is between the bounds inclusive. MultipleGroups.contains should iterate over groupList, call contains on each NumberGroup, return true when any group contains num, and return false if none do.",
+      "solution_outline": "Treat the problem as a polymorphism design task. First define the shared NumberGroup behavior, then make Range provide one concrete version of that behavior, and finally make MultipleGroups depend on the interface rather than on a specific implementation. A strong answer keeps the interface minimal, stores only the range bounds needed for the class, and uses short-circuit logic when testing the collection of groups.",
       "official_text": "Question 4 NumberGroup scoring summary: 2 points for the interface, 5 points for Range, and 2 points for MultipleGroups.contains. Credit depends on correct headers, appropriate instance variables, constructor initialization, inclusive range logic, and correct use of the interface through groupList.",
       "points": [
         {
@@ -233,7 +233,7 @@
     },
     "rubric": {
       "total_points": 9,
-      "solution_outline": "recombine should use substring boundaries based on each word's length, concatenate the first half of word1 with the second half of word2, and return the result. mixedWords should allocate a result array of the same length as words, iterate through words by pairs, use recombine twice for each pair, store both recombined strings in the correct positions, and return the array.",
+      "solution_outline": "Break the task into one string helper and one array-processing method. The helper should make the split rule reusable, so the array method can focus on processing adjacent pairs and writing two outputs per pair. A strong response avoids changing the input array, advances through the array in steps of two, and delegates the string construction to recombine instead of duplicating that logic.",
       "official_text": "Question 1 WordScrambler scoring summary: 4 points for recombine and 5 points for mixedWords. Credit depends on correct substring extraction, concatenation, return value, correct result array size, pairwise traversal, use of recombine, correct storage, and returning the result array.",
       "points": [
         {
