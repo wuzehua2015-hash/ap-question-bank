@@ -1,6 +1,10 @@
 const fs = require('fs')
 const path = require('path')
 
+const STRICT_OPTION_IMAGE_BINDING_SUBJECTS = new Set([
+  'computer-science-principles',
+])
+
 function validateAllSubjects() {
   const subjectsPath = path.resolve('public/data/subjects.json')
   const data = JSON.parse(fs.readFileSync(subjectsPath, 'utf8'))
@@ -70,6 +74,7 @@ function validate(filePath, options = {}) {
   const seenIds = new Set()
   const validUnits = options.validUnits || new Set(['U1','U2','U3','U4','U5','U6','not_applicable'])
   const subjectId = options.subjectId || ''
+  const strictOptionImageBinding = STRICT_OPTION_IMAGE_BINDING_SUBJECTS.has(subjectId)
   const optionPollutionPatterns = [
     /Questions?\s+\d+\s*(?:-|through|and)/i,
     /Questions?\s+\d+\s+(refer|are|is)\b/i,
@@ -373,6 +378,47 @@ function validate(filePath, options = {}) {
         }
       }
     }
+
+    if (!isFRQ && q.options && Array.isArray(q.image_paths) && q.image_paths.length > 0) {
+      const optionValues = Object.values(q.options || {}).map(value => String(value || '').trim())
+      const diagramOptions = optionValues.filter(value => /^Diagram [A-D]$/i.test(value))
+      if (diagramOptions.length === 4) {
+        const reportOptionImageIssue = (message) => {
+          if (strictOptionImageBinding) errors.push(message)
+          else warnings.push(message)
+        }
+        if (q.image_paths.length !== 4) {
+          reportOptionImageIssue(`${qid}: Diagram A-D options require exactly four option images`)
+        }
+        const imageSources = q.visual_asset_review?.image_sources || q.asset_review?.image_sources || []
+        const optionSources = imageSources.filter(source => /^[A-D]$/.test(String(source.option || '')))
+        if (optionSources.length !== 4) {
+          reportOptionImageIssue(`${qid}: Diagram A-D option images require four source records with option letters`)
+        }
+        const optionSet = new Set(optionSources.map(source => source.option))
+        for (const key of ['A', 'B', 'C', 'D']) {
+          if (!optionSet.has(key)) reportOptionImageIssue(`${qid}: Diagram option ${key} lacks source ownership metadata`)
+        }
+        if (optionSources.some(source => source.binding && source.binding !== 'option_label_nearest_image')) {
+          reportOptionImageIssue(`${qid}: Diagram option image source uses unsupported binding metadata`)
+        }
+        const dimensions = []
+        for (const imgPath of q.image_paths) {
+          const fullPath = path.join('public', imgPath)
+          if (!fs.existsSync(fullPath)) continue
+          const buffer = fs.readFileSync(fullPath)
+          const dim = pngDimensions(buffer)
+          if (dim) dimensions.push(dim)
+        }
+        if (dimensions.length === 4) {
+          const widths = dimensions.map(dim => dim.width)
+          const heights = dimensions.map(dim => dim.height)
+          if (Math.max(...widths) / Math.max(1, Math.min(...widths)) > 1.75 || Math.max(...heights) / Math.max(1, Math.min(...heights)) > 1.75) {
+            reportOptionImageIssue(`${qid}: Diagram option images have inconsistent dimensions; possible prompt/option image mix-up`)
+          }
+        }
+      }
+    }
     if (isComputerScienceA) {
       const textBlob = [
         q.text || q.question_text || '',
@@ -487,6 +533,15 @@ function validate(filePath, options = {}) {
   }
   
   return { errors, warnings, passed: errors.length === 0 }
+}
+
+function pngDimensions(buffer) {
+  if (!buffer || buffer.length < 24) return null
+  if (buffer.toString('ascii', 1, 4) !== 'PNG') return null
+  return {
+    width: buffer.readUInt32BE(16),
+    height: buffer.readUInt32BE(20),
+  }
 }
 
 const filePath = process.argv[2]
