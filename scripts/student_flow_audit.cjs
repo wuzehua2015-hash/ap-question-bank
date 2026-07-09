@@ -351,11 +351,15 @@ async function seedSession(client, mcq, frq, info) {
 
 async function clickOption(client, option) {
   const clicked = await evaluate(client, `(() => {
-    const buttons = [...document.querySelectorAll('button, [role="button"], .grid')];
-    const target = buttons.find(el => (el.innerText || '').trim().startsWith(${JSON.stringify(option + '.')}));
+    const label = ${JSON.stringify(option + '.')};
+    const candidates = [
+      ...document.querySelectorAll('button:not([disabled]), [role="button"]:not([disabled]), .cursor-pointer'),
+    ];
+    const target = candidates.find(el => (el.innerText || el.textContent || '').trim().startsWith(label));
     if (target) { target.click(); return true; }
-    const row = [...document.querySelectorAll('div')].find(el => (el.innerText || '').trim() === ${JSON.stringify(option + '.')});
-    if (row) { row.click(); return true; }
+    const labelNode = [...document.querySelectorAll('span,div')].find(el => (el.innerText || el.textContent || '').trim() === label);
+    const button = labelNode?.closest('button,[role="button"]');
+    if (button && !button.disabled) { button.click(); return true; }
     return false;
   })()`)
   if (!clicked) throw new Error(`Could not click option ${option}`)
