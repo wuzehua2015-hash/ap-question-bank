@@ -2406,10 +2406,10 @@
     "type": "MCQ",
     "text": "Which of the following is an accurate comparison of rights protected and not protected by the First \nAmendment? \nProtected by the First Amendment \nNot Protected by the First Amendment",
     "options": {
-      "A": "Libel/slander \nFighting words",
-      "B": "Freedom of religion \nFreedom of assembly",
-      "C": "The right to burn a flag \nObscenity",
-      "D": "Online newspapers \nThe right of a student to pray in school"
+      "A": "Libel/slander / Fighting words",
+      "B": "Freedom of religion / Freedom of assembly",
+      "C": "The right to burn a flag / Obscenity",
+      "D": "Online newspapers / The right of a student to pray in school"
     },
     "answer": "C",
     "image_paths": [],
@@ -2446,6 +2446,30 @@
       "notes": [
         "Extracted from local 2018 full practice exam."
       ]
+    },
+    "option_table_data": {
+      "headers": [
+        "Protected speech",
+        "Unprotected speech"
+      ],
+      "rows": {
+        "A": [
+          "Libel/slander",
+          "Fighting words"
+        ],
+        "B": [
+          "Freedom of religion",
+          "Freedom of assembly"
+        ],
+        "C": [
+          "The right to burn a flag",
+          "Obscenity"
+        ],
+        "D": [
+          "Online newspapers",
+          "The right of a student to pray in school"
+        ]
+      }
     }
   },
   {
@@ -5434,11 +5458,11 @@
     "type": "MCQ",
     "text": "Based on the table above, between 1970 and\n1988, the mean registration rate for Black and\nWhite voters changed in which of the following ways?\nBlack Voters\nWhite Voters",
     "options": {
-      "A": "Decreased slightly\nDecreased slightly",
-      "B": "Decreased slightly\nIncreased slightly",
-      "C": "Increased slightly\nDecreased slightly",
-      "D": "Increased slightly\nIncreased slightly",
-      "E": "Remained unchanged\nIncreased slightly"
+      "A": "Decreased slightly / Decreased slightly",
+      "B": "Decreased slightly / Increased slightly",
+      "C": "Increased slightly / Decreased slightly",
+      "D": "Increased slightly / Increased slightly",
+      "E": "Remained unchanged / Increased slightly"
     },
     "answer": "C",
     "excluded_from_scoring": false,
@@ -5584,6 +5608,34 @@
     "provenance": {
       "source_pdf": "subjects/AP/US-Government-and-Politics/01-exams/candidate_mcq/2005_international_aliyun.pdf",
       "source_status": "candidate_b_verified_text_layer"
+    },
+    "option_table_data": {
+      "headers": [
+        "Black registration 1970-1988",
+        "Registration gap 1970-1988"
+      ],
+      "rows": {
+        "A": [
+          "Decreased slightly",
+          "Decreased slightly"
+        ],
+        "B": [
+          "Decreased slightly",
+          "Increased slightly"
+        ],
+        "C": [
+          "Increased slightly",
+          "Decreased slightly"
+        ],
+        "D": [
+          "Increased slightly",
+          "Increased slightly"
+        ],
+        "E": [
+          "Remained unchanged",
+          "Increased slightly"
+        ]
+      }
     }
   },
   {

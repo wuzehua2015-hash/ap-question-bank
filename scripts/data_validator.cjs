@@ -27,7 +27,12 @@ function validateAllSubjects() {
     }
     const validUnits = new Set((subject.units || []).map(u => u.id))
     validUnits.add('not_applicable')
-    const { errors, warnings } = validate(qbPath, { validUnits, subjectId: subject.id })
+    const { errors, warnings } = validate(qbPath, {
+      validUnits,
+      subjectId: subject.id,
+      releaseStatus: subject.releaseStatus,
+      visibility: subject.visibility,
+    })
     allErrors += errors.length
     allWarnings += warnings.length
 
@@ -37,7 +42,12 @@ function validateAllSubjects() {
         console.log(`ERROR: ${subject.id}: missing FRQ bank: ${subject.frqBank}`)
         allErrors += 1
       } else {
-        const frqResult = validate(frqPath, { validUnits, subjectId: subject.id })
+        const frqResult = validate(frqPath, {
+          validUnits,
+          subjectId: subject.id,
+          releaseStatus: subject.releaseStatus,
+          visibility: subject.visibility,
+        })
         allErrors += frqResult.errors.length
         allWarnings += frqResult.warnings.length
       }
@@ -74,6 +84,9 @@ function validate(filePath, options = {}) {
   const seenIds = new Set()
   const validUnits = options.validUnits || new Set(['U1','U2','U3','U4','U5','U6','not_applicable'])
   const subjectId = options.subjectId || ''
+  const releaseStatus = options.releaseStatus || ''
+  const visibility = options.visibility || ''
+  const subjectMustBlockTableLikeOptions = visibility === 'public' || releaseStatus === 'certified'
   const strictOptionImageBinding = STRICT_OPTION_IMAGE_BINDING_SUBJECTS.has(subjectId)
   const optionPollutionPatterns = [
     /Questions?\s+\d+\s*(?:-|through|and)/i,
@@ -255,6 +268,12 @@ function validate(filePath, options = {}) {
       for (const ans of normalizedAnswers) {
         if (!optionKeys.has(ans)) errors.push(`${qid}: Answer ${ans} is not present in options`)
       }
+      const tableLikeOptions = Object.values(q.options)
+        .map(value => String(value || '').trim())
+        .filter(value => {
+          const lines = value.split(/\r?\n/).map(line => line.trim()).filter(Boolean)
+          return lines.length >= 2 && lines.length <= 3 && lines.every(line => line.length <= 36 && !/[.;:]/.test(line))
+        })
       for (const [opt, optText] of Object.entries(q.options)) {
         if (!optText || optText.trim() === '') {
           errors.push(`${qid}: Option ${opt} is empty`)
@@ -265,6 +284,11 @@ function validate(filePath, options = {}) {
         if (optText && optionPollutionPatterns.some(pattern => pattern.test(optText))) {
           errors.push(`${qid}: Option ${opt} appears polluted with neighboring question/table text`)
         }
+      }
+      if (!q.option_table_data && tableLikeOptions.length >= 3) {
+        const message = `${qid}: table-like MCQ options must use option_table_data`
+        if (subjectMustBlockTableLikeOptions) errors.push(message)
+        else warnings.push(message)
       }
     }
     

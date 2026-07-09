@@ -1157,22 +1157,12 @@
           "U5": 11
         }
       },
-      "releaseStatus": "content-risk",
+      "releaseStatus": "certified",
       "visibility": "internal",
       "readiness": {
-        "status": "red",
-        "updatedAt": "2026-07-09",
-        "p0": 5,
-        "p1": 0,
-        "contentRiskCodes": [
-          "frq_visual_asset_contract_missing",
-          "weak_frq_rubrics"
-        ],
-        "mechanismCodes": [
-          "missing_delivery_contract",
-          "missing_delivery_review",
-          "missing_frq_browser_review"
-        ]
+        "status": "green",
+        "updatedAt": "2026-07-09T15:15:34.549Z",
+        "notes": "Certified internally after AP Gov pre-launch repair: 349 MCQ, 24 FRQ, clean delivery contract, answerability snapshots, FRQ browser review, student-flow, render audit, validate, and build."
       }
     },
     {
