@@ -64,6 +64,11 @@ async function main() {
   assert(frqDisplay.includes('(?<!\\|)\\n'), 'FRQ prompt normalization must preserve newlines after Markdown table rows.')
   assert(frqDisplay.includes('(?:\\||- \\[ \\]|\\([a-z]\\)|'), 'FRQ prompt normalization must preserve Markdown table rows, checklist rows, and (a)-style parts.')
 
+  const questionBank = readText('src/utils/questionBank.js')
+  assert(questionBank.includes('selectMockFRQ'), 'Mock exam FRQ selection must use the shared FRQ sampling helper.')
+  assert(questionBank.includes('_lastMockFRQSignature'), 'Mock exam FRQ selection must remember the previous FRQ set to avoid immediate repeats.')
+  assert(!/candidates\.push\(questions\)[\s\S]*source\.slice\(0,\s*frqCount\)/.test(questionBank), 'Mock exam FRQ selection must not choose a fixed year/set and then take the first configured FRQs.')
+
   const tableRenderFiles = [
     'src/components/QuestionDisplay.jsx',
     'src/components/QuestionCard.jsx',
