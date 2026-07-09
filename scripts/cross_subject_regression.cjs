@@ -98,6 +98,11 @@ async function main() {
     const mockExam = subject.mockExam || {}
     const total = Object.values(mockExam.unitDistribution || {}).reduce((sum, value) => sum + Number(value || 0), 0)
     assert(total === Number(mockExam.totalMCQ), `${subject.id} unitDistribution must sum to totalMCQ.`)
+    if (subject.hasFRQ && subject.frqBank && Number(mockExam.frqCount || 0) > 0) {
+      const frq = readJson(`public/data/${subject.frqBank}`)
+      const slots = new Set(frq.map(item => Number(item.question_number || item.question_num || 0)).filter(Boolean))
+      assert(slots.size >= Number(mockExam.frqCount), `${subject.id} must have at least ${mockExam.frqCount} FRQ question-number slots for mock composition.`)
+    }
   }
 
   if (failures.length) {
