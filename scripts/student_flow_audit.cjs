@@ -174,10 +174,13 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
     const info = await collectVisibleState(client)
     checkVisibleState(`quiz:${quiz[i].question_id}`, info, errors, warnings)
     const pageText = auditComparableText(info.text)
+    const compactPageText = compactAuditText(info.text)
     const questionVisible = questionContentVisible(pageText, quiz[i].text) ||
       Object.values(quiz[i].options || {}).some(option => {
         const text = auditComparableText(option)
-        return text.length >= 8 && pageText.includes(text.slice(0, Math.min(60, text.length)))
+        const compactText = compactAuditText(option)
+        return (text.length >= 8 && pageText.includes(text.slice(0, Math.min(60, text.length)))) ||
+          (compactText.length >= 5 && compactPageText.includes(compactText.slice(0, Math.min(50, compactText.length))))
       }) ||
       (quiz[i].background_data?.table && info.tableCount > 0) ||
       (quiz[i].option_table_data && info.tableCount > 0) ||
@@ -721,6 +724,7 @@ function normalized(text) {
 function auditComparableText(text) {
   return normalized(text)
     .replace(/\$+/g, '')
+    .replace(/\\(sin|cos|tan|sec|csc|cot|ln|log|arcsin|arccos|arctan|sqrt|lim|int)\b/g, '$1')
     .replace(/\\(?:mathrm|text|left|right)\{([^{}]*)\}/g, '$1')
     .replace(/\\(?:,|;|!| )/g, ' ')
     .replace(/\\[a-zA-Z]+/g, ' ')
@@ -729,9 +733,16 @@ function auditComparableText(text) {
     .trim()
 }
 
+function compactAuditText(text) {
+  return auditComparableText(text).toLowerCase().replace(/[^a-z0-9]+/g, '')
+}
+
 function questionContentVisible(pageText, questionText) {
   const cleanQuestion = auditComparableText(questionText)
   if (!cleanQuestion) return false
+  const compactPage = compactAuditText(pageText)
+  const compactQuestion = compactAuditText(questionText)
+  if (compactQuestion.length >= 16 && compactPage.includes(compactQuestion.slice(0, Math.min(80, compactQuestion.length)))) return true
   const direct = cleanQuestion.slice(0, Math.min(80, cleanQuestion.length))
   if (direct.length >= 24 && pageText.includes(direct)) return true
   const words = cleanQuestion

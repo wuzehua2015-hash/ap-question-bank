@@ -85,8 +85,10 @@ async function main() {
   const abFrq = readJson('public/data/ap/calculus-ab/frq_bank.json')
   const ruth = abFrq.find(item => String(item.text || '').includes('Ruth rode her bicycle'))
   assert(ruth, 'AP Calculus AB Ruth FRQ regression fixture must exist.')
-  assert(/\|\s*\$?v\(t\)\$?\s*\(miles per hour\)/.test(ruth?.text || ''), 'AB Ruth FRQ must retain the velocity table row in source data.')
-  assert((ruth?.text || '').split('\n').filter(line => line.trim().startsWith('|')).length >= 3, 'AB Ruth FRQ Markdown table must remain multi-line in source data.')
+  const ruthTable = ruth?.background_data?.table
+  assert(ruthTable, 'AB Ruth FRQ must retain the velocity table as structured background_data.table.')
+  const ruthTableText = JSON.stringify(ruthTable)
+  assert(ruthTableText.includes('v(t)') && ruthTableText.includes('20.1'), 'AB Ruth FRQ structured table must retain velocity row values.')
 
   const psychFrq = readJson('public/data/ap/psychology/frq_bank.json')
   const psychText = JSON.stringify(psychFrq)

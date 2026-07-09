@@ -73,86 +73,6 @@
       }
     },
     {
-      "id": "calculus-ab",
-      "name": "AP Calculus AB",
-      "shortName": "Calc AB",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/calculus-ab/question_bank.json",
-      "frqBank": "ap/calculus-ab/frq_bank.json",
-      "similarityIndex": "ap/calculus-ab/similarity_index.json",
-      "classificationConfig": "ap/calculus-ab/classification_config.json",
-      "dataVersion": "structured-ab-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Limits and Continuity"
-        },
-        {
-          "id": "U2",
-          "name": "Differentiation: Definition and Fundamental Properties"
-        },
-        {
-          "id": "U3",
-          "name": "Differentiation: Composite, Implicit, and Inverse Functions"
-        },
-        {
-          "id": "U4",
-          "name": "Contextual Applications of Differentiation"
-        },
-        {
-          "id": "U5",
-          "name": "Analytical Applications of Differentiation"
-        },
-        {
-          "id": "U6",
-          "name": "Integration and Accumulation of Change"
-        },
-        {
-          "id": "U7",
-          "name": "Differential Equations"
-        },
-        {
-          "id": "U8",
-          "name": "Applications of Integration"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 45,
-        "frqCount": 6,
-        "mcqTimeLimit": 6300,
-        "frqTimeLimit": 5400,
-        "unitDistribution": {
-          "U1": 5,
-          "U2": 5,
-          "U3": 5,
-          "U4": 6,
-          "U5": 7,
-          "U6": 8,
-          "U7": 4,
-          "U8": 5
-        }
-      },
-      "releaseStatus": "content-risk",
-      "visibility": "internal",
-      "readiness": {
-        "status": "red",
-        "updatedAt": "2026-07-09",
-        "p0": 6,
-        "p1": 0,
-        "contentRiskCodes": [
-          "flattened_frq_tables",
-          "frq_visual_asset_contract_missing",
-          "weak_frq_rubrics"
-        ],
-        "mechanismCodes": [
-          "missing_delivery_contract",
-          "missing_delivery_review",
-          "missing_frq_browser_review"
-        ]
-      }
-    },
-    {
       "id": "calculus-bc",
       "name": "AP Calculus BC",
       "shortName": "Calc BC",
@@ -1157,6 +1077,78 @@
           "U6": 8,
           "U7": 7
         }
+      }
+    },
+    {
+      "id": "calculus-ab",
+      "name": "AP Calculus AB",
+      "shortName": "Calc AB",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/calculus-ab/question_bank.json",
+      "frqBank": "ap/calculus-ab/frq_bank.json",
+      "similarityIndex": "ap/calculus-ab/similarity_index.json",
+      "classificationConfig": "ap/calculus-ab/classification_config.json",
+      "dataVersion": "structured-ab-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Limits and Continuity"
+        },
+        {
+          "id": "U2",
+          "name": "Differentiation: Definition and Fundamental Properties"
+        },
+        {
+          "id": "U3",
+          "name": "Differentiation: Composite, Implicit, and Inverse Functions"
+        },
+        {
+          "id": "U4",
+          "name": "Contextual Applications of Differentiation"
+        },
+        {
+          "id": "U5",
+          "name": "Analytical Applications of Differentiation"
+        },
+        {
+          "id": "U6",
+          "name": "Integration and Accumulation of Change"
+        },
+        {
+          "id": "U7",
+          "name": "Differential Equations"
+        },
+        {
+          "id": "U8",
+          "name": "Applications of Integration"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 45,
+        "frqCount": 6,
+        "mcqTimeLimit": 6300,
+        "frqTimeLimit": 5400,
+        "unitDistribution": {
+          "U1": 5,
+          "U2": 5,
+          "U3": 5,
+          "U4": 6,
+          "U5": 7,
+          "U6": 8,
+          "U7": 4,
+          "U8": 5
+        }
+      },
+      "releaseStatus": "certified",
+      "visibility": "internal",
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-09",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
       }
     }
   ]
