@@ -11,12 +11,27 @@ const requiredCopy = [
   },
   {
     file: 'src/pages/HomePage.jsx',
-    labels: ['选择你的学习科目', '我的科目', '管理科目', '快捷入口', '学习记录'],
+    labels: ['选择你的学习科目', '我的科目', '管理科目', '快捷入口', '学习记录', '已认证'],
   },
   {
     file: 'src/pages/SettingsPage.jsx',
-    labels: ['科目设置', '我的科目', '可选科目', '还没有选择科目', '添加', '移除', '设为当前'],
+    labels: ['科目设置', '我的科目', '可选科目', '还没有选择科目', '添加', '移除', '设为当前', '已认证'],
   },
+]
+
+const mojibakePatterns = [
+  /棣栭〉/,
+  /鎼滅储/,
+  /閿欓/,
+  /璁剧疆/,
+  /缈庤嫳/,
+  /绉戠洰/,
+  /瀛︿範/,
+  /褰撳墠/,
+  /閫夋嫨/,
+  /鍙/,
+  /蹇嵎/,
+  /�/,
 ]
 
 let errors = 0
@@ -30,10 +45,16 @@ for (const item of requiredCopy) {
       errors += 1
     }
   }
+  for (const pattern of mojibakePatterns) {
+    if (pattern.test(text)) {
+      console.error(`${item.file}: contains mojibake marker: ${pattern}`)
+      errors += 1
+    }
+  }
 }
 
 if (errors) {
-  console.error(`Chinese copy gate failed: ${errors} missing label(s).`)
+  console.error(`Chinese copy gate failed: ${errors} issue(s).`)
   process.exit(1)
 }
 

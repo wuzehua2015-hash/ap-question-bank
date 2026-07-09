@@ -39,7 +39,7 @@ function HomePage() {
         <section className="bg-surface border border-border rounded-lg p-8">
           <h1 className="text-2xl font-bold text-brand mb-3">选择你的学习科目</h1>
           <p className="text-text-muted mb-6">
-            先选择你正在学习的 AP 科目。首页和顶部科目切换器只会展示这些科目。
+            先选择你正在学习的 AP 科目。首页和顶部科目切换器只会展示已认证并已选择的科目。
           </p>
           <Link
             to="/settings"
@@ -76,7 +76,12 @@ function HomePage() {
                 className={`bg-surface rounded-lg p-5 sm:p-6 shadow-sm border transition-all ${isActive ? 'border-accent ring-1 ring-accent/20' : 'border-border hover:shadow-md'}`}
               >
                 <div className="flex items-start justify-between gap-3 mb-4">
-                  <h2 className="text-lg font-bold text-text leading-snug">{subject.name}</h2>
+                  <div>
+                    <h2 className="text-lg font-bold text-text leading-snug">{subject.name}</h2>
+                    {subject.releaseStatus === 'certified' && (
+                      <span className="inline-flex mt-2 text-xs bg-green-50 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">已认证</span>
+                    )}
+                  </div>
                   {isActive && (
                     <span className="shrink-0 text-xs bg-accent/10 text-accent px-2 py-0.5 rounded-full">当前</span>
                   )}

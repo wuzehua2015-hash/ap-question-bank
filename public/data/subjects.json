@@ -60,6 +60,16 @@
           "U7": 8,
           "U8": 8
         }
+      },
+      "releaseStatus": "certified",
+      "visibility": "public",
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-09",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
       }
     },
     {
@@ -122,6 +132,24 @@
           "U7": 4,
           "U8": 5
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 6,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_visual_asset_contract_missing",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -194,6 +222,24 @@
           "U9": 5,
           "U10": 5
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 6,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_visual_asset_contract_missing",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -261,6 +307,24 @@
           "U8": 5,
           "U9": 4
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 6,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_visual_asset_contract_missing",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -333,6 +397,23 @@
           "U9": 4,
           "U10": 3
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 5,
+        "p1": 0,
+        "contentRiskCodes": [
+          "frq_solution_outline_duplicates_criteria",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -400,6 +481,27 @@
           "U8": 19,
           "U9": 9
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 9,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_internal_rubric_ids",
+          "frq_prompt_page_number_residue",
+          "frq_solution_outline_duplicates_criteria",
+          "frq_visual_asset_contract_missing",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -452,6 +554,25 @@
           "U5": 15,
           "U6": 7
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 7,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_visual_asset_contract_missing",
+          "missing_referenced_images",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -504,6 +625,25 @@
           "U5": 7,
           "U6": 6
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 7,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_visual_asset_contract_missing",
+          "missing_referenced_images",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -566,6 +706,24 @@
           "U7": 7,
           "U8": 0
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 6,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_solution_outline_duplicates_criteria",
+          "frq_visual_asset_contract_missing"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -623,6 +781,26 @@
           "U6": 8,
           "U7": 7
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 8,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_prompt_page_number_residue",
+          "frq_solution_outline_duplicates_criteria",
+          "frq_visual_asset_contract_missing",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -675,6 +853,24 @@
           "U12": 6,
           "U13": 5
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 6,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_visual_asset_contract_missing",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -732,6 +928,24 @@
           "U6": 1,
           "U7": 5
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 6,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_visual_asset_contract_missing",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -799,6 +1013,24 @@
           "U8": 13,
           "U9": 8
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 6,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_visual_asset_contract_missing",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -866,6 +1098,24 @@
           "U8": 2,
           "U9": 3
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 6,
+        "p1": 0,
+        "contentRiskCodes": [
+          "flattened_frq_tables",
+          "frq_visual_asset_contract_missing",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -913,6 +1163,23 @@
           "U4": 8,
           "U5": 11
         }
+      },
+      "releaseStatus": "content-risk",
+      "visibility": "internal",
+      "readiness": {
+        "status": "red",
+        "updatedAt": "2026-07-09",
+        "p0": 5,
+        "p1": 0,
+        "contentRiskCodes": [
+          "frq_visual_asset_contract_missing",
+          "weak_frq_rubrics"
+        ],
+        "mechanismCodes": [
+          "missing_delivery_contract",
+          "missing_delivery_review",
+          "missing_frq_browser_review"
+        ]
       }
     },
     {
@@ -961,6 +1228,16 @@
           "U5": 2
         },
         "scopeNote": "MCQ practice is generated from local 2016/2018 legacy 74-question CSP practice exams. Written-response practice uses official 2024/2025 AP Central prompts and scoring guidelines for the current Create performance task response format."
+      },
+      "releaseStatus": "certified",
+      "visibility": "public",
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-09",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
       }
     }
   ]

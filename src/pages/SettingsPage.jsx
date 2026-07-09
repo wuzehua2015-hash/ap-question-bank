@@ -24,7 +24,7 @@ function SettingsPage() {
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-brand mb-2">科目设置</h1>
         <p className="text-text-muted">
-          选择你正在学习的科目。首页和顶部科目切换器只会展示已选择的科目。
+          选择你正在学习的科目。首页和顶部科目切换器只会展示已认证并已选择的科目。
         </p>
       </div>
 
@@ -72,6 +72,9 @@ function SettingsPage() {
                   <div>
                     <h3 className="text-base font-bold text-text leading-snug">{subject.name}</h3>
                     <p className="text-xs text-text-muted mt-1">{subject.shortName || subject.id}</p>
+                    {subject.releaseStatus === 'certified' && (
+                      <span className="inline-flex mt-2 text-xs bg-green-50 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">已认证</span>
+                    )}
                   </div>
                   <input
                     type="checkbox"

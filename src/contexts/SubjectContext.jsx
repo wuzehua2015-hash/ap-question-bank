@@ -31,20 +31,20 @@ export function SubjectProvider({ children }) {
     loadSubjects()
       .then(data => {
         const loadedSubjects = data.subjects || []
-        const active = loadedSubjects.filter(s => s.active)
-        const activeIds = new Set(active.map(s => s.id))
-        const storedMySubjects = getMySubjects().filter(id => activeIds.has(id))
+        const available = loadedSubjects.filter(s => s.active && s.visibility !== 'internal')
+        const availableIds = new Set(available.map(s => s.id))
+        const storedMySubjects = getMySubjects().filter(id => availableIds.has(id))
         const hasStoredCurrentSubject = localStorage.getItem('currentSubject') !== null
         const hasStoredDefaultSubject = localStorage.getItem('defaultSubject') !== null
         const storedCurrent = getCurrentSubject()
         const storedDefault = getDefaultSubject()
         const seededMySubjects = storedMySubjects.length
           ? storedMySubjects
-          : [
+            : [
               hasStoredCurrentSubject ? storedCurrent : null,
               hasStoredDefaultSubject ? storedDefault : null,
-            ].filter(id => activeIds.has(id)).slice(0, 1)
-        const fallbackSubject = seededMySubjects[0] || active[0]?.id || storedCurrent
+            ].filter(id => availableIds.has(id)).slice(0, 1)
+        const fallbackSubject = seededMySubjects[0] || available[0]?.id || storedCurrent
         const nextCurrent = seededMySubjects.includes(storedCurrent) ? storedCurrent : fallbackSubject
 
         setSubjects(loadedSubjects)
@@ -68,9 +68,9 @@ export function SubjectProvider({ children }) {
   }, [])
 
   const updateMySubjects = useCallback((ids) => {
-    const activeIds = new Set(subjects.filter(s => s.active).map(s => s.id))
-    const nextIds = [...new Set((ids || []).filter(id => activeIds.has(id)))]
-    const fallbackSubject = nextIds[0] || subjects.find(s => s.active)?.id || currentSubject
+    const availableIds = new Set(subjects.filter(s => s.active && s.visibility !== 'internal').map(s => s.id))
+    const nextIds = [...new Set((ids || []).filter(id => availableIds.has(id)))]
+    const fallbackSubject = nextIds[0] || subjects.find(s => s.active && s.visibility !== 'internal')?.id || currentSubject
     const nextCurrent = nextIds.includes(currentSubject) ? currentSubject : fallbackSubject
 
     setMySubjectIds(nextIds)
@@ -92,8 +92,9 @@ export function SubjectProvider({ children }) {
   }, [mySubjectIds, updateMySubjects])
 
   const activeSubjects = subjects.filter(s => s.active)
+  const availableSubjects = activeSubjects.filter(s => s.visibility !== 'internal')
   const mySubjectSet = new Set(mySubjectIds)
-  const mySubjects = activeSubjects.filter(s => mySubjectSet.has(s.id))
+  const mySubjects = availableSubjects.filter(s => mySubjectSet.has(s.id))
 
   const value = {
     currentSubject,
@@ -101,7 +102,7 @@ export function SubjectProvider({ children }) {
     loading,
     setSubject,
     activeSubjects,
-    availableSubjects: activeSubjects,
+    availableSubjects,
     mySubjects,
     mySubjectIds,
     updateMySubjects,
