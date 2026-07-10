@@ -176,10 +176,54 @@ async function collectSurface(client, surface, item) {
 
 function containsEnoughPrompt(visibleText, prompt) {
   const cleanVisible = normalized(visibleText)
-  const words = normalized(prompt).split(/\s+/).filter(word => word.length > 2).slice(0, 20)
+  const cleanPrompt = normalized(prompt)
+  const prosePrompt = normalized(
+    String(prompt || '')
+      .replace(/\$\$[\s\S]*?\$\$/g, ' ')
+      .replace(/\$[^$]*\$/g, ' ')
+      .replace(/\\[a-zA-Z]+(?:\{[^{}]*\})?/g, ' ')
+      .replace(/[{}_^&=<>+\-*/()[\],.;:]/g, ' ')
+  )
+  const proseWords = prosePrompt.split(/\s+/).filter(word => word.length > 2).slice(0, 24)
+  if (proseWords.length >= 5) {
+    const proseHits = proseWords.filter(word => cleanVisible.includes(word)).length
+    if (proseHits >= Math.min(8, Math.ceil(proseWords.length * 0.5))) return true
+  }
+  const compactVisible = auditComparableText(visibleText).toLowerCase().replace(/[^a-z0-9]+/g, '')
+  const compactPrompt = auditComparableText(prompt).toLowerCase().replace(/[^a-z0-9]+/g, '')
+  if (compactPrompt.length >= 24 && compactVisible.includes(compactPrompt.slice(0, Math.min(80, compactPrompt.length)))) return true
+  const mathTokens = mathAuditTokens(prompt)
+  if (mathTokens.length >= 4) {
+    const hits = mathTokens.filter(token => compactVisible.includes(token)).length
+    if (hits >= Math.min(5, Math.ceil(mathTokens.length * 0.45))) return true
+  }
+  const words = cleanPrompt.split(/\s+/).filter(word => word.length > 2).slice(0, 20)
   if (words.length < 5) return cleanVisible.length > 50
   const hits = words.filter(word => cleanVisible.includes(word)).length
   return hits >= Math.min(10, Math.ceil(words.length * 0.55))
+}
+
+function auditComparableText(text) {
+  return normalized(text)
+    .replace(/[′’]/g, ' prime ')
+    .replace(/[−–—]/g, '-')
+    .replace(/\$+/g, '')
+    .replace(/\\(sin|cos|tan|sec|csc|cot|ln|log|arcsin|arccos|arctan|sqrt|lim|int|frac|dfrac|begin|end|cases|le|ge|to|pi)\b/g, ' $1 ')
+    .replace(/\\(?:mathrm|text|left|right)\{([^{}]*)\}/g, '$1')
+    .replace(/\\(?:,|;|!| )/g, ' ')
+    .replace(/\\[a-zA-Z]+/g, ' ')
+    .replace(/[{}_^&]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function mathAuditTokens(text) {
+  const raw = auditComparableText(text)
+  const compact = raw.toLowerCase().replace(/[^a-z0-9]+/g, '')
+  const tokens = new Set()
+  for (const match of raw.matchAll(/[A-Za-z]?\d+[A-Za-z]?|[A-Za-z]\d+|\d+[A-Za-z]|sqrt|cos|sin|frac|dfrac|cases|prime/g)) tokens.add(match[0].toLowerCase())
+  for (const match of compact.matchAll(/[a-z]?\d+[a-z]?|[a-z]\d+|\d+[a-z]|sqrt|cos|sin|frac|dfrac|cases|prime/g)) tokens.add(match[0].toLowerCase())
+  return Array.from(tokens).filter(token => token.length >= 2)
 }
 
 async function seedFrqSession(client, item, mcqStub) {
@@ -187,7 +231,7 @@ async function seedFrqSession(client, item, mcqStub) {
     subjectId,
     mcq: [mcqStub],
     frq: [item],
-    info: { isMock: true, mode: 'mock', requestedCount: 1, actualCount: 1 },
+    info: { subject: subjectId, config: { subject: subjectId }, isMock: true, mode: 'mock', requestedCount: 1, actualCount: 1 },
     config: { subject: subjectId, unit: 'audit', count: 1, type: 'mock' },
   }), 'utf8').toString('base64')
   await evaluate(client, `(() => {

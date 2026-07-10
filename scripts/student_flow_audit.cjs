@@ -179,8 +179,11 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
       Object.values(quiz[i].options || {}).some(option => {
         const text = auditComparableText(option)
         const compactText = compactAuditText(option)
+        const optionTokens = mathAuditTokens(option)
+        const optionTokenHits = optionTokens.filter(token => compactPageText.includes(token)).length
         return (text.length >= 8 && pageText.includes(text.slice(0, Math.min(60, text.length)))) ||
-          (compactText.length >= 5 && compactPageText.includes(compactText.slice(0, Math.min(50, compactText.length))))
+          (compactText.length >= 5 && compactPageText.includes(compactText.slice(0, Math.min(50, compactText.length)))) ||
+          (optionTokens.length >= 2 && optionTokenHits >= Math.min(3, optionTokens.length))
       }) ||
       (quiz[i].background_data?.table && info.tableCount > 0) ||
       (quiz[i].option_table_data && info.tableCount > 0) ||
@@ -367,14 +370,11 @@ function chooseWrongAnswers(question) {
 }
 
 async function seedSession(client, mcq, frq, info) {
-  const answers = {}
-  for (const q of mcq) answers[q.question_id] = q.answer || 'A'
   const payload = Buffer.from(JSON.stringify({
     subjectId,
     mcq,
     frq,
     info,
-    answers,
     config: { subject: subjectId, unit: 'audit', count: mcq.length, type: info.isMock ? 'mock' : 'quiz' },
   }), 'utf8').toString('base64')
   await evaluate(client, `(() => {
@@ -387,7 +387,7 @@ async function seedSession(client, mcq, frq, info) {
     sessionStorage.setItem('currentFRQ', JSON.stringify(payload.frq));
     sessionStorage.setItem('quizConfig', JSON.stringify(payload.config));
     sessionStorage.setItem('quizInfo', JSON.stringify(payload.info));
-    sessionStorage.setItem('mcqAnswers', JSON.stringify(payload.answers));
+    sessionStorage.removeItem('mcqAnswers');
   })()`)
 }
 
@@ -723,6 +723,8 @@ function normalized(text) {
 
 function auditComparableText(text) {
   return normalized(text)
+    .replace(/[′’]/g, ' prime ')
+    .replace(/[−–—]/g, '-')
     .replace(/\$+/g, '')
     .replace(/\\(sin|cos|tan|sec|csc|cot|ln|log|arcsin|arccos|arctan|sqrt|lim|int)\b/g, '$1')
     .replace(/\\(?:mathrm|text|left|right)\{([^{}]*)\}/g, '$1')
@@ -737,6 +739,15 @@ function compactAuditText(text) {
   return auditComparableText(text).toLowerCase().replace(/[^a-z0-9]+/g, '')
 }
 
+function mathAuditTokens(text) {
+  const raw = auditComparableText(text)
+  const compact = compactAuditText(text)
+  const tokens = new Set()
+  for (const match of raw.matchAll(/[A-Za-z]?\d+[A-Za-z]?|[A-Za-z]\d+|\d+[A-Za-z]/g)) tokens.add(match[0].toLowerCase())
+  for (const match of compact.matchAll(/[a-z]?\d+[a-z]?|[a-z]\d+|\d+[a-z]/g)) tokens.add(match[0].toLowerCase())
+  return Array.from(tokens).filter(token => token.length >= 2)
+}
+
 function questionContentVisible(pageText, questionText) {
   const cleanQuestion = auditComparableText(questionText)
   if (!cleanQuestion) return false
@@ -745,6 +756,11 @@ function questionContentVisible(pageText, questionText) {
   if (compactQuestion.length >= 16 && compactPage.includes(compactQuestion.slice(0, Math.min(80, compactQuestion.length)))) return true
   const direct = cleanQuestion.slice(0, Math.min(80, cleanQuestion.length))
   if (direct.length >= 24 && pageText.includes(direct)) return true
+  const mathTokens = mathAuditTokens(questionText)
+  if (mathTokens.length >= 3) {
+    const compactHits = mathTokens.filter(token => compactPage.includes(token)).length
+    if (compactHits >= Math.min(4, Math.ceil(mathTokens.length * 0.55))) return true
+  }
   const words = cleanQuestion
     .split(/\s+/)
     .map(word => word.replace(/[^A-Za-z0-9]+/g, ''))
