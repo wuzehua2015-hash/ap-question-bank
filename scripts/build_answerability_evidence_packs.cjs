@@ -202,7 +202,8 @@ function detectMachineFindings(q, item, subject) {
     }
     const rawOption = String(value || '')
     const isLegitimatePointLabel = /^Point\s+[A-Z]$/i.test(option)
-    if (!isLegitimatePointLabel && (/\n\s*T\s*$|\sT$/.test(rawOption))) {
+    const isGraphRegionLabel = (q.image_paths || []).length > 0 && /^[A-Z](?:\s+(?:[A-Z]|\d+|zero))*$/i.test(option)
+    if (!isLegitimatePointLabel && !isGraphRegionLabel && (/\n\s*T\s*$|\sT$/.test(rawOption))) {
       findings.push({
         severity: 'P0',
         code: 'standalone_footer_t_pollution',

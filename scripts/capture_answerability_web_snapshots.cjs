@@ -132,7 +132,8 @@ async function captureSearchItem(client, item) {
   if (result.brokenImages?.length) {
     findings.push({ severity: 'P0', code: 'broken_image', message: 'One or more visible images failed to load.', details: result.brokenImages })
   }
-  if ((item.data_evidence?.image_count || 0) > 0 && result.imageCount === 0) {
+  const structuredTableVisible = result.tableCount > 0 && (item.data_evidence?.has_option_table || item.data_evidence?.has_background_data)
+  if ((item.data_evidence?.image_count || 0) > 0 && result.imageCount === 0 && !structuredTableVisible) {
     findings.push({ severity: 'P0', code: 'expected_images_not_visible', message: 'Manifest says the item has images, but none are visible in Search.' })
   }
   if (item.data_evidence?.has_background_data && result.tableCount === 0) {
