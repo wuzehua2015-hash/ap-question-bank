@@ -47,7 +47,35 @@
     "group_role": "lead",
     "requires_group_context": true,
     "group_context": "Questions 1-2\nA ball is struck at time $t=0$ and follows the parabolic path shown in the diagram above. The following graphs show quantities possibly associated with the motion as a function of time $t$. Assume that air resistance is negligible and that the positive directions are upward and to the right.",
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2012/2012_p020_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2012/2012_Q01_02_options.png",
+          "asset_type": "combined_option_image",
+          "option": "A-E",
+          "binding": "combined_region_contains_all_option_diagrams",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2012_Q02",
@@ -97,7 +125,35 @@
     "group_role": "member",
     "requires_group_context": true,
     "group_context": "Questions 1-2\nA ball is struck at time $t=0$ and follows the parabolic path shown in the diagram above. The following graphs show quantities possibly associated with the motion as a function of time $t$. Assume that air resistance is negligible and that the positive directions are upward and to the right.",
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2012/2012_p020_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2012/2012_Q01_02_options.png",
+          "asset_type": "combined_option_image",
+          "option": "A-E",
+          "binding": "combined_region_contains_all_option_diagrams",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2012_Q03",
@@ -1242,7 +1298,26 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2012.pdf",
       "raw_chunk_sha256": "1cf1d529971b2acdb8562fa72407ee1492c90838fd8a58570b555cab2338db32"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2012/2012_Q30_options.png",
+          "asset_type": "combined_option_image",
+          "option": "A-E",
+          "binding": "combined_region_contains_all_option_diagrams",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2012_Q31",
@@ -1889,7 +1964,35 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2013.pdf",
       "raw_chunk_sha256": "5b3b3647032555a4e1f2bc9ae27437c62d04d3ef633551f90ea48efe54a427e5"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2013/2013_p020_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2013/2013_Q11_options.png",
+          "asset_type": "combined_option_image",
+          "option": "A-E",
+          "binding": "combined_region_contains_all_option_diagrams",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2013_Q12",
@@ -3110,7 +3213,70 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2014.pdf",
       "raw_chunk_sha256": "4bb0ae872a3154a475a3d5d4e52a00cf826f14879b317411e24bb3af0d1e4925"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p019_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p019_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p019_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p019_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p019_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2014_Q06",
@@ -3155,7 +3321,70 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2014.pdf",
       "raw_chunk_sha256": "315c6c6b47818569f287490ba6bcbcb54d0fa0b450f7f1f0d8d75275b4dbe99b"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p020_img01.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p020_img02.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p020_img03.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p020_img04.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p020_img05.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2014_Q07",
@@ -3566,7 +3795,70 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2014.pdf",
       "raw_chunk_sha256": "c90b62b5ea11329181ee0feeddf1d27561cffab51cdb701b8ae5204a201453c8"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p023_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p023_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p023_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p023_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p023_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2014_Q16",
@@ -3661,10 +3953,10 @@
     "text": "For an object in simple harmonic motion with \namplitude A, the kinetic energy will equal the \npotential energy when the displacement is",
     "options": {
       "A": "zero",
-      "B": "4\nA\n±",
-      "C": "2\nA\n±",
-      "D": "2\nA\n±",
-      "E": "A\n±"
+      "B": "$\\pm\\frac{A}{4}$",
+      "C": "$\\pm\\frac{A}{2}$",
+      "D": "$\\pm\\frac{A}{\\sqrt{2}}$",
+      "E": "$\\pm A$"
     },
     "answer": "D",
     "image_paths": [],
@@ -3687,7 +3979,35 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2014.pdf",
       "raw_chunk_sha256": "b137e6f20c29c929fe453dcfaee32e3563f89e9616ac3a3e1dc9bbd8db5f38be"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Option",
+        "Displacement"
+      ],
+      "rows": {
+        "A": [
+          "A",
+          "zero"
+        ],
+        "B": [
+          "B",
+          "$\\pm\\frac{A}{4}$"
+        ],
+        "C": [
+          "C",
+          "$\\pm\\frac{A}{2}$"
+        ],
+        "D": [
+          "D",
+          "$\\pm\\frac{A}{\\sqrt{2}}$"
+        ],
+        "E": [
+          "E",
+          "$\\pm A$"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q19",
@@ -3877,11 +4197,11 @@
     "type": "MCQ",
     "text": "A gear containing 20 teeth on its circumference \nis meshed with a gear containing 60 teeth on its \ncircumference, as shown above. If the angular \nspeed of the 20-tooth gear is $\\omega$ , what is the \nangular speed of the 60-tooth gear?",
     "options": {
-      "A": "60\n $\\omega$",
-      "B": "20\n $\\omega$",
-      "C": "3\n $\\omega$",
+      "A": "$60\\omega$",
+      "B": "$20\\omega$",
+      "C": "$\\frac{\\omega}{3}$",
       "D": "$\\omega$",
-      "E": "3w"
+      "E": "$3\\omega$"
     },
     "answer": "C",
     "image_paths": [
@@ -3906,7 +4226,35 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2014.pdf",
       "raw_chunk_sha256": "471d6f2eecbb50d7146c8d20e0ded5dc2c9368879287fe70c703acc5f1d1a4d8"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Option",
+        "Angular speed"
+      ],
+      "rows": {
+        "A": [
+          "A",
+          "$60\\omega$"
+        ],
+        "B": [
+          "B",
+          "$20\\omega$"
+        ],
+        "C": [
+          "C",
+          "$\\frac{\\omega}{3}$"
+        ],
+        "D": [
+          "D",
+          "$\\omega$"
+        ],
+        "E": [
+          "E",
+          "$3\\omega$"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q24",
@@ -4340,7 +4688,70 @@
     "group_role": "lead",
     "requires_group_context": true,
     "group_context": "Questions 33-34\nA very light ball is released from rest at time $t=0$ and falls through the air, which provides significant resistance.",
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p027_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p027_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p027_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p027_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p027_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2014_Q34",
@@ -4393,7 +4804,70 @@
     "group_role": "member",
     "requires_group_context": true,
     "group_context": "Questions 33-34\nA very light ball is released from rest at time $t=0$ and falls through the air, which provides significant resistance.",
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p027_img07.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p027_img08.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p027_img09.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p027_img10.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_p028_img01.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2014_Q35",
@@ -4434,7 +4908,26 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2014.pdf",
       "raw_chunk_sha256": "adf897b571416813628eb66a9bfba8e998d95ba33073141d0164db077c719a7b"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2014/2014_Q35_options.png",
+          "asset_type": "combined_option_image",
+          "option": "A-E",
+          "binding": "combined_region_contains_all_option_diagrams",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2015_Q01",
@@ -5786,7 +6279,79 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2015.pdf",
       "raw_chunk_sha256": "7689544cac6c71213461959e1ac73910e2cb3cc6767795899f699227e84f16c7"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2015/2015_p028_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2015/2015_p028_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2015/2015_p028_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2015/2015_p028_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2015/2015_p028_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2015/2015_p028_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2015_Q32",
@@ -6769,13 +7334,13 @@
     "year": 2016,
     "question_number": 19,
     "type": "MCQ",
-    "text": "Object A of mass M is moving east at speed v. \nIt collides with object B of mass 2M that was \ninitially at rest. The motion of the objects before \nand after the collision is along the same line. After \nthe collision, object A is moving west at a speed \nof \n3\nv\n. What is the speed of object B immediately \nafter the collision?",
+    "text": "Object A of mass M is moving east at speed v. \nIt collides with object B of mass 2M that was \ninitially at rest. The motion of the objects before \nand after the collision is along the same line. After \nthe collision, object A is moving west at a speed \nof $v/3$. What is the speed of object B immediately \nafter the collision?",
     "options": {
-      "A": "3\nv",
-      "B": "2\nv",
-      "C": "2v\n \n3",
-      "D": "v",
-      "E": "2v"
+      "A": "$\\frac{v}{3}$",
+      "B": "$\\frac{v}{2}$",
+      "C": "$\\frac{2v}{3}$",
+      "D": "$v$",
+      "E": "$2v$"
     },
     "answer": "C",
     "image_paths": [],
@@ -6798,7 +7363,35 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2016.pdf",
       "raw_chunk_sha256": "befe4e6ba610d661a3594df722761d9d3730b730344f5eeb42df8a23e0239b55"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Option",
+        "Speed"
+      ],
+      "rows": {
+        "A": [
+          "A",
+          "$\\frac{v}{3}$"
+        ],
+        "B": [
+          "B",
+          "$\\frac{v}{2}$"
+        ],
+        "C": [
+          "C",
+          "$\\frac{2v}{3}$"
+        ],
+        "D": [
+          "D",
+          "$v$"
+        ],
+        "E": [
+          "E",
+          "$2v$"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q20",
@@ -7579,7 +8172,79 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2017.pdf",
       "raw_chunk_sha256": "1e33ba0c3b0437418398402a52f33814fb6c0239174246d129779438d42b57d1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2017/2017_p022_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2017/2017_p022_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2017/2017_p022_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2017/2017_p022_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2017/2017_p022_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2017/2017_p022_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2017_Q03",
@@ -8484,7 +9149,26 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2017.pdf",
       "raw_chunk_sha256": "f7c8c0a79074f0f3b975297c8f694e527b1afea78557c6efc843771d979f95b3"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2017/2017_Q23_options.png",
+          "asset_type": "combined_option_image",
+          "option": "A-E",
+          "binding": "combined_region_contains_all_option_diagrams",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2017_Q24",
@@ -9755,7 +10439,79 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2018.pdf",
       "raw_chunk_sha256": "a196705d3b8a305cad1dfa760329af5b20bb38a5874a954a09c2a827b9ff4bae"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_p026_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_p026_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_p026_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_p026_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_p026_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_p026_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2018_Q17",
@@ -10078,7 +10834,26 @@
     "group_role": "lead",
     "requires_group_context": true,
     "group_context": "Questions 23-24\nA block on a level horizontal surface of negligible friction is initially traveling at $20\\,\\mathrm{m/s}$ to the left. A horizontal force $\\vec F$ is exerted to the right on the block for the time interval $0<t<0.10\\,\\mathrm{s}$. The magnitude of the force is given as a function of time $t$ by the equation $F=\\alpha t$, where $\\alpha=240\\,\\mathrm{N/s}$ and $t$ is in seconds.",
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_Q23_options.png",
+          "asset_type": "combined_option_image",
+          "option": "A-E",
+          "binding": "combined_region_contains_all_option_diagrams",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2018_Q24",
@@ -10456,11 +11231,11 @@
     "type": "MCQ",
     "text": "The arm is held in the horizontal position and\nthe hand is bent at the wrist so the fingers point \nup, as shown in the figure above. The torque \nexerted by the weight of the hand with respect \nto the shoulder is most nearly",
     "options": {
-      "A": "6\n Newt\non meters",
-      "B": "1\n0 Newt\non meters",
-      "C": "3\n0 Newt\non meters",
-      "D": "6\n0 Newt\non meters",
-      "E": "7\n0 Newt\non meters"
+      "A": "$6\\,\\mathrm{N\\cdot m}$",
+      "B": "$10\\,\\mathrm{N\\cdot m}$",
+      "C": "$30\\,\\mathrm{N\\cdot m}$",
+      "D": "$60\\,\\mathrm{N\\cdot m}$",
+      "E": "$70\\,\\mathrm{N\\cdot m}$"
     },
     "answer": "A",
     "image_paths": [
@@ -10485,7 +11260,35 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2018.pdf",
       "raw_chunk_sha256": "a319aa520b373d9e9dfd1715c07dbe5c38bbff8ff86517e2ebc7e118f1110d41"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Option",
+        "Torque"
+      ],
+      "rows": {
+        "A": [
+          "A",
+          "$6\\,\\mathrm{N\\cdot m}$"
+        ],
+        "B": [
+          "B",
+          "$10\\,\\mathrm{N\\cdot m}$"
+        ],
+        "C": [
+          "C",
+          "$30\\,\\mathrm{N\\cdot m}$"
+        ],
+        "D": [
+          "D",
+          "$60\\,\\mathrm{N\\cdot m}$"
+        ],
+        "E": [
+          "E",
+          "$70\\,\\mathrm{N\\cdot m}$"
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q33",
@@ -10624,7 +11427,70 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2018.pdf",
       "raw_chunk_sha256": "fba9bcd3486056279925745064e2ce5c7a4168cbdc9fd1ef7216468be339f738"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-mechanics-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_p033_img01.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_p033_img02.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_p033_img03.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_p033_img04.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-mechanics/2018/2018_p033_img05.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-Mechanics/01-exams/AP Mechanics 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2019_Q01",

@@ -523,81 +523,6 @@
       }
     },
     {
-      "id": "physics-c-mechanics",
-      "name": "AP Physics C: Mechanics",
-      "shortName": "Physics C Mech",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/physics-c-mechanics/question_bank.json",
-      "frqBank": "ap/physics-c-mechanics/frq_bank.json",
-      "similarityIndex": "ap/physics-c-mechanics/similarity_index.json",
-      "classificationConfig": "ap/physics-c-mechanics/classification_config.json",
-      "dataVersion": "historical-2012-2019-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Kinematics"
-        },
-        {
-          "id": "U2",
-          "name": "Force and Translational Dynamics"
-        },
-        {
-          "id": "U3",
-          "name": "Work, Energy, and Power"
-        },
-        {
-          "id": "U4",
-          "name": "Linear Momentum"
-        },
-        {
-          "id": "U5",
-          "name": "Torque and Rotational Dynamics"
-        },
-        {
-          "id": "U6",
-          "name": "Energy and Momentum of Rotating Systems"
-        },
-        {
-          "id": "U7",
-          "name": "Oscillations"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 35,
-        "frqCount": 3,
-        "mcqTimeLimit": 2700,
-        "frqTimeLimit": 2700,
-        "unitDistribution": {
-          "U1": 10,
-          "U2": 7,
-          "U3": 4,
-          "U4": 5,
-          "U5": 3,
-          "U6": 1,
-          "U7": 5
-        }
-      },
-      "releaseStatus": "content-risk",
-      "visibility": "internal",
-      "readiness": {
-        "status": "red",
-        "updatedAt": "2026-07-09",
-        "p0": 6,
-        "p1": 0,
-        "contentRiskCodes": [
-          "flattened_frq_tables",
-          "frq_visual_asset_contract_missing",
-          "weak_frq_rubrics"
-        ],
-        "mechanismCodes": [
-          "missing_delivery_contract",
-          "missing_delivery_review",
-          "missing_frq_browser_review"
-        ]
-      }
-    },
-    {
       "id": "psychology",
       "name": "AP Psychology",
       "shortName": "Psych",
@@ -1129,6 +1054,73 @@
       "readiness": {
         "status": "green",
         "updatedAt": "2026-07-09",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
+      }
+    },
+    {
+      "id": "physics-c-mechanics",
+      "name": "AP Physics C: Mechanics",
+      "shortName": "Physics C Mech",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/physics-c-mechanics/question_bank.json",
+      "frqBank": "ap/physics-c-mechanics/frq_bank.json",
+      "similarityIndex": "ap/physics-c-mechanics/similarity_index.json",
+      "classificationConfig": "ap/physics-c-mechanics/classification_config.json",
+      "dataVersion": "historical-2012-2019-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Kinematics"
+        },
+        {
+          "id": "U2",
+          "name": "Force and Translational Dynamics"
+        },
+        {
+          "id": "U3",
+          "name": "Work, Energy, and Power"
+        },
+        {
+          "id": "U4",
+          "name": "Linear Momentum"
+        },
+        {
+          "id": "U5",
+          "name": "Torque and Rotational Dynamics"
+        },
+        {
+          "id": "U6",
+          "name": "Energy and Momentum of Rotating Systems"
+        },
+        {
+          "id": "U7",
+          "name": "Oscillations"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 35,
+        "frqCount": 3,
+        "mcqTimeLimit": 2700,
+        "frqTimeLimit": 2700,
+        "unitDistribution": {
+          "U1": 10,
+          "U2": 7,
+          "U3": 4,
+          "U4": 5,
+          "U5": 3,
+          "U6": 1,
+          "U7": 5
+        }
+      },
+      "releaseStatus": "certified",
+      "visibility": "internal",
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-10",
         "p0": 0,
         "p1": 0,
         "contentRiskCodes": [],
