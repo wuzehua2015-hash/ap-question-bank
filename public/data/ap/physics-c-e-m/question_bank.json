@@ -361,7 +361,79 @@
     ],
     "group_role": "member",
     "group_context": "Questions 6-8\nTwo long, straight, parallel wires are held fixed, as shown above. A voltage is applied to wire X, creating a current $I_X$ to the right, and wire X experiences a magnetic force of magnitude $F_B$ toward wire Y.",
-    "requires_group_context": true
+    "requires_group_context": true,
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_mcq6_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_mcq6_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_mcq6_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_mcq6_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_mcq6_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_mcq8_img01.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2012_Q07",
@@ -991,13 +1063,13 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "Two particles each with a charge -Q are fixed a\ndistance L apart as shown above. Each particle\nexperiences a net electric force F. A particle with\na charge +q is now fixed midway between the\noriginal two particles. As a result, the net electric\nforce experienced by each negatively charged\nparticle is reduced to\n2 F\n. The value of q is",
+    "text": "Two particles each with a charge -Q are fixed a\ndistance L apart as shown above. Each particle\nexperiences a net electric force F. A particle with\na charge +q is now fixed midway between the\noriginal two particles. As a result, the net electric\nforce experienced by each negatively charged\nparticle is reduced to $F/2$. The value of q is",
     "options": {
-      "A": "Q",
-      "B": "2\nQ",
-      "C": "4\nQ",
-      "D": "8\nQ",
-      "E": "16\nQ"
+      "A": "$Q$",
+      "B": "$\\frac{Q}{2}$",
+      "C": "$\\frac{Q}{4}$",
+      "D": "$\\frac{Q}{8}$",
+      "E": "$\\frac{Q}{16}$"
     },
     "answer": "D",
     "primary_unit": "U8",
@@ -1036,7 +1108,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Option",
+        "Value of $q$"
+      ],
+      "rows": {
+        "A": [
+          "A",
+          "$Q$"
+        ],
+        "B": [
+          "B",
+          "$\\frac{Q}{2}$"
+        ],
+        "C": [
+          "C",
+          "$\\frac{Q}{4}$"
+        ],
+        "D": [
+          "D",
+          "$\\frac{Q}{8}$"
+        ],
+        "E": [
+          "E",
+          "$\\frac{Q}{16}$"
+        ]
+      }
+    }
   },
   {
     "question_id": "2012_Q19",
@@ -1548,7 +1648,9 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_context": "图形信息：载流线圈最初的平面垂直于均匀磁场 $B$，线圈磁矩方向与磁场方向平行。线圈绕自身一条直径匀速转动，要求判断从初始位置转过多大角度时磁场对线圈的力矩最大。",
+    "requires_group_context": true
   },
   {
     "question_id": "2012_Q28",
@@ -2275,7 +2377,9 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_context": "图形信息：带正电粒子的速度 $\\vec v$ 沿 $+x$ 方向，匀强磁场 $\\vec B$ 沿 $+y$ 方向。用 $\\vec F=q\\vec v\\times\\vec B$ 判断受力方向。",
+    "requires_group_context": true
   },
   {
     "question_id": "2013_Q06",
@@ -2338,7 +2442,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "A circular loop of wire of radius R is\nperpendicular to a magnetic field whose\nmagnitude as a function of time t is given by the\nequation\n, where b and c are\npositive, nonzero constants. What is the\nmagnitude of the emf induced in the loop\nas a function of time t ?",
+    "text": "A circular loop of wire of radius $R$ is perpendicular to a magnetic field whose magnitude as a function of time $t$ is given by the equation $B(t)=bt^2+ct$, where $b$ and $c$ are positive, nonzero constants. What is the magnitude of the emf induced in the loop as a function of time $t$?",
     "options": {
       "A": "$2\\pi R(bt^2+ct)$",
       "B": "$2\\pi R(2bt+c)$",
@@ -2381,7 +2485,8 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "requires_group_context": true
   },
   {
     "question_id": "2013_Q08",
@@ -2684,7 +2789,70 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_mcq12_img01.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_mcq12_img02.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_mcq12_img03.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_mcq12_img04.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_mcq12_img05.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2013_Q13",
@@ -2790,7 +2958,9 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_context": "图形信息：三个相同导体球 I、II、III 装在绝缘手柄上。I 与 II 相距固定距离，初始电荷均为 $+Q$；III 初始不带电，先接触 I，再接触 II，然后移走。",
+    "requires_group_context": true
   },
   {
     "question_id": "2013_Q15",
@@ -2801,11 +2971,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
     "text": "Which of the following describes the electric field\nand electric potential inside a charged solid\nspherical conductor that is in electrostatic\nequilibrium?\nField Potential",
     "options": {
-      "A": "Zero\nZero",
-      "B": "Nonzero and uniform\nZero",
-      "C": "Nonzero and uniform\nNonzero and uniform",
-      "D": "Zero\nNonzero and uniform",
-      "E": "Zero\n\nNonzero and\nnonuniform"
+      "A": "Field: zero; potential: zero",
+      "B": "Field: nonzero and uniform; potential: zero",
+      "C": "Field: nonzero and uniform; potential: nonzero and uniform",
+      "D": "Field: zero; potential: nonzero and uniform",
+      "E": "Field: zero; potential: nonzero and nonuniform"
     },
     "answer": "D",
     "primary_unit": "U10",
@@ -2842,7 +3012,41 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Option",
+        "Electric field",
+        "Electric potential"
+      ],
+      "rows": {
+        "A": [
+          "A",
+          "Zero",
+          "Zero"
+        ],
+        "B": [
+          "B",
+          "Nonzero and uniform",
+          "Zero"
+        ],
+        "C": [
+          "C",
+          "Nonzero and uniform",
+          "Nonzero and uniform"
+        ],
+        "D": [
+          "D",
+          "Zero",
+          "Nonzero and uniform"
+        ],
+        "E": [
+          "E",
+          "Zero",
+          "Nonzero and nonuniform"
+        ]
+      }
+    }
   },
   {
     "question_id": "2013_Q16",
@@ -3299,7 +3503,9 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_context": "图形信息：一条直线上有两个点电荷，相距 $0.5\\,\\mathrm{m}$；左侧为负电荷，右侧为正电荷。题目询问这条线上有限位置处电势为零的点数。",
+    "requires_group_context": true
   },
   {
     "question_id": "2013_Q24",
@@ -3737,7 +3943,79 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2013_Q32",
@@ -3898,7 +4176,9 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_context": "图形信息：四个相同点电荷 $q$ 固定在边长为 $a$ 的正方形四个顶点，要求求正方形中心处的总电势。",
+    "requires_group_context": true
   },
   {
     "question_id": "2013_Q35",
@@ -4928,7 +5208,79 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2014_Q18",
@@ -5468,11 +5820,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
     "text": "Questions 26-27 refer to a circular conducting ring of area $0.20\\,\\mathrm{m^2}$ lying in the plane of the page inside a spatially uniform magnetic field perpendicular to the page. The field changes smoothly from $1.5\\,\\mathrm{T}$ directed out of the page to $1.5\\,\\mathrm{T}$ directed into the page at a constant rate during a total time interval of $0.60\\,\\mathrm{s}$.\n\nWhen viewed as shown in the figure, what is the direction of the induced current during the first and second halves of the $0.60\\,\\mathrm{s}$ time interval?",
     "options": {
-      "A": "Clockwise\nClockwise",
-      "B": "Clockwise\nCounterclockwise",
-      "C": "Counterclockwise\nClockwise",
-      "D": "Counterclockwise\nCounterclockwise",
-      "E": "Undefined, since\nthe current is zero\nUndefined, since\nthe current is zero"
+      "A": "First half: clockwise; second half: clockwise",
+      "B": "First half: clockwise; second half: counterclockwise",
+      "C": "First half: counterclockwise; second half: clockwise",
+      "D": "First half: counterclockwise; second half: counterclockwise",
+      "E": "First half: undefined, since the current is zero; second half: undefined, since the current is zero"
     },
     "answer": "D",
     "primary_unit": "U13",
@@ -5519,7 +5871,41 @@
     ],
     "group_role": "member",
     "group_context": "Questions 26-27 refer to a circular conducting ring of area $0.20\\,\\mathrm{m^2}$ lying in the plane of the page inside a spatially uniform magnetic field perpendicular to the page. The field changes smoothly from $1.5\\,\\mathrm{T}$ directed out of the page to $1.5\\,\\mathrm{T}$ directed into the page at a constant rate during a total time interval of $0.60\\,\\mathrm{s}$.",
-    "requires_group_context": true
+    "requires_group_context": true,
+    "option_table_data": {
+      "headers": [
+        "Option",
+        "First half",
+        "Second half"
+      ],
+      "rows": {
+        "A": [
+          "A",
+          "Clockwise",
+          "Clockwise"
+        ],
+        "B": [
+          "B",
+          "Clockwise",
+          "Counterclockwise"
+        ],
+        "C": [
+          "C",
+          "Counterclockwise",
+          "Clockwise"
+        ],
+        "D": [
+          "D",
+          "Counterclockwise",
+          "Counterclockwise"
+        ],
+        "E": [
+          "E",
+          "Undefined, current is zero",
+          "Undefined, current is zero"
+        ]
+      }
+    }
   },
   {
     "question_id": "2014_Q28",
@@ -6027,7 +6413,14 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_id": "2015_Q01_Q02",
+    "group_members": [
+      "2015_Q01",
+      "2015_Q02"
+    ],
+    "group_context": "Questions 1-2 refer to the same figure. 图形信息：三个电荷均为 $+Q$ 的粒子放在正方形的三个顶点，边长为 $s$，点 $C$ 位于正方形中心，角点 $P$ 是其中一个带电粒子所在顶点。",
+    "requires_group_context": true
   },
   {
     "question_id": "2015_Q02",
@@ -6081,7 +6474,14 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_id": "2015_Q01_Q02",
+    "group_members": [
+      "2015_Q01",
+      "2015_Q02"
+    ],
+    "group_context": "Questions 1-2 refer to the same figure. 图形信息：三个电荷均为 $+Q$ 的粒子放在正方形的三个顶点，边长为 $s$，点 $C$ 位于正方形中心，角点 $P$ 是其中一个带电粒子所在顶点。",
+    "requires_group_context": true
   },
   {
     "question_id": "2015_Q03",
@@ -6264,7 +6664,79 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2015_Q06",
@@ -6322,7 +6794,70 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq6_img01.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq6_img02.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq6_img03.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq6_img04.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq6_img05.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2015_Q07",
@@ -6852,7 +7387,79 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2015_Q16",
@@ -7492,7 +8099,9 @@
     "difficulty": "medium",
     "has_graph": false,
     "requires_graph": false,
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-c-e-m/2015/2015_mcq26_img01.png"
+    ],
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2015.pdf",
       "notes": [
@@ -7512,7 +8121,26 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_context": "图形信息：电桥电路中，上左支路为 $R_x$，上右支路为 $100\\,\\Omega$，下左支路为 $75\\,\\Omega$，下右支路为 $25\\,\\Omega$；电流表 A 连接上下中点且读数为零。",
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_image_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_mcq26_img01.png",
+          "asset_type": "prompt_context_image",
+          "binding": "2015_Q27_bridge_circuit_prompt_image_filename_offset_reviewed",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ]
+    },
+    "requires_group_context": true
   },
   {
     "question_id": "2015_Q28",
@@ -9401,7 +10029,79 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2016_Q22",
@@ -9668,13 +10368,13 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "A closed cylindrical shell of volume\n2 r pi\nh is\nplaced close to an object with a charge of Q, as\nshown in the figure above. There are no other\ncharged objects nearby. The electric flux through\nthe closed cylindrical shell is",
+    "text": "A closed cylindrical shell of volume $\\pi r^2h$ is\nplaced close to an object with a charge of Q, as\nshown in the figure above. There are no other\ncharged objects nearby. The electric flux through\nthe closed cylindrical shell is",
     "options": {
-      "A": "0",
-      "B": "0\nQ epsilon",
-      "C": "2 r Q pi",
-      "D": "2 rhQ\npi",
-      "E": "2\n2 r Q\nrhQ pi +2pi"
+      "A": "$0$",
+      "B": "$\\frac{Q}{\\epsilon_0}$",
+      "C": "$2\\pi rQ$",
+      "D": "$2\\pi rhQ$",
+      "E": "$2\\pi r^2Q+2\\pi rhQ$"
     },
     "answer": "A",
     "primary_unit": "U13",
@@ -9713,7 +10413,35 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "Option",
+        "Electric flux"
+      ],
+      "rows": {
+        "A": [
+          "A",
+          "$0$"
+        ],
+        "B": [
+          "B",
+          "$\\frac{Q}{\\epsilon_0}$"
+        ],
+        "C": [
+          "C",
+          "$2\\pi rQ$"
+        ],
+        "D": [
+          "D",
+          "$2\\pi rhQ$"
+        ],
+        "E": [
+          "E",
+          "$2\\pi r^2Q+2\\pi rhQ$"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q27",
@@ -9984,7 +10712,79 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2016_Q32",
@@ -10282,7 +11082,14 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_id": "2017_Q01_Q02",
+    "group_members": [
+      "2017_Q01",
+      "2017_Q02"
+    ],
+    "group_context": "Questions 1-2 refer to the same figure. 图形信息：两个电荷均为 $+Q$ 的小球固定在等边三角形两个顶点；点 I 位于第三个顶点，点 II 位于两个固定电荷的中点。",
+    "requires_group_context": true
   },
   {
     "question_id": "2017_Q02",
@@ -10336,7 +11143,14 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_id": "2017_Q01_Q02",
+    "group_members": [
+      "2017_Q01",
+      "2017_Q02"
+    ],
+    "group_context": "Questions 1-2 refer to the same figure. 图形信息：两个电荷均为 $+Q$ 的小球固定在等边三角形两个顶点；点 I 位于第三个顶点，点 II 位于两个固定电荷的中点。",
+    "requires_group_context": true
   },
   {
     "question_id": "2017_Q03",
@@ -10518,7 +11332,70 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2017/2017_mcq5_img01.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2017/2017_mcq5_img02.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2017/2017_mcq5_img03.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2017/2017_mcq5_img04.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2017/2017_mcq5_img05.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2017_Q06",
@@ -11465,7 +12342,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Questions 20-22\nThree small spheres, A, B, and C, have charges with magnitudes $q_A$, $q_B$, and $q_C$, respectively. The three spheres are aligned along a straight line, as shown in the figure above. At the instant shown, the net force on sphere A is zero.\nWhich of the following statements must be true of the signs of the charges?",
+    "text": "Questions 20-22\nThree small spheres, A, B, and C, have charges with magnitudes $q_A$, $q_B$, and $q_C$, respectively. The three spheres are aligned along a straight line, as shown in the figure above. At the instant shown, the net force on sphere A is zero.\n\nWhich of the following statements must be true of the signs of the charges?",
     "options": {
       "A": "Only charges $q_A$ and $q_B$ have the same sign.",
       "B": "Only charges $q_A$ and $q_C$ have the same sign.",
@@ -11528,7 +12405,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Questions 20-22\nThree small spheres, A, B, and C, have charges with magnitudes $q_A$, $q_B$, and $q_C$, respectively. The three spheres are aligned along a straight line, as shown in the figure above. At the instant shown, the net force on sphere A is zero.\nWhich of the following is true about the sign of charge $q_A$?",
+    "text": "Questions 20-22\nThree small spheres, A, B, and C, have charges with magnitudes $q_A$, $q_B$, and $q_C$, respectively. The three spheres are aligned along a straight line, as shown in the figure above. At the instant shown, the net force on sphere A is zero.\n\nWhich of the following is true about the sign of charge $q_A$?",
     "options": {
       "A": "The sign of charge $q_A$ must be the same as that of $q_B$.",
       "B": "The sign of charge $q_A$ must be the same as that of $q_C$.",
@@ -12687,7 +13564,79 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2018_Q06",
@@ -13879,7 +14828,79 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img01.png",
+          "asset_type": "prompt_context_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img02.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img03.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img04.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img05.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img06.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2018_Q26",
@@ -14561,7 +15582,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Points A and B shown above are in the plane of the page and 5 meters apart. The points are located in a uniform electric field of magnitude 1000 volts per meter directed toward the bottom of the page. When a proton (of charge $+e$) moves from point A to point B, how much work is done on the proton by the electric field?",
+    "text": "Points A and B shown above are in the plane of the page and $5\\,\\mathrm{m}$ apart. The points are located in a uniform electric field of magnitude 1000 volts per meter directed toward the bottom of the page. When a proton (of charge $+e$) moves from point A to point B, how much work is done on the proton by the electric field?",
     "options": {
       "A": "$-5000\\,\\mathrm{eV}$",
       "B": "$-3000\\,\\mathrm{eV}$",
@@ -15184,7 +16205,9 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_context": "图形信息：两个同心导体球壳。内壳净电荷 $q=+10\\,\\mathrm{nC}$，外壳净电荷 $Q=-20\\,\\mathrm{nC}$。四个标记点分别位于内壳内部、两壳之间、外壳材料处以及外壳外部，用高斯定律比较 $E_R,E_S,E_T,E_U$ 的大小。",
+    "requires_group_context": true
   },
   {
     "question_id": "2019_Q14",
@@ -15290,7 +16313,9 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_context": "图形信息：四个平行板电容器 A、B、C、D 极板面积相同。A 与 B 之间为空气，C 与 D 中完全填充介电常数 $\\kappa=2$ 的介质；图中给出不同极板间距，用 $C=\\kappa\\epsilon_0A/d$ 排序。",
+    "requires_group_context": true
   },
   {
     "question_id": "2019_Q16",
@@ -15423,7 +16448,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "The capacitor in the circuit represented above is uncharged when the switch is at position B. The switch is then moved to position A. What is the energy stored by the capacitor when the current in the circuit is $2.0\\,\\mathrm{mA}$?",
+    "text": "The capacitor in the circuit represented above is\nuncharged when the switch is at position B. The\nswitch is then moved to position A. What is the\nenergy stored by the capacitor when the current in\nthe circuit is $2.0\\,\\mathrm{mA}$ ?",
     "options": {
       "A": "$0.8\\,\\mathrm{mJ}$",
       "B": "$1.2\\,\\mathrm{mJ}$",
@@ -15829,7 +16854,70 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_mcq_diagram_option_binding_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_mcq24_img01.png",
+          "asset_type": "option_image",
+          "option": "A",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_mcq24_img02.png",
+          "asset_type": "option_image",
+          "option": "B",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_mcq24_img03.png",
+          "asset_type": "option_image",
+          "option": "C",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_mcq24_img04.png",
+          "asset_type": "option_image",
+          "option": "D",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_mcq24_img05.png",
+          "asset_type": "option_image",
+          "option": "E",
+          "binding": "option_label_nearest_image",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "review_status": "PASS"
+        }
+      ],
+      "dimension_variance_reviewed": true
+    }
   },
   {
     "question_id": "2019_Q25",

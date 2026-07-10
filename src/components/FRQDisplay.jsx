@@ -918,7 +918,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
   const imagePaths = frq.image_paths || []
   const rubricImagePaths = frq.rubric_image_paths || []
   const qNum = frq.question_number || frq.question_num || index || '?'
-  const officialImagesFirst = frq.display_mode === 'official_images_first'
+  const officialImagesFirst = frq.display_mode === 'official_images_first' && isPdf
   const promptText = frq.text || frq.question_text
   const contentBlocks = Array.isArray(frq.content_blocks) ? frq.content_blocks : null
   const backgroundTable = frq.background_data?.table

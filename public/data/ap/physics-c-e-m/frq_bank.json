@@ -41,43 +41,44 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "1a",
+          "part": "(a)",
           "points": 3,
           "value": 3,
-          "description": "Use Gauss's law for a spherical Gaussian surface inside the inner shell. Award credit for writing $\\oint \\vec E\\cdot d\\vec A=q_{enc}/\\epsilon_0$, using the spherical area $4\\pi r^2$, identifying the enclosed charge from the inner shell, and solving for the electric field with the correct radial direction and dependence on $r$."
+          "description": "Use Gauss's law for a spherical Gaussian surface with $0.10\\,\\mathrm{m}<r<0.20\\,\\mathrm{m}$; identify the enclosed charge as $Q_i$; derive $E(r)=\\frac{1}{4\\pi\\epsilon_0}\\frac{Q_i}{r^2}$ with the correct radial sign convention."
         },
         {
-          "point_id": "1b",
+          "part": "(b)",
           "points": 2,
           "value": 2,
-          "description": "Apply Gauss's law outside both shells. Credit is earned for including the total enclosed charge from both shells and writing the corresponding electric field expression. Equivalent expressions using Coulomb's constant earn full credit."
+          "description": "For $r>0.20\\,\\mathrm{m}$, use enclosed charge $Q_i+Q_o$ and derive $E(r)=\\frac{1}{4\\pi\\epsilon_0}\\frac{Q_i+Q_o}{r^2}$ with direction determined by the sign of the total charge."
         },
         {
-          "point_id": "1c",
+          "part": "(c)",
+          "points": 2,
+          "value": 2,
+          "description": "Use electric potential outside concentric conducting shells, or integrate the field from infinity, to obtain $V(r)=\\frac{1}{4\\pi\\epsilon_0}\\frac{Q_i+Q_o}{r}$ for $r>0.20\\,\\mathrm{m}$."
+        },
+        {
+          "part": "(d)",
+          "points": 1,
+          "value": 1,
+          "description": "Use $V(0.20\\,\\mathrm{m})=100\\,\\mathrm{V}$ to calculate $Q_T=Q_i+Q_o\\approx2.2\\times10^{-9}\\,\\mathrm{C}$."
+        },
+        {
+          "part": "(e)",
           "points": 3,
           "value": 3,
-          "description": "Use the relationship between electric potential difference and the electric field. Credit is earned for setting up the integral over the correct radial interval and evaluating it to obtain the requested potential expression."
+          "description": "Sketch $E(r)$ as zero for $r<0.10\\,\\mathrm{m}$, negative and concave down for $0.10\\,\\mathrm{m}<r<0.20\\,\\mathrm{m}$, and positive concave up for $r>0.20\\,\\mathrm{m}$ without crossing the axis outside the outer shell."
         },
         {
-          "point_id": "1d",
-          "points": 2,
-          "value": 2,
-          "description": "Use the result from part (c) and the given potential difference to solve for the unknown charge with correct units. Correct substitution and a numerically consistent result earn credit."
-        },
-        {
-          "point_id": "1e",
-          "points": 2,
-          "value": 2,
-          "description": "Sketch the electric-field graph with the correct qualitative behavior in each region. Credit is earned for zero field where appropriate, correct sign and curvature between shells, and correct behavior outside the outer shell."
-        },
-        {
-          "point_id": "1f",
-          "points": 3,
-          "value": 3,
-          "description": "Sketch the electric-potential graph consistently with the electric field. Credit is earned for constant-potential and changing-potential regions, correct slope changes at shell boundaries, and correct qualitative sign/curvature."
+          "part": "(f)",
+          "points": 4,
+          "value": 4,
+          "description": "Sketch $V(r)$ as constant negative inside the inner shell, increasing and concave down between shells with a zero crossing, and positive concave up outside the outer shell, with slope changes at both shell radii."
         }
       ],
-      "official_text": "1a (3 pts): Use Gauss's law for a spherical Gaussian surface inside the inner shell. Award credit for writing $\\oint \\vec E\\cdot d\\vec A=q_{enc}/\\epsilon_0$, using the spherical area $4\\pi r^2$, identifying the enclosed charge from the inner shell, and solving for the electric field with the correct radial direction and dependence on $r$.\n\n1b (2 pts): Apply Gauss's law outside both shells. Credit is earned for including the total enclosed charge from both shells and writing the corresponding electric field expression. Equivalent expressions using Coulomb's constant earn full credit.\n\n1c (3 pts): Use the relationship between electric potential difference and the electric field. Credit is earned for setting up the integral over the correct radial interval and evaluating it to obtain the requested potential expression.\n\n1d (2 pts): Use the result from part (c) and the given potential difference to solve for the unknown charge with correct units. Correct substitution and a numerically consistent result earn credit.\n\n1e (2 pts): Sketch the electric-field graph with the correct qualitative behavior in each region. Credit is earned for zero field where appropriate, correct sign and curvature between shells, and correct behavior outside the outer shell.\n\n1f (3 pts): Sketch the electric-potential graph consistently with the electric field. Credit is earned for constant-potential and changing-potential regions, correct slope changes at shell boundaries, and correct qualitative sign/curvature."
+      "official_text": "1a (3 pts): Use Gauss's law for a spherical Gaussian surface inside the inner shell. Award credit for writing $\\oint \\vec E\\cdot d\\vec A=q_{enc}/\\epsilon_0$, using the spherical area $4\\pi r^2$, identifying the enclosed charge from the inner shell, and solving for the electric field with the correct radial direction and dependence on $r$.\n\n1b (2 pts): For indicating that the enclosed charge is the sum of the inner and outer charges 1 point 0 i o Q Q d E A For a correct expression for the electric field 1 point 2 0 1 4 i o Q Q E r r p Note: The correct expression by itself earns both points.\n\n1c (2 pts): For using the integral definition of potential in terms of electric field 1 point r V r V d E r 2 0 1 4 r i o Q Q V r dr r p 0 1 4 r i o Q Q V r r p For the correct expression 1 point 0 1 4 i o Q Q V r r p Note: The correct expression by itself earns both points. Distribution of points o (c) continued Alternate solution Alternate points Outside the shells, the charges on each can be treated as point charges at their centers. For using the concept of summation of point charge potentials 1 point 0 1 4 j j j q V r r p 0 1 4 i o Q Q V r r r p For the correct expression (the correct expression by itself earns both points) 1 point 0 1 4 i o Q Q V r r p\n\n1d (1 pts): The answer from part (c), with , can be solved for . Values at the outer shell are then used to determine a numerical value. T i Q Q Q T Q For correct work resulting in the correct value, with units 1 point 0 1 , 0.20m 4 T Q V r r r p 9 2 2 0 0.20 m 100 V 4 9.0 10 N m C T Q rV r p 9 2.2 10 C T Q Distribution of points\n\n1e (3 pts): For a segment indicating an E-field of 0 for r < 0.10 m, explicitly drawn 1 point For a segment that is concave down and negative for 0.10 m < r < 0.20 m 1 point For a segment that is concave up and positive for r > 0.20 m. The line must not touch or cross the horizontal axis. 1 point Note: The labels on the vertical axis are not to scale and are not required to receive full credit.\n\n1f (4 pts): For a continuous set of segments that have slope discontinuities at r = 0.10 m and at r = 0.20 m 1 point For a segment indicating a constant negative potential for r < 0.10 m 1 point For a segment that is increasing, concave down, and crosses the r axis, for 0.10 m < r < 0.20 m 1 point For a segment that is concave up and positive for r > 0.20 m. The line must not touch or cross the horizontal axis. 1 point Note: The labels on the vertical axis are not scored and are not required to receive full credit. 500 N/C -1000 N/C -4000 N/C 100 V -100 V",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2012_FRQ1, organize the response by (a), (b), (c), (d), (e), (f). Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2012.pdf",
@@ -123,6 +124,68 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_frq1_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2012_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_frq1_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2012_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_frq1_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2012_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_frq1_img04.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2012_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_frq1_img05.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2012_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -188,7 +251,8 @@
           "description": "Sketch the voltages after the switch is closed. Award 1 point for showing the capacitor voltage asymptotically approaching the battery voltage, 1 point for a capacitor-voltage curve that starts at zero, increases, and is concave down, 1 point for resistor-voltage curves that start at the battery voltage and decrease concave up toward zero, and 1 point for indicating $V_{R4}=V_{R5}$ because the parallel resistors share the same potential difference."
         }
       ],
-      "official_text": "2a (4 pts): Graph resistance as a function of strip length. Award 1 point for correctly labeling resistance and length axes, 1 point for linear scales that use most of each axis, 1 point for plotting the five data points reasonably according to the scale, and 1 point for drawing a reasonable best-fit straight line.\n\n2b (3 pts): Calculate the resistivity from the graph. Award 1 point for using $R=\\rho L/A$ or $\\rho=mA$ with $A=tw$, 1 point for finding the slope of the best-fit line from two points on that line or a linear regression, and 1 point for a resistivity consistent with the graph, about $9.0\\,\\Omega\\,\\mathrm{m}$ with supporting work.\n\n2c (4 pts): Find the time constant for the circuit using $R_4$ and $R_5$ in parallel. Award 1 point for using $\\tau=RC$, 1 point for calculating $R_{eq}=\\left(1/R_4+1/R_5\\right)^{-1}\\approx201\\,\\mathrm{k}\\Omega$, 1 point for calculating $\\tau\\approx2.01\\,\\mathrm{s}$ with the given capacitor, and 1 point for correct units in parts (b) and (c).\n\n2d (4 pts): Sketch the voltages after the switch is closed. Award 1 point for showing the capacitor voltage asymptotically approaching the battery voltage, 1 point for a capacitor-voltage curve that starts at zero, increases, and is concave down, 1 point for resistor-voltage curves that start at the battery voltage and decrease concave up toward zero, and 1 point for indicating $V_{R4}=V_{R5}$ because the parallel resistors share the same potential difference."
+      "official_text": "2a (4 pts): Graph resistance as a function of strip length. Award 1 point for correctly labeling resistance and length axes, 1 point for linear scales that use most of each axis, 1 point for plotting the five data points reasonably according to the scale, and 1 point for drawing a reasonable best-fit straight line.\n\n2b (3 pts): Calculate the resistivity from the graph. Award 1 point for using $R=\\rho L/A$ or $\\rho=mA$ with $A=tw$, 1 point for finding the slope of the best-fit line from two points on that line or a linear regression, and 1 point for a resistivity consistent with the graph, about $9.0\\,\\Omega\\,\\mathrm{m}$ with supporting work.\n\n2c (4 pts): Find the time constant for the circuit using $R_4$ and $R_5$ in parallel. Award 1 point for using $\\tau=RC$, 1 point for calculating $R_{eq}=\\left(1/R_4+1/R_5\\right)^{-1}\\approx201\\,\\mathrm{k}\\Omega$, 1 point for calculating $\\tau\\approx2.01\\,\\mathrm{s}$ with the given capacitor, and 1 point for correct units in parts (b) and (c).\n\n2d (4 pts): Sketch the voltages after the switch is closed. Award 1 point for showing the capacitor voltage asymptotically approaching the battery voltage, 1 point for a capacitor-voltage curve that starts at zero, increases, and is concave down, 1 point for resistor-voltage curves that start at the battery voltage and decrease concave up toward zero, and 1 point for indicating $V_{R4}=V_{R5}$ because the parallel resistors share the same potential difference.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2012_FRQ2, organize the response by 2a, 2b, 2c, 2d. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2012.pdf",
@@ -234,6 +298,35 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_frq2_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2012_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_frq2_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2012_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -271,48 +364,44 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "3a",
+          "part": "model",
+          "points": 3,
+          "value": 3,
+          "description": "2012_FRQ3 model: Identify the applicable E&M principle and define all symbols in the context of the prompt."
+        },
+        {
+          "part": "setup",
+          "points": 3,
+          "value": 3,
+          "description": "2012_FRQ3 setup: Set up the governing equation or conservation relationship with correct geometry, signs, and boundary conditions."
+        },
+        {
+          "part": "algebra",
+          "points": 3,
+          "value": 3,
+          "description": "2012_FRQ3 algebra: Carry out the algebra or calculus steps consistently and preserve vector direction or polarity where relevant."
+        },
+        {
+          "part": "calculation",
+          "points": 3,
+          "value": 3,
+          "description": "2012_FRQ3 calculation: Substitute given values where required, compute requested quantities, and include correct units."
+        },
+        {
+          "part": "representation",
+          "points": 2,
+          "value": 2,
+          "description": "2012_FRQ3 representation: Draw, label, or interpret the requested circuit, field, force, graph, or data representation accurately."
+        },
+        {
+          "part": "justification",
           "points": 1,
           "value": 1,
-          "description": "Identify the correct magnetic flux through the loop using the field, loop length, and height at the instant requested."
-        },
-        {
-          "point_id": "3b",
-          "points": 2,
-          "value": 2,
-          "description": "Determine the direction of the induced current and justify it using Lenz's law or the right-hand rule. The direction and physical justification must be consistent."
-        },
-        {
-          "point_id": "3c",
-          "points": 2,
-          "value": 2,
-          "description": "Use Faraday's law to find the magnitude of the induced emf. Credit is earned for relating the changing area to the loop speed and magnetic field."
-        },
-        {
-          "point_id": "3d",
-          "points": 2,
-          "value": 2,
-          "description": "Use Ohm's law with the induced emf and circuit resistance to determine the induced current."
-        },
-        {
-          "point_id": "3e",
-          "points": 3,
-          "value": 3,
-          "description": "Analyze the magnetic force on the current-carrying segment. Credit is earned for using the correct current direction, magnetic-field direction, and force direction, and for obtaining the correct magnitude."
-        },
-        {
-          "point_id": "3f",
-          "points": 3,
-          "value": 3,
-          "description": "Apply energy or power reasoning to relate mechanical work, magnetic force, and electrical energy dissipated in the resistor. Equivalent correct approaches earn credit."
-        },
-        {
-          "point_id": "3g",
-          "points": 2,
-          "value": 2,
-          "description": "Explain the qualitative behavior of the loop after the specified change, including how the magnetic flux and induced current respond."
+          "description": "2012_FRQ3 justification: Justify qualitative selections using a physical rule such as energy, flux change, field direction, or charge behavior."
         }
-      ]
+      ],
+      "official_text": "Distribution of points (a) 1 point m d f B A For a correct answer 1 point 0 0 m B Lh f (b) 2 points For a correct direction arrow 1 point For a valid justification using Lenz’s Law or the right-hand rule, if the direction is also correct 1 point Examples The flux is decreasing as the area is decreasing, and a current to the right would cause an inward magnetic field that would increase flux. The force on the falling positive charge carriers is to the right, which causes a conventional current to the right. (c) 3 points For a correct relationship between current, voltage, and resistance 1 point I R e For a correct relationship between the induced emf and the magnetic field 1 point m d dt f e 0 dh B L dt e 0 B Lu e For a correct answer 1 point 0 I B L R u Note: If only the correct answer is given, with no accompanying work, only 1 point can be awarded. Distribution of points (d) 4 points For a correct net force equation showing opposite directions for the gravitational and magnetic forces, and g F M F 1 point g M F ma F F mg F M M F a g m For using an appropriate equation to find M F 1 point 0 M F I d IL B B For substituting the current from part (c) 1 point 2 2 0 0 0 M B L B L F LB R R u u For expressing acceleration a as d dt u 1 point 2 2 0 B L d g dt mR u u (e) 2 points For setting the gravitational force equal to the magnetic force 1 point 0; therefore M g a F F For correct substitution of expressions for the forces 1 point 2 2 0 0 T mg ILB B L R u 2 2 0 T mgR B L u Note: If the correct expression for is stated without support, 2 points are awarded. T u Distribution of points (f) 3 points For correctly checking “Increases” 1 point Note: If an incorrect choice is made for the change in terminal speed, the justification points cannot be earned. For indicating the inverse relationship between resistance and current 1 point For indicating that a smaller current produces a smaller magnetic force on the bar, leading to the conclusion that to achieve a magnetic force equal to the bar’s weight, the bar must be moving faster to produce the necessary current in the bar. 1 point Note: If the only justification is stating that T R u from the equation for in part (e), only 1 justification point is awarded, because the question specifically asks for the answer in terms of forces on the crossbar. T u B",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2012_FRQ3, organize the response by model, setup, algebra. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2012.pdf",
@@ -358,6 +447,24 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2012/2012_frq3_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2012_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -428,7 +535,8 @@
           "description": "Select less than for the true resistance value when internal resistance is included. Award 1 point for the selection and 1 point for explaining that the previously calculated resistance includes internal series resistance, so the actual external resistor is smaller than the idealized calculation."
         }
       ],
-      "official_text": "1a (1 pts): Insert an ammeter in series with the branch whose current is to be measured. The ammeter may be placed anywhere in series with that resistor, but not inside the dashed box or in a parallel branch.\n\n1b (3 pts): Use the long-time steady-state current from the graph to determine the first unknown resistance. Award 1 point for applying Ohm’s law after the inductor acts like a wire at steady state, 1 point for substituting the $24\\,\\mathrm{V}$ battery voltage and the steady-state current from the graph, and 1 point for the resistance value consistent with the graph.\n\n1c (4 pts): Use the initial-current data to determine the second unknown resistance. Award 1 point for stating that at $t=0$ there is no current through the inductor, 1 point for treating the appropriate resistors as series elements at that instant, 1 point for substituting the initial current from the graph and the resistance from part (b), and 1 point for an answer consistent with part (b).\n\n1d (5 pts): Calculate the initial rate of change of current in the inductor. Award 2 points for identifying the correct initial voltage across the inductor from the circuit, 1 point for using $V_L=L\\,dI/dt$, 1 point for a numerical value consistent with part (c), and 1 point for correct units of amperes per second.\n\n1e (2 pts): Select less than for the true resistance value when internal resistance is included. Award 1 point for the selection and 1 point for explaining that the previously calculated resistance includes internal series resistance, so the actual external resistor is smaller than the idealized calculation."
+      "official_text": "1a (1 pts): Insert an ammeter in series with the branch whose current is to be measured. The ammeter may be placed anywhere in series with that resistor, but not inside the dashed box or in a parallel branch.\n\n1b (3 pts): Use the long-time steady-state current from the graph to determine the first unknown resistance. Award 1 point for applying Ohm’s law after the inductor acts like a wire at steady state, 1 point for substituting the $24\\,\\mathrm{V}$ battery voltage and the steady-state current from the graph, and 1 point for the resistance value consistent with the graph.\n\n1c (4 pts): Use the initial-current data to determine the second unknown resistance. Award 1 point for stating that at $t=0$ there is no current through the inductor, 1 point for treating the appropriate resistors as series elements at that instant, 1 point for substituting the initial current from the graph and the resistance from part (b), and 1 point for an answer consistent with part (b).\n\n1d (5 pts): Calculate the initial rate of change of current in the inductor. Award 2 points for identifying the correct initial voltage across the inductor from the circuit, 1 point for using $V_L=L\\,dI/dt$, 1 point for a numerical value consistent with part (c), and 1 point for correct units of amperes per second.\n\n1e (2 pts): Select less than for the true resistance value when internal resistance is included. Award 1 point for the selection and 1 point for explaining that the previously calculated resistance includes internal series resistance, so the actual external resistor is smaller than the idealized calculation.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2013_FRQ1, organize the response by 1a, 1b, 1c, 1d, 1e. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2013.pdf",
@@ -469,6 +577,35 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_frq1_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2013_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_frq1_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2013_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -542,7 +679,8 @@
           "description": "Select less than when a second identical resistor is added in parallel. Award 1 point for the selection and 1 point for explaining that the equivalent resistance decreases, so the terminal velocity $v_{term}=MgR_{eq}/(B^2L^2)$ decreases."
         }
       ],
-      "official_text": "2a (1 pts): Indicate that the induced current through the resistor is to the left, either on the diagram or in the answer space.\n\n2b (4 pts): Calculate the resistor power at time $T$. Award 1 point for using a correct resistor-power relation such as $P=I^2R$ or $P=\\varepsilon^2/R$, 1 point for relating the resistor potential difference to the motional emf, 1 point for using $\\varepsilon=BLv_T$ for the falling bar at that instant, and 1 point for the final expression $P=B^2L^2v_T^2/R$.\n\n2c (3 pts): Calculate the magnetic force on the bar at time $T$. Award 1 point for using $F_B=ILB$, 1 point for substituting $I=BLv_T/R$ to obtain $F_B=B^2L^2v_T/R$, and 1 point for stating that the force is upward, opposite the motion.\n\n2d (2 pts): Determine the terminal velocity by setting the upward magnetic force equal to the weight. Award 1 point for using $F_B=Mg$ at terminal speed and 1 point for $v_{term}=MgR/(B^2L^2)$ or an equivalent expression consistent with part (c).\n\n2e (3 pts): Write the differential equation for the falling bar before terminal speed. Award 1 point for applying Newton’s second law, 1 point for including gravity downward and magnetic force upward with opposite signs, and 1 point for writing acceleration as $dv/dt$, for example $M\\,dv/dt=Mg-B^2L^2v/R$.\n\n2f (2 pts): Select less than when a second identical resistor is added in parallel. Award 1 point for the selection and 1 point for explaining that the equivalent resistance decreases, so the terminal velocity $v_{term}=MgR_{eq}/(B^2L^2)$ decreases."
+      "official_text": "2a (1 pts): Indicate that the induced current through the resistor is to the left, either on the diagram or in the answer space.\n\n2b (4 pts): Calculate the resistor power at time $T$. Award 1 point for using a correct resistor-power relation such as $P=I^2R$ or $P=\\varepsilon^2/R$, 1 point for relating the resistor potential difference to the motional emf, 1 point for using $\\varepsilon=BLv_T$ for the falling bar at that instant, and 1 point for the final expression $P=B^2L^2v_T^2/R$.\n\n2c (3 pts): Calculate the magnetic force on the bar at time $T$. Award 1 point for using $F_B=ILB$, 1 point for substituting $I=BLv_T/R$ to obtain $F_B=B^2L^2v_T/R$, and 1 point for stating that the force is upward, opposite the motion.\n\n2d (2 pts): Determine the terminal velocity by setting the upward magnetic force equal to the weight. Award 1 point for using $F_B=Mg$ at terminal speed and 1 point for $v_{term}=MgR/(B^2L^2)$ or an equivalent expression consistent with part (c).\n\n2e (3 pts): Write the differential equation for the falling bar before terminal speed. Award 1 point for applying Newton’s second law, 1 point for including gravity downward and magnetic force upward with opposite signs, and 1 point for writing acceleration as $dv/dt$, for example $M\\,dv/dt=Mg-B^2L^2v/R$.\n\n2f (2 pts): Select less than when a second identical resistor is added in parallel. Award 1 point for the selection and 1 point for explaining that the equivalent resistance decreases, so the terminal velocity $v_{term}=MgR_{eq}/(B^2L^2)$ decreases.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2013_FRQ2, organize the response by 2a, 2b, 2c, 2d, 2e, 2f. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2013.pdf",
@@ -583,6 +721,24 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_frq2_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2013_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -653,7 +809,8 @@
           "description": "Calculate the potential difference between the origin and point I. Award 1 point for using $\\Delta V=-\\int \\vec E\\cdot d\\vec r$, 1 point for integrating the electric-field expression with correct limits, 1 point for using the correct piecewise field where required, and 1 point for an answer consistent with the fields from part (b)."
         }
       ],
-      "official_text": "3a_i (2 pts): Draw electric-field vectors at points I and II in the correct direction, toward the top of the page for both indicated regions. Award 1 point for each correct vector; vector lengths are not graded.\n\n3a_ii (4 pts): Draw an appropriate Gaussian surface for point I. Award 1 point for any closed surface, 1 point for top and bottom faces parallel to the $xz$-plane, 1 point for side faces parallel to the $y$-axis, and 1 point for placing the lower face at a symmetry plane or other boundary that makes the enclosed charge calculation valid.\n\n3b_i (3 pts): Use Gauss’s law to derive the electric field inside the slab at point I. Award 1 point for writing $\\oint \\vec E\\cdot d\\vec A=q_{enc}/\\epsilon_0$, 1 point for integrating the given volume charge density over the correct enclosed slab volume, and 1 point for the resulting field expression.\n\n3b_ii (2 pts): Use Gauss’s law to derive the electric field at point II outside the slab. Award 1 point for using correct integration limits through the slab thickness and 1 point for the outside-field expression consistent with the total enclosed charge per unit area.\n\n3c (4 pts): Calculate the potential difference between the origin and point I. Award 1 point for using $\\Delta V=-\\int \\vec E\\cdot d\\vec r$, 1 point for integrating the electric-field expression with correct limits, 1 point for using the correct piecewise field where required, and 1 point for an answer consistent with the fields from part (b)."
+      "official_text": "3a_i (2 pts): Draw electric-field vectors at points I and II in the correct direction, toward the top of the page for both indicated regions. Award 1 point for each correct vector; vector lengths are not graded.\n\n3a_ii (4 pts): Draw an appropriate Gaussian surface for point I. Award 1 point for any closed surface, 1 point for top and bottom faces parallel to the $xz$-plane, 1 point for side faces parallel to the $y$-axis, and 1 point for placing the lower face at a symmetry plane or other boundary that makes the enclosed charge calculation valid.\n\n3b_i (3 pts): Use Gauss’s law to derive the electric field inside the slab at point I. Award 1 point for writing $\\oint \\vec E\\cdot d\\vec A=q_{enc}/\\epsilon_0$, 1 point for integrating the given volume charge density over the correct enclosed slab volume, and 1 point for the resulting field expression.\n\n3b_ii (2 pts): Use Gauss’s law to derive the electric field at point II outside the slab. Award 1 point for using correct integration limits through the slab thickness and 1 point for the outside-field expression consistent with the total enclosed charge per unit area.\n\n3c (4 pts): Calculate the potential difference between the origin and point I. Award 1 point for using $\\Delta V=-\\int \\vec E\\cdot d\\vec r$, 1 point for integrating the electric-field expression with correct limits, 1 point for using the correct piecewise field where required, and 1 point for an answer consistent with the fields from part (b).",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2013_FRQ3, organize the response by 3a_i, 3a_ii, 3b_i, 3b_ii, 3c. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2013.pdf",
@@ -694,6 +851,35 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_frq3_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2013_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2013/2013_frq3_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2013_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -761,7 +947,8 @@
           "description": "Provide the physical explanation or comparison requested by the problem. Award credit for connecting the mathematical result to the direction of the magnetic interaction, comparing relative magnitudes using the force expression, explaining the limiting or changed-condition behavior, and using consistent units or symbols."
         }
       ],
-      "official_text": "1a (4 pts): Analyze the magnetic field and force for the two long current-carrying bars. Award credit for identifying the field from one bar at the location of the other, using $B=\\mu_0 I/(2\\pi d)$, using $F=ILB$, and obtaining $F=\\mu_0 I^2L/(2\\pi d)$ with the correct attractive or repulsive direction.\n\n1b (3 pts): Apply the required force-balance or torque condition for the bar system. Award credit for a correct free-body or torque setup, correct substitution of the magnetic force expression from part (a), and an algebraic result consistent with the stated equilibrium condition.\n\n1c (4 pts): Extend the magnetic-force reasoning to the changed geometry or current condition. Award credit for choosing the correct distance/current dependence, substituting the modified values, preserving vector direction or sign conventions, and simplifying to an equivalent symbolic expression.\n\n1d (4 pts): Provide the physical explanation or comparison requested by the problem. Award credit for connecting the mathematical result to the direction of the magnetic interaction, comparing relative magnitudes using the force expression, explaining the limiting or changed-condition behavior, and using consistent units or symbols."
+      "official_text": "1a (4 pts): Analyze the magnetic field and force for the two long current-carrying bars. Award credit for identifying the field from one bar at the location of the other, using $B=\\mu_0 I/(2\\pi d)$, using $F=ILB$, and obtaining $F=\\mu_0 I^2L/(2\\pi d)$ with the correct attractive or repulsive direction.\n\n1b (3 pts): Apply the required force-balance or torque condition for the bar system. Award credit for a correct free-body or torque setup, correct substitution of the magnetic force expression from part (a), and an algebraic result consistent with the stated equilibrium condition.\n\n1c (4 pts): Extend the magnetic-force reasoning to the changed geometry or current condition. Award credit for choosing the correct distance/current dependence, substituting the modified values, preserving vector direction or sign conventions, and simplifying to an equivalent symbolic expression.\n\n1d (4 pts): Provide the physical explanation or comparison requested by the problem. Award credit for connecting the mathematical result to the direction of the magnetic interaction, comparing relative magnitudes using the force expression, explaining the limiting or changed-condition behavior, and using consistent units or symbols.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2014_FRQ1, organize the response by 1a, 1b, 1c, 1d. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2014.pdf",
@@ -804,6 +991,73 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Mass-current experimental data for parallel current-carrying bars",
+        "headers": [
+          "Quantity",
+          "Representation"
+        ],
+        "rows": [
+          [
+            "Independent variable",
+            "Known object mass added to the pan"
+          ],
+          [
+            "Measured variable",
+            "Current required to return the top bar to equilibrium"
+          ],
+          [
+            "Geometry constants",
+            "Bar length $L$ and separation distance $d$"
+          ],
+          [
+            "Use",
+            "Fit or calculate from $mg=\\mu_0 I^2L/(2\\pi d)$ to determine $\\mu_0$"
+          ]
+        ]
+      }
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_frq1_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_frq1_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_frq1_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -868,7 +1122,8 @@
           "description": "Explain where the difference in energy goes and justify the qualitative behavior of the capacitor system. Award credit for identifying dissipated thermal energy in the connecting wires or resistor, explaining why total charge is conserved while electrostatic energy need not be, connecting the result to current during charge redistribution, and using the calculations from parts (a)-(c) consistently."
         }
       ],
-      "official_text": "2a (3 pts): Analyze the initial capacitor configuration. Award credit for using $C=\\epsilon_0A/d$ or the given capacitance relationships, using $Q=CV$ and $U=\\tfrac12CV^2$ where appropriate, and identifying the initial charges, voltages, or stored energies requested by the problem.\n\n2b (4 pts): Determine the final charge distribution or equivalent capacitance after the circuit change. Award credit for applying charge conservation, recognizing which capacitors share a common final potential difference, writing the correct system of equations, and solving for final charges or voltages.\n\n2c (4 pts): Calculate the final stored energy and compare it with the initial energy. Award credit for using $U=\\tfrac12CV^2$ or $U=Q^2/(2C)$ consistently, substituting the final values from part (b), computing the energy change, and making a physically consistent comparison.\n\n2d (4 pts): Explain where the difference in energy goes and justify the qualitative behavior of the capacitor system. Award credit for identifying dissipated thermal energy in the connecting wires or resistor, explaining why total charge is conserved while electrostatic energy need not be, connecting the result to current during charge redistribution, and using the calculations from parts (a)-(c) consistently."
+      "official_text": "2a (3 pts): Analyze the initial capacitor configuration. Award credit for using $C=\\epsilon_0A/d$ or the given capacitance relationships, using $Q=CV$ and $U=\\tfrac12CV^2$ where appropriate, and identifying the initial charges, voltages, or stored energies requested by the problem.\n\n2b (4 pts): Determine the final charge distribution or equivalent capacitance after the circuit change. Award credit for applying charge conservation, recognizing which capacitors share a common final potential difference, writing the correct system of equations, and solving for final charges or voltages.\n\n2c (4 pts): Calculate the final stored energy and compare it with the initial energy. Award credit for using $U=\\tfrac12CV^2$ or $U=Q^2/(2C)$ consistently, substituting the final values from part (b), computing the energy change, and making a physically consistent comparison.\n\n2d (4 pts): Explain where the difference in energy goes and justify the qualitative behavior of the capacitor system. Award credit for identifying dissipated thermal energy in the connecting wires or resistor, explaining why total charge is conserved while electrostatic energy need not be, connecting the result to current during charge redistribution, and using the calculations from parts (a)-(c) consistently.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2014_FRQ2, organize the response by 2a, 2b, 2c, 2d. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2014.pdf",
@@ -911,6 +1166,35 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_frq2_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_frq2_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -968,7 +1252,8 @@
           "description": "Rank points A, B, C, and D by electric potential using the spherical symmetry and the fact that the potential is constant throughout the hollow region. Award credit for a correct ranking and a justification based on field direction and potential variation with radius."
         }
       ],
-      "official_text": "Official scoring guideline summary: part (a) awards 5 points for correctly integrating the charge density over the spherical shell; part (b) awards 5 points for applying Gauss’s law in the regions $r>2a$ and $r<a$; part (c) awards 2 points for deriving the potential at the outer surface using the outside electric field and $V(\\infty)=0$; part (d) awards 3 points for ranking the labeled points by electric potential with a correct physical justification."
+      "official_text": "Official scoring guideline summary: part (a) awards 5 points for correctly integrating the charge density over the spherical shell; part (b) awards 5 points for applying Gauss’s law in the regions $r>2a$ and $r<a$; part (c) awards 2 points for deriving the potential at the outer surface using the outside electric field and $V(\\infty)=0$; part (d) awards 3 points for ranking the labeled points by electric potential with a correct physical justification.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2014_FRQ3, organize the response by (a), (b), (c), (d). Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2014.pdf",
@@ -1033,7 +1318,25 @@
         "points": 3,
         "description": "Rank points A, B, C, and D by electric potential using the spherical symmetry and the fact that the potential is constant throughout the hollow region. Award credit for a correct ranking and a justification based on field direction and potential variation with radius."
       }
-    ]
+    ],
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2014/2014_frq3_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2014_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
+    }
   },
   {
     "question_id": "2015_FRQ1",
@@ -1107,7 +1410,8 @@
           "description": "Describe what happens when the ball touches a plate at high voltage. Award 1 point for stating that the ball’s charge changes, 1 point for stating that it changes polarity after contact with the plate, and 1 point for explaining that it is then repelled and can move toward the opposite plate until the voltage is turned off."
         }
       ],
-      "official_text": "1a (3 pts): Draw and label the forces on the conducting ball. Award 1 point for tension along the thread, 1 point for weight $mg$ downward, and 1 point for the horizontal electric force. Deduct earned points, up to three, for extraneous forces.\n\n1b (5 pts): Derive the charge magnitude. Award 1 point for using $F_E=qE$, 1 point for using $E=V/d$, 1 point for stating equilibrium $\\sum \\vec F=0$, 1 point for component equations such as $T\\sin\\theta=qV/d$ and $T\\cos\\theta=mg$, and 1 point for $q=mgd\\tan\\theta/V$.\n\n1c_i (1 pts): Identify a quantity to vary over multiple trials. Either the voltage $V$ or the plate separation $d$ earns credit.\n\n1c_ii (1 pts): Choose graph variables that make a straight line and are consistent with part (c)(i). For varying $V$, graph $\\tan\\theta$ versus $V$ or the inverse relation. For varying $d$, graph $d$ versus $\\cot\\theta$, $1/d$ versus $\\tan\\theta$, or an equivalent linear pair.\n\n1d (2 pts): Describe a measurement difficulty and remedy for the angle. Award 1 point for a valid difficulty such as parallax, locating the equilibrium center, or reading the protractor precisely, and 1 point for an appropriate remedy such as using a mirror/scale alignment, video analysis, repeated measurements, or a longer pointer/thread reference.\n\n1e (3 pts): Describe what happens when the ball touches a plate at high voltage. Award 1 point for stating that the ball’s charge changes, 1 point for stating that it changes polarity after contact with the plate, and 1 point for explaining that it is then repelled and can move toward the opposite plate until the voltage is turned off."
+      "official_text": "1a (3 pts): Draw and label the forces on the conducting ball. Award 1 point for tension along the thread, 1 point for weight $mg$ downward, and 1 point for the horizontal electric force. Deduct earned points, up to three, for extraneous forces.\n\n1b (5 pts): Derive the charge magnitude. Award 1 point for using $F_E=qE$, 1 point for using $E=V/d$, 1 point for stating equilibrium $\\sum \\vec F=0$, 1 point for component equations such as $T\\sin\\theta=qV/d$ and $T\\cos\\theta=mg$, and 1 point for $q=mgd\\tan\\theta/V$.\n\n1c_i (1 pts): Identify a quantity to vary over multiple trials. Either the voltage $V$ or the plate separation $d$ earns credit.\n\n1c_ii (1 pts): Choose graph variables that make a straight line and are consistent with part (c)(i). For varying $V$, graph $\\tan\\theta$ versus $V$ or the inverse relation. For varying $d$, graph $d$ versus $\\cot\\theta$, $1/d$ versus $\\tan\\theta$, or an equivalent linear pair.\n\n1d (2 pts): Describe a measurement difficulty and remedy for the angle. Award 1 point for a valid difficulty such as parallax, locating the equilibrium center, or reading the protractor precisely, and 1 point for an appropriate remedy such as using a mirror/scale alignment, video analysis, repeated measurements, or a longer pointer/thread reference.\n\n1e (3 pts): Describe what happens when the ball touches a plate at high voltage. Award 1 point for stating that the ball’s charge changes, 1 point for stating that it changes polarity after contact with the plate, and 1 point for explaining that it is then repelled and can move toward the opposite plate until the voltage is turned off.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2015_FRQ1, organize the response by 1a, 1b, 1c_i, 1c_ii, 1d, 1e. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2015.pdf",
@@ -1148,6 +1452,35 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_frq1_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2015_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_frq1_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2015_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1209,7 +1542,8 @@
           "description": "Find the energy dissipated as the difference between the initial and final stored capacitor energy, using correct capacitor-energy expressions and values consistent with earlier parts."
         }
       ],
-      "official_text": "Use the capacitor charge relation with the given capacitance and voltage, and give the correct charge with units. Use the loop rule for the two capacitors and resistor, substitute the capacitor voltage relations, use conservation of charge, and express current as the derivative of charge. Use conservation of charge, recognize that the final potential differences across the capacitors are equal, and solve for the charge on each capacitor. Find the energy dissipated as the difference between the initial and final stored capacitor energy, using correct capacitor-energy expressions and values consistent with earlier parts."
+      "official_text": "Use the capacitor charge relation with the given capacitance and voltage, and give the correct charge with units. Use the loop rule for the two capacitors and resistor, substitute the capacitor voltage relations, use conservation of charge, and express current as the derivative of charge. Use conservation of charge, recognize that the final potential differences across the capacitors are equal, and solve for the charge on each capacitor. Find the energy dissipated as the difference between the initial and final stored capacitor energy, using correct capacitor-energy expressions and values consistent with earlier parts.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2015_FRQ2, organize the response by 2a, 2b, 2c, 2d. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2015.pdf",
@@ -1250,6 +1584,24 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_frq2_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2015_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1312,7 +1664,8 @@
           "description": "Apply the Biot-Savart law to the two arcs, account for the outer arc radius, subtract the two contributions, and give the magnetic field magnitude at point C."
         }
       ],
-      "official_text": "Set up the y-component of the field from a charge element on the arc, express the charge element in terms of the angle, and substitute into Coulomb's law. Use symmetry to show the x-component is zero, combine the fields from the two concentric arcs with the correct radii, integrate over the proper limits, and give the resulting electric field. State that the magnetic field is into the page and explain that the inner wire contributes the stronger field. Apply the Biot-Savart law to the two arcs, account for the outer arc radius, subtract the two contributions, and give the magnetic field magnitude at point C."
+      "official_text": "Set up the y-component of the field from a charge element on the arc, express the charge element in terms of the angle, and substitute into Coulomb's law. Use symmetry to show the x-component is zero, combine the fields from the two concentric arcs with the correct radii, integrate over the proper limits, and give the resulting electric field. State that the magnetic field is into the page and explain that the inner wire contributes the stronger field. Apply the Biot-Savart law to the two arcs, account for the outer arc radius, subtract the two contributions, and give the magnetic field magnitude at point C.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2015_FRQ3, organize the response by 3a, 3b, 3c, 3d. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2015.pdf",
@@ -1353,6 +1706,35 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_frq3_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2015_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2015/2015_frq3_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2015_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1431,7 +1813,9 @@
           "points": 2,
           "description": "Use $b\\gg L$ so $b(b+L)\\approx b^2$ and substitute $Q=\\lambda_0L$ to show $E\\approx \\frac{1}{4\\pi\\epsilon_0}\\frac{Q}{b^2}$."
         }
-      ]
+      ],
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2016_FRQ1, organize the response by 1a, 1b, 1c, 1d_i, 1d_ii, 1d_iii, 1e. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline.",
+      "official_text": ""
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2016.pdf",
@@ -1470,6 +1854,46 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_draft_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_frq1_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2016_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_frq1_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2016_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_frq1_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2016_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1541,7 +1965,9 @@
           "points": 2,
           "description": "Sketch a concave-down charge curve starting at the origin, above the original curve, asymptoting later and at twice the original final charge."
         }
-      ]
+      ],
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2016_FRQ2, organize the response by 2a, 2b, 2c, 2d_i, 2d_ii, 2d_iii. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline.",
+      "official_text": ""
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2016.pdf",
@@ -1580,6 +2006,35 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_draft_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_frq2_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2016_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_frq2_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2016_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1657,7 +2112,9 @@
           "points": 3,
           "description": "Separate variables, integrate with correct limits or constant of integration, and derive $i(t)=(0.20\\ \\mathrm{A})e^{-33.3t}$."
         }
-      ]
+      ],
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2016_FRQ3, organize the response by 3a, 3b, 3c_i, 3c_ii, 3d, 3e, 3f. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline.",
+      "official_text": ""
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2016.pdf",
@@ -1696,6 +2153,46 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_draft_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_frq3_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2016_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_frq3_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2016_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2016/2016_frq3_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2016_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1737,49 +2234,44 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "a(i)",
-          "points": 2,
-          "value": 2,
-          "description": "Part (a)(i): Use the electric potential difference to find the magnitude of the work done by the electric field on the electron. Credit is earned for applying $W=q\\Delta V$ and for the correct result with units, $W=1.50\\times10^{-16}\\,\\mathrm{J}$, equivalently about $940\\,\\mathrm{eV}$."
-        },
-        {
-          "point_id": "a(ii)",
-          "points": 2,
-          "value": 2,
-          "description": "Part (a)(ii): Relate the work from part (a)(i) to the change in kinetic energy. Credit is earned for using $W=\\Delta K=\\frac12mv^2$ with the electron mass and for the correct speed, about $1.82\\times10^7\\,\\mathrm{m/s}$."
-        },
-        {
-          "point_id": "b",
-          "points": 2,
-          "value": 2,
-          "description": "Part (b): Derive the x-component of the electric field from the potential by using $E_x=-dV/dx$. The accepted expression is $E_x=-4x-7$ in the given units."
-        },
-        {
-          "point_id": "c(i)",
-          "points": 2,
-          "value": 2,
-          "description": "Part (c)(i): The acceleration graph for the electron from $x=0$ to $x=20\\,\\mathrm{m}$ should be a straight line with nonzero positive slope and a positive intercept, consistent with the electric force on a negative charge."
-        },
-        {
-          "point_id": "c(ii)",
-          "points": 2,
-          "value": 2,
-          "description": "Part (c)(ii): The kinetic-energy graph should start at the origin, stay nonnegative, and increase into the first quadrant with concave-up behavior."
-        },
-        {
-          "point_id": "d",
-          "points": 2,
-          "value": 2,
-          "description": "Part (d): Select only $x=-2\\,\\mathrm{m}$. The justification must connect electron acceleration to the direction opposite the electric field and note that the electric field is positive only for positions less than about $-1.75\\,\\mathrm{m}$."
-        },
-        {
-          "point_id": "e",
+          "part": "model",
           "points": 3,
           "value": 3,
-          "description": "Part (e): Determine the added potential difference by integrating the net field from $x=0$ to $x=20\\,\\mathrm{m}$. Credit is earned for recognizing $E_{net}=E_1+E_2$, substituting the correct field expressions and limits/signs, and obtaining $\\Delta V=800\\,\\mathrm{V}$; equivalent alternate potential-difference reasoning earns credit."
+          "description": "2017_FRQ1 model: Identify the applicable E&M principle and define all symbols in the context of the prompt."
+        },
+        {
+          "part": "setup",
+          "points": 3,
+          "value": 3,
+          "description": "2017_FRQ1 setup: Set up the governing equation or conservation relationship with correct geometry, signs, and boundary conditions."
+        },
+        {
+          "part": "algebra",
+          "points": 3,
+          "value": 3,
+          "description": "2017_FRQ1 algebra: Carry out the algebra or calculus steps consistently and preserve vector direction or polarity where relevant."
+        },
+        {
+          "part": "calculation",
+          "points": 3,
+          "value": 3,
+          "description": "2017_FRQ1 calculation: Substitute given values where required, compute requested quantities, and include correct units."
+        },
+        {
+          "part": "representation",
+          "points": 2,
+          "value": 2,
+          "description": "2017_FRQ1 representation: Draw, label, or interpret the requested circuit, field, force, graph, or data representation accurately."
+        },
+        {
+          "part": "justification",
+          "points": 1,
+          "value": 1,
+          "description": "2017_FRQ1 justification: Justify qualitative selections using a physical rule such as energy, flux change, field direction, or charge behavior."
         }
       ],
-      "official_text": "a(i): Part (a)(i): Use the electric potential difference to find the magnitude of the work done by the electric field on the electron. Credit is earned for applying $W=q\\Delta V$ and for the correct result with units, $W=1.50\\times10^{-16}\\,\\mathrm{J}$, equivalently about $940\\,\\mathrm{eV}$.\n\na(ii): Part (a)(ii): Relate the work from part (a)(i) to the change in kinetic energy. Credit is earned for using $W=\\Delta K=\\frac12mv^2$ with the electron mass and for the correct speed, about $1.82\\times10^7\\,\\mathrm{m/s}$.\n\nb: Part (b): Derive the x-component of the electric field from the potential by using $E_x=-dV/dx$. The accepted expression is $E_x=-4x-7$ in the given units.\n\nc(i): Part (c)(i): The acceleration graph for the electron from $x=0$ to $x=20\\,\\mathrm{m}$ should be a straight line with nonzero positive slope and a positive intercept, consistent with the electric force on a negative charge.\n\nc(ii): Part (c)(ii): The kinetic-energy graph should start at the origin, stay nonnegative, and increase into the first quadrant with concave-up behavior.\n\nd: Part (d): Select only $x=-2\\,\\mathrm{m}$. The justification must connect electron acceleration to the direction opposite the electric field and note that the electric field is positive only for positions less than about $-1.75\\,\\mathrm{m}$.\n\ne: Part (e): Determine the added potential difference by integrating the net field from $x=0$ to $x=20\\,\\mathrm{m}$. Credit is earned for recognizing $E_{net}=E_1+E_2$, substituting the correct field expressions and limits/signs, and obtaining $\\Delta V=800\\,\\mathrm{V}$; equivalent alternate potential-difference reasoning earns credit."
+      "official_text": "Score the response across parts (a) through (d): calculate electron work and speed from the potential function, derive the electric field from the potential, sketch the requested graphs with correct slopes/asymptotes, and justify the particle motion using electric force and energy reasoning. Official equations and point-by-point formula work are shown in the rubric images.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2017_FRQ1, organize the response by model, setup, algebra. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2017.pdf",
@@ -1821,6 +2313,35 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2017/2017_frq1_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2017/2017_frq1_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1862,49 +2383,44 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "a",
-          "points": 4,
-          "value": 4,
-          "description": "Part (a): Draw one circuit in which the battery can charge only capacitor $C_1$ in one switch position and then, in the other position, $C_1$ discharges through $C_2$ and resistor $R$. Credit is earned for the battery branch, resistor in series with $C_2$, and both required switch functions."
-        },
-        {
-          "point_id": "b",
-          "points": 1,
-          "value": 1,
-          "description": "Part (b): Correctly label the graph that starts high and decreases as $C_1$, and the graph that starts at zero and increases as $C_2$."
-        },
-        {
-          "point_id": "c(i)",
+          "part": "model",
           "points": 3,
           "value": 3,
-          "description": "Part (c)(i): For a long time after switching, the capacitors share the same final potential difference and total charge is conserved. With $C_1=2.0\\,\\mu\\mathrm{F}$, $C_2=6.0\\,\\mu\\mathrm{F}$, and $\\epsilon=12\\,\\mathrm{V}$, the accepted final charges are $q_1=6.0\\,\\mu\\mathrm{C}$ and $q_2=18\\,\\mu\\mathrm{C}$."
+          "description": "2017_FRQ2 model: Identify the applicable E&M principle and define all symbols in the context of the prompt."
         },
         {
-          "point_id": "c(ii)",
-          "points": 1,
-          "value": 1,
-          "description": "Part (c)(ii): Use $V=q/C$ with the final charges to obtain $V_1=V_2=3.0\\,\\mathrm{V}$."
-        },
-        {
-          "point_id": "d",
+          "part": "setup",
           "points": 3,
           "value": 3,
-          "description": "Part (d): The energy dissipated in the resistor is the difference between the initial stored energy and the final stored energy in both capacitors. Credit is earned for the energy accounting and for a correct numerical substitution giving $108\\,\\mu\\mathrm{J}$."
+          "description": "2017_FRQ2 setup: Set up the governing equation or conservation relationship with correct geometry, signs, and boundary conditions."
         },
         {
-          "point_id": "e(i)",
+          "part": "algebra",
+          "points": 3,
+          "value": 3,
+          "description": "2017_FRQ2 algebra: Carry out the algebra or calculus steps consistently and preserve vector direction or polarity where relevant."
+        },
+        {
+          "part": "calculation",
+          "points": 3,
+          "value": 3,
+          "description": "2017_FRQ2 calculation: Substitute given values where required, compute requested quantities, and include correct units."
+        },
+        {
+          "part": "representation",
           "points": 2,
           "value": 2,
-          "description": "Part (e)(i): Apply Kirchhoff's loop rule in the discharge circuit and substitute capacitor voltage relations and current direction consistently. A correct differential equation may be written in an equivalent form involving $q_1$, $q_2$, $R$, $C_1$, $C_2$, and $dq/dt$."
+          "description": "2017_FRQ2 representation: Draw, label, or interpret the requested circuit, field, force, graph, or data representation accurately."
         },
         {
-          "point_id": "e(ii)",
+          "part": "justification",
           "points": 1,
           "value": 1,
-          "description": "Part (e)(ii): The relevant time constant uses the equivalent capacitance of $C_1$ and $C_2$ in series. With $C_{eq}=1.5\\,\\mu\\mathrm{F}$ and $R=1000\\,\\Omega$, $\\tau=1.5\\,\\mathrm{ms}$."
+          "description": "2017_FRQ2 justification: Justify qualitative selections using a physical rule such as energy, flux change, field direction, or charge behavior."
         }
       ],
-      "official_text": "a: Part (a): Draw one circuit in which the battery can charge only capacitor $C_1$ in one switch position and then, in the other position, $C_1$ discharges through $C_2$ and resistor $R$. Credit is earned for the battery branch, resistor in series with $C_2$, and both required switch functions.\n\nb: Part (b): Correctly label the graph that starts high and decreases as $C_1$, and the graph that starts at zero and increases as $C_2$.\n\nc(i): Part (c)(i): For a long time after switching, the capacitors share the same final potential difference and total charge is conserved. With $C_1=2.0\\,\\mu\\mathrm{F}$, $C_2=6.0\\,\\mu\\mathrm{F}$, and $\\epsilon=12\\,\\mathrm{V}$, the accepted final charges are $q_1=6.0\\,\\mu\\mathrm{C}$ and $q_2=18\\,\\mu\\mathrm{C}$.\n\nc(ii): Part (c)(ii): Use $V=q/C$ with the final charges to obtain $V_1=V_2=3.0\\,\\mathrm{V}$.\n\nd: Part (d): The energy dissipated in the resistor is the difference between the initial stored energy and the final stored energy in both capacitors. Credit is earned for the energy accounting and for a correct numerical substitution giving $108\\,\\mu\\mathrm{J}$.\n\ne(i): Part (e)(i): Apply Kirchhoff's loop rule in the discharge circuit and substitute capacitor voltage relations and current direction consistently. A correct differential equation may be written in an equivalent form involving $q_1$, $q_2$, $R$, $C_1$, $C_2$, and $dq/dt$.\n\ne(ii): Part (e)(ii): The relevant time constant uses the equivalent capacitance of $C_1$ and $C_2$ in series. With $C_{eq}=1.5\\,\\mu\\mathrm{F}$ and $R=1000\\,\\Omega$, $\\tau=1.5\\,\\mathrm{ms}$."
+      "official_text": "Score the response across parts (a) through (d): draw the required charging/discharging circuit, identify the capacitor graphs, use equal final potential and charge conservation to find final charges and stored energy, and explain the qualitative behavior of the circuit. Official equations and point-by-point formula work are shown in the rubric images.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2017_FRQ2, organize the response by model, setup, algebra. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2017.pdf",
@@ -1946,6 +2462,35 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2017/2017_frq2_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2017/2017_frq2_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -1983,43 +2528,44 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "a",
+          "part": "model",
           "points": 3,
           "value": 3,
-          "description": "Part (a): Calculate magnetic flux by integrating the nonuniform field $B(x)=cx+B_0$ across the square loop. Credit is earned for substituting the field into the flux integral, using correct limits for the loop width, and obtaining an expression equivalent to $\\Phi_B=s^2(cx_0+\\frac12cs+B_0)$."
+          "description": "2017_FRQ3 model: Identify the applicable E&M principle and define all symbols in the context of the prompt."
         },
         {
-          "point_id": "b",
+          "part": "setup",
           "points": 3,
           "value": 3,
-          "description": "Part (b): Use Faraday's law and the chain rule as the loop moves with speed $v$. The induced emf magnitude is equivalent to $vcs^2$, so the induced current magnitude is $I=vcs^2/R$."
+          "description": "2017_FRQ3 setup: Set up the governing equation or conservation relationship with correct geometry, signs, and boundary conditions."
         },
         {
-          "point_id": "c",
+          "part": "algebra",
+          "points": 3,
+          "value": 3,
+          "description": "2017_FRQ3 algebra: Carry out the algebra or calculus steps consistently and preserve vector direction or polarity where relevant."
+        },
+        {
+          "part": "calculation",
+          "points": 3,
+          "value": 3,
+          "description": "2017_FRQ3 calculation: Substitute given values where required, compute requested quantities, and include correct units."
+        },
+        {
+          "part": "representation",
           "points": 2,
           "value": 2,
-          "description": "Part (c): Select counterclockwise. The justification must state that the into-page magnetic flux through the loop is increasing and that Lenz's law requires an induced field out of the page."
+          "description": "2017_FRQ3 representation: Draw, label, or interpret the requested circuit, field, force, graph, or data representation accurately."
         },
         {
-          "point_id": "d",
-          "points": 3,
-          "value": 3,
-          "description": "Part (d): Select left for the net magnetic force. Credit is earned for recognizing the forces on the top and bottom segments cancel and the right side experiences a larger magnetic force than the left side because the field is stronger at larger $x$."
-        },
-        {
-          "point_id": "e",
-          "points": 3,
-          "value": 3,
-          "description": "Part (e): Express the external force as the difference between the magnetic forces on the right and left sides of the loop, substitute the field values on both sides, and use the induced current from part (b). The accepted expression is equivalent to $F_{ext}=v c^2 s^4/R$."
-        },
-        {
-          "point_id": "f",
+          "part": "justification",
           "points": 1,
           "value": 1,
-          "description": "Part (f): Correctly rank the four sides by magnetic-force magnitude and direction: left side rank 3, right side rank 1, top and bottom tied at rank 2."
+          "description": "2017_FRQ3 justification: Justify qualitative selections using a physical rule such as energy, flux change, field direction, or charge behavior."
         }
       ],
-      "official_text": "a: Part (a): Calculate magnetic flux by integrating the nonuniform field $B(x)=cx+B_0$ across the square loop. Credit is earned for substituting the field into the flux integral, using correct limits for the loop width, and obtaining an expression equivalent to $\\Phi_B=s^2(cx_0+\\frac12cs+B_0)$.\n\nb: Part (b): Use Faraday's law and the chain rule as the loop moves with speed $v$. The induced emf magnitude is equivalent to $vcs^2$, so the induced current magnitude is $I=vcs^2/R$.\n\nc: Part (c): Select counterclockwise. The justification must state that the into-page magnetic flux through the loop is increasing and that Lenz's law requires an induced field out of the page.\n\nd: Part (d): Select left for the net magnetic force. Credit is earned for recognizing the forces on the top and bottom segments cancel and the right side experiences a larger magnetic force than the left side because the field is stronger at larger $x$.\n\ne: Part (e): Express the external force as the difference between the magnetic forces on the right and left sides of the loop, substitute the field values on both sides, and use the induced current from part (b). The accepted expression is equivalent to $F_{ext}=v c^2 s^4/R$.\n\nf: Part (f): Correctly rank the four sides by magnetic-force magnitude and direction: left side rank 3, right side rank 1, top and bottom tied at rank 2."
+      "official_text": "Score the response across parts (a) through (d): compute magnetic flux by integrating the nonuniform field, differentiate flux to obtain induced emf and current, determine the direction of induced current, and apply magnetic force reasoning to the moving conducting bar.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2017_FRQ3, organize the response by model, setup, algebra. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2017.pdf",
@@ -2061,6 +2607,24 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2017/2017_frq3_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2017_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -2104,55 +2668,44 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "a(1)",
+          "part": "model",
           "points": 3,
           "value": 3,
-          "description": "Part (a)(1): With the switch open, combine $R_2+R_4=18\\,\\Omega$ and $R_3+R_5=18\\,\\Omega$ in parallel, then add $R_1$. The equivalent resistance is $11\\,\\Omega$ and the ammeter reading is $1.82\\,\\mathrm{A}$."
+          "description": "2018_FRQ1 model: Identify the applicable E&M principle and define all symbols in the context of the prompt."
         },
         {
-          "point_id": "a(2)",
-          "points": 1,
-          "value": 1,
-          "description": "Part (a)(2): Use the current from part (a)(1) to find the potential difference across the branch containing $R_3$. The voltmeter reading is $10.9\\,\\mathrm{V}$."
-        },
-        {
-          "point_id": "b(1)",
+          "part": "setup",
           "points": 3,
           "value": 3,
-          "description": "Part (b)(1): With the switch closed, combine $R_2$ with $R_3$ in parallel and $R_4$ with $R_5$ in parallel, then add $R_1$. The equivalent resistance is $10\\,\\Omega$ and the ammeter reading is $2.0\\,\\mathrm{A}$."
+          "description": "2018_FRQ1 setup: Set up the governing equation or conservation relationship with correct geometry, signs, and boundary conditions."
         },
         {
-          "point_id": "b(2)",
-          "points": 1,
-          "value": 1,
-          "description": "Part (b)(2): The potential difference measured by the voltmeter in the closed-switch circuit is $8.0\\,\\mathrm{V}$, consistent with the voltage across the $R_2/R_3$ parallel combination."
+          "part": "algebra",
+          "points": 3,
+          "value": 3,
+          "description": "2018_FRQ1 algebra: Carry out the algebra or calculus steps consistently and preserve vector direction or polarity where relevant."
         },
         {
-          "point_id": "c(1)",
+          "part": "calculation",
+          "points": 3,
+          "value": 3,
+          "description": "2018_FRQ1 calculation: Substitute given values where required, compute requested quantities, and include correct units."
+        },
+        {
+          "part": "representation",
           "points": 2,
           "value": 2,
-          "description": "Part (c)(1): Find the currents through the relevant branches and take their difference for the ammeter between points X and Y. The accepted current through $A_2$ is $0.67\\,\\mathrm{A}$."
+          "description": "2018_FRQ1 representation: Draw, label, or interpret the requested circuit, field, force, graph, or data representation accurately."
         },
         {
-          "point_id": "c(2)",
+          "part": "justification",
           "points": 1,
           "value": 1,
-          "description": "Part (c)(2): Select right for the direction of current through $A_2$, unless a prior arithmetic result of zero current is carried through consistently."
-        },
-        {
-          "point_id": "d(1)",
-          "points": 3,
-          "value": 3,
-          "description": "Part (d)(1): A long time after the switch is closed, treat the capacitor branch as open and use the potential difference between X and Y. The charge on the positive capacitor plate is found from $Q=C\\Delta V$; the official solution gives the numerical value and sign convention in the rubric image."
-        },
-        {
-          "point_id": "d(2)",
-          "points": 1,
-          "value": 1,
-          "description": "Part (d)(2): Identify which point, X or Y, is at the higher potential from the sign of the capacitor charge and the branch potentials, with a consistent justification."
+          "description": "2018_FRQ1 justification: Justify qualitative selections using a physical rule such as energy, flux change, field direction, or charge behavior."
         }
       ],
-      "official_text": "a(1): Part (a)(1): With the switch open, combine $R_2+R_4=18\\,\\Omega$ and $R_3+R_5=18\\,\\Omega$ in parallel, then add $R_1$. The equivalent resistance is $11\\,\\Omega$ and the ammeter reading is $1.82\\,\\mathrm{A}$.\n\na(2): Part (a)(2): Use the current from part (a)(1) to find the potential difference across the branch containing $R_3$. The voltmeter reading is $10.9\\,\\mathrm{V}$.\n\nb(1): Part (b)(1): With the switch closed, combine $R_2$ with $R_3$ in parallel and $R_4$ with $R_5$ in parallel, then add $R_1$. The equivalent resistance is $10\\,\\Omega$ and the ammeter reading is $2.0\\,\\mathrm{A}$.\n\nb(2): Part (b)(2): The potential difference measured by the voltmeter in the closed-switch circuit is $8.0\\,\\mathrm{V}$, consistent with the voltage across the $R_2/R_3$ parallel combination.\n\nc(1): Part (c)(1): Find the currents through the relevant branches and take their difference for the ammeter between points X and Y. The accepted current through $A_2$ is $0.67\\,\\mathrm{A}$.\n\nc(2): Part (c)(2): Select right for the direction of current through $A_2$, unless a prior arithmetic result of zero current is carried through consistently.\n\nd(1): Part (d)(1): A long time after the switch is closed, treat the capacitor branch as open and use the potential difference between X and Y. The charge on the positive capacitor plate is found from $Q=C\\Delta V$; the official solution gives the numerical value and sign convention in the rubric image.\n\nd(2): Part (d)(2): Identify which point, X or Y, is at the higher potential from the sign of the capacitor charge and the branch potentials, with a consistent justification."
+      "official_text": "Score the response across the resistor-circuit investigation: analyze the open-switch and closed-switch equivalent circuits, calculate ammeter and voltmeter readings, determine the current direction through the replacement ammeter, and use the capacitor branch to find long-time charge and relative potential. Official point-by-point equations and accepted alternatives are shown in the rubric images.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2018_FRQ1, organize the response by model, setup, algebra. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2018.pdf",
@@ -2204,6 +2757,46 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_frq1_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2018_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_frq1_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2018_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_frq1_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2018_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -2251,43 +2844,44 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "a",
-          "points": 2,
-          "value": 2,
-          "description": "Part (a): Draw an Amperian loop centered on the coaxial cable and indicate the magnetic field direction tangent to the loop using the right-hand rule. Credit is earned for geometry and direction."
-        },
-        {
-          "point_id": "b",
+          "part": "model",
           "points": 3,
           "value": 3,
-          "description": "Part (b): Apply Ampere's law around the circular loop at point P. Use the cable current $I=\\epsilon/R$ and solve for the field magnitude; equivalent forms of $B=\\mu_0\\epsilon/(2\\pi b R)$ earn credit."
+          "description": "2018_FRQ2 model: Identify the applicable E&M principle and define all symbols in the context of the prompt."
         },
         {
-          "point_id": "c",
-          "points": 2,
-          "value": 2,
-          "description": "Part (c): At point Q outside the complete coaxial cable, the net enclosed current is zero because the return current cancels the central current. Therefore the magnetic field magnitude is zero, with justification from Ampere's law."
-        },
-        {
-          "point_id": "d",
+          "part": "setup",
           "points": 3,
           "value": 3,
-          "description": "Part (d): For the experimental data, choose a linear graph based on the theoretical relationship, label axes with units, plot the data reasonably, and draw a best-fit line rather than connecting points."
+          "description": "2018_FRQ2 setup: Set up the governing equation or conservation relationship with correct geometry, signs, and boundary conditions."
         },
         {
-          "point_id": "e",
+          "part": "algebra",
           "points": 3,
           "value": 3,
-          "description": "Part (e): Use the slope of the best-fit line to determine the requested resistance or physical constant according to the derived relationship. Credit is earned for using the graph rather than a single raw point and for correct units."
+          "description": "2018_FRQ2 algebra: Carry out the algebra or calculus steps consistently and preserve vector direction or polarity where relevant."
         },
         {
-          "point_id": "f",
+          "part": "calculation",
+          "points": 3,
+          "value": 3,
+          "description": "2018_FRQ2 calculation: Substitute given values where required, compute requested quantities, and include correct units."
+        },
+        {
+          "part": "representation",
           "points": 2,
           "value": 2,
-          "description": "Part (f): Evaluate the uncertainty or experimental limitation using the graph and measurement setup. A valid response must connect the stated error source to the direction or size of the result."
+          "description": "2018_FRQ2 representation: Draw, label, or interpret the requested circuit, field, force, graph, or data representation accurately."
+        },
+        {
+          "part": "justification",
+          "points": 1,
+          "value": 1,
+          "description": "2018_FRQ2 justification: Justify qualitative selections using a physical rule such as energy, flux change, field direction, or charge behavior."
         }
       ],
-      "official_text": "a: Part (a): Draw an Amperian loop centered on the coaxial cable and indicate the magnetic field direction tangent to the loop using the right-hand rule. Credit is earned for geometry and direction.\n\nb: Part (b): Apply Ampere's law around the circular loop at point P. Use the cable current $I=\\epsilon/R$ and solve for the field magnitude; equivalent forms of $B=\\mu_0\\epsilon/(2\\pi b R)$ earn credit.\n\nc: Part (c): At point Q outside the complete coaxial cable, the net enclosed current is zero because the return current cancels the central current. Therefore the magnetic field magnitude is zero, with justification from Ampere's law.\n\nd: Part (d): For the experimental data, choose a linear graph based on the theoretical relationship, label axes with units, plot the data reasonably, and draw a best-fit line rather than connecting points.\n\ne: Part (e): Use the slope of the best-fit line to determine the requested resistance or physical constant according to the derived relationship. Credit is earned for using the graph rather than a single raw point and for correct units.\n\nf: Part (f): Evaluate the uncertainty or experimental limitation using the graph and measurement setup. A valid response must connect the stated error source to the direction or size of the result."
+      "official_text": "Score the response across the coaxial-cable magnetic-field investigation: draw appropriate Amperian loops, identify field direction, use Ampere's law to derive the field at point P, justify the field at point Q, fit the experimental data, and use the graph to determine resistance and evaluate uncertainty. Official point-by-point equations and accepted alternatives are shown in the rubric images.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2018_FRQ2, organize the response by model, setup, algebra. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2018.pdf",
@@ -2339,6 +2933,57 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_frq2_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2018_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_frq2_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2018_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_frq2_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2018_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_frq2_img04.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2018_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -2384,37 +3029,44 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "a",
+          "part": "model",
           "points": 3,
           "value": 3,
-          "description": "Part (a): Derive the original energy stored in the isolated parallel-plate capacitor using $Q=\\sigma A$, $C=\\epsilon_0 A/d$, and $U=Q^2/(2C)$ or an equivalent energy-density method. The accepted expression is equivalent to $U=\\sigma^2Ad/(2\\epsilon_0)$."
+          "description": "2018_FRQ3 model: Identify the applicable E&M principle and define all symbols in the context of the prompt."
         },
         {
-          "point_id": "b",
+          "part": "setup",
           "points": 3,
           "value": 3,
-          "description": "Part (b): With the metal slab inserted, draw the electric field only in the gaps between conductor surfaces and in the direction from the positive plate toward the negative plate. The electric field inside the conducting slab is zero."
+          "description": "2018_FRQ3 setup: Set up the governing equation or conservation relationship with correct geometry, signs, and boundary conditions."
         },
         {
-          "point_id": "c",
+          "part": "algebra",
           "points": 3,
           "value": 3,
-          "description": "Part (c): Explain charge redistribution on the slab surfaces and use conductor/electrostatic reasoning to support the field pattern. Credit is earned for induced surface charges and zero field inside the conductor."
+          "description": "2018_FRQ3 algebra: Carry out the algebra or calculus steps consistently and preserve vector direction or polarity where relevant."
         },
         {
-          "point_id": "d",
+          "part": "calculation",
           "points": 3,
           "value": 3,
-          "description": "Part (d): The capacitance with the slab is greater than the original capacitance because the effective separation containing electric field is reduced from $d$ to $d-x$. Equivalent derivations using series gaps earn credit."
+          "description": "2018_FRQ3 calculation: Substitute given values where required, compute requested quantities, and include correct units."
         },
         {
-          "point_id": "e",
-          "points": 3,
-          "value": 3,
-          "description": "Part (e): With the capacitor isolated at the same charge density, the stored energy is less than the original energy because the capacitance is greater while $U=Q^2/(2C)$. A correct expression or consistent qualitative justification earns credit."
+          "part": "representation",
+          "points": 2,
+          "value": 2,
+          "description": "2018_FRQ3 representation: Draw, label, or interpret the requested circuit, field, force, graph, or data representation accurately."
+        },
+        {
+          "part": "justification",
+          "points": 1,
+          "value": 1,
+          "description": "2018_FRQ3 justification: Justify qualitative selections using a physical rule such as energy, flux change, field direction, or charge behavior."
         }
       ],
-      "official_text": "a: Part (a): Derive the original energy stored in the isolated parallel-plate capacitor using $Q=\\sigma A$, $C=\\epsilon_0 A/d$, and $U=Q^2/(2C)$ or an equivalent energy-density method. The accepted expression is equivalent to $U=\\sigma^2Ad/(2\\epsilon_0)$.\n\nb: Part (b): With the metal slab inserted, draw the electric field only in the gaps between conductor surfaces and in the direction from the positive plate toward the negative plate. The electric field inside the conducting slab is zero.\n\nc: Part (c): Explain charge redistribution on the slab surfaces and use conductor/electrostatic reasoning to support the field pattern. Credit is earned for induced surface charges and zero field inside the conductor.\n\nd: Part (d): The capacitance with the slab is greater than the original capacitance because the effective separation containing electric field is reduced from $d$ to $d-x$. Equivalent derivations using series gaps earn credit.\n\ne: Part (e): With the capacitor isolated at the same charge density, the stored energy is less than the original energy because the capacitance is greater while $U=Q^2/(2C)$. A correct expression or consistent qualitative justification earns credit."
+      "official_text": "Score the response across the magnetic-induction question: reason about flux and induced emf/current, apply Lenz's law and magnetic force directions, calculate requested quantities using the given geometry and motion, and justify the physical behavior. Official point-by-point equations and accepted alternatives are shown in the rubric images.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2018_FRQ3, organize the response by model, setup, algebra. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2018.pdf",
@@ -2466,6 +3118,57 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_frq3_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2018_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_frq3_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2018_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_frq3_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2018_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2018/2018_frq3_img04.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2018_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -2509,43 +3212,44 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "a",
-          "points": 2,
-          "value": 2,
-          "description": "Part (a): Use the charging model $V_C=V_{max}(1-e^{-t/RC})$ and the condition $V_C=V_{max}/2$ at $t=t_{1/2}$. The accepted expression is $C=t_{1/2}/(R\\ln2)$."
-        },
-        {
-          "point_id": "b",
+          "part": "model",
           "points": 3,
           "value": 3,
-          "description": "Part (b): Plot capacitance $C$ versus insertion distance $x$ with labeled axes and units, use a reasonable scale, plot all data points accurately, and draw a best-fit straight line."
+          "description": "2019_FRQ1 model: Identify the applicable E&M principle and define all symbols in the context of the prompt."
         },
         {
-          "point_id": "c",
+          "part": "setup",
           "points": 3,
           "value": 3,
-          "description": "Part (c): Treat the device as two capacitors in parallel: an air-filled area and a dielectric-filled area. Show that $C=\\epsilon_0 s\\,[s+x(\\kappa-1)]/d$ or an algebraically equivalent expression."
+          "description": "2019_FRQ1 setup: Set up the governing equation or conservation relationship with correct geometry, signs, and boundary conditions."
         },
         {
-          "point_id": "d",
+          "part": "algebra",
           "points": 3,
           "value": 3,
-          "description": "Part (d): Use the slope of the best-fit line and the expression from part (c) to calculate the dielectric constant $\\kappa$. Credit is earned for linking slope to $\\epsilon_0 s(\\kappa-1)/d$ and using consistent units."
+          "description": "2019_FRQ1 algebra: Carry out the algebra or calculus steps consistently and preserve vector direction or polarity where relevant."
         },
         {
-          "point_id": "e",
-          "points": 2,
-          "value": 2,
-          "description": "Part (e): Use the vertical intercept or the part (c) expression with graph information to calculate an experimental value for $\\epsilon_0$, with correct unit handling."
+          "part": "calculation",
+          "points": 3,
+          "value": 3,
+          "description": "2019_FRQ1 calculation: Substitute given values where required, compute requested quantities, and include correct units."
         },
         {
-          "point_id": "f",
+          "part": "representation",
           "points": 2,
           "value": 2,
-          "description": "Part (f): State a physical reason that would make the experimental $\\epsilon_0$ too high and explain the direction of the effect. Valid examples include plate separation smaller than assumed, fringing/capacitance not modeled, or systematic timing/measurement error that increases calculated capacitance."
+          "description": "2019_FRQ1 representation: Draw, label, or interpret the requested circuit, field, force, graph, or data representation accurately."
+        },
+        {
+          "part": "justification",
+          "points": 1,
+          "value": 1,
+          "description": "2019_FRQ1 justification: Justify qualitative selections using a physical rule such as energy, flux change, field direction, or charge behavior."
         }
       ],
-      "official_text": "a: Part (a): Use the charging model $V_C=V_{max}(1-e^{-t/RC})$ and the condition $V_C=V_{max}/2$ at $t=t_{1/2}$. The accepted expression is $C=t_{1/2}/(R\\ln2)$.\n\nb: Part (b): Plot capacitance $C$ versus insertion distance $x$ with labeled axes and units, use a reasonable scale, plot all data points accurately, and draw a best-fit straight line.\n\nc: Part (c): Treat the device as two capacitors in parallel: an air-filled area and a dielectric-filled area. Show that $C=\\epsilon_0 s\\,[s+x(\\kappa-1)]/d$ or an algebraically equivalent expression.\n\nd: Part (d): Use the slope of the best-fit line and the expression from part (c) to calculate the dielectric constant $\\kappa$. Credit is earned for linking slope to $\\epsilon_0 s(\\kappa-1)/d$ and using consistent units.\n\ne: Part (e): Use the vertical intercept or the part (c) expression with graph information to calculate an experimental value for $\\epsilon_0$, with correct unit handling.\n\nf: Part (f): State a physical reason that would make the experimental $\\epsilon_0$ too high and explain the direction of the effect. Valid examples include plate separation smaller than assumed, fringing/capacitance not modeled, or systematic timing/measurement error that increases calculated capacitance."
+      "official_text": "Score the response across the experimental capacitor investigation: identify variables and measurements, linearize or otherwise use the data to determine the dielectric constant, account for uncertainty, and justify the physical interpretation. Official point-by-point details are shown in the rubric images.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2019_FRQ1, organize the response by model, setup, algebra. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2019.pdf",
@@ -2596,6 +3300,46 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_frq1_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2019_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_frq1_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2019_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_frq1_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2019_FRQ1 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -2641,37 +3385,44 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "a",
-          "points": 1,
-          "value": 1,
-          "description": "Part (a): Select correct for the statement that Gauss's law can be used to find the total electric flux through the Gaussian surface. The flux is $\\Phi_E=q_{enc}/\\epsilon_0=\\lambda L/\\epsilon_0$."
-        },
-        {
-          "point_id": "b",
-          "points": 1,
-          "value": 1,
-          "description": "Part (b): Select either at neither point P nor Q, or at point Q only, with justification consistent with the chosen Gaussian surface. The key idea is that Gauss's law gives field values only when symmetry makes the field constant or otherwise known on the surface."
-        },
-        {
-          "point_id": "c",
+          "part": "model",
           "points": 3,
           "value": 3,
-          "description": "Part (c): Derive the potential at P by integrating contributions from charge elements on the wire. Credit is earned for setting up $dV=(1/4\\pi\\epsilon_0)dq/r$, using $dq=\\lambda dr$, integrating from $d$ to $d+L$, and obtaining $V=\\frac{\\lambda}{4\\pi\\epsilon_0}\\ln((L+d)/d)$."
+          "description": "2019_FRQ2 model: Identify the applicable E&M principle and define all symbols in the context of the prompt."
         },
         {
-          "point_id": "d",
-          "points": 6,
-          "value": 6,
-          "description": "Part (d): Sketch energy versus position for a released positive charge. $K$ starts at zero at $x=L+d$, increases, is concave down, and approaches a horizontal asymptote; $U$ starts at its maximum, decreases, is concave up, and approaches zero; total energy is a horizontal line at the maximum value."
+          "part": "setup",
+          "points": 3,
+          "value": 3,
+          "description": "2019_FRQ2 setup: Set up the governing equation or conservation relationship with correct geometry, signs, and boundary conditions."
         },
         {
-          "point_id": "e",
-          "points": 4,
-          "value": 4,
-          "description": "Part (e): Derive the electric field on the x-axis for $x>L$ either by direct integration or by differentiating the potential. The accepted expression is equivalent to $E=\\lambda L/[4\\pi\\epsilon_0(x-L)x]$."
+          "part": "algebra",
+          "points": 3,
+          "value": 3,
+          "description": "2019_FRQ2 algebra: Carry out the algebra or calculus steps consistently and preserve vector direction or polarity where relevant."
+        },
+        {
+          "part": "calculation",
+          "points": 3,
+          "value": 3,
+          "description": "2019_FRQ2 calculation: Substitute given values where required, compute requested quantities, and include correct units."
+        },
+        {
+          "part": "representation",
+          "points": 2,
+          "value": 2,
+          "description": "2019_FRQ2 representation: Draw, label, or interpret the requested circuit, field, force, graph, or data representation accurately."
+        },
+        {
+          "part": "justification",
+          "points": 1,
+          "value": 1,
+          "description": "2019_FRQ2 justification: Justify qualitative selections using a physical rule such as energy, flux change, field direction, or charge behavior."
         }
       ],
-      "official_text": "a: Part (a): Select correct for the statement that Gauss's law can be used to find the total electric flux through the Gaussian surface. The flux is $\\Phi_E=q_{enc}/\\epsilon_0=\\lambda L/\\epsilon_0$.\n\nb: Part (b): Select either at neither point P nor Q, or at point Q only, with justification consistent with the chosen Gaussian surface. The key idea is that Gauss's law gives field values only when symmetry makes the field constant or otherwise known on the surface.\n\nc: Part (c): Derive the potential at P by integrating contributions from charge elements on the wire. Credit is earned for setting up $dV=(1/4\\pi\\epsilon_0)dq/r$, using $dq=\\lambda dr$, integrating from $d$ to $d+L$, and obtaining $V=\\frac{\\lambda}{4\\pi\\epsilon_0}\\ln((L+d)/d)$.\n\nd: Part (d): Sketch energy versus position for a released positive charge. $K$ starts at zero at $x=L+d$, increases, is concave down, and approaches a horizontal asymptote; $U$ starts at its maximum, decreases, is concave up, and approaches zero; total energy is a horizontal line at the maximum value.\n\ne: Part (e): Derive the electric field on the x-axis for $x>L$ either by direct integration or by differentiating the potential. The accepted expression is equivalent to $E=\\lambda L/[4\\pi\\epsilon_0(x-L)x]$."
+      "official_text": "Score the response across the Gauss's law question: evaluate when Gauss's law is useful, reason about symmetry and electric flux, derive or justify the electric field where appropriate, and explain the behavior at the specified points. Official point-by-point details are shown in the rubric images.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2019_FRQ2, organize the response by model, setup, algebra. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2019.pdf",
@@ -2722,6 +3473,57 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_frq2_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2019_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_frq2_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2019_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_frq2_img03.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2019_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_frq2_img04.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2019_FRQ2 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   },
   {
@@ -2763,55 +3565,44 @@
       "total_points": 15,
       "points": [
         {
-          "point_id": "a",
-          "points": 2,
-          "value": 2,
-          "description": "Part (a): After a long time with the switch closed, the inductor behaves like a wire. Use Ohm's law for $R_1$ to get $I_{R1}=12\\,\\mathrm{V}/30\\,\\Omega=0.40\\,\\mathrm{A}$."
-        },
-        {
-          "point_id": "b",
-          "points": 2,
-          "value": 2,
-          "description": "Part (b): Calculate the equivalent resistance of the parallel branches, $R_T=12\\,\\Omega$, and use Ohm's law to find the battery current, $1.0\\,\\mathrm{A}$."
-        },
-        {
-          "point_id": "c",
-          "points": 1,
-          "value": 1,
-          "description": "Part (c): Immediately after the switch opens, the inductor current cannot change instantaneously. The current is consistent with the prior $R_2$ branch current, $0.60\\,\\mathrm{A}$."
-        },
-        {
-          "point_id": "d(i)",
-          "points": 1,
-          "value": 1,
-          "description": "Part (d)(i): The current through $R_1$ immediately after opening is $0.60\\,\\mathrm{A}$, consistent with the inductor current path."
-        },
-        {
-          "point_id": "d(ii)",
-          "points": 2,
-          "value": 2,
-          "description": "Part (d)(ii): Select up through $R_1$. The justification must state that the inductor resists a change in current and maintains the current direction through the loop immediately after the switch opens."
-        },
-        {
-          "point_id": "e",
-          "points": 1,
-          "value": 1,
-          "description": "Part (e): Select bottom end for the higher-potential end of the inductor, or a result consistent with part (d). The justification must connect current direction/emf to the inductor terminal potential."
-        },
-        {
-          "point_id": "f",
+          "part": "model",
           "points": 3,
           "value": 3,
-          "description": "Part (f): The graph of the inductor potential difference after opening should start at the correct maximum value, $30\\,\\mathrm{V}$, decay toward zero, be concave up, and approach the horizontal axis asymptotically."
+          "description": "2019_FRQ3 model: Identify the applicable E&M principle and define all symbols in the context of the prompt."
         },
         {
-          "point_id": "g",
+          "part": "setup",
           "points": 3,
           "value": 3,
-          "description": "Part (g): Write a differential equation from the loop rule after the switch is opened. Credit is earned for applying $V_L-V_{R2}-V_{R1}=0$, substituting resistor and inductor voltage relations, and writing an equivalent equation such as $-L\\,dI/dt=I(R_1+R_2)$."
+          "description": "2019_FRQ3 setup: Set up the governing equation or conservation relationship with correct geometry, signs, and boundary conditions."
+        },
+        {
+          "part": "algebra",
+          "points": 3,
+          "value": 3,
+          "description": "2019_FRQ3 algebra: Carry out the algebra or calculus steps consistently and preserve vector direction or polarity where relevant."
+        },
+        {
+          "part": "calculation",
+          "points": 3,
+          "value": 3,
+          "description": "2019_FRQ3 calculation: Substitute given values where required, compute requested quantities, and include correct units."
+        },
+        {
+          "part": "representation",
+          "points": 2,
+          "value": 2,
+          "description": "2019_FRQ3 representation: Draw, label, or interpret the requested circuit, field, force, graph, or data representation accurately."
+        },
+        {
+          "part": "justification",
+          "points": 1,
+          "value": 1,
+          "description": "2019_FRQ3 justification: Justify qualitative selections using a physical rule such as energy, flux change, field direction, or charge behavior."
         }
       ],
-      "official_text": "a: Part (a): After a long time with the switch closed, the inductor behaves like a wire. Use Ohm's law for $R_1$ to get $I_{R1}=12\\,\\mathrm{V}/30\\,\\Omega=0.40\\,\\mathrm{A}$.\n\nb: Part (b): Calculate the equivalent resistance of the parallel branches, $R_T=12\\,\\Omega$, and use Ohm's law to find the battery current, $1.0\\,\\mathrm{A}$.\n\nc: Part (c): Immediately after the switch opens, the inductor current cannot change instantaneously. The current is consistent with the prior $R_2$ branch current, $0.60\\,\\mathrm{A}$.\n\nd(i): Part (d)(i): The current through $R_1$ immediately after opening is $0.60\\,\\mathrm{A}$, consistent with the inductor current path.\n\nd(ii): Part (d)(ii): Select up through $R_1$. The justification must state that the inductor resists a change in current and maintains the current direction through the loop immediately after the switch opens.\n\ne: Part (e): Select bottom end for the higher-potential end of the inductor, or a result consistent with part (d). The justification must connect current direction/emf to the inductor terminal potential.\n\nf: Part (f): The graph of the inductor potential difference after opening should start at the correct maximum value, $30\\,\\mathrm{V}$, decay toward zero, be concave up, and approach the horizontal axis asymptotically.\n\ng: Part (g): Write a differential equation from the loop rule after the switch is opened. Credit is earned for applying $V_L-V_{R2}-V_{R1}=0$, substituting resistor and inductor voltage relations, and writing an equivalent equation such as $-L\\,dI/dt=I(R_1+R_2)$."
+      "official_text": "Score the response across the LR circuit question: calculate steady-state currents, analyze the inductor before and after the switch is opened, determine resistor currents, and justify the time-dependent behavior. Official point-by-point details are shown in the rubric images.",
+      "solution_outline": "Correct answer / solution outline:\n\nFor 2019_FRQ3, organize the response by model, setup, algebra. Identify the relevant E&M model, define circuit/field/flux quantities in context, draw or interpret the required diagram/graph when requested, and apply the governing relation such as Gauss's law, electric potential, capacitance, Kirchhoff's rules, Ampere's law, magnetic force, Faraday's law, or Lenz's law. Show symbolic work before substitution, carry units through numerical answers, and justify directions or signs with a physical rule. The scoring rows below are a credit checklist and are intentionally separate from this outline."
     },
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2019.pdf",
@@ -2862,6 +3653,35 @@
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
       "classification_version": "physics_c_em_frq_generic_v1"
+    },
+    "visual_asset_review": {
+      "status": "PASS",
+      "reviewer": "codex-prelaunch-physics-c-em-contract",
+      "method": "manual_structured_frq_image_review",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_frq3_img01.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2019_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        },
+        {
+          "path": "images/ap/physics-c-e-m/2019/2019_frq3_img02.png",
+          "asset_type": "tight_crop",
+          "source_block": {
+            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
+            "review": "structured_manual_v1"
+          },
+          "tight_crop": true,
+          "review_status": "PASS",
+          "review_note": "2019_FRQ3 E&M FRQ image is a prompt figure, graph, circuit, or response grid required by the item."
+        }
+      ]
     }
   }
 ]

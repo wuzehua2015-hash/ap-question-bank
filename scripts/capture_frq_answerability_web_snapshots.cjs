@@ -98,15 +98,18 @@ async function captureFrqItem(client, item, mcqStub, outDir) {
   const surfaces = []
 
   await navigate(client, routeUrl('#/frq'))
+  await waitForText(client, item.question_id, 10000)
   await waitForImages(client)
   surfaces.push(await collectSurface(client, 'frq_player', item))
 
   await clickCompletionAndFinish(client)
+  await waitForText(client, item.question_id, 10000)
   await waitForImages(client)
   surfaces.push(await collectSurface(client, 'frq_score', item))
 
   await seedFrqSession(client, item, mcqStub)
   await navigate(client, routeUrl('#/mock-pdf'))
+  await waitForText(client, item.question_id, 10000)
   await waitForImages(client)
   surfaces.push(await collectSurface(client, 'mock_pdf_frq', item))
 
@@ -450,6 +453,21 @@ async function waitForImages(client) {
     }
     resolve(true);
   }))()`)
+}
+
+async function waitForText(client, needle, timeoutMs = 8000) {
+  const escaped = JSON.stringify(String(needle || ''))
+  const ok = await evaluate(client, `(() => new Promise(async resolve => {
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+    const deadline = Date.now() + ${Number(timeoutMs) || 8000};
+    while (Date.now() < deadline) {
+      const text = document.body ? document.body.innerText : '';
+      if (text.includes(${escaped})) return resolve(true);
+      await sleep(150);
+    }
+    resolve(false);
+  }))()`)
+  return ok
 }
 
 async function screenshot(client, file) {
