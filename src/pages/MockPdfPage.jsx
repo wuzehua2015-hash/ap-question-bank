@@ -143,7 +143,8 @@ function MockPdfPage() {
             alignItems: 'center',
           }}>
             <div>
-              <div style={{ fontSize: '40px', fontWeight: 'bold', color: '#1e40af' }}>翎英教育</div>`r`n              <div style={{ fontSize: '22px', color: '#6b7280', marginTop: '2px' }}>LynkEdu</div>
+              <div style={{ fontSize: '40px', fontWeight: 'bold', color: '#1e40af' }}>翎英教育</div>
+              <div style={{ fontSize: '22px', color: '#6b7280', marginTop: '2px' }}>LynkEdu</div>
             </div>
             <div style={{ fontSize: '20px', color: '#9ca3af', textAlign: 'right' }}>
               <div>{subjectName}</div>

@@ -1582,9 +1582,9 @@
       "E": "The existence of both checking accounts and savings accounts"
     },
     "answer": "B",
-    "primary_unit": "U6",
+    "primary_unit": "U4",
     "secondary_units": [
-      "U4"
+      "U6"
     ],
     "topics": [
       "currency"
@@ -1594,13 +1594,21 @@
     "image_paths": [],
     "source": "AP Macro 2012 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U6 (score=8.0), Secondary: ['U4'], Matched: ['currency']",
+    "classification_reasoning": "Reviewed 2026-07-10: U4 because the question tests commercial bank money creation.",
     "difficulty_source": "inferred",
     "difficulty_score": 1,
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U4 because the question tests commercial bank money creation."
+      ],
+      "previous_unit": "U6"
+    }
   },
   {
     "question_id": "2012_Q41",
@@ -1904,14 +1912,22 @@
     "image_paths": [],
     "source": "AP Macro 2012 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U6 (score=11.0), Matched: ['appreciate', 'trade deficit']",
+    "classification_reasoning": "Reviewed 2026-07-10: U6 because the item tests appreciation under flexible exchange rates.",
     "difficulty_source": "inferred",
     "difficulty_score": 8,
     "skills": [
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U6 because the item tests appreciation under flexible exchange rates."
+      ],
+      "previous_unit": "U6"
+    }
   },
   {
     "question_id": "2012_Q49",
@@ -2054,8 +2070,10 @@
       "E": "All are controlled by the Federal Reserve system."
     },
     "answer": "C",
-    "primary_unit": "U3",
-    "secondary_units": [],
+    "primary_unit": "U5",
+    "secondary_units": [
+      "U3"
+    ],
     "topics": [
       "aggregate demand",
       "fiscal policy",
@@ -2067,15 +2085,23 @@
     "has_graph": false,
     "image_paths": [],
     "source": "AP Macro 2012 Official Practice Exam",
-    "pure_unit": true,
-    "classification_reasoning": "Primary: U3 (score=9.0), Matched: ['aggregate demand', 'fiscal policy', 'tax']",
+    "pure_unit": false,
+    "classification_reasoning": "Reviewed 2026-07-10: U5 because the item compares fiscal and monetary policy effects together.",
     "difficulty_source": "inferred",
     "difficulty_score": 5,
     "skills": [
       "evaluate",
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U5 because the item compares fiscal and monetary policy effects together."
+      ],
+      "previous_unit": "U3"
+    }
   },
   {
     "question_id": "2012_Q54",
@@ -3565,17 +3591,19 @@
   {
     "question_id": "2014_Q35",
     "year": "2014",
-    "text": "If a contractionary fiscal policy is followed by an expansionary monetary policy, nominal interest rate and employment would most likely be affected in which of the following ways in the short run?\nNominal Interest Rate Employment",
+    "text": "If a contractionary fiscal policy is followed by an expansionary monetary policy, nominal interest rate and employment would most likely be affected in which of the following ways in the short run?",
     "options": {
-      "A": "Increase Increase",
-      "B": "Increase Decrease",
-      "C": "Decrease Decrease",
-      "D": "Decrease Indeterminate",
-      "E": "Indeterminate Decrease."
+      "A": "Increase / Increase",
+      "B": "Increase / Decrease",
+      "C": "Decrease / Decrease",
+      "D": "Decrease / Indeterminate",
+      "E": "Indeterminate / Decrease"
     },
     "answer": "D",
-    "primary_unit": "U4",
-    "secondary_units": [],
+    "primary_unit": "U5",
+    "secondary_units": [
+      "U4"
+    ],
     "topics": [
       "monetary policy",
       "nominal interest rate"
@@ -3584,15 +3612,50 @@
     "has_graph": false,
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
-    "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=4.0), Matched: ['monetary policy', 'nominal interest rate']",
+    "pure_unit": false,
+    "classification_reasoning": "Reviewed 2026-07-10: U5 because the item tests the combined effects of contractionary fiscal policy and expansionary monetary policy.",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Nominal Interest Rate",
+        "Employment"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Indeterminate"
+        ],
+        "E": [
+          "Indeterminate",
+          "Decrease"
+        ]
+      }
+    },
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U5 because the item tests the combined effects of contractionary fiscal policy and expansionary monetary policy."
+      ]
+    }
   },
   {
     "question_id": "2014_Q36",
@@ -3683,13 +3746,21 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U6 (score=11.0), Matched: ['currency', 'depreciation']",
+    "classification_reasoning": "Reviewed 2026-07-10: U6 because the item tests currency depreciation.",
     "difficulty_source": "inferred",
     "difficulty_score": 5,
     "skills": [
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U6 because the item tests currency depreciation."
+      ],
+      "previous_unit": "U6"
+    }
   },
   {
     "question_id": "2014_Q38",
@@ -3992,8 +4063,10 @@
       "E": "decrease the required reserve ratio"
     },
     "answer": "A",
-    "primary_unit": "U5",
-    "secondary_units": [],
+    "primary_unit": "U4",
+    "secondary_units": [
+      "U5"
+    ],
     "topics": [
       "aggregate demand",
       "aggregate supply",
@@ -4004,15 +4077,23 @@
     "has_graph": false,
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
-    "pure_unit": true,
-    "classification_reasoning": "Manual fix: U3 -> U5 (fiscal/monetary policy reclassification)",
+    "pure_unit": false,
+    "classification_reasoning": "Reviewed 2026-07-10: U4 because the question asks for Federal Reserve action to restrain inflation.",
     "difficulty_source": "inferred",
     "difficulty_score": 5,
     "skills": [
       "evaluate",
       "recommend_policy"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U4 because the question asks for Federal Reserve action to restrain inflation."
+      ],
+      "previous_unit": "U5"
+    }
   },
   {
     "question_id": "2014_Q47",
@@ -4203,7 +4284,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U6 (score=13.0), Matched: ['net exports', 'capital outflow', 'export']",
+    "classification_reasoning": "Reviewed 2026-07-10: U6 because the item links interest-rate changes, capital outflows, net exports, and aggregate demand.",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
@@ -4238,6 +4319,14 @@
           "No change"
         ]
       }
+    },
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U6 because the item links interest-rate changes, capital outflows, net exports, and aggregate demand."
+      ],
+      "previous_unit": "U6"
     }
   },
   {
@@ -4252,8 +4341,10 @@
       "E": "$150 million"
     },
     "answer": "D",
-    "primary_unit": "U6",
-    "secondary_units": [],
+    "primary_unit": "U4",
+    "secondary_units": [
+      "U6"
+    ],
     "topics": [
       "currency"
     ],
@@ -4261,14 +4352,22 @@
     "has_graph": false,
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
-    "pure_unit": true,
-    "classification_reasoning": "Primary: U6 (score=8.0), Matched: ['currency']",
+    "pure_unit": false,
+    "classification_reasoning": "Reviewed 2026-07-10: U4 because the question tests reserves, currency, and M1 money creation.",
     "difficulty_source": "inferred",
     "difficulty_score": 0,
     "skills": [
       "calculate"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U4 because the question tests reserves, currency, and M1 money creation."
+      ],
+      "previous_unit": "U6"
+    }
   },
   {
     "question_id": "2014_Q54",
@@ -5692,14 +5791,22 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "CED-based fix: U3 -> U5 (knowledge range verification)",
+    "classification_reasoning": "Reviewed 2026-07-10: U5 because the item tests a policy combination designed to reduce inflation.",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
       "evaluate",
       "recommend_policy"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U5 because the item tests a policy combination designed to reduce inflation."
+      ],
+      "previous_unit": "U5"
+    }
   },
   {
     "question_id": "2015_Q29",
@@ -6403,8 +6510,10 @@
       "E": "$300"
     },
     "answer": "E",
-    "primary_unit": "U3",
-    "secondary_units": [],
+    "primary_unit": "U2",
+    "secondary_units": [
+      "U3"
+    ],
     "topics": [
       "general macro"
     ],
@@ -6414,8 +6523,8 @@
       "/images/ap/macroeconomics/2015/2015_Q47_table.png"
     ],
     "source": "AP Macro 2015 Official Practice Exam",
-    "pure_unit": true,
-    "classification_reasoning": "Default to U3 - no clear match",
+    "pure_unit": false,
+    "classification_reasoning": "Reviewed 2026-07-10: U2 because the question tests CPI purchasing-power calculation.",
     "difficulty_source": "inferred",
     "difficulty_score": 0,
     "skills": [
@@ -6437,6 +6546,14 @@
           "review_status": "PASS"
         }
       ]
+    },
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U2 because the question tests CPI purchasing-power calculation."
+      ],
+      "previous_unit": "U3"
     }
   },
   {
@@ -6805,14 +6922,22 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U6 (score=15.0), Matched: ['depreciation', 'capital inflow', 'import']",
+    "classification_reasoning": "Reviewed 2026-07-10: U6 because the item tests relative real interest rates and exchange-rate/international-capital effects.",
     "difficulty_source": "inferred",
     "difficulty_score": 4,
     "skills": [
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U6 because the item tests relative real interest rates and exchange-rate/international-capital effects."
+      ],
+      "previous_unit": "U6"
+    }
   },
   {
     "question_id": "2015_Q59",
@@ -7435,8 +7560,10 @@
       "E": "$347 billion"
     },
     "answer": "A",
-    "primary_unit": "U3",
-    "secondary_units": [],
+    "primary_unit": "U2",
+    "secondary_units": [
+      "U3"
+    ],
     "topics": [
       "tax",
       "taxes",
@@ -7450,8 +7577,8 @@
       "/images/ap/macroeconomics/2016/2016_Q13_table.png"
     ],
     "source": "AP Macro 2016 Official Practice Exam",
-    "pure_unit": true,
-    "classification_reasoning": "Primary: U3 (score=7.5), Matched: ['tax', 'taxes', 'consumption']",
+    "pure_unit": false,
+    "classification_reasoning": "Reviewed 2026-07-10: U2 because the question asks for GDP from macroeconomic data.",
     "difficulty_source": "official_stats",
     "difficulty_score": 3,
     "percent_correct": 61,
@@ -7474,6 +7601,14 @@
           "review_status": "PASS"
         }
       ]
+    },
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U2 because the question asks for GDP from macroeconomic data."
+      ],
+      "previous_unit": "U3"
     }
   },
   {
@@ -8700,7 +8835,7 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U6 (score=13.5), Matched: ['exchange rate', 'net exports', 'export']",
+    "classification_reasoning": "Reviewed 2026-07-10: U6 because the item asks about budget deficits in an open economy with flexible exchange rates.",
     "difficulty_source": "official_stats",
     "difficulty_score": 6,
     "percent_correct": 48,
@@ -8708,18 +8843,26 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U6 because the item asks about budget deficits in an open economy with flexible exchange rates."
+      ],
+      "previous_unit": "U6"
+    }
   },
   {
     "question_id": "2016_Q46",
     "year": "2016",
     "text": "Which of the following mixes of fiscal and monetary policy would reduce inflation?",
     "options": {
-      "A": "Decrease spending Buy bonds",
-      "B": "Decrease taxes Buy bonds",
-      "C": "Increase taxes Sell bonds",
-      "D": "Increase spending Buy bonds",
-      "E": "Increase spending Sell bonds"
+      "A": "Decrease spending / Buy bonds",
+      "B": "Decrease taxes / Buy bonds",
+      "C": "Increase taxes / Sell bonds",
+      "D": "Increase spending / Buy bonds",
+      "E": "Increase spending / Sell bonds"
     },
     "answer": "C",
     "primary_unit": "U5",
@@ -8734,7 +8877,7 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Manual fix: U3 -> U5 (fiscal/monetary policy reclassification)",
+    "classification_reasoning": "Reviewed 2026-07-10: U5 because the tested concept is an explicit fiscal-policy plus monetary-policy mix.",
     "difficulty_source": "official_stats",
     "difficulty_score": 4,
     "percent_correct": 62,
@@ -8742,7 +8885,43 @@
       "evaluate",
       "recommend_policy"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Fiscal Policy",
+        "Monetary Policy"
+      ],
+      "rows": {
+        "A": [
+          "Decrease spending",
+          "Buy bonds"
+        ],
+        "B": [
+          "Decrease taxes",
+          "Buy bonds"
+        ],
+        "C": [
+          "Increase taxes",
+          "Sell bonds"
+        ],
+        "D": [
+          "Increase spending",
+          "Buy bonds"
+        ],
+        "E": [
+          "Increase spending",
+          "Sell bonds"
+        ]
+      }
+    },
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "The item asks for an explicit mix of fiscal and monetary policy actions to reduce inflation.",
+        "AP Macro U5 covers stabilization policy combinations and policy mix analysis."
+      ]
+    }
   },
   {
     "question_id": "2016_Q47",
@@ -8926,9 +9105,9 @@
       "E": "Buy government bonds"
     },
     "answer": "E",
-    "primary_unit": "U5",
+    "primary_unit": "U4",
     "secondary_units": [
-      "U4"
+      "U5"
     ],
     "topics": [
       "fiscal policy",
@@ -8939,14 +9118,22 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Manual fix: U3 -> U5 (fiscal/monetary policy reclassification)",
+    "classification_reasoning": "Reviewed 2026-07-10: U4 because the question tests central-bank action to stabilize interest rates after fiscal policy.",
     "difficulty_source": "official_stats",
     "difficulty_score": 3,
     "percent_correct": 32,
     "skills": [
       "recommend_policy"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U4 because the question tests central-bank action to stabilize interest rates after fiscal policy."
+      ],
+      "previous_unit": "U5"
+    }
   },
   {
     "question_id": "2016_Q53",
@@ -10009,7 +10196,15 @@
         ]
       }
     },
-    "classification_reasoning": "Manual fix: U3 -> U5 (fiscal/monetary policy reclassification)"
+    "classification_reasoning": "Reviewed 2026-07-10: U5 because the item combines fiscal expansion with central-bank bond sales and asks for the policy-mix effect.",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U5 because the item combines fiscal expansion with central-bank bond sales and asks for the policy-mix effect."
+      ],
+      "previous_unit": "U5"
+    }
   },
   {
     "question_id": "2017_Q17",
@@ -10713,16 +10908,17 @@
     "year": 2017,
     "text": "Which of the following combinations of changes in income taxes, real interest rate, and investment spending is most likely to promote economic growth?",
     "options": {
-      "A": "Income taxes: Increase / Interest Rate: Increase / Investment: Increase",
-      "B": "Income taxes: Increase / Interest Rate: Increase / Investment: Decrease",
-      "C": "Income taxes: Increase / Interest Rate: Decrease / Investment: Decrease",
-      "D": "Income taxes: Decrease / Interest Rate: Decrease / Investment: Decrease",
-      "E": "Decrease Decrease Increase"
+      "A": "Increase / Increase / Increase",
+      "B": "Increase / Increase / Decrease",
+      "C": "Increase / Decrease / Decrease",
+      "D": "Decrease / Decrease / Decrease",
+      "E": "Decrease / Decrease / Increase"
     },
     "answer": "E",
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "secondary_units": [
-      "U3"
+      "U3",
+      "U4"
     ],
     "pure_unit": false,
     "topics": [
@@ -10747,7 +10943,49 @@
       "compare",
       "identify"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Income Taxes",
+        "Real Interest Rate",
+        "Investment Spending"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease",
+          "Increase"
+        ]
+      }
+    },
+    "classification_reasoning": "Reviewed 2026-07-10: U5 because the item asks which policy/interest-rate/investment combination promotes economic growth.",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U5 because the item asks which policy/interest-rate/investment combination promotes economic growth."
+      ]
+    }
   },
   {
     "question_id": "2017_Q39",
@@ -10808,6 +11046,15 @@
           "Increase"
         ]
       }
+    },
+    "classification_reasoning": "Reviewed 2026-07-10: U6 because the item connects open-market operations to foreign exchange value and exports.",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U6 because the item connects open-market operations to foreign exchange value and exports."
+      ],
+      "previous_unit": "U6"
     }
   },
   {
@@ -10997,8 +11244,10 @@
       "E": "+140"
     },
     "answer": "D",
-    "primary_unit": "U3",
-    "secondary_units": [],
+    "primary_unit": "U6",
+    "secondary_units": [
+      "U3"
+    ],
     "topics": [],
     "difficulty": "Hard",
     "has_graph": true,
@@ -11006,7 +11255,7 @@
       "/images/ap/macroeconomics/2017/2017_Q46_table.png"
     ],
     "source": "2017 Released Exam | AP Macro 2022 Exam (Practice Set 1)",
-    "pure_unit": true,
+    "pure_unit": false,
     "difficulty_source": "official_stats",
     "difficulty_score": 1,
     "percent_correct": 38,
@@ -11029,6 +11278,15 @@
           "review_status": "PASS"
         }
       ]
+    },
+    "classification_reasoning": "Reviewed 2026-07-10: U6 because the question tests current account balance from international transactions.",
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U6 because the question tests current account balance from international transactions."
+      ],
+      "previous_unit": "U3"
     }
   },
   {
@@ -11838,7 +12096,7 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U3 (score=7.0), Secondary: ['U4'], Matched: ['government spending', 'tax', 'taxes']",
+    "classification_reasoning": "Reviewed 2026-07-10: U4 because the item asks for contractionary monetary policy action.",
     "difficulty_source": "official_stats",
     "difficulty_score": 4,
     "percent_correct": 76,
@@ -11846,7 +12104,15 @@
       "identify",
       "recommend_policy"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U4 because the item asks for contractionary monetary policy action."
+      ],
+      "previous_unit": "U4"
+    }
   },
   {
     "question_id": "2018_Q13",
@@ -13167,7 +13433,7 @@
     ],
     "source": "AP Macro 2018 Official Practice Exam | AP Macro 2022 Exam (Practice Set 2)",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U2 (score=7.0), Matched: ['unemployment', 'unemployment rate']",
+    "classification_reasoning": "Reviewed 2026-07-10: U2 because the question asks for the unemployment rate from labor-market data.",
     "difficulty_source": "official_stats",
     "difficulty_score": 1,
     "percent_correct": 41,
@@ -13190,6 +13456,14 @@
           "review_status": "PASS"
         }
       ]
+    },
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U2 because the question asks for the unemployment rate from labor-market data."
+      ],
+      "previous_unit": "U2"
     }
   },
   {
@@ -13197,11 +13471,11 @@
     "year": "2018",
     "text": "In the short run, how would a government's budget deficit, national debt, and real output change if government spending increases with no change in taxes?",
     "options": {
-      "A": "Increase Increase Decrease",
-      "B": "Increase Decrease Increase",
-      "C": "Increase Increase Increase",
-      "D": "Decrease Decrease Increase",
-      "E": "Decrease Increase Decrease"
+      "A": "Increase / Increase / Decrease",
+      "B": "Increase / Decrease / Increase",
+      "C": "Increase / Increase / Increase",
+      "D": "Decrease / Decrease / Increase",
+      "E": "Decrease / Increase / Decrease"
     },
     "answer": "C",
     "primary_unit": "U3",
@@ -13220,14 +13494,55 @@
     "image_paths": [],
     "source": "AP Macro 2018 Official Practice Exam | AP Macro 2022 Exam (Practice Set 2)",
     "pure_unit": false,
-    "classification_reasoning": "Primary: U3 (score=11.0), Secondary: ['U5'], Matched: ['government spending', 'tax', 'taxes']",
+    "classification_reasoning": "Reviewed 2026-07-10: U3 because the item tests short-run effects of expansionary fiscal policy on output and government balances.",
     "difficulty_source": "official_stats",
     "difficulty_score": 5,
     "percent_correct": 68,
     "skills": [
       "predict"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Budget Deficit",
+        "National Debt",
+        "Real Output"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Increase",
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Increase",
+          "Increase",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Increase",
+          "Decrease"
+        ]
+      }
+    },
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U3 because the item tests short-run effects of expansionary fiscal policy on output and government balances."
+      ]
+    }
   },
   {
     "question_id": "2018_Q48",
@@ -15436,7 +15751,7 @@
     "image_paths": [],
     "source": "AP Macro 2019 Official Practice Exam | AP Macro 2022 Exam (Practice Set 3)",
     "pure_unit": true,
-    "classification_reasoning": "Primary: U6 (score=10.0), Matched: ['net exports', 'export', 'exports']",
+    "classification_reasoning": "Reviewed 2026-07-10: U6 because the item traces real interest rates through net exports in an open economy.",
     "difficulty_source": "official_stats",
     "difficulty_score": 5,
     "percent_correct": 39,
@@ -15444,7 +15759,15 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U6 because the item traces real interest rates through net exports in an open economy."
+      ],
+      "previous_unit": "U6"
+    }
   },
   {
     "question_id": "2019_Q49",
@@ -16334,15 +16657,17 @@
       "E": "Increase government spending"
     },
     "answer": "A",
-    "primary_unit": "U5",
-    "secondary_units": [],
+    "primary_unit": "U4",
+    "secondary_units": [
+      "U5"
+    ],
     "topics": [],
     "difficulty": "Medium",
     "has_graph": false,
     "image_paths": [],
     "source": "AP Macro 2023 Practice Exam Set 2",
-    "pure_unit": true,
-    "classification_reasoning": "Classified from 2022 AP Practice Exam content analysis",
+    "pure_unit": false,
+    "classification_reasoning": "Reviewed 2026-07-10: U4 because the item asks for contractionary monetary policy action.",
     "difficulty_source": "inferred",
     "difficulty_score": 3,
     "skills": [
@@ -16350,7 +16675,15 @@
       "evaluate"
     ],
     "requires_graph": false,
-    "option_table_data": null
+    "option_table_data": null,
+    "classification": {
+      "review_status": "reviewed",
+      "confidence": "high",
+      "evidence": [
+        "Reviewed 2026-07-10: U4 because the item asks for contractionary monetary policy action."
+      ],
+      "previous_unit": "U5"
+    }
   },
   {
     "question_id": "2023_Q071",

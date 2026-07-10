@@ -13259,7 +13259,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Microeconomics 2015 Official Practice Exam",
-    "text": "Assume that Alpha and Beta are the only sellers of a product and they do not cooperate. Each firm has to decide whether to raise the product price. The payoff matrix below gives the profits, in dollars, associated with each pair of pricing strategies. The first entry in each cell shows the profits to Alpha, and the second, the profits to Beta. Beta Raise Price Do Not Raise Price Alpha Raise Price $100, $100 $30, $120 Do Not Raise Price $110, $20 $50, $70 Assuming both firms know the information in the matrix, which of the following correctly describes the dominant strategy of each firm? Alpha Beta",
+    "text": "Assume that Alpha and Beta are the only sellers of a product and they do not cooperate. Each firm has to decide whether to raise the product price. The payoff matrix below gives the profits, in dollars, associated with each pair of pricing strategies. The first entry in each cell shows the profits to Alpha, and the second entry shows the profits to Beta. Assuming both firms know the information in the matrix, which of the following correctly describes the dominant strategy of each firm?",
     "options": {
       "A": "Do not raise price Do not raise price",
       "B": "Do not raise price Raise price",
@@ -13293,9 +13293,7 @@
     },
     "has_graph": false,
     "requires_graph": false,
-    "image_paths": [
-      "/images/ap/microeconomics/2015/2015_Q37_payoff_matrix.png"
-    ],
+    "image_paths": [],
     "option_table_data": {
       "headers": [
         "Alpha",
@@ -13356,18 +13354,10 @@
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-micro-contract",
-      "method": "manual_microeconomics_mcq_visual_binding_review",
-      "image_sources": [
-        {
-          "path": "/images/ap/microeconomics/2015/2015_Q37_payoff_matrix.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ]
+      "method": "structured_payoff_matrix_replaces_redundant_or_imprecise_image",
+      "image_sources": [],
+      "structured_payoff_matrix_review": "PASS",
+      "redundant_payoff_image_removed": true
     }
   },
   {
@@ -17086,7 +17076,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Microeconomics 2016 Official Practice Exam",
-    "text": "E Soda and R Soda are the only two firms in the soft-drink industry. The companies cannot cooperate. Each firm can follow a high-price strategy or a low-price strategy for pricing its product. In the payoff matrix below, the first entry in each cell shows the profits to E Soda and the second entry shows the profits to R Soda. R Soda Low Price High Price E Soda Low Price $25, $25 $90, $15 High Price $15, $90 $75, $75 Given the information in the payoff matrix, it can be concluded that",
+    "text": "E Soda and R Soda are the only two firms in the soft-drink industry. The companies cannot cooperate. Each firm can follow a high-price strategy or a low-price strategy for pricing its product. In the payoff matrix below, the first entry in each cell shows the profits to E Soda and the second entry shows the profits to R Soda. Given the information in the payoff matrix, it can be concluded that",
     "options": {
       "A": "neither E Soda nor R Soda has a dominant strategy",
       "B": "E Soda has a dominant strategy but R Soda does not",
@@ -17120,9 +17110,7 @@
     },
     "has_graph": false,
     "requires_graph": false,
-    "image_paths": [
-      "/images/ap/microeconomics/2016/2016_Q39_payoff_matrix.png"
-    ],
+    "image_paths": [],
     "option_table_data": null,
     "background_data": {
       "table": {
@@ -17156,18 +17144,10 @@
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-micro-contract",
-      "method": "manual_microeconomics_mcq_visual_binding_review",
-      "image_sources": [
-        {
-          "path": "/images/ap/microeconomics/2016/2016_Q39_payoff_matrix.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ]
+      "method": "structured_payoff_matrix_replaces_redundant_or_imprecise_image",
+      "image_sources": [],
+      "structured_payoff_matrix_review": "PASS",
+      "redundant_payoff_image_removed": true
     }
   },
   {
@@ -18111,7 +18091,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Microeconomics 2016 Official Practice Exam",
-    "text": "Evergreen and Nature View are bidding for a landscaping contract. The payoff matrix above shows what each firm's total weekly profits from all its operations will be for each combination of bids. The first entry in each cell shows Evergreen's profit, and the second entry in each cell shows Nature View's profit. A Nash equilibrium results under which of the following conditions?",
+    "text": "Evergreen and Nature View are bidding for a landscaping contract. The payoff matrix below shows what each firm's total weekly profits from all its operations will be for each combination of bids. The first entry in each cell shows Evergreen's profit, and the second entry shows Nature View's profit. A Nash equilibrium results under which of the following conditions?",
     "options": {
       "A": "When Evergreen bids low, no matter what Nature View's bid is",
       "B": "When both firms bid high and when both firms bid low",
@@ -18145,9 +18125,7 @@
     },
     "has_graph": false,
     "requires_graph": false,
-    "image_paths": [
-      "/images/ap/microeconomics/2016/2016_Q54_payoff_matrix.png"
-    ],
+    "image_paths": [],
     "option_table_data": null,
     "background_data": {
       "table": {
@@ -18181,18 +18159,10 @@
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-micro-contract",
-      "method": "manual_microeconomics_mcq_visual_binding_review",
-      "image_sources": [
-        {
-          "path": "/images/ap/microeconomics/2016/2016_Q54_payoff_matrix.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ]
+      "method": "structured_payoff_matrix_replaces_redundant_or_imprecise_image",
+      "image_sources": [],
+      "structured_payoff_matrix_review": "PASS",
+      "redundant_payoff_image_removed": true
     }
   },
   {
@@ -22000,11 +21970,9 @@
       "E": "Demand elasticity 0.50; supply elasticity 0.50"
     },
     "answer": "E",
-    "has_graph": true,
-    "requires_graph": true,
-    "image_paths": [
-      "/images/ap/microeconomics/2017/2017_Q54_elasticity_table.png"
-    ],
+    "has_graph": false,
+    "requires_graph": false,
+    "image_paths": [],
     "background_data": null,
     "provenance": {
       "content_source": "2017 source PDF audited against backup/microeconomics_2026-06-25/2017_cleaned.json",
@@ -22068,18 +22036,10 @@
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-micro-contract",
-      "method": "manual_microeconomics_mcq_visual_binding_review",
-      "image_sources": [
-        {
-          "path": "/images/ap/microeconomics/2017/2017_Q54_elasticity_table.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2017.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ]
+      "method": "structured_option_table_replaces_redundant_option_table_image",
+      "image_sources": [],
+      "structured_table_review": "PASS",
+      "redundant_option_image_removed": true
     }
   },
   {
@@ -25275,8 +25235,7 @@
     "has_graph": true,
     "requires_graph": true,
     "image_paths": [
-      "/images/ap/microeconomics/2018/2018_Q52_cost_table.png",
-      "/images/ap/microeconomics/2018/2018_Q52_option_table.png"
+      "/images/ap/microeconomics/2018/2018_Q52_cost_table.png"
     ],
     "background_data": null,
     "provenance": {
@@ -25341,7 +25300,7 @@
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-micro-contract",
-      "method": "manual_microeconomics_mcq_visual_binding_review",
+      "method": "background_visual_retained_structured_option_table_replaces_option_table_image",
       "image_sources": [
         {
           "path": "/images/ap/microeconomics/2018/2018_Q52_cost_table.png",
@@ -25351,16 +25310,10 @@
             "review": "structured_manual_v1"
           },
           "review_status": "PASS"
-        },
-        {
-          "path": "/images/ap/microeconomics/2018/2018_Q52_option_table.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": "subjects/AP/Microeconomics/01-exams/AP Micro 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
         }
+      ],
+      "redundant_option_images_removed": [
+        "/images/ap/microeconomics/2018/2018_Q52_option_table.png"
       ]
     }
   },

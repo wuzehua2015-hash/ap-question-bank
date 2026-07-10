@@ -47,6 +47,11 @@ const blockedStudentUiPhrases = [
   /releaseStatus/,
 ]
 
+const literalEscapeArtifacts = [
+  /`r`n/,
+  /`n`r/,
+]
+
 const allowedFilesForEnglishPatterns = new Set([
   'src/components/FRQDisplay.jsx',
 ])
@@ -71,6 +76,14 @@ for (const file of listFiles(SCAN_DIRS)) {
     const match = pattern.exec(text)
     if (match) {
       console.error(`${rel}: contains possible Chinese encoding damage near "${sample(text, match.index)}"`)
+      errors += 1
+      break
+    }
+  }
+  for (const pattern of literalEscapeArtifacts) {
+    const match = pattern.exec(text)
+    if (match) {
+      console.error(`${rel}: contains visible newline escape artifact near "${sample(text, match.index)}"`)
       errors += 1
       break
     }

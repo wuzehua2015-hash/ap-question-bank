@@ -20,6 +20,7 @@
     "audit:answerability:gate": "node scripts/validate_answerability_review.cjs",
     "audit:answerability:gate:all": "node scripts/validate_answerability_review.cjs --all",
     "audit:physics-mechanics:image-content": "node scripts/audit_physics_mechanics_image_content.cjs",
+    "audit:economics-classification": "node scripts/audit_economics_classification.cjs",
     "audit:student-flow": "node scripts/student_flow_audit.cjs",
     "delivery:contract": "node scripts/delivery_contract.cjs",
     "audit:full": "npm run validate && npm run build && npm run audit:render:all",

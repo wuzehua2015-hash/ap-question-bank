@@ -148,7 +148,7 @@
           ]
         }
       ],
-      "total_points": 10.0,
+      "total_points": 10,
       "solution_outline": "2012_FRQ1 solution route: read the scenario and draw or calculate only the model requested; then calculate marginal or total benefit and apply marginal analysis to choose the utility- or surplus-maximizing quantity. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 10 scoring opportunities."
     },
     "provenance": {
@@ -217,41 +217,8 @@
       "/images/ap/microeconomics/2012/2012_FRQ02_utility_table.png"
     ],
     "background_data": {
-      "table": {
-        "caption": "Theresa's marginal utility from bagels and toy cars",
-        "headers": [
-          "Quantity",
-          "Marginal utility from bagels",
-          "Marginal utility from toy cars"
-        ],
-        "rows": [
-          [
-            "1",
-            "10",
-            "8"
-          ],
-          [
-            "2",
-            "8",
-            "7"
-          ],
-          [
-            "3",
-            "6",
-            "5"
-          ],
-          [
-            "4",
-            "4",
-            "3"
-          ],
-          [
-            "5",
-            "2",
-            "1"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "rubric": {
       "points": [
@@ -316,7 +283,7 @@
           ]
         }
       ],
-      "total_points": 6.0,
+      "total_points": 6,
       "solution_outline": "2012_FRQ2 solution route: read the scenario and draw or calculate only the model requested; then calculate marginal or total benefit and apply marginal analysis to choose the utility- or surplus-maximizing quantity. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 6 scoring opportunities."
     },
     "provenance": {
@@ -343,7 +310,7 @@
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-micro-contract",
-      "method": "manual_microeconomics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/microeconomics/2012/2012_FRQ02_utility_table.png",
@@ -356,7 +323,8 @@
           "review_status": "PASS",
           "review_note": "2012_FRQ2 image is a focused microeconomics graph, payoff matrix, or table paired with structured prompt and rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -459,7 +427,7 @@
           ]
         }
       ],
-      "total_points": 5.0,
+      "total_points": 5,
       "solution_outline": "2012_FRQ3 solution route: read the scenario and draw or calculate only the model requested; then calculate marginal or total benefit and apply marginal analysis to choose the utility- or surplus-maximizing quantity; then show how the policy changes price, quantity, surplus, revenue, deadweight loss, or trade flows. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 5 scoring opportunities."
     },
     "provenance": {
@@ -663,7 +631,7 @@
           ]
         }
       ],
-      "total_points": 11.0,
+      "total_points": 11,
       "solution_outline": "2013_FRQ1 solution route: read the scenario and draw or calculate only the model requested; then identify market and firm conditions, then use price, marginal cost, average cost, entry or exit, and long-run adjustment to support the conclusion. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 11 scoring opportunities."
     },
     "provenance": {
@@ -769,7 +737,7 @@
           ]
         }
       ],
-      "total_points": 4.0,
+      "total_points": 4,
       "solution_outline": "2013_FRQ2 solution route: read the scenario and draw or calculate only the model requested; then read each player's payoff under the other firm's choice, then determine strategy incentives and equilibrium outcomes. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 4 scoring opportunities."
     },
     "provenance": {
@@ -859,39 +827,8 @@
       "/images/ap/microeconomics/2013/2013_FRQ03_cost_table.png"
     ],
     "background_data": {
-      "table": {
-        "caption": "Typical umbrella firm's total cost",
-        "headers": [
-          "Quantity",
-          "Total cost"
-        ],
-        "rows": [
-          [
-            "0",
-            "$10"
-          ],
-          [
-            "1",
-            "$15"
-          ],
-          [
-            "2",
-            "$20"
-          ],
-          [
-            "3",
-            "$24"
-          ],
-          [
-            "4",
-            "$31"
-          ],
-          [
-            "5",
-            "$40"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "requires_graph_response": true,
     "rubric_image_paths": [
@@ -960,7 +897,7 @@
           ]
         }
       ],
-      "total_points": 6.0,
+      "total_points": 6,
       "solution_outline": "2013_FRQ3 solution route: read the scenario and draw or calculate only the model requested; then identify market and firm conditions, then use price, marginal cost, average cost, entry or exit, and long-run adjustment to support the conclusion. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 6 scoring opportunities."
     },
     "provenance": {
@@ -986,7 +923,7 @@
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-micro-contract",
-      "method": "manual_microeconomics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/microeconomics/2013/2013_FRQ03_cost_table.png",
@@ -999,7 +936,8 @@
           "review_status": "PASS",
           "review_note": "2013_FRQ3 image is a focused microeconomics graph, payoff matrix, or table paired with structured prompt and rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -1152,7 +1090,7 @@
           ]
         }
       ],
-      "total_points": 10.0,
+      "total_points": 10,
       "solution_outline": "2014_FRQ1 solution route: read the scenario and draw or calculate only the model requested; then identify market and firm conditions, then use price, marginal cost, average cost, entry or exit, and long-run adjustment to support the conclusion; then compare private and social costs or benefits to identify the market failure and the efficient quantity. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 10 scoring opportunities."
     },
     "provenance": {
@@ -1288,7 +1226,7 @@
           ]
         }
       ],
-      "total_points": 6.0,
+      "total_points": 6,
       "solution_outline": "2014_FRQ2 solution route: read the scenario and draw or calculate only the model requested; then identify market and firm conditions, then use price, marginal cost, average cost, entry or exit, and long-run adjustment to support the conclusion; then show how the policy changes price, quantity, surplus, revenue, deadweight loss, or trade flows. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 6 scoring opportunities."
     },
     "provenance": {
@@ -1373,41 +1311,8 @@
       "/images/ap/microeconomics/2014/2014_FRQ03_worker_table.png"
     ],
     "background_data": {
-      "table": {
-        "caption": "Schmitt's Bakery labor and cost data",
-        "headers": [
-          "Workers",
-          "Cookies per day",
-          "Total cost"
-        ],
-        "rows": [
-          [
-            "0",
-            "0",
-            "$20"
-          ],
-          [
-            "1",
-            "20",
-            "$30"
-          ],
-          [
-            "2",
-            "50",
-            "$40"
-          ],
-          [
-            "3",
-            "75",
-            "$50"
-          ],
-          [
-            "4",
-            "90",
-            "$60"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "requires_graph_response": false,
     "rubric": {
@@ -1463,7 +1368,7 @@
           ]
         }
       ],
-      "total_points": 5.0,
+      "total_points": 5,
       "solution_outline": "2014_FRQ3 solution route: read the scenario and draw or calculate only the model requested; then identify market and firm conditions, then use price, marginal cost, average cost, entry or exit, and long-run adjustment to support the conclusion; then connect marginal product or marginal revenue product to hiring, wage, and output decisions. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 5 scoring opportunities."
     },
     "provenance": {
@@ -1489,7 +1394,7 @@
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-micro-contract",
-      "method": "manual_microeconomics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/microeconomics/2014/2014_FRQ03_worker_table.png",
@@ -1502,7 +1407,8 @@
           "review_status": "PASS",
           "review_note": "2014_FRQ3 image is a focused microeconomics graph, payoff matrix, or table paired with structured prompt and rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -1647,7 +1553,7 @@
           ]
         }
       ],
-      "total_points": 10.0,
+      "total_points": 10,
       "solution_outline": "2015_FRQ1 solution route: read the scenario and draw or calculate only the model requested; then locate the firm's output and price from MR, MC, demand, and cost curves, then compare profit maximization with allocative efficiency. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 10 scoring opportunities."
     },
     "source_pages": {
@@ -1800,7 +1706,7 @@
           ]
         }
       ],
-      "total_points": 7.0,
+      "total_points": 7,
       "solution_outline": "2015_FRQ2 solution route: read the scenario and draw or calculate only the model requested; then calculate marginal or total benefit and apply marginal analysis to choose the utility- or surplus-maximizing quantity; then show how the policy changes price, quantity, surplus, revenue, deadweight loss, or trade flows. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 9 scoring opportunities."
     },
     "source_pages": {
@@ -1857,39 +1763,8 @@
       "/images/ap/microeconomics/2015/2015_FRQ03_worker_table.png"
     ],
     "background_data": {
-      "table": {
-        "caption": "Coldbox short-run production with labor as the only variable input",
-        "headers": [
-          "Workers",
-          "Output"
-        ],
-        "rows": [
-          [
-            "0",
-            "0"
-          ],
-          [
-            "1",
-            "80"
-          ],
-          [
-            "2",
-            "180"
-          ],
-          [
-            "3",
-            "250"
-          ],
-          [
-            "4",
-            "300"
-          ],
-          [
-            "5",
-            "330"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "requires_graph_response": false,
     "rubric_image_paths": [
@@ -1948,7 +1823,7 @@
           ]
         }
       ],
-      "total_points": 5.0,
+      "total_points": 5,
       "solution_outline": "2015_FRQ3 solution route: read the scenario and draw or calculate only the model requested; then identify market and firm conditions, then use price, marginal cost, average cost, entry or exit, and long-run adjustment to support the conclusion; then connect marginal product or marginal revenue product to hiring, wage, and output decisions. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 5 scoring opportunities."
     },
     "source_pages": {
@@ -1970,7 +1845,7 @@
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-micro-contract",
-      "method": "manual_microeconomics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/microeconomics/2015/2015_FRQ03_worker_table.png",
@@ -1983,7 +1858,8 @@
           "review_status": "PASS",
           "review_note": "2015_FRQ3 image is a focused microeconomics graph, payoff matrix, or table paired with structured prompt and rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -2138,7 +2014,7 @@
           ]
         }
       ],
-      "total_points": 10.0,
+      "total_points": 10,
       "solution_outline": "2016_FRQ1 solution route: read the scenario and draw or calculate only the model requested; then locate the firm's output and price from MR, MC, demand, and cost curves, then compare profit maximization with allocative efficiency; then calculate marginal or total benefit and apply marginal analysis to choose the utility- or surplus-maximizing quantity. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 11 scoring opportunities."
     },
     "source_pages": {
@@ -2196,35 +2072,8 @@
       "/images/ap/microeconomics/2016/2016_FRQ02_total_benefit_table.png"
     ],
     "background_data": {
-      "table": {
-        "caption": "Kerri's total benefit from volleyballs",
-        "headers": [
-          "Volleyballs",
-          "Total benefit"
-        ],
-        "rows": [
-          [
-            "0",
-            "$0"
-          ],
-          [
-            "1",
-            "$16"
-          ],
-          [
-            "2",
-            "$28"
-          ],
-          [
-            "3",
-            "$36"
-          ],
-          [
-            "4",
-            "$40"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "rubric_image_paths": [
       "/images/ap/microeconomics/2016/2016_FRQ02_rubric_graph.png"
@@ -2312,7 +2161,7 @@
           ]
         }
       ],
-      "total_points": 7.0,
+      "total_points": 7,
       "solution_outline": "2016_FRQ2 solution route: read the scenario and draw or calculate only the model requested; then calculate marginal or total benefit and apply marginal analysis to choose the utility- or surplus-maximizing quantity. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 8 scoring opportunities."
     },
     "source_pages": {
@@ -2334,7 +2183,7 @@
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-micro-contract",
-      "method": "manual_microeconomics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/microeconomics/2016/2016_FRQ02_total_benefit_table.png",
@@ -2347,7 +2196,8 @@
           "review_status": "PASS",
           "review_note": "2016_FRQ2 image is a focused microeconomics graph, payoff matrix, or table paired with structured prompt and rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -2452,7 +2302,7 @@
           ]
         }
       ],
-      "total_points": 6.0,
+      "total_points": 6,
       "solution_outline": "2016_FRQ3 solution route: read the scenario and draw or calculate only the model requested; then identify market and firm conditions, then use price, marginal cost, average cost, entry or exit, and long-run adjustment to support the conclusion; then connect marginal product or marginal revenue product to hiring, wage, and output decisions. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 6 scoring opportunities."
     },
     "source_pages": {
@@ -2600,7 +2450,7 @@
           ]
         }
       ],
-      "total_points": 10.0,
+      "total_points": 10,
       "solution_outline": "2017_FRQ1 solution route: read the scenario and draw or calculate only the model requested; then state the relevant microeconomic model, show required calculations, and justify each directional conclusion with marginal reasoning. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 11 scoring opportunities."
     },
     "source_pages": {
@@ -2662,63 +2512,8 @@
       "/images/ap/microeconomics/2017/2017_FRQ02_rubric_graph.png"
     ],
     "background_data": {
-      "table": {
-        "caption": "Brody's total variable cost for trumpets",
-        "headers": [
-          "Trumpets",
-          "Total variable cost"
-        ],
-        "rows": [
-          [
-            "0",
-            "$0"
-          ],
-          [
-            "1",
-            "$50"
-          ],
-          [
-            "2",
-            "$90"
-          ],
-          [
-            "3",
-            "$120"
-          ],
-          [
-            "4",
-            "$150"
-          ],
-          [
-            "5",
-            "$180"
-          ],
-          [
-            "6",
-            "$210"
-          ],
-          [
-            "7",
-            "$250"
-          ],
-          [
-            "8",
-            "$300"
-          ],
-          [
-            "9",
-            "$360"
-          ],
-          [
-            "10",
-            "$430"
-          ],
-          [
-            "11",
-            "$510"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "rubric": {
       "points": [
@@ -2793,7 +2588,7 @@
           ]
         }
       ],
-      "total_points": 7.0,
+      "total_points": 7,
       "solution_outline": "2017_FRQ2 solution route: read the scenario and draw or calculate only the model requested; then identify market and firm conditions, then use price, marginal cost, average cost, entry or exit, and long-run adjustment to support the conclusion. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 7 scoring opportunities."
     },
     "source_pages": {
@@ -2840,7 +2635,7 @@
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-micro-contract",
-      "method": "manual_microeconomics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/microeconomics/2017/2017_FRQ02_trumpet_table.png",
@@ -2853,7 +2648,8 @@
           "review_status": "PASS",
           "review_note": "2017_FRQ2 image is a focused microeconomics graph, payoff matrix, or table paired with structured prompt and rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -2936,7 +2732,7 @@
           ]
         }
       ],
-      "total_points": 5.0,
+      "total_points": 5,
       "solution_outline": "2017_FRQ3 solution route: read the scenario and draw or calculate only the model requested; then calculate marginal or total benefit and apply marginal analysis to choose the utility- or surplus-maximizing quantity; then show how the policy changes price, quantity, surplus, revenue, deadweight loss, or trade flows. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 6 scoring opportunities."
     },
     "source_pages": {
@@ -3106,7 +2902,7 @@
           ]
         }
       ],
-      "total_points": 9.0,
+      "total_points": 9,
       "solution_outline": "2018_FRQ1 solution route: read the scenario and draw or calculate only the model requested; then identify market and firm conditions, then use price, marginal cost, average cost, entry or exit, and long-run adjustment to support the conclusion. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 9 scoring opportunities."
     },
     "source_pages": {
@@ -3260,7 +3056,7 @@
           ]
         }
       ],
-      "total_points": 5.0,
+      "total_points": 5,
       "solution_outline": "2018_FRQ2 solution route: read the scenario and draw or calculate only the model requested; then show how the policy changes price, quantity, surplus, revenue, deadweight loss, or trade flows; then compare private and social costs or benefits to identify the market failure and the efficient quantity. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 9 scoring opportunities."
     },
     "source_pages": {
@@ -3410,7 +3206,7 @@
           ]
         }
       ],
-      "total_points": 7.0,
+      "total_points": 7,
       "solution_outline": "2018_FRQ3 solution route: read the scenario and draw or calculate only the model requested; then identify market and firm conditions, then use price, marginal cost, average cost, entry or exit, and long-run adjustment to support the conclusion; then show how the policy changes price, quantity, surplus, revenue, deadweight loss, or trade flows. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 7 scoring opportunities."
     },
     "source_pages": {
@@ -3505,7 +3301,7 @@
           "criteria": []
         }
       ],
-      "total_points": 9.0,
+      "total_points": 9,
       "solution_outline": "2019_FRQ1 solution route: read the scenario and draw or calculate only the model requested; then locate the firm's output and price from MR, MC, demand, and cost curves, then compare profit maximization with allocative efficiency. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 4 scoring opportunities."
     },
     "source_pages": {
@@ -3612,7 +3408,7 @@
           "criteria": []
         }
       ],
-      "total_points": 5.0,
+      "total_points": 5,
       "solution_outline": "2019_FRQ2 solution route: read the scenario and draw or calculate only the model requested; then state the relevant microeconomic model, show required calculations, and justify each directional conclusion with marginal reasoning. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 5 scoring opportunities."
     },
     "source_pages": {
@@ -3728,7 +3524,7 @@
           ]
         }
       ],
-      "total_points": 5.0,
+      "total_points": 5,
       "solution_outline": "2019_FRQ3 solution route: read the scenario and draw or calculate only the model requested; then calculate marginal or total benefit and apply marginal analysis to choose the utility- or surplus-maximizing quantity. The answer should keep graph labels, formulas, units, and marginal comparisons aligned across the 5 scoring opportunities."
     },
     "source_pages": {

@@ -64,6 +64,14 @@ function optionTableHeadersAtTextTail(q) {
   return candidates.some(candidate => new RegExp('(?:\\s+|\\n)+' + candidate + '\\s*$', 'i').test(text))
 }
 
+function stripMathSegments(value) {
+  return String(value || '')
+    .replace(/\$\$[\s\S]*?\$\$/g, ' ')
+    .replace(/\$[^$]*\$/g, ' ')
+    .replace(/\\\([\s\S]*?\\\)/g, ' ')
+    .replace(/\\\[[\s\S]*?\\\]/g, ' ')
+}
+
 function headerOrders(headers) {
   if (headers.length > 4) return [headers]
   const out = []
@@ -147,6 +155,21 @@ function validateBank(subject, relPath, errors, warnings) {
       const imagePaths = Array.isArray(q.image_paths) ? q.image_paths : []
       if (imageSources.length && imageSources.length !== imagePaths.length) {
         errors.push(`${label}: provenance.image_sources count does not match final image_paths count`)
+      }
+    }
+    if (subject.id === 'chemistry') {
+      const nonMathText = stripMathSegments(textBlob)
+      if (/\b(?:onl y|an d|for m|t he|th e|g a s|mo le|m o les|f ive|po i nt|grams?ample|K s olid)\b/i.test(nonMathText)) {
+        errors.push(`${label}: Chemistry split OCR text remains`)
+      }
+      if (/\b(?:R b|H e|N e|A r|F e|L i|A l|M g)\b|\b(?:Rb|He|Ne|Ar|Fe|Li|Al|Mg|NO|SO|CO|CH|HCHO|N2O)[ \t]+\d\b/.test(nonMathText)) {
+        errors.push(`${label}: Chemistry element/formula spacing should be rendered with math markup`)
+      }
+      if (/\bN\s+\$O_2\$\b|\$N_2O\$\s*4\b/i.test(textBlob)) {
+        errors.push(`${label}: Chemistry formula subscript markup is split across text`)
+      }
+      if (/\b(?:Known Oxides|Initial Partial Pressure|bond enthalpies).*?\b(?:"A"\s*:\s*"\d+\s+\d+\s+\d+)/is.test(textBlob) && !q.background_data?.table && !q.option_table_data) {
+        errors.push(`${label}: Chemistry table-like content must use structured table fields`)
       }
     }
     if (subject.id === 'biology') {

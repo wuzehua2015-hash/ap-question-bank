@@ -420,12 +420,27 @@ function validate(filePath, options = {}) {
           }
         }
       }
+      if ((subjectId === 'macro' || subjectId === 'micro') && Array.isArray(q.image_paths) && q.image_paths.length > 0) {
+        const redundantOptionTableImages = q.image_paths.filter(imgPath => /(?:option_table|elasticity_table)(?:\.[a-z]+)?$/i.test(String(imgPath || '')))
+        if (redundantOptionTableImages.length > 0) {
+          errors.push(`${qid}: structured option_table_data must not also render redundant option-table image(s): ${redundantOptionTableImages.join(', ')}`)
+        }
+      }
     } else if (!isFRQ && structuredTableHeaderPatterns.some(pattern => pattern.test(text))) {
       errors.push(`${qid}: text contains structured option-table headers but missing option_table_data`)
+    }
+    if (subjectId === 'micro' && !isFRQ && q.background_data?.table && Array.isArray(q.image_paths) && q.image_paths.some(imgPath => /payoff_matrix/i.test(String(imgPath || '')))) {
+      errors.push(`${qid}: structured payoff matrix must not also render redundant payoff_matrix image`)
+    }
+    if (subjectId === 'micro' && !isFRQ && q.background_data?.table && /\b(?:R Soda Low Price High Price|Beta Raise Price Do Not Raise Price|E Soda Low Price|Alpha Raise Price|High Price \$15, \$90|Do Not Raise Price \$110, \$20)\b/i.test(text)) {
+      errors.push(`${qid}: payoff matrix source text appears flattened into the prompt; keep matrix content in background_data.table only`)
     }
     
     // FRQ-specific checks
     if (isFRQ) {
+      if ((subjectId === 'macro' || subjectId === 'micro') && Array.isArray(q.image_paths) && q.image_paths.length > 0 && q.background_data?.table) {
+        errors.push(`${qid}: economics FRQ has both an official image and background_data.table; use the official image as the canonical table/graph asset unless an explicit subject review approves structured replacement`)
+      }
       // FRQ field-name consistency
       if (!q.question_number && q.question_num) {
         warnings.push(`${qid}: FRQ uses 'question_num' instead of 'question_number'`)
@@ -535,6 +550,15 @@ function validate(filePath, options = {}) {
       }
       if (/^\s*←\s*$/m.test(cspText)) {
         errors.push(`${qid}: CSP prompt contains orphan arrow glyph; likely missing pseudocode`)
+      }
+    }
+    if (subjectId === 'macro' && !isFRQ && q.options && !q.option_table_data) {
+      const optionText = Object.values(q.options).map(value => String(value || '')).join('\n')
+      if (/\b(?:Decrease|Increase)\s+(?:spending|taxes)\s+(?:Buy|Sell)\s+bonds\b/i.test(optionText)) {
+        errors.push(`${qid}: macro policy-mix answer choices appear flattened; use option_table_data with fiscal and monetary policy columns`)
+      }
+      if (/\b(?:Increase|Decrease)\s+(?:Increase|Decrease|No change)\s+(?:Increase|Decrease|No change)\b/i.test(optionText)) {
+        errors.push(`${qid}: macro multi-column answer choices appear flattened; use option_table_data`)
       }
     }
     if (isComputerScienceA) {

@@ -698,11 +698,11 @@
     "question_number": 14,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "The table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.\n\n| Container | Gas | Pressure (atm) | Mass of Sample (g) |\n|---:|---|---:|---:|\n| 1 | He | 2.00 | ? |\n| 2 | Ne | 2.00 | ? |\n| 3 | ? | 2.00 | 16.0 |\n| 4 | $SO_2$ | 1.96 | 64.1 |\n\nOn the basis of the data provided above, the gas in container 3 could be",
+    "text": "On the basis of the data provided above, the gas in container 3 could be",
     "options": {
       "A": "$CH_4$",
       "B": "$O_2$",
-      "C": "Ar",
+      "C": "$Ar$",
       "D": "$CO_2$"
     },
     "answer": "A",
@@ -729,8 +729,45 @@
       "override": true
     },
     "source_page": 25,
+    "background_data": {
+      "table": {
+        "headers": [
+          "Container",
+          "Gas",
+          "Pressure (atm)",
+          "Mass of Sample (g)"
+        ],
+        "rows": [
+          [
+            "1",
+            "$He$",
+            "2.00",
+            "?"
+          ],
+          [
+            "2",
+            "$Ne$",
+            "2.00",
+            "?"
+          ],
+          [
+            "3",
+            "?",
+            "2.00",
+            "16.0"
+          ],
+          [
+            "4",
+            "$SO_2$",
+            "1.96",
+            "64.1"
+          ]
+        ]
+      },
+      "source": "official_table_reconstructed_from_source_page"
+    },
     "group_id": "2014_Q14-Q16",
-    "group_context": "Questions 14-16 refer to the following.\n\nThe table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.\n\n| Container | Gas | Pressure (atm) | Mass of Sample (g) |\n|---:|---|---:|---:|\n| 1 | He | 2.00 | ? |\n| 2 | Ne | 2.00 | ? |\n| 3 | ? | 2.00 | 16.0 |\n| 4 | $SO_2$ | 1.96 | 64.1 |\n\nOn the basis of the data provided above, the gas in container 3 could be",
+    "group_context": "Questions 14-16 refer to the following information.\n\nThe table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.",
     "group_members": [
       "2014_Q14",
       "2014_Q15",
@@ -748,7 +785,7 @@
     "question_number": 15,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 14-16 refer to the gas-sample table above. Under the conditions given, consider containers 1, 2, and 4 only. The average speed of the gas particles is",
+    "text": "Under the conditions given, consider containers 1, 2, and 4 only. The average speed of the gas particles is",
     "options": {
       "A": "greatest in container 1",
       "B": "greatest in container 2",
@@ -784,29 +821,40 @@
         "headers": [
           "Container",
           "Gas",
-          "Pressure (atm)"
+          "Pressure (atm)",
+          "Mass of Sample (g)"
         ],
         "rows": [
           [
             "1",
-            "He",
-            "2.00"
+            "$He$",
+            "2.00",
+            "?"
           ],
           [
             "2",
-            "Ne",
-            "2.00"
+            "$Ne$",
+            "2.00",
+            "?"
+          ],
+          [
+            "3",
+            "?",
+            "2.00",
+            "16.0"
           ],
           [
             "4",
             "$SO_2$",
-            "1.96"
+            "1.96",
+            "64.1"
           ]
         ]
-      }
+      },
+      "source": "official_table_reconstructed_from_source_page"
     },
     "group_id": "2014_Q14-Q16",
-    "group_context": "Questions 14-16 refer to the following.\n\nThe table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.\n\n| Container | Gas | Pressure (atm) | Mass of Sample (g) |\n|---:|---|---:|---:|\n| 1 | He | 2.00 | ? |\n| 2 | Ne | 2.00 | ? |\n| 3 | ? | 2.00 | 16.0 |\n| 4 | $SO_2$ | 1.96 | 64.1 |\n\nOn the basis of the data provided above, the gas in container 3 could be",
+    "group_context": "Questions 14-16 refer to the following information.\n\nThe table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.",
     "group_members": [
       "2014_Q14",
       "2014_Q15",
@@ -824,12 +872,12 @@
     "question_number": 16,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Questions 14-16 refer to the gas-sample table above. The best explanation for the lower pressure in container 4 is that $SO_2$ molecules",
+    "text": "The best explanation for the lower pressure in container 4 is that $SO_2$ molecules",
     "options": {
       "A": "have a larger average speed than the other three gases",
       "B": "occupy a larger portion of the container volume than the other three gases",
       "C": "have stronger intermolecular attractions than the other three gases",
-      "D": "contain pi bonds, while the other gases contain only sigma bonds"
+      "D": "contain $\\pi$ bonds, while the other gases contain only $\\sigma$ bonds"
     },
     "answer": "C",
     "image_paths": [],
@@ -866,13 +914,13 @@
         "rows": [
           [
             "1",
-            "He",
+            "$He$",
             "2.00",
             "?"
           ],
           [
             "2",
-            "Ne",
+            "$Ne$",
             "2.00",
             "?"
           ],
@@ -889,10 +937,11 @@
             "64.1"
           ]
         ]
-      }
+      },
+      "source": "official_table_reconstructed_from_source_page"
     },
     "group_id": "2014_Q14-Q16",
-    "group_context": "Questions 14-16 refer to the following.\n\nThe table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.\n\n| Container | Gas | Pressure (atm) | Mass of Sample (g) |\n|---:|---|---:|---:|\n| 1 | He | 2.00 | ? |\n| 2 | Ne | 2.00 | ? |\n| 3 | ? | 2.00 | 16.0 |\n| 4 | $SO_2$ | 1.96 | 64.1 |\n\nOn the basis of the data provided above, the gas in container 3 could be",
+    "group_context": "Questions 14-16 refer to the following information.\n\nThe table below contains information about samples of four different gases at $273\\,\\mathrm{K}$. The samples are in four identical rigid containers numbered 1 through 4.",
     "group_members": [
       "2014_Q14",
       "2014_Q15",
@@ -1926,12 +1975,12 @@
     "question_number": 36,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "At a certain point in time, a one point zero zero Liter rigid reaction\nvessel contains one point f ive m o les of P $Cl$ 3 gas, one point zero mole of $Cl$ 2 gas, and 2 point fi v e m o l e s of P $Cl$ 5 gas,Which of the following describes how the measured pressure in the reaction vessel will change and why it will change that way as the reaction system approaches equilibrium at constant temperature?",
+    "text": "$PCl_3(g)+Cl_2(g)\\rightleftharpoons PCl_5(g)$, $K_c=6.5$\n\nAt a certain point in time, a $1.00\\,\\mathrm{L}$ rigid reaction vessel contains $1.5\\,\\mathrm{mol}$ of $PCl_3(g)$, $1.0\\,\\mathrm{mol}$ of $Cl_2(g)$, and $2.5\\,\\mathrm{mol}$ of $PCl_5(g)$. Which of the following describes how the measured pressure in the reaction vessel will change and why it will change that way as the reaction system approaches equilibrium at constant temperature?",
     "options": {
-      "A": "The pressure will increase because Q is less than K c",
-      "B": "The pressure will increase because Q is greater than K c",
-      "C": "The pressure will decrease because Q is less than K c",
-      "D": "The pressure will decrease because Q is greater than K c"
+      "A": "The pressure will increase because $Q<K_c$.",
+      "B": "The pressure will increase because $Q>K_c$.",
+      "C": "The pressure will decrease because $Q<K_c$.",
+      "D": "The pressure will decrease because $Q>K_c$."
     },
     "answer": "C",
     "image_paths": [],
@@ -2976,11 +3025,11 @@
     "question_number": 1,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "A 0.5 mole sample of H e gas\nof N e gas are placed separately in two 10 point zero liter rigid containers at 25 degrees Celsius. Each container has a pinhole opening. Which of the gases, , will escape faster through the pinhole and why?\nH e g a s or N e gas",
+    "text": "A $0.5\\,\\mathrm{mol}$ sample of $He(g)$ and a $0.5\\,\\mathrm{mol}$ sample of $Ne(g)$ are placed separately in two $10.0\\,\\mathrm{L}$ rigid containers at $25^\\circ\\mathrm{C}$. Each container has a pinhole opening. Which of the gases, $He(g)$ or $Ne(g)$, will escape faster through the pinhole and why?",
     "options": {
-      "A": "average speed than the N e gas atoms.",
-      "B": "N e gas will escape faster because its initial",
-      "C": "N e gas will escape faster because the\nN e g as\natoms have a higher average kinetic energy than the H e gas atoms.",
+      "A": "$He(g)$ will escape faster because the $He(g)$ atoms are moving at a higher average speed than the $Ne(g)$ atoms.",
+      "B": "$Ne(g)$ will escape faster because its initial pressure in the container is higher.",
+      "C": "$Ne(g)$ will escape faster because the $Ne(g)$ atoms have a higher average kinetic energy than the $He(g)$ atoms.",
       "D": "Both gases will escape at the same rate because the atoms of both gases have the same average kinetic energy."
     },
     "answer": "A",
@@ -3815,17 +3864,15 @@
     "question_number": 16,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "A certain gas, X Y gas, decomposes as represented by the\nequation above. A sample of each of the three gases is put in a previously evacuated container. The initial partial pressures of the gases are shown in the table below.\nGas Initial Partial Pressure in atmospheres\nx y 0.010\nx 2 0.20\ny 2 2.0\nThe temperature of the reaction mixture is held constant. In which direction will the reaction proceed?",
+    "text": "$2XY(g)\\rightleftharpoons X_2(g)+Y_2(g)$, $K_p=230$\n\nA certain gas, $XY(g)$, decomposes as represented by the equation above. A sample of each of the three gases is put in a previously evacuated container. The initial partial pressures of the gases are shown in the table below. The temperature of the reaction mixture is held constant. In which direction will the reaction proceed?",
     "options": {
-      "A": "No gas will be produced when K s olid is used.",
-      "B": "Some gas will be produced but less than the\namount of gas produced with L i solid.",
-      "C": "Equal quantities of gas will be produced with the two metals.",
-      "D": "More gas will be produced with K s olid than\nwith L i solid."
+      "A": "The reaction will form more products.",
+      "B": "The reaction will form more reactant.",
+      "C": "The mixture is at equilibrium, so there will be no change.",
+      "D": "It cannot be determined unless the volume of the container is known."
     },
     "answer": "B",
-    "image_paths": [
-      "images/ap/chemistry/2015/2015_p027_img01.png"
-    ],
+    "image_paths": [],
     "primary_unit": "U8",
     "unit": "U8",
     "unit_name": "Acids and Bases",
@@ -3846,19 +3893,28 @@
       "source_page": 27,
       "raw_chunk_sha256": "acdefe0f681706a18ed432ebb246383d8aa700010c436d02cd3cfa6a88b49610"
     },
-    "visual_asset_review": {
-      "status": "PASS",
-      "image_sources": [
-        {
-          "path": "images/ap/chemistry/2015/2015_p027_img01.png",
-          "asset_type": "prompt_visual",
-          "source_block": "2015_p027_img01.png",
-          "binding": "prompt_owned_image_block",
-          "tight_crop": true,
-          "review_status": "PASS"
-        }
-      ],
-      "policy": "Chemistry MCQ visual assets are prompt-owned blocks, option images, or explicitly combined labeled option regions."
+    "background_data": {
+      "table": {
+        "headers": [
+          "Gas",
+          "Initial Partial Pressure (atm)"
+        ],
+        "rows": [
+          [
+            "$XY$",
+            "0.010"
+          ],
+          [
+            "$X_2$",
+            "0.20"
+          ],
+          [
+            "$Y_2$",
+            "2.0"
+          ]
+        ]
+      },
+      "source": "official_table_reconstructed_from_source_page"
     }
   },
   {
@@ -3870,12 +3926,12 @@
     "question_number": 17,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Which of the following changes will most likely\nincrease the rate of reaction between L i solid and water?",
+    "text": "Which of the following changes will most likely increase the rate of reaction between $Li(s)$ and water?",
     "options": {
       "A": "Using $125\\,\\mathrm{mL}$ of water instead of $100\\,\\mathrm{mL}$",
-      "B": "Using a 0 point two five gram sample of L i solid instead of a\n0 point three five gramsample",
-      "C": "Using a 0 point two five gram sample of L i solid cut into small\npieces",
-      "D": "Decreasing the water temperature before\nadding the L i solid"
+      "B": "Using a $0.25\\,\\mathrm{g}$ sample of $Li(s)$ instead of a $0.35\\,\\mathrm{g}$ sample",
+      "C": "Using a $0.35\\,\\mathrm{g}$ sample of $Li(s)$ cut into small pieces",
+      "D": "Decreasing the water temperature before adding the $Li(s)$"
     },
     "answer": "C",
     "image_paths": [],
@@ -3898,7 +3954,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
       "source_page": 27,
       "raw_chunk_sha256": "3db17ca746ed4db4361102ca50f339637e202bdfb58e09b1d878a59ebc278f81"
-    }
+    },
+    "group_id": "2015_Q17-Q20",
+    "group_context": "Questions 17-20 refer to the following information.\n\nA $0.35\\,\\mathrm{g}$ sample of $Li(s)$ is placed in an Erlenmeyer flask containing $100\\,\\mathrm{mL}$ of water at $25^\\circ\\mathrm{C}$. A balloon is placed over the mouth of the flask to collect the hydrogen gas that is generated. After all of the $Li(s)$ has reacted with $H_2O(l)$, the solution in the flask is added to a clean, dry buret and used to titrate an aqueous solution of a monoprotic acid. The pH curve for this titration is shown in the diagram below.",
+    "group_members": [
+      "2015_Q17",
+      "2015_Q18",
+      "2015_Q19",
+      "2015_Q20"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2015_Q18",
@@ -3909,12 +3975,12 @@
     "question_number": 18,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "What will be the effect on the amount of gas produced if the experiment is repeated using\n0 point three five gram of K solid instead of 0 point three f ive gram of L i solid ?",
+    "text": "What will be the effect on the amount of gas produced if the experiment is repeated using $0.35\\,\\mathrm{g}$ of $K(s)$ instead of $0.35\\,\\mathrm{g}$ of $Li(s)$?",
     "options": {
-      "A": "No gas will be produced when K s olid is used.",
-      "B": "Some gas will be produced but less than the\namount of gas produced with L i solid.",
+      "A": "No gas will be produced when $K(s)$ is used.",
+      "B": "Some gas will be produced but less than the amount of gas produced with $Li(s)$.",
       "C": "Equal quantities of gas will be produced with the two metals.",
-      "D": "More gas will be produced with K s olid than\nwith L i solid."
+      "D": "More gas will be produced with $K(s)$ than with $Li(s)$."
     },
     "answer": "B",
     "image_paths": [],
@@ -3937,7 +4003,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
       "source_page": 27,
       "raw_chunk_sha256": "06e7830abe1f0e0bcfbf628c56d08a3d4970d9ae723d47ddb9169311f5a3fe72"
-    }
+    },
+    "group_id": "2015_Q17-Q20",
+    "group_context": "Questions 17-20 refer to the following information.\n\nA $0.35\\,\\mathrm{g}$ sample of $Li(s)$ is placed in an Erlenmeyer flask containing $100\\,\\mathrm{mL}$ of water at $25^\\circ\\mathrm{C}$. A balloon is placed over the mouth of the flask to collect the hydrogen gas that is generated. After all of the $Li(s)$ has reacted with $H_2O(l)$, the solution in the flask is added to a clean, dry buret and used to titrate an aqueous solution of a monoprotic acid. The pH curve for this titration is shown in the diagram below.",
+    "group_members": [
+      "2015_Q17",
+      "2015_Q18",
+      "2015_Q19",
+      "2015_Q20"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2015_Q19",
@@ -3981,6 +4057,16 @@
       "override": true
     },
     "source_page": 28,
+    "group_id": "2015_Q17-Q20",
+    "group_context": "Questions 17-20 refer to the following information.\n\nA $0.35\\,\\mathrm{g}$ sample of $Li(s)$ is placed in an Erlenmeyer flask containing $100\\,\\mathrm{mL}$ of water at $25^\\circ\\mathrm{C}$. A balloon is placed over the mouth of the flask to collect the hydrogen gas that is generated. After all of the $Li(s)$ has reacted with $H_2O(l)$, the solution in the flask is added to a clean, dry buret and used to titrate an aqueous solution of a monoprotic acid. The pH curve for this titration is shown in the diagram below.",
+    "group_members": [
+      "2015_Q17",
+      "2015_Q18",
+      "2015_Q19",
+      "2015_Q20"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
     "visual_asset_review": {
       "status": "PASS",
       "image_sources": [
@@ -4035,7 +4121,17 @@
       "raw_chunk_sha256": "330ea6e25d523e10f5f5f75208b051211ee0a2a7dbe5bfd1f84ce8e80cf65c84",
       "override": true
     },
-    "source_page": 28
+    "source_page": 28,
+    "group_id": "2015_Q17-Q20",
+    "group_context": "Questions 17-20 refer to the following information.\n\nA $0.35\\,\\mathrm{g}$ sample of $Li(s)$ is placed in an Erlenmeyer flask containing $100\\,\\mathrm{mL}$ of water at $25^\\circ\\mathrm{C}$. A balloon is placed over the mouth of the flask to collect the hydrogen gas that is generated. After all of the $Li(s)$ has reacted with $H_2O(l)$, the solution in the flask is added to a clean, dry buret and used to titrate an aqueous solution of a monoprotic acid. The pH curve for this titration is shown in the diagram below.",
+    "group_members": [
+      "2015_Q17",
+      "2015_Q18",
+      "2015_Q19",
+      "2015_Q20"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2015_Q21",
@@ -4165,11 +4261,11 @@
     "question_number": 23,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "A 1 point zero gram sample of a cashew was burned in a\ncalorimeter containing 1,$000.0\\,\\mathrm{g}$ of water, and the temperature of the water changed from 20 point zero degrees Celsius to 25 point zero degrees Celsius. In another experiment, a 3 point zero gram sample of a marshmallow was burned in a calorimeter containing 2,$000.0\\,\\mathrm{g}$ of water, and the temperature of the water changed from 25 point zero degrees Celsius to 30 point zero degrees Celsius. Based on the data, which of the following can be concluded about the energy content for 1 point zero gram of each of the two substances? (The specific heat of water is 4.2 joules per (gram times degrees Celsius ).)",
+    "text": "A $1.0\\,\\mathrm{g}$ sample of a cashew was burned in a calorimeter containing $1000.\\,\\mathrm{g}$ of water, and the temperature of the water changed from $20.0^\\circ\\mathrm{C}$ to $25.0^\\circ\\mathrm{C}$. In another experiment, a $3.0\\,\\mathrm{g}$ sample of a marshmallow was burned in a calorimeter containing $2000.\\,\\mathrm{g}$ of water, and the temperature of the water changed from $25.0^\\circ\\mathrm{C}$ to $30.0^\\circ\\mathrm{C}$. Based on the data, which of the following can be concluded about the energy content for $1.0\\,\\mathrm{g}$ of each of the two substances? The specific heat of water is $4.2\\,\\mathrm{J/(g\\cdot ^\\circ C)}$.",
     "options": {
-      "A": "The combustion of 1 point zero gram of cashew releases\nless energy than the combustion of 1 point zero gram of marshmallow.",
-      "B": "The combustion of 1 point zero gramof cashew releases\nthe same amount of energy as the combustion of 1 point zero gram of marshmallow.",
-      "C": "The combustion of 1 point zero gram of cashew releases\nmore energy than the combustion of 1 point zero gram of marshmallow.",
+      "A": "The combustion of $1.0\\,\\mathrm{g}$ of cashew releases less energy than the combustion of $1.0\\,\\mathrm{g}$ of marshmallow.",
+      "B": "The combustion of $1.0\\,\\mathrm{g}$ of cashew releases the same amount of energy as the combustion of $1.0\\,\\mathrm{g}$ of marshmallow.",
+      "C": "The combustion of $1.0\\,\\mathrm{g}$ of cashew releases more energy than the combustion of $1.0\\,\\mathrm{g}$ of marshmallow.",
       "D": "No comparison can be made because the two systems started with different masses of food, different masses of water, and different initial temperatures."
     },
     "answer": "C",
@@ -4344,9 +4440,9 @@
     "text": "Which of the following statements is a correct interpretation of the data regarding how the order of the reaction can be determined?",
     "options": {
       "A": "The reaction must be first order because there is only one reactant species.",
-      "B": "The reaction is first order if the plot of\nt he natural log of the molar concentration of $H_2O_2$ versus time is a straight line.",
-      "C": "The reaction is first order if the plot of\n1 over the molar concentration of $H_2O_2$ versus time is a straight line.",
-      "D": "The reaction is second order because 2 is\nthe coefficient of $H_2O_2$ in the chemical equation."
+      "B": "The reaction is first order if the plot of $\\ln[H_2O_2]$ versus time is a straight line.",
+      "C": "The reaction is first order if the plot of $1/[H_2O_2]$ versus time is a straight line.",
+      "D": "The reaction is second order because 2 is the coefficient of $H_2O_2$ in the chemical equation."
     },
     "answer": "B",
     "image_paths": [],
@@ -4419,7 +4515,7 @@
     "question_number": 29,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Assume that the bond enthalpies of the oxygen-\nhydrogen bonds in $H_2O$ are not significantly different from those in $H_2O_2$ . Based on the value of $\\Delta H^\\circ$ of the reaction, which of the following could be the bond enthalpies (in kilojoules per moles )for the bonds broken and formed in the reaction?\nO at om d ouble bonded to O atom in $O_2$ O atom single bonded to H atom\nO a tom s i ngle bonded to O atom in $H_2O_2$",
+    "text": "Assume that the bond enthalpies of the oxygen-hydrogen bonds in $H_2O$ are not significantly different from those in $H_2O_2$. Based on the value of $\\Delta H^\\circ$ of the reaction, which of the following could be the bond enthalpies, in $\\mathrm{kJ/mol}$, for the bonds broken and formed in the reaction?",
     "options": {
       "A": "300 500 500",
       "B": "150 500 500",
@@ -4447,6 +4543,35 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
       "source_page": 32,
       "raw_chunk_sha256": "41b9314831ac09794a2a83ebafadc8b93bc97255eca9deeb1330612f8852daa5"
+    },
+    "option_table_data": {
+      "headers": [
+        "$O-O$ in $H_2O_2$",
+        "$O=O$ in $O_2$",
+        "$O-H$"
+      ],
+      "rows": {
+        "A": [
+          "300",
+          "500",
+          "500"
+        ],
+        "B": [
+          "150",
+          "500",
+          "500"
+        ],
+        "C": [
+          "500",
+          "300",
+          "150"
+        ],
+        "D": [
+          "250",
+          "300",
+          "150"
+        ]
+      }
     }
   },
   {
@@ -4458,12 +4583,12 @@
     "question_number": 30,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Which of the following accounts for the\nobservation that the pH of pure water at 37 degrees Celsius is 6.8 ?",
+    "text": "Which of the following accounts for the observation that the pH of pure water at $37^\\circ\\mathrm{C}$ is 6.8?",
     "options": {
-      "A": "At 37 degrees Celsius water is naturally acidic.",
-      "B": "At 37 degrees Celsius the autoionization constant for\nwater, K w , is larger than it is at 25 degrees Celsius.",
-      "C": "At 37 degrees Celsius water has a lower density than it\ndoes at 25 degrees Celsius; therefore, th e molar concentration of H with a $+1$ charge is greater.",
-      "D": "At 37 degrees Celsiuswater ionizes to a lesser extent than\nit does at 25 degrees Celsius."
+      "A": "At $37^\\circ\\mathrm{C}$ water is naturally acidic.",
+      "B": "At $37^\\circ\\mathrm{C}$ the autoionization constant for water, $K_w$, is larger than it is at $25^\\circ\\mathrm{C}$.",
+      "C": "At $37^\\circ\\mathrm{C}$ water has a lower density than it does at $25^\\circ\\mathrm{C}$; therefore, $[H^+]$ is greater.",
+      "D": "At $37^\\circ\\mathrm{C}$ water ionizes to a lesser extent than it does at $25^\\circ\\mathrm{C}$."
     },
     "answer": "B",
     "image_paths": [],
@@ -5747,12 +5872,12 @@
     "question_number": 5,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Which of the following arranges the molecules\n$N_2$ , $O_2$, a n d F 2 in order of their bond enthalpies, from least to greatest?",
+    "text": "Which of the following arranges the molecules $N_2$, $O_2$, and $F_2$ in order of their bond enthalpies, from least to greatest?",
     "options": {
-      "A": "F 2 is less than $O_2$, which is less than $N_2$",
-      "B": "$O_2$ is less than $N_2$, which is less than F 2",
-      "C": "$N_2$ is less than $O_2$, which is less than F 2",
-      "D": "$N_2$ is less than F 2 which is less than $O_2$"
+      "A": "$F_2<O_2<N_2$",
+      "B": "$O_2<N_2<F_2$",
+      "C": "$N_2<O_2<F_2$",
+      "D": "$N_2<F_2<O_2$"
     },
     "answer": "A",
     "image_paths": [],
@@ -7577,12 +7702,12 @@
     "question_number": 36,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "A vessel contains A r gas at a high pressure. Which\nof the following statements best helps to explain why the measured pressure is significantly greater than the pressure calculated using the ideal gas law?",
+    "text": "A vessel contains $Ar(g)$ at a high pressure. Which of the following statements best helps to explain why the measured pressure is significantly greater than the pressure calculated using the ideal gas law?",
     "options": {
-      "A": "The molar mass of A r is relatively large.",
-      "B": "A significant number of A r 2 molecules form.",
-      "C": "The attractive forces among A r atoms cause\nthem to collide with the walls of the container with less force.",
-      "D": "The combined volume of the A r atoms is too\nlarge to be negligible compared with the total volume of the container."
+      "A": "The molar mass of $Ar$ is relatively large.",
+      "B": "A significant number of $Ar_2$ molecules form.",
+      "C": "The attractive forces among $Ar$ atoms cause them to collide with the walls of the container with less force.",
+      "D": "The combined volume of the $Ar$ atoms is too large to be negligible compared with the total volume of the container."
     },
     "answer": "D",
     "image_paths": [],
@@ -8367,12 +8492,12 @@
     "question_number": 49,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Based on the information above and periodic trends, which of the following is the best hypothesis regarding the oxide or oxides formed by R B?",
+    "text": "Based on the information above and periodic trends, which of the following is the best hypothesis regarding the oxide(s) formed by $Rb$?",
     "options": {
-      "A": "R b will form onl y R b 2 O.",
-      "B": "R b will form onl y R b $O_2$.",
-      "C": "R b will form onl y R b 2 O an d R b 2 $O_2$.",
-      "D": "R b will for m R b 2 O , R b 2 $O_2$, andR b $O_2$"
+      "A": "$Rb$ will form only $Rb_2O$.",
+      "B": "$Rb$ will form only $RbO_2$.",
+      "C": "$Rb$ will form only $Rb_2O$ and $Rb_2O_2$.",
+      "D": "$Rb$ will form $Rb_2O$, $Rb_2O_2$, and $RbO_2$."
     },
     "answer": "D",
     "image_paths": [],
@@ -8395,6 +8520,33 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
       "source_page": 41,
       "raw_chunk_sha256": "583447e01e450551cdbf5ba6a521040acbfaf469107a0fdf07bd9d660a3a4b35"
+    },
+    "background_data": {
+      "table": {
+        "headers": [
+          "Element",
+          "Known Oxides"
+        ],
+        "rows": [
+          [
+            "$H$",
+            "$H_2O$, $H_2O_2$"
+          ],
+          [
+            "$Li$",
+            "$Li_2O$, $Li_2O_2$"
+          ],
+          [
+            "$Na$",
+            "$Na_2O$, $Na_2O_2$, $NaO_2$"
+          ],
+          [
+            "$K$",
+            "$K_2O$, $K_2O_2$, $KO_2$"
+          ]
+        ]
+      },
+      "source": "official_table_reconstructed_from_source_page"
     }
   },
   {
@@ -8996,10 +9148,10 @@
     "type": "MCQ",
     "text": "Which of the following correctly compares periodic properties of two elements and provides an accurate explanation for that difference?",
     "options": {
-      "A": "The first ionization energy of A l is greater\nthan that of B because A l has a larger nuclear charge than B does.",
-      "B": "The first ionization energy of F is greater than that of O because O has a higher electronegativity than F has.",
-      "C": "The atomic radius of $Ca$ is larger than that of\nM g because the valence electrons in M g experience more shielding than the valence electrons in $Ca$ do.",
-      "D": "The atomic radius of $Cl$ is smaller than that\nof S because $Cl$ has a larger nuclear charge than S does."
+      "A": "The first ionization energy of $Al$ is greater than that of $B$ because $Al$ has a larger nuclear charge than $B$ does.",
+      "B": "The first ionization energy of $F$ is greater than that of $O$ because $O$ has a higher electronegativity than $F$ has.",
+      "C": "The atomic radius of $Ca$ is larger than that of $Mg$ because the valence electrons in $Mg$ experience more shielding than the valence electrons in $Ca$ do.",
+      "D": "The atomic radius of $Cl$ is smaller than that of $S$ because $Cl$ has a larger nuclear charge than $S$ does."
     },
     "answer": "D",
     "image_paths": [],
@@ -9112,7 +9264,7 @@
     "question_number": 13,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "A balloon filled with 0.2 5 mo le of H e, g as at $273\\,\\mathrm{K}$ and $1\\,\\mathrm{atm}$ is allowed to rise through the atmosphere. Which of the following explains what happens to the volume of the balloon as it rises from ground level to an altitude where the air temperature is $220\\,\\mathrm{K}$ and the air pressure is $0.1\\,\\mathrm{atm}$?",
+    "text": "A balloon filled with $0.25\\,\\mathrm{mol}$ of $He(g)$ at $273\\,\\mathrm{K}$ and $1\\,\\mathrm{atm}$ is allowed to rise through the atmosphere. Which of the following explains what happens to the volume of the balloon as it rises from ground level to an altitude where the air temperature is $220\\,\\mathrm{K}$ and the air pressure is $0.1\\,\\mathrm{atm}$?",
     "options": {
       "A": "The volume will increase because the decrease in air pressure will have a greater effect than the decrease in temperature.",
       "B": "The volume will remain unchanged because of the counteracting effects of the decrease in temperature and the decrease in air pressure.",
@@ -9190,7 +9342,7 @@
     "question_number": 15,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "The value of K p for the evaporation of $CH_3$ $OH^-$, liquid at $300\\,\\mathrm{K}$ is closest to",
+    "text": "The value of $K_p$ for the evaporation of $CH_3OH(l)$ at $300\\,\\mathrm{K}$ is closest to",
     "options": {
       "A": "0.04",
       "B": "0.2",
@@ -10058,11 +10210,11 @@
     "question_number": 33,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "When 7 0 decimal po i nt g rams of L i 3 N, solid molar mass $35\\,\\mathrm{g}$ per mole\nreacts with excess $H_2$ gas, 8 .$0\\,\\mathrm{g}$ of L i H, solid is produced. The percent yield is closest to",
+    "text": "When $70.\\,\\mathrm{g}$ of $Li_3N(s)$, molar mass $35\\,\\mathrm{g/mol}$, reacts with excess $H_2(g)$, $8.0\\,\\mathrm{g}$ of $LiH(s)$ is produced. The percent yield is closest to",
     "options": {
       "A": "17%",
       "B": "25%",
-      "C": "50.%",
+      "C": "50%",
       "D": "100%"
     },
     "answer": "B",
@@ -10086,7 +10238,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 38,
       "raw_chunk_sha256": "e0ec79d26c0203305b81f589f5e51b3d85aa2f10fb9264cd3a843c16a20ad645"
-    }
+    },
+    "group_id": "2018_Q33-Q36",
+    "group_context": "Questions 33-36 refer to the following information.\n\n$Li_3N(s)+2H_2(g)\\rightleftharpoons LiNH_2(s)+2LiH(s)$, $\\Delta H^\\circ_{rxn}=-192\\,\\mathrm{kJ/mol}$\n\nBecause pure $H_2$ is a hazardous substance, safer and more cost-effective techniques to store it as a solid for shipping purposes have been developed. One such method is the reaction represented above, which occurs at $200^\\circ\\mathrm{C}$.",
+    "group_members": [
+      "2018_Q33",
+      "2018_Q34",
+      "2018_Q35",
+      "2018_Q36"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2018_Q34",
@@ -10125,7 +10287,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 38,
       "raw_chunk_sha256": "3e6990a4facc1bca19da4664215dd4425e60c6d6e075d69f7b7704f45c0d47f6"
-    }
+    },
+    "group_id": "2018_Q33-Q36",
+    "group_context": "Questions 33-36 refer to the following information.\n\n$Li_3N(s)+2H_2(g)\\rightleftharpoons LiNH_2(s)+2LiH(s)$, $\\Delta H^\\circ_{rxn}=-192\\,\\mathrm{kJ/mol}$\n\nBecause pure $H_2$ is a hazardous substance, safer and more cost-effective techniques to store it as a solid for shipping purposes have been developed. One such method is the reaction represented above, which occurs at $200^\\circ\\mathrm{C}$.",
+    "group_members": [
+      "2018_Q33",
+      "2018_Q34",
+      "2018_Q35",
+      "2018_Q36"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2018_Q35",
@@ -10136,12 +10308,12 @@
     "question_number": 35,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "Which of the following is the most likely reason that the reaction occurs at a significant rate only if the temperature of the reaction mixture is greater than 200 degrees Celsius?",
+    "text": "Which of the following is the most likely reason that the reaction occurs at a significant rate only if the temperature of the reaction mixture is greater than $200^\\circ\\mathrm{C}$?",
     "options": {
       "A": "The reaction is exothermic.",
-      "B": "D e lta S naught for the reaction is negative.",
+      "B": "$\\Delta S^\\circ$ for the reaction is negative.",
       "C": "The reaction has a high activation energy.",
-      "D": "$\\Delta G^\\circ$ i s less t han 0 when T is less than 200 degrees Celsius"
+      "D": "$\\Delta G^\\circ<0$ when $T<200^\\circ\\mathrm{C}$."
     },
     "answer": "C",
     "image_paths": [],
@@ -10164,7 +10336,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 38,
       "raw_chunk_sha256": "cee355eaadaa0dfa44140e492730b0697c304755fb33a1a01d0bf4b311abc4fe"
-    }
+    },
+    "group_id": "2018_Q33-Q36",
+    "group_context": "Questions 33-36 refer to the following information.\n\n$Li_3N(s)+2H_2(g)\\rightleftharpoons LiNH_2(s)+2LiH(s)$, $\\Delta H^\\circ_{rxn}=-192\\,\\mathrm{kJ/mol}$\n\nBecause pure $H_2$ is a hazardous substance, safer and more cost-effective techniques to store it as a solid for shipping purposes have been developed. One such method is the reaction represented above, which occurs at $200^\\circ\\mathrm{C}$.",
+    "group_members": [
+      "2018_Q33",
+      "2018_Q34",
+      "2018_Q35",
+      "2018_Q36"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2018_Q36",
@@ -10203,7 +10385,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 38,
       "raw_chunk_sha256": "1330639f193a7bbf6fe0ea363c97a734da62983b75e9ac0f8671af0b9cb4cb1b"
-    }
+    },
+    "group_id": "2018_Q33-Q36",
+    "group_context": "Questions 33-36 refer to the following information.\n\n$Li_3N(s)+2H_2(g)\\rightleftharpoons LiNH_2(s)+2LiH(s)$, $\\Delta H^\\circ_{rxn}=-192\\,\\mathrm{kJ/mol}$\n\nBecause pure $H_2$ is a hazardous substance, safer and more cost-effective techniques to store it as a solid for shipping purposes have been developed. One such method is the reaction represented above, which occurs at $200^\\circ\\mathrm{C}$.",
+    "group_members": [
+      "2018_Q33",
+      "2018_Q34",
+      "2018_Q35",
+      "2018_Q36"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2018_Q37",
@@ -10296,10 +10488,10 @@
     "type": "MCQ",
     "text": "$HCHO_2(aq)+H_2O(l)\\rightleftharpoons H_3O^+(aq)+CHO_2^-(aq)$\n\n$HCHO_2(aq)$, a weak acid with $K_a=2\\times10^{-4}$, dissociates in water according to the equation above. Which of the following provides the best estimate of the pH of $0.5\\,\\mathrm{M}$ $HCHO_2(aq)$ and identifies the species at the highest concentration, excluding $H_2O$, in the solution?",
     "options": {
-      "A": "1 $H_3O^+$ with a $+1$ charge, aqueous",
-      "B": "1 $HCHO_2$, aqueous",
-      "C": "2 $H_3O^+$ with a $+1$ charge, aqueous\n$HCHO_2$, aqueous.",
-      "D": "2\nX reacts to produce Products"
+      "A": "pH 1; highest-concentration species $H_3O^+(aq)$",
+      "B": "pH 1; highest-concentration species $HCHO_2(aq)$",
+      "C": "pH 2; highest-concentration species $H_3O^+(aq)$",
+      "D": "pH 2; highest-concentration species $HCHO_2(aq)$"
     },
     "answer": "D",
     "image_paths": [],
@@ -10521,7 +10713,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 42,
       "raw_chunk_sha256": "a9a1b1375057d08a7e118e44481b8cc8e1d797f8b43fa403c5805b1a306d800c"
-    }
+    },
+    "group_id": "2018_Q43-Q46",
+    "group_context": "Questions 43-46 refer to the following information.\n\n$2NO_2(g)\\rightleftharpoons N_2O_4(g)$\n\n$NO_2$ is dark brown and $N_2O_4$ is colorless. The dimerization of $NO_2(g)$, an exothermic process, is represented by the equation above.",
+    "group_members": [
+      "2018_Q43",
+      "2018_Q44",
+      "2018_Q45",
+      "2018_Q46"
+    ],
+    "group_role": "lead",
+    "requires_group_context": false
   },
   {
     "question_id": "2018_Q44",
@@ -10560,7 +10762,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 42,
       "raw_chunk_sha256": "1f67f4d3121734e7b49a82c2247b0fd580a0d65bd67a7589f95c03a820d1d167"
-    }
+    },
+    "group_id": "2018_Q43-Q46",
+    "group_context": "Questions 43-46 refer to the following information.\n\n$2NO_2(g)\\rightleftharpoons N_2O_4(g)$\n\n$NO_2$ is dark brown and $N_2O_4$ is colorless. The dimerization of $NO_2(g)$, an exothermic process, is represented by the equation above.",
+    "group_members": [
+      "2018_Q43",
+      "2018_Q44",
+      "2018_Q45",
+      "2018_Q46"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2018_Q45",
@@ -10571,7 +10783,7 @@
     "question_number": 45,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "0 .0300 mole sample of N $O_2$ , gas is placed in a\nrigid $1.00\\,\\mathrm{L}$ reaction vessel and allowed to reach equilibrium at a certain temperature. What is the value of K c at this temperature if 0.00500 mole of\n$N_2O$ 4 , gas is present at equilibrium?",
+    "text": "A $0.0300\\,\\mathrm{mol}$ sample of $NO_2(g)$ is placed in a rigid $1.00\\,\\mathrm{L}$ reaction vessel and allowed to reach equilibrium at a certain temperature. What is the value of $K_c$ at this temperature if $0.00500\\,\\mathrm{mol}$ of $N_2O_4(g)$ is present at equilibrium?",
     "options": {
       "A": "0.0800",
       "B": "0.250",
@@ -10599,7 +10811,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 42,
       "raw_chunk_sha256": "ab153c4719c287b539b01e56fa8e2e89f6787055553cd1e7d893f0e804b96709"
-    }
+    },
+    "group_id": "2018_Q43-Q46",
+    "group_context": "Questions 43-46 refer to the following information.\n\n$2NO_2(g)\\rightleftharpoons N_2O_4(g)$\n\n$NO_2$ is dark brown and $N_2O_4$ is colorless. The dimerization of $NO_2(g)$, an exothermic process, is represented by the equation above.",
+    "group_members": [
+      "2018_Q43",
+      "2018_Q44",
+      "2018_Q45",
+      "2018_Q46"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2018_Q46",
@@ -10610,11 +10832,11 @@
     "question_number": 46,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "A mixture of N $O_2$ , g a s and $N_2O$ 4, gas is at equilibrium in a rigid reaction vessel. If the temperature of the mixture is decreased, then",
+    "text": "A mixture of $NO_2(g)$ and $N_2O_4(g)$ is at equilibrium in a rigid reaction vessel. If the temperature of the mixture is decreased, then",
     "options": {
-      "A": "the molar concentration of N $O_2$ will increase and the mixture will turn\na darker brown",
-      "B": "t he molar concentration of $N_2O$ 4 will increase and the mixture will\nturn a lighter brown",
-      "C": "th e molar concentration of $N_2O$ 4 will decrease and the mixture will\nturn a lighter brown",
+      "A": "$[NO_2]$ will increase and the mixture will turn a darker brown",
+      "B": "$[N_2O_4]$ will increase and the mixture will turn a lighter brown",
+      "C": "$[N_2O_4]$ will decrease and the mixture will turn a lighter brown",
       "D": "no change will be observed"
     },
     "answer": "B",
@@ -10638,7 +10860,17 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
       "source_page": 42,
       "raw_chunk_sha256": "430b5bc4284e3375e2c7460351d71ca9ce5ae00c2e28c66f52f24bf0b2f278fe"
-    }
+    },
+    "group_id": "2018_Q43-Q46",
+    "group_context": "Questions 43-46 refer to the following information.\n\n$2NO_2(g)\\rightleftharpoons N_2O_4(g)$\n\n$NO_2$ is dark brown and $N_2O_4$ is colorless. The dimerization of $NO_2(g)$, an exothermic process, is represented by the equation above.",
+    "group_members": [
+      "2018_Q43",
+      "2018_Q44",
+      "2018_Q45",
+      "2018_Q46"
+    ],
+    "group_role": "member",
+    "requires_group_context": true
   },
   {
     "question_id": "2018_Q47",
@@ -10833,12 +11065,12 @@
     "question_number": 50,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "5 0 .$0\\,\\mathrm{g}$ sample of F e at 100 degrees Celsius is added to\n$500.0\\,\\mathrm{mL}$ of water at 35 degrees Celsius in a perfectly insulated container. Which of the following statements is true?",
+    "text": "A $50.0\\,\\mathrm{g}$ sample of $Fe$ at $100^\\circ\\mathrm{C}$ is added to $500.0\\,\\mathrm{mL}$ of water at $35^\\circ\\mathrm{C}$ in a perfectly insulated container. Which of the following statements is true?",
     "options": {
       "A": "The temperature of the water will decrease.",
-      "B": "The temperature change of the F e will have\nthe same magnitude as the temperature change of the water.",
-      "C": "The heat energy lost by the F e will be less\nthan the heat energy gained by the water.",
-      "D": "The heat energy lost by the F e will be equal\nto the heat energy gained by the water."
+      "B": "The temperature change of the $Fe$ will have the same magnitude as the temperature change of the water.",
+      "C": "The heat energy lost by the $Fe$ will be less than the heat energy gained by the water.",
+      "D": "The heat energy lost by the $Fe$ will be equal to the heat energy gained by the water."
     },
     "answer": "D",
     "image_paths": [],

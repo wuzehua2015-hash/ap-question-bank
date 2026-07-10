@@ -188,34 +188,13 @@
     ],
     "prompt": "2. The following is a simplified balance sheet for Mi Tierra Bank in the United States.\n(a) What is the reserve requirement?\n(b) Assume that Luis withdraws $5,000 in cash from his checking account at Mi Tierra Bank.\n(i) By how much will Mi Tierra Bank’s reserves change based on Luis’ withdrawal?\n(ii) What is the initial effect of the withdrawal on the M1 measure of money supply? Explain.\n(iii) As a result of the withdrawal, what is the ne w value of excess reserves on the balance sheet of\nMi Tierra Bank based on the reserve requirement from part (a)?\n(c) Assume that the next day John withdraws from Mi Tierra Bank an amount that exceeds the bank’s excess\nreserves. Assuming that no loans are called in, how can Mi Tierra Bank cover its required reserves?",
     "background_data": {
-      "table": {
-        "caption": "Mi Tierra Bank simplified balance sheet",
-        "headers": [
-          "Assets",
-          "Amount",
-          "Liabilities",
-          "Amount"
-        ],
-        "rows": [
-          [
-            "Reserves",
-            "$10,000",
-            "Demand deposits",
-            "$100,000"
-          ],
-          [
-            "Loans",
-            "$90,000",
-            "Owner's equity",
-            "$0"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-macro-contract",
-      "method": "manual_economics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/macroeconomics/frq/2012_FRQ2.png",
@@ -228,7 +207,8 @@
           "review_status": "PASS",
           "review_note": "2012_FRQ2 image is a focused economics table or graph required by the prompt, paired with structured prompt/rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -477,34 +457,13 @@
     ],
     "prompt": "2. The simplified T-account (balance sheet) for Zenith Bank in the country of Everland is shown below. Assume\nthe reserve requirement in Everland is 20 percent.\n(a) Calculate the maximum amount by which Zenith Bank can increase its loans.\n(b) Based on your answer in part (a), calculate the maximum possible increase in Everland’s money supply.\n(c) Identify one reason that Everland’s money supply may expand by a smaller amount than the amount you\nidentified in part (b).\n(d) Assume the central bank of Everland purchases $10 million in government securities from the public. If the\npublic deposits the $10 million in Zenith Bank, by how much will Zenith Bank’s required reserves change as\na result of the new deposit?\n(e) What will happen to the price of bonds as a result of the central bank’s purchase of government securities\ndescribed in part (d)?",
     "background_data": {
-      "table": {
-        "caption": "Zenith Bank simplified T-account",
-        "headers": [
-          "Assets",
-          "Amount",
-          "Liabilities",
-          "Amount"
-        ],
-        "rows": [
-          [
-            "Reserves",
-            "$80 million",
-            "Demand deposits",
-            "$200 million"
-          ],
-          [
-            "Loans",
-            "$120 million",
-            "Owner's equity",
-            "$0"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-macro-contract",
-      "method": "manual_economics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/macroeconomics/frq/2014_FRQ2.png",
@@ -517,7 +476,8 @@
           "review_status": "PASS",
           "review_note": "2014_FRQ2 image is a focused economics table or graph required by the prompt, paired with structured prompt/rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -595,32 +555,13 @@
     ],
     "prompt": "3. Unemployment is an economic problem that a nation frequently faces.\n(a) Using the data from the table above, calculate the unemployment rate, as a percentage, for Country X.\n(b) Assume that the natural rate of unemployment for Country X is 6 percent.\n(i) Draw a single correctly labeled graph and show both the short-run Phillips curve and the long-run\nPhillips curve.\n(ii) Using the unemployment rate you calculated in part (a) and assuming an actual inflation rate of\n2 percent, show the current combination of unemployment and inflation on your graph in part (b)(i),\nand label it as Z.\n(c) In the absence of any policy action, will the short-run aggregate supply for Country X increase, decrease, or\nremain constant in the long run? Explain.\n(d) If the actual unemployment rate equals the natural rate of 6 percent, is there cyclical unemployment in\nCountry X?",
     "background_data": {
-      "table": {
-        "caption": "Country X labor force data",
-        "headers": [
-          "Category",
-          "People"
-        ],
-        "rows": [
-          [
-            "Employed",
-            "720"
-          ],
-          [
-            "Unemployed",
-            "80"
-          ],
-          [
-            "Labor force",
-            "800"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-macro-contract",
-      "method": "manual_economics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/macroeconomics/frq/2014_FRQ3.png",
@@ -633,7 +574,8 @@
           "review_status": "PASS",
           "review_note": "2014_FRQ3 image is a focused economics table or graph required by the prompt, paired with structured prompt/rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -1161,34 +1103,13 @@
     ],
     "prompt": "3. The Bank of Uchenna has the following balance sheet.\nAssume that the reserve requirement ratio is 20 percent.\n(a) Calculate the dollar value of the reserves that the Bank of Uchenna is required to hold.\n(b) Given the current reserves, calculate the maximum value of additional loans that the Bank of Uchenna\ncan make.\n(c) Assume that Elike raises $5,000 in cash from a yard sale and deposits the cash in his checking account at the\nBank of Uchenna. By how much does the money supply immediately change as a result of Elike’s deposit?\n(d) Calculate the maximum change in demand deposits in the banking system as a whole resulting from Elike’s\ndeposit.\n(e) If the Bank of Uchenna is not mee ting its reserve requirement, what action can it take to meet the reserve\nrequirement without calling in loans or selling property?",
     "background_data": {
-      "table": {
-        "caption": "Bank of Uchenna balance sheet",
-        "headers": [
-          "Assets",
-          "Amount",
-          "Liabilities",
-          "Amount"
-        ],
-        "rows": [
-          [
-            "Reserves",
-            "$100",
-            "Demand deposits",
-            "$400"
-          ],
-          [
-            "Loans",
-            "$300",
-            "Owner's equity",
-            "$0"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-macro-contract",
-      "method": "manual_economics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/macroeconomics/frq/2016_FRQ3.png",
@@ -1201,7 +1122,8 @@
           "review_status": "PASS",
           "review_note": "2016_FRQ3 image is a focused economics table or graph required by the prompt, paired with structured prompt/rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -1381,40 +1303,13 @@
     ],
     "prompt": "2. The following is the balance sheet for Raymond Bank, one of many commercial banks in a country.\nAssume a 10 percent reserve requirement.\n(a) Calculate Raymond Ba nk’s required reserves.\n(b) Calculate the maximum amount of additional lo ans that Raymond Bank can make without selling its\nholdings of government securities.\n(c) Assuming that Raymond Bank and ot her banks now lend out all excess reserves, calculate the maximum\npossible change in the following.\n(i) Demand deposits throughout the banking Total reserves throughout the banking Suppose that the country’s central bank purchases $1,000 of Raymond Bank’s holdings of government\nsecurities as part of its open-market operations. Do Raymond Bank’s required reserves initially increase,\ndecrease, or remain the same as a result of the central bank’s purchase? Explain.",
     "background_data": {
-      "table": {
-        "caption": "Raymond Bank balance sheet",
-        "headers": [
-          "Assets",
-          "Amount",
-          "Liabilities",
-          "Amount"
-        ],
-        "rows": [
-          [
-            "Reserves",
-            "$5,000",
-            "Demand deposits",
-            "$20,000"
-          ],
-          [
-            "Government securities",
-            "$10,000",
-            "Owner's equity",
-            "$0"
-          ],
-          [
-            "Loans",
-            "$5,000",
-            "",
-            ""
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-macro-contract",
-      "method": "manual_economics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/macroeconomics/frq/2017_FRQ2.png",
@@ -1427,7 +1322,8 @@
           "review_status": "PASS",
           "review_note": "2017_FRQ2 image is a focused economics table or graph required by the prompt, paired with structured prompt/rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -1775,36 +1671,13 @@
     ],
     "prompt": "3. Gross domestic product (GDP), unemployment, inflation, and economic growth are key measures of a country's\neconomic performance.\nThe following statistics are from the country of Pattiland in 2016; dollar values are measured in 2016 dollars.\n(a) Calculate each of the following and show your work.\n(i) Nominal Real Real GDP per Debbie is a citizen of the country of Wayland and owns a computer software firm in Pattiland. Is the output\nproduced by Debbie's computer software firm included in Pattiland's nominal GDP calculated in part (a)?\nExplain.\n(c) The GDP deflator for Pattiland in 2015 was 110. In 2016 was Pattiland experiencing inflation or deflation,\nor is there insufficient information to determine Pattiland's economic condition? Explain.\n( d) Calculate the unemployment rate in Pattiland.",
     "background_data": {
-      "table": {
-        "caption": "Pattiland economic statistics",
-        "headers": [
-          "Statistic",
-          "Value"
-        ],
-        "rows": [
-          [
-            "Population",
-            "10,000"
-          ],
-          [
-            "Labor force",
-            "6,000"
-          ],
-          [
-            "Unemployed",
-            "600"
-          ],
-          [
-            "Nominal GDP components",
-            "Consumption, investment, government spending, net exports"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-macro-contract",
-      "method": "manual_economics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/macroeconomics/frq/2018_FRQ3.png",
@@ -1817,7 +1690,8 @@
           "review_status": "PASS",
           "review_note": "2018_FRQ3 image is a focused economics table or graph required by the prompt, paired with structured prompt/rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -2235,40 +2109,13 @@
     "pure_unit": true,
     "prompt": "2. The following is the balance sheet for Raymond Bank, one of many commercial banks in a country in which the banking system has limited reserves.\n\nAssume a 10 percent reserve requirement.\n(a) Calculate Raymond Bank's required reserves. Show your work.\n(b) Calculate the maximum amount of additional loans that Raymond Bank can make without selling its holdings of government securities. Show your work.\n(c) Assume that Raymond Bank and other banks now lend out all excess reserves.\n(i) Calculate the maximum possible change in demand deposits throughout the banking system. Show your work.\n(ii) What is the maximum possible change in total reserves throughout the banking system?\n(d) Suppose that the country's central bank purchases $1,000 of Raymond Bank's holdings of government securities as part of its open-market operations. Do Raymond Bank's required reserves initially increase, decrease, or remain the same as a result of the central bank's purchase? Explain",
     "background_data": {
-      "table": {
-        "caption": "Raymond Bank balance sheet",
-        "headers": [
-          "Assets",
-          "Amount",
-          "Liabilities",
-          "Amount"
-        ],
-        "rows": [
-          [
-            "Reserves",
-            "$5,000",
-            "Demand deposits",
-            "$20,000"
-          ],
-          [
-            "Government securities",
-            "$10,000",
-            "Owner's equity",
-            "$0"
-          ],
-          [
-            "Loans",
-            "$5,000",
-            "",
-            ""
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-macro-contract",
-      "method": "manual_economics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/macroeconomics/frq/2023_FRQ2_S1.png",
@@ -2281,7 +2128,8 @@
           "review_status": "PASS",
           "review_note": "2023_FRQ2_S1 image is a focused economics table or graph required by the prompt, paired with structured prompt/rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -2567,36 +2415,13 @@
     "pure_unit": true,
     "prompt": "3. Gross domestic product (GDP), unemployment, inflation, and economic growth are key measures of a country's economic performance.\nThe following statistics are from the country of Pattiland in 2016; dollar values are measured in 2016 dollars.\n\n(a) Calculate each of the following and show your work.\n(i) Nominal GDP.\n(ii) Real GDP.\n(iii) Real GDP per capita.\n(b) Debbie is a citizen of the country of Wayland and owns a computer software firm in Pattiland. Is the output produced by Debbie's computer software firm included in Pattiland's nominal GDP calculated in part (a)? Explain.\n(c) The GDP deflator for Pattiland in 2015 was 110. In 2016 was Pattiland experiencing inflation or deflation, or is there insufficient information to determine Pattiland's economic condition? Explain.\n(d) Calculate the unemployment rate in Pattiland. Show your work",
     "background_data": {
-      "table": {
-        "caption": "Pattiland economic statistics",
-        "headers": [
-          "Statistic",
-          "Value"
-        ],
-        "rows": [
-          [
-            "Population",
-            "10,000"
-          ],
-          [
-            "Labor force",
-            "6,000"
-          ],
-          [
-            "Unemployed",
-            "600"
-          ],
-          [
-            "Nominal GDP components",
-            "Consumption, investment, government spending, net exports"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-macro-contract",
-      "method": "manual_economics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/macroeconomics/frq/2023_FRQ3_S2.png",
@@ -2609,7 +2434,8 @@
           "review_status": "PASS",
           "review_note": "2023_FRQ3_S2 image is a focused economics table or graph required by the prompt, paired with structured prompt/rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   },
   {
@@ -2817,37 +2643,13 @@
     "pure_unit": true,
     "prompt": "3. The table above shows data for the economy of Fruitland, which produces two goods, apples and oranges.\n(a) Calculate the nominal gross domestic product (GDP) for year 2. Show your work.\n(b) Using year 1 as the base year, calculate real GDP for year 2. Show your work.\n(c) Calculate the GDP deflator for year 2. Show your work.\n(d) Assuming the market basket is composed of the quantities in year 1, calculate the consumer price index (CPI) for year 2. Show your work.\n(e) Suppose apple and orange pickers received a 2 percent increase in their wages. Based on your answer to part (d), would real wages of apple and orange pickers increase, decrease, or stay the same from year 1 to year 2? Explain",
     "background_data": {
-      "table": {
-        "caption": "Fruitland output and prices",
-        "headers": [
-          "Good",
-          "Year 1 quantity",
-          "Year 1 price",
-          "Year 2 quantity",
-          "Year 2 price"
-        ],
-        "rows": [
-          [
-            "Apples",
-            "10",
-            "$4",
-            "10",
-            "$6"
-          ],
-          [
-            "Oranges",
-            "20",
-            "$10",
-            "20",
-            "$5"
-          ]
-        ]
-      }
+      "table_rendering": "official_image_only",
+      "table_rendering_reason": "Official prompt image is the canonical student-facing table/graph asset; duplicate structured rendering is suppressed to preserve source layout."
     },
     "visual_asset_review": {
       "status": "PASS",
       "reviewer": "codex-prelaunch-macro-contract",
-      "method": "manual_economics_frq_table_graph_asset_review",
+      "method": "official_economics_frq_table_or_graph_image_is_canonical",
       "image_sources": [
         {
           "path": "/images/ap/macroeconomics/frq/2023_FRQ3_S3.png",
@@ -2860,7 +2662,8 @@
           "review_status": "PASS",
           "review_note": "2023_FRQ3_S3 image is a focused economics table or graph required by the prompt, paired with structured prompt/rubric text."
         }
-      ]
+      ],
+      "duplicate_structured_table_removed": true
     }
   }
 ]
