@@ -72,9 +72,6 @@ function SettingsPage() {
                   <div>
                     <h3 className="text-base font-bold text-text leading-snug">{subject.name}</h3>
                     <p className="text-xs text-text-muted mt-1">{subject.shortName || subject.id}</p>
-                    {subject.releaseStatus === 'certified' && (
-                      <span className="inline-flex mt-2 text-xs bg-green-50 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">已认证</span>
-                    )}
                   </div>
                   <input
                     type="checkbox"

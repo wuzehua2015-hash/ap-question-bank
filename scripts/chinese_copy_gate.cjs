@@ -8,7 +8,7 @@ const SCAN_DIRS = ['src/components', 'src/pages']
 const requiredCopy = [
   { file: 'src/components/Header.jsx', labels: ['首页', '专项练习', '模考', '搜索', '错题本', '记录', '设置', '翎英教育 LynkEdu'] },
   { file: 'src/pages/HomePage.jsx', labels: ['选择你的学习科目', '我的科目', '管理科目', '快捷入口', '学习记录'] },
-  { file: 'src/pages/SettingsPage.jsx', labels: ['科目设置', '我的科目', '可选科目', '已认证', '添加', '移除', '设为当前'] },
+  { file: 'src/pages/SettingsPage.jsx', labels: ['科目设置', '我的科目', '可选科目', '添加', '移除', '设为当前'] },
   { file: 'src/pages/FRQPlayer.jsx', labels: ['自由作答题', '完成 FRQ，进入评分', '我已完成本题作答'] },
   { file: 'src/pages/FRQScorePage.jsx', labels: ['FRQ 评分标准', '自评得分', '确认分数并查看结果'] },
   { file: 'src/pages/ScorePage.jsx', labels: ['模考成绩', '模考成绩单', '预估 AP 分数', '返回首页', '再考一次'] },
@@ -41,6 +41,10 @@ const blockedStudentUiPhrases = [
   /Possibly Qualified/i,
   /marked complete/i,
   /questions\. Write your responses/i,
+  /已认证/,
+  /certified/i,
+  /content-risk/i,
+  /releaseStatus/,
 ]
 
 const allowedFilesForEnglishPatterns = new Set([

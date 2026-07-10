@@ -78,9 +78,6 @@ function HomePage() {
                 <div className="flex items-start justify-between gap-3 mb-4">
                   <div>
                     <h2 className="text-lg font-bold text-text leading-snug">{subject.name}</h2>
-                    {subject.releaseStatus === 'certified' && (
-                      <span className="inline-flex mt-2 text-xs bg-green-50 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">已认证</span>
-                    )}
                   </div>
                   {isActive && (
                     <span className="shrink-0 text-xs bg-accent/10 text-accent px-2 py-0.5 rounded-full">当前</span>
