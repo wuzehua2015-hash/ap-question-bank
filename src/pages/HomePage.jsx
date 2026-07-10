@@ -1,7 +1,7 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
 import { loadMCQBank, loadFRQBank } from '../utils/questionBank'
-import { useState, useEffect } from 'react'
 
 function HomePage() {
   const { currentSubject, mySubjects, setSubject } = useSubject()
@@ -39,7 +39,7 @@ function HomePage() {
         <section className="bg-surface border border-border rounded-lg p-8">
           <h1 className="text-2xl font-bold text-brand mb-3">选择你的学习科目</h1>
           <p className="text-text-muted mb-6">
-            先选择你正在学习的 AP 科目。首页和顶部科目切换器只会展示已认证并已选择的科目。
+            先选择正在学习的 AP 科目。首页和顶部科目切换器只展示你已选择的科目。
           </p>
           <Link
             to="/settings"
@@ -98,14 +98,14 @@ function HomePage() {
                     onClick={() => setSubject(subject.id)}
                     className="inline-flex items-center bg-accent hover:bg-accent-light text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
                   >
-                    Quiz
+                    专项练习
                   </Link>
                   <Link
                     to="/exam"
                     onClick={() => setSubject(subject.id)}
                     className="inline-flex items-center bg-brand hover:bg-brand-light text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
                   >
-                    Mock
+                    模考
                   </Link>
                   <Link
                     to="/search"

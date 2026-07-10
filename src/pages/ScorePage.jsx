@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCurrentQuiz, getCurrentFRQ, getMCQAnswers } from '../utils/quizSession'
 import { MathText } from '../components/MathText'
@@ -41,7 +41,7 @@ function ScoreBackgroundTable({ tableData }) {
       </table>
       {tableData.source && (
         <div style={{ fontSize: '11px', color: '#6b7280', marginTop: '4px' }}>
-          <MathText text={`Source: ${tableData.source}`} />
+          <MathText text={`来源：${tableData.source}`} />
         </div>
       )}
       {Array.isArray(tableData.notes) && tableData.notes.length > 0 && (
@@ -56,7 +56,7 @@ function ScoreBackgroundTable({ tableData }) {
 function ScorePage() {
   const navigate = useNavigate()
   const { currentSubjectConfig } = useSubject()
-  const subjectName = currentSubjectConfig?.name || 'AP Microeconomics'
+  const subjectName = currentSubjectConfig?.name || 'AP 题库'
   const pdfRef = useRef(null)
   const [quiz, setQuiz] = useState([])
   const [answers, setAnswers] = useState({})
@@ -91,25 +91,27 @@ function ScorePage() {
   const totalMcqMax = quiz.length || 0
   const totalScore = mcqScore + totalFrqScore
   const totalMax = totalMcqMax + totalFrqMax
+  const percent = totalMax ? Math.round((totalScore / totalMax) * 100) : 0
 
-  const estimateAPScore = (rawScore, maxScore) => {
-    const pct = rawScore / maxScore
+  const apScore = useMemo(() => {
+    const pct = totalMax ? totalScore / totalMax : 0
     if (pct >= 0.75) return 5
     if (pct >= 0.60) return 4
     if (pct >= 0.45) return 3
     if (pct >= 0.30) return 2
     return 1
-  }
+  }, [totalMax, totalScore])
 
-  const apScore = estimateAPScore(totalScore, totalMax)
-
-  const unitStats = {}
-  quiz.forEach(q => {
-    const unit = q.primary_unit
-    if (!unitStats[unit]) unitStats[unit] = { total: 0, correct: 0 }
-    unitStats[unit].total++
-    if (isAnswerCorrect(q, answers[q.question_id])) unitStats[unit].correct++
-  })
+  const unitStats = useMemo(() => {
+    const stats = {}
+    quiz.forEach(q => {
+      const unit = q.primary_unit || '未分类'
+      if (!stats[unit]) stats[unit] = { total: 0, correct: 0 }
+      stats[unit].total += 1
+      if (isAnswerCorrect(q, answers[q.question_id])) stats[unit].correct += 1
+    })
+    return stats
+  }, [answers, quiz])
 
   const exportPDF = async () => {
     if (!pdfRef.current) return
@@ -126,6 +128,7 @@ function ScorePage() {
     const colors = {
       U1: '#3B82F6', U2: '#10B981', U3: '#8B5CF6',
       U4: '#F59E0B', U5: '#EF4444', U6: '#06B6D4',
+      U7: '#6366F1', U8: '#14B8A6',
     }
     return colors[unit] || '#6B7280'
   }
@@ -146,7 +149,7 @@ function ScorePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-6">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-brand">Mock Exam 成绩</h1>
+        <h1 className="text-2xl font-bold text-brand">模考成绩</h1>
         <button
           onClick={exportPDF}
           disabled={exporting}
@@ -168,7 +171,7 @@ function ScorePage() {
           }}>
             <div>
               <div style={{ fontSize: '40px', fontWeight: 'bold', color: '#1e40af' }}>翎英教育</div>
-              <div style={{ fontSize: '22px', color: '#6b7280', marginTop: '2px' }}>LynkEdu Education</div>
+              <div style={{ fontSize: '22px', color: '#6b7280', marginTop: '2px' }}>LynkEdu</div>
             </div>
             <div style={{ fontSize: '20px', color: '#9ca3af', textAlign: 'right' }}>
               <div>{subjectName}</div>
@@ -178,10 +181,10 @@ function ScorePage() {
 
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
             <div style={{ fontSize: '52px', fontWeight: 'bold', color: '#1f2937', marginBottom: '6px' }}>
-              Mock Exam 成绩单
+              模考成绩单
             </div>
             <div style={{ fontSize: '26px', color: '#6b7280' }}>
-              {subjectName} Practice Examination Report
+              {subjectName} 练习报告
             </div>
           </div>
 
@@ -202,204 +205,44 @@ function ScorePage() {
               {apScore}
             </div>
             <div style={{ fontSize: '26px', color: '#6b7280', marginTop: '6px' }}>
-              {apScore >= 5 ? 'Extremely Well Qualified' :
-               apScore >= 4 ? 'Well Qualified' :
-               apScore >= 3 ? 'Qualified' :
-               apScore >= 2 ? 'Possibly Qualified' : 'No Recommendation'}
+              {apScore >= 5 ? '非常充分' :
+               apScore >= 4 ? '较充分' :
+               apScore >= 3 ? '达到要求' :
+               apScore >= 2 ? '仍需加强' : '需要系统复习'}
             </div>
             <div style={{ fontSize: '24px', color: '#6b7280', marginTop: '10px' }}>
-              原始分：{totalScore} / {totalMax}（{Math.round((totalScore / totalMax) * 100)}%）
+              原始分：{totalScore} / {totalMax}（{percent}%）
             </div>
           </div>
 
           <div style={{ display: 'flex', gap: '14px', marginBottom: '28px' }}>
-            <div style={{ flex: 1, background: '#f3f4f6', borderRadius: '10px', padding: '18px' }}>
-              <div style={{ fontSize: '22px', color: '#6b7280', marginBottom: '4px' }}>Section I</div>
-              <div style={{ fontSize: '44px', fontWeight: 'bold', color: '#1e40af' }}>{mcqScore} / {totalMcqMax}</div>
-              <div style={{ fontSize: '22px', color: '#9ca3af' }}>Multiple Choice</div>
-              <div style={{ fontSize: '24px', color: '#4b5563', marginTop: '6px' }}>
-                {Math.round((mcqScore / Math.max(1, totalMcqMax)) * 100)}% 正确率
-              </div>
-            </div>
-            {frqs.length > 0 && <div style={{ flex: 1, background: '#f3f4f6', borderRadius: '10px', padding: '18px' }}>
-              <div style={{ fontSize: '22px', color: '#6b7280', marginBottom: '4px' }}>Section II</div>
-              <div style={{ fontSize: '44px', fontWeight: 'bold', color: '#1e40af' }}>
-                {totalFrqScore} / {totalFrqMax}
-              </div>
-              <div style={{ fontSize: '22px', color: '#9ca3af' }}>Free Response</div>
-              <div style={{ fontSize: '24px', color: '#4b5563', marginTop: '6px' }}>
-                自评得分
-              </div>
-            </div>}
+            <ScoreSummaryCard title="第一部分" value={`${mcqScore} / ${totalMcqMax}`} subtitle="选择题" detail={`${Math.round((mcqScore / Math.max(1, totalMcqMax)) * 100)}% 正确率`} />
+            {frqs.length > 0 && (
+              <ScoreSummaryCard title="第二部分" value={`${totalFrqScore} / ${totalFrqMax}`} subtitle="自由作答题" detail="自评得分" />
+            )}
           </div>
 
-          <div style={{ marginBottom: '20px' }}>
-            <div style={{
-              fontSize: '30px',
-              fontWeight: 'bold',
-              color: '#1f2937',
-              marginBottom: '14px',
-              paddingBottom: '6px',
-              borderBottom: '2px solid #e5e7eb',
-            }}>
-              单元正确率分布
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
-              {Object.entries(unitStats).sort().map(([unit, stats]) => {
-                const pct = Math.round((stats.correct / stats.total) * 100)
-                return (
-                  <div key={unit} style={{
-                    background: '#f9fafb',
-                    borderRadius: '8px',
-                    padding: '12px',
-                    borderLeft: `4px solid ${unitColor(unit)}`,
-                    pageBreakInside: 'avoid',
-                    breakInside: 'avoid',
-                  }}>
-                    <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1f2937' }}>{unit}</div>
-                    <div style={{ fontSize: '22px', color: '#6b7280', marginBottom: '2px' }}>{unitName(unit)}</div>
-                    <div style={{ fontSize: '40px', fontWeight: 'bold', color: unitColor(unit) }}>{pct}%</div>
-                    <div style={{ fontSize: '20px', color: '#9ca3af' }}>
-                      {stats.correct} / {stats.total} 正确
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
+          <UnitStats stats={unitStats} unitName={unitName} unitColor={unitColor} />
         </div>
 
         <div className="pdf-page-break" style={{ position: 'relative', zIndex: 1, padding: '30px 20px' }}>
-          <div style={{
-            borderBottom: '2px solid #1e40af',
-            paddingBottom: '12px',
-            marginBottom: '20px',
-          }}>
-            <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#1f2937' }}>
-              Section I: 全部 MCQ 题目回顾
-            </div>
-            <div style={{ fontSize: '11px', color: '#9ca3af', marginTop: '4px' }}>
-              {mcqScore} 正确 / {quiz.length} 总题
-            </div>
-          </div>
-
+          <SectionTitle title="第一部分：全部 MCQ 题目回顾" subtitle={`${mcqScore} 正确 / ${quiz.length} 总题`} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            {quiz.map((q, idx) => {
-              const isCorrect = isAnswerCorrect(q, answers[q.question_id])
-              const correctSet = new Set(q.answers?.length ? q.answers : [q.answer].filter(Boolean))
-              const selectedSet = new Set(formatAnswer(answers[q.question_id]).split(',').filter(Boolean))
-              const visibleImages = getQuestionImagePaths(q.image_paths || [], q.options, q.option_table_data)
-              const diagramOptionLayout = getDiagramOptionLayout(q.image_paths || [], q.options)
-              return (
-                <div key={q.question_id} style={{
-                  background: isCorrect ? '#f0fdf4' : '#fef2f2',
-                  borderRadius: '8px',
-                  padding: '24px',
-                  border: `1px solid ${isCorrect ? '#bbf7d0' : '#fecaca'}`,
-                  pageBreakInside: 'avoid',
-                  breakInside: 'avoid',
-                  marginBottom: '24px',
-                }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '24px', fontWeight: 'bold', color: '#1f2937' }}>
-                      #{idx + 1} {q.question_id}
-                    </span>
-                    <span style={{
-                      fontSize: '20px',
-                      padding: '4px 12px',
-                      borderRadius: '10px',
-                      background: unitColor(q.primary_unit) + '20',
-                      color: unitColor(q.primary_unit),
-                      fontWeight: '500',
-                    }}>
-                      {q.primary_unit}
-                    </span>
-                  </div>
-                  <p style={{ fontSize: '22px', color: '#4b5563', marginBottom: '12px', lineHeight: 1.5 }}>
-                    <MathText text={q.text || q.question_text} />
-                  </p>
-                  {q.group_context && (
-                    <div style={{
-                      marginBottom: '12px',
-                      padding: '8px 10px',
-                      background: '#f8fafc',
-                      borderLeft: '4px solid #2563eb',
-                      fontSize: '16px',
-                      color: '#374151',
-                      lineHeight: 1.5,
-                    }}>
-                      <MathText text={q.group_context} />
-                    </div>
-                  )}
-                  <ScoreBackgroundTable tableData={q.background_data?.table} />
-                  {visibleImages.length > 0 && (
-                    <div style={{ marginBottom: '12px' }}>
-                      {visibleImages
-                        .map((imgPath, i) => (
-                          <img
-                            key={i}
-                            src={import.meta.env.BASE_URL + imgPath.replace(/^\//, '')}
-                            alt=""
-                            style={{ maxWidth: '100%', maxHeight: '420px', borderRadius: '4px' }}
-                          />
-                        ))}
-                    </div>
-                  )}
-                  {q.option_table_data ? (
-                    <ScoreTableOptions tableData={q.option_table_data} answer={q.answer} userAnswer={answers[q.question_id]} />
-                  ) : diagramOptionLayout ? (
-                    <ScoreDiagramOptions
-                      diagramGroups={diagramOptionLayout}
-                      answer={q.answer}
-                      userAnswer={answers[q.question_id]}
-                    />
-                  ) : (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '8px' }}>
-                      {Object.entries(q.options).map(([key, val]) => (
-                        <span key={key} style={{
-                          fontSize: '20px',
-                          padding: '4px 12px',
-                          borderRadius: '4px',
-                          background: correctSet.has(key) ? '#dcfce7' : selectedSet.has(key) && !isCorrect ? '#fee2e2' : '#f3f4f6',
-                          color: correctSet.has(key) ? '#166534' : selectedSet.has(key) && !isCorrect ? '#991b1b' : '#4b5563',
-                          border: `1px solid ${correctSet.has(key) ? '#86efac' : selectedSet.has(key) && !isCorrect ? '#fca5a5' : '#e5e7eb'}`,
-                        }}>
-                          {key}: <MathText text={val} />
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  <div style={{ fontSize: '22px', display: 'flex', gap: '12px' }}>
-                    <span style={{ color: isCorrect ? '#16a34a' : '#dc2626', fontWeight: 'bold' }}>
-                      {isCorrect ? '✓ 正确' : '✗ 错误'}
-                    </span>
-                    {!isCorrect && (
-                      <span style={{ color: '#dc2626' }}>
-                        你的答案：{formatAnswer(answers[q.question_id])} | 正确答案：{formatAnswer(q.answers?.length ? q.answers : q.answer)}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              )
-            })}
+            {quiz.map((q, idx) => (
+              <MCQReviewItem
+                key={q.question_id}
+                question={q}
+                index={idx}
+                answer={answers[q.question_id]}
+                unitColor={unitColor}
+              />
+            ))}
           </div>
         </div>
 
         {frqs.length > 0 && (
           <div className="pdf-page-break" style={{ position: 'relative', zIndex: 1, padding: '30px 20px' }}>
-            <div style={{
-              borderBottom: '2px solid #1e40af',
-              paddingBottom: '12px',
-              marginBottom: '20px',
-            }}>
-              <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1f2937' }}>
-                Section II: Free Response 回顾
-              </div>
-              <div style={{ fontSize: '22px', color: '#9ca3af', marginTop: '4px' }}>
-                自评得分 {totalFrqScore} / {totalFrqMax}
-              </div>
-            </div>
-
+            <SectionTitle title="第二部分：FRQ 回顾" subtitle={`自评得分 ${totalFrqScore} / ${totalFrqMax}`} large />
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {frqs.map((frq) => (
                 <div key={frq.question_id} style={{
@@ -412,14 +255,11 @@ function ScorePage() {
                   marginBottom: '16px',
                 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-                    <div style={{ fontSize: '26px', fontWeight: 'bold', color: '#1f2937' }}>
-                      FRQ {frq.question_number}
-                    </div>
+                    <div style={{ fontSize: '26px', fontWeight: 'bold', color: '#1f2937' }}>FRQ {frq.question_number}</div>
                     <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1e40af' }}>
                       {frqScores[frq.question_id] || 0} / {frq.rubric?.total_points || 0}
                     </div>
                   </div>
-
                   <div style={{ fontSize: '22px', fontWeight: 'bold', color: '#6b7280', marginBottom: '6px' }}>
                     评分标准
                   </div>
@@ -439,10 +279,10 @@ function ScorePage() {
           marginTop: '20px',
         }}>
           <div style={{ fontSize: '20px', color: '#9ca3af' }}>
-            翎英教育 LynkEdu · {subjectName} Mock Exam Report
+            翎英教育 LynkEdu · {subjectName} 模考报告
           </div>
           <div style={{ fontSize: '18px', color: '#d1d5db', marginTop: '2px' }}>
-            Generated on {new Date().toLocaleString('zh-CN')} · For practice purposes only
+            生成时间：{new Date().toLocaleString('zh-CN')} · 仅供学习练习使用
           </div>
         </div>
       </PdfContainer>
@@ -455,6 +295,170 @@ function ScorePage() {
           再考一次
         </button>
       </div>
+    </div>
+  )
+}
+
+function ScoreSummaryCard({ title, value, subtitle, detail }) {
+  return (
+    <div style={{ flex: 1, background: '#f3f4f6', borderRadius: '10px', padding: '18px' }}>
+      <div style={{ fontSize: '22px', color: '#6b7280', marginBottom: '4px' }}>{title}</div>
+      <div style={{ fontSize: '44px', fontWeight: 'bold', color: '#1e40af' }}>{value}</div>
+      <div style={{ fontSize: '22px', color: '#9ca3af' }}>{subtitle}</div>
+      <div style={{ fontSize: '24px', color: '#4b5563', marginTop: '6px' }}>{detail}</div>
+    </div>
+  )
+}
+
+function UnitStats({ stats, unitName, unitColor }) {
+  return (
+    <div style={{ marginBottom: '20px' }}>
+      <div style={{
+        fontSize: '30px',
+        fontWeight: 'bold',
+        color: '#1f2937',
+        marginBottom: '14px',
+        paddingBottom: '6px',
+        borderBottom: '2px solid #e5e7eb',
+      }}>
+        单元正确率分布
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
+        {Object.entries(stats).sort().map(([unit, item]) => {
+          const pct = Math.round((item.correct / item.total) * 100)
+          return (
+            <div key={unit} style={{
+              background: '#f9fafb',
+              borderRadius: '8px',
+              padding: '12px',
+              borderLeft: `4px solid ${unitColor(unit)}`,
+              pageBreakInside: 'avoid',
+              breakInside: 'avoid',
+            }}>
+              <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1f2937' }}>{unit}</div>
+              <div style={{ fontSize: '22px', color: '#6b7280', marginBottom: '2px' }}>{unitName(unit)}</div>
+              <div style={{ fontSize: '40px', fontWeight: 'bold', color: unitColor(unit) }}>{pct}%</div>
+              <div style={{ fontSize: '20px', color: '#9ca3af' }}>
+                {item.correct} / {item.total} 正确
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+function SectionTitle({ title, subtitle, large = false }) {
+  return (
+    <div style={{
+      borderBottom: '2px solid #1e40af',
+      paddingBottom: '12px',
+      marginBottom: '20px',
+    }}>
+      <div style={{ fontSize: large ? '32px' : '16px', fontWeight: 'bold', color: '#1f2937' }}>{title}</div>
+      <div style={{ fontSize: large ? '22px' : '11px', color: '#9ca3af', marginTop: '4px' }}>{subtitle}</div>
+    </div>
+  )
+}
+
+function MCQReviewItem({ question, index, answer, unitColor }) {
+  const isCorrect = isAnswerCorrect(question, answer)
+  const correctSet = new Set(question.answers?.length ? question.answers : [question.answer].filter(Boolean))
+  const selectedSet = new Set(formatAnswer(answer).split(',').filter(Boolean))
+  const visibleImages = getQuestionImagePaths(question.image_paths || [], question.options, question.option_table_data)
+  const diagramOptionLayout = getDiagramOptionLayout(question.image_paths || [], question.options)
+
+  return (
+    <div style={{
+      background: isCorrect ? '#f0fdf4' : '#fef2f2',
+      borderRadius: '8px',
+      padding: '24px',
+      border: `1px solid ${isCorrect ? '#bbf7d0' : '#fecaca'}`,
+      pageBreakInside: 'avoid',
+      breakInside: 'avoid',
+      marginBottom: '24px',
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px' }}>
+        <span style={{ fontSize: '24px', fontWeight: 'bold', color: '#1f2937' }}>
+          #{index + 1} {question.question_id}
+        </span>
+        <span style={{
+          fontSize: '20px',
+          padding: '4px 12px',
+          borderRadius: '10px',
+          background: unitColor(question.primary_unit) + '20',
+          color: unitColor(question.primary_unit),
+          fontWeight: '500',
+        }}>
+          {question.primary_unit}
+        </span>
+      </div>
+      <p style={{ fontSize: '22px', color: '#4b5563', marginBottom: '12px', lineHeight: 1.5 }}>
+        <MathText text={question.text || question.question_text} />
+      </p>
+      {question.group_context && (
+        <div style={{
+          marginBottom: '12px',
+          padding: '8px 10px',
+          background: '#f8fafc',
+          borderLeft: '4px solid #2563eb',
+          fontSize: '16px',
+          color: '#374151',
+          lineHeight: 1.5,
+        }}>
+          <MathText text={question.group_context} />
+        </div>
+      )}
+      <ScoreBackgroundTable tableData={question.background_data?.table} />
+      {visibleImages.length > 0 && (
+        <div style={{ marginBottom: '12px' }}>
+          {visibleImages.map((imgPath, i) => (
+            <img
+              key={i}
+              src={import.meta.env.BASE_URL + imgPath.replace(/^\//, '')}
+              alt=""
+              style={{ maxWidth: '100%', maxHeight: '420px', borderRadius: '4px' }}
+            />
+          ))}
+        </div>
+      )}
+      {question.option_table_data ? (
+        <ScoreTableOptions tableData={question.option_table_data} answer={question.answer} userAnswer={answer} />
+      ) : diagramOptionLayout ? (
+        <ScoreDiagramOptions diagramGroups={diagramOptionLayout} answer={question.answer} userAnswer={answer} />
+      ) : (
+        <PlainOptions options={question.options} correctSet={correctSet} selectedSet={selectedSet} isCorrect={isCorrect} />
+      )}
+      <div style={{ fontSize: '22px', display: 'flex', gap: '12px' }}>
+        <span style={{ color: isCorrect ? '#16a34a' : '#dc2626', fontWeight: 'bold' }}>
+          {isCorrect ? '正确' : '错误'}
+        </span>
+        {!isCorrect && (
+          <span style={{ color: '#dc2626' }}>
+            你的答案：{formatAnswer(answer)} | 正确答案：{formatAnswer(question.answers?.length ? question.answers : question.answer)}
+          </span>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function PlainOptions({ options, correctSet, selectedSet, isCorrect }) {
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '8px' }}>
+      {Object.entries(options || {}).map(([key, val]) => (
+        <span key={key} style={{
+          fontSize: '20px',
+          padding: '4px 12px',
+          borderRadius: '4px',
+          background: correctSet.has(key) ? '#dcfce7' : selectedSet.has(key) && !isCorrect ? '#fee2e2' : '#f3f4f6',
+          color: correctSet.has(key) ? '#166534' : selectedSet.has(key) && !isCorrect ? '#991b1b' : '#4b5563',
+          border: `1px solid ${correctSet.has(key) ? '#86efac' : selectedSet.has(key) && !isCorrect ? '#fca5a5' : '#e5e7eb'}`,
+        }}>
+          {key}: <MathText text={val} />
+        </span>
+      ))}
     </div>
   )
 }
@@ -513,7 +517,7 @@ function ScoreDiagramOptions({ diagramGroups, answer, userAnswer }) {
         return (
           <div key={`${key}-${paths.join('|')}`} style={{ border: `1px solid ${border}`, borderRadius: '6px', padding: '8px', background: bg }}>
             <div style={{ fontSize: '16px', fontWeight: 700, color: '#374151', marginBottom: '6px' }}>
-              {key}. Diagram {key}
+              {key}. 图示 {key}
             </div>
             <div style={{
               display: 'grid',
@@ -524,7 +528,7 @@ function ScoreDiagramOptions({ diagramGroups, answer, userAnswer }) {
                 <img
                   key={path}
                   src={import.meta.env.BASE_URL + path.replace(/^\//, '')}
-                  alt={`Diagram ${key}${paths.length > 1 ? ` part ${imageIdx + 1}` : ''}`}
+                  alt={`图示 ${key}${paths.length > 1 ? ` 第 ${imageIdx + 1} 部分` : ''}`}
                   style={{ maxWidth: '100%', maxHeight: '220px', display: 'block', margin: '0 auto' }}
                 />
               ))}

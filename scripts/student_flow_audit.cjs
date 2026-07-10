@@ -129,7 +129,7 @@ async function auditMockGenerationFromSetup(client, errors, warnings, artifacts)
   await waitForImages(client)
   const clicked = await evaluate(client, `(() => {
     const buttons = [...document.querySelectorAll('button')];
-    const target = buttons.find(el => !el.disabled && /Mock Exam/i.test(el.innerText || el.textContent || '')) || buttons.find(el => !el.disabled);
+    const target = buttons.find(el => !el.disabled && /生成模考|Mock Exam/i.test(el.innerText || el.textContent || '')) || buttons.find(el => !el.disabled);
     if (!target) return false;
     target.click();
     return true;
@@ -201,7 +201,7 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
   await sleep(1200)
   const submitted = await collectVisibleState(client)
   checkVisibleState('quiz:submitted', submitted, errors, warnings)
-  if (!/变式|similar|错了/i.test(submitted.text)) {
+  if (!/变式|错了|similar/i.test(submitted.text)) {
     errors.push({ page: 'quiz-play', kind: 'similar_recommendation_not_visible_after_wrong_answers' })
   }
   const duplicate = quiz.find(q => {
@@ -237,14 +237,14 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     await waitForImages(client)
     const info = await collectVisibleState(client)
     checkVisibleState(`frq-player:${selectedFrq[i].question_id}`, info, errors, warnings)
-    if (!/Free Response|FRQ/i.test(info.text)) errors.push({ page: 'frq-player', kind: 'frq_header_missing' })
+    if (!/自由作答题|Free Response|FRQ/i.test(info.text)) errors.push({ page: 'frq-player', kind: 'frq_header_missing' })
     if (selectedFrq[i].background_data?.table && info.tableCount < 1) {
       errors.push({ page: 'frq-player', kind: 'missing_frq_background_table', question_id: selectedFrq[i].question_id })
     }
     await clickCheckbox(client)
     if (i < selectedFrq.length - 1) await clickTextButton(client, /下一题|Next/i)
   }
-  await clickTextButton(client, /完成 FRQ|进入.*成绩|Finish/i)
+  await clickTextButton(client, /完成 FRQ|进入评分|Finish/i)
   await sleep(1000)
   const scorePage = await collectVisibleState(client)
   checkVisibleState('frq-score', scorePage, errors, warnings)
@@ -259,11 +259,11 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     errors.push({ page: 'frq-score', kind: 'missing_frq_background_tables', expectedScoreTables, actualTables: scorePage.tableCount })
   }
   await screenshot(client, `${subjectId}-frq-score.png`, artifacts)
-  await clickTextButton(client, /确认评分|查看成绩|Score/i)
+  await clickTextButton(client, /确认分数|确认评分|查看结果|查看成绩|Score/i)
   await sleep(1000)
   const finalScore = await collectVisibleState(client)
   checkVisibleState('score-final', finalScore, errors, warnings)
-  if (!/Mock Exam|成绩|Report/i.test(finalScore.text)) {
+  if (!/模考成绩|成绩单|Mock Exam|Report/i.test(finalScore.text)) {
     errors.push({ page: 'score-final', kind: 'final_score_page_not_reached' })
   }
   await screenshot(client, `${subjectId}-score-final.png`, artifacts)
@@ -295,7 +295,7 @@ async function auditMockMcqOnlyFlow(client, mcq, errors, warnings, artifacts) {
   await sleep(1200)
   const finalScore = await collectVisibleState(client)
   checkVisibleState('mock-mcq-only-score-final', finalScore, errors, warnings)
-  if (!/Mock Exam|鎴愮哗|Report/i.test(finalScore.text)) {
+  if (!/模考成绩|成绩单|Mock Exam|Report/i.test(finalScore.text)) {
     errors.push({ page: 'mock-mcq-only-score-final', kind: 'final_score_page_not_reached' })
   }
   if (/Free Response|FRQ|Section II/i.test(finalScore.text)) {
@@ -374,6 +374,7 @@ async function seedSession(client, mcq, frq, info) {
     subjectId,
     mcq,
     frq,
+    mcqAnswers: Object.fromEntries((mcq || []).map(question => [question.question_id, chooseWrongAnswers(question)[0] || ''])),
     info,
     config: { subject: subjectId, unit: 'audit', count: mcq.length, type: info.isMock ? 'mock' : 'quiz' },
   }), 'utf8').toString('base64')
@@ -387,7 +388,11 @@ async function seedSession(client, mcq, frq, info) {
     sessionStorage.setItem('currentFRQ', JSON.stringify(payload.frq));
     sessionStorage.setItem('quizConfig', JSON.stringify(payload.config));
     sessionStorage.setItem('quizInfo', JSON.stringify(payload.info));
-    sessionStorage.removeItem('mcqAnswers');
+    if (payload.info?.isMock && payload.frq?.length) {
+      sessionStorage.setItem('mcqAnswers', JSON.stringify(payload.mcqAnswers));
+    } else {
+      sessionStorage.removeItem('mcqAnswers');
+    }
   })()`)
 }
 
@@ -779,3 +784,4 @@ function escapeRegex(text) {
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
+

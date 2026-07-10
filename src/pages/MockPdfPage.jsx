@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+﻿import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCurrentQuiz, getCurrentFRQ, getQuizInfo } from '../utils/quizSession'
 import { exportToPdf, PdfContainer } from '../utils/pdfExport.jsx'
@@ -82,7 +82,7 @@ function MockPdfPage() {
   if (loading) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
-        <p className="text-text-muted">Loading...</p>
+        <p className="text-text-muted">加载中...</p>
       </div>
     )
   }
@@ -91,7 +91,7 @@ function MockPdfPage() {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
         <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-red-800">
-          <h2 className="text-xl font-bold mb-2">Load Failed</h2>
+          <h2 className="text-xl font-bold mb-2">加载失败</h2>
           <p className="mb-2">{error}</p>
           {debugInfo && (
             <pre className="text-left text-xs bg-red-100 rounded p-3 mt-2 overflow-auto">
@@ -105,7 +105,7 @@ function MockPdfPage() {
 
   const sessionSubjectId = quizInfo?.subject || quizInfo?.config?.subject
   const sessionSubjectConfig = subjects?.find(subject => subject.id === sessionSubjectId)
-  const subjectName = sessionSubjectConfig?.name || currentSubjectConfig?.name || 'AP Question Bank'
+  const subjectName = sessionSubjectConfig?.name || currentSubjectConfig?.name || 'AP 题库'
   const totalMcq = mcqs.length
   const totalFrq = frqs.length
   const totalFrqPoints = frqs.reduce((sum, f) => sum + (f.rubric?.total_points || 0), 0)
@@ -114,20 +114,20 @@ function MockPdfPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-6">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-brand">Mock Exam PDF Export</h1>
+        <h1 className="text-2xl font-bold text-brand">模考 PDF 导出</h1>
         <div className="flex gap-3">
           <button
             onClick={() => navigate('/play')}
             className="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
           >
-            Start Mock Exam
+            开始模考
           </button>
           <button
             onClick={handleExport}
             disabled={exporting}
             className="bg-brand hover:bg-brand-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
           >
-            {exporting ? 'Generating...' : 'Download PDF'}
+            {exporting ? '生成中...' : '下载 PDF'}
           </button>
         </div>
       </div>
@@ -143,8 +143,7 @@ function MockPdfPage() {
             alignItems: 'center',
           }}>
             <div>
-              <div style={{ fontSize: '40px', fontWeight: 'bold', color: '#1e40af' }}>翎英教育</div>
-              <div style={{ fontSize: '22px', color: '#6b7280', marginTop: '2px' }}>LynkEdu Education</div>
+              <div style={{ fontSize: '40px', fontWeight: 'bold', color: '#1e40af' }}>翎英教育</div>`r`n              <div style={{ fontSize: '22px', color: '#6b7280', marginTop: '2px' }}>LynkEdu</div>
             </div>
             <div style={{ fontSize: '20px', color: '#9ca3af', textAlign: 'right' }}>
               <div>{subjectName}</div>
@@ -154,10 +153,10 @@ function MockPdfPage() {
 
           <div style={{ textAlign: 'center', marginBottom: '24px' }}>
             <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1f2937' }}>
-              {subjectName} Mock Exam
+              {subjectName} 模考
             </div>
             <div style={{ fontSize: '20px', color: '#6b7280', marginTop: '6px' }}>
-              Section I: {totalMcq} MCQs &nbsp;|&nbsp; Section II: {totalFrq} FRQs ({totalFrqPoints} points)
+              第一部分：{totalMcq} 道 MCQ &nbsp;|&nbsp; 第二部分：{totalFrq} 道 FRQ（{totalFrqPoints} 分）
             </div>
           </div>
 
@@ -167,7 +166,7 @@ function MockPdfPage() {
               marginBottom: '16px', paddingBottom: '8px',
               borderBottom: '2px solid #dbeafe',
             }}>
-              Section I: Multiple Choice
+              第一部分：选择题
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {mcqs.map((q, idx) => (
@@ -191,10 +190,10 @@ function MockPdfPage() {
               marginBottom: '16px', paddingBottom: '8px',
               borderBottom: '2px solid #dbeafe',
             }}>
-              Section II: Free Response
+              第二部分：自由作答题
             </div>
             <div style={{ fontSize: '16px', color: '#6b7280', marginBottom: '16px' }}>
-              Suggested time: {frqMinutes} minutes &nbsp;|&nbsp; Total: {totalFrqPoints} points
+              建议用时：{frqMinutes} 分钟 &nbsp;|&nbsp; 总分：{totalFrqPoints} 分
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {frqs.map((frq, idx) => (
@@ -213,7 +212,7 @@ function MockPdfPage() {
             marginBottom: '24px',
           }}>
             <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#1f2937' }}>
-              Answer Key
+              参考答案
             </div>
           </div>
 
@@ -222,7 +221,7 @@ function MockPdfPage() {
               fontSize: '20px', fontWeight: 'bold', color: '#1e40af',
               marginBottom: '12px',
             }}>
-              Section I: Multiple Choice Answers
+              第一部分：选择题答案
             </div>
             <div style={{
               display: 'grid',
@@ -249,7 +248,7 @@ function MockPdfPage() {
               fontSize: '20px', fontWeight: 'bold', color: '#1e40af',
               marginBottom: '12px',
             }}>
-              Section II: Free Response Rubric Reference
+              第二部分：FRQ 评分参考
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               {frqs.map((frq) => (
@@ -267,7 +266,7 @@ function MockPdfPage() {
                       FRQ {frq.question_number}
                     </div>
                     <div style={{ fontSize: '16px', fontWeight: '600', color: '#1e40af' }}>
-                      {frq.rubric?.total_points || 0} points
+                      {frq.rubric?.total_points || 0} 分
                     </div>
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
@@ -299,3 +298,4 @@ function MockPdfPage() {
 }
 
 export default MockPdfPage
+

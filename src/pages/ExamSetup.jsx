@@ -34,7 +34,7 @@ function ExamSetup() {
       const [mcqs, frqs] = await Promise.all([loadMCQBank(currentSubject), loadFRQBank(currentSubject)])
       const result = await generateMockExam(mcqs, frqs, currentSubject)
       if (!result || !Array.isArray(result.quiz) || !Array.isArray(result.frq)) {
-        throw new Error('生成 Mock Exam 失败')
+        throw new Error('生成模考失败')
       }
       const currentMockConfig = await getMockExamConfig(currentSubject)
       setPreview({
@@ -45,10 +45,11 @@ function ExamSetup() {
           mcqTimeLimit: currentMockConfig.mcqTimeLimit,
           frqTimeLimit: currentMockConfig.frqTimeLimit,
           frqCount: currentMockConfig.frqCount || 0,
+          subject: currentSubject,
         },
       })
     } catch (err) {
-      setError('加载失败：' + (err.message || '请检查网络'))
+      setError(`加载失败：${err.message || '请检查网络后重试'}`)
     } finally {
       setLoading(false)
     }
@@ -73,17 +74,17 @@ function ExamSetup() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold text-brand mb-6">Mock Exam</h1>
+      <h1 className="text-2xl font-bold text-brand mb-6">模考</h1>
       <div className="bg-surface rounded-xl p-6 shadow-sm border border-border space-y-6">
         <div className="text-sm text-text-muted">
           {frqCount > 0 ? (
             <>
-              <p>模拟真实考试环境，包含 {mcqCount} 道 MCQ 和 {frqCount} 道 FRQ。</p>
+              <p>模拟真实考试流程，包含 {mcqCount} 道 MCQ 和 {frqCount} 道 FRQ。</p>
               <p>MCQ 限时 {mcqMinutes} 分钟，FRQ 限时 {frqMinutes} 分钟。</p>
             </>
           ) : (
             <>
-              <p>模拟考试练习包含 {mcqCount} 道 MCQ。</p>
+              <p>本套模考包含 {mcqCount} 道 MCQ。</p>
               <p>MCQ 限时 {mcqMinutes} 分钟。</p>
             </>
           )}
@@ -101,7 +102,7 @@ function ExamSetup() {
             disabled={loading}
             className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50"
           >
-            {loading ? '生成中...' : '生成 Mock Exam'}
+            {loading ? '生成中...' : '生成模考'}
           </button>
         ) : (
           <div className="space-y-4">
@@ -115,7 +116,7 @@ function ExamSetup() {
                 onClick={startMock}
                 className="flex-1 bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors"
               >
-                开始考试
+                开始模考
               </button>
               <button
                 onClick={exportPdf}

@@ -24,7 +24,7 @@ function SettingsPage() {
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-brand mb-2">科目设置</h1>
         <p className="text-text-muted">
-          选择你正在学习的科目。首页和顶部科目切换器只会展示已认证并已选择的科目。
+          选择正在学习的科目。首页和顶部科目切换器只展示你已选择的科目。
         </p>
       </div>
 

@@ -653,8 +653,8 @@ export function RubricDisplay({ rubric, variant }) {
   const solutionOutline = String(rubric.solution_outline || '').trim()
   const referenceSolution = String(rubric.reference_solution || '').trim()
   const isCspCreateRubric = rubric.rubric_type === 'csp_create_written_response'
-  const outlineTitle = isCspCreateRubric ? 'Scoring Approach' : 'Correct Answer / Solution Outline'
-  const rubricTitle = isCspCreateRubric ? 'Written-Response Scoring Criteria' : 'Scoring Rubric'
+  const outlineTitle = isCspCreateRubric ? '评分思路' : '参考答案 / 解题思路'
+  const rubricTitle = isCspCreateRubric ? '书面作答评分标准' : '评分细则'
 
   if (variant === 'pdf') {
     return (
@@ -664,7 +664,7 @@ export function RubricDisplay({ rubric, variant }) {
           marginBottom: '8px', paddingBottom: '4px',
           borderBottom: '1px solid #dbeafe',
         }}>
-          {rubricTitle} ({rubric.total_points} points)
+          {rubricTitle}（{rubric.total_points} 分）
         </div>
         {referenceSolution && (
           <div style={{
@@ -676,7 +676,7 @@ export function RubricDisplay({ rubric, variant }) {
             ...BREAK_GUARD.BLOCK,
           }}>
             <div style={{ fontSize: '13px', fontWeight: '700', color: '#334155', marginBottom: '6px' }}>
-              Reference Implementation
+              参考实现
             </div>
             <MathText text={referenceSolution} as="div" />
           </div>
@@ -711,7 +711,7 @@ export function RubricDisplay({ rubric, variant }) {
               {!isSingleGuideline && (
                 <div style={{ fontWeight: 'bold', color: '#1e40af', marginBottom: '4px' }}>
                   {point.point_id}
-                  <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} pts)</span>
+                  <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>（{point.value} 分）</span>
                 </div>
               )}
               <RubricDescription text={point.description} variant="pdf" />
@@ -725,11 +725,11 @@ export function RubricDisplay({ rubric, variant }) {
   return (
     <div className="mt-4">
       <div className="text-sm font-bold text-blue-800 mb-2 pb-1 border-b border-blue-100">
-        {rubricTitle} ({rubric.total_points} points)
+        {rubricTitle}（{rubric.total_points} 分）
       </div>
       {referenceSolution && (
         <div className="mb-3 rounded-md border border-slate-200 bg-slate-50 px-3 py-3">
-          <div className="mb-2 text-sm font-bold text-slate-800">Reference Implementation</div>
+          <div className="mb-2 text-sm font-bold text-slate-800">参考实现</div>
           <MathText text={referenceSolution} as="div" />
         </div>
       )}
@@ -745,7 +745,7 @@ export function RubricDisplay({ rubric, variant }) {
             {!isSingleGuideline && (
               <div className="font-bold text-blue-700">
                 {point.point_id}
-                <span className="text-blue-500 ml-2 font-normal">({point.value} pts)</span>
+                <span className="text-blue-500 ml-2 font-normal">（{point.value} 分）</span>
               </div>
             )}
             <RubricDescription text={point.description} variant="web" />
@@ -971,14 +971,14 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
             fontSize: '16px', fontWeight: '600', color: '#1e40af',
             fontFamily: "'Times New Roman', 'Georgia', serif",
           }}>
-            {frq.rubric?.total_points || 0} points
+            {frq.rubric?.total_points || 0} 分
           </div>
         </div>
       ) : (
         <div className="flex justify-between items-center mb-4 pb-3 border-b border-border">
           <div className="text-lg font-bold text-brand">FRQ {qNum}</div>
           <div className="text-sm font-semibold text-brand">
-            {frq.rubric?.total_points || 0} points
+            {frq.rubric?.total_points || 0} 分
           </div>
         </div>
       )}
@@ -994,7 +994,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
           {imageBlock}
           {promptText && !isPdf && (
               <details className="mb-6 rounded-lg border border-border bg-gray-50 p-3 text-sm text-text-muted">
-                <summary className="cursor-pointer font-semibold text-text">Extracted text (supplemental)</summary>
+                <summary className="cursor-pointer font-semibold text-text">补充识别文本</summary>
                 <div className="mt-3">
                   <FRQText text={promptText} isPdf={false} />
                 </div>

@@ -12,8 +12,8 @@ function Header() {
 
   const items = [
     { path: '/', label: '首页' },
-    { path: '/quiz', label: 'Quiz' },
-    { path: '/exam', label: 'Mock Exam' },
+    { path: '/quiz', label: '专项练习' },
+    { path: '/exam', label: '模考' },
     { path: '/search', label: '搜索' },
     { path: '/mistakes', label: '错题本' },
     { path: '/history', label: '记录' },
