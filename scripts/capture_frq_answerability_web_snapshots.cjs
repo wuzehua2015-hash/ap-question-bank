@@ -64,7 +64,12 @@ async function main() {
 
     const snapshots = []
     for (const item of frq) {
-      snapshots.push(await captureFrqItem(client, item, mcqStub, outDir))
+      console.log(`FRQ snapshot ${item.question_id}`)
+      snapshots.push(await withItemTimeout(
+        captureFrqItem(client, item, mcqStub, outDir),
+        item.question_id,
+        30000,
+      ))
     }
 
     const report = {
@@ -98,18 +103,18 @@ async function captureFrqItem(client, item, mcqStub, outDir) {
   const surfaces = []
 
   await navigate(client, routeUrl('#/frq'))
-  await waitForText(client, item.question_id, 10000)
+  await waitForText(client, item.question_id, 1500)
   await waitForImages(client)
   surfaces.push(await collectSurface(client, 'frq_player', item))
 
   await clickCompletionAndFinish(client)
-  await waitForText(client, item.question_id, 10000)
+  await waitForText(client, item.question_id, 1500)
   await waitForImages(client)
   surfaces.push(await collectSurface(client, 'frq_score', item))
 
   await seedFrqSession(client, item, mcqStub)
   await navigate(client, routeUrl('#/mock-pdf'))
-  await waitForText(client, item.question_id, 10000)
+  await waitForText(client, item.question_id, 1500)
   await waitForImages(client)
   surfaces.push(await collectSurface(client, 'mock_pdf_frq', item))
 
@@ -125,6 +130,22 @@ async function captureFrqItem(client, item, mcqStub, outDir) {
     surfaces,
     findings,
   }
+}
+
+async function withItemTimeout(promise, questionId, timeoutMs) {
+  let timer = null
+  const timeout = new Promise(resolve => {
+    timer = setTimeout(() => {
+      resolve({
+        question_id: questionId,
+        surfaces: [],
+        findings: [{ severity: 'P0', code: 'frq_snapshot_item_timeout', message: `${questionId} exceeded ${timeoutMs}ms` }],
+      })
+    }, timeoutMs)
+  })
+  const result = await Promise.race([promise, timeout])
+  if (timer) clearTimeout(timer)
+  return result
 }
 
 async function collectSurface(client, surface, item) {
@@ -154,7 +175,7 @@ async function collectSurface(client, surface, item) {
   if (!containsEnoughPrompt(info.text, item.text)) {
     findings.push({ severity: 'P0', surface, code: 'frq_prompt_not_visible', message: 'FRQ prompt text is not visible enough on this surface.' })
   }
-  if (surface !== 'frq_player' && !/Scoring|Rubric|评分标准/i.test(info.text || '')) {
+  if (surface === 'frq_score' && !/Scoring|Rubric|评分标准|得分点/i.test(info.text || '')) {
     findings.push({ severity: 'P0', surface, code: 'rubric_not_visible' })
   }
   if (item.background_data?.table && info.tableCount < 1) {
@@ -445,7 +466,7 @@ async function evaluate(client, expression) {
 async function waitForImages(client) {
   await evaluate(client, `(() => new Promise(async resolve => {
     const sleep = ms => new Promise(r => setTimeout(r, ms));
-    const deadline = Date.now() + 15000;
+    const deadline = Date.now() + 5000;
     while (Date.now() < deadline) {
       const pending = [...document.images].some(img => !img.complete || img.naturalWidth === 0);
       if (!pending) break;

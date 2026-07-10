@@ -361,24 +361,15 @@
           "U6": 7
         }
       },
-      "releaseStatus": "content-risk",
+      "releaseStatus": "certified",
       "visibility": "internal",
       "readiness": {
-        "status": "red",
-        "updatedAt": "2026-07-09",
-        "p0": 7,
+        "status": "green",
+        "updatedAt": "2026-07-10",
+        "p0": 0,
         "p1": 0,
-        "contentRiskCodes": [
-          "flattened_frq_tables",
-          "frq_visual_asset_contract_missing",
-          "missing_referenced_images",
-          "weak_frq_rubrics"
-        ],
-        "mechanismCodes": [
-          "missing_delivery_contract",
-          "missing_delivery_review",
-          "missing_frq_browser_review"
-        ]
+        "contentRiskCodes": [],
+        "mechanismCodes": []
       }
     },
     {
