@@ -209,6 +209,57 @@ function validate(filePath, options = {}) {
       .replace(/\\\([\s\S]*?\\\)/g, ' ')
       .replace(/\\\[[\s\S]*?\\\]/g, ' ')
   }
+
+  function findStructuredVisibleText(value, currentPath, out) {
+    const key = currentPath.split('.').pop().replace(/\[\d+\]$/, '')
+    const visibleKeys = new Set([
+      'text',
+      'question_text',
+      'group_context',
+      'title',
+      'caption',
+      'subcaption',
+      'label',
+      'description',
+      'solution_outline',
+      'reference_solution',
+      'prompt',
+      'rubric_text',
+      'headers',
+      'rows',
+      'options',
+      'points',
+      'parts',
+      'criteria',
+      'content_blocks',
+      'background_data',
+      'option_table_data',
+    ])
+    const metadataKeys = new Set([
+      'source',
+      'source_refs',
+      'source_ref',
+      'source_block',
+      'source_pdf',
+      'image_sources',
+      'visual_asset_review',
+      'asset_review',
+      'metadata',
+    ])
+    if (metadataKeys.has(key)) return
+    if (value && typeof value === 'object' && !Array.isArray(value)) {
+      const objectKeys = Object.keys(value)
+      if (visibleKeys.has(key) && objectKeys.some(k => ['pdf', 'page_range', 'source_type'].includes(k))) {
+        out.push(`${currentPath}: student-visible text field contains source metadata object`)
+        return
+      }
+      for (const [childKey, item] of Object.entries(value)) {
+        findStructuredVisibleText(item, `${currentPath}.${childKey}`, out)
+      }
+    } else if (Array.isArray(value)) {
+      value.forEach((item, index) => findStructuredVisibleText(item, `${currentPath}[${index}]`, out))
+    }
+  }
   
   for (const q of data) {
     const qid = q.question_id || 'UNKNOWN'
@@ -234,6 +285,7 @@ function validate(filePath, options = {}) {
     }
     findHiddenControlChars(q, qid, errors)
     findTextArtifacts(q, qid, errors)
+    findStructuredVisibleText(q, qid, errors)
     if (isPhysicsEM) {
       const searchableText = JSON.stringify(q, (key, value) => (typeof value === 'string' ? stripMathSegments(value) : value))
       for (const { name, pattern } of physicsArtifactPatterns) {

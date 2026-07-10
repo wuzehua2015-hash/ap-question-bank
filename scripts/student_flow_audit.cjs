@@ -31,8 +31,8 @@ main().catch(error => {
 async function main() {
   const subject = loadSubject(subjectId)
   activeSubject = subject
-  const mcq = readJson(path.join(PUBLIC, 'data', subject.questionBank))
-  const frq = subject.frqBank ? readJson(path.join(PUBLIC, 'data', subject.frqBank)) : []
+  const mcq = readJson(path.join(PUBLIC, 'data', subject.questionBank)).map(adaptMCQ)
+  const frq = subject.frqBank ? readJson(path.join(PUBLIC, 'data', subject.frqBank)).map(adaptFRQ) : []
   const similarity = subject.similarityIndex
     ? readJson(path.join(PUBLIC, 'data', subject.similarityIndex))
     : {}
@@ -49,6 +49,7 @@ async function main() {
   try {
     await client.send('Page.enable')
     await client.send('Runtime.enable')
+    await client.send('Log.enable')
     await setViewport(client, 1440, 1400)
     await client.send('Page.addScriptToEvaluateOnNewDocument', {
       source: `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`,
@@ -120,6 +121,81 @@ function validateDataBehavior(subject, mcq, frq, similarity, errors, warnings, n
   } else if (subject.hasFRQ && frq.length !== expectedFrq) {
     notes.push({ area: 'data', kind: 'frq_bank_larger_than_mock_requirement', count: frq.length, expectedFrq })
   }
+}
+
+function adaptMCQ(raw) {
+  const answers = normalizeAnswers(raw)
+  return {
+    question_id: raw.question_id || raw.id || '',
+    text: raw.question_text || raw.text || '',
+    options: normalizeOptionsToObject(raw.options || {}),
+    answer: answers.length > 1 ? answers.join(',') : (answers[0] || ''),
+    answers,
+    answer_type: raw.answer_type || (answers.length > 1 ? 'multiple' : 'single'),
+    correct_answer: answers.length > 1 ? answers.join(',') : (answers[0] || ''),
+    scoring_status: raw.scoring_status || 'scored',
+    primary_unit: raw.primary_unit || raw.primaryUnit || 'U1',
+    secondary_units: raw.secondary_units || raw.secondaryUnits || [],
+    pure_unit: raw.pure_unit !== undefined ? raw.pure_unit : (raw.secondary_units || []).length === 0,
+    year: raw.year || 0,
+    question_number: raw.question_number || raw.question_num || 0,
+    question_type: raw.question_type || 'MCQ',
+    source: typeof raw.source === 'string' ? raw.source : '',
+    difficulty: raw.difficulty || '',
+    topics: raw.topics || [],
+    image_paths: raw.image_paths || raw.images || [],
+    option_table_data: raw.option_table_data || null,
+    diagram_references: raw.diagram_references || [],
+    background_data: raw.background_data || null,
+    rubric_image_paths: raw.rubric_image_paths || [],
+    group_id: raw.group_id || null,
+    group_members: raw.group_members || [],
+    group_role: raw.group_role || null,
+    group_context: raw.group_context || null,
+    requires_group_context: !!raw.requires_group_context,
+  }
+}
+
+function adaptFRQ(raw) {
+  const rawRubric = raw.rubric || null
+  const rubric = rawRubric
+    ? {
+        ...rawRubric,
+        total_points: Number(rawRubric.total_points ?? rawRubric.max_score ?? raw.total_points ?? raw.max_score ?? 0),
+      }
+    : null
+  return {
+    question_id: raw.question_id || raw.id || '',
+    text: raw.question_text || raw.text || '',
+    content_blocks: raw.content_blocks || raw.contentBlocks || null,
+    question_number: raw.question_number || raw.question_num || 0,
+    year: raw.year || 0,
+    image_paths: raw.image_paths || raw.images || [],
+    rubric_image_paths: raw.rubric_image_paths || [],
+    requires_graph: raw.requires_graph || false,
+    rubric,
+    background_data: raw.background_data || null,
+  }
+}
+
+function normalizeAnswers(raw) {
+  const source = raw.answers || raw.correct_answers || raw.answer || raw.correct_answer || ''
+  if (Array.isArray(source)) return source.map(String).map(s => s.trim()).filter(Boolean).sort()
+  return String(source).split(',').map(s => s.trim()).filter(Boolean).sort()
+}
+
+function normalizeOptionsToObject(options) {
+  if (!options) return {}
+  if (Array.isArray(options)) {
+    const result = {}
+    for (const opt of options) {
+      const m = String(opt).match(/^\(([A-E])\)\s*/)
+      const key = m ? m[1] : String(Object.keys(result).length)
+      result[key] = String(opt).replace(/^\([A-E]\)\s*/, '')
+    }
+    return result
+  }
+  return options
 }
 
 async function auditMockGenerationFromSetup(client, errors, warnings, artifacts) {
@@ -414,13 +490,24 @@ async function clickOption(client, option) {
 }
 
 async function clickCheckbox(client) {
-  const clicked = await evaluate(client, `(() => {
+  const result = await evaluate(client, `(() => {
     const box = document.querySelector('input[type="checkbox"]');
-    if (!box) return false;
+    if (!box) {
+      return {
+        clicked: false,
+        url: location.href,
+        inputCount: document.querySelectorAll('input').length,
+        buttonCount: document.querySelectorAll('button').length,
+        textSample: (document.body?.innerText || '').slice(0, 1200),
+      };
+    }
     box.click();
-    return true;
+    return { clicked: true };
   })()`)
-  if (!clicked) throw new Error('Could not click FRQ completion checkbox')
+  if (!result?.clicked) {
+    result.events = typeof client.events === 'function' ? client.events() : []
+    throw new Error(`Could not click FRQ completion checkbox: ${JSON.stringify(result)}`)
+  }
   await sleep(200)
 }
 
@@ -618,6 +705,10 @@ async function connectChrome(debugPort) {
   const pending = new Map()
   ws.addEventListener('message', event => {
     const msg = JSON.parse(event.data)
+    if (msg.method) {
+      eventLog.push(compactCdpEvent(msg))
+      if (eventLog.length > 50) eventLog.shift()
+    }
     if (!msg.id || !pending.has(msg.id)) return
     const { resolve, reject } = pending.get(msg.id)
     pending.delete(msg.id)
@@ -634,7 +725,38 @@ async function connectChrome(debugPort) {
       ws.close()
       return Promise.resolve()
     },
+    events() {
+      return eventLog.slice()
+    },
   }
+}
+
+const eventLog = []
+
+function compactCdpEvent(msg) {
+  if (msg.method === 'Runtime.exceptionThrown') {
+    const detail = msg.params?.exceptionDetails || {}
+    return {
+      method: msg.method,
+      text: detail.text,
+      url: detail.url,
+      lineNumber: detail.lineNumber,
+      columnNumber: detail.columnNumber,
+      exception: detail.exception?.description || detail.exception?.value || detail.exception?.className,
+    }
+  }
+  if (msg.method === 'Log.entryAdded') {
+    const entry = msg.params?.entry || {}
+    return { method: msg.method, level: entry.level, text: entry.text, url: entry.url, lineNumber: entry.lineNumber }
+  }
+  if (msg.method === 'Runtime.consoleAPICalled') {
+    return {
+      method: msg.method,
+      type: msg.params?.type,
+      args: (msg.params?.args || []).map(arg => arg.value || arg.description).filter(Boolean).slice(0, 5),
+    }
+  }
+  return { method: msg.method }
 }
 
 function getJson(url) {

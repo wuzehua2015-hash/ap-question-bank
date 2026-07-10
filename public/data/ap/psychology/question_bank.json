@@ -1307,7 +1307,9 @@
       "review_status": "needs_review",
       "classification_version": "ap_psychology_legacy_9_unit_v1"
     },
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/psychology/1999/1999_Q031_advertising_attitude_graph.png"
+    ],
     "source": {
       "pdf": "subjects/AP/Psychology/01-exams/AP_Psychology_1999_Released_Exam_Excerpt_MC_Key_mirror.pdf",
       "page_range": "1-16",
@@ -1316,7 +1318,24 @@
     "pure_unit": true,
     "has_graph": false,
     "requires_graph": false,
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "pass",
+      "image_sources": [
+        {
+          "asset": "images/ap/psychology/1999/1999_Q031_advertising_attitude_graph.png",
+          "source_pdf": "subjects/AP/Psychology/01-exams/AP_Psychology_1999_Released_Exam_Excerpt_MC_Key_mirror.pdf",
+          "source_page_image": ".workspace/psychology_candidate_sources/1999_quia_page_05.png",
+          "source_region": {
+            "x": 455,
+            "y": 405,
+            "width": 345,
+            "height": 330
+          },
+          "asset_type": "prompt_graph"
+        }
+      ]
+    }
   },
   {
     "question_id": "1999_Q032",
@@ -4560,7 +4579,7 @@
     "year": 2004,
     "question_number": 10,
     "question_type": "MCQ",
-    "text": "Questions 10-12 refer to the following definitions. Each definition can be used once, more than once, or not at all.\n\nWhich is a definition of discrimination that most directly applies to perception?",
+    "text": "Which is a definition of discrimination that most directly applies to perception?",
     "options": {
       "A": "Prototype matching to organize information into categories",
       "B": "Maintaining information in memory through repetition",
@@ -4595,14 +4614,22 @@
     "pure_unit": true,
     "has_graph": false,
     "requires_graph": false,
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_id": "2004_Q010_Q012_definitions",
+    "group_members": [
+      "2004_Q010",
+      "2004_Q011",
+      "2004_Q012"
+    ],
+    "group_context": "Questions 10-12 refer to the following definitions. Each definition can be used once, more than once, or not at all.\n\n(A) Prototype matching to organize information into categories\n(B) Maintaining information in memory through repetition\n(C) Differential treatment, usually negative, based on group membership\n(D) Recognizing an object as distinct from its surroundings\n(E) Learning to respond differently to similar stimuli",
+    "group_role": "group_first"
   },
   {
     "question_id": "2004_Q011",
     "year": 2004,
     "question_number": 11,
     "question_type": "MCQ",
-    "text": "Questions 10-12 refer to the following definitions. Each definition can be used once, more than once, or not at all.\n\nWhich is a definition of discrimination that most directly applies to classical conditioning?",
+    "text": "Which is a definition of discrimination that most directly applies to classical conditioning?",
     "options": {
       "A": "Prototype matching to organize information into categories",
       "B": "Maintaining information in memory through repetition",
@@ -4638,14 +4665,22 @@
     "pure_unit": true,
     "has_graph": false,
     "requires_graph": false,
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_id": "2004_Q010_Q012_definitions",
+    "group_members": [
+      "2004_Q010",
+      "2004_Q011",
+      "2004_Q012"
+    ],
+    "group_context": "Questions 10-12 refer to the following definitions. Each definition can be used once, more than once, or not at all.\n\n(A) Prototype matching to organize information into categories\n(B) Maintaining information in memory through repetition\n(C) Differential treatment, usually negative, based on group membership\n(D) Recognizing an object as distinct from its surroundings\n(E) Learning to respond differently to similar stimuli",
+    "group_role": "group_member"
   },
   {
     "question_id": "2004_Q012",
     "year": 2004,
     "question_number": 12,
     "question_type": "MCQ",
-    "text": "Questions 10-12 refer to the following definitions. Each definition can be used once, more than once, or not at all.\n\nWhich is a definition of discrimination that most directly applies to social psychology?",
+    "text": "Which is a definition of discrimination that most directly applies to social psychology?",
     "options": {
       "A": "Prototype matching to organize information into categories",
       "B": "Maintaining information in memory through repetition",
@@ -4681,7 +4716,15 @@
     "pure_unit": true,
     "has_graph": false,
     "requires_graph": false,
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_id": "2004_Q010_Q012_definitions",
+    "group_members": [
+      "2004_Q010",
+      "2004_Q011",
+      "2004_Q012"
+    ],
+    "group_context": "Questions 10-12 refer to the following definitions. Each definition can be used once, more than once, or not at all.\n\n(A) Prototype matching to organize information into categories\n(B) Maintaining information in memory through repetition\n(C) Differential treatment, usually negative, based on group membership\n(D) Recognizing an object as distinct from its surroundings\n(E) Learning to respond differently to similar stimuli",
+    "group_role": "group_member"
   },
   {
     "question_id": "2004_Q013",
@@ -7046,7 +7089,7 @@
     "year": 2004,
     "question_number": 68,
     "question_type": "MCQ",
-    "text": "The psychologists who first developed encounter groups and sensitivity-training groups based their work on which of the following approaches to therapy? .",
+    "text": "The psychologists who first developed encounter groups and sensitivity-training groups based their work on which of the following approaches to therapy?.",
     "options": {
       "A": "Psychodynamic",
       "B": "Humanistic",
@@ -8068,7 +8111,7 @@
     "year": 2004,
     "question_number": 92,
     "question_type": "MCQ",
-    "text": "Questions 92-93 refer to the following psychological perspectives. Choose the perspective that best answers each of the following questions. A choice can be used once, more than once, or not at all.\n\nWhich perspective views the human condition as a mixture of unconscious desires and conflicts?",
+    "text": "Which perspective views the human condition as a mixture of unconscious desires and conflicts?",
     "options": {
       "A": "Humanistic",
       "B": "Trait",
@@ -8103,14 +8146,21 @@
     "pure_unit": true,
     "has_graph": false,
     "requires_graph": false,
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_id": "2004_Q092_Q093_psychological_perspectives",
+    "group_members": [
+      "2004_Q092",
+      "2004_Q093"
+    ],
+    "group_context": "Questions 92-93 refer to the following psychological perspectives. Choose the perspective that best answers each of the following questions. A choice can be used once, more than once, or not at all.\n\n(A) Humanistic\n(B) Trait\n(C) Psychoanalytic\n(D) Behavioral\n(E) Cognitive",
+    "group_role": "group_first"
   },
   {
     "question_id": "2004_Q093",
     "year": 2004,
     "question_number": 93,
     "question_type": "MCQ",
-    "text": "Questions 92-93 refer to the following psychological perspectives. Choose the perspective that best answers each of the following questions. A choice can be used once, more than once, or not at all.\n\nWhich perspective was used by Raymond Cattell as a basis for his personality measure known as the 16PF test?",
+    "text": "Which perspective was used by Raymond Cattell as a basis for his personality measure known as the 16PF test?",
     "options": {
       "A": "Humanistic",
       "B": "Trait",
@@ -8145,7 +8195,14 @@
     "pure_unit": true,
     "has_graph": false,
     "requires_graph": false,
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_id": "2004_Q092_Q093_psychological_perspectives",
+    "group_members": [
+      "2004_Q092",
+      "2004_Q093"
+    ],
+    "group_context": "Questions 92-93 refer to the following psychological perspectives. Choose the perspective that best answers each of the following questions. A choice can be used once, more than once, or not at all.\n\n(A) Humanistic\n(B) Trait\n(C) Psychoanalytic\n(D) Behavioral\n(E) Cognitive",
+    "group_role": "group_member"
   },
   {
     "question_id": "2004_Q094",
@@ -11446,13 +11503,13 @@
     "year": 2007,
     "question_number": 71,
     "question_type": "MCQ",
-    "text": "Match the Roman numerals in the table above with the a I I __",
+    "text": "Match the Roman numerals in the table above with the appropriate terms in signal detection theory.",
     "options": {
-      "A": "Miss False alarm Hit",
-      "B": "False alarm Miss Hit",
-      "C": "Hit Correct rejection Miss",
-      "D": "Hit Miss False",
-      "E": "Correct rejection Hit False"
+      "A": "Miss | False alarm | Hit | Correct rejection",
+      "B": "False alarm | Miss | Hit | Correct rejection",
+      "C": "Hit | Correct rejection | Miss | False alarm",
+      "D": "Hit | Miss | False alarm | Correct rejection",
+      "E": "Correct rejection | Hit | False alarm | Miss"
     },
     "answer": "A",
     "primary_unit": "U5",
@@ -11472,7 +11529,9 @@
       "review_status": "needs_review",
       "classification_version": "ap_psychology_legacy_9_unit_v1"
     },
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/psychology/2007/2007_Q071_signal_detection_table.png"
+    ],
     "source": {
       "pdf": "subjects/AP/Psychology/01-exams/AP_Psychology_2007_Released_Exam_Excerpt_MC_Key_mirror.pdf",
       "page_range": "1-15",
@@ -11481,7 +11540,64 @@
     "pure_unit": true,
     "has_graph": false,
     "requires_graph": false,
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "rows": {
+        "A": [
+          "Miss",
+          "False alarm",
+          "Hit",
+          "Correct rejection"
+        ],
+        "B": [
+          "False alarm",
+          "Miss",
+          "Hit",
+          "Correct rejection"
+        ],
+        "C": [
+          "Hit",
+          "Correct rejection",
+          "Miss",
+          "False alarm"
+        ],
+        "D": [
+          "Hit",
+          "Miss",
+          "False alarm",
+          "Correct rejection"
+        ],
+        "E": [
+          "Correct rejection",
+          "Hit",
+          "False alarm",
+          "Miss"
+        ]
+      }
+    },
+    "visual_asset_review": {
+      "status": "pass",
+      "image_sources": [
+        {
+          "asset": "images/ap/psychology/2007/2007_Q071_signal_detection_table.png",
+          "source_pdf": "subjects/AP/Psychology/01-exams/AP_Psychology_2007_Released_Exam_Excerpt_MC_Key_mirror.pdf",
+          "source_page_image": ".workspace/psychology_candidate_sources/renders_fix/2007_page_011.png",
+          "source_region": {
+            "x": 420,
+            "y": 125,
+            "width": 285,
+            "height": 190
+          },
+          "asset_type": "prompt_table"
+        }
+      ]
+    }
   },
   {
     "question_id": "2007_Q072",
@@ -12128,7 +12244,7 @@
     "year": 2007,
     "question_number": 87,
     "question_type": "MCQ",
-    "text": "The semicircular canals, located in the inner ear, : provide important information about the",
+    "text": "The semicircular canals, located in the inner ear,: provide important information about the",
     "options": {
       "A": "apparent distance of sound",
       "B": "air pressure of the surrounding area",
@@ -12341,7 +12457,7 @@
     "year": 2007,
     "question_number": 92,
     "question_type": "MCQ",
-    "text": "The quotation below is consistent with the views of which of the following schools of psychology?\n\n\"Give me a dozen healthy infants, well formed,\n\nand my own specified world to bring them up\n\nin and I'll guarantee to take any one at random\n\nand train him to be any type of specialist I might\n\nselect-doctor, lawyer, artist, merchant-chief and, yes, even beggar-man and thief. . . .\"",
+    "text": "The quotation below is consistent with the views of which of the following schools of psychology?\n\n\"Give me a dozen healthy infants, well formed,\n\nand my own specified world to bring them up\n\nin and I'll guarantee to take any one at random\n\nand train him to be any type of specialist I might\n\nselect-doctor, lawyer, artist, merchant-chief and, yes, even beggar-man and thief....\"",
     "options": {
       "A": "Existentialism",
       "B": "Structuralism",
@@ -12469,7 +12585,7 @@
     "year": 2007,
     "question_number": 96,
     "question_type": "MCQ",
-    "text": "A researcher studying the effect of noise level on concentration randomly assigns student participants to either a noisy room or a quiet room to take a problem-solving test. The researcher subsequently compares the two groups' test scores using a t-test and concludes p = .05.\n\nThe dependent variable in this study is the |",
+    "text": "A researcher studying the effect of noise level on concentration randomly assigns student participants to either a noisy room or a quiet room to take a problem-solving test. The researcher subsequently compares the two groups' test scores using a t-test and concludes p =.05.\n\nThe dependent variable in this study is the |",
     "options": {
       "A": "p value",
       "B": "noise level",
@@ -12514,7 +12630,7 @@
     "year": 2007,
     "question_number": 97,
     "question_type": "MCQ",
-    "text": "A researcher studying the effect of noise level on concentration randomly assigns student participants to either a noisy room or a quiet room to take a problem-solving test. The researcher subsequently compares the two groups' test scores using a t-test and concludes p = .05.\n\nThe independent variable in this study is the",
+    "text": "A researcher studying the effect of noise level on concentration randomly assigns student participants to either a noisy room or a quiet room to take a problem-solving test. The researcher subsequently compares the two groups' test scores using a t-test and concludes p =.05.\n\nThe independent variable in this study is the",
     "options": {
       "A": "p value",
       "B": "noise level",
@@ -12559,7 +12675,7 @@
     "year": 2007,
     "question_number": 98,
     "question_type": "MCQ",
-    "text": "A researcher studying the effect of noise level on concentration randomly assigns student participants to either a noisy room or a quiet room to take a problem-solving test. The researcher subsequently compares the two groups' test scores using a t-test and concludes p = .05.\n\nThe researcher's conclusion that p = .05 most likely indicates",
+    "text": "A researcher studying the effect of noise level on concentration randomly assigns student participants to either a noisy room or a quiet room to take a problem-solving test. The researcher subsequently compares the two groups' test scores using a t-test and concludes p =.05.\n\nThe researcher's conclusion that p =.05 most likely indicates",
     "options": {
       "A": "that the difference in the two groups' scores is likely due to chance",
       "B": "that a loss of concentration is common among students",
@@ -14871,7 +14987,7 @@
     "year": 2012,
     "question_number": 53,
     "question_type": "MCQ",
-    "text": "For extinction to occur, which of the following must be true of the conditioned response (CR), the conditioned stimulus (CS), and the unconditioned stimulus (UCS) ?",
+    "text": "For extinction to occur, which of the following must be true of the conditioned response (CR), the conditioned stimulus (CS), and the unconditioned stimulus (UCS)?",
     "options": {
       "A": "The CR occurs after the CS but does not occur after other stimuli.",
       "B": "The CR occurs after a stimulus that is similar to the CS.",
@@ -17862,7 +17978,7 @@
     "year": 2018,
     "question_number": 24,
     "question_type": "MCQ",
-    "text": "Which of the following is most likely to be used as evidence against the concept of g ?",
+    "text": "Which of the following is most likely to be used as evidence against the concept of g?",
     "options": {
       "A": "Mental age",
       "B": "Standardization",
@@ -18053,7 +18169,9 @@
       "review_status": "reviewed",
       "classification_version": "ap_psychology_legacy_9_unit_v1"
     },
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/psychology/2018/2018_Q028_iq_score_histogram.png"
+    ],
     "source": {
       "pdf": "subjects/AP/Psychology/01-exams/AP_Psychology_2018_Full_Exam.pdf",
       "page_range": "17-34"
@@ -18061,7 +18179,24 @@
     "pure_unit": true,
     "has_graph": false,
     "requires_graph": false,
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "visual_asset_review": {
+      "status": "pass",
+      "image_sources": [
+        {
+          "asset": "images/ap/psychology/2018/2018_Q028_iq_score_histogram.png",
+          "source_pdf": "subjects/AP/Psychology/01-exams/AP_Psychology_2018_Full_Exam.pdf",
+          "source_page_image": ".workspace/psychology_2018_page_scan/page_021.png",
+          "source_region": {
+            "x": 680,
+            "y": 95,
+            "width": 430,
+            "height": 380
+          },
+          "asset_type": "prompt_histogram"
+        }
+      ]
+    }
   },
   {
     "question_id": "2018_Q029",
@@ -18112,7 +18247,7 @@
     "year": 2018,
     "question_number": 30,
     "question_type": "MCQ",
-    "text": "Karl goes to see Dr. Norton to help him overcome his fear of cats. Karl's fear began in childhood when he petted a cat and someone slammed a door. Every time Karl petted the cat, the door slammed. Now whenever Karl sees a cat, he becomes very anxious.\n\nIn the development of Karl’s fear of cats, what was the unconditioned stimulus (UCS) ?",
+    "text": "Karl goes to see Dr. Norton to help him overcome his fear of cats. Karl's fear began in childhood when he petted a cat and someone slammed a door. Every time Karl petted the cat, the door slammed. Now whenever Karl sees a cat, he becomes very anxious.\n\nIn the development of Karl’s fear of cats, what was the unconditioned stimulus (UCS)?",
     "options": {
       "A": "Fear",
       "B": "The cat",
@@ -18572,7 +18707,7 @@
     "year": 2018,
     "question_number": 41,
     "question_type": "MCQ",
-    "text": "The diagram above is used for Questions 41-42. Which of the following structures is part of the vestibular system?",
+    "text": "Which of the following structures is part of the vestibular system?",
     "options": {
       "A": "A",
       "B": "B",
@@ -18608,14 +18743,21 @@
     "pure_unit": true,
     "has_graph": true,
     "requires_graph": true,
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_id": "2018_Q041_Q042_ear_diagram",
+    "group_members": [
+      "2018_Q041",
+      "2018_Q042"
+    ],
+    "group_context": "Questions 41-42 are based on the ear diagram.",
+    "group_role": "group_first"
   },
   {
     "question_id": "2018_Q042",
     "year": 2018,
     "question_number": 42,
     "question_type": "MCQ",
-    "text": "The diagram above is used for Questions 41-42. The area labeled A contains the",
+    "text": "The area labeled A contains the",
     "options": {
       "A": "auditory nerves",
       "B": "pinna",
@@ -18652,7 +18794,14 @@
     "pure_unit": true,
     "has_graph": true,
     "requires_graph": true,
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "group_id": "2018_Q041_Q042_ear_diagram",
+    "group_members": [
+      "2018_Q041",
+      "2018_Q042"
+    ],
+    "group_context": "Questions 41-42 are based on the ear diagram.",
+    "group_role": "group_member"
   },
   {
     "question_id": "2018_Q043",

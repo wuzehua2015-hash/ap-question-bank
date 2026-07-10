@@ -813,6 +813,7 @@ function FRQText({ text, isPdf }) {
 function FRQBackgroundTable({ tableData, isPdf }) {
   if (!tableData || !Array.isArray(tableData.headers) || !Array.isArray(tableData.rows)) return null
 
+  const sourceText = typeof tableData.source === 'string' ? tableData.source.trim() : ''
   const cols = tableData.headers.length
   const gridTemplateColumns = tableData.firstColumnWide
     ? `minmax(${isPdf ? '120px' : '160px'}, 1.4fr) repeat(${Math.max(0, cols - 1)}, minmax(0, 1fr))`
@@ -846,9 +847,9 @@ function FRQBackgroundTable({ tableData, isPdf }) {
             </div>
           )))}
         </div>
-        {tableData.source && (
+        {sourceText && (
           <div style={{ padding: '6px 8px', fontSize: '10px', color: '#64748b', borderTop: '1px solid #cbd5e1' }}>
-            <MathText text={tableData.source} />
+            <MathText text={sourceText} />
           </div>
         )}
       </div>
@@ -874,9 +875,9 @@ function FRQBackgroundTable({ tableData, isPdf }) {
           </div>
         )))}
       </div>
-      {tableData.source && (
+      {sourceText && (
         <div className="border-t border-border px-3 py-2 text-xs text-text-muted">
-          <MathText text={tableData.source} />
+          <MathText text={sourceText} />
         </div>
       )}
     </div>

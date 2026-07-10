@@ -232,7 +232,9 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
               <span className="text-error ml-2">（你的答案：{formatAnswer(selectedAnswer)}）</span>
             )}
           </div>
-          <div className="text-sm text-text-muted mt-1">来源：{question.source}</div>
+          {typeof question.source === 'string' && question.source.trim() && (
+            <div className="text-sm text-text-muted mt-1">来源：{question.source}</div>
+          )}
         </div>
       )}
     </div>
