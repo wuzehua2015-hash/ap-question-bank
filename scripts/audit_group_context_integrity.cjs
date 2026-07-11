@@ -5,7 +5,8 @@ const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 
 const QUESTION_CUE = /\b(?:Which of the following|Which statement|Which expression|Which equation|Which diagram|Which graph|What is|What value|What mass|What volume|How many|How much|For which|Suppose|The method)\b/i
-const GROUP_MARKER = /\bQuestions?\s+\d+\s*(?:-|–|to|through)\s*\d+\s+(?:refer|are based|relate|are|is)\b/i
+const GROUP_RANGE = String.raw`\d+\s*(?:-|[\u2013\u2014]|to|through)\s*\d+`
+const GROUP_MARKER = new RegExp(String.raw`\bQuestions?\s+${GROUP_RANGE}\s+(?:refer|are based|relate|are|is)\b`, 'i')
 
 function readJson(relPath) {
   return JSON.parse(fs.readFileSync(path.join(PUBLIC, relPath), 'utf8'))
@@ -24,6 +25,37 @@ function questionNumber(q) {
 
 function leadingWords(value, count = 22) {
   return normalize(value).split(/\s+/).slice(0, count).join(' ')
+}
+
+function contentTokens(value) {
+  return normalize(value)
+    .toLowerCase()
+    .replace(/`+/g, ' ')
+    .replace(/\$+/g, ' ')
+    .replace(/\\(?:mathrm|mu|vec|mathcal|Omega|Phi|tau|epsilon|cdot)\b/g, ' ')
+    .replace(/\\[a-zA-Z]+/g, ' ')
+    .replace(/[_^{}]/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+}
+
+function stripGroupMarker(value) {
+  return normalize(value)
+    .replace(new RegExp(String.raw`^Questions?\s+${GROUP_RANGE}\s+(?:refer|are based|relate|are|is)\b[^.]*\.\s*`, 'i'), '')
+    .replace(new RegExp(String.raw`^Questions?\s+${GROUP_RANGE}\s*`, 'i'), '')
+    .trim()
+}
+
+function hasSharedPrefixByTokens(context, text, minTokens = 12) {
+  const contextTokens = contentTokens(stripGroupMarker(context))
+  const textTokens = contentTokens(text)
+  if (contextTokens.length < minTokens || textTokens.length < minTokens) return false
+  for (let i = 0; i < minTokens; i += 1) {
+    if (contextTokens[i] !== textTokens[i]) return false
+  }
+  return true
 }
 
 function containsLikelyMemberStem(context, items) {
@@ -53,14 +85,14 @@ function hasDuplicatedContext(q) {
   const contextLead = leadingWords(q.group_context, 18)
   const textLead = leadingWords(q.text || q.question_text, 18)
   if (contextLead.length > 30 && textLead.length > 30 && contextLead === textLead) return true
-  const contextWithoutMarker = normalize(q.group_context)
-    .replace(/^Questions?\s+\d+\s*(?:-|–|to|through)\s*\d+\s+(?:refer|are based|relate|are|is)\b[^.]*\.\s*/i, '')
+  const contextWithoutMarker = stripGroupMarker(q.group_context)
   const contextWithoutMarkerLead = leadingWords(contextWithoutMarker, 18)
-  return contextWithoutMarkerLead.length > 30 && textLead.length > 30 && contextWithoutMarkerLead === textLead
+  if (contextWithoutMarkerLead.length > 30 && textLead.length > 30 && contextWithoutMarkerLead === textLead) return true
+  return hasSharedPrefixByTokens(q.group_context, q.text || q.question_text)
 }
 
 function expectedMembersFromText(text, year) {
-  const match = String(text || '').match(/\bQuestions?\s+(\d+)\s*(?:-|–|to|through)\s*(\d+)/i)
+  const match = String(text || '').match(/\bQuestions?\s+(\d+)\s*(?:-|[\u2013\u2014]|to|through)\s*(\d+)/i)
   if (!match) return null
   const start = Number(match[1])
   const end = Number(match[2])

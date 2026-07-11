@@ -4,6 +4,7 @@ const { auditActiveSubjects } = require('./audit_group_context_integrity.cjs')
 
 const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
+const GROUP_RANGE = String.raw`\d+\s*(?:-|[\u2013\u2014]|to|through)\s*\d+`
 
 const TARGET_SUBJECTS = new Set([
   'chemistry',
@@ -42,9 +43,33 @@ function stripLeadingQuestionNumber(text, q) {
 
 function stripLeadingGroupMarker(text) {
   return text
-    .replace(/^\s*Questions?\s+\d+\s*(?:-|–|to|through)\s*\d+\s+(?:refer|are based|relate|are|is)\b[^.\n]*\.\s*/i, '')
-    .replace(/^\s*Questions?\s+\d+\s*(?:-|–|to|through)\s*\d+\s*/i, '')
+    .replace(new RegExp(String.raw`^\s*Questions?\s+${GROUP_RANGE}\s+(?:refer|are based|relate|are|is)\b[^.\n]*\.\s*`, 'i'), '')
+    .replace(new RegExp(String.raw`^\s*Questions?\s+${GROUP_RANGE}\s*`, 'i'), '')
     .trim()
+}
+
+function contentTokens(value) {
+  return normalize(value)
+    .toLowerCase()
+    .replace(/`+/g, ' ')
+    .replace(/\$+/g, ' ')
+    .replace(/\\(?:mathrm|mu|vec|mathcal|Omega|Phi|tau|epsilon|cdot)\b/g, ' ')
+    .replace(/\\[a-zA-Z]+/g, ' ')
+    .replace(/[_^{}]/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+}
+
+function hasSharedPrefixByTokens(context, text, minTokens = 12) {
+  const contextTokens = contentTokens(stripLeadingGroupMarker(context))
+  const textTokens = contentTokens(text)
+  if (contextTokens.length < minTokens || textTokens.length < minTokens) return false
+  for (let i = 0; i < minTokens; i += 1) {
+    if (contextTokens[i] !== textTokens[i]) return false
+  }
+  return true
 }
 
 function stripSharedContext(text, context, q) {
@@ -56,6 +81,8 @@ function stripSharedContext(text, context, q) {
     const contextWithoutMarker = stripLeadingGroupMarker(cleanContext)
     if (contextWithoutMarker && out.startsWith(contextWithoutMarker)) {
       out = out.slice(contextWithoutMarker.length).trim()
+    } else if (hasSharedPrefixByTokens(cleanContext, out) && /\n\s*\n/.test(out)) {
+      out = out.replace(/^[\s\S]*?\n\s*\n/, '').trim()
     }
   }
   if (/^Questions?\s+\d+/i.test(out)) {
@@ -248,6 +275,24 @@ function applySpecialRepairs(subjectId, data) {
     for (const q of group2019) q.group_context = context2019
     setText('2019_Q26', 'Which compound, chloroacetic acid or iodoacetic acid, most likely has the lower boiling point, and why?')
     setText('2019_Q27', 'An aqueous solution contains small but equal concentrations of both chloroacetic and fluoroacetic acids. Which statement comparing the percent ionizations of the two acids in the solution is true?')
+
+    const group2015Q34 = ['2015_Q34', '2015_Q35', '2015_Q36'].map(id => byId.get(id)).filter(Boolean)
+    const context2015Q34 = [
+      'Questions 34-36 refer to the reactions represented below, which are involved in a demonstration commonly known as underwater fireworks.',
+      '',
+      'Reaction 1: $CaC_2(s)+2H_2O(l)\\rightarrow C_2H_2(g)+Ca(OH)_2(s)$',
+      '',
+      'Reaction 2: $NaOCl(aq)+2HCl(aq)\\rightarrow Cl_2(g)+NaCl(aq)+H_2O(l)$',
+      '',
+      'Reaction 3: $C_2H_2(g)+Cl_2(g)\\rightarrow C_2H_2Cl_2(g)$',
+    ].join('\n')
+    for (const q of group2015Q34) {
+      q.group_context = context2015Q34
+      q.requires_group_context = true
+    }
+    setText('2015_Q34', '$Ca(OH)_2(s)$ precipitates when a $1.0\\,\\mathrm{g}$ sample of $CaC_2(s)$ is added to $1.0\\,\\mathrm{L}$ of distilled water at room temperature. If a $0.064\\,\\mathrm{g}$ sample of $CaC_2(s)$ is used instead and all of it reacts, which of the following will occur and why? The molar mass of $CaC_2$ is $64\\,\\mathrm{g/mol}$, and $K_{sp}$ for $Ca(OH)_2$ is $8.0\\times10^{-8}$.')
+    setText('2015_Q35', 'Reaction 2 occurs when an excess of $6\\,\\mathrm{M}$ $HCl(aq)$ solution is added to $100.\\,\\mathrm{mL}$ of $NaOCl(aq)$ of unknown concentration. If the reaction goes to completion and $0.010\\,\\mathrm{mol}$ of $Cl_2(g)$ is produced, what was the molarity of the $NaOCl(aq)$ solution?')
+    setText('2015_Q36', 'When Reaction 3 occurs, does the hybridization of the carbon atoms change?')
   }
 }
 
