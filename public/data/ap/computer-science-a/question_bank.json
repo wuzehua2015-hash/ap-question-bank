@@ -1126,7 +1126,7 @@
     "source_set": "released",
     "question_number": 27,
     "type": "MCQ",
-    "text": "Consider the following method.\n\n```java\npublic static void sort(int[] data)\n{\n  for (int j = 0; j < data.length - 1; j++)\n  {\n    int m = j;\n    for (int k = j + 1; k < data.length; k++)\n    {\n      if (data[k] < data[m])    /* Compare values */\n      {\n        m = k;\n      }\n    }\n\n    int temp = data[m];         /* Assign to temp */\n    data[m] = data[j];\n    data[j] = temp;\n\n    /* End of outer loop */\n  }\n}\n```\n\nAssume that `sort` is called with the array `{6, 3, 2, 5, 4, 1}`. What will the value of `data` be after three passes of the outer loop, that is, when `j = 2` at the point indicated by `/* End of outer loop */`?",
+    "text": "Assume that `sort` is called with the array `{6, 3, 2, 5, 4, 1}`. What will the value of `data` be after three passes of the outer loop, that is, when `j = 2` at the point indicated by `/* End of outer loop */`?",
     "options": {
       "A": "`{1, 2, 3, 4, 5, 6}`",
       "B": "`{1, 2, 3, 5, 4, 6}`",
@@ -1165,7 +1165,7 @@
     ],
     "group_role": "lead",
     "requires_group_context": true,
-    "group_context": "",
+    "group_context": "Questions 27-28 refer to the following method.\n\nConsider the following method.\n\n```java\npublic static void sort(int[] data)\n{\n  for (int j = 0; j < data.length - 1; j++)\n  {\n    int m = j;\n    for (int k = j + 1; k < data.length; k++)\n    {\n      if (data[k] < data[m])    /* Compare values */\n      {\n        m = k;\n      }\n    }\n\n    int temp = data[m];         /* Assign to temp */\n    data[m] = data[j];\n    data[j] = temp;\n\n    /* End of outer loop */\n  }\n}\n```",
     "rubric_image_paths": []
   },
   {
@@ -1177,7 +1177,7 @@
     "source_set": "released",
     "question_number": 28,
     "type": "MCQ",
-    "text": "Consider the following method.\n\n```java\npublic static void sort(int[] data)\n{\n  for (int j = 0; j < data.length - 1; j++)\n  {\n    int m = j;\n    for (int k = j + 1; k < data.length; k++)\n    {\n      if (data[k] < data[m])    /* Compare values */\n      {\n        m = k;\n      }\n    }\n\n    int temp = data[m];         /* Assign to temp */\n    data[m] = data[j];\n    data[j] = temp;\n\n    /* End of outer loop */\n  }\n}\n```\n\nAssume that `sort` is called with the array `{1, 2, 3, 4, 5, 6}`. How many times will the expression indicated by `/* Compare values */` and the statement indicated by `/* Assign to temp */` execute?",
+    "text": "Assume that `sort` is called with the array `{1, 2, 3, 4, 5, 6}`. How many times will the expression indicated by `/* Compare values */` and the statement indicated by `/* Assign to temp */` execute?",
     "options": {
       "A": "`Compare values`: 15; `Assign to temp`: 0",
       "B": "`Compare values`: 15; `Assign to temp`: 5",
@@ -1216,7 +1216,7 @@
     ],
     "group_role": "member",
     "requires_group_context": true,
-    "group_context": "",
+    "group_context": "Questions 27-28 refer to the following method.\n\nConsider the following method.\n\n```java\npublic static void sort(int[] data)\n{\n  for (int j = 0; j < data.length - 1; j++)\n  {\n    int m = j;\n    for (int k = j + 1; k < data.length; k++)\n    {\n      if (data[k] < data[m])    /* Compare values */\n      {\n        m = k;\n      }\n    }\n\n    int temp = data[m];         /* Assign to temp */\n    data[m] = data[j];\n    data[j] = temp;\n\n    /* End of outer loop */\n  }\n}\n```",
     "rubric_image_paths": []
   },
   {

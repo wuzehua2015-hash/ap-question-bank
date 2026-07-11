@@ -1,10 +1,13 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { createRequire } from 'node:module'
 
 const __filename = fileURLToPath(import.meta.url)
 const ROOT = path.resolve(path.dirname(__filename), '..')
 const PUBLIC = path.join(ROOT, 'public')
+const require = createRequire(import.meta.url)
+const { auditActiveSubjects } = require('./audit_group_context_integrity.cjs')
 
 globalThis.localStorage = {
   getItem() { return null },
@@ -170,6 +173,14 @@ for (const subject of subjects) {
       const quiz = generateMockLocal(mcq, subject)
       assertCompleteGroups(subject.id, `mock:${i}`, quiz, errors)
     }
+  }
+}
+
+const groupContextResults = auditActiveSubjects()
+for (const result of groupContextResults) {
+  for (const finding of result.findings) {
+    if (finding.severity !== 'P0') continue
+    errors.push(`${result.subject_id} ${finding.code}${finding.group_id ? ` ${finding.group_id}` : ''}${finding.question_id ? ` ${finding.question_id}` : ''}: ${finding.detail}`)
   }
 }
 
