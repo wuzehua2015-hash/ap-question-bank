@@ -1073,6 +1073,38 @@ const blocks = parseFRQBlocks(text)
 
 ---
 
+## 十七、Mock PDF 分段导出标准（2026-07-11 新增）
+
+### 17.1 核心原则
+
+Mock PDF 不能把整份长页面交给 `html2pdf.js` 自动分页。不同科目的 MCQ/FRQ 会包含长题干、图片、表格、代码块、评分细则等，整页截图式分页容易造成题目、答案、表格或评分项被页面边界切开。
+
+`MockPdfPage` 必须使用分段导出：
+- 封面/章节标题作为独立段落。
+- 每道 MCQ 作为独立段落，顺排到当前页，放不下再进入下一页。
+- 每道 FRQ 作为独立段落，并从新页开始；长 FRQ 可以自然跨页，但不能把多道 FRQ 挤在同一页。
+- MCQ 答案页从新页开始。
+- 每道 FRQ 评分参考从新页开始；评分项过长时允许延续到下一页。
+
+### 17.2 实现约束
+
+- 模考 PDF 使用 `exportToPdf(element, filename, { segmented: true })`。
+- 可分页段落必须标记 `data-pdf-segment="true"`。
+- 必须新起页的段落标记 `data-pdf-start-page="true"`。
+- 不要在 FRQ 子块或评分子块上堆叠 `pdf-page-break`、`breakBefore`、`pageBreakBefore`、`pdf-avoid-break` 等多层分页控制；这会让导出库在长 DOM 中计算失败。
+- `QuizPdfPage`、`ScorePage` 仍可使用普通 `html2pdf.js` 路径；Mock PDF 是独立产品路径。
+
+### 17.3 验收要求
+
+修改 PDF 相关代码后，必须真实下载一份 Mock PDF，并用 PyMuPDF 渲染全页缩略图检查：
+- 文件不能是异常小文件或空白页。
+- MCQ 题块、图片题、表格题、答案页不能有明显内容缺失。
+- FRQ 每题必须从新页开始；长题允许延续，但页面边界不能斩断关键文字、表格或图片。
+- 每道 FRQ 评分参考必须从新页开始。
+- 至少用一个包含 FRQ、图表和表格的科目做验收；经济学、科学、数学、CSA/CSP 都可能暴露不同分页风险。
+
+---
+
 ## 十六、单元分类错误与缺失图片（2026-06-22 新增）
 
 ### 16.1 问题：GDP/经济成长题被错分到 U1
