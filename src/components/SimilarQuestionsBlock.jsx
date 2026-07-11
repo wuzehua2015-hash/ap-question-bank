@@ -28,6 +28,7 @@ function strictSimilarity(current, candidate, item) {
   if (sharedTopics.length === 0) return null
 
   const sameUnit = current.primary_unit && current.primary_unit === candidate.primary_unit
+  if (!sameUnit) return null
   const sameType = (current.question_type || 'MCQ') === (candidate.question_type || 'MCQ')
   const rawScore = Number(item.similarity ?? item.score ?? 0)
 
@@ -133,9 +134,11 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3 }) {
                   <span className="text-xs text-text-muted shrink-0">{q.question_id}</span>
                   <span className="text-xs bg-brand text-white px-1.5 py-0.5 rounded shrink-0">{q.primary_unit}</span>
                   <span className="text-xs bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded shrink-0">{item.sharedTopics.join(', ')}</span>
-                  <span className="text-xs text-text truncate">
-                    <MathText text={q.text || q.question_text} />
-                  </span>
+                  {!(isExpanded && q.group_context) && (
+                    <span className="text-xs text-text truncate">
+                      <MathText text={q.text || q.question_text} />
+                    </span>
+                  )}
                 </div>
                 <button className="text-xs text-brand hover:underline shrink-0 ml-2">
                   {isExpanded ? '收起' : '查看'}
@@ -147,6 +150,12 @@ function SimilarQuestionsBlock({ questionId, allQuestions, count = 3 }) {
                   {q.group_context && (
                     <div className="mb-2 mt-2 rounded border-l-4 border-brand bg-white px-2 py-1.5 text-xs leading-relaxed text-text">
                       <MathText text={q.group_context} />
+                    </div>
+                  )}
+
+                  {q.group_context && (
+                    <div className="mb-2 text-xs leading-relaxed text-text">
+                      <MathText text={q.text || q.question_text} />
                     </div>
                   )}
 

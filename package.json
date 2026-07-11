@@ -22,6 +22,7 @@
     "audit:physics-mechanics:image-content": "node scripts/audit_physics_mechanics_image_content.cjs",
     "audit:economics-classification": "node scripts/audit_economics_classification.cjs",
     "audit:student-flow": "node scripts/student_flow_audit.cjs",
+    "repair:similarity": "node scripts/repair_similarity_unit_priority.cjs",
     "delivery:contract": "node scripts/delivery_contract.cjs",
     "audit:full": "npm run validate && npm run build && npm run audit:render:all",
     "stable:push": "node scripts/stable_push.cjs",

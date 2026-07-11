@@ -179,7 +179,7 @@ for (const subject of subjects) {
 const groupContextResults = auditActiveSubjects()
 for (const result of groupContextResults) {
   for (const finding of result.findings) {
-    if (finding.severity !== 'P0') continue
+    if (!['P0', 'P0_CANDIDATE', 'P1'].includes(finding.severity)) continue
     errors.push(`${result.subject_id} ${finding.code}${finding.group_id ? ` ${finding.group_id}` : ''}${finding.question_id ? ` ${finding.question_id}` : ''}: ${finding.detail}`)
   }
 }

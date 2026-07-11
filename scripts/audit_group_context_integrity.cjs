@@ -114,6 +114,15 @@ function auditSubject(subject) {
       groups.get(q.group_id).push(q)
     }
 
+    if (q.requires_group_context && !normalize(q.group_context)) {
+      findings.push({
+        severity: 'P1',
+        code: 'REQUIRES_GROUP_CONTEXT_WITHOUT_CONTEXT',
+        question_id: q.question_id,
+        detail: 'requires_group_context=true but group_context is empty; the item contract is inconsistent',
+      })
+    }
+
     const textDecl = expectedMembersFromText(q.text || q.question_text || '', q.year || String(q.question_id || '').slice(0, 4))
     if (textDecl && !q.group_id) {
       findings.push({

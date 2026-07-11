@@ -64,7 +64,7 @@ async function main() {
     } else {
       await auditMockMcqOnlyFlow(client, mcq, errors, warnings, artifacts)
     }
-    await auditTargetSearchItems(client, searchSample.map(q => q.question_id), errors, warnings, artifacts)
+    await auditTargetSearchItems(client, searchSample, errors, warnings, artifacts)
 
     const report = {
       subject_id: subjectId,
@@ -267,6 +267,7 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
     if (!questionVisible) {
       errors.push({ page: 'quiz-play', kind: 'current_question_content_not_visible', question_id: quiz[i].question_id, visible_sample: sampleText(info.text, 0) })
     }
+    checkGroupedContextOrder(`quiz:${quiz[i].question_id}`, info, quiz[i], errors)
     const answers = chooseWrongAnswers(quiz[i])
     for (const answer of (answers.length ? answers : ['A'])) {
       await clickOption(client, answer)
@@ -380,8 +381,9 @@ async function auditMockMcqOnlyFlow(client, mcq, errors, warnings, artifacts) {
   await screenshot(client, `${subjectId}-mock-mcq-only-score-final.png`, artifacts)
 }
 
-async function auditTargetSearchItems(client, ids, errors, warnings, artifacts) {
-  for (const id of ids) {
+async function auditTargetSearchItems(client, questions, errors, warnings, artifacts) {
+  for (const question of questions) {
+    const id = question.question_id
     await navigate(client, routeUrl(`#/search?qid=${encodeURIComponent(id)}`))
     await waitForImages(client)
     const info = await collectVisibleState(client)
@@ -389,6 +391,7 @@ async function auditTargetSearchItems(client, ids, errors, warnings, artifacts) 
     if (!info.text.includes(id)) {
       errors.push({ page: 'search', kind: 'target_question_not_visible', question_id: id })
     }
+    checkGroupedContextOrder(`search:${id}`, info, question, errors)
   }
   await screenshot(client, `${subjectId}-target-search.png`, artifacts)
 }
@@ -571,6 +574,120 @@ function checkVisibleState(page, info, errors, warnings) {
   }
   if (info.bodyHeight < 250) warnings.push({ page, kind: 'short_body', bodyHeight: info.bodyHeight })
   checkImageReadability(page, info.visibleImages, errors, warnings)
+}
+
+function checkGroupedContextOrder(page, info, question, errors) {
+  const context = String(question.group_context || '').trim()
+  const stem = String(question.text || question.question_text || '').trim()
+  if (!context) return
+
+  const pageTokens = auditTokenStream(info.text)
+  const contextTokens = auditTokenStream(context)
+  const stemTokens = auditTokenStream(stem)
+  const contextIndex = findTokenAnchor(pageTokens, contextTokens)
+  const stemIndex = findTokenAnchor(pageTokens, stemTokens)
+  if (contextIndex < 0) {
+    errors.push({ page, kind: 'group_context_not_visible', question_id: question.question_id })
+    return
+  }
+  if (stemIndex < 0) {
+    errors.push({ page, kind: 'group_member_stem_not_visible', question_id: question.question_id })
+    return
+  }
+  if (contextIndex > stemIndex) {
+    errors.push({ page, kind: 'group_context_after_member_stem', question_id: question.question_id })
+  }
+}
+
+function auditTokenStream(text) {
+  return auditComparableText(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .split(/\s+/)
+    .filter(token => token.length > 1)
+}
+
+function findTokenAnchor(haystack, needle) {
+  if (!haystack.length || !needle.length) return -1
+  const exact = findTokenSequence(haystack, needle.slice(0, Math.min(12, needle.length)))
+  if (exact >= 0) return exact
+
+  for (const window of stableTokenWindows(needle)) {
+    const index = findTokenSequence(haystack, window)
+    if (index >= 0) return index
+  }
+
+  return findOrderedTokenAnchor(haystack, significantTokens(needle).slice(0, 16))
+}
+
+function findTokenSequence(haystack, needle) {
+  if (!haystack.length || !needle.length) return -1
+  const target = needle
+  if (target.length < 3) return -1
+  const max = haystack.length - target.length
+  for (let i = 0; i <= max; i += 1) {
+    let ok = true
+    for (let j = 0; j < target.length; j += 1) {
+      if (haystack[i + j] !== target[j]) {
+        ok = false
+        break
+      }
+    }
+    if (ok) return i
+  }
+  return -1
+}
+
+function stableTokenWindows(tokens) {
+  const significant = significantTokens(tokens)
+  const windows = []
+  for (const size of [8, 7, 6, 5, 4]) {
+    for (let i = 0; i <= Math.min(36, significant.length - size); i += 1) {
+      windows.push(significant.slice(i, i + size))
+    }
+  }
+  return windows
+}
+
+function significantTokens(tokens) {
+  const stop = new Set([
+    'the', 'and', 'for', 'with', 'that', 'this', 'which', 'following', 'refer',
+    'question', 'questions', 'figure', 'table', 'shown', 'above', 'below',
+    'information', 'each', 'when', 'where', 'what', 'from', 'into', 'only',
+  ])
+  return tokens.filter(token => {
+    if (token.length < 3 || stop.has(token)) return false
+    // Formula identifiers such as ch3oh or agno3 often render visually but drop
+    // out of accessibility text, so they are poor anchors for flow auditing.
+    if (/[a-z][0-9]|[0-9][a-z]/i.test(token)) return false
+    return true
+  })
+}
+
+function findOrderedTokenAnchor(haystack, needle) {
+  if (needle.length < 4) return -1
+  const maxGap = 24
+  for (let i = 0; i < haystack.length; i += 1) {
+    if (haystack[i] !== needle[0]) continue
+    let cursor = i + 1
+    let hits = 1
+    for (let j = 1; j < needle.length && cursor < haystack.length; j += 1) {
+      const limit = Math.min(haystack.length, cursor + maxGap)
+      let found = -1
+      for (let k = cursor; k < limit; k += 1) {
+        if (haystack[k] === needle[j]) {
+          found = k
+          break
+        }
+      }
+      if (found < 0) continue
+      hits += 1
+      cursor = found + 1
+    }
+    if (hits >= Math.min(8, Math.ceil(needle.length * 0.65))) return i
+  }
+  return -1
 }
 
 function checkImageReadability(page, images, errors, warnings) {

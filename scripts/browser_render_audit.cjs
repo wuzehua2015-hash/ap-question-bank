@@ -8,6 +8,7 @@ const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 const WORKSPACE = path.join(ROOT, '.workspace', 'browser-render-audit')
 const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
+const MAX_STUDENT_PDF_MCQ = 60
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject || 'physics-c-e-m'
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
@@ -300,7 +301,7 @@ function selectAuditMcq(mcq) {
       rest.push(q)
     }
   }
-  return [...priority, ...rest]
+  return [...priority, ...rest].slice(0, Math.min(MAX_STUDENT_PDF_MCQ, mcq.length))
 }
 
 function selectAuditFrq(frq) {
