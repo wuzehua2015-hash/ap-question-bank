@@ -7,10 +7,12 @@ export const PDF_EXPORT_OPTIONS = {
   margin: [10, 10, 10, 10],
   image: { type: 'jpeg', quality: 0.95 },
   html2canvas: {
-    scale: 2,
+    scale: 1.25,
     useCORS: true,
     logging: false,
     letterRendering: true,
+    imageTimeout: 8000,
+    removeContainer: true,
   },
   jsPDF: {
     unit: 'mm',
@@ -54,6 +56,14 @@ async function exportSegmentedPdf(element, filename) {
   const contentHeight = pageHeight - margin * 2
   let y = margin
   let hasContent = false
+  const exportState = {
+    status: 'running',
+    total: segments.length,
+    current: 0,
+    filename,
+    startedAt: new Date().toISOString(),
+  }
+  window.__lynkPdfExportProgress = exportState
 
   const addPage = () => {
     if (hasContent) pdf.addPage()
@@ -61,7 +71,10 @@ async function exportSegmentedPdf(element, filename) {
     hasContent = true
   }
 
-  for (const segment of segments) {
+  for (let index = 0; index < segments.length; index += 1) {
+    const segment = segments[index]
+    exportState.current = index + 1
+    exportState.segmentText = (segment.textContent || '').trim().slice(0, 80)
     if (segment.dataset.pdfStartPage === 'true' && hasContent) {
       pdf.addPage()
       y = margin
@@ -120,9 +133,14 @@ async function exportSegmentedPdf(element, filename) {
       if (sourceY < canvas.height) pdf.addPage()
     }
     y = pageHeight - margin
+
+    await new Promise(resolve => setTimeout(resolve, 0))
   }
 
+  exportState.status = 'saving'
   pdf.save(filename)
+  exportState.status = 'done'
+  exportState.finishedAt = new Date().toISOString()
 }
 
 export { WatermarkLayer }
