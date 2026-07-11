@@ -394,9 +394,6 @@ function MCQReviewItem({ question, index, answer, unitColor }) {
           {question.primary_unit}
         </span>
       </div>
-      <p style={{ fontSize: '22px', color: '#4b5563', marginBottom: '12px', lineHeight: 1.5 }}>
-        <MathText text={question.text || question.question_text} />
-      </p>
       {question.group_context && (
         <div style={{
           marginBottom: '12px',
@@ -410,6 +407,9 @@ function MCQReviewItem({ question, index, answer, unitColor }) {
           <MathText text={question.group_context} />
         </div>
       )}
+      <p style={{ fontSize: '22px', color: '#4b5563', marginBottom: '12px', lineHeight: 1.5 }}>
+        <MathText text={question.text || question.question_text} />
+      </p>
       <ScoreBackgroundTable tableData={question.background_data?.table} />
       {visibleImages.length > 0 && (
         <div style={{ marginBottom: '12px' }}>

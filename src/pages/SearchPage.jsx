@@ -208,6 +208,11 @@ function SearchPage() {
                   {isWrong && <Tag tone="wrong">错题</Tag>}
                   {correctRate !== null && <Tag tone={correctRate >= 70 ? 'done' : 'wrong'}>正确率 {correctRate}%</Tag>}
                 </div>
+                {isExpanded && q.group_context && (
+                  <div className="mb-3 rounded-md border-l-4 border-brand bg-white px-3 py-2 text-sm leading-relaxed text-text">
+                    <MathText text={q.group_context} />
+                  </div>
+                )}
                 <div className={`text-sm text-text ${isExpanded ? '' : 'line-clamp-2'}`}>
                   {isExpanded ? (
                     <MathText text={q.text || q.question_text} />
@@ -219,12 +224,6 @@ function SearchPage() {
 
               {isExpanded && (
                 <div className="px-4 pb-4 border-t border-border bg-gray-50">
-                  {q.group_context && (
-                    <div className="mb-3 mt-3 rounded-md border-l-4 border-brand bg-white px-3 py-2 text-sm leading-relaxed text-text">
-                      <MathText text={q.group_context} />
-                    </div>
-                  )}
-
                   <BackgroundTable tableData={q.background_data?.table} />
 
                   {visibleImages.length > 0 && (
