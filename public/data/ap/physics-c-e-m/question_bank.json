@@ -58,7 +58,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "The net force on the particle with charge +q due\nto the other two charges is in the plane of the page\nand directed",
+    "text": "Questions 2-4\nThree particles having charges of +q, +Q, and -Q\nare placed at the corners of an equilateral triangle of\nside a, as shown above.\n\nThe net force on the particle with charge +q due\nto the other two charges is in the plane of the page\nand directed",
     "options": {
       "A": "vertically upward",
       "B": "vertically downward",
@@ -121,7 +121,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "The magnitude of the force on the particle with charge $+q$ due to the other two charges is",
+    "text": "Questions 2-4\nThree particles having charges of $+q$, $+Q$, and $-Q$ are placed at the corners of an equilateral triangle of side $a$, as shown above.\n\nThe magnitude of the force on the particle with charge $+q$ due to the other two charges is",
     "options": {
       "A": "$\\frac{kqQ}{a^2}$",
       "B": "$\\frac{2kqQ}{a^2}$",
@@ -184,7 +184,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "The potential energy of the particle with charge $+q$ due to the other two charges is",
+    "text": "Questions 2-4\nThree particles having charges of $+q$, $+Q$, and $-Q$ are placed at the corners of an equilateral triangle of side $a$, as shown above.\n\nThe potential energy of the particle with charge $+q$ due to the other two charges is",
     "options": {
       "A": "zero",
       "B": "$-\\frac{2kqQ}{a}$",
@@ -302,7 +302,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "Assuming the resistance of wire X is constant, which of the following graphs correctly illustrates the magnitude of the magnetic force $F$ on wire X as a function of the voltage $V$ applied to the wire?",
+    "text": "Questions 6-8\nTwo long, straight, parallel wires are held fixed, as shown above. A voltage is applied to wire X, creating a current $I_X$ to the right, and wire X experiences a magnetic force of magnitude $F_B$ toward wire Y.\n\nAssuming the resistance of wire X is constant, which of the following graphs correctly illustrates the magnitude of the magnetic force $F$ on wire X as a function of the voltage $V$ applied to the wire?",
     "options": {
       "A": "Diagram A",
       "B": "Diagram B",
@@ -361,79 +361,7 @@
     ],
     "group_role": "member",
     "group_context": "Questions 6-8\nTwo long, straight, parallel wires are held fixed, as shown above. A voltage is applied to wire X, creating a current $I_X$ to the right, and wire X experiences a magnetic force of magnitude $F_B$ toward wire Y.",
-    "requires_group_context": true,
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2012/2012_mcq6_img01.png",
-          "asset_type": "prompt_context_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2012/2012_mcq6_img02.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2012/2012_mcq6_img03.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2012/2012_mcq6_img04.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2012/2012_mcq6_img05.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2012/2012_mcq8_img01.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2012.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "requires_group_context": true
   },
   {
     "question_id": "2012_Q07",
@@ -442,7 +370,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "Which of the following could be true of wire Y?\nI. It carries a current in the same direction as the current in wire X.\nII. It experiences a force directed away from wire X.\nIII. It experiences a force of different magnitude than the force on wire X.",
+    "text": "Questions 6-8\nTwo long, straight, parallel wires are held fixed, as shown above. A voltage is applied to wire X, creating a current $I_X$ to the right, and wire X experiences a magnetic force of magnitude $F_B$ toward wire Y.\n\nWhich of the following could be true of wire Y?\nI. It carries a current in the same direction as the current in wire X.\nII. It experiences a force directed away from wire X.\nIII. It experiences a force of different magnitude than the force on wire X.",
     "options": {
       "A": "None",
       "B": "I only",
@@ -505,7 +433,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "If the distance between the two wires is tripled, what is the magnitude of the new magnetic force exerted on wire X?",
+    "text": "Questions 6-8\nTwo long, straight, parallel wires are held fixed, as shown above. A voltage is applied to wire X, creating a current $I_X$ to the right, and wire X experiences a magnetic force of magnitude $F_B$ toward wire Y.\n\nIf the distance between the two wires is tripled, what is the magnitude of the new magnetic force exerted on wire X?",
     "options": {
       "A": "$F_B/9$",
       "B": "$F_B/3$",
@@ -622,7 +550,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "Suppose all three capacitors have charge +Q on\nthe top plate and charge –Q on the bottom plate.\nWhich of the following is true of the potential\ndifference across the plates of the three\ncapacitors?",
+    "text": "Questions 10-11\nThe plate areas and separations for three capacitors\nare shown in the diagram above. The space between\nthe plates in each capacitor is filled with air.\n\nSuppose all three capacitors have charge +Q on\nthe top plate and charge –Q on the bottom plate.\nWhich of the following is true of the potential\ndifference across the plates of the three\ncapacitors?",
     "options": {
       "A": "It is greatest for I.",
       "B": "It is greatest for II.",
@@ -684,7 +612,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "Suppose all three capacitors are connected in\nparallel with a 9 V battery. Which of the\nfollowing is true of the electric field between\nthe plates?",
+    "text": "Questions 10-11\nThe plate areas and separations for three capacitors\nare shown in the diagram above. The space between\nthe plates in each capacitor is filled with air.\n\nSuppose all three capacitors are connected in\nparallel with a 9 V battery. Which of the\nfollowing is true of the electric field between\nthe plates?",
     "options": {
       "A": "It is greatest for I.",
       "B": "It is greatest for II.",
@@ -1063,13 +991,13 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "Two particles each with a charge -Q are fixed a\ndistance L apart as shown above. Each particle\nexperiences a net electric force F. A particle with\na charge +q is now fixed midway between the\noriginal two particles. As a result, the net electric\nforce experienced by each negatively charged\nparticle is reduced to $F/2$. The value of q is",
+    "text": "Two particles each with a charge -Q are fixed a\ndistance L apart as shown above. Each particle\nexperiences a net electric force F. A particle with\na charge +q is now fixed midway between the\noriginal two particles. As a result, the net electric\nforce experienced by each negatively charged\nparticle is reduced to\n2 F\n. The value of q is",
     "options": {
-      "A": "$Q$",
-      "B": "$\\frac{Q}{2}$",
-      "C": "$\\frac{Q}{4}$",
-      "D": "$\\frac{Q}{8}$",
-      "E": "$\\frac{Q}{16}$"
+      "A": "Q",
+      "B": "2\nQ",
+      "C": "4\nQ",
+      "D": "8\nQ",
+      "E": "16\nQ"
     },
     "answer": "D",
     "primary_unit": "U8",
@@ -1108,35 +1036,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "option_table_data": {
-      "headers": [
-        "Option",
-        "Value of $q$"
-      ],
-      "rows": {
-        "A": [
-          "A",
-          "$Q$"
-        ],
-        "B": [
-          "B",
-          "$\\frac{Q}{2}$"
-        ],
-        "C": [
-          "C",
-          "$\\frac{Q}{4}$"
-        ],
-        "D": [
-          "D",
-          "$\\frac{Q}{8}$"
-        ],
-        "E": [
-          "E",
-          "$\\frac{Q}{16}$"
-        ]
-      }
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2012_Q19",
@@ -1361,7 +1261,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "For which two points can a negatively charged\nparticle be moved from rest at one point to rest\nat the other with no work being done by the\nelectric field?",
+    "text": "Questions 23-25\nThe diagram above shows a cross section of\nequipotential lines produced by a charge distribution.\nPoints A, B, C, and D lie in the plane of the page.\n\nFor which two points can a negatively charged\nparticle be moved from rest at one point to rest\nat the other with no work being done by the\nelectric field?",
     "options": {
       "A": "A and B",
       "B": "A and C",
@@ -1424,7 +1324,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "A positively charged particle is moved by an\nexternal force from rest at one point to rest at\nanother. For which of the following motions\nwould net positive work be required by the\nexternal force?",
+    "text": "Questions 23-25\nThe diagram above shows a cross section of\nequipotential lines produced by a charge distribution.\nPoints A, B, C, and D lie in the plane of the page.\n\nA positively charged particle is moved by an\nexternal force from rest at one point to rest at\nanother. For which of the following motions\nwould net positive work be required by the\nexternal force?",
     "options": {
       "A": "From A to D",
       "B": "From B to A",
@@ -1487,7 +1387,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "The electric potential shown in the diagram could\nbe created by which of the following?",
+    "text": "Questions 23-25\nThe diagram above shows a cross section of\nequipotential lines produced by a charge distribution.\nPoints A, B, C, and D lie in the plane of the page.\n\nThe electric potential shown in the diagram could\nbe created by which of the following?",
     "options": {
       "A": "A ring of positive charge",
       "B": "A large sheet of positive charge",
@@ -1648,9 +1548,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_context": "图形信息：载流线圈最初的平面垂直于均匀磁场 $B$，线圈磁矩方向与磁场方向平行。线圈绕自身一条直径匀速转动，要求判断从初始位置转过多大角度时磁场对线圈的力矩最大。",
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2012_Q28",
@@ -1713,7 +1611,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "If the current in the circuit is $I$ at time $t$, what energy is stored in the circuit in addition to that stored in the battery?",
+    "text": "Questions 29-31\nA circuit consists of a resistor $R$, an inductor $L$, and an open switch $S$ connected in series with a battery. The switch is then closed at time $t=0$.\n\nIf the current in the circuit is $I$ at time $t$, what energy is stored in the circuit in addition to that stored in the battery?",
     "options": {
       "A": "$LI$",
       "B": "$I^2R$",
@@ -1776,7 +1674,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "Which of the following quantities could be\nrepresented as a function of time by the graph\nshown above?\nI. The potential difference across the resistor\nII. The potential difference across the inductor\nIII. The current in the circuit",
+    "text": "Questions 29-31\nA circuit consists of a resistor R, an inductor L,\nand an open switch S connected in series with a\nbattery. The switch is then closed at time t = 0.\n\nWhich of the following quantities could be\nrepresented as a function of time by the graph\nshown above?\nI. The potential difference across the resistor\nII. The potential difference across the inductor\nIII. The current in the circuit",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -1839,7 +1737,7 @@
     "question_type": "MCQ",
     "year": 2012,
     "source": "AP Physics C: Electricity and Magnetism 2012 Practice Exam",
-    "text": "The change in current when the switch is closed is\ndetermined by the inductive time constant t . If\nthe inductance is doubled and the resistance is\nhalved, the new inductive time constant t¢\nequals",
+    "text": "Questions 29-31\nA circuit consists of a resistor R, an inductor L,\nand an open switch S connected in series with a\nbattery. The switch is then closed at time t = 0.\n\nThe change in current when the switch is closed is\ndetermined by the inductive time constant t . If\nthe inductance is doubled and the resistance is\nhalved, the new inductive time constant t¢\nequals",
     "options": {
       "A": "1\n4 t",
       "B": "1\n2 t",
@@ -2377,9 +2275,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_context": "图形信息：带正电粒子的速度 $\\vec v$ 沿 $+x$ 方向，匀强磁场 $\\vec B$ 沿 $+y$ 方向。用 $\\vec F=q\\vec v\\times\\vec B$ 判断受力方向。",
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2013_Q06",
@@ -2442,7 +2338,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "A circular loop of wire of radius $R$ is perpendicular to a magnetic field whose magnitude as a function of time $t$ is given by the equation $B(t)=bt^2+ct$, where $b$ and $c$ are positive, nonzero constants. What is the magnitude of the emf induced in the loop as a function of time $t$?",
+    "text": "A circular loop of wire of radius R is\nperpendicular to a magnetic field whose\nmagnitude as a function of time t is given by the\nequation\n, where b and c are\npositive, nonzero constants. What is the\nmagnitude of the emf induced in the loop\nas a function of time t ?",
     "options": {
       "A": "$2\\pi R(bt^2+ct)$",
       "B": "$2\\pi R(2bt+c)$",
@@ -2494,7 +2390,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "At which of the three labeled points is the electric\nfield equal to zero?",
+    "text": "Questions 8-10\nA charge\nis inside a hollow region in an\nelectrically neutral piece of solid metal, as shown\nabove. The dashed line represents a Gaussian surface\nwithin the metal that completely encloses the hollow\nregion.\n\nAt which of the three labeled points is the electric\nfield equal to zero?",
     "options": {
       "A": "X only",
       "B": "Y only",
@@ -2557,7 +2453,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "A charge $+Q$ is inside a hollow region in an electrically neutral piece of solid metal, as shown above. The dashed line represents a Gaussian surface within the metal that completely encloses the hollow region.\n\nWhat is the net electric flux through the Gaussian surface?",
+    "text": "Questions 8-10\nA charge $+Q$ is inside a hollow region in an electrically neutral piece of solid metal, as shown above. The dashed line represents a Gaussian surface within the metal that completely encloses the hollow region.\n\nWhat is the net electric flux through the Gaussian surface?",
     "options": {
       "A": "$-Q/\\epsilon_0$",
       "B": "Zero",
@@ -2620,7 +2516,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "A charge $+Q$ is inside a hollow region in an electrically neutral piece of solid metal, as shown above. The dashed line represents a Gaussian surface within the metal that completely encloses the hollow region.\n\nWhich of the following correctly relates the electric potentials $V$ at points X, Y, and Z?",
+    "text": "Questions 8-10\nA charge $+Q$ is inside a hollow region in an electrically neutral piece of solid metal, as shown above. The dashed line represents a Gaussian surface within the metal that completely encloses the hollow region.\n\nWhich of the following correctly relates the electric potentials $V$ at points X, Y, and Z?",
     "options": {
       "A": "$V_X<V_Y<V_Z$",
       "B": "$V_Y<V_X<V_Z$",
@@ -2788,70 +2684,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2013/2013_mcq12_img01.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2013/2013_mcq12_img02.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2013/2013_mcq12_img03.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2013/2013_mcq12_img04.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2013/2013_mcq12_img05.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2013_Q13",
@@ -2957,9 +2790,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_context": "图形信息：三个相同导体球 I、II、III 装在绝缘手柄上。I 与 II 相距固定距离，初始电荷均为 $+Q$；III 初始不带电，先接触 I，再接触 II，然后移走。",
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2013_Q15",
@@ -2970,11 +2801,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
     "text": "Which of the following describes the electric field\nand electric potential inside a charged solid\nspherical conductor that is in electrostatic\nequilibrium?\nField Potential",
     "options": {
-      "A": "Field: zero; potential: zero",
-      "B": "Field: nonzero and uniform; potential: zero",
-      "C": "Field: nonzero and uniform; potential: nonzero and uniform",
-      "D": "Field: zero; potential: nonzero and uniform",
-      "E": "Field: zero; potential: nonzero and nonuniform"
+      "A": "Zero\nZero",
+      "B": "Nonzero and uniform\nZero",
+      "C": "Nonzero and uniform\nNonzero and uniform",
+      "D": "Zero\nNonzero and uniform",
+      "E": "Zero\n\nNonzero and\nnonuniform"
     },
     "answer": "D",
     "primary_unit": "U10",
@@ -3011,41 +2842,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "option_table_data": {
-      "headers": [
-        "Option",
-        "Electric field",
-        "Electric potential"
-      ],
-      "rows": {
-        "A": [
-          "A",
-          "Zero",
-          "Zero"
-        ],
-        "B": [
-          "B",
-          "Nonzero and uniform",
-          "Zero"
-        ],
-        "C": [
-          "C",
-          "Nonzero and uniform",
-          "Nonzero and uniform"
-        ],
-        "D": [
-          "D",
-          "Zero",
-          "Nonzero and uniform"
-        ],
-        "E": [
-          "E",
-          "Zero",
-          "Nonzero and nonuniform"
-        ]
-      }
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2013_Q16",
@@ -3216,7 +3013,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "resistors are connected in a circuit, as shown above.\nNeglect internal resistance in the batteries and\nconsider all meters to be ideal.\n\nA voltmeter would read 6 V if connected correctly\nbetween which two points in the circuit?",
+    "text": "Questions 19-21\nTwo 9 V batteries and three identical\n\nresistors are connected in a circuit, as shown above.\nNeglect internal resistance in the batteries and\nconsider all meters to be ideal.\n\nA voltmeter would read 6 V if connected correctly\nbetween which two points in the circuit?",
     "options": {
       "A": "a and b",
       "B": "a and f",
@@ -3279,7 +3076,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "resistors are connected in a circuit, as shown above.\nNeglect internal resistance in the batteries and\nconsider all meters to be ideal.\n\nAmmeters are inserted at points I, II, III,\nand IV. At which of the other points would\nthe ammeter register the same current as the\nammeter at point IV ?",
+    "text": "Questions 19-21\nTwo 9 V batteries and three identical\n\nresistors are connected in a circuit, as shown above.\nNeglect internal resistance in the batteries and\nconsider all meters to be ideal.\n\nAmmeters are inserted at points I, II, III,\nand IV. At which of the other points would\nthe ammeter register the same current as the\nammeter at point IV ?",
     "options": {
       "A": "I only",
       "B": "III only",
@@ -3342,7 +3139,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Physics C: Electricity and Magnetism 2013 Practice Exam",
-    "text": "resistors are connected in a circuit, as shown above.\nNeglect internal resistance in the batteries and\nconsider all meters to be ideal.\n\nWhat is the total power dissipated in the three\nresistors?",
+    "text": "Questions 19-21\nTwo 9 V batteries and three identical\n\nresistors are connected in a circuit, as shown above.\nNeglect internal resistance in the batteries and\nconsider all meters to be ideal.\n\nWhat is the total power dissipated in the three\nresistors?",
     "options": {
       "A": "0.023 W",
       "B": "0.045 W",
@@ -3502,9 +3299,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_context": "图形信息：一条直线上有两个点电荷，相距 $0.5\\,\\mathrm{m}$；左侧为负电荷，右侧为正电荷。题目询问这条线上有限位置处电势为零的点数。",
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2013_Q24",
@@ -3942,79 +3737,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img01.png",
-          "asset_type": "prompt_context_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img02.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img03.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img04.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img05.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2013/2013_mcq31_img06.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2013.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2013_Q32",
@@ -4175,9 +3898,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_context": "图形信息：四个相同点电荷 $q$ 固定在边长为 $a$ 的正方形四个顶点，要求求正方形中心处的总电势。",
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2013_Q35",
@@ -4290,7 +4011,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "What is the electric potential energy of an object with charge $+1.0\\,\\mu\\mathrm{C}$ located at $x=0.005\\,\\mathrm{m}$?",
+    "text": "Questions 2-4 refer to the parallel-plate setup and potential graph shown above. A uniform electric field exists between two parallel plates that are perpendicular to the x-axis and separated by $0.010\\,\\mathrm{m}$. The graph shows electric potential $V$ as a function of position $x$ on the x-axis.\n\nWhat is the electric potential energy of an object with charge $+1.0\\,\\mu\\mathrm{C}$ located at $x=0.005\\,\\mathrm{m}$?",
     "options": {
       "A": "$-20\\,\\mu\\mathrm{J}$",
       "B": "$-10\\,\\mu\\mathrm{J}$",
@@ -4352,7 +4073,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "What is the magnitude of the electric field between the plates at $x=0.005\\,\\mathrm{m}$?",
+    "text": "Questions 2-4 refer to the parallel-plate setup and potential graph shown above. A uniform electric field exists between two parallel plates that are perpendicular to the x-axis and separated by $0.010\\,\\mathrm{m}$. The graph shows electric potential $V$ as a function of position $x$ on the x-axis.\n\nWhat is the magnitude of the electric field between the plates at $x=0.005\\,\\mathrm{m}$?",
     "options": {
       "A": "$0$",
       "B": "$0.1\\,\\mathrm{V/m}$",
@@ -4414,7 +4135,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "What is the direction of the electric field between the plates at points on the $x$-axis?",
+    "text": "Questions 2-4 refer to the parallel-plate setup and potential graph shown above. A uniform electric field exists between two parallel plates that are perpendicular to the x-axis and separated by $0.010\\,\\mathrm{m}$. The graph shows electric potential $V$ as a function of position $x$ on the x-axis.\n\nWhat is the direction of the electric field between the plates at points on the $x$-axis?",
     "options": {
       "A": "To the left at all points",
       "B": "To the right at all points",
@@ -4530,7 +4251,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "The velocity of the particle is in which direction?",
+    "text": "Questions 6-7\nA region contains a uniform electric field\nof strength E in the Positive x-direction and a uniform\nmagnetic field of strength B in the Positive y-direction,\nrelative to the axes shown above. A positively\ncharged particle passes through these two fields\nin a straight line at a constant speed v .\n\nThe velocity of the particle is in which direction?",
     "options": {
       "A": "Positive y",
       "B": "Positive x",
@@ -4592,7 +4313,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "The magnetic field strength B is equal to",
+    "text": "Questions 6-7\nA region contains a uniform electric field\nof strength E in the Positive x-direction and a uniform\nmagnetic field of strength B in the Positive y-direction,\nrelative to the axes shown above. A positively\ncharged particle passes through these two fields\nin a straight line at a constant speed v .\n\nThe magnetic field strength B is equal to",
     "options": {
       "A": "$E$",
       "B": "$Ev$",
@@ -4708,7 +4429,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "What is the magnitude of the induced emf in the wire loop at $t=4\\,\\mathrm{ms}$?",
+    "text": "Questions 9-10 refer to the graph of magnetic flux through a wire loop as a function of time shown above.\n\nWhat is the magnitude of the induced emf in the wire loop at $t=4\\,\\mathrm{ms}$?",
     "options": {
       "A": "$0\\,\\mathrm{V}$",
       "B": "$0.5\\,\\mathrm{V}$",
@@ -4769,7 +4490,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "What is the total width of the magnetic field through which the loop moves?",
+    "text": "Questions 9-10 refer to the graph of magnetic flux through a wire loop as a function of time shown above.\n\nWhat is the total width of the magnetic field through which the loop moves?",
     "options": {
       "A": "$0.1\\,\\mathrm{m}$",
       "B": "$0.2\\,\\mathrm{m}$",
@@ -5207,79 +4928,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img01.png",
-          "asset_type": "prompt_context_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img02.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img03.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img04.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img05.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2014/2014_mcq17_img06.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2014.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2014_Q18",
@@ -5455,7 +5104,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "To use this meter as an ammeter with a range of $0$ to $1\\,\\mathrm{A}$, one should connect an additional resistance of approximately",
+    "text": "Questions 21-22 refer to a meter that registers $0.20\\,\\mathrm{mA}$ at full scale and has an internal resistance of $500\\,\\Omega$.\n\nTo use this meter as an ammeter with a range of $0$ to $1\\,\\mathrm{A}$, one should connect an additional resistance of approximately",
     "options": {
       "A": "$0.10\\,\\Omega$ in parallel with the meter",
       "B": "$0.10\\,\\Omega$ in series with the meter",
@@ -5517,7 +5166,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "To use this meter as a voltmeter with a range of $0$ to $1\\,\\mathrm{V}$, one should connect an additional resistance of approximately",
+    "text": "Questions 21-22 refer to a meter that registers $0.20\\,\\mathrm{mA}$ at full scale and has an internal resistance of $500\\,\\Omega$.\n\nTo use this meter as a voltmeter with a range of $0$ to $1\\,\\mathrm{V}$, one should connect an additional resistance of approximately",
     "options": {
       "A": "$0.10\\,\\Omega$ in parallel with the meter",
       "B": "$0.10\\,\\Omega$ in series with the meter",
@@ -5631,7 +5280,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "What is the magnitude of the net magnetic field at point P, located $0.20\\,\\mathrm{m}$ to the right of wire II?",
+    "text": "Questions 24-25 refer to two parallel wires that lie in the plane of the page, as shown above. The wires are $0.20\\,\\mathrm{m}$ apart. Wire I carries a current of $15\\,\\mathrm{A}$ toward the top of the page, and wire II carries a current of $5\\,\\mathrm{A}$ toward the bottom of the page.\n\nWhat is the magnitude of the net magnetic field at point P, located $0.20\\,\\mathrm{m}$ to the right of wire II?",
     "options": {
       "A": "$0.5\\,\\mu\\mathrm{T}$",
       "B": "$1.0\\,\\mu\\mathrm{T}$",
@@ -5693,7 +5342,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "What is the magnitude of the force per meter that wire I exerts on wire II?",
+    "text": "Questions 24-25 refer to two parallel wires that lie in the plane of the page, as shown above. The wires are $0.20\\,\\mathrm{m}$ apart. Wire I carries a current of $15\\,\\mathrm{A}$ toward the top of the page, and wire II carries a current of $5\\,\\mathrm{A}$ toward the bottom of the page.\n\nWhat is the magnitude of the force per meter that wire I exerts on wire II?",
     "options": {
       "A": "$25\\,\\mu\\mathrm{N/m}$",
       "B": "$50\\,\\mu\\mathrm{N/m}$",
@@ -5755,7 +5404,7 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "What is the magnitude of the average emf induced during the $0.60\\,\\mathrm{s}$ time interval?",
+    "text": "Questions 26-27 refer to a circular conducting ring of area $0.20\\,\\mathrm{m^2}$ lying in the plane of the page inside a spatially uniform magnetic field perpendicular to the page. The field changes smoothly from $1.5\\,\\mathrm{T}$ directed out of the page to $1.5\\,\\mathrm{T}$ directed into the page at a constant rate during a total time interval of $0.60\\,\\mathrm{s}$.\n\nWhat is the magnitude of the average emf induced during the $0.60\\,\\mathrm{s}$ time interval?",
     "options": {
       "A": "$0\\,\\mathrm{V}$",
       "B": "$0.5\\,\\mathrm{V}$",
@@ -5817,13 +5466,13 @@
     "question_type": "MCQ",
     "year": 2014,
     "source": "AP Physics C: Electricity and Magnetism 2014 Practice Exam",
-    "text": "When viewed as shown in the figure, what is the direction of the induced current during the first and second halves of the $0.60\\,\\mathrm{s}$ time interval?",
+    "text": "Questions 26-27 refer to a circular conducting ring of area $0.20\\,\\mathrm{m^2}$ lying in the plane of the page inside a spatially uniform magnetic field perpendicular to the page. The field changes smoothly from $1.5\\,\\mathrm{T}$ directed out of the page to $1.5\\,\\mathrm{T}$ directed into the page at a constant rate during a total time interval of $0.60\\,\\mathrm{s}$.\n\nWhen viewed as shown in the figure, what is the direction of the induced current during the first and second halves of the $0.60\\,\\mathrm{s}$ time interval?",
     "options": {
-      "A": "First half: clockwise; second half: clockwise",
-      "B": "First half: clockwise; second half: counterclockwise",
-      "C": "First half: counterclockwise; second half: clockwise",
-      "D": "First half: counterclockwise; second half: counterclockwise",
-      "E": "First half: undefined, since the current is zero; second half: undefined, since the current is zero"
+      "A": "Clockwise\nClockwise",
+      "B": "Clockwise\nCounterclockwise",
+      "C": "Counterclockwise\nClockwise",
+      "D": "Counterclockwise\nCounterclockwise",
+      "E": "Undefined, since\nthe current is zero\nUndefined, since\nthe current is zero"
     },
     "answer": "D",
     "primary_unit": "U13",
@@ -5870,41 +5519,7 @@
     ],
     "group_role": "member",
     "group_context": "Questions 26-27 refer to a circular conducting ring of area $0.20\\,\\mathrm{m^2}$ lying in the plane of the page inside a spatially uniform magnetic field perpendicular to the page. The field changes smoothly from $1.5\\,\\mathrm{T}$ directed out of the page to $1.5\\,\\mathrm{T}$ directed into the page at a constant rate during a total time interval of $0.60\\,\\mathrm{s}$.",
-    "requires_group_context": true,
-    "option_table_data": {
-      "headers": [
-        "Option",
-        "First half",
-        "Second half"
-      ],
-      "rows": {
-        "A": [
-          "A",
-          "Clockwise",
-          "Clockwise"
-        ],
-        "B": [
-          "B",
-          "Clockwise",
-          "Counterclockwise"
-        ],
-        "C": [
-          "C",
-          "Counterclockwise",
-          "Clockwise"
-        ],
-        "D": [
-          "D",
-          "Counterclockwise",
-          "Counterclockwise"
-        ],
-        "E": [
-          "E",
-          "Undefined, current is zero",
-          "Undefined, current is zero"
-        ]
-      }
-    }
+    "requires_group_context": true
   },
   {
     "question_id": "2014_Q28",
@@ -6367,7 +5982,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "Three particles each with charge $+Q$ are placed on three corners of a square, as shown above. The sides of the square have length $s$. Point $C$ is at the center of the square.\n\nWhat is the direction of the electric field at point $C$?",
+    "text": "Questions 1-2 refer to the figure above. Three particles each with charge $+Q$ are placed on three corners of a square, as shown above. The sides of the square have length $s$. Point $C$ is at the center of the square.\n\nWhat is the direction of the electric field at point $C$?",
     "options": {
       "A": "Toward the right.",
       "B": "Toward the left.",
@@ -6412,14 +6027,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_id": "2015_Q01_Q02",
-    "group_members": [
-      "2015_Q01",
-      "2015_Q02"
-    ],
-    "group_context": "Questions 1-2 refer to the same figure. 图形信息：三个电荷均为 $+Q$ 的粒子放在正方形的三个顶点，边长为 $s$，点 $C$ 位于正方形中心，角点 $P$ 是其中一个带电粒子所在顶点。",
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2015_Q02",
@@ -6428,7 +6036,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "Three particles each with charge $+Q$ are placed on three corners of a square, as shown above. The sides of the square have length $s$. Point $C$ is at the center of the square.\n\nThe particle at corner $P$ is allowed to move while the other two particles are held in place. What is the work done by the electric field as the particle at corner $P$ moves to infinity?",
+    "text": "Questions 1-2 refer to the figure above. Three particles each with charge $+Q$ are placed on three corners of a square, as shown above. The sides of the square have length $s$. Point $C$ is at the center of the square.\n\nThe particle at corner $P$ is allowed to move while the other two particles are held in place. What is the work done by the electric field as the particle at corner $P$ moves to infinity?",
     "options": {
       "A": "$\\frac{2kQ^2}{s}$",
       "B": "$\\frac{2kQ}{s}$",
@@ -6473,14 +6081,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_id": "2015_Q01_Q02",
-    "group_members": [
-      "2015_Q01",
-      "2015_Q02"
-    ],
-    "group_context": "Questions 1-2 refer to the same figure. 图形信息：三个电荷均为 $+Q$ 的粒子放在正方形的三个顶点，边长为 $s$，点 $C$ 位于正方形中心，角点 $P$ 是其中一个带电粒子所在顶点。",
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2015_Q03",
@@ -6489,7 +6090,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "What is the equivalent resistance of the network?",
+    "text": "Questions 3-4\nFour resistors, all with the same resistance R, are\nconnected as shown above.\n\nWhat is the equivalent resistance of the network?",
     "options": {
       "A": "15 A",
       "B": "5 A",
@@ -6551,7 +6152,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "If the power supply produces $10\\,\\mathrm{V}$ and the resistance $R$ is $5\\,\\Omega$, what is the current in resistor $R_4$?",
+    "text": "Questions 3-4\nFour resistors, all with the same resistance $R$, are connected as shown above.\n\nIf the power supply produces $10\\,\\mathrm{V}$ and the resistance $R$ is $5\\,\\Omega$, what is the current in resistor $R_4$?",
     "options": {
       "A": "$15\\ \\mathrm{A}$",
       "B": "$5\\ \\mathrm{A}$",
@@ -6663,79 +6264,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img01.png",
-          "asset_type": "prompt_context_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img02.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img03.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img04.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img05.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq5_img06.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2015_Q06",
@@ -6793,70 +6322,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq6_img01.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq6_img02.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq6_img03.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq6_img04.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq6_img05.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2015_Q07",
@@ -6917,7 +6383,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "Which of the following represents a correct application of Gauss's law for $r>b$?",
+    "text": "Questions 8-9\nAn insulated nonconducting sphere of radius $R$ has a charge $Q$ uniformly distributed throughout its volume. It is surrounded by a concentric spherical conducting shell of inner radius $a$ and outer radius $b$, as shown in the figure above. There is no net charge on the conducting shell. Let $E$ be the electric field magnitude at a distance $r$ from the center of the spheres.\n\nWhich of the following represents a correct application of Gauss's law for $r>b$?",
     "options": {
       "A": "$0=E(4\\pi)r^2$",
       "B": "$\\frac{Q}{\\epsilon_0}=E(4\\pi)r^2$",
@@ -6979,7 +6445,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "Which of the following represents a correct application of Gauss's law for $r<R$?",
+    "text": "Questions 8-9\nAn insulated nonconducting sphere of radius $R$ has a charge $Q$ uniformly distributed throughout its volume. It is surrounded by a concentric spherical conducting shell of inner radius $a$ and outer radius $b$, as shown in the figure above. There is no net charge on the conducting shell. Let $E$ be the electric field magnitude at a distance $r$ from the center of the spheres.\n\nWhich of the following represents a correct application of Gauss's law for $r<R$?",
     "options": {
       "A": "$0=E(4\\pi)r^2$",
       "B": "$\\frac{Q}{\\epsilon_0}=E(4\\pi)r^2$",
@@ -7095,7 +6561,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "What is the energy stored by the inductor?",
+    "text": "Questions 11-13\nIn the circuit above, all of the resistors have the same resistance $R$. Switch $S$ has been in position $a$ for a very long time.\n\nWhat is the energy stored by the inductor?",
     "options": {
       "A": "Zero",
       "B": "$\\frac{\\mathcal{E}^2}{R}$",
@@ -7158,7 +6624,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "The switch is now moved instantaneously to\nposition b. The voltage across the inductor\nimmediately after the move is",
+    "text": "Questions 11-13\nIn the circuit above, all of the resistors have the same\nresistance R. Switch S has been in position a for a\nvery long time.\n\nThe switch is now moved instantaneously to\nposition b. The voltage across the inductor\nimmediately after the move is",
     "options": {
       "A": "zero",
       "B": "greater than zero but less than e",
@@ -7221,7 +6687,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "The time constant when the switch is in position a\nis 0\nt . How does the time constant when the\nswitch is in position b compare to\n0 t ?",
+    "text": "Questions 11-13\nIn the circuit above, all of the resistors have the same\nresistance R. Switch S has been in position a for a\nvery long time.\n\nThe time constant when the switch is in position a\nis 0\nt . How does the time constant when the\nswitch is in position b compare to\n0 t ?",
     "options": {
       "A": "It is zero.",
       "B": "It is less than\n0\nt but greater than zero.",
@@ -7386,79 +6852,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img01.png",
-          "asset_type": "prompt_context_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img02.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img03.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img04.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img05.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq15_img06.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2015_Q16",
@@ -7737,7 +7131,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "At which labeled point is the magnitude of the electric field greatest?",
+    "text": "Questions 21-22\nTwo point charges, $Q_1=+3\\,\\mu\\mathrm{C}$ and $Q_2=-3\\,\\mu\\mathrm{C}$, are situated as shown in the figure above.\n\nAt which labeled point is the magnitude of the electric field greatest?",
     "options": {
       "A": "A",
       "B": "B",
@@ -7799,7 +7193,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "At which labeled point is the electric potential the lowest?",
+    "text": "Questions 21-22\nTwo point charges, $Q_1=+3\\,\\mu\\mathrm{C}$ and $Q_2=-3\\,\\mu\\mathrm{C}$, are situated as shown in the figure above.\n\nAt which labeled point is the electric potential the lowest?",
     "options": {
       "A": "A",
       "B": "B",
@@ -8098,9 +7492,7 @@
     "difficulty": "medium",
     "has_graph": false,
     "requires_graph": false,
-    "image_paths": [
-      "images/ap/physics-c-e-m/2015/2015_mcq26_img01.png"
-    ],
+    "image_paths": [],
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2015.pdf",
       "notes": [
@@ -8120,26 +7512,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_context": "图形信息：电桥电路中，上左支路为 $R_x$，上右支路为 $100\\,\\Omega$，下左支路为 $75\\,\\Omega$，下右支路为 $25\\,\\Omega$；电流表 A 连接上下中点且读数为零。",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_image_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2015/2015_mcq26_img01.png",
-          "asset_type": "prompt_context_image",
-          "binding": "2015_Q27_bridge_circuit_prompt_image_filename_offset_reviewed",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2015.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ]
-    },
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2015_Q28",
@@ -8286,7 +7659,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "At which labeled point is the magnitude of the electric field the greatest?",
+    "text": "Questions 30-31 refer to the figure above. Equipotential lines due to an electric field in a certain region of space are illustrated in the figure above. Points $A$ and $B$ are located on lines $V_2$ and $V_4$, respectively, and points $C$ and $D$ are located within the equipotential region $V_6$.\n\nAt which labeled point is the magnitude of the electric field the greatest?",
     "options": {
       "A": "A",
       "B": "B",
@@ -8348,7 +7721,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "How much work is required by an external force to move a $2.0\\,\\mu\\mathrm{C}$ charge from rest at point $A$ to rest at point $D$ via the path $ABCD$?",
+    "text": "Questions 30-31 refer to the figure above. Equipotential lines due to an electric field in a certain region of space are illustrated in the figure above. Points $A$ and $B$ are located on lines $V_2$ and $V_4$, respectively, and points $C$ and $D$ are located within the equipotential region $V_6$.\n\nHow much work is required by an external force to move a $2.0\\,\\mu\\mathrm{C}$ charge from rest at point $A$ to rest at point $D$ via the path $ABCD$?",
     "options": {
       "A": "$2.0\\,\\mu\\mathrm{J}$",
       "B": "$3.0\\,\\mu\\mathrm{J}$",
@@ -8518,7 +7891,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "If the current in the wire is decreasing, what is the direction of the induced current, if any, in each of the loops?",
+    "text": "Questions 34-35 Two identical rectangular conducting loops and a very long, straight wire lie in the plane of the page, as shown above. The loops are equal distances from the wire, and there is a current to the right in the wire. If the current in the wire is decreasing, what is the direction of the induced current, if any, in each of the loops?",
     "options": {
       "A": "Counterclockwise\nClockwise",
       "B": "Counterclockwise\nCounterclockwise",
@@ -8608,7 +7981,7 @@
     "question_type": "MCQ",
     "year": 2015,
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
-    "text": "If the current in the wire is constant and the wire is moved toward loop X, what is the direction of the induced current, if any, in each of the loops?",
+    "text": "Questions 34-35 Two identical rectangular conducting loops and a very long, straight wire lie in the plane of the page, as shown above. The loops are equal distances from the wire, and there is a current to the right in the wire. If the current in the wire is constant and the wire is moved toward loop X, what is the direction of the induced current, if any, in each of the loops?",
     "options": {
       "A": "Counterclockwise\nClockwise",
       "B": "Counterclockwise\nCounterclockwise",
@@ -8858,7 +8231,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "The plate separation is now increased to a distance 2d. Which of the following correctly describes the\nchange, if any, of the voltage across the capacitor, the electric field between the plates, and the energy\nstored in the capacitor?",
+    "text": "Questions 4-5\nA capacitor is constructed of two large, identical, parallel metal plates separated by a small distance $d$. A battery fully charges the capacitor and is then disconnected.\n\nThe plate separation is now increased to a distance 2d. Which of the following correctly describes the\nchange, if any, of the voltage across the capacitor, the electric field between the plates, and the energy\nstored in the capacitor?",
     "options": {
       "A": "Voltage does not change; electric field does not change; energy does not change.",
       "B": "Voltage does not change; electric field doubles; energy does not change.",
@@ -8952,7 +8325,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "If, instead of separating the plates, the empty space between the plates is filled with a slab of insulating material that has a dielectric constant K = 2, which of the following correctly describes the change, if any, of the voltage across the capacitor, the electric field between the plates, and the energy stored in the capacitor?",
+    "text": "Questions 4-5\nA capacitor is constructed of two large, identical, parallel metal plates separated by a small distance $d$. A battery fully charges the capacitor and is then disconnected.\n\nIf, instead of separating the plates, the empty space between the plates is filled with a slab of insulating material that has a dielectric constant K = 2, which of the following correctly describes the change, if any, of the voltage across the capacitor, the electric field between the plates, and the energy stored in the capacitor?",
     "options": {
       "A": "Voltage: halves; electric field: halves; energy: halves.",
       "B": "Voltage: halves; electric field: halves; energy: does not change.",
@@ -9098,7 +8471,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "Which of the following is the correct expression for the current in the resistor?",
+    "text": "Questions 7-8 refer to the circuit shown above. Switch $S$ in the circuit shown above has been closed for a long time.\n\nWhich of the following is the correct expression for the current in the resistor?",
     "options": {
       "A": "$\\frac{\\mathcal{E}}{R}$",
       "B": "$\\frac{C\\mathcal{E}}{R}$",
@@ -9160,7 +8533,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "Suppose that the switch is opened at time $t=0$. Which of the following combinations of a differential equation and an initial condition can be used to solve for the charge $Q(t)$ on the upper plate of the capacitor as a function of time $t$?",
+    "text": "Questions 7-8 refer to the circuit shown above. Switch $S$ in the circuit shown above has been closed for a long time.\n\nSuppose that the switch is opened at time $t=0$. Which of the following combinations of a differential equation and an initial condition can be used to solve for the charge $Q(t)$ on the upper plate of the capacitor as a function of time $t$?",
     "options": {
       "A": "$\\frac{Q}{C}-R\\frac{dQ}{dt}=0$ | $Q(0)=C\\mathcal{E}$",
       "B": "$\\frac{Q}{C}-R\\frac{dQ}{dt}=\\mathcal{E}$ | $Q(0)=0$",
@@ -9302,7 +8675,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "If the magnitude of the electric field at point $T$ is $E_T$, which of the following best represents the magnitude of the electric field at point $S$?",
+    "text": "Questions 10-11 refer to the figure above. The figure above shows a thin, circular nonconducting sheet of positive charge uniformly distributed over its area. The radius of the sheet is $R$. Point $O$ is at the center of the sheet. Point $S$ is a distance $x$ from the center of the sheet, and point $T$ is a distance $4x$ from the center of the sheet. Assume $R \\gg x$.\n\nIf the magnitude of the electric field at point $T$ is $E_T$, which of the following best represents the magnitude of the electric field at point $S$?",
     "options": {
       "A": "$E_T/16$",
       "B": "$E_T/4$",
@@ -9364,7 +8737,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "A small sphere of mass $m$ and charge $-q$ is released from rest at point $T$. If the electric potentials at points $S$ and $T$ are $V_S$ and $V_T$, respectively, what is the speed of the sphere when it reaches point $S$? Ignore the effects of gravity.",
+    "text": "Questions 10-11\nThe figure above shows a thin, circular nonconducting sheet of positive charge uniformly distributed over its area. The radius of the sheet is $R$. Point $O$ is at the center of the sheet. Point $S$ is a distance $x$ from the center of the sheet, and point $T$ is a distance $4x$ from the center of the sheet. Assume $R \\gg x$.\n\nA small sphere of mass $m$ and charge $-q$ is released from rest at point $T$. If the electric potentials at points $S$ and $T$ are $V_S$ and $V_T$, respectively, what is the speed of the sphere when it reaches point $S$? Ignore the effects of gravity.",
     "options": {
       "A": "$\\frac{2q}{m}(V_S+V_T)$",
       "B": "$\\frac{4q}{m}(V_S+V_T)$",
@@ -9426,7 +8799,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "The chart below shows the plate area and separation for four different air-filled parallel-plate capacitors: K, L, M, and N.\n\nEach capacitor is charged such that the same electric field is created between the plates. Which of the following correctly ranks the charge stored on each capacitor?",
+    "text": "Questions 12-13\nThe chart below shows the plate area and separation for four different air-filled parallel-plate capacitors: K, L, M, and N.\n\nEach capacitor is charged such that the same electric field is created between the plates. Which of the following correctly ranks the charge stored on each capacitor?",
     "options": {
       "A": "$Q_M=Q_N>Q_K=Q_L$",
       "B": "$Q_M>Q_K>Q_N>Q_L$",
@@ -9513,7 +8886,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "The chart below shows the plate area and separation for four different air-filled parallel-plate capacitors: K, L, M, and N.\n\nEach capacitor is charged such that the same potential difference exists across the plates. Which of the following correctly ranks the magnitude of electric field between the plates of each capacitor?",
+    "text": "Questions 12-13\nThe chart below shows the plate area and separation for four different air-filled parallel-plate capacitors: K, L, M, and N.\n\nEach capacitor is charged such that the same potential difference exists across the plates. Which of the following correctly ranks the magnitude of electric field between the plates of each capacitor?",
     "options": {
       "A": "$E_M=E_N>E_K=E_L$",
       "B": "$E_M>E_K>E_N>E_L$",
@@ -10028,79 +9401,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img01.png",
-          "asset_type": "prompt_context_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img02.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img03.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img04.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img05.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq21_img06.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2016_Q22",
@@ -10243,7 +9544,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "Which of the following ranks the absolute values of the potential differences $\\Delta V$ across the resistors from highest to lowest?",
+    "text": "Questions 24-25\nThe circuit represented in the figure above contains four resistors and a battery. The 45 V battery has a 1 ohm internal resistance.\n\nWhich of the following ranks the absolute values of the potential differences $\\Delta V$ across the resistors from highest to lowest?",
     "options": {
       "A": "$\\Delta V_3>\\Delta V_1>\\Delta V_2>\\Delta V_4$",
       "B": "$\\Delta V_4>\\Delta V_2>\\Delta V_1>\\Delta V_3$",
@@ -10305,7 +9606,7 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "How much energy is dissipated by the battery's internal resistance in $60\\,\\mathrm{s}$?",
+    "text": "Questions 24-25\nThe circuit represented in the figure above contains\nfour resistors and a battery. The 45 V battery has a\n1 W internal resistance.\n\nHow much energy is dissipated by the battery’s\ninternal resistance in 60 s?",
     "options": {
       "A": "9 J",
       "B": "180 J",
@@ -10367,13 +9668,13 @@
     "question_type": "MCQ",
     "year": 2016,
     "source": "AP Physics C: Electricity and Magnetism 2016 Practice Exam",
-    "text": "A closed cylindrical shell of volume $\\pi r^2h$ is\nplaced close to an object with a charge of Q, as\nshown in the figure above. There are no other\ncharged objects nearby. The electric flux through\nthe closed cylindrical shell is",
+    "text": "A closed cylindrical shell of volume\n2 r pi\nh is\nplaced close to an object with a charge of Q, as\nshown in the figure above. There are no other\ncharged objects nearby. The electric flux through\nthe closed cylindrical shell is",
     "options": {
-      "A": "$0$",
-      "B": "$\\frac{Q}{\\epsilon_0}$",
-      "C": "$2\\pi rQ$",
-      "D": "$2\\pi rhQ$",
-      "E": "$2\\pi r^2Q+2\\pi rhQ$"
+      "A": "0",
+      "B": "0\nQ epsilon",
+      "C": "2 r Q pi",
+      "D": "2 rhQ\npi",
+      "E": "2\n2 r Q\nrhQ pi +2pi"
     },
     "answer": "A",
     "primary_unit": "U13",
@@ -10412,35 +9713,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "option_table_data": {
-      "headers": [
-        "Option",
-        "Electric flux"
-      ],
-      "rows": {
-        "A": [
-          "A",
-          "$0$"
-        ],
-        "B": [
-          "B",
-          "$\\frac{Q}{\\epsilon_0}$"
-        ],
-        "C": [
-          "C",
-          "$2\\pi rQ$"
-        ],
-        "D": [
-          "D",
-          "$2\\pi rhQ$"
-        ],
-        "E": [
-          "E",
-          "$2\\pi r^2Q+2\\pi rhQ$"
-        ]
-      }
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2016_Q27",
@@ -10711,79 +9984,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img01.png",
-          "asset_type": "prompt_context_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img02.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img03.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img04.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img05.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2016/2016_mcq31_img06.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2016.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2016_Q32",
@@ -11036,7 +10237,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "In the figure above, two small spheres, each with charge $+Q$, are fixed in place at the corners of an equilateral triangle. Point I is at the third corner, and point II is midway between the charges.\n\nA small particle with charge $+q$, where $q \\ll Q$, is moved from point I to point II at constant speed $v$ by an external force. $W_{EXT}$ is the work done by the external force on the moving charge, and $W_{ELEC}$ is the work done by the electrostatic force. Which of the following correctly identifies the signs of these quantities?",
+    "text": "Questions 1-2 refer to the figure above. In the figure above, two small spheres, each with charge $+Q$, are fixed in place at the corners of an equilateral triangle. Point I is at the third corner, and point II is midway between the charges.\n\nA small particle with charge $+q$, where $q \\ll Q$, is moved from point I to point II at constant speed $v$ by an external force. $W_{EXT}$ is the work done by the external force on the moving charge, and $W_{ELEC}$ is the work done by the electrostatic force. Which of the following correctly identifies the signs of these quantities?",
     "options": {
       "A": "$W_{EXT}$ positive; $W_{ELEC}$ positive.",
       "B": "$W_{EXT}$ positive; $W_{ELEC}$ negative.",
@@ -11081,14 +10282,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_id": "2017_Q01_Q02",
-    "group_members": [
-      "2017_Q01",
-      "2017_Q02"
-    ],
-    "group_context": "Questions 1-2 refer to the same figure. 图形信息：两个电荷均为 $+Q$ 的小球固定在等边三角形两个顶点；点 I 位于第三个顶点，点 II 位于两个固定电荷的中点。",
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2017_Q02",
@@ -11142,14 +10336,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_id": "2017_Q01_Q02",
-    "group_members": [
-      "2017_Q01",
-      "2017_Q02"
-    ],
-    "group_context": "Questions 1-2 refer to the same figure. 图形信息：两个电荷均为 $+Q$ 的小球固定在等边三角形两个顶点；点 I 位于第三个顶点，点 II 位于两个固定电荷的中点。",
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2017_Q03",
@@ -11158,7 +10345,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "The magnitude of the electric flux through A is $\\Phi_A$. The magnitude of the electric flux through surface B is $\\Phi_B$. The ratio $\\Phi_A/\\Phi_B$ is",
+    "text": "Questions 3-4\nA small sphere has a charge $+q$. Spherical Gaussian surfaces A and B are concentric with the sphere, as shown above. The radii of surfaces A and B are $r$ and $2r$, respectively.\n\nThe magnitude of the electric flux through A is $\\Phi_A$. The magnitude of the electric flux through surface B is $\\Phi_B$. The ratio $\\Phi_A/\\Phi_B$ is",
     "options": {
       "A": "$4/1$",
       "B": "$2/1$",
@@ -11220,7 +10407,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "The magnitude of the electric field at surface A is $E_A$. The magnitude of the electric field at surface B is $E_B$. The ratio $E_A/E_B$ is",
+    "text": "Questions 3-4\nA small sphere has a charge $+q$. Spherical Gaussian surfaces A and B are concentric with the sphere, as shown above. The radii of surfaces A and B are $r$ and $2r$, respectively.\n\nThe magnitude of the electric field at surface A is $E_A$. The magnitude of the electric field at surface B is $E_B$. The ratio $E_A/E_B$ is",
     "options": {
       "A": "$4/1$",
       "B": "$2/1$",
@@ -11331,70 +10518,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2017/2017_mcq5_img01.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2017/2017_mcq5_img02.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2017/2017_mcq5_img03.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2017/2017_mcq5_img04.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2017/2017_mcq5_img05.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2017.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2017_Q06",
@@ -11705,7 +10829,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "A parallel-plate capacitor connected to a battery is fully charged with switch $S$ closed, as shown in the circuit above. A slab of dielectric constant $k>1$ is slowly inserted between the plates of the capacitor.\n\nIf the switch remains closed when the slab is inserted, what changes, if any, occur?",
+    "text": "Questions 11-12\nA parallel-plate capacitor connected to a battery is fully charged with switch $S$ closed, as shown in the circuit above. A slab of dielectric constant $k>1$ is slowly inserted between the plates of the capacitor.\n\nIf the switch remains closed when the slab is inserted, what changes, if any, occur?",
     "options": {
       "A": "Remains the same | Increases",
       "B": "Remains the same | Decreases",
@@ -11795,7 +10919,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "A parallel-plate capacitor connected to a battery is fully charged with switch $S$ closed, as shown in the circuit above. A slab of dielectric constant $k>1$ is slowly inserted between the plates of the capacitor.\n\nIf, instead, the switch is open with the capacitor still fully charged when the slab is inserted, what changes, if any, occur?",
+    "text": "Questions 11-12\nA parallel-plate capacitor connected to a battery is fully charged with switch $S$ closed, as shown in the circuit above. A slab of dielectric constant $k>1$ is slowly inserted between the plates of the capacitor.\n\nIf, instead, the switch is open with the capacitor still fully charged when the slab is inserted, what changes, if any, occur?",
     "options": {
       "A": "Remains the same | Increases",
       "B": "Remains the same | Decreases",
@@ -12154,7 +11278,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Which of the following is true about the direction\nof the magnetic field produced by the current at\nthe position of the electron?",
+    "text": "Questions 18-19\nAn electron is placed near a wire carrying current I,\nas shown in the figure above, and released from rest.\nBoth the electron and the wire are in the plane of the\npage.\n\nWhich of the following is true about the direction\nof the magnetic field produced by the current at\nthe position of the electron?",
     "options": {
       "A": "It is toward the top of the page.",
       "B": "It is toward the bottom of the page.",
@@ -12216,7 +11340,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Which of the following is true about the direction\nof the initial magnetic force acting on the electron\ndue to the current in the wire?",
+    "text": "Questions 18-19\nAn electron is placed near a wire carrying current I,\nas shown in the figure above, and released from rest.\nBoth the electron and the wire are in the plane of the\npage.\n\nWhich of the following is true about the direction\nof the initial magnetic force acting on the electron\ndue to the current in the wire?",
     "options": {
       "A": "It is toward the top of the page.",
       "B": "It is toward the bottom of the page.",
@@ -12278,7 +11402,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "The ratio $q_C/q_B$ is",
+    "text": "Questions 20-22\nThree small spheres, A, B, and C, have charges with magnitudes $q_A$, $q_B$, and $q_C$, respectively. The three spheres are aligned along a straight line, as shown in the figure above. At the instant shown, the net force on sphere A is zero.\n\nThe ratio $q_C/q_B$ is",
     "options": {
       "A": "$9/4$",
       "B": "$1/1$",
@@ -12341,7 +11465,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Which of the following statements must be true of the signs of the charges?",
+    "text": "Questions 20-22\nThree small spheres, A, B, and C, have charges with magnitudes $q_A$, $q_B$, and $q_C$, respectively. The three spheres are aligned along a straight line, as shown in the figure above. At the instant shown, the net force on sphere A is zero.\nWhich of the following statements must be true of the signs of the charges?",
     "options": {
       "A": "Only charges $q_A$ and $q_B$ have the same sign.",
       "B": "Only charges $q_A$ and $q_C$ have the same sign.",
@@ -12404,7 +11528,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "Which of the following is true about the sign of charge $q_A$?",
+    "text": "Questions 20-22\nThree small spheres, A, B, and C, have charges with magnitudes $q_A$, $q_B$, and $q_C$, respectively. The three spheres are aligned along a straight line, as shown in the figure above. At the instant shown, the net force on sphere A is zero.\nWhich of the following is true about the sign of charge $q_A$?",
     "options": {
       "A": "The sign of charge $q_A$ must be the same as that of $q_B$.",
       "B": "The sign of charge $q_A$ must be the same as that of $q_C$.",
@@ -12521,7 +11645,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "What is the current in the $10\\,\\Omega$ resistor immediately after the switch is closed?",
+    "text": "Questions 24-25\nAn uncharged $3.0\\,\\mu\\mathrm{F}$ capacitor is placed in a circuit with an ideal battery, two resistors, and an open switch S, as shown in the figure above. The switch is then closed.\n\nWhat is the current in the $10\\,\\Omega$ resistor immediately after the switch is closed?",
     "options": {
       "A": "Zero",
       "B": "1.0 A",
@@ -12583,7 +11707,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "What is the current in the $20\\,\\Omega$ resistor a long time after the switch is closed?",
+    "text": "Questions 24-25\nAn uncharged $3.0\\,\\mu\\mathrm{F}$ capacitor is placed in a circuit with an ideal battery, two resistors, and an open switch S, as shown in the figure above. The switch is then closed.\n\nWhat is the current in the $20\\,\\Omega$ resistor a long time after the switch is closed?",
     "options": {
       "A": "Zero",
       "B": "1.0 A",
@@ -12727,7 +11851,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "What is the net charge on the inner surface of the spherical shell?",
+    "text": "Questions 27-28\nA hollow conducting sphere is surrounded by a larger concentric spherical conducting shell, as shown above. The inner sphere has a net charge of $-Q$, and the outer sphere has a net charge of $+3Q$.\n\nWhat is the net charge on the inner surface of the spherical shell?",
     "options": {
       "A": "$-3Q$",
       "B": "$0$",
@@ -12789,7 +11913,7 @@
     "question_type": "MCQ",
     "year": 2017,
     "source": "AP Physics C: Electricity and Magnetism 2017 Practice Exam",
-    "text": "What is the net charge on the outer surface of the spherical shell?",
+    "text": "Questions 27-28\nA hollow conducting sphere is surrounded by a larger concentric spherical conducting shell, as shown above. The inner sphere has a net charge of $-Q$, and the outer sphere has a net charge of $+3Q$.\n\nWhat is the net charge on the outer surface of the spherical shell?",
     "options": {
       "A": "$0$",
       "B": "$+Q$",
@@ -13283,7 +12407,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "If the magnitude of the electric field at point X\nis E, what is the magnitude of the electric field\nat point Y?",
+    "text": "Questions 1-2\nThe figure above shows a thin, square, nonconducting sheet of positive charge uniformly distributed over its area. The length of each side of the sheet is $a$. Point C is at the center of the sheet. Point X is a distance $d$ above the center of the sheet, and point Y is a distance $2d$ above the center of the sheet. Assume $a>>d$. The effect of gravity is negligible.\n\nIf the magnitude of the electric field at point X\nis E, what is the magnitude of the electric field\nat point Y?",
     "options": {
       "A": "4",
       "B": "2",
@@ -13345,7 +12469,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "A positive point charge $+q$ is released from rest at point X. If the magnitude of the electric field at point X is $E$, what is the kinetic energy of the charge at point Y?",
+    "text": "Questions 1-2\nThe figure above shows a thin, square, nonconducting sheet of positive charge uniformly distributed over its area. The length of each side of the sheet is $a$. Point C is at the center of the sheet. Point X is a distance $d$ above the center of the sheet, and point Y is a distance $2d$ above the center of the sheet. Assume $a>>d$. The effect of gravity is negligible.\n\nA positive point charge $+q$ is released from rest at point X. If the magnitude of the electric field at point X is $E$, what is the kinetic energy of the charge at point Y?",
     "options": {
       "A": "$qEd$",
       "B": "$\\sqrt{2}\\,qEd$",
@@ -13563,79 +12687,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img01.png",
-          "asset_type": "prompt_context_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img02.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img03.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img04.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img05.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq5_img06.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2018_Q06",
@@ -13835,7 +12887,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "Conductor Y is brought into contact with conductor X and then separated. If the separation is small so that both conductors are inside the same closed cubical surface, as shown above, what is the total electric flux through the surface?",
+    "text": "Questions 9-11\nThe figure above shows two charged spherical conductors, X and Y, which are equal in size. When each conductor is isolated and surrounded by a closed cubical surface, the total electric flux through the surfaces is $+\\Phi_0$ for conductor X and $-4\\Phi_0$ for conductor Y.\n\nConductor Y is brought into contact with conductor X and then separated. If the separation is small so that both conductors are inside the same closed cubical surface, as shown above, what is the total electric flux through the surface?",
     "options": {
       "A": "$-3\\Phi_0$",
       "B": "$-\\frac{5}{2}\\Phi_0$",
@@ -13899,7 +12951,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "After being brought into contact with conductor X, conductor Y is moved a very large distance away from conductor X. What is the total electric flux through a closed cubical surface surrounding conductor X, as shown above?",
+    "text": "Questions 9-11\nThe figure above shows two charged spherical conductors, X and Y, which are equal in size. When each conductor is isolated and surrounded by a closed cubical surface, the total electric flux through the surfaces is $+\\Phi_0$ for conductor X and $-4\\Phi_0$ for conductor Y.\n\nAfter being brought into contact with conductor X, conductor Y is moved a very large distance away from conductor X. What is the total electric flux through a closed cubical surface surrounding conductor X, as shown above?",
     "options": {
       "A": "$-3\\Phi_0$",
       "B": "$-\\frac{3}{2}\\Phi_0$",
@@ -13963,7 +13015,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "Conductor Y is then moved closer to\nconductor X until it is just outside a closed\ncubical surface containing conductor X, as shown\nin the figure above. How would the total electric\nflux through the cubical surface change as\nconductor Y is moving?",
+    "text": "Questions 9-11\nThe figure above shows two charged spherical conductors, X and Y, which are equal in size. When each conductor is isolated and surrounded by a closed cubical surface, the total electric flux through the surfaces is $+\\Phi_0$ for conductor X and $-4\\Phi_0$ for conductor Y.\n\nConductor Y is then moved closer to\nconductor X until it is just outside a closed\ncubical surface containing conductor X, as shown\nin the figure above. How would the total electric\nflux through the cubical surface change as\nconductor Y is moving?",
     "options": {
       "A": "It would increase.",
       "B": "It would decrease.",
@@ -14483,7 +13535,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "All switches are open, and there is no stored energy in the capacitor or the inductor. Switch $S_3$ is closed. What is the current in the inductor after steady state has been reached?",
+    "text": "Questions 20-21\nA circuit is constructed using a battery of emf $\\mathcal{E}$, a resistor of resistance $R$, a capacitor of capacitance $C$, an inductor of inductance $L$, and three switches, as shown in the figure above. The three switches are labeled $S_1$, $S_2$, and $S_3$, and they can be operated independently.\n\nAll switches are open, and there is no stored energy in the capacitor or the inductor. Switch $S_3$ is closed. What is the current in the inductor after steady state has been reached?",
     "options": {
       "A": "$\\frac{\\epsilon}{LR}$",
       "B": "$\\frac{\\epsilon R}{L}$",
@@ -14545,7 +13597,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "All switches are open, and there is no stored energy in the capacitor or the inductor. Switch $S_1$ is closed. After the capacitor is fully charged, switch $S_1$ is opened and switch $S_2$ is closed. Which of the following expressions represents the maximum current in the $LC$ circuit?",
+    "text": "Questions 20-21\nA circuit is constructed using a battery of emf $\\mathcal{E}$, a resistor of resistance $R$, a capacitor of capacitance $C$, an inductor of inductance $L$, and three switches, as shown in the figure above. The three switches are labeled $S_1$, $S_2$, and $S_3$, and they can be operated independently.\n\nAll switches are open, and there is no stored energy in the capacitor or the inductor. Switch $S_1$ is closed. After the capacitor is fully charged, switch $S_1$ is opened and switch $S_2$ is closed. Which of the following expressions represents the maximum current in the $LC$ circuit?",
     "options": {
       "A": "$\\mathcal{E}/R$",
       "B": "$\\mathcal{E}\\sqrt{C/L}$",
@@ -14608,7 +13660,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "What is the value of $I$?",
+    "text": "Questions 22-23 refer to the circuit shown above. After the switch is closed in the circuit above, the current in the circuit is given by $i=I(1-e^{-t/\\tau})$, where $I$ and $\\tau$ are constants.\n\nWhat is the value of $I$?",
     "options": {
       "A": "0",
       "B": "$0.001\\,\\mathrm{A}$",
@@ -14654,13 +13706,7 @@
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
     "rubric_image_paths": [],
-    "group_context": "Questions 22-23 refer to the circuit shown above. After the switch is closed in the circuit above, the current in the circuit is given by $i=I(1-e^{-t/\\tau})$, where $I$ and $\\tau$ are constants.",
-    "group_id": "2018_Q22_Q23",
-    "group_members": [
-      "2018_Q22",
-      "2018_Q23"
-    ],
-    "requires_group_context": true
+    "group_context": "Questions 22-23 refer to the circuit shown above. After the switch is closed in the circuit above, the current in the circuit is given by $i=I(1-e^{-t/\\tau})$, where $I$ and $\\tau$ are constants."
   },
   {
     "question_id": "2018_Q23",
@@ -14669,7 +13715,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Physics C: Electricity and Magnetism 2018 Practice Exam",
-    "text": "What is the value of $\\tau$?",
+    "text": "Questions 22-23 refer to the circuit shown above. After the switch is closed in the circuit above, the current in the circuit is given by $i=I(1-e^{-t/\\tau})$, where $I$ and $\\tau$ are constants.\n\nWhat is the value of $\\tau$?",
     "options": {
       "A": "$1.0\\times10^{-5}\\,\\mathrm{s}$",
       "B": "$2.5\\times10^{-4}\\,\\mathrm{s}$",
@@ -14715,13 +13761,7 @@
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
     "rubric_image_paths": [],
-    "group_context": "Questions 22-23 refer to the circuit shown above. After the switch is closed in the circuit above, the current in the circuit is given by $i=I(1-e^{-t/\\tau})$, where $I$ and $\\tau$ are constants.",
-    "group_id": "2018_Q22_Q23",
-    "group_members": [
-      "2018_Q22",
-      "2018_Q23"
-    ],
-    "requires_group_context": true
+    "group_context": "Questions 22-23 refer to the circuit shown above. After the switch is closed in the circuit above, the current in the circuit is given by $i=I(1-e^{-t/\\tau})$, where $I$ and $\\tau$ are constants."
   },
   {
     "question_id": "2018_Q24",
@@ -14839,79 +13879,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img01.png",
-          "asset_type": "prompt_context_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img02.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img03.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img04.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img05.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2018/2018_mcq25_img06.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2018.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2018_Q26",
@@ -15593,7 +14561,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Points A and B shown above are in the plane of the page and $5\\,\\mathrm{m}$ apart. The points are located in a uniform electric field of magnitude 1000 volts per meter directed toward the bottom of the page. When a proton (of charge $+e$) moves from point A to point B, how much work is done on the proton by the electric field?",
+    "text": "Points A and B shown above are in the plane of the page and 5 meters apart. The points are located in a uniform electric field of magnitude 1000 volts per meter directed toward the bottom of the page. When a proton (of charge $+e$) moves from point A to point B, how much work is done on the proton by the electric field?",
     "options": {
       "A": "$-5000\\,\\mathrm{eV}$",
       "B": "$-3000\\,\\mathrm{eV}$",
@@ -15943,7 +14911,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Assuming that the electric potential is zero an infinite distance from the conductor, which of the following statements is true about the magnitude of the electric potential at points X and Y?",
+    "text": "Questions 9-10\nThe figure above shows a cross section of a solid, isolated, metallic conductor in electrostatic equilibrium with a net charge $+Q$. The two ends of the conductor are spherical surfaces of radii $r_X$ and $r_Y$, where $r_X<r_Y$. Points X and Y are on the conductor at each end.\n\nAssuming that the electric potential is zero an infinite distance from the conductor, which of the following statements is true about the magnitude of the electric potential at points X and Y?",
     "options": {
       "A": "It is greater at point X than at point Y.",
       "B": "It is greater at point Y than at point X.",
@@ -16005,7 +14973,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Which of the following is true about the magnitude of the electric field just outside the surface of the conductor at points X and Y?",
+    "text": "Questions 9-10\nThe figure above shows a cross section of a solid, isolated, metallic conductor in electrostatic equilibrium with a net charge $+Q$. The two ends of the conductor are spherical surfaces of radii $r_X$ and $r_Y$, where $r_X<r_Y$. Points X and Y are on the conductor at each end.\n\nWhich of the following is true about the magnitude of the electric field just outside the surface of the conductor at points X and Y?",
     "options": {
       "A": "It is greater at point X than at point Y.",
       "B": "It is greater at point Y than at point X.",
@@ -16216,9 +15184,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_context": "图形信息：两个同心导体球壳。内壳净电荷 $q=+10\\,\\mathrm{nC}$，外壳净电荷 $Q=-20\\,\\mathrm{nC}$。四个标记点分别位于内壳内部、两壳之间、外壳材料处以及外壳外部，用高斯定律比较 $E_R,E_S,E_T,E_U$ 的大小。",
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2019_Q14",
@@ -16324,9 +15290,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "group_context": "图形信息：四个平行板电容器 A、B、C、D 极板面积相同。A 与 B 之间为空气，C 与 D 中完全填充介电常数 $\\kappa=2$ 的介质；图中给出不同极板间距，用 $C=\\kappa\\epsilon_0A/d$ 排序。",
-    "requires_group_context": true
+    "rubric_image_paths": []
   },
   {
     "question_id": "2019_Q16",
@@ -16335,7 +15299,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "What is the resistance $R$?",
+    "text": "Questions 16-17\nTwo resistors of resistances $R$ and $12\\ \\Omega$ are connected to a battery of emf $18\\ \\mathrm{V}$, as shown in the figure above. The battery has an internal resistance of $r$. The current in the battery is $1.5\\ \\mathrm{A}$, and the current in the $12\\ \\Omega$ resistor is $1.0\\ \\mathrm{A}$.\n\nWhat is the resistance $R$?",
     "options": {
       "A": "$7.2\\ \\Omega$",
       "B": "$12\\ \\Omega$",
@@ -16397,7 +15361,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "What is the internal resistance of the battery?",
+    "text": "Questions 16-17\nTwo resistors of resistances $R$ and $12\\ \\Omega$ are connected to a battery of emf $18\\ \\mathrm{V}$, as shown in the figure above. The battery has an internal resistance of $r$. The current in the battery is $1.5\\ \\mathrm{A}$, and the current in the $12\\ \\Omega$ resistor is $1.0\\ \\mathrm{A}$.\n\nWhat is the internal resistance of the battery?",
     "options": {
       "A": "$4.0\\ \\Omega$",
       "B": "$6.0\\ \\Omega$",
@@ -16459,7 +15423,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "The capacitor in the circuit represented above is\nuncharged when the switch is at position B. The\nswitch is then moved to position A. What is the\nenergy stored by the capacitor when the current in\nthe circuit is $2.0\\,\\mathrm{mA}$ ?",
+    "text": "The capacitor in the circuit represented above is uncharged when the switch is at position B. The switch is then moved to position A. What is the energy stored by the capacitor when the current in the circuit is $2.0\\,\\mathrm{mA}$?",
     "options": {
       "A": "$0.8\\,\\mathrm{mJ}$",
       "B": "$1.2\\,\\mathrm{mJ}$",
@@ -16513,7 +15477,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "If $Q_a$ is the new charge on capacitor $C_a$, the charge $Q_b$ on capacitor $C_b$ is given by",
+    "text": "Questions 19-20\nA capacitor of capacitance $C_a$ is first charged to a voltage $V_0$, as shown above on the left. Without losing any charge, the capacitor is now disconnected from the voltage source and connected to a second initially uncharged capacitor of capacitance $C_b$ that is three times $C_a$, and the circuit is allowed to reach equilibrium, as shown above on the right.\n\nIf $Q_a$ is the new charge on capacitor $C_a$, the charge $Q_b$ on capacitor $C_b$ is given by",
     "options": {
       "A": "0",
       "B": "$Q_a/3$",
@@ -16575,7 +15539,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "The new voltage across capacitor $C_a$ is $V_a$. How does this new voltage compare with the original voltage of $V_0$?",
+    "text": "Questions 19-20\nA capacitor of capacitance $C_a$ is first charged to a voltage $V_0$, as shown above on the left. Without losing any charge, the capacitor is now disconnected from the voltage source and connected to a second initially uncharged capacitor of capacitance $C_b$ that is three times $C_a$, and the circuit is allowed to reach equilibrium, as shown above on the right.\n\nThe new voltage across capacitor $C_a$ is $V_a$. How does this new voltage compare with the original voltage of $V_0$?",
     "options": {
       "A": "$V_a>V_0$",
       "B": "$V_a<V_0$",
@@ -16692,7 +15656,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "What is the potential difference across capacitor $C_1$?",
+    "text": "Questions 22-23\nThe circuit shown above has three capacitors and a 12 V battery. The capacitors are charged to steady state conditions.\n\nWhat is the potential difference across capacitor $C_1$?",
     "options": {
       "A": "$3.0\\ \\mathrm{V}$",
       "B": "$4.0\\ \\mathrm{V}$",
@@ -16754,7 +15718,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "One of the capacitors is removed from the circuit and isolated. While it still holds all of its charge, a piece of ceramic with dielectric constant of 2 is inserted and completely fills the space between the plates. $U_i$ is the energy stored in the capacitor before the dielectric was inserted, and $U_f$ is the energy stored in the capacitor after the dielectric was inserted. What is the ratio $U_f/U_i$?",
+    "text": "Questions 22-23\nThe circuit shown above has three capacitors and a 12 V battery. The capacitors are charged to steady state conditions.\n\nOne of the capacitors is removed from the circuit and isolated. While it still holds all of its charge, a piece of ceramic with dielectric constant of 2 is inserted and completely fills the space between the plates. $U_i$ is the energy stored in the capacitor before the dielectric was inserted, and $U_f$ is the energy stored in the capacitor after the dielectric was inserted. What is the ratio $U_f/U_i$?",
     "options": {
       "A": "$1/4$",
       "B": "$1/2$",
@@ -16865,70 +15829,7 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics-c-em-contract",
-      "method": "manual_mcq_diagram_option_binding_review",
-      "image_sources": [
-        {
-          "path": "images/ap/physics-c-e-m/2019/2019_mcq24_img01.png",
-          "asset_type": "option_image",
-          "option": "A",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2019/2019_mcq24_img02.png",
-          "asset_type": "option_image",
-          "option": "B",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2019/2019_mcq24_img03.png",
-          "asset_type": "option_image",
-          "option": "C",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2019/2019_mcq24_img04.png",
-          "asset_type": "option_image",
-          "option": "D",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-c-e-m/2019/2019_mcq24_img05.png",
-          "asset_type": "option_image",
-          "option": "E",
-          "binding": "option_label_nearest_image",
-          "source_block": {
-            "source_pdf": "subjects/AP/Physics-C-E-M/01-exams/AP Physics C Electricity and Magnetism 2019.pdf",
-            "review": "structured_manual_v1"
-          },
-          "review_status": "PASS"
-        }
-      ],
-      "dimension_variance_reviewed": true
-    }
+    "rubric_image_paths": []
   },
   {
     "question_id": "2019_Q25",
@@ -16937,7 +15838,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Which of the following expressions represents the magnitude of the magnetic field at point $R$?",
+    "text": "Questions 25-26 refer to the figure above. Two wires perpendicular to the $x$-axis have currents $I$ directed out of the page, as shown above. Each wire is a distance $d$ from the $y$-axis. Point $P$ lies on the $y$-axis at the coordinate $(0,a)$, and point $R$ lies on the $x$-axis at the coordinate $(-d/2,0)$.\n\nWhich of the following expressions represents the magnitude of the magnetic field at point $R$?",
     "options": {
       "A": "Zero",
       "B": "$\\frac{\\mu_0 I}{2\\pi d}$",
@@ -16999,7 +15900,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Which of the following best represents the direction of the net magnetic field at point $P$?",
+    "text": "Questions 25-26 refer to the figure above. Two wires perpendicular to the $x$-axis have currents $I$ directed out of the page, as shown above. Each wire is a distance $d$ from the $y$-axis. Point $P$ lies on the $y$-axis at the coordinate $(0,a)$, and point $R$ lies on the $x$-axis at the coordinate $(-d/2,0)$.\n\nWhich of the following best represents the direction of the net magnetic field at point $P$?",
     "options": {
       "A": "Up and to the right.",
       "B": "To the right.",
@@ -17061,7 +15962,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "If $B_S$ is the magnitude of the magnetic field at point P due to wire S, which of the following gives the magnitude and direction of the magnetic field at point P due to all three wires?",
+    "text": "Questions 27-28\nThree long, current-carrying wires are shown in the cross-sectional view above. The currents in wires R and S are out of the page, and the current in wire T is into the page. The currents in the wires have equal magnitude, and the wires are in the positions shown. Point P is halfway between wires S and T.\n\nIf $B_S$ is the magnitude of the magnetic field at point P due to wire S, which of the following gives the magnitude and direction of the magnetic field at point P due to all three wires?",
     "options": {
       "A": "$\\frac{B_S}{2}$; top of the page.",
       "B": "$\\frac{B_S}{2}$; bottom of the page.",
@@ -17123,7 +16024,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "To which of the following locations, if any, could wire S be moved so that the total magnetic force exerted on it by the other two wires is zero?",
+    "text": "Questions 27-28\nThree long, current-carrying wires are shown\nin the cross-sectional view above. The currents in\nwires R and S are out of the page, and the current in\nwire T is into the page. The currents in the wires have\nequal magnitude, and the wires are in the positions\nshown. Point P is halfway between wires S and T.\n\nTo which of the following locations, if any, could\nwire S be moved so that the total magnetic force\nexerted on it by the other two wires is zero?",
     "options": {
       "A": "negative d is less than x, which is less than 0",
       "B": "0 is less than x, which is less than d",
@@ -17185,7 +16086,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "Which labeled path best shows the path the\nelectron will follow as it travels through the\nmagnetic field?",
+    "text": "Questions 29-30\nAn electron is traveling with speed v when it enters\na uniform magnetic field that is directed into the page,\nas shown above. Five paths in the magnetic field are\nlabeled A, B, C, D, and E.\n\nWhich labeled path best shows the path the\nelectron will follow as it travels through the\nmagnetic field?",
     "options": {
       "A": "Path A",
       "B": "Path B",
@@ -17247,7 +16148,7 @@
     "question_type": "MCQ",
     "year": 2019,
     "source": "AP Physics C: Electricity and Magnetism 2019 Practice Exam",
-    "text": "The electron is replaced with a proton that is\ntraveling at the same speed v in the same direction\nas it enters the magnetic field. Which of the\nfollowing best describes the motion of the proton\nas it passes through the magnetic field?\n1. The speed of the proton changes less than\nthe speed of the electron did.\n2 . The proton is deflected in the opposite\ndirection.\n3 . The proton is deflected more than the\nelectron.",
+    "text": "Questions 29-30\nAn electron is traveling with speed v when it enters\na uniform magnetic field that is directed into the page,\nas shown above. Five paths in the magnetic field are\nlabeled A, B, C, D, and E.\n\nThe electron is replaced with a proton that is\ntraveling at the same speed v in the same direction\nas it enters the magnetic field. Which of the\nfollowing best describes the motion of the proton\nas it passes through the magnetic field?\n1. The speed of the proton changes less than\nthe speed of the electron did.\n2 . The proton is deflected in the opposite\ndirection.\n3 . The proton is deflected more than the\nelectron.",
     "options": {
       "A": "1 only",
       "B": "1 and 2 only",

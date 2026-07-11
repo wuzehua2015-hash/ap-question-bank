@@ -56,9 +56,9 @@ function FRQPlayer() {
       <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
         <div className="flex justify-between items-start gap-4">
           <div>
-            <h2 className="text-lg font-bold text-blue-800 mb-2">自由作答题（FRQ）</h2>
+            <h2 className="text-lg font-bold text-blue-800 mb-2">Free Response Questions（FRQ）</h2>
             <p className="text-sm text-blue-700">
-              共 {frqs.length} 道题。请先独立完成作答，再根据评分标准进行自评。
+              共 {frqs.length} 道大题。请使用草稿纸作答，系统不会自动批改。完成后请对照官方评分标准自评。
             </p>
           </div>
           {quizInfo && quizInfo.isMock && quizInfo.frqTimeLimit && phase === 'playing' && (
@@ -74,8 +74,8 @@ function FRQPlayer() {
 
       <div className="mb-4">
         <div className="flex justify-between text-sm text-text-muted mb-1">
-          <span>FRQ {currentIndex + 1} / {frqs.length}</span>
-          <span>已确认 {doneCount}/{frqs.length}</span>
+          <span>FRQ 第 {currentIndex + 1} / {frqs.length} 题</span>
+          <span>{doneCount}/{frqs.length} 已标记完成</span>
         </div>
         <div className="w-full bg-border rounded-full h-2">
           <div className="bg-accent h-2 rounded-full transition-all" style={{ width: `${progress}%` }} />
@@ -95,7 +95,7 @@ function FRQPlayer() {
                 className="w-5 h-5 rounded border-border text-brand focus:ring-brand"
               />
               <span className="text-sm text-text">
-                我已完成本题作答。
+                我已经在草稿纸上完成本题作答
               </span>
             </label>
           </div>
@@ -120,8 +120,8 @@ function FRQPlayer() {
                 idx === currentIndex
                   ? 'bg-brand text-white'
                   : acknowledged[idx]
-                    ? 'bg-green-100 text-green-700 border border-green-300'
-                    : 'bg-gray-100 text-gray-500 border border-border'
+                  ? 'bg-green-100 text-green-700 border border-green-300'
+                  : 'bg-gray-100 text-gray-500 border border-border'
               }`}
             >
               {idx + 1}
@@ -149,14 +149,14 @@ function FRQPlayer() {
           }`}
         >
           {allAcknowledged
-            ? '完成 FRQ，进入评分'
-            : `还有 ${frqs.length - doneCount} 道题需要确认`}
+            ? '完成 FRQ，进入成绩页面'
+            : `还有 ${frqs.length - doneCount} 题未标记完成`}
         </button>
       </div>
 
       {!allAcknowledged && (
         <p className="text-center text-sm text-text-muted mt-3">
-          请逐题确认已完成作答后，再进入评分页面。
+          请确认每道题都已经在草稿纸上作答，然后勾选“我已经在草稿纸上完成本题作答”。
         </p>
       )}
     </div>

@@ -6,7 +6,7 @@
     "question_type": "FRQ",
     "year": 2012,
     "source": "AP Calculus AB 2012 Practice Exam",
-    "text": "The temperature of water in a tub at time $t$ is modeled by a strictly increasing, twice-differentiable function $W$, where $W(t)$ is measured in degrees Fahrenheit and $t$ is measured in minutes. At time $t=0$, the temperature of the water is $55^\\circ\\mathrm{F}$. The water is heated for 30 minutes, beginning at time $t=0$. Values of $W(t)$ at selected times $t$ for the first 20 minutes are given in the table above.\n\n(a) Use the data in the table to estimate $W'(12)$. Show the computations that lead to your answer. Using correct units, interpret the meaning of your answer in the context of this problem.\n\n(b) Use the data in the table to evaluate $\\int_0^{20} W'(t)\\,dt$. Using correct units, interpret the meaning of $\\int_0^{20} W'(t)\\,dt$ in the context of this problem.\n\n(c) For $0\\le t\\le20$, the average temperature of the water in the tub is $\\frac1{20}\\int_0^{20} W(t)\\,dt$. Use a left Riemann sum with the four subintervals indicated by the data in the table to approximate $\\frac1{20}\\int_0^{20} W(t)\\,dt$. Does this approximation overestimate or underestimate the average temperature of the water over these 20 minutes? Explain your reasoning.\n\n(d) For $20\\le t\\le25$, the function $W$ that models the water temperature has first derivative given by $W'(t)=0.4\\sqrt{t}\\cos(0.06t)$. Based on the model, what is the temperature of the water at time $t=25$?",
+    "text": "| $t$ (minutes) | 0 | 4 | 9 | 15 | 20 |\n|---:|---:|---:|---:|---:|---:|\n| $W(t)$ (degrees Fahrenheit) | 55.0 | 57.1 | 61.8 | 67.9 | 71.0 |\n\nThe temperature of water in a tub at time $t$ is modeled by a strictly increasing, twice-differentiable function $W$, where $W(t)$ is measured in degrees Fahrenheit and $t$ is measured in minutes. At time $t=0$, the temperature of the water is $55^\\circ\\mathrm{F}$. The water is heated for 30 minutes, beginning at time $t=0$. Values of $W(t)$ at selected times $t$ for the first 20 minutes are given in the table above.\n\n(a) Use the data in the table to estimate $W'(12)$. Show the computations that lead to your answer. Using correct units, interpret the meaning of your answer in the context of this problem.\n\n(b) Use the data in the table to evaluate $\\int_0^{20} W'(t)\\,dt$. Using correct units, interpret the meaning of $\\int_0^{20} W'(t)\\,dt$ in the context of this problem.\n\n(c) For $0\\le t\\le20$, the average temperature of the water in the tub is $\\frac1{20}\\int_0^{20} W(t)\\,dt$. Use a left Riemann sum with the four subintervals indicated by the data in the table to approximate $\\frac1{20}\\int_0^{20} W(t)\\,dt$. Does this approximation overestimate or underestimate the average temperature of the water over these 20 minutes? Explain your reasoning.\n\n(d) For $20\\le t\\le25$, the function $W$ that models the water temperature has first derivative given by $W'(t)=0.4\\sqrt{t}\\cos(0.06t)$. Based on the model, what is the temperature of the water at time $t=25$?",
     "answer": "",
     "points": 9,
     "primary_unit": "U6",
@@ -51,8 +51,7 @@
           "description": "Compute $W(25)=W(20)+\\int_{20}^{25}0.4\\sqrt{t}\\cos(0.06t)\\,dt=78.103$ degrees Fahrenheit, using the model and initial value at $t=20$.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2012_FRQ1, organize the solution by the official subparts of question 1. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2012_Practice_Exam_CollegeBoard.pdf",
@@ -77,30 +76,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "background_data": {
-      "table": {
-        "title": "Selected values of water temperature",
-        "headers": [
-          "$t$ (minutes)",
-          "0",
-          "4",
-          "9",
-          "15",
-          "20"
-        ],
-        "rows": [
-          [
-            "$W(t)$ (degrees Fahrenheit)",
-            "55.0",
-            "57.1",
-            "61.8",
-            "67.9",
-            "71.0"
-          ]
-        ]
-      }
     }
   },
   {
@@ -138,27 +113,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "2a",
+          "description": "Find the intersection and set up a correct area integral, then evaluate the area as approximately $2.986$.",
+          "points": 3
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "2b",
+          "description": "Write a correct volume expression with square cross sections, using the appropriate side lengths on the two subintervals.",
+          "points": 3
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "2c",
+          "description": "Write a correct equation stating that the area below $y=k$ equals $\\frac12$ of the total area of $R$.",
+          "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2012_FRQ2, organize the solution by the official subparts of question 2. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2012_Practice_Exam_CollegeBoard.pdf",
@@ -183,26 +152,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2012/2012_FRQ2_region_R.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2012,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2012_FRQ2 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -259,8 +208,7 @@
           "description": "Identify points of inflection where $g''(x)=f'(x)$ changes sign: $x=-2$, $x=0$, and $x=1$.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2012_FRQ3, organize the solution by the official subparts of question 3. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2012_Practice_Exam_CollegeBoard.pdf",
@@ -285,26 +233,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2012/2012_FRQ3_graph_f.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2012,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2012_FRQ3 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -359,8 +287,7 @@
           "description": "Evaluate the integral by substitution to obtain $125/3$.",
           "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2012_FRQ4, organize the solution by the official subparts of question 4. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2012_Practice_Exam_CollegeBoard.pdf",
@@ -385,8 +312,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2012_FRQ5",
@@ -423,27 +349,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "5a",
+          "description": "Evaluate $\\frac{dB}{dt}$ at $B=40$ and $B=70$ and compare the rates; the bird gains weight faster at 40 grams.",
+          "points": 2
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "5b",
+          "description": "Find $\\frac{d^2B}{dt^2}=-\\frac1{25}(100-B)$ and use concavity to reject the given graph.",
+          "points": 2
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "5c",
+          "description": "Separate variables, integrate, use the initial condition, and solve for $B(t)=100-80e^{-t/5}$.",
+          "points": 5
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2012_FRQ5, organize the solution by the official subparts of question 5. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2012_Practice_Exam_CollegeBoard.pdf",
@@ -468,26 +388,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2012/2012_FRQ5_rejected_graph.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2012,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2012_FRQ5 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -542,8 +442,7 @@
           "description": "Use position $x(4)=-2+\\int_0^4 \\cos(\\frac{\\pi t}{6})\\,dt=-2+\\frac{3\\sqrt3}{\\pi}$.",
           "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2012_FRQ6, organize the solution by the official subparts of question 6. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2012_Practice_Exam_CollegeBoard.pdf",
@@ -568,8 +467,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2013_FRQ1",
@@ -606,27 +504,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "1a",
+          "description": "Use the correct intersection limit and integrand $1-x^3-\\sin(x^2)$ to compute the area of $R$.",
+          "points": 3
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "1b",
+          "description": "Find the intersection height $k$, compute or compare the two relevant areas, and conclude the regions have unequal areas.",
+          "points": 3
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "1c",
+          "description": "Set up and evaluate the washer-method volume about $y=-3$ using the outer and inner radii from the two bounding curves.",
+          "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2013_FRQ1, organize the solution by the official subparts of question 1. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2013_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -655,26 +547,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2013/2013_FRQ1_region_R.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2013,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2013_FRQ1 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -729,8 +601,7 @@
           "description": "Check endpoints and the critical point where $B(t)=D(t)$; report the absolute minimum and maximum populations with supporting analysis.",
           "points": 4
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2013_FRQ2, organize the solution by the official subparts of question 2. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2013_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -759,8 +630,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2013_FRQ3",
@@ -787,9 +657,11 @@
       "4"
     ],
     "difficulty": "medium",
-    "has_graph": false,
-    "requires_graph": false,
-    "image_paths": [],
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/calculus-ab/2013/2013_FRQ3_water_table.png"
+    ],
     "rubric_image_paths": [],
     "rubric": {
       "total_points": 9,
@@ -814,8 +686,7 @@
           "description": "Differentiate $A=0.3W^{2/3}$ with respect to $t$ and evaluate using $W(30)=125$ and $W'(30)=0.5$.",
           "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2013_FRQ3, organize the solution by the official subparts of question 3. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2013_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -844,28 +715,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "background_data": {
-      "table": {
-        "title": "Rate of change of reservoir volume",
-        "headers": [
-          "$t$ (days)",
-          "0",
-          "10",
-          "22",
-          "30"
-        ],
-        "rows": [
-          [
-            "$W'(t)$ (GL per day)",
-            "0.6",
-            "0.7",
-            "1.0",
-            "0.5"
-          ]
-        ]
-      }
     }
   },
   {
@@ -901,27 +750,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "4a",
+          "description": "Evaluate both end behavior limits of $(x^2-2x-1)e^x$.",
+          "points": 1
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "4b",
+          "description": "Find $f'(x)$, solve the sign intervals, and identify where $f$ is increasing.",
+          "points": 4
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "4c",
+          "description": "Find $f''(x)$, solve the sign intervals, and identify where the graph of $f$ is concave down.",
+          "points": 4
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2013_FRQ4, organize the solution by the official subparts of question 4. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2013_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -950,8 +793,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2013_FRQ5",
@@ -1007,8 +849,7 @@
           "description": "Use changes in monotonicity of $f$ to identify where $g''=f'$ changes sign and justify the inflection points.",
           "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2013_FRQ5, organize the solution by the official subparts of question 5. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2013_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -1037,26 +878,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2013/2013_FRQ5_graph_f.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2013,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2013_FRQ5 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -1116,8 +937,7 @@
           "description": "Solve for the negative branch of $y=f(x)$ because the initial value is negative.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2013_FRQ6, organize the solution by the official subparts of question 6. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2013_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -1146,8 +966,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2014_FRQ1",
@@ -1156,7 +975,7 @@
     "question_type": "FRQ",
     "year": 2014,
     "source": "AP Calculus AB 2014 Practice Exam",
-    "text": "Ruth rode her bicycle on a straight trail. She recorded her velocity $v(t)$, in miles per hour, for selected values of $t$ over the interval $0\\le t\\le2.4$ hours, as shown in the table above. For $0<t\\le2.4$, $v(t)>0$.\n\n(a) Use the data in the table to approximate Ruth's acceleration at time $t=1.4$ hours. Show the computations that lead to your answer. Indicate units of measure.\n\n(b) Using correct units, interpret the meaning of $\\int_0^{2.4}v(t)\\,dt$ in the context of the problem. Approximate $\\int_0^{2.4}v(t)\\,dt$ using a midpoint Riemann sum with three subintervals of equal length and values from the table.\n\n(c) For $0\\le t\\le2.4$ hours, Ruth's velocity can be modeled by $g(t)=\\dfrac{24t+5\\sin(6t)}{t+0.7}$. According to the model, what was Ruth's average velocity during the time interval $0\\le t\\le2.4$?\n\n(d) According to the model given in part (c), is Ruth's speed increasing or decreasing at time $t=1.3$? Give a reason for your answer.",
+    "text": "| $t$ (hours) | 0 | 0.4 | 0.8 | 1.2 | 1.6 | 2.0 | 2.4 |\n|---:|---:|---:|---:|---:|---:|---:|---:|\n| $v(t)$ (miles per hour) | 0 | 11.8 | 9.5 | 17.2 | 16.3 | 16.8 | 20.1 |\n\nRuth rode her bicycle on a straight trail. She recorded her velocity $v(t)$, in miles per hour, for selected values of $t$ over the interval $0\\le t\\le2.4$ hours, as shown in the table above. For $0<t\\le2.4$, $v(t)>0$.\n\n(a) Use the data in the table to approximate Ruth's acceleration at time $t=1.4$ hours. Show the computations that lead to your answer. Indicate units of measure.\n\n(b) Using correct units, interpret the meaning of $\\int_0^{2.4}v(t)\\,dt$ in the context of the problem. Approximate $\\int_0^{2.4}v(t)\\,dt$ using a midpoint Riemann sum with three subintervals of equal length and values from the table.\n\n(c) For $0\\le t\\le2.4$ hours, Ruth's velocity can be modeled by $g(t)=\\dfrac{24t+5\\sin(6t)}{t+0.7}$. According to the model, what was Ruth's average velocity during the time interval $0\\le t\\le2.4$?\n\n(d) According to the model given in part (c), is Ruth's speed increasing or decreasing at time $t=1.3$? Give a reason for your answer.",
     "answer": "",
     "points": 9,
     "primary_unit": "U8",
@@ -1201,8 +1020,7 @@
           "description": "Determine the sign of $g'(1.3)$ and use $g(1.3)>0$ to decide whether speed is increasing or decreasing.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2014_FRQ1, organize the solution by the official subparts of question 1. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2014_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -1230,34 +1048,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "background_data": {
-      "table": {
-        "title": "Selected values of Ruth's velocity",
-        "headers": [
-          "$t$ (hours)",
-          "0",
-          "0.4",
-          "0.8",
-          "1.2",
-          "1.6",
-          "2.0",
-          "2.4"
-        ],
-        "rows": [
-          [
-            "$v(t)$ (miles per hour)",
-            "0",
-            "11.8",
-            "9.5",
-            "17.2",
-            "16.3",
-            "16.8",
-            "20.1"
-          ]
-        ]
-      }
     }
   },
   {
@@ -1312,8 +1102,7 @@
           "description": "Maximize the store population $N(t)=S(t)-\\int_0^t L(u)\\,du$ by comparing endpoints and critical points where $S'(t)=L(t)$.",
           "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2014_FRQ2, organize the solution by the official subparts of question 2. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2014_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -1341,8 +1130,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2014_FRQ3",
@@ -1377,27 +1165,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "3a",
+          "description": "Find $f(1)=e^2$ and $f'(1)=2e^2$, then write the tangent line at $x=1$.",
+          "points": 2
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "3b",
+          "description": "Evaluate $\\int_0^1 e^{2x}\\,dx=\\frac12(e^2-1)$.",
+          "points": 3
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "3c",
+          "description": "Write the square cross-section volume integral with respect to $y$, using side length $1-\\frac12\\ln y$ over the correct interval.",
+          "points": 4
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2014_FRQ3, organize the solution by the official subparts of question 3. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2014_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -1425,8 +1207,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2014_FRQ4",
@@ -1482,8 +1263,7 @@
           "description": "Apply the chain rule to $h(x)=g(x^3+1)$ and evaluate $h'(1)=g'(2)\\cdot3$.",
           "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2014_FRQ4, organize the solution by the official subparts of question 4. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2014_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -1511,26 +1291,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2014/2014_FRQ4_graph_f.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2014,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2014_FRQ4 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -1566,27 +1326,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "5a",
+          "description": "Compute $x'(1)$ and use its sign to state the direction of motion.",
+          "points": 2
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "5b",
+          "description": "Find critical times for $x(t)$, analyze the sign of $x'(t)$, and identify when particle $X$ is farthest left.",
+          "points": 3
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "5c",
+          "description": "Use $A(t)=\\frac12x(t)y(t)$ and differentiate to find $A'(1)$.",
+          "points": 4
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2014_FRQ5, organize the solution by the official subparts of question 5. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2014_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -1614,8 +1368,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2014_FRQ6",
@@ -1652,27 +1405,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "6a",
+          "description": "Substitute $(1,2)$ into the differential equation to find the tangent slope.",
+          "points": 1
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "6b",
+          "description": "Sketch zero slopes at points with $y=1$ and correct positive/negative slopes at the remaining indicated points.",
+          "points": 2
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "6c",
+          "description": "Separate variables, integrate, use the initial condition, and solve for the particular solution.",
+          "points": 6
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2014_FRQ6, organize the solution by the official subparts of question 6. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2014_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -1700,26 +1447,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2014/2014_FRQ6_slope_field_axes.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2014,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2014_FRQ6 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -1776,8 +1503,7 @@
           "description": "Compare $R(45)$ and $D(45)$ to determine the sign of the net rate.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2015_FRQ1, organize the solution by the official subparts of question 1. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2015_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -1805,26 +1531,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2015/2015_FRQ1_rate_graph.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2015,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2015_FRQ1 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -1862,27 +1568,26 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c), (d)."
+          "point_id": "2a",
+          "description": "Use the point coordinates and derivative formula to write the tangent line.",
+          "points": 2
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "2b",
+          "description": "Identify vertical tangents from the derivative denominator and verify points on the curve in the given interval.",
+          "points": 2
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
+          "point_id": "2c",
+          "description": "Differentiate $dy/dx$ implicitly to obtain $d^2y/dx^2$ in terms of $y$.",
+          "points": 3
         },
         {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "2d",
+          "description": "Evaluate the second derivative at point $P$.",
+          "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2015_FRQ2, organize the solution by the official subparts of question 2. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2015_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -1910,26 +1615,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2015/2015_FRQ2_implicit_graph.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2015,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2015_FRQ2 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -1939,7 +1624,7 @@
     "question_type": "FRQ",
     "year": 2015,
     "source": "AP Calculus AB 2015 Practice Exam",
-    "text": "Kathleen skates on a straight track. She starts from rest at the starting line at time $t=0$. For $0<t\\le12$ seconds, Kathleen's velocity $k(t)$, measured in feet per second, is differentiable and increasing. Values of $k(t)$ at various times $t$ are given in the table above.\n\n(a) Use the data in the table to estimate Kathleen's acceleration at time $t=4$ seconds. Show the computations that lead to your answer. Indicate units of measure.\n\n(b) Use a right Riemann sum with the four subintervals indicated by the table to approximate $\\displaystyle\\int_0^{12}k(t)\\,dt$. Indicate units of measure. Is this approximation an overestimate or an underestimate for the value of $\\displaystyle\\int_0^{12}k(t)\\,dt$? Explain your reasoning.\n\n(c) Nathan skates on the same track, starting $5$ feet ahead of Kathleen at time $t=0$. Nathan's velocity, in feet per second, is given by $n(t)=\\dfrac{150}{t+3}-50e^{-t}$. Write, but do not evaluate, an expression involving an integral that gives Nathan's distance from the starting line at time $t=12$ seconds.\n\n(d) Write an expression for Nathan's acceleration in terms of $t$.",
+    "text": "| $t$ (seconds) | 0 | 3 | 5 | 8 | 12 |\n|---:|---:|---:|---:|---:|---:|\n| $k(t)$ (feet per second) | 0 | 5 | 10 | 20 | 24 |\n\nKathleen skates on a straight track. She starts from rest at the starting line at time $t=0$. For $0<t\\le12$ seconds, Kathleen's velocity $k(t)$, measured in feet per second, is differentiable and increasing. Values of $k(t)$ at various times $t$ are given in the table above.\n\n(a) Use the data in the table to estimate Kathleen's acceleration at time $t=4$ seconds. Show the computations that lead to your answer. Indicate units of measure.\n\n(b) Use a right Riemann sum with the four subintervals indicated by the table to approximate $\\displaystyle\\int_0^{12}k(t)\\,dt$. Indicate units of measure. Is this approximation an overestimate or an underestimate for the value of $\\displaystyle\\int_0^{12}k(t)\\,dt$? Explain your reasoning.\n\n(c) Nathan skates on the same track, starting $5$ feet ahead of Kathleen at time $t=0$. Nathan's velocity, in feet per second, is given by $n(t)=\\dfrac{150}{t+3}-50e^{-t}$. Write, but do not evaluate, an expression involving an integral that gives Nathan's distance from the starting line at time $t=12$ seconds.\n\n(d) Write an expression for Nathan's acceleration in terms of $t$.",
     "answer": "",
     "points": 9,
     "primary_unit": "U8",
@@ -1984,8 +1669,7 @@
           "description": "Differentiate $n(t)$ to obtain Nathan's acceleration.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2015_FRQ3, organize the solution by the official subparts of question 3. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2015_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -2013,30 +1697,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "background_data": {
-      "table": {
-        "title": "Selected values of Kathleen's velocity",
-        "headers": [
-          "$t$ (seconds)",
-          "0",
-          "3",
-          "5",
-          "8",
-          "12"
-        ],
-        "rows": [
-          [
-            "$k(t)$ (feet per second)",
-            "0",
-            "5",
-            "10",
-            "20",
-            "24"
-          ]
-        ]
-      }
     }
   },
   {
@@ -2074,27 +1734,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "4a",
+          "description": "Sketch the indicated slope field segments with slopes determined by $x(y-1)/4$.",
+          "points": 2
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "4b",
+          "description": "Find the slope at $(1,3)$, write the tangent line, and use it for a linear approximation.",
+          "points": 3
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "4c",
+          "description": "Separate variables, integrate, apply the initial condition, and solve for the particular solution.",
+          "points": 4
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2015_FRQ4, organize the solution by the official subparts of question 4. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2015_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -2122,26 +1776,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2015/2015_FRQ4_slope_field_axes.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2015,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2015_FRQ4 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -2179,27 +1813,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "5a",
+          "description": "Find intersections and integrate the upper curve minus lower curve.",
+          "points": 3
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "5b",
+          "description": "Set up the washer-method integral about $y=4$ with correct radii.",
+          "points": 3
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "5c",
+          "description": "Maximize $g(x)-h(x)$ on $[0,16]$ using derivative and endpoint analysis.",
+          "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2015_FRQ5, organize the solution by the official subparts of question 5. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2015_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -2227,26 +1855,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2015/2015_FRQ5_region_R.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2015,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2015_FRQ5 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -2301,8 +1909,7 @@
           "description": "Use the polynomial approximation and justify whether it overestimates or underestimates.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2015_FRQ6, organize the solution by the official subparts of question 6. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2015_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -2330,8 +1937,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2016_FRQ1",
@@ -2385,8 +1991,7 @@
           "description": "Find $S'(3)\\approx-0.582$ and interpret it as the rate of change of the sales rate at $t=3$ hours.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2016_FRQ1, organize the solution by the official subparts of question 1. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2016_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -2414,8 +2019,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2016_FRQ2",
@@ -2424,7 +2028,7 @@
     "question_type": "FRQ",
     "year": 2016,
     "source": "AP Calculus AB 2016 Practice Exam",
-    "text": "A store tracks the sales of one of its popular board games over a $12$-week period. The rate at which games are being sold is modeled by the differentiable function $G$, where $G(t)$ is measured in games per week and $t$ is measured in weeks for $0\\le t\\le12$. Values of $G(t)$ are given in the table above for selected values of $t$.\n\n(a) Approximate the value of $G'(8)$ using the data in the table. Show the computations that lead to your answer.\n\n(b) Approximate the value of $\\displaystyle\\int_0^{12}G(t)\\,dt$ using a right Riemann sum with the four subintervals indicated by the table. Explain the meaning of $\\displaystyle\\int_0^{12}G(t)\\,dt$ in the context of this problem.\n\n(c) One salesperson believes that, starting with $2400$ games per week at time $t=12$, the rate at which games will be sold will increase at a constant rate of $100$ games per week per week. Based on this model, how many total games will be sold in the $8$ weeks between time $t=12$ and $t=20$?\n\n(d) Another salesperson believes the best model for the rate at which games will be sold in the $8$ weeks between time $t=12$ and $t=20$ is $M(t)=2400e^{-0.01(t-12)^2}$ games per week. Based on this model, how many total games, to the nearest whole number, will be sold during this period?",
+    "text": "| $t$ (weeks) | 0 | 3 | 6 | 10 | 12 |\n|---:|---:|---:|---:|---:|---:|\n| $G(t)$ (games per week) | 160 | 450 | 900 | 2100 | 2400 |\n\nA store tracks the sales of one of its popular board games over a $12$-week period. The rate at which games are being sold is modeled by the differentiable function $G$, where $G(t)$ is measured in games per week and $t$ is measured in weeks for $0\\le t\\le12$. Values of $G(t)$ are given in the table above for selected values of $t$.\n\n(a) Approximate the value of $G'(8)$ using the data in the table. Show the computations that lead to your answer.\n\n(b) Approximate the value of $\\displaystyle\\int_0^{12}G(t)\\,dt$ using a right Riemann sum with the four subintervals indicated by the table. Explain the meaning of $\\displaystyle\\int_0^{12}G(t)\\,dt$ in the context of this problem.\n\n(c) One salesperson believes that, starting with $2400$ games per week at time $t=12$, the rate at which games will be sold will increase at a constant rate of $100$ games per week per week. Based on this model, how many total games will be sold in the $8$ weeks between time $t=12$ and $t=20$?\n\n(d) Another salesperson believes the best model for the rate at which games will be sold in the $8$ weeks between time $t=12$ and $t=20$ is $M(t)=2400e^{-0.01(t-12)^2}$ games per week. Based on this model, how many total games, to the nearest whole number, will be sold during this period?",
     "answer": "",
     "points": 9,
     "primary_unit": "U6",
@@ -2442,9 +2046,11 @@
       "4"
     ],
     "difficulty": "medium",
-    "has_graph": false,
-    "requires_graph": false,
-    "image_paths": [],
+    "has_graph": true,
+    "requires_graph": true,
+    "image_paths": [
+      "images/ap/calculus-ab/2016/2016_FRQ2_table.png"
+    ],
     "rubric_image_paths": [],
     "rubric": {
       "total_points": 9,
@@ -2469,8 +2075,7 @@
           "description": "Evaluate $\\int_{12}^{20}M(t)\\,dt$ and round to $15784$ games.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2016_FRQ2, organize the solution by the official subparts of question 2. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2016_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -2500,30 +2105,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "background_data": {
-      "table": {
-        "title": "Rate at which games are sold",
-        "headers": [
-          "$t$ (weeks)",
-          "0",
-          "3",
-          "6",
-          "10",
-          "12"
-        ],
-        "rows": [
-          [
-            "$G(t)$ (games per week)",
-            "160",
-            "450",
-            "900",
-            "2100",
-            "2400"
-          ]
-        ]
-      }
     }
   },
   {
@@ -2580,8 +2161,7 @@
           "description": "Apply the chain rule to $h(x)=f(x/2)$ and use the slope of the final segment to get $h'(6)=-1/c$.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2016_FRQ3, organize the solution by the official subparts of question 3. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2016_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -2609,26 +2189,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2016/2016_FRQ3_graph_f.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2016,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2016_FRQ3 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -2666,27 +2226,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "4a",
+          "description": "Set up and evaluate $\\int_{\\pi/3}^{\\pi/2}(3-3\\sin x)\\,dx$ to find the area.",
+          "points": 3
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "4b",
+          "description": "Express area as $A(k)=\\int_k^{\\pi/2}(3-3\\sin x)\\,dx$ and compute $A'(\\pi/6)$.",
+          "points": 3
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "4c",
+          "description": "Write a washer-method volume integral about $y=5$ using correct radii and limits for $k=\\pi/4$.",
+          "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2016_FRQ4, organize the solution by the official subparts of question 4. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2016_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -2714,26 +2268,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2016/2016_FRQ4_region_S.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2016,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2016_FRQ4 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -2769,27 +2303,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "5a",
+          "description": "Find $W'(0)=1/2$, write the tangent line $y=3+\\frac12t$, and approximate $W(0.4)=3.2^\\circ\\mathrm{C}$.",
+          "points": 2
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "5b",
+          "description": "Separate variables, integrate to get $W^2=3\\sin t+C$, use $W(0)=3$ to find $C=9$, and solve $W=\\sqrt{3\\sin t+9}$.",
+          "points": 5
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "5c",
+          "description": "Write the cost expression $0.001\\int_0^{24}(20-W(t))\\,dt$ with correct integrand, limits, and constant.",
+          "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2016_FRQ5, organize the solution by the official subparts of question 5. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2016_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -2817,8 +2345,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2016_FRQ6",
@@ -2853,27 +2380,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "6a",
+          "description": "Compare one-sided limits at $x=1$ and explain that both equal $f(1)=7$, so $f$ is continuous.",
+          "points": 2
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "6b",
+          "description": "Differentiate both pieces, identify critical points $x=-1$ and $x=1$, evaluate endpoints and critical points, and conclude the absolute minimum is $7$ and maximum is $3+4e$.",
+          "points": 4
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "6c",
+          "description": "Split the integral at $x=1$, integrate each expression, and obtain $\\frac{23}{3}+4e$.",
+          "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2016_FRQ6, organize the solution by the official subparts of question 6. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2016_Practice_Exam_CollegeBoard_mirror.pdf",
@@ -2902,8 +2423,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2017_FRQ1",
@@ -2957,8 +2477,7 @@
           "description": "Use values such as $x(1)=9.403593$ and $x(4)=6.711558$ with continuity and the Intermediate Value Theorem to justify that the particle returns to $x=7$.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2017_FRQ1, organize the solution by the official subparts of question 1. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2017_Full_Exam.pdf",
@@ -2986,8 +2505,7 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   },
   {
     "question_id": "2017_FRQ2",
@@ -3043,8 +2561,7 @@
           "description": "Evaluate $w'(3.5)-a'(3.5)=-1.14298<0$ and conclude the difference is decreasing.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2017_FRQ2, organize the solution by the official subparts of question 2. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2017_Full_Exam.pdf",
@@ -3072,26 +2589,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2017/2017_FRQ2_rate_graph.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2017,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2017_FRQ2 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -3148,8 +2645,7 @@
           "description": "Identify critical points at $x=-2$ and $x=1$; classify $x=-2$ as neither and $x=1$ as a local minimum, with sign-change justification for $g'=f$.",
           "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2017_FRQ3, organize the solution by the official subparts of question 3. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2017_Full_Exam.pdf",
@@ -3177,26 +2673,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2017/2017_FRQ3_graph_f.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2017,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2017_FRQ3 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -3206,7 +2682,7 @@
     "question_type": "FRQ",
     "year": 2017,
     "source": "AP Calculus AB 2017 Practice Exam",
-    "text": "The function $f$ satisfies $f(0)=20$. The first derivative of $f$ satisfies the inequality $0\\le f'(x)\\le7$ for all $x$ in the closed interval $[0,6]$. Selected values of $f'$ are shown in the table above. The function $f$ has a continuous second derivative for all real numbers.\n\n(a) Use a midpoint Riemann sum with three subintervals of equal length indicated by the data in the table to approximate the value of $f(6)$.\n\n(b) Determine whether the actual value of $f(6)$ could be $70$. Explain your reasoning.\n\n(c) Evaluate $\\displaystyle\\int_2^4 f''(x)\\,dx$.\n\n(d) Find\n\n$$\\lim_{x\\to0}\\frac{f(x)-20e^x}{0.5f(x)-10}.$$",
+    "text": "| $x$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 |\n|---:|---:|---:|---:|---:|---:|---:|---:|\n| $f'(x)$ | 4 | 3.5 | 2 | 0.8 | 1.7 | 5.8 | 7 |\n\nThe function $f$ satisfies $f(0)=20$. The first derivative of $f$ satisfies the inequality $0\\le f'(x)\\le7$ for all $x$ in the closed interval $[0,6]$. Selected values of $f'$ are shown in the table above. The function $f$ has a continuous second derivative for all real numbers.\n\n(a) Use a midpoint Riemann sum with three subintervals of equal length indicated by the data in the table to approximate the value of $f(6)$.\n\n(b) Determine whether the actual value of $f(6)$ could be $70$. Explain your reasoning.\n\n(c) Evaluate $\\displaystyle\\int_2^4 f''(x)\\,dx$.\n\n(d) Find\n\n$$\\lim_{x\\to0}\\frac{f(x)-20e^x}{0.5f(x)-10}.$$",
     "answer": "",
     "points": 9,
     "primary_unit": "U6",
@@ -3251,8 +2727,7 @@
           "description": "Recognize the $0/0$ form and use L'Hospital's Rule to get $\\lim_{x\\to0}\\frac{f'(x)-20e^x}{0.5f'(x)}=\\frac{4-20}{0.5(4)}=-8$.",
           "points": 2
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2017_FRQ4, organize the solution by the official subparts of question 4. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2017_Full_Exam.pdf",
@@ -3280,34 +2755,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "background_data": {
-      "table": {
-        "title": "Selected values of $f'(x)$",
-        "headers": [
-          "$x$",
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ],
-        "rows": [
-          [
-            "$f'(x)$",
-            "4",
-            "3.5",
-            "2",
-            "0.8",
-            "1.7",
-            "5.8",
-            "7"
-          ]
-        ]
-      }
     }
   },
   {
@@ -3345,27 +2792,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "5a",
+          "description": "Write the area integral $\\int_0^{\\pi/2}\\left(e^x-\\sqrt{\\cos x}\\right)\\,dx$.",
+          "points": 2
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "5b",
+          "description": "Use washers about the $x$-axis: $\\pi\\int_0^{\\pi/2}\\left(e^{2x}-\\cos x\\right)\\,dx=\\frac{\\pi}{2}(e^\\pi-1)-\\pi$.",
+          "points": 4
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "5c",
+          "description": "For semicircular cross sections, write $\\frac{\\pi}{8}\\int_0^{\\pi/2}\\left(e^x-\\sqrt{\\cos x}\\right)^2\\,dx$.",
+          "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2017_FRQ5, organize the solution by the official subparts of question 5. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2017_Full_Exam.pdf",
@@ -3393,26 +2834,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ",
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-calculus-ab-contract",
-      "method": "focused_calculus_ab_frq_visual_asset_review",
-      "image_sources": [
-        {
-          "path": "images/ap/calculus-ab/2017/2017_FRQ5_region_R.png",
-          "asset_type": "tight_crop",
-          "source_block": {
-            "source_pdf": null,
-            "year": 2017,
-            "review": "structured_sample_image_asset"
-          },
-          "tight_crop": true,
-          "review_status": "PASS",
-          "review_note": "2017_FRQ5 uses this focused graph, region, or table asset as answer-critical prompt content."
-        }
-      ]
     }
   },
   {
@@ -3448,27 +2869,21 @@
       "total_points": 9,
       "points": [
         {
-          "point_id": "setup",
-          "points": 3,
-          "description": "Identifies the correct calculus model, relationship, graph feature, table interval, differential equation, or equation setup required by (a), (b), (c)."
+          "point_id": "6a",
+          "description": "Use $A=\\pi r^2$ and $\\frac{dA}{dt}=2\\pi r\\frac{dr}{dt}$ to get $27\\pi$ square centimeters per second.",
+          "points": 3
         },
         {
-          "point_id": "execution",
-          "points": 2,
-          "description": "Carries out the derivative, integral, Riemann sum, separation of variables, area/volume expression, or numerical approximation with correct substitutions and notation."
+          "point_id": "6b",
+          "description": "Differentiate $w(t)$ to get $w'(t)=6e^{-0.5t}$, solve $6e^{-0.5t}=3$, and obtain $t=2\\ln2$ seconds.",
+          "points": 3
         },
         {
-          "point_id": "reasoning",
-          "points": 2,
-          "description": "Justifies conclusions using signs, monotonicity, concavity, accumulation, extrema, tangent-line behavior, units, or contextual meaning as required by the prompt."
-        },
-        {
-          "point_id": "answer",
-          "points": 2,
-          "description": "States the requested final value, expression, equation, interpretation, or comparison clearly, with appropriate units and rounding when the problem context requires them."
+          "point_id": "6c",
+          "description": "Compute $\\int_0^3 f'(t)\\,dt=\\int_0^3(t^2-4t+4)\\,dt=3$, so the radius increases by $3$ centimeters.",
+          "points": 3
         }
-      ],
-      "solution_outline": "Correct answer / solution outline:\n\nFor 2017_FRQ6, organize the solution by the official subparts of question 6. State the calculus relationship being used, define all quantities with units when the context provides them, show substitutions from the given function, graph, or table, and carry the work to the requested exact value, approximation, equation, interpretation, or conclusion. For graph and table questions, identify the relevant intervals, slopes, accumulated change, extrema, concavity, or model assumptions before calculating. Use the scoring rows below as the checklist for earning credit; they are separate from this solution outline."
+      ]
     },
     "provenance": {
       "pdf": "subjects/AP/Calculus-AB/01-exams/AP_Calculus_AB_2017_Full_Exam.pdf",
@@ -3496,7 +2911,6 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    },
-    "type": "FRQ"
+    }
   }
 ]

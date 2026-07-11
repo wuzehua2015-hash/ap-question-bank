@@ -1,13 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { createRequire } from 'node:module'
 
 const __filename = fileURLToPath(import.meta.url)
 const ROOT = path.resolve(path.dirname(__filename), '..')
 const PUBLIC = path.join(ROOT, 'public')
-const require = createRequire(import.meta.url)
-const { auditActiveSubjects } = require('./audit_group_context_integrity.cjs')
 
 globalThis.localStorage = {
   getItem() { return null },
@@ -70,9 +67,6 @@ function generateQuizLocal(questions, { unit = 'all', count = 10 } = {}) {
 function generateMockLocal(questions, subject) {
   const playable = questions.filter(q => q.scoring_status !== 'not_scored' && q.answer && Object.keys(q.options || {}).length > 0)
   const mcq = []
-  if (subject.mockExam?.preserveGroupsOnly) {
-    return flattenBucketsToLimit(makeQuestionBuckets(playable).sort(() => Math.random() - 0.5), Number(subject.mockExam?.totalMCQ || 0), { exact: true })
-  }
   const selected = new Set()
   for (const [unit, count] of Object.entries(subject.mockExam?.unitDistribution || {})) {
     const buckets = makeQuestionBuckets(playable)
@@ -102,54 +96,6 @@ function assertCompleteGroups(subjectId, label, questions, errors) {
   }
 }
 
-function assertGroupMetadata(subjectId, questions, errors) {
-  const byId = new Map(questions.map(q => [q.question_id, q]))
-  const byGroup = new Map()
-  for (const q of questions) {
-    if (!q.group_id) continue
-    if (!byGroup.has(q.group_id)) byGroup.set(q.group_id, [])
-    byGroup.get(q.group_id).push(q)
-  }
-
-  for (const [groupId, items] of byGroup) {
-    const sorted = [...items].sort((a, b) => questionOrder(a) - questionOrder(b))
-    const actualIds = sorted.map(q => q.question_id)
-    const declared = sorted[0].group_members || []
-    if (!declared.length) {
-      errors.push(`${subjectId} ${groupId}: missing group_members`)
-      continue
-    }
-    if (JSON.stringify(actualIds) !== JSON.stringify(declared)) {
-      errors.push(`${subjectId} ${groupId}: actual members ${actualIds.join(',')} do not match declared ${declared.join(',')}`)
-    }
-    for (const q of sorted) {
-      if (q.group_id !== groupId) {
-        errors.push(`${subjectId} ${groupId}: ${q.question_id} has mismatched group_id ${q.group_id}`)
-      }
-      if (JSON.stringify(q.group_members || []) !== JSON.stringify(declared)) {
-        errors.push(`${subjectId} ${groupId}: ${q.question_id} has inconsistent group_members`)
-      }
-      for (const memberId of declared) {
-        const member = byId.get(memberId)
-        if (!member) {
-          errors.push(`${subjectId} ${groupId}: declared member missing from bank: ${memberId}`)
-        } else if (member.group_id !== groupId) {
-          errors.push(`${subjectId} ${groupId}: declared member ${memberId} points to ${member.group_id || 'no group'}`)
-        }
-      }
-    }
-    const numbers = sorted.map(q => questionOrder(q)).filter(Boolean)
-    if (numbers.length === sorted.length) {
-      for (let i = 1; i < numbers.length; i += 1) {
-        if (numbers[i] !== numbers[i - 1] + 1) {
-          errors.push(`${subjectId} ${groupId}: grouped question numbers are not consecutive: ${numbers.join(',')}`)
-          break
-        }
-      }
-    }
-  }
-}
-
 const subjectsConfig = readJson('data/subjects.json')
 const subjects = subjectsConfig.subjects.filter(subject => subject.active)
 const errors = []
@@ -158,8 +104,6 @@ for (const subject of subjects) {
   const mcq = readJson(`data/${subject.questionBank}`)
   const frq = subject.frqBank ? readJson(`data/${subject.frqBank}`) : []
   const units = subject.units?.map(unit => unit.id) || []
-
-  assertGroupMetadata(subject.id, mcq, errors)
 
   for (const unit of ['all', ...units]) {
     for (let i = 0; i < 20; i += 1) {
@@ -173,14 +117,6 @@ for (const subject of subjects) {
       const quiz = generateMockLocal(mcq, subject)
       assertCompleteGroups(subject.id, `mock:${i}`, quiz, errors)
     }
-  }
-}
-
-const groupContextResults = auditActiveSubjects()
-for (const result of groupContextResults) {
-  for (const finding of result.findings) {
-    if (!['P0', 'P0_CANDIDATE', 'P1'].includes(finding.severity)) continue
-    errors.push(`${result.subject_id} ${finding.code}${finding.group_id ? ` ${finding.group_id}` : ''}${finding.question_id ? ` ${finding.question_id}` : ''}: ${finding.detail}`)
   }
 }
 

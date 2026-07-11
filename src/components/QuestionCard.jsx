@@ -150,16 +150,10 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
         <span className="bg-brand text-white text-xs px-2 py-1 rounded">{question.primary_unit}</span>
       </div>
 
-      {question.group_context && (
-        <div className="mb-4 rounded-md border-l-4 border-brand bg-gray-50 px-3 py-2 text-sm leading-relaxed text-text">
-          <MathText text={question.group_context} />
-        </div>
-      )}
-
       {/* Question text */}
-      <div className="text-lg font-medium text-text mb-4 leading-relaxed">
+      <h3 className="text-lg font-medium text-text mb-4 leading-relaxed">
         <MathText text={question.text || question.question_text} />
-      </div>
+      </h3>
 
       {/* Images */}
       <BackgroundTable tableData={hasTableImage ? null : backgroundTable} />
@@ -232,9 +226,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
               <span className="text-error ml-2">（你的答案：{formatAnswer(selectedAnswer)}）</span>
             )}
           </div>
-          {typeof question.source === 'string' && question.source.trim() && (
-            <div className="text-sm text-text-muted mt-1">来源：{question.source}</div>
-          )}
+          <div className="text-sm text-text-muted mt-1">来源：{question.source}</div>
         </div>
       )}
     </div>

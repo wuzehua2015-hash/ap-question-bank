@@ -38,7 +38,7 @@ function renderLatex(source, displayMode) {
   }
 }
 
-function renderLatexSegmentsRaw(text, options = {}) {
+function renderLatexSegments(text, options = {}) {
   const { forceInlineLatex = false } = options
   const restoredHtml = []
   const protectedText = String(text).replace(/<\/?(?:sub|sup)>|&lt;(\/?(?:sub|sup))&gt;/gi, (raw, escapedTag) => {
@@ -81,51 +81,15 @@ function renderLatexSegmentsRaw(text, options = {}) {
   return parts.join('').replace(/@@HTML_TAG_(\d+)@@/g, (_, idx) => restoredHtml[Number(idx)] || '')
 }
 
-function renderLatexSegments(text, options = {}) {
-  const source = String(text)
-  const pattern = /`([^`\n]+?)`/g
-  const parts = []
-  let lastIndex = 0
-  let match
-
-  while ((match = pattern.exec(source)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(renderLatexSegmentsRaw(source.slice(lastIndex, match.index), options))
-    }
-    parts.push(`<code class="inline-code">${escapeHtml(match[1])}</code>`)
-    lastIndex = pattern.lastIndex
-  }
-
-  if (lastIndex < source.length) {
-    parts.push(renderLatexSegmentsRaw(source.slice(lastIndex), options))
-  }
-
-  return parts.join('')
-}
-
 function isLikelyCurrencyToken(token, fullText, startIndex) {
   const body = token.slice(1, -1).trim()
   const after = fullText[startIndex + token.length] || ''
-  const beforeContext = fullText.slice(Math.max(0, startIndex - 80), startIndex)
-  const afterContext = fullText.slice(startIndex + token.length, startIndex + token.length + 80)
-  const context = `${beforeContext} ${afterContext}`
   if (!body || !/^\d/.test(body)) return false
   if (/[_^{}\\]/.test(body)) return false
   if (isLikelyChemistryLatex(body)) return false
-  if (isLikelyMathQuantityToken(body, context)) return false
   if (/^[\d,.]+$/.test(body) && /\d/.test(after)) return true
-  if (/^[\d,.]+(?:\s+(?:they|per|and|or|to|for|million|billion|trillion)\b)/.test(body)) return true
-  if (/^[\d,.]+[MBK]\b/.test(body) && /\b(?:dollars?|cents?|price|cost|revenue|profit|wage|income|funds?|money|paid|give|earns?|million|billion|thousand)\b/i.test(context)) return true
+  if (/^[\d,.]+(?:\s+(?:they|per|and|or|to|for|million|billion|trillion)\b|[A-Za-z])/.test(body)) return true
   if (/\b(?:dollars?|cents?|price|cost|revenue|profit|wage|income|funds?|money|paid|give|earns?)\b/i.test(body)) return true
-  return false
-}
-
-function isLikelyMathQuantityToken(body, context = '') {
-  if (/^\d+(?:\.\d+)?[A-Za-z](?:_[A-Za-z0-9]+)?$/.test(body)) return true
-  if (/^\d+(?:\.\d+)?\\(?:theta|alpha|beta|gamma|pi|mu|Delta|Omega)\b/.test(body)) return true
-  if (/^\d+(?:\.\d+)?(?:[A-Za-z](?:_[A-Za-z0-9]+)?){1,3}$/.test(body) && !/\b(?:dollars?|price|cost|revenue|profit|wage|income|funds?|money|paid|earns?|million|billion|thousand)\b/i.test(context)) {
-    return true
-  }
   return false
 }
 
@@ -204,36 +168,10 @@ function renderMarkdownTable(lines, startIndex) {
   return { html, nextIndex: index }
 }
 
-function renderFencedCode(lines, startIndex) {
-  const opening = lines[startIndex].trim()
-  const match = opening.match(/^```([A-Za-z0-9_-]*)\s*$/)
-  if (!match) return null
-
-  const body = []
-  let index = startIndex + 1
-  while (index < lines.length && !/^```\s*$/.test(lines[index].trim())) {
-    body.push(lines[index])
-    index += 1
-  }
-  if (index >= lines.length) return null
-
-  const language = match[1] || 'text'
-  const languageLabel = language.toLowerCase() === 'java' ? 'Java' : language
-  const html = [
-    '<div class="code-block-wrap">',
-    language ? `<div class="code-block-label">${escapeHtml(languageLabel)}</div>` : '',
-    `<pre class="code-block"><code>${escapeHtml(body.join('\n'))}</code></pre>`,
-    '</div>',
-  ].join('')
-
-  return { html, nextIndex: index + 1 }
-}
-
 function renderTextWithMarkdownTables(text, options = {}) {
   const lines = text.split('\n')
   const parts = []
   let buffer = []
-  let listBuffer = []
 
   const flushBuffer = () => {
     if (!buffer.length) return
@@ -241,43 +179,23 @@ function renderTextWithMarkdownTables(text, options = {}) {
     buffer = []
   }
 
-  const flushList = () => {
-    if (!listBuffer.length) return
-    parts.push(`<ul class="math-bullet-list">${listBuffer.map(item => `<li>${renderLatexSegments(item, options)}</li>`).join('')}</ul>`)
-    listBuffer = []
-  }
-
   for (let i = 0; i < lines.length;) {
-    const code = renderFencedCode(lines, i)
-    const table = code ? null : renderMarkdownTable(lines, i)
-    if (code) {
+    const table = renderMarkdownTable(lines, i)
+    if (table) {
       flushBuffer()
-      flushList()
-      parts.push(code.html)
-      i = code.nextIndex
-    } else if (table) {
-      flushBuffer()
-      flushList()
       parts.push(table.html)
       i = table.nextIndex
     } else if (/^\s*- \[ \]\s+/.test(lines[i])) {
       flushBuffer()
-      flushList()
       const label = lines[i].replace(/^\s*- \[ \]\s+/, '').trim()
       parts.push(`<div class="math-check-option"><span class="math-check-box"></span>${renderLatexSegments(label, { ...options, forceInlineLatex: true })}</div>`)
       i += 1
-    } else if (/^\s*(?:[-*]|\u2022)\s+/.test(lines[i])) {
-      flushBuffer()
-      listBuffer.push(lines[i].replace(/^\s*(?:[-*]|\u2022)\s+/, '').trim())
-      i += 1
     } else {
-      flushList()
       buffer.push(lines[i])
       i += 1
     }
   }
 
-  flushList()
   flushBuffer()
   return parts.join('')
 }

@@ -12,8 +12,7 @@ const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
-const port = Number(args.port || defaultDebugPort(subjectId || 'frq-audit'))
-const spokenMathCheckEnabled = !isHumanitiesSubject(subjectId)
+const port = Number(args.port || 9454)
 
 if (!subjectId) {
   console.error('Usage: node scripts/capture_frq_answerability_web_snapshots.cjs --subject <subject_id> [--url http://127.0.0.1:4174/ap-question-bank/] [--port 9454]')
@@ -25,13 +24,9 @@ const BAD_VISIBLE_PATTERNS = [
   { code: 'raw_html_entity', re: /&(?:quot|amp|lt|gt|nbsp);/i },
   { code: 'visible_mojibake', re: /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7\u9354\u68f0\u93bc]/ },
   { code: 'exam_footer', re: /IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING|(?:STOP\s*)?END OF EXAM|THE FOLLOWING INSTRUCTIONS APPLY TO|MAKE SURE YOU HAVE COMPLETED THE IDENTIFICATION|AP NUMBER LABELS/i },
-  ...(spokenMathCheckEnabled ? [{ code: 'spoken_math', re: /\bend fraction\b|\b(?:the )?fraction\s+\d+|\b(?:the )?fraction\s+[A-Za-z]\s+over\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i }] : []),
+  { code: 'spoken_math', re: /\b(?:the )?fraction\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i },
   { code: 'raw_mapping_key', re: /\bofficial_(?:scoring_guideline|rubric)\b|rubric_image_paths/i },
 ]
-
-function isHumanitiesSubject(id) {
-  return /english|literature|history|government|psychology|human-geography/.test(String(id || ''))
-}
 
 main().catch(error => {
   console.error(error.stack || error.message || String(error))
@@ -64,12 +59,7 @@ async function main() {
 
     const snapshots = []
     for (const item of frq) {
-      console.log(`FRQ snapshot ${item.question_id}`)
-      snapshots.push(await withItemTimeout(
-        captureFrqItem(client, item, mcqStub, outDir),
-        item.question_id,
-        30000,
-      ))
+      snapshots.push(await captureFrqItem(client, item, mcqStub, outDir))
     }
 
     const report = {
@@ -103,18 +93,15 @@ async function captureFrqItem(client, item, mcqStub, outDir) {
   const surfaces = []
 
   await navigate(client, routeUrl('#/frq'))
-  await waitForText(client, item.question_id, 1500)
   await waitForImages(client)
   surfaces.push(await collectSurface(client, 'frq_player', item))
 
   await clickCompletionAndFinish(client)
-  await waitForText(client, item.question_id, 1500)
   await waitForImages(client)
   surfaces.push(await collectSurface(client, 'frq_score', item))
 
   await seedFrqSession(client, item, mcqStub)
   await navigate(client, routeUrl('#/mock-pdf'))
-  await waitForText(client, item.question_id, 1500)
   await waitForImages(client)
   surfaces.push(await collectSurface(client, 'mock_pdf_frq', item))
 
@@ -130,22 +117,6 @@ async function captureFrqItem(client, item, mcqStub, outDir) {
     surfaces,
     findings,
   }
-}
-
-async function withItemTimeout(promise, questionId, timeoutMs) {
-  let timer = null
-  const timeout = new Promise(resolve => {
-    timer = setTimeout(() => {
-      resolve({
-        question_id: questionId,
-        surfaces: [],
-        findings: [{ severity: 'P0', code: 'frq_snapshot_item_timeout', message: `${questionId} exceeded ${timeoutMs}ms` }],
-      })
-    }, timeoutMs)
-  })
-  const result = await Promise.race([promise, timeout])
-  if (timer) clearTimeout(timer)
-  return result
 }
 
 async function collectSurface(client, surface, item) {
@@ -175,7 +146,7 @@ async function collectSurface(client, surface, item) {
   if (!containsEnoughPrompt(info.text, item.text)) {
     findings.push({ severity: 'P0', surface, code: 'frq_prompt_not_visible', message: 'FRQ prompt text is not visible enough on this surface.' })
   }
-  if (surface === 'frq_score' && !/Scoring|Rubric|评分标准|得分点/i.test(info.text || '')) {
+  if (surface !== 'frq_player' && !/Scoring|Rubric|评分标准/i.test(info.text || '')) {
     findings.push({ severity: 'P0', surface, code: 'rubric_not_visible' })
   }
   if (item.background_data?.table && info.tableCount < 1) {
@@ -200,54 +171,10 @@ async function collectSurface(client, surface, item) {
 
 function containsEnoughPrompt(visibleText, prompt) {
   const cleanVisible = normalized(visibleText)
-  const cleanPrompt = normalized(prompt)
-  const prosePrompt = normalized(
-    String(prompt || '')
-      .replace(/\$\$[\s\S]*?\$\$/g, ' ')
-      .replace(/\$[^$]*\$/g, ' ')
-      .replace(/\\[a-zA-Z]+(?:\{[^{}]*\})?/g, ' ')
-      .replace(/[{}_^&=<>+\-*/()[\],.;:]/g, ' ')
-  )
-  const proseWords = prosePrompt.split(/\s+/).filter(word => word.length > 2).slice(0, 24)
-  if (proseWords.length >= 5) {
-    const proseHits = proseWords.filter(word => cleanVisible.includes(word)).length
-    if (proseHits >= Math.min(8, Math.ceil(proseWords.length * 0.5))) return true
-  }
-  const compactVisible = auditComparableText(visibleText).toLowerCase().replace(/[^a-z0-9]+/g, '')
-  const compactPrompt = auditComparableText(prompt).toLowerCase().replace(/[^a-z0-9]+/g, '')
-  if (compactPrompt.length >= 24 && compactVisible.includes(compactPrompt.slice(0, Math.min(80, compactPrompt.length)))) return true
-  const mathTokens = mathAuditTokens(prompt)
-  if (mathTokens.length >= 4) {
-    const hits = mathTokens.filter(token => compactVisible.includes(token)).length
-    if (hits >= Math.min(5, Math.ceil(mathTokens.length * 0.45))) return true
-  }
-  const words = cleanPrompt.split(/\s+/).filter(word => word.length > 2).slice(0, 20)
+  const words = normalized(prompt).split(/\s+/).filter(word => word.length > 2).slice(0, 20)
   if (words.length < 5) return cleanVisible.length > 50
   const hits = words.filter(word => cleanVisible.includes(word)).length
   return hits >= Math.min(10, Math.ceil(words.length * 0.55))
-}
-
-function auditComparableText(text) {
-  return normalized(text)
-    .replace(/[′’]/g, ' prime ')
-    .replace(/[−–—]/g, '-')
-    .replace(/\$+/g, '')
-    .replace(/\\(sin|cos|tan|sec|csc|cot|ln|log|arcsin|arccos|arctan|sqrt|lim|int|frac|dfrac|begin|end|cases|le|ge|to|pi)\b/g, ' $1 ')
-    .replace(/\\(?:mathrm|text|left|right)\{([^{}]*)\}/g, '$1')
-    .replace(/\\(?:,|;|!| )/g, ' ')
-    .replace(/\\[a-zA-Z]+/g, ' ')
-    .replace(/[{}_^&]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-}
-
-function mathAuditTokens(text) {
-  const raw = auditComparableText(text)
-  const compact = raw.toLowerCase().replace(/[^a-z0-9]+/g, '')
-  const tokens = new Set()
-  for (const match of raw.matchAll(/[A-Za-z]?\d+[A-Za-z]?|[A-Za-z]\d+|\d+[A-Za-z]|sqrt|cos|sin|frac|dfrac|cases|prime/g)) tokens.add(match[0].toLowerCase())
-  for (const match of compact.matchAll(/[a-z]?\d+[a-z]?|[a-z]\d+|\d+[a-z]|sqrt|cos|sin|frac|dfrac|cases|prime/g)) tokens.add(match[0].toLowerCase())
-  return Array.from(tokens).filter(token => token.length >= 2)
 }
 
 async function seedFrqSession(client, item, mcqStub) {
@@ -255,7 +182,7 @@ async function seedFrqSession(client, item, mcqStub) {
     subjectId,
     mcq: [mcqStub],
     frq: [item],
-    info: { subject: subjectId, config: { subject: subjectId }, isMock: true, mode: 'mock', requestedCount: 1, actualCount: 1 },
+    info: { isMock: true, mode: 'mock', requestedCount: 1, actualCount: 1 },
     config: { subject: subjectId, unit: 'audit', count: 1, type: 'mock' },
   }), 'utf8').toString('base64')
   await evaluate(client, `(() => {
@@ -301,29 +228,17 @@ function parseArgs(argv) {
   return out
 }
 
-function defaultDebugPort(seed) {
-  let hash = 0
-  for (const ch of String(seed)) hash = (hash * 31 + ch.charCodeAt(0)) % 700
-  return 10154 + hash
-}
-
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'))
 }
 
 async function ensurePreview(url) {
   if (await httpOk(url)) return
-  const previewPort = String(new URL(url).port || 4174)
-  const npmCmd = process.platform === 'win32' ? 'cmd.exe' : 'npm'
-  const npmArgs = process.platform === 'win32'
-    ? ['/d', '/s', '/c', `npm run preview -- --host 127.0.0.1 --port ${previewPort} --strictPort`]
-    : ['run', 'preview', '--', '--host', '127.0.0.1', '--port', previewPort, '--strictPort']
-  const child = spawn(npmCmd, npmArgs, {
+  const child = spawn('npm.cmd', ['run', 'preview', '--', '--host', '127.0.0.1', '--port', '4174', '--strictPort'], {
     cwd: ROOT,
     stdio: 'ignore',
     windowsHide: true,
   })
-  child.unref()
   for (let i = 0; i < 30; i += 1) {
     await sleep(500)
     if (await httpOk(url)) return
@@ -466,7 +381,7 @@ async function evaluate(client, expression) {
 async function waitForImages(client) {
   await evaluate(client, `(() => new Promise(async resolve => {
     const sleep = ms => new Promise(r => setTimeout(r, ms));
-    const deadline = Date.now() + 5000;
+    const deadline = Date.now() + 15000;
     while (Date.now() < deadline) {
       const pending = [...document.images].some(img => !img.complete || img.naturalWidth === 0);
       if (!pending) break;
@@ -474,21 +389,6 @@ async function waitForImages(client) {
     }
     resolve(true);
   }))()`)
-}
-
-async function waitForText(client, needle, timeoutMs = 8000) {
-  const escaped = JSON.stringify(String(needle || ''))
-  const ok = await evaluate(client, `(() => new Promise(async resolve => {
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
-    const deadline = Date.now() + ${Number(timeoutMs) || 8000};
-    while (Date.now() < deadline) {
-      const text = document.body ? document.body.innerText : '';
-      if (text.includes(${escaped})) return resolve(true);
-      await sleep(150);
-    }
-    resolve(false);
-  }))()`)
-  return ok
 }
 
 async function screenshot(client, file) {

@@ -26,32 +26,18 @@ function normalizePromptTables(text) {
 
 function normalizePromptTextV2(text) {
   const tableBlocks = []
-  const codeBlocks = []
   const isTableRow = (value) => /^\s*\|.*\|\s*$/.test(value || '')
   const isSeparator = (value) => {
     const cells = String(value || '').trim().split('|').filter(Boolean).map(cell => cell.trim())
     return cells.length > 1 && cells.every(cell => /^:?-{3,}:?$/.test(cell))
   }
-  const isFence = (value) => /^\s*```[A-Za-z0-9_-]*\s*$/.test(value || '')
-  const isClosingFence = (value) => /^\s*```\s*$/.test(value || '')
 
   const lines = String(text || '').replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n')
   const protectedLines = []
 
   for (let idx = 0; idx < lines.length; idx += 1) {
     const line = lines[idx]
-    if (isFence(line)) {
-      const code = [line]
-      idx += 1
-      while (idx < lines.length) {
-        code.push(lines[idx])
-        if (isClosingFence(lines[idx])) break
-        idx += 1
-      }
-      const token = `@@FRQ_CODE_${codeBlocks.length}@@`
-      codeBlocks.push(code.join('\n'))
-      protectedLines.push(token)
-    } else if (isTableRow(line) && isSeparator(lines[idx + 1])) {
+    if (isTableRow(line) && isSeparator(lines[idx + 1])) {
       const table = [line, lines[idx + 1]]
       idx += 2
       while (idx < lines.length && isTableRow(lines[idx])) {
@@ -81,7 +67,6 @@ function normalizePromptTextV2(text) {
     .replace(/\s+(- \[ \]\s+)/g, '\n$1')
     .replace(/\s+(Introduction|Participants|Method|Results and Discussion|Results|Discussion|Source\s+\d+)\s+/g, '\n\n$1\n')
     .replace(/\s*\u2022\s*/g, '\n\u2022 ')
-    .replace(/@@FRQ_CODE_(\d+)@@/g, (_, idx) => `\n\n${codeBlocks[Number(idx)] || ''}\n\n`)
     .replace(/@@FRQ_TABLE_(\d+)@@/g, (_, idx) => `\n\n${tableBlocks[Number(idx)] || ''}\n\n`)
     .replace(/\n{3,}/g, '\n\n')
     .trim()
@@ -554,107 +539,12 @@ function DisplayImage({ path, variant }) {
   )
 }
 
-function FigureBlock({ block, variant }) {
-  const isPdf = variant === 'pdf'
-  const title = [block.figure_id, block.caption].filter(Boolean).join('. ')
-  const images = block.image_paths || block.images || []
-  const subcaptions = block.subcaptions || []
-  const subcaptionText = subcaptions.join('; ')
-
-  if (isPdf) {
-    return (
-      <div style={{ margin: '14px 0 18px', ...BREAK_GUARD.BLOCK }}>
-        {title && (
-          <div style={{ fontSize: '13px', fontWeight: 700, color: '#1f2937', marginBottom: '3px' }}>
-            <MathText text={title} />
-          </div>
-        )}
-        {subcaptionText && (
-          <div style={{ fontSize: '12px', color: '#475569', marginBottom: '6px' }}>
-            <MathText text={subcaptionText} />
-          </div>
-        )}
-        {images.map((path, idx) => <DisplayImage key={idx} path={path} variant={variant} />)}
-      </div>
-    )
-  }
-
-  return (
-    <figure className="my-5 rounded-lg border border-border bg-white p-3">
-      {title && (
-        <figcaption className="text-sm font-semibold text-text">
-          <MathText text={title} />
-        </figcaption>
-      )}
-      {subcaptionText && (
-        <div className="mb-3 mt-1 text-sm text-text-muted">
-          <MathText text={subcaptionText} />
-        </div>
-      )}
-      {images.map((path, idx) => <DisplayImage key={idx} path={path} variant={variant} />)}
-    </figure>
-  )
-}
-
-function ContentBlocks({ blocks, variant }) {
-  const isPdf = variant === 'pdf'
-  if (!Array.isArray(blocks) || blocks.length === 0) return null
-
-  if (isPdf) {
-    return (
-      <div style={{
-        fontFamily: "'Times New Roman', 'Georgia', 'Songti SC', 'SimSun', serif",
-        fontSize: '16px',
-        lineHeight: 1.8,
-        color: '#1f2937',
-      }}>
-        {blocks.map((block, idx) => {
-          if (block.type === 'figure') return <FigureBlock key={idx} block={block} variant={variant} />
-          if (block.type === 'table') return <FRQBackgroundTable key={idx} tableData={block.table || block.data} isPdf={true} />
-          const text = block.text || ''
-          const label = block.label || block.part || ''
-          const marginLeft = block.type === 'part' ? '24px' : '0'
-          return (
-            <div key={idx} style={{ marginLeft, marginTop: block.type === 'part' ? '8px' : '0', ...BREAK_GUARD.BLOCK }}>
-              {label && <span style={{ fontWeight: 700, color: '#1e40af', marginRight: '8px' }}><MathText text={label} /> </span>}
-              <MathText text={text} />
-            </div>
-          )
-        })}
-      </div>
-    )
-  }
-
-  return (
-    <div className="text-base text-text leading-relaxed">
-      {blocks.map((block, idx) => {
-        if (block.type === 'figure') return <FigureBlock key={idx} block={block} variant={variant} />
-        if (block.type === 'table') return <FRQBackgroundTable key={idx} tableData={block.table || block.data} isPdf={false} />
-        const text = block.text || ''
-        const label = block.label || block.part || ''
-        const isPart = block.type === 'part'
-        return (
-          <div key={idx} className={isPart ? 'ml-6 mt-3' : 'mb-3'}>
-            {label && <span className="mr-2 inline-block font-semibold text-blue-800"><MathText text={label} /> </span>}
-            <MathText text={text} />
-          </div>
-        )
-      })}
-    </div>
-  )
-}
-
 export function RubricDisplay({ rubric, variant }) {
   const points = normalizeRubricPoints(rubric)
-  if (!rubric || (points.length === 0 && !rubric.solution_outline)) return null
+  if (!rubric || points.length === 0) return null
   const isSingleGuideline =
     points.length === 1 &&
     isOfficialWholeRubric(points[0], rubric)
-  const solutionOutline = String(rubric.solution_outline || '').trim()
-  const referenceSolution = String(rubric.reference_solution || '').trim()
-  const isCspCreateRubric = rubric.rubric_type === 'csp_create_written_response'
-  const outlineTitle = isCspCreateRubric ? '评分思路' : '参考答案 / 解题思路'
-  const rubricTitle = isCspCreateRubric ? '书面作答评分标准' : '评分细则'
 
   if (variant === 'pdf') {
     return (
@@ -664,38 +554,8 @@ export function RubricDisplay({ rubric, variant }) {
           marginBottom: '8px', paddingBottom: '4px',
           borderBottom: '1px solid #dbeafe',
         }}>
-          {rubricTitle}（{rubric.total_points} 分）
+          Scoring Rubric ({rubric.total_points} points)
         </div>
-        {referenceSolution && (
-          <div style={{
-            padding: '10px 12px',
-            marginBottom: '10px',
-            background: '#f8fafc',
-            border: '1px solid #cbd5e1',
-            borderRadius: '6px',
-            ...BREAK_GUARD.BLOCK,
-          }}>
-            <div style={{ fontSize: '13px', fontWeight: '700', color: '#334155', marginBottom: '6px' }}>
-              参考实现
-            </div>
-            <MathText text={referenceSolution} as="div" />
-          </div>
-        )}
-        {solutionOutline && (
-          <div style={{
-            padding: '10px 12px',
-            marginBottom: '10px',
-            background: '#f0f9ff',
-            border: '1px solid #bae6fd',
-            borderRadius: '6px',
-            ...BREAK_GUARD.BLOCK,
-          }}>
-            <div style={{ fontSize: '13px', fontWeight: '700', color: '#075985', marginBottom: '6px' }}>
-              {outlineTitle}
-            </div>
-            <RubricDescription text={solutionOutline} variant="pdf" />
-          </div>
-        )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
           {points.map((point, idx) => (
             <div key={idx} style={{
@@ -711,7 +571,7 @@ export function RubricDisplay({ rubric, variant }) {
               {!isSingleGuideline && (
                 <div style={{ fontWeight: 'bold', color: '#1e40af', marginBottom: '4px' }}>
                   {point.point_id}
-                  <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>（{point.value} 分）</span>
+                  <span style={{ color: '#6b7280', marginLeft: '6px', fontWeight: 'normal' }}>({point.value} pts)</span>
                 </div>
               )}
               <RubricDescription text={point.description} variant="pdf" />
@@ -725,27 +585,15 @@ export function RubricDisplay({ rubric, variant }) {
   return (
     <div className="mt-4">
       <div className="text-sm font-bold text-blue-800 mb-2 pb-1 border-b border-blue-100">
-        {rubricTitle}（{rubric.total_points} 分）
+        Scoring Rubric ({rubric.total_points} points)
       </div>
-      {referenceSolution && (
-        <div className="mb-3 rounded-md border border-slate-200 bg-slate-50 px-3 py-3">
-          <div className="mb-2 text-sm font-bold text-slate-800">参考实现</div>
-          <MathText text={referenceSolution} as="div" />
-        </div>
-      )}
-      {solutionOutline && (
-        <div className="mb-3 rounded-md border border-sky-200 bg-sky-50 px-3 py-3">
-          <div className="mb-2 text-sm font-bold text-sky-800">{outlineTitle}</div>
-          <RubricDescription text={solutionOutline} variant="web" />
-        </div>
-      )}
       <div className="space-y-2">
         {points.map((point, idx) => (
           <div key={idx} className={`${isSingleGuideline ? '' : 'pl-3 border-l-2 border-blue-300'} py-2 bg-blue-50/50 rounded-r`}>
             {!isSingleGuideline && (
               <div className="font-bold text-blue-700">
                 {point.point_id}
-                <span className="text-blue-500 ml-2 font-normal">（{point.value} 分）</span>
+                <span className="text-blue-500 ml-2 font-normal">({point.value} pts)</span>
               </div>
             )}
             <RubricDescription text={point.description} variant="web" />
@@ -763,10 +611,7 @@ function FRQText({ text, isPdf }) {
   const renderBlockText = (block) => {
     const blockText = block.lines.join('\n')
     const hasTable = /^\s*\|.*\|\s*$/m.test(blockText)
-    const hasCode = /^\s*```[A-Za-z0-9_-]*\s*$/m.test(blockText)
     return hasTable ? (
-      <MathText text={blockText} as="div" />
-    ) : hasCode ? (
       <MathText text={blockText} as="div" />
     ) : (
       <div style={{ whiteSpace: 'pre-wrap' }}>
@@ -813,7 +658,6 @@ function FRQText({ text, isPdf }) {
 function FRQBackgroundTable({ tableData, isPdf }) {
   if (!tableData || !Array.isArray(tableData.headers) || !Array.isArray(tableData.rows)) return null
 
-  const sourceText = typeof tableData.source === 'string' ? tableData.source.trim() : ''
   const cols = tableData.headers.length
   const gridTemplateColumns = tableData.firstColumnWide
     ? `minmax(${isPdf ? '120px' : '160px'}, 1.4fr) repeat(${Math.max(0, cols - 1)}, minmax(0, 1fr))`
@@ -847,9 +691,9 @@ function FRQBackgroundTable({ tableData, isPdf }) {
             </div>
           )))}
         </div>
-        {sourceText && (
+        {tableData.source && (
           <div style={{ padding: '6px 8px', fontSize: '10px', color: '#64748b', borderTop: '1px solid #cbd5e1' }}>
-            <MathText text={sourceText} />
+            <MathText text={tableData.source} />
           </div>
         )}
       </div>
@@ -875,9 +719,9 @@ function FRQBackgroundTable({ tableData, isPdf }) {
           </div>
         )))}
       </div>
-      {sourceText && (
+      {tableData.source && (
         <div className="border-t border-border px-3 py-2 text-xs text-text-muted">
-          <MathText text={sourceText} />
+          <MathText text={tableData.source} />
         </div>
       )}
     </div>
@@ -919,22 +763,11 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
   const imagePaths = frq.image_paths || []
   const rubricImagePaths = frq.rubric_image_paths || []
   const qNum = frq.question_number || frq.question_num || index || '?'
-  const officialImagesFirst = frq.display_mode === 'official_images_first' && isPdf
+  const officialImagesFirst = frq.display_mode === 'official_images_first'
   const promptText = frq.text || frq.question_text
-  const contentBlocks = Array.isArray(frq.content_blocks) ? frq.content_blocks : null
   const backgroundTable = frq.background_data?.table
 
-  const promptTextBlock = contentBlocks ? (
-    isPdf ? (
-      <div style={{ marginBottom: '16px' }}>
-        <ContentBlocks blocks={contentBlocks} variant={variant} />
-      </div>
-    ) : (
-      <div className="mb-6 bg-gray-50 rounded-lg p-4">
-        <ContentBlocks blocks={contentBlocks} variant={variant} />
-      </div>
-    )
-  ) : promptText && (
+  const promptTextBlock = promptText && (
     isPdf ? (
       <div style={{ marginBottom: '16px' }}>
         <FRQText text={promptText} isPdf={true} />
@@ -946,10 +779,10 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
     )
   )
 
-  const imageBlock = contentBlocks ? [] : imagePaths.map((path, i) => (
+  const imageBlock = imagePaths.map((path, i) => (
     <DisplayImage key={i} path={path} variant={variant} />
   ))
-  const backgroundTableBlock = !contentBlocks && backgroundTable && (
+  const backgroundTableBlock = backgroundTable && (
     <FRQBackgroundTable tableData={backgroundTable} isPdf={isPdf} />
   )
 
@@ -972,14 +805,14 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
             fontSize: '16px', fontWeight: '600', color: '#1e40af',
             fontFamily: "'Times New Roman', 'Georgia', serif",
           }}>
-            {frq.rubric?.total_points || 0} 分
+            {frq.rubric?.total_points || 0} points
           </div>
         </div>
       ) : (
         <div className="flex justify-between items-center mb-4 pb-3 border-b border-border">
           <div className="text-lg font-bold text-brand">FRQ {qNum}</div>
           <div className="text-sm font-semibold text-brand">
-            {frq.rubric?.total_points || 0} 分
+            {frq.rubric?.total_points || 0} points
           </div>
         </div>
       )}
@@ -995,7 +828,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
           {imageBlock}
           {promptText && !isPdf && (
               <details className="mb-6 rounded-lg border border-border bg-gray-50 p-3 text-sm text-text-muted">
-                <summary className="cursor-pointer font-semibold text-text">补充识别文本</summary>
+                <summary className="cursor-pointer font-semibold text-text">Extracted text (supplemental)</summary>
                 <div className="mt-3">
                   <FRQText text={promptText} isPdf={false} />
                 </div>

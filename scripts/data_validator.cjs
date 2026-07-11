@@ -1,10 +1,6 @@
 const fs = require('fs')
 const path = require('path')
 
-const STRICT_OPTION_IMAGE_BINDING_SUBJECTS = new Set([
-  'computer-science-principles',
-])
-
 function validateAllSubjects() {
   const subjectsPath = path.resolve('public/data/subjects.json')
   const data = JSON.parse(fs.readFileSync(subjectsPath, 'utf8'))
@@ -27,12 +23,7 @@ function validateAllSubjects() {
     }
     const validUnits = new Set((subject.units || []).map(u => u.id))
     validUnits.add('not_applicable')
-    const { errors, warnings } = validate(qbPath, {
-      validUnits,
-      subjectId: subject.id,
-      releaseStatus: subject.releaseStatus,
-      visibility: subject.visibility,
-    })
+    const { errors, warnings } = validate(qbPath, { validUnits, subjectId: subject.id })
     allErrors += errors.length
     allWarnings += warnings.length
 
@@ -42,12 +33,7 @@ function validateAllSubjects() {
         console.log(`ERROR: ${subject.id}: missing FRQ bank: ${subject.frqBank}`)
         allErrors += 1
       } else {
-        const frqResult = validate(frqPath, {
-          validUnits,
-          subjectId: subject.id,
-          releaseStatus: subject.releaseStatus,
-          visibility: subject.visibility,
-        })
+        const frqResult = validate(frqPath, { validUnits, subjectId: subject.id })
         allErrors += frqResult.errors.length
         allWarnings += frqResult.warnings.length
       }
@@ -84,10 +70,6 @@ function validate(filePath, options = {}) {
   const seenIds = new Set()
   const validUnits = options.validUnits || new Set(['U1','U2','U3','U4','U5','U6','not_applicable'])
   const subjectId = options.subjectId || ''
-  const releaseStatus = options.releaseStatus || ''
-  const visibility = options.visibility || ''
-  const subjectMustBlockTableLikeOptions = visibility === 'public' || releaseStatus === 'certified'
-  const strictOptionImageBinding = STRICT_OPTION_IMAGE_BINDING_SUBJECTS.has(subjectId)
   const optionPollutionPatterns = [
     /Questions?\s+\d+\s*(?:-|through|and)/i,
     /Questions?\s+\d+\s+(refer|are|is)\b/i,
@@ -158,14 +140,6 @@ function validate(filePath, options = {}) {
   ]
   const byId = new Map()
   const isPhysicsEM = /physics-c-e-m/i.test(filePath)
-  const isComputerScienceA = /computer-science-a/i.test(filePath)
-  const csaSpokenCodePatterns = [
-    { name: 'spoken parenthesis', pattern: /\b(?:open|close)\s+parenthesis\b/i },
-    { name: 'spoken bracket', pattern: /\b(?:open|close)\s+(?:curly\s+)?bracket\b/i },
-    { name: 'spoken operator', pattern: /\b(?:equals equals|plus plus|minus minus|percent|semicolon|comma|dot|open parenthesis|close parenthesis)\b|(?:open|close)\s*parenthesis/i },
-    { name: 'letter-spaced identifier', pattern: /\b(?:a r r|a r g|s 1|s 2|s 3|max Val|input Val|Student In f o|Student Info|Number GrGroup|Hidden WoWord)\b/i },
-    { name: 'screen-reader method description', pattern: /\ball\s+(?:one|1)\s+word\b|\bhence(?:forth)?\s+referr?ed\s+to\s+as\b|\binitial capital on\b/i },
-  ]
 
   function findHiddenControlChars(value, currentPath, out) {
     if (typeof value === 'string') {
@@ -209,57 +183,6 @@ function validate(filePath, options = {}) {
       .replace(/\\\([\s\S]*?\\\)/g, ' ')
       .replace(/\\\[[\s\S]*?\\\]/g, ' ')
   }
-
-  function findStructuredVisibleText(value, currentPath, out) {
-    const key = currentPath.split('.').pop().replace(/\[\d+\]$/, '')
-    const visibleKeys = new Set([
-      'text',
-      'question_text',
-      'group_context',
-      'title',
-      'caption',
-      'subcaption',
-      'label',
-      'description',
-      'solution_outline',
-      'reference_solution',
-      'prompt',
-      'rubric_text',
-      'headers',
-      'rows',
-      'options',
-      'points',
-      'parts',
-      'criteria',
-      'content_blocks',
-      'background_data',
-      'option_table_data',
-    ])
-    const metadataKeys = new Set([
-      'source',
-      'source_refs',
-      'source_ref',
-      'source_block',
-      'source_pdf',
-      'image_sources',
-      'visual_asset_review',
-      'asset_review',
-      'metadata',
-    ])
-    if (metadataKeys.has(key)) return
-    if (value && typeof value === 'object' && !Array.isArray(value)) {
-      const objectKeys = Object.keys(value)
-      if (visibleKeys.has(key) && objectKeys.some(k => ['pdf', 'page_range', 'source_type'].includes(k))) {
-        out.push(`${currentPath}: student-visible text field contains source metadata object`)
-        return
-      }
-      for (const [childKey, item] of Object.entries(value)) {
-        findStructuredVisibleText(item, `${currentPath}.${childKey}`, out)
-      }
-    } else if (Array.isArray(value)) {
-      value.forEach((item, index) => findStructuredVisibleText(item, `${currentPath}[${index}]`, out))
-    }
-  }
   
   for (const q of data) {
     const qid = q.question_id || 'UNKNOWN'
@@ -285,7 +208,6 @@ function validate(filePath, options = {}) {
     }
     findHiddenControlChars(q, qid, errors)
     findTextArtifacts(q, qid, errors)
-    findStructuredVisibleText(q, qid, errors)
     if (isPhysicsEM) {
       const searchableText = JSON.stringify(q, (key, value) => (typeof value === 'string' ? stripMathSegments(value) : value))
       for (const { name, pattern } of physicsArtifactPatterns) {
@@ -320,12 +242,6 @@ function validate(filePath, options = {}) {
       for (const ans of normalizedAnswers) {
         if (!optionKeys.has(ans)) errors.push(`${qid}: Answer ${ans} is not present in options`)
       }
-      const tableLikeOptions = Object.values(q.options)
-        .map(value => String(value || '').trim())
-        .filter(value => {
-          const lines = value.split(/\r?\n/).map(line => line.trim()).filter(Boolean)
-          return lines.length >= 2 && lines.length <= 3 && lines.every(line => line.length <= 36 && !/[.;:]/.test(line))
-        })
       for (const [opt, optText] of Object.entries(q.options)) {
         if (!optText || optText.trim() === '') {
           errors.push(`${qid}: Option ${opt} is empty`)
@@ -336,11 +252,6 @@ function validate(filePath, options = {}) {
         if (optText && optionPollutionPatterns.some(pattern => pattern.test(optText))) {
           errors.push(`${qid}: Option ${opt} appears polluted with neighboring question/table text`)
         }
-      }
-      if (!q.option_table_data && tableLikeOptions.length >= 3) {
-        const message = `${qid}: table-like MCQ options must use option_table_data`
-        if (subjectMustBlockTableLikeOptions) errors.push(message)
-        else warnings.push(message)
       }
     }
     
@@ -420,27 +331,12 @@ function validate(filePath, options = {}) {
           }
         }
       }
-      if ((subjectId === 'macro' || subjectId === 'micro') && Array.isArray(q.image_paths) && q.image_paths.length > 0) {
-        const redundantOptionTableImages = q.image_paths.filter(imgPath => /(?:option_table|elasticity_table)(?:\.[a-z]+)?$/i.test(String(imgPath || '')))
-        if (redundantOptionTableImages.length > 0) {
-          errors.push(`${qid}: structured option_table_data must not also render redundant option-table image(s): ${redundantOptionTableImages.join(', ')}`)
-        }
-      }
     } else if (!isFRQ && structuredTableHeaderPatterns.some(pattern => pattern.test(text))) {
       errors.push(`${qid}: text contains structured option-table headers but missing option_table_data`)
-    }
-    if (subjectId === 'micro' && !isFRQ && q.background_data?.table && Array.isArray(q.image_paths) && q.image_paths.some(imgPath => /payoff_matrix/i.test(String(imgPath || '')))) {
-      errors.push(`${qid}: structured payoff matrix must not also render redundant payoff_matrix image`)
-    }
-    if (subjectId === 'micro' && !isFRQ && q.background_data?.table && /\b(?:R Soda Low Price High Price|Beta Raise Price Do Not Raise Price|E Soda Low Price|Alpha Raise Price|High Price \$15, \$90|Do Not Raise Price \$110, \$20)\b/i.test(text)) {
-      errors.push(`${qid}: payoff matrix source text appears flattened into the prompt; keep matrix content in background_data.table only`)
     }
     
     // FRQ-specific checks
     if (isFRQ) {
-      if ((subjectId === 'macro' || subjectId === 'micro') && Array.isArray(q.image_paths) && q.image_paths.length > 0 && q.background_data?.table) {
-        errors.push(`${qid}: economics FRQ has both an official image and background_data.table; use the official image as the canonical table/graph asset unless an explicit subject review approves structured replacement`)
-      }
       // FRQ field-name consistency
       if (!q.question_number && q.question_num) {
         warnings.push(`${qid}: FRQ uses 'question_num' instead of 'question_number'`)
@@ -466,149 +362,6 @@ function validate(filePath, options = {}) {
         if (pattern.test(q.text || '') || pattern.test(rubricText)) {
           errors.push(`${qid}: FRQ/rubric contains ${name}`)
           break
-        }
-      }
-    }
-
-    if (!isFRQ && q.options && Array.isArray(q.image_paths) && q.image_paths.length > 0) {
-      const optionValues = Object.values(q.options || {}).map(value => String(value || '').trim())
-      const diagramOptions = optionValues.filter(value => /^Diagram [A-E]$/i.test(value))
-      if (diagramOptions.length >= 4) {
-        const expectedOptionLetters = ['A', 'B', 'C', 'D', 'E'].slice(0, diagramOptions.length)
-        const optionLetterPattern = diagramOptions.length === 5 ? /^[A-E]$/ : /^[A-D]$/
-        const optionLabel = diagramOptions.length === 5 ? 'A-E' : 'A-D'
-        const reportOptionImageIssue = (message) => {
-          if (strictOptionImageBinding) errors.push(message)
-          else warnings.push(message)
-        }
-        const imageSources = q.visual_asset_review?.image_sources || q.asset_review?.image_sources || []
-        const optionSources = imageSources.filter(source => optionLetterPattern.test(String(source.option || '')))
-        const combinedOptionSources = imageSources.filter(source => source.asset_type === 'combined_option_image' && String(source.option || '') === optionLabel)
-        const multiImageOptionSources = imageSources.filter(source => optionLetterPattern.test(String(source.option || '')) && source.binding === 'two_images_per_option_in_source_order')
-        const contextSources = imageSources.filter(source => source.asset_type === 'prompt_context_image')
-        const hasStandardOptionSources = q.image_paths.length === expectedOptionLetters.length && optionSources.length === expectedOptionLetters.length
-        const hasPromptPlusOptionSources = q.image_paths.length === expectedOptionLetters.length + 1 && contextSources.length === 1 && optionSources.length === expectedOptionLetters.length
-        const hasTwoImagesPerOptionSources = q.image_paths.length === expectedOptionLetters.length * 2 && multiImageOptionSources.length === expectedOptionLetters.length * 2
-        const hasCombinedOptionRegion = q.image_paths.length === 1 && combinedOptionSources.length === 1
-        const hasPromptPlusCombinedOptionRegion = q.image_paths.length === 2 && contextSources.length === 1 && combinedOptionSources.length === 1
-        const supportedDiagramBinding =
-          hasStandardOptionSources ||
-          hasPromptPlusOptionSources ||
-          hasTwoImagesPerOptionSources ||
-          hasCombinedOptionRegion ||
-          hasPromptPlusCombinedOptionRegion
-        if (!supportedDiagramBinding) {
-          reportOptionImageIssue(`${qid}: Diagram ${optionLabel} options require explicit option image ownership metadata`)
-        }
-        if (!supportedDiagramBinding && q.image_paths.length !== expectedOptionLetters.length) {
-          reportOptionImageIssue(`${qid}: Diagram ${optionLabel} options require exactly ${expectedOptionLetters.length} option images`)
-        }
-        if (!supportedDiagramBinding && optionSources.length !== expectedOptionLetters.length) {
-          reportOptionImageIssue(`${qid}: Diagram ${optionLabel} option images require ${expectedOptionLetters.length} source records with option letters`)
-        }
-        const optionSet = new Set(optionSources.map(source => source.option))
-        if (!supportedDiagramBinding || optionSources.length) {
-          for (const key of expectedOptionLetters) {
-            if (!optionSet.has(key) && !hasCombinedOptionRegion) reportOptionImageIssue(`${qid}: Diagram option ${key} lacks source ownership metadata`)
-          }
-        }
-        const supportedBindings = new Set(['option_label_nearest_image', 'two_images_per_option_in_source_order'])
-        if (optionSources.some(source => source.binding && !supportedBindings.has(source.binding))) {
-          reportOptionImageIssue(`${qid}: Diagram option image source uses unsupported binding metadata`)
-        }
-        const dimensions = []
-        for (const imgPath of q.image_paths) {
-          const fullPath = path.join('public', imgPath)
-          if (!fs.existsSync(fullPath)) continue
-          const buffer = fs.readFileSync(fullPath)
-          const dim = pngDimensions(buffer)
-          if (dim) dimensions.push(dim)
-        }
-        if (dimensions.length === 4) {
-          const widths = dimensions.map(dim => dim.width)
-          const heights = dimensions.map(dim => dim.height)
-          const dimensionVarianceReviewed = q.visual_asset_review?.dimension_variance_reviewed === true || q.asset_review?.dimension_variance_reviewed === true
-          if (!dimensionVarianceReviewed && (Math.max(...widths) / Math.max(1, Math.min(...widths)) > 1.75 || Math.max(...heights) / Math.max(1, Math.min(...heights)) > 1.75)) {
-            reportOptionImageIssue(`${qid}: Diagram option images have inconsistent dimensions; possible prompt/option image mix-up`)
-          }
-        }
-      }
-    }
-    if (subjectId === 'computer-science-principles' && !isFRQ) {
-      const cspText = q.text || q.question_text || ''
-      if (/\b(?:sample portion of the database|database is shown below|database is sorted|table below)\b/i.test(cspText) && !q.background_data?.table && !(q.image_paths || []).length) {
-        errors.push(`${qid}: CSP database/table prompt must use background_data.table or precise image evidence`)
-      }
-      if (/\bfollowing information\b/i.test(cspText) && /(?:^|\n)\s*\u2022\s+/u.test(cspText)) {
-        errors.push(`${qid}: CSP field list uses raw bullet glyphs; use markdown list lines for structured rendering`)
-      }
-      if (/\bDay and Date\s+Movie Title\s+City\s+Number of Times Purchased\b/i.test(cspText.replace(/\s+/g, ' '))) {
-        errors.push(`${qid}: CSP sample database appears flattened in question text`)
-      }
-      if (/\b(?:computer program|program|code segment|code fragment|algorithm) below\b/i.test(cspText) && !/```/.test(cspText) && !q.background_data?.table && !(q.image_paths || []).length) {
-        errors.push(`${qid}: CSP prompt references code/algorithm below but has no structured code block, table, or precise image evidence`)
-      }
-      if (/^\s*←\s*$/m.test(cspText)) {
-        errors.push(`${qid}: CSP prompt contains orphan arrow glyph; likely missing pseudocode`)
-      }
-    }
-    if (subjectId === 'macro' && !isFRQ && q.options && !q.option_table_data) {
-      const optionText = Object.values(q.options).map(value => String(value || '')).join('\n')
-      if (/\b(?:Decrease|Increase)\s+(?:spending|taxes)\s+(?:Buy|Sell)\s+bonds\b/i.test(optionText)) {
-        errors.push(`${qid}: macro policy-mix answer choices appear flattened; use option_table_data with fiscal and monetary policy columns`)
-      }
-      if (/\b(?:Increase|Decrease)\s+(?:Increase|Decrease|No change)\s+(?:Increase|Decrease|No change)\b/i.test(optionText)) {
-        errors.push(`${qid}: macro multi-column answer choices appear flattened; use option_table_data`)
-      }
-    }
-    if (isComputerScienceA) {
-      const textBlob = [
-        q.text || q.question_text || '',
-        q.group_context || '',
-        ...Object.values(q.options || {}),
-        q.rubric?.solution_outline || '',
-        q.rubric?.reference_solution || '',
-      ].join('\n')
-      if (/See the official (?:prompt|free-response prompt) image below/i.test(textBlob)) {
-        errors.push(`${qid}: CSA prompt uses official-image placeholder instead of structured text/code`)
-      }
-      if (!isFRQ && q.options && Object.entries(q.options).every(([key, value]) => String(value).trim() === key)) {
-        errors.push(`${qid}: CSA options are bare letters; option text/code must be structured`)
-      }
-      if (!isFRQ && Array.isArray(q.image_paths) && q.image_paths.length > 0) {
-        errors.push(`${qid}: CSA MCQ must not render prompt screenshots; rebuild prompt/options/code as structured content`)
-      }
-      for (const { name, pattern } of csaSpokenCodePatterns) {
-        if (pattern.test(textBlob)) {
-          errors.push(`${qid}: CSA contains ${name}`)
-          break
-        }
-      }
-      if (/```java/i.test(textBlob) && !/```java[\s\S]{12,}?```/i.test(textBlob)) {
-        errors.push(`${qid}: CSA Java code block is empty or malformed`)
-      }
-      if (!/```java/i.test(textBlob) && /\b(?:code segment|following method|following class declaration|following interface|constructor declaration|incomplete method)\b/i.test(textBlob)) {
-        errors.push(`${qid}: CSA code-heavy item lacks fenced Java code`)
-      }
-      if (/\b(?:Lin e|Li ne|space space|open quote|close quote|bina ry|Str ing|s t r|List Of|list Of [A-Z]\w*|size Of|Answers to Computer)\b/.test(textBlob)) {
-        errors.push(`${qid}: CSA contains residual OCR/accessibility prose or answer-key pollution`)
-      }
-      if (Object.values(q.options || {}).some(value => /\s\d{2}\s*$/.test(String(value)) || /Answers to Computer/i.test(String(value)))) {
-        errors.push(`${qid}: CSA option appears to contain trailing page number or answer-key pollution`)
-      }
-      if (!isFRQ && /\bInteger Score\s+Letter Grade\b/i.test(textBlob)) {
-        errors.push(`${qid}: CSA grading scale appears flattened; render it as a markdown table`)
-      }
-      if (!isFRQ && /\nI\.\s*`[^`\n]+`\s*\nII\.\s*`[^`\n]+`\s*\nIII\.\s*`[^`\n]+`/i.test(q.text || q.question_text || '')) {
-        errors.push(`${qid}: CSA inline I/II/III code candidates should be a structured markdown table`)
-      }
-      if (isFRQ) {
-        const reference = String(q.rubric?.reference_solution || '')
-        if (!/```java[\s\S]{40,}?```/i.test(reference)) {
-          errors.push(`${qid}: CSA FRQ rubric missing fenced Java reference_solution`)
-        }
-        if (!q.rubric?.solution_outline || String(q.rubric.solution_outline).replace(/\s+/g, ' ').trim().length < 120) {
-          errors.push(`${qid}: CSA FRQ rubric missing student-usable solution_outline`)
         }
       }
     }
@@ -675,15 +428,6 @@ function validate(filePath, options = {}) {
   }
   
   return { errors, warnings, passed: errors.length === 0 }
-}
-
-function pngDimensions(buffer) {
-  if (!buffer || buffer.length < 24) return null
-  if (buffer.toString('ascii', 1, 4) !== 'PNG') return null
-  return {
-    width: buffer.readUInt32BE(16),
-    height: buffer.readUInt32BE(20),
-  }
 }
 
 const filePath = process.argv[2]

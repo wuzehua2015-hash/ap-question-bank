@@ -107,18 +107,11 @@ export function formatAnswer(value) {
 }
 
 export function adaptFRQ(raw) {
-  const rawRubric = raw.rubric || null
-  const rubric = rawRubric
-    ? {
-        ...rawRubric,
-        total_points: Number(rawRubric.total_points ?? rawRubric.max_score ?? raw.total_points ?? raw.max_score ?? 0),
-      }
-    : null
+  const rubric = raw.rubric || null
   
   return {
     question_id: raw.question_id || raw.id || '',
     text: raw.question_text || raw.text || '',
-    content_blocks: raw.content_blocks || raw.contentBlocks || null,
     question_number: raw.question_number || raw.question_num || 0,
     year: raw.year || 0,
     image_paths: raw.image_paths || raw.images || [],
@@ -135,14 +128,6 @@ function isPlayableMCQ(q) {
 
 function questionOrder(q) {
   return Number(q.question_number || q.official_number || 0)
-}
-
-function questionId(q) {
-  return q.question_id || q.id || q.frq_id || `${q.year || 'unknown'}_${questionOrder(q)}`
-}
-
-function shuffleCopy(items) {
-  return [...items].sort(() => Math.random() - 0.5)
 }
 
 function makeQuestionBuckets(questions) {
@@ -191,67 +176,6 @@ function flattenBucketsToLimit(buckets, limit, { exact = false } = {}) {
     if (selected.length >= limit) break
   }
   return selected.slice(0, exact ? limit : selected.length)
-}
-
-function readLastMockFrqSignature(subjectId) {
-  if (typeof localStorage === 'undefined') return null
-  return localStorage.getItem(`${subjectId}_lastMockFRQSignature`)
-}
-
-function writeLastMockFrqSignature(subjectId, signature) {
-  if (typeof localStorage === 'undefined') return
-  localStorage.setItem(`${subjectId}_lastMockFRQSignature`, signature)
-}
-
-function mockFrqSignature(frqs) {
-  return frqs.map(questionId).sort().join('|')
-}
-
-function selectMockFRQ(frqQuestions, frqCount, subjectId) {
-  const pool = Array.isArray(frqQuestions) ? frqQuestions.filter(Boolean) : []
-  if (!frqCount || pool.length === 0) return []
-  if (pool.length <= frqCount) {
-    return pool.slice().sort((a, b) => questionOrder(a) - questionOrder(b))
-  }
-
-  const byQuestionNumber = new Map()
-  for (const frq of pool) {
-    const number = questionOrder(frq)
-    if (!number) continue
-    if (!byQuestionNumber.has(number)) byQuestionNumber.set(number, [])
-    byQuestionNumber.get(number).push(frq)
-  }
-  const slots = [...byQuestionNumber.keys()]
-    .sort((a, b) => a - b)
-    .slice(0, frqCount)
-
-  if (slots.length < frqCount) {
-    return shuffleCopy(pool)
-      .slice(0, frqCount)
-      .sort((a, b) => {
-        const orderDiff = questionOrder(a) - questionOrder(b)
-        return orderDiff || Number(a.year || 0) - Number(b.year || 0)
-      })
-  }
-
-  const lastSignature = readLastMockFrqSignature(subjectId)
-  let selected = []
-  for (let attempt = 0; attempt < 20; attempt += 1) {
-    selected = slots.map(number => {
-      const candidates = byQuestionNumber.get(number) || []
-      return shuffleCopy(candidates)[0]
-    }).filter(Boolean)
-    if (mockFrqSignature(selected) !== lastSignature) break
-  }
-
-  selected = selected
-    .slice(0, frqCount)
-    .sort((a, b) => {
-      const orderDiff = questionOrder(a) - questionOrder(b)
-      return orderDiff || Number(a.year || 0) - Number(b.year || 0)
-    })
-  writeLastMockFrqSignature(subjectId, mockFrqSignature(selected))
-  return selected
 }
 
 // Normalize option formats to an A-E keyed object.
@@ -406,10 +330,6 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
   const playableQuestions = questions.filter(isPlayableMCQ)
 
   const mcq = []
-  if (mockConfig.preserveGroupsOnly) {
-    const buckets = makeQuestionBuckets(playableQuestions).sort(() => Math.random() - 0.5)
-    mcq.push(...flattenBucketsToLimit(buckets, mockConfig.totalMCQ, { exact: true }))
-  } else {
   const unitDistribution = mockConfig.unitDistribution || {}
   const configTotal = Object.values(unitDistribution).reduce((a, b) => a + b, 0)
   if (configTotal > 0 && configTotal !== mockConfig.totalMCQ) {
@@ -438,20 +358,32 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
     const buckets = makeQuestionBuckets(playableQuestions).sort(() => Math.random() - 0.5)
     mcq.push(...flattenBucketsToLimit(buckets, mockConfig.totalMCQ, { exact: true }))
   }
+
+  // FRQ: select a year, then a set if multiple sets exist for that year
+  const yearGroups = {}
+  for (const frq of frqQuestions) {
+    const year = frq.year
+    if (!yearGroups[year]) yearGroups[year] = []
+    yearGroups[year].push(frq)
   }
 
-  // FRQ: sample from the full subject FRQ pool. Released-year sets are useful
-  // source groupings, but mock practice should not repeat the same fixed year.
-  const frqCount = Number(mockConfig.frqCount || 0)
-  if (!frqCount || !Array.isArray(frqQuestions) || frqQuestions.length === 0) {
-    return {
-      quiz: mcq,
-      frq: [],
-      isMock: true,
+  const yearSets = {}
+  for (const year of Object.keys(yearGroups)) {
+    const frqs = yearGroups[year]
+    const sets = {}
+    for (const frq of frqs) {
+      const set = frq.set || 'default'
+      if (!sets[set]) sets[set] = []
+      sets[set].push(frq)
     }
+    yearSets[year] = sets
   }
 
-  const frq = selectMockFRQ(frqQuestions, frqCount, subjectId)
+  const years = Object.keys(yearSets)
+  const selectedYear = years[Math.floor(Math.random() * years.length)]
+  const sets = Object.keys(yearSets[selectedYear])
+  const selectedSet = sets[Math.floor(Math.random() * sets.length)]
+  const frq = yearSets[selectedYear][selectedSet]
 
   return {
     quiz: mcq,

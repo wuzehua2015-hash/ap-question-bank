@@ -6667,7 +6667,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Calculus BC 2013 Full Exam",
-    "text": "Which of the following series converge?\n\\nI. $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{|\\sin n|}{n^2}$\n\\nII. $\\displaystyle\\sum_{n=1}^{\\infty}e^{-n}$\n\\nIII. $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{n+2}{n^2+n}$",
+    "text": "Which of the following series converge?\\n\\nI. $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{|\\sin n|}{n^2}$\\n\\nII. $\\displaystyle\\sum_{n=1}^{\\infty}e^{-n}$\\n\\nIII. $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{n+2}{n^2+n}$",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -6899,7 +6899,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Calculus BC 2013 Full Exam",
-    "text": "The function $f$ has the properties indicated in the table above. Which of the following must be true?\n\n| $a$ | $\\displaystyle\\lim_{x\\to a^-} f(x)$ | $\\displaystyle\\lim_{x\\to a^+} f(x)$ | $f(a)$ |\n|---:|---:|---:|---:|\n| $-1$ | $4$ | $6$ | $4$ |\n| $0$ | $-3$ | $-3$ | $5$ |\n| $1$ | $2$ | $2$ | $2$ |",
+    "text": "The function $f$ has the properties indicated in the table above. Which of the following must be true?\\n\\n| $a$ | $\\displaystyle\\lim_{x\\to a^-} f(x)$ | $\\displaystyle\\lim_{x\\to a^+} f(x)$ | $f(a)$ |\\n|---:|---:|---:|---:|\\n| $-1$ | $4$ | $6$ | $4$ |\\n| $0$ | $-3$ | $-3$ | $5$ |\\n| $1$ | $2$ | $2$ | $2$ |",
     "options": {
       "A": "$f$ is continuous at $x=-1$",
       "B": "$f$ is continuous at $x=0$",
@@ -7251,7 +7251,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Calculus BC 2013 Full Exam",
-    "text": "The table above gives selected values for a continuous function $f$. If $f$ is increasing over the closed interval $[0,3]$, which of the following could be the value of $\\displaystyle\\int_0^3 f(x)\\,dx$?\n\n| $x$ | $0$ | $0.5$ | $1$ | $1.5$ | $2$ | $2.5$ | $3$ |\n|---:|---:|---:|---:|---:|---:|---:|---:|\n| $f(x)$ | $0$ | $4$ | $10$ | $18$ | $28$ | $40$ | $54$ |",
+    "text": "The table above gives selected values for a continuous function $f$. If $f$ is increasing over the closed interval $[0,3]$, which of the following could be the value of $\\displaystyle\\int_0^3 f(x)\\,dx$?\\n\\n| $x$ | $0$ | $0.5$ | $1$ | $1.5$ | $2$ | $2.5$ | $3$ |\\n|---:|---:|---:|---:|---:|---:|---:|---:|\\n| $f(x)$ | $0$ | $4$ | $10$ | $18$ | $28$ | $40$ | $54$ |",
     "options": {
       "A": "$50$",
       "B": "$62$",
@@ -7663,7 +7663,7 @@
     "question_type": "MCQ",
     "year": 2013,
     "source": "AP Calculus BC 2013 Full Exam",
-    "text": "Which of the following statements are true about the series $\\displaystyle\\sum_{n=2}^{\\infty}a_n$, where $a_n=\\dfrac{(-1)^n}{\\sqrt n+(-1)^n}$?\n\\nI. The series is alternating.\n\\nII. $|a_{n+1}|\\le |a_n|$ for all $n\\ge2$.\n\\nIII. $\\displaystyle\\lim_{n\\to\\infty}a_n=0$",
+    "text": "Which of the following statements are true about the series $\\displaystyle\\sum_{n=2}^{\\infty}a_n$, where $a_n=\\dfrac{(-1)^n}{\\sqrt n+(-1)^n}$?\\n\\nI. The series is alternating.\\n\\nII. $|a_{n+1}|\\le |a_n|$ for all $n\\ge2$.\\n\\nIII. $\\displaystyle\\lim_{n\\to\\infty}a_n=0$",
     "options": {
       "A": "None",
       "B": "I only",
@@ -19893,7 +19893,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Calculus BC 2018 Full Exam",
-    "text": "If the power series $\\sum_{n=0}^{\\infty}a_n(x-4)^n$ converges at $x=7$ and diverges at $x=9$, which of the following must be true?\n\\nI. The series converges at $x=1$.\n\\nII. The series converges at $x=2$.\n\\nIII. The series diverges at $x=-1$.",
+    "text": "If the power series $\\sum_{n=0}^{\\infty}a_n(x-4)^n$ converges at $x=7$ and diverges at $x=9$, which of the following must be true?\\n\\nI. The series converges at $x=1$.\\n\\nII. The series converges at $x=2$.\\n\\nIII. The series diverges at $x=-1$.",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -20115,7 +20115,7 @@
     "question_type": "MCQ",
     "year": 2018,
     "source": "AP Calculus BC 2018 Full Exam",
-    "text": "Let $y=f(x)$ be the solution to the differential equation $\\frac{dy}{dx}=f\\prime(x)$ with initial condition $f(1)=5$. Selected values of $f\\prime(x)$ are given in the table below. What is the approximation for $f(2)$ if Euler's method is used with a step size of $0.5$, starting at $x=1$?\n\n| $x$ | 0.0 | 0.5 | 1.0 | 1.5 | 2.0 |\n|---:|---:|---:|---:|---:|---:|\n| $f\\prime(x)$ | 1.0 | 0.7 | 0.5 | 0.4 | 0.3 |",
+    "text": "Let $y=f(x)$ be the solution to the differential equation $\\frac{dy}{dx}=f\\prime(x)$ with initial condition $f(1)=5$. Selected values of $f\\prime(x)$ are given in the table below. What is the approximation for $f(2)$ if Euler's method is used with a step size of $0.5$, starting at $x=1$?\\n\\n| $x$ | 0.0 | 0.5 | 1.0 | 1.5 | 2.0 |\\n|---:|---:|---:|---:|---:|---:|\\n| $f\\prime(x)$ | 1.0 | 0.7 | 0.5 | 0.4 | 0.3 |",
     "options": {
       "A": "$5.35$",
       "B": "$5.45$",

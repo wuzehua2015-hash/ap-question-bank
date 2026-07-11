@@ -69,31 +69,6 @@ body {
   font-weight: 650;
 }
 
-.math-bullet-list {
-  margin: 0.65rem 0 0.85rem 1.25rem;
-  padding-left: 0.75rem;
-  list-style: disc;
-}
-
-.math-bullet-list li {
-  margin: 0.22rem 0;
-  line-height: 1.45;
-}
-
-.inline-code {
-  display: inline-block;
-  padding: 0.08rem 0.28rem;
-  border: 1px solid #d7dde6;
-  border-radius: 4px;
-  background: #f8fafc;
-  color: #111827;
-  font-family: "Cascadia Mono", "Consolas", "Menlo", monospace;
-  font-size: 0.92em;
-  font-weight: 500;
-  line-height: 1.35;
-  white-space: nowrap;
-}
-
 .math-check-option {
   display: flex;
   align-items: flex-start;
@@ -111,42 +86,6 @@ body {
   flex: 0 0 auto;
   border: 1.5px solid currentColor;
   background: transparent;
-}
-
-.code-block-wrap {
-  display: block;
-  max-width: 100%;
-  margin: 0.75rem 0;
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  overflow: hidden;
-  background: #0f172a;
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
-
-.code-block-label {
-  padding: 0.35rem 0.65rem;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.18);
-  background: rgba(15, 23, 42, 0.96);
-  color: #cbd5e1;
-  font-size: 0.75rem;
-  font-weight: 650;
-  line-height: 1.2;
-}
-
-.code-block {
-  margin: 0;
-  max-width: 100%;
-  overflow-x: auto;
-  padding: 0.75rem 0.85rem;
-  background: #0f172a;
-  color: #e2e8f0;
-  font-family: "Cascadia Mono", "Consolas", "Menlo", monospace;
-  font-size: 0.86rem;
-  line-height: 1.45;
-  tab-size: 2;
-  white-space: pre;
 }
 
 .katex {

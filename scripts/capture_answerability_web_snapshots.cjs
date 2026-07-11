@@ -12,13 +12,12 @@ const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
-const port = Number(args.port || defaultDebugPort(subjectId || 'audit'))
+const port = Number(args.port || 9444)
 const limit = args.limit ? Number(args.limit) : null
 const offset = args.offset ? Number(args.offset) : 0
 const onlyPriority = args.priority || null
 const onlyIds = args.ids ? new Set(String(args.ids).split(',').map(id => id.trim()).filter(Boolean)) : null
 const includeReviewed = args['include-reviewed'] === 'true' || args.includeReviewed === 'true'
-const spokenMathCheckEnabled = !isHumanitiesSubject(subjectId)
 
 if (!subjectId) {
   console.error('Usage: node scripts/capture_answerability_web_snapshots.cjs --subject <subject_id> [--priority P1_REVIEW] [--limit 50]')
@@ -30,14 +29,10 @@ const BAD_VISIBLE_PATTERNS = [
   { code: 'raw_html_entity', re: /&(?:quot|amp|lt|gt|nbsp);/i },
   { code: 'visible_mojibake', re: /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7\u9354\u68f0\u93bc]/ },
   { code: 'exam_footer', re: /IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING|(?:STOP\s*)?END OF EXAM|THE FOLLOWING INSTRUCTIONS APPLY TO|MAKE SURE YOU HAVE COMPLETED THE IDENTIFICATION|AP NUMBER LABELS/i },
-  ...(spokenMathCheckEnabled ? [{ code: 'spoken_math', re: /\bend fraction\b|\b(?:the )?fraction\s+\d+|\b(?:the )?fraction\s+[A-Za-z]\s+over\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i }] : []),
+  { code: 'spoken_math', re: /\b(?:the )?fraction\b|\bend fraction\b|\bsub\s+(?:one|two|half|max|min|[A-Za-z0-9])\b|\be raised to\b|\bopen parenthesis\b|\bclose parenthesis\b/i },
   { code: 'missing_formula_phrase', re: /\b(?:according to|given by|modeled by) the equation\s*,/i },
   { code: 'missing_constants_phrase', re: /\bwhere\s+and\s+are\s+constants\b/i },
 ]
-
-function isHumanitiesSubject(id) {
-  return /english|literature|history|government|psychology|human-geography/.test(String(id || ''))
-}
 
 function isExpandedText(text) {
   return /查看答案|正确答案|Hide Answer|Show Answer/.test(text || '') ||
@@ -57,7 +52,7 @@ async function main() {
     ? readJson(path.join(auditDir, 'review_results.json'))
     : { items: [] }
   const reviewed = new Set((review.items || []).filter(item => item.status === 'PASS').map(item => item.question_id))
-  let items = (manifest.items || []).filter(item => item.type === 'MCQ' && (onlyIds || includeReviewed || !reviewed.has(item.question_id)))
+  let items = (manifest.items || []).filter(item => item.type === 'MCQ' && (includeReviewed || !reviewed.has(item.question_id)))
   if (onlyPriority) items = items.filter(item => item.priority === onlyPriority)
   if (onlyIds) items = items.filter(item => onlyIds.has(item.question_id))
   if (offset || limit) items = items.slice(offset, limit ? offset + limit : undefined)
@@ -75,11 +70,11 @@ async function main() {
     await client.send('Page.addScriptToEvaluateOnNewDocument', {
       source: `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`,
     })
-    await navigate(client, routeUrl(`#/search?subject=${encodeURIComponent(subjectId)}`))
-    await evaluate(client, `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`)
-    await navigate(client, routeUrl(`#/search?subject=${encodeURIComponent(subjectId)}`))
+    await navigate(client, routeUrl('#/'))
+    await navigate(client, routeUrl('#/search'))
+    await evaluate(client, `window.location.hash = '#/search'`)
     for (let i = 0; i < 60; i += 1) {
-      const ready = await evaluate(client, `location.hash.includes('/search') && localStorage.getItem('currentSubject') === ${JSON.stringify(subjectId)} && Boolean(document.querySelector('input'))`).catch(() => false)
+      const ready = await evaluate(client, `location.hash.includes('/search') && Boolean(document.querySelector('input'))`).catch(() => false)
       if (ready) break
       await sleep(100)
     }
@@ -132,8 +127,7 @@ async function captureSearchItem(client, item) {
   if (result.brokenImages?.length) {
     findings.push({ severity: 'P0', code: 'broken_image', message: 'One or more visible images failed to load.', details: result.brokenImages })
   }
-  const structuredTableVisible = result.tableCount > 0 && (item.data_evidence?.has_option_table || item.data_evidence?.has_background_data)
-  if ((item.data_evidence?.image_count || 0) > 0 && result.imageCount === 0 && !structuredTableVisible) {
+  if ((item.data_evidence?.image_count || 0) > 0 && result.imageCount === 0) {
     findings.push({ severity: 'P0', code: 'expected_images_not_visible', message: 'Manifest says the item has images, but none are visible in Search.' })
   }
   if (item.data_evidence?.has_background_data && result.tableCount === 0) {
@@ -250,29 +244,17 @@ function parseArgs(argv) {
   return out
 }
 
-function defaultDebugPort(seed) {
-  let hash = 0
-  for (const ch of String(seed)) hash = (hash * 31 + ch.charCodeAt(0)) % 700
-  return 9444 + hash
-}
-
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'))
 }
 
 async function ensurePreview(url) {
   if (await httpOk(url)) return
-  const previewPort = String(new URL(url).port || 4174)
-  const npmCmd = process.platform === 'win32' ? 'cmd.exe' : 'npm'
-  const npmArgs = process.platform === 'win32'
-    ? ['/d', '/s', '/c', `npm run preview -- --host 127.0.0.1 --port ${previewPort} --strictPort`]
-    : ['run', 'preview', '--', '--host', '127.0.0.1', '--port', previewPort, '--strictPort']
-  const child = spawn(npmCmd, npmArgs, {
+  const child = spawn('npm.cmd', ['run', 'preview', '--', '--host', '127.0.0.1', '--port', '4174', '--strictPort'], {
     cwd: ROOT,
     stdio: 'ignore',
     windowsHide: true,
   })
-  child.unref()
   for (let i = 0; i < 30; i += 1) {
     await sleep(500)
     if (await httpOk(url)) return

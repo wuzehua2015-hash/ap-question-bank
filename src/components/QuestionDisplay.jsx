@@ -262,35 +262,6 @@ function DisplayBackgroundTable({ tableData, variant }) {
   )
 }
 
-function DisplayGroupContext({ text, variant }) {
-  const value = String(text || '').trim()
-  if (!value) return null
-
-  if (variant === 'pdf') {
-    return (
-      <div style={{
-        margin: '0 0 10px',
-        padding: '8px 10px',
-        background: '#f8fafc',
-        borderLeft: '3px solid #2563eb',
-        fontSize: '13px',
-        color: '#374151',
-        lineHeight: 1.5,
-        pageBreakInside: 'avoid',
-        breakInside: 'avoid',
-      }}>
-        <MathText text={value} />
-      </div>
-    )
-  }
-
-  return (
-    <div className="mb-4 rounded-md border-l-4 border-brand bg-gray-50 px-3 py-2 text-sm leading-relaxed text-text">
-      <MathText text={value} />
-    </div>
-  )
-}
-
 function QuestionDisplay({ question, variant = 'web', showAnswer = false, index: _index }) {
   if (!question) return null
 
@@ -322,18 +293,15 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
         </div>
       )}
 
-      {/* Shared prompt for grouped questions */}
-      <DisplayGroupContext text={question.group_context} variant={variant} />
-
       {/* Question text */}
       {isPdf ? (
         <div style={{ fontSize: '16px', fontWeight: '500', color: '#1f2937', marginBottom: '12px', lineHeight: 1.6 }}>
           <MathText text={question.text || question.question_text} />
         </div>
       ) : (
-        <div className="text-lg font-medium text-text mb-4 leading-relaxed">
+        <h3 className="text-lg font-medium text-text mb-4 leading-relaxed">
           <MathText text={question.text || question.question_text} />
-        </div>
+        </h3>
       )}
 
       {/* Images */}

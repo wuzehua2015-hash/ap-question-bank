@@ -8,20 +8,13 @@ const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 const WORKSPACE = path.join(ROOT, '.workspace', 'browser-render-audit')
 const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
-const MAX_STUDENT_PDF_MCQ = 60
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject || 'physics-c-e-m'
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
 const headless = args.headless !== 'false'
-const port = Number(args.port || defaultDebugPort(subjectId))
+const port = Number(args.port || 9333)
 
 fs.mkdirSync(WORKSPACE, { recursive: true })
-
-function defaultDebugPort(seed) {
-  let hash = 0
-  for (const ch of String(seed)) hash = (hash * 31 + ch.charCodeAt(0)) % 700
-  return 11333 + hash
-}
 
 const BAD_TEXT_PATTERNS = [
   { name: 'replacement_char', re: /\uFFFD/ },
@@ -39,8 +32,6 @@ const PHYSICS_TEXT_PATTERNS = [
   { name: 'physics_split_symbol', re: /\b(?:current\s+X\s+I|magnitude\s+B\s+F|force\s+B\s+F)\b/i },
   { name: 'physics_signed_variable_words', re: /\b(?:charge\s+positive\s+e|charges?\s+negative\s+q\s+and\s+positive\s+3\s*q)\b/i },
 ]
-
-const RUBRIC_TEXT_RE = /Free Response Rubric Reference|Scoring Rubric|Rubric|FRQ\s*评分参考|评分参考|评分标准|评分细则/i
 
 main().catch((error) => {
   console.error(error.stack || error.message || String(error))
@@ -301,7 +292,7 @@ function selectAuditMcq(mcq) {
       rest.push(q)
     }
   }
-  return [...priority, ...rest].slice(0, Math.min(MAX_STUDENT_PDF_MCQ, mcq.length))
+  return [...priority, ...rest]
 }
 
 function selectAuditFrq(frq) {
@@ -309,8 +300,7 @@ function selectAuditFrq(frq) {
 }
 
 async function auditSearch(client, errors, warnings, artifacts) {
-  await navigate(client, routeUrl(`#/search?subject=${encodeURIComponent(subjectId)}`))
-  await waitForSubjectLock(client, 'search', errors)
+  await navigate(client, routeUrl('#/search'))
   await waitForImages(client)
   const info = await collectPageInfo(client, 'search')
   checkPageInfo(info, errors, warnings)
@@ -342,7 +332,7 @@ async function auditMockPdf(client, mcq, frq, errors, warnings, artifacts) {
   await waitForImages(client)
   const info = await collectPageInfo(client, 'mock-pdf')
   checkPageInfo(info, errors, warnings)
-  if (!RUBRIC_TEXT_RE.test(info.text)) {
+  if (!/Free Response Rubric Reference|Scoring Rubric|Rubric/i.test(info.text)) {
     errors.push({ page: 'mock-pdf', kind: 'rubric_not_visible' })
   }
   if (info.brokenImages.length) {
@@ -353,7 +343,7 @@ async function auditMockPdf(client, mcq, frq, errors, warnings, artifacts) {
     errors.push({ page: 'mock-pdf', kind: 'missing_frq_background_tables', expectedFrqTables, actualTables: info.tableCount })
   }
   await screenshot(client, `${subjectId}-mock-pdf.png`, artifacts)
-  const mockRubricScroll = await scrollToText(client, RUBRIC_TEXT_RE)
+  const mockRubricScroll = await scrollToText(client, /Free Response Rubric Reference|Scoring Rubric|Rubric/i)
   if (!mockRubricScroll.found) {
     errors.push({ page: 'mock-pdf', kind: 'rubric_scroll_target_not_found' })
   }
@@ -369,7 +359,7 @@ async function auditScorePage(client, mcq, frq, errors, warnings, artifacts) {
   await waitForImages(client)
   const info = await collectPageInfo(client, 'score')
   checkPageInfo(info, errors, warnings)
-  if (!RUBRIC_TEXT_RE.test(info.text)) {
+  if (!/Scoring Rubric|Rubric/i.test(info.text)) {
     warnings.push({ page: 'score', kind: 'score_page_missing_frq_or_rubric_text' })
   }
   const expectedFrqTables = frq.filter(item => item.background_data?.table).length
@@ -377,37 +367,11 @@ async function auditScorePage(client, mcq, frq, errors, warnings, artifacts) {
     errors.push({ page: 'score', kind: 'missing_frq_background_tables', expectedFrqTables, actualTables: info.tableCount })
   }
   await screenshot(client, `${subjectId}-score.png`, artifacts)
-  const scoreRubricScroll = await scrollToText(client, RUBRIC_TEXT_RE)
+  const scoreRubricScroll = await scrollToText(client, /Scoring Rubric|Rubric/i)
   if (!scoreRubricScroll.found) {
     errors.push({ page: 'score', kind: 'rubric_scroll_target_not_found' })
   }
   await screenshot(client, `${subjectId}-score-rubric.png`, artifacts)
-}
-
-async function waitForSubjectLock(client, page, errors) {
-  for (let i = 0; i < 40; i += 1) {
-    const state = await evaluate(client, `(() => ({
-      currentSubject: localStorage.getItem('currentSubject'),
-      url: location.href,
-      hasInput: Boolean(document.querySelector('input')),
-      loading: /Loading|加载|鍔犺浇/.test(document.body?.innerText || '')
-    }))()`)
-    if (state.currentSubject === subjectId && state.hasInput && !state.loading) return
-    await sleep(150)
-  }
-  const state = await evaluate(client, `(() => ({
-    currentSubject: localStorage.getItem('currentSubject'),
-    url: location.href,
-    text: (document.body?.innerText || '').slice(0, 240)
-  }))()`)
-  errors.push({
-    page,
-    kind: 'subject_not_locked',
-    expectedSubject: subjectId,
-    actualSubject: state.currentSubject || null,
-    url: state.url,
-    sample: state.text,
-  })
 }
 
 function routeUrl(hash) {

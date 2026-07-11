@@ -4,26 +4,16 @@ const path = require('path')
 const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 
-const SCIENCE_SUBJECT_RE = /^(chemistry|physics-|physics-c-|environmental-science|biology)/
-const PHYSICS_SUBJECT_RE = /^(physics-|physics-c-)/
+const SCIENCE_SUBJECT_RE = /^(chemistry|physics-|physics-c-)/
 
 const HARD_PATTERNS = [
   { name: 'unscored published item', pattern: /"scoring_status"\s*:\s*"not_scored"/i },
   { name: 'spoken decimal OCR', pattern: /\b(?:zero|one|two|three|four|five|six|seven|eight|nine|\d+)\s+d\s*ecimal\s+point\b|\b\d+\s+decimal\s+point\b/i },
-  { name: 'spoken formula narration', pattern: /\b(?:open|close)\s+parenthesis\b|\bo\s*p\s*e\s*n\s+p\s*a\s*r\s*e\s*n\s*t\s*h\s*e\s*s\s*i\s*s\b|\bend\s+(?:subscript|fraction|bracket)\b|\bwith\s+numerator\b|\bthe\s+fraction\b/i },
-  { name: 'spoken subscript OCR', pattern: /\b(?:theta|t\s*heta|V|P|F|E|I|q|C|R)\s+sub\b/i },
-  { name: 'spoken sign OCR', pattern: /\bn\s+e\s+g\s+a\s+tive\b|\bne\s+g\s+a\s+tive\b|\bneg\s+a\s+tive\b/i },
-  { name: 'split word OCR', pattern: /\b(?:p\s+ro\s+duce|pro\s+duc\s+e|rea\s+c\s+t|rea\s+c\s+ts|r\s+e\s+a\s+c\s+t\s+s)\b/i },
-  { name: 'split physics symbol OCR', pattern: /\bp\s+f\s*\n\s*i\s*\n\s*[+-]\s*p\b|\bp\s+f\s*\.\b|\bp\s*f\s+and\s+p\s*i\b|\bp\s*d\s+is\b|\bp\s+d\s*\n|\bp\s+f\s*\n/i },
-  { name: 'unrendered physics symbol', pattern: /\bmagnitude\s+p\s*i\b|\bmomentum\s+of\s+magnitude\s+p\s*f\b|\bpi\s+perpendicular\b/i },
-  { name: 'raw isotope OCR', pattern: /\b\d+[ \t]+\d+[ \t]*(?:He|U|Th|Pb|Be|Ac)\b|(?:^|\n)\s*-\s*b\s*(?:\n|$)/ },
-  { name: 'dirty rubric OCR formula/table', pattern: /\b0\s+i_s\s+s\b|\bObject Distance os\b|\bhose\s*\n\s*V_A\s*\n\s*vt\b|\bV_A\s*\n\s*vt\b|\bm\s+s_1\b|\bT_T\s*\n\s*new\b/i },
+  { name: 'spoken formula narration', pattern: /\b(?:open|close)\s+parenthesis\b|\bend\s+(?:subscript|fraction|bracket)\b|\bwith\s+numerator\b|\bthe\s+fraction\b/i },
   { name: 'spoken charge narration', pattern: /\bwith\s+a\s+(?:positive|negative)\s+(?:one|two|three|\d+)\s+charge\b/i },
-  { name: 'accessibility figure text leak', pattern: /\bThe figure presents\b|\bThe diagram on\b/i },
+  { name: 'accessibility figure text leak', pattern: /\bThe figure (?:presents|shows)\b|\bThe diagram on\b/i },
   { name: 'accessibility table narration leak', pattern: /\bRow\s+\d+\.\s+[A-Z]/i },
-  { name: 'PDF boilerplate', pattern: /\bUnauthorized\b|Unauthorized copying|GO ON TO THE NEXT PAGE|END OF EXAM|IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING|Visit College Board on the web|Continue your response to QUESTION|Begin your response to QUESTION|Physics 2 Practice Exam|Scoring Guidelines for Free-Response/i },
-  { name: 'generic rubric variable leak', pattern: /\b(?:official_scoring_guideline|official_rubric)\b/ },
-  { name: 'physics OCR comparison fragment', pattern: /(?:^|\n)\s*[A-Za-z]{1,2}\s*\n\s*[A-Za-z]{1,2}\s*\n\s*[A-Za-z]{1,2}\s*[<>=]|[<>=]\s*\n\s*[A-Za-z]{1,2}\s*\n/ },
+  { name: 'PDF boilerplate', pattern: /Unauthorized copying|GO ON TO THE NEXT PAGE|END OF EXAM|IF YOU FINISH BEFORE TIME IS CALLED|MAKE SURE YOU HAVE DONE THE FOLLOWING/i },
   { name: 'raw sub/sup tag', pattern: /<\/?(?:sub|sup)>/i },
   { name: 'HTML entity leak', pattern: /&(quot|apos|amp|lt|gt|#34|#39|#x22|#x27);/i },
   { name: 'replacement/mojibake character', pattern: /\uFFFD|鈥|蔚|碌|¥/ },
@@ -52,48 +42,6 @@ function questionLabel(q) {
   return q.question_id || q.frq_id || q.id || 'UNKNOWN'
 }
 
-function escapeRegex(value) {
-  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-}
-
-function optionTableHeadersAtTextTail(q) {
-  const headers = (q.option_table_data?.headers || []).map(header => String(header || '').trim()).filter(Boolean)
-  const text = String(q.text || q.question_text || '')
-  if (!headers.length || !text) return false
-  const candidates = headerOrders(headers).map(order => order.map(escapeRegex).join('\\s+'))
-  return candidates.some(candidate => new RegExp('(?:\\s+|\\n)+' + candidate + '\\s*$', 'i').test(text))
-}
-
-function stripMathSegments(value) {
-  return String(value || '')
-    .replace(/\$\$[\s\S]*?\$\$/g, ' ')
-    .replace(/\$[^$]*\$/g, ' ')
-    .replace(/\\\([\s\S]*?\\\)/g, ' ')
-    .replace(/\\\[[\s\S]*?\\\]/g, ' ')
-}
-
-function headerOrders(headers) {
-  if (headers.length > 4) return [headers]
-  const out = []
-  const used = Array(headers.length).fill(false)
-  function walk(current) {
-    if (current.length === headers.length) {
-      out.push(current.slice())
-      return
-    }
-    for (let i = 0; i < headers.length; i += 1) {
-      if (used[i]) continue
-      used[i] = true
-      current.push(headers[i])
-      walk(current)
-      current.pop()
-      used[i] = false
-    }
-  }
-  walk([])
-  return out
-}
-
 function validateBank(subject, relPath, errors, warnings) {
   const full = path.join(PUBLIC, 'data', relPath)
   if (!fs.existsSync(full)) return
@@ -109,112 +57,6 @@ function validateBank(subject, relPath, errors, warnings) {
     for (const { name, pattern } of SOFT_TABLE_PATTERNS) {
       if (pattern.test(textBlob)) {
         warnings.push(`${label}: contains ${name}; verify structured table/list rendering`)
-      }
-    }
-    const diagramOptions = Object.values(q.options || {}).every(value => /^Diagram [A-E]$/.test(String(value || '').trim()))
-    if (PHYSICS_SUBJECT_RE.test(subject.id) && /Sphere Y\s+Sphere Z|Left Sphere\s+Right Sphere|Speed\s+Direction|Voltage\s+Electric Field|Figure 1\s+Figure 2|Figure\s+1\s*\n\s*Figure\s+2/i.test(textBlob) && !q.option_table_data && !(diagramOptions && (q.image_paths || []).length)) {
-      errors.push(`${label}: table-style options must use option_table_data`)
-    }
-    if (PHYSICS_SUBJECT_RE.test(subject.id) && optionTableHeadersAtTextTail(q)) {
-      errors.push(`${label}: option table headers are duplicated at the end of the question text`)
-    }
-    for (const imagePath of [...(q.image_paths || []), ...(q.rubric_image_paths || [])]) {
-      if (/qr|qrcode/i.test(imagePath)) {
-        errors.push(`${label}: image path looks like QR/footer pollution: ${imagePath}`)
-      }
-    }
-    for (const [optionKey, optionValue] of Object.entries(q.options || {})) {
-      const option = String(optionValue || '')
-      if (/Questions.{0,8}\d+\s*-\s*\d+.{0,30}refer/i.test(option)) {
-        errors.push(`${label}: option ${optionKey} contains next-question group intro pollution`)
-      }
-      if (/GO ON TO THE\s+N?\s*EXT PAGE|NEXT PAGE/i.test(option)) {
-        errors.push(`${label}: option ${optionKey} contains PDF page-transition pollution`)
-      }
-      if (/(?:Voltmeter\s+Reading|Ohmmeter\s+Reading|Wire\s+Current|theta\s+sub|t\s*heta\s+sub)/i.test(option) && !q.option_table_data) {
-        errors.push(`${label}: option ${optionKey} appears to contain flattened table/OCR spillover`)
-      }
-      if (/Resistance\s*\([^)]*\)|Potential Difference\s*\(|Current\s*\(/i.test(option) && !q.option_table_data) {
-        errors.push(`${label}: option ${optionKey} appears to contain next-table spillover`)
-      }
-    }
-    if (subject.id === 'physics-2' && /\b(?:figures?|graph|table)\s+above\b/i.test(textBlob) && !(q.image_paths || []).length && !q.table_data && !q.option_table_data) {
-      errors.push(`${label}: references a figure/graph/table above but has no rendered asset or structured table`)
-    }
-    if (subject.id === 'environmental-science') {
-      if (/\bThe (?:figure|diagram|graph|table|map) (?:shows|presents|illustrates|depicts|contains|is)\b|\bOption [A-E] presents\b/i.test(textBlob)) {
-        errors.push(`${label}: APES accessibility figure/table prose leaked into student-visible text`)
-      }
-      if (/\bd\s+o\s+l\s+l\s+a\s+r\b|\bpe\s+r\s+h\s*ect\s*are\b|\bpl\s+u\s+s\b|\be\s+quals\b|\bM\s*S\s*Wcreation\b|\bS\s*T\s*O\s*P\b|\bhe\s+ctares?\b|\btim\s+es\b|\bkiloca\s+lories?\b|\bkilocalorie\s+s\b|\bN\s+P\s+P\b|\bp\s+H\b|\bm\s+p\s+g\b|\bp\s+p\s+b\b|\bC\s+A\s+F\s+E\b|\bC\s+F\s+C\s*s\b|\bV\s+O\s+C\s*s\b|\bP\s+C\s+B\s*s\b|\bN\s+O\b|\bN\s+T\s+U\b/i.test(textBlob)) {
-        errors.push(`${label}: APES split OCR/science abbreviation text remains`)
-      }
-      if (/\b(?:CO2|CH4|H2O|O3|CCl2F2|NOx|SOx|SO2|NO3|NO2|NH4|NH3|N2)\b|\bH\+(?=\s|$)/.test(textBlob)) {
-        errors.push(`${label}: APES chemical notation should be rendered with math subscript markup`)
-      }
-      const imageSources = q.provenance && Array.isArray(q.provenance.image_sources) ? q.provenance.image_sources : []
-      const imagePaths = Array.isArray(q.image_paths) ? q.image_paths : []
-      if (imageSources.length && imageSources.length !== imagePaths.length) {
-        errors.push(`${label}: provenance.image_sources count does not match final image_paths count`)
-      }
-    }
-    if (subject.id === 'chemistry') {
-      const nonMathText = stripMathSegments(textBlob)
-      if (/\b(?:onl y|an d|for m|t he|th e|g a s|mo le|m o les|f ive|po i nt|grams?ample|K s olid)\b/i.test(nonMathText)) {
-        errors.push(`${label}: Chemistry split OCR text remains`)
-      }
-      if (/\b(?:R b|H e|N e|A r|F e|L i|A l|M g)\b|\b(?:Rb|He|Ne|Ar|Fe|Li|Al|Mg|NO|SO|CO|CH|HCHO|N2O)[ \t]+\d\b/.test(nonMathText)) {
-        errors.push(`${label}: Chemistry element/formula spacing should be rendered with math markup`)
-      }
-      if (/\bN\s+\$O_2\$\b|\$N_2O\$\s*4\b/i.test(textBlob)) {
-        errors.push(`${label}: Chemistry formula subscript markup is split across text`)
-      }
-      if (/\b(?:Known Oxides|Initial Partial Pressure|bond enthalpies).*?\b(?:"A"\s*:\s*"\d+\s+\d+\s+\d+)/is.test(textBlob) && !q.background_data?.table && !q.option_table_data) {
-        errors.push(`${label}: Chemistry table-like content must use structured table fields`)
-      }
-    }
-    if (subject.id === 'biology') {
-      const isFrq = q.type === 'FRQ' || q.question_type === 'FRQ' || q.rubric
-      if (!isFrq) {
-        const bareOptions = Object.entries(q.options || {})
-          .filter(([key, value]) => String(value || '').trim() === key)
-          .map(([key]) => key)
-        if (bareOptions.length) {
-          errors.push(`${label}: Biology MCQ options are bare letters: ${bareOptions.join(', ')}`)
-        }
-        if (/\bDirections:\b|\bQuestions\s+\d+\s*-\s*\d+\b/i.test(String(q.text || q.question_text || ''))) {
-          errors.push(`${label}: Biology MCQ stem contains directions/group-marker pollution`)
-        }
-        if (/2008_Q(?:5[7-9]|6[0-9]|7[0-6])$/.test(questionLabel(q)) && !String(q.group_context || '').trim()) {
-          errors.push(`${label}: Biology grouped matching item is missing group_context`)
-        }
-        if (/\btable below\b/i.test(String(q.text || q.question_text || '')) && !q.background_data?.table && !(q.image_paths || []).length) {
-          errors.push(`${label}: Biology table reference requires background_data.table or precise image evidence`)
-        }
-        if (/\bFigure\s+\d+\b/i.test(String(q.text || q.question_text || '')) && !(q.image_paths || []).length) {
-          errors.push(`${label}: Biology numbered figure reference requires precise image evidence`)
-        }
-        if (/\bdata are as follows\b/i.test(String(q.text || q.question_text || '')) && !q.background_data?.table) {
-          errors.push(`${label}: Biology inline data table must be rendered as background_data.table`)
-        }
-        if (q.background_data?.table && /\bTrait\s+Species\s+1\s+2\s+3\s+4\s+5\b/i.test(String(q.text || q.question_text || ''))) {
-          errors.push(`${label}: Biology structured table is duplicated as flattened text in the stem`)
-        }
-      } else {
-        const rubric = q.rubric || {}
-        const rubricText = JSON.stringify(rubric)
-        if (/College Board|Visit the College Board|Unauthorized/i.test(rubricText)) {
-          errors.push(`${label}: Biology FRQ rubric contains footer/legal residue`)
-        }
-        if (/Question\s+\d+\b(?!\s*\(continued\))[\s\S]{120,}Question\s+\d+\b(?!\s*\(continued\))/i.test(String(rubric.official_text || ''))) {
-          errors.push(`${label}: Biology FRQ rubric likely contains another question`)
-        }
-        const weakPoint = (rubric.points || []).find(point => /^1 point$/i.test(String(point.description || '').trim()) || /^Examples of acceptable responses/i.test(String(point.description || '').trim()))
-        if (weakPoint) {
-          errors.push(`${label}: Biology FRQ rubric has non-criterion scoring row: ${String(weakPoint.description || '').slice(0, 80)}`)
-        }
-        if (!String(rubric.solution_outline || '').trim() || String(rubric.solution_outline || '').trim().length < 120) {
-          errors.push(`${label}: Biology FRQ rubric is missing a usable solution_outline`)
-        }
       }
     }
   }

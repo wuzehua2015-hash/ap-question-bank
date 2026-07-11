@@ -146,30 +146,6 @@ export function setCurrentSubject(subject) {
   localStorage.setItem('currentSubject', subject)
 }
 
-export function getMySubjects() {
-  const data = localStorage.getItem('mySubjects')
-  if (!data) return []
-  try {
-    const parsed = JSON.parse(data)
-    return Array.isArray(parsed) ? parsed.map(String).filter(Boolean) : []
-  } catch {
-    return []
-  }
-}
-
-export function setMySubjects(subjectIds) {
-  const unique = [...new Set((subjectIds || []).map(String).filter(Boolean))]
-  localStorage.setItem('mySubjects', JSON.stringify(unique))
-}
-
-export function getDefaultSubject() {
-  return localStorage.getItem('defaultSubject') || getCurrentSubject()
-}
-
-export function setDefaultSubject(subject) {
-  localStorage.setItem('defaultSubject', subject)
-}
-
 // ────────────────────────────
 // Debug helpers
 // ────────────────────────────

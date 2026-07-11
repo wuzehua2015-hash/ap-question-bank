@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useState } from 'react'
+import { useState, useEffect, useLayoutEffect, useMemo, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import QuestionCard from '../components/QuestionCard'
 import QuizNavigator from '../components/QuizNavigator'
@@ -69,7 +69,9 @@ function QuizPlayer() {
     const finalAnswers = { ...answers }
     if (isTimeout) {
       quiz.forEach(q => {
-        if (finalAnswers[q.question_id] === undefined) finalAnswers[q.question_id] = ''
+        if (finalAnswers[q.question_id] === undefined) {
+          finalAnswers[q.question_id] = ''
+        }
       })
     }
 
@@ -85,16 +87,16 @@ function QuizPlayer() {
 
     quiz.forEach(q => {
       const isCorrect = isAnswerCorrect(q, finalAnswers[q.question_id])
-      if (isCorrect) correct += 1
+      if (isCorrect) correct++
       else wrongIds.push(q.question_id)
 
       if (unitStats[q.primary_unit]) {
-        unitStats[q.primary_unit].total += 1
-        if (isCorrect) unitStats[q.primary_unit].correct += 1
+        unitStats[q.primary_unit].total++
+        if (isCorrect) unitStats[q.primary_unit].correct++
       }
       if (q.difficulty && difficultyStats[q.difficulty]) {
-        difficultyStats[q.difficulty].total += 1
-        if (isCorrect) difficultyStats[q.difficulty].correct += 1
+        difficultyStats[q.difficulty].total++
+        if (isCorrect) difficultyStats[q.difficulty].correct++
       }
 
       const allHistory = getQuestionHistory(subject)
@@ -109,8 +111,8 @@ function QuizPlayer() {
         answer: q.answer,
         answers: q.answers || [],
       })
-      if (isCorrect) rec.correct_count += 1
-      else rec.wrong_count += 1
+      if (isCorrect) rec.correct_count++
+      else rec.wrong_count++
       rec.attempts = rec.attempts.slice(-20)
       setQuestionHistory(subject, allHistory)
     })
@@ -137,15 +139,12 @@ function QuizPlayer() {
     })
     setQuizHistory(subject, history.slice(-20))
 
-    const frqCount = Number(quizInfo?.frqCount || 0)
-    if (quizInfo && quizInfo.isMock && frqCount > 0) {
+    if (quizInfo && quizInfo.isMock) {
       setPhase('frqTransition')
-    } else if (quizInfo && quizInfo.isMock) {
-      navigate('/score')
     } else {
       setPhase('submitted')
     }
-  }, [answers, navigate, quiz, quizInfo, subject])
+  }, [quiz, answers, quizInfo, subject])
 
   const handleTimerTimeout = useCallback(() => {
     submitQuiz(true)
@@ -161,7 +160,7 @@ function QuizPlayer() {
   const wrongQuestions = useMemo(() => {
     if (phase !== 'submitted' && phase !== 'frqTransition') return []
     return quiz.filter(q => !isAnswerCorrect(q, answers[q.question_id]))
-  }, [answers, phase, quiz])
+  }, [quiz, answers, phase])
 
   const wrongByUnit = useMemo(() => {
     if (!similarityIndex || wrongQuestions.length === 0) return []
@@ -188,7 +187,7 @@ function QuizPlayer() {
     })
 
     return Object.values(grouped).map(({ similarIds, ...group }) => group)
-  }, [questionBank, quiz, similarityIndex, wrongQuestions])
+  }, [wrongQuestions, similarityIndex, questionBank, quiz])
 
   const practiceSimilar = (wrongQs, similarQs) => {
     const selectedById = new Map()
@@ -237,7 +236,7 @@ function QuizPlayer() {
 
       {quizInfo && quizInfo.actualCount < quizInfo.requestedCount && (
         <div className="mb-4 p-3 bg-yellow-50 border border-warning rounded-lg text-warning text-sm">
-          该单元只有 {quizInfo.actualCount} 道可用题，已为你生成 {quizInfo.actualCount} 道题。
+          该单元仅有 {quizInfo.actualCount} 题，已为你生成 {quizInfo.actualCount} 题。
         </div>
       )}
 
@@ -264,7 +263,7 @@ function QuizPlayer() {
                 {wrongByUnit.map(({ unit, wrongQs, similarQs }) => (
                   <div key={unit} className="bg-surface rounded-xl border border-border p-4">
                     <div className="text-sm font-medium text-brand mb-2">
-                      {unit} - 错了 {wrongQs.length} 道，试试这些变式题。
+                      {unit} - 错了 {wrongQs.length} 题，试试这些变式题。
                     </div>
                     <div className="space-y-1 mb-3">
                       {similarQs.map((sim) => (
@@ -306,21 +305,23 @@ function QuizPlayer() {
       {phase === 'frqTransition' && score !== null && (
         <div className="mb-6 space-y-4">
           <div className="p-4 rounded-lg text-center bg-blue-50 border border-blue-200">
-            <div className="text-xl font-bold text-blue-800 mb-2">MCQ 部分完成</div>
+            <div className="text-xl font-bold text-blue-800 mb-2">
+              MCQ 部分完成！
+            </div>
             <div className="text-blue-700 mb-4">
               {score} / {quiz.length} 正确（{Math.round((score / quiz.length) * 100)}%）
             </div>
             <p className="text-sm text-blue-600 mb-4">
-              接下来进入自由作答题（FRQ）部分。
+              接下来进入 Free Response Questions（FRQ）部分。
             </p>
             <p className="text-xs text-blue-500 mb-4">
-              请准备好草稿纸和计算器。FRQ 部分计时开始后不暂停。
+              请准备好草稿纸和计算器。FRQ 部分计时开始后不可暂停。
             </p>
             <button
               onClick={enterFRQ}
               className="bg-accent hover:bg-accent-light text-white px-6 py-3 rounded-lg text-sm font-semibold transition-colors"
             >
-              确定，进入 FRQ 部分
+              确定，进入 FRQ 部分 →
             </button>
           </div>
         </div>
@@ -357,14 +358,14 @@ function QuizPlayer() {
           disabled={currentIndex === 0 || phase !== 'playing'}
           className="flex-1 sm:flex-none px-4 py-3 rounded-lg border border-border bg-surface disabled:opacity-30 text-sm sm:text-base"
         >
-          上一题
+          ← 上一题
         </button>
         <button
           onClick={() => setCurrentIndex(Math.min(quiz.length - 1, currentIndex + 1))}
           disabled={currentIndex === quiz.length - 1 || phase !== 'playing'}
           className="flex-1 sm:flex-none px-4 py-3 rounded-lg border border-border bg-surface disabled:opacity-30 text-sm sm:text-base"
         >
-          下一题
+          下一题 →
         </button>
       </div>
 
@@ -372,7 +373,7 @@ function QuizPlayer() {
         questions={quiz}
         current={currentIndex}
         answers={answers}
-        phase={phase}
+        phase={phase === 'playing' ? 'playing' : 'submitted'}
         onJump={setCurrentIndex}
       />
     </div>

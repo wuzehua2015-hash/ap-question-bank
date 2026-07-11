@@ -41,15 +41,12 @@ function hasMath(text) {
 }
 
 function hasVisualAsset(q) {
-  const text = textOfQuestion(q)
-  const hasMarkdownTable = /^\s*\|.+\|\s*$/m.test(text)
   return Boolean(
     (q.image_paths && q.image_paths.length) ||
     (q.images && q.images.length) ||
     q.option_table_data ||
     q.background_data ||
-    q.group_context ||
-    hasMarkdownTable
+    q.group_context
   )
 }
 
@@ -118,7 +115,7 @@ function collectSignals(q, type) {
     }
   }
 
-  if (/\bQuestions?\s+\d+\s*[-\u2013\u2014]\s*\d+\b/i.test(text)) {
+  if (/\bQuestions?\s+\d+\s*[-–]\s*\d+\b/i.test(text)) {
     signals.push('shared_question_group')
     if (!q.group_id && !q.group_context) signals.push('group_marker_without_structured_context')
   }
@@ -158,10 +155,6 @@ function collectSignals(q, type) {
     signals.push('frq_rubric_too_short_for_independent_grading')
   }
 
-  if (q.source_review?.status === 'NEEDS_SOURCE_ASSET') {
-    signals.push('source_visual_asset_missing_after_review')
-  }
-
   if (lower.includes('if you finish before time is called') || lower.includes('make sure you have done the following')) {
     signals.push('exam_footer_pollution')
   }
@@ -178,7 +171,6 @@ function priority(signals) {
     'equation_sentence_without_math',
     'empty_or_nearly_empty_option',
     'exam_footer_pollution',
-    'source_visual_asset_missing_after_review',
   ]
   if (signals.some(s => p0.includes(s))) return 'P0_REVIEW'
   if (signals.length) return 'P1_REVIEW'

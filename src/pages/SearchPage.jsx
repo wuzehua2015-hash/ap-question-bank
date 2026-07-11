@@ -11,19 +11,10 @@ import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramO
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
-function makeQuestionPreview(text) {
-  return String(text || '')
-    .replace(/```[\s\S]*?```/g, ' code segment ')
-    .replace(/^\|.*\|$/gm, ' ')
-    .replace(/`([^`\n]+?)`/g, '$1')
-    .replace(/\s+/g, ' ')
-    .trim()
-}
-
 function SearchPage() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
-  const { currentSubject, setSubject } = useSubject()
+  const { currentSubject } = useSubject()
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(true)
   const [keyword, setKeyword] = useState('')
@@ -41,11 +32,6 @@ function SearchPage() {
   }, [currentSubject])
 
   useEffect(() => {
-    const subjectFromUrl = searchParams.get('subject')
-    if (subjectFromUrl && subjectFromUrl !== currentSubject) {
-      setSubject(subjectFromUrl)
-      return
-    }
     setLoading(true)
     loadMCQBank(currentSubject).then(data => {
       setQuestions(data)
@@ -57,7 +43,7 @@ function SearchPage() {
       }
       setLoading(false)
     }).catch(() => setLoading(false))
-  }, [currentSubject, searchParams, setSubject])
+  }, [currentSubject, searchParams])
 
   useEffect(() => {
     const qid = searchParams.get('qid')
@@ -208,17 +194,8 @@ function SearchPage() {
                   {isWrong && <Tag tone="wrong">错题</Tag>}
                   {correctRate !== null && <Tag tone={correctRate >= 70 ? 'done' : 'wrong'}>正确率 {correctRate}%</Tag>}
                 </div>
-                {isExpanded && q.group_context && (
-                  <div className="mb-3 rounded-md border-l-4 border-brand bg-white px-3 py-2 text-sm leading-relaxed text-text">
-                    <MathText text={q.group_context} />
-                  </div>
-                )}
                 <div className={`text-sm text-text ${isExpanded ? '' : 'line-clamp-2'}`}>
-                  {isExpanded ? (
-                    <MathText text={q.text || q.question_text} />
-                  ) : (
-                    <MathText text={makeQuestionPreview(q.text || q.question_text)} />
-                  )}
+                  <MathText text={q.text || q.question_text} />
                 </div>
               </div>
 

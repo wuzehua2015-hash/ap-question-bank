@@ -48,7 +48,7 @@ function FRQScorePage() {
     <div className="max-w-4xl mx-auto px-4 py-6">
       <h1 className="text-2xl font-bold text-brand mb-2">FRQ 评分标准</h1>
       <p className="text-sm text-text-muted mb-6">
-        对照评分标准检查自己的作答，并为每道题输入原始得分。
+        请对照每道题的官方评分标准，为自己的答案输入原始得分。
       </p>
 
       <div className="space-y-8">
@@ -57,10 +57,10 @@ function FRQScorePage() {
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-4 pb-3 border-b border-border">
               <div>
                 <span className="text-lg font-bold text-brand">FRQ {frq.question_number || idx + 1}</span>
-                <span className="text-sm text-text-muted ml-2">（{frq.rubric?.total_points || 0} 分）</span>
+                <span className="text-sm text-text-muted ml-2">({frq.rubric?.total_points || 0} 分)</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-sm text-text-muted">自评得分：</span>
+                <span className="text-sm text-text-muted">你的得分：</span>
                 <input
                   type="number"
                   min={0}
@@ -89,7 +89,7 @@ function FRQScorePage() {
           onClick={goToScore}
           className="bg-accent hover:bg-accent-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
         >
-          确认分数并查看结果
+          确认评分，查看成绩
         </button>
       </div>
     </div>

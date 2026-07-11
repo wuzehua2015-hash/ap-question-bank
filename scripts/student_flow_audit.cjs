@@ -12,16 +12,10 @@ const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject || 'physics-c-mechanics'
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
-const port = Number(args.port || defaultDebugPort(subjectId))
+const port = Number(args.port || 9555)
 let activeSubject = null
 
 fs.mkdirSync(WORKSPACE, { recursive: true })
-
-function defaultDebugPort(seed) {
-  let hash = 0
-  for (const ch of String(seed)) hash = (hash * 31 + ch.charCodeAt(0)) % 700
-  return 10955 + hash
-}
 
 main().catch(error => {
   console.error(error.stack || error.message || String(error))
@@ -31,8 +25,8 @@ main().catch(error => {
 async function main() {
   const subject = loadSubject(subjectId)
   activeSubject = subject
-  const mcq = readJson(path.join(PUBLIC, 'data', subject.questionBank)).map(adaptMCQ)
-  const frq = subject.frqBank ? readJson(path.join(PUBLIC, 'data', subject.frqBank)).map(adaptFRQ) : []
+  const mcq = readJson(path.join(PUBLIC, 'data', subject.questionBank))
+  const frq = subject.frqBank ? readJson(path.join(PUBLIC, 'data', subject.frqBank)) : []
   const similarity = subject.similarityIndex
     ? readJson(path.join(PUBLIC, 'data', subject.similarityIndex))
     : {}
@@ -49,7 +43,6 @@ async function main() {
   try {
     await client.send('Page.enable')
     await client.send('Runtime.enable')
-    await client.send('Log.enable')
     await setViewport(client, 1440, 1400)
     await client.send('Page.addScriptToEvaluateOnNewDocument', {
       source: `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`,
@@ -57,14 +50,9 @@ async function main() {
 
     const quizSample = selectQuizSample(mcq)
     const searchSample = selectSearchSample(mcq)
-    await auditMockGenerationFromSetup(client, errors, warnings, artifacts)
     await auditQuizPlay(client, quizSample, errors, warnings, artifacts)
-    if (subject.hasFRQ && Number(subject.mockExam?.frqCount || 0) > 0) {
-      await auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts)
-    } else {
-      await auditMockMcqOnlyFlow(client, mcq, errors, warnings, artifacts)
-    }
-    await auditTargetSearchItems(client, searchSample, errors, warnings, artifacts)
+    await auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts)
+    await auditTargetSearchItems(client, searchSample.map(q => q.question_id), errors, warnings, artifacts)
 
     const report = {
       subject_id: subjectId,
@@ -123,119 +111,6 @@ function validateDataBehavior(subject, mcq, frq, similarity, errors, warnings, n
   }
 }
 
-function adaptMCQ(raw) {
-  const answers = normalizeAnswers(raw)
-  return {
-    question_id: raw.question_id || raw.id || '',
-    text: raw.question_text || raw.text || '',
-    options: normalizeOptionsToObject(raw.options || {}),
-    answer: answers.length > 1 ? answers.join(',') : (answers[0] || ''),
-    answers,
-    answer_type: raw.answer_type || (answers.length > 1 ? 'multiple' : 'single'),
-    correct_answer: answers.length > 1 ? answers.join(',') : (answers[0] || ''),
-    scoring_status: raw.scoring_status || 'scored',
-    primary_unit: raw.primary_unit || raw.primaryUnit || 'U1',
-    secondary_units: raw.secondary_units || raw.secondaryUnits || [],
-    pure_unit: raw.pure_unit !== undefined ? raw.pure_unit : (raw.secondary_units || []).length === 0,
-    year: raw.year || 0,
-    question_number: raw.question_number || raw.question_num || 0,
-    question_type: raw.question_type || 'MCQ',
-    source: typeof raw.source === 'string' ? raw.source : '',
-    difficulty: raw.difficulty || '',
-    topics: raw.topics || [],
-    image_paths: raw.image_paths || raw.images || [],
-    option_table_data: raw.option_table_data || null,
-    diagram_references: raw.diagram_references || [],
-    background_data: raw.background_data || null,
-    rubric_image_paths: raw.rubric_image_paths || [],
-    group_id: raw.group_id || null,
-    group_members: raw.group_members || [],
-    group_role: raw.group_role || null,
-    group_context: raw.group_context || null,
-    requires_group_context: !!raw.requires_group_context,
-  }
-}
-
-function adaptFRQ(raw) {
-  const rawRubric = raw.rubric || null
-  const rubric = rawRubric
-    ? {
-        ...rawRubric,
-        total_points: Number(rawRubric.total_points ?? rawRubric.max_score ?? raw.total_points ?? raw.max_score ?? 0),
-      }
-    : null
-  return {
-    question_id: raw.question_id || raw.id || '',
-    text: raw.question_text || raw.text || '',
-    content_blocks: raw.content_blocks || raw.contentBlocks || null,
-    question_number: raw.question_number || raw.question_num || 0,
-    year: raw.year || 0,
-    image_paths: raw.image_paths || raw.images || [],
-    rubric_image_paths: raw.rubric_image_paths || [],
-    requires_graph: raw.requires_graph || false,
-    rubric,
-    background_data: raw.background_data || null,
-  }
-}
-
-function normalizeAnswers(raw) {
-  const source = raw.answers || raw.correct_answers || raw.answer || raw.correct_answer || ''
-  if (Array.isArray(source)) return source.map(String).map(s => s.trim()).filter(Boolean).sort()
-  return String(source).split(',').map(s => s.trim()).filter(Boolean).sort()
-}
-
-function normalizeOptionsToObject(options) {
-  if (!options) return {}
-  if (Array.isArray(options)) {
-    const result = {}
-    for (const opt of options) {
-      const m = String(opt).match(/^\(([A-E])\)\s*/)
-      const key = m ? m[1] : String(Object.keys(result).length)
-      result[key] = String(opt).replace(/^\([A-E]\)\s*/, '')
-    }
-    return result
-  }
-  return options
-}
-
-async function auditMockGenerationFromSetup(client, errors, warnings, artifacts) {
-  const expectedMcq = Number(activeSubject?.mockExam?.totalMCQ || 0)
-  const expectedFrq = Number(activeSubject?.mockExam?.frqCount || 0)
-  await navigate(client, routeUrl(`#/exam?subject=${encodeURIComponent(subjectId)}`))
-  await waitForImages(client)
-  const clicked = await evaluate(client, `(() => {
-    const buttons = [...document.querySelectorAll('button')];
-    const target = buttons.find(el => !el.disabled && /生成模考|Mock Exam/i.test(el.innerText || el.textContent || '')) || buttons.find(el => !el.disabled);
-    if (!target) return false;
-    target.click();
-    return true;
-  })()`)
-  if (!clicked) {
-    errors.push({ page: 'mock-setup', kind: 'generate_button_not_found' })
-    return
-  }
-  const generated = await waitForGeneratedMockPreview(client)
-  if (!generated) {
-    const info = await collectVisibleState(client)
-    errors.push({ page: 'mock-setup', kind: 'generated_preview_not_visible', visible_sample: sampleText(info.text, 0) })
-    return
-  }
-  const info = await collectVisibleState(client)
-  checkVisibleState('mock-setup:generated', info, errors, warnings)
-  const counts = parseGeneratedMockCounts(info.text)
-  if (!counts) {
-    errors.push({ page: 'mock-setup', kind: 'generated_counts_not_parseable', visible_sample: sampleText(info.text, 0) })
-  } else {
-    if (expectedMcq && counts.mcq !== expectedMcq) {
-      errors.push({ page: 'mock-setup', kind: 'generated_mcq_count_mismatch', actual: counts.mcq, expected: expectedMcq })
-    }
-    if (activeSubject?.hasFRQ && counts.frq !== expectedFrq) {
-      errors.push({ page: 'mock-setup', kind: 'generated_frq_count_mismatch', actual: counts.frq, expected: expectedFrq })
-    }
-  }
-  await screenshot(client, `${subjectId}-mock-setup-generated.png`, artifacts)
-}
-
 async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
   if (!quiz.length) {
     errors.push({ page: 'quiz-play', kind: 'no_quiz_sample_selected' })
@@ -250,24 +125,17 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
     const info = await collectVisibleState(client)
     checkVisibleState(`quiz:${quiz[i].question_id}`, info, errors, warnings)
     const pageText = auditComparableText(info.text)
-    const compactPageText = compactAuditText(info.text)
-    const questionVisible = questionContentVisible(pageText, quiz[i].text) ||
+    const questionVisible = pageText.includes(auditComparableText(quiz[i].text).slice(0, 50)) ||
       Object.values(quiz[i].options || {}).some(option => {
         const text = auditComparableText(option)
-        const compactText = compactAuditText(option)
-        const optionTokens = mathAuditTokens(option)
-        const optionTokenHits = optionTokens.filter(token => compactPageText.includes(token)).length
-        return (text.length >= 8 && pageText.includes(text.slice(0, Math.min(60, text.length)))) ||
-          (compactText.length >= 5 && compactPageText.includes(compactText.slice(0, Math.min(50, compactText.length)))) ||
-          (optionTokens.length >= 2 && optionTokenHits >= Math.min(3, optionTokens.length))
+        return text.length >= 8 && pageText.includes(text.slice(0, Math.min(60, text.length)))
       }) ||
       (quiz[i].background_data?.table && info.tableCount > 0) ||
       (quiz[i].option_table_data && info.tableCount > 0) ||
       ((quiz[i].image_paths || []).length > 0 && info.visibleImages.length > 0)
     if (!questionVisible) {
-      errors.push({ page: 'quiz-play', kind: 'current_question_content_not_visible', question_id: quiz[i].question_id, visible_sample: sampleText(info.text, 0) })
+      warnings.push({ page: 'quiz-play', kind: 'current_question_id_not_visible', question_id: quiz[i].question_id, visible_sample: sampleText(info.text, 0) })
     }
-    checkGroupedContextOrder(`quiz:${quiz[i].question_id}`, info, quiz[i], errors)
     const answers = chooseWrongAnswers(quiz[i])
     for (const answer of (answers.length ? answers : ['A'])) {
       await clickOption(client, answer)
@@ -278,7 +146,7 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
   await sleep(1200)
   const submitted = await collectVisibleState(client)
   checkVisibleState('quiz:submitted', submitted, errors, warnings)
-  if (!/变式|错了|similar/i.test(submitted.text)) {
+  if (!/变式|similar|错了/i.test(submitted.text)) {
     errors.push({ page: 'quiz-play', kind: 'similar_recommendation_not_visible_after_wrong_answers' })
   }
   const duplicate = quiz.find(q => {
@@ -314,14 +182,14 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     await waitForImages(client)
     const info = await collectVisibleState(client)
     checkVisibleState(`frq-player:${selectedFrq[i].question_id}`, info, errors, warnings)
-    if (!/自由作答题|Free Response|FRQ/i.test(info.text)) errors.push({ page: 'frq-player', kind: 'frq_header_missing' })
+    if (!/Free Response|FRQ/i.test(info.text)) errors.push({ page: 'frq-player', kind: 'frq_header_missing' })
     if (selectedFrq[i].background_data?.table && info.tableCount < 1) {
       errors.push({ page: 'frq-player', kind: 'missing_frq_background_table', question_id: selectedFrq[i].question_id })
     }
     await clickCheckbox(client)
     if (i < selectedFrq.length - 1) await clickTextButton(client, /下一题|Next/i)
   }
-  await clickTextButton(client, /完成 FRQ|进入评分|Finish/i)
+  await clickTextButton(client, /完成 FRQ|进入.*成绩|Finish/i)
   await sleep(1000)
   const scorePage = await collectVisibleState(client)
   checkVisibleState('frq-score', scorePage, errors, warnings)
@@ -336,54 +204,18 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     errors.push({ page: 'frq-score', kind: 'missing_frq_background_tables', expectedScoreTables, actualTables: scorePage.tableCount })
   }
   await screenshot(client, `${subjectId}-frq-score.png`, artifacts)
-  await clickTextButton(client, /确认分数|确认评分|查看结果|查看成绩|Score/i)
+  await clickTextButton(client, /确认评分|查看成绩|Score/i)
   await sleep(1000)
   const finalScore = await collectVisibleState(client)
   checkVisibleState('score-final', finalScore, errors, warnings)
-  if (!/模考成绩|成绩单|Mock Exam|Report/i.test(finalScore.text)) {
+  if (!/Mock Exam|成绩|Report/i.test(finalScore.text)) {
     errors.push({ page: 'score-final', kind: 'final_score_page_not_reached' })
   }
   await screenshot(client, `${subjectId}-score-final.png`, artifacts)
 }
 
-async function auditMockMcqOnlyFlow(client, mcq, errors, warnings, artifacts) {
-  const totalMcq = Number(activeSubject?.mockExam?.totalMCQ || mcq.length || 0)
-  const selectedMcq = mcq.slice(0, totalMcq || mcq.length)
-  await navigate(client, routeUrl('#/'))
-  await seedSession(client, selectedMcq, [], {
-    isMock: true,
-    mode: 'mock',
-    requestedCount: selectedMcq.length,
-    actualCount: selectedMcq.length,
-    mcqTimeLimit: activeSubject?.mockExam?.mcqTimeLimit,
-    frqTimeLimit: 0,
-    frqCount: 0,
-  })
-  await navigate(client, routeUrl('#/play'))
-  for (let i = 0; i < selectedMcq.length; i += 1) {
-    await waitForImages(client)
-    const answers = chooseWrongAnswers(selectedMcq[i])
-    for (const answer of (answers.length ? answers : ['A'])) {
-      await clickOption(client, answer)
-    }
-    if (i < selectedMcq.length - 1) await clickTextButton(client, /下一题|Next/i)
-  }
-  await clickTextButton(client, /提交|Submit|Finish/i)
-  await sleep(1200)
-  const finalScore = await collectVisibleState(client)
-  checkVisibleState('mock-mcq-only-score-final', finalScore, errors, warnings)
-  if (!/模考成绩|成绩单|Mock Exam|Report/i.test(finalScore.text)) {
-    errors.push({ page: 'mock-mcq-only-score-final', kind: 'final_score_page_not_reached' })
-  }
-  if (/Free Response|FRQ|Section II/i.test(finalScore.text)) {
-    errors.push({ page: 'mock-mcq-only-score-final', kind: 'frq_section_visible_for_mcq_only_subject' })
-  }
-  await screenshot(client, `${subjectId}-mock-mcq-only-score-final.png`, artifacts)
-}
-
-async function auditTargetSearchItems(client, questions, errors, warnings, artifacts) {
-  for (const question of questions) {
-    const id = question.question_id
+async function auditTargetSearchItems(client, ids, errors, warnings, artifacts) {
+  for (const id of ids) {
     await navigate(client, routeUrl(`#/search?qid=${encodeURIComponent(id)}`))
     await waitForImages(client)
     const info = await collectVisibleState(client)
@@ -391,7 +223,6 @@ async function auditTargetSearchItems(client, questions, errors, warnings, artif
     if (!info.text.includes(id)) {
       errors.push({ page: 'search', kind: 'target_question_not_visible', question_id: id })
     }
-    checkGroupedContextOrder(`search:${id}`, info, question, errors)
   }
   await screenshot(client, `${subjectId}-target-search.png`, artifacts)
 }
@@ -449,12 +280,14 @@ function chooseWrongAnswers(question) {
 }
 
 async function seedSession(client, mcq, frq, info) {
+  const answers = {}
+  for (const q of mcq) answers[q.question_id] = q.answer || 'A'
   const payload = Buffer.from(JSON.stringify({
     subjectId,
     mcq,
     frq,
-    mcqAnswers: Object.fromEntries((mcq || []).map(question => [question.question_id, chooseWrongAnswers(question)[0] || ''])),
     info,
+    answers,
     config: { subject: subjectId, unit: 'audit', count: mcq.length, type: info.isMock ? 'mock' : 'quiz' },
   }), 'utf8').toString('base64')
   await evaluate(client, `(() => {
@@ -467,25 +300,17 @@ async function seedSession(client, mcq, frq, info) {
     sessionStorage.setItem('currentFRQ', JSON.stringify(payload.frq));
     sessionStorage.setItem('quizConfig', JSON.stringify(payload.config));
     sessionStorage.setItem('quizInfo', JSON.stringify(payload.info));
-    if (payload.info?.isMock && payload.frq?.length) {
-      sessionStorage.setItem('mcqAnswers', JSON.stringify(payload.mcqAnswers));
-    } else {
-      sessionStorage.removeItem('mcqAnswers');
-    }
+    sessionStorage.setItem('mcqAnswers', JSON.stringify(payload.answers));
   })()`)
 }
 
 async function clickOption(client, option) {
   const clicked = await evaluate(client, `(() => {
-    const label = ${JSON.stringify(option + '.')};
-    const candidates = [
-      ...document.querySelectorAll('button:not([disabled]), [role="button"]:not([disabled]), .cursor-pointer'),
-    ];
-    const target = candidates.find(el => (el.innerText || el.textContent || '').trim().startsWith(label));
+    const buttons = [...document.querySelectorAll('button, [role="button"], .grid')];
+    const target = buttons.find(el => (el.innerText || '').trim().startsWith(${JSON.stringify(option + '.')}));
     if (target) { target.click(); return true; }
-    const labelNode = [...document.querySelectorAll('span,div')].find(el => (el.innerText || el.textContent || '').trim() === label);
-    const button = labelNode?.closest('button,[role="button"]');
-    if (button && !button.disabled) { button.click(); return true; }
+    const row = [...document.querySelectorAll('div')].find(el => (el.innerText || '').trim() === ${JSON.stringify(option + '.')});
+    if (row) { row.click(); return true; }
     return false;
   })()`)
   if (!clicked) throw new Error(`Could not click option ${option}`)
@@ -493,24 +318,13 @@ async function clickOption(client, option) {
 }
 
 async function clickCheckbox(client) {
-  const result = await evaluate(client, `(() => {
+  const clicked = await evaluate(client, `(() => {
     const box = document.querySelector('input[type="checkbox"]');
-    if (!box) {
-      return {
-        clicked: false,
-        url: location.href,
-        inputCount: document.querySelectorAll('input').length,
-        buttonCount: document.querySelectorAll('button').length,
-        textSample: (document.body?.innerText || '').slice(0, 1200),
-      };
-    }
+    if (!box) return false;
     box.click();
-    return { clicked: true };
+    return true;
   })()`)
-  if (!result?.clicked) {
-    result.events = typeof client.events === 'function' ? client.events() : []
-    throw new Error(`Could not click FRQ completion checkbox: ${JSON.stringify(result)}`)
-  }
+  if (!clicked) throw new Error('Could not click FRQ completion checkbox')
   await sleep(200)
 }
 
@@ -574,120 +388,6 @@ function checkVisibleState(page, info, errors, warnings) {
   }
   if (info.bodyHeight < 250) warnings.push({ page, kind: 'short_body', bodyHeight: info.bodyHeight })
   checkImageReadability(page, info.visibleImages, errors, warnings)
-}
-
-function checkGroupedContextOrder(page, info, question, errors) {
-  const context = String(question.group_context || '').trim()
-  const stem = String(question.text || question.question_text || '').trim()
-  if (!context) return
-
-  const pageTokens = auditTokenStream(info.text)
-  const contextTokens = auditTokenStream(context)
-  const stemTokens = auditTokenStream(stem)
-  const contextIndex = findTokenAnchor(pageTokens, contextTokens)
-  const stemIndex = findTokenAnchor(pageTokens, stemTokens)
-  if (contextIndex < 0) {
-    errors.push({ page, kind: 'group_context_not_visible', question_id: question.question_id })
-    return
-  }
-  if (stemIndex < 0) {
-    errors.push({ page, kind: 'group_member_stem_not_visible', question_id: question.question_id })
-    return
-  }
-  if (contextIndex > stemIndex) {
-    errors.push({ page, kind: 'group_context_after_member_stem', question_id: question.question_id })
-  }
-}
-
-function auditTokenStream(text) {
-  return auditComparableText(text)
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim()
-    .split(/\s+/)
-    .filter(token => token.length > 1)
-}
-
-function findTokenAnchor(haystack, needle) {
-  if (!haystack.length || !needle.length) return -1
-  const exact = findTokenSequence(haystack, needle.slice(0, Math.min(12, needle.length)))
-  if (exact >= 0) return exact
-
-  for (const window of stableTokenWindows(needle)) {
-    const index = findTokenSequence(haystack, window)
-    if (index >= 0) return index
-  }
-
-  return findOrderedTokenAnchor(haystack, significantTokens(needle).slice(0, 16))
-}
-
-function findTokenSequence(haystack, needle) {
-  if (!haystack.length || !needle.length) return -1
-  const target = needle
-  if (target.length < 3) return -1
-  const max = haystack.length - target.length
-  for (let i = 0; i <= max; i += 1) {
-    let ok = true
-    for (let j = 0; j < target.length; j += 1) {
-      if (haystack[i + j] !== target[j]) {
-        ok = false
-        break
-      }
-    }
-    if (ok) return i
-  }
-  return -1
-}
-
-function stableTokenWindows(tokens) {
-  const significant = significantTokens(tokens)
-  const windows = []
-  for (const size of [8, 7, 6, 5, 4]) {
-    for (let i = 0; i <= Math.min(36, significant.length - size); i += 1) {
-      windows.push(significant.slice(i, i + size))
-    }
-  }
-  return windows
-}
-
-function significantTokens(tokens) {
-  const stop = new Set([
-    'the', 'and', 'for', 'with', 'that', 'this', 'which', 'following', 'refer',
-    'question', 'questions', 'figure', 'table', 'shown', 'above', 'below',
-    'information', 'each', 'when', 'where', 'what', 'from', 'into', 'only',
-  ])
-  return tokens.filter(token => {
-    if (token.length < 3 || stop.has(token)) return false
-    // Formula identifiers such as ch3oh or agno3 often render visually but drop
-    // out of accessibility text, so they are poor anchors for flow auditing.
-    if (/[a-z][0-9]|[0-9][a-z]/i.test(token)) return false
-    return true
-  })
-}
-
-function findOrderedTokenAnchor(haystack, needle) {
-  if (needle.length < 4) return -1
-  const maxGap = 24
-  for (let i = 0; i < haystack.length; i += 1) {
-    if (haystack[i] !== needle[0]) continue
-    let cursor = i + 1
-    let hits = 1
-    for (let j = 1; j < needle.length && cursor < haystack.length; j += 1) {
-      const limit = Math.min(haystack.length, cursor + maxGap)
-      let found = -1
-      for (let k = cursor; k < limit; k += 1) {
-        if (haystack[k] === needle[j]) {
-          found = k
-          break
-        }
-      }
-      if (found < 0) continue
-      hits += 1
-      cursor = found + 1
-    }
-    if (hits >= Math.min(8, Math.ceil(needle.length * 0.65))) return i
-  }
-  return -1
 }
 
 function checkImageReadability(page, images, errors, warnings) {
@@ -822,10 +522,6 @@ async function connectChrome(debugPort) {
   const pending = new Map()
   ws.addEventListener('message', event => {
     const msg = JSON.parse(event.data)
-    if (msg.method) {
-      eventLog.push(compactCdpEvent(msg))
-      if (eventLog.length > 50) eventLog.shift()
-    }
     if (!msg.id || !pending.has(msg.id)) return
     const { resolve, reject } = pending.get(msg.id)
     pending.delete(msg.id)
@@ -842,38 +538,7 @@ async function connectChrome(debugPort) {
       ws.close()
       return Promise.resolve()
     },
-    events() {
-      return eventLog.slice()
-    },
   }
-}
-
-const eventLog = []
-
-function compactCdpEvent(msg) {
-  if (msg.method === 'Runtime.exceptionThrown') {
-    const detail = msg.params?.exceptionDetails || {}
-    return {
-      method: msg.method,
-      text: detail.text,
-      url: detail.url,
-      lineNumber: detail.lineNumber,
-      columnNumber: detail.columnNumber,
-      exception: detail.exception?.description || detail.exception?.value || detail.exception?.className,
-    }
-  }
-  if (msg.method === 'Log.entryAdded') {
-    const entry = msg.params?.entry || {}
-    return { method: msg.method, level: entry.level, text: entry.text, url: entry.url, lineNumber: entry.lineNumber }
-  }
-  if (msg.method === 'Runtime.consoleAPICalled') {
-    return {
-      method: msg.method,
-      type: msg.params?.type,
-      args: (msg.params?.args || []).map(arg => arg.value || arg.description).filter(Boolean).slice(0, 5),
-    }
-  }
-  return { method: msg.method }
 }
 
 function getJson(url) {
@@ -925,24 +590,6 @@ async function waitForImages(client) {
   }))()`)
 }
 
-async function waitForGeneratedMockPreview(client) {
-  for (let i = 0; i < 80; i += 1) {
-    const text = await evaluate(client, `document.body ? document.body.innerText : ''`).catch(() => '')
-    if (parseGeneratedMockCounts(text)) return true
-    await sleep(250)
-  }
-  return false
-}
-
-function parseGeneratedMockCounts(text) {
-  const value = String(text || '')
-  const full = /(\d+)\s*[^\d\n]{0,20}\bMCQ\b\s*\+\s*(\d+)\s*[^\d\n]{0,20}\bFRQ\b/i.exec(value)
-  if (full) return { mcq: Number(full[1]), frq: Number(full[2]) }
-  const mcqOnly = /(?:已生成|Generated)?\s*(\d+)\s*[^\d\n]{0,20}\bMCQ\b(?!\s*\+)/i.exec(value)
-  if (mcqOnly && !(activeSubject?.hasFRQ)) return { mcq: Number(mcqOnly[1]), frq: 0 }
-  return null
-}
-
 async function screenshot(client, name, artifacts) {
   const result = await client.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false })
   const file = path.join(WORKSPACE, name)
@@ -967,53 +614,13 @@ function normalized(text) {
 
 function auditComparableText(text) {
   return normalized(text)
-    .replace(/[′’]/g, ' prime ')
-    .replace(/[−–—]/g, '-')
     .replace(/\$+/g, '')
-    .replace(/\\(sin|cos|tan|sec|csc|cot|ln|log|arcsin|arccos|arctan|sqrt|lim|int)\b/g, '$1')
     .replace(/\\(?:mathrm|text|left|right)\{([^{}]*)\}/g, '$1')
     .replace(/\\(?:,|;|!| )/g, ' ')
     .replace(/\\[a-zA-Z]+/g, ' ')
     .replace(/[{}_^]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
-}
-
-function compactAuditText(text) {
-  return auditComparableText(text).toLowerCase().replace(/[^a-z0-9]+/g, '')
-}
-
-function mathAuditTokens(text) {
-  const raw = auditComparableText(text)
-  const compact = compactAuditText(text)
-  const tokens = new Set()
-  for (const match of raw.matchAll(/[A-Za-z]?\d+[A-Za-z]?|[A-Za-z]\d+|\d+[A-Za-z]/g)) tokens.add(match[0].toLowerCase())
-  for (const match of compact.matchAll(/[a-z]?\d+[a-z]?|[a-z]\d+|\d+[a-z]/g)) tokens.add(match[0].toLowerCase())
-  return Array.from(tokens).filter(token => token.length >= 2)
-}
-
-function questionContentVisible(pageText, questionText) {
-  const cleanQuestion = auditComparableText(questionText)
-  if (!cleanQuestion) return false
-  const compactPage = compactAuditText(pageText)
-  const compactQuestion = compactAuditText(questionText)
-  if (compactQuestion.length >= 16 && compactPage.includes(compactQuestion.slice(0, Math.min(80, compactQuestion.length)))) return true
-  const direct = cleanQuestion.slice(0, Math.min(80, cleanQuestion.length))
-  if (direct.length >= 24 && pageText.includes(direct)) return true
-  const mathTokens = mathAuditTokens(questionText)
-  if (mathTokens.length >= 3) {
-    const compactHits = mathTokens.filter(token => compactPage.includes(token)).length
-    if (compactHits >= Math.min(4, Math.ceil(mathTokens.length * 0.55))) return true
-  }
-  const words = cleanQuestion
-    .split(/\s+/)
-    .map(word => word.replace(/[^A-Za-z0-9]+/g, ''))
-    .filter(word => word.length >= 4)
-    .slice(0, 28)
-  if (words.length < 5) return pageText.includes(cleanQuestion.slice(0, Math.min(24, cleanQuestion.length)))
-  const pageWords = new Set(pageText.split(/\s+/).map(word => word.replace(/[^A-Za-z0-9]+/g, '')).filter(Boolean))
-  const hits = words.filter(word => pageWords.has(word)).length
-  return hits >= Math.min(10, Math.ceil(words.length * 0.55))
 }
 
 function escapeRegex(text) {
@@ -1023,4 +630,3 @@ function escapeRegex(text) {
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
-

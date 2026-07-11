@@ -1,5 +1,7 @@
 import { WatermarkLayer } from './pdfWatermarkSystem'
 import html2pdf from 'html2pdf.js'
+import html2canvas from 'html2canvas'
+import { jsPDF } from 'jspdf'
 
 export const PDF_EXPORT_OPTIONS = {
   margin: [10, 10, 10, 10],
@@ -24,12 +26,103 @@ export const PDF_EXPORT_OPTIONS = {
   },
 }
 
-export async function exportToPdf(element, filename) {
+export async function exportToPdf(element, filename, options = {}) {
+  if (options.segmented) {
+    await exportSegmentedPdf(element, filename)
+    return
+  }
+
   const opt = {
     ...PDF_EXPORT_OPTIONS,
     filename,
   }
   await html2pdf().set(opt).from(element).save()
+}
+
+async function exportSegmentedPdf(element, filename) {
+  const segments = Array.from(element.querySelectorAll('[data-pdf-segment="true"]'))
+  if (!segments.length) {
+    await html2pdf().set({ ...PDF_EXPORT_OPTIONS, filename }).from(element).save()
+    return
+  }
+
+  const margin = 10
+  const pdf = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait', compress: true })
+  const pageWidth = pdf.internal.pageSize.getWidth()
+  const pageHeight = pdf.internal.pageSize.getHeight()
+  const contentWidth = pageWidth - margin * 2
+  const contentHeight = pageHeight - margin * 2
+  let y = margin
+  let hasContent = false
+
+  const addPage = () => {
+    if (hasContent) pdf.addPage()
+    y = margin
+    hasContent = true
+  }
+
+  for (const segment of segments) {
+    if (segment.dataset.pdfStartPage === 'true' && hasContent) {
+      pdf.addPage()
+      y = margin
+    }
+
+    const canvas = await html2canvas(segment, {
+      ...PDF_EXPORT_OPTIONS.html2canvas,
+      backgroundColor: '#ffffff',
+      windowWidth: element.scrollWidth,
+    })
+
+    const imgWidth = contentWidth
+    const imgHeight = (canvas.height * imgWidth) / canvas.width
+
+    if (imgHeight <= contentHeight) {
+      if (y + imgHeight > pageHeight - margin) {
+        addPage()
+      } else if (!hasContent) {
+        hasContent = true
+      }
+      pdf.addImage(canvas.toDataURL('image/jpeg', 0.95), 'JPEG', margin, y, imgWidth, imgHeight)
+      y += imgHeight + 4
+      continue
+    }
+
+    if (y > margin) {
+      pdf.addPage()
+      y = margin
+      hasContent = true
+    } else if (!hasContent) {
+      hasContent = true
+    }
+
+    const sliceHeightPx = Math.floor((contentHeight * canvas.width) / contentWidth)
+    let sourceY = 0
+    while (sourceY < canvas.height) {
+      const currentSliceHeight = Math.min(sliceHeightPx, canvas.height - sourceY)
+      const slice = document.createElement('canvas')
+      slice.width = canvas.width
+      slice.height = currentSliceHeight
+      const ctx = slice.getContext('2d')
+      ctx.drawImage(
+        canvas,
+        0,
+        sourceY,
+        canvas.width,
+        currentSliceHeight,
+        0,
+        0,
+        canvas.width,
+        currentSliceHeight,
+      )
+      const sliceHeightMm = (currentSliceHeight * contentWidth) / canvas.width
+      pdf.addImage(slice.toDataURL('image/jpeg', 0.95), 'JPEG', margin, margin, contentWidth, sliceHeightMm)
+      sourceY += currentSliceHeight
+      if (sourceY < canvas.height) pdf.addPage()
+    }
+    y = pageHeight - margin
+  }
+
+  pdf.save(filename)
 }
 
 export { WatermarkLayer }

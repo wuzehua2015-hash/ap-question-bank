@@ -1,75 +1,107 @@
 {
   "subjects": [
     {
-      "id": "biology",
-      "name": "AP Biology",
-      "shortName": "Biology",
+      "id": "macro",
+      "name": "AP Macroeconomics",
+      "shortName": "Macro",
       "active": true,
       "hasFRQ": true,
-      "questionBank": "ap/biology/question_bank.json",
-      "frqBank": "ap/biology/frq_bank.json",
-      "similarityIndex": "ap/biology/similarity_index.json",
-      "classificationConfig": "ap/biology/classification_config.json",
-      "dataVersion": "biology-2008-2013-2023-2025-frq-v1",
+      "questionBank": "ap/macroeconomics/question_bank.json",
+      "frqBank": "ap/macroeconomics/frq_bank.json",
+      "similarityIndex": "ap/macroeconomics/similarity_index.json",
+      "classificationConfig": "ap/macroeconomics/classification_config.json",
+      "dataVersion": "v1",
       "units": [
         {
           "id": "U1",
-          "name": "Chemistry of Life"
+          "name": "Basic Economic Concepts"
         },
         {
           "id": "U2",
-          "name": "Cell Structure and Function"
+          "name": "Economic Indicators & Business Cycle"
         },
         {
           "id": "U3",
-          "name": "Cellular Energetics"
+          "name": "National Income & Price Determination"
         },
         {
           "id": "U4",
-          "name": "Cell Communication and Cell Cycle"
+          "name": "Financial Sector"
         },
         {
           "id": "U5",
-          "name": "Heredity"
+          "name": "Long-Run Consequences of Policies"
         },
         {
           "id": "U6",
-          "name": "Gene Expression and Regulation"
-        },
-        {
-          "id": "U7",
-          "name": "Natural Selection"
-        },
-        {
-          "id": "U8",
-          "name": "Ecology"
+          "name": "Open Economy"
         }
       ],
       "mockExam": {
         "totalMCQ": 60,
-        "frqCount": 6,
-        "mcqTimeLimit": 5400,
-        "frqTimeLimit": 5400,
+        "frqCount": 3,
+        "mcqTimeLimit": 4200,
+        "frqTimeLimit": 3600,
         "unitDistribution": {
-          "U1": 5,
-          "U2": 7,
-          "U3": 8,
-          "U4": 8,
-          "U5": 8,
-          "U6": 8,
-          "U7": 8,
-          "U8": 8
+          "U1": 4,
+          "U2": 9,
+          "U3": 13,
+          "U4": 12,
+          "U5": 15,
+          "U6": 7
         }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-09",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
+      }
+    },
+    {
+      "id": "micro",
+      "name": "AP Microeconomics",
+      "shortName": "Micro",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/microeconomics/question_bank.json",
+      "frqBank": "ap/microeconomics/frq_bank.json",
+      "similarityIndex": "ap/microeconomics/similarity_index.json",
+      "classificationConfig": "ap/microeconomics/classification_config.json",
+      "dataVersion": "v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Basic Economic Concepts"
+        },
+        {
+          "id": "U2",
+          "name": "Supply and Demand"
+        },
+        {
+          "id": "U3",
+          "name": "Production, Cost, and Perfect Competition"
+        },
+        {
+          "id": "U4",
+          "name": "Imperfect Competition"
+        },
+        {
+          "id": "U5",
+          "name": "Factor Markets"
+        },
+        {
+          "id": "U6",
+          "name": "Market Failure and the Role of Government"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 60,
+        "frqCount": 3,
+        "mcqTimeLimit": 4200,
+        "frqTimeLimit": 3600,
+        "unitDistribution": {
+          "U1": 7,
+          "U2": 13,
+          "U3": 15,
+          "U4": 12,
+          "U5": 7,
+          "U6": 6
+        }
       }
     },
     {
@@ -142,435 +174,6 @@
           "U9": 5,
           "U10": 5
         }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-10",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
-      }
-    },
-    {
-      "id": "chemistry",
-      "name": "AP Chemistry",
-      "shortName": "Chem",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/chemistry/question_bank.json",
-      "frqBank": "ap/chemistry/frq_bank.json",
-      "similarityIndex": "ap/chemistry/similarity_index.json",
-      "classificationConfig": "ap/chemistry/classification_config.json",
-      "dataVersion": "strict-gated-2014-2015-2016-2018-2019-v2",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Atomic Structure and Properties"
-        },
-        {
-          "id": "U2",
-          "name": "Molecular and Ionic Compound Structure and Properties"
-        },
-        {
-          "id": "U3",
-          "name": "Intermolecular Forces and Properties"
-        },
-        {
-          "id": "U4",
-          "name": "Chemical Reactions"
-        },
-        {
-          "id": "U5",
-          "name": "Kinetics"
-        },
-        {
-          "id": "U6",
-          "name": "Thermodynamics"
-        },
-        {
-          "id": "U7",
-          "name": "Equilibrium"
-        },
-        {
-          "id": "U8",
-          "name": "Acids and Bases"
-        },
-        {
-          "id": "U9",
-          "name": "Applications of Thermodynamics"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 50,
-        "frqCount": 7,
-        "mcqTimeLimit": 5400,
-        "frqTimeLimit": 6300,
-        "unitDistribution": {
-          "U1": 5,
-          "U2": 5,
-          "U3": 8,
-          "U4": 6,
-          "U5": 6,
-          "U6": 6,
-          "U7": 5,
-          "U8": 5,
-          "U9": 4
-        }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-09T16:00:00.000Z",
-        "notes": "Certified internally after Chemistry pre-launch repair: 250 MCQ, 35 FRQ, FRQ solution outlines, structured tables, visual asset review, delivery contract, student-flow, render audit, validate, and build."
-      }
-    },
-    {
-      "id": "computer-science-a",
-      "name": "AP Computer Science A",
-      "shortName": "Computer Science A",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/computer-science-a/question_bank.json",
-      "frqBank": "ap/computer-science-a/frq_bank.json",
-      "similarityIndex": "ap/computer-science-a/similarity_index.json",
-      "classificationConfig": "ap/computer-science-a/classification_config.json",
-      "dataVersion": "csa-2015-gridworld-2014sample-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Primitive Types"
-        },
-        {
-          "id": "U2",
-          "name": "Using Objects"
-        },
-        {
-          "id": "U3",
-          "name": "Boolean Expressions and if Statements"
-        },
-        {
-          "id": "U4",
-          "name": "Iteration"
-        },
-        {
-          "id": "U5",
-          "name": "Writing Classes"
-        },
-        {
-          "id": "U6",
-          "name": "Array"
-        },
-        {
-          "id": "U7",
-          "name": "ArrayList"
-        },
-        {
-          "id": "U8",
-          "name": "2D Array"
-        },
-        {
-          "id": "U9",
-          "name": "Inheritance"
-        },
-        {
-          "id": "U10",
-          "name": "Recursion"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 42,
-        "frqCount": 4,
-        "mcqTimeLimit": 5400,
-        "frqTimeLimit": 5400,
-        "unitDistribution": {
-          "U1": 1,
-          "U2": 1,
-          "U3": 2,
-          "U4": 3,
-          "U5": 9,
-          "U6": 12,
-          "U7": 1,
-          "U8": 6,
-          "U9": 4,
-          "U10": 3
-        }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-09",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
-      }
-    },
-    {
-      "id": "macro",
-      "name": "AP Macroeconomics",
-      "shortName": "Macro",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/macroeconomics/question_bank.json",
-      "frqBank": "ap/macroeconomics/frq_bank.json",
-      "similarityIndex": "ap/macroeconomics/similarity_index.json",
-      "classificationConfig": "ap/macroeconomics/classification_config.json",
-      "dataVersion": "v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Basic Economic Concepts"
-        },
-        {
-          "id": "U2",
-          "name": "Economic Indicators & Business Cycle"
-        },
-        {
-          "id": "U3",
-          "name": "National Income & Price Determination"
-        },
-        {
-          "id": "U4",
-          "name": "Financial Sector"
-        },
-        {
-          "id": "U5",
-          "name": "Long-Run Consequences of Policies"
-        },
-        {
-          "id": "U6",
-          "name": "Open Economy"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 60,
-        "frqCount": 3,
-        "mcqTimeLimit": 4200,
-        "frqTimeLimit": 3600,
-        "unitDistribution": {
-          "U1": 4,
-          "U2": 9,
-          "U3": 13,
-          "U4": 12,
-          "U5": 15,
-          "U6": 7
-        }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-10",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
-      }
-    },
-    {
-      "id": "micro",
-      "name": "AP Microeconomics",
-      "shortName": "Micro",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/microeconomics/question_bank.json",
-      "frqBank": "ap/microeconomics/frq_bank.json",
-      "similarityIndex": "ap/microeconomics/similarity_index.json",
-      "classificationConfig": "ap/microeconomics/classification_config.json",
-      "dataVersion": "v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Basic Economic Concepts"
-        },
-        {
-          "id": "U2",
-          "name": "Supply and Demand"
-        },
-        {
-          "id": "U3",
-          "name": "Production, Cost, and Perfect Competition"
-        },
-        {
-          "id": "U4",
-          "name": "Imperfect Competition"
-        },
-        {
-          "id": "U5",
-          "name": "Factor Markets"
-        },
-        {
-          "id": "U6",
-          "name": "Market Failure and the Role of Government"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 60,
-        "frqCount": 3,
-        "mcqTimeLimit": 4200,
-        "frqTimeLimit": 3600,
-        "unitDistribution": {
-          "U1": 7,
-          "U2": 13,
-          "U3": 15,
-          "U4": 12,
-          "U5": 7,
-          "U6": 6
-        }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-10",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
-      }
-    },
-    {
-      "id": "physics-c-e-m",
-      "name": "AP Physics C: Electricity and Magnetism",
-      "shortName": "Physics C E&M",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/physics-c-e-m/question_bank.json",
-      "frqBank": "ap/physics-c-e-m/frq_bank.json",
-      "similarityIndex": "ap/physics-c-e-m/similarity_index.json",
-      "classificationConfig": "ap/physics-c-e-m/classification_config.json",
-      "dataVersion": "historical-2012-2019-v1",
-      "units": [
-        {
-          "id": "U8",
-          "name": "Electric Charges, Fields, and Gauss's Law"
-        },
-        {
-          "id": "U9",
-          "name": "Electric Potential"
-        },
-        {
-          "id": "U10",
-          "name": "Conductors and Capacitors"
-        },
-        {
-          "id": "U11",
-          "name": "Electric Circuits"
-        },
-        {
-          "id": "U12",
-          "name": "Magnetic Fields and Electromagnetism"
-        },
-        {
-          "id": "U13",
-          "name": "Electromagnetic Induction"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 35,
-        "frqCount": 3,
-        "mcqTimeLimit": 2700,
-        "frqTimeLimit": 2700,
-        "unitDistribution": {
-          "U8": 6,
-          "U9": 5,
-          "U10": 6,
-          "U11": 7,
-          "U12": 6,
-          "U13": 5
-        }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-10",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
-      }
-    },
-    {
-      "id": "psychology",
-      "name": "AP Psychology",
-      "shortName": "Psych",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/psychology/question_bank.json",
-      "frqBank": "ap/psychology/frq_bank.json",
-      "similarityIndex": "ap/psychology/similarity_index.json",
-      "classificationConfig": "ap/psychology/classification_config.json",
-      "dataVersion": "local-1999-2004-2007-2012-2018-official-frq-2023-2025-v3",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Scientific Foundations of Psychology"
-        },
-        {
-          "id": "U2",
-          "name": "Biological Bases of Behavior"
-        },
-        {
-          "id": "U3",
-          "name": "Sensation and Perception"
-        },
-        {
-          "id": "U4",
-          "name": "Learning"
-        },
-        {
-          "id": "U5",
-          "name": "Cognitive Psychology"
-        },
-        {
-          "id": "U6",
-          "name": "Developmental Psychology"
-        },
-        {
-          "id": "U7",
-          "name": "Motivation, Emotion, and Personality"
-        },
-        {
-          "id": "U8",
-          "name": "Clinical Psychology"
-        },
-        {
-          "id": "U9",
-          "name": "Social Psychology"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 100,
-        "frqCount": 2,
-        "mcqTimeLimit": 4200,
-        "frqTimeLimit": 3000,
-        "unitDistribution": {
-          "U1": 13,
-          "U2": 10,
-          "U3": 7,
-          "U4": 9,
-          "U5": 16,
-          "U6": 9,
-          "U7": 15,
-          "U8": 13,
-          "U9": 8
-        }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-10",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
       }
     },
     {
@@ -638,344 +241,6 @@
           "U8": 2,
           "U9": 3
         }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-10",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
-      }
-    },
-    {
-      "id": "us-government-politics",
-      "name": "AP United States Government and Politics",
-      "shortName": "AP Gov",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/us-government-politics/question_bank.json",
-      "frqBank": "ap/us-government-politics/frq_bank.json",
-      "similarityIndex": "ap/us-government-politics/similarity_index.json",
-      "classificationConfig": "ap/us-government-politics/classification_config.json",
-      "dataVersion": "local-2005-2008-2012-2013-2018-2020-practice-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Foundations of American Democracy"
-        },
-        {
-          "id": "U2",
-          "name": "Interactions Among Branches of Government"
-        },
-        {
-          "id": "U3",
-          "name": "Civil Liberties and Civil Rights"
-        },
-        {
-          "id": "U4",
-          "name": "American Political Ideologies and Beliefs"
-        },
-        {
-          "id": "U5",
-          "name": "Political Participation"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 55,
-        "frqCount": 4,
-        "mcqTimeLimit": 4800,
-        "frqTimeLimit": 6000,
-        "unitDistribution": {
-          "U1": 12,
-          "U2": 15,
-          "U3": 9,
-          "U4": 8,
-          "U5": 11
-        }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-09T15:15:34.549Z",
-        "notes": "Certified internally after AP Gov pre-launch repair: 349 MCQ, 24 FRQ, clean delivery contract, answerability snapshots, FRQ browser review, student-flow, render audit, validate, and build."
-      }
-    },
-    {
-      "id": "computer-science-principles",
-      "name": "AP Computer Science Principles",
-      "shortName": "CSP",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/computer-science-principles/question_bank.json",
-      "frqBank": "ap/computer-science-principles/frq_bank.json",
-      "similarityIndex": "ap/computer-science-principles/similarity_index.json",
-      "classificationConfig": "ap/computer-science-principles/classification_config.json",
-      "dataVersion": "local-2016-2018-mcq-official-2024-2025-written-response-v2",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Creative Development"
-        },
-        {
-          "id": "U2",
-          "name": "Data"
-        },
-        {
-          "id": "U3",
-          "name": "Algorithms and Programming"
-        },
-        {
-          "id": "U4",
-          "name": "Computer Systems and Networks"
-        },
-        {
-          "id": "U5",
-          "name": "Impact of Computing"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 70,
-        "frqCount": 2,
-        "mcqTimeLimit": 7200,
-        "frqTimeLimit": 3600,
-        "unitDistribution": {
-          "U1": 0,
-          "U2": 11,
-          "U3": 50,
-          "U4": 7,
-          "U5": 2
-        },
-        "scopeNote": "MCQ practice is generated from local 2016/2018 legacy 74-question CSP practice exams. Written-response practice uses official 2024/2025 AP Central prompts and scoring guidelines for the current Create performance task response format."
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-09",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
-      }
-    },
-    {
-      "id": "environmental-science",
-      "name": "AP Environmental Science",
-      "shortName": "Environmental Science",
-      "active": true,
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "hasFRQ": true,
-      "questionBank": "ap/environmental-science/question_bank.json",
-      "frqBank": "ap/environmental-science/frq_bank.json",
-      "similarityIndex": "ap/environmental-science/similarity_index.json",
-      "classificationConfig": "ap/environmental-science/classification_config.json",
-      "dataVersion": "structured-2008-2016-v2",
-      "units": [
-        {
-          "id": "U1",
-          "name": "The Living World: Ecosystems"
-        },
-        {
-          "id": "U2",
-          "name": "The Living World: Biodiversity"
-        },
-        {
-          "id": "U3",
-          "name": "Populations"
-        },
-        {
-          "id": "U4",
-          "name": "Earth Systems and Resources"
-        },
-        {
-          "id": "U5",
-          "name": "Land and Water Use"
-        },
-        {
-          "id": "U6",
-          "name": "Energy Resources and Consumption"
-        },
-        {
-          "id": "U7",
-          "name": "Atmospheric Pollution"
-        },
-        {
-          "id": "U8",
-          "name": "Aquatic and Terrestrial Pollution"
-        },
-        {
-          "id": "U9",
-          "name": "Global Change"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 80,
-        "frqCount": 4,
-        "mcqTimeLimit": 5400,
-        "frqTimeLimit": 5400,
-        "unitDistribution": {
-          "U1": 12,
-          "U2": 2,
-          "U3": 10,
-          "U4": 3,
-          "U5": 3,
-          "U6": 16,
-          "U7": 6,
-          "U8": 19,
-          "U9": 9
-        }
-      },
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-10",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
-      }
-    },
-    {
-      "id": "physics-1",
-      "name": "AP Physics 1: Algebra-Based",
-      "shortName": "Physics 1",
-      "active": true,
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "hasFRQ": true,
-      "questionBank": "ap/physics-1/question_bank.json",
-      "frqBank": "ap/physics-1/frq_bank.json",
-      "similarityIndex": "ap/physics-1/similarity_index.json",
-      "classificationConfig": "ap/physics-1/classification_config.json",
-      "dataVersion": "structured-2014-2015-2017-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Kinematics"
-        },
-        {
-          "id": "U2",
-          "name": "Force and Translational Dynamics"
-        },
-        {
-          "id": "U3",
-          "name": "Work, Energy, and Power"
-        },
-        {
-          "id": "U4",
-          "name": "Linear Momentum"
-        },
-        {
-          "id": "U5",
-          "name": "Torque and Rotational Dynamics"
-        },
-        {
-          "id": "U6",
-          "name": "Energy and Momentum of Rotating Systems"
-        },
-        {
-          "id": "U7",
-          "name": "Oscillations"
-        },
-        {
-          "id": "U8",
-          "name": "Fluids"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 40,
-        "frqCount": 4,
-        "mcqTimeLimit": 4800,
-        "frqTimeLimit": 6000,
-        "unitDistribution": {
-          "U1": 5,
-          "U2": 12,
-          "U3": 7,
-          "U4": 6,
-          "U5": 2,
-          "U6": 1,
-          "U7": 7,
-          "U8": 0
-        }
-      },
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-10",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
-      }
-    },
-    {
-      "id": "physics-2",
-      "name": "AP Physics 2: Algebra-Based",
-      "shortName": "Physics 2",
-      "active": true,
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "hasFRQ": true,
-      "questionBank": "ap/physics-2/question_bank.json",
-      "frqBank": "ap/physics-2/frq_bank.json",
-      "similarityIndex": "ap/physics-2/similarity_index.json",
-      "classificationConfig": "ap/physics-2/classification_config.json",
-      "dataVersion": "structured-2014-2016-2017-2019-frq-2023-2025-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Fluids"
-        },
-        {
-          "id": "U2",
-          "name": "Thermodynamics"
-        },
-        {
-          "id": "U3",
-          "name": "Electric Force, Field, and Potential"
-        },
-        {
-          "id": "U4",
-          "name": "Electric Circuits"
-        },
-        {
-          "id": "U5",
-          "name": "Magnetism and Electromagnetic Induction"
-        },
-        {
-          "id": "U6",
-          "name": "Geometric and Physical Optics"
-        },
-        {
-          "id": "U7",
-          "name": "Quantum, Atomic, and Nuclear Physics"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 40,
-        "frqCount": 4,
-        "mcqTimeLimit": 4800,
-        "frqTimeLimit": 6000,
-        "unitDistribution": {
-          "U1": 3,
-          "U2": 5,
-          "U3": 8,
-          "U4": 5,
-          "U5": 4,
-          "U6": 8,
-          "U7": 7
-        }
-      },
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-10",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
       }
     },
     {
@@ -1038,16 +303,58 @@
           "U7": 4,
           "U8": 5
         }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-09",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
+      }
+    },
+    {
+      "id": "physics-c-e-m",
+      "name": "AP Physics C: Electricity and Magnetism",
+      "shortName": "Physics C E&M",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/physics-c-e-m/question_bank.json",
+      "frqBank": "ap/physics-c-e-m/frq_bank.json",
+      "similarityIndex": "ap/physics-c-e-m/similarity_index.json",
+      "classificationConfig": "ap/physics-c-e-m/classification_config.json",
+      "dataVersion": "historical-2012-2019-v1",
+      "units": [
+        {
+          "id": "U8",
+          "name": "Electric Charges, Fields, and Gauss's Law"
+        },
+        {
+          "id": "U9",
+          "name": "Electric Potential"
+        },
+        {
+          "id": "U10",
+          "name": "Conductors and Capacitors"
+        },
+        {
+          "id": "U11",
+          "name": "Electric Circuits"
+        },
+        {
+          "id": "U12",
+          "name": "Magnetic Fields and Electromagnetism"
+        },
+        {
+          "id": "U13",
+          "name": "Electromagnetic Induction"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 35,
+        "frqCount": 3,
+        "mcqTimeLimit": 2700,
+        "frqTimeLimit": 2700,
+        "unitDistribution": {
+          "U8": 6,
+          "U9": 5,
+          "U10": 6,
+          "U11": 7,
+          "U12": 6,
+          "U13": 5
+        }
       }
     },
     {
@@ -1105,16 +412,187 @@
           "U6": 1,
           "U7": 5
         }
-      },
-      "releaseStatus": "certified",
-      "visibility": "public",
-      "readiness": {
-        "status": "green",
-        "updatedAt": "2026-07-10",
-        "p0": 0,
-        "p1": 0,
-        "contentRiskCodes": [],
-        "mechanismCodes": []
+      }
+    },
+    {
+      "id": "psychology",
+      "name": "AP Psychology",
+      "shortName": "Psych",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/psychology/question_bank.json",
+      "frqBank": "ap/psychology/frq_bank.json",
+      "similarityIndex": "ap/psychology/similarity_index.json",
+      "classificationConfig": "ap/psychology/classification_config.json",
+      "dataVersion": "local-1999-2004-2007-2012-2018-official-frq-2023-2025-v3",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Scientific Foundations of Psychology"
+        },
+        {
+          "id": "U2",
+          "name": "Biological Bases of Behavior"
+        },
+        {
+          "id": "U3",
+          "name": "Sensation and Perception"
+        },
+        {
+          "id": "U4",
+          "name": "Learning"
+        },
+        {
+          "id": "U5",
+          "name": "Cognitive Psychology"
+        },
+        {
+          "id": "U6",
+          "name": "Developmental Psychology"
+        },
+        {
+          "id": "U7",
+          "name": "Motivation, Emotion, and Personality"
+        },
+        {
+          "id": "U8",
+          "name": "Clinical Psychology"
+        },
+        {
+          "id": "U9",
+          "name": "Social Psychology"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 100,
+        "frqCount": 2,
+        "mcqTimeLimit": 4200,
+        "frqTimeLimit": 3000,
+        "unitDistribution": {
+          "U1": 13,
+          "U2": 10,
+          "U3": 7,
+          "U4": 9,
+          "U5": 16,
+          "U6": 9,
+          "U7": 15,
+          "U8": 13,
+          "U9": 8
+        }
+      }
+    },
+    {
+      "id": "us-government-politics",
+      "name": "AP United States Government and Politics",
+      "shortName": "AP Gov",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/us-government-politics/question_bank.json",
+      "frqBank": "ap/us-government-politics/frq_bank.json",
+      "similarityIndex": "ap/us-government-politics/similarity_index.json",
+      "classificationConfig": "ap/us-government-politics/classification_config.json",
+      "dataVersion": "local-2005-2008-2012-2013-2018-2020-practice-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Foundations of American Democracy"
+        },
+        {
+          "id": "U2",
+          "name": "Interactions Among Branches of Government"
+        },
+        {
+          "id": "U3",
+          "name": "Civil Liberties and Civil Rights"
+        },
+        {
+          "id": "U4",
+          "name": "American Political Ideologies and Beliefs"
+        },
+        {
+          "id": "U5",
+          "name": "Political Participation"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 55,
+        "frqCount": 4,
+        "mcqTimeLimit": 4800,
+        "frqTimeLimit": 6000,
+        "unitDistribution": {
+          "U1": 12,
+          "U2": 15,
+          "U3": 9,
+          "U4": 8,
+          "U5": 11
+        }
+      }
+    },
+    {
+      "id": "chemistry",
+      "name": "AP Chemistry",
+      "shortName": "Chem",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/chemistry/question_bank.json",
+      "frqBank": "ap/chemistry/frq_bank.json",
+      "similarityIndex": "ap/chemistry/similarity_index.json",
+      "classificationConfig": "ap/chemistry/classification_config.json",
+      "dataVersion": "strict-gated-2014-2015-2016-2018-2019-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Atomic Structure and Properties"
+        },
+        {
+          "id": "U2",
+          "name": "Molecular and Ionic Compound Structure and Properties"
+        },
+        {
+          "id": "U3",
+          "name": "Intermolecular Forces and Properties"
+        },
+        {
+          "id": "U4",
+          "name": "Chemical Reactions"
+        },
+        {
+          "id": "U5",
+          "name": "Kinetics"
+        },
+        {
+          "id": "U6",
+          "name": "Thermodynamics"
+        },
+        {
+          "id": "U7",
+          "name": "Equilibrium"
+        },
+        {
+          "id": "U8",
+          "name": "Acids and Bases"
+        },
+        {
+          "id": "U9",
+          "name": "Applications of Thermodynamics"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 50,
+        "frqCount": 7,
+        "mcqTimeLimit": 5400,
+        "frqTimeLimit": 6300,
+        "unitDistribution": {
+          "U1": 5,
+          "U2": 5,
+          "U3": 8,
+          "U4": 6,
+          "U5": 6,
+          "U6": 6,
+          "U7": 5,
+          "U8": 5,
+          "U9": 4
+        }
       }
     }
   ]

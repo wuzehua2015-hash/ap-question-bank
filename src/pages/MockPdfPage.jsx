@@ -73,7 +73,7 @@ function MockPdfPage() {
     setExporting(true)
     try {
       const date = new Date().toISOString().split('T')[0]
-      await exportToPdf(pdfRef.current, `LynkEdu-MockExam-${date}.pdf`)
+      await exportToPdf(pdfRef.current, `LynkEdu-MockExam-${date}.pdf`, { segmented: true })
     } finally {
       setExporting(false)
     }
@@ -134,7 +134,7 @@ function MockPdfPage() {
 
       <PdfContainer refProp={pdfRef}>
         <div style={{ padding: '30px 20px' }}>
-          <div style={{
+          <div data-pdf-segment="true" style={{
             borderBottom: '2px solid #1e40af',
             paddingBottom: '12px',
             marginBottom: '30px',
@@ -152,7 +152,7 @@ function MockPdfPage() {
             </div>
           </div>
 
-          <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+          <div data-pdf-segment="true" style={{ textAlign: 'center', marginBottom: '24px' }}>
             <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1f2937' }}>
               {subjectName} 模考
             </div>
@@ -162,7 +162,7 @@ function MockPdfPage() {
           </div>
 
           <div style={{ marginBottom: '40px' }}>
-            <div style={{
+            <div data-pdf-segment="true" style={{
               fontSize: '24px', fontWeight: 'bold', color: '#1e40af',
               marginBottom: '16px', paddingBottom: '8px',
               borderBottom: '2px solid #dbeafe',
@@ -171,7 +171,7 @@ function MockPdfPage() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {mcqs.map((q, idx) => (
-                <div key={q.question_id} style={{ pageBreakInside: 'avoid', breakInside: 'avoid', marginBottom: '24px' }}>
+                <div key={q.question_id} data-pdf-segment="true" style={{ pageBreakInside: 'avoid', breakInside: 'avoid', marginBottom: '24px' }}>
                   <div style={{
                     fontSize: '18px', fontWeight: 'bold', color: '#1f2937',
                     marginBottom: '8px', paddingBottom: '4px',
@@ -185,28 +185,29 @@ function MockPdfPage() {
             </div>
           </div>
 
-          <div className="pdf-page-break" style={{ paddingTop: '30px' }}>
-            <div style={{
-              fontSize: '24px', fontWeight: 'bold', color: '#1e40af',
-              marginBottom: '16px', paddingBottom: '8px',
-              borderBottom: '2px solid #dbeafe',
-            }}>
-              第二部分：自由作答题
-            </div>
-            <div style={{ fontSize: '16px', color: '#6b7280', marginBottom: '16px' }}>
-              建议用时：{frqMinutes} 分钟 &nbsp;|&nbsp; 总分：{totalFrqPoints} 分
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-              {frqs.map((frq, idx) => (
-                <div key={frq.question_id}>
-                  <FRQDisplay frq={frq} variant="pdf" index={idx + 1} showRubric={false} />
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
-        <div className="pdf-page-break" style={{ padding: '30px 20px' }}>
+        {frqs.map((frq, idx) => (
+          <div key={frq.question_id} className="pdf-page-break" data-pdf-segment="true" data-pdf-start-page="true" style={{ padding: '30px 20px' }}>
+            {idx === 0 && (
+              <>
+                <div style={{
+                  fontSize: '24px', fontWeight: 'bold', color: '#1e40af',
+                  marginBottom: '16px', paddingBottom: '8px',
+                  borderBottom: '2px solid #dbeafe',
+                }}>
+                  第二部分：自由作答题
+                </div>
+                <div style={{ fontSize: '16px', color: '#6b7280', marginBottom: '16px' }}>
+                  建议用时：{frqMinutes} 分钟 &nbsp;|&nbsp; 总分：{totalFrqPoints} 分
+                </div>
+              </>
+            )}
+            <FRQDisplay frq={frq} variant="pdf" index={idx + 1} showRubric={false} />
+          </div>
+        ))}
+
+        <div className="pdf-page-break" data-pdf-segment="true" data-pdf-start-page="true" style={{ padding: '30px 20px' }}>
           <div style={{
             borderBottom: '2px solid #1e40af',
             paddingBottom: '12px',
@@ -243,6 +244,19 @@ function MockPdfPage() {
               ))}
             </div>
           </div>
+        </div>
+
+        {frqs.map((frq) => (
+          <div key={`rubric-${frq.question_id}`} className="pdf-page-break" data-pdf-segment="true" data-pdf-start-page="true" style={{ padding: '30px 20px' }}>
+          <div style={{
+            borderBottom: '2px solid #1e40af',
+            paddingBottom: '12px',
+            marginBottom: '24px',
+          }}>
+            <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#1f2937' }}>
+              参考答案
+            </div>
+          </div>
 
           <div>
             <div style={{
@@ -251,48 +265,46 @@ function MockPdfPage() {
             }}>
               第二部分：FRQ 评分参考
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              {frqs.map((frq) => (
-                <div key={frq.question_id} style={{
-                  background: '#f9fafb',
-                  borderRadius: '8px',
-                  padding: '16px',
-                  border: '1px solid #e5e7eb',
-                }}>
-                  <div style={{
-                    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                    marginBottom: '10px',
-                  }}>
-                    <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#1f2937' }}>
-                      FRQ {frq.question_number}
-                    </div>
-                    <div style={{ fontSize: '16px', fontWeight: '600', color: '#1e40af' }}>
-                      {frq.rubric?.total_points || 0} 分
-                    </div>
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <RubricDisplay rubric={frq.rubric} variant="pdf" />
-                    {(frq.rubric_image_paths || []).map((path, i) => (
-                      <img
-                        key={`rubric-img-${i}`}
-                        src={assetUrl(path)}
-                        alt=""
-                        style={{
-                          maxWidth: '100%',
-                          maxHeight: '620px',
-                          display: 'block',
-                          margin: '8px auto 12px',
-                          pageBreakInside: 'avoid',
-                          breakInside: 'avoid',
-                        }}
-                      />
-                    ))}
-                  </div>
+            <div style={{
+              background: '#f9fafb',
+              borderRadius: '8px',
+              padding: '16px',
+              border: '1px solid #e5e7eb',
+              marginBottom: '20px',
+            }}>
+              <div style={{
+                display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                marginBottom: '10px',
+              }}>
+                <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#1f2937' }}>
+                  FRQ {frq.question_number}
                 </div>
-              ))}
+                <div style={{ fontSize: '16px', fontWeight: '600', color: '#1e40af' }}>
+                  {frq.rubric?.total_points || 0} 分
+                </div>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <RubricDisplay rubric={frq.rubric} variant="pdf" />
+                {(frq.rubric_image_paths || []).map((path, i) => (
+                  <img
+                    key={`rubric-img-${i}`}
+                    src={assetUrl(path)}
+                    alt=""
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '620px',
+                      display: 'block',
+                      margin: '8px auto 12px',
+                      pageBreakInside: 'avoid',
+                      breakInside: 'avoid',
+                    }}
+                  />
+                ))}
+                  </div>
             </div>
           </div>
-        </div>
+          </div>
+        ))}
       </PdfContainer>
     </div>
   )

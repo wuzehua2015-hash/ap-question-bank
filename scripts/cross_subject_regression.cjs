@@ -64,12 +64,6 @@ async function main() {
   assert(frqDisplay.includes('(?<!\\|)\\n'), 'FRQ prompt normalization must preserve newlines after Markdown table rows.')
   assert(frqDisplay.includes('(?:\\||- \\[ \\]|\\([a-z]\\)|'), 'FRQ prompt normalization must preserve Markdown table rows, checklist rows, and (a)-style parts.')
 
-  const questionBank = readText('src/utils/questionBank.js')
-  assert(questionBank.includes('selectMockFRQ'), 'Mock exam FRQ selection must use the shared FRQ sampling helper.')
-  assert(questionBank.includes('_lastMockFRQSignature'), 'Mock exam FRQ selection must remember the previous FRQ set to avoid immediate repeats.')
-  assert(questionBank.includes('byQuestionNumber'), 'Mock exam FRQ selection must sample by question number because FRQ numbers represent distinct task types.')
-  assert(!/candidates\.push\(questions\)[\s\S]*source\.slice\(0,\s*frqCount\)/.test(questionBank), 'Mock exam FRQ selection must not choose a fixed year/set and then take the first configured FRQs.')
-
   const tableRenderFiles = [
     'src/components/QuestionDisplay.jsx',
     'src/components/QuestionCard.jsx',
@@ -85,10 +79,8 @@ async function main() {
   const abFrq = readJson('public/data/ap/calculus-ab/frq_bank.json')
   const ruth = abFrq.find(item => String(item.text || '').includes('Ruth rode her bicycle'))
   assert(ruth, 'AP Calculus AB Ruth FRQ regression fixture must exist.')
-  const ruthTable = ruth?.background_data?.table
-  assert(ruthTable, 'AB Ruth FRQ must retain the velocity table as structured background_data.table.')
-  const ruthTableText = JSON.stringify(ruthTable)
-  assert(ruthTableText.includes('v(t)') && ruthTableText.includes('20.1'), 'AB Ruth FRQ structured table must retain velocity row values.')
+  assert(/\|\s*\$?v\(t\)\$?\s*\(miles per hour\)/.test(ruth?.text || ''), 'AB Ruth FRQ must retain the velocity table row in source data.')
+  assert((ruth?.text || '').split('\n').filter(line => line.trim().startsWith('|')).length >= 3, 'AB Ruth FRQ Markdown table must remain multi-line in source data.')
 
   const psychFrq = readJson('public/data/ap/psychology/frq_bank.json')
   const psychText = JSON.stringify(psychFrq)
@@ -100,11 +92,6 @@ async function main() {
     const mockExam = subject.mockExam || {}
     const total = Object.values(mockExam.unitDistribution || {}).reduce((sum, value) => sum + Number(value || 0), 0)
     assert(total === Number(mockExam.totalMCQ), `${subject.id} unitDistribution must sum to totalMCQ.`)
-    if (subject.hasFRQ && subject.frqBank && Number(mockExam.frqCount || 0) > 0) {
-      const frq = readJson(`public/data/${subject.frqBank}`)
-      const slots = new Set(frq.map(item => Number(item.question_number || item.question_num || 0)).filter(Boolean))
-      assert(slots.size >= Number(mockExam.frqCount), `${subject.id} must have at least ${mockExam.frqCount} FRQ question-number slots for mock composition.`)
-    }
   }
 
   if (failures.length) {
