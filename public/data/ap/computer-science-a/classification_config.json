@@ -1,0 +1,92 @@
+{
+  "subject": "AP Computer Science A",
+  "version": "csa_2015_gridworld_2014sample_v1",
+  "units": [
+    {
+      "code": "U1",
+      "name": "Primitive Types"
+    },
+    {
+      "code": "U2",
+      "name": "Using Objects"
+    },
+    {
+      "code": "U3",
+      "name": "Boolean Expressions and if Statements"
+    },
+    {
+      "code": "U4",
+      "name": "Iteration"
+    },
+    {
+      "code": "U5",
+      "name": "Writing Classes"
+    },
+    {
+      "code": "U6",
+      "name": "Array"
+    },
+    {
+      "code": "U7",
+      "name": "ArrayList"
+    },
+    {
+      "code": "U8",
+      "name": "2D Array"
+    },
+    {
+      "code": "U9",
+      "name": "Inheritance"
+    },
+    {
+      "code": "U10",
+      "name": "Recursion"
+    }
+  ],
+  "included_sources": [
+    {
+      "key": "2015",
+      "year": 2015,
+      "source_set": "released",
+      "mcq": 40,
+      "frq": 4
+    },
+    {
+      "key": "gridworld",
+      "year": 2008,
+      "source_set": "gridworld_practice",
+      "mcq": 40,
+      "frq": 4
+    },
+    {
+      "key": "2014_sample",
+      "year": 2014,
+      "source_set": "college_board_sample",
+      "mcq": 25,
+      "frq": 0
+    }
+  ],
+  "mock_exam": {
+    "total_mcq": 42,
+    "frq_count": 4,
+    "mcq_time_limit": 5400,
+    "frq_time_limit": 5400,
+    "unit_distribution": {
+      "U1": 1,
+      "U2": 1,
+      "U3": 2,
+      "U4": 3,
+      "U5": 9,
+      "U6": 12,
+      "U7": 1,
+      "U8": 6,
+      "U9": 4,
+      "U10": 3
+    }
+  },
+  "notes": [
+    "2014 College Board sample contributes MCQ only; sample FRQ has suggested solutions but no full scoring guideline and is excluded from FRQ bank.",
+    "GridWorld is marked as a legacy practice source.",
+    "CSA prompts/options must be structured as text, tables, and fenced Java code; prompt screenshots are not part of the student-facing delivery standard."
+  ]
+}

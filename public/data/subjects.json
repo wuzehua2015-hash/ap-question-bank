@@ -1,6 +1,299 @@
 {
   "subjects": [
     {
+      "id": "biology",
+      "name": "AP Biology",
+      "shortName": "Biology",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/biology/question_bank.json",
+      "frqBank": "ap/biology/frq_bank.json",
+      "similarityIndex": "ap/biology/similarity_index.json",
+      "classificationConfig": "ap/biology/classification_config.json",
+      "dataVersion": "biology-2008-2013-2023-2025-frq-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Chemistry of Life"
+        },
+        {
+          "id": "U2",
+          "name": "Cell Structure and Function"
+        },
+        {
+          "id": "U3",
+          "name": "Cellular Energetics"
+        },
+        {
+          "id": "U4",
+          "name": "Cell Communication and Cell Cycle"
+        },
+        {
+          "id": "U5",
+          "name": "Heredity"
+        },
+        {
+          "id": "U6",
+          "name": "Gene Expression and Regulation"
+        },
+        {
+          "id": "U7",
+          "name": "Natural Selection"
+        },
+        {
+          "id": "U8",
+          "name": "Ecology"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 60,
+        "frqCount": 6,
+        "mcqTimeLimit": 5400,
+        "frqTimeLimit": 5400,
+        "unitDistribution": {
+          "U1": 5,
+          "U2": 7,
+          "U3": 8,
+          "U4": 8,
+          "U5": 8,
+          "U6": 8,
+          "U7": 8,
+          "U8": 8
+        }
+      },
+      "releaseStatus": "certified",
+      "visibility": "public",
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-09",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
+      }
+    },
+    {
+      "id": "calculus-bc",
+      "name": "AP Calculus BC",
+      "shortName": "Calc BC",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/calculus-bc/question_bank.json",
+      "frqBank": "ap/calculus-bc/frq_bank.json",
+      "similarityIndex": "ap/calculus-bc/similarity_index.json",
+      "classificationConfig": "ap/calculus-bc/classification_config.json",
+      "dataVersion": "structured-2008-2012-2013-2014-2015-2016-2017-2018-2019-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Limits and Continuity"
+        },
+        {
+          "id": "U2",
+          "name": "Differentiation: Definition and Fundamental Properties"
+        },
+        {
+          "id": "U3",
+          "name": "Differentiation: Composite, Implicit, and Inverse Functions"
+        },
+        {
+          "id": "U4",
+          "name": "Contextual Applications of Differentiation"
+        },
+        {
+          "id": "U5",
+          "name": "Analytical Applications of Differentiation"
+        },
+        {
+          "id": "U6",
+          "name": "Integration and Accumulation of Change"
+        },
+        {
+          "id": "U7",
+          "name": "Differential Equations"
+        },
+        {
+          "id": "U8",
+          "name": "Applications of Integration"
+        },
+        {
+          "id": "U9",
+          "name": "Parametric Equations, Polar Coordinates, and Vector-Valued Functions"
+        },
+        {
+          "id": "U10",
+          "name": "Infinite Sequences and Series"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 45,
+        "frqCount": 6,
+        "mcqTimeLimit": 6300,
+        "frqTimeLimit": 5400,
+        "unitDistribution": {
+          "U1": 3,
+          "U2": 3,
+          "U3": 3,
+          "U4": 4,
+          "U5": 5,
+          "U6": 9,
+          "U7": 4,
+          "U8": 4,
+          "U9": 5,
+          "U10": 5
+        }
+      }
+    },
+    {
+      "id": "chemistry",
+      "name": "AP Chemistry",
+      "shortName": "Chem",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/chemistry/question_bank.json",
+      "frqBank": "ap/chemistry/frq_bank.json",
+      "similarityIndex": "ap/chemistry/similarity_index.json",
+      "classificationConfig": "ap/chemistry/classification_config.json",
+      "dataVersion": "strict-gated-2014-2015-2016-2018-2019-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Atomic Structure and Properties"
+        },
+        {
+          "id": "U2",
+          "name": "Molecular and Ionic Compound Structure and Properties"
+        },
+        {
+          "id": "U3",
+          "name": "Intermolecular Forces and Properties"
+        },
+        {
+          "id": "U4",
+          "name": "Chemical Reactions"
+        },
+        {
+          "id": "U5",
+          "name": "Kinetics"
+        },
+        {
+          "id": "U6",
+          "name": "Thermodynamics"
+        },
+        {
+          "id": "U7",
+          "name": "Equilibrium"
+        },
+        {
+          "id": "U8",
+          "name": "Acids and Bases"
+        },
+        {
+          "id": "U9",
+          "name": "Applications of Thermodynamics"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 50,
+        "frqCount": 7,
+        "mcqTimeLimit": 5400,
+        "frqTimeLimit": 6300,
+        "unitDistribution": {
+          "U1": 5,
+          "U2": 5,
+          "U3": 8,
+          "U4": 6,
+          "U5": 6,
+          "U6": 6,
+          "U7": 5,
+          "U8": 5,
+          "U9": 4
+        }
+      }
+    },
+    {
+      "id": "computer-science-a",
+      "name": "AP Computer Science A",
+      "shortName": "Computer Science A",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/computer-science-a/question_bank.json",
+      "frqBank": "ap/computer-science-a/frq_bank.json",
+      "similarityIndex": "ap/computer-science-a/similarity_index.json",
+      "classificationConfig": "ap/computer-science-a/classification_config.json",
+      "dataVersion": "csa-2015-gridworld-2014sample-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Primitive Types"
+        },
+        {
+          "id": "U2",
+          "name": "Using Objects"
+        },
+        {
+          "id": "U3",
+          "name": "Boolean Expressions and if Statements"
+        },
+        {
+          "id": "U4",
+          "name": "Iteration"
+        },
+        {
+          "id": "U5",
+          "name": "Writing Classes"
+        },
+        {
+          "id": "U6",
+          "name": "Array"
+        },
+        {
+          "id": "U7",
+          "name": "ArrayList"
+        },
+        {
+          "id": "U8",
+          "name": "2D Array"
+        },
+        {
+          "id": "U9",
+          "name": "Inheritance"
+        },
+        {
+          "id": "U10",
+          "name": "Recursion"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 42,
+        "frqCount": 4,
+        "mcqTimeLimit": 5400,
+        "frqTimeLimit": 5400,
+        "unitDistribution": {
+          "U1": 1,
+          "U2": 1,
+          "U3": 2,
+          "U4": 3,
+          "U5": 9,
+          "U6": 12,
+          "U7": 1,
+          "U8": 6,
+          "U9": 4,
+          "U10": 3
+        }
+      },
+      "releaseStatus": "certified",
+      "visibility": "public",
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-09",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
+      }
+    },
+    {
       "id": "macro",
       "name": "AP Macroeconomics",
       "shortName": "Macro",
@@ -105,207 +398,6 @@
       }
     },
     {
-      "id": "calculus-bc",
-      "name": "AP Calculus BC",
-      "shortName": "Calc BC",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/calculus-bc/question_bank.json",
-      "frqBank": "ap/calculus-bc/frq_bank.json",
-      "similarityIndex": "ap/calculus-bc/similarity_index.json",
-      "classificationConfig": "ap/calculus-bc/classification_config.json",
-      "dataVersion": "structured-2008-2012-2013-2014-2015-2016-2017-2018-2019-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Limits and Continuity"
-        },
-        {
-          "id": "U2",
-          "name": "Differentiation: Definition and Fundamental Properties"
-        },
-        {
-          "id": "U3",
-          "name": "Differentiation: Composite, Implicit, and Inverse Functions"
-        },
-        {
-          "id": "U4",
-          "name": "Contextual Applications of Differentiation"
-        },
-        {
-          "id": "U5",
-          "name": "Analytical Applications of Differentiation"
-        },
-        {
-          "id": "U6",
-          "name": "Integration and Accumulation of Change"
-        },
-        {
-          "id": "U7",
-          "name": "Differential Equations"
-        },
-        {
-          "id": "U8",
-          "name": "Applications of Integration"
-        },
-        {
-          "id": "U9",
-          "name": "Parametric Equations, Polar Coordinates, and Vector-Valued Functions"
-        },
-        {
-          "id": "U10",
-          "name": "Infinite Sequences and Series"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 45,
-        "frqCount": 6,
-        "mcqTimeLimit": 6300,
-        "frqTimeLimit": 5400,
-        "unitDistribution": {
-          "U1": 3,
-          "U2": 3,
-          "U3": 3,
-          "U4": 4,
-          "U5": 5,
-          "U6": 9,
-          "U7": 4,
-          "U8": 4,
-          "U9": 5,
-          "U10": 5
-        }
-      }
-    },
-    {
-      "id": "statistics",
-      "name": "AP Statistics",
-      "shortName": "Stats",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/statistics/question_bank.json",
-      "frqBank": "ap/statistics/frq_bank.json",
-      "similarityIndex": "ap/statistics/similarity_index.json",
-      "classificationConfig": "ap/statistics/classification_config.json",
-      "dataVersion": "local-2008-2017-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Exploring One-Variable Data"
-        },
-        {
-          "id": "U2",
-          "name": "Exploring Two-Variable Data"
-        },
-        {
-          "id": "U3",
-          "name": "Collecting Data"
-        },
-        {
-          "id": "U4",
-          "name": "Probability, Random Variables, and Probability Distributions"
-        },
-        {
-          "id": "U5",
-          "name": "Sampling Distributions"
-        },
-        {
-          "id": "U6",
-          "name": "Inference for Categorical Data: Proportions"
-        },
-        {
-          "id": "U7",
-          "name": "Inference for Quantitative Data: Means"
-        },
-        {
-          "id": "U8",
-          "name": "Inference for Categorical Data: Chi-Square"
-        },
-        {
-          "id": "U9",
-          "name": "Inference for Quantitative Data: Slopes"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 40,
-        "frqCount": 6,
-        "mcqTimeLimit": 5400,
-        "frqTimeLimit": 5400,
-        "unitDistribution": {
-          "U1": 8,
-          "U2": 2,
-          "U3": 5,
-          "U4": 6,
-          "U5": 4,
-          "U6": 5,
-          "U7": 5,
-          "U8": 2,
-          "U9": 3
-        }
-      }
-    },
-    {
-      "id": "calculus-ab",
-      "name": "AP Calculus AB",
-      "shortName": "Calc AB",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/calculus-ab/question_bank.json",
-      "frqBank": "ap/calculus-ab/frq_bank.json",
-      "similarityIndex": "ap/calculus-ab/similarity_index.json",
-      "classificationConfig": "ap/calculus-ab/classification_config.json",
-      "dataVersion": "structured-ab-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Limits and Continuity"
-        },
-        {
-          "id": "U2",
-          "name": "Differentiation: Definition and Fundamental Properties"
-        },
-        {
-          "id": "U3",
-          "name": "Differentiation: Composite, Implicit, and Inverse Functions"
-        },
-        {
-          "id": "U4",
-          "name": "Contextual Applications of Differentiation"
-        },
-        {
-          "id": "U5",
-          "name": "Analytical Applications of Differentiation"
-        },
-        {
-          "id": "U6",
-          "name": "Integration and Accumulation of Change"
-        },
-        {
-          "id": "U7",
-          "name": "Differential Equations"
-        },
-        {
-          "id": "U8",
-          "name": "Applications of Integration"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 45,
-        "frqCount": 6,
-        "mcqTimeLimit": 6300,
-        "frqTimeLimit": 5400,
-        "unitDistribution": {
-          "U1": 5,
-          "U2": 5,
-          "U3": 5,
-          "U4": 6,
-          "U5": 7,
-          "U6": 8,
-          "U7": 4,
-          "U8": 5
-        }
-      }
-    },
-    {
       "id": "physics-c-e-m",
       "name": "AP Physics C: Electricity and Magnetism",
       "shortName": "Physics C E&M",
@@ -354,63 +446,6 @@
           "U11": 7,
           "U12": 6,
           "U13": 5
-        }
-      }
-    },
-    {
-      "id": "physics-c-mechanics",
-      "name": "AP Physics C: Mechanics",
-      "shortName": "Physics C Mech",
-      "active": true,
-      "hasFRQ": true,
-      "questionBank": "ap/physics-c-mechanics/question_bank.json",
-      "frqBank": "ap/physics-c-mechanics/frq_bank.json",
-      "similarityIndex": "ap/physics-c-mechanics/similarity_index.json",
-      "classificationConfig": "ap/physics-c-mechanics/classification_config.json",
-      "dataVersion": "historical-2012-2019-v1",
-      "units": [
-        {
-          "id": "U1",
-          "name": "Kinematics"
-        },
-        {
-          "id": "U2",
-          "name": "Force and Translational Dynamics"
-        },
-        {
-          "id": "U3",
-          "name": "Work, Energy, and Power"
-        },
-        {
-          "id": "U4",
-          "name": "Linear Momentum"
-        },
-        {
-          "id": "U5",
-          "name": "Torque and Rotational Dynamics"
-        },
-        {
-          "id": "U6",
-          "name": "Energy and Momentum of Rotating Systems"
-        },
-        {
-          "id": "U7",
-          "name": "Oscillations"
-        }
-      ],
-      "mockExam": {
-        "totalMCQ": 35,
-        "frqCount": 3,
-        "mcqTimeLimit": 2700,
-        "frqTimeLimit": 2700,
-        "unitDistribution": {
-          "U1": 10,
-          "U2": 7,
-          "U3": 4,
-          "U4": 5,
-          "U5": 3,
-          "U6": 1,
-          "U7": 5
         }
       }
     },
@@ -482,6 +517,73 @@
       }
     },
     {
+      "id": "statistics",
+      "name": "AP Statistics",
+      "shortName": "Stats",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/statistics/question_bank.json",
+      "frqBank": "ap/statistics/frq_bank.json",
+      "similarityIndex": "ap/statistics/similarity_index.json",
+      "classificationConfig": "ap/statistics/classification_config.json",
+      "dataVersion": "local-2008-2017-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Exploring One-Variable Data"
+        },
+        {
+          "id": "U2",
+          "name": "Exploring Two-Variable Data"
+        },
+        {
+          "id": "U3",
+          "name": "Collecting Data"
+        },
+        {
+          "id": "U4",
+          "name": "Probability, Random Variables, and Probability Distributions"
+        },
+        {
+          "id": "U5",
+          "name": "Sampling Distributions"
+        },
+        {
+          "id": "U6",
+          "name": "Inference for Categorical Data: Proportions"
+        },
+        {
+          "id": "U7",
+          "name": "Inference for Quantitative Data: Means"
+        },
+        {
+          "id": "U8",
+          "name": "Inference for Categorical Data: Chi-Square"
+        },
+        {
+          "id": "U9",
+          "name": "Inference for Quantitative Data: Slopes"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 40,
+        "frqCount": 6,
+        "mcqTimeLimit": 5400,
+        "frqTimeLimit": 5400,
+        "unitDistribution": {
+          "U1": 8,
+          "U2": 2,
+          "U3": 5,
+          "U4": 6,
+          "U5": 4,
+          "U6": 5,
+          "U7": 5,
+          "U8": 2,
+          "U9": 3
+        }
+      }
+    },
+    {
       "id": "us-government-politics",
       "name": "AP United States Government and Politics",
       "shortName": "AP Gov",
@@ -529,69 +631,395 @@
       }
     },
     {
-      "id": "chemistry",
-      "name": "AP Chemistry",
-      "shortName": "Chem",
+      "id": "computer-science-principles",
+      "name": "AP Computer Science Principles",
+      "shortName": "CSP",
       "active": true,
       "hasFRQ": true,
-      "questionBank": "ap/chemistry/question_bank.json",
-      "frqBank": "ap/chemistry/frq_bank.json",
-      "similarityIndex": "ap/chemistry/similarity_index.json",
-      "classificationConfig": "ap/chemistry/classification_config.json",
-      "dataVersion": "strict-gated-2014-2015-2016-2018-2019-v1",
+      "questionBank": "ap/computer-science-principles/question_bank.json",
+      "frqBank": "ap/computer-science-principles/frq_bank.json",
+      "similarityIndex": "ap/computer-science-principles/similarity_index.json",
+      "classificationConfig": "ap/computer-science-principles/classification_config.json",
+      "dataVersion": "local-2016-2018-mcq-official-2024-2025-written-response-v2",
       "units": [
         {
           "id": "U1",
-          "name": "Atomic Structure and Properties"
+          "name": "Creative Development"
         },
         {
           "id": "U2",
-          "name": "Molecular and Ionic Compound Structure and Properties"
+          "name": "Data"
         },
         {
           "id": "U3",
-          "name": "Intermolecular Forces and Properties"
+          "name": "Algorithms and Programming"
         },
         {
           "id": "U4",
-          "name": "Chemical Reactions"
+          "name": "Computer Systems and Networks"
         },
         {
           "id": "U5",
-          "name": "Kinetics"
-        },
-        {
-          "id": "U6",
-          "name": "Thermodynamics"
-        },
-        {
-          "id": "U7",
-          "name": "Equilibrium"
-        },
-        {
-          "id": "U8",
-          "name": "Acids and Bases"
-        },
-        {
-          "id": "U9",
-          "name": "Applications of Thermodynamics"
+          "name": "Impact of Computing"
         }
       ],
       "mockExam": {
-        "totalMCQ": 50,
-        "frqCount": 7,
+        "totalMCQ": 70,
+        "frqCount": 2,
+        "mcqTimeLimit": 7200,
+        "frqTimeLimit": 3600,
+        "unitDistribution": {
+          "U1": 0,
+          "U2": 11,
+          "U3": 50,
+          "U4": 7,
+          "U5": 2
+        },
+        "scopeNote": "MCQ practice is generated from local 2016/2018 legacy 74-question CSP practice exams. Written-response practice uses official 2024/2025 AP Central prompts and scoring guidelines for the current Create performance task response format."
+      },
+      "releaseStatus": "certified",
+      "visibility": "public",
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-09",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
+      }
+    },
+    {
+      "id": "environmental-science",
+      "name": "AP Environmental Science",
+      "shortName": "Environmental Science",
+      "active": true,
+      "releaseStatus": "certified",
+      "visibility": "public",
+      "hasFRQ": true,
+      "questionBank": "ap/environmental-science/question_bank.json",
+      "frqBank": "ap/environmental-science/frq_bank.json",
+      "similarityIndex": "ap/environmental-science/similarity_index.json",
+      "classificationConfig": "ap/environmental-science/classification_config.json",
+      "dataVersion": "structured-2008-2016-v2",
+      "units": [
+        {
+          "id": "U1",
+          "name": "The Living World: Ecosystems"
+        },
+        {
+          "id": "U2",
+          "name": "The Living World: Biodiversity"
+        },
+        {
+          "id": "U3",
+          "name": "Populations"
+        },
+        {
+          "id": "U4",
+          "name": "Earth Systems and Resources"
+        },
+        {
+          "id": "U5",
+          "name": "Land and Water Use"
+        },
+        {
+          "id": "U6",
+          "name": "Energy Resources and Consumption"
+        },
+        {
+          "id": "U7",
+          "name": "Atmospheric Pollution"
+        },
+        {
+          "id": "U8",
+          "name": "Aquatic and Terrestrial Pollution"
+        },
+        {
+          "id": "U9",
+          "name": "Global Change"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 80,
+        "frqCount": 4,
         "mcqTimeLimit": 5400,
-        "frqTimeLimit": 6300,
+        "frqTimeLimit": 5400,
+        "unitDistribution": {
+          "U1": 12,
+          "U2": 2,
+          "U3": 10,
+          "U4": 3,
+          "U5": 3,
+          "U6": 16,
+          "U7": 6,
+          "U8": 19,
+          "U9": 9
+        }
+      },
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-10",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
+      }
+    },
+    {
+      "id": "physics-1",
+      "name": "AP Physics 1: Algebra-Based",
+      "shortName": "Physics 1",
+      "active": true,
+      "releaseStatus": "certified",
+      "visibility": "public",
+      "hasFRQ": true,
+      "questionBank": "ap/physics-1/question_bank.json",
+      "frqBank": "ap/physics-1/frq_bank.json",
+      "similarityIndex": "ap/physics-1/similarity_index.json",
+      "classificationConfig": "ap/physics-1/classification_config.json",
+      "dataVersion": "structured-2014-2015-2017-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Kinematics"
+        },
+        {
+          "id": "U2",
+          "name": "Force and Translational Dynamics"
+        },
+        {
+          "id": "U3",
+          "name": "Work, Energy, and Power"
+        },
+        {
+          "id": "U4",
+          "name": "Linear Momentum"
+        },
+        {
+          "id": "U5",
+          "name": "Torque and Rotational Dynamics"
+        },
+        {
+          "id": "U6",
+          "name": "Energy and Momentum of Rotating Systems"
+        },
+        {
+          "id": "U7",
+          "name": "Oscillations"
+        },
+        {
+          "id": "U8",
+          "name": "Fluids"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 40,
+        "frqCount": 4,
+        "mcqTimeLimit": 4800,
+        "frqTimeLimit": 6000,
+        "unitDistribution": {
+          "U1": 5,
+          "U2": 12,
+          "U3": 7,
+          "U4": 6,
+          "U5": 2,
+          "U6": 1,
+          "U7": 7,
+          "U8": 0
+        }
+      },
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-10",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
+      }
+    },
+    {
+      "id": "physics-2",
+      "name": "AP Physics 2: Algebra-Based",
+      "shortName": "Physics 2",
+      "active": true,
+      "releaseStatus": "certified",
+      "visibility": "public",
+      "hasFRQ": true,
+      "questionBank": "ap/physics-2/question_bank.json",
+      "frqBank": "ap/physics-2/frq_bank.json",
+      "similarityIndex": "ap/physics-2/similarity_index.json",
+      "classificationConfig": "ap/physics-2/classification_config.json",
+      "dataVersion": "structured-2014-2016-2017-2019-frq-2023-2025-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Fluids"
+        },
+        {
+          "id": "U2",
+          "name": "Thermodynamics"
+        },
+        {
+          "id": "U3",
+          "name": "Electric Force, Field, and Potential"
+        },
+        {
+          "id": "U4",
+          "name": "Electric Circuits"
+        },
+        {
+          "id": "U5",
+          "name": "Magnetism and Electromagnetic Induction"
+        },
+        {
+          "id": "U6",
+          "name": "Geometric and Physical Optics"
+        },
+        {
+          "id": "U7",
+          "name": "Quantum, Atomic, and Nuclear Physics"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 40,
+        "frqCount": 4,
+        "mcqTimeLimit": 4800,
+        "frqTimeLimit": 6000,
+        "unitDistribution": {
+          "U1": 3,
+          "U2": 5,
+          "U3": 8,
+          "U4": 5,
+          "U5": 4,
+          "U6": 8,
+          "U7": 7
+        }
+      },
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-10",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
+      }
+    },
+    {
+      "id": "calculus-ab",
+      "name": "AP Calculus AB",
+      "shortName": "Calc AB",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/calculus-ab/question_bank.json",
+      "frqBank": "ap/calculus-ab/frq_bank.json",
+      "similarityIndex": "ap/calculus-ab/similarity_index.json",
+      "classificationConfig": "ap/calculus-ab/classification_config.json",
+      "dataVersion": "structured-ab-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Limits and Continuity"
+        },
+        {
+          "id": "U2",
+          "name": "Differentiation: Definition and Fundamental Properties"
+        },
+        {
+          "id": "U3",
+          "name": "Differentiation: Composite, Implicit, and Inverse Functions"
+        },
+        {
+          "id": "U4",
+          "name": "Contextual Applications of Differentiation"
+        },
+        {
+          "id": "U5",
+          "name": "Analytical Applications of Differentiation"
+        },
+        {
+          "id": "U6",
+          "name": "Integration and Accumulation of Change"
+        },
+        {
+          "id": "U7",
+          "name": "Differential Equations"
+        },
+        {
+          "id": "U8",
+          "name": "Applications of Integration"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 45,
+        "frqCount": 6,
+        "mcqTimeLimit": 6300,
+        "frqTimeLimit": 5400,
         "unitDistribution": {
           "U1": 5,
           "U2": 5,
-          "U3": 8,
+          "U3": 5,
           "U4": 6,
-          "U5": 6,
-          "U6": 6,
-          "U7": 5,
-          "U8": 5,
-          "U9": 4
+          "U5": 7,
+          "U6": 8,
+          "U7": 4,
+          "U8": 5
+        }
+      }
+    },
+    {
+      "id": "physics-c-mechanics",
+      "name": "AP Physics C: Mechanics",
+      "shortName": "Physics C Mech",
+      "active": true,
+      "hasFRQ": true,
+      "questionBank": "ap/physics-c-mechanics/question_bank.json",
+      "frqBank": "ap/physics-c-mechanics/frq_bank.json",
+      "similarityIndex": "ap/physics-c-mechanics/similarity_index.json",
+      "classificationConfig": "ap/physics-c-mechanics/classification_config.json",
+      "dataVersion": "historical-2012-2019-v1",
+      "units": [
+        {
+          "id": "U1",
+          "name": "Kinematics"
+        },
+        {
+          "id": "U2",
+          "name": "Force and Translational Dynamics"
+        },
+        {
+          "id": "U3",
+          "name": "Work, Energy, and Power"
+        },
+        {
+          "id": "U4",
+          "name": "Linear Momentum"
+        },
+        {
+          "id": "U5",
+          "name": "Torque and Rotational Dynamics"
+        },
+        {
+          "id": "U6",
+          "name": "Energy and Momentum of Rotating Systems"
+        },
+        {
+          "id": "U7",
+          "name": "Oscillations"
+        }
+      ],
+      "mockExam": {
+        "totalMCQ": 35,
+        "frqCount": 3,
+        "mcqTimeLimit": 2700,
+        "frqTimeLimit": 2700,
+        "unitDistribution": {
+          "U1": 10,
+          "U2": 7,
+          "U3": 4,
+          "U4": 5,
+          "U5": 3,
+          "U6": 1,
+          "U7": 5
         }
       }
     }

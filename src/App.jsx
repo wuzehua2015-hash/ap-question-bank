@@ -16,6 +16,7 @@ import MockPdfPage from './pages/MockPdfPage'
 import SearchPage from './pages/SearchPage'
 import MistakeBook from './pages/MistakeBook'
 import HistoryPage from './pages/HistoryPage'
+import SettingsPage from './pages/SettingsPage'
 
 import { SubjectProvider } from './contexts/SubjectContext'
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/search" element={<SearchPage />} />
             <Route path="/mistakes" element={<MistakeBook />} />
             <Route path="/history" element={<HistoryPage />} />
+            <Route path="/settings" element={<SettingsPage />} />
             <Route path="/score" element={<ScorePage />} />
             <Route path="/quiz-pdf" element={<QuizPdfPage />} />
             <Route path="/mock-pdf" element={<MockPdfPage />} />

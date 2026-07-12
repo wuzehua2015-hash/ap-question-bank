@@ -33,7 +33,8 @@
     "validate:units": "node scripts/unit_progression_audit.cjs --blocking --fail-on-findings",
     "validate:science": "node scripts/science_content_gate.cjs",
     "validate:regression": "node scripts/cross_subject_regression.cjs",
-    "validate": "npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:groups && npm run validate:units && npm run validate:science && npm run validate:regression",
+    "validate:launch-contract": "node scripts/launch_contract_audit.cjs",
+    "validate": "npm run validate:launch-contract && npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:groups && npm run validate:units && npm run validate:science && npm run validate:regression",
     "prebuild": "npm run validate",
     "predev": "npm run validate"
   },

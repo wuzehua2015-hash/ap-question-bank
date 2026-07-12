@@ -1,0 +1,570 @@
+[
+  {
+    "question_id": "2024_S1_FRQ1",
+    "id": "2024_S1_FRQ1",
+    "subject": "AP Computer Science Principles",
+    "subject_id": "computer-science-principles",
+    "year": 2024,
+    "set": 1,
+    "source_set": "official_written_response_2024_set_1",
+    "source_exam_structure": "current_create_written_response",
+    "question_number": 1,
+    "type": "FRQ",
+    "question_type": "FRQ",
+    "text": "Programs accept input to achieve their intended functionality. Describe at least one valid input to your program and what your program does with that input.",
+    "primary_unit": "U1",
+    "unit": "U1",
+    "unit_name": "Creative Development",
+    "secondary_units": [
+      "U3"
+    ],
+    "pure_unit": false,
+    "difficulty": "medium",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap24-frq-csp-set-1.pdf",
+      "scoring_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap24-sg-computer-science-principles-set-1.pdf",
+      "source_pages": [
+        2
+      ],
+      "scoring_pages": [
+        2,
+        3
+      ]
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Use your submitted Create performance task and Personalized Project Reference. Answer only from the program and code segments in that reference."
+      },
+      {
+        "type": "part",
+        "label": "Written Response 1",
+        "text": "Programs accept input to achieve their intended functionality. Describe at least one valid input to your program and what your program does with that input."
+      }
+    ],
+    "rubric": {
+      "total_points": 1,
+      "rubric_type": "csp_create_written_response",
+      "solution_outline": "Check whether the response names the requested program input, output, user group, or invalid-input case and then connects it to actual program behavior. The response must be consistent with the submitted program and reference materials; unsupported generic claims do not earn the point.",
+      "points": [
+        {
+          "point_id": "Written Response 1",
+          "value": 1,
+          "description": "Reporting Category: Program Design, Function, and Purpose\nScoring Criteria: The response describes at least one valid input to the program and describes what the program does with that input.\nDecision Rules: Evaluate against the submitted video, program code, and Personalized Project Reference as needed. Award the point only when the explanation is plausible and consistent with the program."
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2024_S1_FRQ2",
+    "id": "2024_S1_FRQ2",
+    "subject": "AP Computer Science Principles",
+    "subject_id": "computer-science-principles",
+    "year": 2024,
+    "set": 1,
+    "source_set": "official_written_response_2024_set_1",
+    "source_exam_structure": "current_create_written_response",
+    "question_number": 2,
+    "type": "FRQ",
+    "question_type": "FRQ",
+    "text": "Refer to your Personalized Project Reference when answering this question.\n\nA. Consider the first iteration statement included in the Procedure section of your Personalized Project Reference. Describe what is being accomplished by the code in the body of the iteration statement.\n\nB. Consider the procedure identified in part (i) of the Procedure section of your Personalized Project Reference. Write two calls to your procedure that each cause a different code segment in the procedure to execute. Describe the expected behavior of each call. If it is not possible for two calls to your procedure to cause different code segments to execute, explain why this is the case for your procedure.\n\nC. Suppose another programmer provides you with a procedure called `checkValidity(value)` that returns `true` if a value passed as an argument is considered valid by the other programmer and returns `false` otherwise. Using the list identified in the List section of your Personalized Project Reference, explain in detailed steps an algorithm that uses `checkValidity` to check whether all elements in your list are considered valid by the other programmer. Your explanation must be detailed enough for someone else to write the program code for the algorithm that uses `checkValidity`.",
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Algorithms and Programming",
+    "secondary_units": [
+      "U2"
+    ],
+    "pure_unit": false,
+    "difficulty": "medium",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap24-frq-csp-set-1.pdf",
+      "scoring_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap24-sg-computer-science-principles-set-1.pdf",
+      "source_pages": [
+        3,
+        4
+      ],
+      "scoring_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Use your submitted Create performance task and Personalized Project Reference. Answer only from the program and code segments in that reference."
+      },
+      {
+        "type": "paragraph",
+        "text": "Refer to your Personalized Project Reference when answering this question."
+      },
+      {
+        "type": "part",
+        "label": "A",
+        "text": "Consider the first iteration statement included in the Procedure section of your Personalized Project Reference. Describe what is being accomplished by the code in the body of the iteration statement."
+      },
+      {
+        "type": "part",
+        "label": "B",
+        "text": "Consider the procedure identified in part (i) of the Procedure section of your Personalized Project Reference. Write two calls to your procedure that each cause a different code segment in the procedure to execute. Describe the expected behavior of each call. If it is not possible for two calls to your procedure to cause different code segments to execute, explain why this is the case for your procedure."
+      },
+      {
+        "type": "part",
+        "label": "C",
+        "text": "Suppose another programmer provides you with a procedure called `checkValidity(value)` that returns `true` if a value passed as an argument is considered valid by the other programmer and returns `false` otherwise. Using the list identified in the List section of your Personalized Project Reference, explain in detailed steps an algorithm that uses `checkValidity` to check whether all elements in your list are considered valid by the other programmer. Your explanation must be detailed enough for someone else to write the program code for the algorithm that uses `checkValidity`."
+      }
+    ],
+    "rubric": {
+      "total_points": 3,
+      "rubric_type": "csp_create_written_response",
+      "solution_outline": "Score each written-response part independently against the student's Personalized Project Reference. A complete answer must identify the relevant code or data object, connect it to program behavior, and provide reasoning detailed enough to verify from the submitted program.",
+      "points": [
+        {
+          "point_id": "2A",
+          "value": 1,
+          "description": "Reporting Category: Algorithm Development\nScoring Criteria: The response describes what is accomplished by the code in the body of the first iteration statement.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        },
+        {
+          "point_id": "2B",
+          "value": 1,
+          "description": "Reporting Category: Errors and Testing\nScoring Criteria: The response includes two calls to the selected procedure that cause different code segments to run and describes each expected behavior, or explains why that is not possible for the procedure.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        },
+        {
+          "point_id": "2C",
+          "value": 1,
+          "description": "Reporting Category: Data and Procedural Abstraction\nScoring Criteria: The response gives detailed steps for an algorithm that uses `checkValidity` to check elements of the identified list.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2024_S2_FRQ1",
+    "id": "2024_S2_FRQ1",
+    "subject": "AP Computer Science Principles",
+    "subject_id": "computer-science-principles",
+    "year": 2024,
+    "set": 2,
+    "source_set": "official_written_response_2024_set_2",
+    "source_exam_structure": "current_create_written_response",
+    "question_number": 1,
+    "type": "FRQ",
+    "question_type": "FRQ",
+    "text": "Identify the expected group of users of your program. Explain how your program addresses at least one concern or interest of the users you identified.",
+    "primary_unit": "U1",
+    "unit": "U1",
+    "unit_name": "Creative Development",
+    "secondary_units": [
+      "U3"
+    ],
+    "pure_unit": false,
+    "difficulty": "medium",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap24-frq-csp-set-2.pdf",
+      "scoring_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap24-sg-computer-science-principles-set-2.pdf",
+      "source_pages": [
+        2
+      ],
+      "scoring_pages": [
+        2,
+        3
+      ]
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Use your submitted Create performance task and Personalized Project Reference. Answer only from the program and code segments in that reference."
+      },
+      {
+        "type": "part",
+        "label": "Written Response 1",
+        "text": "Identify the expected group of users of your program. Explain how your program addresses at least one concern or interest of the users you identified."
+      }
+    ],
+    "rubric": {
+      "total_points": 1,
+      "rubric_type": "csp_create_written_response",
+      "solution_outline": "Check whether the response names the requested program input, output, user group, or invalid-input case and then connects it to actual program behavior. The response must be consistent with the submitted program and reference materials; unsupported generic claims do not earn the point.",
+      "points": [
+        {
+          "point_id": "Written Response 1",
+          "value": 1,
+          "description": "Reporting Category: Program Design, Function, and Purpose\nScoring Criteria: The response identifies the expected user group and explains how the program addresses at least one concern or interest of that group.\nDecision Rules: Evaluate against the submitted video, program code, and Personalized Project Reference as needed. Award the point only when the explanation is plausible and consistent with the program."
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2024_S2_FRQ2",
+    "id": "2024_S2_FRQ2",
+    "subject": "AP Computer Science Principles",
+    "subject_id": "computer-science-principles",
+    "year": 2024,
+    "set": 2,
+    "source_set": "official_written_response_2024_set_2",
+    "source_exam_structure": "current_create_written_response",
+    "question_number": 2,
+    "type": "FRQ",
+    "question_type": "FRQ",
+    "text": "Refer to your Personalized Project Reference when answering this question.\n\nA. Consider the first conditional statement included in the Procedure section of your Personalized Project Reference. Describe your conditional statement, including its Boolean expression. Describe what the procedure does in general when the Boolean expression of this conditional statement evaluates to `false`.\n\nB. Consider the procedure and procedure call identified in parts (i) and (ii) of the Procedure section of your Personalized Project Reference. Describe the outcome that your procedure call is intended to produce. Write a new procedure call with at least one different argument value that will produce the same outcome, if possible, and explain why this procedure call produces the same outcome. If it is not possible to write a new procedure call that produces the same outcome, explain why this is not possible.\n\nC. Consider the procedure identified in part (i) of the Procedure section of your Personalized Project Reference. Identify the parameter(s) used in this procedure. Explain how your identified parameter(s) use abstraction to manage complexity in your program.",
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Algorithms and Programming",
+    "secondary_units": [
+      "U2"
+    ],
+    "pure_unit": false,
+    "difficulty": "medium",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap24-frq-csp-set-2.pdf",
+      "scoring_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap24-sg-computer-science-principles-set-2.pdf",
+      "source_pages": [
+        3,
+        4
+      ],
+      "scoring_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Use your submitted Create performance task and Personalized Project Reference. Answer only from the program and code segments in that reference."
+      },
+      {
+        "type": "paragraph",
+        "text": "Refer to your Personalized Project Reference when answering this question."
+      },
+      {
+        "type": "part",
+        "label": "A",
+        "text": "Consider the first conditional statement included in the Procedure section of your Personalized Project Reference. Describe your conditional statement, including its Boolean expression. Describe what the procedure does in general when the Boolean expression of this conditional statement evaluates to `false`."
+      },
+      {
+        "type": "part",
+        "label": "B",
+        "text": "Consider the procedure and procedure call identified in parts (i) and (ii) of the Procedure section of your Personalized Project Reference. Describe the outcome that your procedure call is intended to produce. Write a new procedure call with at least one different argument value that will produce the same outcome, if possible, and explain why this procedure call produces the same outcome. If it is not possible to write a new procedure call that produces the same outcome, explain why this is not possible."
+      },
+      {
+        "type": "part",
+        "label": "C",
+        "text": "Consider the procedure identified in part (i) of the Procedure section of your Personalized Project Reference. Identify the parameter(s) used in this procedure. Explain how your identified parameter(s) use abstraction to manage complexity in your program."
+      }
+    ],
+    "rubric": {
+      "total_points": 3,
+      "rubric_type": "csp_create_written_response",
+      "solution_outline": "Score each written-response part independently against the student's Personalized Project Reference. A complete answer must identify the relevant code or data object, connect it to program behavior, and provide reasoning detailed enough to verify from the submitted program.",
+      "points": [
+        {
+          "point_id": "2A",
+          "value": 1,
+          "description": "Reporting Category: Algorithm Development\nScoring Criteria: The response describes the first conditional statement, including its Boolean expression, and describes what the relevant code does when the expression is false.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        },
+        {
+          "point_id": "2B",
+          "value": 1,
+          "description": "Reporting Category: Errors and Testing\nScoring Criteria: The response describes the intended outcome of the referenced call and gives a different call that produces the same outcome, or explains why that is not possible.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        },
+        {
+          "point_id": "2C",
+          "value": 1,
+          "description": "Reporting Category: Data and Procedural Abstraction\nScoring Criteria: The response identifies parameter(s) in the selected procedure and explains how they use abstraction to manage complexity.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2025_S1_FRQ1",
+    "id": "2025_S1_FRQ1",
+    "subject": "AP Computer Science Principles",
+    "subject_id": "computer-science-principles",
+    "year": 2025,
+    "set": 1,
+    "source_set": "official_written_response_2025_set_1",
+    "source_exam_structure": "current_create_written_response",
+    "question_number": 1,
+    "type": "FRQ",
+    "question_type": "FRQ",
+    "text": "Identify an example output of your program. Explain how this output shows an aspect of your program's functionality.",
+    "primary_unit": "U1",
+    "unit": "U1",
+    "unit_name": "Creative Development",
+    "secondary_units": [
+      "U3"
+    ],
+    "pure_unit": false,
+    "difficulty": "medium",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap25-frq-computer-science-principles-set-1.pdf",
+      "scoring_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap25-sg-computer-science-principles-set-1.pdf",
+      "source_pages": [
+        2
+      ],
+      "scoring_pages": [
+        2,
+        3
+      ]
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Use your submitted Create performance task and Personalized Project Reference. Answer only from the program and code segments in that reference."
+      },
+      {
+        "type": "part",
+        "label": "Written Response 1",
+        "text": "Identify an example output of your program. Explain how this output shows an aspect of your program's functionality."
+      }
+    ],
+    "rubric": {
+      "total_points": 1,
+      "rubric_type": "csp_create_written_response",
+      "solution_outline": "Check whether the response names the requested program input, output, user group, or invalid-input case and then connects it to actual program behavior. The response must be consistent with the submitted program and reference materials; unsupported generic claims do not earn the point.",
+      "points": [
+        {
+          "point_id": "Written Response 1",
+          "value": 1,
+          "description": "Reporting Category: Program Design, Function, and Purpose\nScoring Criteria: The response identifies at least one example output and explains how that output shows an aspect of program functionality.\nDecision Rules: Evaluate against the submitted video, program code, and Personalized Project Reference as needed. Award the point only when the explanation is plausible and consistent with the program."
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2025_S1_FRQ2",
+    "id": "2025_S1_FRQ2",
+    "subject": "AP Computer Science Principles",
+    "subject_id": "computer-science-principles",
+    "year": 2025,
+    "set": 1,
+    "source_set": "official_written_response_2025_set_1",
+    "source_exam_structure": "current_create_written_response",
+    "question_number": 2,
+    "type": "FRQ",
+    "question_type": "FRQ",
+    "text": "Refer to your Personalized Project Reference when answering this question.\n\nA. Consider the first selection statement included in the Procedure section of your Personalized Project Reference. Identify the Boolean expression in this selection statement. Identify a specific value or set of values that will cause this expression to evaluate to `true`. Explain why the specified value(s) will cause the expression to evaluate to `true`.\n\nB. Consider the procedure included in part (i) of the Procedure section of your Personalized Project Reference. Suppose another programmer modifies the code within this procedure. Describe a modification the other programmer could make that would cause this procedure to have a logic error. Describe how the behavior of this procedure would change because of the error.\n\nC. Consider the list included in the List section of your Personalized Project Reference. Suppose another programmer adds several new elements to the end of the list. Explain how the code segment in part (ii) of the List section would need to be modified to account for the additional elements. If no changes to the code segment are necessary, explain why this is the case for your program.",
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Algorithms and Programming",
+    "secondary_units": [
+      "U2"
+    ],
+    "pure_unit": false,
+    "difficulty": "medium",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap25-frq-computer-science-principles-set-1.pdf",
+      "scoring_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap25-sg-computer-science-principles-set-1.pdf",
+      "source_pages": [
+        3,
+        4
+      ],
+      "scoring_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Use your submitted Create performance task and Personalized Project Reference. Answer only from the program and code segments in that reference."
+      },
+      {
+        "type": "paragraph",
+        "text": "Refer to your Personalized Project Reference when answering this question."
+      },
+      {
+        "type": "part",
+        "label": "A",
+        "text": "Consider the first selection statement included in the Procedure section of your Personalized Project Reference. Identify the Boolean expression in this selection statement. Identify a specific value or set of values that will cause this expression to evaluate to `true`. Explain why the specified value(s) will cause the expression to evaluate to `true`."
+      },
+      {
+        "type": "part",
+        "label": "B",
+        "text": "Consider the procedure included in part (i) of the Procedure section of your Personalized Project Reference. Suppose another programmer modifies the code within this procedure. Describe a modification the other programmer could make that would cause this procedure to have a logic error. Describe how the behavior of this procedure would change because of the error."
+      },
+      {
+        "type": "part",
+        "label": "C",
+        "text": "Consider the list included in the List section of your Personalized Project Reference. Suppose another programmer adds several new elements to the end of the list. Explain how the code segment in part (ii) of the List section would need to be modified to account for the additional elements. If no changes to the code segment are necessary, explain why this is the case for your program."
+      }
+    ],
+    "rubric": {
+      "total_points": 3,
+      "rubric_type": "csp_create_written_response",
+      "solution_outline": "Score each written-response part independently against the student's Personalized Project Reference. A complete answer must identify the relevant code or data object, connect it to program behavior, and provide reasoning detailed enough to verify from the submitted program.",
+      "points": [
+        {
+          "point_id": "2A",
+          "value": 1,
+          "description": "Reporting Category: Algorithm Development\nScoring Criteria: The response identifies the Boolean expression, identifies values that make it true, and explains why they make it true.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        },
+        {
+          "point_id": "2B",
+          "value": 1,
+          "description": "Reporting Category: Errors and Testing\nScoring Criteria: The response describes a code modification that would create a logic error and describes how the procedure behavior would change.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        },
+        {
+          "point_id": "2C",
+          "value": 1,
+          "description": "Reporting Category: Data and Procedural Abstraction\nScoring Criteria: The response explains how the list-access or list-manipulation code would need to change for additional list elements, or why no change is needed.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2025_S2_FRQ1",
+    "id": "2025_S2_FRQ1",
+    "subject": "AP Computer Science Principles",
+    "subject_id": "computer-science-principles",
+    "year": 2025,
+    "set": 2,
+    "source_set": "official_written_response_2025_set_2",
+    "source_exam_structure": "current_create_written_response",
+    "question_number": 1,
+    "type": "FRQ",
+    "question_type": "FRQ",
+    "text": "Identify an unexpected or invalid input that a user could provide to your program. Describe the behavior of your program after it receives this input. If it is not possible for your program to accept an unexpected or invalid input, explain why this is the case.",
+    "primary_unit": "U1",
+    "unit": "U1",
+    "unit_name": "Creative Development",
+    "secondary_units": [
+      "U3"
+    ],
+    "pure_unit": false,
+    "difficulty": "medium",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap25-frq-computer-science-principles-set-2.pdf",
+      "scoring_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap25-sg-computer-science-principles-set-2.pdf",
+      "source_pages": [
+        2
+      ],
+      "scoring_pages": [
+        2,
+        3
+      ]
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Use your submitted Create performance task and Personalized Project Reference. Answer only from the program and code segments in that reference."
+      },
+      {
+        "type": "part",
+        "label": "Written Response 1",
+        "text": "Identify an unexpected or invalid input that a user could provide to your program. Describe the behavior of your program after it receives this input. If it is not possible for your program to accept an unexpected or invalid input, explain why this is the case."
+      }
+    ],
+    "rubric": {
+      "total_points": 1,
+      "rubric_type": "csp_create_written_response",
+      "solution_outline": "Check whether the response names the requested program input, output, user group, or invalid-input case and then connects it to actual program behavior. The response must be consistent with the submitted program and reference materials; unsupported generic claims do not earn the point.",
+      "points": [
+        {
+          "point_id": "Written Response 1",
+          "value": 1,
+          "description": "Reporting Category: Program Design, Function, and Purpose\nScoring Criteria: The response identifies an unexpected or invalid input and describes program behavior after receiving it, or explains why such input cannot be accepted.\nDecision Rules: Evaluate against the submitted video, program code, and Personalized Project Reference as needed. Award the point only when the explanation is plausible and consistent with the program."
+        }
+      ]
+    }
+  },
+  {
+    "question_id": "2025_S2_FRQ2",
+    "id": "2025_S2_FRQ2",
+    "subject": "AP Computer Science Principles",
+    "subject_id": "computer-science-principles",
+    "year": 2025,
+    "set": 2,
+    "source_set": "official_written_response_2025_set_2",
+    "source_exam_structure": "current_create_written_response",
+    "question_number": 2,
+    "type": "FRQ",
+    "question_type": "FRQ",
+    "text": "Refer to your Personalized Project Reference when answering this question.\n\nA. Consider the first selection statement included in the Procedure section of your Personalized Project Reference. Identify the Boolean expression in this selection statement. Identify a specific value or set of values that will cause this expression to evaluate to `false`. Explain why the specified value(s) will cause the expression to evaluate to `false`.\n\nB. Consider the code segment in part (ii) of the List section of your Personalized Project Reference. Suppose another programmer modifies this code segment. Describe a modification the other programmer could make to this code segment that would result in a logic error. Explain why this modification would result in a logic error.\n\nC. Consider the procedure identified in part (i) of the Procedure section of your Personalized Project Reference. Describe the functionality provided by this procedure. Explain how implementing this functionality as a procedure results in your program being easier to maintain than if the functionality were not implemented as a procedure.",
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Algorithms and Programming",
+    "secondary_units": [
+      "U2"
+    ],
+    "pure_unit": false,
+    "difficulty": "medium",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap25-frq-computer-science-principles-set-2.pdf",
+      "scoring_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\official-frq\\ap25-sg-computer-science-principles-set-2.pdf",
+      "source_pages": [
+        3,
+        4
+      ],
+      "scoring_pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Use your submitted Create performance task and Personalized Project Reference. Answer only from the program and code segments in that reference."
+      },
+      {
+        "type": "paragraph",
+        "text": "Refer to your Personalized Project Reference when answering this question."
+      },
+      {
+        "type": "part",
+        "label": "A",
+        "text": "Consider the first selection statement included in the Procedure section of your Personalized Project Reference. Identify the Boolean expression in this selection statement. Identify a specific value or set of values that will cause this expression to evaluate to `false`. Explain why the specified value(s) will cause the expression to evaluate to `false`."
+      },
+      {
+        "type": "part",
+        "label": "B",
+        "text": "Consider the code segment in part (ii) of the List section of your Personalized Project Reference. Suppose another programmer modifies this code segment. Describe a modification the other programmer could make to this code segment that would result in a logic error. Explain why this modification would result in a logic error."
+      },
+      {
+        "type": "part",
+        "label": "C",
+        "text": "Consider the procedure identified in part (i) of the Procedure section of your Personalized Project Reference. Describe the functionality provided by this procedure. Explain how implementing this functionality as a procedure results in your program being easier to maintain than if the functionality were not implemented as a procedure."
+      }
+    ],
+    "rubric": {
+      "total_points": 3,
+      "rubric_type": "csp_create_written_response",
+      "solution_outline": "Score each written-response part independently against the student's Personalized Project Reference. A complete answer must identify the relevant code or data object, connect it to program behavior, and provide reasoning detailed enough to verify from the submitted program.",
+      "points": [
+        {
+          "point_id": "2A",
+          "value": 1,
+          "description": "Reporting Category: Algorithm Development\nScoring Criteria: The response identifies the Boolean expression, identifies values that make it false, and explains why they make it false.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        },
+        {
+          "point_id": "2B",
+          "value": 1,
+          "description": "Reporting Category: Errors and Testing\nScoring Criteria: The response describes a modification to the referenced list code that would create a logic error and explains why.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        },
+        {
+          "point_id": "2C",
+          "value": 1,
+          "description": "Reporting Category: Data and Procedural Abstraction\nScoring Criteria: The response describes the selected procedure's functionality and explains how making it a procedure improves maintainability.\nDecision Rules: Use the submitted Personalized Project Reference and program code when needed. Do not award the point for answers that are too vague, inconsistent with the program, or disconnected from the referenced list, procedure, selection, iteration, or code segment."
+        }
+      ]
+    }
+  }
+]
