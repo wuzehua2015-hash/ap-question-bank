@@ -60,7 +60,7 @@ export function adaptMCQ(raw) {
     year: raw.year || 0,
     question_number: raw.question_number || raw.question_num || 0,
     question_type: raw.question_type || 'MCQ',
-    source: raw.source || '',
+    source: normalizeSource(raw.source),
     difficulty: raw.difficulty || '',
     topics: raw.topics || [],
     image_paths: raw.image_paths || raw.images || [],
@@ -329,6 +329,17 @@ export function generateQuiz(questions, config) {
     unit: config.unit || 'all',
     allowedUnits: Array.isArray(config.allowedUnits) ? config.allowedUnits : null,
   }
+}
+
+function normalizeSource(source) {
+  if (!source) return ''
+  if (typeof source === 'string') return source
+  if (typeof source === 'object') {
+    return [source.pdf, source.page_range ? `pages ${source.page_range}` : '', source.source_type]
+      .filter(Boolean)
+      .join(' | ')
+  }
+  return String(source)
 }
 
 // Mock Exam Generation

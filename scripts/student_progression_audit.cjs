@@ -10,6 +10,8 @@ const WORKSPACE = path.join(ROOT, '.workspace', 'student-progression-audit')
 const args = parseArgs(process.argv.slice(2))
 const runBrowser = args.browser !== 'false' && args['skip-browser'] !== 'true'
 const subjectFilter = args.subject ? new Set(String(args.subject).split(',').map(s => s.trim()).filter(Boolean)) : null
+const baseUrl = args.url ? String(args.url).replace(/\/?$/, '/') : null
+const mobile = args.mobile === 'true'
 
 fs.mkdirSync(WORKSPACE, { recursive: true })
 
@@ -24,6 +26,8 @@ async function main() {
   const report = {
     generated_at: new Date().toISOString(),
     run_browser_paths: runBrowser,
+    baseUrl,
+    viewport: mobile ? 'mobile' : 'desktop',
     subjects: [],
     errors: [],
     warnings: [],
@@ -259,9 +263,12 @@ function getSimilarQuestions(questionId, index, count) {
 async function runStudentFlow(subjectId, port) {
   return new Promise(resolve => {
     const npmCmd = process.platform === 'win32' ? 'cmd.exe' : 'npm'
+    const flowArgs = ['run', 'audit:student-flow', '--', '--subject', subjectId, '--port', String(port)]
+    if (baseUrl) flowArgs.push('--url', baseUrl)
+    if (mobile) flowArgs.push('--mobile', 'true')
     const npmArgs = process.platform === 'win32'
-      ? ['/d', '/s', '/c', `npm run audit:student-flow -- --subject ${subjectId} --port ${port}`]
-      : ['run', 'audit:student-flow', '--', '--subject', subjectId, '--port', String(port)]
+      ? ['/d', '/s', '/c', `npm ${flowArgs.map(quoteCmdArg).join(' ')}`]
+      : flowArgs
     const child = spawn(npmCmd, npmArgs, {
       cwd: ROOT,
       stdio: 'pipe',
@@ -287,6 +294,12 @@ async function runStudentFlow(subjectId, port) {
       })
     })
   })
+}
+
+function quoteCmdArg(value) {
+  const text = String(value)
+  if (!/[\s"&|<>^]/.test(text)) return text
+  return `"${text.replace(/"/g, '\\"')}"`
 }
 
 function unique(values) {

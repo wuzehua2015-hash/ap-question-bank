@@ -2,6 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const http = require('http')
+const https = require('https')
 const { spawn } = require('child_process')
 
 const ROOT = path.resolve(__dirname, '..')
@@ -13,9 +14,11 @@ const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject || 'physics-c-mechanics'
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
 const port = Number(args.port || 9555)
+const mobile = args.mobile === 'true'
 let activeSubject = null
 let activeQuestionBank = []
 let activeSimilarity = {}
+const browserEvents = []
 
 fs.mkdirSync(WORKSPACE, { recursive: true })
 
@@ -27,7 +30,7 @@ main().catch(error => {
 async function main() {
   const subject = loadSubject(subjectId)
   activeSubject = subject
-  const mcq = readJson(path.join(PUBLIC, 'data', subject.questionBank))
+  const mcq = readJson(path.join(PUBLIC, 'data', subject.questionBank)).map(normalizeAuditMCQ)
   const frq = subject.frqBank ? readJson(path.join(PUBLIC, 'data', subject.frqBank)) : []
   const similarity = subject.similarityIndex
     ? readJson(path.join(PUBLIC, 'data', subject.similarityIndex))
@@ -47,7 +50,8 @@ async function main() {
   try {
     await client.send('Page.enable')
     await client.send('Runtime.enable')
-    await setViewport(client, 1440, 1400)
+    await client.send('Log.enable').catch(() => {})
+    await setViewport(client, mobile ? 390 : 1440, mobile ? 844 : 1400, mobile)
     await client.send('Page.addScriptToEvaluateOnNewDocument', {
       source: `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`,
     })
@@ -62,12 +66,14 @@ async function main() {
     const report = {
       subject_id: subjectId,
       baseUrl,
+      viewport: mobile ? 'mobile' : 'desktop',
       quiz_sample: quizSample.map(q => q.question_id),
       search_sample: searchSample.map(q => q.question_id),
       generated_at: new Date().toISOString(),
       errors,
       warnings,
       notes,
+      browser_events: browserEvents.slice(-50),
       artifacts,
     }
     const reportPath = path.join(WORKSPACE, `${subjectId}-student-flow-report.json`)
@@ -119,6 +125,7 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
   await navigate(client, routeUrl('#/'))
   await seedSession(client, quiz, [], { isMock: false, mode: 'custom', requestedCount: quiz.length, actualCount: quiz.length })
   await navigate(client, routeUrl('#/play'))
+  await ensureRouteBody(client)
 
   for (let i = 0; i < quiz.length; i += 1) {
     await waitForImages(client)
@@ -178,6 +185,7 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     frqTimeLimit: activeSubject?.mockExam?.frqTimeLimit,
   })
   await navigate(client, routeUrl('#/frq'))
+  await ensureRouteBody(client)
   for (let i = 0; i < selectedFrq.length; i += 1) {
     await waitForImages(client)
     const info = await collectVisibleState(client)
@@ -237,6 +245,24 @@ function selectQuizSample(mcq) {
   addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 4, 8)
   addByPredicate(selected, mcq, () => true, 8)
   return selected.slice(0, Math.min(8, Math.max(1, mcq.length)))
+}
+
+function normalizeAuditMCQ(question) {
+  return {
+    ...question,
+    source: normalizeSource(question.source),
+  }
+}
+
+function normalizeSource(source) {
+  if (!source) return ''
+  if (typeof source === 'string') return source
+  if (typeof source === 'object') {
+    return [source.pdf, source.page_range ? `pages ${source.page_range}` : '', source.source_type]
+      .filter(Boolean)
+      .join(' | ')
+  }
+  return String(source)
 }
 
 function selectSearchSample(mcq) {
@@ -308,19 +334,37 @@ async function seedSession(client, mcq, frq, info) {
 async function clickOption(client, option) {
   const clicked = await evaluate(client, `(() => {
     const buttons = [...document.querySelectorAll('button, [role="button"]')];
-    const target = buttons.find(el => (el.innerText || '').trim().startsWith(${JSON.stringify(option + '.')}));
+    const optionRe = new RegExp('^\\\\s*' + ${JSON.stringify(option)} + '(?:\\\\.|\\\\b)', 'i');
+    const target = buttons.find(el => optionRe.test(el.innerText || el.textContent || el.getAttribute('aria-label') || ''));
     if (target) { target.click(); return true; }
     const grid = [...document.querySelectorAll('.grid')].find(el => {
       const text = (el.innerText || '').trim();
-      return text === ${JSON.stringify(option + '.')} || text.startsWith(${JSON.stringify(option + '\\n')}) || text.startsWith(${JSON.stringify(option + '. ')});
+      return text === ${JSON.stringify(option)} || text === ${JSON.stringify(option + '.')} || text.startsWith(${JSON.stringify(option + '\\n')}) || text.startsWith(${JSON.stringify(option + '. ')});
     });
     if (grid) { grid.click(); return true; }
-    const label = [...document.querySelectorAll('div,span')].find(el => (el.innerText || '').trim() === ${JSON.stringify(option + '.')});
+    const label = [...document.querySelectorAll('div,span')].find(el => {
+      const text = (el.innerText || '').trim();
+      return text === ${JSON.stringify(option)} || text === ${JSON.stringify(option + '.')};
+    });
     const row = label ? label.closest('.grid') : null;
     if (row) { row.click(); return true; }
+    const fallback = [...document.querySelectorAll('.option-btn, button')].find(el => {
+      const rect = el.getBoundingClientRect();
+      return !el.disabled && rect.width > 0 && rect.height > 0 && !/上一题|下一题|Submit|Finish|提交|未答|已答|首页|搜索|设置/.test(el.innerText || el.textContent || '');
+    });
+    if (fallback) { fallback.click(); return true; }
     return false;
   })()`)
-  if (!clicked) throw new Error(`Could not click option ${option}`)
+  if (!clicked) {
+    const debug = await evaluate(client, `(() => ({
+      url: location.href,
+      text: document.body ? document.body.innerText.slice(0, 1000) : '',
+      buttons: [...document.querySelectorAll('button, [role="button"], .option-btn, .grid')]
+        .slice(0, 40)
+        .map(el => ({ tag: el.tagName, text: (el.innerText || el.textContent || el.getAttribute('aria-label') || '').trim().slice(0, 120), cls: String(el.className || '').slice(0, 120), disabled: !!el.disabled }))
+    }))()`)
+    throw new Error(`Could not click option ${option}: ${JSON.stringify(debug)}`)
+  }
   await sleep(200)
 }
 
@@ -331,7 +375,16 @@ async function clickCheckbox(client) {
     box.click();
     return true;
   })()`)
-  if (!clicked) throw new Error('Could not click FRQ completion checkbox')
+  if (!clicked) {
+    const debug = await evaluate(client, `(() => ({
+      url: location.href,
+      text: document.body ? document.body.innerText.slice(0, 1200) : '',
+      inputs: [...document.querySelectorAll('input,button,label')]
+        .slice(0, 40)
+        .map(el => ({ tag: el.tagName, type: el.type || '', text: (el.innerText || el.textContent || '').trim().slice(0, 160), checked: !!el.checked, disabled: !!el.disabled }))
+    }))()`)
+    throw new Error(`Could not click FRQ completion checkbox: ${JSON.stringify(debug)}`)
+  }
   await sleep(200)
 }
 
@@ -405,7 +458,7 @@ async function collectVisibleState(client) {
       text,
       textLength: text.length,
       images,
-      brokenImages: images.filter(img => !img.complete || img.naturalWidth === 0),
+      brokenImages: images.filter(img => img.complete && img.naturalWidth === 0),
       visibleImages: images.filter(img => img.visible),
       tableCount: document.querySelectorAll('table, [style*="grid-template-columns"]').length,
       katexCount: document.querySelectorAll('.katex').length,
@@ -415,7 +468,7 @@ async function collectVisibleState(client) {
 }
 
 function checkVisibleState(page, info, errors, warnings) {
-  if (!info.textLength) errors.push({ page, kind: 'blank_page', url: info.url })
+  if (!info.textLength) errors.push({ page, kind: 'blank_page', url: info.url, browser_events: browserEvents.slice(-10) })
   if (info.brokenImages.length) errors.push({ page, kind: 'broken_images', images: info.brokenImages.slice(0, 5) })
   const bad = [
     { kind: 'replacement_char', re: /\uFFFD/ },
@@ -497,7 +550,8 @@ async function ensurePreview(url) {
 
 function httpOk(url) {
   return new Promise(resolve => {
-    const req = http.get(url, res => {
+    const transport = url.startsWith('https:') ? https : http
+    const req = transport.get(url, res => {
       res.resume()
       resolve(res.statusCode >= 200 && res.statusCode < 500)
     })
@@ -568,6 +622,10 @@ async function connectChrome(debugPort) {
   const pending = new Map()
   ws.addEventListener('message', event => {
     const msg = JSON.parse(event.data)
+    if (msg.method === 'Runtime.exceptionThrown' || msg.method === 'Log.entryAdded') {
+      browserEvents.push({ method: msg.method, params: msg.params })
+      if (browserEvents.length > 100) browserEvents.shift()
+    }
     if (!msg.id || !pending.has(msg.id)) return
     const { resolve, reject } = pending.get(msg.id)
     pending.delete(msg.id)
@@ -637,8 +695,34 @@ async function waitForQuestionId(client, questionId) {
   return false
 }
 
-async function setViewport(client, width, height) {
-  await client.send('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: false })
+async function waitForBodyText(client, minLength = 20) {
+  for (let i = 0; i < 60; i += 1) {
+    const length = await evaluate(client, `(document.body && document.body.innerText || '').trim().length`).catch(() => 0)
+    if (length >= minLength) return true
+    await sleep(250)
+  }
+  return false
+}
+
+async function ensureRouteBody(client) {
+  if (await waitForBodyText(client)) return
+  await client.send('Page.reload', { ignoreCache: true })
+  if (await waitForBodyText(client)) return
+  throw new Error('Route did not render visible text after reload')
+}
+
+async function setViewport(client, width, height, isMobile = false) {
+  await client.send('Emulation.setDeviceMetricsOverride', {
+    width,
+    height,
+    deviceScaleFactor: isMobile ? 3 : 1,
+    mobile: isMobile,
+  })
+  if (isMobile) {
+    await client.send('Emulation.setUserAgentOverride', {
+      userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1',
+    })
+  }
 }
 
 async function evaluate(client, expression) {
@@ -653,6 +737,14 @@ async function evaluate(client, expression) {
 async function waitForImages(client) {
   await evaluate(client, `(() => new Promise(async resolve => {
     const sleep = ms => new Promise(r => setTimeout(r, ms));
+    const originalY = window.scrollY || document.documentElement.scrollTop || 0;
+    const height = Math.max(document.body?.scrollHeight || 0, document.documentElement?.scrollHeight || 0);
+    const step = Math.max(400, Math.floor(window.innerHeight * 0.8));
+    for (let y = 0; y <= height; y += step) {
+      window.scrollTo(0, y);
+      await sleep(80);
+    }
+    window.scrollTo(0, originalY);
     const deadline = Date.now() + 15000;
     while (Date.now() < deadline) {
       const pending = [...document.images].some(img => !img.complete || img.naturalWidth === 0);
