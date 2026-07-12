@@ -331,3 +331,13 @@ main（只接受通过回归测试的代码）
 
 *最后更新：2025-06-22*
 *责任人：每次修改前必须阅读并执行此清单*
+---
+
+## Release Acceptance Addendum: PDF Bottom Clipping and Unit Progression (2026-07-12)
+
+- MCQ PDF acceptance must zoom into the downloaded production PDF and check the final option of each sampled MCQ. Contact sheets are not enough for this check.
+- Each PDF segment must include bottom breathing room before canvas rendering so the last line of text is not clipped.
+- Primary unit classification must follow the progression gate: assign the latest unit a student must complete to answer the item, including all earlier prerequisites.
+- Do not assign primary unit by keyword count. Example: a question using unemployment, inflation, and real GDP as answer-choice variables is U3 if solving it requires the short-run AD-AS / fiscal policy model.
+- Distractor-only concepts do not determine the primary unit.
+- `npm run validate:units` must pass before release.
