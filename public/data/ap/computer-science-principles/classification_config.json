@@ -1,0 +1,88 @@
+{
+  "subject": "AP Computer Science Principles",
+  "version": "csp_2016_2018_practice_v1",
+  "units": [
+    {
+      "code": "U1",
+      "name": "Creative Development"
+    },
+    {
+      "code": "U2",
+      "name": "Data"
+    },
+    {
+      "code": "U3",
+      "name": "Algorithms and Programming"
+    },
+    {
+      "code": "U4",
+      "name": "Computer Systems and Networks"
+    },
+    {
+      "code": "U5",
+      "name": "Impact of Computing"
+    }
+  ],
+  "included_sources": [
+    {
+      "key": "2016",
+      "year": 2016,
+      "source_set": "practice_exam_2016",
+      "mcq": 74,
+      "frq": 0
+    },
+    {
+      "key": "2018",
+      "year": 2018,
+      "source_set": "practice_exam_2018",
+      "mcq": 74,
+      "frq": 0
+    },
+    {
+      "key": "2024_set_1_written_response",
+      "year": 2024,
+      "source_set": "official_written_response_2024_set_1",
+      "mcq": 0,
+      "frq": 2
+    },
+    {
+      "key": "2024_set_2_written_response",
+      "year": 2024,
+      "source_set": "official_written_response_2024_set_2",
+      "mcq": 0,
+      "frq": 2
+    },
+    {
+      "key": "2025_set_1_written_response",
+      "year": 2025,
+      "source_set": "official_written_response_2025_set_1",
+      "mcq": 0,
+      "frq": 2
+    },
+    {
+      "key": "2025_set_2_written_response",
+      "year": 2025,
+      "source_set": "official_written_response_2025_set_2",
+      "mcq": 0,
+      "frq": 2
+    }
+  ],
+  "mock_exam": {
+    "total_mcq": 70,
+    "frq_count": 2,
+    "frq_time_limit": 3600,
+    "mcq_time_limit": 7200,
+    "unit_distribution": {
+      "U3": 106,
+      "U4": 14,
+      "U2": 24,
+      "U5": 4
+    }
+  },
+  "notes": [
+    "Current written-response practice is limited to official AP Central 2024/2025 released prompts with scoring guidelines.",
+    "2016 and 2018 local practice exams each contain 74 historical MCQ items; Web mock uses 70 MCQ to align with the current end-of-course MCQ count.",
+    "CSP code, data tables, multiple-select MCQ, and Create written responses require subject-specific rendering and review.",
+    "2026 released CSP prompts are excluded from scored practice until matching scoring guidelines are available in the source pack."
+  ]
+}

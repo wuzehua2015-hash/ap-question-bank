@@ -1,0 +1,409 @@
+[
+  {
+    "question_id": "2015_FRQ1",
+    "frq_id": "2015_FRQ1",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "released",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "This question involves reasoning about one-dimensional and two-dimensional arrays of integers. You will write three static methods in a single enclosing class named `DiverseArray`.\n\nPart (a): Write method `arraySum`, which returns the sum of the entries in a one-dimensional `int` array.\n\n```java\n/** Returns the sum of the entries in the one-dimensional array arr. */\npublic static int arraySum(int[] arr)\n```\n\nFor example, if `arr1` contains `{1, 3, 2, 7, 3}`, then `arraySum(arr1)` returns `16`.\n\nPart (b): Write method `rowSums`, which returns a one-dimensional array containing the sum of each row in a two-dimensional array.\n\n```java\n/** Returns a one-dimensional array in which each entry is the sum of\n *  the corresponding row in the two-dimensional array arr2D.\n */\npublic static int[] rowSums(int[][] arr2D)\n```\n\nPart (c): Write method `isDiverse`, which returns `true` if no two rows in `arr2D` have the same sum and returns `false` otherwise.\n\n```java\n/** Returns true if all rows in arr2D have different row sums;\n *  false otherwise.\n */\npublic static boolean isDiverse(int[][] arr2D)\n```",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "2D Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "arraySum: traverse all elements of arr, accumulate their sum, and return it. rowSums: create an int array with one entry per row, call arraySum for each row, store each row total, and return the result. isDiverse: compute row sums, compare each pair of row sums without comparing an element to itself, return false when a duplicate is found, and return true only after all relevant pairs have been checked.",
+      "official_text": "Question 1 DiverseArray scoring summary: 2 points for arraySum, 4 points for rowSums, and 3 points for isDiverse. Credit depends on correct traversal, correct array sizing and return values, use of row sums, and pairwise duplicate checks without corrupting the input arrays.",
+      "points": [
+        {
+          "part": "a",
+          "points": 2,
+          "description": "Compute and return the sum of all entries in arr."
+        },
+        {
+          "part": "b",
+          "points": 4,
+          "description": "Create and return an array containing the sum of each row of arr2D."
+        },
+        {
+          "part": "c",
+          "points": 3,
+          "description": "Use row sums to determine whether all row sums are distinct."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\npublic static int arraySum(int[] arr)\n{\n  int sum = 0;\n  for (int value : arr)\n  {\n    sum += value;\n  }\n  return sum;\n}\n\npublic static int[] rowSums(int[][] arr2D)\n{\n  int[] sums = new int[arr2D.length];\n  for (int row = 0; row < arr2D.length; row++)\n  {\n    sums[row] = arraySum(arr2D[row]);\n  }\n  return sums;\n}\n\npublic static boolean isDiverse(int[][] arr2D)\n{\n  int[] sums = rowSums(arr2D);\n  for (int j = 0; j < sums.length; j++)\n  {\n    for (int k = j + 1; k < sums.length; k++)\n    {\n      if (sums[j] == sums[k])\n      {\n        return false;\n      }\n    }\n  }\n  return true;\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
+      "source_page": 56
+    }
+  },
+  {
+    "question_id": "2015_FRQ2",
+    "frq_id": "2015_FRQ2",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "released",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "Consider a guessing game in which a player tries to guess a `HiddenWord`. The hidden word and each guess contain only capital letters and have the same known length. After a guess is made, the player receives a hint.\n\nFor each position in the guess, the corresponding hint character is determined as follows.\n\n| If the letter in the guess is... | The hint character is... |\n|---|---|\n| also in the same position in the hidden word | that matching letter |\n| also in the hidden word, but in a different position | `+` |\n| not in the hidden word | `*` |\n\nThe `HiddenWord` is passed to the constructor. The class contains a method `getHint`, which takes a guess and returns the hint string.\n\nFor example, suppose the variable `puzzle` is declared as follows.\n\n```java\nHiddenWord puzzle = new HiddenWord(\"HARPS\");\n```\n\n| Call | String returned |\n|---|---|\n| `puzzle.getHint(\"AAAAA\")` | `+A+++` |\n| `puzzle.getHint(\"HELLO\")` | `H****` |\n| `puzzle.getHint(\"HEART\")` | `H*++*` |\n| `puzzle.getHint(\"HARMS\")` | `HAR*S` |\n| `puzzle.getHint(\"HARPS\")` | `HARPS` |\n\nWrite the complete `HiddenWord` class, including any necessary instance variables, the constructor, and the method `getHint`. You may assume that the length of the guess is the same as the length of the hidden word.",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Writing Classes",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "The class should store the hidden word in a private instance variable, initialize it in the constructor, and implement getHint by traversing the guess. For each position, compare the guess character to the hidden word at the same position, otherwise test whether it appears elsewhere in the hidden word, append the correct hint character, and return the completed hint.",
+      "official_text": "Question 2 HiddenWord scoring summary: 1 point for correct class, constructor, and method headers; 1 point for an appropriate private instance variable; 1 point for constructor initialization; and 6 points for getHint, including traversal, character extraction, exact-position match, elsewhere-in-word match, appending exactly one hint character per guess position, and returning the result.",
+      "points": [
+        {
+          "part": "class",
+          "points": 3,
+          "description": "Define HiddenWord with the required constructor, method, and stored hidden word."
+        },
+        {
+          "part": "getHint",
+          "points": 6,
+          "description": "Build and return the hint string according to the three matching rules."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\npublic class HiddenWord\n{\n  private String word;\n\n  public HiddenWord(String hWord)\n  {\n    word = hWord;\n  }\n\n  public String getHint(String guess)\n  {\n    String hint = \"\";\n    for (int k = 0; k < guess.length(); k++)\n    {\n      String ch = guess.substring(k, k + 1);\n      if (ch.equals(word.substring(k, k + 1)))\n      {\n        hint += ch;\n      }\n      else if (word.indexOf(ch) >= 0)\n      {\n        hint += \"+\";\n      }\n      else\n      {\n        hint += \"*\";\n      }\n    }\n    return hint;\n  }\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
+      "source_page": 62
+    }
+  },
+  {
+    "question_id": "2015_FRQ3",
+    "frq_id": "2015_FRQ3",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "released",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "This question uses a sparse array representation. A sparse array stores only nonzero values, along with each value's row and column indexes.\n\n```java\npublic class SparseArrayEntry\n{\n  private int row;\n  private int col;\n  private int value;\n\n  public SparseArrayEntry(int r, int c, int v)\n  {\n    row = r;\n    col = c;\n    value = v;\n  }\n\n  public int getRow() { return row; }\n  public int getCol() { return col; }\n  public int getValue() { return value; }\n}\n\npublic class SparseArray\n{\n  private int numRows;\n  private int numCols;\n  private List<SparseArrayEntry> entries;\n\n  public SparseArray()\n  {\n    entries = new ArrayList<SparseArrayEntry>();\n  }\n\n  public int getNumRows() { return numRows; }\n  public int getNumCols() { return numCols; }\n\n  public int getValueAt(int row, int col)\n  {\n    /* to be implemented in part (a) */\n  }\n\n  public void removeColumn(int col)\n  {\n    /* to be implemented in part (b) */\n  }\n}\n```\n\nIn the sample array, `numRows` is `6`, `numCols` is `5`, and the nonzero entries are `(row 1, col 4, value 4)`, `(row 2, col 0, value 1)`, `(row 3, col 1, value -9)`, and `(row 1, col 1, value 5)`.\n\nPart (a): Write method `getValueAt`. The method returns the value at the given row and column. If no entry in `entries` has the specified row and column, the method returns `0`.\n\nPart (b): Write method `removeColumn`. After removing the specified column, entries in that column are removed, entries in columns to the right are replaced by entries whose column index is one less, and `numCols` is decremented.",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "ArrayList",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "getValueAt should traverse entries, find an entry whose row and column match the parameters, return that entry's value, and return 0 if no matching entry exists. removeColumn should decrement numCols, remove entries whose column equals the removed column, and replace entries to the right with new SparseArrayEntry objects using the same row and value and col - 1.",
+      "official_text": "Question 3 SparseArray scoring summary: 3 points for getValueAt and 6 points for removeColumn. Credit depends on correct list traversal, matching row and column, correct default return value, removing only entries in the selected column, shifting only entries to the right, and preserving other entries.",
+      "points": [
+        {
+          "part": "a",
+          "points": 3,
+          "description": "Return the stored value for a matching row and column, or 0 if no such entry exists."
+        },
+        {
+          "part": "b",
+          "points": 6,
+          "description": "Remove the selected column, shift entries to the right, and update numCols."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\npublic int getValueAt(int row, int col)\n{\n  for (SparseArrayEntry entry : entries)\n  {\n    if (entry.getRow() == row && entry.getCol() == col)\n    {\n      return entry.getValue();\n    }\n  }\n  return 0;\n}\n\npublic void removeColumn(int col)\n{\n  for (int k = entries.size() - 1; k >= 0; k--)\n  {\n    SparseArrayEntry entry = entries.get(k);\n    if (entry.getCol() == col)\n    {\n      entries.remove(k);\n    }\n    else if (entry.getCol() > col)\n    {\n      entries.set(k, new SparseArrayEntry(entry.getRow(),\n                                          entry.getCol() - 1,\n                                          entry.getValue()));\n    }\n  }\n  numCols--;\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
+      "source_page": 64
+    }
+  },
+  {
+    "question_id": "2015_FRQ4",
+    "frq_id": "2015_FRQ4",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "released",
+    "question_number": 4,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "This question involves designing an interface, writing a class that implements the interface, and writing a method that uses the interface.\n\nPart (a): A number group represents a group of integers. Write an interface named `NumberGroup` with exactly one method, `contains`, that determines whether a given integer is in the group.\n\nPart (b): Write a class named `Range` that implements `NumberGroup`. A `Range` object represents all integers from a minimum value through a maximum value, inclusive.\n\n```java\nNumberGroup range1 = new Range(-3, 2);\n```\n\nThe declaration above represents the integers `-3, -2, -1, 0, 1, 2`.\n\nPart (c): The `MultipleGroups` class represents a collection of `NumberGroup` objects and contains the instance variable below.\n\n```java\nprivate List<NumberGroup> groupList;\n```\n\nWrite the `contains` method for `MultipleGroups`. The method returns `true` if at least one group in `groupList` contains the parameter value and returns `false` otherwise.\n\n```java\npublic boolean contains(int num)\n```",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Inheritance",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "Treat the problem as a polymorphism design task. First define the shared NumberGroup behavior, then make Range provide one concrete version of that behavior, and finally make MultipleGroups depend on the interface rather than on a specific implementation. A strong answer keeps the interface minimal, stores only the range bounds needed for the class, and uses short-circuit logic when testing the collection of groups.",
+      "official_text": "Question 4 NumberGroup scoring summary: 2 points for the interface, 5 points for Range, and 2 points for MultipleGroups.contains. Credit depends on correct headers, appropriate instance variables, constructor initialization, inclusive range logic, and correct use of the interface through groupList.",
+      "points": [
+        {
+          "part": "a",
+          "points": 2,
+          "description": "Define the NumberGroup interface with exactly the contains method."
+        },
+        {
+          "part": "b",
+          "points": 5,
+          "description": "Implement Range with bounds, constructor, and inclusive contains logic."
+        },
+        {
+          "part": "c",
+          "points": 2,
+          "description": "Use groupList to determine whether any group contains the value."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\npublic interface NumberGroup\n{\n  boolean contains(int num);\n}\n\npublic class Range implements NumberGroup\n{\n  private int min;\n  private int max;\n\n  public Range(int lower, int upper)\n  {\n    min = lower;\n    max = upper;\n  }\n\n  public boolean contains(int num)\n  {\n    return num >= min && num <= max;\n  }\n}\n\npublic boolean contains(int num)\n{\n  for (NumberGroup group : groupList)\n  {\n    if (group.contains(num))\n    {\n      return true;\n    }\n  }\n  return false;\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
+      "source_page": 72
+    }
+  },
+  {
+    "question_id": "gridworld_FRQ1",
+    "frq_id": "gridworld_FRQ1",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2008,
+    "source_set": "gridworld_practice",
+    "question_number": 1,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "Consider the following partial declaration for a `WordScrambler` class. The constructor takes an even-length array of `String` objects and initializes `scrambledWords`.\n\n```java\npublic class WordScrambler\n{\n  private String[] scrambledWords;\n\n  /** @param wordArr an array of String objects\n   *  Precondition: wordArr.length is even\n   */\n  public WordScrambler(String[] wordArr)\n  {\n    scrambledWords = mixedWords(wordArr);\n  }\n\n  /** @param word1 a String of characters\n   *  @param word2 a String of characters\n   *  @return a String that contains the first half of word1 and\n   *          the second half of word2\n   */\n  private String recombine(String word1, String word2)\n  {\n    /* to be implemented in part (a) */\n  }\n\n  /** @param words an array of String objects\n   *  Precondition: words.length is even\n   *  @return an array of String objects created by recombining pairs of strings\n   */\n  private String[] mixedWords(String[] words)\n  {\n    /* to be implemented in part (b) */\n  }\n}\n```\n\nPart (a): Write `recombine`. The method takes the first half of `word1`, takes the second half of `word2`, concatenates the two halves, and returns the new string. If a word has an odd number of letters, the second half contains the extra letter.\n\n| `word1` | `word2` | `recombine(word1, word2)` |\n|---|---|---|\n| `\"apple\"` | `\"pear\"` | `\"apar\"` |\n| `\"pear\"` | `\"apple\"` | `\"peple\"` |\n\nPart (b): Write `mixedWords`. The method creates and returns a new array by processing strings in adjacent pairs. For each pair `w1`, `w2`, the returned array should contain `recombine(w1, w2)` followed by `recombine(w2, w1)`. The returned array must have the same length as `words`.",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "Break the task into one string helper and one array-processing method. The helper should make the split rule reusable, so the array method can focus on processing adjacent pairs and writing two outputs per pair. A strong response avoids changing the input array, advances through the array in steps of two, and delegates the string construction to recombine instead of duplicating that logic.",
+      "official_text": "Question 1 WordScrambler scoring summary: 4 points for recombine and 5 points for mixedWords. Credit depends on correct substring extraction, concatenation, return value, correct result array size, pairwise traversal, use of recombine, correct storage, and returning the result array.",
+      "points": [
+        {
+          "part": "a",
+          "points": 4,
+          "description": "Return the first half of word1 concatenated with the second half of word2."
+        },
+        {
+          "part": "b",
+          "points": 5,
+          "description": "Build a same-length array by recombining each adjacent pair in both orders."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\nprivate String recombine(String word1, String word2)\n{\n  int half1 = word1.length() / 2;\n  int half2 = word2.length() / 2;\n  return word1.substring(0, half1) + word2.substring(half2);\n}\n\nprivate String[] mixedWords(String[] words)\n{\n  String[] result = new String[words.length];\n  for (int k = 0; k < words.length; k += 2)\n  {\n    result[k] = recombine(words[k], words[k + 1]);\n    result[k + 1] = recombine(words[k + 1], words[k]);\n  }\n  return result;\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
+      "source_page": 45
+    }
+  },
+  {
+    "question_id": "gridworld_FRQ2",
+    "frq_id": "gridworld_FRQ2",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2008,
+    "source_set": "gridworld_practice",
+    "question_number": 2,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "An array of positive integer values has the mountain property if its values increase until a peak is reached and then decrease. The `Mountain` class contains helper methods and two methods that you will implement.\n\n```java\npublic class Mountain\n{\n  /** @param array an array of positive integer values\n   *  @param stop the last index to check\n   *  Precondition: 0 <= stop < array.length\n   *  @return true if array[j] < array[j + 1] for all 0 <= j < stop;\n   *          false otherwise\n   */\n  public static boolean isIncreasing(int[] array, int stop)\n  {\n    /* implementation not shown */\n  }\n\n  /** @param array an array of positive integer values\n   *  @param start the first index to check\n   *  Precondition: 0 <= start < array.length - 1\n   *  @return true if array[j] > array[j + 1] for all\n   *          start <= j < array.length - 1; false otherwise\n   */\n  public static boolean isDecreasing(int[] array, int start)\n  {\n    /* implementation not shown */\n  }\n\n  public static int getPeakIndex(int[] array)\n  {\n    /* to be implemented in part (a) */\n  }\n\n  public static boolean isMountain(int[] array)\n  {\n    /* to be implemented in part (b) */\n  }\n}\n```\n\nPart (a): Write `getPeakIndex`. A peak is an element whose value is greater than the value immediately before it and greater than the value immediately after it. The method returns the index of the first peak found, or `-1` if no peak exists.\n\nExamples:\n\n| Array | `getPeakIndex` result |\n|---|---:|\n| `{11, 22, 33, 22, 11}` | `2` |\n| `{11, 22, 11, 22, 11}` | `1` |\n| `{11, 22, 33, 55, 77}` | `-1` |\n\nPart (b): Write `isMountain`. The method should use `getPeakIndex`, `isIncreasing`, and `isDecreasing` to determine whether the array has the mountain property. An array with no peak is not a mountain.",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "getPeakIndex should scan valid interior indexes, compare each element with its immediate neighbors, return the first peak index found, and return -1 if none exists. isMountain should call getPeakIndex, reject -1, call isIncreasing for the portion before the peak and isDecreasing for the portion after the peak, and return the combined boolean result.",
+      "official_text": "Question 2 Mountain scoring summary: 4 points for getPeakIndex and 5 points for isMountain. Credit depends on correct loop bounds, neighbor comparisons, return values, correct use of helper methods, handling the no-peak case, and returning the correct boolean result.",
+      "points": [
+        {
+          "part": "a",
+          "points": 4,
+          "description": "Return the first local peak index, or -1 if no peak exists."
+        },
+        {
+          "part": "b",
+          "points": 5,
+          "description": "Use the peak index and helper methods to decide whether the array is a mountain."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\npublic static int getPeakIndex(int[] array)\n{\n  for (int k = 1; k < array.length - 1; k++)\n  {\n    if (array[k] > array[k - 1] && array[k] > array[k + 1])\n    {\n      return k;\n    }\n  }\n  return -1;\n}\n\npublic static boolean isMountain(int[] array)\n{\n  int peak = getPeakIndex(array);\n  return peak != -1 &&\n         isIncreasing(array, peak) &&\n         isDecreasing(array, peak);\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
+      "source_page": 47
+    }
+  },
+  {
+    "question_id": "gridworld_FRQ3",
+    "frq_id": "gridworld_FRQ3",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2008,
+    "source_set": "gridworld_practice",
+    "question_number": 3,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "This question involves reasoning about the GridWorld case study. A `Grub` is a `Critter` that chooses a direction, considers locations up to a maximum distance in that direction, and then selects a move location.\n\n```java\npublic class Grub extends Critter\n{\n  private int maxDistance;\n\n  public Grub(int distance)\n  {\n    maxDistance = distance;\n  }\n\n  public int getRandomDirection()\n  {\n    /* to be implemented in part (a) */\n  }\n\n  public ArrayList<Location> getMoveLocations()\n  {\n    /* to be implemented in part (b) */\n  }\n\n  public Location selectMoveLocation(ArrayList<Location> locs)\n  {\n    /* to be implemented in part (c) */\n  }\n}\n```\n\nPart (a): Write `getRandomDirection`, returning one of the eight direction constants from `Location`.\n\nPart (b): Write `getMoveLocations`, returning all valid locations from one step through `maxDistance` steps away in a randomly selected direction. The method must not change the state of any actors.\n\nPart (c): Write `selectMoveLocation`. If `locs` is empty, return the current location. Otherwise select a random location from `locs`. Return that location if it is empty or contains a `Flower`; return `null` if it contains any other actor.",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Inheritance",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "getRandomDirection should generate one of the eight valid GridWorld directions. getMoveLocations should call getRandomDirection, build an ArrayList<Location>, repeatedly compute the next adjacent location in that direction up to maxDistance, add only valid locations, and return the list without changing actor state. selectMoveLocation should handle an empty list, choose a random candidate, inspect the grid at that location, return the candidate for an empty location or a Flower, and return null for other occupants.",
+      "official_text": "Question 3 Grub scoring summary: 1 point for random direction, 5 points for move-location generation, and 3 points for selecting the next location. Credit depends on correct GridWorld API use, valid-location checks, random selection, and preserving actor state.",
+      "points": [
+        {
+          "part": "a",
+          "points": 1,
+          "description": "Return a valid random direction."
+        },
+        {
+          "part": "b",
+          "points": 5,
+          "description": "Return valid locations in the chosen direction through maxDistance."
+        },
+        {
+          "part": "c",
+          "points": 3,
+          "description": "Select and validate a move location according to the Grub rules."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\npublic int getRandomDirection()\n{\n  return Location.NORTH + (int) (Math.random() * 8) * Location.HALF_RIGHT;\n}\n\npublic ArrayList<Location> getMoveLocations()\n{\n  ArrayList<Location> locs = new ArrayList<Location>();\n  Grid<Actor> gr = getGrid();\n  Location loc = getLocation();\n  int dir = getRandomDirection();\n\n  for (int k = 1; k <= maxDistance; k++)\n  {\n    Location next = loc.getAdjacentLocation(dir);\n    if (gr.isValid(next))\n    {\n      locs.add(next);\n      loc = next;\n    }\n  }\n  return locs;\n}\n\npublic Location selectMoveLocation(ArrayList<Location> locs)\n{\n  if (locs.size() == 0)\n  {\n    return getLocation();\n  }\n  Location loc = locs.get((int) (Math.random() * locs.size()));\n  Actor actor = getGrid().get(loc);\n  if (actor == null || actor instanceof Flower)\n  {\n    return loc;\n  }\n  return null;\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
+      "source_page": 50
+    }
+  },
+  {
+    "question_id": "gridworld_FRQ4",
+    "frq_id": "gridworld_FRQ4",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2008,
+    "source_set": "gridworld_practice",
+    "question_number": 4,
+    "question_type": "FRQ",
+    "type": "FRQ",
+    "text": "A school district stores standardized test score statistics using `ScoreInfo` objects.\n\n```java\npublic class ScoreInfo\n{\n  private int score;\n  private int numStudents;\n\n  public ScoreInfo(int aScore)\n  {\n    score = aScore;\n    numStudents = 1;\n  }\n\n  public void increment()\n  {\n    numStudents++;\n  }\n\n  public int getScore()\n  {\n    return score;\n  }\n\n  public int getFrequency()\n  {\n    return numStudents;\n  }\n}\n\npublic class Stats\n{\n  private ArrayList<ScoreInfo> scoreList;\n\n  public boolean record(int score)\n  {\n    /* to be implemented in part (a) */\n  }\n\n  public void recordScores(int[] stuScores)\n  {\n    /* to be implemented in part (b) */\n  }\n}\n```\n\nThe list `scoreList` is kept in increasing score order, and no two `ScoreInfo` objects contain the same score.\n\nPart (a): Write `record`. If `score` is already represented in `scoreList`, increment that `ScoreInfo` object's frequency and return `false`. Otherwise insert a new `ScoreInfo` object in the correct sorted position and return `true`.\n\nPart (b): Write `recordScores`, which records every score in `stuScores` by using `record`.",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "ArrayList",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
+      "review_status": "machine_reviewed"
+    },
+    "rubric": {
+      "total_points": 9,
+      "solution_outline": "record should traverse scoreList, find the correct sorted position, increment an existing ScoreInfo when the score is already present, insert a new ScoreInfo when needed, and return whether a new object was added. recordScores should loop through all entries of stuScores and call record for each score.",
+      "official_text": "Question 4 Score Statistics scoring summary: 7 points for record and 2 points for recordScores. Credit depends on sorted insertion, recognizing an existing score, updating frequency, returning the correct boolean value, and processing all scores in the input array.",
+      "points": [
+        {
+          "part": "a",
+          "points": 7,
+          "description": "Record one score by traversing scoreList, detecting an existing ScoreInfo, incrementing its frequency and returning false, or inserting a new ScoreInfo at the correct sorted position and returning true."
+        },
+        {
+          "part": "b",
+          "points": 2,
+          "description": "Record every score in the input array by iterating through stuScores and calling record for each element without skipping or changing the input scores."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\npublic boolean record(int score)\n{\n  for (int k = 0; k < scoreList.size(); k++)\n  {\n    ScoreInfo info = scoreList.get(k);\n    if (info.getScore() == score)\n    {\n      info.increment();\n      return false;\n    }\n    if (score < info.getScore())\n    {\n      scoreList.add(k, new ScoreInfo(score));\n      return true;\n    }\n  }\n  scoreList.add(new ScoreInfo(score));\n  return true;\n}\n\npublic void recordScores(int[] stuScores)\n{\n  for (int score : stuScores)\n  {\n    record(score);\n  }\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
+      "source_page": 53
+    }
+  }
+]

@@ -16,7 +16,33 @@ function QuizSetup() {
   const [units, setUnits] = useState([])
 
   useEffect(() => {
-    getSubjectUnits(currentSubject).then(setUnits).catch(() => setUnits([]))
+    let cancelled = false
+    async function loadUnits() {
+      try {
+        const [allUnits, questions] = await Promise.all([
+          getSubjectUnits(currentSubject),
+          loadMCQBank(currentSubject),
+        ])
+        const counts = new Map()
+        for (const question of questions) {
+          if (question.scoring_status === 'not_scored') continue
+          if (!question.answer && !question.answers?.length && !question.correct_answer && !question.correct_answers?.length) continue
+          const unitId = question.primary_unit || question.primaryUnit || 'U1'
+          counts.set(unitId, (counts.get(unitId) || 0) + 1)
+        }
+        const playableUnits = allUnits
+          .map(item => ({ ...item, questionCount: counts.get(item.id) || 0 }))
+          .filter(item => item.questionCount > 0)
+        if (!cancelled) {
+          setUnits(playableUnits)
+          setUnit(current => current === 'all' || playableUnits.some(item => item.id === current) ? current : 'all')
+        }
+      } catch {
+        if (!cancelled) setUnits([])
+      }
+    }
+    loadUnits()
+    return () => { cancelled = true }
   }, [currentSubject])
 
   const generate = async () => {
@@ -27,7 +53,7 @@ function QuizSetup() {
       const questions = await loadMCQBank(currentSubject)
       const result = generateQuiz(questions, { unit, count, excludeDone, diverseSources: true, subject: currentSubject })
       if (result.actualCount === 0) {
-        setError('没有符合条件的题目')
+        setError('没有符合条件的题目。')
         return
       }
       setPreview({
@@ -40,7 +66,7 @@ function QuizSetup() {
         },
       })
     } catch (err) {
-      setError('加载失败：' + (err.message || '请检查网络'))
+      setError(`加载失败：${err.message || '请检查网络'}`)
     } finally {
       setLoading(false)
     }
@@ -60,7 +86,7 @@ function QuizSetup() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold text-brand mb-6">生成 Quiz</h1>
+      <h1 className="text-2xl font-bold text-brand mb-6">生成专项练习</h1>
       <div className="bg-surface rounded-xl p-6 shadow-sm border border-border space-y-6">
         <div>
           <label className="block text-sm font-semibold text-brand mb-2">单元</label>
@@ -69,8 +95,12 @@ function QuizSetup() {
             onChange={event => setUnit(event.target.value)}
             className="w-full p-2 border border-border rounded-lg bg-bg"
           >
-            <option value="all">全部单元</option>
-            {units.map(u => <option key={u.id} value={u.id}>{u.id}: {u.name}</option>)}
+            <option value="all">全部可练单元</option>
+            {units.map(item => (
+              <option key={item.id} value={item.id}>
+                {item.id}: {item.name}（{item.questionCount} 题）
+              </option>
+            ))}
           </select>
         </div>
 
@@ -108,7 +138,7 @@ function QuizSetup() {
             disabled={loading}
             className="w-full bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50"
           >
-            {loading ? '生成中...' : '生成 Quiz'}
+            {loading ? '生成中...' : '生成练习'}
           </button>
         ) : (
           <div className="space-y-4">

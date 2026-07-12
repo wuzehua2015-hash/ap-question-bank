@@ -53,7 +53,7 @@ async function main() {
     await client.send('Log.enable').catch(() => {})
     await setViewport(client, mobile ? 390 : 1440, mobile ? 844 : 1400, mobile)
     await client.send('Page.addScriptToEvaluateOnNewDocument', {
-      source: `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`,
+      source: seedSubjectStorageScript(subjectId),
     })
     await initializeSubjectPage(client)
 
@@ -323,6 +323,8 @@ async function seedSession(client, mcq, frq, info) {
     const payload = JSON.parse(new TextDecoder('utf-8').decode(bytes));
     sessionStorage.clear();
     localStorage.setItem('currentSubject', payload.subjectId);
+    localStorage.setItem('defaultSubject', payload.subjectId);
+    localStorage.setItem('mySubjects', JSON.stringify([payload.subjectId]));
     sessionStorage.setItem('currentQuiz', JSON.stringify(payload.mcq));
     sessionStorage.setItem('currentFRQ', JSON.stringify(payload.frq));
     sessionStorage.setItem('quizConfig', JSON.stringify(payload.config));
@@ -670,7 +672,7 @@ async function navigate(client, url) {
 
 async function initializeSubjectPage(client) {
   await navigate(client, routeUrl('#/'))
-  await evaluate(client, `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)})`)
+  await evaluate(client, seedSubjectStorageScript(subjectId))
   await client.send('Page.reload', { ignoreCache: true })
   for (let i = 0; i < 50; i += 1) {
     await sleep(120)
@@ -678,6 +680,15 @@ async function initializeSubjectPage(client) {
     if (ready) break
   }
   await sleep(700)
+}
+
+function seedSubjectStorageScript(id) {
+  return `(() => {
+    const subjectId = ${JSON.stringify(id)};
+    localStorage.setItem('currentSubject', subjectId);
+    localStorage.setItem('defaultSubject', subjectId);
+    localStorage.setItem('mySubjects', JSON.stringify([subjectId]));
+  })()`
 }
 
 async function waitForQuestionId(client, questionId) {
