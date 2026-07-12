@@ -2399,7 +2399,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [],
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "unit": "U4",
     "unit_name": "Computer Systems and Networks",
     "secondary_units": [],
@@ -3484,7 +3484,7 @@
     "answer_type": "multiple",
     "scoring_status": "scored",
     "image_paths": [],
-    "primary_unit": "U1",
+    "primary_unit": "U3",
     "unit": "U3",
     "unit_name": "Algorithms and Programming",
     "secondary_units": [],
@@ -5461,7 +5461,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [],
-    "primary_unit": "U2",
+    "primary_unit": "U3",
     "unit": "U3",
     "unit_name": "Algorithms and Programming",
     "secondary_units": [],
@@ -5471,14 +5471,15 @@
       "primary_unit": "U3",
       "secondary_units": [],
       "confidence": 0.55,
-      "evidence": "Keyword classification from CSP prompt/options.",
-      "review_status": "machine_reviewed"
+      "evidence": "Student-progression review: execution time requires tracing a procedure call outside and inside a loop.",
+      "review_status": "reviewed"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2018.pdf",
       "source_page": 41
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "classification_reasoning": "Primary unit is U3 because solving requires tracing program execution time through a procedure call and loop."
   },
   {
     "question_id": "2018_Q34",
@@ -6080,7 +6081,7 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [],
-    "primary_unit": "U2",
+    "primary_unit": "U4",
     "unit": "U2",
     "unit_name": "Data",
     "secondary_units": [],

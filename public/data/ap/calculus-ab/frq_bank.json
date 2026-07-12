@@ -400,12 +400,14 @@
     "text": "For $0\\le t\\le12$, a particle moves along the $x$-axis. The velocity of the particle at time $t$ is given by $v(t)=\\cos\\left(\\frac{\\pi t}{6}\\right)$. The particle is at position $x=-2$ at time $t=0$.\n\n(a) For $0\\le t\\le12$, when is the particle moving to the left?\n\n(b) Write, but do not evaluate, an integral expression that gives the total distance traveled by the particle from time $t=0$ to time $t=6$.\n\n(c) Find the acceleration of the particle at time $t$. Is the speed of the particle increasing, decreasing, or neither at time $t=4$? Explain your reasoning.\n\n(d) Find the position of the particle at time $t=4$.",
     "answer": "",
     "points": 9,
-    "primary_unit": "U4",
-    "secondary_units": [],
+    "primary_unit": "U6",
+    "secondary_units": [
+      "U4"
+    ],
     "topics": [
       {
-        "code": "U4.x",
-        "name": "Particle Motion"
+        "code": "U6.x",
+        "name": "Integration and Accumulation in Particle Motion"
       }
     ],
     "skills": [
@@ -454,7 +456,7 @@
         "Prompt and scoring guideline text structured from the official PDF."
       ]
     },
-    "pure_unit": true,
+    "pure_unit": false,
     "classification": {
       "review_status": "structured_sample_reviewed",
       "confidence": "medium",
@@ -467,7 +469,8 @@
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
       "classification_version": "calc_ab_structured_v1"
-    }
+    },
+    "classification_reasoning": "Primary unit is U6 because the full FRQ requires accumulation by definite integrals for distance and position; U4 particle motion remains prerequisite context."
   },
   {
     "question_id": "2013_FRQ1",

@@ -21,7 +21,7 @@
     "audit:answerability:gate:all": "node scripts/validate_answerability_review.cjs --all",
     "audit:physics-mechanics:image-content": "node scripts/audit_physics_mechanics_image_content.cjs",
     "audit:student-flow": "node scripts/student_flow_audit.cjs",
-    "audit:student-progression": "node scripts/student_progression_audit.cjs",
+    "audit:student-progression": "node scripts/unit_progression_audit.cjs --write-report --fail-on-findings && node scripts/student_progression_audit.cjs",
     "audit:full": "npm run validate && npm run build && npm run audit:render:all",
     "stable:push": "node scripts/stable_push.cjs",
     "stable:status": "node scripts/stable_push_status.cjs",
@@ -35,7 +35,8 @@
     "validate:regression": "node scripts/cross_subject_regression.cjs",
     "validate:launch-contract": "node scripts/launch_contract_audit.cjs",
     "validate:unit-distribution": "node scripts/unit_distribution_contract_audit.cjs",
-    "validate": "npm run validate:launch-contract && npm run validate:unit-distribution && npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:groups && npm run validate:units && npm run validate:science && npm run validate:regression",
+    "validate:student-progression": "node scripts/unit_progression_audit.cjs --write-report --fail-on-findings && node scripts/student_progression_audit.cjs --skip-browser",
+    "validate": "npm run validate:launch-contract && npm run validate:unit-distribution && npm run validate:student-progression && npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:groups && npm run validate:units && npm run validate:science && npm run validate:regression",
     "prebuild": "npm run validate",
     "predev": "npm run validate"
   },
