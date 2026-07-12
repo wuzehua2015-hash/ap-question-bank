@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
+import { useAuth } from '../contexts/AuthContext'
 import { loadMCQBank, loadFRQBank, generateMockExam, getMockExamConfig } from '../utils/questionBank'
 import { startMockExam } from '../utils/quizSession'
 
@@ -8,6 +9,7 @@ function ExamSetup() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const { currentSubject, setSubject } = useSubject()
+  const { isLoggedIn } = useAuth()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [preview, setPreview] = useState(null)
@@ -27,6 +29,10 @@ function ExamSetup() {
   }, [currentSubject, searchParams, setSubject])
 
   const generate = async () => {
+    if (!isLoggedIn) {
+      navigate(`/login?returnTo=${encodeURIComponent('/exam')}&reason=mock-exam`)
+      return
+    }
     setLoading(true)
     setError(null)
     setPreview(null)
@@ -86,13 +92,20 @@ function ExamSetup() {
         )}
 
         {!preview ? (
+          <>
+          {!isLoggedIn && (
+            <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-800 text-sm">
+              登录 / 注册后可以生成 Mock Exam，并保存考试记录。
+            </div>
+          )}
           <button
             onClick={generate}
             disabled={loading}
             className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50"
           >
-            {loading ? '生成中...' : '生成 Mock Exam'}
+            {loading ? '生成中...' : isLoggedIn ? '生成 Mock Exam' : '登录 / 注册后生成 Mock Exam'}
           </button>
+          </>
         ) : (
           <div className="space-y-4">
             <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
