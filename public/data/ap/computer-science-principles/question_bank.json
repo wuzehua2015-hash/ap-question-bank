@@ -782,7 +782,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 17,
     "type": "MCQ",
-    "text": "Central High School keeps a database of information about each student, including the numeric\nvariables numberOfAbsences and gradePointAverage. The expression below is used to determine\nwhether a student is eligible to receive an academic award.\n(numberOfAbsences\n 5) AND (gradePointAverage > 3.5\n≤\n)\nWhich of the following pairs of values indicates that a student is eligible to receive an academic award?",
+    "text": "Central High School keeps a database of information about each student, including the numeric variables `numberOfAbsences` and `gradePointAverage`. The expression below is used to determine whether a student is eligible to receive an academic award.\n\n```text\n(numberOfAbsences <= 5) AND (gradePointAverage > 3.5)\n```\n\nWhich of the following pairs of values indicates that a student is eligible to receive an academic award?",
     "options": {
       "A": "numberOfAbsences = 3, gradePointAverage = 3.5",
       "B": "numberOfAbsences = 5, gradePointAverage = 3.8",
@@ -813,7 +813,10 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2016.pdf",
       "source_page": 24
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "code": "(numberOfAbsences <= 5) AND (gradePointAverage > 3.5)"
+    }
   },
   {
     "question_id": "2016_Q18",
@@ -2115,7 +2118,20 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2016.pdf",
       "source_page": 40
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "list": {
+        "title": "Footwear database fields",
+        "items": [
+          "Item identification number",
+          "Footwear type (sneakers, boots, sandals, etc.)",
+          "Selling price (in dollars)",
+          "Size",
+          "Color",
+          "Quantity available"
+        ]
+      }
+    }
   },
   {
     "question_id": "2016_Q44",
@@ -2342,12 +2358,12 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 49,
     "type": "MCQ",
-    "text": "The procedure below is intended to display the index in a list of unique names (nameList) where a particular\nname (targetName) is found. If targetName is not found in nameList, the code should display 0.\nWhich of the following procedure calls can be used to demonstrate that the procedure does NOT work as intended?",
+    "text": "The procedure below is intended to display the index in a list of unique names (`nameList`) where a particular name (`targetName`) is found. If `targetName` is not found in `nameList`, the procedure should display 0.\n\nWhich of the following procedure calls can be used to demonstrate that the procedure does not work as intended?",
     "options": {
-      "A": "FindName ([\"Andrea\", \"Ben\"], \"Ben\")",
-      "B": "FindName ([ Andrea ,\nBen ],\nDiane )\n\n\"\n\" \"\n\"\n \"\n\"",
-      "C": "FindName ([\"Andrea\", \"Ben\", \"Chris\"], \"Ben\")",
-      "D": "FindName ([\"Andrea\", \"Chris\", \"Diane\"], \"Ben\")"
+      "A": "FindName([\"Andrea\", \"Ben\"], \"Ben\")",
+      "B": "FindName([\"Andrea\", \"Ben\"], \"Diane\")",
+      "C": "FindName([\"Andrea\", \"Ben\", \"Chris\"], \"Ben\")",
+      "D": "FindName([\"Andrea\", \"Chris\", \"Diane\"], \"Ben\")"
     },
     "answer": "C",
     "answers": [
@@ -2373,7 +2389,10 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2016.pdf",
       "source_page": 43
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "code": "PROCEDURE FindName(nameList, targetName)\n{\n  index <- 1\n  found <- false\n  REPEAT UNTIL (index > LENGTH(nameList))\n  {\n    IF (nameList[index] = targetName)\n    {\n      found <- true\n    }\n    index <- index + 1\n  }\n  IF (found)\n  {\n    DISPLAY(index)\n  }\n  ELSE\n  {\n    DISPLAY(0)\n  }\n}"
+    }
   },
   {
     "question_id": "2016_Q50",
@@ -2514,7 +2533,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 53,
     "type": "MCQ",
-    "text": "Two grids are shown below. Each grid contains a robot represented as a triangle. Both robots are initially facing\nleft. Each robot can move into a white or gray square, but cannot move into a black region.\nFor each grid, the program below is intended to move the robot to the gray square. The program uses the\nprocedure Goal_Reached (), which evaluates to true if the robot is in the gray square and evaluates\nto false otherwise.\n```text\nREPEAT UNTIL (Goal_Reached ())\n{\nIF (CAN_MOVE (right))\n{\nROTATE_RIGHT ()\n}\nELSE\n{\nIF (CAN_MOVE (left))\n{\nROTATE_LEFT ()\n}\n}\nIF (CAN_MOVE (forward))\n{\nMOVE_FORWARD ()\n}\n}\nFor which of the grids does the program correctly move the robot to the gray square?\n```",
+    "text": "Two grids are shown below. Each grid contains a robot represented as a triangle. Both robots are initially facing left. Each robot can move into a white or gray square, but cannot move into a black region.\n\nFor each grid, the program below is intended to move the robot to the gray square. The program uses the procedure `Goal_Reached()`, which evaluates to true if the robot is in the gray square and evaluates to false otherwise.\n\n```text\nREPEAT UNTIL (Goal_Reached())\n{\n  IF (CAN_MOVE(right))\n  {\n    ROTATE_RIGHT()\n  }\n  ELSE\n  {\n    IF (CAN_MOVE(left))\n    {\n      ROTATE_LEFT()\n    }\n  }\n  IF (CAN_MOVE(forward))\n  {\n    MOVE_FORWARD()\n  }\n}\n```\n\nFor which of the grids does the program correctly move the robot to the gray square?",
     "options": {
       "A": "Grid I only",
       "B": "Grid II only",
@@ -2527,7 +2546,9 @@
     ],
     "answer_type": "single",
     "scoring_status": "scored",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/computer-science-principles/2016_Q53_grids.png"
+    ],
     "primary_unit": "U3",
     "unit": "U3",
     "unit_name": "Algorithms and Programming",
@@ -4939,7 +4960,10 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2018.pdf",
       "source_page": 34
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "code": "PROCEDURE IsVeryHot(temperatureList)\n{\n  counter <- 0\n  total <- LENGTH(temperatureList)\n  FOR EACH temperature IN temperatureList\n  {\n    IF (temperature >= 90)\n    {\n      counter <- counter + 1\n    }\n  }\n  RETURN(<MISSING CODE>)\n}"
+    }
   },
   {
     "question_id": "2018_Q24",
@@ -5711,7 +5735,30 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2018.pdf",
       "source_page": 45
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "table": {
+        "title": "Procedures used in the simulation",
+        "headers": [
+          "Procedure Call",
+          "Explanation"
+        ],
+        "rows": [
+          [
+            "InitialMousePopulation()",
+            "Returns the number of mice at the start of the simulation"
+          ],
+          [
+            "InitialPredatorPopulation()",
+            "Returns the number of predators at the start of the simulation"
+          ],
+          [
+            "NextDayPopulation(numberOfMice, numberOfPredators)",
+            "Based on the current numbers of mice and predators, returns the number of mice after one day"
+          ]
+        ]
+      }
+    }
   },
   {
     "question_id": "2018_Q39",
@@ -6476,7 +6523,10 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2018.pdf",
       "source_page": 57
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "code": "PROCEDURE Search(list, target)\n{\n  index <- 1\n  found <- false\n  REPEAT UNTIL (index > LENGTH(list))\n  {\n    IF (list[index] = target)\n    {\n      found <- true\n    }\n    index <- index + 1\n  }\n  RETURN(found)\n}"
+    }
   },
   {
     "question_id": "2018_Q56",
@@ -6691,7 +6741,10 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2018.pdf",
       "source_page": 60
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "code": "PROCEDURE keepPlaying()\n{\n  DISPLAY(\"Do you want to keep playing? Enter y or n.\")\n  response <- INPUT()\n  IF (response = \"y\" OR \"Y\")\n  {\n    RETURN(true)\n  }\n  ELSE\n  {\n    RETURN(false)\n  }\n}"
+    }
   },
   {
     "question_id": "2018_Q61",

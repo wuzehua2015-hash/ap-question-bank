@@ -33,6 +33,15 @@ const PHYSICS_TEXT_PATTERNS = [
   { name: 'physics_signed_variable_words', re: /\b(?:charge\s+positive\s+e|charges?\s+negative\s+q\s+and\s+positive\s+3\s*q)\b/i },
 ]
 
+const RUBRIC_TEXT_PATTERN = new RegExp([
+  'Free Response Rubric Reference',
+  'Scoring Rubric',
+  'Rubric',
+  'FRQ\\s*\\u8bc4\\u5206\\u6807\\u51c6',
+  '\\u8bc4\\u5206\\u6807\\u51c6',
+  '\\u8bc4\\u5206\\u53c2\\u8003',
+].join('|'), 'i')
+
 main().catch((error) => {
   console.error(error.stack || error.message || String(error))
   process.exit(1)
@@ -332,7 +341,7 @@ async function auditMockPdf(client, mcq, frq, errors, warnings, artifacts) {
   await waitForImages(client)
   const info = await collectPageInfo(client, 'mock-pdf')
   checkPageInfo(info, errors, warnings)
-  if (!/Free Response Rubric Reference|Scoring Rubric|Rubric/i.test(info.text)) {
+  if (!RUBRIC_TEXT_PATTERN.test(info.text)) {
     errors.push({ page: 'mock-pdf', kind: 'rubric_not_visible' })
   }
   if (info.brokenImages.length) {
@@ -343,7 +352,7 @@ async function auditMockPdf(client, mcq, frq, errors, warnings, artifacts) {
     errors.push({ page: 'mock-pdf', kind: 'missing_frq_background_tables', expectedFrqTables, actualTables: info.tableCount })
   }
   await screenshot(client, `${subjectId}-mock-pdf.png`, artifacts)
-  const mockRubricScroll = await scrollToText(client, /Free Response Rubric Reference|Scoring Rubric|Rubric/i)
+  const mockRubricScroll = await scrollToText(client, RUBRIC_TEXT_PATTERN)
   if (!mockRubricScroll.found) {
     errors.push({ page: 'mock-pdf', kind: 'rubric_scroll_target_not_found' })
   }
@@ -359,7 +368,7 @@ async function auditScorePage(client, mcq, frq, errors, warnings, artifacts) {
   await waitForImages(client)
   const info = await collectPageInfo(client, 'score')
   checkPageInfo(info, errors, warnings)
-  if (!/Scoring Rubric|Rubric/i.test(info.text)) {
+  if (!RUBRIC_TEXT_PATTERN.test(info.text)) {
     warnings.push({ page: 'score', kind: 'score_page_missing_frq_or_rubric_text' })
   }
   const expectedFrqTables = frq.filter(item => item.background_data?.table).length
@@ -367,7 +376,7 @@ async function auditScorePage(client, mcq, frq, errors, warnings, artifacts) {
     errors.push({ page: 'score', kind: 'missing_frq_background_tables', expectedFrqTables, actualTables: info.tableCount })
   }
   await screenshot(client, `${subjectId}-score.png`, artifacts)
-  const scoreRubricScroll = await scrollToText(client, /Scoring Rubric|Rubric/i)
+  const scoreRubricScroll = await scrollToText(client, RUBRIC_TEXT_PATTERN)
   if (!scoreRubricScroll.found) {
     errors.push({ page: 'score', kind: 'rubric_scroll_target_not_found' })
   }
@@ -492,3 +501,4 @@ function sampleMatch(text, re) {
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
+

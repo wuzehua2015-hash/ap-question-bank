@@ -6,6 +6,7 @@ const { spawn } = require('child_process')
 const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 const BASE_PORT = Number(process.env.AUDIT_RENDER_PORT || 9340)
+const PREVIEW_PORT = Number(process.env.AUDIT_PREVIEW_PORT || 4184)
 
 main().catch((error) => {
   console.error(error.stack || error.message || String(error))
@@ -25,8 +26,9 @@ async function main() {
   for (let index = 0; index < subjects.length; index += 1) {
     const subject = subjects[index]
     const port = BASE_PORT + index
+    const url = `http://127.0.0.1:${PREVIEW_PORT}/ap-question-bank/`
     console.log(`\n[${index + 1}/${subjects.length}] ${subject} on CDP port ${port}`)
-    await run('node', ['scripts/browser_render_audit.cjs', '--subject', subject, '--port', String(port)])
+    await run('node', ['scripts/browser_render_audit.cjs', '--subject', subject, '--port', String(port), '--url', url])
   }
 }
 
