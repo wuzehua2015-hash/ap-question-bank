@@ -791,8 +791,10 @@
       "E": "No change / Decrease / Increase"
     },
     "answer": "C",
-    "primary_unit": "U2",
-    "secondary_units": [],
+    "primary_unit": "U3",
+    "secondary_units": [
+      "U2"
+    ],
     "topics": [
       "gross domestic product",
       "unemployment",
@@ -804,8 +806,8 @@
     "has_graph": false,
     "image_paths": [],
     "source": "AP Macro 2012 Official Practice Exam",
-    "pure_unit": true,
-    "classification_reasoning": "Primary: U2 (score=16.0), Matched: ['gross domestic product', 'unemployment', 'unemployment rate']",
+    "pure_unit": false,
+    "classification_reasoning": "Manual progression-gate fix: U2 -> U3. Although answer choices are U2 indicators, solving requires the U3 short-run AD-AS / fiscal policy model for an increase in government expenditures.",
     "difficulty_source": "inferred",
     "difficulty_score": 3,
     "skills": [

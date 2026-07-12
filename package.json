@@ -28,9 +28,10 @@
     "validate:images": "node scripts/image_validator.cjs",
     "validate:rubrics": "node scripts/rubric_text_validator.cjs",
     "validate:groups": "node scripts/grouped_quiz_audit.mjs",
+    "validate:units": "node scripts/unit_progression_audit.cjs --fail-on-findings",
     "validate:science": "node scripts/science_content_gate.cjs",
     "validate:regression": "node scripts/cross_subject_regression.cjs",
-    "validate": "npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:groups && npm run validate:science && npm run validate:regression",
+    "validate": "npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:groups && npm run validate:units && npm run validate:science && npm run validate:regression",
     "prebuild": "npm run validate",
     "predev": "npm run validate"
   },
