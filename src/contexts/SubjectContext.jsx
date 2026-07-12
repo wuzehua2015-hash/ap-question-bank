@@ -7,6 +7,7 @@ import {
   setMySubjects as persistMySubjects,
   getDefaultSubject,
   setDefaultSubject,
+  STORAGE_SYNC_EVENT,
 } from '../utils/storage'
 
 const SubjectContext = createContext({
@@ -66,6 +67,22 @@ export function SubjectProvider({ children }) {
     setSubjectState(id)
     setCurrentSubject(id)
   }, [])
+
+  useEffect(() => {
+    const refreshFromStorage = () => {
+      if (!subjects.length) return
+      const availableIds = new Set(subjects.filter(s => s.active && s.visibility !== 'internal').map(s => s.id))
+      const storedMySubjects = getMySubjects().filter(id => availableIds.has(id))
+      const storedCurrent = getCurrentSubject()
+      const nextCurrent = storedMySubjects.includes(storedCurrent)
+        ? storedCurrent
+        : storedMySubjects[0] || currentSubject
+      setMySubjectIds(storedMySubjects)
+      if (nextCurrent !== currentSubject) setSubjectState(nextCurrent)
+    }
+    window.addEventListener(STORAGE_SYNC_EVENT, refreshFromStorage)
+    return () => window.removeEventListener(STORAGE_SYNC_EVENT, refreshFromStorage)
+  }, [currentSubject, subjects])
 
   const updateMySubjects = useCallback((ids) => {
     const availableIds = new Set(subjects.filter(s => s.active && s.visibility !== 'internal').map(s => s.id))

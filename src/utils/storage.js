@@ -1,8 +1,9 @@
-// Storage utilities with subject-scoped keys
-// All keys are prefixed with subject ID (e.g., macro_doneQuestions)
-// Old data (without prefix) is auto-migrated on first access
+// Storage utilities with subject-scoped keys.
+// Anonymous students keep using localStorage. Logged-in students sync the same
+// snapshot shape to D1, so existing student data does not need a migration.
 
 const MIGRATED_FLAG = '_legacyDataMigrated'
+export const STORAGE_SYNC_EVENT = 'lynkedu:storage-sync'
 
 const LEGACY_KEYS = ['doneQuestions', 'wrongQuestions', 'questionHistory', 'quizHistory']
 
@@ -17,12 +18,12 @@ function migrateLegacyData() {
   localStorage.setItem(MIGRATED_FLAG, 'true')
 }
 
-// Run migration once on module load
-migrateLegacyData()
+function notifyStorageChange(detail = {}) {
+  if (typeof window === 'undefined') return
+  window.dispatchEvent(new CustomEvent(STORAGE_SYNC_EVENT, { detail }))
+}
 
-// ────────────────────────────
-// Core helpers
-// ────────────────────────────
+migrateLegacyData()
 
 export function getStorageKey(subject, key) {
   return `${subject}_${key}`
@@ -40,15 +41,13 @@ export function getSubjectItem(subject, key, defaultValue = null) {
 
 export function setSubjectItem(subject, key, value) {
   localStorage.setItem(getStorageKey(subject, key), JSON.stringify(value))
+  notifyStorageChange({ scope: 'subject', subject, key })
 }
 
 export function removeSubjectItem(subject, key) {
   localStorage.removeItem(getStorageKey(subject, key))
+  notifyStorageChange({ scope: 'subject', subject, key })
 }
-
-// ────────────────────────────
-// Specific data accessors
-// ────────────────────────────
 
 export function getDoneQuestions(subject = 'macro') {
   return getSubjectItem(subject, 'doneQuestions', [])
@@ -82,17 +81,11 @@ export function setQuizHistory(subject = 'macro', value) {
   setSubjectItem(subject, 'quizHistory', value)
 }
 
-// ────────────────────────────
-// Quiz result recording
-// ────────────────────────────
-
 export function recordQuizResult(subject, { quizId, questionIds, wrongQuestionIds, score, total, unit, timestamp = Date.now() }) {
-  // doneQuestions: append new IDs
   const done = new Set(getDoneQuestions(subject))
   questionIds.forEach(id => done.add(id))
   setDoneQuestions(subject, [...done])
 
-  // wrongQuestions: add wrong ones, remove corrected ones
   const wrong = new Set(getWrongQuestions(subject))
   questionIds.forEach(id => {
     if (wrongQuestionIds.includes(id)) wrong.add(id)
@@ -100,18 +93,16 @@ export function recordQuizResult(subject, { quizId, questionIds, wrongQuestionId
   })
   setWrongQuestions(subject, [...wrong])
 
-  // questionHistory: per-question record
   const history = getQuestionHistory(subject)
   questionIds.forEach(id => {
     if (!history[id]) history[id] = []
     history[id].push({
       timestamp,
-      correct: !wrongQuestionIds.includes(id)
+      correct: !wrongQuestionIds.includes(id),
     })
   })
   setQuestionHistory(subject, history)
 
-  // quizHistory: quiz-level record
   const quizHistory = getQuizHistory(subject)
   quizHistory.push({
     quizId,
@@ -119,14 +110,10 @@ export function recordQuizResult(subject, { quizId, questionIds, wrongQuestionId
     score,
     total,
     unit,
-    wrongCount: wrongQuestionIds.length
+    wrongCount: wrongQuestionIds.length,
   })
   setQuizHistory(subject, quizHistory.slice(-20))
 }
-
-// ────────────────────────────
-// Mistake book: remove from wrong
-// ────────────────────────────
 
 export function removeWrongQuestion(subject, questionId) {
   const wrong = getWrongQuestions(subject)
@@ -134,16 +121,13 @@ export function removeWrongQuestion(subject, questionId) {
   setWrongQuestions(subject, updated)
 }
 
-// ────────────────────────────
-// Settings / current subject
-// ────────────────────────────
-
 export function getCurrentSubject() {
   return localStorage.getItem('currentSubject') || 'macro'
 }
 
 export function setCurrentSubject(subject) {
   localStorage.setItem('currentSubject', subject)
+  notifyStorageChange({ scope: 'settings', key: 'currentSubject' })
 }
 
 export function getMySubjects() {
@@ -160,6 +144,7 @@ export function getMySubjects() {
 export function setMySubjects(subjectIds) {
   const unique = [...new Set((subjectIds || []).map(String).filter(Boolean))]
   localStorage.setItem('mySubjects', JSON.stringify(unique))
+  notifyStorageChange({ scope: 'settings', key: 'mySubjects' })
 }
 
 export function getDefaultSubject() {
@@ -168,11 +153,8 @@ export function getDefaultSubject() {
 
 export function setDefaultSubject(subject) {
   localStorage.setItem('defaultSubject', subject)
+  notifyStorageChange({ scope: 'settings', key: 'defaultSubject' })
 }
-
-// ────────────────────────────
-// Debug helpers
-// ────────────────────────────
 
 export function listStorageKeys() {
   return Object.keys(localStorage)
@@ -182,4 +164,100 @@ export function clearSubjectData(subject) {
   for (const key of LEGACY_KEYS) {
     removeSubjectItem(subject, key)
   }
+}
+
+export function collectLocalProgressSnapshot() {
+  const subjects = {}
+  for (const key of Object.keys(localStorage)) {
+    const matched = key.match(/^(.+)_(doneQuestions|wrongQuestions|questionHistory|quizHistory)$/)
+    if (!matched) continue
+    const [, subject, dataKey] = matched
+    if (!subjects[subject]) subjects[subject] = {}
+    subjects[subject][dataKey] = getSubjectItem(subject, dataKey, defaultValueForDataKey(dataKey))
+  }
+
+  return {
+    version: 1,
+    updatedAt: new Date().toISOString(),
+    settings: {
+      currentSubject: getCurrentSubject(),
+      defaultSubject: getDefaultSubject(),
+      mySubjects: getMySubjects(),
+    },
+    subjects,
+  }
+}
+
+export function mergeProgressSnapshot(snapshot) {
+  if (!snapshot || typeof snapshot !== 'object') return
+  const settings = snapshot.settings || {}
+  if (Array.isArray(settings.mySubjects)) {
+    const merged = [...new Set([...getMySubjects(), ...settings.mySubjects.map(String).filter(Boolean)])]
+    localStorage.setItem('mySubjects', JSON.stringify(merged))
+  }
+  if (settings.defaultSubject && !localStorage.getItem('defaultSubject')) {
+    localStorage.setItem('defaultSubject', String(settings.defaultSubject))
+  }
+  if (settings.currentSubject && !localStorage.getItem('currentSubject')) {
+    localStorage.setItem('currentSubject', String(settings.currentSubject))
+  }
+
+  Object.entries(snapshot.subjects || {}).forEach(([subject, data]) => {
+    const done = new Set([...getDoneQuestions(subject), ...(Array.isArray(data.doneQuestions) ? data.doneQuestions : [])])
+    const wrong = new Set([...getWrongQuestions(subject), ...(Array.isArray(data.wrongQuestions) ? data.wrongQuestions : [])])
+    setSubjectItem(subject, 'doneQuestions', [...done])
+    setSubjectItem(subject, 'wrongQuestions', [...wrong])
+
+    const localQuestionHistory = getQuestionHistory(subject)
+    const incomingQuestionHistory = data.questionHistory && typeof data.questionHistory === 'object' ? data.questionHistory : {}
+    setSubjectItem(subject, 'questionHistory', mergeQuestionHistory(localQuestionHistory, incomingQuestionHistory))
+
+    const localQuizHistory = getQuizHistory(subject)
+    const incomingQuizHistory = Array.isArray(data.quizHistory) ? data.quizHistory : []
+    setSubjectItem(subject, 'quizHistory', mergeQuizHistory(localQuizHistory, incomingQuizHistory))
+  })
+
+  notifyStorageChange({ scope: 'merge' })
+}
+
+function defaultValueForDataKey(dataKey) {
+  if (dataKey === 'questionHistory') return {}
+  return []
+}
+
+function mergeQuestionHistory(localHistory, incomingHistory) {
+  const merged = { ...(incomingHistory || {}), ...(localHistory || {}) }
+  Object.entries(incomingHistory || {}).forEach(([questionId, incoming]) => {
+    const local = localHistory?.[questionId]
+    if (!local) return
+    const attempts = [...(incoming.attempts || []), ...(local.attempts || [])]
+    const seen = new Set()
+    const uniqueAttempts = attempts.filter(item => {
+      const key = `${item.date || item.timestamp || ''}:${item.selected || ''}:${item.correct ? 1 : 0}`
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    }).slice(-20)
+    merged[questionId] = {
+      ...incoming,
+      ...local,
+      attempts: uniqueAttempts,
+      correct_count: Math.max(local.correct_count || 0, incoming.correct_count || 0),
+      wrong_count: Math.max(local.wrong_count || 0, incoming.wrong_count || 0),
+    }
+  })
+  return merged
+}
+
+function mergeQuizHistory(localHistory, incomingHistory) {
+  const seen = new Set()
+  return [...incomingHistory, ...localHistory]
+    .filter(item => {
+      const key = `${item.date || item.timestamp || ''}:${item.count || item.total || ''}:${item.correct || item.score || ''}`
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    })
+    .sort((a, b) => String(a.date || a.timestamp || '').localeCompare(String(b.date || b.timestamp || '')))
+    .slice(-20)
 }
