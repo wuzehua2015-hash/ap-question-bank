@@ -1,0 +1,600 @@
+{
+  "standard": "Primary unit is the latest AP unit a student must complete to answer the item, including earlier prerequisites. These reviewed cases are blocking regression checks.",
+  "cases": [
+    {
+      "subject": "chemistry",
+      "file": "frq_bank.json",
+      "question_id": "2015_FRQ2",
+      "expected_primary_unit": "U8",
+      "reason": "Manual progression-gate fix: Complete response combines lattice/Ksp reasoning with acid-base reactions of metal hydroxides."
+    },
+    {
+      "subject": "chemistry",
+      "file": "frq_bank.json",
+      "question_id": "2015_FRQ5",
+      "expected_primary_unit": "U7",
+      "reason": "Manual progression-gate fix: Complete response requires equilibrium pressure and Kp calculation for the reversible dimerization."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
+      "question_id": "2015_Q13",
+      "expected_primary_unit": "U8",
+      "reason": "Manual progression-gate fix: Requires connecting hydroxide solubility equilibrium with pH / acid-base effects."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
+      "question_id": "2015_Q27",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires integrated-rate-law plot reasoning for reaction order."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
+      "question_id": "2015_Q41",
+      "expected_primary_unit": "U8",
+      "reason": "Manual progression-gate fix: Requires acid-base titration stoichiometry to identify concentration range."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
+      "question_id": "2016_Q44",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Requires endothermic reaction and temperature-change reasoning."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
+      "question_id": "2019_Q28",
+      "expected_primary_unit": "U8",
+      "reason": "Manual progression-gate fix: Requires acid-base titration equivalence-point stoichiometry."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2012_FRQ1",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Complete response requires monetary policy plus current-account and exchange-rate effects."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2012_FRQ3",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Complete response requires AD-AS export shock plus investment effects on LRAS."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2014_FRQ1",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Complete response requires AD-AS, monetary policy, capital flows, and exchange-rate reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2014_FRQ3",
+      "expected_primary_unit": "U5",
+      "reason": "Complete scoring requires long-run Phillips curve and long-run adjustment reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2015_FRQ1",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Complete response requires AD-AS, loanable funds, growth, and foreign-exchange effects."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2015_FRQ3",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Complete response requires Phillips curve and fiscal multiplier reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2016_FRQ2",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Complete response requires Phillips curve, fiscal policy, and loanable-funds effects."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2017_FRQ1",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Complete response requires long-run adjustment plus monetary-policy stabilization."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2017_FRQ3",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Complete response requires exchange rates, net exports, and current/financial-account reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2018_FRQ1",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Complete response requires monetary policy, loanable funds, and potential-output growth effects."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2019_FRQ1",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Complete response requires monetary expansion, Phillips curve movement, currency value, and net exports."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2023_FRQ1_S1",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Complete response requires monetary-policy stabilization and long-run self-correction."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2023_FRQ1_S2",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Complete response requires monetary policy, loanable funds, and potential-output growth effects."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2023_FRQ1_S3",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Complete response requires monetary expansion, Phillips curve movement, currency value, and net exports."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2012_Q22",
+      "expected_primary_unit": "U3",
+      "reason": "Solving requires short-run AD-AS/fiscal policy effects, even though the choices are indicator outcomes."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2012_Q37",
+      "expected_primary_unit": "U3",
+      "reason": "Manual progression-gate fix: Requires U3 short-run stabilization policy effects on demand-pull inflation and unemployment."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2012_Q53",
+      "expected_primary_unit": "U4",
+      "reason": "Manual progression-gate fix: Requires comparing discretionary fiscal policy with monetary policy and money supply effects; U4 is the latest required unit."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2012_Q60",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires long-run Phillips curve / no long-run inflation-unemployment tradeoff reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2014_Q06",
+      "expected_primary_unit": "U4",
+      "reason": "Manual progression-gate fix: Requires choosing a combined fiscal and monetary response; U4 monetary policy is the latest required unit."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2014_Q17",
+      "expected_primary_unit": "U4",
+      "reason": "Manual progression-gate fix: Correct cause is a money-supply change shifting aggregate demand; monetary-policy channel is U4."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2014_Q26",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires productivity/capital-stock reasoning for long-run growth."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2014_Q35",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires policy-mix reasoning for fiscal and monetary actions and their short-run macro effects."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2015_Q03",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires physical-capital effects on aggregate supply / long-run productive capacity."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2015_Q32",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires recognizing economic growth as a rightward LRAS shift."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2015_Q38",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires Phillips curve effects of contractionary fiscal policy."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2016_Q23",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires long-run growth and human-capital/productivity reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2016_Q34",
+      "expected_primary_unit": "U3",
+      "reason": "Manual progression-gate fix: Requires short-run recession effects on fiscal balance through automatic stabilizers."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2016_Q36",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires Fisher-effect style long-run inflation and nominal interest-rate reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2016_Q50",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires supply-side policy reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2016_Q54",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires productivity and long-run supply reasoning in an AD-AS setting."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2017_Q02",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires long-run technology/productivity growth effects."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2017_Q04",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires fiscal expansion, interest-rate pressure, and crowding-out channel reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2017_Q05",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires the economic-growth concept, measured by sustained per-capita real GDP growth."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2017_Q30",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires identifying policies that promote long-run economic growth."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2017_Q38",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires policy, real-interest-rate, investment, and growth-channel reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2017_Q51",
+      "expected_primary_unit": "U4",
+      "reason": "Manual progression-gate fix: Correct mechanism is an open-market purchase increasing aggregate demand through monetary policy."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q02",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires the economic-growth concept rather than only GDP measurement."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q39",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires R&D subsidy effects on AD and LRAS / long-run growth."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q50",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires expected-inflation and long-run macro adjustment reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2019_Q26",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires combined monetary and fiscal policy effects."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2019_Q34",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Requires balance-of-payments financial-account classification."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2019_Q43",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires long-run self-correction from above-potential output."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2019_Q47",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires physical-capital investment and long-run growth-channel reasoning."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2012_FRQ2",
+      "expected_primary_unit": "U2",
+      "reason": "Manual progression-gate fix: Complete response requires marginal benefit, consumer surplus, market shift, and elasticity reasoning."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2014_FRQ1",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Complete response requires perfect competition plus external cost / socially optimal quantity analysis."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2016_FRQ2",
+      "expected_primary_unit": "U2",
+      "reason": "Manual progression-gate fix: Complete response requires marginal benefit, consumer surplus, demand shift, and income elasticity."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2013_Q36",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires least-cost input combination / factor-market marginal product per dollar reasoning."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2013_Q51",
+      "expected_primary_unit": "U4",
+      "reason": "Manual progression-gate fix: Requires market-structure classification for monopolistic competition."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2016_Q08",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires least-cost input combination / factor-market marginal product per dollar reasoning."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2016_Q29",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Requires government role in preserving competitive market outcomes."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2017_Q09",
+      "expected_primary_unit": "U2",
+      "reason": "Manual progression-gate fix: Requires consumer surplus calculation from benefit and price."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2017_Q42",
+      "expected_primary_unit": "U3",
+      "reason": "Manual progression-gate fix: Requires allocative efficiency condition in a perfectly competitive market."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q41",
+      "expected_primary_unit": "U4",
+      "reason": "Manual progression-gate fix: Requires monopolistic-competition advertising reasoning."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q58",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Requires government role in preserving competitive market outcomes."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2019_Q30",
+      "expected_primary_unit": "U6",
+      "reason": "Manual progression-gate fix: Requires government role in preserving competitive market outcomes."
+    },
+    {
+      "subject": "physics-c-e-m",
+      "file": "question_bank.json",
+      "question_id": "2012_Q04",
+      "expected_primary_unit": "U9",
+      "reason": "Manual progression-gate fix: Requires electric potential energy of a charge configuration."
+    },
+    {
+      "subject": "physics-c-e-m",
+      "file": "question_bank.json",
+      "question_id": "2014_Q03",
+      "expected_primary_unit": "U9",
+      "reason": "Manual progression-gate fix: Requires using electric potential / equipotential information."
+    },
+    {
+      "subject": "physics-c-e-m",
+      "file": "question_bank.json",
+      "question_id": "2014_Q04",
+      "expected_primary_unit": "U9",
+      "reason": "Manual progression-gate fix: Requires using electric potential / equipotential information."
+    },
+    {
+      "subject": "physics-c-e-m",
+      "file": "question_bank.json",
+      "question_id": "2014_Q10",
+      "expected_primary_unit": "U13",
+      "reason": "Manual progression-gate fix: Requires magnetic flux reasoning."
+    },
+    {
+      "subject": "physics-c-e-m",
+      "file": "question_bank.json",
+      "question_id": "2015_Q30",
+      "expected_primary_unit": "U9",
+      "reason": "Manual progression-gate fix: Requires equipotential-line reasoning."
+    },
+    {
+      "subject": "physics-c-e-m",
+      "file": "question_bank.json",
+      "question_id": "2018_Q23",
+      "expected_primary_unit": "U11",
+      "reason": "Manual progression-gate fix: Requires RC circuit time-constant reasoning."
+    },
+    {
+      "subject": "physics-c-e-m",
+      "file": "question_bank.json",
+      "question_id": "2018_Q31",
+      "expected_primary_unit": "U9",
+      "reason": "Manual progression-gate fix: Requires electric potential energy of a charge configuration."
+    },
+    {
+      "subject": "physics-c-mechanics",
+      "file": "question_bank.json",
+      "question_id": "2015_Q33",
+      "expected_primary_unit": "U2",
+      "reason": "Manual progression-gate fix: Requires circular-orbit force/centripetal reasoning."
+    },
+    {
+      "subject": "physics-c-mechanics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q11",
+      "expected_primary_unit": "U2",
+      "reason": "Manual progression-gate fix: Requires centripetal-force reasoning for circular motion."
+    },
+    {
+      "subject": "statistics",
+      "file": "frq_bank.json",
+      "question_id": "2008_FRQ5",
+      "expected_primary_unit": "U7",
+      "reason": "Manual progression-gate fix: Complete response uses a t-test comparing means and interpretation of mean differences with study design limits."
+    },
+    {
+      "subject": "statistics",
+      "file": "question_bank.json",
+      "question_id": "2016_Q27",
+      "expected_primary_unit": "U4",
+      "reason": "Manual progression-gate fix: Requires probability calculation for a compound random selection."
+    },
+    {
+      "subject": "statistics",
+      "file": "question_bank.json",
+      "question_id": "2016_Q28",
+      "expected_primary_unit": "U9",
+      "reason": "The item requires inference for regression slope, not only interpreting a scatterplot."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "frq_bank.json",
+      "question_id": "2005_FRQ1",
+      "expected_primary_unit": "U4",
+      "reason": "Manual progression-gate fix: Complete response combines Supreme Court independence with public-opinion constraints."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "frq_bank.json",
+      "question_id": "2005_FRQ2",
+      "expected_primary_unit": "U3",
+      "reason": "Manual progression-gate fix: Complete response requires federalism plus civil-rights legislation expansion of federal power."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "frq_bank.json",
+      "question_id": "2018_FRQ2",
+      "expected_primary_unit": "U3",
+      "reason": "Manual progression-gate fix: Complete response uses judicial appointments and effects on civil-liberties decisions."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2008_Q31",
+      "expected_primary_unit": "U3",
+      "reason": "Manual progression-gate fix: Requires civil-rights legislation ending Jim Crow laws."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2013_Q11",
+      "expected_primary_unit": "U5",
+      "reason": "Manual progression-gate fix: Requires presidential election mandate and electoral-vote system reasoning."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2013_Q49",
+      "expected_primary_unit": "U3",
+      "reason": "Manual progression-gate fix: Requires civil-rights strategy through courts to secure legal protections."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q49",
+      "expected_primary_unit": "U2",
+      "reason": "Manual progression-gate fix: Requires separation-of-powers interaction between the executive and legislative branches."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2020_Q04",
+      "expected_primary_unit": "U4",
+      "reason": "Manual progression-gate fix: Requires interpreting ideology/public-opinion differences from the chart."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2020_Q06",
+      "expected_primary_unit": "U3",
+      "reason": "Manual progression-gate fix: Requires selective incorporation of a civil liberty to the states."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2020_Q20",
+      "expected_primary_unit": "U3",
+      "reason": "Manual progression-gate fix: Requires student free-speech civil-liberties case reasoning."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2020_Q46",
+      "expected_primary_unit": "U3",
+      "reason": "Manual progression-gate fix: Requires Establishment Clause and Free Exercise Clause civil-liberties comparison."
+    }
+  ]
+}

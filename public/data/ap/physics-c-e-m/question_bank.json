@@ -193,7 +193,7 @@
       "E": "$\\frac{2\\sqrt{2}kqQ}{a}$"
     },
     "answer": "A",
-    "primary_unit": "U8",
+    "primary_unit": "U9",
     "secondary_units": [],
     "topics": [
       {
@@ -239,7 +239,8 @@
     ],
     "group_role": "member",
     "group_context": "Questions 2-4\nThree particles having charges of +q, +Q, and -Q\nare placed at the corners of an equilateral triangle of\nside a, as shown above.",
-    "requires_group_context": true
+    "requires_group_context": true,
+    "classification_reasoning": "Manual progression-gate fix: Requires electric potential energy of a charge configuration."
   },
   {
     "question_id": "2012_Q05",
@@ -4082,7 +4083,7 @@
       "E": "$2000\\,\\mathrm{V/m}$"
     },
     "answer": "E",
-    "primary_unit": "U8",
+    "primary_unit": "U9",
     "secondary_units": [],
     "topics": [
       {
@@ -4126,7 +4127,8 @@
       "2014_Q04"
     ],
     "group_context": "Questions 2-4 refer to the parallel-plate setup and potential graph shown above. A uniform electric field exists between two parallel plates that are perpendicular to the x-axis and separated by $0.010\\,\\mathrm{m}$. The graph shows electric potential $V$ as a function of position $x$ on the x-axis.",
-    "requires_group_context": true
+    "requires_group_context": true,
+    "classification_reasoning": "Manual progression-gate fix: Requires using electric potential / equipotential information."
   },
   {
     "question_id": "2014_Q04",
@@ -4144,7 +4146,7 @@
       "E": "It is undefined because the field is zero at all points."
     },
     "answer": "A",
-    "primary_unit": "U8",
+    "primary_unit": "U9",
     "secondary_units": [],
     "topics": [
       {
@@ -4188,7 +4190,8 @@
       "2014_Q04"
     ],
     "group_context": "Questions 2-4 refer to the parallel-plate setup and potential graph shown above. A uniform electric field exists between two parallel plates that are perpendicular to the x-axis and separated by $0.010\\,\\mathrm{m}$. The graph shows electric potential $V$ as a function of position $x$ on the x-axis.",
-    "requires_group_context": true
+    "requires_group_context": true,
+    "classification_reasoning": "Manual progression-gate fix: Requires using electric potential / equipotential information."
   },
   {
     "question_id": "2014_Q05",
@@ -4499,7 +4502,7 @@
       "E": "$0.8\\,\\mathrm{m}$"
     },
     "answer": "C",
-    "primary_unit": "U12",
+    "primary_unit": "U13",
     "secondary_units": [],
     "topics": [
       {
@@ -4542,7 +4545,8 @@
       "2014_Q10"
     ],
     "group_context": "Questions 9-10 refer to the graph of magnetic flux through a wire loop as a function of time shown above.",
-    "requires_group_context": true
+    "requires_group_context": true,
+    "classification_reasoning": "Manual progression-gate fix: Requires magnetic flux reasoning."
   },
   {
     "question_id": "2014_Q11",
@@ -7668,7 +7672,7 @@
       "E": "It is the same at all the points."
     },
     "answer": "A",
-    "primary_unit": "U8",
+    "primary_unit": "U9",
     "secondary_units": [],
     "topics": [
       {
@@ -7712,7 +7716,8 @@
     ],
     "group_role": "member",
     "group_context": "Questions 30-31\nEquipotential lines due to an electric field in a\ncertain region of space are illustrated in the figure\nabove. Points A and B are located on lines\n2\nV and\n4 V ,\nrespectively, and points C and D are located within\nthe equipotential region\n6 V .",
-    "requires_group_context": true
+    "requires_group_context": true,
+    "classification_reasoning": "Manual progression-gate fix: Requires equipotential-line reasoning."
   },
   {
     "question_id": "2015_Q31",
@@ -13724,7 +13729,7 @@
       "E": "$1.0\\times10^{5}\\,\\mathrm{s}$"
     },
     "answer": "B",
-    "primary_unit": "U8",
+    "primary_unit": "U11",
     "secondary_units": [],
     "topics": [
       {
@@ -13761,7 +13766,8 @@
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
     "rubric_image_paths": [],
-    "group_context": "Questions 22-23 refer to the circuit shown above. After the switch is closed in the circuit above, the current in the circuit is given by $i=I(1-e^{-t/\\tau})$, where $I$ and $\\tau$ are constants."
+    "group_context": "Questions 22-23 refer to the circuit shown above. After the switch is closed in the circuit above, the current in the circuit is given by $i=I(1-e^{-t/\\tau})$, where $I$ and $\\tau$ are constants.",
+    "classification_reasoning": "Manual progression-gate fix: Requires RC circuit time-constant reasoning."
   },
   {
     "question_id": "2018_Q24",
@@ -14194,7 +14200,7 @@
       "E": "$-\\frac{Q^2}{4\\pi\\epsilon_0 a}$"
     },
     "answer": "E",
-    "primary_unit": "U8",
+    "primary_unit": "U9",
     "secondary_units": [],
     "topics": [
       {
@@ -14230,7 +14236,8 @@
       ],
       "classification_version": "physics_c_em_keyword_draft_v1"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "classification_reasoning": "Manual progression-gate fix: Requires electric potential energy of a charge configuration."
   },
   {
     "question_id": "2018_Q32",

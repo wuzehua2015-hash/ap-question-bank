@@ -949,7 +949,7 @@
     "points": 10,
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U4",
+    "primary_unit": "U8",
     "unit": "U4",
     "unit_name": "Chemical Reactions",
     "secondary_units": [],
@@ -1064,7 +1064,8 @@
         87
       ],
       "override": true
-    }
+    },
+    "classification_reasoning": "Manual progression-gate fix: Complete response combines lattice/Ksp reasoning with acid-base reactions of metal hydroxides."
   },
   {
     "question_id": "2015_FRQ3",
@@ -1315,7 +1316,7 @@
       "images/ap/chemistry/2015/2015_p062_img01.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U2",
+    "primary_unit": "U7",
     "unit": "U2",
     "unit_name": "Molecular and Ionic Compound Structure and Properties",
     "secondary_units": [],
@@ -1400,7 +1401,8 @@
         87
       ],
       "override": true
-    }
+    },
+    "classification_reasoning": "Manual progression-gate fix: Complete response requires equilibrium pressure and Kp calculation for the reversible dimerization."
   },
   {
     "question_id": "2015_FRQ6",

@@ -2917,7 +2917,7 @@
     },
     "answer": "A",
     "image_paths": [],
-    "primary_unit": "U7",
+    "primary_unit": "U8",
     "unit": "U7",
     "unit_name": "Equilibrium",
     "secondary_units": [],
@@ -2938,7 +2938,8 @@
       "raw_chunk_sha256": "7b80fd66d9b1b0e3ecb247c30643763267ace07612c095055ca837229ee39d6e",
       "override": true
     },
-    "source_page": 25
+    "source_page": 25,
+    "classification_reasoning": "Manual progression-gate fix: Requires connecting hydroxide solubility equilibrium with pH / acid-base effects."
   },
   {
     "question_id": "2015_Q14",
@@ -3512,7 +3513,7 @@
     },
     "answer": "B",
     "image_paths": [],
-    "primary_unit": "U4",
+    "primary_unit": "U5",
     "unit": "U4",
     "unit_name": "Chemical Reactions",
     "secondary_units": [],
@@ -3531,7 +3532,8 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
       "source_page": 31,
       "raw_chunk_sha256": "ae7039211d8eaf8f6da897ad4cf2bc6712eb10b4a507bf0e38fb02745f7181e7"
-    }
+    },
+    "classification_reasoning": "Manual progression-gate fix: Requires integrated-rate-law plot reasoning for reaction order."
   },
   {
     "question_id": "2015_Q28",
@@ -4100,7 +4102,7 @@
     },
     "answer": "C",
     "image_paths": [],
-    "primary_unit": "U4",
+    "primary_unit": "U8",
     "unit": "U4",
     "unit_name": "Chemical Reactions",
     "secondary_units": [],
@@ -4147,7 +4149,8 @@
           ]
         ]
       }
-    }
+    },
+    "classification_reasoning": "Manual progression-gate fix: Requires acid-base titration stoichiometry to identify concentration range."
   },
   {
     "question_id": "2015_Q42",
@@ -6669,7 +6672,7 @@
     },
     "answer": "C",
     "image_paths": [],
-    "primary_unit": "U4",
+    "primary_unit": "U6",
     "unit": "U4",
     "unit_name": "Chemical Reactions",
     "secondary_units": [],
@@ -6688,7 +6691,8 @@
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
       "source_page": 40,
       "raw_chunk_sha256": "94cb0302886a2f519669cf7217cb0f579cf556c790100cde181114669fef1d1e"
-    }
+    },
+    "classification_reasoning": "Manual progression-gate fix: Requires endothermic reaction and temperature-change reasoning."
   },
   {
     "question_id": "2016_Q45",
@@ -10615,7 +10619,7 @@
     },
     "answer": "C",
     "image_paths": [],
-    "primary_unit": "U4",
+    "primary_unit": "U8",
     "unit": "U4",
     "unit_name": "Chemical Reactions",
     "secondary_units": [],
@@ -10650,7 +10654,8 @@
           ]
         ]
       }
-    }
+    },
+    "classification_reasoning": "Manual progression-gate fix: Requires acid-base titration equivalence-point stoichiometry."
   },
   {
     "question_id": "2019_Q29",
