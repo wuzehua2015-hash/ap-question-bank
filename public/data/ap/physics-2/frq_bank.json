@@ -1991,7 +1991,11 @@
     "text": "3. (12 points, suggested time 25 minutes)\nTank X is a large cylindrical tank that is partially filled with water, as shown in Figure 1. The bottom of Tank X is\nconnected to a short horizontal pipe. A valve that is initially closed can be opened to allow water to flow through\nthe pipe and exit through the other end of the pipe.\n(a) Two blocks, A and B, have identical dimensions and are placed in the tank. Both blocks float at rest and are\npartially submerged in the water.\ni. The water and air can be modeled as consisting of individual particles that are in continuous random\nmotion. In terms of interactions with both water and air particles, explain why there is an upward buoyant\nforce exerted on each block.\nii. The valve is then opened, and water flows out through the pipe. The surface of the water moves\ndownward. When Block A touches the bottom of Tank X, Block B is still above the bottom of Tank X.\nWhich block has a greater density? Briefly explain your reasoning.\nTank Y is a large tank with the top open to the air, as shown in Figure 2. The bottom of Tank Y is connected to a\nshort horizontal pipe of radius r with a closed valve. Tank Y is filled with water to height h0 above the horizontal\npipe. Tank Y is specially designed so that when the valve is opened, the surface of the water moves downward at\nconstant speed vs.\n(b) At time t = 0, the valve is opened.\ni. Derive the relationship between the speed vp at which water exits the pipe and the changing height h of\nthe surface of the water above the pipe to show that $v_p = \\sqrt{2gh + v_s^2}$.\nii. Derive the relationship between vp and the changing radius R of the top surface of the water to show\nthat\n$R^2 v_s = r^2 v_p$.\niii. When the radius R of the tank is sufficiently greater than r, the speed vp can be approximated\nas vp =\n2gh . Justify this claim.\nTank Z is a large tank whose top is open to the air and is shaped as shown in Figure 3. The bottom of Tank Z is\nconnected to a short horizontal pipe with a closed valve. Tank is filled with water to a height\nZ\nh0 above the\nhorizontal pipe.\nAt time t = 0, the valve of Tank Z is opened.\n(c) Does the speed vs at which the surface of the water moves downward increase, decrease, or remain the same\nover time as water exits the other end of the pipe? Justify your answer by using or referencing equations from\nboth part (b)(i) and part (b)(ii).",
     "answer": "",
     "points": 10,
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-2/2023/2023_frq3_figure1_tank_x.png",
+      "images/ap/physics-2/2023/2023_frq3_figure2_tank_y.png",
+      "images/ap/physics-2/2023/2023_frq3_figure3_tank_z.png"
+    ],
     "rubric_image_paths": [],
     "primary_unit": "U1",
     "unit": "U1",
@@ -2039,6 +2043,29 @@
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2023_FRQ_Official.pdf",
       "scoring_guideline_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2023_Scoring_Guidelines_Official.pdf",
       "structured_method": "physics2_official_frq_draft_v1"
+    },
+    "visual_asset_review": {
+      "status": "reviewed",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-2/2023/2023_frq3_figure1_tank_x.png",
+          "source": "AP_Physics_2_2023_FRQ_Official.pdf",
+          "page": 12,
+          "crop_type": "figure"
+        },
+        {
+          "path": "images/ap/physics-2/2023/2023_frq3_figure2_tank_y.png",
+          "source": "AP_Physics_2_2023_FRQ_Official.pdf",
+          "page": 13,
+          "crop_type": "figure"
+        },
+        {
+          "path": "images/ap/physics-2/2023/2023_frq3_figure3_tank_z.png",
+          "source": "AP_Physics_2_2023_FRQ_Official.pdf",
+          "page": 14,
+          "crop_type": "figure"
+        }
+      ]
     }
   },
   {
@@ -2251,7 +2278,14 @@
     "text": "2. (12 points, suggested time 25 minutes)\nIn Experiment 1, shown in Figure 1, a sample of an ideal gas is contained in an insulated, sealed chamber with\nthin, rigid walls. The chamber contains a heater and sensors that measure the temperature and pressure of the gas.\nA student is asked to design an experiment to determine the number N of molecules of the gas contained in the\nchamber.\n(a) Describe a procedure for collecting data that would allow the student to determine an experimental value\nfor N . Provide enough detail so that a student could replicate the experiment, including any steps necessary to\nreduce experimental uncertainty.\n(b)\ni. On the following axes, sketch a curve or line to represent the expected relationship between the\npressure P and the volume V of the gas while the heater is on. Draw an arrow on the curve or line to\nrepresent the direction of the resulting thermal process.\nii. On the following axes, sketch a curve or line to represent the expected relationship between the internal\nenergy U and the volume V of the gas while the heater is on. Draw an arrow on the curve or line to\nrepresent the direction of the resulting thermal process.\niii. Briefly justify why the curve or line drawn in part (b)(ii) has the shape that you sketched.\nIn Experiment 2, shown in Figure 2, a liquid-filled container that is completely wrapped with a material of\nuniform thickness 0.01 m is inside the sealed chamber that is filled with an ideal gas. The material has a total area\nof 0.06 m2 in contact with the gas. The heater is turned on. As the temperature TG of the gas increases, the\nfollowing data for the temperature TL of the liquid and the rate Q\nt\nΔ of energy transfer are collected.\nT\nK\nG ( )\nT\nK\nL ( )\nQ\nt\nJ\ns\n⎛\n⎝\n⎜⎜⎜\n⎞\n⎠\n⎟⎟⎟\nΔ\n295\n295\n0.0\n371\n303\n26.3\n425\n308\n43.1\n475\n313\n60.0\n528\n323\n75.0\n(c) The student is asked to determine an experimental value of the thermal conductivity k of the material used to\nwrap the container inside the sealed chamber.\ni. Indicate what measured and/or calculated quantities could be graphed to yield a straight line that could\nbe used to calculate an experimental value for the thermal conductivity k of the material. Use the blank\ncolumns in the table to list any calculated quantities you graph in addition to the data provided.\nVertical Axis: Horizontal Axis: ii. Plot the data points for the quantities indicated in part (c)(i) on the graph provided. Clearly scale and\nlabel all axes, including units, as appropriate.\niii. Draw the best-fit line for the data graphed in part (c)(ii).\n(d) Using the best-fit line, calculate an experimental value for k.",
     "answer": "",
     "points": 10,
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-2/2024/2024_frq2_figure1_gas_chamber.png",
+      "images/ap/physics-2/2024/2024_frq2_pv_axes.png",
+      "images/ap/physics-2/2024/2024_frq2_uv_axes.png",
+      "images/ap/physics-2/2024/2024_frq2_figure2_container.png",
+      "images/ap/physics-2/2024/2024_frq2_temperature_table.png",
+      "images/ap/physics-2/2024/2024_frq2_graph_grid.png"
+    ],
     "rubric_image_paths": [],
     "primary_unit": "U2",
     "unit": "U2",
@@ -2329,6 +2363,84 @@
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2024_FRQ_Official.pdf",
       "scoring_guideline_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2024_Scoring_Guidelines_Official.pdf",
       "structured_method": "physics2_official_frq_draft_v1"
+    },
+    "visual_asset_review": {
+      "status": "reviewed",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-2/2024/2024_frq2_figure1_gas_chamber.png",
+          "source": "AP_Physics_2_2024_FRQ_Official.pdf",
+          "page": 7,
+          "crop_type": "figure_or_response_grid"
+        },
+        {
+          "path": "images/ap/physics-2/2024/2024_frq2_pv_axes.png",
+          "source": "AP_Physics_2_2024_FRQ_Official.pdf",
+          "page": 8,
+          "crop_type": "figure_or_response_grid"
+        },
+        {
+          "path": "images/ap/physics-2/2024/2024_frq2_uv_axes.png",
+          "source": "AP_Physics_2_2024_FRQ_Official.pdf",
+          "page": 8,
+          "crop_type": "figure_or_response_grid"
+        },
+        {
+          "path": "images/ap/physics-2/2024/2024_frq2_figure2_container.png",
+          "source": "AP_Physics_2_2024_FRQ_Official.pdf",
+          "page": 9,
+          "crop_type": "figure_or_response_grid"
+        },
+        {
+          "path": "images/ap/physics-2/2024/2024_frq2_temperature_table.png",
+          "source": "AP_Physics_2_2024_FRQ_Official.pdf",
+          "page": 9,
+          "crop_type": "figure_or_response_grid"
+        },
+        {
+          "path": "images/ap/physics-2/2024/2024_frq2_graph_grid.png",
+          "source": "AP_Physics_2_2024_FRQ_Official.pdf",
+          "page": 10,
+          "crop_type": "figure_or_response_grid"
+        }
+      ]
+    },
+    "background_data": {
+      "table": {
+        "title": "Experiment 2 data",
+        "headers": [
+          "$T_G$ (K)",
+          "$T_L$ (K)",
+          "$Q/\\Delta t$ (J/s)"
+        ],
+        "rows": [
+          [
+            "295",
+            "295",
+            "0.0"
+          ],
+          [
+            "371",
+            "303",
+            "26.3"
+          ],
+          [
+            "425",
+            "308",
+            "43.1"
+          ],
+          [
+            "475",
+            "313",
+            "60.0"
+          ],
+          [
+            "528",
+            "323",
+            "75.0"
+          ]
+        ]
+      }
     }
   },
   {
@@ -2343,7 +2455,11 @@
     "text": "3. (12 points, suggested time 25 minutes)\nA circuit consists of an ideal battery of emf Ɛ and four identical resistors R1, R2, R3, and R4, each of\nresistance R, as shown in Figure 1.\n(a) For parts (a)(i) and (a)(ii), express your answers in terms of numerical values, Ɛ, and R only.\ni. Derive an expression for the current I1 in Resistor R1.\nii. Derive an expression for the current I3 in Resistor R3.\n(b) The partially completed bar chart in Figure 2 shows a bar that represents the absolute value\nV\nΔ\nof the\npotential difference across the ideal battery.\n• In Figure 2, draw a bar to represent\nV\nΔ\nacross each resistor, relative to the emf Ɛ of the ideal\nbattery.\n• The height of each bar should be proportional to the value of\nV\nΔ\nrepresented by that bar.\nIf\nV\nΔ\nis zero, write a “0” in that column.\nA student claims that the rate at which energy is dissipated (power) by the circuit can be expressed\nas P\nR\n3\n5\n2\nƐ\n=\n.\n(c) State whether the expression for P is correct or incorrect. Justify your answer by referring to the derivations\nfrom part (a) or the bar chart from part (b).\nWhen the ideal battery is connected in the original circuit, the rate at which energy is dissipated by Resistor R1\nis Poriginal. The ideal battery is now replaced with a nonideal battery of emf Ɛ and internal resistance r to form\nthe new circuit shown in Figure 3. The rate at which energy is dissipated by Resistor R1 in the new circuit\nis Pnew.\n(d) Indicate whether P new is greater than, less than, or equal to P original.\n$P_{new} > P_{original}$\n$P_{new} < P_{original}$\n$P_{new} = P_{original}$\nBriefly justify your answer.",
     "answer": "",
     "points": 10,
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-2/2024/2024_frq3_figure1_circuit.png",
+      "images/ap/physics-2/2024/2024_frq3_figure2_bar_chart.png",
+      "images/ap/physics-2/2024/2024_frq3_figure3_nonideal_circuit.png"
+    ],
     "rubric_image_paths": [],
     "primary_unit": "U5",
     "unit": "U5",
@@ -2391,6 +2507,29 @@
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2024_FRQ_Official.pdf",
       "scoring_guideline_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2024_Scoring_Guidelines_Official.pdf",
       "structured_method": "physics2_official_frq_draft_v1"
+    },
+    "visual_asset_review": {
+      "status": "reviewed",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-2/2024/2024_frq3_figure1_circuit.png",
+          "source": "AP_Physics_2_2024_FRQ_Official.pdf",
+          "page": 11,
+          "crop_type": "figure_or_response_grid"
+        },
+        {
+          "path": "images/ap/physics-2/2024/2024_frq3_figure2_bar_chart.png",
+          "source": "AP_Physics_2_2024_FRQ_Official.pdf",
+          "page": 12,
+          "crop_type": "figure_or_response_grid"
+        },
+        {
+          "path": "images/ap/physics-2/2024/2024_frq3_figure3_nonideal_circuit.png",
+          "source": "AP_Physics_2_2024_FRQ_Official.pdf",
+          "page": 13,
+          "crop_type": "figure_or_response_grid"
+        }
+      ]
     }
   },
   {
@@ -2405,7 +2544,10 @@
     "text": "4. (10 points, suggested time 20 minutes)\nTwo particles, 1 and 2, have different mass and charge as described by the following.\n• Particle 1 has mass M and negative charge Q\n−.\n• Particle 2 has mass M\n2 and positive charge\nQ\n2\n+\n.\nIn separate trials, a device is used to accelerate each particle in the y\n−-direction from rest through a potential\ndifference of absolute value\nV\nΔ\n. The polarity of the potential difference can be adjusted so that a particle with\neither positive charge or negative charge can be accelerated in the y\n−-direction by the device. Gravitational effects\nare negligible.\nAfter moving through the potential difference, particles 1 and 2 exit the device with kinetic energies K1\nand K2, respectively.\n(a) Calculate the ratio K\nK\n2\n1\n.\nAfter exiting the device, the particles enter a large region of constant uniform magnetic field of magnitude B 0\nthat is directed in the z\n+ -direction (out of the page), as shown in Figure 1. Each particle is moving in\nthe y\n−-direction when entering the region, and each particle is moving in the y\n+ -direction when exiting the\nregion.\n(b)\ni. Determine an expression for the speed of Particle 2 in the region. Express your answer in terms\nof M , K2, and physical constants, as appropriate.\nii. Derive an expression for the horizontal distance x\nΔ between the locations where Particle 2 enters and\nleaves the region. Express your answer in terms of M , Q, K2, B0, and physical constants, as appropriate.\n(c) On the following diagram in Figure 2, sketch and clearly label the paths of both particles 1 and 2 in the\nregion.\n(d) A uniform electric field is added to the region such that Particle 1 of negative charge Q\n− travels with constant\nspeed in a straight line through the region. Determine the direction of the electric field.",
     "answer": "",
     "points": 10,
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/physics-2/2024/2024_frq4_figure1_field.png",
+      "images/ap/physics-2/2024/2024_frq4_figure2_path_diagram.png"
+    ],
     "rubric_image_paths": [],
     "primary_unit": "U5",
     "unit": "U5",
@@ -2453,6 +2595,23 @@
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2024_FRQ_Official.pdf",
       "scoring_guideline_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2024_Scoring_Guidelines_Official.pdf",
       "structured_method": "physics2_official_frq_draft_v1"
+    },
+    "visual_asset_review": {
+      "status": "reviewed",
+      "image_sources": [
+        {
+          "path": "images/ap/physics-2/2024/2024_frq4_figure1_field.png",
+          "source": "AP_Physics_2_2024_FRQ_Official.pdf",
+          "page": 15,
+          "crop_type": "figure_or_response_grid"
+        },
+        {
+          "path": "images/ap/physics-2/2024/2024_frq4_figure2_path_diagram.png",
+          "source": "AP_Physics_2_2024_FRQ_Official.pdf",
+          "page": 16,
+          "crop_type": "figure_or_response_grid"
+        }
+      ]
     }
   },
   {

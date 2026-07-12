@@ -180,7 +180,7 @@ function ScorePage() {
               Mock Exam 成绩单
             </div>
             <div style={{ fontSize: '26px', color: '#6b7280' }}>
-              {subjectName} Practice Examination Report
+              {subjectName} 练习报告
             </div>
           </div>
 
@@ -428,7 +428,7 @@ function ScorePage() {
             翎英教育 LynkEdu · {subjectName} Mock Exam Report
           </div>
           <div style={{ fontSize: '18px', color: '#d1d5db', marginTop: '2px' }}>
-            Generated on {new Date().toLocaleString('zh-CN')} · For practice purposes only
+            生成时间：{new Date().toLocaleString('zh-CN')} · 仅供练习使用
           </div>
         </div>
       </PdfContainer>
