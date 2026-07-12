@@ -204,7 +204,7 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     errors.push({ page: 'frq-score', kind: 'missing_frq_background_tables', expectedScoreTables, actualTables: scorePage.tableCount })
   }
   await screenshot(client, `${subjectId}-frq-score.png`, artifacts)
-  await clickTextButton(client, /确认评分|查看成绩|Score/i)
+  await clickTextButton(client, /确认|查看|成绩|评分|Score|Report/i)
   await sleep(1000)
   const finalScore = await collectVisibleState(client)
   checkVisibleState('score-final', finalScore, errors, warnings)
