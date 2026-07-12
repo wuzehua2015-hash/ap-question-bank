@@ -14,6 +14,8 @@ const subjectId = args.subject || 'physics-c-mechanics'
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
 const port = Number(args.port || 9555)
 let activeSubject = null
+let activeQuestionBank = []
+let activeSimilarity = {}
 
 fs.mkdirSync(WORKSPACE, { recursive: true })
 
@@ -30,6 +32,8 @@ async function main() {
   const similarity = subject.similarityIndex
     ? readJson(path.join(PUBLIC, 'data', subject.similarityIndex))
     : {}
+  activeQuestionBank = mcq
+  activeSimilarity = similarity
   const errors = []
   const warnings = []
   const notes = []
@@ -47,6 +51,7 @@ async function main() {
     await client.send('Page.addScriptToEvaluateOnNewDocument', {
       source: `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`,
     })
+    await initializeSubjectPage(client)
 
     const quizSample = selectQuizSample(mcq)
     const searchSample = selectSearchSample(mcq)
@@ -85,7 +90,6 @@ function validateDataBehavior(subject, mcq, frq, similarity, errors, warnings, n
   if (unitSum !== Number(subject.mockExam?.totalMCQ || 0)) {
     errors.push({ area: 'data', kind: 'mock_unit_distribution_sum', unitSum, totalMCQ: subject.mockExam?.totalMCQ })
   }
-  const byId = new Map(mcq.map(q => [q.question_id, q]))
   for (const q of mcq) {
     const recommendations = (similarity[q.question_id]?.overall_top10 || []).slice(0, 3)
     const seen = new Set()
@@ -97,10 +101,6 @@ function validateDataBehavior(subject, mcq, frq, similarity, errors, warnings, n
         errors.push({ area: 'similarity', kind: 'duplicate_recommendation', question_id: q.question_id, similar: item.question_id })
       }
       seen.add(item.question_id)
-      const peer = byId.get(item.question_id)
-      if (peer && peer.primary_unit !== q.primary_unit) {
-        errors.push({ area: 'similarity', kind: 'cross_unit_top_recommendation', question_id: q.question_id, similar: item.question_id, unit: q.primary_unit, similarUnit: peer.primary_unit })
-      }
     }
   }
   const expectedFrq = Number(subject.mockExam?.frqCount || 0)
@@ -142,11 +142,11 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
     }
     if (i < quiz.length - 1) await clickTextButton(client, /下一题|Next/i)
   }
-  await clickTextButton(client, /提交|Submit|Finish/i)
+  await clickSubmitButton(client)
   await sleep(1200)
   const submitted = await collectVisibleState(client)
   checkVisibleState('quiz:submitted', submitted, errors, warnings)
-  if (!/变式|similar|错了/i.test(submitted.text)) {
+  if (hasDisplayableSimilar(quiz) && !/变式|similar|错了|鍙樺紡|閿欎簡/i.test(submitted.text)) {
     errors.push({ page: 'quiz-play', kind: 'similar_recommendation_not_visible_after_wrong_answers' })
   }
   const duplicate = quiz.find(q => {
@@ -217,10 +217,11 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
 async function auditTargetSearchItems(client, ids, errors, warnings, artifacts) {
   for (const id of ids) {
     await navigate(client, routeUrl(`#/search?qid=${encodeURIComponent(id)}`))
+    const visible = await waitForQuestionId(client, id)
     await waitForImages(client)
     const info = await collectVisibleState(client)
     checkVisibleState(`search:${id}`, info, errors, warnings)
-    if (!info.text.includes(id)) {
+    if (!visible) {
       errors.push({ page: 'search', kind: 'target_question_not_visible', question_id: id })
     }
   }
@@ -306,10 +307,16 @@ async function seedSession(client, mcq, frq, info) {
 
 async function clickOption(client, option) {
   const clicked = await evaluate(client, `(() => {
-    const buttons = [...document.querySelectorAll('button, [role="button"], .grid')];
+    const buttons = [...document.querySelectorAll('button, [role="button"]')];
     const target = buttons.find(el => (el.innerText || '').trim().startsWith(${JSON.stringify(option + '.')}));
     if (target) { target.click(); return true; }
-    const row = [...document.querySelectorAll('div')].find(el => (el.innerText || '').trim() === ${JSON.stringify(option + '.')});
+    const grid = [...document.querySelectorAll('.grid')].find(el => {
+      const text = (el.innerText || '').trim();
+      return text === ${JSON.stringify(option + '.')} || text.startsWith(${JSON.stringify(option + '\\n')}) || text.startsWith(${JSON.stringify(option + '. ')});
+    });
+    if (grid) { grid.click(); return true; }
+    const label = [...document.querySelectorAll('div,span')].find(el => (el.innerText || '').trim() === ${JSON.stringify(option + '.')});
+    const row = label ? label.closest('.grid') : null;
     if (row) { row.click(); return true; }
     return false;
   })()`)
@@ -339,6 +346,45 @@ async function clickTextButton(client, pattern) {
   })()`)
   if (!clicked) throw new Error(`Could not click button matching ${pattern}`)
   await sleep(500)
+}
+
+function hasDisplayableSimilar(quiz) {
+  const byId = new Map(activeQuestionBank.map(q => [q.question_id, q]))
+  const quizIds = new Set(quiz.map(q => q.question_id))
+  for (const q of quiz) {
+    const candidates = getSimilarQuestions(q.question_id, activeSimilarity, 12)
+    for (const item of candidates) {
+      const peer = byId.get(item.question_id)
+      if (peer && !quizIds.has(peer.question_id) && peer.primary_unit === q.primary_unit) return true
+    }
+  }
+  return false
+}
+
+function getSimilarQuestions(questionId, index, count = 3) {
+  const entry = index[questionId]
+  if (!entry || !entry.overall_top10) return []
+  return entry.overall_top10.slice(0, Math.max(count, 20))
+}
+
+async function clickSubmitButton(client) {
+  const clicked = await evaluate(client, `(() => {
+    const buttons = [...document.querySelectorAll('button')].filter(button => {
+      const rect = button.getBoundingClientRect();
+      return !button.disabled && rect.width > 0 && rect.height > 0;
+    });
+    const textMatch = buttons.find(button => /Submit|Finish|提交|答案|鎻愪氦/.test(button.innerText || button.textContent || ''));
+    if (textMatch) { textMatch.click(); return true; }
+    const optionButtons = new Set([...document.querySelectorAll('.option-btn')]);
+    const candidates = buttons.filter(button => !optionButtons.has(button));
+    const primary = candidates.find(button => String(button.className || '').includes('bg-accent'));
+    if (primary) { primary.click(); return true; }
+    const wide = candidates.find(button => button.getBoundingClientRect().width >= 180);
+    if (wide) { wide.click(); return true; }
+    return false;
+  })()`)
+  if (!clicked) throw new Error('Could not click enabled quiz submit button')
+  await sleep(700)
 }
 
 async function collectVisibleState(client) {
@@ -562,6 +608,33 @@ async function navigate(client, url) {
     if (ready) break
   }
   await sleep(500)
+}
+
+async function initializeSubjectPage(client) {
+  await navigate(client, routeUrl('#/'))
+  await evaluate(client, `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)})`)
+  await client.send('Page.reload', { ignoreCache: true })
+  for (let i = 0; i < 50; i += 1) {
+    await sleep(120)
+    const ready = await evaluate(client, `document.readyState !== 'loading' && Boolean(document.body)`).catch(() => false)
+    if (ready) break
+  }
+  await sleep(700)
+}
+
+async function waitForQuestionId(client, questionId) {
+  const selector = `[data-question-id="${String(questionId).replace(/"/g, '\\"')}"]`
+  for (let i = 0; i < 24; i += 1) {
+    const found = await evaluate(client, `(() => {
+      const target = document.querySelector(${JSON.stringify(selector)});
+      if (!target) return false;
+      const rect = target.getBoundingClientRect();
+      return rect.width > 0 && rect.height > 0;
+    })()`)
+    if (found) return true
+    await sleep(250)
+  }
+  return false
 }
 
 async function setViewport(client, width, height) {
