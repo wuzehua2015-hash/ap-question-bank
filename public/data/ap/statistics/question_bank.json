@@ -12014,8 +12014,10 @@
     },
     "answer": "C",
     "is_scored": true,
-    "primary_unit": "U1",
-    "secondary_units": [],
+    "primary_unit": "U9",
+    "secondary_units": [
+      "U2"
+    ],
     "topics": [
       {
         "code": "U1.2016",
@@ -12036,7 +12038,7 @@
         "Machine draft from text layer; page-image audit required before publishing."
       ]
     },
-    "pure_unit": true,
+    "pure_unit": false,
     "classification": {
       "review_status": "year_rule_reviewed",
       "confidence": "medium",
@@ -12048,7 +12050,8 @@
         "subjects/AP/Statistics/docs/source_pack.json"
       ],
       "classification_version": "ap_statistics_legacy_9_unit_v1"
-    }
+    },
+    "classification_reasoning": "Manual progression-gate fix: interpreting a confidence interval for the slope of a least-squares regression line requires U9 inference for slopes; U2 regression is prerequisite context."
   },
   {
     "question_id": "2016_Q29",
