@@ -178,6 +178,19 @@ function flattenBucketsToLimit(buckets, limit, { exact = false } = {}) {
   return selected.slice(0, exact ? limit : selected.length)
 }
 
+function filterBucketsByQuizScope(buckets, config) {
+  const allowedUnits = Array.isArray(config.allowedUnits)
+    ? new Set(config.allowedUnits.filter(Boolean))
+    : null
+  if (allowedUnits && allowedUnits.size > 0) {
+    return buckets.filter(bucket => bucket.every(q => allowedUnits.has(q.primary_unit)))
+  }
+  if (config.unit && config.unit !== 'all') {
+    return buckets.filter(bucket => bucket.some(q => q.primary_unit === config.unit))
+  }
+  return buckets
+}
+
 // Normalize option formats to an A-E keyed object.
 function normalizeOptionsToObject(options) {
   if (!options) return {}
@@ -274,10 +287,8 @@ export function generateQuiz(questions, config) {
   const playableQuestions = questions.filter(isPlayableMCQ)
   let buckets = makeQuestionBuckets(playableQuestions)
 
-  // Filter by primary unit without splitting official grouped questions.
-  if (config.unit && config.unit !== 'all') {
-    buckets = buckets.filter(bucket => bucket.some(q => q.primary_unit === config.unit))
-  }
+  // Filter by study scope without splitting official grouped questions.
+  buckets = filterBucketsByQuizScope(buckets, config)
 
   // Optionally exclude completed questions using subject-scoped history.
   const subject = config.subject || 'macro'
@@ -290,9 +301,7 @@ export function generateQuiz(questions, config) {
   let count = config.count || 10
   if (buckets.flat().length < count) {
     buckets = makeQuestionBuckets(playableQuestions)
-    if (config.unit && config.unit !== 'all') {
-      buckets = buckets.filter(bucket => bucket.some(q => q.primary_unit === config.unit))
-    }
+    buckets = filterBucketsByQuizScope(buckets, config)
     if (config.excludeDone) {
       buckets = buckets.filter(bucket => bucket.every(q => !doneIds.has(q.question_id)))
     }
@@ -301,9 +310,7 @@ export function generateQuiz(questions, config) {
   if (buckets.flat().length < count) {
     // Relax completed-question exclusion if needed.
     buckets = makeQuestionBuckets(playableQuestions)
-    if (config.unit && config.unit !== 'all') {
-      buckets = buckets.filter(bucket => bucket.some(q => q.primary_unit === config.unit))
-    }
+    buckets = filterBucketsByQuizScope(buckets, config)
   }
 
   // Shuffle grouped buckets and return contiguous official question groups.
@@ -320,6 +327,7 @@ export function generateQuiz(questions, config) {
     requestedCount: count,
     actualCount: quiz.length,
     unit: config.unit || 'all',
+    allowedUnits: Array.isArray(config.allowedUnits) ? config.allowedUnits : null,
   }
 }
 
