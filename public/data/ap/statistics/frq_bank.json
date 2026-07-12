@@ -241,7 +241,7 @@
     },
     "rubric_image_paths": [],
     "total_points": 4,
-    "primary_unit": "U3",
+    "primary_unit": "U7",
     "secondary_units": [],
     "topics": [
       {
@@ -273,7 +273,8 @@
       "classification_version": "ap_statistics_legacy_9_unit_v1"
     },
     "text": "Bone mineral density (BMD) is a measure of bone strength. In a study of regular physical exercise and BMD, a simple random sample of 59 women between ages 41 and 45 with no major health problems were classified into two groups based on exercise activity: 31 sedentary women and 28 walkers.\n\n(a) The table below shows the mean BMD and standard deviation for each group.\n\n| Exercise group | Number of women | Mean BMD | Standard deviation |\n|---|---:|---:|---:|\n| Sedentary | 31 | 1.151 | 0.068 |\n| Walkers | 28 | 1.209 | 0.067 |\n\nA t-test comparing the mean BMD levels showed a significant difference at the 0.01 level. Based on the results, can it be concluded that converting sedentary women into walkers would necessarily increase their BMD levels? Explain.\n\n(b) Researchers also asked each woman to report weekly milk consumption when she was age 20 through age 29. BMD levels were plotted against calcium intake from milk consumption for each group, with least squares regression lines shown below. What do the plots indicate about the relationship between BMD and calcium intake from milk consumption from age 20 through age 29?\n\n(c) The line graphs in part (b) suggest that sedentary women tend to have lower calcium intake from milk consumption than walkers do. Assuming this is true, describe the impact, if any, that it would have on the conclusions from t-tests comparing mean BMD levels for the two groups.",
-    "rubric_text": "Part (a) requires saying that a cause-and-effect conclusion is not justified because this was an observational study; sedentary women and walkers may differ in other factors related to BMD. Part (b) requires describing the positive association shown in the plots: higher calcium intake from milk consumption is associated with higher BMD levels. Part (c) requires using part (b) to explain confounding: if walkers had higher calcium intake and calcium intake is associated with BMD, then some or all of the BMD difference could be due to calcium intake rather than exercise. Each part is scored E/P/I and combined into a 4-point response."
+    "rubric_text": "Part (a) requires saying that a cause-and-effect conclusion is not justified because this was an observational study; sedentary women and walkers may differ in other factors related to BMD. Part (b) requires describing the positive association shown in the plots: higher calcium intake from milk consumption is associated with higher BMD levels. Part (c) requires using part (b) to explain confounding: if walkers had higher calcium intake and calcium intake is associated with BMD, then some or all of the BMD difference could be due to calcium intake rather than exercise. Each part is scored E/P/I and combined into a 4-point response.",
+    "classification_reasoning": "Manual progression-gate fix: Complete response uses a t-test comparing means and interpretation of mean differences with study design limits."
   },
   {
     "question_id": "2008_FRQ6",
