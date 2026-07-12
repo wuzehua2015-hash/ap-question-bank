@@ -2,6 +2,34 @@
   "standard": "Primary unit is the latest AP unit a student must complete to answer the item, including earlier prerequisites. These reviewed cases are blocking regression checks.",
   "cases": [
     {
+      "subject": "calculus-ab",
+      "file": "frq_bank.json",
+      "question_id": "2012_FRQ6",
+      "expected_primary_unit": "U6",
+      "reason": "Corrected: total distance and position require definite-integral accumulation; U6 is the latest required unit."
+    },
+    {
+      "subject": "calculus-bc",
+      "file": "frq_bank.json",
+      "question_id": "2012_FRQ4",
+      "expected_primary_unit": "U10",
+      "reason": "Corrected: the full FRQ includes Taylor polynomial work; U10 is the latest required BC unit."
+    },
+    {
+      "subject": "calculus-bc",
+      "file": "frq_bank.json",
+      "question_id": "2017_FRQ5",
+      "expected_primary_unit": "U10",
+      "reason": "Corrected: the full FRQ includes Taylor polynomial and Lagrange error bound; U10 is the latest required BC unit."
+    },
+    {
+      "subject": "calculus-bc",
+      "file": "question_bank.json",
+      "question_id": "2014_Q37",
+      "expected_primary_unit": "U4",
+      "reason": "Reviewed: the phrase circular cross section gives related-rates geometry; no integration-volume method is required."
+    },
+    {
       "subject": "chemistry",
       "file": "frq_bank.json",
       "question_id": "2015_FRQ2",
@@ -14,6 +42,27 @@
       "question_id": "2015_FRQ5",
       "expected_primary_unit": "U7",
       "reason": "Manual progression-gate fix: Complete response requires equilibrium pressure and Kp calculation for the reversible dimerization."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
+      "question_id": "2014_Q32",
+      "expected_primary_unit": "U5",
+      "reason": "Reviewed: the calculation uses reaction-rate stoichiometry; titration context does not require acid-base reasoning."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
+      "question_id": "2014_Q33",
+      "expected_primary_unit": "U4",
+      "reason": "Reviewed: solving requires oxidation-number/redox reasoning; titration context does not require acid-base reasoning."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
+      "question_id": "2014_Q41",
+      "expected_primary_unit": "U3",
+      "reason": "Reviewed: the answer depends on intermolecular forces and hydrogen bonding; enthalpy language is only the property being compared."
     },
     {
       "subject": "chemistry",
@@ -39,6 +88,13 @@
     {
       "subject": "chemistry",
       "file": "question_bank.json",
+      "question_id": "2016_Q37",
+      "expected_primary_unit": "U6",
+      "reason": "Reviewed: solving requires limiting reactant plus thermochemical heat released; complete-reaction wording is not equilibrium reasoning."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
       "question_id": "2016_Q44",
       "expected_primary_unit": "U6",
       "reason": "Manual progression-gate fix: Requires endothermic reaction and temperature-change reasoning."
@@ -46,9 +102,51 @@
     {
       "subject": "chemistry",
       "file": "question_bank.json",
+      "question_id": "2018_Q25",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: the solid-property identification is particle structure / bonding; thermal and electrical descriptors do not require thermodynamics."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
       "question_id": "2019_Q28",
       "expected_primary_unit": "U8",
       "reason": "Manual progression-gate fix: Requires acid-base titration equivalence-point stoichiometry."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
+      "question_id": "2019_Q30",
+      "expected_primary_unit": "U3",
+      "reason": "Reviewed: solving uses gas temperature, kinetic energy, and particle speed from molecular theory; equilibrium wording is contextual."
+    },
+    {
+      "subject": "chemistry",
+      "file": "question_bank.json",
+      "question_id": "2019_Q35",
+      "expected_primary_unit": "U4",
+      "reason": "Reviewed: solving identifies carbonate reaction species in a stoichiometry/reactions context; exothermic cooling is only experimental context."
+    },
+    {
+      "subject": "computer-science-principles",
+      "file": "question_bank.json",
+      "question_id": "2016_Q51",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: metadata analysis is a data-use item; computationally analyze wording does not require algorithm tracing."
+    },
+    {
+      "subject": "computer-science-principles",
+      "file": "question_bank.json",
+      "question_id": "2018_Q33",
+      "expected_primary_unit": "U3",
+      "reason": "Corrected: solving requires tracing procedure calls inside a loop to determine running time."
+    },
+    {
+      "subject": "computer-science-principles",
+      "file": "question_bank.json",
+      "question_id": "2018_Q69",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: combining two data formats tests what can be determined from available fields; no algorithm tracing is required."
     },
     {
       "subject": "macroeconomics",
@@ -123,6 +221,13 @@
     {
       "subject": "macroeconomics",
       "file": "frq_bank.json",
+      "question_id": "2018_FRQ3",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: the FRQ requires GDP, GDP deflator, and unemployment calculations; economic growth appears in the introductory list only."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "frq_bank.json",
       "question_id": "2019_FRQ1",
       "expected_primary_unit": "U6",
       "reason": "Manual progression-gate fix: Complete response requires monetary expansion, Phillips curve movement, currency value, and net exports."
@@ -150,6 +255,13 @@
     },
     {
       "subject": "macroeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2023_FRQ3_S2",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: duplicate set of the Pattiland FRQ requires indicators calculations, not long-run growth modeling."
+    },
+    {
+      "subject": "macroeconomics",
       "file": "question_bank.json",
       "question_id": "2012_Q22",
       "expected_primary_unit": "U3",
@@ -165,6 +277,13 @@
     {
       "subject": "macroeconomics",
       "file": "question_bank.json",
+      "question_id": "2012_Q47",
+      "expected_primary_unit": "U3",
+      "reason": "Reviewed: solving uses short-run aggregate supply shift from wages exceeding productivity; long-run growth policy is not required."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
       "question_id": "2012_Q53",
       "expected_primary_unit": "U4",
       "reason": "Manual progression-gate fix: Requires comparing discretionary fiscal policy with monetary policy and money supply effects; U4 is the latest required unit."
@@ -175,6 +294,13 @@
       "question_id": "2012_Q60",
       "expected_primary_unit": "U5",
       "reason": "Manual progression-gate fix: Requires long-run Phillips curve / no long-run inflation-unemployment tradeoff reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2014_Q02",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: inflation definition is an economic indicator concept; no AD-AS model is required."
     },
     {
       "subject": "macroeconomics",
@@ -214,9 +340,30 @@
     {
       "subject": "macroeconomics",
       "file": "question_bank.json",
+      "question_id": "2015_Q10",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: scarcity is a foundational economic concept; productive capacity wording does not require indicators."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2015_Q21",
+      "expected_primary_unit": "U3",
+      "reason": "Reviewed: fiscal policy in a recessionary gap without crowding out is a short-run AD-AS/multiplier item."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
       "question_id": "2015_Q32",
       "expected_primary_unit": "U5",
       "reason": "Manual progression-gate fix: Requires recognizing economic growth as a rightward LRAS shift."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2015_Q36",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: a PPC inward shift from labor-force loss is a foundational production-possibilities concept."
     },
     {
       "subject": "macroeconomics",
@@ -228,9 +375,23 @@
     {
       "subject": "macroeconomics",
       "file": "question_bank.json",
+      "question_id": "2015_Q44",
+      "expected_primary_unit": "U3",
+      "reason": "Reviewed: the item uses the spending multiplier to close a recessionary gap; crowding-out wording is an exclusion, not the tested concept."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
       "question_id": "2016_Q23",
       "expected_primary_unit": "U5",
       "reason": "Manual progression-gate fix: Requires long-run growth and human-capital/productivity reasoning."
+    },
+    {
+      "subject": "macroeconomics",
+      "file": "question_bank.json",
+      "question_id": "2016_Q32",
+      "expected_primary_unit": "U3",
+      "reason": "Reviewed: cost-push inflation is read from SRAS movement in AD-AS; LRAS appears only in the graph context."
     },
     {
       "subject": "macroeconomics",
@@ -368,9 +529,23 @@
     {
       "subject": "microeconomics",
       "file": "frq_bank.json",
+      "question_id": "2014_FRQ2",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: corn market price floor, elasticity, and surplus are supply-demand market applications."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "frq_bank.json",
       "question_id": "2016_FRQ2",
       "expected_primary_unit": "U2",
       "reason": "Manual progression-gate fix: Complete response requires marginal benefit, consumer surplus, demand shift, and income elasticity."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "frq_bank.json",
+      "question_id": "2018_FRQ3",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: milk price floor and related-good effects are supply-demand applications; firm cost curves are not required."
     },
     {
       "subject": "microeconomics",
@@ -385,6 +560,27 @@
       "question_id": "2013_Q51",
       "expected_primary_unit": "U4",
       "reason": "Manual progression-gate fix: Requires market-structure classification for monopolistic competition."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2014_Q46",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: despite perfect-competition wording, solving is a demand shift in a supply-demand market."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2014_Q54",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: solving asks what shifts market supply; firm cost/production curves are not required."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2016_Q03",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: the lemonade item uses input price shifting market supply; production-cost unit is not required."
     },
     {
       "subject": "microeconomics",
@@ -417,9 +613,30 @@
     {
       "subject": "microeconomics",
       "file": "question_bank.json",
+      "question_id": "2018_Q05",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: price floor program cost is supply-demand surplus geometry; firm behavior in perfect competition is not required."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
       "question_id": "2018_Q41",
       "expected_primary_unit": "U4",
       "reason": "Manual progression-gate fix: Requires monopolistic-competition advertising reasoning."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q46",
+      "expected_primary_unit": "U1",
+      "reason": "Content corrected: PPC movement tests tradeoff/opportunity cost within basic economic concepts."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q47",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: increase in price and quantity is solved by demand-side shift analysis in a supply-demand market."
     },
     {
       "subject": "microeconomics",
@@ -431,9 +648,23 @@
     {
       "subject": "microeconomics",
       "file": "question_bank.json",
+      "question_id": "2019_Q19",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: substitution effect is consumer-choice reasoning; the supply-demand-looking table text is unrelated residual content."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
       "question_id": "2019_Q30",
       "expected_primary_unit": "U6",
       "reason": "Manual progression-gate fix: Requires government role in preserving competitive market outcomes."
+    },
+    {
+      "subject": "microeconomics",
+      "file": "question_bank.json",
+      "question_id": "2019_Q46",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: private property rights incentives are foundational economic systems/incentives; market-demand words appear only in choices."
     },
     {
       "subject": "physics-c-e-m",
@@ -520,6 +751,20 @@
       "reason": "The item requires inference for regression slope, not only interpreting a scatterplot."
     },
     {
+      "subject": "statistics",
+      "file": "question_bank.json",
+      "question_id": "2017_Q15",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: the item asks how removing an outlier changes descriptive statistics; experiment wording is only context."
+    },
+    {
+      "subject": "statistics",
+      "file": "question_bank.json",
+      "question_id": "2017_Q31",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: the item interprets residual plot behavior for a fitted regression; random assignment is context, not the tested method."
+    },
+    {
       "subject": "us-government-politics",
       "file": "frq_bank.json",
       "question_id": "2005_FRQ1",
@@ -543,9 +788,44 @@
     {
       "subject": "us-government-politics",
       "file": "question_bank.json",
+      "question_id": "2005_Q01",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: judicial nominations are an institutions topic; party affiliation appears as the deciding factor but not as participation content."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2005_Q12",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: judiciary insulation is an institutions topic; public opinion is the pressure being compared."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
       "question_id": "2008_Q31",
       "expected_primary_unit": "U3",
       "reason": "Manual progression-gate fix: Requires civil-rights legislation ending Jim Crow laws."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2008_Q39",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: iron triangle is bureaucracy/Congress/interest-group institutional interaction; participation unit is not required."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2008_Q55",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: Articles of Confederation structure is a foundations concept; executive branch wording is part of a false statement."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2012_Q20",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: necessary and proper clause is constitutional foundations; Congress is the subject, not a branches-process item."
     },
     {
       "subject": "us-government-politics",
@@ -557,6 +837,27 @@
     {
       "subject": "us-government-politics",
       "file": "question_bank.json",
+      "question_id": "2013_Q29",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: court insulation from public opinion is an institutions design concept."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2013_Q46",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: enumerated power is a constitutional foundations concept; Congress wording is the example."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2013_Q48",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: checks and balances as an anti-tyranny constitutional design is foundations content."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
       "question_id": "2013_Q49",
       "expected_primary_unit": "U3",
       "reason": "Manual progression-gate fix: Requires civil-rights strategy through courts to secure legal protections."
@@ -564,9 +865,44 @@
     {
       "subject": "us-government-politics",
       "file": "question_bank.json",
+      "question_id": "2018_Q14",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: creative federalism is a federalism concept; presidential source context does not require institutions unit."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q15",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: question uses the same federalism/public education stimulus; presidential action wording is stimulus context."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q29",
+      "expected_primary_unit": "U4",
+      "reason": "Reviewed: exit poll definition belongs to polling/public opinion; election context does not require participation mechanics."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2018_Q47",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: the case pair illustrates federalism shifts; Supreme Court case names are evidence, not an institutions-unit requirement."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
       "question_id": "2018_Q49",
       "expected_primary_unit": "U2",
       "reason": "Manual progression-gate fix: Requires separation-of-powers interaction between the executive and legislative branches."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2020_Q02",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: United States v. Lopez is used for federalism/commerce power foundations."
     },
     {
       "subject": "us-government-politics",
@@ -585,9 +921,30 @@
     {
       "subject": "us-government-politics",
       "file": "question_bank.json",
+      "question_id": "2020_Q08",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: delegate vs trustee representation is Congress/institutions; polling is scenario evidence."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
       "question_id": "2020_Q20",
       "expected_primary_unit": "U3",
       "reason": "Manual progression-gate fix: Requires student free-speech civil-liberties case reasoning."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2020_Q24",
+      "expected_primary_unit": "U1",
+      "reason": "Reviewed: amendment process reflects constitutional design and checks; branch terms appear in the process context."
+    },
+    {
+      "subject": "us-government-politics",
+      "file": "question_bank.json",
+      "question_id": "2020_Q26",
+      "expected_primary_unit": "U2",
+      "reason": "Reviewed: Supreme Court appointment and Senate confirmation are institutions; ideological stakes are scenario context."
     },
     {
       "subject": "us-government-politics",

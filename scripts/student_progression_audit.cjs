@@ -76,8 +76,6 @@ function inspectSubjectProgression(subject) {
     : {}
   const units = subject.units || []
   const playable = mcq.filter(isPlayableMCQ)
-  const playableUnitIds = new Set(playable.map(q => q.primary_unit))
-  const practiceUnits = units.filter(unit => playableUnitIds.has(unit.id))
   const unitRank = new Map(units.map((unit, index) => [unit.id, index]))
   const buckets = makeQuestionBuckets(playable)
   const byId = new Map(mcq.map(q => [q.question_id, q]))
@@ -101,7 +99,7 @@ function inspectSubjectProgression(subject) {
   for (const bucket of buckets) {
     const bucketUnits = unique(bucket.map(q => q.primary_unit))
     if (bucket.length > 1 && bucketUnits.length > 1) {
-      warnings.push({
+      notes.push({
         subject_id: subject.id,
         area: 'grouped_questions',
         kind: 'mixed_unit_group_requires_strict_progression_filter',
@@ -112,8 +110,8 @@ function inspectSubjectProgression(subject) {
     }
   }
 
-  for (let unitIndex = 0; unitIndex < practiceUnits.length; unitIndex += 1) {
-    const currentUnitRank = unitRank.get(practiceUnits[unitIndex].id)
+  for (let unitIndex = 0; unitIndex < units.length; unitIndex += 1) {
+    const currentUnitRank = unitRank.get(units[unitIndex].id)
     const allowedUnits = units
       .filter(unit => unitRank.get(unit.id) <= currentUnitRank)
       .map(unit => unit.id)
@@ -121,7 +119,7 @@ function inspectSubjectProgression(subject) {
     const stageBuckets = buckets.filter(bucket => bucket.every(q => allowed.has(q.primary_unit)))
     const selected = flattenBucketsToLimit(stageBuckets, 10)
     const stage = {
-      through_unit: practiceUnits[unitIndex].id,
+      through_unit: units[unitIndex].id,
       allowed_units: allowedUnits,
       available_questions: stageBuckets.reduce((sum, bucket) => sum + bucket.length, 0),
       sampled_questions: selected.map(q => q.question_id),
@@ -144,7 +142,7 @@ function inspectSubjectProgression(subject) {
           subject_id: subject.id,
           area: 'student_progression',
           kind: 'sample_contains_unlearned_unit',
-          through_unit: practiceUnits[unitIndex].id,
+          through_unit: units[unitIndex].id,
           question_id: q.question_id,
           primary_unit: q.primary_unit,
         })
@@ -158,7 +156,7 @@ function inspectSubjectProgression(subject) {
           subject_id: subject.id,
           area: 'similar_recommendations',
           kind: 'display_recommendation_outside_progression_scope',
-          through_unit: practiceUnits[unitIndex].id,
+          through_unit: units[unitIndex].id,
           question_id: q.question_id,
           similar_question_id: displayPeer.question_id,
           similar_unit: displayPeer.primary_unit,
@@ -172,7 +170,6 @@ function inspectSubjectProgression(subject) {
     area: 'student_progression',
     kind: 'stage_summary',
     units: units.length,
-    practice_units: practiceUnits.length,
     playable_questions: playable.length,
     grouped_buckets: buckets.filter(bucket => bucket.length > 1).length,
   })

@@ -7,7 +7,7 @@ const SUBJECTS_PATH = path.join(ROOT, 'public', 'data', 'subjects.json')
 const CASES_PATH = path.join(__dirname, 'unit_progression_reviewed_cases.json')
 const WRITE_REPORT = process.argv.includes('--write-report')
 const FAIL_ON_FINDINGS = process.argv.includes('--fail-on-findings')
-const BLOCKING_ONLY = process.argv.includes('--blocking') || FAIL_ON_FINDINGS
+const BLOCKING_ONLY = process.argv.includes('--blocking')
 
 const OUT_DIR = path.join(ROOT, '.workspace', 'unit-progression-audit')
 const OUT_PATH = path.join(OUT_DIR, 'unit-progression-audit-report.json')
@@ -25,6 +25,12 @@ const advisoryRules = {
     late('U7', /\b(equilibrium constant|\bKp\b|\bKc\b|reaction quotient|\bQ\b|le chatelier|solubility product|\bKsp\b)\b/i, 'Equilibrium reasoning is U7.'),
     late('U8', /\b(acid-base|weak acid|strong acid|weak base|strong base|pH|pOH|buffer|titration|Ka\b|Kb\b|pKa|equivalence point)\b/i, 'Acid-base reasoning is U8.'),
     late('U9', /\b(gibbs|free energy|electrochemical|cell potential|galvanic|electrolysis|nernst|Faraday)\b/i, 'Applications of thermodynamics/electrochemistry are U9.'),
+  ],
+  'computer-science-principles': [
+    late('U2', /\b(data|database|metadata|binary|bits?|bytes?|hexadecimal|compression|lossless|lossy|encoding|visuali[sz]ation|model predicted|machine learning|large data set|data set|citizen science)\b/i, 'Data representation, data analysis, data compression, and data-driven prediction are U2.'),
+    late('U3', /\b(algorithm|procedure|code segment|loop|iteration|list|Boolean|condition|variable|simulation|random|robot|flowchart|linear search|binary search|sort|heuristic|undecidable|logic gate|abstraction)\b/i, 'Algorithms, programming constructs, simulations, and procedural abstraction are U3.'),
+    late('U4', /\b(Internet|network|packet|routing|router|protocol|DNS|IP address|domain|latency|bandwidth|cloud computing|encryption|cryptography|public key|symmetric encryption|fault[- ]tolerant|distributed)\b/i, 'Computer systems, networks, the Internet, and encryption are U4.'),
+    late('U5', /\b(digital divide|privacy|copyright|Creative Commons|intellectual property|legal|ethical|social|crowdsourcing|public access|licensed online|personal information|unethical|computer resources)\b/i, 'Impact of computing, privacy, legal, ethical, and societal effects are U5.'),
   ],
   macroeconomics: [
     late('U2', /\b(GDP|gross domestic product|unemployment|inflation|CPI|consumer price index|business cycle)\b/i, 'Economic indicators are U2 unless used only as outputs of a later model.'),
@@ -174,7 +180,8 @@ function auditQuestion(subject, file, q, validUnits, cases) {
     ))
   }
 
-  if (BLOCKING_ONLY) return findings
+  if (reviewed && normalizeUnitCode(reviewed.expected_primary_unit) === primary) return findings
+  if (BLOCKING_ONLY && !FAIL_ON_FINDINGS) return findings
 
   const pNum = unitNumber(primary)
   const text = stemText(q)
@@ -285,7 +292,7 @@ function main() {
     findings: findings.slice(0, 80),
   }, null, 2))
 
-  if (FAIL_ON_FINDINGS && blocking.length) process.exit(1)
+  if (FAIL_ON_FINDINGS && findings.length) process.exit(1)
 }
 
 main()
