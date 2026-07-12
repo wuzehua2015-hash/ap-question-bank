@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
+import { useAuth } from '../contexts/AuthContext'
 
 function Header() {
   const location = useLocation()
   const { currentSubject, mySubjects, setSubject } = useSubject()
+  const { isLoggedIn, isInternalStudent, user } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false)
   const [subjectDropdownOpen, setSubjectDropdownOpen] = useState(false)
 
@@ -18,6 +20,7 @@ function Header() {
     { path: '/mistakes', label: '错题本' },
     { path: '/history', label: '记录' },
     { path: '/settings', label: '设置' },
+    { path: isLoggedIn ? '/account' : '/login', label: isLoggedIn ? '账号' : '登录' },
   ]
 
   const isActive = (path) => location.pathname === path
@@ -77,6 +80,16 @@ function Header() {
               {item.label}
             </Link>
           ))}
+
+          {isLoggedIn && (
+            <Link
+              to="/account"
+              className="text-xs font-medium bg-white/10 text-white px-2.5 py-1 rounded-full hover:bg-white/15 transition-colors"
+              title={user?.email}
+            >
+              {isInternalStudent ? '内部学生' : '免费账号'}
+            </Link>
+          )}
         </nav>
 
         <button

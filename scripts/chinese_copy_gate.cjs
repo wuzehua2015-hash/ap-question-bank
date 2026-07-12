@@ -11,6 +11,8 @@ const files = [
   'src/components/QuestionDisplay.jsx',
   'src/components/FRQDisplay.jsx',
   'src/pages/HomePage.jsx',
+  'src/pages/LoginPage.jsx',
+  'src/pages/AccountPage.jsx',
   'src/pages/SettingsPage.jsx',
   'src/pages/QuizPlayer.jsx',
   'src/pages/FRQPlayer.jsx',
@@ -18,6 +20,7 @@ const files = [
   'src/pages/FRQScorePage.jsx',
   'src/pages/MockPdfPage.jsx',
   'src/pages/SearchPage.jsx',
+  'src/pages/MistakeBook.jsx',
   'src/pages/MistakeBookPage.jsx',
   'src/pages/HistoryPage.jsx',
 ].filter(rel => fs.existsSync(path.join(ROOT, rel)))
@@ -25,6 +28,8 @@ const files = [
 const requiredChineseFiles = [
   'src/components/Header.jsx',
   'src/pages/HomePage.jsx',
+  'src/pages/LoginPage.jsx',
+  'src/pages/AccountPage.jsx',
   'src/pages/SettingsPage.jsx',
   'src/pages/QuizPlayer.jsx',
   'src/pages/ScorePage.jsx',
@@ -33,7 +38,7 @@ const requiredChineseFiles = [
 
 const mojibakePattern = /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7\u9354\u68f0\u93bc\u7edb\u95ff\u59dd\u7035\u6d93\u93c4\u935a\u9a9e\u95c5\u5bb8\u6ccc\u6d60\u9429\u5997\u6ad2\u704f\uFFFD]/
 const chinesePattern = /[\u4e00-\u9fff]/
-const internalStatusPattern = /(已认证|认证|releaseStatus|visibility|certified|content-risk|internal|public launch|公开状态|内部状态)/
+const internalStatusPattern = /(已认证|认证|releaseStatus|visibility|certified|content-risk|public launch|公开状态|内部状态)/
 const englishCoreCopy = [
   /\bStart Mock Exam\b/,
   /\bDownload PDF\b/,
