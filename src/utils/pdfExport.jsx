@@ -142,6 +142,11 @@ async function exportSegmentedPdf(element, filename) {
 }
 
 async function renderSegmentCanvas(segment, element, exportState) {
+  const previousPaddingBottom = segment.style.paddingBottom
+  const previousOverflow = segment.style.overflow
+  segment.style.paddingBottom = `${readPx(previousPaddingBottom) + 18}px`
+  segment.style.overflow = 'visible'
+
   const renderTask = html2canvas(segment, {
       ...PDF_EXPORT_OPTIONS.html2canvas,
       backgroundColor: '#ffffff',
@@ -150,11 +155,21 @@ async function renderSegmentCanvas(segment, element, exportState) {
   const timeoutTask = new Promise(resolve => {
     window.setTimeout(() => resolve(null), 12000)
   })
-  const canvas = await Promise.race([renderTask, timeoutTask])
-  if (canvas) return canvas
+  try {
+    const canvas = await Promise.race([renderTask, timeoutTask])
+    if (canvas) return canvas
 
-  exportState.fallbacks = [...(exportState.fallbacks || []), exportState.current]
-  return renderTextFallbackCanvas(segment)
+    exportState.fallbacks = [...(exportState.fallbacks || []), exportState.current]
+    return renderTextFallbackCanvas(segment)
+  } finally {
+    segment.style.paddingBottom = previousPaddingBottom
+    segment.style.overflow = previousOverflow
+  }
+}
+
+function readPx(value) {
+  const parsed = Number.parseFloat(value)
+  return Number.isFinite(parsed) ? parsed : 0
 }
 
 function renderTextFallbackCanvas(segment) {
