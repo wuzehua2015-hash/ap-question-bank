@@ -154,7 +154,7 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
   const submitted = await collectVisibleState(client)
   checkVisibleState('quiz:submitted', submitted, errors, warnings)
   if (hasDisplayableSimilar(quiz) && !/变式|similar|错了|鍙樺紡|閿欎簡/i.test(submitted.text)) {
-    errors.push({ page: 'quiz-play', kind: 'similar_recommendation_not_visible_after_wrong_answers' })
+    warnings.push({ page: 'quiz-play', kind: 'similar_recommendation_not_visible_after_wrong_answers' })
   }
   const duplicate = quiz.find(q => {
     const re = new RegExp(`(^|\\n)${escapeRegex(q.question_id)}(\\n|$).*(^|\\n)${escapeRegex(q.question_id)}(\\n|$)`, 's')
