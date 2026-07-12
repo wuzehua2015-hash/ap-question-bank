@@ -1,11 +1,12 @@
-import { useState, useEffect, useLayoutEffect, useMemo, useCallback } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useEffect, useLayoutEffect, useMemo, useCallback, useRef } from 'react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import QuestionCard from '../components/QuestionCard'
 import QuizNavigator from '../components/QuizNavigator'
 import Timer from '../components/Timer'
 import { MathText } from '../components/MathText'
 import { UNITS, loadMCQBank, loadSimilarityIndex, getSimilarQuestions, isAnswerCorrect } from '../utils/questionBank'
-import { getCurrentQuiz, getQuizConfig, getQuizInfo, setMCQAnswers, startSimilarQuiz } from '../utils/quizSession'
+import { getCurrentQuiz, getQuizConfig, getQuizInfo, getMCQAnswers, setMCQAnswers, startSimilarQuiz } from '../utils/quizSession'
+import { useAuth } from '../contexts/AuthContext'
 import {
   getDoneQuestions, setDoneQuestions,
   getWrongQuestions, setWrongQuestions,
@@ -15,6 +16,9 @@ import {
 
 function QuizPlayer() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const { isLoggedIn } = useAuth()
+  const autoSubmitRef = useRef(false)
   const [quiz, setQuiz] = useState([])
   const [answers, setAnswers] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -35,6 +39,7 @@ function QuizPlayer() {
     }
     setQuiz(parsed)
     setQuizInfo(parsedInfo)
+    setAnswers(getMCQAnswers() || {})
     setSubject(config?.subject || 'macro')
     setPhase('playing')
   }, [navigate])
@@ -73,6 +78,12 @@ function QuizPlayer() {
           finalAnswers[q.question_id] = ''
         }
       })
+    }
+
+    if (!isLoggedIn && !(quizInfo && quizInfo.isMock)) {
+      setMCQAnswers(finalAnswers)
+      navigate(`/login?returnTo=${encodeURIComponent('/play?showResults=1')}&reason=quiz-result`)
+      return
     }
 
     let correct = 0
@@ -144,7 +155,21 @@ function QuizPlayer() {
     } else {
       setPhase('submitted')
     }
-  }, [quiz, answers, quizInfo, subject])
+  }, [quiz, answers, quizInfo, subject, isLoggedIn, navigate])
+
+  useEffect(() => {
+    if (autoSubmitRef.current) return
+    if (phase !== 'playing') return
+    if (searchParams.get('showResults') !== '1') return
+    if (!isLoggedIn) return
+    if (!quiz.length) return
+    const savedAnswers = getMCQAnswers() || {}
+    const hasEnoughAnswers = quiz.every(q => savedAnswers[q.question_id] !== undefined)
+    if (!hasEnoughAnswers) return
+    autoSubmitRef.current = true
+    setAnswers(savedAnswers)
+    submitQuiz(false)
+  }, [isLoggedIn, phase, quiz, searchParams, submitQuiz])
 
   const handleTimerTimeout = useCallback(() => {
     submitQuiz(true)
@@ -347,7 +372,7 @@ function QuizPlayer() {
                 : 'bg-gray-300 text-gray-500 cursor-not-allowed'
             }`}
           >
-            {allAnswered ? '提交全部答案' : `还有 ${quiz.length - answeredCount} 题未答`}
+            {allAnswered ? (isLoggedIn || quizInfo?.isMock ? '提交全部答案' : '登录 / 注册后查看答案') : `还有 ${quiz.length - answeredCount} 题未答`}
           </button>
         </div>
       )}
