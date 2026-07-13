@@ -30,7 +30,7 @@ Hard rule: do not deploy if `npm run build` fails. Direct Pages deployment must 
 ## Git State
 
 - Working branch: `prod-mock-pdf-fix`
-- Latest local commit deployed to Pages: `064c565 Refine subject management flow`
+- Latest local code deployed to Pages: subject-management flow refinement, committed locally as `Refine subject management flow`.
 - GitHub push status at last update: failed due local network reset while reaching GitHub; retry required when network recovers.
 
 ## Product Access Tiers
