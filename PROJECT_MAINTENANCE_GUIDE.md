@@ -44,6 +44,16 @@ npx wrangler pages deploy dist --project-name lynkedu-ap-question-bank --branch 
 - Biology 和部分科目的题量偏少，后续需要做题库扩容/补题。
 - 每次新增科目或新增题包后，必须重新评估各单元题量、mock 抽题容量和重复率，不得只看总题量。
 
+扩容硬规则：
+- 扩容必须走该学科既有 `RISK_DISCOVERY.md`、`RENDERING_STRATEGY.md`、source pack、pipeline、validator、学生端验收流程，不允许直接手改 Web JSON 凑数量。
+- 每个新增来源必须先确认来源类型、答案/评分材料、扫描或文本质量、题型结构、版权/发布范围、与当前考试结构的关系。
+- 新增题目必须按“学生学到哪个单元才能作答”原则重新做单元分类，不能只用关键词匹配。
+- 扩容优先补低容量单元，而不是只提高总题数；每次发布前必须重新跑单元容量统计。
+- 学科专属渲染规则必须继续生效：CSA 代码块、Biology 图表/实验、Physics 图像/公式、APES 数据表、CSP 算法/数据表等都不能退回到纯文本或宽泛截图。
+- 新增 FRQ 必须有完整评分材料；CSA FRQ 还必须有 Java reference solution、solution outline 和 part-level scoring rows。
+- 新增 MCQ 必须有完整选项和正确答案；任何扫描/OCR 来源必须经过结构化复原和学生端可答性检查。
+- 扩容后必须执行：数据验证、图片/表格/分组/学科风险 gate、学生进度与单元分布检查、真实浏览器抽样、PDF/Mock 路径抽样、SSoT 更新、稳定推送。
+
 ## 2026-07-13 当前学生账号系统
 
 学生账号系统不再以“每次邮箱验证码登录”为主流程：
