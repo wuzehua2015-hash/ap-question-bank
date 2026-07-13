@@ -21,6 +21,7 @@ import LoginPage from './pages/LoginPage'
 import AccountPage from './pages/AccountPage'
 import RegisterPage from './pages/RegisterPage'
 import ResetPasswordPage from './pages/ResetPasswordPage'
+import RequireSubject from './components/RequireSubject'
 
 import { SubjectProvider } from './contexts/SubjectContext'
 import { AuthProvider } from './contexts/AuthContext'
@@ -34,14 +35,14 @@ function App() {
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/quiz" element={<QuizSetup />} />
-              <Route path="/exam" element={<ExamSetup />} />
+              <Route path="/quiz" element={<RequireSubject><QuizSetup /></RequireSubject>} />
+              <Route path="/exam" element={<RequireSubject><ExamSetup /></RequireSubject>} />
               <Route path="/play" element={<QuizPlayer />} />
               <Route path="/frq" element={<FRQPlayer />} />
               <Route path="/frq-score" element={<FRQScorePage />} />
-              <Route path="/search" element={<SearchPage />} />
-              <Route path="/mistakes" element={<MistakeBook />} />
-              <Route path="/history" element={<HistoryPage />} />
+              <Route path="/search" element={<RequireSubject><SearchPage /></RequireSubject>} />
+              <Route path="/mistakes" element={<RequireSubject><MistakeBook /></RequireSubject>} />
+              <Route path="/history" element={<RequireSubject><HistoryPage /></RequireSubject>} />
               <Route path="/settings" element={<SettingsPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />

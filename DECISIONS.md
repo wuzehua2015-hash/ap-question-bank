@@ -65,3 +65,11 @@ Home may use existing local/account progress data to adjust copy and the seconda
 ## 2026-07-13: Account Page Layout
 
 Login, registration, and password recovery should use a quiet single-column account form pattern. Do not add side panels such as `账号能保存什么` or benefits cards that feel like product-copy patches. Account pages should focus on the immediate task, with only concise helper text and route links.
+
+## 2026-07-13: Subject Management State Contract
+
+`mySubjects` is the student's learning scope. Home and the header switcher must show only selected subjects, while the full catalog lives in Settings.
+
+Subject-dependent pages must not silently load a default subject when `mySubjects` is empty. They must show a clear choose-subject prompt. This applies to direct URL entry as well as header navigation.
+
+Adding a subject sets it as current/default. Once at least one subject is selected, the UI blocks removing the final selected subject. If the current/default subject is removed while other selected subjects remain, both `currentSubject` and `defaultSubject` must fall back to a remaining selected subject in the same state update.

@@ -1,3 +1,4 @@
+import { useMemo, useState } from 'react'
 import { useSubject } from '../contexts/SubjectContext'
 
 function SettingsPage() {
@@ -8,108 +9,112 @@ function SettingsPage() {
     updateMySubjects,
     setDefaultStudySubject,
   } = useSubject()
+  const [notice, setNotice] = useState('')
 
-  const selected = new Set(mySubjectIds)
+  const selected = useMemo(() => new Set(mySubjectIds), [mySubjectIds])
+  const selectedSubjects = availableSubjects.filter(subject => selected.has(subject.id))
 
-  const toggleSubject = (subjectId) => {
-    if (selected.has(subjectId)) {
-      updateMySubjects(mySubjectIds.filter(id => id !== subjectId))
-    } else {
-      updateMySubjects([...mySubjectIds, subjectId])
+  const addSubject = (subjectId) => {
+    setNotice('')
+    updateMySubjects([...mySubjectIds, subjectId])
+    setDefaultStudySubject(subjectId)
+  }
+
+  const removeSubject = (subjectId) => {
+    if (mySubjectIds.length <= 1) {
+      setNotice('至少保留一个学习科目。')
+      return
     }
+    setNotice('')
+    updateMySubjects(mySubjectIds.filter(id => id !== subjectId))
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold text-brand mb-2">科目设置</h1>
-        <p className="text-text-muted">
-          选择正在学习的科目。首页和顶部科目切换器只展示你已选择的科目。
+    <div className="max-w-5xl mx-auto px-5 py-12 sm:py-16">
+      <div className="mb-10">
+        <p className="mb-3 text-sm text-text-muted">科目管理</p>
+        <h1 className="text-3xl font-bold tracking-tight text-brand">选择学习科目</h1>
+        <p className="mt-3 max-w-2xl text-text-muted">
+          首页和顶部切换器只展示这里选择的科目。当前科目会用于练习、模考、错题和记录。
         </p>
       </div>
 
-      <section className="mb-10">
-        <h2 className="text-lg font-bold text-text mb-4">我的科目</h2>
-        {mySubjectIds.length === 0 ? (
-          <div className="bg-surface border border-border rounded-lg p-5 text-text-muted">
-            还没有选择科目。
-          </div>
+      {notice && (
+        <div className="mb-6 rounded-md border border-yellow-200 bg-yellow-50 px-4 py-3 text-sm text-yellow-800">
+          {notice}
+        </div>
+      )}
+
+      <section className="mb-10 border-b border-border pb-8">
+        <div className="mb-4 flex items-center justify-between gap-4">
+          <h2 className="text-base font-semibold text-brand">我的科目</h2>
+          <span className="text-sm text-text-muted">{selectedSubjects.length} 个</span>
+        </div>
+
+        {selectedSubjects.length === 0 ? (
+          <div className="text-text-muted">先从下方添加一个科目。</div>
         ) : (
-          <div className="flex flex-wrap gap-2">
-            {availableSubjects
-              .filter(subject => selected.has(subject.id))
-              .map(subject => (
-                <button
-                  key={subject.id}
-                  onClick={() => setDefaultStudySubject(subject.id)}
-                  className={`border px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    subject.id === currentSubject
-                      ? 'border-accent bg-accent/10 text-accent'
-                      : 'border-border bg-surface hover:bg-gray-50 text-text'
-                  }`}
-                >
-                  {subject.shortName || subject.name}
-                </button>
-              ))}
+          <div className="divide-y divide-border">
+            {selectedSubjects.map(subject => {
+              const isCurrent = subject.id === currentSubject
+              return (
+                <div key={subject.id} className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
+                  <button
+                    type="button"
+                    onClick={() => setDefaultStudySubject(subject.id)}
+                    className="text-left"
+                  >
+                    <span className={`block font-semibold ${isCurrent ? 'text-brand' : 'text-text'}`}>{subject.name}</span>
+                    <span className="mt-1 block text-sm text-text-muted">{isCurrent ? '当前科目' : '点击设为当前'}</span>
+                  </button>
+                  <div className="flex gap-4 text-sm">
+                    {!isCurrent && (
+                      <button type="button" onClick={() => setDefaultStudySubject(subject.id)} className="text-brand hover:underline">
+                        设为当前
+                      </button>
+                    )}
+                    <button type="button" onClick={() => removeSubject(subject.id)} className="text-text-muted hover:text-brand">
+                      移除
+                    </button>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         )}
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-text mb-4">可选科目</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mb-4 flex items-center justify-between gap-4">
+          <h2 className="text-base font-semibold text-brand">可添加科目</h2>
+          <span className="text-sm text-text-muted">{availableSubjects.length} 科</span>
+        </div>
+
+        <div className="divide-y divide-border">
           {availableSubjects.map(subject => {
             const isSelected = selected.has(subject.id)
             const isCurrent = subject.id === currentSubject
             return (
-              <div
-                key={subject.id}
-                className={`bg-surface rounded-lg p-5 shadow-sm border transition-all ${
-                  isSelected ? 'border-accent ring-1 ring-accent/20' : 'border-border'
-                }`}
-              >
-                <div className="flex items-start justify-between gap-3 mb-4">
-                  <div>
-                    <h3 className="text-base font-bold text-text leading-snug">{subject.name}</h3>
-                    <p className="text-xs text-text-muted mt-1">{subject.shortName || subject.id}</p>
+              <div key={subject.id} className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <div className="font-semibold text-text">{subject.name}</div>
+                  <div className="mt-1 text-sm text-text-muted">
+                    {subject.mockExam?.totalMCQ || 0} MCQ 模考{subject.hasFRQ ? ` · ${subject.mockExam?.frqCount || 0} FRQ 模考` : ''}
                   </div>
-                  <input
-                    type="checkbox"
-                    checked={isSelected}
-                    onChange={() => toggleSubject(subject.id)}
-                    className="mt-1 h-4 w-4 accent-[var(--color-accent)]"
-                    aria-label={`选择 ${subject.name}`}
-                  />
                 </div>
-
-                <div className="flex gap-4 mb-4 text-sm text-text-muted">
-                  <div>{subject.mockExam?.totalMCQ || 0} MCQ 模考</div>
-                  {subject.hasFRQ && <div>{subject.mockExam?.frqCount || 0} FRQ 模考</div>}
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  <button
-                    type="button"
-                    onClick={() => toggleSubject(subject.id)}
-                    className={`text-sm font-medium px-4 py-2 rounded-lg transition-colors ${
-                      isSelected
-                        ? 'bg-gray-100 hover:bg-gray-200 text-text'
-                        : 'bg-accent hover:bg-accent-light text-white'
-                    }`}
-                  >
-                    {isSelected ? '移除' : '添加'}
-                  </button>
-                  {isSelected && (
-                    <button
-                      type="button"
-                      onClick={() => setDefaultStudySubject(subject.id)}
-                      className={`text-sm font-medium px-4 py-2 rounded-lg border transition-colors ${
-                        isCurrent
-                          ? 'border-accent bg-accent/10 text-accent'
-                          : 'border-border bg-surface hover:bg-gray-50 text-text'
-                      }`}
-                    >
-                      {isCurrent ? '当前' : '设为当前'}
+                <div className="flex gap-4 text-sm">
+                  {isSelected ? (
+                    <>
+                      <span className={isCurrent ? 'font-medium text-brand' : 'text-text-muted'}>{isCurrent ? '当前' : '已添加'}</span>
+                      {!isCurrent && (
+                        <button type="button" onClick={() => setDefaultStudySubject(subject.id)} className="text-brand hover:underline">
+                          设为当前
+                        </button>
+                      )}
+                    </>
+                  ) : (
+                    <button type="button" onClick={() => addSubject(subject.id)} className="text-accent hover:underline">
+                      添加
                     </button>
                   )}
                 </div>
