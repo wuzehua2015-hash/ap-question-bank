@@ -9,7 +9,7 @@ function ExamSetup() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const { currentSubject, setSubject } = useSubject()
-  const { isLoggedIn } = useAuth()
+  const { isLoggedIn, isInternalStudent } = useAuth()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [preview, setPreview] = useState(null)
@@ -67,6 +67,10 @@ function ExamSetup() {
 
   const exportPdf = () => {
     if (!preview) return
+    if (!isInternalStudent) {
+      navigate(isLoggedIn ? '/account' : `/login?returnTo=${encodeURIComponent('/exam')}&reason=lynk-student`)
+      return
+    }
     startMockExam(preview)
     navigate('/mock-pdf')
   }
@@ -122,7 +126,7 @@ function ExamSetup() {
                 onClick={exportPdf}
                 className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors"
               >
-                导出 PDF
+                {isInternalStudent ? '导出 PDF' : '翎英学员下载 PDF'}
               </button>
             </div>
             <button

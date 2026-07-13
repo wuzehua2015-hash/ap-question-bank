@@ -12,6 +12,7 @@ import {
   mergeProgressSnapshot,
   STORAGE_SYNC_EVENT,
 } from '../utils/storage'
+import { hasLynkStudentAccess } from '../utils/featureAccess'
 
 const AuthContext = createContext({
   status: 'loading',
@@ -20,6 +21,7 @@ const AuthContext = createContext({
   accountLevel: 'visitor',
   isLoggedIn: false,
   isInternalStudent: false,
+  isLynkStudent: false,
   requestLoginCode: async () => {},
   verifyLoginCode: async () => {},
   logout: () => {},
@@ -113,7 +115,7 @@ export function AuthProvider({ children }) {
   }, [])
 
   const accountLevel = user?.account_level || (user ? 'free' : 'visitor')
-  const isInternalStudent = accountLevel === 'internal' || entitlements.some(item => item.feature_key === 'full_access')
+  const isInternalStudent = hasLynkStudentAccess({ accountLevel, entitlements })
 
   const value = useMemo(() => ({
     status,
@@ -122,6 +124,7 @@ export function AuthProvider({ children }) {
     accountLevel,
     isLoggedIn: Boolean(user),
     isInternalStudent,
+    isLynkStudent: isInternalStudent,
     requestLoginCode,
     verifyLoginCode,
     logout,

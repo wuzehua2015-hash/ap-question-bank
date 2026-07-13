@@ -37,7 +37,7 @@ function AccountPage() {
     <div className="max-w-5xl mx-auto px-4 py-8 sm:py-12">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-brand mb-2">我的账号</h1>
-        <p className="text-text-muted">学习记录会自动同步。内部学生和付费用户会显示完整权益。</p>
+        <p className="text-text-muted">学习记录会自动同步。翎英学员会显示完整题库工具权益。</p>
       </div>
 
       <section className="bg-surface border border-border rounded-lg p-6 mb-6">
@@ -102,7 +102,7 @@ function StatCard({ label, value }) {
 }
 
 function accountLevelLabel(level, isInternalStudent) {
-  if (isInternalStudent) return '内部学生 / 付费用户'
+  if (isInternalStudent) return '翎英学员'
   if (level === 'free') return '免费账号'
   if (level === 'admin') return '管理员'
   return '游客'

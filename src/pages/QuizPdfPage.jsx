@@ -4,6 +4,7 @@ import QuestionDisplay from '../components/QuestionDisplay'
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
+import PremiumGate from '../components/PremiumGate'
 
 const UNIT_NAMES = {
   U1: 'Unit 1',
@@ -61,6 +62,7 @@ function QuizPdfPage() {
   const totalCount = quiz.length
 
   return (
+    <PremiumGate title="Quiz PDF 下载">
     <div className="max-w-4xl mx-auto px-4 py-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-brand">导出 PDF</h1>
@@ -162,6 +164,7 @@ function QuizPdfPage() {
         </div>
       </PdfContainer>
     </div>
+    </PremiumGate>
   )
 }
 

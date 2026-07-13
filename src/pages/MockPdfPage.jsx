@@ -6,6 +6,7 @@ import { BREAK_GUARD } from '../utils/pdfBreakGuard'
 import QuestionDisplay from '../components/QuestionDisplay'
 import FRQDisplay, { RubricDisplay } from '../components/FRQDisplay'
 import { useSubject } from '../contexts/SubjectContext'
+import PremiumGate from '../components/PremiumGate'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -112,6 +113,7 @@ function MockPdfPage() {
   const frqMinutes = formatMinutes(quizInfo?.frqTimeLimit)
 
   return (
+    <PremiumGate title="Mock Exam PDF 下载">
     <div className="max-w-4xl mx-auto px-4 py-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-brand">模考 PDF 导出</h1>
@@ -307,6 +309,7 @@ function MockPdfPage() {
         ))}
       </PdfContainer>
     </div>
+    </PremiumGate>
   )
 }
 

@@ -141,6 +141,7 @@ function reasonMessage(reason) {
   const messages = {
     'quiz-result': '登录或注册后即可回到本次练习，查看答案、错题和相似题推荐。',
     'mock-exam': '生成 Mock Exam 前需要登录，以便保存考试记录并保持使用体验稳定。',
+    'lynk-student': '该功能面向翎英学员开放。请先登录账号；如需开通学员权限，请联系翎英教育。',
   }
   return messages[reason] || '登录或注册后即可继续刚才的操作。'
 }

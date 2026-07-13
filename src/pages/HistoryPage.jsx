@@ -4,8 +4,17 @@ import { loadMCQBank, getSubjectUnits } from '../utils/questionBank'
 import {
   getQuizHistory, getQuestionHistory, clearSubjectData,
 } from '../utils/storage'
+import PremiumGate from '../components/PremiumGate'
 
 function HistoryPage() {
+  return (
+    <PremiumGate title="学习记录">
+      <HistoryPageContent />
+    </PremiumGate>
+  )
+}
+
+function HistoryPageContent() {
   const { currentSubject } = useSubject()
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(true)

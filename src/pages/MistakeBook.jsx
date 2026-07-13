@@ -8,10 +8,19 @@ import {
 import { startWrongQuiz, startCustomQuiz } from '../utils/quizSession'
 import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
 import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
+import PremiumGate from '../components/PremiumGate'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
 function MistakeBook() {
+  return (
+    <PremiumGate title="错题本">
+      <MistakeBookContent />
+    </PremiumGate>
+  )
+}
+
+function MistakeBookContent() {
   const navigate = useNavigate()
   const { currentSubject } = useSubject()
   const [questions, setQuestions] = useState([])
