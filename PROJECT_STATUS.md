@@ -7,9 +7,9 @@ Last updated: 2026-07-13
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Pages production deployment: `03e773eb-034b-4d11-b256-4095c77a35b1`
+- Latest Pages deployment URL observed: `https://b89a6272.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
-  - JS: `/assets/index-BfOc4GGt.js`
+  - JS: `/assets/index-CdPMt8hY.js`
   - CSS: `/assets/index-BgNSD0mB.css`
 - Current Vite base for custom root-domain deployment: `base: '/'`
 - Router: `HashRouter`
@@ -30,8 +30,8 @@ Hard rule: do not deploy if `npm run build` fails. Direct Pages deployment must 
 ## Git State
 
 - Working branch: `prod-mock-pdf-fix`
-- Latest local commit deployed to Pages: `77d2fa5 Gate premium tools and upgrade search workbench`
-- GitHub push status at last update: failed due local network inability to reach `github.com:443`; retry required when network recovers.
+- Latest local commit deployed to Pages: `4984408 Normalize registered member copy`
+- GitHub push status at last update: failed due local network reset while reaching GitHub; retry required when network recovers.
 
 ## Product Access Tiers
 

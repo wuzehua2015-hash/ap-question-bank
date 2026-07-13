@@ -34,4 +34,9 @@
 - Added question-set storage into the progress snapshot sync path.
 - Verified locally through `npm run build`.
 - Verified production search page in real browser: visitor sees `翎英学员` access gate.
-- GitHub push of local commit `77d2fa5` failed because the local machine could not connect to `github.com:443`; production was still updated through Cloudflare Pages direct deploy.
+- 2026-07-13 access-tier correction deployed to Cloudflare Pages:
+  - local commits: `1e21049 Refine student access tiers`, `4984408 Normalize registered member copy`;
+  - latest Pages deployment URL observed: `https://b89a6272.lynkedu-ap-question-bank.pages.dev`;
+  - production `lynkedu.com` bundle observed: `/assets/index-CdPMt8hY.js`;
+  - real-browser checks passed for visitor `/mistakes` login gate and visitor `/search` `翎英学员` gate with `注册会员` copy.
+- GitHub push of local commits failed because the local machine hit a GitHub connection reset; production was still updated through Cloudflare Pages direct deploy.
