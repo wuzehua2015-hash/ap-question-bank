@@ -44,40 +44,65 @@ function ResetPasswordPage() {
   }
 
   return (
-    <div className="max-w-md mx-auto px-4 py-10">
-      <section className="bg-surface border border-border rounded-lg p-6 shadow-sm">
-        <h1 className="text-2xl font-bold text-brand mb-2">找回密码</h1>
-        <p className="text-sm text-text-muted mb-6">通过邮箱验证码设置新密码。重置后其他设备会退出登录。</p>
+    <div className="max-w-md mx-auto px-5 py-14 sm:py-20">
+      <div className="mb-8">
+        <Link to="/login" className="text-sm font-medium text-text-muted hover:text-brand">返回登录</Link>
+        <h1 className="mt-8 text-3xl font-bold tracking-tight text-brand">找回密码</h1>
+        <p className="mt-3 text-sm leading-6 text-text-muted">通过邮箱验证码设置新密码。</p>
+      </div>
+      <section className="rounded-lg border border-border bg-white p-6 shadow-sm">
         {step === 'email' ? (
           <form onSubmit={sendCode} className="space-y-4">
-            <div>
-              <label className="block text-sm font-semibold text-brand mb-2">邮箱</label>
-              <input type="email" value={email} onChange={event => setEmail(event.target.value)} className="w-full p-3 border border-border rounded-lg bg-bg" required />
-            </div>
-            <button disabled={loading || !email.trim()} className="w-full bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg disabled:opacity-50">
-              {loading ? '发送中...' : '发送重置验证码'}
+            <Field label="邮箱">
+              <input
+                type="email"
+                value={email}
+                onChange={event => setEmail(event.target.value)}
+                className="w-full rounded-md border border-border bg-bg px-3 py-3"
+                required
+              />
+            </Field>
+            <button disabled={loading || !email.trim()} className="w-full rounded-md bg-brand py-3 text-sm font-semibold text-white hover:bg-brand-light disabled:opacity-50">
+              {loading ? '发送中...' : '发送验证码'}
             </button>
           </form>
         ) : (
           <form onSubmit={submitReset} className="space-y-4">
-            <div>
-              <label className="block text-sm font-semibold text-brand mb-2">验证码</label>
-              <input value={code} onChange={event => setCode(event.target.value)} className="w-full p-3 border border-border rounded-lg bg-bg tracking-widest" required />
-            </div>
-            <div>
-              <label className="block text-sm font-semibold text-brand mb-2">新密码</label>
-              <input type="password" value={password} onChange={event => setPassword(event.target.value)} className="w-full p-3 border border-border rounded-lg bg-bg" required />
-            </div>
-            <button disabled={loading || code.trim().length < 4 || password.length < 8} className="w-full bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg disabled:opacity-50">
+            <Field label="验证码">
+              <input
+                value={code}
+                onChange={event => setCode(event.target.value)}
+                className="w-full rounded-md border border-border bg-bg px-3 py-3 tracking-widest"
+                required
+              />
+            </Field>
+            <Field label="新密码">
+              <input
+                type="password"
+                value={password}
+                onChange={event => setPassword(event.target.value)}
+                className="w-full rounded-md border border-border bg-bg px-3 py-3"
+                required
+              />
+            </Field>
+            <button disabled={loading || code.trim().length < 4 || password.length < 8} className="w-full rounded-md bg-brand py-3 text-sm font-semibold text-white hover:bg-brand-light disabled:opacity-50">
               {loading ? '保存中...' : '设置新密码'}
             </button>
           </form>
         )}
-        <Link to="/login" className="block mt-4 text-sm text-brand hover:underline">返回登录</Link>
-        {message && <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">{message}</div>}
-        {error && <div className="mt-4 p-3 bg-red-50 border border-error rounded-lg text-error text-sm">{error}</div>}
+        {message && <div className="mt-4 rounded-md border border-green-200 bg-green-50 p-3 text-sm text-green-800">{message}</div>}
+        {error && <div className="mt-4 rounded-md border border-error bg-red-50 p-3 text-sm text-error">{error}</div>}
       </section>
     </div>
+  )
+}
+
+function Field({ label, children }) {
+  return (
+    <label className="block">
+      <span className="mb-2 block text-sm font-medium text-text">{label}</span>
+      {children}
+    </label>
   )
 }
 
