@@ -31,7 +31,7 @@ Hard rule: do not deploy if `npm run build` fails. Direct Pages deployment must 
 
 - Working branch: `prod-mock-pdf-fix`
 - Latest local code deployed to Pages: subject-management flow refinement, committed locally as `Refine subject management flow`.
-- GitHub push status at last update: failed due local network reset while reaching GitHub; retry required when network recovers.
+- GitHub sync status at last update: stable-push API fallback synced local HEAD tree to remote branch `prod-mock-pdf-fix`; main remains a separate remote history.
 
 ## Product Access Tiers
 
