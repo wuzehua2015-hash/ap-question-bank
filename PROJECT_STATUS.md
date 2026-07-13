@@ -78,7 +78,7 @@ Content-capacity backlog: Biology and some other subjects have comparatively sma
 
 Capacity audit on 2026-07-13 identified the first expansion queue:
 
-1. AP Computer Science A: first expansion pass completed from current official CED; now 125 MCQ / 12 FRQ. Still high risk because MCQ total is below the long-term planning line and U1, U2, U3, U7, U10 remain sparse.
+1. AP Computer Science A: completed; now 291 MCQ / 12 FRQ and capacity risk OK.
 2. AP Physics 1: 121 MCQ / 15 FRQ; sparse U5, U6, U8.
 3. AP Biology: 153 MCQ / 30 FRQ; sparse U2, U4, U5, U7.
 4. AP Computer Science Principles: 148 MCQ / 8 written-response items; U1 sparse and U3 over-concentrated.
@@ -87,13 +87,14 @@ Capacity audit on 2026-07-13 identified the first expansion queue:
 
 Expansion is quality-gated work, not a count-only task. Each subject must use its subject-specific rendering strategy and delivery standard before new items reach Web.
 
-CSA expansion batch status on 2026-07-13:
+CSA expansion closeout on 2026-07-13:
 
-- Published 20 MCQ + 4 FRQ from the 2025 current CED through the CSA pipeline.
-- Added `npm run audit:csa` for CSA-specific structured-content checks.
-- Validation passed: `npm run audit:csa`, `npm run validate`, `npm run build`, CSA render audit, CSA student-flow audit, and capacity audit.
-- 2009 scanned released exam remains a deferred candidate until scanned Java/code reconstruction is complete.
-- This is a partial source-batch closeout, not full CSA expansion completion. `npm run audit:expansion-closeout -- --subject=computer-science-a --status=complete` must fail while capacity risk remains High.
+- Published 186 net-new MCQ relative to the pre-expansion 105-item CSA package.
+- Final package: 291 MCQ / 12 FRQ.
+- Sources added: 2025 current CED, AP Bowl 2018 public practice, CSAwesome / Runestone open-curriculum practice, and a small LynkEdu U1 original practice batch.
+- Added and updated `npm run audit:csa` for CSA-specific structured-content and source-metadata checks.
+- Validation passed: `npm run audit:csa`, `npm run validate`, `npm run build`, CSA render audit, CSA student-flow audit, capacity audit, and `npm run audit:expansion-closeout -- --subject=computer-science-a --status=complete`.
+- 2009 scanned released exam and AP Bowl 2015/2016 remain deferred candidates until OCR/code reconstruction is complete.
 
 ## Subject Management Contract
 
