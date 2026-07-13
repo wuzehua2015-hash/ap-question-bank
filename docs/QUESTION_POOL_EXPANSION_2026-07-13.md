@@ -6,6 +6,15 @@ Date: 2026-07-13
 
 Question-pool expansion is a delivery-quality task, not a count-only task. New items must enter through the subject source pack, risk discovery, rendering strategy, source pipeline, validators, and student-facing checks.
 
+Every low-volume subject must also run a network source inventory before choosing expansion sources. Use this priority order:
+
+1. Official current-course materials, especially current CED sample questions.
+2. Official AP Central recent exam questions and scoring materials.
+3. Local official released exams from 2009 or later.
+4. Other public reliable sources only after source-origin, answer/scoring, publication-rights, and duplicate checks.
+
+Do not publish a third-party-hosted PDF or question set only because it is reachable. Treat it as a lead until its source origin, completeness, answer/scoring materials, permissions, and current-course relevance are confirmed.
+
 Every expansion pass must preserve subject-specific rendering:
 
 - CSA: Java code blocks, structured candidate tables, complete A-E options, code-aware FRQ rubrics.
@@ -53,6 +62,17 @@ Current status:
 ```text
 D:\Lynk\翎英教育LynkEdu\.workspace\csa_2009_probe
 ```
+
+Additional network source candidates:
+
+- Current official CED: `https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf`
+  - high priority for timeliness and current framework alignment;
+  - must be inventoried, deduplicated against current package, and checked for answer/explanation availability.
+- AP Central past CSA questions: `https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam/past-exam-questions`
+  - useful for recent FRQ expansion and scoring style;
+  - does not solve the CSA MCQ pool shortage by itself.
+- Third-party mirrors of practice exams:
+  - deferred unless source origin, rights, answer key, and completeness are confirmed.
 
 Observed page map:
 

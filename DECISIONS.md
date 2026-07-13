@@ -80,4 +80,6 @@ Question-pool expansion must preserve the same delivery quality as a full subjec
 
 The expansion target is not only total count. The main target is usable coverage by unit and by student workflow: unit Quiz, Mock Exam, search/question set, review, scoring, and PDF output. New items that weaken rendering, unit classification, answerability, scoring quality, or browser/PDF behavior are not acceptable even if they increase the count.
 
+Network expansion is mandatory for low-volume subjects. Do not rely only on one local old source. Prefer official, current, and public reliable sources; prefer 2009-or-newer materials, and put current-course CED or AP Central materials first. Any network source must pass source reliability, timeliness, answer/scoring completeness, structure quality, permission, and deduplication checks before publication.
+
 The current expansion priority is CSA, Physics 1, Biology, CSP, Physics 2, then Environmental Science.
