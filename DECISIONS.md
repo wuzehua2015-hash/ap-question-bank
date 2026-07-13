@@ -83,3 +83,11 @@ The expansion target is not only total count. The main target is usable coverage
 Network expansion is mandatory for low-volume subjects. Do not rely only on one local old source. Prefer official, current, and public reliable sources; prefer 2009-or-newer materials, and put current-course CED or AP Central materials first. Any network source must pass source reliability, timeliness, answer/scoring completeness, structure quality, permission, and deduplication checks before publication.
 
 The current expansion priority is CSA, Physics 1, Biology, CSP, Physics 2, then Environmental Science.
+
+## 2026-07-13: CSA Current CED Expansion
+
+AP Computer Science A now includes the current official CED sample questions as a published source: 20 MCQ and 4 FRQ. CED items keep their official A-D option format and must not be padded to A-E.
+
+CSA expansion must continue to use structured Java/code/table rendering rather than prompt screenshots. The mandatory CSA post-pipeline check is `npm run audit:csa`, in addition to full `npm run validate`, build, render, student-flow, and capacity audits.
+
+The 2009 scanned released exam remains a deferred candidate until its Java code, options, answer key, FRQ prompts, and scoring rows are reconstructed from the scanned source.

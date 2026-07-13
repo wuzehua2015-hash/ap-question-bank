@@ -78,7 +78,7 @@ Content-capacity backlog: Biology and some other subjects have comparatively sma
 
 Capacity audit on 2026-07-13 identified the first expansion queue:
 
-1. AP Computer Science A: 105 MCQ / 8 FRQ; severe sparse units U1, U2, U3, U4, U7, U10.
+1. AP Computer Science A: first expansion pass completed from current official CED; now 125 MCQ / 12 FRQ. Still high risk because MCQ total is below the long-term planning line and U1, U2, U3, U7, U10 remain sparse.
 2. AP Physics 1: 121 MCQ / 15 FRQ; sparse U5, U6, U8.
 3. AP Biology: 153 MCQ / 30 FRQ; sparse U2, U4, U5, U7.
 4. AP Computer Science Principles: 148 MCQ / 8 written-response items; U1 sparse and U3 over-concentrated.
@@ -86,6 +86,13 @@ Capacity audit on 2026-07-13 identified the first expansion queue:
 6. AP Environmental Science: 200 MCQ / 8 FRQ; medium risk with sparse U2, U4, U5.
 
 Expansion is quality-gated work, not a count-only task. Each subject must use its subject-specific rendering strategy and delivery standard before new items reach Web.
+
+CSA expansion closeout on 2026-07-13:
+
+- Published 20 MCQ + 4 FRQ from the 2025 current CED through the CSA pipeline.
+- Added `npm run audit:csa` for CSA-specific structured-content checks.
+- Validation passed: `npm run audit:csa`, `npm run validate`, `npm run build`, CSA render audit, CSA student-flow audit, and capacity audit.
+- 2009 scanned released exam remains a deferred candidate until scanned Java/code reconstruction is complete.
 
 ## Subject Management Contract
 

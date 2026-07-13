@@ -25,7 +25,7 @@ Every expansion pass must preserve subject-specific rendering:
 
 ## Capacity Queue
 
-1. AP Computer Science A: 105 MCQ / 8 FRQ; sparse U1, U2, U3, U4, U7, U10.
+1. AP Computer Science A: first pass completed; now 125 MCQ / 12 FRQ after adding current CED. Still sparse U1, U2, U3, U7, U10.
 2. AP Physics 1: 121 MCQ / 15 FRQ; sparse U5, U6, U8.
 3. AP Biology: 153 MCQ / 30 FRQ; sparse U2, U4, U5, U7.
 4. AP Computer Science Principles: 148 MCQ / 8 written-response items; U1 sparse and U3 over-concentrated.
@@ -44,7 +44,42 @@ Report path:
 .workspace/subject-capacity-audit/subject-capacity-report.json
 ```
 
-## CSA Expansion Start
+## CSA Expansion Closeout: Current CED
+
+Published source:
+
+```text
+2025 AP Computer Science A Course and Exam Description
+```
+
+Published scope:
+
+- 20 MCQ.
+- 4 FRQ.
+- Structured Java/code/table/list reconstruction.
+- A-D answer options preserved for CED items.
+- CSA FRQ scoring rows plus fenced Java reference solutions.
+
+Pipeline and audit assets:
+
+```text
+subjects/AP/Computer-Science-A/tools/build_ced_2025_data.py
+subjects/AP/Computer-Science-A/tools/csa_pipeline.py
+subjects/AP/Computer-Science-A/02-data/ced_2025/
+scripts/csa_content_audit.cjs
+npm run audit:csa
+```
+
+Validation evidence:
+
+- `npm run audit:csa`: pass.
+- `npm run validate`: pass.
+- `npm run build`: pass.
+- `npm run audit:render -- --subject=computer-science-a`: pass, all 125 MCQ and 12 FRQ selected, 0 errors / 0 warnings.
+- `npm run audit:student-flow -- --subject=computer-science-a`: pass, 0 errors; internal question-id visibility warnings are non-blocking because content is visible.
+- `npm run audit:capacity`: CSA remains high risk because total MCQ count is still 125 and multiple units remain sparse.
+
+## CSA Deferred Source: 2009 Scanned Released Exam
 
 Candidate source:
 
@@ -52,7 +87,7 @@ Candidate source:
 D:\Lynk\翎英教育LynkEdu\subjects\AP\Computer-Science-A\01-exams\AP_Computer_Science_A_2009_Released_Exam.pdf
 ```
 
-Current status:
+Current 2009 status:
 
 - 135-page scanned released exam.
 - No embedded text layer.
@@ -93,6 +128,6 @@ Publish gate:
 - Reclassify units by required learning sequence.
 - Run validation, capacity audit, real-browser Search/Quiz/FRQ/Mock/PDF sampling.
 
-## Current Non-Publishable State
+## Current 2009 Non-Publishable State
 
-CSA expansion has started, but no 2009 items are publishable yet. The next implementation step is a scanned-source reconstruction pipeline for the 2009 source.
+The current CED expansion has been published. No 2009 items are publishable yet. The next 2009 implementation step is a scanned-source reconstruction pipeline for the 2009 source.

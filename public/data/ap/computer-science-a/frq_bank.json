@@ -405,5 +405,290 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 53
     }
+  },
+  {
+    "question_id": "ced_2025_FRQ1",
+    "frq_id": "ced_2025_FRQ1",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2025,
+    "source_set": "current_ced_sample",
+    "question_number": 1,
+    "question_type": "Methods and Control Structures",
+    "type": "FRQ",
+    "text": "This question involves the `MessageBuilder` class, which is used to generate a message based on a starting word. The class has instance variables `message` and `numWords`, a helper method `getNextWord(String s)`, a constructor to implement, and a method `getAbbreviation` to implement.\n\n```java\npublic class MessageBuilder\n{\n  private String message;\n  private int numWords;\n\n  /**\n   * Builds a message starting with the word specified by the parameter and\n   * counts the number of words in the message.\n   */\n  public MessageBuilder(String startingWord)\n  { /* to be implemented in part (a) */ }\n\n  /**\n   * Returns a word to follow the word specified by the parameter or null\n   * if there are no remaining words.\n   * Precondition: s is a single word with no spaces.\n   */\n  public String getNextWord(String s)\n  { /* implementation not shown */ }\n\n  /**\n   * Returns an abbreviation for message.\n   * Preconditions: each word in message is separated by a single space.\n   * Postcondition: message is unchanged.\n   */\n  public String getAbbreviation()\n  { /* to be implemented in part (b) */ }\n}\n```\n\nPart (a): Write the `MessageBuilder` constructor. It must use `getNextWord` to build the message beginning with `startingWord`, store the completed message in `message`, and store the word count in `numWords`.\n\nPart (b): Write `getAbbreviation`, which returns a string consisting of the first letter of each word in `message`. For example, if `message` is `\"as soon as possible\"`, the method returns `\"asap\"`.",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Iteration",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA CED FRQ mapping by required learning sequence and task type.",
+      "review_status": "human_reviewed"
+    },
+    "rubric": {
+      "total_points": 7,
+      "solution_outline": "Constructor: call getNextWord on the starting word, continue until null, build message with exactly one space between words, and assign the correct word count to numWords. getAbbreviation: inspect all words in message, identify the first character of each word, return the combined abbreviation, and leave message unchanged.",
+      "official_text": "Constructor: call getNextWord on the starting word, continue until null, build message with exactly one space between words, and assign the correct word count to numWords. getAbbreviation: inspect all words in message, identify the first character of each word, return the combined abbreviation, and leave message unchanged.",
+      "points": [
+        {
+          "part": "a",
+          "points": 1,
+          "description": "Calls getNextWord on startingWord."
+        },
+        {
+          "part": "a",
+          "points": 1,
+          "description": "Loops until no more words remain."
+        },
+        {
+          "part": "a",
+          "points": 1,
+          "description": "Counts the number of accessed words in the loop context."
+        },
+        {
+          "part": "a",
+          "points": 1,
+          "description": "Correctly builds message and assigns the correct count."
+        },
+        {
+          "part": "b",
+          "points": 1,
+          "description": "Accesses all necessary parts of message."
+        },
+        {
+          "part": "b",
+          "points": 1,
+          "description": "Identifies letters that appear after spaces using valid String operations."
+        },
+        {
+          "part": "b",
+          "points": 1,
+          "description": "Returns the first letter of each word without modifying message or numWords."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\npublic MessageBuilder(String startingWord)\n{\n  message = startingWord;\n  String w = getNextWord(startingWord);\n  numWords = 1;\n  while (w != null)\n  {\n    message += \" \" + w;\n    numWords++;\n    w = getNextWord(w);\n  }\n}\n\npublic String getAbbreviation()\n{\n  String temp = message;\n  String result = temp.substring(0, 1);\n  while (temp.indexOf(\" \") >= 0)\n  {\n    int i = temp.indexOf(\" \");\n    temp = temp.substring(i + 1);\n    result += temp.substring(0, 1);\n  }\n  return result;\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "backups/真题/AP/Official_Resources/ap-computer-science-a-course-and-exam-description.pdf",
+      "source_page": 168,
+      "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
+    }
+  },
+  {
+    "question_id": "ced_2025_FRQ2",
+    "frq_id": "ced_2025_FRQ2",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2025,
+    "source_set": "current_ced_sample",
+    "question_number": 2,
+    "question_type": "Class Design",
+    "type": "FRQ",
+    "text": "Write the complete `CupcakeMachine` class. A `CupcakeMachine` object represents an automated cupcake vending machine.\n\nThe constructor has two parameters: an `int` for the number of cupcakes initially stocked and a `double` for the cost per cupcake. The `takeOrder(int quantity)` method determines whether an order can be filled.\n\nIf the order can be filled, `takeOrder` decreases the available cupcake count, assigns the next order number, and returns a string in the form `\"Order number 1, cost $3.5\"`. If there are not enough cupcakes, it returns `\"Order cannot be filled\"`, leaves the cupcake count unchanged, and does not advance the order number.\n\nSample behavior:\n\n| Statement | Return value |\n|---|---|\n| `CupcakeMachine c1 = new CupcakeMachine(10, 1.75);` | |\n| `c1.takeOrder(2);` | `\"Order number 1, cost $3.5\"` |\n| `c1.takeOrder(3);` | `\"Order number 2, cost $5.25\"` |\n| `c1.takeOrder(10);` | `\"Order cannot be filled\"` |\n| `c1.takeOrder(1);` | `\"Order number 3, cost $1.75\"` |",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Writing Classes",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA CED FRQ mapping by required learning sequence and task type.",
+      "review_status": "human_reviewed"
+    },
+    "rubric": {
+      "total_points": 7,
+      "solution_outline": "The class must declare the CupcakeMachine class, store available cupcakes, cost per cupcake, and next order number in private instance variables, initialize them in the constructor, and implement takeOrder to handle filled and unfilled orders, update state only for filled orders, construct the required message, and return it.",
+      "official_text": "The class must declare the CupcakeMachine class, store available cupcakes, cost per cupcake, and next order number in private instance variables, initialize them in the constructor, and implement takeOrder to handle filled and unfilled orders, update state only for filled orders, construct the required message, and return it.",
+      "points": [
+        {
+          "part": "class",
+          "points": 1,
+          "description": "Declares the CupcakeMachine class header."
+        },
+        {
+          "part": "state",
+          "points": 1,
+          "description": "Declares private instance variables for available cupcakes, order number, and cost per cupcake."
+        },
+        {
+          "part": "constructor",
+          "points": 1,
+          "description": "Declares the required constructor header."
+        },
+        {
+          "part": "constructor",
+          "points": 1,
+          "description": "Constructor assigns correct initial values to all instance variables."
+        },
+        {
+          "part": "method",
+          "points": 1,
+          "description": "Declares public String takeOrder(int quantity)."
+        },
+        {
+          "part": "method",
+          "points": 1,
+          "description": "Builds the correct message and updates available cupcakes and order number appropriately."
+        },
+        {
+          "part": "method",
+          "points": 1,
+          "description": "Returns the appropriate constructed String value."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\npublic class CupcakeMachine\n{\n  private int availCupcakes;\n  private double cupcakeCost;\n  private int orderNum;\n\n  public CupcakeMachine(int num, double cost)\n  {\n    availCupcakes = num;\n    cupcakeCost = cost;\n    orderNum = 1;\n  }\n\n  public String takeOrder(int quantity)\n  {\n    String message = \"Order cannot be filled\";\n    if (quantity <= availCupcakes)\n    {\n      availCupcakes -= quantity;\n      double cost = quantity * cupcakeCost;\n      message = \"Order number \" + orderNum + \", cost $\" + cost;\n      orderNum++;\n    }\n    return message;\n  }\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "backups/真题/AP/Official_Resources/ap-computer-science-a-course-and-exam-description.pdf",
+      "source_page": 171,
+      "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
+    }
+  },
+  {
+    "question_id": "ced_2025_FRQ3",
+    "frq_id": "ced_2025_FRQ3",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2025,
+    "source_set": "current_ced_sample",
+    "question_number": 3,
+    "question_type": "Data Analysis with ArrayList",
+    "type": "FRQ",
+    "text": "The `ItemInfo` class stores information about an item at a store.\n\n```java\npublic class ItemInfo\n{\n  public String getName()\n  { /* implementation not shown */ }\n\n  public double getCost()\n  { /* implementation not shown */ }\n\n  public boolean isAvailable()\n  { /* implementation not shown */ }\n}\n```\n\nThe `ItemInventory` class maintains an `ArrayList<ItemInfo>` named `inventory`.\n\n```java\npublic class ItemInventory\n{\n  /** The list of all items at the store */\n  private ArrayList<ItemInfo> inventory;\n\n  /**\n   * Returns the average cost of the available items whose cost is between\n   * lower and upper, inclusive.\n   * Precondition: lower <= upper\n   *               At least one available element of inventory has a cost\n   *               between lower and upper, inclusive.\n   *               No elements of inventory are null.\n   */\n  public double averageWithinRange(double lower, double upper)\n  { /* to be implemented */ }\n}\n```\n\nWrite `averageWithinRange`, which returns the average cost of the available items in `inventory` whose cost is between `lower` and `upper`, inclusive.",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "ArrayList",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA CED FRQ mapping by required learning sequence and task type.",
+      "review_status": "human_reviewed"
+    },
+    "rubric": {
+      "total_points": 5,
+      "solution_outline": "Traverse every ItemInfo in inventory, call isAvailable and getCost on each item, include only available items whose cost is within the inclusive range, accumulate a double sum and a count, and return sum divided by the count.",
+      "official_text": "Traverse every ItemInfo in inventory, call isAvailable and getCost on each item, include only available items whose cost is within the inclusive range, accumulate a double sum and a count, and return sum divided by the count.",
+      "points": [
+        {
+          "part": "loop",
+          "points": 1,
+          "description": "Accesses all items in inventory without bounds errors."
+        },
+        {
+          "part": "methods",
+          "points": 1,
+          "description": "Calls getCost and isAvailable on an ItemInfo element from the list."
+        },
+        {
+          "part": "condition",
+          "points": 1,
+          "description": "Checks whether the cost is between lower and upper, inclusive."
+        },
+        {
+          "part": "accumulation",
+          "points": 1,
+          "description": "Declares a double sum and accumulates included costs inside a loop."
+        },
+        {
+          "part": "algorithm",
+          "points": 1,
+          "description": "Returns the correct average cost of available items in range."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\npublic double averageWithinRange(double lower, double upper)\n{\n  double sum = 0.0;\n  int count = 0;\n\n  for (ItemInfo it : inventory)\n  {\n    if (it.isAvailable() && it.getCost() >= lower && it.getCost() <= upper)\n    {\n      sum += it.getCost();\n      count++;\n    }\n  }\n  return sum / count;\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "backups/真题/AP/Official_Resources/ap-computer-science-a-course-and-exam-description.pdf",
+      "source_page": 173,
+      "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
+    }
+  },
+  {
+    "question_id": "ced_2025_FRQ4",
+    "frq_id": "ced_2025_FRQ4",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2025,
+    "source_set": "current_ced_sample",
+    "question_number": 4,
+    "question_type": "2D Array",
+    "type": "FRQ",
+    "text": "The `Appointment` class is used to store information about scheduled appointments.\n\n```java\npublic class Appointment\n{\n  public String getStatus()\n  { /* implementation not shown */ }\n\n  public int getRoomNumber()\n  { /* implementation not shown */ }\n}\n```\n\nThe `Schedule` class maintains a two-dimensional array of appointments.\n\n```java\npublic class Schedule\n{\n  private Appointment[][] sched;\n\n  /**\n   * Returns the index of a column containing the fewest occurrences of target.\n   * Preconditions: sched is not null and no elements of sched are null.\n   *                sched has at least one row and at least one column.\n   */\n  public int columnWithFewest(String target)\n  { /* to be implemented */ }\n}\n```\n\nWrite `columnWithFewest`. The method returns the index of a column in `sched` that contains the fewest occurrences of `target`. If multiple columns have the fewest number of occurrences, any of their indices may be returned.",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U8",
+    "unit": "U8",
+    "unit_name": "2D Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U8",
+      "secondary_units": [],
+      "confidence": 0.95,
+      "evidence": "Manual CSA CED FRQ mapping by required learning sequence and task type.",
+      "review_status": "human_reviewed"
+    },
+    "rubric": {
+      "total_points": 6,
+      "solution_outline": "Iterate by column, inspect each row in the current column, call getStatus on each Appointment, compare statuses to target using equals, count target occurrences for each column, track the smallest count and its column index, and return that index.",
+      "official_text": "Iterate by column, inspect each row in the current column, call getStatus on each Appointment, compare statuses to target using equals, count target occurrences for each column, track the smallest count and its column index, and return that index.",
+      "points": [
+        {
+          "part": "traversal",
+          "points": 1,
+          "description": "Accesses all elements of sched without bounds errors."
+        },
+        {
+          "part": "method",
+          "points": 1,
+          "description": "Calls getStatus on an Appointment object."
+        },
+        {
+          "part": "comparison",
+          "points": 1,
+          "description": "Compares a status with target using String equality."
+        },
+        {
+          "part": "comparison",
+          "points": 1,
+          "description": "Compares identified counts for two columns."
+        },
+        {
+          "part": "count",
+          "points": 1,
+          "description": "Determines the number of matching elements in each accessed column."
+        },
+        {
+          "part": "algorithm",
+          "points": 1,
+          "description": "Returns the index of a column with the smallest computed count."
+        }
+      ],
+      "reference_solution": "One acceptable implementation is:\n\n```java\npublic int columnWithFewest(String target)\n{\n  int minCol = 0;\n  int minCount = sched.length;\n\n  for (int col = 0; col < sched[0].length; col++)\n  {\n    int count = 0;\n    for (int row = 0; row < sched.length; row++)\n    {\n      if (sched[row][col].getStatus().equals(target))\n      {\n        count++;\n      }\n    }\n    if (count < minCount)\n    {\n      minCol = col;\n      minCount = count;\n    }\n  }\n  return minCol;\n}\n```"
+    },
+    "provenance": {
+      "source_pdf": "backups/真题/AP/Official_Resources/ap-computer-science-a-course-and-exam-description.pdf",
+      "source_page": 175,
+      "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
+    }
   }
 ]
