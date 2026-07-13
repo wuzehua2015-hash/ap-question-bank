@@ -162,7 +162,6 @@ function LoginPage() {
           <div className="space-y-3 text-sm text-text-muted">
             <p>注册会员可以保存错题本、学习记录、科目选择和 Mock Exam 进度。</p>
             <p>翎英学员可以继续使用搜索、题单、相似题和 PDF 下载。</p>
-            <p>这些训练记录会用于后续教研分析和系统迭代，帮助老师更准确地发现薄弱点。</p>
           </div>
         </aside>
       </div>

@@ -51,7 +51,7 @@ function AccountPage() {
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-brand mb-2">我的账号</h1>
-        <p className="text-text-muted">账号用于同步训练数据、保留错题记录，并为后续教师端作业和教研分析打基础。</p>
+        <p className="text-text-muted">账号用于同步学习记录、保留错题本，并在不同设备上继续学习。</p>
       </div>
 
       {(message || error) && (

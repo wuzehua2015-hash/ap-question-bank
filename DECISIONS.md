@@ -50,3 +50,9 @@ PDF download is not a standalone public purchase feature at this stage. It is a 
 Reason:
 - Lower operational complexity.
 - Lower copyright/commercialization risk than selling individual AP-question PDFs.
+
+## 2026-07-13: Student Home Layout
+
+The student home page should be maintained as a learning dashboard, not a loose directory of cards. The first screen should make the current subject, next practice action, mock exam action, account state, selected-subject scope, and common review tools visible with clear hierarchy.
+
+Student-facing copy must explain direct student value. Internal teaching-research, data-infrastructure, or system-iteration rationale belongs in maintenance docs, not the product UI.

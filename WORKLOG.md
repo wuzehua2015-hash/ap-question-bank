@@ -54,3 +54,15 @@
   - production `lynkedu.com` bundle observed: `/assets/index-Cfz2d49t.js`;
   - production CSS observed: `/assets/index-BsNt8fSc.css`;
   - real-browser checks passed for `/login`, `/register`, `/reset-password`, and `/account` visitor account gate.
+
+- Removed student-facing copy that described training records as teacher research/system-iteration data.
+- Refined the student web shell and home layout:
+  - lighter sticky header with clearer navigation, subject switcher, and account entry;
+  - low-emphasis footer so the learning workspace carries the page;
+  - home page rebuilt as a learning dashboard with current subject, primary actions, account status, selected subjects, and common tools;
+  - desktop and mobile browser screenshots checked through WebBridge against the built preview.
+- Deployed student layout refinement to Cloudflare Pages:
+  - latest Pages deployment URL observed: `https://b03edf40.lynkedu-ap-question-bank.pages.dev`;
+  - production `lynkedu.com` bundle observed: `/assets/index-Dqt_u_sP.js`;
+  - production CSS observed: `/assets/index-DbOL2LWp.css`;
+  - real-browser production checks passed for `/login` copy removal and `/` learning-dashboard structure.
