@@ -154,3 +154,6 @@
 - Deferred 2009 scanned released exam and AP Bowl 2015/2016 until OCR/code reconstruction is complete.
 - Updated CSA pipeline, CSA content audit, subject-risk audit, source pack, CSA status, and expansion ledger.
 - Verification passed: `npm run audit:csa`, `npm run validate`, `npm run build`, `npm run audit:render -- --subject=computer-science-a`, `npm run audit:student-flow -- --subject=computer-science-a`, `npm run audit:capacity`, and `npm run audit:expansion-closeout -- --subject=computer-science-a --status=complete`.
+- Production data check passed on `https://lynkedu.com/data/ap/computer-science-a/question_bank.json`: 291 MCQ returned with HTTP 200; `frq_bank.json` returned 12 FRQ with HTTP 200.
+- Source mirror synced through `npm run stable:push`; normal Git push was rejected by non-linear remote history, then the stable API path created remote commit `8057aec64f17d9c98c22f9bc67e40699d9c165db`.
+- `npm run stable:status` confirmed remote tree `120e35882d4b5f3e3d6a74694799d8583545c0ae` matches local HEAD tree.

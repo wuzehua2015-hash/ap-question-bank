@@ -195,3 +195,5 @@ Closeout evidence:
 - `npm run audit:student-flow -- --subject=computer-science-a`: pass, 0 errors / 5 non-blocking internal-ID visibility warnings.
 - `npm run audit:capacity`: CSA OK.
 - `npm run audit:expansion-closeout -- --subject=computer-science-a --status=complete`: pass.
+- Production data check: `lynkedu.com` returns 291 CSA MCQ and 12 CSA FRQ.
+- Source mirror check: stable push remote commit `8057aec64f17d9c98c22f9bc67e40699d9c165db`; remote tree matches local HEAD tree.
