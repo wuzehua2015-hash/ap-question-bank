@@ -84,3 +84,13 @@
   - latest Pages deployment URL observed: `https://21082dae.lynkedu-ap-question-bank.pages.dev`;
   - production `lynkedu.com` bundle observed: `/assets/index-dVLuSvV1.js`;
   - production CSS remains `/assets/index-CEg-XvSo.css`.
+- Redesigned account entry pages with a minimalist single-column account form layout:
+  - removed the login-page `账号能保存什么` side panel;
+  - removed the register-page benefits side panel;
+  - aligned login, register, and password reset around one quiet form pattern;
+  - kept password login primary and email-code login as fallback;
+  - verified built preview and production snapshots for `/login` and `/register`.
+- Deployed account-page layout refinement to Cloudflare Pages:
+  - latest Pages deployment URL observed: `https://73072b39.lynkedu-ap-question-bank.pages.dev`;
+  - production `lynkedu.com` bundle observed: `/assets/index-DSx-shk8.js`;
+  - production CSS observed: `/assets/index-CcoUOuDc.css`.

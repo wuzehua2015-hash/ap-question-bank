@@ -62,3 +62,6 @@ The student web UI should prefer a minimalist learning-tool style over dense das
 ## 2026-07-13: Lightweight Learning Flow
 
 Home may use existing local/account progress data to adjust copy and the secondary action, but it should not become a heavy recommendation system. Current approved pattern: current subject, two primary actions, and one context-aware secondary link such as `复盘错题` when wrong questions exist.
+## 2026-07-13: Account Page Layout
+
+Login, registration, and password recovery should use a quiet single-column account form pattern. Do not add side panels such as `账号能保存什么` or benefits cards that feel like product-copy patches. Account pages should focus on the immediate task, with only concise helper text and route links.
