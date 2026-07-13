@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { useSubject } from '../contexts/SubjectContext'
 import { loadFRQBank, loadMCQBank } from '../utils/questionBank'
+import { getQuizHistory, getWrongQuestions } from '../utils/storage'
 
 function HomePage() {
   const { currentSubject, mySubjects, setSubject } = useSubject()
@@ -34,6 +35,7 @@ function HomePage() {
   const currentSubjectConfig = mySubjects.find(subject => subject.id === currentSubject) || mySubjects[0]
   const currentStats = subjectStats[currentSubjectConfig?.id] || {}
   const accountLabel = isLoggedIn ? (isInternalStudent ? '翎英学员' : '注册会员') : '游客模式'
+  const currentProgress = useMemo(() => buildProgressSummary(currentSubject), [currentSubject])
 
   if (mySubjects.length === 0) {
     return (
@@ -58,9 +60,9 @@ function HomePage() {
       <section className="mb-14">
         <div className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-text-muted">
           <span>{accountLabel}</span>
-          <span className="h-1 w-1 rounded-full bg-border" />
+          <Dot />
           <Link to="/settings" className="hover:text-brand">管理科目</Link>
-          <span className="h-1 w-1 rounded-full bg-border" />
+          <Dot />
           <Link to={isLoggedIn ? '/account' : '/login'} className="hover:text-brand">
             {isLoggedIn ? '账号设置' : '登录同步'}
           </Link>
@@ -71,24 +73,26 @@ function HomePage() {
         </h1>
 
         <p className="max-w-2xl text-lg leading-8 text-text-muted mb-7">
-          先做专项练习，再用模拟考试检查完整状态。
+          {currentProgress.lead}
         </p>
 
         <div className="mb-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-text-muted">
           <span>{currentStats.mcqCount || '...'} MCQ</span>
           {currentStats.hasFRQ && <span>{currentStats.frqCount || 0} FRQ</span>}
           <span>{mySubjects.length} 个学习科目</span>
+          {currentProgress.lastScore && <span>上次 {currentProgress.lastScore}</span>}
+          {currentProgress.wrongCount > 0 && <span>{currentProgress.wrongCount} 道错题</span>}
         </div>
 
         <div className="flex flex-wrap gap-3">
           <Link to="/quiz" className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-light">
-            专项练习
+            {currentProgress.primaryLabel}
           </Link>
           <Link to="/exam" className="rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-light">
             模拟考试
           </Link>
-          <Link to="/history" className="rounded-md px-4 py-3 text-sm font-medium text-text-muted hover:text-brand">
-            学习记录
+          <Link to={currentProgress.wrongCount > 0 ? '/mistakes' : '/history'} className="rounded-md px-4 py-3 text-sm font-medium text-text-muted hover:text-brand">
+            {currentProgress.secondaryLabel}
           </Link>
         </div>
       </section>
@@ -132,6 +136,40 @@ function HomePage() {
       </section>
     </div>
   )
+}
+
+function Dot() {
+  return <span className="h-1 w-1 rounded-full bg-border" />
+}
+
+function buildProgressSummary(subject) {
+  const quizHistory = getQuizHistory(subject)
+  const wrongQuestions = getWrongQuestions(subject)
+  const lastQuiz = quizHistory[quizHistory.length - 1]
+  const wrongCount = wrongQuestions.length
+
+  if (lastQuiz) {
+    const score = Number(lastQuiz.score)
+    const total = Number(lastQuiz.total)
+    const lastScore = Number.isFinite(score) && Number.isFinite(total) && total > 0
+      ? `${score}/${total}`
+      : null
+    return {
+      lead: wrongCount > 0 ? '先复盘错题，再继续新的专项练习。' : '继续保持节奏，可以直接开始下一组专项练习。',
+      primaryLabel: '继续练习',
+      secondaryLabel: wrongCount > 0 ? '复盘错题' : '学习记录',
+      lastScore,
+      wrongCount,
+    }
+  }
+
+  return {
+    lead: '先做专项练习，再用模拟考试检查完整状态。',
+    primaryLabel: '专项练习',
+    secondaryLabel: '学习记录',
+    lastScore: null,
+    wrongCount,
+  }
 }
 
 export default HomePage
