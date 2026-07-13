@@ -74,6 +74,19 @@ Content-capacity backlog: Biology and some other subjects have comparatively sma
 - SEO/GEO optimization for public acquisition and AI answer-engine discoverability.
 - Subject question-pool expansion for low-volume subjects, especially Biology and sparse units flagged by unit-distribution audit.
 
+## Question Pool Expansion Queue
+
+Capacity audit on 2026-07-13 identified the first expansion queue:
+
+1. AP Computer Science A: 105 MCQ / 8 FRQ; severe sparse units U1, U2, U3, U4, U7, U10.
+2. AP Physics 1: 121 MCQ / 15 FRQ; sparse U5, U6, U8.
+3. AP Biology: 153 MCQ / 30 FRQ; sparse U2, U4, U5, U7.
+4. AP Computer Science Principles: 148 MCQ / 8 written-response items; U1 sparse and U3 over-concentrated.
+5. AP Physics 2: 169 MCQ / 28 FRQ; total MCQ count below target but unit spread is less severe.
+6. AP Environmental Science: 200 MCQ / 8 FRQ; medium risk with sparse U2, U4, U5.
+
+Expansion is quality-gated work, not a count-only task. Each subject must use its subject-specific rendering strategy and delivery standard before new items reach Web.
+
 ## Subject Management Contract
 
 - Student home and the header subject switcher show only `mySubjects`.

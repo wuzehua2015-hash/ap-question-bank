@@ -73,3 +73,11 @@ Login, registration, and password recovery should use a quiet single-column acco
 Subject-dependent pages must not silently load a default subject when `mySubjects` is empty. They must show a clear choose-subject prompt. This applies to direct URL entry as well as header navigation.
 
 Adding a subject sets it as current/default. Once at least one subject is selected, the UI blocks removing the final selected subject. If the current/default subject is removed while other selected subjects remain, both `currentSubject` and `defaultSubject` must fall back to a remaining selected subject in the same state update.
+
+## 2026-07-13: Question Pool Expansion Standard
+
+Question-pool expansion must preserve the same delivery quality as a full subject rebuild. A subject can receive new questions only through its source pack, risk discovery, rendering strategy, pipeline, validators, and student-surface checks.
+
+The expansion target is not only total count. The main target is usable coverage by unit and by student workflow: unit Quiz, Mock Exam, search/question set, review, scoring, and PDF output. New items that weaken rendering, unit classification, answerability, scoring quality, or browser/PDF behavior are not acceptable even if they increase the count.
+
+The current expansion priority is CSA, Physics 1, Biology, CSP, Physics 2, then Environmental Science.

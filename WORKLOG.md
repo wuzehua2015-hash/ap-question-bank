@@ -2,6 +2,19 @@
 
 ## 2026-07-13
 
+- Started question-pool expansion program:
+  - recorded expansion hard rules in SSoT and main-session memory;
+  - added `npm run audit:capacity` / `scripts/subject_capacity_audit.cjs`;
+  - generated `.workspace/subject-capacity-audit/subject-capacity-report.json`;
+  - documented capacity queue in `docs/QUESTION_POOL_EXPANSION_2026-07-13.md`.
+- Started CSA expansion preflight:
+  - confirmed current package is 105 MCQ + 8 FRQ with sparse U1/U2/U3/U4/U7/U10;
+  - identified local 2009 released exam as candidate source;
+  - confirmed the 2009 PDF is a 135-page scanned source with no embedded text layer;
+  - generated local OCR/page-map assets under `D:\Lynk\翎英教育LynkEdu\.workspace\csa_2009_probe`;
+  - updated CSA source pack, risk discovery, and expansion plan under `subjects/AP/Computer-Science-A/docs`;
+  - fixed CSA pipeline Web target to prefer `ap-question-bank-prod-fix`.
+
 - Refined subject management and switching:
   - header learning links route to settings when no subject is selected;
   - subject dropdown opens even for one selected subject and always includes management entry;
