@@ -44,6 +44,33 @@ npx wrangler pages deploy dist --project-name lynkedu-ap-question-bank --branch 
 - Biology 和部分科目的题量偏少，后续需要做题库扩容/补题。
 - 每次新增科目或新增题包后，必须重新评估各单元题量、mock 抽题容量和重复率，不得只看总题量。
 
+## 2026-07-13 当前学生账号系统
+
+学生账号系统不再以“每次邮箱验证码登录”为主流程：
+
+- `/register`: 邮箱、密码、昵称、可选翎英学员邀请码。
+- `/login`: 默认邮箱 + 密码；验证码登录只作为旧账号、恢复和兜底入口。
+- `/reset-password`: 邮箱验证码重置密码。
+- `/account`: 资料编辑、邮箱验证、密码设置/修改、学习记录同步、退出其他设备。
+
+后端 D1 schema:
+- `migrations/0001_student_accounts.sql`: 基础账号、session、权益、学习记录、教师端预留表。
+- `migrations/0002_password_auth.sql`: 密码凭证、邮箱验证、密码重置、邀请码、账号审计日志。
+
+发布硬条件：
+- 涉及 Functions 读取新列或新表时，必须先在远程 D1 执行对应 migration，再部署 Pages。
+- 密码永远不能明文存储；当前使用 WebCrypto PBKDF2-SHA256，并只保存哈希。
+- 旧账号没有密码时必须仍可通过邮箱验证码登录，并在账号页设置密码。
+- 新增手机号、微信扫码或第三方登录前，必须先补独立身份表映射，不要把手机号/微信 ID 硬塞进 `users.email`。
+
+## 2026-07-13 SEO/GEO 必做 backlog
+
+正式公开获客前必须做 SEO/GEO 专项，不得只靠题库应用本体自然传播：
+- 经典 SEO：标题、描述、canonical、sitemap、robots、公开 landing 内容、结构化数据、性能。
+- GEO/AI answer discoverability：清晰品牌实体、课程/科目页面、FAQ、可引用的中文说明内容、面向 AI 摘要的结构化页面。
+- 所有公开页面中文优先，品牌统一为 `翎英教育 LynkEdu`。
+- 题库训练页和需要登录/付费的功能不应直接作为 SEO 主入口；主入口应是可索引的官网/科目/功能说明页。
+
 > 本文档记录AP题库项目开发过程中遇到的所有问题，按类别分类，供后续新项目（微观经济学、其他学科）参考。
 > 最后更新: 2026-06-25
 

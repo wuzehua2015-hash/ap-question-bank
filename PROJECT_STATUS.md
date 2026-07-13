@@ -58,6 +58,21 @@ Student-facing copy must use `翎英学员`, not internal certification/release 
 
 Content-capacity backlog: Biology and some other subjects have comparatively small question pools. After launch stabilization, add a subject-by-subject expansion/backfill pass so low-volume units do not produce repetitive practice or weak mock coverage.
 
+## Student Account System
+
+- Primary login: email + password.
+- Fallback login: email code for legacy accounts and recovery.
+- Register route: `/register`.
+- Login route: `/login`.
+- Password reset route: `/reset-password`.
+- Account route: `/account` with profile, email verification, password, learning-data sync, and session controls.
+- D1 schema migration applied through `migrations/0002_password_auth.sql` on remote database `lynkedu-question-bank`.
+
+## Required Backlog
+
+- SEO/GEO optimization for public acquisition and AI answer-engine discoverability.
+- Subject question-pool expansion for low-volume subjects, especially Biology and sparse units flagged by unit-distribution audit.
+
 ## Current Web Product Milestone
 
 The site has entered productization for public launch:

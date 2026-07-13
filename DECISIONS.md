@@ -25,6 +25,18 @@ Search, question sets, similar-question workflows, PDF downloads, and unit knowl
 
 Student-facing labels must say `注册会员` and `翎英学员`; do not expose internal account-state terms such as internal/certified student labels.
 
+## 2026-07-13: Student Account Flow
+
+The account system uses password login as the primary student flow. Email one-time codes remain as fallback for legacy accounts, email verification, and password recovery.
+
+Registration must be a separate route (`/register`) with email, password, display name, and optional `翎英学员` invite code. Login must be a separate route (`/login`) with password login first and code login second. Password recovery must use `/reset-password`.
+
+Account management must expose profile editing, learning-data sync, email verification, password setup/change, and logout-other-devices controls. Teacher-side assignment tables stay reserved; no teacher UI is exposed in this phase.
+
+## 2026-07-13: SEO/GEO Backlog
+
+SEO/GEO optimization is a required future workstream before broader public acquisition. It must cover classic search indexing, AI answer-engine discoverability, public landing content, metadata, structured data, sitemap/robots, performance, canonical URLs, and Chinese-first brand positioning for `lynkedu.com`.
+
 ## 2026-07-13: Search Scope
 
 Search stays within the current subject. Cross-subject search is intentionally not implemented because it is low value for the current student workflow.

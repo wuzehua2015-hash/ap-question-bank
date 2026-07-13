@@ -19,6 +19,8 @@ import HistoryPage from './pages/HistoryPage'
 import SettingsPage from './pages/SettingsPage'
 import LoginPage from './pages/LoginPage'
 import AccountPage from './pages/AccountPage'
+import RegisterPage from './pages/RegisterPage'
+import ResetPasswordPage from './pages/ResetPasswordPage'
 
 import { SubjectProvider } from './contexts/SubjectContext'
 import { AuthProvider } from './contexts/AuthContext'
@@ -42,6 +44,8 @@ function App() {
               <Route path="/history" element={<HistoryPage />} />
               <Route path="/settings" element={<SettingsPage />} />
               <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/reset-password" element={<ResetPasswordPage />} />
               <Route path="/account" element={<AccountPage />} />
               <Route path="/score" element={<ScorePage />} />
               <Route path="/quiz-pdf" element={<QuizPdfPage />} />

@@ -45,6 +45,8 @@ mustInclude('src/pages/ExamSetup.jsx', 'if (!isInternalStudent)', 'premium guard
 const studentFacingFiles = [
   'src/components/Header.jsx',
   'src/pages/LoginPage.jsx',
+  'src/pages/RegisterPage.jsx',
+  'src/pages/ResetPasswordPage.jsx',
   'src/pages/AccountPage.jsx',
   'src/components/LoginGate.jsx',
   'src/components/PremiumGate.jsx',

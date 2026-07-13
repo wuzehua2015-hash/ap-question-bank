@@ -1,4 +1,5 @@
 import { createId, createNumericCode, isValidEmail, json, normalizeEmail, readJson, requireDb, sha256 } from '../../_shared/auth.js'
+import { sendAccountEmail } from '../../_shared/email.js'
 
 export async function onRequestPost({ request, env }) {
   try {
@@ -28,19 +29,9 @@ export async function onRequestPost({ request, env }) {
 }
 
 async function sendLoginEmail(env, email, code) {
-  if (!env.RESEND_API_KEY || !env.LOGIN_EMAIL_FROM) return { sent: false }
-  const response = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${env.RESEND_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from: env.LOGIN_EMAIL_FROM,
-      to: email,
-      subject: '翎英教育 LynkEdu 登录验证码',
-      text: `你的登录验证码是 ${code}，10 分钟内有效。`,
-    }),
+  return sendAccountEmail(env, {
+    to: email,
+    subject: '翎英教育 LynkEdu 登录验证码',
+    text: `你的登录验证码是 ${code}，10 分钟内有效。`,
   })
-  return { sent: response.ok }
 }

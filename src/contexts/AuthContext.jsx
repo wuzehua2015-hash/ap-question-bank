@@ -2,10 +2,13 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import {
   fetchMe,
   fetchProgress,
+  loginWithPassword as loginWithPasswordApi,
   requestLoginCode as requestLoginCodeApi,
+  registerAccount as registerAccountApi,
   saveProgress,
   setSessionToken,
   verifyLoginCode as verifyLoginCodeApi,
+  verifyEmail as verifyEmailApi,
 } from '../utils/accountApi'
 import {
   collectLocalProgressSnapshot,
@@ -23,7 +26,10 @@ const AuthContext = createContext({
   isInternalStudent: false,
   isLynkStudent: false,
   requestLoginCode: async () => {},
+  registerAccount: async () => {},
+  loginWithPassword: async () => {},
   verifyLoginCode: async () => {},
+  verifyEmail: async () => {},
   logout: () => {},
   syncNow: async () => {},
 })
@@ -97,13 +103,32 @@ export function AuthProvider({ children }) {
     return requestLoginCodeApi(email)
   }, [])
 
-  const verifyLoginCode = useCallback(async (email, code) => {
-    const accountData = await verifyLoginCodeApi(email, code)
+  const finishAuthenticated = useCallback(async (accountData) => {
     setSessionToken(accountData.sessionToken)
     applyAccountData(accountData)
     const progressData = await fetchProgress().catch(() => null)
     if (progressData?.snapshot) mergeProgressSnapshot(progressData.snapshot)
     await saveProgress(collectLocalProgressSnapshot()).catch(() => {})
+    return accountData
+  }, [applyAccountData])
+
+  const registerAccount = useCallback((payload) => {
+    return registerAccountApi(payload).then(finishAuthenticated)
+  }, [finishAuthenticated])
+
+  const loginWithPassword = useCallback((email, password) => {
+    return loginWithPasswordApi(email, password).then(finishAuthenticated)
+  }, [finishAuthenticated])
+
+  const verifyLoginCode = useCallback(async (email, code) => {
+    const accountData = await verifyLoginCodeApi(email, code)
+    return finishAuthenticated(accountData)
+  }, [finishAuthenticated])
+
+  const verifyEmail = useCallback(async (code) => {
+    await verifyEmailApi(code)
+    const accountData = await fetchMe()
+    applyAccountData(accountData)
     return accountData
   }, [applyAccountData])
 
@@ -126,10 +151,13 @@ export function AuthProvider({ children }) {
     isInternalStudent,
     isLynkStudent: isInternalStudent,
     requestLoginCode,
+    registerAccount,
+    loginWithPassword,
     verifyLoginCode,
+    verifyEmail,
     logout,
     syncNow,
-  }), [accountLevel, entitlements, isInternalStudent, logout, requestLoginCode, status, syncNow, user, verifyLoginCode])
+  }), [accountLevel, entitlements, isInternalStudent, loginWithPassword, logout, registerAccount, requestLoginCode, status, syncNow, user, verifyEmail, verifyLoginCode])
 
   return (
     <AuthContext.Provider value={value}>

@@ -40,3 +40,11 @@
   - production `lynkedu.com` bundle observed: `/assets/index-CdPMt8hY.js`;
   - real-browser checks passed for visitor `/mistakes` login gate and visitor `/search` `翎英学员` gate with `注册会员` copy.
 - GitHub push of local commits failed because the local machine hit a GitHub connection reset; production was still updated through Cloudflare Pages direct deploy.
+- Implemented student account upgrade:
+  - primary email/password registration and login;
+  - email-code login retained as fallback;
+  - forgot-password flow;
+  - account profile, email verification, password setup/change, progress sync, and logout-other-devices controls;
+  - optional `翎英学员` invite-code backend.
+- Applied remote D1 migration `migrations/0002_password_auth.sql` to `lynkedu-question-bank`; verified `email_verified_at` and new password/auth tables exist.
+- Recorded SEO/GEO optimization as a required future launch/acquisition workstream.
