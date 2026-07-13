@@ -59,3 +59,6 @@ Student-facing copy must explain direct student value. Internal teaching-researc
 ## 2026-07-13: Minimal Student UI Direction
 
 The student web UI should prefer a minimalist learning-tool style over dense dashboard cards. Home should avoid card walls, repeated metric boxes, and equal-weight tool grids. Keep the first screen focused on current subject, two primary actions, quiet account/subject context, and sparse secondary links.
+## 2026-07-13: Lightweight Learning Flow
+
+Home may use existing local/account progress data to adjust copy and the secondary action, but it should not become a heavy recommendation system. Current approved pattern: current subject, two primary actions, and one context-aware secondary link such as `复盘错题` when wrong questions exist.

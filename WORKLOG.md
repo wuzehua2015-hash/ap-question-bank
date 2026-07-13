@@ -75,3 +75,12 @@
   - latest Pages deployment URL observed: `https://ad0317fa.lynkedu-ap-question-bank.pages.dev`;
   - production `lynkedu.com` bundle observed: `/assets/index-zpiUeq2o.js`;
   - production CSS observed: `/assets/index-CEg-XvSo.css`.
+- Added a lightweight student next-step flow to the minimalist home page:
+  - reads current-subject local quiz history and wrong-question count;
+  - keeps new students on the simple `专项练习 / 模拟考试 / 学习记录` path;
+  - returning students with wrong questions see `继续练习`, last score, wrong-count summary, and a `复盘错题` secondary action;
+  - no complex recommendation engine or new data model was added.
+- Deployed lightweight home learning-flow refinement to Cloudflare Pages:
+  - latest Pages deployment URL observed: `https://21082dae.lynkedu-ap-question-bank.pages.dev`;
+  - production `lynkedu.com` bundle observed: `/assets/index-dVLuSvV1.js`;
+  - production CSS remains `/assets/index-CEg-XvSo.css`.
