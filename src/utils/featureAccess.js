@@ -4,6 +4,6 @@ export function hasLynkStudentAccess({ accountLevel, entitlements } = {}) {
 
 export function accountLevelLabel(accountLevel, isLynkStudent = false) {
   if (isLynkStudent) return '翎英学员'
-  if (accountLevel === 'free') return '普通账号'
+  if (accountLevel === 'free') return '注册会员'
   return '游客'
 }

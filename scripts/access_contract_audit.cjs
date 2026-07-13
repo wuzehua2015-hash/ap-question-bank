@@ -50,7 +50,7 @@ const studentFacingFiles = [
   'src/components/PremiumGate.jsx',
 ]
 
-const forbiddenLabels = /(免费账号|内部学生|已认证|认证|certified|internal student|releaseStatus|visibility)/
+const forbiddenLabels = /(免费账号|普通账号|内部学生|已认证|认证|certified|internal student|releaseStatus|visibility)/
 for (const relativePath of studentFacingFiles) {
   const text = read(relativePath)
   if (forbiddenLabels.test(text)) {

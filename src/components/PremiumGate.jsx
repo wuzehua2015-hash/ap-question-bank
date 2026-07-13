@@ -13,7 +13,7 @@ function PremiumGate({ title = '翎英学员功能', children }) {
       <section className="bg-surface border border-border rounded-lg p-6 shadow-sm">
         <h1 className="text-2xl font-bold text-brand mb-3">{title}</h1>
         <p className="text-sm text-text-muted mb-6">
-          该功能面向翎英学员开放。你仍然可以使用单元 Quiz 进行在线训练；登录普通账号后可以在线生成和完成 Mock Exam。
+          该功能面向翎英学员开放。你仍然可以使用单元 Quiz 进行在线训练；注册会员可以在线生成和完成 Mock Exam。
         </p>
         <div className="flex flex-wrap gap-3">
           {!isLoggedIn && (
