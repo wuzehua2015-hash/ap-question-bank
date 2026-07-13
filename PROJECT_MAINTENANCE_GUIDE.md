@@ -1,5 +1,27 @@
 # AP题库项目常见问题与维护清单
 
+## 2026-07-13 当前权威部署说明
+
+当前线上生产环境是 Cloudflare Pages 项目 `lynkedu-ap-question-bank`，自定义域名是 `lynkedu.com` 和 `www.lynkedu.com`。当前根域名部署要求 `vite.config.js` 使用 `base: '/'`。
+
+当前生产发布可以通过本地构建产物直接上传：
+
+```powershell
+npm run build
+npx wrangler pages deploy dist --project-name lynkedu-ap-question-bank --branch main
+```
+
+因此，GitHub 推送失败并不代表线上不会更新；只要 Wrangler 上传成功，Cloudflare Pages 就会发布新的 `dist` 资源。GitHub 仍然必须作为源码追踪目标补推，但不能再把“GitHub Pages 自动部署”当作当前生产事实。
+
+每次网站功能或部署方式变更后，必须同步更新：
+
+- `PROJECT_STATUS.md`
+- `WORKLOG.md`
+- `DECISIONS.md`
+- `C:\Users\wuzeh\.codex\main-session\MEMORY.md`
+
+旧文档中关于 GitHub Pages `base: '/ap-question-bank/'` 或 Vercel 的内容只作为历史排障参考；当前生产以本节为准。
+
 > 本文档记录AP题库项目开发过程中遇到的所有问题，按类别分类，供后续新项目（微观经济学、其他学科）参考。
 > 最后更新: 2026-06-25
 
