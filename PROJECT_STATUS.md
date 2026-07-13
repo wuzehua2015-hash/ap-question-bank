@@ -96,7 +96,7 @@ CSA expansion closeout on 2026-07-13:
 - Validation passed: `npm run audit:csa`, `npm run validate`, `npm run build`, CSA render audit, CSA student-flow audit, capacity audit, and `npm run audit:expansion-closeout -- --subject=computer-science-a --status=complete`.
 - 2009 scanned released exam and AP Bowl 2015/2016 remain deferred candidates until OCR/code reconstruction is complete.
 - Production data verified on `lynkedu.com`: CSA `question_bank.json` returns 291 MCQ and `frq_bank.json` returns 12 FRQ.
-- GitHub source mirror: remote branch `prod-mock-pdf-fix` was synced through stable API fallback at remote commit `8057aec64f17d9c98c22f9bc67e40699d9c165db`; remote tree matches local HEAD tree `120e35882d4b5f3e3d6a74694799d8583545c0ae`.
+- GitHub source mirror: remote branch `prod-mock-pdf-fix` was synced through stable API fallback; `npm run stable:status` confirms the remote tree matches the local HEAD tree.
 
 ## Subject Management Contract
 
