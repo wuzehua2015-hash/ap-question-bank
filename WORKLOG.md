@@ -2,6 +2,22 @@
 
 ## 2026-07-13
 
+- Refined subject management and switching:
+  - header learning links route to settings when no subject is selected;
+  - subject dropdown opens even for one selected subject and always includes management entry;
+  - settings page now uses a minimalist `我的科目 / 可添加科目` layout;
+  - adding a subject sets it current/default;
+  - removing the final selected subject is blocked with a student-facing notice;
+  - deleting the current subject falls back to the remaining selected subject and updates `currentSubject` / `defaultSubject`;
+  - subject-dependent routes are wrapped by `RequireSubject` so direct URLs cannot silently open a stale/default subject.
+- Verification:
+  - `npm run build` passed.
+  - Real-browser built-preview checks passed for no-subject `/quiz`, settings empty state, add Biology, single-subject dropdown, last-subject removal block, add Calculus BC, remove current subject, home, and Biology quiz setup.
+- Deployed subject-flow refinement to Cloudflare Pages:
+  - latest Pages deployment URL observed: `https://83e65ae1.lynkedu-ap-question-bank.pages.dev`;
+  - production `lynkedu.com` bundle observed: `/assets/index-1HOTOWOv.js`;
+  - production CSS observed: `/assets/index-h2m_05wC.css`.
+
 - Deployed LynkEdu AP Question Bank to Cloudflare Pages production by direct `dist` upload.
 - Verified `https://lynkedu.com` and `https://www.lynkedu.com` return 200 and load root-path assets, not `/ap-question-bank/` assets.
 - Confirmed production bundle:

@@ -12,6 +12,7 @@ function Header() {
 
   const currentSubjectConfig = mySubjects.find(subject => subject.id === currentSubject)
   const accountLabel = isLoggedIn ? (isInternalStudent ? '翎英学员' : '注册会员') : '登录'
+  const hasStudySubjects = mySubjects.length > 0
   const navItems = [
     { path: '/quiz', label: '练习' },
     { path: '/exam', label: '模考' },
@@ -29,7 +30,7 @@ function Header() {
             {navItems.map(item => (
               <Link
                 key={item.path}
-                to={item.path}
+                to={hasStudySubjects ? item.path : '/settings'}
                 className={location.pathname === item.path ? 'font-semibold text-brand' : 'text-text-muted hover:text-brand'}
               >
                 {item.label}
@@ -41,26 +42,30 @@ function Header() {
             <div className="relative">
               <button
                 type="button"
-                onClick={() => mySubjects.length > 1 && setSubjectOpen(!subjectOpen)}
+                onClick={() => setSubjectOpen(!subjectOpen)}
                 className="text-text-muted hover:text-brand"
               >
                 {currentSubjectConfig?.shortName || currentSubjectConfig?.name || '选择科目'}
               </button>
-              {subjectOpen && mySubjects.length > 1 && (
+              {subjectOpen && (
                 <div className="absolute right-0 top-full mt-3 w-64 rounded-lg border border-border bg-white p-2 shadow-lg">
-                  {mySubjects.map(subject => (
-                    <button
-                      key={subject.id}
-                      type="button"
-                      onClick={() => {
-                        setSubject(subject.id)
-                        setSubjectOpen(false)
-                      }}
-                      className={`block w-full rounded-md px-3 py-2 text-left text-sm hover:bg-bg ${subject.id === currentSubject ? 'font-semibold text-brand' : 'text-text'}`}
-                    >
-                      {subject.name}
-                    </button>
-                  ))}
+                  {hasStudySubjects ? (
+                    mySubjects.map(subject => (
+                      <button
+                        key={subject.id}
+                        type="button"
+                        onClick={() => {
+                          setSubject(subject.id)
+                          setSubjectOpen(false)
+                        }}
+                        className={`block w-full rounded-md px-3 py-2 text-left text-sm hover:bg-bg ${subject.id === currentSubject ? 'font-semibold text-brand' : 'text-text'}`}
+                      >
+                        {subject.name}
+                      </button>
+                    ))
+                  ) : (
+                    <div className="px-3 py-2 text-sm text-text-muted">先选择学习科目</div>
+                  )}
                   <Link
                     to="/settings"
                     onClick={() => setSubjectOpen(false)}
@@ -92,7 +97,7 @@ function Header() {
           <div className="grid grid-cols-2 gap-3 text-sm">
             <Link to="/" onClick={() => setMenuOpen(false)} className="text-text">首页</Link>
             {navItems.map(item => (
-              <Link key={item.path} to={item.path} onClick={() => setMenuOpen(false)} className="text-text">
+              <Link key={item.path} to={hasStudySubjects ? item.path : '/settings'} onClick={() => setMenuOpen(false)} className="text-text">
                 {item.label}
               </Link>
             ))}

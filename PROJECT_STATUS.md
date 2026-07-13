@@ -7,10 +7,10 @@ Last updated: 2026-07-13
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Latest Pages deployment URL observed: `https://73072b39.lynkedu-ap-question-bank.pages.dev`
+- Latest Pages deployment URL observed: `https://83e65ae1.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
-  - JS: `/assets/index-DSx-shk8.js`
-  - CSS: `/assets/index-CcoUOuDc.css`
+  - JS: `/assets/index-1HOTOWOv.js`
+  - CSS: `/assets/index-h2m_05wC.css`
 - Current Vite base for custom root-domain deployment: `base: '/'`
 - Router: `HashRouter`
 
@@ -30,7 +30,7 @@ Hard rule: do not deploy if `npm run build` fails. Direct Pages deployment must 
 ## Git State
 
 - Working branch: `prod-mock-pdf-fix`
-- Latest local commit deployed to Pages: `ea3dd66 Upgrade student account flow`
+- Latest local code deployed to Pages: subject-management flow refinement, committed locally as `Refine subject management flow`.
 - GitHub push status at last update: failed due local network reset while reaching GitHub; retry required when network recovers.
 
 ## Product Access Tiers
@@ -73,6 +73,15 @@ Content-capacity backlog: Biology and some other subjects have comparatively sma
 
 - SEO/GEO optimization for public acquisition and AI answer-engine discoverability.
 - Subject question-pool expansion for low-volume subjects, especially Biology and sparse units flagged by unit-distribution audit.
+
+## Subject Management Contract
+
+- Student home and the header subject switcher show only `mySubjects`.
+- First visit may have zero selected subjects; subject-dependent pages must show the choose-subject prompt instead of silently loading a default subject.
+- Adding a subject immediately makes it the current/default subject.
+- The UI must not allow removing the last selected subject once the student has selected one.
+- Removing the current/default subject must immediately fall back to a remaining selected subject and update `currentSubject` and `defaultSubject` together.
+- Direct URL access to `/quiz`, `/exam`, `/search`, `/mistakes`, or `/history` must use the same selected-subject guard as header navigation.
 
 ## Current Web Product Milestone
 

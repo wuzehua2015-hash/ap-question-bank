@@ -64,9 +64,11 @@ export function SubjectProvider({ children }) {
   }, [])
 
   const setSubject = useCallback((id) => {
+    const availableIds = new Set(subjects.filter(s => s.active && s.visibility !== 'internal').map(s => s.id))
+    if (availableIds.size > 0 && !availableIds.has(id)) return
     setSubjectState(id)
     setCurrentSubject(id)
-  }, [])
+  }, [subjects])
 
   useEffect(() => {
     const refreshFromStorage = () => {
@@ -89,6 +91,8 @@ export function SubjectProvider({ children }) {
     const nextIds = [...new Set((ids || []).filter(id => availableIds.has(id)))]
     const fallbackSubject = nextIds[0] || subjects.find(s => s.active && s.visibility !== 'internal')?.id || currentSubject
     const nextCurrent = nextIds.includes(currentSubject) ? currentSubject : fallbackSubject
+    const currentDefault = getDefaultSubject()
+    const nextDefault = nextIds.includes(currentDefault) ? currentDefault : nextCurrent
 
     setMySubjectIds(nextIds)
     persistMySubjects(nextIds)
@@ -96,17 +100,22 @@ export function SubjectProvider({ children }) {
       setSubjectState(nextCurrent)
       setCurrentSubject(nextCurrent)
     }
+    if (nextDefault && nextDefault !== currentDefault) {
+      setDefaultSubject(nextDefault)
+    }
   }, [currentSubject, subjects])
 
   const setDefaultStudySubject = useCallback((id) => {
     if (!id) return
+    const availableIds = new Set(subjects.filter(s => s.active && s.visibility !== 'internal').map(s => s.id))
+    if (availableIds.size > 0 && !availableIds.has(id)) return
     setDefaultSubject(id)
     if (!mySubjectIds.includes(id)) {
       updateMySubjects([...mySubjectIds, id])
     }
     setSubjectState(id)
     setCurrentSubject(id)
-  }, [mySubjectIds, updateMySubjects])
+  }, [mySubjectIds, subjects, updateMySubjects])
 
   const activeSubjects = subjects.filter(s => s.active)
   const availableSubjects = activeSubjects.filter(s => s.visibility !== 'internal')
