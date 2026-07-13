@@ -13,11 +13,16 @@
   - `翎英学员`.
 - Restricted premium tools to `翎英学员`:
   - search,
-  - mistake book,
-  - history,
+  - question sets,
+  - similar-question practice,
   - Quiz PDF download,
-  - Mock Exam PDF download.
-- Kept online Mock Exam available to registered accounts.
+  - Mock Exam PDF download,
+  - score-report PDF download,
+  - future unit knowledge-point explanations.
+- Kept online Mock Exam, mistake book, and practice history available to registered accounts.
+- Recorded that registered-account mistake/history data is a durable teaching-research and product-iteration data foundation.
+- Recorded post-launch content-capacity backlog: Biology and other low-volume subjects need question-pool expansion/backfill.
+- Added `scripts/access_contract_audit.cjs` and wired it into `npm run validate` so the tier-2/tier-3 permission boundary is executable.
 - Rebuilt Search as a current-subject question-bank workbench:
   - weighted current-subject search,
   - official question rendering via `QuestionDisplay`,
@@ -30,4 +35,3 @@
 - Verified locally through `npm run build`.
 - Verified production search page in real browser: visitor sees `翎英学员` access gate.
 - GitHub push of local commit `77d2fa5` failed because the local machine could not connect to `github.com:443`; production was still updated through Cloudflare Pages direct deploy.
-

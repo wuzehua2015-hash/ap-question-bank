@@ -4,13 +4,13 @@ import { loadMCQBank, getSubjectUnits } from '../utils/questionBank'
 import {
   getQuizHistory, getQuestionHistory, clearSubjectData,
 } from '../utils/storage'
-import PremiumGate from '../components/PremiumGate'
+import LoginGate from '../components/LoginGate'
 
 function HistoryPage() {
   return (
-    <PremiumGate title="学习记录">
+    <LoginGate title="学习记录">
       <HistoryPageContent />
-    </PremiumGate>
+    </LoginGate>
   )
 }
 

@@ -41,18 +41,22 @@ Hard rule: do not deploy if `npm run build` fails. Direct Pages deployment must 
 - Registered account:
   - Can use unit Quiz online.
   - Can generate and complete Mock Exam online.
+  - Can view mistake book and practice history.
   - Progress syncs to D1.
+  - These training records are product data infrastructure for teaching research, curriculum iteration, and future teacher-side analytics.
 - Lynk Student (`翎英学员`):
   - Full question-bank tools.
   - Search.
   - Question set.
   - Similar-question practice.
-  - Mistake book.
-  - History.
   - Quiz PDF download.
   - Mock Exam PDF download.
+  - Score-report PDF download.
+  - Unit knowledge-point explanations.
 
 Student-facing copy must use `翎英学员`, not internal certification/release labels.
+
+Content-capacity backlog: Biology and some other subjects have comparatively small question pools. After launch stabilization, add a subject-by-subject expansion/backfill pass so low-volume units do not produce repetitive practice or weak mock coverage.
 
 ## Current Web Product Milestone
 
@@ -65,4 +69,3 @@ The site has entered productization for public launch:
   - local and account-storage behavior,
   - production build verification,
   - production URL verification when deployed.
-

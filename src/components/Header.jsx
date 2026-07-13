@@ -87,7 +87,7 @@ function Header() {
               className="text-xs font-medium bg-white/10 text-white px-2.5 py-1 rounded-full hover:bg-white/15 transition-colors"
               title={user?.email}
             >
-              {isInternalStudent ? '内部学生' : '免费账号'}
+              {isInternalStudent ? '翎英学员' : '注册会员'}
             </Link>
           )}
         </nav>

@@ -31,6 +31,7 @@
     "validate:copy": "node scripts/chinese_copy_gate.cjs",
     "validate:groups": "node scripts/audit_group_context_integrity.cjs && node scripts/grouped_quiz_audit.mjs",
     "validate:subject-risk": "node scripts/subject_risk_audit.cjs",
+    "validate:access-contract": "node scripts/access_contract_audit.cjs",
     "audit:units": "node scripts/unit_progression_audit.cjs --write-report",
     "validate:units": "node scripts/unit_progression_audit.cjs --blocking --fail-on-findings",
     "validate:science": "node scripts/science_content_gate.cjs",
@@ -38,7 +39,7 @@
     "validate:launch-contract": "node scripts/launch_contract_audit.cjs",
     "validate:unit-distribution": "node scripts/unit_distribution_contract_audit.cjs",
     "validate:student-progression": "node scripts/unit_progression_audit.cjs --write-report --fail-on-findings && node scripts/student_progression_audit.cjs --skip-browser",
-    "validate": "npm run validate:launch-contract && npm run validate:copy && npm run validate:unit-distribution && npm run validate:student-progression && npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:groups && npm run validate:subject-risk && npm run validate:units && npm run validate:science && npm run validate:regression",
+    "validate": "npm run validate:launch-contract && npm run validate:copy && npm run validate:access-contract && npm run validate:unit-distribution && npm run validate:student-progression && npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:groups && npm run validate:subject-risk && npm run validate:units && npm run validate:science && npm run validate:regression",
     "prebuild": "npm run validate",
     "predev": "npm run validate"
   },

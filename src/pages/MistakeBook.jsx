@@ -8,21 +8,23 @@ import {
 import { startWrongQuiz, startCustomQuiz } from '../utils/quizSession'
 import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
 import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
-import PremiumGate from '../components/PremiumGate'
+import LoginGate from '../components/LoginGate'
+import { useAuth } from '../contexts/AuthContext'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
 function MistakeBook() {
   return (
-    <PremiumGate title="错题本">
+    <LoginGate title="错题本">
       <MistakeBookContent />
-    </PremiumGate>
+    </LoginGate>
   )
 }
 
 function MistakeBookContent() {
   const navigate = useNavigate()
   const { currentSubject } = useSubject()
+  const { isLoggedIn, isInternalStudent } = useAuth()
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(true)
   const [unitFilter, setUnitFilter] = useState('all')
@@ -78,6 +80,10 @@ function MistakeBookContent() {
 
   const exportWrongPdf = () => {
     if (wrongQuestions.length === 0) return
+    if (!isInternalStudent) {
+      navigate(isLoggedIn ? '/account' : `/login?returnTo=${encodeURIComponent('/mistakes')}&reason=lynk-student`)
+      return
+    }
     const shuffled = [...wrongQuestions].sort(() => Math.random() - 0.5)
     const selected = shuffled.slice(0, Math.min(30, shuffled.length))
     startWrongQuiz({
@@ -132,7 +138,7 @@ function MistakeBookContent() {
               onClick={exportWrongPdf}
               className="border border-brand text-brand hover:bg-brand hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
             >
-              📄 导出 PDF
+              {isInternalStudent ? '导出 PDF' : '翎英学员下载 PDF'}
             </button>
           )}
           {wrongQuestions.length > 0 && (
@@ -258,11 +264,13 @@ function MistakeBookContent() {
                       重新练习
                     </button>
                   </div>
-                  <SimilarQuestionsBlock
-                    questionId={q.question_id}
-                    allQuestions={questions}
-                    count={3}
-                  />
+                  {isInternalStudent && (
+                    <SimilarQuestionsBlock
+                      questionId={q.question_id}
+                      allQuestions={questions}
+                      count={3}
+                    />
+                  )}
                 </div>
               )}
             </div>

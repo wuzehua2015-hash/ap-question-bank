@@ -5,6 +5,7 @@ import { MathText } from '../components/MathText'
 import FRQDisplay from '../components/FRQDisplay'
 import { PdfContainer, exportToPdf } from '../utils/pdfExport.jsx'
 import { useSubject } from '../contexts/SubjectContext'
+import { useAuth } from '../contexts/AuthContext'
 import { formatAnswer, isAnswerCorrect } from '../utils/questionBank'
 import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
 
@@ -56,6 +57,7 @@ function ScoreBackgroundTable({ tableData }) {
 function ScorePage() {
   const navigate = useNavigate()
   const { currentSubjectConfig } = useSubject()
+  const { isLoggedIn, isInternalStudent } = useAuth()
   const subjectName = currentSubjectConfig?.name || 'AP Microeconomics'
   const pdfRef = useRef(null)
   const [quiz, setQuiz] = useState([])
@@ -112,6 +114,10 @@ function ScorePage() {
 
   const exportPDF = async () => {
     if (!pdfRef.current) return
+    if (!isInternalStudent) {
+      navigate(isLoggedIn ? '/account' : `/login?returnTo=${encodeURIComponent('/score')}&reason=lynk-student`)
+      return
+    }
     setExporting(true)
     try {
       const filename = `LynkEdu-Mock-Exam-Report-${new Date().toISOString().split('T')[0]}.pdf`
@@ -151,7 +157,7 @@ function ScorePage() {
           disabled={exporting}
           className="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
         >
-          {exporting ? '生成中...' : '导出 PDF 成绩单'}
+          {exporting ? '生成中...' : isInternalStudent ? '导出 PDF 成绩单' : '翎英学员下载成绩单'}
         </button>
       </div>
 

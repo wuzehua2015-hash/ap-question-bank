@@ -58,7 +58,7 @@ function LoginPage() {
       <section className="bg-surface border border-border rounded-lg p-6 shadow-sm">
         <h1 className="text-2xl font-bold text-brand mb-2">学生登录 / 注册</h1>
         <p className="text-sm text-text-muted mb-6">
-          输入邮箱即可登录；如果是第一次使用，系统会自动创建免费账号。游客记录会在登录后自动合并到账号。
+          输入邮箱即可登录；如果是第一次使用，系统会自动创建注册会员账号。游客记录会在登录后自动合并到账号。
         </p>
         {reason && (
           <div className="mb-5 p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-800 text-sm">
@@ -141,6 +141,7 @@ function reasonMessage(reason) {
   const messages = {
     'quiz-result': '登录或注册后即可回到本次练习，查看答案、错题和相似题推荐。',
     'mock-exam': '生成 Mock Exam 前需要登录，以便保存考试记录并保持使用体验稳定。',
+    'progress': '登录或注册后可以查看并同步错题本、学习记录和跨设备进度。',
     'lynk-student': '该功能面向翎英学员开放。请先登录账号；如需开通学员权限，请联系翎英教育。',
   }
   return messages[reason] || '登录或注册后即可继续刚才的操作。'

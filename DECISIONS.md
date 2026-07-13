@@ -18,10 +18,12 @@ Consequence:
 The product access model is:
 
 - Visitor: online unit Quiz only.
-- Registered account: online unit Quiz and online Mock Exam.
-- `翎英学员`: full tools and downloads.
+- Registered account: online unit Quiz, online Mock Exam, mistake book, and practice history.
+- `翎英学员`: full tools, downloads, and knowledge-point explanations.
 
-Search, mistake book, history, question sets, similar-question workflows, and PDF downloads are premium student tools.
+Search, question sets, similar-question workflows, PDF downloads, and unit knowledge-point explanations are premium student tools. Mistake book and practice history are registered-account features because they are part of the site's learning-data infrastructure.
+
+Student-facing labels must say `注册会员` and `翎英学员`; do not expose internal account-state terms such as internal/certified student labels.
 
 ## 2026-07-13: Search Scope
 
@@ -36,4 +38,3 @@ PDF download is not a standalone public purchase feature at this stage. It is a 
 Reason:
 - Lower operational complexity.
 - Lower copyright/commercialization risk than selling individual AP-question PDFs.
-
