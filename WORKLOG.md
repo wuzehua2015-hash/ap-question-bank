@@ -142,3 +142,15 @@
   - latest Pages deployment URL observed: `https://73072b39.lynkedu-ap-question-bank.pages.dev`;
   - production `lynkedu.com` bundle observed: `/assets/index-DSx-shk8.js`;
   - production CSS observed: `/assets/index-CcoUOuDc.css`.
+# 2026-07-13 - CSA Capacity Expansion Closeout
+
+- Completed AP Computer Science A MCQ expansion from 105 MCQ to 291 MCQ while keeping 12 FRQ.
+- Added source approval ledger and archived network/open-curriculum sources under `subjects/AP/Computer-Science-A/01-exams/network_sources/`.
+- Published:
+  - 20 CED MCQ + 4 CED FRQ.
+  - 38 AP Bowl 2018 MCQ.
+  - 122 CSAwesome / Runestone open-curriculum MCQ with GFDL 1.3 metadata.
+  - 6 LynkEdu-owned U1 original MCQ.
+- Deferred 2009 scanned released exam and AP Bowl 2015/2016 until OCR/code reconstruction is complete.
+- Updated CSA pipeline, CSA content audit, subject-risk audit, source pack, CSA status, and expansion ledger.
+- Verification passed: `npm run audit:csa`, `npm run validate`, `npm run build`, `npm run audit:render -- --subject=computer-science-a`, `npm run audit:student-flow -- --subject=computer-science-a`, `npm run audit:capacity`, and `npm run audit:expansion-closeout -- --subject=computer-science-a --status=complete`.

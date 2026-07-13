@@ -1,6 +1,6 @@
 {
   "subject": "AP Computer Science A",
-  "version": "csa_2015_gridworld_2014sample_ced2025_v2",
+  "version": "csa_2015_gridworld_2014sample_ced2025_apbowl2018_csawesome_lynkeduu1_v4",
   "units": [
     {
       "code": "U1",
@@ -71,6 +71,27 @@
       "source_set": "current_ced_sample",
       "mcq": 20,
       "frq": 4
+    },
+    {
+      "key": "ap_bowl_2018",
+      "year": 2018,
+      "source_set": "ap_bowl_gt_practice",
+      "mcq": 38,
+      "frq": 0
+    },
+    {
+      "key": "csawesome_practice",
+      "year": 2026,
+      "source_set": "csawesome_open_practice",
+      "mcq": 122,
+      "frq": 0
+    },
+    {
+      "key": "lynkedu_u1_practice",
+      "year": 2026,
+      "source_set": "lynkedu_original_u1_practice",
+      "mcq": 6,
+      "frq": 0
     }
   ],
   "mock_exam": {
@@ -79,22 +100,25 @@
     "mcq_time_limit": 5400,
     "frq_time_limit": 5400,
     "unit_distribution": {
-      "U1": 1,
-      "U2": 1,
-      "U3": 2,
+      "U1": 2,
+      "U2": 2,
+      "U3": 3,
       "U4": 4,
-      "U5": 9,
-      "U6": 11,
-      "U7": 2,
-      "U8": 6,
-      "U9": 3,
-      "U10": 3
+      "U5": 6,
+      "U6": 9,
+      "U7": 3,
+      "U8": 4,
+      "U9": 4,
+      "U10": 5
     }
   },
   "notes": [
     "2014 College Board sample contributes MCQ only; sample FRQ has suggested solutions but no full scoring guideline and is excluded from FRQ bank.",
     "GridWorld is marked as a legacy practice source.",
     "CSA prompts/options must be structured as text, tables, and fenced Java code; prompt screenshots are not part of the student-facing delivery standard.",
-    "2025 current CED sample questions are included as official current-source content; CED MCQ options are A-D and are intentionally not padded to A-E."
+    "2025 current CED sample questions are included as official current-source content; CED MCQ options are A-D and are intentionally not padded to A-E.",
+    "2018 AP Bowl / Georgia Tech practice questions are included as public practice content after answer, duplicate, Java-version, code rendering, and unit review; two items were excluded before publish.",
+    "CSAwesome / Runestone open-curriculum practice questions are included with GFDL 1.3 source metadata and source credit after structured RST, answer, image, duplicate, and unit review.",
+    "A small LynkEdu-owned U1 original batch is included to improve Primitive Types coverage without misclassifying later-unit items."
   ]
 }

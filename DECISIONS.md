@@ -106,3 +106,10 @@ AP Computer Science A now includes the current official CED sample questions as 
 CSA expansion must continue to use structured Java/code/table rendering rather than prompt screenshots. The mandatory CSA post-pipeline check is `npm run audit:csa`, in addition to full `npm run validate`, build, render, student-flow, and capacity audits.
 
 The 2009 scanned released exam remains a deferred candidate until its Java code, options, answer key, FRQ prompts, and scoring rows are reconstructed from the scanned source.
+# 2026-07-13 - CSA Expansion Source Policy
+
+- CSA expansion completion may include open-curriculum and LynkEdu-owned original practice content, but every non-official source must be labeled as practice, carry source provenance, and keep license/credit metadata where applicable.
+- CSAwesome / Runestone content is acceptable as open-curriculum practice only with GFDL 1.3 metadata retained; it is not official released exam content.
+- Small owned-content batches may be used to clear a narrowly identified sparse unit only when official/open sources do not provide enough clean standard MCQ and when the items are deterministic and manually answer-verified.
+- CSA item classification must use required learning sequence. Method names such as `mystery` are not sufficient evidence for recursion.
+- Structure-risk scanning should distinguish true record/table prompts from abstract terms such as “database containing sorted integers.”

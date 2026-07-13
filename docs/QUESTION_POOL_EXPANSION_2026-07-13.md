@@ -53,7 +53,7 @@ Every expansion pass must preserve subject-specific rendering:
 
 ## Capacity Queue
 
-1. AP Computer Science A: first pass completed; now 125 MCQ / 12 FRQ after adding current CED. Still sparse U1, U2, U3, U7, U10.
+1. AP Computer Science A: capacity expansion completed; now 291 MCQ / 12 FRQ after adding current CED, AP Bowl 2018, CSAwesome open practice, and a small LynkEdu U1 original batch. Capacity risk OK; no sparse units.
 2. AP Physics 1: 121 MCQ / 15 FRQ; sparse U5, U6, U8.
 3. AP Biology: 153 MCQ / 30 FRQ; sparse U2, U4, U5, U7.
 4. AP Computer Science Principles: 148 MCQ / 8 written-response items; U1 sparse and U3 over-concentrated.
@@ -74,7 +74,7 @@ Report path:
 
 ## CSA Expansion Closeout: Current CED
 
-Status: partial source-batch closeout, not full CSA expansion completion.
+Status: superseded by full CSA capacity closeout below. The CED batch remains a published official-current source batch.
 
 Published source:
 
@@ -161,3 +161,37 @@ Publish gate:
 ## Current 2009 Non-Publishable State
 
 The current CED expansion has been published. No 2009 items are publishable yet. The next 2009 implementation step is a scanned-source reconstruction pipeline for the 2009 source.
+
+## CSA Full Capacity Closeout
+
+Status: complete.
+
+Published additional sources after the CED partial batch:
+
+- AP Bowl 2018 / Georgia Tech public practice: 38 MCQ accepted, 2 excluded before publish.
+- CSAwesome / Runestone open-curriculum practice: 122 MCQ accepted from 135 candidates; GFDL 1.3 license and source credit retained in provenance.
+- LynkEdu original U1 practice: 6 MCQ added only to clear Primitive Types sparse coverage.
+
+Final CSA package:
+
+- 291 MCQ.
+- 12 FRQ.
+- +186 MCQ relative to the pre-expansion 105-item package.
+- Capacity audit: OK; no sparse units.
+
+Reusable mechanism lessons:
+
+- A complete expansion can combine official samples, public practice, open-curriculum items, and a small owned-content patch, but each source must carry a distinct `source_set`, provenance, license/credit where applicable, and source decision.
+- Open curriculum is not official exam content; it must be labeled as practice and may require license metadata.
+- Item classification must follow the required learning sequence. Do not classify by broad keywords such as a method name.
+- Structure-risk scanning must distinguish true tabular/record prompts from abstract uses of words like `database`.
+
+Closeout evidence:
+
+- `npm run audit:csa`: pass.
+- `npm run validate`: pass, 0 errors / 0 warnings.
+- `npm run build`: pass.
+- `npm run audit:render -- --subject=computer-science-a`: pass, all 291 MCQ and 12 FRQ covered.
+- `npm run audit:student-flow -- --subject=computer-science-a`: pass, 0 errors / 5 non-blocking internal-ID visibility warnings.
+- `npm run audit:capacity`: CSA OK.
+- `npm run audit:expansion-closeout -- --subject=computer-science-a --status=complete`: pass.
