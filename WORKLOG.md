@@ -18,10 +18,8 @@
   - production `lynkedu.com` bundle observed: `/assets/index-1HOTOWOv.js`;
   - production CSS observed: `/assets/index-h2m_05wC.css`.
 - Synced source through stable-push API fallback:
-  - local HEAD before status-only update: `00a47864404c2381da60fc04e7e5a1d5461dd07d`;
   - remote branch: `prod-mock-pdf-fix`;
-  - remote commit: `ec2f5f1a7b6cd11a7b76507d9db42bf75d0c337a`;
-  - remote tree matched local tree `0703a5f6964218f966c79c26ad1a5c7e21171589`.
+  - `npm run stable:status` confirmed remote tree matches local HEAD tree after API fallback.
 
 - Deployed LynkEdu AP Question Bank to Cloudflare Pages production by direct `dist` upload.
 - Verified `https://lynkedu.com` and `https://www.lynkedu.com` return 200 and load root-path assets, not `/ap-question-bank/` assets.
