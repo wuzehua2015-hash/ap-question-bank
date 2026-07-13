@@ -7,10 +7,10 @@ Last updated: 2026-07-13
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Latest Pages deployment URL observed: `https://b89a6272.lynkedu-ap-question-bank.pages.dev`
+- Latest Pages deployment URL observed: `https://ef774b20.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
-  - JS: `/assets/index-CdPMt8hY.js`
-  - CSS: `/assets/index-BgNSD0mB.css`
+  - JS: `/assets/index-Cfz2d49t.js`
+  - CSS: `/assets/index-BsNt8fSc.css`
 - Current Vite base for custom root-domain deployment: `base: '/'`
 - Router: `HashRouter`
 
@@ -30,7 +30,7 @@ Hard rule: do not deploy if `npm run build` fails. Direct Pages deployment must 
 ## Git State
 
 - Working branch: `prod-mock-pdf-fix`
-- Latest local commit deployed to Pages: `4984408 Normalize registered member copy`
+- Latest local commit deployed to Pages: `ea3dd66 Upgrade student account flow`
 - GitHub push status at last update: failed due local network reset while reaching GitHub; retry required when network recovers.
 
 ## Product Access Tiers
@@ -67,6 +67,7 @@ Content-capacity backlog: Biology and some other subjects have comparatively sma
 - Password reset route: `/reset-password`.
 - Account route: `/account` with profile, email verification, password, learning-data sync, and session controls.
 - D1 schema migration applied through `migrations/0002_password_auth.sql` on remote database `lynkedu-question-bank`.
+- Production browser checks passed for `/login`, `/register`, `/reset-password`, and `/account` visitor account gate.
 
 ## Required Backlog
 

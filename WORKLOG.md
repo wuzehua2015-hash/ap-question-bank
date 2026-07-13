@@ -48,3 +48,9 @@
   - optional `翎英学员` invite-code backend.
 - Applied remote D1 migration `migrations/0002_password_auth.sql` to `lynkedu-question-bank`; verified `email_verified_at` and new password/auth tables exist.
 - Recorded SEO/GEO optimization as a required future launch/acquisition workstream.
+- Deployed account-system upgrade to Cloudflare Pages:
+  - local commit: `ea3dd66 Upgrade student account flow`;
+  - latest Pages deployment URL observed: `https://ef774b20.lynkedu-ap-question-bank.pages.dev`;
+  - production `lynkedu.com` bundle observed: `/assets/index-Cfz2d49t.js`;
+  - production CSS observed: `/assets/index-BsNt8fSc.css`;
+  - real-browser checks passed for `/login`, `/register`, `/reset-password`, and `/account` visitor account gate.
