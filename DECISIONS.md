@@ -84,6 +84,21 @@ Network expansion is mandatory for low-volume subjects. Do not rely only on one 
 
 The current expansion priority is CSA, Physics 1, Biology, CSP, Physics 2, then Environmental Science.
 
+## 2026-07-13: Expansion Closeout Semantics
+
+Publishing one accepted source batch is not the same as completing a subject expansion goal. Expansion work must distinguish:
+
+- `partial`: a source batch was added and passed delivery checks, but capacity risk, sparse units, source inventory, or deferred candidates remain.
+- `complete`: the full expansion objective is achieved after network source inventory, source decisions, capacity review, and student-surface checks.
+
+If capacity audit remains `High` or `Medium`, do not close the expansion goal as complete unless there is an explicit written product decision accepting the remaining shortage. The required guard is:
+
+```powershell
+npm run audit:expansion-closeout -- --subject=<subject-id> --status=partial|complete
+```
+
+CSA after the 2025 CED batch is `partial`, not complete.
+
 ## 2026-07-13: CSA Current CED Expansion
 
 AP Computer Science A now includes the current official CED sample questions as a published source: 20 MCQ and 4 FRQ. CED items keep their official A-D option format and must not be padded to A-E.

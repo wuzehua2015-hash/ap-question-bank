@@ -87,12 +87,13 @@ Capacity audit on 2026-07-13 identified the first expansion queue:
 
 Expansion is quality-gated work, not a count-only task. Each subject must use its subject-specific rendering strategy and delivery standard before new items reach Web.
 
-CSA expansion closeout on 2026-07-13:
+CSA expansion batch status on 2026-07-13:
 
 - Published 20 MCQ + 4 FRQ from the 2025 current CED through the CSA pipeline.
 - Added `npm run audit:csa` for CSA-specific structured-content checks.
 - Validation passed: `npm run audit:csa`, `npm run validate`, `npm run build`, CSA render audit, CSA student-flow audit, and capacity audit.
 - 2009 scanned released exam remains a deferred candidate until scanned Java/code reconstruction is complete.
+- This is a partial source-batch closeout, not full CSA expansion completion. `npm run audit:expansion-closeout -- --subject=computer-science-a --status=complete` must fail while capacity risk remains High.
 
 ## Subject Management Contract
 

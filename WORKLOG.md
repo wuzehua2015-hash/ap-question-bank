@@ -24,6 +24,12 @@
   - verification passed: `npm run audit:csa`, `npm run validate`, `npm run build`, `npm run audit:render -- --subject=computer-science-a`, `npm run audit:student-flow -- --subject=computer-science-a`, and `npm run audit:capacity`;
   - capacity audit still flags CSA as high risk because total MCQ count is 125 and U1/U2/U3/U7/U10 remain sparse;
   - 2009 scanned released exam remains deferred until scanned Java reconstruction is complete.
+- Corrected expansion closeout mechanism:
+  - recorded that the CSA CED pass is partial, not full expansion completion;
+  - added `scripts/expansion_closeout_audit.cjs`;
+  - added `npm run audit:expansion-closeout`;
+  - closeout now distinguishes source-batch acceptance from full expansion completion;
+  - `--status=complete` must fail for CSA while capacity risk remains High.
 
 - Refined subject management and switching:
   - header learning links route to settings when no subject is selected;

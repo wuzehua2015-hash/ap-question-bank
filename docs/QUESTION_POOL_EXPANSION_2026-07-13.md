@@ -6,6 +6,34 @@ Date: 2026-07-13
 
 Question-pool expansion is a delivery-quality task, not a count-only task. New items must enter through the subject source pack, risk discovery, rendering strategy, source pipeline, validators, and student-facing checks.
 
+Expansion completion is also not a "one-source published" event. A source batch can be accepted while the subject expansion remains unfinished.
+
+## Expansion Goal Closeout Contract
+
+There are two allowed closeout states:
+
+- `partial`: one or more source batches were published, but the subject still has material capacity risk, incomplete source inventory, or deferred usable sources.
+- `complete`: the expansion objective is actually achieved; capacity risk is cleared or explicitly accepted by a written product decision after full source inventory.
+
+Hard rules:
+
+- A goal cannot be marked complete only because one high-quality source was published.
+- A subject with capacity risk `High` or `Medium` cannot be closed as complete by default.
+- A subject with sparse units still listed by capacity audit cannot be closed as complete unless the remaining shortage is intentionally accepted in writing.
+- A low-volume subject must have a completed network source inventory before any complete closeout.
+- Every candidate source must have one of these states recorded: `published`, `deferred`, `rejected`, or `needs reconstruction`.
+- If the result is only a first pass, the final status must say `partial`, list residual capacity risk, list next source candidates, and keep the goal open or open a follow-up goal.
+- "Validation passed" only means the published batch is technically acceptable; it does not mean the expansion objective is complete.
+
+Executable closeout check:
+
+```powershell
+npm run audit:expansion-closeout -- --subject=computer-science-a --status=partial
+npm run audit:expansion-closeout -- --subject=computer-science-a --status=complete
+```
+
+For CSA after the CED pass, `--status=partial` is the only valid status because capacity risk remains High.
+
 Every low-volume subject must also run a network source inventory before choosing expansion sources. Use this priority order:
 
 1. Official current-course materials, especially current CED sample questions.
@@ -45,6 +73,8 @@ Report path:
 ```
 
 ## CSA Expansion Closeout: Current CED
+
+Status: partial source-batch closeout, not full CSA expansion completion.
 
 Published source:
 
