@@ -66,3 +66,12 @@
   - production `lynkedu.com` bundle observed: `/assets/index-Dqt_u_sP.js`;
   - production CSS observed: `/assets/index-DbOL2LWp.css`;
   - real-browser production checks passed for `/login` copy removal and `/` learning-dashboard structure.
+- Reworked the student home page and web shell toward a stricter minimalist style:
+  - removed dashboard-style card density and metric blocks;
+  - reduced navigation to core learning paths;
+  - kept the home page to current subject, two primary actions, a simple subject list, and text links;
+  - verified built preview on desktop and mobile before deployment.
+- Deployed minimalist layout refinement to Cloudflare Pages:
+  - latest Pages deployment URL observed: `https://ad0317fa.lynkedu-ap-question-bank.pages.dev`;
+  - production `lynkedu.com` bundle observed: `/assets/index-zpiUeq2o.js`;
+  - production CSS observed: `/assets/index-CEg-XvSo.css`.

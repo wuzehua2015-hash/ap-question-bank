@@ -56,3 +56,6 @@ Reason:
 The student home page should be maintained as a learning dashboard, not a loose directory of cards. The first screen should make the current subject, next practice action, mock exam action, account state, selected-subject scope, and common review tools visible with clear hierarchy.
 
 Student-facing copy must explain direct student value. Internal teaching-research, data-infrastructure, or system-iteration rationale belongs in maintenance docs, not the product UI.
+## 2026-07-13: Minimal Student UI Direction
+
+The student web UI should prefer a minimalist learning-tool style over dense dashboard cards. Home should avoid card walls, repeated metric boxes, and equal-weight tool grids. Keep the first screen focused on current subject, two primary actions, quiet account/subject context, and sparse secondary links.
