@@ -1,6 +1,6 @@
 {
   "subject": "AP Computer Science A",
-  "version": "csa_2015_gridworld_2014sample_v1",
+  "version": "csa_2015_gridworld_2014sample_ced2025_v2",
   "units": [
     {
       "code": "U1",
@@ -64,6 +64,13 @@
       "source_set": "college_board_sample",
       "mcq": 25,
       "frq": 0
+    },
+    {
+      "key": "ced_2025",
+      "year": 2025,
+      "source_set": "current_ced_sample",
+      "mcq": 20,
+      "frq": 4
     }
   ],
   "mock_exam": {
@@ -75,18 +82,19 @@
       "U1": 1,
       "U2": 1,
       "U3": 2,
-      "U4": 3,
+      "U4": 4,
       "U5": 9,
-      "U6": 12,
-      "U7": 1,
+      "U6": 11,
+      "U7": 2,
       "U8": 6,
-      "U9": 4,
+      "U9": 3,
       "U10": 3
     }
   },
   "notes": [
     "2014 College Board sample contributes MCQ only; sample FRQ has suggested solutions but no full scoring guideline and is excluded from FRQ bank.",
     "GridWorld is marked as a legacy practice source.",
-    "CSA prompts/options must be structured as text, tables, and fenced Java code; prompt screenshots are not part of the student-facing delivery standard."
+    "CSA prompts/options must be structured as text, tables, and fenced Java code; prompt screenshots are not part of the student-facing delivery standard.",
+    "2025 current CED sample questions are included as official current-source content; CED MCQ options are A-D and are intentionally not padded to A-E."
   ]
 }

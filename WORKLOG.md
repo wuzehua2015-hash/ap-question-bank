@@ -14,6 +14,16 @@
   - generated local OCR/page-map assets under `D:\Lynk\翎英教育LynkEdu\.workspace\csa_2009_probe`;
   - updated CSA source pack, risk discovery, and expansion plan under `subjects/AP/Computer-Science-A/docs`;
   - fixed CSA pipeline Web target to prefer `ap-question-bank-prod-fix`.
+- Completed CSA first expansion pass:
+  - added official current CED sample questions as a first-class source;
+  - generated and published `ced_2025` data: 20 MCQ + 4 FRQ;
+  - CSA Web package increased from 105 MCQ / 8 FRQ to 125 MCQ / 12 FRQ;
+  - rebuilt CED content as structured Java, Markdown tables, lists, and CSA FRQ scoring rows; no broad prompt screenshots were used;
+  - added `scripts/csa_content_audit.cjs` and `npm run audit:csa`;
+  - fixed stale empty group metadata for CSA 2015 Q27-Q28 during the rebuild;
+  - verification passed: `npm run audit:csa`, `npm run validate`, `npm run build`, `npm run audit:render -- --subject=computer-science-a`, `npm run audit:student-flow -- --subject=computer-science-a`, and `npm run audit:capacity`;
+  - capacity audit still flags CSA as high risk because total MCQ count is 125 and U1/U2/U3/U7/U10 remain sparse;
+  - 2009 scanned released exam remains deferred until scanned Java reconstruction is complete.
 
 - Refined subject management and switching:
   - header learning links route to settings when no subject is selected;

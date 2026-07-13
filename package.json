@@ -39,6 +39,7 @@
     "validate:launch-contract": "node scripts/launch_contract_audit.cjs",
     "validate:unit-distribution": "node scripts/unit_distribution_contract_audit.cjs",
     "audit:capacity": "node scripts/subject_capacity_audit.cjs",
+    "audit:csa": "node scripts/csa_content_audit.cjs",
     "validate:student-progression": "node scripts/unit_progression_audit.cjs --write-report --fail-on-findings && node scripts/student_progression_audit.cjs --skip-browser",
     "validate": "npm run validate:launch-contract && npm run validate:copy && npm run validate:access-contract && npm run validate:unit-distribution && npm run validate:student-progression && npm run validate:data && npm run validate:images && npm run validate:rubrics && npm run validate:groups && npm run validate:subject-risk && npm run validate:units && npm run validate:science && npm run validate:regression",
     "prebuild": "npm run validate",
