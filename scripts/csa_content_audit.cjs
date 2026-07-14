@@ -12,14 +12,20 @@ const errors = []
 const cedQuestions = questions.filter(q => q.source_set === 'current_ced_sample')
 const cedFrqs = frqs.filter(q => q.source_set === 'current_ced_sample')
 const apBowl2018Questions = questions.filter(q => q.source_set === 'ap_bowl_gt_practice')
+const apBowl2015Questions = questions.filter(q => q.source_set === 'ap_bowl_gt_practice' && Number(q.year) === 2015)
+const apBowl2016Questions = questions.filter(q => q.source_set === 'ap_bowl_gt_practice' && Number(q.year) === 2016)
+const released2009Questions = questions.filter(q => q.source_set === 'released_2009')
 const csawesomeQuestions = questions.filter(q => q.source_set === 'csawesome_open_practice')
 const lynkeduU1Questions = questions.filter(q => q.source_set === 'lynkedu_original_u1_practice')
 
-if (questions.length !== 291) errors.push(`expected 291 CSA MCQ after full CSA expansion, found ${questions.length}`)
+if (questions.length !== 302) errors.push(`expected 302 CSA MCQ after deferred-source curated expansion, found ${questions.length}`)
 if (frqs.length !== 12) errors.push(`expected 12 CSA FRQ after CED expansion, found ${frqs.length}`)
 if (cedQuestions.length !== 20) errors.push(`expected 20 CED MCQ, found ${cedQuestions.length}`)
 if (cedFrqs.length !== 4) errors.push(`expected 4 CED FRQ, found ${cedFrqs.length}`)
-if (apBowl2018Questions.length !== 38) errors.push(`expected 38 AP Bowl 2018 MCQ after source approval, found ${apBowl2018Questions.length}`)
+if (apBowl2018Questions.filter(q => Number(q.year) === 2018).length !== 38) errors.push(`expected 38 AP Bowl 2018 MCQ after source approval, found ${apBowl2018Questions.filter(q => Number(q.year) === 2018).length}`)
+if (apBowl2015Questions.length !== 5) errors.push(`expected 5 curated AP Bowl 2015 MCQ, found ${apBowl2015Questions.length}`)
+if (apBowl2016Questions.length !== 4) errors.push(`expected 4 curated AP Bowl 2016 MCQ, found ${apBowl2016Questions.length}`)
+if (released2009Questions.length !== 2) errors.push(`expected 2 curated 2009 released MCQ, found ${released2009Questions.length}`)
 if (csawesomeQuestions.length !== 122) errors.push(`expected 122 CSAwesome MCQ after source approval, found ${csawesomeQuestions.length}`)
 if (lynkeduU1Questions.length !== 6) errors.push(`expected 6 LynkEdu U1 MCQ after source approval, found ${lynkeduU1Questions.length}`)
 
@@ -34,6 +40,15 @@ for (const q of questions) {
   if (/open parenthesis|close parenthesis|equals equals|semicolon|percent|dot\b/i.test(blob)) {
     errors.push(`${q.question_id}: visible spoken-code artifact`)
   }
+  if (/\bprintin\s*\(|\b5S\b|\bvaluet\b|\btypeAt\b|apcsaexam|QUESTION WRITTEN ABOUT PRE JAVA|GO ON TO THE NEXT PAGE|Unauthorized/i.test(blob)) {
+    errors.push(`${q.question_id}: visible OCR/source artifact`)
+  }
+  if (/\b[a-z]ar myCar\b|\blic,|\bIc,|\bla,|appearsina|m1\(\)\s*2|\$ 10|a\{j\]|alsavedIndex|savediIndex/.test(blob)) {
+    errors.push(`${q.question_id}: visible OCR-damaged Java text`)
+  }
+  if (Object.values(options).join('\n').match(/\bWhich of the following\b|\bConsider the following\b|\(\s*[A-E]\s*\)/i)) {
+    errors.push(`${q.question_id}: answer option appears to contain another question`)
+  }
   if (/```java/.test(blob) && !/```java[\s\S]+?```/.test(blob)) {
     errors.push(`${q.question_id}: malformed Java code block`)
   }
@@ -41,8 +56,16 @@ for (const q of questions) {
     if (!q.provenance?.source_credit || !/Georgia Tech|Barbara Ericson/i.test(q.provenance.source_credit)) {
       errors.push(`${q.question_id}: missing AP Bowl source credit`)
     }
-    if ([19, 21].includes(Number(q.question_number))) {
+    if (Number(q.year) === 2018 && [19, 21].includes(Number(q.question_number))) {
       errors.push(`${q.question_id}: excluded AP Bowl item should not be published`)
+    }
+  }
+  if (q.source_set === 'released_2009') {
+    if (!/College Board AP Computer Science A 2009 Released Exam/i.test(q.provenance?.source_credit || '')) {
+      errors.push(`${q.question_id}: missing 2009 released source credit`)
+    }
+    if (Number(q.question_number) > 20) {
+      errors.push(`${q.question_id}: 2009 GridWorld-era item should not be published in current CSA practice`)
     }
   }
   if (q.source_set === 'csawesome_open_practice') {
@@ -92,7 +115,7 @@ if (errors.length) {
   process.exit(1)
 }
 
-console.log(`CSA content audit passed: ${questions.length} MCQ, ${frqs.length} FRQ, CED ${cedQuestions.length}/${cedFrqs.length}, AP Bowl 2018 ${apBowl2018Questions.length}, CSAwesome ${csawesomeQuestions.length}, LynkEdu U1 ${lynkeduU1Questions.length}`)
+console.log(`CSA content audit passed: ${questions.length} MCQ, ${frqs.length} FRQ, CED ${cedQuestions.length}/${cedFrqs.length}, AP Bowl 2018 ${apBowl2018Questions.filter(q => Number(q.year) === 2018).length}, AP Bowl 2015 ${apBowl2015Questions.length}, AP Bowl 2016 ${apBowl2016Questions.length}, 2009 released ${released2009Questions.length}, CSAwesome ${csawesomeQuestions.length}, LynkEdu U1 ${lynkeduU1Questions.length}`)
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'))

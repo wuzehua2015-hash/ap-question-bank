@@ -197,3 +197,35 @@ Closeout evidence:
 - `npm run audit:expansion-closeout -- --subject=computer-science-a --status=complete`: pass.
 - Production data check: `lynkedu.com` returns 291 CSA MCQ and 12 CSA FRQ.
 - Source mirror check: stable push completed; `npm run stable:status` confirms the remote tree matches the local HEAD tree.
+
+## Deferred Source Curated Follow-Up
+
+Date: 2026-07-14.
+
+Sources rechecked:
+
+- AP Computer Science A 2009 released exam.
+- AP Bowl 2015.
+- AP Bowl 2016.
+
+Outcome:
+
+- CSA package is now 302 MCQ / 12 FRQ.
+- AP Bowl 2015 published 5 high-confidence MCQ; 35 candidates remain rejected/deferred in `source_report.json`.
+- AP Bowl 2016 published 4 high-confidence MCQ; 36 candidates remain rejected/deferred in `source_report.json`.
+- 2009 released exam published 2 high-confidence current-course-compatible MCQ; 38 MCQ remain rejected/deferred.
+- 2009 FRQ remains deferred until prompt cleanup, reference solutions, and part-level scoring rows meet CSA standard.
+
+Quality rule:
+
+- Scanned/OCR sources must not be published by count target alone. Only items with complete stem, complete options, verified answer, stable Java/code text, current-course fit, and required-learning-sequence unit classification may enter Web data.
+
+Evidence:
+
+- `npm run audit:csa`: pass, 302 MCQ / 12 FRQ.
+- `npm run validate`: pass.
+- `npm run audit:capacity`: CSA OK.
+- `node scripts/unit_progression_audit.cjs --subject=computer-science-a --blocking --fail-on-findings`: pass.
+- `npm run audit:render -- --subject=computer-science-a`: pass.
+- `npm run audit:student-flow -- --subject=computer-science-a`: pass, 0 errors / 5 non-blocking warnings.
+- `npm run build`: pass.
