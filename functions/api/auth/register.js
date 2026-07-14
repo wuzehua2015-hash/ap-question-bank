@@ -25,7 +25,7 @@ export async function onRequestPost({ request, env }) {
     const inviteCode = String(body.inviteCode || '').trim()
 
     if (!isValidEmail(email)) return json({ error: '请输入有效邮箱。' }, 400)
-    if (!isStrongEnoughPassword(password)) return json({ error: '密码至少 8 位，并包含字母和数字。' }, 400)
+    if (!isStrongEnoughPassword(password)) return json({ error: '密码需为 8-128 位，并包含字母和数字。' }, 400)
 
     const existing = await db.prepare('SELECT id FROM users WHERE email = ? LIMIT 1').bind(email).first()
     if (existing) return json({ error: '该邮箱已经注册，请直接登录。' }, 409)

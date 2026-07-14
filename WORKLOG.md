@@ -1,5 +1,32 @@
 # LynkEdu Worklog
 
+## 2026-07-14
+
+- Fixed student account password hashing for Cloudflare Workers:
+  - `functions/_shared/auth.js` now uses `PASSWORD_HASH_ITERATIONS = 100000`;
+  - password verification returns false for stored hashes above the Workers PBKDF2 cap instead of crashing the request;
+  - account/password/login/register/reset-code function files passed `node --check`.
+- Repaired online student rendering for special subjects:
+  - `MathText` formatting now supports fenced code blocks and inline code while preserving KaTeX rendering;
+  - online MCQ question text and options now use block-capable MathText containers;
+  - FRQ prompt normalization now protects fenced code blocks the same way it protects Markdown tables, so CSA FRQ code is not flattened.
+- Strengthened student-side visual auditing:
+  - `scripts/student_flow_audit.cjs` now deliberately samples CSA code questions and math/formula-heavy questions;
+  - online Quiz, Mock MCQ, and FRQ player fail if CSA code lacks `.math-code-block`/`.math-inline-code`, if raw code fences are visible, or if math subjects lack `.katex` for formula questions;
+  - search page target visibility is a warning in unauthenticated audits because search is a Lynk Student gated surface.
+- Verification:
+  - `node --check` passed for updated audit/auth files;
+  - `npm run validate` passed;
+  - `npm run build` passed;
+  - CSA student-flow audit on fresh preview `4182` passed with 0 errors;
+  - Calculus AB student-flow audit on fresh preview `4183` passed with 0 errors.
+- Deployed to Cloudflare Pages:
+  - latest Pages URL: `https://8a850978.lynkedu-ap-question-bank.pages.dev`;
+  - production `lynkedu.com` returned JS `/assets/index-B-vZgovI.js` and CSS `/assets/index-BRfFf4PD.css`;
+  - production CSA data verified at 302 MCQ / 12 FRQ;
+  - real-browser production checks confirmed CSA code render layer present with no raw code fences, and Calculus AB KaTeX present with no raw formula text;
+  - local password hash regression confirmed new hashes use `pbkdf2_sha256$100000` and verify successfully.
+
 ## 2026-07-13
 
 - Started question-pool expansion program:

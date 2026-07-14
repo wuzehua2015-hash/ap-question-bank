@@ -4,10 +4,13 @@ export async function onRequestPost({ request, env }) {
   try {
     const user = await getSessionUser(request, env)
     if (!user) return json({ error: '请先登录。' }, 401)
+
     const body = await readJson(request)
     const currentPassword = String(body.currentPassword || '')
     const newPassword = String(body.newPassword || '')
-    if (!isStrongEnoughPassword(newPassword)) return json({ error: '新密码至少 8 位，并包含字母和数字。' }, 400)
+    if (!isStrongEnoughPassword(newPassword)) {
+      return json({ error: '新密码需为 8-128 位，并包含字母和数字。' }, 400)
+    }
 
     const db = requireDb(env)
     const credential = await db.prepare('SELECT password_hash FROM password_credentials WHERE user_id = ? LIMIT 1').bind(user.id).first()

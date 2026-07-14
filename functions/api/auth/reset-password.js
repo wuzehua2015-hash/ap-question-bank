@@ -8,7 +8,7 @@ export async function onRequestPost({ request, env }) {
     const code = String(body.code || '').trim()
     const password = String(body.password || '')
     if (!isValidEmail(email) || !code) return json({ error: '邮箱或验证码不正确。' }, 400)
-    if (!isStrongEnoughPassword(password)) return json({ error: '密码至少 8 位，并包含字母和数字。' }, 400)
+    if (!isStrongEnoughPassword(password)) return json({ error: '密码需为 8-128 位，并包含字母和数字。' }, 400)
 
     const codeHash = await sha256(`${email}:${code}:${env.AUTH_CODE_SECRET || 'local-secret'}:reset-password`)
     const row = await db.prepare(`

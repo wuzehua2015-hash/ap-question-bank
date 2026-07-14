@@ -41,7 +41,12 @@ function renderLatex(source, displayMode) {
 function renderLatexSegments(text, options = {}) {
   const { forceInlineLatex = false } = options
   const restoredHtml = []
-  const protectedText = String(text).replace(/<\/?(?:sub|sup)>|&lt;(\/?(?:sub|sup))&gt;/gi, (raw, escapedTag) => {
+  let protectedText = String(text).replace(/`([^`\n]+?)`/g, (_, code) => {
+    const token = `@@HTML_TAG_${restoredHtml.length}@@`
+    restoredHtml.push(`<code class="math-inline-code">${escapeHtml(code)}</code>`)
+    return token
+  })
+  protectedText = protectedText.replace(/<\/?(?:sub|sup)>|&lt;(\/?(?:sub|sup))&gt;/gi, (raw, escapedTag) => {
     const tag = escapedTag || raw.slice(1, -1)
     const token = `@@HTML_TAG_${restoredHtml.length}@@`
     restoredHtml.push(`<${tag.toLowerCase()}>`)
@@ -185,6 +190,18 @@ function renderTextWithMarkdownTables(text, options = {}) {
       flushBuffer()
       parts.push(table.html)
       i = table.nextIndex
+    } else if (/^\s*```/.test(lines[i])) {
+      flushBuffer()
+      const fence = lines[i].trim()
+      const language = fence.replace(/^```/, '').trim() || 'text'
+      const codeLines = []
+      i += 1
+      while (i < lines.length && !/^\s*```\s*$/.test(lines[i])) {
+        codeLines.push(lines[i])
+        i += 1
+      }
+      if (i < lines.length) i += 1
+      parts.push(renderCodeBlock(codeLines.join('\n'), language))
     } else if (/^\s*- \[ \]\s+/.test(lines[i])) {
       flushBuffer()
       const label = lines[i].replace(/^\s*- \[ \]\s+/, '').trim()
@@ -198,6 +215,11 @@ function renderTextWithMarkdownTables(text, options = {}) {
 
   flushBuffer()
   return parts.join('')
+}
+
+function renderCodeBlock(code, language) {
+  const langClass = language ? ` language-${escapeHtml(language.toLowerCase())}` : ''
+  return `<pre class="math-code-block${langClass}"><code>${escapeHtml(code).replace(/\n$/, '')}</code></pre>`
 }
 
 function normalizeLegacyMathText(text) {
