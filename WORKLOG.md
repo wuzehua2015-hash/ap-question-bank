@@ -221,3 +221,11 @@
   - Pages URL: `https://d5c8f7c8.lynkedu-ap-question-bank.pages.dev`
   - production bundle: `/assets/index-Be2xE0yd.js`, `/assets/index-Bqxh0FeN.css`
   - production data check: 302 CSA MCQ, Q08/Q09 grouped context, Q33 Roman label cleanup.
+
+# 2026-07-14 - Global Question-Bank SOP Hardening
+
+- Added `docs/GLOBAL_QUESTION_BANK_SOP.md` as the top-level SSoT for future AP/A-Level/IB/competition subject work.
+- The SOP now defines the required lifecycle for source approval, subject risk discovery, reconstruction, unit classification, student-surface verification, local publish, deployment verification, closeout, and full-diagnosis passes.
+- Added `scripts/global_sop_gate.cjs` and wired it into `npm run validate` through `validate:sop`.
+- The gate verifies that global SOP, structured prompt contract, unit classification standard, expansion ledger, project status, and work log remain present and contain the required markers.
+- Updated `PROJECT_STATUS.md` so global expansion/new-item delivery rules are visible from the project status entry point.

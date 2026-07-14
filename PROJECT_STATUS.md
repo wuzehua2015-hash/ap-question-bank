@@ -86,6 +86,16 @@ Content-capacity backlog: Biology and some other subjects have comparatively sma
 - SEO/GEO optimization for public acquisition and AI answer-engine discoverability.
 - Subject question-pool expansion for low-volume subjects, especially Biology and sparse units flagged by unit-distribution audit.
 
+## Global Content Delivery SOP
+
+- Top-level SOP: `docs/GLOBAL_QUESTION_BANK_SOP.md`.
+- Structured rendering contract: `docs/STRUCTURED_PROMPT_DELIVERY_CONTRACT.md`.
+- Unit classification contract: `docs/UNIT_CLASSIFICATION_STANDARD.md`.
+- Expansion ledger: `docs/QUESTION_POOL_EXPANSION_2026-07-13.md`.
+- `npm run validate` now starts with `validate:sop`, which checks that these SSoT files and the required delivery gates remain present.
+- Any new subject, source expansion, item batch, or major diagnosis must follow the lifecycle in `GLOBAL_QUESTION_BANK_SOP.md`: source approval, subject risk discovery, reconstruction, unit review, student-surface verification, local publish, deployment verification, SSoT update, and remote tree sync.
+- A count increase is not completion. Completion requires accepted/rejected/deferred source decisions, subject-specific rendering checks, learning-sequence unit review, full validation/build, student-path evidence, and closeout notes.
+
 ## Question Pool Expansion Queue
 
 Capacity audit on 2026-07-13 identified the first expansion queue:
