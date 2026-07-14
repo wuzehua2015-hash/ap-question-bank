@@ -157,3 +157,22 @@
 - Production data check passed on `https://lynkedu.com/data/ap/computer-science-a/question_bank.json`: 291 MCQ returned with HTTP 200; `frq_bank.json` returned 12 FRQ with HTTP 200.
 - Source mirror synced through `npm run stable:push`; normal Git push was rejected by non-linear remote history, then the stable API path synced the current local tree to `prod-mock-pdf-fix`.
 - `npm run stable:status` confirmed the remote tree matches the local HEAD tree.
+
+# 2026-07-14 - CSA Deferred Source Curated Follow-Up
+
+- Rechecked deferred CSA sources:
+  - 2009 released exam scanned PDF.
+  - AP Bowl 2015.
+  - AP Bowl 2016.
+- Archived a public 2009 PDF copy under the CSA network source folder and generated OCR work drafts under `.workspace/csa_deferred_ocr_20260714/`.
+- Added source builders:
+  - `subjects/AP/Computer-Science-A/tools/build_ap_bowl_ocr_data.py`
+  - `subjects/AP/Computer-Science-A/tools/build_2009_released_data.py`
+- Published only high-confidence manually verified structured MCQ:
+  - AP Bowl 2015: 5 accepted / 35 rejected-deferred.
+  - AP Bowl 2016: 4 accepted / 36 rejected-deferred.
+  - 2009 released: 2 accepted / 38 rejected-deferred.
+- CSA package increased from 291 MCQ / 12 FRQ to 302 MCQ / 12 FRQ.
+- 2009 FRQ remains deferred because prompt cleanup, reference solutions, and part-level scoring rows have not yet met CSA FRQ standard.
+- Updated `scripts/csa_content_audit.cjs` to enforce 302 MCQ, source counts, 2009/GridWorld guardrails, AP Bowl year-specific counts, and OCR-damage checks.
+- Verification passed: `npm run audit:csa`, `npm run validate`, `npm run audit:capacity`, CSA unit-progression blocking audit, `npm run audit:render -- --subject=computer-science-a`, `npm run audit:student-flow -- --subject=computer-science-a`, and `npm run build`.

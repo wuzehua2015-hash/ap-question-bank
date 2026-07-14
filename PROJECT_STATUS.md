@@ -98,6 +98,18 @@ CSA expansion closeout on 2026-07-13:
 - Production data verified on `lynkedu.com`: CSA `question_bank.json` returns 291 MCQ and `frq_bank.json` returns 12 FRQ.
 - GitHub source mirror: remote branch `prod-mock-pdf-fix` was synced through stable API fallback; `npm run stable:status` confirms the remote tree matches the local HEAD tree.
 
+CSA deferred-source curated follow-up on 2026-07-14:
+
+- Final local package: 302 MCQ / 12 FRQ.
+- Added only 11 high-confidence MCQ from previously deferred scanned/OCR sources:
+  - AP Bowl 2015: 5.
+  - AP Bowl 2016: 4.
+  - 2009 released exam: 2.
+- Remaining AP Bowl 2015/2016 and 2009 candidates are not published; each is recorded in source reports with reject/defer reasons.
+- 2009 GridWorld-era items are blocked from current CSA practice unless a separate legacy mode is explicitly created.
+- 2009 FRQ is still deferred until CSA-specific FRQ prompt/reference-solution/scoring-row reconstruction passes.
+- Latest validation passed: CSA audit, full validate, capacity, unit progression, render, student-flow, and build.
+
 ## Subject Management Contract
 
 - Student home and the header subject switcher show only `mySubjects`.

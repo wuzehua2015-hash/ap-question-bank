@@ -7167,6 +7167,512 @@
     "rubric_image_paths": []
   },
   {
+    "question_id": "ap_bowl_2015_Q01",
+    "id": "ap_bowl_2015_Q01",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "ap_bowl_gt_practice",
+    "question_number": 1,
+    "type": "MCQ",
+    "text": "Consider the following code segment:\n\n```java\nfor (int i = 0; i < 5; i++)\n{\n  for (int j = 9; j >= 1; j--)\n  {\n    System.out.println(\"!\");\n  }\n}\n```\n\nHow many times will a `!` be printed?",
+    "options": {
+      "A": "35",
+      "B": "40",
+      "C": "38",
+      "D": "42",
+      "E": "45"
+    },
+    "answer": "E",
+    "answers": [
+      "E"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Iteration",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.72,
+      "evidence": "AP Bowl OCR reconstruction with required-learning-sequence review.",
+      "review_status": "ocr_reconstructed_and_quality_gated"
+    },
+    "provenance": {
+      "source_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2015_exam.pdf",
+      "answer_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2015_answers.pdf",
+      "source_page": 1,
+      "source_credit": "Barbara Ericson / Georgia Tech AP CSA Practice Exam 2015",
+      "reconstruction": "OCR draft plus automated quality gate; rejected items are recorded in source_report.json"
+    },
+    "rubric_image_paths": []
+  },
+  {
+    "question_id": "ap_bowl_2015_Q07",
+    "id": "ap_bowl_2015_Q07",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "ap_bowl_gt_practice",
+    "question_number": 7,
+    "type": "MCQ",
+    "text": "Given the following code:\n\n```java\npublic static int mystery(String str)\n{\n  if (str.length() == 1)\n    return 0;\n  else\n  {\n    if (str.substring(0, 1).equals(\"y\"))\n      return 1 + mystery(str.substring(1));\n    else\n      return mystery(str.substring(1));\n  }\n}\n```\n\nWhat will it return when called with `mystery(\"xyyxyxy\")`?",
+    "options": {
+      "A": "4",
+      "B": "1",
+      "C": "7",
+      "D": "0",
+      "E": "3"
+    },
+    "answer": "E",
+    "answers": [
+      "E"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "primary_unit": "U10",
+    "unit": "U10",
+    "unit_name": "Recursion",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U10",
+      "secondary_units": [],
+      "confidence": 0.72,
+      "evidence": "AP Bowl OCR reconstruction with required-learning-sequence review.",
+      "review_status": "ocr_reconstructed_and_quality_gated"
+    },
+    "provenance": {
+      "source_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2015_exam.pdf",
+      "answer_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2015_answers.pdf",
+      "source_page": 6,
+      "source_credit": "Barbara Ericson / Georgia Tech AP CSA Practice Exam 2015",
+      "reconstruction": "OCR draft plus automated quality gate; rejected items are recorded in source_report.json"
+    },
+    "rubric_image_paths": []
+  },
+  {
+    "question_id": "ap_bowl_2015_Q19",
+    "id": "ap_bowl_2015_Q19",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "ap_bowl_gt_practice",
+    "question_number": 19,
+    "type": "MCQ",
+    "text": "Consider the following method.\n\n```java\npublic static boolean test(int[] a, int val)\n{\n  boolean temp = false;\n  for (int i = a.length - 1; i >= 0; i--)\n  {\n    temp = (a[i] == val);\n    if (temp)\n      return temp;\n  }\n  return temp;\n}\n```\n\nWhich of the following best describes when the method returns `true`?",
+    "options": {
+      "A": "Whenever the last element in `a` is equal to `val`.",
+      "B": "Whenever the first element in `a` is equal to `val`.",
+      "C": "Whenever more than one element in `a` is equal to `val`.",
+      "D": "Whenever `a` contains any element that equals `val`.",
+      "E": "Whenever exactly one element in `a` is equal to `val`."
+    },
+    "answer": "D",
+    "answers": [
+      "D"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.72,
+      "evidence": "AP Bowl OCR reconstruction with required-learning-sequence review.",
+      "review_status": "ocr_reconstructed_and_quality_gated"
+    },
+    "provenance": {
+      "source_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2015_exam.pdf",
+      "answer_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2015_answers.pdf",
+      "source_page": 16,
+      "source_credit": "Barbara Ericson / Georgia Tech AP CSA Practice Exam 2015",
+      "reconstruction": "OCR draft plus automated quality gate; rejected items are recorded in source_report.json"
+    },
+    "rubric_image_paths": []
+  },
+  {
+    "question_id": "ap_bowl_2015_Q20",
+    "id": "ap_bowl_2015_Q20",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "ap_bowl_gt_practice",
+    "question_number": 20,
+    "type": "MCQ",
+    "text": "Consider the following method.\n\n```java\npublic static int m1(int a)\n{\n  if (a == 1)\n    return 1;\n  else\n    return 10 + m1(a - 1);\n}\n```\n\nWhat is the output when `m1(6)` is called?",
+    "options": {
+      "A": "60",
+      "B": "51",
+      "C": "11",
+      "D": "61",
+      "E": "1"
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "primary_unit": "U10",
+    "unit": "U10",
+    "unit_name": "Recursion",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U10",
+      "secondary_units": [],
+      "confidence": 0.72,
+      "evidence": "AP Bowl OCR reconstruction with required-learning-sequence review.",
+      "review_status": "ocr_reconstructed_and_quality_gated"
+    },
+    "provenance": {
+      "source_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2015_exam.pdf",
+      "answer_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2015_answers.pdf",
+      "source_page": 17,
+      "source_credit": "Barbara Ericson / Georgia Tech AP CSA Practice Exam 2015",
+      "reconstruction": "OCR draft plus automated quality gate; rejected items are recorded in source_report.json"
+    },
+    "rubric_image_paths": []
+  },
+  {
+    "question_id": "ap_bowl_2015_Q22",
+    "id": "ap_bowl_2015_Q22",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2015,
+    "source_set": "ap_bowl_gt_practice",
+    "question_number": 22,
+    "type": "MCQ",
+    "text": "What are the values of `a` and `b` after the following loop finishes?\n\n```java\nint a = 8;\nint b = 3;\nint temp = 0;\n\nfor (int i = 1; i < 6; i++)\n{\n  temp = a;\n  a = i + b;\n  b = temp - i;\n}\n```",
+    "options": {
+      "A": "`a = 9, b = 3`",
+      "B": "`a = 6, b = 5`",
+      "C": "`a = 0, b = 13`",
+      "D": "`a = 13, b = 0`",
+      "E": "`a = 11, b = 0`"
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Iteration",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.72,
+      "evidence": "AP Bowl OCR reconstruction with required-learning-sequence review.",
+      "review_status": "ocr_reconstructed_and_quality_gated"
+    },
+    "provenance": {
+      "source_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2015_exam.pdf",
+      "answer_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2015_answers.pdf",
+      "source_page": 19,
+      "source_credit": "Barbara Ericson / Georgia Tech AP CSA Practice Exam 2015",
+      "reconstruction": "OCR draft plus automated quality gate; rejected items are recorded in source_report.json"
+    },
+    "rubric_image_paths": []
+  },
+  {
+    "question_id": "ap_bowl_2016_Q16",
+    "id": "ap_bowl_2016_Q16",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2016,
+    "source_set": "ap_bowl_gt_practice",
+    "question_number": 16,
+    "type": "MCQ",
+    "text": "Given the following code, which of the answers best describes the conditions needed for `temp` to be `true` when it is returned?\n\n```java\nboolean temp = false;\nint count = 0;\n\nfor (int testVal : a)\n{\n  if (testVal == val)\n    count++;\n}\n\ntemp = count > 1;\nreturn temp;\n```",
+    "options": {
+      "A": "Whenever the first element in `a` is equal to `val`.",
+      "B": "Whenever `a` contains any element that equals `val`.",
+      "C": "Whenever more than one element in `a` is equal to `val`.",
+      "D": "Whenever exactly one element in `a` is equal to `val`.",
+      "E": "Whenever the last element in `a` is equal to `val`."
+    },
+    "answer": "C",
+    "answers": [
+      "C"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.72,
+      "evidence": "AP Bowl OCR reconstruction with required-learning-sequence review.",
+      "review_status": "ocr_reconstructed_and_quality_gated"
+    },
+    "provenance": {
+      "source_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2016_exam.pdf",
+      "answer_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2016_answers.pdf",
+      "source_page": 11,
+      "source_credit": "Barbara Ericson / Georgia Tech AP CSA Practice Exam 2016",
+      "reconstruction": "OCR draft plus automated quality gate; rejected items are recorded in source_report.json"
+    },
+    "rubric_image_paths": []
+  },
+  {
+    "question_id": "ap_bowl_2016_Q22",
+    "id": "ap_bowl_2016_Q22",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2016,
+    "source_set": "ap_bowl_gt_practice",
+    "question_number": 22,
+    "type": "MCQ",
+    "text": "The Boolean expression `(x == y && !(x == y)) || (x != y && !(x != y))` can be simplified to which of the following?",
+    "options": {
+      "A": "`x != y`",
+      "B": "`x == y`",
+      "C": "`true`",
+      "D": "`false`",
+      "E": "`x < y`"
+    },
+    "answer": "D",
+    "answers": [
+      "D"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Boolean Expressions and if Statements",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.72,
+      "evidence": "AP Bowl OCR reconstruction with required-learning-sequence review.",
+      "review_status": "ocr_reconstructed_and_quality_gated"
+    },
+    "provenance": {
+      "source_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2016_exam.pdf",
+      "answer_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2016_answers.pdf",
+      "source_page": 16,
+      "source_credit": "Barbara Ericson / Georgia Tech AP CSA Practice Exam 2016",
+      "reconstruction": "OCR draft plus automated quality gate; rejected items are recorded in source_report.json"
+    },
+    "rubric_image_paths": []
+  },
+  {
+    "question_id": "ap_bowl_2016_Q31",
+    "id": "ap_bowl_2016_Q31",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2016,
+    "source_set": "ap_bowl_gt_practice",
+    "question_number": 31,
+    "type": "MCQ",
+    "text": "Consider the following code.\n\n```java\nString s1 = \"Hi There\";\nString s2 = s1;\nString s3 = s2;\nString s4 = s1;\ns2 = s2.toUpperCase();\ns3 = s3.toLowerCase();\ns4 = null;\n```\n\nWhat is the value of `s1` after the code executes?",
+    "options": {
+      "A": "`hi there`",
+      "B": "`HI THERE`",
+      "C": "`Hi There`",
+      "D": "`null`",
+      "E": "`hI tHERE`"
+    },
+    "answer": "C",
+    "answers": [
+      "C"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "Using Objects",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.72,
+      "evidence": "AP Bowl OCR reconstruction with required-learning-sequence review.",
+      "review_status": "ocr_reconstructed_and_quality_gated"
+    },
+    "provenance": {
+      "source_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2016_exam.pdf",
+      "answer_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2016_answers.pdf",
+      "source_page": 21,
+      "source_credit": "Barbara Ericson / Georgia Tech AP CSA Practice Exam 2016",
+      "reconstruction": "OCR draft plus automated quality gate; rejected items are recorded in source_report.json"
+    },
+    "rubric_image_paths": []
+  },
+  {
+    "question_id": "ap_bowl_2016_Q35",
+    "id": "ap_bowl_2016_Q35",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2016,
+    "source_set": "ap_bowl_gt_practice",
+    "question_number": 35,
+    "type": "MCQ",
+    "text": "Which will cause the longest execution of a binary search looking for a value in an array of 10 integers?",
+    "options": {
+      "A": "The value is the first one in the array.",
+      "B": "The value is in the middle of the array.",
+      "C": "The value is at position 3 in the array.",
+      "D": "The value is not in the array.",
+      "E": "The value is at position 6 in the array."
+    },
+    "answer": "D",
+    "answers": [
+      "D"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Array",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.72,
+      "evidence": "AP Bowl OCR reconstruction with required-learning-sequence review.",
+      "review_status": "ocr_reconstructed_and_quality_gated"
+    },
+    "provenance": {
+      "source_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2016_exam.pdf",
+      "answer_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2016_answers.pdf",
+      "source_page": 23,
+      "source_credit": "Barbara Ericson / Georgia Tech AP CSA Practice Exam 2016",
+      "reconstruction": "OCR draft plus automated quality gate; rejected items are recorded in source_report.json"
+    },
+    "rubric_image_paths": []
+  },
+  {
+    "question_id": "released_2009_Q01",
+    "id": "released_2009_Q01",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2009,
+    "source_set": "released_2009",
+    "question_number": 1,
+    "type": "MCQ",
+    "text": "Consider the following code segment.\n\n```java\nint value = 15;\nwhile (value < 28)\n{\n  System.out.println(value);\n  value++;\n}\n```\n\nWhat are the first and last numbers output by the code segment?",
+    "options": {
+      "A": "First 15, last 27",
+      "B": "First 15, last 28",
+      "C": "First 16, last 27",
+      "D": "First 16, last 28",
+      "E": "First 16, last 29"
+    },
+    "answer": "A",
+    "answers": [
+      "A"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Iteration",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.76,
+      "evidence": "2009 released-exam OCR reconstruction with required-learning-sequence review.",
+      "review_status": "ocr_reconstructed_and_quality_gated"
+    },
+    "provenance": {
+      "source_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2009_Released_Exam.pdf",
+      "public_archive_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\csa_2009\\apcsaexam_2009_released_exam.pdf",
+      "source_credit": "College Board AP Computer Science A 2009 Released Exam",
+      "answer_key_page": 91,
+      "reconstruction": "OCR draft plus automated quality gate; obsolete GridWorld items are rejected for current CSA practice."
+    },
+    "rubric_image_paths": []
+  },
+  {
+    "question_id": "released_2009_Q04",
+    "id": "released_2009_Q04",
+    "subject": "AP Computer Science A",
+    "subject_id": "computer-science-a",
+    "year": 2009,
+    "source_set": "released_2009",
+    "question_number": 4,
+    "type": "MCQ",
+    "text": "Consider the following code segment.\n\n```java\nArrayList<String> items = new ArrayList<String>();\nitems.add(\"A\");\nitems.add(\"B\");\nitems.add(\"C\");\nitems.add(0, \"D\");\nitems.remove(3);\nitems.add(0, \"E\");\nSystem.out.println(items);\n```\n\nWhat is printed as a result of executing the code segment?",
+    "options": {
+      "A": "`[A, B, C, E]`",
+      "B": "`[A, B, D, E]`",
+      "C": "`[E, D, A, B]`",
+      "D": "`[E, D, A, C]`",
+      "E": "`[E, D, C, B]`"
+    },
+    "answer": "C",
+    "answers": [
+      "C"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "ArrayList",
+    "secondary_units": [],
+    "pure_unit": true,
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.76,
+      "evidence": "2009 released-exam OCR reconstruction with required-learning-sequence review.",
+      "review_status": "ocr_reconstructed_and_quality_gated"
+    },
+    "provenance": {
+      "source_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2009_Released_Exam.pdf",
+      "public_archive_pdf": "D:\\Lynk\\翎英教育LynkEdu\\subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\csa_2009\\apcsaexam_2009_released_exam.pdf",
+      "source_credit": "College Board AP Computer Science A 2009 Released Exam",
+      "answer_key_page": 91,
+      "reconstruction": "OCR draft plus automated quality gate; obsolete GridWorld items are rejected for current CSA practice."
+    },
+    "rubric_image_paths": []
+  },
+  {
     "question_id": "csawesome_practice_Q001",
     "id": "csawesome_practice_Q001",
     "subject": "AP Computer Science A",
