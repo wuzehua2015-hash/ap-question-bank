@@ -74,6 +74,9 @@ Content-capacity backlog: Biology and some other subjects have comparatively sma
 
 - Online Quiz, online Mock MCQ, FRQ player, review pages, search, and PDF surfaces must share the same `MathText` rendering path.
 - CSA code must render through code elements (`.math-code-block` or `.math-inline-code`); raw Markdown code fences must never be visible to students.
+- Grouped MCQ context is student-visible content, not audit-only metadata. If a question has `group_context`, Quiz, Search, review, and PDF displays must render `group_context` before the member stem through the same `MathText` path.
+- CSA missing-code prompts must be answerable from the student surface. A prompt containing `/* missing code */` or equivalent must include the referenced Java block in `text` or `group_context`, and the placeholder must appear inside a fenced Java block.
+- CSA Roman-numeral candidate lists (`I.`, `II.`, `III.`) must render as structured rows, with the label column separated from the expression/content column. Source text like `III.s1.equals(s4)` is a hard cleanup failure.
 - Formula-heavy subjects must render LaTeX through KaTeX (`.katex`) on student answer paths, not as raw delimiters or flattened text.
 - `scripts/student_flow_audit.cjs` now samples subject-specific render-risk questions and fails on missing code/formula render layers for Quiz, Mock MCQ, and FRQ player.
 - Representative evidence on 2026-07-14: CSA student-flow audit passed with 0 errors on a fresh preview port; Calculus AB student-flow audit passed with 0 errors on a fresh preview port.
@@ -118,6 +121,14 @@ CSA deferred-source curated follow-up on 2026-07-14:
 - 2009 GridWorld-era items are blocked from current CSA practice unless a separate legacy mode is explicitly created.
 - 2009 FRQ is still deferred until CSA-specific FRQ prompt/reference-solution/scoring-row reconstruction passes.
 - Latest validation passed: CSA audit, full validate, capacity, unit progression, render, student-flow, and build.
+
+CSA rendering/answerability repair on 2026-07-14:
+
+- Repaired `2014_sample_Q08` and `2014_sample_Q09` so the shared `TimeRecord` class declaration is published as consistent `group_context` with `group_id`, `group_members`, `group_role`, and `requires_group_context`.
+- Repaired `ap_bowl_2018_Q33` candidate statements so `I.`, `II.`, and `III.` are normalized and rendered as structured rows.
+- Updated `QuestionCard` and `QuestionDisplay` so grouped context appears in Quiz, Search/review, and PDF surfaces.
+- Updated `scripts/csa_content_audit.cjs` so CSA answerability checks use the full student-visible prompt (`group_context + text`) and block missing-code prompts without Java context plus malformed Roman candidate labels.
+- Verification passed: `npm run audit:csa`, `npm run validate`, `npm run build`, and real-browser Quiz checks for `2014_sample_Q08` plus `ap_bowl_2018_Q33`.
 
 ## Subject Management Contract
 

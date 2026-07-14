@@ -3815,13 +3815,13 @@
     "source_set": "college_board_sample",
     "question_number": 8,
     "type": "MCQ",
-    "text": "Which of the following can be used to replace /* missing code */ so that advance\nwill correctly update the time?",
+    "text": "Which of the following can be used to replace `/* missing code */` so that `advance` will correctly update the time?",
     "options": {
-      "A": "minutes = minutes % 60;",
-      "B": "minutes = minutes + hours % 60;",
-      "C": "hours = hours + minutes / 60; minutes = minutes % 60;",
-      "D": "hours = hours + minutes % 60; minutes = minutes / 60;",
-      "E": "hours = hours + minutes / 60;"
+      "A": "`minutes = minutes % 60;`",
+      "B": "`minutes = minutes + hours % 60;`",
+      "C": "`hours = hours + minutes / 60; minutes = minutes % 60;`",
+      "D": "`hours = hours + minutes % 60; minutes = minutes / 60;`",
+      "E": "`hours = hours + minutes / 60;`"
     },
     "answer": "C",
     "answers": [
@@ -3847,6 +3847,14 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2014_CB_Sample_MCQs.pdf",
       "source_page": 8
     },
+    "group_id": "2014_sample_Q08_09",
+    "group_members": [
+      "2014_sample_Q08",
+      "2014_sample_Q09"
+    ],
+    "group_role": "lead",
+    "requires_group_context": true,
+    "group_context": "Questions 8-9 refer to the following incomplete class declaration.\n\n```java\npublic class TimeRecord\n{\n  private int hours;\n  private int minutes; // 0 <= minutes < 60\n\n  /** Constructs a TimeRecord object.\n   *  @param h the number of hours\n   *         Precondition: h >= 0\n   *  @param m the number of minutes\n   *         Precondition: 0 <= m < 60\n   */\n  public TimeRecord(int h, int m)\n  {\n    hours = h;\n    minutes = m;\n  }\n\n  /** @return the number of hours */\n  public int getHours()\n  { /* implementation not shown */ }\n\n  /** @return the number of minutes\n   *  Postcondition: 0 <= minutes < 60\n   */\n  public int getMinutes()\n  { /* implementation not shown */ }\n\n  /** Adds h hours and m minutes to this TimeRecord.\n   *  @param h the number of hours\n   *         Precondition: h >= 0\n   *  @param m the number of minutes\n   *         Precondition: m >= 0\n   */\n  public void advance(int h, int m)\n  {\n    hours = hours + h;\n    minutes = minutes + m;\n    /* missing code */\n  }\n\n  // Other methods not shown\n}\n```",
     "rubric_image_paths": []
   },
   {
@@ -3890,6 +3898,14 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2014_CB_Sample_MCQs.pdf",
       "source_page": 8
     },
+    "group_id": "2014_sample_Q08_09",
+    "group_members": [
+      "2014_sample_Q08",
+      "2014_sample_Q09"
+    ],
+    "group_role": "member",
+    "requires_group_context": true,
+    "group_context": "Questions 8-9 refer to the following incomplete class declaration.\n\n```java\npublic class TimeRecord\n{\n  private int hours;\n  private int minutes; // 0 <= minutes < 60\n\n  /** Constructs a TimeRecord object.\n   *  @param h the number of hours\n   *         Precondition: h >= 0\n   *  @param m the number of minutes\n   *         Precondition: 0 <= m < 60\n   */\n  public TimeRecord(int h, int m)\n  {\n    hours = h;\n    minutes = m;\n  }\n\n  /** @return the number of hours */\n  public int getHours()\n  { /* implementation not shown */ }\n\n  /** @return the number of minutes\n   *  Postcondition: 0 <= minutes < 60\n   */\n  public int getMinutes()\n  { /* implementation not shown */ }\n\n  /** Adds h hours and m minutes to this TimeRecord.\n   *  @param h the number of hours\n   *         Precondition: h >= 0\n   *  @param m the number of minutes\n   *         Precondition: m >= 0\n   */\n  public void advance(int h, int m)\n  {\n    hours = hours + h;\n    minutes = minutes + m;\n    /* missing code */\n  }\n\n  // Other methods not shown\n}\n```",
     "rubric_image_paths": []
   },
   {
@@ -6815,7 +6831,7 @@
     "source_set": "ap_bowl_gt_practice",
     "question_number": 33,
     "type": "MCQ",
-    "text": "Given the following code:\n```java\nString s1 = new String(\"bye\");\nString s2 = new String(\"bye now\");\nString s3 = s2.substring(0,3);\nString s4 = new String(\"bye\");\n```\nWhich of the following would return true?\nI.  s1.equals(s3)\nII. s1 == s4\nIII.s1.equals(s4)",
+    "text": "Given the following code:\n```java\nString s1 = new String(\"bye\");\nString s2 = new String(\"bye now\");\nString s3 = s2.substring(0, 3);\nString s4 = new String(\"bye\");\n```\nWhich of the following would return true?\nI. s1.equals(s3)\nII. s1 == s4\nIII. s1.equals(s4)",
     "options": {
       "A": "I and III only",
       "B": "II and III only",

@@ -43,7 +43,7 @@ function DisplayOptions({ options, variant }) {
         {Object.entries(opts).map(([key, text]) => (
           <div key={key} style={{ fontSize: '14px', color: '#374151', lineHeight: 1.5 }}>
             <span style={{ fontWeight: 'bold', marginRight: '4px' }}>{key}.</span>
-            <MathText text={text} forceInlineLatex />
+            <MathText text={text} forceInlineLatex as="div" />
           </div>
         ))}
       </div>
@@ -55,7 +55,7 @@ function DisplayOptions({ options, variant }) {
       {Object.entries(opts).map(([key, text]) => (
         <div key={key} className="text-base sm:text-sm text-text min-h-[48px] flex items-center">
           <span className="font-bold mr-2">{key}.</span>
-          <MathText text={text} forceInlineLatex />
+          <MathText text={text} forceInlineLatex as="div" />
         </div>
       ))}
     </div>
@@ -116,6 +116,35 @@ function DisplayDiagramOptionImages({ imagePaths, options, variant }) {
           </div>
         )
       })}
+    </div>
+  )
+}
+
+function DisplayGroupContext({ text, variant }) {
+  if (!text) return null
+
+  if (variant === 'pdf') {
+    return (
+      <div style={{
+        fontSize: '14px',
+        color: '#374151',
+        lineHeight: 1.55,
+        marginBottom: '12px',
+        padding: '10px 12px',
+        border: '1px solid #d1d5db',
+        borderRadius: '6px',
+        background: '#f8fafc',
+        pageBreakInside: 'avoid',
+        breakInside: 'avoid',
+      }}>
+        <MathText text={text} as="div" />
+      </div>
+    )
+  }
+
+  return (
+    <div className="question-group-context">
+      <MathText text={text} as="div" />
     </div>
   )
 }
@@ -293,14 +322,16 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
         </div>
       )}
 
+      <DisplayGroupContext text={question.group_context} variant={variant} />
+
       {/* Question text */}
       {isPdf ? (
         <div style={{ fontSize: '16px', fontWeight: '500', color: '#1f2937', marginBottom: '12px', lineHeight: 1.6 }}>
-          <MathText text={question.text || question.question_text} />
+          <MathText text={question.text || question.question_text} as="div" />
         </div>
       ) : (
         <h3 className="text-lg font-medium text-text mb-4 leading-relaxed">
-          <MathText text={question.text || question.question_text} />
+          <MathText text={question.text || question.question_text} as="div" />
         </h3>
       )}
 

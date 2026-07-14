@@ -203,3 +203,17 @@
 - 2009 FRQ remains deferred because prompt cleanup, reference solutions, and part-level scoring rows have not yet met CSA FRQ standard.
 - Updated `scripts/csa_content_audit.cjs` to enforce 302 MCQ, source counts, 2009/GridWorld guardrails, AP Bowl year-specific counts, and OCR-damage checks.
 - Verification passed: `npm run audit:csa`, `npm run validate`, `npm run audit:capacity`, CSA unit-progression blocking audit, `npm run audit:render -- --subject=computer-science-a`, `npm run audit:student-flow -- --subject=computer-science-a`, and `npm run build`.
+
+# 2026-07-14 - CSA Rendering And Group-Context Repair
+
+- Repaired `2014_sample_Q08` / `2014_sample_Q09` after discovering that the question stem referenced missing Java context. The shared `TimeRecord` class is now consistent `group_context` with formal group metadata.
+- Repaired `ap_bowl_2018_Q33` and the renderer for Roman-numeral candidate lists so `I.`, `II.`, `III.` lines render as separate structured rows.
+- Updated Quiz and read-only question displays so `group_context` is visible on the student surface. This closes the gap where metadata existed but the actual Quiz card did not show the shared stimulus/code.
+- Strengthened `scripts/csa_content_audit.cjs` to validate the full student-visible prompt (`group_context + text`) for CSA missing-code and Roman-list issues.
+- Verification passed:
+  - `python subjects/AP/Computer-Science-A/tools/csa_pipeline.py`
+  - `npm run audit:csa`
+  - `npm run validate`
+  - `npm run build`
+  - real-browser Quiz check for `2014_sample_Q08`: `TimeRecord` code block and answer choices visible.
+  - real-browser Quiz check for `ap_bowl_2018_Q33`: three `.math-roman-option` rows and Java code block visible.

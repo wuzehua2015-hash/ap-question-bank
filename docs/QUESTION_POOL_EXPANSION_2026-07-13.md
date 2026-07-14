@@ -229,3 +229,25 @@ Evidence:
 - `npm run audit:render -- --subject=computer-science-a`: pass.
 - `npm run audit:student-flow -- --subject=computer-science-a`: pass, 0 errors / 5 non-blocking warnings.
 - `npm run build`: pass.
+
+## CSA Rendering And Student-Surface Contract Follow-Up
+
+Date: 2026-07-14.
+
+The deferred-source follow-up exposed two reusable delivery rules:
+
+- Shared materials for grouped questions must be represented as `group_context` plus formal group metadata, and they must be rendered on the student surface. It is not enough for the data to contain `group_context`; `QuestionCard`, `QuestionDisplay`, review, and PDF surfaces must display it before the member stem.
+- CSA candidate lists using `I.`, `II.`, `III.` are structured content. Source cleanup must normalize labels such as `III.s1.equals(s4)` to `III. s1.equals(s4)`, and rendering must display each candidate as its own row.
+
+Concrete repair:
+
+- `2014_sample_Q08` and `2014_sample_Q09` now share a consistent `TimeRecord` class declaration through `group_context`.
+- `ap_bowl_2018_Q33` now renders the code block and Roman-numeral candidate statements in the online Quiz card.
+- `scripts/csa_content_audit.cjs` now checks the full student-visible prompt (`group_context + text`) before accepting missing-code prompts or Roman-numeral candidate lists.
+
+Evidence:
+
+- `npm run audit:csa`: pass.
+- `npm run validate`: pass.
+- `npm run build`: pass.
+- Real-browser Quiz check passed for `2014_sample_Q08` and `ap_bowl_2018_Q33` on local built preview.

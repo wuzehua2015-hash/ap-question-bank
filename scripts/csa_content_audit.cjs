@@ -36,7 +36,8 @@ for (const q of questions) {
   if (Object.keys(options).length !== expected) {
     errors.push(`${q.question_id}: expected ${expected} options, found ${Object.keys(options).length}`)
   }
-  const blob = `${q.text || ''}\n${Object.values(options).join('\n')}`
+  const visiblePrompt = `${q.group_context || ''}\n${q.text || ''}`
+  const blob = `${visiblePrompt}\n${Object.values(options).join('\n')}`
   if (/open parenthesis|close parenthesis|equals equals|semicolon|percent|dot\b/i.test(blob)) {
     errors.push(`${q.question_id}: visible spoken-code artifact`)
   }
@@ -51,6 +52,12 @@ for (const q of questions) {
   }
   if (/```java/.test(blob) && !/```java[\s\S]+?```/.test(blob)) {
     errors.push(`${q.question_id}: malformed Java code block`)
+  }
+  if (/\/\*\s*missing code\s*\*\/|\/\/\s*missing code\s*\/\//i.test(visiblePrompt) && !/```java[\s\S]*?(?:\/\*\s*missing code\s*\*\/|\/\/\s*missing code\s*\/\/)[\s\S]*?```/i.test(visiblePrompt)) {
+    errors.push(`${q.question_id}: missing-code prompt lacks the required Java context block`)
+  }
+  if (/\b(?:I|II|III|IV|V)\.[^\s`\n]/.test(visiblePrompt)) {
+    errors.push(`${q.question_id}: roman-numeral candidate line lacks spacing after the label`)
   }
   if (q.source_set === 'ap_bowl_gt_practice') {
     if (!q.provenance?.source_credit || !/Georgia Tech|Barbara Ericson/i.test(q.provenance.source_credit)) {
