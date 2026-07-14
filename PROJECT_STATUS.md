@@ -1,16 +1,16 @@
 # LynkEdu AP Question Bank Project Status
 
-Last updated: 2026-07-13
+Last updated: 2026-07-14
 
 ## Current Production
 
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Latest Pages deployment URL observed: `https://83e65ae1.lynkedu-ap-question-bank.pages.dev`
+- Latest Pages deployment URL observed: `https://8a850978.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
-  - JS: `/assets/index-1HOTOWOv.js`
-  - CSS: `/assets/index-h2m_05wC.css`
+  - JS: `/assets/index-B-vZgovI.js`
+  - CSS: `/assets/index-BRfFf4PD.css`
 - Current Vite base for custom root-domain deployment: `base: '/'`
 - Router: `HashRouter`
 
@@ -68,6 +68,15 @@ Content-capacity backlog: Biology and some other subjects have comparatively sma
 - Account route: `/account` with profile, email verification, password, learning-data sync, and session controls.
 - D1 schema migration applied through `migrations/0002_password_auth.sql` on remote database `lynkedu-question-bank`.
 - Production browser checks passed for `/login`, `/register`, `/reset-password`, and `/account` visitor account gate.
+- Cloudflare Workers WebCrypto PBKDF2 iteration cap is 100000. Password hashing must stay at or below `PASSWORD_HASH_ITERATIONS = 100000`; higher stored iteration counts are treated as unverifiable instead of throwing in Functions.
+
+## Student Rendering Contract
+
+- Online Quiz, online Mock MCQ, FRQ player, review pages, search, and PDF surfaces must share the same `MathText` rendering path.
+- CSA code must render through code elements (`.math-code-block` or `.math-inline-code`); raw Markdown code fences must never be visible to students.
+- Formula-heavy subjects must render LaTeX through KaTeX (`.katex`) on student answer paths, not as raw delimiters or flattened text.
+- `scripts/student_flow_audit.cjs` now samples subject-specific render-risk questions and fails on missing code/formula render layers for Quiz, Mock MCQ, and FRQ player.
+- Representative evidence on 2026-07-14: CSA student-flow audit passed with 0 errors on a fresh preview port; Calculus AB student-flow audit passed with 0 errors on a fresh preview port.
 
 ## Required Backlog
 

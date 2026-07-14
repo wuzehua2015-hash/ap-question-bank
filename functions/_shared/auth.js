@@ -33,7 +33,7 @@ export function createId(prefix) {
 
 export function isStrongEnoughPassword(password) {
   const value = String(password || '')
-  return value.length >= 8 && /[A-Za-z]/.test(value) && /\d/.test(value)
+  return value.length >= 8 && value.length <= 128 && /[A-Za-z]/.test(value) && /\d/.test(value)
 }
 
 export function publicUser(user) {
@@ -79,8 +79,11 @@ async function pbkdf2(password, salt, iterations) {
   return new Uint8Array(bits)
 }
 
+const PASSWORD_HASH_ITERATIONS = 100000
+const MAX_WORKERS_PBKDF2_ITERATIONS = 100000
+
 export async function hashPassword(password) {
-  const iterations = 210000
+  const iterations = PASSWORD_HASH_ITERATIONS
   const salt = crypto.getRandomValues(new Uint8Array(16))
   const hash = await pbkdf2(password, salt, iterations)
   return `pbkdf2_sha256$${iterations}$${base64Url(salt)}$${base64Url(hash)}`
@@ -91,6 +94,7 @@ export async function verifyPassword(password, storedHash) {
   if (algorithm !== 'pbkdf2_sha256' || !iterationText || !saltText || !hashText) return false
   const iterations = Number(iterationText)
   if (!Number.isFinite(iterations) || iterations < 100000) return false
+  if (iterations > MAX_WORKERS_PBKDF2_ITERATIONS) return false
   const expected = fromBase64Url(hashText)
   const actual = await pbkdf2(password, fromBase64Url(saltText), iterations)
   if (expected.length !== actual.length) return false

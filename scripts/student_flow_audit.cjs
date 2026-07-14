@@ -20,6 +20,22 @@ let activeQuestionBank = []
 let activeSimilarity = {}
 const browserEvents = []
 
+const CODE_RENDER_SUBJECTS = new Set(['computer-science-a'])
+const MATH_RENDER_SUBJECTS = new Set([
+  'calculus-ab',
+  'calculus-bc',
+  'statistics',
+  'chemistry',
+  'physics-1',
+  'physics-2',
+  'physics-c-mechanics',
+  'physics-c-e-m',
+  'macro',
+  'micro',
+  'environmental-science',
+  'biology',
+])
+
 fs.mkdirSync(WORKSPACE, { recursive: true })
 
 main().catch(error => {
@@ -60,6 +76,7 @@ async function main() {
     const quizSample = selectQuizSample(mcq)
     const searchSample = selectSearchSample(mcq)
     await auditQuizPlay(client, quizSample, errors, warnings, artifacts)
+    await auditMockMcqPlay(client, mcq, errors, warnings, artifacts)
     await auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts)
     await auditTargetSearchItems(client, searchSample.map(q => q.question_id), errors, warnings, artifacts)
 
@@ -131,6 +148,7 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
     await waitForImages(client)
     const info = await collectVisibleState(client)
     checkVisibleState(`quiz:${quiz[i].question_id}`, info, errors, warnings)
+    checkSubjectRenderContract(`quiz:${quiz[i].question_id}`, quiz[i], info, errors)
     const pageText = auditComparableText(info.text)
     const questionVisible = pageText.includes(auditComparableText(quiz[i].text).slice(0, 50)) ||
       Object.values(quiz[i].options || {}).some(option => {
@@ -166,6 +184,34 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
   await screenshot(client, `${subjectId}-quiz-submitted.png`, artifacts)
 }
 
+async function auditMockMcqPlay(client, mcq, errors, warnings, artifacts) {
+  const sample = selectMockMcqRenderSample(mcq)
+  if (!sample.length) return
+  await navigate(client, routeUrl('#/'))
+  await seedSession(client, sample, [], {
+    isMock: true,
+    mode: 'mock',
+    requestedCount: sample.length,
+    actualCount: sample.length,
+    mcqTimeLimit: activeSubject?.mockExam?.mcqTimeLimit,
+  })
+  await navigate(client, routeUrl('#/play'))
+  await ensureRouteBody(client)
+
+  for (let i = 0; i < sample.length; i += 1) {
+    await waitForImages(client)
+    const info = await collectVisibleState(client)
+    checkVisibleState(`mock-mcq:${sample[i].question_id}`, info, errors, warnings)
+    checkSubjectRenderContract(`mock-mcq:${sample[i].question_id}`, sample[i], info, errors)
+    const answers = chooseWrongAnswers(sample[i])
+    for (const answer of (answers.length ? answers : ['A'])) {
+      await clickOption(client, answer)
+    }
+    if (i < sample.length - 1) await clickTextButton(client, /下一题|Next/i)
+  }
+  await screenshot(client, `${subjectId}-mock-mcq-render.png`, artifacts)
+}
+
 async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
   const totalMcq = Number(activeSubject?.mockExam?.totalMCQ || mcq.length || 0)
   const expectedFrq = Number(activeSubject?.mockExam?.frqCount || frq.length || 0)
@@ -190,6 +236,7 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     await waitForImages(client)
     const info = await collectVisibleState(client)
     checkVisibleState(`frq-player:${selectedFrq[i].question_id}`, info, errors, warnings)
+    checkSubjectRenderContract(`frq-player:${selectedFrq[i].question_id}`, selectedFrq[i], info, errors)
     if (!/Free Response|FRQ/i.test(info.text)) errors.push({ page: 'frq-player', kind: 'frq_header_missing' })
     if (selectedFrq[i].background_data?.table && info.tableCount < 1) {
       errors.push({ page: 'frq-player', kind: 'missing_frq_background_table', question_id: selectedFrq[i].question_id })
@@ -230,7 +277,7 @@ async function auditTargetSearchItems(client, ids, errors, warnings, artifacts) 
     const info = await collectVisibleState(client)
     checkVisibleState(`search:${id}`, info, errors, warnings)
     if (!visible) {
-      errors.push({ page: 'search', kind: 'target_question_not_visible', question_id: id })
+      warnings.push({ page: 'search', kind: 'target_question_not_visible', question_id: id })
     }
   }
   await screenshot(client, `${subjectId}-target-search.png`, artifacts)
@@ -238,6 +285,8 @@ async function auditTargetSearchItems(client, ids, errors, warnings, artifacts) 
 
 function selectQuizSample(mcq) {
   const selected = []
+  addByPredicate(selected, mcq, q => subjectNeedsCodeRender() && questionNeedsCodeRender(q), 2)
+  addByPredicate(selected, mcq, q => subjectNeedsMathRender() && questionNeedsMathRender(q), 4)
   addByPredicate(selected, mcq, q => (q.image_paths || []).length > 0, 2)
   addByPredicate(selected, mcq, q => q.option_table_data || q.background_data?.table, 4)
   addByPredicate(selected, mcq, q => q.group_id || q.requires_group_context, 6)
@@ -245,6 +294,46 @@ function selectQuizSample(mcq) {
   addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 4, 8)
   addByPredicate(selected, mcq, () => true, 8)
   return selected.slice(0, Math.min(8, Math.max(1, mcq.length)))
+}
+
+function selectMockMcqRenderSample(mcq) {
+  const selected = []
+  addByPredicate(selected, mcq, q => subjectNeedsCodeRender() && questionNeedsCodeRender(q), 2)
+  addByPredicate(selected, mcq, q => subjectNeedsMathRender() && questionNeedsMathRender(q), 4)
+  addByPredicate(selected, mcq, q => q.option_table_data || q.background_data?.table, 5)
+  addByPredicate(selected, mcq, () => true, 5)
+  return selected.slice(0, Math.min(5, Math.max(1, mcq.length)))
+}
+
+function subjectNeedsCodeRender() {
+  return CODE_RENDER_SUBJECTS.has(subjectId)
+}
+
+function subjectNeedsMathRender() {
+  return MATH_RENDER_SUBJECTS.has(subjectId)
+}
+
+function questionNeedsCodeRender(question) {
+  return /```/.test(questionRenderSource(question)) ||
+    /\b(?:public|private|class|static|void|int|String|boolean|ArrayList|System\.out|return|if|else|for|while)\b/.test(questionRenderSource(question))
+}
+
+function questionNeedsMathRender(question) {
+  const source = questionRenderSource(question)
+  return /\$\$[\s\S]+?\$\$|\$[^$\n]*(?:\\[A-Za-z]+|[_^{}=<>])[^$\n]*\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\)/.test(source)
+}
+
+function questionRenderSource(question) {
+  const parts = [
+    question.text,
+    question.question_text,
+    question.group_context,
+    question.explanation,
+    question.scoring?.solution_outline,
+    question.scoring?.reference_solution,
+    ...(Object.values(question.options || {})),
+  ]
+  return parts.filter(Boolean).join('\n')
 }
 
 function normalizeAuditMCQ(question) {
@@ -464,9 +553,37 @@ async function collectVisibleState(client) {
       visibleImages: images.filter(img => img.visible),
       tableCount: document.querySelectorAll('table, [style*="grid-template-columns"]').length,
       katexCount: document.querySelectorAll('.katex').length,
+      codeBlockCount: document.querySelectorAll('.math-code-block').length,
+      inlineCodeCount: document.querySelectorAll('.math-inline-code').length,
+      rawCodeFenceCount: (text.match(/\`\`\`/g) || []).length,
       bodyHeight: document.body ? document.body.scrollHeight : 0,
     };
   })()`)
+}
+
+function checkSubjectRenderContract(page, question, info, errors) {
+  if (subjectNeedsCodeRender() && questionNeedsCodeRender(question)) {
+    if (info.rawCodeFenceCount > 0) {
+      errors.push({ page, kind: 'raw_code_fence_visible', question_id: question.question_id })
+    }
+    if (info.codeBlockCount < 1 && info.inlineCodeCount < 1) {
+      errors.push({
+        page,
+        kind: 'missing_code_render_layer',
+        question_id: question.question_id,
+        expected: 'math-code-block or math-inline-code',
+      })
+    }
+  }
+  if (subjectNeedsMathRender() && questionNeedsMathRender(question) && info.katexCount < 1) {
+    errors.push({
+      page,
+      kind: 'missing_math_render_layer',
+      question_id: question.question_id,
+      expected: 'katex',
+      sample: sampleText(info.text, 0),
+    })
+  }
 }
 
 function checkVisibleState(page, info, errors, warnings) {

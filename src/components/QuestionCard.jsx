@@ -151,9 +151,9 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
       </div>
 
       {/* Question text */}
-      <h3 className="text-lg font-medium text-text mb-4 leading-relaxed">
-        <MathText text={question.text || question.question_text} />
-      </h3>
+      <div className="text-lg font-medium text-text mb-4 leading-relaxed">
+        <MathText text={question.text || question.question_text} as="div" />
+      </div>
 
       {/* Images */}
       <BackgroundTable tableData={hasTableImage ? null : backgroundTable} />
@@ -208,7 +208,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
                   </span>
                 )}
                 <span className="font-bold mr-2">{key}.</span>
-                <MathText text={text} forceInlineLatex />
+                <MathText text={text} forceInlineLatex as="div" />
                 {showCorrect && <span className="ml-2 text-success text-sm">✓ 正确</span>}
                 {showIncorrect && <span className="ml-2 text-error text-sm">✗ 你的答案</span>}
               </button>

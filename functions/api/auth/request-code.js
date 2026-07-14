@@ -6,9 +6,7 @@ export async function onRequestPost({ request, env }) {
     const db = requireDb(env)
     const body = await readJson(request)
     const email = normalizeEmail(body.email)
-    if (!isValidEmail(email)) {
-      return json({ error: '请输入有效邮箱。' }, 400)
-    }
+    if (!isValidEmail(email)) return json({ error: '请输入有效邮箱。' }, 400)
 
     const code = createNumericCode()
     const codeHash = await sha256(`${email}:${code}:${env.AUTH_CODE_SECRET || 'local-secret'}`)
@@ -19,9 +17,7 @@ export async function onRequestPost({ request, env }) {
 
     const delivery = await sendLoginEmail(env, email, code)
     if (delivery.sent) return json({ ok: true, delivery: 'email' })
-    if (env.DEV_LOGIN_CODE_ENABLED === 'true') {
-      return json({ ok: true, delivery: 'debug', debugCode: code })
-    }
+    if (env.DEV_LOGIN_CODE_ENABLED === 'true') return json({ ok: true, delivery: 'debug', debugCode: code })
     return json({ ok: true, delivery: 'pending' })
   } catch (error) {
     return json({ error: error.message || '验证码发送失败。' }, 500)
