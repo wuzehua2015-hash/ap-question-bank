@@ -116,6 +116,40 @@ body {
   line-height: 1.35;
 }
 
+.math-roman-option {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  gap: 0.5rem;
+  align-items: start;
+  margin: 0.35rem 0;
+  line-height: 1.55;
+}
+
+.math-roman-label {
+  font-weight: 700;
+  color: var(--color-brand);
+  font-variant-numeric: tabular-nums;
+}
+
+.math-roman-content {
+  min-width: 0;
+}
+
+.question-group-context {
+  margin: 0 0 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: #f8fafc;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.question-group-context .math-code-block {
+  margin-bottom: 0;
+}
+
 .katex {
   white-space: nowrap;
   color: inherit;

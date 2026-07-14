@@ -61,6 +61,15 @@ function BackgroundTable({ tableData }) {
   )
 }
 
+function GroupContext({ text }) {
+  if (!text) return null
+  return (
+    <div className="question-group-context">
+      <MathText text={text} as="div" />
+    </div>
+  )
+}
+
 function DiagramOptionButtons({ imagePaths, options, selectedAnswer, answer, isSubmitted, onSelect }) {
   const diagramGroups = getDiagramOptionLayout(imagePaths, options)
   if (!diagramGroups) return null
@@ -149,6 +158,8 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
       <div className="flex flex-wrap gap-2 mb-3">
         <span className="bg-brand text-white text-xs px-2 py-1 rounded">{question.primary_unit}</span>
       </div>
+
+      <GroupContext text={question.group_context} />
 
       {/* Question text */}
       <div className="text-lg font-medium text-text mb-4 leading-relaxed">

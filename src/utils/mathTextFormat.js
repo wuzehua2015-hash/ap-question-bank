@@ -207,6 +207,11 @@ function renderTextWithMarkdownTables(text, options = {}) {
       const label = lines[i].replace(/^\s*- \[ \]\s+/, '').trim()
       parts.push(`<div class="math-check-option"><span class="math-check-box"></span>${renderLatexSegments(label, { ...options, forceInlineLatex: true })}</div>`)
       i += 1
+    } else if (/^\s*(?:I|II|III|IV|V)\.\s*\S/.test(lines[i])) {
+      flushBuffer()
+      const match = lines[i].match(/^\s*((?:I|II|III|IV|V))\.\s*(.+)$/)
+      parts.push(`<div class="math-roman-option"><span class="math-roman-label">${match[1]}.</span><span class="math-roman-content">${renderLatexSegments(match[2], { ...options, forceInlineLatex: true })}</span></div>`)
+      i += 1
     } else {
       buffer.push(lines[i])
       i += 1
