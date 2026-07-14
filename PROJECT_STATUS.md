@@ -7,10 +7,10 @@ Last updated: 2026-07-14
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Latest Pages deployment URL observed: `https://8a850978.lynkedu-ap-question-bank.pages.dev`
+- Latest Pages deployment URL observed: `https://d5c8f7c8.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
-  - JS: `/assets/index-B-vZgovI.js`
-  - CSS: `/assets/index-BRfFf4PD.css`
+  - JS: `/assets/index-Be2xE0yd.js`
+  - CSS: `/assets/index-Bqxh0FeN.css`
 - Current Vite base for custom root-domain deployment: `base: '/'`
 - Router: `HashRouter`
 
@@ -129,6 +129,7 @@ CSA rendering/answerability repair on 2026-07-14:
 - Updated `QuestionCard` and `QuestionDisplay` so grouped context appears in Quiz, Search/review, and PDF surfaces.
 - Updated `scripts/csa_content_audit.cjs` so CSA answerability checks use the full student-visible prompt (`group_context + text`) and block missing-code prompts without Java context plus malformed Roman candidate labels.
 - Verification passed: `npm run audit:csa`, `npm run validate`, `npm run build`, and real-browser Quiz checks for `2014_sample_Q08` plus `ap_bowl_2018_Q33`.
+- Deployed to Cloudflare Pages: `https://d5c8f7c8.lynkedu-ap-question-bank.pages.dev`; production `lynkedu.com` data check confirms 302 CSA MCQ, Q08/Q09 `group_context`, and Q33 Roman label cleanup.
 
 ## Subject Management Contract
 

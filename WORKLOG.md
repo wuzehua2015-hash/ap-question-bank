@@ -217,3 +217,7 @@
   - `npm run build`
   - real-browser Quiz check for `2014_sample_Q08`: `TimeRecord` code block and answer choices visible.
   - real-browser Quiz check for `ap_bowl_2018_Q33`: three `.math-roman-option` rows and Java code block visible.
+- Deployed to Cloudflare Pages:
+  - Pages URL: `https://d5c8f7c8.lynkedu-ap-question-bank.pages.dev`
+  - production bundle: `/assets/index-Be2xE0yd.js`, `/assets/index-Bqxh0FeN.css`
+  - production data check: 302 CSA MCQ, Q08/Q09 grouped context, Q33 Roman label cleanup.
