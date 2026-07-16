@@ -186,7 +186,7 @@ function filterBucketsByQuizScope(buckets, config) {
     return buckets.filter(bucket => bucket.every(q => allowedUnits.has(q.primary_unit)))
   }
   if (config.unit && config.unit !== 'all') {
-    return buckets.filter(bucket => bucket.some(q => q.primary_unit === config.unit))
+    return buckets.filter(bucket => bucket.every(q => q.primary_unit === config.unit))
   }
   return buckets
 }

@@ -1,15 +1,15 @@
 # LynkEdu AP Question Bank Project Status
 
-Last updated: 2026-07-14
+Last updated: 2026-07-16
 
 ## Current Production
 
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Latest Pages deployment URL observed: `https://d5c8f7c8.lynkedu-ap-question-bank.pages.dev`
+- Latest Pages deployment URL observed: `https://51ae9bcb.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
-  - JS: `/assets/index-Be2xE0yd.js`
+  - JS: `/assets/index-Cy5JXXQs.js`
   - CSS: `/assets/index-Bqxh0FeN.css`
 - Current Vite base for custom root-domain deployment: `base: '/'`
 - Router: `HashRouter`
@@ -75,6 +75,8 @@ Content-capacity backlog: Biology and some other subjects have comparatively sma
 - Online Quiz, online Mock MCQ, FRQ player, review pages, search, and PDF surfaces must share the same `MathText` rendering path.
 - CSA code must render through code elements (`.math-code-block` or `.math-inline-code`); raw Markdown code fences must never be visible to students.
 - Grouped MCQ context is student-visible content, not audit-only metadata. If a question has `group_context`, Quiz, Search, review, and PDF displays must render `group_context` before the member stem through the same `MathText` path.
+- Cross-unit grouped MCQ buckets are excluded from single-unit Quiz. They may appear only in cumulative/all-subject/Mock flows, and only as complete grouped buckets.
+- Subject rebuild pipelines must preserve reviewed per-item metadata such as `visual_asset_review` unless the pipeline explicitly regenerates and revalidates the replacement.
 - CSA missing-code prompts must be answerable from the student surface. A prompt containing `/* missing code */` or equivalent must include the referenced Java block in `text` or `group_context`, and the placeholder must appear inside a fenced Java block.
 - CSA Roman-numeral candidate lists (`I.`, `II.`, `III.`) must render as structured rows, with the label column separated from the expression/content column. Source text like `III.s1.equals(s4)` is a hard cleanup failure.
 - Formula-heavy subjects must render LaTeX through KaTeX (`.katex`) on student answer paths, not as raw delimiters or flattened text.

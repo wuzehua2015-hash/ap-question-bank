@@ -1,5 +1,29 @@
 # LynkEdu Worklog
 
+## 2026-07-16
+
+- Hardened grouped-MCQ delivery after Biology pond-water/duckweed review:
+  - Biology `2008_Q77`-`2008_Q80` now publish a complete `group_id`, `group_members`, `group_role`, `requires_group_context`, and markdown-table `group_context`;
+  - single-unit Quiz filtering now requires every member of a grouped bucket to match the selected unit, so cross-unit grouped buckets cannot appear as incomplete unit practice;
+  - grouped Quiz validation now checks complete grouped selection and single-unit grouped-bucket scope for all active subjects;
+  - unit-distribution validation now accounts for single-unit Quiz coverage after grouped-bucket filtering.
+- Hardened Biology rebuild behavior:
+  - Biology pipeline supports grouped prompts with shared context but independent options;
+  - `update_subjects()` preserves existing publication/readiness fields;
+  - rebuilt rows preserve reviewed per-item metadata such as `visual_asset_review` instead of silently dropping it.
+- Verification:
+  - `npm run validate:groups` passed;
+  - `npm run validate:unit-distribution` passed with existing sparse-capacity warnings only;
+  - `npm run validate:student-progression -- --skip-browser` passed for all 16 active subjects;
+  - `npm run validate:data` passed with 0 errors / 0 warnings;
+  - `npm run validate` passed;
+  - `npm run build` passed;
+  - Biology real-browser student-flow audit passed with 0 errors / 0 warnings.
+- Deployed grouped-Quiz repair to Cloudflare Pages:
+  - latest Pages deployment URL: `https://51ae9bcb.lynkedu-ap-question-bank.pages.dev`;
+  - production `lynkedu.com` bundle observed: `/assets/index-Cy5JXXQs.js`;
+  - production Biology data verified: `2008_Q77` returns `group_id: 2008_Q77_80`, four `group_members`, and the duckweed growth table in `group_context`.
+
 ## 2026-07-14
 
 - Fixed student account password hashing for Cloudflare Workers:
