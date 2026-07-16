@@ -27,6 +27,8 @@ This means production can load a newer build even if GitHub push fails. GitHub r
 
 Hard rule: do not deploy if `npm run build` fails. Direct Pages deployment must still be followed by production URL verification.
 
+Static data files under `/data/*` must not use long-lived edge/browser caching. `public/_headers` sets `Cache-Control: no-cache, no-store, must-revalidate` for `/data/*`; after content updates, verify both the fresh Pages deployment URL and `https://lynkedu.com/data/...` return the new question counts.
+
 ## Git State
 
 - Working branch: `prod-mock-pdf-fix`

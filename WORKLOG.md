@@ -21,6 +21,7 @@
   - math-heavy current-question visibility checks now accept KaTeX-rendered stems/options instead of relying only on raw source substrings;
   - mobile question, FRQ, search, and score-review images now use a shared horizontally scrollable image container so wide diagrams stay readable instead of being compressed too small;
   - final 16-subject mobile student-flow audit on local production preview passed with 0 errors / 0 warnings.
+- Added `public/_headers` for `/data/*` with no-cache headers after production custom domain returned stale question-bank JSON while the new Pages deployment and local `dist` were correct.
 
 - Hardened grouped-MCQ delivery after Biology pond-water/duckweed review:
   - Biology `2008_Q77`-`2008_Q80` now publish a complete `group_id`, `group_members`, `group_role`, `requires_group_context`, and markdown-table `group_context`;
