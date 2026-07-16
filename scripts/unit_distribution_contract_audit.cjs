@@ -18,12 +18,32 @@ function readJson(relativePath) {
   return JSON.parse(fs.readFileSync(path.join(root, 'public', 'data', relativePath), 'utf8'))
 }
 
+function questionOrder(q) {
+  return Number(q.question_number || q.question_num || q.official_number || 0)
+}
+
+function makeQuestionBuckets(questions) {
+  const byGroup = new Map()
+  const singles = []
+  for (const q of questions) {
+    if (q.group_id) {
+      if (!byGroup.has(q.group_id)) byGroup.set(q.group_id, [])
+      byGroup.get(q.group_id).push(q)
+    } else {
+      singles.push([q])
+    }
+  }
+  const groups = [...byGroup.values()].map(group => [...group].sort((a, b) => questionOrder(a) - questionOrder(b)))
+  return [...groups, ...singles].filter(bucket => bucket.length > 0)
+}
+
 for (const subject of subjects.filter(item => item.active && item.visibility !== 'internal')) {
   if (!subject.questionBank) continue
   const rows = readJson(subject.questionBank)
   const units = subject.units || []
   const unitIds = new Set(units.map(unit => unit.id))
   const counts = new Map(units.map(unit => [unit.id, 0]))
+  const unitQuizCounts = new Map(units.map(unit => [unit.id, 0]))
 
   for (const row of rows) {
     const unit = row.primary_unit || row.primaryUnit
@@ -38,11 +58,21 @@ for (const subject of subjects.filter(item => item.active && item.visibility !==
     counts.set(unit, (counts.get(unit) || 0) + 1)
   }
 
+  for (const bucket of makeQuestionBuckets(rows)) {
+    const bucketUnits = [...new Set(bucket.map(row => row.primary_unit || row.primaryUnit).filter(Boolean))]
+    if (bucketUnits.length === 1 && unitIds.has(bucketUnits[0])) {
+      unitQuizCounts.set(bucketUnits[0], (unitQuizCounts.get(bucketUnits[0]) || 0) + bucket.length)
+    }
+  }
+
   const total = rows.length
   for (const unit of units) {
     const count = counts.get(unit.id) || 0
+    const unitQuizCount = unitQuizCounts.get(unit.id) || 0
     if (count === 0) {
       errors.push(`${subject.id}: unit ${unit.id} has zero MCQ coverage`)
+    } else if (unitQuizCount === 0) {
+      errors.push(`${subject.id}: unit ${unit.id} has zero single-unit Quiz coverage after grouped-scope filtering`)
     } else if (count < 5 && !allowedSparseUnits[subject.id]?.[unit.id]) {
       warnings.push(`${subject.id}: unit ${unit.id} has sparse MCQ coverage (${count})`)
     }

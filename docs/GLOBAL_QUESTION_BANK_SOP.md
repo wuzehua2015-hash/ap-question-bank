@@ -1,6 +1,6 @@
 # Global Question Bank SOP
 
-Last updated: 2026-07-14
+Last updated: 2026-07-16
 
 This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and publishing question-bank content across AP subjects and future A-Level, IB, and competition subjects. Older subject notes remain useful evidence, but this SOP is the entry contract.
 
@@ -11,6 +11,8 @@ This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and pu
 - Every subject gets its own risk discovery. Generic extraction cannot certify a subject with code, formulas, tables, diagrams, grouped stimuli, visual answer choices, FRQ rubrics, or unusual option layouts.
 - Unit classification follows learning order. `primary_unit` is the latest unit a student must have completed to answer the item, not a keyword label.
 - Grouped items stay together. Shared context, figures, tables, and code must be represented once as `group_context` or equivalent structured fields, and every member must render that context.
+- Cross-unit grouped MCQ buckets are not unit-Quiz eligible. A single-unit Quiz may include a grouped bucket only when every member has that same `primary_unit`; cumulative/all-subject/Mock flows may include the bucket only as a complete group.
+- Rebuild pipelines must preserve reviewed per-item metadata such as visual, rendering, answerability, and classification review fields unless the pipeline explicitly regenerates and revalidates that field.
 - Source decisions are recorded. Accepted, rejected, deferred, and future-work candidates must be documented with reasons.
 - No publication without a fresh build and student-path check. JSON validation alone is insufficient.
 
@@ -81,6 +83,8 @@ An item may enter Web data only when:
 - answer key is verified;
 - all referenced visuals/tables/code/formulas are present;
 - grouped context is represented as structured shared context;
+- every grouped bucket has complete `group_id`, `group_members`, `group_role`, and `group_context` metadata;
+- shared tables inside `group_context` are rendered as structured tables through `MathText`, not left as unreadable flattened text;
 - visual assets are precise and owned by the item or group;
 - no broad page image is used as a substitute for clean structure unless explicitly approved as the only faithful representation;
 - FRQ rubrics have subject-specific solution outlines and scoring rows, without repeated template text.
@@ -105,6 +109,8 @@ For every new or changed item:
 - Ignore keyword-only evidence if the concept is only a label, distractor, or background.
 - Record `classification_reasoning` when the item is newly added, repaired, or previously risky.
 - For grouped questions, do not allow a member to appear in an earlier cumulative scope than its shared context and group members allow.
+- For single-unit Quiz, grouped buckets must be filtered by `every(member.primary_unit === selectedUnit)`, never by "any member matches selected unit".
+- For cumulative progression scopes, grouped buckets must be filtered by `every(member.primary_unit in learnedUnits)`.
 
 Required gates:
 
@@ -163,6 +169,8 @@ Run a multi-angle pass:
 - data schema and answer completeness;
 - image and visual precision;
 - grouped context integrity;
+- unit-Quiz grouped-bucket scope;
+- item-level review metadata preservation after rebuild;
 - subject risk signals;
 - unit progression and student learning sequence;
 - student flow on desktop and mobile;
@@ -183,6 +191,7 @@ Every new subject must explicitly answer these questions:
 - Does FRQ sampling need year-based or question-number-type grouping?
 - Are there subject-specific renderers for code, equations, chemical notation, graphs, tables, maps, datasets, or passages?
 - Are grouped prompts common?
+- Can grouped prompts span units, and if so which student paths may include them?
 - Are answer choices visual, tabular, or multi-line?
 - Does unit classification need special boundary rules?
 - Are official sources enough, or is approved external expansion required?

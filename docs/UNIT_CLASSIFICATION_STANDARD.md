@@ -40,7 +40,7 @@ For each active subject, the simulator must:
 - check that sampled questions, options, submission, report, and similar-practice paths work on the student side
 - write the result to `.workspace/student-progression-audit/summary.json`
 
-If a grouped item spans multiple units, it cannot appear in a cumulative stage until every member of the group is inside the learned scope. This prevents a split-screen Quiz session from showing unlearned material through a shared stimulus or grouped option set.
+If a grouped item spans multiple units, it cannot appear in a cumulative stage until every member of the group is inside the learned scope. A single-unit Quiz is stricter: it may include a grouped bucket only when every member belongs to that exact unit. This prevents a split-screen Quiz session from showing incomplete shared material or unlearned concepts through a grouped stimulus or grouped option set.
 
 ## Blocking Validation
 
