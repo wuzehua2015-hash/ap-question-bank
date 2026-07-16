@@ -15,7 +15,14 @@
   - `npm run validate:groups` passed;
   - `npm run validate:unit-distribution` passed with existing sparse-capacity warnings only;
   - `npm run validate:student-progression -- --skip-browser` passed for all 16 active subjects;
-  - `npm run validate:data` passed with 0 errors / 0 warnings.
+  - `npm run validate:data` passed with 0 errors / 0 warnings;
+  - `npm run validate` passed;
+  - `npm run build` passed;
+  - Biology real-browser student-flow audit passed with 0 errors / 0 warnings.
+- Deployed grouped-Quiz repair to Cloudflare Pages:
+  - latest Pages deployment URL: `https://51ae9bcb.lynkedu-ap-question-bank.pages.dev`;
+  - production `lynkedu.com` bundle observed: `/assets/index-Cy5JXXQs.js`;
+  - production Biology data verified: `2008_Q77` returns `group_id: 2008_Q77_80`, four `group_members`, and the duckweed growth table in `group_context`.
 
 ## 2026-07-14
 

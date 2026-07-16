@@ -7,9 +7,9 @@ Last updated: 2026-07-16
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Latest Pages deployment URL observed: `https://d5c8f7c8.lynkedu-ap-question-bank.pages.dev`
+- Latest Pages deployment URL observed: `https://51ae9bcb.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
-  - JS: `/assets/index-Be2xE0yd.js`
+  - JS: `/assets/index-Cy5JXXQs.js`
   - CSS: `/assets/index-Bqxh0FeN.css`
 - Current Vite base for custom root-domain deployment: `base: '/'`
 - Router: `HashRouter`
