@@ -2,6 +2,27 @@
 
 ## 2026-07-16
 
+- Completed pre-launch capacity reinforcement across all active low-volume subjects:
+  - added `scripts/add_capacity_reinforcement_20260716.cjs` as an idempotent owned-content publisher;
+  - published LynkEdu-owned MCQ under `source_set: lynkedu_capacity_20260716`;
+  - updated question banks and similarity indexes for Biology, CSP, APES, Physics 1, and Physics 2;
+  - final counts: Biology 250 MCQ, CSP 250 MCQ, APES 250 MCQ, Physics 1 250 MCQ, Physics 2 250 MCQ;
+  - source reports written under each subject's `02-data/lynkedu_capacity_20260716/source_report.json`.
+- Capacity verification:
+  - `npm run audit:capacity`: all 16 active subjects risk OK;
+  - `npm run validate:unit-distribution`: 0 warnings;
+  - `npm run validate:student-progression -- --skip-browser`: 0 errors / 0 warnings / 0 findings;
+  - `npm run validate`: passed;
+  - `npm run build`: passed;
+  - student-flow audits for Biology, CSP, APES, Physics 1, and Physics 2 passed with 0 errors.
+- Improved `scripts/student_flow_audit.cjs` comparable-text matching so KaTeX-rendered unit spacing such as `2N` versus source `$2\\,\\mathrm{N}$` does not create false current-question visibility warnings.
+- Hardened mobile student-flow delivery and audit coverage:
+  - `scripts/student_flow_audit.cjs` now supports account-tier simulation and runs premium search/question-set/similar-question paths with a Lynk Student account state instead of treating gated pages as search failures;
+  - math-heavy current-question visibility checks now accept KaTeX-rendered stems/options instead of relying only on raw source substrings;
+  - mobile question, FRQ, search, and score-review images now use a shared horizontally scrollable image container so wide diagrams stay readable instead of being compressed too small;
+  - final 16-subject mobile student-flow audit on local production preview passed with 0 errors / 0 warnings.
+- Added `public/_headers` for `/data/*` with no-cache headers after production custom domain returned stale question-bank JSON while the new Pages deployment and local `dist` were correct.
+
 - Hardened grouped-MCQ delivery after Biology pond-water/duckweed review:
   - Biology `2008_Q77`-`2008_Q80` now publish a complete `group_id`, `group_members`, `group_role`, `requires_group_context`, and markdown-table `group_context`;
   - single-unit Quiz filtering now requires every member of a grouped bucket to match the selected unit, so cross-unit grouped buckets cannot appear as incomplete unit practice;

@@ -48,9 +48,9 @@
         {
           "page": 5,
           "bbox": [
-            48.0,
+            48,
             238.8,
-            564.0,
+            564,
             535.9
           ],
           "kind": "image"
@@ -116,9 +116,9 @@
         {
           "page": 5,
           "bbox": [
-            48.0,
+            48,
             238.8,
-            564.0,
+            564,
             535.9
           ],
           "kind": "image"
@@ -184,9 +184,9 @@
         {
           "page": 5,
           "bbox": [
-            48.0,
+            48,
             238.8,
-            564.0,
+            564,
             535.9
           ],
           "kind": "image"
@@ -3500,7 +3500,7 @@
         {
           "page": 16,
           "bbox": [
-            94.0,
+            94,
             54.5,
             242.3,
             267.6
@@ -6237,7 +6237,7 @@
           "page": 10,
           "bbox": [
             55.2,
-            61.0,
+            61,
             556.8,
             266.4
           ],
@@ -6305,7 +6305,7 @@
           "page": 10,
           "bbox": [
             55.2,
-            61.0,
+            61,
             556.8,
             266.4
           ],
@@ -6373,7 +6373,7 @@
           "page": 10,
           "bbox": [
             55.2,
-            61.0,
+            61,
             556.8,
             266.4
           ],
@@ -6603,8 +6603,8 @@
         {
           "page": 11,
           "bbox": [
-            336.0,
-            75.0,
+            336,
+            75,
             508.3,
             193.1
           ],
@@ -6623,7 +6623,7 @@
         {
           "page": 11,
           "bbox": [
-            336.0,
+            336,
             218.9,
             508.3,
             337.5
@@ -6681,8 +6681,8 @@
           "source_block": {
             "page": 11,
             "bbox": [
-              336.0,
-              75.0,
+              336,
+              75,
               508.3,
               193.1
             ],
@@ -6715,7 +6715,7 @@
           "source_block": {
             "page": 11,
             "bbox": [
-              336.0,
+              336,
               218.9,
               508.3,
               337.5
@@ -7176,7 +7176,7 @@
             361.4,
             176.3,
             467.3,
-            260.0
+            260
           ],
           "kind": "image"
         },
@@ -7239,7 +7239,7 @@
               361.4,
               176.3,
               467.3,
-              260.0
+              260
             ],
             "kind": "image"
           },
@@ -7536,7 +7536,7 @@
             67.1,
             45.5,
             268.9,
-            137.0
+            137
           ],
           "kind": "image"
         }
@@ -8085,7 +8085,7 @@
             362.2,
             278.5,
             525.8,
-            404.0
+            404
           ],
           "kind": "image"
         }
@@ -8283,7 +8283,7 @@
           "page": 19,
           "bbox": [
             163.1,
-            98.0,
+            98,
             448.9,
             367.3
           ],
@@ -8351,7 +8351,7 @@
           "page": 19,
           "bbox": [
             163.1,
-            98.0,
+            98,
             448.9,
             367.3
           ],
@@ -8542,7 +8542,7 @@
         {
           "page": 21,
           "bbox": [
-            288.0,
+            288,
             78.1,
             413.3,
             207.9
@@ -8562,7 +8562,7 @@
         {
           "page": 21,
           "bbox": [
-            288.0,
+            288,
             246.8,
             395.3,
             376.6
@@ -8612,7 +8612,7 @@
           "source_block": {
             "page": 21,
             "bbox": [
-              288.0,
+              288,
               78.1,
               413.3,
               207.9
@@ -8646,7 +8646,7 @@
           "source_block": {
             "page": 21,
             "bbox": [
-              288.0,
+              288,
               246.8,
               395.3,
               376.6
@@ -10722,7 +10722,7 @@
           "bbox": [
             160.1,
             46.4,
-            452.0,
+            452,
             336.6
           ],
           "kind": "image"
@@ -11792,6 +11792,3106 @@
       "source_page": 39,
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q001",
+    "id": "lynkedu_2026_environmental_science_capacity_Q001",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9001,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 1 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 1"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q002",
+    "id": "lynkedu_2026_environmental_science_capacity_Q002",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9002,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 2 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 2"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q003",
+    "id": "lynkedu_2026_environmental_science_capacity_Q003",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9003,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 3 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 3"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q004",
+    "id": "lynkedu_2026_environmental_science_capacity_Q004",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9004,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 4 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 4"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q005",
+    "id": "lynkedu_2026_environmental_science_capacity_Q005",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9005,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 5 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 5"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q006",
+    "id": "lynkedu_2026_environmental_science_capacity_Q006",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9006,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 6 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 6"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q007",
+    "id": "lynkedu_2026_environmental_science_capacity_Q007",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9007,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 7 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 7"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q008",
+    "id": "lynkedu_2026_environmental_science_capacity_Q008",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9008,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 8 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 8"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q009",
+    "id": "lynkedu_2026_environmental_science_capacity_Q009",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9009,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 9 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 9"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q010",
+    "id": "lynkedu_2026_environmental_science_capacity_Q010",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9010,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 10 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 10"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q011",
+    "id": "lynkedu_2026_environmental_science_capacity_Q011",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9011,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 11 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 11"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q012",
+    "id": "lynkedu_2026_environmental_science_capacity_Q012",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9012,
+    "type": "MCQ",
+    "text": "In a forest ecosystem, species 12 depends on several food sources instead of one. Which ecosystem property is most directly increased?",
+    "options": {
+      "A": "The number of trophic levels must become zero.",
+      "B": "Resilience after one food source declines.",
+      "C": "Energy transfer becomes 100 percent efficient.",
+      "D": "All species occupy the same niche.",
+      "E": "Primary productivity becomes impossible."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "The Living World: Biodiversity",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 12"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U2",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U2 (The Living World: Biodiversity) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q013",
+    "id": "lynkedu_2026_environmental_science_capacity_Q013",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9013,
+    "type": "MCQ",
+    "text": "A soil sample 1 has high clay content. Which property is most likely compared with sandy soil?",
+    "options": {
+      "A": "Lower nutrient retention in every case.",
+      "B": "Higher water-holding capacity.",
+      "C": "Larger particle size.",
+      "D": "No ability to hold ions.",
+      "E": "No relationship to plant growth."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Earth Systems and Resources",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 13"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U4 (Earth Systems and Resources) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q014",
+    "id": "lynkedu_2026_environmental_science_capacity_Q014",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9014,
+    "type": "MCQ",
+    "text": "A soil sample 2 has high clay content. Which property is most likely compared with sandy soil?",
+    "options": {
+      "A": "Lower nutrient retention in every case.",
+      "B": "Higher water-holding capacity.",
+      "C": "Larger particle size.",
+      "D": "No ability to hold ions.",
+      "E": "No relationship to plant growth."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Earth Systems and Resources",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 14"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U4 (Earth Systems and Resources) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q015",
+    "id": "lynkedu_2026_environmental_science_capacity_Q015",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9015,
+    "type": "MCQ",
+    "text": "A soil sample 3 has high clay content. Which property is most likely compared with sandy soil?",
+    "options": {
+      "A": "Lower nutrient retention in every case.",
+      "B": "Higher water-holding capacity.",
+      "C": "Larger particle size.",
+      "D": "No ability to hold ions.",
+      "E": "No relationship to plant growth."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Earth Systems and Resources",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 15"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U4 (Earth Systems and Resources) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q016",
+    "id": "lynkedu_2026_environmental_science_capacity_Q016",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9016,
+    "type": "MCQ",
+    "text": "A soil sample 4 has high clay content. Which property is most likely compared with sandy soil?",
+    "options": {
+      "A": "Lower nutrient retention in every case.",
+      "B": "Higher water-holding capacity.",
+      "C": "Larger particle size.",
+      "D": "No ability to hold ions.",
+      "E": "No relationship to plant growth."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Earth Systems and Resources",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 16"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U4 (Earth Systems and Resources) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q017",
+    "id": "lynkedu_2026_environmental_science_capacity_Q017",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9017,
+    "type": "MCQ",
+    "text": "A soil sample 5 has high clay content. Which property is most likely compared with sandy soil?",
+    "options": {
+      "A": "Lower nutrient retention in every case.",
+      "B": "Higher water-holding capacity.",
+      "C": "Larger particle size.",
+      "D": "No ability to hold ions.",
+      "E": "No relationship to plant growth."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Earth Systems and Resources",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 17"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U4 (Earth Systems and Resources) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q018",
+    "id": "lynkedu_2026_environmental_science_capacity_Q018",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9018,
+    "type": "MCQ",
+    "text": "A soil sample 6 has high clay content. Which property is most likely compared with sandy soil?",
+    "options": {
+      "A": "Lower nutrient retention in every case.",
+      "B": "Higher water-holding capacity.",
+      "C": "Larger particle size.",
+      "D": "No ability to hold ions.",
+      "E": "No relationship to plant growth."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Earth Systems and Resources",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 18"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U4 (Earth Systems and Resources) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q019",
+    "id": "lynkedu_2026_environmental_science_capacity_Q019",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9019,
+    "type": "MCQ",
+    "text": "A soil sample 7 has high clay content. Which property is most likely compared with sandy soil?",
+    "options": {
+      "A": "Lower nutrient retention in every case.",
+      "B": "Higher water-holding capacity.",
+      "C": "Larger particle size.",
+      "D": "No ability to hold ions.",
+      "E": "No relationship to plant growth."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Earth Systems and Resources",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 19"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U4 (Earth Systems and Resources) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q020",
+    "id": "lynkedu_2026_environmental_science_capacity_Q020",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9020,
+    "type": "MCQ",
+    "text": "A soil sample 8 has high clay content. Which property is most likely compared with sandy soil?",
+    "options": {
+      "A": "Lower nutrient retention in every case.",
+      "B": "Higher water-holding capacity.",
+      "C": "Larger particle size.",
+      "D": "No ability to hold ions.",
+      "E": "No relationship to plant growth."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Earth Systems and Resources",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 20"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U4 (Earth Systems and Resources) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q021",
+    "id": "lynkedu_2026_environmental_science_capacity_Q021",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9021,
+    "type": "MCQ",
+    "text": "A soil sample 9 has high clay content. Which property is most likely compared with sandy soil?",
+    "options": {
+      "A": "Lower nutrient retention in every case.",
+      "B": "Higher water-holding capacity.",
+      "C": "Larger particle size.",
+      "D": "No ability to hold ions.",
+      "E": "No relationship to plant growth."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Earth Systems and Resources",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 21"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U4 (Earth Systems and Resources) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q022",
+    "id": "lynkedu_2026_environmental_science_capacity_Q022",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9022,
+    "type": "MCQ",
+    "text": "A soil sample 10 has high clay content. Which property is most likely compared with sandy soil?",
+    "options": {
+      "A": "Lower nutrient retention in every case.",
+      "B": "Higher water-holding capacity.",
+      "C": "Larger particle size.",
+      "D": "No ability to hold ions.",
+      "E": "No relationship to plant growth."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Earth Systems and Resources",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 22"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U4",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U4 (Earth Systems and Resources) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q023",
+    "id": "lynkedu_2026_environmental_science_capacity_Q023",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9023,
+    "type": "MCQ",
+    "text": "A farm field 1 uses contour plowing on a slope. What is the primary environmental benefit?",
+    "options": {
+      "A": "Increased runoff speed.",
+      "B": "Reduced soil erosion by slowing runoff.",
+      "C": "Removal of all soil organic matter.",
+      "D": "Elimination of all irrigation needs.",
+      "E": "Conversion of soil into bedrock."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Land and Water Use",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 23"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U5 (Land and Water Use) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q024",
+    "id": "lynkedu_2026_environmental_science_capacity_Q024",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9024,
+    "type": "MCQ",
+    "text": "A farm field 2 uses contour plowing on a slope. What is the primary environmental benefit?",
+    "options": {
+      "A": "Increased runoff speed.",
+      "B": "Reduced soil erosion by slowing runoff.",
+      "C": "Removal of all soil organic matter.",
+      "D": "Elimination of all irrigation needs.",
+      "E": "Conversion of soil into bedrock."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Land and Water Use",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 24"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U5 (Land and Water Use) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q025",
+    "id": "lynkedu_2026_environmental_science_capacity_Q025",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9025,
+    "type": "MCQ",
+    "text": "A farm field 3 uses contour plowing on a slope. What is the primary environmental benefit?",
+    "options": {
+      "A": "Increased runoff speed.",
+      "B": "Reduced soil erosion by slowing runoff.",
+      "C": "Removal of all soil organic matter.",
+      "D": "Elimination of all irrigation needs.",
+      "E": "Conversion of soil into bedrock."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Land and Water Use",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 25"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U5 (Land and Water Use) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q026",
+    "id": "lynkedu_2026_environmental_science_capacity_Q026",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9026,
+    "type": "MCQ",
+    "text": "A farm field 4 uses contour plowing on a slope. What is the primary environmental benefit?",
+    "options": {
+      "A": "Increased runoff speed.",
+      "B": "Reduced soil erosion by slowing runoff.",
+      "C": "Removal of all soil organic matter.",
+      "D": "Elimination of all irrigation needs.",
+      "E": "Conversion of soil into bedrock."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Land and Water Use",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 26"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U5 (Land and Water Use) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q027",
+    "id": "lynkedu_2026_environmental_science_capacity_Q027",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9027,
+    "type": "MCQ",
+    "text": "A farm field 5 uses contour plowing on a slope. What is the primary environmental benefit?",
+    "options": {
+      "A": "Increased runoff speed.",
+      "B": "Reduced soil erosion by slowing runoff.",
+      "C": "Removal of all soil organic matter.",
+      "D": "Elimination of all irrigation needs.",
+      "E": "Conversion of soil into bedrock."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Land and Water Use",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 27"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U5 (Land and Water Use) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q028",
+    "id": "lynkedu_2026_environmental_science_capacity_Q028",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9028,
+    "type": "MCQ",
+    "text": "A farm field 6 uses contour plowing on a slope. What is the primary environmental benefit?",
+    "options": {
+      "A": "Increased runoff speed.",
+      "B": "Reduced soil erosion by slowing runoff.",
+      "C": "Removal of all soil organic matter.",
+      "D": "Elimination of all irrigation needs.",
+      "E": "Conversion of soil into bedrock."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Land and Water Use",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 28"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U5 (Land and Water Use) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q029",
+    "id": "lynkedu_2026_environmental_science_capacity_Q029",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9029,
+    "type": "MCQ",
+    "text": "A farm field 7 uses contour plowing on a slope. What is the primary environmental benefit?",
+    "options": {
+      "A": "Increased runoff speed.",
+      "B": "Reduced soil erosion by slowing runoff.",
+      "C": "Removal of all soil organic matter.",
+      "D": "Elimination of all irrigation needs.",
+      "E": "Conversion of soil into bedrock."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Land and Water Use",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 29"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U5 (Land and Water Use) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q030",
+    "id": "lynkedu_2026_environmental_science_capacity_Q030",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9030,
+    "type": "MCQ",
+    "text": "A farm field 8 uses contour plowing on a slope. What is the primary environmental benefit?",
+    "options": {
+      "A": "Increased runoff speed.",
+      "B": "Reduced soil erosion by slowing runoff.",
+      "C": "Removal of all soil organic matter.",
+      "D": "Elimination of all irrigation needs.",
+      "E": "Conversion of soil into bedrock."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Land and Water Use",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 30"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U5 (Land and Water Use) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q031",
+    "id": "lynkedu_2026_environmental_science_capacity_Q031",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9031,
+    "type": "MCQ",
+    "text": "A farm field 9 uses contour plowing on a slope. What is the primary environmental benefit?",
+    "options": {
+      "A": "Increased runoff speed.",
+      "B": "Reduced soil erosion by slowing runoff.",
+      "C": "Removal of all soil organic matter.",
+      "D": "Elimination of all irrigation needs.",
+      "E": "Conversion of soil into bedrock."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Land and Water Use",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 31"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U5 (Land and Water Use) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q032",
+    "id": "lynkedu_2026_environmental_science_capacity_Q032",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9032,
+    "type": "MCQ",
+    "text": "A farm field 10 uses contour plowing on a slope. What is the primary environmental benefit?",
+    "options": {
+      "A": "Increased runoff speed.",
+      "B": "Reduced soil erosion by slowing runoff.",
+      "C": "Removal of all soil organic matter.",
+      "D": "Elimination of all irrigation needs.",
+      "E": "Conversion of soil into bedrock."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Land and Water Use",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 32"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U5",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U5 (Land and Water Use) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q033",
+    "id": "lynkedu_2026_environmental_science_capacity_Q033",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9033,
+    "type": "MCQ",
+    "text": "Which process 1 moves carbon from the atmosphere into biomass?",
+    "options": {
+      "A": "Nitrification.",
+      "B": "Photosynthesis.",
+      "C": "Weathering of limestone only.",
+      "D": "Combustion.",
+      "E": "Ozone formation."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U1",
+    "unit": "U1",
+    "unit_name": "The Living World: Ecosystems",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 33"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U1",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U1 (The Living World: Ecosystems) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q034",
+    "id": "lynkedu_2026_environmental_science_capacity_Q034",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9034,
+    "type": "MCQ",
+    "text": "Which process 2 moves carbon from the atmosphere into biomass?",
+    "options": {
+      "A": "Nitrification.",
+      "B": "Photosynthesis.",
+      "C": "Weathering of limestone only.",
+      "D": "Combustion.",
+      "E": "Ozone formation."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U1",
+    "unit": "U1",
+    "unit_name": "The Living World: Ecosystems",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 34"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U1",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U1 (The Living World: Ecosystems) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q035",
+    "id": "lynkedu_2026_environmental_science_capacity_Q035",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9035,
+    "type": "MCQ",
+    "text": "Which process 3 moves carbon from the atmosphere into biomass?",
+    "options": {
+      "A": "Nitrification.",
+      "B": "Photosynthesis.",
+      "C": "Weathering of limestone only.",
+      "D": "Combustion.",
+      "E": "Ozone formation."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U1",
+    "unit": "U1",
+    "unit_name": "The Living World: Ecosystems",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 35"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U1",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U1 (The Living World: Ecosystems) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q036",
+    "id": "lynkedu_2026_environmental_science_capacity_Q036",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9036,
+    "type": "MCQ",
+    "text": "Which process 4 moves carbon from the atmosphere into biomass?",
+    "options": {
+      "A": "Nitrification.",
+      "B": "Photosynthesis.",
+      "C": "Weathering of limestone only.",
+      "D": "Combustion.",
+      "E": "Ozone formation."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U1",
+    "unit": "U1",
+    "unit_name": "The Living World: Ecosystems",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 36"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U1",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U1 (The Living World: Ecosystems) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q037",
+    "id": "lynkedu_2026_environmental_science_capacity_Q037",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9037,
+    "type": "MCQ",
+    "text": "A population 1 grows rapidly when resources are abundant, then slows as resources become limited. Which model best describes this pattern?",
+    "options": {
+      "A": "Linear decrease.",
+      "B": "Logistic growth.",
+      "C": "Exponential decay to zero only.",
+      "D": "No population model.",
+      "E": "Random sampling error only."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Populations",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 37"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U3 (Populations) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q038",
+    "id": "lynkedu_2026_environmental_science_capacity_Q038",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9038,
+    "type": "MCQ",
+    "text": "A population 2 grows rapidly when resources are abundant, then slows as resources become limited. Which model best describes this pattern?",
+    "options": {
+      "A": "Linear decrease.",
+      "B": "Logistic growth.",
+      "C": "Exponential decay to zero only.",
+      "D": "No population model.",
+      "E": "Random sampling error only."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Populations",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 38"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U3 (Populations) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q039",
+    "id": "lynkedu_2026_environmental_science_capacity_Q039",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9039,
+    "type": "MCQ",
+    "text": "A population 3 grows rapidly when resources are abundant, then slows as resources become limited. Which model best describes this pattern?",
+    "options": {
+      "A": "Linear decrease.",
+      "B": "Logistic growth.",
+      "C": "Exponential decay to zero only.",
+      "D": "No population model.",
+      "E": "Random sampling error only."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Populations",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 39"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U3 (Populations) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q040",
+    "id": "lynkedu_2026_environmental_science_capacity_Q040",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9040,
+    "type": "MCQ",
+    "text": "A population 4 grows rapidly when resources are abundant, then slows as resources become limited. Which model best describes this pattern?",
+    "options": {
+      "A": "Linear decrease.",
+      "B": "Logistic growth.",
+      "C": "Exponential decay to zero only.",
+      "D": "No population model.",
+      "E": "Random sampling error only."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Populations",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 40"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U3",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U3 (Populations) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q041",
+    "id": "lynkedu_2026_environmental_science_capacity_Q041",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9041,
+    "type": "MCQ",
+    "text": "A city replaces coal electricity with wind energy in case 1. Which pollutant is most directly reduced during electricity generation?",
+    "options": {
+      "A": "Dissolved oxygen in streams.",
+      "B": "Carbon dioxide from combustion.",
+      "C": "Soil organic matter.",
+      "D": "Water vapor from transpiration.",
+      "E": "Nitrogen in plant tissue."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Energy Resources and Consumption",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 41"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U6 (Energy Resources and Consumption) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q042",
+    "id": "lynkedu_2026_environmental_science_capacity_Q042",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9042,
+    "type": "MCQ",
+    "text": "A city replaces coal electricity with wind energy in case 2. Which pollutant is most directly reduced during electricity generation?",
+    "options": {
+      "A": "Dissolved oxygen in streams.",
+      "B": "Carbon dioxide from combustion.",
+      "C": "Soil organic matter.",
+      "D": "Water vapor from transpiration.",
+      "E": "Nitrogen in plant tissue."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Energy Resources and Consumption",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 42"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U6 (Energy Resources and Consumption) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q043",
+    "id": "lynkedu_2026_environmental_science_capacity_Q043",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9043,
+    "type": "MCQ",
+    "text": "A city replaces coal electricity with wind energy in case 3. Which pollutant is most directly reduced during electricity generation?",
+    "options": {
+      "A": "Dissolved oxygen in streams.",
+      "B": "Carbon dioxide from combustion.",
+      "C": "Soil organic matter.",
+      "D": "Water vapor from transpiration.",
+      "E": "Nitrogen in plant tissue."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Energy Resources and Consumption",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 43"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U6 (Energy Resources and Consumption) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q044",
+    "id": "lynkedu_2026_environmental_science_capacity_Q044",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9044,
+    "type": "MCQ",
+    "text": "A city replaces coal electricity with wind energy in case 4. Which pollutant is most directly reduced during electricity generation?",
+    "options": {
+      "A": "Dissolved oxygen in streams.",
+      "B": "Carbon dioxide from combustion.",
+      "C": "Soil organic matter.",
+      "D": "Water vapor from transpiration.",
+      "E": "Nitrogen in plant tissue."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Energy Resources and Consumption",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 44"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U6",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U6 (Energy Resources and Consumption) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q045",
+    "id": "lynkedu_2026_environmental_science_capacity_Q045",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9045,
+    "type": "MCQ",
+    "text": "A monitoring station 1 records high particulate matter near a roadway. Which human health concern is most directly associated?",
+    "options": {
+      "A": "Increased soil permeability.",
+      "B": "Respiratory irritation.",
+      "C": "Reduced algal growth in lakes.",
+      "D": "Lower noise levels.",
+      "E": "Higher biodiversity in all areas."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Atmospheric Pollution",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 45"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U7 (Atmospheric Pollution) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q046",
+    "id": "lynkedu_2026_environmental_science_capacity_Q046",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9046,
+    "type": "MCQ",
+    "text": "A monitoring station 2 records high particulate matter near a roadway. Which human health concern is most directly associated?",
+    "options": {
+      "A": "Increased soil permeability.",
+      "B": "Respiratory irritation.",
+      "C": "Reduced algal growth in lakes.",
+      "D": "Lower noise levels.",
+      "E": "Higher biodiversity in all areas."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Atmospheric Pollution",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 46"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U7 (Atmospheric Pollution) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q047",
+    "id": "lynkedu_2026_environmental_science_capacity_Q047",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9047,
+    "type": "MCQ",
+    "text": "A monitoring station 3 records high particulate matter near a roadway. Which human health concern is most directly associated?",
+    "options": {
+      "A": "Increased soil permeability.",
+      "B": "Respiratory irritation.",
+      "C": "Reduced algal growth in lakes.",
+      "D": "Lower noise levels.",
+      "E": "Higher biodiversity in all areas."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Atmospheric Pollution",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 47"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U7",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U7 (Atmospheric Pollution) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q048",
+    "id": "lynkedu_2026_environmental_science_capacity_Q048",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9048,
+    "type": "MCQ",
+    "text": "Warmer ocean water in scenario 1 causes coral bleaching. What is the direct cause of the bleaching response?",
+    "options": {
+      "A": "Corals become mammals.",
+      "B": "Corals lose symbiotic algae that provide much of their energy.",
+      "C": "Ocean salinity becomes zero.",
+      "D": "All dissolved oxygen disappears instantly.",
+      "E": "Corals stop being animals."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Global Change",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 48"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U9 (Global Change) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q049",
+    "id": "lynkedu_2026_environmental_science_capacity_Q049",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9049,
+    "type": "MCQ",
+    "text": "Warmer ocean water in scenario 2 causes coral bleaching. What is the direct cause of the bleaching response?",
+    "options": {
+      "A": "Corals become mammals.",
+      "B": "Corals lose symbiotic algae that provide much of their energy.",
+      "C": "Ocean salinity becomes zero.",
+      "D": "All dissolved oxygen disappears instantly.",
+      "E": "Corals stop being animals."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Global Change",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 49"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U9 (Global Change) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
+    }
+  },
+  {
+    "question_id": "lynkedu_2026_environmental_science_capacity_Q050",
+    "id": "lynkedu_2026_environmental_science_capacity_Q050",
+    "subject": "AP Environmental Science",
+    "subject_id": "environmental-science",
+    "year": 2026,
+    "source_set": "lynkedu_capacity_20260716",
+    "source_exam_structure": "owned_capacity_reinforcement_mcq",
+    "question_number": 9050,
+    "type": "MCQ",
+    "text": "Warmer ocean water in scenario 3 causes coral bleaching. What is the direct cause of the bleaching response?",
+    "options": {
+      "A": "Corals become mammals.",
+      "B": "Corals lose symbiotic algae that provide much of their energy.",
+      "C": "Ocean salinity becomes zero.",
+      "D": "All dissolved oxygen disappears instantly.",
+      "E": "Corals stop being animals."
+    },
+    "answer": "B",
+    "answers": [
+      "B"
+    ],
+    "answer_type": "single",
+    "scoring_status": "scored",
+    "image_paths": [],
+    "rubric_image_paths": [],
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Global Change",
+    "secondary_units": [],
+    "pure_unit": true,
+    "topics": [
+      "apes reinforcement 50"
+    ],
+    "skills": [],
+    "difficulty": "medium",
+    "classification": {
+      "primary_unit": "U9",
+      "secondary_units": [],
+      "confidence": 0.92,
+      "evidence": "LynkEdu owned capacity reinforcement item written directly for the target unit learning objective.",
+      "review_status": "manual_reviewed"
+    },
+    "provenance": {
+      "source_set": "lynkedu_capacity_20260716",
+      "source_type": "LynkEdu owned original practice",
+      "author": "LynkEdu curriculum team",
+      "created_at": "2026-07-16",
+      "rights": "owned_by_lynkedu"
+    },
+    "classification_reasoning": "Targets U9 (Global Change) and requires no later-unit concept.",
+    "rendering_review": {
+      "status": "PASS",
+      "method": "structured_text_no_external_visual",
+      "reviewed_at": "2026-07-16"
+    },
+    "answerability_review": {
+      "status": "PASS",
+      "method": "stem_options_answer_key_manual_check",
+      "reviewed_at": "2026-07-16"
     }
   }
 ]

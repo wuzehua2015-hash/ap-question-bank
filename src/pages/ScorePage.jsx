@@ -325,14 +325,15 @@ function ScorePage() {
                   </p>
                   <ScoreBackgroundTable tableData={q.background_data?.table} />
                   {visibleImages.length > 0 && (
-                    <div style={{ marginBottom: '12px' }}>
+                    <div className="question-image-wrap">
                       {visibleImages
                         .map((imgPath, i) => (
                           <img
                             key={i}
                             src={import.meta.env.BASE_URL + imgPath.replace(/^\//, '')}
                             alt=""
-                            style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '4px' }}
+                            className="question-image"
+                            style={{ maxHeight: '300px', borderRadius: '4px' }}
                           />
                         ))}
                     </div>

@@ -12,21 +12,23 @@ function ImageWithFallback({ path }) {
   if (hasError) return null
 
   return (
-    <img
-      src={src}
-      alt=""
-      className="max-w-full max-h-[560px] mx-auto mb-4 rounded-lg border border-border"
-      onError={() => {
-        const originalPath = path.startsWith('/') ? path : '/' + path
-        if (src !== originalPath) {
-          console.log('Image fallback:', originalPath)
-          setSrc(originalPath)
-        } else {
-          console.error('Image failed completely:', path)
-          setHasError(true)
-        }
-      }}
-    />
+    <div className="question-image-wrap">
+      <img
+        src={src}
+        alt=""
+        className="question-image max-w-full max-h-[560px] mx-auto rounded-lg border border-border"
+        onError={() => {
+          const originalPath = path.startsWith('/') ? path : '/' + path
+          if (src !== originalPath) {
+            console.log('Image fallback:', originalPath)
+            setSrc(originalPath)
+          } else {
+            console.error('Image failed completely:', path)
+            setHasError(true)
+          }
+        }}
+      />
+    </div>
   )
 }
 

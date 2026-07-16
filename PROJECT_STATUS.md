@@ -27,6 +27,8 @@ This means production can load a newer build even if GitHub push fails. GitHub r
 
 Hard rule: do not deploy if `npm run build` fails. Direct Pages deployment must still be followed by production URL verification.
 
+Static data files under `/data/*` must not use long-lived edge/browser caching. `public/_headers` sets `Cache-Control: no-cache, no-store, must-revalidate` for `/data/*`; after content updates, verify both the fresh Pages deployment URL and `https://lynkedu.com/data/...` return the new question counts.
+
 ## Git State
 
 - Working branch: `prod-mock-pdf-fix`
@@ -56,7 +58,7 @@ Hard rule: do not deploy if `npm run build` fails. Direct Pages deployment must 
 
 Student-facing copy must use `翎英学员`, not internal certification/release labels.
 
-Content-capacity backlog: Biology and some other subjects have comparatively small question pools. After launch stabilization, add a subject-by-subject expansion/backfill pass so low-volume units do not produce repetitive practice or weak mock coverage.
+Content-capacity status: 2026-07-16 capacity reinforcement cleared the pre-launch capacity audit for all 16 active subjects. Biology, CSP, APES, Physics 1, and Physics 2 now have at least 250 MCQ each and no sparse units under the current capacity audit.
 
 ## Student Account System
 
@@ -82,6 +84,9 @@ Content-capacity backlog: Biology and some other subjects have comparatively sma
 - Formula-heavy subjects must render LaTeX through KaTeX (`.katex`) on student answer paths, not as raw delimiters or flattened text.
 - `scripts/student_flow_audit.cjs` now samples subject-specific render-risk questions and fails on missing code/formula render layers for Quiz, Mock MCQ, and FRQ player.
 - Representative evidence on 2026-07-14: CSA student-flow audit passed with 0 errors on a fresh preview port; Calculus AB student-flow audit passed with 0 errors on a fresh preview port.
+- Mobile student-flow release gate must run with explicit URL, mobile viewport, and account tier. For premium surfaces, use Lynk Student account state so search, question set, similar-question practice, PDF gates, and review pages are actually exercised.
+- Mobile topic images use `.question-image-wrap` / `.question-image`: wide diagrams are horizontally scrollable at a minimum readable width and must preserve natural aspect ratio. Do not add per-page image rules that compress wide figures below readability thresholds.
+- Latest evidence on 2026-07-16: all 16 active subjects passed mobile student-flow audit with 0 errors / 0 warnings under Lynk Student account state.
 
 ## Required Backlog
 
@@ -103,11 +108,11 @@ Content-capacity backlog: Biology and some other subjects have comparatively sma
 Capacity audit on 2026-07-13 identified the first expansion queue:
 
 1. AP Computer Science A: completed; now 291 MCQ / 12 FRQ and capacity risk OK.
-2. AP Physics 1: 121 MCQ / 15 FRQ; sparse U5, U6, U8.
-3. AP Biology: 153 MCQ / 30 FRQ; sparse U2, U4, U5, U7.
-4. AP Computer Science Principles: 148 MCQ / 8 written-response items; U1 sparse and U3 over-concentrated.
-5. AP Physics 2: 169 MCQ / 28 FRQ; total MCQ count below target but unit spread is less severe.
-6. AP Environmental Science: 200 MCQ / 8 FRQ; medium risk with sparse U2, U4, U5.
+2. AP Physics 1: completed 2026-07-16; now 250 MCQ / 15 FRQ; capacity risk OK.
+3. AP Biology: completed 2026-07-16; now 250 MCQ / 30 FRQ; capacity risk OK.
+4. AP Computer Science Principles: completed 2026-07-16; now 250 MCQ / 8 written-response items; capacity risk OK.
+5. AP Physics 2: completed 2026-07-16; now 250 MCQ / 28 FRQ; capacity risk OK.
+6. AP Environmental Science: completed 2026-07-16; now 250 MCQ / 8 FRQ; capacity risk OK.
 
 Expansion is quality-gated work, not a count-only task. Each subject must use its subject-specific rendering strategy and delivery standard before new items reach Web.
 
