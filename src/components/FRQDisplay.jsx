@@ -527,28 +527,33 @@ function DisplayImage({ path, variant }) {
 
   if (variant === 'pdf') {
     return (
-      <img
-        src={imgUrl}
-        alt=""
-        style={{
-          maxWidth: '100%',
-          maxHeight: isPromptPage ? '900px' : '620px',
-          display: 'block',
-          margin: '12px auto',
-          ...BREAK_GUARD.MEDIA,
-        }}
-        onError={() => {}}
-      />
+      <div className="question-image-wrap">
+        <img
+          src={imgUrl}
+          alt=""
+          className="question-image"
+          style={{
+            maxWidth: '100%',
+            maxHeight: isPromptPage ? '900px' : '620px',
+            display: 'block',
+            margin: '12px auto',
+            ...BREAK_GUARD.MEDIA,
+          }}
+          onError={() => {}}
+        />
+      </div>
     )
   }
 
   return (
-    <img
-      src={imgUrl}
-      alt=""
-      className="max-w-full max-h-[820px] mx-auto mb-4 rounded-lg border border-border"
-      onError={() => {}}
-    />
+    <div className="question-image-wrap">
+      <img
+        src={imgUrl}
+        alt=""
+        className="question-image max-w-full max-h-[820px] mx-auto rounded-lg border border-border"
+        onError={() => {}}
+      />
+    </div>
   )
 }
 

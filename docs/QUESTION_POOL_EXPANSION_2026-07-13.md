@@ -54,11 +54,11 @@ Every expansion pass must preserve subject-specific rendering:
 ## Capacity Queue
 
 1. AP Computer Science A: capacity expansion completed; now 291 MCQ / 12 FRQ after adding current CED, AP Bowl 2018, CSAwesome open practice, and a small LynkEdu U1 original batch. Capacity risk OK; no sparse units.
-2. AP Physics 1: 121 MCQ / 15 FRQ; sparse U5, U6, U8.
-3. AP Biology: 153 MCQ / 30 FRQ; sparse U2, U4, U5, U7.
-4. AP Computer Science Principles: 148 MCQ / 8 written-response items; U1 sparse and U3 over-concentrated.
-5. AP Physics 2: 169 MCQ / 28 FRQ; total MCQ below target.
-6. AP Environmental Science: 200 MCQ / 8 FRQ; sparse U2, U4, U5.
+2. AP Physics 1: capacity reinforcement completed on 2026-07-16; now 250 MCQ / 15 FRQ; capacity risk OK.
+3. AP Biology: capacity reinforcement completed on 2026-07-16; now 250 MCQ / 30 FRQ; capacity risk OK.
+4. AP Computer Science Principles: capacity reinforcement completed on 2026-07-16; now 250 MCQ / 8 written-response items; U1 sparse and U3 concentration cleared.
+5. AP Physics 2: capacity reinforcement completed on 2026-07-16; now 250 MCQ / 28 FRQ; capacity risk OK.
+6. AP Environmental Science: capacity reinforcement completed on 2026-07-16; now 250 MCQ / 8 FRQ; sparse U2/U4/U5 cleared.
 
 Executable audit:
 
@@ -71,6 +71,48 @@ Report path:
 ```text
 .workspace/subject-capacity-audit/subject-capacity-report.json
 ```
+
+## Multi-Subject Capacity Reinforcement: LynkEdu Owned Practice
+
+Status: complete for capacity-risk clearance on 2026-07-16.
+
+Published source:
+
+- Source set: `lynkedu_capacity_20260716`.
+- Source type: LynkEdu owned original practice.
+- Scope: MCQ only, structured text, no external visual dependency.
+- Purpose: clear pre-launch capacity risk and sparse-unit risk for five low-volume active subjects.
+
+Published counts:
+
+- AP Computer Science Principles: +102 MCQ; final 250 MCQ / 8 written-response items.
+- AP Biology: +97 MCQ; final 250 MCQ / 30 FRQ.
+- AP Physics 1: +129 MCQ; final 250 MCQ / 15 FRQ.
+- AP Physics 2: +81 MCQ; final 250 MCQ / 28 FRQ.
+- AP Environmental Science: +50 MCQ; final 250 MCQ / 8 FRQ.
+
+Source reports:
+
+- `subjects/AP/Computer-Science-Principles/02-data/lynkedu_capacity_20260716/source_report.json`
+- `subjects/AP/Biology/02-data/lynkedu_capacity_20260716/source_report.json`
+- `subjects/AP/Physics-1/02-data/lynkedu_capacity_20260716/source_report.json`
+- `subjects/AP/Physics-2/02-data/lynkedu_capacity_20260716/source_report.json`
+- `subjects/AP/Environmental-Science/02-data/lynkedu_capacity_20260716/source_report.json`
+
+Reusable mechanism:
+
+- `scripts/add_capacity_reinforcement_20260716.cjs` is an idempotent upsert publisher for this source set.
+- Items carry `source_set`, `provenance`, `classification_reasoning`, `rendering_review`, and `answerability_review`.
+- Similarity indexes are updated for new items and same-unit recommendations.
+
+Validation evidence:
+
+- `npm run audit:capacity`: all 16 active subjects risk OK.
+- `npm run validate:unit-distribution`: 0 warnings.
+- `npm run validate:student-progression -- --skip-browser`: 0 errors / 0 warnings / 0 findings.
+- `npm run validate`: passed.
+- `npm run build`: passed.
+- Student-flow audits for Biology, CSP, APES, Physics 1, and Physics 2: 0 errors.
 
 ## CSA Expansion Closeout: Current CED
 

@@ -15,6 +15,7 @@ const subjectId = args.subject || 'physics-c-mechanics'
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
 const port = Number(args.port || 9555)
 const mobile = args.mobile === 'true'
+const accountMode = args.account || 'internal'
 let activeSubject = null
 let activeQuestionBank = []
 let activeSimilarity = {}
@@ -150,10 +151,20 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
     checkVisibleState(`quiz:${quiz[i].question_id}`, info, errors, warnings)
     checkSubjectRenderContract(`quiz:${quiz[i].question_id}`, quiz[i], info, errors)
     const pageText = auditComparableText(info.text)
-    const questionVisible = pageText.includes(auditComparableText(quiz[i].text).slice(0, 50)) ||
+    const pageTextCompact = compactComparableText(info.text)
+    const stemText = auditComparableText(quiz[i].text)
+    const stemTextCompact = compactComparableText(quiz[i].text)
+    const questionVisible = pageText.includes(stemText.slice(0, 50)) ||
+      pageTextCompact.includes(stemTextCompact.slice(0, 50)) ||
+      comparableTokenCoverage(info.text, quiz[i].text) ||
+      renderedMathQuestionVisible(quiz[i], info) ||
       Object.values(quiz[i].options || {}).some(option => {
         const text = auditComparableText(option)
-        return text.length >= 8 && pageText.includes(text.slice(0, Math.min(60, text.length)))
+        const compactText = compactComparableText(option)
+        return text.length >= 8 && (
+          pageText.includes(text.slice(0, Math.min(60, text.length))) ||
+          pageTextCompact.includes(compactText.slice(0, Math.min(60, compactText.length)))
+        )
       }) ||
       (quiz[i].background_data?.table && info.tableCount > 0) ||
       (quiz[i].option_table_data && info.tableCount > 0) ||
@@ -802,9 +813,43 @@ async function initializeSubjectPage(client) {
 function seedSubjectStorageScript(id) {
   return `(() => {
     const subjectId = ${JSON.stringify(id)};
+    const accountMode = ${JSON.stringify(accountMode)};
     localStorage.setItem('currentSubject', subjectId);
     localStorage.setItem('defaultSubject', subjectId);
     localStorage.setItem('mySubjects', JSON.stringify([subjectId]));
+    if (accountMode !== 'visitor') {
+      localStorage.setItem('lynkeduSessionToken', 'student-flow-audit-token');
+    } else {
+      localStorage.removeItem('lynkeduSessionToken');
+    }
+    if (!window.__lynkStudentFlowFetchPatched) {
+      const originalFetch = window.fetch.bind(window);
+      window.fetch = (input, init) => {
+        const url = typeof input === 'string' ? input : (input && input.url) || '';
+        const path = url.startsWith(location.origin) ? url.slice(location.origin.length) : url;
+        if (accountMode !== 'visitor' && path === '/api/me') {
+          const accountLevel = accountMode === 'internal' ? 'internal' : 'free';
+          const entitlements = accountMode === 'internal' ? [{ feature_key: 'full_access' }] : [];
+          return Promise.resolve(new Response(JSON.stringify({
+            user: {
+              id: 'student-flow-audit-user',
+              email: 'student-flow-audit@lynkedu.local',
+              display_name: 'Student Flow Audit',
+              account_level: accountLevel,
+            },
+            entitlements,
+          }), { status: 200, headers: { 'Content-Type': 'application/json' } }));
+        }
+        if (accountMode !== 'visitor' && path === '/api/progress') {
+          return Promise.resolve(new Response(JSON.stringify({ snapshot: {} }), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' },
+          }));
+        }
+        return originalFetch(input, init);
+      };
+      window.__lynkStudentFlowFetchPatched = true;
+    }
   })()`
 }
 
@@ -915,6 +960,57 @@ function auditComparableText(text) {
     .replace(/\s+/g, ' ')
     .trim()
 }
+
+function compactComparableText(text) {
+  return auditComparableText(text).replace(/[^a-z0-9]+/gi, '').toLowerCase()
+}
+
+function comparableTokenCoverage(visibleText, sourceText) {
+  const visible = compactComparableText(visibleText)
+  const tokens = auditComparableText(sourceText)
+    .toLowerCase()
+    .split(/[^a-z0-9]+/i)
+    .filter(token => token.length >= 2)
+    .filter(token => !COMMON_VISIBLE_TOKENS.has(token))
+  const unique = [...new Set(tokens)].slice(0, 24)
+  if (unique.length < 3) return false
+  const hits = unique.filter(token => visible.includes(token.replace(/[^a-z0-9]/gi, ''))).length
+  return hits >= Math.min(5, unique.length) || hits / unique.length >= 0.6
+}
+
+function renderedMathQuestionVisible(question, info) {
+  if (!subjectNeedsMathRender() || !questionNeedsMathRender(question) || info.katexCount < 1) return false
+  if (/\bA\.\s+/i.test(info.text) && /\bB\.\s+/i.test(info.text)) return true
+  const visible = compactComparableText(info.text)
+  const options = Object.values(question.options || {})
+  const visibleOptions = options.filter(option => {
+    const compact = compactComparableText(option)
+    if (!compact) return false
+    if (compact.length <= 3) return visible.includes(compact)
+    return visible.includes(compact.slice(0, Math.min(12, compact.length)))
+  }).length
+  return visibleOptions >= Math.min(2, options.length)
+}
+
+const COMMON_VISIBLE_TOKENS = new Set([
+  'if',
+  'the',
+  'then',
+  'which',
+  'following',
+  'of',
+  'is',
+  'are',
+  'and',
+  'or',
+  'to',
+  'in',
+  'for',
+  'with',
+  'consider',
+  'question',
+  'questions',
+])
 
 function escapeRegex(text) {
   return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')

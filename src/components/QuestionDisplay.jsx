@@ -26,12 +26,14 @@ function DisplayImage({ path, variant }) {
   }
 
   return (
-    <img
-      src={imgUrl}
-      alt=""
-      className="max-w-full max-h-[560px] mx-auto mb-4 rounded-lg border border-border"
-      onError={() => {}}
-    />
+    <div className="question-image-wrap">
+      <img
+        src={imgUrl}
+        alt=""
+        className="question-image max-w-full max-h-[560px] mx-auto rounded-lg border border-border"
+        onError={() => {}}
+      />
+    </div>
   )
 }
 
