@@ -7,10 +7,10 @@ Last updated: 2026-07-17
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Latest Pages deployment URL observed: `https://51ae9bcb.lynkedu-ap-question-bank.pages.dev`
+- Latest Pages deployment URL observed: `https://cadaa5d0.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
-  - JS: `/assets/index-Cy5JXXQs.js`
-  - CSS: `/assets/index-Bqxh0FeN.css`
+  - JS: `/assets/index-zz9BSPum.js`
+  - CSS: `/assets/index-SlSDx4HT.css`
 - Current Vite base for custom root-domain deployment: `base: '/'`
 - Router: `HashRouter`
 
@@ -32,8 +32,8 @@ Static data files under `/data/*` must not use long-lived edge/browser caching. 
 ## Git State
 
 - Working branch: `prod-mock-pdf-fix`
-- Latest local code deployed to Pages: subject-management flow refinement, committed locally as `Refine subject management flow`.
-- GitHub sync status at last update: stable-push API fallback synced local HEAD tree to remote branch `prod-mock-pdf-fix`; main remains a separate remote history.
+- Latest local code deployed to Pages: full student-risk ledger gate and all active-subject content repairs, local commit `3736b27 Add full student-risk ledger gate`.
+- GitHub sync status at last update: stable-push API fallback synced local HEAD tree `ad0c19c43a9456b269146a94de7ff60455dc1e42` to remote branch `prod-mock-pdf-fix` at remote commit `8919880462320c24a0f547283bfe42e375cf3119`; main remains a separate remote history.
 
 ## Product Access Tiers
 

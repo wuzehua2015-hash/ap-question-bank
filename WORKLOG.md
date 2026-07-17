@@ -26,6 +26,8 @@
   - Repaired true findings found by the ledger: Chemistry missing visual bindings, Physics C:E&M missing visual context, Physics 2 missing table data, Macro FRQ table data, Psychology graph/table data and assets, Statistics missing regression equation, CSP data-table structure, and hidden unresolved AP Gov visual-stimulus items from student delivery with `publish_status: "blocked"` and `student_visible: false`.
   - Added frontend filtering for blocked/non-student-visible items and upgraded `MathText` so same-line Roman candidate lists render as structured rows.
   - Verification passed: `npm run validate` (including student-risk 5482 items P0=0/P1=0/P2=0), `npm run build`, and `npm run audit:render:all` for all 16 active subjects with 0 errors / 0 warnings.
+  - Deployed to Cloudflare Pages: `https://cadaa5d0.lynkedu-ap-question-bank.pages.dev`; production `lynkedu.com` observed `/assets/index-zz9BSPum.js` and `/assets/index-SlSDx4HT.css`.
+  - GitHub stable sync completed through API fallback: local tree `ad0c19c43a9456b269146a94de7ff60455dc1e42` matches remote branch `prod-mock-pdf-fix` remote commit `8919880462320c24a0f547283bfe42e375cf3119`.
 
 - Improved `scripts/student_flow_audit.cjs` comparable-text matching so KaTeX-rendered unit spacing such as `2N` versus source `$2\\,\\mathrm{N}$` does not create false current-question visibility warnings.
 - Hardened mobile student-flow delivery and audit coverage:
