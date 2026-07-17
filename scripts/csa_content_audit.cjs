@@ -44,6 +44,15 @@ for (const q of questions) {
   if (/\bprintin\s*\(|\b5S\b|\bvaluet\b|\btypeAt\b|apcsaexam|QUESTION WRITTEN ABOUT PRE JAVA|GO ON TO THE NEXT PAGE|Unauthorized/i.test(blob)) {
     errors.push(`${q.question_id}: visible OCR/source artifact`)
   }
+  if (/(?:^|\n)\s*(?:FRQs?|Free Response Questions?|Multiple Choice Questions?)\s*$/i.test(visiblePrompt)) {
+    errors.push(`${q.question_id}: source section heading leaked into student prompt`)
+  }
+  if (/\.\.\.\s*will\b/i.test(visiblePrompt)) {
+    errors.push(`${q.question_id}: prompt contains ellipsis continuation artifact`)
+  }
+  if (/Suppose\s+`[^`]*\band\b[^`]*`\s+are\s+`?boolean`?\s+variables/i.test(visiblePrompt)) {
+    errors.push(`${q.question_id}: boolean variable phrase is incorrectly marked as one code span`)
+  }
   if (/\b[a-z]ar myCar\b|\blic,|\bIc,|\bla,|appearsina|m1\(\)\s*2|\$ 10|a\{j\]|alsavedIndex|savediIndex/.test(blob)) {
     errors.push(`${q.question_id}: visible OCR-damaged Java text`)
   }

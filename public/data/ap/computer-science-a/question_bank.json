@@ -8562,7 +8562,7 @@
     "question_number": 19,
     "source_question_id": "qalh_2",
     "type": "MCQ",
-    "text": "Assume that nums has been created as an ArrayList object and initially contains the following Integer values: [0, 0, 4, 2, 5, 0, 3, 0]. What will nums contain as a result of executing the following method numQuest?\n\n```java\n  private List<Integer> nums;\n\n  //precondition: nums.size() > 0\n  //nums contains Integer objects\n  public void numQuest() {\n     int k = 0;\n     Integer zero = new Integer(0);\n     while (k < nums.size())\n     {\n        if (nums.get(k).equals(zero))\n           nums.remove(k);\n        k++;\n     }\n  }\n```\n\n   FRQs",
+    "text": "Assume that `nums` has been created as an `ArrayList` object and initially contains the following `Integer` values.\n\n```java\n[0, 0, 4, 2, 5, 0, 3, 0]\n```\n\nWhat will `nums` contain as a result of executing the following method `numQuest`?\n\n```java\nprivate List<Integer> nums;\n\n// precondition: nums.size() > 0\n// nums contains Integer objects\npublic void numQuest()\n{\n  int k = 0;\n  Integer zero = new Integer(0);\n  while (k < nums.size())\n  {\n    if (nums.get(k).equals(zero))\n      nums.remove(k);\n    k++;\n  }\n}\n```",
     "options": {
       "A": "[0, 0, 4, 2, 5, 0, 3, 0]",
       "B": "[3, 5, 2, 4, 0, 0, 0, 0]",
@@ -12978,7 +12978,7 @@
     "question_number": 111,
     "source_question_id": "qtnt5_7",
     "type": "MCQ",
-    "text": "Suppose `a and b` are `boolean` variables. The expression below\n\n      `!a && !b`\n\n      ...will evaluate to `false` whenever\n\n      I. a and b are both false\n      II. a is false and b is true\n      III. a is true and b is false",
+    "text": "Suppose `a` and `b` are `boolean` variables. The expression below will evaluate to `false` whenever which of the following conditions are true?\n\n```java\n!a && !b\n```\n\nI. `a` and `b` are both `false`\nII. `a` is `false` and `b` is `true`\nIII. `a` is `true` and `b` is `false`",
     "options": {
       "A": "I only",
       "B": "II only",

@@ -29,6 +29,14 @@
   - Deployed to Cloudflare Pages: `https://cadaa5d0.lynkedu-ap-question-bank.pages.dev`; production `lynkedu.com` observed `/assets/index-zz9BSPum.js` and `/assets/index-SlSDx4HT.css`.
   - GitHub stable sync completed through API fallback: local tree `ad0c19c43a9456b269146a94de7ff60455dc1e42` matches remote branch `prod-mock-pdf-fix` remote commit `8919880462320c24a0f547283bfe42e375cf3119`.
 
+- 2026-07-17 CSA prompt-quality repair after user found CSAwesome MCQ cleanup issues:
+  - repaired `csawesome_practice_Q019` so the ArrayList `numQuest` prompt no longer includes the source section heading `FRQs` and renders the initial list plus Java method as structured code;
+  - repaired `csawesome_practice_Q111` so the boolean variables and `!a && !b` expression render cleanly without `...will` continuation text or a combined `` `a and b` `` code span;
+  - updated `scripts/csa_content_audit.cjs` to block source section-heading carryover, ellipsis continuation artifacts, and combined boolean-variable code spans;
+  - added `validate:csa` to the global `npm run validate` chain;
+  - updated the local CSAwesome source builder at `subjects/AP/Computer-Science-A/tools/build_csawesome_data.py` and the generated CSAwesome source data copy so future local rebuilds keep the same cleanup.
+  - Verification passed: residual text scan found no matching artifacts, `npm run validate:csa` passed, and full `npm run validate` passed.
+
 - Improved `scripts/student_flow_audit.cjs` comparable-text matching so KaTeX-rendered unit spacing such as `2N` versus source `$2\\,\\mathrm{N}$` does not create false current-question visibility warnings.
 - Hardened mobile student-flow delivery and audit coverage:
   - `scripts/student_flow_audit.cjs` now supports account-tier simulation and runs premium search/question-set/similar-question paths with a Lynk Student account state instead of treating gated pages as search failures;
