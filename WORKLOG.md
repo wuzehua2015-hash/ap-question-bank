@@ -20,6 +20,13 @@
   - `npm run validate`: passed;
   - `npm run build`: passed;
   - student-flow audits for Biology, CSP, APES, Physics 1, and Physics 2 passed with 0 errors.
+- 2026-07-17 full student-risk audit rebuilt from sampling-only checks into a full item-ledger gate.
+  - Added `scripts/full_student_risk_audit.cjs`, `audit:student-risk`, and release-blocking `validate:student-risk`.
+  - The gate now checks all active MCQ/FRQ items, writes `.workspace/full-student-risk-audit/items.jsonl`, and must finish with P0/P1/P2 all equal to 0.
+  - Repaired true findings found by the ledger: Chemistry missing visual bindings, Physics C:E&M missing visual context, Physics 2 missing table data, Macro FRQ table data, Psychology graph/table data and assets, Statistics missing regression equation, CSP data-table structure, and hidden unresolved AP Gov visual-stimulus items from student delivery with `publish_status: "blocked"` and `student_visible: false`.
+  - Added frontend filtering for blocked/non-student-visible items and upgraded `MathText` so same-line Roman candidate lists render as structured rows.
+  - Verification passed: `npm run validate` (including student-risk 5482 items P0=0/P1=0/P2=0), `npm run build`, and `npm run audit:render:all` for all 16 active subjects with 0 errors / 0 warnings.
+
 - Improved `scripts/student_flow_audit.cjs` comparable-text matching so KaTeX-rendered unit spacing such as `2N` versus source `$2\\,\\mathrm{N}$` does not create false current-question visibility warnings.
 - Hardened mobile student-flow delivery and audit coverage:
   - `scripts/student_flow_audit.cjs` now supports account-tier simulation and runs premium search/question-set/similar-question paths with a Lynk Student account state instead of treating gated pages as search failures;

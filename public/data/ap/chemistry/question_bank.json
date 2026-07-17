@@ -3128,7 +3128,7 @@
     "skills": [],
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U7",
+      "primary_unit": "U8",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": "Structured override from visual PDF review.",
@@ -3724,7 +3724,7 @@
     "skills": [],
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U4",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": "Draft keyword classification; verify against AP Chemistry source pack before final publish.",
@@ -4340,7 +4340,7 @@
     "skills": [],
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U4",
+      "primary_unit": "U8",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": "Structured override from visual PDF review.",
@@ -6529,7 +6529,7 @@
     "question_number": 35,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "The photoelectron spectra of the 1 s electrons of\ntwo isoelectronic species, $Ca$ with a $+2$ charge and A r , are shown above. Which of the following correctly identifies the species associated with peak X and provides a valid justification?",
+    "text": "The photoelectron spectra of the $1s$ electrons of two isoelectronic species, $Ca^{2+}$ and $Ar$, are shown above. Which of the following correctly identifies the species associated with peak X and provides a valid justification?",
     "options": {
       "A": "A r, because it has completely filled energy\nlevels",
       "B": "A r, because its radius is smaller than the\nradius of $Ca$ with a $+2$ charge",
@@ -6537,7 +6537,9 @@
       "D": "$Ca$ with a $+2$ charge , because its nucleus has two more\nprotons than the nucleus of A r has"
     },
     "answer": "D",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/chemistry/2016/2016_p036_img01.png"
+    ],
     "primary_unit": "U8",
     "unit": "U8",
     "unit_name": "Acids and Bases",
@@ -7047,7 +7049,7 @@
     "skills": [],
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U4",
+      "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": "Draft keyword classification; verify against AP Chemistry source pack before final publish.",
@@ -8567,7 +8569,9 @@
       "D": "It cannot be determined unless the pressure of each sample is known."
     },
     "answer": "A",
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/chemistry/2018/2018_p035_img02.png"
+    ],
     "primary_unit": "U3",
     "unit": "U3",
     "unit_name": "Intermolecular Forces and Properties",
@@ -8901,9 +8905,9 @@
     "text": "Which of the following is the most likely reason that the reaction occurs at a significant rate only if the temperature of the reaction mixture is greater than 200 degrees Celsius?",
     "options": {
       "A": "The reaction is exothermic.",
-      "B": "D e lta S naught for the reaction is negative.",
+      "B": "$\\Delta S^\\circ$ for the reaction is negative.",
       "C": "The reaction has a high activation energy.",
-      "D": "$\\Delta G^\\circ$ i s less t han 0 when T is less than 200 degrees Celsius"
+      "D": "$\\Delta G^\\circ$ is less than 0 when T is less than 200 degrees Celsius"
     },
     "answer": "C",
     "image_paths": [],
@@ -11123,7 +11127,7 @@
     "skills": [],
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U4",
+      "primary_unit": "U8",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": "Structured override from visual PDF review.",
@@ -12061,7 +12065,7 @@
     "question_number": 47,
     "question_type": "MCQ",
     "type": "MCQ",
-    "text": "$X_2(g)+Y_2(g)\\rightleftharpoons2XY(g)$, $K_c=3.0$\n\nA mixture of $X_2(g)$, $Y_2(g)$, and $XY(g)$ is placed in a previously evacuated, rigid container and allowed to reach equilibrium at a constant temperature, as shown above. Which of the following sets of initial concentrations would lead to the formation of more product as the system moves toward equilibrium?",
+    "text": "$X_2(g)+Y_2(g)\\rightleftharpoons2XY(g)$, $K_c=3.0$\n\nA mixture of $X_2(g)$, $Y_2(g)$, and $XY(g)$ is placed in a previously evacuated, rigid container and allowed to reach equilibrium at a constant temperature. Which of the following sets of initial concentrations would lead to the formation of more product as the system moves toward equilibrium?",
     "options": {
       "A": "$[X_2]=0.40\\,\\mathrm{M}$, $[Y_2]=0.40\\,\\mathrm{M}$, $[XY]=0.20\\,\\mathrm{M}$",
       "B": "$[X_2]=0.30\\,\\mathrm{M}$, $[Y_2]=0.30\\,\\mathrm{M}$, $[XY]=0.90\\,\\mathrm{M}$",

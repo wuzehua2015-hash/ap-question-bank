@@ -8037,7 +8037,42 @@
         ]
       ]
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "table": {
+        "caption": "Measured incident and refracted angles",
+        "headers": [
+          "$\\theta_i$ (degrees)",
+          "$\\theta_r$ (degrees)"
+        ],
+        "rows": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "16",
+            "10.8"
+          ],
+          [
+            "32",
+            "20.4"
+          ],
+          [
+            "48",
+            "30.1"
+          ],
+          [
+            "64",
+            "37.9"
+          ],
+          [
+            "80",
+            "39.8"
+          ]
+        ]
+      }
+    }
   },
   {
     "question_id": "2019_Q27",
@@ -8450,7 +8485,7 @@
     "year": 2019,
     "question_number": 35,
     "type": "MCQ",
-    "text": "A student has a nonideal $10\\,\\mathrm{V}$ battery, some\nresistors, a voltmeter, and an ohmmeter and wants\nto determine the internal resistance of the battery\nand whether the resistors are ohmic. The student\nuses the ohmmeter to measure the resistance of\neach resistor. The student then connects the\nvoltmeter across the battery terminals and one at\na time connects each resistor to the battery. The\ntable above shows the student’s data. Which of\nthe following indicates what can be concluded\nabout the battery and resistors?",
+    "text": "A student has a nonideal $10\\,\\mathrm{V}$ battery, some resistors, a voltmeter, and an ohmmeter and wants to determine the internal resistance of the battery and whether the resistors are ohmic. The student uses the ohmmeter to measure the resistance of each resistor. The student then connects the voltmeter across the battery terminals and one at a time connects each resistor to the battery. The table above shows the student's data. Which of the following indicates what can be concluded about the battery and resistors?",
     "options": {
       "A": "The internal resistance of the battery is\nnegligible, and the resistors are nonohmic.",
       "B": "The internal resistance of the battery is\nnegligible, and the ohmic nature of the\nresistors cannot be confirmed using only\none potential difference measurement each.",
@@ -8512,7 +8547,38 @@
         ]
       ]
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "table": {
+        "caption": "Battery measurements with different resistors",
+        "headers": [
+          "Voltmeter reading (V)",
+          "Ohmmeter reading ($\\Omega$)"
+        ],
+        "rows": [
+          [
+            "9.9",
+            "100"
+          ],
+          [
+            "9.8",
+            "50"
+          ],
+          [
+            "9.1",
+            "10"
+          ],
+          [
+            "8.3",
+            "5"
+          ],
+          [
+            "6.7",
+            "2"
+          ]
+        ]
+      }
+    }
   },
   {
     "question_id": "2019_Q36",

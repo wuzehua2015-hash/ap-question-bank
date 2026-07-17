@@ -73,7 +73,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U1",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -138,7 +138,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 4,
     "type": "MCQ",
-    "text": "Consider the following code segment.\nWhich of the following replacements for <MISSING CONDITION> will result in an infinite loop?",
+    "text": "Consider the following code segment.\n\n```text\nj <- 1\nREPEAT UNTIL (<MISSING CONDITION>)\n{\n  j <- j + 2\n}\n```\n\nWhich of the following replacements for `<MISSING CONDITION>` will result in an infinite loop?",
     "options": {
       "A": "`j = 6`",
       "B": "`j >= 6`",
@@ -169,7 +169,10 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2016.pdf",
       "source_page": 17
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "background_data": {
+      "code": "j <- 1\nREPEAT UNTIL (<MISSING CONDITION>)\n{\n  j <- j + 2\n}"
+    }
   },
   {
     "question_id": "2016_Q05",
@@ -315,7 +318,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U4",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -444,7 +447,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -487,7 +490,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -849,7 +852,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -1128,7 +1131,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -1616,7 +1619,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U4",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -1659,7 +1662,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U2",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -1745,7 +1748,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -1874,7 +1877,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -2065,7 +2068,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -2250,7 +2253,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U4",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -2336,7 +2339,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U4",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -2358,7 +2361,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 49,
     "type": "MCQ",
-    "text": "The procedure below is intended to display the index in a list of unique names (`nameList`) where a particular name (`targetName`) is found. If `targetName` is not found in `nameList`, the procedure should display 0.\n\nWhich of the following procedure calls can be used to demonstrate that the procedure does not work as intended?",
+    "text": "The procedure below is intended to display the index in a list of unique names (`nameList`) where a particular name (`targetName`) is found. If `targetName` is not found in `nameList`, the procedure should display 0.\n\n```text\nPROCEDURE FindName(nameList, targetName)\n{\n  index <- 1\n  found <- false\n  REPEAT UNTIL (index > LENGTH(nameList))\n  {\n    IF (nameList[index] = targetName)\n    {\n      found <- true\n    }\n    index <- index + 1\n  }\n  IF (found)\n  {\n    DISPLAY(index)\n  }\n  ELSE\n  {\n    DISPLAY(0)\n  }\n}\n```\n\nWhich of the following procedure calls can be used to demonstrate that the procedure does not work as intended?",
     "options": {
       "A": "FindName([\"Andrea\", \"Ben\"], \"Ben\")",
       "B": "FindName([\"Andrea\", \"Ben\"], \"Diane\")",
@@ -2425,7 +2428,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U4",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -2468,7 +2471,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -2599,7 +2602,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -2831,7 +2834,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -2874,7 +2877,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U2",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -3292,7 +3295,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -3424,7 +3427,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -3686,7 +3689,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -3729,7 +3732,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U2",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -4056,7 +4059,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U1",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -4260,7 +4263,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -4720,7 +4723,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -4763,7 +4766,7 @@
     "pure_unit": true,
     "difficulty": "easy",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -4929,7 +4932,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 23,
     "type": "MCQ",
-    "text": "A student is creating a procedure to determine whether the weather for a particular month was considered very\nhot. The procedure takes as input a list containing daily high temperatures for a particular month. The procedure\nis intended to return true if the daily high temperature was at least 90 degrees for a majority of days in the\nmonth and return false otherwise.\nWhich of the following can be used to replace <MISSING CODE> so that the procedure works as intended?",
+    "text": "A student is creating a procedure to determine whether the weather for a particular month was considered very\nhot. The procedure takes as input a list containing daily high temperatures for a particular month. The procedure\nis intended to return true if the daily high temperature was at least 90 degrees for a majority of days in the\nmonth and return false otherwise.\n\n```text\nPROCEDURE IsVeryHot(temperatureList)\n{\n  counter <- 0\n  total <- LENGTH(temperatureList)\n  FOR EACH temperature IN temperatureList\n  {\n    IF (temperature >= 90)\n    {\n      counter <- counter + 1\n    }\n  }\n  RETURN(<MISSING CODE>)\n}\n```\n\nWhich of the following can be used to replace <MISSING CODE> so that the procedure works as intended?",
     "options": {
       "A": "counter < 0.5 * total",
       "B": "counter > 0.5 * total",
@@ -5269,7 +5272,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -5791,7 +5794,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U2",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -6135,7 +6138,7 @@
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U2",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -6492,7 +6495,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 55,
     "type": "MCQ",
-    "text": "The procedure below searches for the value target in list. It returns true if target is found and\nreturns false otherwise.\nWhich of the following are true statements about the procedure?\nI. It implements a binary search.\nII. It implements a linear search.\nIII. It only works as intended when list is sorted.",
+    "text": "The procedure below searches for the value target in list. It returns true if target is found and\nreturns false otherwise.\n\n```text\nPROCEDURE Search(list, target)\n{\n  index <- 1\n  found <- false\n  REPEAT UNTIL (index > LENGTH(list))\n  {\n    IF (list[index] = target)\n    {\n      found <- true\n    }\n    index <- index + 1\n  }\n  RETURN(found)\n}\n```\n\nWhich of the following are true statements about the procedure?\nI. It implements a binary search.\nII. It implements a linear search.\nIII. It only works as intended when list is sorted.",
     "options": {
       "A": "I only",
       "B": "II only",
@@ -6559,7 +6562,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -6645,7 +6648,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -6710,7 +6713,7 @@
     "source_exam_structure": "legacy_74_mcq_practice_exam",
     "question_number": 60,
     "type": "MCQ",
-    "text": "A student wrote the procedure below, which is intended to ask whether a user wants to keep playing a game.\nThe procedure does not work as intended.\nWhich of the following best describes the result of running the procedure?",
+    "text": "A student wrote the procedure below, which is intended to ask whether a user wants to keep playing a game.\nThe procedure does not work as intended.\n\n```text\nPROCEDURE keepPlaying()\n{\n  DISPLAY(\"Do you want to keep playing? Enter y or n.\")\n  response <- INPUT()\n  IF (response = \"y\" OR \"Y\")\n  {\n    RETURN(true)\n  }\n  ELSE\n  {\n    RETURN(false)\n  }\n}\n```\n\nWhich of the following best describes the result of running the procedure?",
     "options": {
       "A": "The procedure returns true when the user inputs the value \"y\" and returns false otherwise.",
       "B": "The procedure returns true when the user inputs the value \"n\" and returns false otherwise.",
@@ -6863,7 +6866,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -6949,7 +6952,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -6992,7 +6995,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -7036,7 +7039,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -7124,7 +7127,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -7168,7 +7171,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -7256,7 +7259,7 @@
     "pure_unit": true,
     "difficulty": "hard",
     "classification": {
-      "primary_unit": "U2",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.55,
       "evidence": "Keyword classification from CSP prompt/options.",
@@ -10888,6 +10891,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -10950,6 +10976,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11012,6 +11061,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11074,6 +11146,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11136,6 +11231,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11198,6 +11316,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11260,6 +11401,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11322,6 +11486,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11384,6 +11571,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11446,6 +11656,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11508,6 +11741,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11570,6 +11826,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11632,6 +11911,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11694,6 +11996,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {
@@ -11756,6 +12081,29 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
+    },
+    "background_data": {
+      "table": {
+        "caption": "Inconsistent category values in a data table",
+        "headers": [
+          "Record",
+          "Category value"
+        ],
+        "rows": [
+          [
+            "1",
+            "NY"
+          ],
+          [
+            "2",
+            "New York"
+          ],
+          [
+            "3",
+            "N.Y."
+          ]
+        ]
+      }
     }
   },
   {

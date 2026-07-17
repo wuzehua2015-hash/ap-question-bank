@@ -73,6 +73,8 @@ export function adaptMCQ(raw) {
     group_role: raw.group_role || null,
     group_context: raw.group_context || null,
     requires_group_context: !!raw.requires_group_context,
+    publish_status: raw.publish_status || 'ready',
+    student_visible: raw.student_visible !== false,
   }
 }
 
@@ -119,11 +121,17 @@ export function adaptFRQ(raw) {
     requires_graph: raw.requires_graph || false,
     rubric: rubric,
     background_data: raw.background_data || null,
+    publish_status: raw.publish_status || 'ready',
+    student_visible: raw.student_visible !== false,
   }
 }
 
 function isPlayableMCQ(q) {
-  return q.scoring_status !== 'not_scored' && !!q.answer && Object.keys(q.options || {}).length > 0
+  return q.student_visible !== false && q.publish_status !== 'blocked' && q.scoring_status !== 'not_scored' && !!q.answer && Object.keys(q.options || {}).length > 0
+}
+
+function isPlayableFRQ(q) {
+  return q.student_visible !== false && q.publish_status !== 'blocked'
 }
 
 function questionOrder(q) {
@@ -213,7 +221,7 @@ export async function loadMCQBank(subjectId = 'macro') {
   if (!res.ok) throw new Error(`Failed to load MCQ bank for ${subjectId}: ${res.status}`)
   const data = await res.json()
   // Normalize source versions to the internal frontend model.
-  cache.mcq[subjectId] = data.map(adaptMCQ)
+  cache.mcq[subjectId] = data.map(adaptMCQ).filter(q => q.student_visible !== false && q.publish_status !== 'blocked')
   return cache.mcq[subjectId]
 }
 
@@ -225,7 +233,7 @@ export async function loadFRQBank(subjectId = 'macro') {
   if (!res.ok) throw new Error(`Failed to load FRQ bank for ${subjectId}: ${res.status}`)
   const data = await res.json()
   // Normalize source versions to the internal frontend model.
-  cache.frq[subjectId] = data.map(adaptFRQ)
+  cache.frq[subjectId] = data.map(adaptFRQ).filter(isPlayableFRQ)
   return cache.frq[subjectId]
 }
 

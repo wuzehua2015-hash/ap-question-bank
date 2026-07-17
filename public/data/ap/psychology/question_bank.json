@@ -1372,7 +1372,9 @@
       "classification_version": "ap_psychology_official_5_unit_2026_v1",
       "secondary_units": []
     },
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/psychology/1999/1999_Q031_advertising_attitude_graph.png"
+    ],
     "source": {
       "pdf": "subjects/AP/Psychology/01-exams/AP_Psychology_1999_Released_Exam_Excerpt_MC_Key_mirror.pdf",
       "page_range": "1-16",
@@ -12046,7 +12048,7 @@
     "year": 2007,
     "question_number": 71,
     "question_type": "MCQ",
-    "text": "Match the Roman numerals in the table above with the a I I __",
+    "text": "Match the Roman numerals in the table above with the appropriate terms in signal detection theory.",
     "options": {
       "A": "Miss False alarm Hit",
       "B": "False alarm Miss Hit",
@@ -12074,7 +12076,9 @@
       "classification_version": "ap_psychology_official_5_unit_2026_v1",
       "secondary_units": []
     },
-    "image_paths": [],
+    "image_paths": [
+      "images/ap/psychology/2007/2007_Q071_signal_detection_table.png"
+    ],
     "source": {
       "pdf": "subjects/AP/Psychology/01-exams/AP_Psychology_2007_Released_Exam_Excerpt_MC_Key_mirror.pdf",
       "page_range": "1-15",
@@ -12083,7 +12087,47 @@
     "pure_unit": true,
     "has_graph": false,
     "requires_graph": false,
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "rows": {
+        "A": [
+          "Miss",
+          "False alarm",
+          "Hit",
+          "Correct rejection"
+        ],
+        "B": [
+          "False alarm",
+          "Miss",
+          "Hit",
+          "Correct rejection"
+        ],
+        "C": [
+          "Hit",
+          "Correct rejection",
+          "Miss",
+          "False alarm"
+        ],
+        "D": [
+          "Hit",
+          "Miss",
+          "False alarm",
+          "Correct rejection"
+        ],
+        "E": [
+          "Correct rejection",
+          "Hit",
+          "False alarm",
+          "Miss"
+        ]
+      }
+    }
   },
   {
     "question_id": "2007_Q072",

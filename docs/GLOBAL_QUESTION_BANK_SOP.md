@@ -16,6 +16,8 @@ This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and pu
 - Rebuild pipelines must preserve reviewed per-item metadata such as visual, rendering, answerability, and classification review fields unless the pipeline explicitly regenerates and revalidates that field.
 - Source decisions are recorded. Accepted, rejected, deferred, and future-work candidates must be documented with reasons.
 - No publication without a fresh build and student-path check. JSON validation alone is insufficient.
+- "Full" means every active student-visible item is in an item-level ledger. Sampling, screenshots, and representative browser checks are useful evidence, but they never replace the full ledger.
+- Release closeout requires `npm run validate:student-risk` with P0=0, P1=0, and P2=0 across the full active item set. Any unresolved required prompt, table, figure, code block, option structure, scoring support, or unit-classification issue must be fixed or hidden before release.
 
 ## Global Lifecycle
 
@@ -89,6 +91,7 @@ An item may enter Web data only when:
 - visual assets are precise and owned by the item or group;
 - no broad page image is used as a substitute for clean structure unless explicitly approved as the only faithful representation;
 - FRQ rubrics have subject-specific solution outlines and scoring rows, without repeated template text.
+- items that cannot yet meet the above student-delivery contract must be marked `publish_status: "blocked"` and `student_visible: false`; they must not remain available to Quiz, Mock, Search/review, mistake-book, history, question-set, similar-practice, or PDF flows.
 
 Subject-specific examples:
 
@@ -132,6 +135,7 @@ For every source batch or renderer-affecting change:
 - Test PDF generation/download when PDF output can contain the changed content.
 - Run student-surface checks under the correct account tier. Premium surfaces such as Search, question sets, similar-practice tools, and PDF export must be checked as Lynk Student, not as a visitor page.
 - A gated access page is not valid evidence for PDF/search/render delivery. Render checks must fail clearly if they see the access gate while the test claims to cover premium content.
+- Student-surface checks must include the content classes actually present in the subject: grouped context, code, formulas, tables, visual options, diagrams, FRQ scoring, and PDF pagination where applicable.
 - Use the correct router path (`/#/...`) for the deployed app.
 - Use a fresh build and isolated preview port for local evidence.
 - Production deployment must be followed by `lynkedu.com` verification.
@@ -147,6 +151,7 @@ An expansion is not complete unless all are true:
 - rejected/deferred items remain out of Web data with reasons;
 - source counts match subject-specific checks;
 - capacity and unit distribution are reviewed;
+- the full item-level student-risk ledger has P0=0/P1=0/P2=0;
 - full validation/build passed;
 - student-surface evidence exists;
 - production data check passed if deployed;
@@ -158,6 +163,7 @@ Minimum commands:
 ```powershell
 npm run audit:sop
 npm run validate:official-units
+npm run validate:student-risk
 npm run validate
 npm run build
 npm run audit:render:all
@@ -189,6 +195,8 @@ Run a multi-angle pass:
 - remote tree synchronization.
 
 Do not stop at the first fixed example. If a defect reveals a class of failures, reopen the whole class for the affected subject and decide whether the same class applies globally.
+
+Full-diagnosis closeout must report the ledger totals: active subjects, MCQ count, FRQ count, total active items, and P0/P1/P2 counts. A response that only reports sampled subjects, sampled questions, or browser screenshots is not a full-diagnosis closeout.
 
 ## Multi-Subject Adaptation Matrix
 
