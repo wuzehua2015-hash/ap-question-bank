@@ -289,8 +289,22 @@
   - `https://f6e5e2b7.lynkedu-admin.pages.dev`: HTTP 200, title `翎英教育管理后台`.
   - unauthenticated `/api/me` and `/api/admin/users`: HTTP 401.
   - `https://lynkedu.com`: HTTP 200, title `翎英教育题库`.
-- Pending deployment item: `admin.lynkedu.com` is added to Pages but pending DNS. Current Cloudflare login lacks DNS write permission. Add CNAME `admin` -> `lynkedu-admin.pages.dev`, proxied, or grant DNS write permission and rerun the DNS step.
+- Admin custom domain item is complete: `admin.lynkedu.com` is active on Pages with CNAME `admin` -> `lynkedu-admin.pages.dev`, proxied, TTL Auto. Public access returns HTTP 200 and renders `翎英教育管理后台`.
 - Source mirror synced through stable API fallback; `npm run stable:status` must be used as the live source-of-truth check because API fallback creates a remote commit id different from local Git history while preserving the same tree.
+
+# 2026-07-17 - Admin Custom Domain Live
+
+- Added Cloudflare DNS record for admin console:
+  - CNAME `admin` -> `lynkedu-admin.pages.dev`;
+  - proxy enabled;
+  - TTL Auto.
+- Verified Cloudflare Pages custom domain status for `lynkedu-admin`: `admin.lynkedu.com` is `active`.
+- Verified public access: `https://admin.lynkedu.com` returns HTTP 200 and contains `翎英教育管理后台`.
+- Global API Key email-code route was not needed; DNS was completed through the already logged-in Cloudflare dashboard session.
+- Current deployment split remains:
+  - student: `lynkedu-ap-question-bank`, `lynkedu.com`, `www.lynkedu.com`;
+  - admin: `lynkedu-admin`, `admin.lynkedu.com`;
+  - both share D1 database `lynkedu-question-bank` through binding `DB`.
 
 # 2026-07-13 - CSA Capacity Expansion Closeout
 
