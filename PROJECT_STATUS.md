@@ -205,5 +205,8 @@ The site has entered productization for public launch:
 - Latest deployments:
   - student Pages deployment: `https://de8c083b.lynkedu-ap-question-bank.pages.dev`;
   - admin Pages deployment: `https://f6e5e2b7.lynkedu-admin.pages.dev`.
-- Custom domain note: `admin.lynkedu.com` has been added to the Pages project, but DNS creation is still pending because the current Cloudflare login has Zone read but not DNS write permission. Required DNS record: CNAME `admin` -> `lynkedu-admin.pages.dev`, proxied.
+- Admin custom domain is live:
+  - DNS record: CNAME `admin` -> `lynkedu-admin.pages.dev`, proxied, TTL Auto;
+  - Pages domain status: `admin.lynkedu.com` active;
+  - production check: `https://admin.lynkedu.com` returns HTTP 200 and renders `翎英教育管理后台`.
 - Source mirror note: latest admin-console source tree is synced to GitHub branch `prod-mock-pdf-fix` through stable API fallback. Use `npm run stable:status` for the live tree-match check; API fallback creates a remote commit id different from local Git history while preserving the same tree.
