@@ -165,9 +165,24 @@ export async function getEntitlements(env, userId) {
     SELECT id, subject_id, feature_key, starts_at, expires_at, source
     FROM entitlements
     WHERE user_id = ?
+      AND COALESCE(status, 'active') = 'active'
       AND (starts_at IS NULL OR starts_at <= datetime('now'))
       AND (expires_at IS NULL OR expires_at > datetime('now'))
     ORDER BY subject_id, feature_key
   `).bind(userId).all()
   return result.results || []
+}
+
+export async function requireAdmin(request, env) {
+  const user = await getSessionUser(request, env)
+  if (!user) return { error: json({ error: '请先登录。' }, 401) }
+  if (user.account_level !== 'admin') return { error: json({ error: '没有管理权限。' }, 403) }
+  return { user }
+}
+
+export async function logAdminEvent(env, adminUserId, targetUserId, eventType, metadata = {}) {
+  await requireDb(env).prepare(`
+    INSERT INTO admin_audit_logs (id, admin_user_id, target_user_id, event_type, metadata, created_at)
+    VALUES (?, ?, ?, ?, ?, datetime('now'))
+  `).bind(createId('adlog'), adminUserId, targetUserId || null, eventType, JSON.stringify(metadata || {})).run()
 }

@@ -180,3 +180,29 @@ The site has entered productization for public launch:
   - local and account-storage behavior,
   - production build verification,
   - production URL verification when deployed.
+
+## Admin Console Status
+
+- Admin console architecture is separate from the student site:
+  - student site: Cloudflare Pages project `lynkedu-ap-question-bank`, domains `lynkedu.com` and `www.lynkedu.com`;
+  - admin site: Cloudflare Pages project `lynkedu-admin`, intended domain `admin.lynkedu.com`;
+  - both projects share D1 database `lynkedu-question-bank` through binding name `DB`.
+- Admin frontend build entry:
+  - source entry: `admin.html`;
+  - build config: `vite.admin.config.js`;
+  - command: `npm run build:admin`;
+  - deployment output: `dist-admin/index.html`, normalized by `scripts/prepare_admin_dist.cjs`.
+- Admin APIs live under `functions/api/admin/*` and require `users.account_level = 'admin'`.
+- `翎英学员` access is not an account-level string. It is determined by active `entitlements` rows, normally `feature_key = 'full_access'`, with optional `expires_at`.
+- Admin capabilities now implemented:
+  - direct grant, extend, and revoke of `翎英学员`;
+  - invitation-code creation and deactivation;
+  - redemption duration through `membership_invites.redemption_days`;
+  - redemption records in `invite_redemptions`;
+  - admin operation records in `admin_audit_logs`.
+- Remote D1 migration `migrations/0003_admin_entitlements.sql` was applied on 2026-07-17 and verified.
+- Initial admin account: `wuzehua2015@gmail.com` has `account_level = 'admin'`.
+- Latest deployments:
+  - student Pages deployment: `https://de8c083b.lynkedu-ap-question-bank.pages.dev`;
+  - admin Pages deployment: `https://f6e5e2b7.lynkedu-admin.pages.dev`.
+- Custom domain note: `admin.lynkedu.com` has been added to the Pages project, but DNS creation is still pending because the current Cloudflare login has Zone read but not DNS write permission. Required DNS record: CNAME `admin` -> `lynkedu-admin.pages.dev`, proxied.

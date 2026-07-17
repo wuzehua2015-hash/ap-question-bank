@@ -259,6 +259,38 @@
   - Mobile `audit:student-flow` for all 16 active subjects under internal account state: 0 errors / 0 warnings.
   - `npm run audit:render:all`: all 16 active subjects, 0 errors / 0 warnings.
 
+# 2026-07-17 - Admin Console And Entitlement Operations
+
+- Added a dedicated admin console for `admin.lynkedu.com` as a separate frontend build:
+  - `admin.html`
+  - `vite.admin.config.js`
+  - `src/admin/AdminApp.jsx`
+  - `src/admin/adminApi.js`
+  - `scripts/prepare_admin_dist.cjs`
+- Added admin APIs:
+  - `functions/api/admin/users.js`
+  - `functions/api/admin/entitlements.js`
+  - `functions/api/admin/invites.js`
+  - `functions/api/admin/logs.js`
+- Added D1 migration `migrations/0003_admin_entitlements.sql` for entitlement status, revocation fields, invite redemption duration, invite redemption records, and admin operation records.
+- Updated shared account logic:
+  - active access reads only active, non-expired entitlement rows;
+  - admin APIs require an admin account;
+  - register-with-invite can create expiring entitlement rows and redemption records.
+- Applied remote migration to D1 database `lynkedu-question-bank` and verified the new columns/tables.
+- Set `wuzehua2015@gmail.com` to `account_level = 'admin'`.
+- Created Cloudflare Pages project `lynkedu-admin`, bound the same D1 database as `DB`, and deployed:
+  - admin deployment: `https://f6e5e2b7.lynkedu-admin.pages.dev`;
+  - student deployment after Functions update: `https://de8c083b.lynkedu-ap-question-bank.pages.dev`.
+- Verification:
+  - `npm run validate`: passed.
+  - `npm run build`: passed.
+  - `npm run build:admin`: passed.
+  - `https://f6e5e2b7.lynkedu-admin.pages.dev`: HTTP 200, title `翎英教育管理后台`.
+  - unauthenticated `/api/me` and `/api/admin/users`: HTTP 401.
+  - `https://lynkedu.com`: HTTP 200, title `翎英教育题库`.
+- Pending deployment item: `admin.lynkedu.com` is added to Pages but pending DNS. Current Cloudflare login lacks DNS write permission. Add CNAME `admin` -> `lynkedu-admin.pages.dev`, proxied, or grant DNS write permission and rerun the DNS step.
+
 # 2026-07-13 - CSA Capacity Expansion Closeout
 
 - Completed AP Computer Science A MCQ expansion from 105 MCQ to 291 MCQ while keeping 12 FRQ.

@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:admin": "npm run validate && vite build --config vite.admin.config.js && node scripts/prepare_admin_dist.cjs",
     "lint": "eslint .",
     "preview": "vite preview",
+    "preview:admin": "vite preview --outDir dist-admin",
     "open:quiet": "node scripts/open_quiet_browser.cjs",
     "audit:browser:quiet": "node scripts/open_quiet_browser.cjs --headless",
     "audit:render": "node scripts/browser_render_audit.cjs",

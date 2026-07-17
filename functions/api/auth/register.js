@@ -92,10 +92,22 @@ async function applyInvite(db, userId, rawCode) {
   `).bind(codeHash).first()
   if (!invite) return false
 
+  const entitlementId = createId('ent')
   await db.prepare(`
     INSERT INTO entitlements (id, user_id, subject_id, feature_key, source, created_at)
     VALUES (?, ?, '*', ?, ?, datetime('now'))
-  `).bind(createId('ent'), userId, invite.feature_key || 'full_access', `invite:${invite.id}`).run()
+  `).bind(entitlementId, userId, invite.feature_key || 'full_access', `invite:${invite.id}`).run()
+  if (Number(invite.redemption_days) > 0) {
+    await db.prepare(`
+      UPDATE entitlements
+      SET starts_at = datetime('now'), expires_at = datetime('now', ?)
+      WHERE id = ?
+    `).bind(`+${Number(invite.redemption_days)} days`, entitlementId).run()
+  }
+  await db.prepare(`
+    INSERT INTO invite_redemptions (id, invite_id, user_id, entitlement_id, redeemed_at)
+    VALUES (?, ?, ?, ?, datetime('now'))
+  `).bind(createId('red'), invite.id, userId, entitlementId).run()
   await db.prepare('UPDATE membership_invites SET used_count = used_count + 1 WHERE id = ?').bind(invite.id).run()
   return true
 }
