@@ -36,6 +36,7 @@
   - added `validate:csa` to the global `npm run validate` chain;
   - updated the local CSAwesome source builder at `subjects/AP/Computer-Science-A/tools/build_csawesome_data.py` and the generated CSAwesome source data copy so future local rebuilds keep the same cleanup.
   - Verification passed: residual text scan found no matching artifacts, `npm run validate:csa` passed, and full `npm run validate` passed.
+  - Build/render/deploy passed: `npm run build`, `npm run audit:render -- --subject=computer-science-a`, Cloudflare Pages deployment `https://6a7c8cbc.lynkedu-ap-question-bank.pages.dev`, production data checks for `Q019` and `Q111`, and stable-push remote tree match at remote commit `49315a50c802f1d4b51a67e1dd38d4ef80e0f9f1`.
 
 - Improved `scripts/student_flow_audit.cjs` comparable-text matching so KaTeX-rendered unit spacing such as `2N` versus source `$2\\,\\mathrm{N}$` does not create false current-question visibility warnings.
 - Hardened mobile student-flow delivery and audit coverage:
