@@ -290,10 +290,7 @@
   - unauthenticated `/api/me` and `/api/admin/users`: HTTP 401.
   - `https://lynkedu.com`: HTTP 200, title `翎英教育题库`.
 - Pending deployment item: `admin.lynkedu.com` is added to Pages but pending DNS. Current Cloudflare login lacks DNS write permission. Add CNAME `admin` -> `lynkedu-admin.pages.dev`, proxied, or grant DNS write permission and rerun the DNS step.
-- Source mirror synced through stable API fallback:
-  - local commit: `c2c7ebf54c69a825da54c4262cedc4d9dbccd04a`;
-  - remote commit: `f8a0deb0acbf46098398524a6dbe21e2a909c88b`;
-  - remote tree matches local HEAD tree `331d903071b648439b278c0191d3d823c2e7c041`.
+- Source mirror synced through stable API fallback; `npm run stable:status` must be used as the live source-of-truth check because API fallback creates a remote commit id different from local Git history while preserving the same tree.
 
 # 2026-07-13 - CSA Capacity Expansion Closeout
 

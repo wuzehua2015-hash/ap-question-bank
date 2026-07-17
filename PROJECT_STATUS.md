@@ -206,4 +206,4 @@ The site has entered productization for public launch:
   - student Pages deployment: `https://de8c083b.lynkedu-ap-question-bank.pages.dev`;
   - admin Pages deployment: `https://f6e5e2b7.lynkedu-admin.pages.dev`.
 - Custom domain note: `admin.lynkedu.com` has been added to the Pages project, but DNS creation is still pending because the current Cloudflare login has Zone read but not DNS write permission. Required DNS record: CNAME `admin` -> `lynkedu-admin.pages.dev`, proxied.
-- Source mirror note: latest admin-console source tree is synced to GitHub branch `prod-mock-pdf-fix` through stable API fallback at remote commit `f8a0deb0acbf46098398524a6dbe21e2a909c88b`; remote tree matches local HEAD tree `331d903071b648439b278c0191d3d823c2e7c041`.
+- Source mirror note: latest admin-console source tree is synced to GitHub branch `prod-mock-pdf-fix` through stable API fallback. Use `npm run stable:status` for the live tree-match check; API fallback creates a remote commit id different from local Git history while preserving the same tree.
