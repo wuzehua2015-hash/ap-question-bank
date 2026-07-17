@@ -37,12 +37,20 @@ for (const q of questions) {
     errors.push(`${q.question_id}: expected ${expected} options, found ${Object.keys(options).length}`)
   }
   const visiblePrompt = `${q.group_context || ''}\n${q.text || ''}`
+  const explanation = q.explanation || ''
   const blob = `${visiblePrompt}\n${Object.values(options).join('\n')}`
+  const fullStudentText = `${blob}\n${explanation}`
   if (/open parenthesis|close parenthesis|equals equals|semicolon|percent|dot\b/i.test(blob)) {
     errors.push(`${q.question_id}: visible spoken-code artifact`)
   }
   if (/\bprintin\s*\(|\b5S\b|\bvaluet\b|\btypeAt\b|apcsaexam|QUESTION WRITTEN ABOUT PRE JAVA|GO ON TO THE NEXT PAGE|Unauthorized/i.test(blob)) {
     errors.push(`${q.question_id}: visible OCR/source artifact`)
+  }
+  if (/\.\.\s+(?:mchoice|code-block|image|figure|raw)::|:\w+:`|\|FRQs\|/i.test(fullStudentText)) {
+    errors.push(`${q.question_id}: visible RST/source markup artifact`)
+  }
+  if (/https?:\/\/\S+|Java Visualizer|cscircles\.cemc/i.test(explanation)) {
+    errors.push(`${q.question_id}: explanation contains external source link or source UI text`)
   }
   if (/(?:^|\n)\s*(?:FRQs?|Free Response Questions?|Multiple Choice Questions?)\s*$/i.test(visiblePrompt)) {
     errors.push(`${q.question_id}: source section heading leaked into student prompt`)
@@ -67,6 +75,9 @@ for (const q of questions) {
   }
   if (/\b(?:I|II|III|IV|V)\.[^\s`\n]/.test(visiblePrompt)) {
     errors.push(`${q.question_id}: roman-numeral candidate line lacks spacing after the label`)
+  }
+  if (q.primary_unit === 'U10' && !hasRecursionEvidence(visiblePrompt)) {
+    errors.push(`${q.question_id}: U10 classification lacks recursion evidence in prompt or code`)
   }
   if (q.source_set === 'ap_bowl_gt_practice') {
     if (!q.provenance?.source_credit || !/Georgia Tech|Barbara Ericson/i.test(q.provenance.source_credit)) {
@@ -135,4 +146,21 @@ console.log(`CSA content audit passed: ${questions.length} MCQ, ${frqs.length} F
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'))
+}
+
+function hasRecursionEvidence(text) {
+  const value = String(text || '')
+  if (/recurs/i.test(value)) return true
+  const codeBlocks = [...value.matchAll(/```(?:java|text)?\n([\s\S]*?)```/g)].map(match => match[1]).join('\n')
+  const methodNames = [...codeBlocks.matchAll(/\b(?:public|private|protected)\s+(?:static\s+)?[\w<>\[\]]+\s+([A-Za-z_]\w*)\s*\(/g)].map(match => match[1])
+  for (const methodName of methodNames) {
+    const declarationPattern = new RegExp(`\\b(?:public|private|protected)\\s+(?:static\\s+)?[\\w<>\\[\\]]+\\s+${escapeRegExp(methodName)}\\s*\\(`)
+    const codeWithoutDeclaration = codeBlocks.replace(declarationPattern, ' ')
+    if (new RegExp(`\\b${escapeRegExp(methodName)}\\s*\\(`).test(codeWithoutDeclaration)) return true
+  }
+  return false
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
