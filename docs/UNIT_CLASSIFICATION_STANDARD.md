@@ -37,13 +37,27 @@ Passing the browser flow alone is never enough. A question can be clickable and 
 ## Required Workflow
 
 1. Run `npm run audit:units` before repairing or certifying a subject.
-2. Run `npm run audit:student-progression -- --skip-browser` during data repair, then run `npm run audit:student-progression` before release.
-3. Treat advisory findings as required review candidates, not automatic edits.
-4. Change `primary_unit` only after reading the full item and deciding the latest required unit.
-5. Do not let distractors alone determine `primary_unit`.
-6. Confirm the decision against the official subject framework before writing the unit label.
-7. If an item is corrected, update related indexes and add a short `classification_reasoning` that states the official-framework and progression-gate reason.
-8. Add corrected examples and confirmed false alarms to `scripts/unit_progression_reviewed_cases.json` so future validation catches regressions and does not bury real issues in repeated noise.
+2. Run `npm run validate:official-units` before repairing or certifying a subject. This checks every active subject's `classification_config.json` unit sequence against the registered official framework contract.
+3. Run `npm run audit:student-progression -- --skip-browser` during data repair, then run `npm run audit:student-progression` before release.
+4. Treat advisory findings as required review candidates, not automatic edits.
+5. Change `primary_unit` only after reading the full item and deciding the latest required unit.
+6. Do not let distractors alone determine `primary_unit`.
+7. Confirm the decision against the official subject framework before writing the unit label.
+8. If an item is corrected, update related indexes and add a short `classification_reasoning` that states the official-framework and progression-gate reason.
+9. Add corrected examples and confirmed false alarms to `scripts/unit_progression_reviewed_cases.json` so future validation catches regressions and does not bury real issues in repeated noise.
+
+## Framework Metadata
+
+Every active subject must record `unit_classification_authority` in its `classification_config.json`:
+
+- `official_framework`
+- `official_url`
+- `policy`
+- `student_progression_rule`
+
+The unit sequence in that file must match the official framework used by `scripts/official_unit_authority_audit.cjs`. Historical labels may be retained only as source evidence or migration notes; they cannot remain the student-facing unit sequence when the current official framework has changed.
+
+If a current official framework moves a former standalone topic into cross-unit course skills, assign items by the earliest official stage at which a student has enough course knowledge to answer. Record that rule in the subject's `framework_note`; do not create a non-official extra unit just to preserve old labels.
 
 ## Student Progression Simulation
 

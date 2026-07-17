@@ -1,6 +1,6 @@
 # Global Question Bank SOP
 
-Last updated: 2026-07-16
+Last updated: 2026-07-17
 
 This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and publishing question-bank content across AP subjects and future A-Level, IB, and competition subjects. Older subject notes remain useful evidence, but this SOP is the entry contract.
 
@@ -116,6 +116,7 @@ For every new or changed item:
 
 Required gates:
 
+- `npm run validate:official-units`
 - `npm run audit:units`
 - `npm run validate:units`
 - `npm run validate:student-progression`
@@ -129,6 +130,8 @@ For every source batch or renderer-affecting change:
 - Test Mock path when the subject supports Mock.
 - Test FRQ and FRQ scoring pages for FRQ changes.
 - Test PDF generation/download when PDF output can contain the changed content.
+- Run student-surface checks under the correct account tier. Premium surfaces such as Search, question sets, similar-practice tools, and PDF export must be checked as Lynk Student, not as a visitor page.
+- A gated access page is not valid evidence for PDF/search/render delivery. Render checks must fail clearly if they see the access gate while the test claims to cover premium content.
 - Use the correct router path (`/#/...`) for the deployed app.
 - Use a fresh build and isolated preview port for local evidence.
 - Production deployment must be followed by `lynkedu.com` verification.
@@ -154,8 +157,10 @@ Minimum commands:
 
 ```powershell
 npm run audit:sop
+npm run validate:official-units
 npm run validate
 npm run build
+npm run audit:render:all
 npm run audit:capacity
 npm run audit:expansion-closeout -- --subject=<subject-id> --status=partial|complete
 ```

@@ -219,6 +219,25 @@
   - latest Pages deployment URL observed: `https://73072b39.lynkedu-ap-question-bank.pages.dev`;
   - production `lynkedu.com` bundle observed: `/assets/index-DSx-shk8.js`;
   - production CSS observed: `/assets/index-CcoUOuDc.css`.
+# 2026-07-17 - Full Student Audit And Official Unit Gate
+
+- Ran a full all-subject student review under the current framework across 16 active AP subjects.
+- Added `scripts/official_unit_authority_audit.cjs` and wired `validate:official-units` into `npm run validate`.
+- Filled `unit_classification_authority` metadata for all 16 active subject `classification_config.json` files.
+- Found and repaired a blocking AP Psychology framework mismatch:
+  - previous Web package used the legacy 9-unit AP Psychology sequence;
+  - current official framework uses 5 units;
+  - migrated 497 MCQ and 16 FRQ to the official 5-unit sequence;
+  - regenerated Psychology mock distribution and `similarity_index.json`.
+- Repaired `scripts/browser_render_audit.cjs` so render/PDF checks run with internal student account state by default, matching premium surface requirements.
+- Added a render-audit failure mode for premium gate pages appearing during internal-account PDF checks.
+- Verification passed:
+  - `npm run validate:official-units`: 16 subjects, 0 errors, 0 warnings.
+  - `npm run validate`: 0 blocking findings.
+  - `npm run build`: passed.
+  - Mobile `audit:student-flow` for all 16 active subjects under internal account state: 0 errors / 0 warnings.
+  - `npm run audit:render:all`: all 16 active subjects, 0 errors / 0 warnings.
+
 # 2026-07-13 - CSA Capacity Expansion Closeout
 
 - Completed AP Computer Science A MCQ expansion from 105 MCQ to 291 MCQ while keeping 12 FRQ.
