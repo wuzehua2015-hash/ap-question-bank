@@ -32,11 +32,13 @@
 - 2026-07-17 CSA prompt-quality repair after user found CSAwesome MCQ cleanup issues:
   - repaired `csawesome_practice_Q019` so the ArrayList `numQuest` prompt no longer includes the source section heading `FRQs` and renders the initial list plus Java method as structured code;
   - repaired `csawesome_practice_Q111` so the boolean variables and `!a && !b` expression render cleanly without `...will` continuation text or a combined `` `a and b` `` code span;
+  - completed a full CSA source-cleanup pass after follow-up review: repaired `csawesome_practice_Q116` so two adjacent RST code blocks render as separate student-visible blocks, corrected its unit from U10 to U8, and removed external source links from CSAwesome explanations in `Q110`, `Q115`, `Q120`, and `Q122`;
   - updated `scripts/csa_content_audit.cjs` to block source section-heading carryover, ellipsis continuation artifacts, and combined boolean-variable code spans;
+  - expanded `scripts/csa_content_audit.cjs` to check explanations, visible RST/source markup, external source links in explanations, and U10 recursion evidence;
   - added `validate:csa` to the global `npm run validate` chain;
-  - updated the local CSAwesome source builder at `subjects/AP/Computer-Science-A/tools/build_csawesome_data.py` and the generated CSAwesome source data copy so future local rebuilds keep the same cleanup.
-  - Verification passed: residual text scan found no matching artifacts, `npm run validate:csa` passed, and full `npm run validate` passed.
-  - Build/render/deploy passed: `npm run build`, `npm run audit:render -- --subject=computer-science-a`, Cloudflare Pages deployment `https://6a7c8cbc.lynkedu-ap-question-bank.pages.dev`, production data checks for `Q019` and `Q111`, and stable-push remote tree match at remote commit `49315a50c802f1d4b51a67e1dd38d4ef80e0f9f1`.
+  - updated the local CSAwesome source builder at `subjects/AP/Computer-Science-A/tools/build_csawesome_data.py` so code-block parsing respects actual RST code indentation and feedback cleanup removes external links; updated the generated CSAwesome source data copy so future local rebuilds keep the same cleanup.
+  - Verification passed: Web CSA residual scan found 0 artifacts, CSAwesome source-data residual scan found 0 artifacts, `npm run validate:csa` passed, and full `npm run validate` passed.
+  - Build/render/deploy evidence before final deploy: `npm run build`, `npm run audit:render -- --subject=computer-science-a`, Cloudflare Pages deployment `https://6a7c8cbc.lynkedu-ap-question-bank.pages.dev`, production data checks for `Q019` and `Q111`, and stable-push remote tree match at remote commit `49315a50c802f1d4b51a67e1dd38d4ef80e0f9f1`.
 
 - Improved `scripts/student_flow_audit.cjs` comparable-text matching so KaTeX-rendered unit spacing such as `2N` versus source `$2\\,\\mathrm{N}$` does not create false current-question visibility warnings.
 - Hardened mobile student-flow delivery and audit coverage:
