@@ -2,6 +2,11 @@
 
 ## 2026-07-16
 
+- Updated unit-classification authority rule after user clarified classification must use official exam and subject framework materials as the only source of truth:
+  - `docs/UNIT_CLASSIFICATION_STANDARD.md` now states official exam/framework materials are the only authority for `primary_unit`;
+  - `docs/GLOBAL_QUESTION_BANK_SOP.md` now requires current official framework confirmation before classifying new or changed items;
+  - `PROJECT_STATUS.md` records third-party maps, existing labels, generated topics, and keyword scans as review aids only, never final classification evidence.
+
 - Completed pre-launch capacity reinforcement across all active low-volume subjects:
   - added `scripts/add_capacity_reinforcement_20260716.cjs` as an idempotent owned-content publisher;
   - published LynkEdu-owned MCQ under `source_set: lynkedu_capacity_20260716`;

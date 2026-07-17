@@ -102,6 +102,7 @@ Content-capacity status: 2026-07-16 capacity reinforcement cleared the pre-launc
 - `npm run validate` now starts with `validate:sop`, which checks that these SSoT files and the required delivery gates remain present.
 - Any new subject, source expansion, item batch, or major diagnosis must follow the lifecycle in `GLOBAL_QUESTION_BANK_SOP.md`: source approval, subject risk discovery, reconstruction, unit review, student-surface verification, local publish, deployment verification, SSoT update, and remote tree sync.
 - A count increase is not completion. Completion requires accepted/rejected/deferred source decisions, subject-specific rendering checks, learning-sequence unit review, full validation/build, student-path evidence, and closeout notes.
+- Unit classification authority: every subject's `primary_unit` decisions must use official exam and official subject-framework materials as the only authority. For AP, use the current official Course and Exam Description/course framework plus official released/sample questions and official scoring guidelines where relevant. Third-party maps, existing labels, generated topics, and keyword scans are review aids only; they cannot justify final classification.
 
 ## Question Pool Expansion Queue
 

@@ -6,6 +6,23 @@
 
 This is a progression gate, not a keyword label. A term that appears in the stem, stimulus, table, visual, or answer choices is only evidence. The reviewer must decide which course model, procedure, or concept is required to solve the item.
 
+## Authority Rule
+
+Official exam and subject framework materials are the only authority for unit classification.
+
+For AP subjects, classification must be derived from the current official Course and Exam Description, official exam format/course framework, official released questions, official sample questions, and official scoring guidelines where applicable. Third-party course maps, textbook chapters, online lessons, existing question-bank labels, AI-generated topic names, and keyword tables may help find review candidates, but they cannot justify the final `primary_unit`.
+
+If a source item is non-official practice or LynkEdu-owned original content, it may still enter the question bank only after the reviewer maps its required solving knowledge to the official framework. The item's source does not define the unit; the official framework does.
+
+Every new, expanded, or repaired item must be classified using:
+
+- the official unit sequence;
+- the official topic/learning objective boundary for each unit;
+- the earliest unit after which a student has enough official-course knowledge to solve the item;
+- all prerequisite units before that point.
+
+When official curriculum structure changes, affected subjects require a classification review before publication. Historical or legacy unit labels remain historical evidence only and must not override the current official framework.
+
 ## Student-Logic Definition
 
 Student-logic audit means answering this question for every active subject: if a student has learned through unit `Uk`, are all questions shown at that stage answerable with `U1..Uk`, and are later-unit concepts excluded unless they are only background, labels, or distractors?
@@ -24,8 +41,9 @@ Passing the browser flow alone is never enough. A question can be clickable and 
 3. Treat advisory findings as required review candidates, not automatic edits.
 4. Change `primary_unit` only after reading the full item and deciding the latest required unit.
 5. Do not let distractors alone determine `primary_unit`.
-6. If an item is corrected, update related indexes and add a short `classification_reasoning` that states the progression-gate reason.
-7. Add corrected examples and confirmed false alarms to `scripts/unit_progression_reviewed_cases.json` so future validation catches regressions and does not bury real issues in repeated noise.
+6. Confirm the decision against the official subject framework before writing the unit label.
+7. If an item is corrected, update related indexes and add a short `classification_reasoning` that states the official-framework and progression-gate reason.
+8. Add corrected examples and confirmed false alarms to `scripts/unit_progression_reviewed_cases.json` so future validation catches regressions and does not bury real issues in repeated noise.
 
 ## Student Progression Simulation
 
@@ -58,8 +76,10 @@ Broad signals can identify risk without proving that the current unit is wrong. 
 
 Every new or reopened subject must include a unit-classification risk pass during subject risk discovery:
 
-- read the official unit sequence
+- read and record the current official unit sequence and framework source
 - identify late-unit concepts that often appear as outputs, distractors, table labels, or stimulus context
 - define which signals are advisory and which are blocking
 - sample each year/set before bulk publication
 - record subject-specific classification notes in the subject delivery documentation
+
+The risk pass is incomplete if the official framework source is missing, outdated, or replaced by a non-official curriculum map.

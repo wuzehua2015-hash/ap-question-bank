@@ -9,7 +9,8 @@ This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and pu
 - Quality beats count. A target such as "add 100-200 MCQ" is not complete until every accepted item passes source approval, reconstruction, unit classification, student rendering, and release checks.
 - The student surface is the truth. Data that exists in JSON but is not visible in Quiz, Search/review, Mock, FRQ, or PDF is not delivered.
 - Every subject gets its own risk discovery. Generic extraction cannot certify a subject with code, formulas, tables, diagrams, grouped stimuli, visual answer choices, FRQ rubrics, or unusual option layouts.
-- Unit classification follows learning order. `primary_unit` is the latest unit a student must have completed to answer the item, not a keyword label.
+- Unit classification follows official learning order. `primary_unit` is the latest official unit a student must have completed to answer the item, not a keyword label.
+- Official exam and subject framework materials are the only authority for unit classification. Third-party maps, existing labels, generated topic names, or keyword tables can suggest review candidates but cannot justify the final unit.
 - Grouped items stay together. Shared context, figures, tables, and code must be represented once as `group_context` or equivalent structured fields, and every member must render that context.
 - Cross-unit grouped MCQ buckets are not unit-Quiz eligible. A single-unit Quiz may include a grouped bucket only when every member has that same `primary_unit`; cumulative/all-subject/Mock flows may include the bucket only as a complete group.
 - Rebuild pipelines must preserve reviewed per-item metadata such as visual, rendering, answerability, and classification review fields unless the pipeline explicitly regenerates and revalidates that field.
@@ -104,10 +105,11 @@ Classification must follow `docs/UNIT_CLASSIFICATION_STANDARD.md`.
 
 For every new or changed item:
 
+- Confirm the current official subject framework and unit sequence before classification.
 - Read the full item, options, shared context, and any visual.
 - Determine the latest unit required to solve it with all prior units available.
 - Ignore keyword-only evidence if the concept is only a label, distractor, or background.
-- Record `classification_reasoning` when the item is newly added, repaired, or previously risky.
+- Record `classification_reasoning` when the item is newly added, repaired, or previously risky; the reasoning must refer to the official framework boundary, not a third-party course map.
 - For grouped questions, do not allow a member to appear in an earlier cumulative scope than its shared context and group members allow.
 - For single-unit Quiz, grouped buckets must be filtered by `every(member.primary_unit === selectedUnit)`, never by "any member matches selected unit".
 - For cumulative progression scopes, grouped buckets must be filtered by `every(member.primary_unit in learnedUnits)`.
@@ -193,7 +195,8 @@ Every new subject must explicitly answer these questions:
 - Are grouped prompts common?
 - Can grouped prompts span units, and if so which student paths may include them?
 - Are answer choices visual, tabular, or multi-line?
-- Does unit classification need special boundary rules?
+- What is the current official unit sequence, and which official framework source is used as the classification authority?
+- Does unit classification need special boundary rules under that official framework?
 - Are official sources enough, or is approved external expansion required?
 - What student-path checks are mandatory for this subject?
 
