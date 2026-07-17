@@ -39,6 +39,22 @@ body {
   @apply border-error bg-red-50;
 }
 
+.admin-input {
+  @apply w-full rounded-md border border-border bg-white px-3 py-2.5 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-blue-100;
+}
+
+.admin-primary {
+  @apply rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-light disabled:opacity-50;
+}
+
+.admin-secondary {
+  @apply rounded-md border border-border bg-white px-3 py-2 text-sm font-medium text-text hover:border-brand hover:text-brand;
+}
+
+.admin-danger {
+  @apply rounded-md border border-red-200 bg-red-50 px-4 py-2.5 text-sm font-semibold text-error hover:bg-red-100;
+}
+
 .math-markdown-table-wrap {
   display: block;
   max-width: 100%;
