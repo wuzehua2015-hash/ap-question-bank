@@ -2,6 +2,11 @@
 
 ## 2026-07-16
 
+- Updated unit-classification authority rule after user clarified classification must use official exam and subject framework materials as the only source of truth:
+  - `docs/UNIT_CLASSIFICATION_STANDARD.md` now states official exam/framework materials are the only authority for `primary_unit`;
+  - `docs/GLOBAL_QUESTION_BANK_SOP.md` now requires current official framework confirmation before classifying new or changed items;
+  - `PROJECT_STATUS.md` records third-party maps, existing labels, generated topics, and keyword scans as review aids only, never final classification evidence.
+
 - Completed pre-launch capacity reinforcement across all active low-volume subjects:
   - added `scripts/add_capacity_reinforcement_20260716.cjs` as an idempotent owned-content publisher;
   - published LynkEdu-owned MCQ under `source_set: lynkedu_capacity_20260716`;
@@ -15,6 +20,13 @@
   - `npm run validate`: passed;
   - `npm run build`: passed;
   - student-flow audits for Biology, CSP, APES, Physics 1, and Physics 2 passed with 0 errors.
+- 2026-07-17 full student-risk audit rebuilt from sampling-only checks into a full item-ledger gate.
+  - Added `scripts/full_student_risk_audit.cjs`, `audit:student-risk`, and release-blocking `validate:student-risk`.
+  - The gate now checks all active MCQ/FRQ items, writes `.workspace/full-student-risk-audit/items.jsonl`, and must finish with P0/P1/P2 all equal to 0.
+  - Repaired true findings found by the ledger: Chemistry missing visual bindings, Physics C:E&M missing visual context, Physics 2 missing table data, Macro FRQ table data, Psychology graph/table data and assets, Statistics missing regression equation, CSP data-table structure, and hidden unresolved AP Gov visual-stimulus items from student delivery with `publish_status: "blocked"` and `student_visible: false`.
+  - Added frontend filtering for blocked/non-student-visible items and upgraded `MathText` so same-line Roman candidate lists render as structured rows.
+  - Verification passed: `npm run validate` (including student-risk 5482 items P0=0/P1=0/P2=0), `npm run build`, and `npm run audit:render:all` for all 16 active subjects with 0 errors / 0 warnings.
+
 - Improved `scripts/student_flow_audit.cjs` comparable-text matching so KaTeX-rendered unit spacing such as `2N` versus source `$2\\,\\mathrm{N}$` does not create false current-question visibility warnings.
 - Hardened mobile student-flow delivery and audit coverage:
   - `scripts/student_flow_audit.cjs` now supports account-tier simulation and runs premium search/question-set/similar-question paths with a Lynk Student account state instead of treating gated pages as search failures;
@@ -214,6 +226,25 @@
   - latest Pages deployment URL observed: `https://73072b39.lynkedu-ap-question-bank.pages.dev`;
   - production `lynkedu.com` bundle observed: `/assets/index-DSx-shk8.js`;
   - production CSS observed: `/assets/index-CcoUOuDc.css`.
+# 2026-07-17 - Full Student Audit And Official Unit Gate
+
+- Ran a full all-subject student review under the current framework across 16 active AP subjects.
+- Added `scripts/official_unit_authority_audit.cjs` and wired `validate:official-units` into `npm run validate`.
+- Filled `unit_classification_authority` metadata for all 16 active subject `classification_config.json` files.
+- Found and repaired a blocking AP Psychology framework mismatch:
+  - previous Web package used the legacy 9-unit AP Psychology sequence;
+  - current official framework uses 5 units;
+  - migrated 497 MCQ and 16 FRQ to the official 5-unit sequence;
+  - regenerated Psychology mock distribution and `similarity_index.json`.
+- Repaired `scripts/browser_render_audit.cjs` so render/PDF checks run with internal student account state by default, matching premium surface requirements.
+- Added a render-audit failure mode for premium gate pages appearing during internal-account PDF checks.
+- Verification passed:
+  - `npm run validate:official-units`: 16 subjects, 0 errors, 0 warnings.
+  - `npm run validate`: 0 blocking findings.
+  - `npm run build`: passed.
+  - Mobile `audit:student-flow` for all 16 active subjects under internal account state: 0 errors / 0 warnings.
+  - `npm run audit:render:all`: all 16 active subjects, 0 errors / 0 warnings.
+
 # 2026-07-13 - CSA Capacity Expansion Closeout
 
 - Completed AP Computer Science A MCQ expansion from 105 MCQ to 291 MCQ while keeping 12 FRQ.

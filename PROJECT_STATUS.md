@@ -1,6 +1,6 @@
 # LynkEdu AP Question Bank Project Status
 
-Last updated: 2026-07-16
+Last updated: 2026-07-17
 
 ## Current Production
 
@@ -83,10 +83,16 @@ Content-capacity status: 2026-07-16 capacity reinforcement cleared the pre-launc
 - CSA Roman-numeral candidate lists (`I.`, `II.`, `III.`) must render as structured rows, with the label column separated from the expression/content column. Source text like `III.s1.equals(s4)` is a hard cleanup failure.
 - Formula-heavy subjects must render LaTeX through KaTeX (`.katex`) on student answer paths, not as raw delimiters or flattened text.
 - `scripts/student_flow_audit.cjs` now samples subject-specific render-risk questions and fails on missing code/formula render layers for Quiz, Mock MCQ, and FRQ player.
+- `scripts/full_student_risk_audit.cjs` is now the release-blocking full item ledger for all active subjects. It checks every active MCQ/FRQ for missing prompts/options/answers, invalid units, classification mismatch, visible OCR/text corruption, table/visual references without student-visible support, code/pseudocode structure, FRQ rubric availability, and blocked/excluded item status. It writes `.workspace/full-student-risk-audit/items.jsonl`, `summary.json`, and `p1_review_pack.json`.
+- Delivery completion for launch content means `npm run validate:student-risk` reports P0=0, P1=0, P2=0 across the full active item set. Sampling audits are additional evidence, not substitutes for the full ledger.
+- Items with unresolved required stimulus material must be marked `publish_status: "blocked"` and `student_visible: false`, and the frontend loader must filter them before Quiz, Mock, Search, review, mistake-book, and question-set use.
 - Representative evidence on 2026-07-14: CSA student-flow audit passed with 0 errors on a fresh preview port; Calculus AB student-flow audit passed with 0 errors on a fresh preview port.
 - Mobile student-flow release gate must run with explicit URL, mobile viewport, and account tier. For premium surfaces, use Lynk Student account state so search, question set, similar-question practice, PDF gates, and review pages are actually exercised.
 - Mobile topic images use `.question-image-wrap` / `.question-image`: wide diagrams are horizontally scrollable at a minimum readable width and must preserve natural aspect ratio. Do not add per-page image rules that compress wide figures below readability thresholds.
 - Latest evidence on 2026-07-16: all 16 active subjects passed mobile student-flow audit with 0 errors / 0 warnings under Lynk Student account state.
+- Latest evidence on 2026-07-17: all 16 active subjects passed mobile student-flow audit again under Lynk Student account state after the official-unit framework check was added. `npm run audit:render:all` also passed for all 16 active subjects with 0 errors / 0 warnings after `browser_render_audit.cjs` was aligned to premium account-state simulation.
+- 2026-07-17 full item-ledger evidence: `npm run validate:student-risk` checked 16 active subjects and 5482 active items with P0=0 / P1=0 / P2=0. `npm run validate`, `npm run build`, and `npm run audit:render:all` passed afterward; render audit covered all 16 active subjects with 0 errors / 0 warnings.
+- Browser/PDF render checks must never inspect a visitor access gate while claiming to validate premium surfaces. `browser_render_audit.cjs` now defaults to `--account internal`, seeds the same local account state used by student-flow checks, and reports a dedicated access-gate finding if a PDF page is blocked during internal-account render validation.
 
 ## Required Backlog
 
@@ -97,11 +103,15 @@ Content-capacity status: 2026-07-16 capacity reinforcement cleared the pre-launc
 
 - Top-level SOP: `docs/GLOBAL_QUESTION_BANK_SOP.md`.
 - Structured rendering contract: `docs/STRUCTURED_PROMPT_DELIVERY_CONTRACT.md`.
+- Inline Roman-numeral candidate lists such as `I. ... II. ... III. ...` must render as separate structured rows even when source text stores them on one line. `MathText` owns this behavior globally.
 - Unit classification contract: `docs/UNIT_CLASSIFICATION_STANDARD.md`.
 - Expansion ledger: `docs/QUESTION_POOL_EXPANSION_2026-07-13.md`.
 - `npm run validate` now starts with `validate:sop`, which checks that these SSoT files and the required delivery gates remain present.
 - Any new subject, source expansion, item batch, or major diagnosis must follow the lifecycle in `GLOBAL_QUESTION_BANK_SOP.md`: source approval, subject risk discovery, reconstruction, unit review, student-surface verification, local publish, deployment verification, SSoT update, and remote tree sync.
 - A count increase is not completion. Completion requires accepted/rejected/deferred source decisions, subject-specific rendering checks, learning-sequence unit review, full validation/build, student-path evidence, and closeout notes.
+- Unit classification authority: every subject's `primary_unit` decisions must use official exam and official subject-framework materials as the only authority. For AP, use the current official Course and Exam Description/course framework plus official released/sample questions and official scoring guidelines where relevant. Third-party maps, existing labels, generated topics, and keyword scans are review aids only; they cannot justify final classification.
+- Official framework gate: `npm run validate:official-units` is part of `npm run validate`. It checks all 16 active subjects' `classification_config.json` unit sequences against the registered official AP framework contract and requires explicit `unit_classification_authority` metadata.
+- Psychology framework migration: AP Psychology has been migrated from the legacy 9-unit sequence to the current official 5-unit sequence. Legacy released questions are remapped to the earliest official unit after which a student can answer with prior knowledge available; pure research-method/statistics items are treated as cross-unit course skills and assigned to the earliest viable stage rather than preserving a non-official standalone unit.
 
 ## Question Pool Expansion Queue
 

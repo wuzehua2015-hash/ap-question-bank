@@ -1,6 +1,6 @@
 # Global Question Bank SOP
 
-Last updated: 2026-07-16
+Last updated: 2026-07-17
 
 This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and publishing question-bank content across AP subjects and future A-Level, IB, and competition subjects. Older subject notes remain useful evidence, but this SOP is the entry contract.
 
@@ -9,12 +9,15 @@ This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and pu
 - Quality beats count. A target such as "add 100-200 MCQ" is not complete until every accepted item passes source approval, reconstruction, unit classification, student rendering, and release checks.
 - The student surface is the truth. Data that exists in JSON but is not visible in Quiz, Search/review, Mock, FRQ, or PDF is not delivered.
 - Every subject gets its own risk discovery. Generic extraction cannot certify a subject with code, formulas, tables, diagrams, grouped stimuli, visual answer choices, FRQ rubrics, or unusual option layouts.
-- Unit classification follows learning order. `primary_unit` is the latest unit a student must have completed to answer the item, not a keyword label.
+- Unit classification follows official learning order. `primary_unit` is the latest official unit a student must have completed to answer the item, not a keyword label.
+- Official exam and subject framework materials are the only authority for unit classification. Third-party maps, existing labels, generated topic names, or keyword tables can suggest review candidates but cannot justify the final unit.
 - Grouped items stay together. Shared context, figures, tables, and code must be represented once as `group_context` or equivalent structured fields, and every member must render that context.
 - Cross-unit grouped MCQ buckets are not unit-Quiz eligible. A single-unit Quiz may include a grouped bucket only when every member has that same `primary_unit`; cumulative/all-subject/Mock flows may include the bucket only as a complete group.
 - Rebuild pipelines must preserve reviewed per-item metadata such as visual, rendering, answerability, and classification review fields unless the pipeline explicitly regenerates and revalidates that field.
 - Source decisions are recorded. Accepted, rejected, deferred, and future-work candidates must be documented with reasons.
 - No publication without a fresh build and student-path check. JSON validation alone is insufficient.
+- "Full" means every active student-visible item is in an item-level ledger. Sampling, screenshots, and representative browser checks are useful evidence, but they never replace the full ledger.
+- Release closeout requires `npm run validate:student-risk` with P0=0, P1=0, and P2=0 across the full active item set. Any unresolved required prompt, table, figure, code block, option structure, scoring support, or unit-classification issue must be fixed or hidden before release.
 
 ## Global Lifecycle
 
@@ -88,6 +91,7 @@ An item may enter Web data only when:
 - visual assets are precise and owned by the item or group;
 - no broad page image is used as a substitute for clean structure unless explicitly approved as the only faithful representation;
 - FRQ rubrics have subject-specific solution outlines and scoring rows, without repeated template text.
+- items that cannot yet meet the above student-delivery contract must be marked `publish_status: "blocked"` and `student_visible: false`; they must not remain available to Quiz, Mock, Search/review, mistake-book, history, question-set, similar-practice, or PDF flows.
 
 Subject-specific examples:
 
@@ -104,16 +108,18 @@ Classification must follow `docs/UNIT_CLASSIFICATION_STANDARD.md`.
 
 For every new or changed item:
 
+- Confirm the current official subject framework and unit sequence before classification.
 - Read the full item, options, shared context, and any visual.
 - Determine the latest unit required to solve it with all prior units available.
 - Ignore keyword-only evidence if the concept is only a label, distractor, or background.
-- Record `classification_reasoning` when the item is newly added, repaired, or previously risky.
+- Record `classification_reasoning` when the item is newly added, repaired, or previously risky; the reasoning must refer to the official framework boundary, not a third-party course map.
 - For grouped questions, do not allow a member to appear in an earlier cumulative scope than its shared context and group members allow.
 - For single-unit Quiz, grouped buckets must be filtered by `every(member.primary_unit === selectedUnit)`, never by "any member matches selected unit".
 - For cumulative progression scopes, grouped buckets must be filtered by `every(member.primary_unit in learnedUnits)`.
 
 Required gates:
 
+- `npm run validate:official-units`
 - `npm run audit:units`
 - `npm run validate:units`
 - `npm run validate:student-progression`
@@ -127,6 +133,9 @@ For every source batch or renderer-affecting change:
 - Test Mock path when the subject supports Mock.
 - Test FRQ and FRQ scoring pages for FRQ changes.
 - Test PDF generation/download when PDF output can contain the changed content.
+- Run student-surface checks under the correct account tier. Premium surfaces such as Search, question sets, similar-practice tools, and PDF export must be checked as Lynk Student, not as a visitor page.
+- A gated access page is not valid evidence for PDF/search/render delivery. Render checks must fail clearly if they see the access gate while the test claims to cover premium content.
+- Student-surface checks must include the content classes actually present in the subject: grouped context, code, formulas, tables, visual options, diagrams, FRQ scoring, and PDF pagination where applicable.
 - Use the correct router path (`/#/...`) for the deployed app.
 - Use a fresh build and isolated preview port for local evidence.
 - Production deployment must be followed by `lynkedu.com` verification.
@@ -142,6 +151,7 @@ An expansion is not complete unless all are true:
 - rejected/deferred items remain out of Web data with reasons;
 - source counts match subject-specific checks;
 - capacity and unit distribution are reviewed;
+- the full item-level student-risk ledger has P0=0/P1=0/P2=0;
 - full validation/build passed;
 - student-surface evidence exists;
 - production data check passed if deployed;
@@ -152,8 +162,11 @@ Minimum commands:
 
 ```powershell
 npm run audit:sop
+npm run validate:official-units
+npm run validate:student-risk
 npm run validate
 npm run build
+npm run audit:render:all
 npm run audit:capacity
 npm run audit:expansion-closeout -- --subject=<subject-id> --status=partial|complete
 ```
@@ -183,6 +196,8 @@ Run a multi-angle pass:
 
 Do not stop at the first fixed example. If a defect reveals a class of failures, reopen the whole class for the affected subject and decide whether the same class applies globally.
 
+Full-diagnosis closeout must report the ledger totals: active subjects, MCQ count, FRQ count, total active items, and P0/P1/P2 counts. A response that only reports sampled subjects, sampled questions, or browser screenshots is not a full-diagnosis closeout.
+
 ## Multi-Subject Adaptation Matrix
 
 Every new subject must explicitly answer these questions:
@@ -193,7 +208,8 @@ Every new subject must explicitly answer these questions:
 - Are grouped prompts common?
 - Can grouped prompts span units, and if so which student paths may include them?
 - Are answer choices visual, tabular, or multi-line?
-- Does unit classification need special boundary rules?
+- What is the current official unit sequence, and which official framework source is used as the classification authority?
+- Does unit classification need special boundary rules under that official framework?
 - Are official sources enough, or is approved external expansion required?
 - What student-path checks are mandatory for this subject?
 

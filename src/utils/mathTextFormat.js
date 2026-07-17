@@ -190,6 +190,12 @@ function renderTextWithMarkdownTables(text, options = {}) {
       flushBuffer()
       parts.push(table.html)
       i = table.nextIndex
+    } else if (hasInlineRomanOptions(lines[i])) {
+      flushBuffer()
+      for (const option of splitInlineRomanOptions(lines[i])) {
+        parts.push(`<div class="math-roman-option"><span class="math-roman-label">${option.label}.</span><span class="math-roman-content">${renderLatexSegments(option.content, { ...options, forceInlineLatex: true })}</span></div>`)
+      }
+      i += 1
     } else if (/^\s*```/.test(lines[i])) {
       flushBuffer()
       const fence = lines[i].trim()
@@ -220,6 +226,24 @@ function renderTextWithMarkdownTables(text, options = {}) {
 
   flushBuffer()
   return parts.join('')
+}
+
+function hasInlineRomanOptions(line) {
+  return /^\s*I\.\s+\S/.test(line) && /\s+II\.\s+\S/.test(line)
+}
+
+function splitInlineRomanOptions(line) {
+  const parts = []
+  const pattern = /\b(I|II|III|IV|V)\.\s*/g
+  const matches = [...String(line).matchAll(pattern)]
+  for (let i = 0; i < matches.length; i += 1) {
+    const label = matches[i][1]
+    const start = matches[i].index + matches[i][0].length
+    const end = i + 1 < matches.length ? matches[i + 1].index : line.length
+    const content = line.slice(start, end).trim()
+    if (content) parts.push({ label, content })
+  }
+  return parts
 }
 
 function renderCodeBlock(code, language) {

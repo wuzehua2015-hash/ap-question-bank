@@ -6651,7 +6651,7 @@
     "source_set": "ap_bowl_gt_practice",
     "question_number": 29,
     "type": "MCQ",
-    "text": "Consider the following method.  What value is returned from a call of mystery(5)?\npublic static int mystery(int n)\n{\n  if (n == 0)\n    return 1;\n  else\n    return 3 * mystery (n - 1);\n}",
+    "text": "Consider the following method.\n```java\npublic static int mystery(int n)\n{\n  if (n == 0)\n    return 1;\n  else\n    return 3 * mystery (n - 1);\n}\n```\n\nWhat value is returned from a call of `mystery(5)`?",
     "options": {
       "A": "243",
       "B": "0",
