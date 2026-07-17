@@ -7,7 +7,7 @@ Last updated: 2026-07-17
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Latest Pages deployment URL observed: `https://6a7c8cbc.lynkedu-ap-question-bank.pages.dev`
+- Latest Pages deployment URL observed: `https://25fee8fb.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
   - JS: `/assets/index-zz9BSPum.js`
   - CSS: `/assets/index-SlSDx4HT.css`
@@ -32,8 +32,8 @@ Static data files under `/data/*` must not use long-lived edge/browser caching. 
 ## Git State
 
 - Working branch: `prod-mock-pdf-fix`
-- Latest local code deployed to Pages: CSA prompt cleanup repair and CSA release-blocking audit gate, local commit `1f1824a Harden CSA prompt cleanup checks`.
-- GitHub sync status at last update: stable-push API fallback synced local HEAD tree `3799778d6d90e0a23e7cf59e069e19487a638c32` to remote branch `prod-mock-pdf-fix` at remote commit `49315a50c802f1d4b51a67e1dd38d4ef80e0f9f1`; main remains a separate remote history.
+- Latest local code deployed to Pages: full CSA source-cleanup pass, local commit `e951d24 Complete CSA source cleanup pass`.
+- GitHub sync status at last update: stable-push API fallback synced local HEAD tree `0f85edde29220e5d41d8fa00ffad1a8f6dfee8f9` to remote branch `prod-mock-pdf-fix` at remote commit `18b152142d306e3bffba514f512b46f23cb526b9`; main remains a separate remote history.
 
 ## Product Access Tiers
 
