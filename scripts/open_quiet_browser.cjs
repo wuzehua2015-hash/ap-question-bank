@@ -9,7 +9,7 @@ const fs = require('fs')
 const path = require('path')
 const { spawn } = require('child_process')
 
-const DEFAULT_URL = 'http://127.0.0.1:5173/ap-question-bank/'
+const DEFAULT_URL = 'http://127.0.0.1:5173/'
 const cliArgs = process.argv.slice(2)
 const headless = cliArgs.includes('--headless')
 const keepAlive = cliArgs.includes('--keep-alive')

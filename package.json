@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prepare_main_dist.cjs",
     "build:admin": "npm run validate && vite build --config vite.admin.config.js && node scripts/prepare_admin_dist.cjs",
     "lint": "eslint .",
     "preview": "vite preview",

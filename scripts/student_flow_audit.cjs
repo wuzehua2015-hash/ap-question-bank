@@ -8,7 +8,7 @@ const { spawn } = require('child_process')
 const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 const WORKSPACE = path.join(ROOT, '.workspace', 'student-flow-audit')
-const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
+const DEFAULT_URL = 'http://127.0.0.1:4174/'
 
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject || 'physics-c-mechanics'
@@ -182,7 +182,7 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
   await sleep(1200)
   const submitted = await collectVisibleState(client)
   checkVisibleState('quiz:submitted', submitted, errors, warnings)
-  if (hasDisplayableSimilar(quiz) && !/变式|similar|错了|鍙樺紡|閿欎簡/i.test(submitted.text)) {
+  if (hasDisplayableSimilar(quiz) && !/变式|similar|错了/i.test(submitted.text)) {
     warnings.push({ page: 'quiz-play', kind: 'similar_recommendation_not_visible_after_wrong_answers' })
   }
   const duplicate = quiz.find(q => {
@@ -528,7 +528,7 @@ async function clickSubmitButton(client) {
       const rect = button.getBoundingClientRect();
       return !button.disabled && rect.width > 0 && rect.height > 0;
     });
-    const textMatch = buttons.find(button => /Submit|Finish|提交|答案|鎻愪氦/.test(button.innerText || button.textContent || ''));
+    const textMatch = buttons.find(button => /Submit|Finish|提交|答案/.test(button.innerText || button.textContent || ''));
     if (textMatch) { textMatch.click(); return true; }
     const optionButtons = new Set([...document.querySelectorAll('.option-btn')]);
     const candidates = buttons.filter(button => !optionButtons.has(button));

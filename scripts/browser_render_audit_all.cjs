@@ -26,7 +26,7 @@ async function main() {
   for (let index = 0; index < subjects.length; index += 1) {
     const subject = subjects[index]
     const port = BASE_PORT + index
-    const url = `http://127.0.0.1:${PREVIEW_PORT}/ap-question-bank/`
+    const url = `http://127.0.0.1:${PREVIEW_PORT}/`
     console.log(`\n[${index + 1}/${subjects.length}] ${subject} on CDP port ${port}`)
     await run('node', ['scripts/browser_render_audit.cjs', '--subject', subject, '--port', String(port), '--url', url])
   }

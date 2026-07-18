@@ -1,4 +1,6 @@
 import { WatermarkLayer } from './pdfWatermarkSystem'
+import html2canvas from 'html2canvas'
+import { jsPDF } from 'jspdf'
 
 export const PDF_EXPORT_OPTIONS = {
   margin: [10, 10, 10, 10],
@@ -35,11 +37,15 @@ export async function exportToPdf(element, filename, options = {}) {
 }
 
 async function exportSegmentedPdf(element, filename) {
-  const [html2canvas, jsPDF] = await Promise.all([
-    loadHtml2Canvas(),
-    loadJsPdf(),
-  ])
-  const segments = Array.from(element.querySelectorAll('[data-pdf-segment="true"]'))
+  const allSegments = Array.from(element.querySelectorAll('[data-pdf-segment="true"]'))
+  const nestedSegments = allSegments.filter(segment => {
+    const parentSegment = segment.parentElement?.closest('[data-pdf-segment="true"]')
+    return parentSegment && element.contains(parentSegment)
+  })
+  if (nestedSegments.length) {
+    console.warn(`PDF export ignored ${nestedSegments.length} nested segment marker(s).`)
+  }
+  const segments = allSegments.filter(segment => !segment.querySelector('[data-pdf-segment="true"]'))
   if (!segments.length) {
     await exportSingleCanvasPdf(element, filename, html2canvas, jsPDF)
     return
@@ -103,7 +109,7 @@ async function exportSegmentedPdf(element, filename) {
       hasContent = true
     }
 
-    const sliceHeightPx = Math.floor((contentHeight * canvas.width) / contentWidth)
+    const sliceHeightPx = Math.floor(((contentHeight - 8) * canvas.width) / contentWidth)
     let sourceY = 0
     while (sourceY < canvas.height) {
       const currentSliceHeight = Math.min(sliceHeightPx, canvas.height - sourceY)
@@ -137,21 +143,21 @@ async function exportSegmentedPdf(element, filename) {
 }
 
 async function exportSingleCanvasPdf(element, filename, html2canvasLoader, jsPDFLoader) {
-  const [html2canvas, jsPDF] = html2canvasLoader && jsPDFLoader
-    ? [html2canvasLoader, jsPDFLoader]
-    : await Promise.all([loadHtml2Canvas(), loadJsPdf()])
+  const renderer = html2canvasLoader || html2canvas
+  const PdfWriter = jsPDFLoader || jsPDF
   const margin = 10
-  const pdf = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait', compress: true })
+  const pdf = new PdfWriter({ unit: 'mm', format: 'a4', orientation: 'portrait', compress: true })
   const pageWidth = pdf.internal.pageSize.getWidth()
   const pageHeight = pdf.internal.pageSize.getHeight()
   const contentWidth = pageWidth - margin * 2
   const contentHeight = pageHeight - margin * 2
-  const canvas = await html2canvas(element, {
+  const canvas = await withTimeout(renderer(element, {
     ...PDF_EXPORT_OPTIONS.html2canvas,
     backgroundColor: '#ffffff',
     windowWidth: element.scrollWidth,
-  })
-  const sliceHeightPx = Math.floor((contentHeight * canvas.width) / contentWidth)
+    windowHeight: Math.max(element.scrollHeight, document.documentElement.scrollHeight),
+  }), 15000, 'PDF render timed out')
+  const sliceHeightPx = Math.floor(((contentHeight - 8) * canvas.width) / contentWidth)
   let sourceY = 0
   while (sourceY < canvas.height) {
     const currentSliceHeight = Math.min(sliceHeightPx, canvas.height - sourceY)
@@ -188,6 +194,7 @@ async function renderSegmentCanvas(segment, element, exportState, html2canvas) {
       ...PDF_EXPORT_OPTIONS.html2canvas,
       backgroundColor: '#ffffff',
       windowWidth: element.scrollWidth,
+      windowHeight: Math.max(segment.scrollHeight, element.scrollHeight, document.documentElement.scrollHeight),
     })
   const timeoutTask = new Promise(resolve => {
     window.setTimeout(() => resolve(null), 12000)
@@ -204,14 +211,14 @@ async function renderSegmentCanvas(segment, element, exportState, html2canvas) {
   }
 }
 
-async function loadHtml2Canvas() {
-  const mod = await import('html2canvas')
-  return mod.default || mod
-}
-
-async function loadJsPdf() {
-  const mod = await import('jspdf')
-  return mod.jsPDF
+function withTimeout(promise, timeoutMs, message) {
+  let timeoutId
+  const timeout = new Promise((_, reject) => {
+    timeoutId = window.setTimeout(() => reject(new Error(message)), timeoutMs)
+  })
+  return Promise.race([promise, timeout]).finally(() => {
+    window.clearTimeout(timeoutId)
+  })
 }
 
 function readPx(value) {

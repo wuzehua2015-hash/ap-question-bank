@@ -73,8 +73,8 @@ function MockPdfPage() {
     if (!pdfRef.current) return
     setExporting(true)
     try {
-      const date = new Date().toISOString().split('T')[0]
-      await exportToPdf(pdfRef.current, `LynkEdu-MockExam-${date}.pdf`, { segmented: true })
+      const stamp = formatPdfTimestamp(new Date())
+      await exportToPdf(pdfRef.current, `LynkEdu-MockExam-${stamp}.pdf`, { segmented: true })
     } finally {
       setExporting(false)
     }
@@ -317,5 +317,17 @@ function MockPdfPage() {
   )
 }
 
-export default MockPdfPage
+function formatPdfTimestamp(date) {
+  const pad = value => String(value).padStart(2, '0')
+  return [
+    date.getFullYear(),
+    pad(date.getMonth() + 1),
+    pad(date.getDate()),
+  ].join('-') + '-' + [
+    pad(date.getHours()),
+    pad(date.getMinutes()),
+    pad(date.getSeconds()),
+  ].join('')
+}
 
+export default MockPdfPage

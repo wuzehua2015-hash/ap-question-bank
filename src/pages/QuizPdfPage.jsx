@@ -24,6 +24,7 @@ function QuizPdfPage() {
   const [quizInfo, setQuizInfo] = useState(null)
   const [loading, setLoading] = useState(true)
   const [exporting, setExporting] = useState(false)
+  const [exportError, setExportError] = useState('')
 
   useEffect(() => {
     const parsed = getCurrentQuiz()
@@ -39,9 +40,13 @@ function QuizPdfPage() {
   const handleExport = async () => {
     if (!pdfRef.current) return
     setExporting(true)
+    setExportError('')
     try {
-      const date = new Date().toISOString().split('T')[0]
-      await exportToPdf(pdfRef.current, `LynkEdu-Quiz-${date}.pdf`)
+      const stamp = formatPdfTimestamp(new Date())
+      await exportToPdf(pdfRef.current, `LynkEdu-Quiz-${stamp}.pdf`, { segmented: true })
+    } catch (err) {
+      console.error('PDF export failed:', err)
+      setExportError(err?.message || 'PDF 生成失败，请稍后重试。')
     } finally {
       setExporting(false)
     }
@@ -81,10 +86,15 @@ function QuizPdfPage() {
           </button>
         </div>
       </div>
+      {exportError && (
+        <div className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+          {exportError}
+        </div>
+      )}
 
       <PdfContainer refProp={pdfRef}>
         <div style={{ padding: '30px 20px' }}>
-          <div style={{
+          <div data-pdf-segment="true" style={{
             borderBottom: '2px solid #1e40af',
             paddingBottom: '12px',
             marginBottom: '30px',
@@ -102,7 +112,7 @@ function QuizPdfPage() {
             </div>
           </div>
 
-          <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+          <div data-pdf-segment="true" style={{ textAlign: 'center', marginBottom: '24px' }}>
             <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1f2937' }}>
               {unitName} - {totalCount} 题
             </div>
@@ -110,8 +120,8 @@ function QuizPdfPage() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             {quiz.map((q, idx) => (
-              <div key={q.question_id} style={{ pageBreakInside: 'avoid', breakInside: 'avoid', marginBottom: '24px' }}>
-                <div style={{
+              <div key={q.question_id} style={{ pageBreakInside: 'auto', breakInside: 'auto', marginBottom: '24px' }}>
+                <div data-pdf-segment="true" style={{
                   fontSize: '18px',
                   fontWeight: 'bold',
                   color: '#1f2937',
@@ -127,7 +137,7 @@ function QuizPdfPage() {
           </div>
         </div>
 
-        <div className="pdf-page-break" style={{ padding: '30px 20px' }}>
+        <div className="pdf-page-break" data-pdf-segment="true" data-pdf-start-page="true" style={{ padding: '30px 20px' }}>
           <div style={{
             borderBottom: '2px solid #1e40af',
             paddingBottom: '12px',
@@ -165,6 +175,19 @@ function QuizPdfPage() {
     </div>
     </PremiumGate>
   )
+}
+
+function formatPdfTimestamp(date) {
+  const pad = value => String(value).padStart(2, '0')
+  return [
+    date.getFullYear(),
+    pad(date.getMonth() + 1),
+    pad(date.getDate()),
+  ].join('-') + '-' + [
+    pad(date.getHours()),
+    pad(date.getMinutes()),
+    pad(date.getSeconds()),
+  ].join('')
 }
 
 export default QuizPdfPage

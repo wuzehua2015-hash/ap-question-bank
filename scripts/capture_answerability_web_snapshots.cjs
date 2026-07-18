@@ -6,7 +6,7 @@ const { spawn } = require('child_process')
 
 const ROOT = path.resolve(__dirname, '..')
 const OUT_ROOT = path.join(ROOT, '.workspace', 'answerability-audit')
-const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
+const DEFAULT_URL = 'http://127.0.0.1:4174/'
 
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject

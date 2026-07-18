@@ -10,6 +10,12 @@ export default defineConfig({
       checks: {
         pluginTimings: false,
       },
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/html2canvas')) return 'pdf-html2canvas'
+          if (id.includes('node_modules/jspdf')) return 'pdf-jspdf'
+        },
+      },
     },
   },
 })
