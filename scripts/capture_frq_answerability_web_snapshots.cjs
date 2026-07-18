@@ -7,7 +7,7 @@ const { spawn } = require('child_process')
 const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 const OUT_ROOT = path.join(ROOT, '.workspace', 'answerability-audit')
-const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
+const DEFAULT_URL = 'http://127.0.0.1:4174/'
 
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject
@@ -15,7 +15,7 @@ const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
 const port = Number(args.port || 9454)
 
 if (!subjectId) {
-  console.error('Usage: node scripts/capture_frq_answerability_web_snapshots.cjs --subject <subject_id> [--url http://127.0.0.1:4174/ap-question-bank/] [--port 9454]')
+  console.error('Usage: node scripts/capture_frq_answerability_web_snapshots.cjs --subject <subject_id> [--url http://127.0.0.1:4174/] [--port 9454]')
   process.exit(1)
 }
 

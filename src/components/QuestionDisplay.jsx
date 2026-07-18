@@ -28,6 +28,7 @@ function DisplayImage({ path, variant }) {
   return (
     <div className="question-image-wrap">
       <img
+        data-pdf-segment="true"
         src={imgUrl}
         alt=""
         className="question-image max-w-full max-h-[560px] mx-auto rounded-lg border border-border"
@@ -43,7 +44,7 @@ function DisplayOptions({ options, variant }) {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '12px' }}>
         {Object.entries(opts).map(([key, text]) => (
-          <div key={key} style={{ fontSize: '14px', color: '#374151', lineHeight: 1.5 }}>
+          <div key={key} data-pdf-segment="true" style={{ fontSize: '14px', color: '#374151', lineHeight: 1.5 }}>
             <span style={{ fontWeight: 'bold', marginRight: '4px' }}>{key}.</span>
             <MathText text={text} forceInlineLatex />
           </div>
@@ -90,6 +91,7 @@ function DisplayDiagramOptionImages({ imagePaths, options, variant }) {
         return (
           <div
             key={`${key}-${paths.join('|')}`}
+            data-pdf-segment={isPdf ? 'true' : undefined}
             className={isPdf ? '' : 'rounded-lg border border-border bg-white p-3'}
             style={isPdf ? { border: '1px solid #d1d5db', borderRadius: '6px', padding: '8px' } : {}}
           >
@@ -129,7 +131,7 @@ function DisplayGroupContext({ text, variant }) {
 
   if (variant === 'pdf') {
     return (
-      <div style={{
+      <div data-pdf-segment="true" style={{
         fontSize: '14px',
         color: '#374151',
         lineHeight: 1.55,
@@ -165,7 +167,7 @@ function DisplayTableOptions({ tableData, variant }) {
 
   if (variant === 'pdf') {
     return (
-      <div style={{
+      <div data-pdf-segment="true" style={{
         marginTop: '12px',
         border: '1px solid #d1d5db',
         borderRadius: '4px',
@@ -245,7 +247,7 @@ function DisplayBackgroundTable({ tableData, variant }) {
 
   if (variant === 'pdf') {
     return (
-      <div style={{
+      <div data-pdf-segment="true" style={{
         margin: '12px 0',
         border: '1px solid #d1d5db',
         borderRadius: '4px',
@@ -330,7 +332,7 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
 
       {/* Question text */}
       {isPdf ? (
-        <div style={{ fontSize: '16px', fontWeight: '500', color: '#1f2937', marginBottom: '12px', lineHeight: 1.6 }}>
+        <div data-pdf-segment="true" style={{ fontSize: '16px', fontWeight: '500', color: '#1f2937', marginBottom: '12px', lineHeight: 1.6 }}>
           <MathText text={question.text || question.question_text} as="div" />
         </div>
       ) : (
