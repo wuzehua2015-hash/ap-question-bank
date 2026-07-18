@@ -309,6 +309,16 @@
 - Admin custom domain item is complete: `admin.lynkedu.com` is active on Pages with CNAME `admin` -> `lynkedu-admin.pages.dev`, proxied, TTL Auto. Public access returns HTTP 200 and renders `翎英教育管理后台`.
 - Source mirror synced through stable API fallback; `npm run stable:status` must be used as the live source-of-truth check because API fallback creates a remote commit id different from local Git history while preserving the same tree.
 
+# 2026-07-18 - Chinese Display Mapping Contract
+
+- Added `src/utils/displayLabels.js` as the single display-label layer for subject names, subject short names, unit names, difficulty labels, account tiers, entitlement features, and entitlement statuses.
+- Updated Header, Home, Settings, Quiz setup, Search, History, Mistake Book, Score report, Quiz PDF, Mock PDF, Account, and Admin entitlement surfaces to use the centralized Chinese-first mapping instead of raw English source metadata.
+- Preserved official/source metadata in `public/data/subjects.json`; UI localization is now a presentation-layer concern, not a data-source rewrite.
+- Strengthened `scripts/chinese_copy_gate.cjs` so checked student-facing files cannot directly render raw `subject.name`, `subject.shortName`, `unit.name`, or `unit.title`.
+- Verification passed: `npm run validate:copy`, `npm run validate`, `npm run build:admin`, and `npm run build`.
+- Deployed student site to `https://a4263303.lynkedu-ap-question-bank.pages.dev`; production `https://lynkedu.com` now references JS `/assets/index-BPpfi7Zf.js` and CSS `/assets/index-C75AEhR5.css`.
+- Deployed admin site to `https://4c150904.lynkedu-admin.pages.dev`; production `https://admin.lynkedu.com` now references JS `/assets/index-DvhgSTr2.js` and CSS `/assets/index-DrvrsFJO.css`.
+
 # 2026-07-17 - Admin Custom Domain Live
 
 - Added Cloudflare DNS record for admin console:

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { useSubject } from '../contexts/SubjectContext'
 import { loadFRQBank, loadMCQBank } from '../utils/questionBank'
+import { accountLevelDisplay, subjectDisplayName } from '../utils/displayLabels'
 import { getQuizHistory, getWrongQuestions } from '../utils/storage'
 
 function HomePage() {
@@ -34,7 +35,7 @@ function HomePage() {
 
   const currentSubjectConfig = mySubjects.find(subject => subject.id === currentSubject) || mySubjects[0]
   const currentStats = subjectStats[currentSubjectConfig?.id] || {}
-  const accountLabel = isLoggedIn ? (isInternalStudent ? '翎英学员' : '注册会员') : '游客模式'
+  const accountLabel = isLoggedIn ? accountLevelDisplay('free', isInternalStudent) : '游客模式'
   const currentProgress = useMemo(() => buildProgressSummary(currentSubject), [currentSubject])
 
   if (mySubjects.length === 0) {
@@ -69,7 +70,7 @@ function HomePage() {
         </div>
 
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-brand mb-5">
-          {currentSubjectConfig?.name || 'AP 题库'}
+          {currentSubjectConfig ? subjectDisplayName(currentSubjectConfig) : 'AP 题库'}
         </h1>
 
         <p className="max-w-2xl text-lg leading-8 text-text-muted mb-7">
@@ -114,7 +115,7 @@ function HomePage() {
                   onClick={() => setSubject(subject.id)}
                   className="text-left"
                 >
-                  <span className={`block font-semibold ${isActive ? 'text-brand' : 'text-text'}`}>{subject.name}</span>
+                  <span className={`block font-semibold ${isActive ? 'text-brand' : 'text-text'}`}>{subjectDisplayName(subject)}</span>
                   <span className="mt-1 block text-sm text-text-muted">
                     {stats.mcqCount || '...'} MCQ{stats.hasFRQ ? ` · ${stats.frqCount || 0} FRQ` : ''}
                   </span>

@@ -8,6 +8,7 @@ import { useSubject } from '../contexts/SubjectContext'
 import { useAuth } from '../contexts/AuthContext'
 import { formatAnswer, isAnswerCorrect } from '../utils/questionBank'
 import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
+import { subjectDisplayName, unitDisplayName } from '../utils/displayLabels'
 
 function ScoreBackgroundTable({ tableData }) {
   if (!tableData?.headers?.length || !tableData?.rows?.length) return null
@@ -58,7 +59,7 @@ function ScorePage() {
   const navigate = useNavigate()
   const { currentSubjectConfig } = useSubject()
   const { isLoggedIn, isInternalStudent } = useAuth()
-  const subjectName = currentSubjectConfig?.name || 'AP Microeconomics'
+  const subjectName = currentSubjectConfig ? subjectDisplayName(currentSubjectConfig) : 'AP 题库'
   const pdfRef = useRef(null)
   const [quiz, setQuiz] = useState([])
   const [answers, setAnswers] = useState({})
@@ -137,7 +138,7 @@ function ScorePage() {
 
   const unitName = (unit) => {
     const found = currentSubjectConfig?.units?.find(u => u.id === unit)
-    return found?.name || unit
+    return found ? unitDisplayName(found, currentSubjectConfig, { includeId: false }) : unit
   }
 
   if (loading) {

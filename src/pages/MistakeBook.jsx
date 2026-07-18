@@ -10,6 +10,7 @@ import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
 import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
 import LoginGate from '../components/LoginGate'
 import { useAuth } from '../contexts/AuthContext'
+import { difficultyDisplayName, unitDisplayName } from '../utils/displayLabels'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -173,7 +174,7 @@ function MistakeBookContent() {
       <div className="mb-4">
         <select value={unitFilter} onChange={e => setUnitFilter(e.target.value)} className="p-2 border border-border rounded bg-bg text-sm">
           <option value="all">全部单元</option>
-          {units.map(u => <option key={u.id} value={u.id}>{u.id}: {u.name}</option>)}
+          {units.map(u => <option key={u.id} value={u.id}>{unitDisplayName(u, currentSubject)}</option>)}
         </select>
       </div>
 
@@ -199,7 +200,7 @@ function MistakeBookContent() {
                 <div className="flex flex-wrap gap-2 mb-2">
                   <span className="bg-brand text-white text-xs px-2 py-1 rounded">{q.primary_unit}</span>
                   <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">{q.year}</span>
-                  {q.difficulty && <span className={`text-xs px-2 py-1 rounded ${q.difficulty === 'Hard' ? 'bg-red-100 text-red-700' : q.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'}`}>{q.difficulty}</span>}
+                  {q.difficulty && <span className={`text-xs px-2 py-1 rounded ${q.difficulty === 'Hard' ? 'bg-red-100 text-red-700' : q.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'}`}>{difficultyDisplayName(q.difficulty)}</span>}
                   {correctRate !== null && (
                     <span className={`text-xs px-2 py-1 rounded ${correctRate >= 70 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
                       正确率 {correctRate}%

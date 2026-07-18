@@ -55,6 +55,11 @@ const englishCoreCopy = [
   /\bNext Question\b/,
   /\bView Results\b/,
 ]
+const rawSubjectRenderPattern = /\{(?:currentSubjectConfig|sessionSubjectConfig|subject)\?\?\.\s*(?:name|shortName)\}|\{(?:currentSubjectConfig|sessionSubjectConfig|subject)\.(?:name|shortName)\}/
+const rawUnitRenderPattern = /\{(?:unit|u|item)\.(?:name|title)\}/
+const allowedRawLabelFiles = new Set([
+  'src/utils/displayLabels.js',
+])
 
 for (const rel of files) {
   const text = fs.readFileSync(path.join(ROOT, rel), 'utf8')
@@ -69,6 +74,12 @@ for (const rel of files) {
       errors.push(`${rel}: contains English core student UI phrase ${pattern}`)
       break
     }
+  }
+  if (!allowedRawLabelFiles.has(rel) && rawSubjectRenderPattern.test(text)) {
+    errors.push(`${rel}: renders raw subject name/shortName instead of displayLabels mapping`)
+  }
+  if (!allowedRawLabelFiles.has(rel) && rawUnitRenderPattern.test(text)) {
+    errors.push(`${rel}: renders raw unit name/title instead of displayLabels mapping`)
   }
 }
 

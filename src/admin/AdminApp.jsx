@@ -10,6 +10,7 @@ import {
   setAdminToken,
   updateEntitlement,
 } from './adminApi'
+import { accountLevelDisplay, entitlementStatusDisplay, featureDisplayName } from '../utils/displayLabels'
 
 function AdminApp() {
   const [user, setUser] = useState(null)
@@ -149,7 +150,7 @@ function UsersPanel() {
             cells: [
               item.email,
               item.display_name || '-',
-              accountLabel(item.account_level),
+              accountLevelDisplay(item.account_level),
               entitlementSummary(item.entitlements),
               formatDate(item.created_at),
             ],
@@ -184,7 +185,7 @@ function UserActions({ user, onAction, message, error }) {
         <div className="font-medium">当前权益</div>
         {activeEntitlements.length ? activeEntitlements.map(item => (
           <div key={item.id} className="rounded-md border border-border p-3">
-            <div className="font-medium">{item.feature_key} · {item.status || 'active'}</div>
+            <div className="font-medium">{featureDisplayName(item.feature_key)} · {entitlementStatusDisplay(item.status, item.expires_at)}</div>
             <div className="mt-1 text-text-muted">到期：{item.expires_at ? formatDate(item.expires_at) : '长期'}</div>
             <div className="mt-1 text-text-muted">来源：{item.source || '-'}</div>
           </div>
@@ -196,7 +197,7 @@ function UserActions({ user, onAction, message, error }) {
           <div className="mt-2 space-y-2">
             {historicalEntitlements.map(item => (
               <div key={item.id} className="rounded-md border border-border bg-gray-50 p-3 text-text-muted">
-                <div className="font-medium">{item.feature_key} · {item.status || 'active'}</div>
+                <div className="font-medium">{featureDisplayName(item.feature_key)} · {entitlementStatusDisplay(item.status, item.expires_at)}</div>
                 <div className="mt-1">到期：{item.expires_at ? formatDate(item.expires_at) : '长期'}</div>
                 <div className="mt-1">来源：{item.source || '-'}</div>
               </div>
@@ -368,11 +369,6 @@ function entitlementSummary(entitlements = []) {
   const active = entitlements.find(item => item.feature_key === 'full_access' && (item.status || 'active') === 'active' && (!item.expires_at || new Date(item.expires_at) > new Date()))
   if (!active) return '注册会员'
   return active.expires_at ? `翎英学员至 ${formatDate(active.expires_at)}` : '翎英学员'
-}
-
-function accountLabel(level) {
-  if (level === 'admin') return '管理员'
-  return '注册会员'
 }
 
 function eventLabel(type) {

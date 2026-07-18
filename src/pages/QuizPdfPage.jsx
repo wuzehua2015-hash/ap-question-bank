@@ -1,31 +1,27 @@
-import { getCurrentQuiz } from '../utils/quizSession'
+import { getCurrentQuiz, getQuizInfo } from '../utils/quizSession'
 import { exportToPdf, PdfContainer } from '../utils/pdfExport.jsx'
 import QuestionDisplay from '../components/QuestionDisplay'
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
 import PremiumGate from '../components/PremiumGate'
+import { subjectDisplayName, unitDisplayName } from '../utils/displayLabels'
 
-const UNIT_NAMES = {
-  U1: 'Unit 1',
-  U2: 'Unit 2',
-  U3: 'Unit 3',
-  U4: 'Unit 4',
-  U5: 'Unit 5',
-  U6: 'Unit 6',
-  all: '全部单元',
-  wrong: '错题',
+const QUIZ_MODE_LABELS = {
+  all: '全部可练单元',
+  wrong: '错题练习',
   custom: '自定义题组',
   similar: '相似题组',
+  single: '单题练习',
 }
 
 function QuizPdfPage() {
   const navigate = useNavigate()
   const { currentSubjectConfig } = useSubject()
-  const subjectName = currentSubjectConfig?.name || 'AP Microeconomics'
+  const subjectName = currentSubjectConfig ? subjectDisplayName(currentSubjectConfig) : 'AP 题库'
   const pdfRef = useRef(null)
   const [quiz, setQuiz] = useState([])
-  const [quizInfo] = useState(null)
+  const [quizInfo, setQuizInfo] = useState(null)
   const [loading, setLoading] = useState(true)
   const [exporting, setExporting] = useState(false)
 
@@ -36,6 +32,7 @@ function QuizPdfPage() {
       return
     }
     setQuiz(parsed)
+    setQuizInfo(getQuizInfo())
     setLoading(false)
   }, [navigate])
 
@@ -58,7 +55,9 @@ function QuizPdfPage() {
     )
   }
 
-  const unitName = quizInfo?.unit ? (UNIT_NAMES[quizInfo.unit] || quizInfo.unit) : 'Quiz'
+  const unitName = quizInfo?.unit
+    ? QUIZ_MODE_LABELS[quizInfo.unit] || unitDisplayName(quizInfo.unit, currentSubjectConfig)
+    : 'Quiz'
   const totalCount = quiz.length
 
   return (

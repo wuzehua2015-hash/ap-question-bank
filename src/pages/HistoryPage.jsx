@@ -5,6 +5,7 @@ import {
   getQuizHistory, getQuestionHistory, clearSubjectData,
 } from '../utils/storage'
 import LoginGate from '../components/LoginGate'
+import { difficultyDisplayName, unitDisplayName } from '../utils/displayLabels'
 
 function HistoryPage() {
   return (
@@ -175,7 +176,7 @@ function HistoryPageContent() {
                 return (
                   <div key={u.id}>
                     <div className="flex justify-between text-sm mb-1">
-                      <span className="text-text">{u.id} {u.name}</span>
+                      <span className="text-text">{unitDisplayName(u, currentSubject)}</span>
                       <span className={`font-medium ${rateTone(rate)}`}>
                         {rate}% ({s.correct}/{s.total})
                       </span>
@@ -202,7 +203,7 @@ function HistoryPageContent() {
                 return (
                   <div key={diff} className="text-center p-3 bg-gray-50 rounded-lg">
                     <div className={`text-xl font-bold ${rateTone(rate)}`}>{rate}%</div>
-                    <div className="text-xs text-text-muted">{diff}</div>
+                    <div className="text-xs text-text-muted">{difficultyDisplayName(diff)}</div>
                     <div className="text-xs text-text-muted">{s.correct}/{s.total}</div>
                   </div>
                 )
