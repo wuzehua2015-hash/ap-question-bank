@@ -226,7 +226,38 @@
     },
     "pure_unit": true,
     "has_graph": true,
-    "requires_graph": true
+    "requires_graph": true,
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "2. Mr. Smith is a new high school math teacher. Before the school year begins, he asks his colleagues to review a list of students in his class in an attempt to gather information about his incoming students. As he begins teaching, Mr. Smith struggles with managing student behavior in the classroom. In particular, he has difficulty helping his students focus on their assignments and cooperate during group work."
+      },
+      {
+        "type": "part",
+        "label": "PartA",
+        "text": "Explain how each of the following concepts might hinder Mr. Smith’s success in this scenario. • Self-fulfilling prophecy • Big Five trait of neuroticism"
+      },
+      {
+        "type": "part",
+        "label": "PartB",
+        "text": "Explain how Mr. Smith might use each of the following to be more successful in managing his students’ behavior. • Superordinate goals • Metacognition • Token economy"
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Class Performance Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/psychology/2018/2018_FRQ2_class_performance_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "PartC",
+        "text": "The statewide results of a standardized math test had a normal distribution and a mean of 70. Mr. Smith’s students took the same test and the graph above depicts their results. • What does the mean score of Mr. Smith’s class suggest about how well his students are performing relative to the state scores? • What does the distribution of scores in Mr. Smith’s class suggest about how well his students are performing relative to the state scores?"
+      }
+    ]
   },
   {
     "question_id": "2023_SET_1_FRQ1",

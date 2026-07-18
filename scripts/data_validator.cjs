@@ -404,6 +404,12 @@ function validate(filePath, options = {}) {
             errors.push(`${qid}: anchored figure image ${imagePath} is missing from top-level image_paths`)
           }
         }
+      } else if (
+        Array.isArray(q.image_paths) &&
+        q.image_paths.length > 0 &&
+        q.display_mode !== 'official_images_first'
+      ) {
+        errors.push(`${qid}: FRQ has image_paths but no content_blocks; non-official-image FRQ media must be anchored in reading order`)
       }
       const rubricText = JSON.stringify(q.rubric || {})
       for (const { name, pattern } of frqRubricArtifactPatterns) {

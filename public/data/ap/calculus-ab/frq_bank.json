@@ -154,7 +154,38 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U8"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Let $R$ be the region in the first quadrant bounded by the $x$-axis and the graphs of $y=\\ln x$ and $y=5-x$, as shown in the figure above."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Region R",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2012/2012_FRQ2_region_R.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the area of $R$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Region $R$ is the base of a solid. For the solid, each cross section perpendicular to the $x$-axis is a square. Write, but do not evaluate, an expression involving one or more integrals that gives the volume of the solid."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The horizontal line $y=k$ divides $R$ into two regions of equal area. Write, but do not solve, an equation involving one or more integrals whose solution gives the value of $k$."
+      }
+    ]
   },
   {
     "question_id": "2012_FRQ3",
@@ -236,7 +267,43 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U6"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Let $f$ be the continuous function defined on $[-4,3]$ whose graph, consisting of three line segments and a semicircle centered at the origin, is given above. Let $g$ be the function given by $g(x)=\\int_1^x f(t)\\,dt$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph F",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2012/2012_FRQ3_graph_f.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the values of $g(2)$ and $g(-2)$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "For each of $g'(-3)$ and $g''(-3)$, find the value or state that it does not exist."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find the $x$-coordinate of each point at which the graph of $g$ has a horizontal tangent line. For each of these points, determine whether $g$ has a relative minimum, relative maximum, or neither a minimum nor a maximum at the point. Justify your answers."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "For $-4<x<3$, find all values of $x$ for which the graph of $g$ has a point of inflection. Explain your reasoning."
+      }
+    ]
   },
   {
     "question_id": "2012_FRQ4",
@@ -393,7 +460,38 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U7"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The rate at which a baby bird gains weight is proportional to the difference between its adult weight and its current weight. At time $t=0$, when the bird is first weighed, its weight is 20 grams. If $B(t)$ is the weight of the bird, in grams, at time $t$ days after it is first weighed, then $\\frac{dB}{dt}=\\frac15(100-B)$. Let $y=B(t)$ be the solution to the differential equation above with initial condition $B(0)=20$."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Is the bird gaining weight faster when it weighs 40 grams or when it weighs 70 grams? Explain your reasoning."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find $\\frac{d^2B}{dt^2}$ in terms of $B$. Use $\\frac{d^2B}{dt^2}$ to explain why the graph of $B$ cannot resemble the following graph."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Rejected Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2012/2012_FRQ5_rejected_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Use separation of variables to find $y=B(t)$, the particular solution to the differential equation with initial condition $B(0)=20$."
+      }
+    ]
   },
   {
     "question_id": "2012_FRQ6",
@@ -557,7 +655,38 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U8"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Let $R$ be the shaded region in the first quadrant enclosed by the $y$-axis and the graphs of $y=1-x^3$ and $y=\\sin(x^2)$, as shown in the figure above."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Region R",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2013/2013_FRQ1_region_R.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the area of $R$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "A horizontal line, $y=k$, is drawn through the point where the graphs of $y=1-x^3$ and $y=\\sin(x^2)$ intersect. Find $k$ and determine whether this line divides $R$ into two regions of equal area. Show the work that leads to your conclusion."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find the volume of the solid generated when $R$ is revolved about the line $y=-3$."
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ2",
@@ -727,7 +856,43 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U6"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The twice-differentiable function $W$ models the volume of water in a reservoir at time $t$, where $W(t)$ is measured in gigaliters (GL) and $t$ is measured in days. The table above gives values of $W'(t)$ sampled at various times during $0\\le t\\le30$ days. At time $t=30$, the reservoir contains $125$ gigaliters of water."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Water Table",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2013/2013_FRQ3_water_table.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Use the tangent line approximation to $W$ at time $t=30$ to predict the volume of water $W(t)$, in gigaliters, in the reservoir at time $t=32$. Show the computations that lead to your answer."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Use a left Riemann sum, with the three subintervals indicated by the data in the table, to approximate $\\int_0^{30}W'(t)\\,dt$. Use this approximation to estimate the volume of water $W(t)$, in gigaliters, in the reservoir at time $t=0$. Show the computations that lead to your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Explain why there must be at least one time $t$, other than $t=10$, such that $W'(t)=0.7$ GL/day."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The equation $A=0.3W^{2/3}$ gives the relationship between the area $A$, in square kilometers, of the surface of the reservoir, and the volume of water $W(t)$, in gigaliters, in the reservoir. Find the instantaneous rate of change of $A$, in square kilometers per day, with respect to $t$ when $t=30$ days."
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ4",
@@ -892,7 +1057,43 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U6"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The graph of the continuous function $f$, consisting of three line segments and a semicircle, is shown above. Let $g$ be the function given by $g(x)=\\displaystyle\\int_{-2}^x f(t)\\,dt$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph F",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2013/2013_FRQ5_graph_f.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find $g(-6)$ and $g(3)$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find $g'(0)$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find all values of $x$ on the open interval $-6<x<3$ for which the graph of $g$ has a horizontal tangent. Determine whether $g$ has a local maximum, a local minimum, or neither at each of these values. Justify your answers."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Find all values of $x$ on the open interval $-6<x<3$ for which the graph of $g$ has a point of inflection. Explain your reasoning."
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ6",
@@ -1310,7 +1511,43 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U6"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The continuous function $f$ is defined on the interval $-5\\le x\\le8$. The graph of $f$, which consists of four line segments, is shown above. Let $g$ be the function given by $g(x)=2x+\\displaystyle\\int_{-2}^x f(t)\\,dt$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph F",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2014/2014_FRQ4_graph_f.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find $g(0)$ and $g(-5)$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find $g'(x)$ in terms of $f(x)$. For each of $g''(4)$ and $g''(-2)$, find the value or state that it does not exist."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "On what intervals, if any, is the graph of $g$ concave down? Give a reason for your answer."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The function $h$ is given by $h(x)=g(x^3+1)$. Find $h'(1)$. Show the work that leads to your answer."
+      }
+    ]
   },
   {
     "question_id": "2014_FRQ5",
@@ -1468,7 +1705,38 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U7"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Consider the differential equation $\\dfrac{dy}{dx}=\\left(1-\\dfrac2{x^2}\\right)(y-1)$, where $x\\ne0$. Let $y=f(x)$ be the particular solution to the differential equation with initial condition $f(1)=2$."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the slope of the line tangent to the graph of $f$ at the point $(1,2)$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Slope Field Axes",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2014/2014_FRQ6_slope_field_axes.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "On the axes provided, sketch a slope field for the given differential equation at the nine points indicated."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find the particular solution $y=f(x)$ to the differential equation $\\dfrac{dy}{dx}=\\left(1-\\dfrac2{x^2}\\right)(y-1)$ with initial condition $f(1)=2$."
+      }
+    ]
   },
   {
     "question_id": "2015_FRQ1",
@@ -1553,7 +1821,43 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U8"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "At time $t=0$ minutes, a tank contains $100$ liters of water. The piecewise-linear graph above shows the rate $R(t)$, in liters per minute, at which water is pumped into the tank during a $55$-minute period."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Rate Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2015/2015_FRQ1_rate_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find $R'(45)$. Using appropriate units, explain the meaning of your answer in the context of this problem."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "How many liters of water have been pumped into the tank from time $t=0$ to time $t=55$ minutes? Show the work that leads to your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "At time $t=10$ minutes, water begins draining from the tank at a rate modeled by the function $D$, where $D(t)=10e^{(\\sin t)/10}$ liters per minute. Water continues to drain at this rate until time $t=55$ minutes. How many liters of water are in the tank at time $t=55$ minutes?"
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Using the functions $R$ and $D$, determine whether the amount of water in the tank is increasing or decreasing at time $t=45$ minutes. Justify your answer."
+      }
+    ]
   },
   {
     "question_id": "2015_FRQ2",
@@ -1638,7 +1942,43 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U3"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The graph of the equation $x^2=-2+y+5\\cos y$ is shown above for $y\\le11$. It is known that $\\dfrac{dy}{dx}=\\dfrac{2x}{1-5\\sin y}$. The $x$-coordinate of point $P$ shown on the graph is $2$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Implicit Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2015/2015_FRQ2_implicit_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Write an equation for the line tangent to the graph at point $P$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "For $y\\le11$, find the $y$-coordinate of each point on the graph where the line tangent to the graph is vertical."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find $\\dfrac{d^2y}{dx^2}$ in terms of $y$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Find the value of $\\dfrac{d^2y}{dx^2}$ at point $P$."
+      }
+    ]
   },
   {
     "question_id": "2015_FRQ3",
@@ -1801,7 +2141,38 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U7"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Consider the differential equation $\\dfrac{dy}{dx}=\\dfrac{x(y-1)}4$."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the axes provided, sketch a slope field for the given differential equation at the twelve points indicated."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Slope Field Axes",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2015/2015_FRQ4_slope_field_axes.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Let $y=f(x)$ be the particular solution to the differential equation with the initial condition $f(1)=3$. Write an equation for the line tangent to the graph of $f$ at $x=1$ and use it to approximate $f(1.2)$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find the particular solution $y=f(x)$ to the differential equation with the initial condition $f(1)=3$."
+      }
+    ]
   },
   {
     "question_id": "2015_FRQ5",
@@ -1881,7 +2252,38 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U8"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Let $R$ be the region in the first quadrant enclosed by the graphs of $g(x)=\\sqrt{x}$ and $h(x)=\\dfrac{x}{3}$, as shown in the figure above."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Region R",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2015/2015_FRQ5_region_R.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the area of region $R$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Write, but do not evaluate, an expression involving one or more integrals that gives the volume of the solid generated when $R$ is revolved about the horizontal line $y=4$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find the maximum vertical distance between the graph of $g$ and the graph of $h$ between $x=0$ and $x=16$. Justify your answer."
+      }
+    ]
   },
   {
     "question_id": "2015_FRQ6",
@@ -2134,7 +2536,43 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U6"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "| $t$ (weeks) | 0 | 3 | 6 | 10 | 12 | |---:|---:|---:|---:|---:|---:| | $G(t)$ (games per week) | 160 | 450 | 900 | 2100 | 2400 | A store tracks the sales of one of its popular board games over a $12$-week period. The rate at which games are being sold is modeled by the differentiable function $G$, where $G(t)$ is measured in games per week and $t$ is measured in weeks for $0\\le t\\le12$. Values of $G(t)$ are given in the table above for selected values of $t$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Table",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2016/2016_FRQ2_table.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Approximate the value of $G'(8)$ using the data in the table. Show the computations that lead to your answer."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Approximate the value of $\\displaystyle\\int_0^{12}G(t)\\,dt$ using a right Riemann sum with the four subintervals indicated by the table. Explain the meaning of $\\displaystyle\\int_0^{12}G(t)\\,dt$ in the context of this problem."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "One salesperson believes that, starting with $2400$ games per week at time $t=12$, the rate at which games will be sold will increase at a constant rate of $100$ games per week per week. Based on this model, how many total games will be sold in the $8$ weeks between time $t=12$ and $t=20$?"
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Another salesperson believes the best model for the rate at which games will be sold in the $8$ weeks between time $t=12$ and $t=20$ is $M(t)=2400e^{-0.01(t-12)^2}$ games per week. Based on this model, how many total games, to the nearest whole number, will be sold during this period?"
+      }
+    ]
   },
   {
     "question_id": "2016_FRQ3",
@@ -2219,7 +2657,43 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U5"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The function $f$ is defined on the interval $-5\\le x\\le c$, where $c>0$ and $f(c)=0$. The graph of $f$, which consists of three line segments and a quarter of a circle with center $(-3,0)$ and radius $2$, is shown in the figure above."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph F",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2016/2016_FRQ3_graph_f.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the average rate of change of $f$ over the interval $[-5,0]$. Show the computations that lead to your answer."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "For $-5\\le x\\le c$, let $g$ be the function defined by $g(x)=\\displaystyle\\int_{-1}^x f(t)\\,dt$. Find the $x$-coordinate of each point of inflection of the graph of $g$. Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find the value of $c$ for which the average value of $f$ over the interval $-5\\le x\\le c$ is $\\dfrac12$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Assume $c>3$. The function $h$ is defined by $h(x)=f\\left(\\dfrac{x}{2}\\right)$. Find $h'(6)$ in terms of $c$."
+      }
+    ]
   },
   {
     "question_id": "2016_FRQ4",
@@ -2299,7 +2773,38 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U8"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Let $S$ be the shaded region in the first quadrant bounded above by the horizontal line $y=3$, below by the graph of $y=3\\sin x$, and on the left by the vertical line $x=k$, where $0<k<\\dfrac{\\pi}{2}$, as shown in the figure above."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Region S",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2016/2016_FRQ4_region_S.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the area of $S$ when $k=\\dfrac\\pi3$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "The area of $S$ is a function of $k$. Find the rate of change of the area of $S$ with respect to $k$ when $k=\\dfrac\\pi6$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Region $S$ is revolved about the horizontal line $y=5$ to form a solid. Write, but do not evaluate, an expression involving one or more integrals that gives the volume of the solid when $k=\\dfrac\\pi4$."
+      }
+    ]
   },
   {
     "question_id": "2016_FRQ5",
@@ -2624,7 +3129,43 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U6"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "During the time interval $0\\le t\\le4.5$ hours, water flows into tank A at a rate of $$a(t)=(2t-5)+5e^{2\\sin t}$$ liters per hour. During the same time interval, water flows into tank B at a rate of $b(t)$ liters per hour. Both tanks are empty at time $t=0$. The graphs of $y=a(t)$ and $y=b(t)$, shown in the figure above, intersect at $t=k$ and $t=2.416$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Rate Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2017/2017_FRQ2_rate_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "How much water will be in tank A at time $t=4.5$?"
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "During the time interval $0\\le t\\le k$ hours, water flows into tank B at a constant rate of $20.5$ liters per hour. What is the difference between the amount of water in tank A and the amount of water in tank B at time $t=k$?"
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The area of the region bounded by the graphs of $y=a(t)$ and $y=b(t)$ for $k\\le t\\le2.416$ is $14.470$. How much water is in tank B at time $t=2.416$?"
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "During the time interval $2.7\\le t\\le4.5$ hours, the rate at which water flows into tank B is modeled by $$w(t)=21-\\frac{30t}{(t-8)^2}$$ liters per hour. Is the difference $w(t)-a(t)$ increasing or decreasing at time $t=3.5$? Show the work that leads to your answer."
+      }
+    ]
   },
   {
     "question_id": "2017_FRQ3",
@@ -2709,7 +3250,43 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U6"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The graph of the function $f$, consisting of three line segments and a quarter of a circle, is shown above. Let $g$ be the function defined by $$g(x)=\\int_1^x f(t)\\,dt.$$"
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph F",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2017/2017_FRQ3_graph_f.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the average rate of change of $g$ from $x=-5$ to $x=5$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find the instantaneous rate of change of $g$ with respect to $x$ at $x=3$, or state that it does not exist."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "On what open intervals, if any, is the graph of $g$ concave up? Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Find all $x$-values in the interval $-5<x<5$ at which $g$ has a critical point. Classify each critical point as the location of a local minimum, a local maximum, or neither. Justify your answers."
+      }
+    ]
   },
   {
     "question_id": "2017_FRQ4",
@@ -2872,7 +3449,38 @@
       ],
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U8"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Let $R$ be the region in the first quadrant enclosed by the graph of $f(x)=\\sqrt{\\cos x}$, the graph of $g(x)=e^x$, and the vertical line $x=\\dfrac\\pi2$, as shown in the figure above."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Region R",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-ab/2017/2017_FRQ5_region_R.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Write, but do not evaluate, an integral expression that gives the area of $R$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find the volume of the solid generated when $R$ is revolved about the $x$-axis."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Region $R$ is the base of a solid whose cross sections perpendicular to the $x$-axis are semicircles with diameters on the $xy$-plane. Write, but do not evaluate, an integral expression that gives the volume of this solid."
+      }
+    ]
   },
   {
     "question_id": "2017_FRQ6",
