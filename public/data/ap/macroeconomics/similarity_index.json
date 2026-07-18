@@ -3007,16 +3007,6 @@
           "money",
           "supply_demand"
         ]
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.75,
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
-        ]
       }
     ],
     "overall_top10": [
@@ -3115,27 +3105,6 @@
           "money",
           "ppc",
           "supply_demand"
-        ]
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.6416,
-        "semantic": 0.4791,
-        "structural": 1.0,
-        "metadata": 0.5,
-        "concept": 0.75,
-        "primary_unit": "U4",
-        "topics": [
-          "fed",
-          "bank",
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
         ]
       },
       {
@@ -4858,16 +4827,6 @@
           "banking",
           "circular_flow",
           "monetary_policy"
-        ]
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.75,
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
         ]
       },
       {
@@ -10481,10 +10440,6 @@
       {
         "question_id": "2023_Q066",
         "similarity": 0.6167
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.6047
       }
     ],
     "concept_top5": [
@@ -10707,27 +10662,6 @@
           "monetary_policy",
           "money",
           "supply_demand"
-        ]
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.5419,
-        "semantic": 0.6047,
-        "structural": 1.0,
-        "metadata": 0.0,
-        "concept": 0.5,
-        "primary_unit": "U4",
-        "topics": [
-          "fed",
-          "bank",
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
         ]
       }
     ]
@@ -11259,16 +11193,6 @@
           "banking",
           "circular_flow",
           "monetary_policy"
-        ]
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.75,
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
         ]
       },
       {
@@ -14747,277 +14671,6 @@
       }
     ]
   },
-  "2012_Q56": {
-    "semantic_top5": [
-      {
-        "question_id": "2012_Q40",
-        "similarity": 0.6047
-      },
-      {
-        "question_id": "2019_Q59",
-        "similarity": 0.5668
-      },
-      {
-        "question_id": "2012_Q03",
-        "similarity": 0.5431
-      },
-      {
-        "question_id": "2018_Q06",
-        "similarity": 0.5384
-      },
-      {
-        "question_id": "2018_Q22",
-        "similarity": 0.5233
-      }
-    ],
-    "concept_top5": [
-      {
-        "question_id": "2016_Q16",
-        "similarity": 0.8,
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money",
-          "supply_demand"
-        ]
-      },
-      {
-        "question_id": "2018_Q35",
-        "similarity": 0.8,
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money",
-          "supply_demand"
-        ]
-      },
-      {
-        "question_id": "2012_Q19",
-        "similarity": 0.75,
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy"
-        ]
-      },
-      {
-        "question_id": "2012_Q43",
-        "similarity": 0.75,
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy"
-        ]
-      },
-      {
-        "question_id": "2019_Q27",
-        "similarity": 0.75,
-        "concepts": [
-          "banking",
-          "monetary_policy",
-          "money"
-        ]
-      }
-    ],
-    "overall_top10": [
-      {
-        "question_id": "2018_Q22",
-        "similarity": 0.6843,
-        "semantic": 0.5233,
-        "structural": 1.0,
-        "metadata": 0.75,
-        "concept": 0.75,
-        "primary_unit": "U4",
-        "topics": [
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2016_Q48",
-        "similarity": 0.6606,
-        "semantic": 0.443,
-        "structural": 1.0,
-        "metadata": 0.8333,
-        "concept": 0.75,
-        "primary_unit": "U4",
-        "topics": [
-          "fed",
-          "bank",
-          "bond",
-          "bonds",
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy"
-        ]
-      },
-      {
-        "question_id": "2012_Q12",
-        "similarity": 0.6416,
-        "semantic": 0.4791,
-        "structural": 1.0,
-        "metadata": 0.5,
-        "concept": 0.75,
-        "primary_unit": "U4",
-        "topics": [
-          "general macro"
-        ],
-        "concepts": [
-          "circular_flow",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2016_Q15",
-        "similarity": 0.6224,
-        "semantic": 0.3997,
-        "structural": 1.0,
-        "metadata": 0.625,
-        "concept": 0.75,
-        "primary_unit": "U4",
-        "topics": [
-          "bank"
-        ],
-        "concepts": [
-          "banking",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2018_Q34",
-        "similarity": 0.6067,
-        "semantic": 0.5166,
-        "structural": 1.0,
-        "metadata": 0.6,
-        "concept": 0.6,
-        "primary_unit": "U4",
-        "topics": [
-          "money supply",
-          "bank"
-        ],
-        "concepts": [
-          "banking",
-          "monetary_policy",
-          "money",
-          "supply_demand"
-        ]
-      },
-      {
-        "question_id": "2019_Q27",
-        "similarity": 0.6048,
-        "semantic": 0.3691,
-        "structural": 1.0,
-        "metadata": 0.5714,
-        "concept": 0.75,
-        "primary_unit": "U4",
-        "topics": [
-          "reserve requirement",
-          "bank",
-          "excess reserves",
-          "required reserves"
-        ],
-        "concepts": [
-          "banking",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2012_Q16",
-        "similarity": 0.5799,
-        "semantic": 0.3902,
-        "structural": 1.0,
-        "metadata": 0.5714,
-        "concept": 0.6667,
-        "primary_unit": "U4",
-        "topics": [
-          "money supply",
-          "reserve requirement",
-          "discount rate",
-          "bank"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "fiscal_policy",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2018_Q35",
-        "similarity": 0.5782,
-        "semantic": 0.2455,
-        "structural": 1.0,
-        "metadata": 0.6,
-        "concept": 0.8,
-        "primary_unit": "U4",
-        "topics": [
-          "money supply",
-          "bank"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money",
-          "supply_demand"
-        ]
-      },
-      {
-        "question_id": "2012_Q19",
-        "similarity": 0.5728,
-        "semantic": 0.3486,
-        "structural": 0.75,
-        "metadata": 0.5833,
-        "concept": 0.75,
-        "primary_unit": "U4",
-        "topics": [
-          "reserve requirement",
-          "bank",
-          "excess reserves"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy"
-        ]
-      },
-      {
-        "question_id": "2019_Q59",
-        "similarity": 0.5667,
-        "semantic": 0.5668,
-        "structural": 1.0,
-        "metadata": 0.8,
-        "concept": 0.4,
-        "primary_unit": "U4",
-        "topics": [
-          "bank",
-          "excess reserves",
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "fiscal_policy",
-          "money"
-        ]
-      }
-    ]
-  },
   "2012_Q57": {
     "semantic_top5": [
       {
@@ -17811,10 +17464,6 @@
       {
         "question_id": "2019_Q47",
         "similarity": 0.5267
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.513
       },
       {
         "question_id": "2019_Q25",
@@ -42430,10 +42079,6 @@
       {
         "question_id": "2019_Q36",
         "similarity": 0.5494
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.517
       }
     ],
     "concept_top5": [
@@ -42541,27 +42186,6 @@
         "concepts": [
           "banking",
           "monetary_policy"
-        ]
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.4668,
-        "semantic": 0.517,
-        "structural": 1.0,
-        "metadata": 0.6,
-        "concept": 0.25,
-        "primary_unit": "U4",
-        "topics": [
-          "fed",
-          "bank",
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
         ]
       },
       {
@@ -51606,16 +51230,6 @@
         ]
       },
       {
-        "question_id": "2012_Q56",
-        "similarity": 0.75,
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
         "question_id": "2014_Q53",
         "similarity": 0.75,
         "concepts": [
@@ -52549,27 +52163,6 @@
           "circular_flow",
           "fiscal_policy",
           "gdp"
-        ]
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.4259,
-        "semantic": 0.3314,
-        "structural": 1.0,
-        "metadata": 0.3333,
-        "concept": 0.4,
-        "primary_unit": "U4",
-        "topics": [
-          "fed",
-          "bank",
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
         ]
       },
       {
@@ -58276,16 +57869,6 @@
           "money",
           "supply_demand"
         ]
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.75,
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
-        ]
       }
     ],
     "overall_top10": [
@@ -60431,16 +60014,6 @@
         ]
       },
       {
-        "question_id": "2012_Q56",
-        "similarity": 0.75,
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
         "question_id": "2016_Q33",
         "similarity": 0.6667,
         "concepts": [
@@ -60494,27 +60067,6 @@
           "banking",
           "circular_flow",
           "monetary_policy"
-        ]
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.6606,
-        "semantic": 0.443,
-        "structural": 1.0,
-        "metadata": 0.8333,
-        "concept": 0.75,
-        "primary_unit": "U4",
-        "topics": [
-          "fed",
-          "bank",
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
         ]
       },
       {
@@ -81235,10 +80787,6 @@
         "similarity": 0.5542
       },
       {
-        "question_id": "2012_Q56",
-        "similarity": 0.5384
-      },
-      {
         "question_id": "2023_Q072",
         "similarity": 0.5356
       },
@@ -85570,10 +85118,6 @@
   "2018_Q22": {
     "semantic_top5": [
       {
-        "question_id": "2012_Q56",
-        "similarity": 0.5233
-      },
-      {
         "question_id": "2012_Q03",
         "similarity": 0.51
       },
@@ -85591,16 +85135,6 @@
       }
     ],
     "concept_top5": [
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.75,
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
-        ]
-      },
       {
         "question_id": "2018_Q35",
         "similarity": 0.6,
@@ -85643,27 +85177,6 @@
       }
     ],
     "overall_top10": [
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.6843,
-        "semantic": 0.5233,
-        "structural": 1.0,
-        "metadata": 0.75,
-        "concept": 0.75,
-        "primary_unit": "U6",
-        "topics": [
-          "fed",
-          "bank",
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
-        ]
-      },
       {
         "question_id": "2012_Q03",
         "similarity": 0.554,
@@ -103591,267 +103104,6 @@
       }
     ]
   },
-  "2019_Q32": {
-    "semantic_top5": [
-      {
-        "question_id": "2014_Q05",
-        "similarity": 0.4955
-      },
-      {
-        "question_id": "2016_Q16",
-        "similarity": 0.4789
-      },
-      {
-        "question_id": "2015_Q31",
-        "similarity": 0.4681
-      },
-      {
-        "question_id": "2014_Q52",
-        "similarity": 0.4671
-      },
-      {
-        "question_id": "2018_Q15",
-        "similarity": 0.467
-      }
-    ],
-    "concept_top5": [
-      {
-        "question_id": "2019_Q59",
-        "similarity": 0.3333,
-        "concepts": [
-          "banking",
-          "fiscal_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2014_Q24",
-        "similarity": 0.3333,
-        "concepts": [
-          "monetary_policy",
-          "money",
-          "supply_demand"
-        ]
-      },
-      {
-        "question_id": "2015_Q20",
-        "similarity": 0.3333,
-        "concepts": [
-          "monetary_policy",
-          "money",
-          "supply_demand"
-        ]
-      },
-      {
-        "question_id": "2019_Q27",
-        "similarity": 0.3333,
-        "concepts": [
-          "banking",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2012_Q03",
-        "similarity": 0.3333,
-        "concepts": [
-          "circular_flow",
-          "money",
-          "supply_demand"
-        ]
-      }
-    ],
-    "overall_top10": [
-      {
-        "question_id": "2015_Q20",
-        "similarity": 0.4514,
-        "semantic": 0.4201,
-        "structural": 1.0,
-        "metadata": 0.5,
-        "concept": 0.3333,
-        "primary_unit": "U4",
-        "topics": [
-          "money supply"
-        ],
-        "concepts": [
-          "monetary_policy",
-          "money",
-          "supply_demand"
-        ]
-      },
-      {
-        "question_id": "2018_Q22",
-        "similarity": 0.4409,
-        "semantic": 0.3315,
-        "structural": 0.75,
-        "metadata": 1.0,
-        "concept": 0.3333,
-        "primary_unit": "U4",
-        "topics": [
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2019_Q27",
-        "similarity": 0.4384,
-        "semantic": 0.4502,
-        "structural": 0.75,
-        "metadata": 0.5,
-        "concept": 0.3333,
-        "primary_unit": "U4",
-        "topics": [
-          "reserve requirement",
-          "bank",
-          "excess reserves",
-          "required reserves"
-        ],
-        "concepts": [
-          "banking",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2012_Q12",
-        "similarity": 0.43,
-        "semantic": 0.4292,
-        "structural": 0.75,
-        "metadata": 0.5,
-        "concept": 0.3333,
-        "primary_unit": "U4",
-        "topics": [
-          "general macro"
-        ],
-        "concepts": [
-          "circular_flow",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2016_Q15",
-        "similarity": 0.4286,
-        "semantic": 0.4256,
-        "structural": 0.75,
-        "metadata": 0.5,
-        "concept": 0.3333,
-        "primary_unit": "U4",
-        "topics": [
-          "bank"
-        ],
-        "concepts": [
-          "banking",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.4197,
-        "semantic": 0.4243,
-        "structural": 0.75,
-        "metadata": 0.75,
-        "concept": 0.25,
-        "primary_unit": "U4",
-        "topics": [
-          "fed",
-          "bank",
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2016_Q40",
-        "similarity": 0.4181,
-        "semantic": 0.337,
-        "structural": 1.0,
-        "metadata": 0.5,
-        "concept": 0.3333,
-        "primary_unit": "U4",
-        "topics": [
-          "real interest rate",
-          "bond",
-          "bonds"
-        ],
-        "concepts": [
-          "circular_flow",
-          "monetary_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2016_Q60",
-        "similarity": 0.4138,
-        "semantic": 0.4511,
-        "structural": 1.0,
-        "metadata": 0.3333,
-        "concept": 0.25,
-        "primary_unit": "U4",
-        "topics": [
-          "gdp",
-          "gross domestic product",
-          "real gdp",
-          "price level"
-        ],
-        "concepts": [
-          "gdp",
-          "monetary_policy",
-          "money",
-          "supply_demand"
-        ]
-      },
-      {
-        "question_id": "2019_Q59",
-        "similarity": 0.4093,
-        "semantic": 0.315,
-        "structural": 0.75,
-        "metadata": 0.75,
-        "concept": 0.3333,
-        "primary_unit": "U4",
-        "topics": [
-          "bank",
-          "excess reserves",
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "fiscal_policy",
-          "money"
-        ]
-      },
-      {
-        "question_id": "2015_Q45",
-        "similarity": 0.4072,
-        "semantic": 0.4554,
-        "structural": 0.75,
-        "metadata": 0.5,
-        "concept": 0.25,
-        "primary_unit": "U4",
-        "topics": [
-          "money supply"
-        ],
-        "concepts": [
-          "banking",
-          "monetary_policy",
-          "money",
-          "supply_demand"
-        ]
-      }
-    ]
-  },
   "2019_Q33": {
     "semantic_top5": [
       {
@@ -111030,27 +110282,6 @@
           "monetary_policy",
           "money",
           "supply_demand"
-        ]
-      },
-      {
-        "question_id": "2012_Q56",
-        "similarity": 0.5667,
-        "semantic": 0.5668,
-        "structural": 1.0,
-        "metadata": 0.8,
-        "concept": 0.4,
-        "primary_unit": "U4",
-        "topics": [
-          "fed",
-          "bank",
-          "saving",
-          "savings"
-        ],
-        "concepts": [
-          "banking",
-          "circular_flow",
-          "monetary_policy",
-          "money"
         ]
       },
       {

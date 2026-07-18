@@ -2085,40 +2085,6 @@
     "requires_graph": false
   },
   {
-    "question_id": "2012_Q56",
-    "year": "2012",
-    "text": "In the narrowest definition of money, M1, savings accounts are excluded because they are",
-    "options": {
-      "A": "not a medium of exchange",
-      "B": "not insured by federal deposit insurance",
-      "C": "available from financial institutions other than banks",
-      "D": "a store of purchasing power",
-      "E": "interest-paying accounts"
-    },
-    "answer": "A",
-    "primary_unit": "U4",
-    "secondary_units": [],
-    "topics": [
-      "fed",
-      "bank",
-      "saving",
-      "savings"
-    ],
-    "difficulty": "Easy",
-    "has_graph": false,
-    "image_paths": [],
-    "source": "AP Macro 2012 Official Practice Exam",
-    "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=7.0), Matched: ['fed', 'bank', 'saving']",
-    "difficulty_source": "inferred",
-    "difficulty_score": 0,
-    "skills": [
-      "identify",
-      "explain"
-    ],
-    "requires_graph": false
-  },
-  {
     "question_id": "2012_Q57",
     "year": "2012",
     "text": "For which of the following sets of unemployment and inflation rates will a central bank be most reluctant to increase the rate of growth in the money supply?",
@@ -9742,9 +9708,9 @@
     "options": {
       "A": "Increase / Increase / Increase",
       "B": "Increase / Increase / No change",
-      "C": "No change / Increase / Increase",
+      "C": "No change / Increase / Decrease",
       "D": "Decrease / Increase / Increase",
-      "E": "No change / Increase / Decrease"
+      "E": "No change / Increase / Increase"
     },
     "answer": "E",
     "primary_unit": "U4",
@@ -9803,7 +9769,14 @@
           "Decrease"
         ]
       }
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "answer_option_correction",
+        "note": "Verified 2017 Q21: answer E is correct; local issue was option E text. Correct option table is C = No change / Increase / Decrease, E = No change / Increase / Increase."
+      }
+    ]
   },
   {
     "question_id": "2017_Q22",
@@ -14225,71 +14198,6 @@
       "identify"
     ],
     "requires_graph": false
-  },
-  {
-    "question_id": "2019_Q32",
-    "year": "2019",
-    "text": "Fred Jones withdraws $1,000 in cash fro m his savings account. What immediate effect does this transaction have on the monetary aggregate measures of M1 and M2 ?",
-    "options": {
-      "A": "Increases / Decreases",
-      "B": "Increases / No change",
-      "C": "Decreases / No change",
-      "D": "No change / Decreases",
-      "E": "No change / No change"
-    },
-    "answer": "B",
-    "primary_unit": "U4",
-    "secondary_units": [],
-    "topics": [
-      "saving",
-      "savings"
-    ],
-    "difficulty": "Hard",
-    "has_graph": false,
-    "image_paths": [],
-    "source": "AP Macro 2019 Official Practice Exam | AP Macro 2022 Exam (Practice Set 3)",
-    "pure_unit": true,
-    "classification_reasoning": "Primary: U4 (score=1.0), Matched: ['saving', 'savings']",
-    "difficulty_source": "official_stats",
-    "difficulty_score": 0,
-    "percent_correct": 27,
-    "skills": [
-      "predict",
-      "analyze"
-    ],
-    "requires_graph": false,
-    "option_headers": [
-      "M1",
-      "M2"
-    ],
-    "option_table_data": {
-      "headers": [
-        "M1",
-        "M2"
-      ],
-      "rows": {
-        "A": [
-          "Increases",
-          "Decreases"
-        ],
-        "B": [
-          "Increases",
-          "No change"
-        ],
-        "C": [
-          "Decreases",
-          "No change"
-        ],
-        "D": [
-          "No change",
-          "Decreases"
-        ],
-        "E": [
-          "No change",
-          "No change"
-        ]
-      }
-    }
   },
   {
     "question_id": "2019_Q33",

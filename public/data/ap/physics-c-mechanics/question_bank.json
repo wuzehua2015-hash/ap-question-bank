@@ -3661,10 +3661,10 @@
     "text": "For an object in simple harmonic motion with \namplitude A, the kinetic energy will equal the \npotential energy when the displacement is",
     "options": {
       "A": "zero",
-      "B": "4\nA\n±",
-      "C": "2\nA\n±",
-      "D": "2\nA\n±",
-      "E": "A\n±"
+      "B": "$\\pm A/4$",
+      "C": "$\\pm A/2$",
+      "D": "$\\pm A/\\sqrt{2}$",
+      "E": "$\\pm A$"
     },
     "answer": "D",
     "image_paths": [],
@@ -3687,7 +3687,14 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2014.pdf",
       "raw_chunk_sha256": "b137e6f20c29c929fe453dcfaee32e3563f89e9616ac3a3e1dc9bbd8db5f38be"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Restored SHM displacement choices; answer D remains ?A/sqrt(2)."
+      }
+    ]
   },
   {
     "question_id": "2014_Q19",
@@ -7348,10 +7355,10 @@
     "text": "A small rock is launched straight upward from the \nsurface of a planet with no atmosphere. The initial \nspeed of the rock is twice the escape speed \nev of \nthe rock from the planet. If gravitational effects \nfrom other objects are negligible, the speed of the \nrock at a very great distance from the planet will \napproach a value of",
     "options": {
       "A": "zero",
-      "B": "2\nev",
-      "C": "ev",
-      "D": "2 ev",
-      "E": "3 ev"
+      "B": "$\\sqrt{2}v_e$",
+      "C": "$v_e$",
+      "D": "$2v_e$",
+      "E": "$\\sqrt{3}v_e$"
     },
     "answer": "E",
     "image_paths": [],
@@ -7374,7 +7381,14 @@
       "source_pdf": "subjects\\AP\\Physics-C-Mechanics\\01-exams\\AP Mechanics 2016.pdf",
       "raw_chunk_sha256": "2fddaebc78d47e79855eee8d7b289b1cb518ca27ccbc08cd526f4e0db8eb0b24"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Restored escape-speed distractors; answer E follows energy conservation for launch speed 2ve."
+      }
+    ]
   },
   {
     "question_id": "2016_Q33",
