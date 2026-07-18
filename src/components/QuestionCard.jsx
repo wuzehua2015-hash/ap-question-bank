@@ -220,8 +220,10 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
                     {isSelected ? '✓' : ''}
                   </span>
                 )}
-                <span className="font-bold mr-2">{key}.</span>
-                <MathText text={text} forceInlineLatex as="div" />
+                <span className="option-label">{key}.</span>
+                <span className="option-content">
+                  <MathText text={text} forceInlineLatex />
+                </span>
                 {showCorrect && <span className="ml-2 text-success text-sm">✓ 正确</span>}
                 {showIncorrect && <span className="ml-2 text-error text-sm">✗ 你的答案</span>}
               </button>

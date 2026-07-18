@@ -45,7 +45,7 @@ function DisplayOptions({ options, variant }) {
         {Object.entries(opts).map(([key, text]) => (
           <div key={key} style={{ fontSize: '14px', color: '#374151', lineHeight: 1.5 }}>
             <span style={{ fontWeight: 'bold', marginRight: '4px' }}>{key}.</span>
-            <MathText text={text} forceInlineLatex as="div" />
+            <MathText text={text} forceInlineLatex />
           </div>
         ))}
       </div>
@@ -56,8 +56,10 @@ function DisplayOptions({ options, variant }) {
     <div className="space-y-3 mt-4">
       {Object.entries(opts).map(([key, text]) => (
         <div key={key} className="text-base sm:text-sm text-text min-h-[48px] flex items-center">
-          <span className="font-bold mr-2">{key}.</span>
-          <MathText text={text} forceInlineLatex as="div" />
+          <span className="option-label">{key}.</span>
+          <span className="option-content">
+            <MathText text={text} forceInlineLatex />
+          </span>
         </div>
       ))}
     </div>
