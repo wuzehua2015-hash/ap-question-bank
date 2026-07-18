@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useSubject } from '../contexts/SubjectContext'
+import { subjectDisplayName } from '../utils/displayLabels'
 
 function SettingsPage() {
   const {
@@ -64,7 +65,7 @@ function SettingsPage() {
                     onClick={() => setDefaultStudySubject(subject.id)}
                     className="text-left"
                   >
-                    <span className={`block font-semibold ${isCurrent ? 'text-brand' : 'text-text'}`}>{subject.name}</span>
+                    <span className={`block font-semibold ${isCurrent ? 'text-brand' : 'text-text'}`}>{subjectDisplayName(subject)}</span>
                     <span className="mt-1 block text-sm text-text-muted">{isCurrent ? '当前科目' : '点击设为当前'}</span>
                   </button>
                   <div className="flex gap-4 text-sm">
@@ -97,7 +98,7 @@ function SettingsPage() {
             return (
               <div key={subject.id} className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <div className="font-semibold text-text">{subject.name}</div>
+                  <div className="font-semibold text-text">{subjectDisplayName(subject)}</div>
                   <div className="mt-1 text-sm text-text-muted">
                     {subject.mockExam?.totalMCQ || 0} MCQ 模考{subject.hasFRQ ? ` · ${subject.mockExam?.frqCount || 0} FRQ 模考` : ''}
                   </div>

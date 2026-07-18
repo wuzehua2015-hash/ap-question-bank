@@ -78,6 +78,9 @@ Content-capacity status: 2026-07-16 capacity reinforcement cleared the pre-launc
 ## Student Rendering Contract
 
 - Online Quiz, online Mock MCQ, FRQ player, review pages, search, and PDF surfaces must share the same `MathText` rendering path.
+- Student-facing product UI is Chinese-first. Keep `public/data/subjects.json` in official/source terminology, but render course names, short names, unit names, difficulty labels, account tiers, entitlement features, and entitlement statuses through `src/utils/displayLabels.js`.
+- Stable exam/product terms may remain bilingual or English when clearer: `AP`, `Quiz`, `Mock Exam`, `MCQ`, `FRQ`, `PDF`, Java/code identifiers, route names, and internal storage/API keys.
+- `npm run validate:copy` blocks direct rendering of raw `subject.name`, `subject.shortName`, `unit.name`, or `unit.title` in checked student-facing files. New pages that show subjects or units must import the display-label helpers instead of reading source labels directly.
 - CSA code must render through code elements (`.math-code-block` or `.math-inline-code`); raw Markdown code fences must never be visible to students.
 - Grouped MCQ context is student-visible content, not audit-only metadata. If a question has `group_context`, Quiz, Search, review, and PDF displays must render `group_context` before the member stem through the same `MathText` path.
 - Cross-unit grouped MCQ buckets are excluded from single-unit Quiz. They may appear only in cumulative/all-subject/Mock flows, and only as complete grouped buckets.

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { changePassword, logoutOtherSessions, updateProfile } from '../utils/accountApi'
+import { accountLevelDisplay, featureDisplayName, subjectDisplayName } from '../utils/displayLabels'
 import { collectLocalProgressSnapshot } from '../utils/storage'
 
 function AccountPage() {
@@ -110,7 +111,7 @@ function AccountPage() {
 
         <section className="bg-surface border border-border rounded-lg p-6">
           <h2 className="text-lg font-bold text-brand mb-4">账号级别</h2>
-          <div className="text-2xl font-bold text-brand mb-2">{accountLevelLabel(accountLevel, isInternalStudent)}</div>
+          <div className="text-2xl font-bold text-brand mb-2">{accountLevelDisplay(accountLevel, isInternalStudent)}</div>
           <p className="text-sm text-text-muted mb-4">
             注册会员可以使用错题本、学习记录和在线 Mock Exam。翎英学员可以使用搜索、题单、相似题和 PDF 下载。
           </p>
@@ -120,8 +121,8 @@ function AccountPage() {
             <div className="space-y-2">
               {entitlements.map(item => (
                 <div key={item.id || `${item.subject_id}-${item.feature_key}`} className="flex justify-between gap-3 text-sm border border-border rounded-lg p-3">
-                  <span>{item.subject_id === '*' ? '全部科目' : item.subject_id}</span>
-                  <span className="font-medium text-brand">{featureLabel(item.feature_key)}</span>
+                  <span>{item.subject_id === '*' ? '全部科目' : subjectDisplayName(item.subject_id)}</span>
+                  <span className="font-medium text-brand">{featureDisplayName(item.feature_key)}</span>
                 </div>
               ))}
             </div>
@@ -204,23 +205,6 @@ function StatCard({ label, value }) {
       <div className="text-xs text-text-muted">{label}</div>
     </div>
   )
-}
-
-function accountLevelLabel(level, isInternalStudent) {
-  if (isInternalStudent) return '翎英学员'
-  if (level === 'free') return '注册会员'
-  if (level === 'admin') return '管理员'
-  return '游客'
-}
-
-function featureLabel(featureKey) {
-  const labels = {
-    full_access: '完整题库',
-    assignments: '老师作业',
-    pdf_export: 'PDF 下载',
-    frq_rubric: 'FRQ 评分标准',
-  }
-  return labels[featureKey] || featureKey
 }
 
 export default AccountPage

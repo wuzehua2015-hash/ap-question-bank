@@ -4,6 +4,7 @@ import { useSubject } from '../contexts/SubjectContext'
 import { useAuth } from '../contexts/AuthContext'
 import { loadMCQBank, getSubjectUnits, generateQuiz } from '../utils/questionBank'
 import { startQuiz } from '../utils/quizSession'
+import { unitDisplayName } from '../utils/displayLabels'
 
 function QuizSetup() {
   const navigate = useNavigate()
@@ -104,7 +105,7 @@ function QuizSetup() {
             <option value="all">全部可练单元</option>
             {units.map(item => (
               <option key={item.id} value={item.id}>
-                {item.id}: {item.name}（{item.questionCount} 题）
+                {unitDisplayName(item, currentSubject)}（{item.questionCount} 题）
               </option>
             ))}
           </select>

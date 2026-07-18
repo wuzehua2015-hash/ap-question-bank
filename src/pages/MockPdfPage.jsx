@@ -7,6 +7,7 @@ import QuestionDisplay from '../components/QuestionDisplay'
 import FRQDisplay, { RubricDisplay } from '../components/FRQDisplay'
 import { useSubject } from '../contexts/SubjectContext'
 import PremiumGate from '../components/PremiumGate'
+import { subjectDisplayName } from '../utils/displayLabels'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -106,7 +107,11 @@ function MockPdfPage() {
 
   const sessionSubjectId = quizInfo?.subject || quizInfo?.config?.subject
   const sessionSubjectConfig = subjects?.find(subject => subject.id === sessionSubjectId)
-  const subjectName = sessionSubjectConfig?.name || currentSubjectConfig?.name || 'AP 题库'
+  const subjectName = sessionSubjectConfig
+    ? subjectDisplayName(sessionSubjectConfig)
+    : currentSubjectConfig
+    ? subjectDisplayName(currentSubjectConfig)
+    : 'AP 题库'
   const totalMcq = mcqs.length
   const totalFrq = frqs.length
   const totalFrqPoints = frqs.reduce((sum, f) => sum + (f.rubric?.total_points || 0), 0)

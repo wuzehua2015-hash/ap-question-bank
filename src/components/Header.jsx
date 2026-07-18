@@ -2,16 +2,17 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { useSubject } from '../contexts/SubjectContext'
+import { accountLevelDisplay, subjectDisplayName } from '../utils/displayLabels'
 
 function Header() {
   const location = useLocation()
   const { currentSubject, mySubjects, setSubject } = useSubject()
-  const { isLoggedIn, isInternalStudent, user } = useAuth()
+  const { isLoggedIn, isInternalStudent, user, accountLevel } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false)
   const [subjectOpen, setSubjectOpen] = useState(false)
 
   const currentSubjectConfig = mySubjects.find(subject => subject.id === currentSubject)
-  const accountLabel = isLoggedIn ? (isInternalStudent ? '翎英学员' : '注册会员') : '登录'
+  const accountLabel = isLoggedIn ? accountLevelDisplay(accountLevel || user?.account_level || 'free', isInternalStudent) : '登录'
   const hasStudySubjects = mySubjects.length > 0
   const navItems = [
     { path: '/quiz', label: '练习' },
@@ -45,7 +46,7 @@ function Header() {
                 onClick={() => setSubjectOpen(!subjectOpen)}
                 className="text-text-muted hover:text-brand"
               >
-                {currentSubjectConfig?.shortName || currentSubjectConfig?.name || '选择科目'}
+                {currentSubjectConfig ? subjectDisplayName(currentSubjectConfig, 'short') : '选择科目'}
               </button>
               {subjectOpen && (
                 <div className="absolute right-0 top-full mt-3 w-64 rounded-lg border border-border bg-white p-2 shadow-lg">
@@ -60,7 +61,7 @@ function Header() {
                         }}
                         className={`block w-full rounded-md px-3 py-2 text-left text-sm hover:bg-bg ${subject.id === currentSubject ? 'font-semibold text-brand' : 'text-text'}`}
                       >
-                        {subject.name}
+                        {subjectDisplayName(subject)}
                       </button>
                     ))
                   ) : (
@@ -93,7 +94,7 @@ function Header() {
 
       {menuOpen && (
         <nav className="md:hidden border-t border-border bg-bg px-5 py-4">
-          <div className="mb-4 text-sm text-text-muted">{currentSubjectConfig?.name || '选择科目'}</div>
+          <div className="mb-4 text-sm text-text-muted">{currentSubjectConfig ? subjectDisplayName(currentSubjectConfig) : '选择科目'}</div>
           <div className="grid grid-cols-2 gap-3 text-sm">
             <Link to="/" onClick={() => setMenuOpen(false)} className="text-text">首页</Link>
             {navItems.map(item => (

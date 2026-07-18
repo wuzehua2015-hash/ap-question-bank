@@ -20,6 +20,7 @@ import {
   removeQuestionFromDefaultSet,
 } from '../utils/storage'
 import { startCustomQuiz, startSimilarQuiz } from '../utils/quizSession'
+import { difficultyDisplayName, subjectDisplayName, unitDisplayName } from '../utils/displayLabels'
 
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard']
 
@@ -167,7 +168,7 @@ function SearchWorkbench() {
       <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between mb-6">
         <div>
           <h1 className="text-2xl font-bold text-brand">题库搜索</h1>
-          <p className="text-sm text-text-muted mt-1">{currentSubjectConfig?.name || currentSubject} · 当前科目</p>
+          <p className="text-sm text-text-muted mt-1">{currentSubjectConfig ? subjectDisplayName(currentSubjectConfig) : currentSubject} · 当前科目</p>
         </div>
         <QuestionSetPanel
           count={questionSetQuestions.length}
@@ -186,9 +187,9 @@ function SearchWorkbench() {
           className="w-full p-3 border border-border rounded-lg bg-bg text-base mb-4"
         />
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          <FilterSelect label="单元" value={unitFilter} onChange={setUnitFilter} options={units.map(unit => [unit.id, `${unit.id} ${unit.name || ''}`.trim()])} />
+          <FilterSelect label="单元" value={unitFilter} onChange={setUnitFilter} options={units.map(unit => [unit.id, unitDisplayName(unit, currentSubject)])} />
           <FilterSelect label="年份" value={yearFilter} onChange={setYearFilter} options={years.map(year => [year, year])} />
-          <FilterSelect label="难度" value={difficultyFilter} onChange={setDifficultyFilter} options={DIFFICULTIES.map(item => [item, item])} />
+          <FilterSelect label="难度" value={difficultyFilter} onChange={setDifficultyFilter} options={DIFFICULTIES.map(item => [item, difficultyDisplayName(item)])} />
           <FilterSelect label="已做过" value={doneFilter} onChange={setDoneFilter} options={[['yes', '是'], ['no', '否']]} />
           <FilterSelect label="错题" value={wrongFilter} onChange={setWrongFilter} options={[['yes', '是'], ['no', '否']]} />
         </div>
@@ -236,7 +237,7 @@ function SearchWorkbench() {
                   <Tag>{question.question_id}</Tag>
                   <Tag tone="brand">{question.primary_unit}</Tag>
                   <Tag>{question.year}</Tag>
-                  {question.difficulty && <Tag tone={question.difficulty}>{question.difficulty}</Tag>}
+                  {question.difficulty && <Tag tone={question.difficulty}>{difficultyDisplayName(question.difficulty)}</Tag>}
                   {doneIds.has(question.question_id) && <Tag tone="done">已做</Tag>}
                   {wrongIds.has(question.question_id) && <Tag tone="wrong">错题</Tag>}
                   {inSet && <Tag tone="set">题单</Tag>}
