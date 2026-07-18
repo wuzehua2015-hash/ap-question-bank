@@ -935,10 +935,11 @@ async function screenshot(client, name, artifacts) {
   artifacts.push(file)
 }
 
-function routeUrl(hash) {
-  const cleanHash = hash.startsWith('#') ? hash : `#${hash}`
-  const separator = cleanHash.includes('?') ? '&' : '?'
-  return `${baseUrl}${cleanHash}${separator}audit=${Date.now()}`
+function routeUrl(route) {
+  const cleanRoute = String(route || '/').replace(/^#/, '')
+  const path = cleanRoute.startsWith('/') ? cleanRoute.slice(1) : cleanRoute
+  const separator = path.includes('?') ? '&' : '?'
+  return `${baseUrl}${path}${separator}audit=${Date.now()}`
 }
 
 function sampleText(text, index) {

@@ -3,6 +3,7 @@ import {
   fetchMe,
   fetchProgress,
   loginWithPassword as loginWithPasswordApi,
+  requestEmailVerification as requestEmailVerificationApi,
   requestLoginCode as requestLoginCodeApi,
   registerAccount as registerAccountApi,
   saveProgress,
@@ -25,6 +26,7 @@ const AuthContext = createContext({
   isLoggedIn: false,
   isInternalStudent: false,
   isLynkStudent: false,
+  requestEmailVerification: async () => {},
   requestLoginCode: async () => {},
   registerAccount: async () => {},
   loginWithPassword: async () => {},
@@ -103,6 +105,10 @@ export function AuthProvider({ children }) {
     return requestLoginCodeApi(email)
   }, [])
 
+  const requestEmailVerification = useCallback(() => {
+    return requestEmailVerificationApi()
+  }, [])
+
   const finishAuthenticated = useCallback(async (accountData) => {
     setSessionToken(accountData.sessionToken)
     applyAccountData(accountData)
@@ -150,6 +156,7 @@ export function AuthProvider({ children }) {
     isLoggedIn: Boolean(user),
     isInternalStudent,
     isLynkStudent: isInternalStudent,
+    requestEmailVerification,
     requestLoginCode,
     registerAccount,
     loginWithPassword,
@@ -157,7 +164,7 @@ export function AuthProvider({ children }) {
     verifyEmail,
     logout,
     syncNow,
-  }), [accountLevel, entitlements, isInternalStudent, loginWithPassword, logout, registerAccount, requestLoginCode, status, syncNow, user, verifyEmail, verifyLoginCode])
+  }), [accountLevel, entitlements, isInternalStudent, loginWithPassword, logout, registerAccount, requestEmailVerification, requestLoginCode, status, syncNow, user, verifyEmail, verifyLoginCode])
 
   return (
     <AuthContext.Provider value={value}>

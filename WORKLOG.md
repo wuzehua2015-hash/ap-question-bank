@@ -1,5 +1,22 @@
 # LynkEdu Worklog
 
+## 2026-07-18
+
+- Completed real production browser QA for student account and admin entitlement flows on `lynkedu.com` / `admin.lynkedu.com`:
+  - migrated student routing from hash URLs to direct `BrowserRouter` paths and updated browser audit scripts to use normal paths;
+  - verified `/register` renders on the production domain and created a real test account through the online registration page;
+  - verified registration email delivery is accepted by Resend and recorded in D1 account audit metadata;
+  - added `/api/auth/request-email-verification` plus `/account` “重新发送验证码” controls with server-side 60-second cooldown and safe email diagnostics;
+  - verified admin grant, cancellation, and restoration of `翎英学员` using the real admin page;
+  - verified student account level and `/search` access change correctly after grant/cancellation/restore;
+  - improved admin entitlement panel so active current entitlements and revoked/expired historical rows are separated;
+  - hardened admin deployment cache behavior by generating `dist-admin/_headers` with no-store HTML and immutable asset headers.
+- Validation/deployment evidence:
+  - `npm run validate` passed;
+  - `npm run build` passed and student Pages deployed to `https://56c101dd.lynkedu-ap-question-bank.pages.dev`;
+  - `npm run build:admin` passed and admin Pages deployed to `https://c581a9af.lynkedu-admin.pages.dev`;
+  - real browser confirmed `admin.lynkedu.com` renders after forcing a new asset hash and the entitlement panel shows “历史记录（1）” separately from current active access.
+
 ## 2026-07-16
 
 - Updated unit-classification authority rule after user clarified classification must use official exam and subject framework materials as the only source of truth:

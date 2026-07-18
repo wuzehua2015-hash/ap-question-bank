@@ -3,6 +3,7 @@
 > 针对 AP Question Bank 从单科目（Macro）扩展到多科目（Macro + Micro）的架构调研
 > 
 > 调研维度：部署环境、数据隔离、前端合理性、竞品方案
+> 当前状态：历史研究文档。生产SSoT请以 `../PROJECT_STATUS.md` 和 `GLOBAL_QUESTION_BANK_SOP.md` 为准；当前线上部署为 Cloudflare Pages 根域名 + `BrowserRouter`，不再使用 GitHub Pages 子路径/HashRouter 方案。
 
 ---
 

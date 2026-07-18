@@ -63,6 +63,12 @@ export function verifyEmail(code) {
   })
 }
 
+export function requestEmailVerification() {
+  return apiRequest('/api/auth/request-email-verification', {
+    method: 'POST',
+  })
+}
+
 export function requestPasswordReset(email) {
   return apiRequest('/api/auth/request-password-reset', {
     method: 'POST',
