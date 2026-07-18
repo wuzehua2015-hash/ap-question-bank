@@ -316,6 +316,8 @@
 - Preserved official/source metadata in `public/data/subjects.json`; UI localization is now a presentation-layer concern, not a data-source rewrite.
 - Strengthened `scripts/chinese_copy_gate.cjs` so checked student-facing files cannot directly render raw `subject.name`, `subject.shortName`, `unit.name`, or `unit.title`.
 - Verification passed: `npm run validate:copy`, `npm run validate`, `npm run build:admin`, and `npm run build`.
+- Deployed student site to `https://a4263303.lynkedu-ap-question-bank.pages.dev`; production `https://lynkedu.com` now references JS `/assets/index-BPpfi7Zf.js` and CSS `/assets/index-C75AEhR5.css`.
+- Deployed admin site to `https://4c150904.lynkedu-admin.pages.dev`; production `https://admin.lynkedu.com` now references JS `/assets/index-DvhgSTr2.js` and CSS `/assets/index-DrvrsFJO.css`.
 
 # 2026-07-17 - Admin Custom Domain Live
 
