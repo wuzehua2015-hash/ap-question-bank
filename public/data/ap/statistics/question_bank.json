@@ -13164,7 +13164,7 @@
       "B": "$\\frac{0.50-0.60}{\\sqrt{(0.40)(0.60)/1{,}045}}$",
       "C": "$\\frac{0.60-0.50}{\\sqrt{(0.50)(0.50)/1{,}045}}$",
       "D": "$\\frac{0.60-0.50}{\\sqrt{(0.40)(0.60)/1{,}045}}$",
-      "E": "$\\frac{0.60-0.50}{\\sqrt{(0.50)(0.50)/1{,}045}}$"
+      "E": "$\\frac{0.60-0.50}{(0.40)(0.60)/1{,}045}$"
     },
     "answer": "C",
     "is_scored": true,
@@ -13203,7 +13203,14 @@
       ],
       "classification_version": "official_framework_2026_07",
       "primary_unit": "U6"
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate distractor E with a non-square-root standard-error form; answer C remains the one-proportion z statistic under H0 p=0.50."
+      }
+    ]
   },
   {
     "question_id": "2017_Q06",
@@ -13488,7 +13495,7 @@
     "options": {
       "A": "$4.3\\pm1.96\\left(\\frac{1.5}{\\sqrt{3}}\\right)$",
       "B": "$4.3\\pm1.96\\left(\\frac{1.5}{3}\\right)$",
-      "C": "$4.3\\pm2.306\\left(\\frac{1.5}{\\sqrt{9}}\\right)$",
+      "C": "$4.3\\pm1.96\\left(\\frac{1.5}{\\sqrt{9}}\\right)$",
       "D": "$4.3\\pm2.306\\left(\\frac{1.5}{9}\\right)$",
       "E": "$4.3\\pm2.306\\left(\\frac{1.5}{\\sqrt{9}}\\right)$"
     },
@@ -13529,7 +13536,19 @@
       ],
       "classification_version": "official_framework_2026_07",
       "primary_unit": "U7"
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate distractor C with the denominator n form; answer E remains the t interval using s/sqrt(n)."
+      },
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Adjusted option C to a distinct z-critical distractor; answer E remains the t interval with 2.306 and s/sqrt(n)."
+      }
+    ]
   },
   {
     "question_id": "2017_Q12",

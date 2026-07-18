@@ -24888,10 +24888,10 @@
     "text": "How many units of output should a firm with the cost and demand curves shown above produce to maximize profit?",
     "options": {
       "A": "0",
-      "B": "Q,",
-      "C": "Q",
-      "D": "Q,",
-      "E": "Q4"
+      "B": "$Q_1$",
+      "C": "$Q_2$",
+      "D": "$Q_3$",
+      "E": "$Q_4$"
     },
     "answer": "D",
     "has_graph": true,
@@ -24930,7 +24930,14 @@
       ],
       "primary_unit": "U4"
     },
-    "pure_unit": true
+    "pure_unit": true,
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Restored quantity-label subscripts from the graph; profit-maximizing output remains answer D at Q3."
+      }
+    ]
   },
   {
     "question_id": "2019_Q11",

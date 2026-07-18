@@ -11447,7 +11447,7 @@
       "A": "[62, 45, 30, 12, 7, 8, 10, 3]",
       "B": "[30, 12, 8, 7, 62, 45, 10, 3]",
       "C": "[62, 45, 30, 7, 12, 8, 10, 3]",
-      "D": "[62, 45, 30, 12, 7, 8, 10, 3]",
+      "D": "[62, 45, 7, 30, 12, 8, 10, 3]",
       "E": "[12, 8, 30, 7, 62, 45, 10, 3]"
     },
     "answer": "C",
@@ -11478,7 +11478,14 @@
       "license": "GNU Free Documentation License 1.3",
       "source_url": "https://github.com/bhoffman0/CSAwesome"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate distractor D with the list state after two descending-selection-sort passes; answer C remains the state after three passes."
+      }
+    ]
   },
   {
     "question_id": "csawesome_practice_Q080",
@@ -11876,11 +11883,11 @@
     "type": "MCQ",
     "text": "Which of the following is equivalent to `! ( (x > 10) && (x <= 5) )`?",
     "options": {
-      "A": "(x 5)",
+      "A": "`(x <= 10) && (x > 5)`",
       "B": "(x > 10) && (x <=5)",
-      "C": "(x 5)",
-      "D": "(x 5)",
-      "E": "(x > 10) || (x <= 5)"
+      "C": "`(x > 10) && (x <= 5)`",
+      "D": "`(x <= 10) || (x > 5)`",
+      "E": "`(x > 10) || (x <= 5)`"
     },
     "answer": "D",
     "answers": [
@@ -11910,7 +11917,14 @@
       "license": "GNU Free Documentation License 1.3",
       "source_url": "https://github.com/bhoffman0/CSAwesome"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Restored comparison operators in boolean-expression choices; answer D is the De Morgan equivalent."
+      }
+    ]
   },
   {
     "question_id": "csawesome_practice_Q089",
@@ -13175,7 +13189,7 @@
       "A": "It prints string str",
       "B": "It prints string str in reverse order",
       "C": "It prints only the first two characters of string str",
-      "D": "It prints only the first two characters of string str",
+      "D": "It prints all but the first character of string str",
       "E": "It prints only the last character of string str"
     },
     "answer": "A",
@@ -13206,7 +13220,14 @@
       "license": "GNU Free Documentation License 1.3",
       "source_url": "https://github.com/bhoffman0/CSAwesome"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate distractor D; recursive method prints each character of str in order, so answer A remains correct."
+      }
+    ]
   },
   {
     "question_id": "csawesome_practice_Q116",

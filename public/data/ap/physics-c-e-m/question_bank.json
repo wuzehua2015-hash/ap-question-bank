@@ -3592,7 +3592,7 @@
     "text": "A compass needle is in a uniform magnetic\nfield B with its north-seeking pole pointing in\nthe direction of the field. The net magnetic force\non the compass needle is",
     "options": {
       "A": "in the direction of B",
-      "B": "in the direction of\nB",
+      "B": "opposite the direction of B",
       "C": "perpendicular to the plane determined by B\nand the needle",
       "D": "in the same plane as B and the needle, but\nperpendicular to the needle",
       "E": "zero"
@@ -3610,12 +3610,9 @@
       "2.B"
     ],
     "difficulty": "medium",
-    "has_graph": true,
-    "requires_graph": true,
-    "image_paths": [
-      "images/ap/physics-c-e-m/2013/2013_mcq28_img01.png",
-      "images/ap/physics-c-e-m/2013/2013_mcq28_img02.png"
-    ],
+    "has_graph": false,
+    "requires_graph": false,
+    "image_paths": [],
     "provenance": {
       "pdf": "subjects/AP/Physics-C-E-M/01-exams/AP EM 2013.pdf",
       "notes": [
@@ -3636,7 +3633,19 @@
       "classification_version": "physics_c_em_keyword_draft_v1",
       "primary_unit": "U12"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Removed unrelated image assets and restored a distinct direction distractor; answer E remains zero net force in a uniform magnetic field."
+      },
+      {
+        "date": "2026-07-18",
+        "type": "visual_metadata_update",
+        "note": "Question is text-only after unrelated image references were removed."
+      }
+    ]
   },
   {
     "question_id": "2013_Q29",
@@ -7517,11 +7526,11 @@
     "source": "AP Physics C: Electricity and Magnetism 2015 Practice Exam",
     "text": "A capacitor of capacitance C is connected in\nseries with resistance R and a battery of emf e .\nThe graph above shows the charge q on the\ncapacitor approaching a value qmax with\n\nincreasing time t. What is qmax ?",
     "options": {
-      "A": "R Ce",
-      "B": "RC e",
-      "C": "RC e",
-      "D": "R e",
-      "E": "Ce"
+      "A": "$RC\\mathcal{E}$",
+      "B": "$R\\mathcal{E}$",
+      "C": "$\\mathcal{E}/C$",
+      "D": "$\\mathcal{E}/R$",
+      "E": "$C\\mathcal{E}$"
     },
     "answer": "E",
     "primary_unit": "U13",
@@ -7561,7 +7570,19 @@
       "classification_version": "physics_c_em_keyword_draft_v1",
       "primary_unit": "U13"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Normalized emf notation and restored distinct distractors for capacitor maximum charge; answer E remains C times emf."
+      },
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Adjusted option C to remain a distinct distractor after emf notation cleanup."
+      }
+    ]
   },
   {
     "question_id": "2015_Q26",

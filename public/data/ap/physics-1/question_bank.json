@@ -4759,87 +4759,17 @@
       "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf",
       "raw_chunk_sha256": "5dd2e23d4739b2d859832faf1014cb42974b51e177ec28d0cedb02f17a1244a4"
     },
-    "group_id": "2015_Q35_36",
-    "group_members": [
-      "2015_Q35",
-      "2015_Q36"
-    ],
     "group_role": "lead",
     "requires_group_context": true,
     "group_context": "Questions 35-36 refer to two identical spaceships traveling in deep space, far from any planets or stars. The ships travel in the same direction, with the slower one directly behind the faster one. The ships are connected by a cable attached to a spool, so that the part of the cable outside the ships can be made longer or shorter as needed. The cable is used to bring the ships to the same speed for a transfer of cargo. The graph above shows the speed of the two ships during a $10\\,\\mathrm{s}$ interval.",
-    "rubric_image_paths": []
-  },
-  {
-    "question_id": "2015_Q36",
-    "id": "2015_Q36",
-    "subject": "AP Physics 1: Algebra-Based",
-    "subject_id": "physics-1",
-    "year": 2015,
-    "question_number": 36,
-    "type": "MCQ",
-    "text": "Which of the following graphs best represents the net force $F_{net}$ exerted on the two-ship system?",
-    "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D"
-    },
-    "answer": "C",
-    "answers": [
-      "C"
-    ],
-    "answer_type": "single",
-    "scoring_status": "scored",
-    "image_paths": [
-      "images/ap/physics-1/2015/2015_p034_img01.png"
-    ],
-    "primary_unit": "U4",
-    "unit": "U4",
-    "unit_name": "Linear Momentum",
-    "secondary_units": [],
-    "pure_unit": true,
-    "topics": [],
-    "skills": [],
-    "difficulty": "medium",
-    "classification": {
-      "primary_unit": "U4",
-      "secondary_units": [],
-      "confidence": 0.85,
-      "evidence": "Structured override from visual PDF review.",
-      "review_status": "reviewed"
-    },
-    "provenance": {
-      "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf",
-      "raw_chunk_sha256": "b9a1372ba1ffcb8c94ea6bd6d25293ced01a54aeafbec60cf10656cfb30c21a1",
-      "override": true
-    },
-    "group_id": "2015_Q35_36",
-    "group_members": [
-      "2015_Q35",
-      "2015_Q36"
-    ],
-    "group_role": "member",
-    "requires_group_context": true,
-    "group_context": "Questions 35-36 refer to two identical spaceships traveling in deep space, far from any planets or stars. The ships travel in the same direction, with the slower one directly behind the faster one. The ships are connected by a cable attached to a spool, so that the part of the cable outside the ships can be made longer or shorter as needed. The cable is used to bring the ships to the same speed for a transfer of cargo. The graph above shows the speed of the two ships during a $10\\,\\mathrm{s}$ interval.",
     "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics1-contract",
-      "method": "diagram_option_binding_from_published_assets",
-      "dimension_variance_reviewed": true,
-      "image_sources": [
-        {
-          "path": "images/ap/physics-1/2015/2015_p034_img01.png",
-          "option": "A-D",
-          "asset_type": "combined_option_image",
-          "binding": "combined_option_region",
-          "source_block": {
-            "source_pdf": "subjects\\AP\\Physics-1\\01-exams\\AP Physics 1 2015.pdf"
-          },
-          "review_status": "PASS"
-        }
-      ]
-    }
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "group_metadata_update",
+        "note": "Removed group metadata after companion item 2015_Q36 was excluded for missing option visual assets; shared context remains in group_context."
+      }
+    ]
   },
   {
     "question_id": "2017_Q01",
@@ -6796,7 +6726,7 @@
       "A": "$6\\,\\mathrm{N\\cdot m}$",
       "B": "$8\\,\\mathrm{N\\cdot m}$",
       "C": "$2\\,\\mathrm{N\\cdot m}$",
-      "D": "$2\\,\\mathrm{N\\cdot m}$",
+      "D": "$4\\,\\mathrm{N\\cdot m}$",
       "E": "$0.5\\,\\mathrm{N\\cdot m}$"
     },
     "answer": "B",
@@ -6841,7 +6771,14 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate generated physics distractor while preserving the computed correct answer B."
+      }
+    ]
   },
   {
     "question_id": "lynkedu_2026_physics_1_capacity_Q003",
@@ -7230,8 +7167,8 @@
       "A": "$10\\,\\mathrm{N\\cdot m}$",
       "B": "$9\\,\\mathrm{N\\cdot m}$",
       "C": "$8\\,\\mathrm{N\\cdot m}$",
-      "D": "$9\\,\\mathrm{N\\cdot m}$",
-      "E": "$0.1111111111111111\\,\\mathrm{N\\cdot m}$"
+      "D": "$6\\,\\mathrm{N\\cdot m}$",
+      "E": "$1\\,\\mathrm{N\\cdot m}$"
     },
     "answer": "B",
     "answers": [
@@ -7275,7 +7212,14 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate generated physics distractor while preserving the computed correct answer B."
+      }
+    ]
   },
   {
     "question_id": "lynkedu_2026_physics_1_capacity_Q010",
@@ -7479,7 +7423,7 @@
       "B": "$9\\,\\mathrm{J}$",
       "C": "$5\\,\\mathrm{J}$",
       "D": "$12\\,\\mathrm{J}$",
-      "E": "$9\\,\\mathrm{J}$"
+      "E": "$18\\,\\mathrm{J}$"
     },
     "answer": "B",
     "answers": [
@@ -7523,7 +7467,14 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate generated physics distractor while preserving the computed correct answer B."
+      }
+    ]
   },
   {
     "question_id": "lynkedu_2026_physics_1_capacity_Q014",
@@ -7540,7 +7491,7 @@
       "A": "$6\\,\\mathrm{J}$",
       "B": "$12\\,\\mathrm{J}$",
       "C": "$5.5\\,\\mathrm{J}$",
-      "D": "$12\\,\\mathrm{J}$",
+      "D": "$24\\,\\mathrm{J}$",
       "E": "$16\\,\\mathrm{J}$"
     },
     "answer": "B",
@@ -7585,7 +7536,14 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate generated physics distractor while preserving the computed correct answer B."
+      }
+    ]
   },
   {
     "question_id": "lynkedu_2026_physics_1_capacity_Q015",
@@ -7599,11 +7557,11 @@
     "type": "MCQ",
     "text": "A rotating object has rotational inertia $4\\,\\mathrm{kg\\cdot m^2}$ and angular speed $2\\,\\mathrm{rad/s}$. What is its rotational kinetic energy?",
     "options": {
-      "A": "$8\\,\\mathrm{J}$",
+      "A": "$4\\,\\mathrm{J}$",
       "B": "$8\\,\\mathrm{J}$",
       "C": "$6\\,\\mathrm{J}$",
       "D": "$16\\,\\mathrm{J}$",
-      "E": "$4\\,\\mathrm{J}$"
+      "E": "$2\\,\\mathrm{J}$"
     },
     "answer": "B",
     "answers": [
@@ -7647,7 +7605,19 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate generated physics distractor while preserving the computed correct answer B."
+      },
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Adjusted option E to remove duplicate distractor text; answer B remains correct."
+      }
+    ]
   },
   {
     "question_id": "lynkedu_2026_physics_1_capacity_Q016",
@@ -7723,7 +7693,7 @@
     "type": "MCQ",
     "text": "A rotating object has rotational inertia $5\\,\\mathrm{kg\\cdot m^2}$ and angular speed $2\\,\\mathrm{rad/s}$. What is its rotational kinetic energy?",
     "options": {
-      "A": "$10\\,\\mathrm{J}$",
+      "A": "$5\\,\\mathrm{J}$",
       "B": "$10\\,\\mathrm{J}$",
       "C": "$7\\,\\mathrm{J}$",
       "D": "$20\\,\\mathrm{J}$",
@@ -7771,7 +7741,14 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate generated physics distractor while preserving the computed correct answer B."
+      }
+    ]
   },
   {
     "question_id": "lynkedu_2026_physics_1_capacity_Q018",
@@ -8098,8 +8075,8 @@
       "A": "$16\\,\\mathrm{J}$",
       "B": "$32\\,\\mathrm{J}$",
       "C": "$8\\,\\mathrm{J}$",
-      "D": "$32\\,\\mathrm{J}$",
-      "E": "$16\\,\\mathrm{J}$"
+      "D": "$48\\,\\mathrm{J}$",
+      "E": "$64\\,\\mathrm{J}$"
     },
     "answer": "B",
     "answers": [
@@ -8143,7 +8120,14 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate generated physics distractor while preserving the computed correct answer B."
+      }
+    ]
   },
   {
     "question_id": "lynkedu_2026_physics_1_capacity_Q024",
@@ -8157,7 +8141,7 @@
     "type": "MCQ",
     "text": "A rotating object has rotational inertia $7\\,\\mathrm{kg\\cdot m^2}$ and angular speed $2\\,\\mathrm{rad/s}$. What is its rotational kinetic energy?",
     "options": {
-      "A": "$14\\,\\mathrm{J}$",
+      "A": "$7\\,\\mathrm{J}$",
       "B": "$14\\,\\mathrm{J}$",
       "C": "$9\\,\\mathrm{J}$",
       "D": "$28\\,\\mathrm{J}$",
@@ -8205,7 +8189,14 @@
       "status": "PASS",
       "method": "stem_options_answer_key_manual_check",
       "reviewed_at": "2026-07-16"
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced duplicate generated physics distractor while preserving the computed correct answer B."
+      }
+    ]
   },
   {
     "question_id": "lynkedu_2026_physics_1_capacity_Q025",

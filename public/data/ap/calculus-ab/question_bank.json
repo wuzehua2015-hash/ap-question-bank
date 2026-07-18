@@ -9708,7 +9708,7 @@
       "B": "$f'(2)\\le0$",
       "C": "$f''(2)<0$",
       "D": "$f''(2)\\ge0$",
-      "E": "$f''(2)<0$"
+      "E": "$f''(2)\\le0$"
     },
     "answer": "E",
     "primary_unit": "U5",
@@ -9749,7 +9749,14 @@
       "classification_version": "calc_ab_structured_v1",
       "primary_unit": "U5"
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Corrected duplicate option E; tangent line above f for all x supports the nonpositive second-derivative condition while preserving answer E."
+      }
+    ]
   },
   {
     "question_id": "2015_Q39",

@@ -6121,8 +6121,8 @@
     "options": {
       "A": "4 times as many addresses are available.",
       "B": "96 times as many addresses are available.",
-      "C": "times as many addresses are available.",
-      "D": "times as many addresses are available."
+      "C": "$2^{32}$ times as many addresses are available.",
+      "D": "$2^{96}$ times as many addresses are available."
     },
     "answer": "D",
     "answers": [
@@ -6148,7 +6148,14 @@
       "source_pdf": "subjects\\AP\\Computer-Science-Principles\\01-exams\\AP CSP 2018.pdf",
       "source_page": 52
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Restored exponent values for IPv6 versus IPv4 address-space options; answer D remains correct because 2^128 / 2^32 = 2^96."
+      }
+    ]
   },
   {
     "question_id": "2018_Q48",

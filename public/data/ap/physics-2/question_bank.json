@@ -1585,70 +1585,6 @@
     }
   },
   {
-    "question_id": "2014_Q33",
-    "id": "2014_Q33",
-    "subject": "AP Physics 2: Algebra-Based",
-    "subject_id": "physics-2",
-    "year": 2014,
-    "question_number": 33,
-    "type": "MCQ",
-    "text": "Which of the following indicates the particles with charges of the greatest and the least magnitude?",
-    "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D"
-    },
-    "answer": "D",
-    "answers": [
-      "D"
-    ],
-    "answer_type": "single",
-    "scoring_status": "scored",
-    "image_paths": [
-      "images/ap/physics-2/2014/2014_q32_33_field.png"
-    ],
-    "primary_unit": "U3",
-    "unit": "U3",
-    "unit_name": "Electric Force, Field, and Potential",
-    "secondary_units": [],
-    "pure_unit": true,
-    "topics": [],
-    "skills": [],
-    "difficulty": "medium",
-    "classification": {
-      "primary_unit": "U3",
-      "secondary_units": [],
-      "confidence": 0.85,
-      "evidence": "Structured override from visual PDF review.",
-      "review_status": "reviewed"
-    },
-    "provenance": {
-      "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2014_Practice_Exam_FLibrary.pdf",
-      "raw_chunk_sha256": "160906e4daa95af5f400dc1b42a7fb9cd5320574fed411498aca91849f0f118b",
-      "override": true
-    },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics2-contract",
-      "method": "diagram_option_binding_from_published_assets",
-      "dimension_variance_reviewed": true,
-      "image_sources": [
-        {
-          "path": "images/ap/physics-2/2014/2014_q32_33_field.png",
-          "option": "A-D",
-          "asset_type": "combined_option_image",
-          "binding": "combined_option_region",
-          "source_block": {
-            "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2014_Practice_Exam_FLibrary.pdf"
-          },
-          "review_status": "PASS"
-        }
-      ]
-    }
-  },
-  {
     "question_id": "2014_Q34",
     "id": "2014_Q34",
     "subject": "AP Physics 2: Algebra-Based",
@@ -4994,10 +4930,10 @@
     "type": "MCQ",
     "text": "A sample of ideal gas that is initially in state A\nshown on the graph above is taken through the\ncycle shown. What is the net work done on the\ngas during one cycle?",
     "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D"
+      "A": "$-500\\,\\mathrm{J}$",
+      "B": "$-1000\\,\\mathrm{J}$",
+      "C": "$500\\,\\mathrm{J}$",
+      "D": "$1000\\,\\mathrm{J}$"
     },
     "answer": "A",
     "answers": [
@@ -5045,7 +4981,14 @@
           "review_status": "PASS"
         }
       ]
-    }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Replaced erroneous Diagram A-D placeholders with net-work choices. The clockwise PV cycle has area 500 J, so work done on the gas is -500 J; answer A remains correct."
+      }
+    ]
   },
   {
     "question_id": "2017_Q11",
@@ -5792,9 +5735,9 @@
     "text": "As the second sphere is moved at a constant velocity closer to the first sphere, data is taken for the force F\nexerted on the second sphere by the first sphere as a function of the separation d of the spheres. Which of the\nfollowing should be graphed to yield a straight line from the data?",
     "options": {
       "A": "F as a function of d",
-      "B": "F as a function of",
-      "C": "F as a function of",
-      "D": "F as a function of"
+      "B": "F as a function of $1/d$",
+      "C": "F as a function of $d^2$",
+      "D": "F as a function of $1/d^2$"
     },
     "answer": "D",
     "answers": [
@@ -5802,9 +5745,7 @@
     ],
     "answer_type": "single",
     "scoring_status": "scored",
-    "image_paths": [
-      "images/ap/physics-2/2017/2017_p031_img01.png"
-    ],
+    "image_paths": [],
     "primary_unit": "U3",
     "unit": "U3",
     "unit_name": "Electric Force, Field, and Potential",
@@ -5833,7 +5774,14 @@
     "group_role": "member",
     "requires_group_context": true,
     "group_context": "Questions 21-23 refer to the following material.\nA very small, isolated sphere with charge +Q exists in an empty region of space. A second very small sphere is\nmoved from far away to a short distance from the first sphere.",
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_integrity_correction",
+        "note": "Restored Coulomb-law graphing choices and removed unrelated gas-graph image inherited from the next question; answer D remains correct."
+      }
+    ]
   },
   {
     "question_id": "2017_Q24",
@@ -6568,7 +6516,15 @@
           "review_status": "PASS"
         }
       ]
-    }
+    },
+    "visual_option_mode": "combined_sheet",
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_visual_contract",
+        "note": "Verified image is a combined A-D option sheet for the diagram choices."
+      }
+    ]
   },
   {
     "question_id": "2017_Q134",
@@ -7429,78 +7385,6 @@
       "raw_chunk_sha256": "f1cc35fd817f5a4156d96c1bbe805902ca2a0817751ffa1ca684bf2e98d9feda"
     },
     "rubric_image_paths": []
-  },
-  {
-    "question_id": "2019_Q17",
-    "id": "2019_Q17",
-    "subject": "AP Physics 2: Algebra-Based",
-    "subject_id": "physics-2",
-    "year": 2019,
-    "question_number": 17,
-    "type": "MCQ",
-    "text": "Three charged particles are near each other but\nisolated from other objects. Particle L has a\ncharge of positive $2.0\\,\\mu\\mathrm{C}$\n and is located $4.0\\,\\mathrm{cm}$ above\nthe origin on the positive y-axis. Particle M has a\ncharge of negative $4.0\\,\\mu\\mathrm{C}$\n and is located $8.0\\,\\mathrm{cm}$ directly\nbelow particle L. Particles L and M are fixed in\nplace. Particle N has a charge of negative $1.0\\,\\mu\\mathrm{C}$\n and is\nreleased from rest at $3.0\\,\\mathrm{cm}$ from the origin on the\npositive x-axis. Which of the following shows the\ninitial direction of motion of particle N ?",
-    "options": {
-      "A": "Diagram A",
-      "B": "Diagram B",
-      "C": "Diagram C",
-      "D": "Diagram D"
-    },
-    "answer": "A",
-    "answers": [
-      "A"
-    ],
-    "answer_type": "single",
-    "scoring_status": "scored",
-    "image_paths": [
-      "images/ap/physics-2/2019/2019_p022_img02.png",
-      "images/ap/physics-2/2019/2019_p022_img04.png"
-    ],
-    "primary_unit": "U3",
-    "unit": "U3",
-    "unit_name": "Electric Force, Field, and Potential",
-    "secondary_units": [],
-    "pure_unit": true,
-    "topics": [],
-    "skills": [],
-    "difficulty": "medium",
-    "classification": {
-      "primary_unit": "U3",
-      "secondary_units": [],
-      "confidence": 0.65,
-      "evidence": "Physics 2 source-pack keyword classification checked by strict year gate.",
-      "review_status": "reviewed"
-    },
-    "provenance": {
-      "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2019_Full_Exam_Aliyun.pdf",
-      "raw_chunk_sha256": "452b0f5d05cb94bfc8716a5cdce7ae24e58c116dfc81c936b7af391c46380b90"
-    },
-    "rubric_image_paths": [],
-    "visual_asset_review": {
-      "status": "PASS",
-      "reviewer": "codex-prelaunch-physics2-contract",
-      "method": "diagram_option_binding_from_published_assets",
-      "dimension_variance_reviewed": true,
-      "image_sources": [
-        {
-          "path": "images/ap/physics-2/2019/2019_p022_img02.png",
-          "asset_type": "prompt_context_image",
-          "source_block": {
-            "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2019_Full_Exam_Aliyun.pdf"
-          },
-          "review_status": "PASS"
-        },
-        {
-          "path": "images/ap/physics-2/2019/2019_p022_img04.png",
-          "option": "A-D",
-          "asset_type": "combined_option_image",
-          "binding": "combined_option_region",
-          "source_block": {
-            "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2019_Full_Exam_Aliyun.pdf"
-          },
-          "review_status": "PASS"
-        }
-      ]
-    }
   },
   {
     "question_id": "2019_Q18",
