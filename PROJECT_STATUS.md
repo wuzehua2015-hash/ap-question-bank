@@ -1,18 +1,18 @@
 # LynkEdu AP Question Bank Project Status
 
-Last updated: 2026-07-17
+Last updated: 2026-07-18
 
 ## Current Production
 
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Latest Pages deployment URL observed: `https://25fee8fb.lynkedu-ap-question-bank.pages.dev`
+- Latest Pages deployment URL observed: `https://56c101dd.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
   - JS: `/assets/index-zz9BSPum.js`
   - CSS: `/assets/index-SlSDx4HT.css`
 - Current Vite base for custom root-domain deployment: `base: '/'`
-- Router: `HashRouter`
+- Router: `BrowserRouter`
 
 ## Deployment Model
 
@@ -28,6 +28,8 @@ This means production can load a newer build even if GitHub push fails. GitHub r
 Hard rule: do not deploy if `npm run build` fails. Direct Pages deployment must still be followed by production URL verification.
 
 Static data files under `/data/*` must not use long-lived edge/browser caching. `public/_headers` sets `Cache-Control: no-cache, no-store, must-revalidate` for `/data/*`; after content updates, verify both the fresh Pages deployment URL and `https://lynkedu.com/data/...` return the new question counts.
+
+Direct production paths such as `/register`, `/login`, `/account`, and `/search` are launch-critical and must be verified on `https://lynkedu.com` after routing changes. The student app uses `BrowserRouter`; browser audit scripts must generate normal paths, not hash URLs.
 
 ## Git State
 
@@ -68,6 +70,7 @@ Content-capacity status: 2026-07-16 capacity reinforcement cleared the pre-launc
 - Login route: `/login`.
 - Password reset route: `/reset-password`.
 - Account route: `/account` with profile, email verification, password, learning-data sync, and session controls.
+- Email verification can be requested again from `/account` through `/api/auth/request-email-verification`; production delivery must return `delivery: "email"` and write safe provider/status metadata to `account_audit_logs`.
 - D1 schema migration applied through `migrations/0002_password_auth.sql` on remote database `lynkedu-question-bank`.
 - Production browser checks passed for `/login`, `/register`, `/reset-password`, and `/account` visitor account gate.
 - Cloudflare Workers WebCrypto PBKDF2 iteration cap is 100000. Password hashing must stay at or below `PASSWORD_HASH_ITERATIONS = 100000`; higher stored iteration counts are treated as unverifiable instead of throwing in Functions.
@@ -203,10 +206,19 @@ The site has entered productization for public launch:
 - Remote D1 migration `migrations/0003_admin_entitlements.sql` was applied on 2026-07-17 and verified.
 - Initial admin account: `wuzehua2015@gmail.com` has `account_level = 'admin'`.
 - Latest deployments:
-  - student Pages deployment: `https://de8c083b.lynkedu-ap-question-bank.pages.dev`;
-  - admin Pages deployment: `https://f6e5e2b7.lynkedu-admin.pages.dev`.
+  - student Pages deployment: `https://56c101dd.lynkedu-ap-question-bank.pages.dev`;
+  - admin Pages deployment: `https://c581a9af.lynkedu-admin.pages.dev`.
 - Admin custom domain is live:
   - DNS record: CNAME `admin` -> `lynkedu-admin.pages.dev`, proxied, TTL Auto;
   - Pages domain status: `admin.lynkedu.com` active;
   - production check: `https://admin.lynkedu.com` returns HTTP 200 and renders `翎英教育管理后台`.
+- Admin build output includes a dedicated `_headers` file from `scripts/prepare_admin_dist.cjs`: HTML is no-store and `/assets/*` is immutable. If `admin.lynkedu.com` renders blank while `pages.dev` works, verify in the real browser that the script URL returns JavaScript rather than an HTML fallback, then force a new asset hash and redeploy.
+- Admin right-panel entitlement display separates active current entitlements from revoked/expired historical rows. Do not list revoked rows under “当前权益”.
+- 2026-07-18 real-browser launch QA evidence:
+  - `https://lynkedu.com/register` direct route renders the registration form after BrowserRouter migration;
+  - test registration returned `emailVerification.delivery = "email"`;
+  - account page shows `翎英学员` after admin grant and `注册会员` after admin cancellation;
+  - `/search` is blocked for registered members and opens for `翎英学员`;
+  - resend email verification returned `delivery: "email"` and D1 logged provider status 200;
+  - admin grant, cancellation, and restore are present in `admin_audit_logs`.
 - Source mirror note: latest admin-console source tree is synced to GitHub branch `prod-mock-pdf-fix` through stable API fallback. Use `npm run stable:status` for the live tree-match check; API fallback creates a remote commit id different from local Git history while preserving the same tree.

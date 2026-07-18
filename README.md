@@ -1,4 +1,6 @@
-# AP Macroeconomics Question Bank — 项目交付文档
+# AP Macroeconomics Question Bank — 历史交付文档
+
+> 当前生产SSoT请以 `PROJECT_STATUS.md`、`docs/GLOBAL_QUESTION_BANK_SOP.md` 和 `docs/STUDENT_ACCOUNT_MVP_2026-07-12.md` 为准。本文是早期单科目/Vercel阶段记录，不代表当前16科Cloudflare Pages生产架构。
 
 > 文档版本: v2.1 | 更新日期: 2026-06-17 | 维护者: 翎英教育
 
@@ -7,9 +9,9 @@
 ## 一、项目概述
 
 **项目名称**: AP Macroeconomics Question Bank（AP宏观经济学题库系统）
-**技术栈**: React 18 + Vite + TailwindCSS + React Router（HashRouter）
-**部署平台**: Vercel（静态站点）
-**访问地址**: https://ap-macroecon-question-bank.vercel.app
+**技术栈**: React + Vite + TailwindCSS + React Router
+**当前生产部署平台**: Cloudflare Pages
+**当前访问地址**: https://lynkedu.com
 
 **核心功能**:
 - 按单元（U1-U6）随机抽题练习（Quiz）

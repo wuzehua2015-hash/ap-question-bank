@@ -2,6 +2,7 @@
 
 > 创建时间：2026-06-21
 > 用途：记录多科目扩展的核心约束，防止后续实施中遗忘或偏离
+> 当前状态：历史研究文档。生产SSoT请以 `../PROJECT_STATUS.md` 和 `GLOBAL_QUESTION_BANK_SOP.md` 为准；当前线上部署为 Cloudflare Pages 根域名 + `BrowserRouter`。
 
 ---
 

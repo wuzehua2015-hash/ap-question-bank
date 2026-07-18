@@ -136,7 +136,7 @@ For every source batch or renderer-affecting change:
 - Run student-surface checks under the correct account tier. Premium surfaces such as Search, question sets, similar-practice tools, and PDF export must be checked as Lynk Student, not as a visitor page.
 - A gated access page is not valid evidence for PDF/search/render delivery. Render checks must fail clearly if they see the access gate while the test claims to cover premium content.
 - Student-surface checks must include the content classes actually present in the subject: grouped context, code, formulas, tables, visual options, diagrams, FRQ scoring, and PDF pagination where applicable.
-- Use the correct router path (`/#/...`) for the deployed app.
+- Use the correct production router path for the deployed app. The current Cloudflare root-domain student app uses normal paths such as `/quiz`, `/register`, `/account`, and `/search`; do not use legacy `/#/...` paths for launch evidence.
 - Use a fresh build and isolated preview port for local evidence.
 - Production deployment must be followed by `lynkedu.com` verification.
 

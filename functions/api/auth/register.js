@@ -49,7 +49,12 @@ export async function onRequestPost({ request, env }) {
     const user = await db.prepare('SELECT * FROM users WHERE id = ? LIMIT 1').bind(userId).first()
     const sessionToken = await createSession(env, userId)
     const entitlements = await getEntitlements(env, userId)
-    await logAccountEvent(env, userId, 'register', { inviteApplied })
+    await logAccountEvent(env, userId, 'register', {
+      inviteApplied,
+      emailVerificationDelivery: verification.delivery,
+      emailVerificationMessageId: verification.messageId || null,
+      emailVerificationStatus: verification.status || null,
+    })
 
     return json({
       sessionToken,
@@ -76,9 +81,9 @@ async function createEmailVerification(db, env, userId, email) {
     subject: '验证你的翎英教育账号',
     text: `你的邮箱验证码是 ${code}，20 分钟内有效。`,
   })
-  if (delivery.sent) return { delivery: 'email' }
+  if (delivery.sent) return { delivery: 'email', messageId: delivery.messageId || null, status: delivery.status }
   if (env.DEV_LOGIN_CODE_ENABLED === 'true') return { delivery: 'debug', debugCode: code }
-  return { delivery: 'pending' }
+  return { delivery: 'pending', status: delivery.status || null, error: delivery.error || null }
 }
 
 async function applyInvite(db, userId, rawCode) {

@@ -72,9 +72,9 @@ async function main() {
     })
     await navigate(client, routeUrl('#/'))
     await navigate(client, routeUrl('#/search'))
-    await evaluate(client, `window.location.hash = '#/search'`)
+    await evaluate(client, `history.replaceState(null, '', '/search')`)
     for (let i = 0; i < 60; i += 1) {
-      const ready = await evaluate(client, `location.hash.includes('/search') && Boolean(document.querySelector('input'))`).catch(() => false)
+      const ready = await evaluate(client, `location.pathname.endsWith('/search') && Boolean(document.querySelector('input'))`).catch(() => false)
       if (ready) break
       await sleep(100)
     }
@@ -379,10 +379,11 @@ async function navigate(client, url) {
   await installSearchCaptureHelper(client)
 }
 
-function routeUrl(hash) {
-  const cleanHash = hash.startsWith('#') ? hash : `#${hash}`
-  const separator = cleanHash.includes('?') ? '&' : '?'
-  return `${baseUrl}${cleanHash}${separator}audit=${Date.now()}`
+function routeUrl(route) {
+  const cleanRoute = String(route || '/').replace(/^#/, '')
+  const path = cleanRoute.startsWith('/') ? cleanRoute.slice(1) : cleanRoute
+  const separator = path.includes('?') ? '&' : '?'
+  return `${baseUrl}${path}${separator}audit=${Date.now()}`
 }
 
 async function setViewport(client, width, height) {

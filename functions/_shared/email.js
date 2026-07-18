@@ -1,5 +1,7 @@
 export async function sendAccountEmail(env, { to, subject, text }) {
-  if (!env.RESEND_API_KEY || !env.LOGIN_EMAIL_FROM) return { sent: false }
+  if (!env.RESEND_API_KEY || !env.LOGIN_EMAIL_FROM) {
+    return { sent: false, provider: 'resend', status: 'not_configured' }
+  }
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
@@ -13,5 +15,12 @@ export async function sendAccountEmail(env, { to, subject, text }) {
       text,
     }),
   })
-  return { sent: response.ok }
+  const payload = await response.json().catch(() => ({}))
+  return {
+    sent: response.ok,
+    provider: 'resend',
+    status: response.status,
+    messageId: payload.id || null,
+    error: response.ok ? null : String(payload.message || payload.error || 'email_delivery_failed').slice(0, 160),
+  }
 }

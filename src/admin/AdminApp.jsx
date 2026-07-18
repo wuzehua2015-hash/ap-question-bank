@@ -171,6 +171,8 @@ function UserActions({ user, onAction, message, error }) {
   const [days, setDays] = useState(365)
   const [expiresAt, setExpiresAt] = useState('')
   const [note, setNote] = useState('')
+  const activeEntitlements = (user.entitlements || []).filter(isActiveEntitlement)
+  const historicalEntitlements = (user.entitlements || []).filter(item => !isActiveEntitlement(item))
 
   return (
     <div className="space-y-5">
@@ -180,7 +182,7 @@ function UserActions({ user, onAction, message, error }) {
       </div>
       <div className="space-y-2 text-sm">
         <div className="font-medium">当前权益</div>
-        {user.entitlements?.length ? user.entitlements.map(item => (
+        {activeEntitlements.length ? activeEntitlements.map(item => (
           <div key={item.id} className="rounded-md border border-border p-3">
             <div className="font-medium">{item.feature_key} · {item.status || 'active'}</div>
             <div className="mt-1 text-text-muted">到期：{item.expires_at ? formatDate(item.expires_at) : '长期'}</div>
@@ -188,6 +190,20 @@ function UserActions({ user, onAction, message, error }) {
           </div>
         )) : <div className="text-text-muted">暂无权益。</div>}
       </div>
+      {historicalEntitlements.length > 0 && (
+        <details className="text-sm">
+          <summary className="cursor-pointer font-medium text-text-muted">历史记录（{historicalEntitlements.length}）</summary>
+          <div className="mt-2 space-y-2">
+            {historicalEntitlements.map(item => (
+              <div key={item.id} className="rounded-md border border-border bg-gray-50 p-3 text-text-muted">
+                <div className="font-medium">{item.feature_key} · {item.status || 'active'}</div>
+                <div className="mt-1">到期：{item.expires_at ? formatDate(item.expires_at) : '长期'}</div>
+                <div className="mt-1">来源：{item.source || '-'}</div>
+              </div>
+            ))}
+          </div>
+        </details>
+      )}
       <Field label="开通或续期天数">
         <input className="admin-input" type="number" min="1" value={days} onChange={event => setDays(event.target.value)} />
       </Field>
@@ -206,6 +222,13 @@ function UserActions({ user, onAction, message, error }) {
       {error && <div className="rounded-md border border-error bg-red-50 p-3 text-sm text-error">{error}</div>}
     </div>
   )
+}
+
+function isActiveEntitlement(item) {
+  const status = item.status || 'active'
+  if (status !== 'active') return false
+  if (!item.expires_at) return true
+  return new Date(item.expires_at) > new Date()
 }
 
 function InvitesPanel() {
@@ -330,7 +353,7 @@ function DataTable({ columns, rows }) {
 }
 
 function Shell({ children, narrow = false }) {
-  return <div className={`${narrow ? 'max-w-md' : 'max-w-6xl'} mx-auto px-5 py-10`}>{children}</div>
+  return <div data-admin-shell="2026-07-18" className={`${narrow ? 'max-w-md' : 'max-w-6xl'} mx-auto px-5 py-10`}>{children}</div>
 }
 
 function TabButton({ active, onClick, children }) {

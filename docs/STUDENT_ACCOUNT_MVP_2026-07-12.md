@@ -71,6 +71,7 @@ After login, local and account snapshots are merged. Later changes trigger a deb
 - `/login`: password login by default, email-code login as fallback for legacy users and recovery.
 - `/reset-password`: email reset code plus new password.
 - `/account`: profile editing, email verification, password setup/change, progress sync, logout other devices.
+- `/api/auth/request-email-verification`: logged-in resend flow for unverified email accounts. It enforces a 60-second server-side cooldown, sends through the configured email provider, and logs provider/status/message metadata without secrets.
 
 Password login is the primary flow. Email codes are retained for email verification, password recovery, and legacy accounts that do not yet have a password.
 
@@ -84,12 +85,14 @@ The admin console is a separate Cloudflare Pages project from the student site.
 - Admin frontend build command: `npm run build:admin`.
 - Admin deployment directory: `dist-admin`.
 - `scripts/prepare_admin_dist.cjs` converts the admin build entry to `dist-admin/index.html` so `admin.lynkedu.com/` opens the console directly.
+- `scripts/prepare_admin_dist.cjs` also writes `dist-admin/_headers`: HTML must not be cached, while hashed `/assets/*` files may be cached immutably. After admin deployment, verify the real browser gets JavaScript from the script URL, not an HTML fallback.
 
 Admin access rules:
 
 - A user can access admin APIs only when `users.account_level = 'admin'`.
 - `翎英学员` must be represented by active rows in `entitlements`; do not encode it as `account_level = 'internal'`.
 - Direct grants, extensions, cancellations, invitation-code creation, and invitation-code deactivation must write `admin_audit_logs`.
+- The admin user panel must separate active current entitlements from revoked/expired historical rows. Historical rows must not appear under the “当前权益” label.
 - Invitation-code use must write `invite_redemptions` and should create an entitlement with `expires_at` when `redemption_days` is set.
 
 Required migration before deploying admin-aware Functions:

@@ -5,13 +5,14 @@ import { changePassword, logoutOtherSessions, updateProfile } from '../utils/acc
 import { collectLocalProgressSnapshot } from '../utils/storage'
 
 function AccountPage() {
-  const { status, user, entitlements, accountLevel, isInternalStudent, logout, syncNow, verifyEmail } = useAuth()
+  const { status, user, entitlements, accountLevel, isInternalStudent, logout, requestEmailVerification, syncNow, verifyEmail } = useAuth()
   const [displayName, setDisplayName] = useState(user?.display_name || '')
   const [emailCode, setEmailCode] = useState('')
   const [currentPassword, setCurrentPassword] = useState('')
   const [newPassword, setNewPassword] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
+  const [resendBusy, setResendBusy] = useState(false)
   const snapshot = collectLocalProgressSnapshot()
   const subjectCount = Object.keys(snapshot.subjects || {}).length
   const quizCount = Object.values(snapshot.subjects || {}).reduce((sum, item) => sum + (item.quizHistory?.length || 0), 0)
@@ -70,6 +71,26 @@ function AccountPage() {
               <div className={`mt-1 text-xs ${user.email_verified_at ? 'text-success' : 'text-warning'}`}>
                 {user.email_verified_at ? '邮箱已验证' : '邮箱待验证'}
               </div>
+              {!user.email_verified_at && (
+                <button
+                  type="button"
+                  disabled={resendBusy}
+                  onClick={() => run(async () => {
+                    setResendBusy(true)
+                    try {
+                      const result = await requestEmailVerification()
+                      if (result.delivery === 'debug' && result.debugCode) {
+                        setEmailCode(result.debugCode)
+                      }
+                    } finally {
+                      window.setTimeout(() => setResendBusy(false), 60000)
+                    }
+                  }, '验证码已重新发送，请查看邮箱。')}
+                  className="mt-2 border border-border px-3 py-1.5 rounded-lg text-xs text-brand disabled:opacity-60"
+                >
+                  {resendBusy ? '稍后再发' : '重新发送验证码'}
+                </button>
+              )}
             </div>
             <div>
               <label className="block text-sm font-semibold text-brand mb-2">姓名或昵称</label>
@@ -128,6 +149,24 @@ function AccountPage() {
                 <input value={emailCode} onChange={event => setEmailCode(event.target.value)} className="flex-1 p-2 border border-border rounded-lg bg-bg" placeholder="注册后收到的验证码" />
                 <button onClick={() => run(() => verifyEmail(emailCode), '邮箱已验证。')} className="bg-accent text-white px-3 py-2 rounded-lg text-sm">验证</button>
               </div>
+              <button
+                type="button"
+                disabled={resendBusy}
+                onClick={() => run(async () => {
+                  setResendBusy(true)
+                  try {
+                    const result = await requestEmailVerification()
+                    if (result.delivery === 'debug' && result.debugCode) {
+                      setEmailCode(result.debugCode)
+                    }
+                  } finally {
+                    window.setTimeout(() => setResendBusy(false), 60000)
+                  }
+                }, '验证码已重新发送，请查看邮箱。')}
+                className="mt-3 text-xs text-brand underline disabled:opacity-60"
+              >
+                {resendBusy ? '请稍后再发送' : '没有收到？重新发送'}
+              </button>
             </div>
           )}
           <div className="space-y-3">
