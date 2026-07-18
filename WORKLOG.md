@@ -318,6 +318,12 @@
 - Verification passed: `npm run validate:copy`, `npm run validate`, `npm run build:admin`, and `npm run build`.
 - Deployed student site to `https://a4263303.lynkedu-ap-question-bank.pages.dev`; production `https://lynkedu.com` now references JS `/assets/index-BPpfi7Zf.js` and CSS `/assets/index-C75AEhR5.css`.
 - Deployed admin site to `https://4c150904.lynkedu-admin.pages.dev`; production `https://admin.lynkedu.com` now references JS `/assets/index-DvhgSTr2.js` and CSS `/assets/index-DrvrsFJO.css`.
+- Real-browser production QA passed:
+  - `https://lynkedu.com/`: home/header show Chinese subject names such as `AP 生物`, `AP 计算机科学 A`, `AP 宏观经济学`, and no raw `AP Biology` / `AP Computer Science A`.
+  - `https://lynkedu.com/settings`: 16-subject selector shows Chinese-first course names.
+  - `https://lynkedu.com/quiz`: Biology unit options show Chinese unit names (`U1 生命的化学基础`, etc.) and no raw Biology unit English.
+  - `https://lynkedu.com/search`: subject, unit filter, and difficulty filter show Chinese labels while original question stems remain unchanged.
+  - `https://admin.lynkedu.com`: entitlement list/detail shows Chinese labels such as `完整题库 · 有效`, with no raw `full_access` / `active` visible.
 
 # 2026-07-17 - Admin Custom Domain Live
 
