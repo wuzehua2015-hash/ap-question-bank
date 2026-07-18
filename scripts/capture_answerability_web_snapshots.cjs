@@ -5,7 +5,6 @@ const http = require('http')
 const { spawn } = require('child_process')
 
 const ROOT = path.resolve(__dirname, '..')
-const PUBLIC = path.join(ROOT, 'public')
 const OUT_ROOT = path.join(ROOT, '.workspace', 'answerability-audit')
 const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
 
@@ -34,7 +33,7 @@ const BAD_VISIBLE_PATTERNS = [
   { code: 'missing_constants_phrase', re: /\bwhere\s+and\s+are\s+constants\b/i },
 ]
 
-function isExpandedText(text) {
+function _isExpandedText(text) {
   return /查看答案|正确答案|Hide Answer|Show Answer/.test(text || '') ||
     /(^|\n)\s*A\.\s/m.test(text || '') ||
     /(^|\n)\s*B\.\s/m.test(text || '')

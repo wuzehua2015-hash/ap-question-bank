@@ -7,7 +7,7 @@ import {
 } from '../utils/storage'
 import { startWrongQuiz, startCustomQuiz } from '../utils/quizSession'
 import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
-import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
+import { getQuestionImagePaths } from '../utils/diagramOptions'
 import LoginGate from '../components/LoginGate'
 import { useAuth } from '../contexts/AuthContext'
 import { difficultyDisplayName, unitDisplayName } from '../utils/displayLabels'
@@ -193,7 +193,6 @@ function MistakeBookContent() {
           const totalAttempts = hist ? hist.correct_count + hist.wrong_count : 0
           const correctRate = totalAttempts > 0 ? Math.round((hist.correct_count / totalAttempts) * 100) : null
           const visibleImages = getQuestionImagePaths(q.image_paths || [], q.options, q.option_table_data)
-          const diagramOptionLayout = getDiagramOptionLayout(q.image_paths || [], q.options)
           return (
             <div key={q.question_id} className="bg-surface rounded-xl border border-border overflow-hidden">
               <div className="p-4 hover:bg-gray-50 transition-colors">

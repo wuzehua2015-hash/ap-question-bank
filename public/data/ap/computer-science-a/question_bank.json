@@ -1474,11 +1474,11 @@
     "type": "MCQ",
     "text": "Consider the following instance variable and method. Method `wordsWithCommas` is intended to return a string containing all the words in `listOfWords` separated by commas and enclosed in braces. For example, if `listOfWords` contains `[\"one\", \"two\", \"three\"]`, the string returned by the call `wordsWithCommas()` should be `\"{one, two, three}\"`.\n\n```java\nprivate List<String> listOfWords;\n\npublic String wordsWithCommas()\n{\n  String result = \"{\";\n\n  int sizeOfList = /* expression */;\n\n  for (int k = 0; k < sizeOfList; k++)\n  {\n    result = result + listOfWords.get(k);\n\n    if (/* condition */)\n    {\n      result = result + \", \";\n    }\n  }\n\n  result = result + \"}\";\n  return result;\n}\n```\n\nWhich of the following can be used to replace `/* expression */` and `/* condition */` so that `wordsWithCommas` will work as intended?",
     "options": {
-      "A": "`/* expression */`: `listOfWords.size() - 1`; `/* condition */`: `k != 0`",
-      "B": "`/* expression */`: `listOfWords.size()`; `/* condition */`: `k != 0`",
-      "C": "`/* expression */`: `listOfWords.size() - 1`; `/* condition */`: `k != sizeOfList - 1`",
-      "D": "`/* expression */`: `listOfWords.size()`; `/* condition */`: `k != sizeOfList - 1`",
-      "E": "`/* expression */`: `result.length()`; `/* condition */`: `k != 0`"
+      "A": "`listOfWords.size() - 1` / `k != 0`",
+      "B": "`listOfWords.size()` / `k != 0`",
+      "C": "`listOfWords.size() - 1` / `k != sizeOfList - 1`",
+      "D": "`listOfWords.size()` / `k != sizeOfList - 1`",
+      "E": "`result.length()` / `k != 0`"
     },
     "answer": "D",
     "answers": [
@@ -1504,7 +1504,42 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 46
     },
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_table_data": {
+      "headers": [
+        "`/* expression */`",
+        "`/* condition */`"
+      ],
+      "rows": {
+        "A": [
+          "`listOfWords.size() - 1`",
+          "`k != 0`"
+        ],
+        "B": [
+          "`listOfWords.size()`",
+          "`k != 0`"
+        ],
+        "C": [
+          "`listOfWords.size() - 1`",
+          "`k != sizeOfList - 1`"
+        ],
+        "D": [
+          "`listOfWords.size()`",
+          "`k != sizeOfList - 1`"
+        ],
+        "E": [
+          "`result.length()`",
+          "`k != 0`"
+        ]
+      }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_table_structure",
+        "note": "Structured replacement-pair choices into option_table_data."
+      }
+    ]
   },
   {
     "question_id": "2015_Q36",
@@ -2987,7 +3022,15 @@
       "gridworld_Q28"
     ],
     "group_role": "member",
-    "rubric_image_paths": []
+    "rubric_image_paths": [],
+    "option_integrity_reviewed": true,
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_table_structure",
+        "note": "Reviewed as prose/code-location choices, not a combination option table."
+      }
+    ]
   },
   {
     "question_id": "gridworld_Q29",

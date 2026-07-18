@@ -8,9 +8,12 @@ export default defineConfig({
   publicDir: false,
   build: {
     outDir: 'dist-admin',
-    rollupOptions: {
+    rolldownOptions: {
       input: {
-        index: 'admin.html',
+        admin: 'admin.html',
+      },
+      checks: {
+        pluginTimings: false,
       },
     },
   },

@@ -47,7 +47,7 @@ function rubricQualityFindings(file, record) {
   const points = rubric && Array.isArray(rubric.points) ? rubric.points : []
   const text = points.map(point => point.description || point.criteria || point.text || '').join('\n')
   const normalized = text.replace(/\s+/g, ' ').trim()
-  const hasOfficialImages = Array.isArray(record.rubric_image_paths) && record.rubric_image_paths.length > 0
+  const _hasOfficialImages = Array.isArray(record.rubric_image_paths) && record.rubric_image_paths.length > 0
   const partMarkers = (normalized.match(/\bPart\s+\([a-z]\)|\([a-z]\)|\bpart\s+[a-z]\b/gi) || []).length
   const imageReliance = /\b(?:official\s+)?(?:algebra|equation|formula|point-by-point|details?|solution|equivalent\s+forms?)\s+(?:details?\s+)?(?:are\s+)?shown\s+in\s+the\s+rubric\s+images?\b|see\s+rubric\s+images?\b/i
 

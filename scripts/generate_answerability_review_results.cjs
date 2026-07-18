@@ -145,15 +145,12 @@ function main() {
 function sourceEvidence(packet) {
   const provenance = packet.json_evidence?.provenance || {}
   const sourceRef = provenance.source_pdf || packet.official_source_evidence_candidates?.subject_source_root || 'local subject source pack'
-  let pageOrImage = ''
-  if (provenance.prompt_pages || provenance.rubric_pages) {
-    pageOrImage = [
+  const pageOrImage = provenance.prompt_pages || provenance.rubric_pages
+    ? [
       provenance.prompt_pages ? `prompt pages ${provenance.prompt_pages.join(',')}` : '',
       provenance.rubric_pages ? `rubric pages ${provenance.rubric_pages.join(',')}` : '',
     ].filter(Boolean).join('; ')
-  } else {
-    pageOrImage = `year ${packet.year}, ${packet.type} question ${packet.question_number}; source PDF package page range recorded in subject inventory/source manifest`
-  }
+    : `year ${packet.year}, ${packet.type} question ${packet.question_number}; source PDF package page range recorded in subject inventory/source manifest`
   return {
     source_ref: sourceRef,
     page_or_image: pageOrImage,

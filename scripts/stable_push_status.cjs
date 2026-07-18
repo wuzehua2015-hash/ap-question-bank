@@ -55,12 +55,7 @@ function githubRequest({ path, token }) {
       res.on('data', chunk => chunks.push(chunk))
       res.on('end', () => {
         const text = Buffer.concat(chunks).toString('utf8')
-        let data = null
-        try {
-          data = text ? JSON.parse(text) : null
-        } catch {
-          data = { raw: text }
-        }
+        const data = parseJsonResponse(text)
         if (res.statusCode >= 200 && res.statusCode < 300) resolve(data)
         else reject(new Error(`GET ${path} failed: ${res.statusCode} ${text.slice(0, 1000)}`))
       })
@@ -68,6 +63,14 @@ function githubRequest({ path, token }) {
     req.on('error', reject)
     req.end()
   })
+}
+
+function parseJsonResponse(text) {
+  try {
+    return text ? JSON.parse(text) : null
+  } catch {
+    return { raw: text }
+  }
 }
 
 async function main() {

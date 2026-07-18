@@ -73,12 +73,7 @@ function githubRequest({ method = 'GET', path, token, body }) {
       res.on('data', chunk => chunks.push(chunk))
       res.on('end', () => {
         const text = Buffer.concat(chunks).toString('utf8')
-        let data = null
-        try {
-          data = text ? JSON.parse(text) : null
-        } catch {
-          data = { raw: text }
-        }
+        const data = parseJsonResponse(text)
         if (res.statusCode >= 200 && res.statusCode < 300) {
           resolve(data)
         } else {
@@ -90,6 +85,14 @@ function githubRequest({ method = 'GET', path, token, body }) {
     if (payload !== undefined) req.write(payload)
     req.end()
   })
+}
+
+function parseJsonResponse(text) {
+  try {
+    return text ? JSON.parse(text) : null
+  } catch {
+    return { raw: text }
+  }
 }
 
 function ensureCleanWorktree() {

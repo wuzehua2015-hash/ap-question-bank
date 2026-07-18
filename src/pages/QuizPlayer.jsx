@@ -211,7 +211,7 @@ function QuizPlayer() {
       }
     })
 
-    return Object.values(grouped).map(({ similarIds, ...group }) => group)
+    return Object.values(grouped).map(({ similarIds: _similarIds, ...group }) => group)
   }, [wrongQuestions, similarityIndex, questionBank, quiz])
 
   const practiceSimilar = (wrongQs, similarQs) => {

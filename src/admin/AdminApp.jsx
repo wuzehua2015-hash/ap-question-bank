@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import {
   createInvite,
   deactivateInvite,
@@ -111,18 +111,18 @@ function UsersPanel() {
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
 
-  async function load(search = query) {
+  const load = useCallback(async (search = '') => {
     setError('')
     const data = await fetchUsers(search)
-    setUsers(data.users || [])
-    if (selected) {
-      setSelected((data.users || []).find(item => item.id === selected.id) || null)
-    }
-  }
+    const nextUsers = data.users || []
+    setUsers(nextUsers)
+    setSelected(current => current ? nextUsers.find(item => item.id === current.id) || null : null)
+  }, [])
 
-  useEffect(() => { load('').catch(err => setError(err.message)) }, [])
+  useEffect(() => { load('').catch(err => setError(err.message)) }, [load])
 
   async function runAction(payload) {
+    if (!selected) return
     setMessage('')
     setError('')
     try {
@@ -225,25 +225,18 @@ function UserActions({ user, onAction, message, error }) {
   )
 }
 
-function isActiveEntitlement(item) {
-  const status = item.status || 'active'
-  if (status !== 'active') return false
-  if (!item.expires_at) return true
-  return new Date(item.expires_at) > new Date()
-}
-
 function InvitesPanel() {
   const [invites, setInvites] = useState([])
   const [createdCode, setCreatedCode] = useState('')
   const [form, setForm] = useState({ label: '', maxUses: 1, redemptionDays: 365, expiresAt: '', note: '' })
   const [error, setError] = useState('')
 
-  async function load() {
+  const load = useCallback(async () => {
     const data = await fetchInvites()
     setInvites(data.invites || [])
-  }
+  }, [])
 
-  useEffect(() => { load().catch(err => setError(err.message)) }, [])
+  useEffect(() => { load().catch(err => setError(err.message)) }, [load])
 
   async function submit(event) {
     event.preventDefault()
@@ -313,7 +306,11 @@ function InvitesPanel() {
 function LogsPanel() {
   const [logs, setLogs] = useState([])
   const [error, setError] = useState('')
-  useEffect(() => { fetchLogs().then(data => setLogs(data.logs || [])).catch(err => setError(err.message)) }, [])
+
+  useEffect(() => {
+    fetchLogs().then(data => setLogs(data.logs || [])).catch(err => setError(err.message))
+  }, [])
+
   if (error) return <div className="rounded-md border border-error bg-red-50 p-3 text-sm text-error">{error}</div>
   return (
     <DataTable
@@ -365,8 +362,15 @@ function Field({ label, children }) {
   return <label className="block"><span className="mb-2 block text-sm font-medium text-text">{label}</span>{children}</label>
 }
 
+function isActiveEntitlement(item) {
+  const status = item.status || 'active'
+  if (status !== 'active') return false
+  if (!item.expires_at) return true
+  return new Date(item.expires_at) > new Date()
+}
+
 function entitlementSummary(entitlements = []) {
-  const active = entitlements.find(item => item.feature_key === 'full_access' && (item.status || 'active') === 'active' && (!item.expires_at || new Date(item.expires_at) > new Date()))
+  const active = entitlements.find(item => item.feature_key === 'full_access' && isActiveEntitlement(item))
   if (!active) return '注册会员'
   return active.expires_at ? `翎英学员至 ${formatDate(active.expires_at)}` : '翎英学员'
 }

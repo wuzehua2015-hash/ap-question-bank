@@ -4,7 +4,7 @@ import { isOfficialWholeRubric, normalizeRubricPoints } from '../utils/rubric'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
-function normalizePromptText(text) {
+function _normalizePromptText(text) {
   return normalizePromptTextV2(text)
 }
 
@@ -487,7 +487,7 @@ export function RubricDescription({ text, variant = 'web' }) {
       {paragraphs.map((paragraph, idx) => {
         const type = rubricParagraphType(paragraph)
         const lines = splitRubricLines(paragraph)
-        const isHeading = type !== 'body'
+        const _isHeading = type !== 'body'
         const hasSeparateHeading = ['major', 'criteria', 'notes'].includes(type) && lines.length > 1
         const headingText = hasSeparateHeading || ['criteria', 'notes'].includes(type) ? lines[0] : paragraph
         const detailLines = hasSeparateHeading || ['criteria', 'notes'].includes(type) ? lines.slice(1) : lines
