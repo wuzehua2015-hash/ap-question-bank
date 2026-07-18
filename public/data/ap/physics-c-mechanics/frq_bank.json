@@ -138,7 +138,58 @@
         "2012_FRQ1 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Official page images are not used as student-facing text substitutes."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Experiment 1. A block of mass $0.30\\,\\mathrm{kg}$ is placed on a frictionless table and is attached to one end of a horizontal spring of spring constant $k$, as shown above. The other end of the spring is attached to a fixed wall. The block is set into oscillatory motion by stretching the spring and releasing the block from rest at time $t=0$. A motion detector is used to record the position of the block as it oscillates. The resulting graph of velocity $v$ versus time $t$ is shown below. The positive direction for all quantities is to the right."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2012/2012_frq1_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2012/2012_frq1_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Determine the equation for $v(t)$, including numerical values for all constants."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Given that the equilibrium position is at $x=0$, determine the equation for $x(t)$, including numerical values for all constants."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Calculate the value of $k$. Experiment 2. The block and spring arrangement is now placed on a rough surface, as shown below. The block is displaced so that the spring is compressed a distance $d$ and released from rest."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "On the dots below that represent the block, draw and label the forces, not components, that act on the block when the spring is compressed a distance $x=d/2$ and the block is moving in the direction indicated below each dot."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Draw a sketch of $v$ versus $t$ in this case. Assume that there is a negligible change in the period and that the positive direction is still to the right."
+      }
+    ]
   },
   {
     "question_id": "2012_FRQ2",
@@ -278,7 +329,58 @@
         "2012_FRQ2 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Official page images are not used as student-facing text substitutes."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "You are to perform an experiment investigating the conservation of mechanical energy involving a transformation from initial gravitational potential energy to translational kinetic energy."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "You are given the equipment listed below, all the supports required to hold the equipment, and a lab table. On the list below, indicate each piece of equipment you would use by checking the line next to each item. - [ ] Track - [ ] Meterstick - [ ] Set of objects of different masses - [ ] Cart - [ ] Electronic balance - [ ] Lightweight low-friction pulley - [ ] String - [ ] Stopwatch"
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2012/2012_frq2_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Outline a procedure for performing the experiment. Include a diagram of your experimental setup. Label the equipment in your diagram. Also include a description of the measurements you would make and a symbol for each measurement."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2012/2012_frq2_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Give a detailed account of the calculations of gravitational potential energy and translational kinetic energy both before and after the transformation, in terms of the quantities measured in part (b)."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "After your first trial, your calculations show that the energy increased during the experiment. Assuming you made no mathematical errors, give a reasonable explanation for this result."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "On all other trials, your calculations show that the energy decreased during the experiment. Assuming you made no mathematical errors, give a reasonable physical explanation for the fact that the average energy you determined decreased. Include references to conservative and nonconservative forces, as appropriate."
+      }
+    ]
   },
   {
     "question_id": "2012_FRQ3",
@@ -432,7 +534,48 @@
         "2012_FRQ3 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Official page images are not used as student-facing text substitutes."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A ring of mass $M$, radius $R$, and rotational inertia $MR^2$ is initially sliding on a frictionless surface at constant velocity $v_0$ to the right, as shown above. At time $t=0$ it encounters a surface with coefficient of friction $\\mu$ and begins sliding and rotating. After traveling a distance $L$, the ring begins rolling without sliding. Express all answers in terms of $M$, $R$, $v_0$, $\\mu$, and fundamental constants, as appropriate."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2012/2012_frq3_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Starting from Newton's second law in either translational or rotational form, as appropriate, derive a differential equation that can be used to solve for the magnitude of each of the following as the ring is sliding and rotating. i. The linear velocity $v$ of the ring as a function of time $t$ ii. The angular velocity $\\omega$ of the ring as a function of time $t$"
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Derive an expression for the magnitude of each of the following as the ring is sliding and rotating. i. The linear velocity $v$ of the ring as a function of time $t$ ii. The angular velocity $\\omega$ of the ring as a function of time $t$"
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Derive an expression for the time it takes the ring to travel the distance $L$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Derive an expression for the magnitude of the velocity of the ring immediately after it has traveled the distance $L$."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Derive an expression for the distance $L$."
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ1",
@@ -562,7 +705,63 @@
         "2013_FRQ1 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Official page images are used only for verification and focused visual assets, not as rubric text replacements."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A ball of mass $m$ and cross-sectional area $A$ is released from rest near the surface of Earth. The ball experiences a resistive force due to the air that is proportional to the ball's velocity, $F_R=bAv$, where $b$ is a positive constant. Determine all algebraic answers in terms of $m$, $b$, $A$, and fundamental constants."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Draw free-body diagrams for the ball for the following situations. Give each vector a descriptive label and draw them approximately to scale. - A short time after the ball is released - Once the ball has reached terminal velocity"
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2013/2013_frq1_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Calculate the terminal velocity $v_T$ of the ball."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Starting from Newton's laws, derive an expression for the time required for the ball to reach one third the terminal velocity."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Sketch graphs of the ball's acceleration and velocity from when the ball is released at time $t=0$ until it approaches terminal velocity."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2013/2013_frq1_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2013/2013_frq1_img03.png"
+        ],
+        "used_by_parts": []
+      }
+    ]
   },
   {
     "question_id": "2013_FRQ2",
@@ -824,7 +1023,53 @@
         "2013_FRQ3 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Official page images are used only for verification and focused visual assets, not as rubric text replacements."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A solid disk of radius $0.10\\,\\mathrm{m}$ is mounted on a vertical axis. A string of negligible mass is wrapped around the rim of the disk, passes over a small, lightweight, frictionless pulley as shown above, and is tied to a block of mass $0.05\\,\\mathrm{kg}$. The system is released from rest, and a computer records the velocity of the falling block as a function of time, as shown below."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2013/2013_frq3_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2013/2013_frq3_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Using the graph above, calculate the acceleration of the falling block."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Use your result from part (a) to calculate the rotational inertia of the disk."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Calculate the angular momentum of the disk at time $t=0.45\\,\\mathrm{s}$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The disk is removed and replaced with a hoop of the same mass and radius, but with all of its mass concentrated near the rim of the hoop and connected to the axis by lightweight spokes. The experiment is then repeated. Is the angular acceleration of the hoop greater than, less than, or the same as that of the solid disk? - [ ] Greater than - [ ] Less than - [ ] The same Justify your answer."
+      }
+    ]
   },
   {
     "question_id": "2014_FRQ1",
@@ -1108,7 +1353,38 @@
         "Student-facing prompt and rubric are structured Markdown plus LaTeX.",
         "Official page images were used only as internal verification evidence and are not substitutes for rubric text."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A satellite of mass $m$ is in a stable circular orbit around Earth at a distance $R_1$ from the center of Earth. The mass of Earth is $M_E$."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Derive an expression for the following in terms of $m$, $R_1$, $M_E$, and fundamental constants, as appropriate. i. The orbital speed $v_1$ of the satellite ii. The total energy of the satellite in this orbit, assuming gravitational potential energy to be zero at an infinite distance from the center of Earth The satellite's booster rockets fire and lift the satellite to a higher circular orbit of radius $2R_1$. The satellite follows the path shown in the diagram below, moving a total distance $S$ during the orbital change. The component of the rockets' force parallel to the path is given by the equation $F=F_0\\left(1-\\frac{x}{S}\\right)$, where $x$ is the variable distance traveled along the path at any moment."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Orbit",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2014/2014_FRQ2_orbit.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Derive an expression for the total work done on the satellite by the force $F$ in terms of $F_0$ and $S$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "If the total distance $S$ is equal to $3R_1$, derive an expression for $F_0$ in terms of $M_E$, $R_1$, $m$, and fundamental constants, as appropriate."
+      }
+    ]
   },
   {
     "question_id": "2014_FRQ3",
@@ -1245,7 +1521,68 @@
         "Student-facing prompt and rubric are structured Markdown plus LaTeX.",
         "Official page images were used only as internal verification evidence and are not substitutes for rubric text."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A uniform disk of mass $M$ and radius $R$ is suspended vertically from a pivot on its edge so that it is free to swing without friction, as shown in Figure 1 above. The disk is raised to an initial angular displacement $\\theta_0$ with respect to the vertical, as shown in Figure 2 above, and released from rest. The rotational inertia of the disk about its center of mass is $I=MR^2/2$. Express all algebraic answers in terms of the given quantities and fundamental constants, as appropriate."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2014/2014_FRQ3_disk_setup.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2014/2014_frq3_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2014/2014_frq3_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Derive an expression for the rotational inertia of the disk about the pivot."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Derive an expression for the maximum angular velocity of the disk during its swing."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Using Newton's second law in either translational or rotational form, as appropriate, write a differential equation that could be used to determine the angular displacement of the disk $\\theta$ as a function of time $t$. Do not solve the equation."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Derive an expression for the period for small-amplitude oscillations of the disk."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Suppose the disk is replaced with another uniform disk with twice the radius, and the pivot point is again on the edge of the disk. How will the period of small-amplitude oscillations be affected by the new disk? - [ ] It will increase. - [ ] It will decrease. - [ ] It will remain the same. - [ ] There is not enough information to determine the period. Justify your answer."
+      }
+    ]
   },
   {
     "question_id": "2015_FRQ1",
@@ -1393,7 +1730,53 @@
         "2015_FRQ1 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Scoring worksheet and copyright pages are excluded from student-facing rubric text."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A new sports car is undergoing acceleration tests to determine its specifications. The following data on speed $v$ versus time $t$ are recorded for the car as it accelerates from rest along a straight track. | $t$ (s) | 0 | 2 | 4 | 6 | 8 | 10 | |---:|---:|---:|---:|---:|---:|---:| | $v$ (m/s) | 0 | 14 | 23 | 30 | 35 | 39 |"
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the axes below, plot $v$ as a function of $t$ and sketch a curve that best represents the data."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2015/2015_frq1_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Answer each of the following for the time period $t=0\\,\\mathrm{s}$ to $t=10\\,\\mathrm{s}$. i. Does the speed of the car increase, decrease, or stay the same? - [ ] Increase - [ ] Decrease - [ ] Stay the same Justify your answer. ii. Does the acceleration of the car increase, decrease, or stay the same? - [ ] Increase - [ ] Decrease - [ ] Stay the same Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Explain how you would use your graph in part (a) to find the distance traveled by the car between $t=2\\,\\mathrm{s}$ and $t=8\\,\\mathrm{s}$. The equation for the speed $v$ of the car as a function of time $t$ found from the graph is $$v(t)=-0.3t^2+7t,$$ where $v$ is in $\\mathrm{m/s}$ and $t$ is in seconds."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Derive an expression for the acceleration of the car $a(t)$ as a function of time $t$."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Calculate the position of the car as a function of time, $x(t)$, assuming that the car starts from rest at the origin of a coordinate system."
+      },
+      {
+        "type": "part",
+        "label": "(f)",
+        "text": "Calculate the distance traveled by the car between $t=2\\,\\mathrm{s}$ and $t=8\\,\\mathrm{s}$."
+      }
+    ]
   },
   {
     "question_id": "2015_FRQ2",
@@ -1528,7 +1911,58 @@
         "2015_FRQ2 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Scoring worksheet and copyright pages are excluded from student-facing rubric text."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The model of a roller coaster shown above consists of a ramp and a circular loop. A small block of mass $M$ starts from height $H$ with speed $v=0$ and slides without friction down the ramp and around the inside of the loop of radius $H/2$. Position $P$ is a point on the loop at an angle $\\theta$ with the horizontal, as shown above. Express all algebraic answers in terms of $M$, $H$, $\\theta$, and fundamental constants, as appropriate."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2015/2015_frq2_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2015/2015_frq2_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Derive an expression for the speed of the block at position $P$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "On the following diagram, draw and label vectors to represent the forces, not components, on the block when it is at position $P$. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot at position $P$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Derive an expression for the magnitude of the force exerted by the loop on the block when it is at position $P$. If you need to draw anything other than what you have shown in part (b) to assist in your solution, use the space below. Do not add anything to the figure in part (b)."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Calculate the angle $\\theta_L$, in degrees, at which the block leaves the loop."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "The small block is replaced with a small sphere that also starts at height $H$. Now there is enough friction to allow the sphere to roll down the ramp without slipping. Identify how the new angle $\\theta_n$ at which the sphere leaves the loop compares with the angle $\\theta_L$ calculated in part (d). - [ ] $\\theta_n<\\theta_L$ - [ ] $\\theta_n=\\theta_L$ - [ ] $\\theta_n>\\theta_L$ Explain your reasoning."
+      }
+    ]
   },
   {
     "question_id": "2015_FRQ3",
@@ -1669,7 +2103,43 @@
         "2015_FRQ3 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Scoring worksheet and copyright pages are excluded from student-facing rubric text."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A uniform, rigid, thin board that is $2.4\\,\\mathrm{m}$ long and weighs $200\\,\\mathrm{N}$ is attached to a post by a pivot at point $P$ and hangs over the edge of a building, as shown above. A crate weighing $400\\,\\mathrm{N}$ is attached to the right end of the board. The left end of the board, $0.80\\,\\mathrm{m}$ from the pivot, is attached to a light vertical wire anchored at the other end to keep the board from rotating."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2015/2015_frq3_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the diagram below, draw and label vectors to represent all the forces, not components, acting on the board. Show each force vector originating at its point of application."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Calculate the magnitudes of the forces exerted on the board by the post and by the wire. If you need to draw anything other than what you have shown in part (a) to assist in your solution, use the space below. Do not add anything to the figure in part (a)."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The rotational inertia of the board alone about its center is $\\frac{1}{12}ML^2$, where $M$ is the mass of the board and $L$ is its length. Calculate the rotational inertia of the combined board-crate system about point $P$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Suppose that the wire breaks and the board begins to pivot about point $P$. Calculate each of the following. i. The magnitude of the initial angular acceleration of the board-crate system ii. The magnitude of the initial linear acceleration of the left end of the board"
+      }
+    ]
   },
   {
     "question_id": "2016_FRQ1",
@@ -1814,7 +2284,73 @@
         "2016_FRQ1 prompt and scoring criteria were reconstructed as structured Markdown plus LaTeX from visible PDF page images.",
         "Page images are verification evidence and visual-asset sources only; student-facing scoring criteria are text."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A block of mass $m_B$ is being pulled up a ramp by a hanging object of mass $m_H$, as shown in the figure above. The blocks are attached to each other by a light string that passes over a pulley of negligible mass and friction. Both the block and the hanging object are moving at constant speed, and the angle of the ramp with the horizontal is $\\theta$. The coefficient of kinetic friction between the block and the ramp is $\\mu_k$."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2016/2016_frq1_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2016/2016_frq1_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the dots below, which represent the block and the hanging object, draw and label the forces, not components, that act on the block and the hanging object. Each force must be represented by a distinct arrow starting on, and pointing away from, the appropriate dot."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Derive an expression for the mass $m_H$ of the hanging object. Express your answer in terms of $m_B$, $\\theta$, $\\mu_k$, and physical constants, as appropriate. If you need to draw anything other than what you have shown in part (a) to assist in your solution, use the space below. Do not add anything to the figure in part (a). It is determined that $m_B=2.0\\,\\mathrm{kg}$, $\\theta=30^\\circ$, and $\\mu_k=0.10$. While the block is moving up the ramp and the hanging object is moving downward, the string is suddenly cut."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2016/2016_frq1_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 4",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2016/2016_frq1_img04.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "i. Calculate the magnitude of the acceleration of the block immediately after the string is cut. ii. What is the direction of the acceleration of the block immediately after the string is cut? - [ ] Up the ramp - [ ] Down the ramp - [ ] No direction, because the acceleration is zero iii. Determine the magnitude of the acceleration of the hanging object immediately after the string is cut."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Assume the block is moving up the ramp at $2.0\\,\\mathrm{m/s}$ when the string is cut. Calculate how far the block travels up the ramp from the time the string is cut until the block stops, assuming there is sufficient distance on the ramp."
+      }
+    ]
   },
   {
     "question_id": "2016_FRQ2",
@@ -1967,7 +2503,68 @@
         "2016_FRQ2 prompt and scoring criteria were reconstructed as structured Markdown plus LaTeX from visible PDF page images.",
         "Page images are verification evidence and visual-asset sources only; student-facing scoring criteria are text."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "An experiment is performed on a frictionless surface consisting of a horizontal section and a ramp inclined at a $20^\\circ$ angle. Block A of mass $3.0\\,\\mathrm{kg}$ rests on the horizontal section against but not attached to an ideal spring at its equilibrium length, as shown in the figure above. The spring has a spring constant $k=700\\,\\mathrm{N/m}$. Block A is pushed to the left, compressing the spring $0.15\\,\\mathrm{m}$, and then released."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2016/2016_frq2_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2016/2016_frq2_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Calculate the speed of block A when it leaves the spring."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Calculate the maximum distance $d$ block A travels up the ramp."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "On the axis below, sketch a graph of the speed $v$ of block A as a function of time $t$ from $t=0$ to $t=t_3$. Block A is released at time $t=0$, loses contact with the spring at time $t=t_1$, transitions to the ramp at time $t=t_2$, and reaches its maximum height at time $t=t_3$. In a second experiment, block B, of mass $0.50\\,\\mathrm{kg}$, is placed on the ramp a distance of $d$ from the bottom of the ramp and held in place. Block A is released from the spring as in the first experiment. Block B is released from rest so that it collides with block A as block A travels up the ramp. The two blocks collide at a distance of $d/2$ up the ramp. The blocks stick together after the collision."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2016/2016_frq2_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "i. Calculate the speed of the two blocks immediately after the collision. ii. In what direction, if any, are the two blocks moving immediately after the collision? - [ ] Up the ramp - [ ] Down the ramp - [ ] Undefined, because the blocks momentarily come to rest after the collision"
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "i. Calculate the magnitude of the impulse exerted on block A by block B. ii. In what direction, if any, is the impulse exerted on block A by block B? - [ ] Up the ramp - [ ] Down the ramp - [ ] Undefined, because the impulse is zero"
+      }
+    ]
   },
   {
     "question_id": "2016_FRQ3",
@@ -2110,7 +2707,48 @@
         "2016_FRQ3 prompt and scoring criteria were reconstructed as structured Markdown plus LaTeX from visible PDF page images.",
         "Page images are verification evidence and visual-asset sources only; student-facing scoring criteria are text."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A uniform rod of mass $M$ and length $L$ is pivoted at a point a distance $L/3$ from the top end, as shown above. The rod is pulled back so that it makes a small angle with the vertical and is then released."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2016/2016_frq3_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Using integral calculus, show that the rotational inertia for the rod around its pivot is $ML^2/9$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "i. Using Newton's second law in rotational form, write but do not solve a differential equation in terms of $M$, $L$, and physical constants, as appropriate, that can be used to determine the angular displacement $\\theta$ as a function of time $t$. ii. Using the differential equation from part (b)(i), show that the period of oscillation for the rod is given by $$T=2\\pi\\sqrt{\\frac{2L}{3g}}.$$ An experiment is performed with thin, uniform metal rods of different lengths, each pivoted around a point one third the length of the rod from the top end and used as a physical pendulum, as shown in the figure on the previous page. Each rod is pulled back so that it makes a small angle with the vertical and is then released, and the period of oscillation is measured. The data are recorded in the table below. | Length (m) | 0.5 | 1.0 | 1.5 | 2.0 | 2.5 | |---:|---:|---:|---:|---:|---:| | Period (s) | 1.2 | 1.6 | 2.0 | 2.3 | 2.6 |"
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Indicate below which quantities should be graphed to yield a straight line whose slope could be used to calculate a numerical value for the acceleration due to gravity $g$. Horizontal axis: Vertical axis: Use the remaining rows in the table above, as needed, to record any quantities that you indicated that are not given."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Plot the straight-line data points on the graph below. Clearly scale and label all axes, including units if appropriate. Draw a straight line that best represents the data."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Using your straight line, determine an experimental value for $g$."
+      }
+    ]
   },
   {
     "question_id": "2017_FRQ1",
@@ -2273,7 +2911,63 @@
         "2017_FRQ1 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Scoring worksheet pages are excluded; focused figures remain supplemental visual assets."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A spring of negligible mass and spring constant $50\\,\\mathrm{N/m}$ is hung vertically, as shown above in the figure on the left. A block of mass $1.0\\,\\mathrm{kg}$ is attached to the spring and slowly lowered a distance $x_0$ until it hangs at rest at the equilibrium position, as shown above in the figure on the right."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2017/2017_frq1_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2017/2017_frq1_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the dot below that represents the block, draw and label the forces, not components, that act on the block when it is at the equilibrium position shown. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Calculate the distance $x_0$ that the spring is stretched from its original length to the equilibrium position. While the $1.0\\,\\mathrm{kg}$ block is in equilibrium, a $0.20\\,\\mathrm{kg}$ ball of clay is launched with speed $v_0$ vertically from the ground $1.0\\,\\mathrm{m}$ below the hanging block. The clay has speed $v_1=5.0\\,\\mathrm{m/s}$ when it collides with the block."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Calculate the speed $v_0$. Upon impact, the clay sticks to the $1.0\\,\\mathrm{kg}$ block."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "i. Calculate the speed of the block immediately after the collision. ii. Calculate the kinetic energy lost in the collision. iii. Determine the period of oscillation for the block-clay-spring system."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "When the oscillating block-clay-spring system reaches its maximum speed after the collision, will the spring be stretched from its original length by a distance greater than, less than, or equal to $x_0$? - [ ] Greater than - [ ] Less than - [ ] Equal to Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(f)",
+        "text": "The collision is repeated using a rubber ball with the same mass as the ball of clay. The rubber ball is launched vertically with the same speed $v_0$. The collision between the rubber ball and the block is elastic. Will the speed of the block immediately after colliding with the rubber ball be greater than, less than, or equal to the speed of the block you calculated in part (d)(i)? - [ ] Greater than - [ ] Less than - [ ] Equal to Justify your answer."
+      }
+    ]
   },
   {
     "question_id": "2017_FRQ2",
@@ -2438,7 +3132,78 @@
         "2017_FRQ2 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Scoring worksheet pages are excluded; focused figures remain supplemental visual assets."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A cart of mass $M$ is on a level, horizontal track. The cart is attached to one end of an ideal spring, and the other end of the spring is attached to a vertical support. The spring has spring constant $k$. The cart is pulled to the right, stretching the spring a distance $d$, as shown above, and released from rest at time $t=0$. The cart-spring system begins to oscillate, and the position $x$ of the cart as a function of time $t$ is given by $$x(t)=d\\cos(\\omega t),$$ where $x$ is in meters, $\\omega$ is in $\\mathrm{rad/s}$, and $t$ is in seconds. Assume the mass of the cart's wheels is negligible."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2017/2017_frq2_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Derive an equation for the velocity of the cart $v$ as a function of time $t$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "On the axes below, sketch a graph of the velocity $v$ of the cart as a function of time $t$ for two complete oscillations. On the graph, $T$ represents the time for one complete oscillation. Explicitly label asymptotes, maxima, or minima with algebraic expressions, as appropriate."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2017/2017_frq2_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2017/2017_frq2_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 4",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2017/2017_frq2_img04.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Express all answers in part (c) in terms of $\\omega$, $t$, $M$, $d$, $k$, and physical constants, as appropriate. i. Determine an expression for the kinetic energy $K$ of the system as a function of time $t$. ii. Determine an expression for the potential energy $U$ of the system as a function of time $t$. iii. Using the equations from parts (c)(i) and (c)(ii), show that the rate of change of the total energy of the system, $dE/dt$, is zero. Two springs identical to the spring above are attached to each side of the cart of unknown mass $M$, as shown in Figure 1 above. The cart is on a level, horizontal track of negligible friction. A piece of clay is added to the top of the cart so that it will stick to the cart. The cart is displaced to the left a distance $d$ and released from rest, as shown in Figure 2 above. The period of oscillation is recorded. This procedure is repeated for several different pieces of clay of different masses. In each trial, the cart is displaced the same distance $d$. The data are shown below on the linear graph of $T^2$ as a function of $m_C$, where $T$ is the period of oscillation and $m_C$ represents the mass of the clay."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "From the graph, determine the following. i. $k$, the spring constant of each spring ii. $M$, the mass of the cart"
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "The experiment is repeated, but in a second set of trials, the cart is pulled back a distance $D$, where $D>d$. Describe any changes that will occur for the straight line on the graph in part (d). Justify your answer."
+      }
+    ]
   },
   {
     "question_id": "2017_FRQ3",
@@ -2589,7 +3354,68 @@
         "2017_FRQ3 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Scoring worksheet pages are excluded; focused figures remain supplemental visual assets."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A sphere of mass $m$ and radius $r$ is released from rest at the top of a curved track of height $H$. The sphere travels down the curved track and around a loop of radius $R$. The sphere rolls without slipping during the entire motion. Point $A$ on the loop is at height $R$, and point $B$ is at the top of the loop. The rotational inertia of the sphere is $\\frac{2}{5}mr^2$. Express all answers in parts (a) through (d) in terms of $m$, $r$, $H$, $R$, and physical constants, as appropriate. Assume $r\\ll R$."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the dots below, which represent the sphere, draw and label the forces, not components, that are exerted on the sphere at point $A$ and at point $B$, respectively. Each force must be represented by a distinct arrow starting on and pointing away from the dot."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "i. Derive an expression for the speed of the sphere at point $A$. ii. Derive an expression for the normal force the track exerts on the sphere at point $A$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Calculate the ratio of the rotational kinetic energy to the translational kinetic energy of the sphere at point $A$."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2017/2017_frq3_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2017/2017_frq3_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The minimum release height necessary for the sphere to travel around the loop and not lose contact with the loop at point $B$ is $H_{\\min}$. The sphere is replaced with a hoop of the same mass and radius. Will the value of $H_{\\min}$ increase, decrease, or stay the same? - [ ] Increase - [ ] Decrease - [ ] Stay the same Justify your answer. The sphere is again released from a known height $H$ and eventually leaves the track at point $C$, which is a height $R$ above the bottom of the loop, as shown in the figure above. The track makes an angle $\\theta$ above the horizontal at point $C$. Express your answer in part (e) in terms of $m$, $r$, $H$, $R$, $\\theta$, and physical constants, as appropriate."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2017/2017_frq3_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Calculate the maximum height above the bottom of the loop that the sphere will reach."
+      }
+    ]
   },
   {
     "question_id": "2018_FRQ1",
@@ -2746,7 +3572,68 @@
         "2018_FRQ1 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Prompt leakage from adjacent questions and scoring worksheet pages is excluded."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A student sets up an experiment with a cart on a level horizontal track. The cart is attached with an elastic cord to a force sensor that is fixed in place on the left end of the track. A motion sensor is at the right end of the track, as shown in the figure above. The cart is given an initial speed of $v_0=2.0\\,\\mathrm{m/s}$ and moves with this constant speed until the elastic cord exerts a force on the cart. The motion of the cart is measured with the motion detector, and the force the elastic cord exerts on the cart is measured with the force sensor. Both sensors are set up so that the positive direction is to the left. The data recorded by both sensors are shown in the graphs of velocity as a function of time and force as a function of time below. The area under the force-time graph is $1.0\\,\\mathrm{N\\cdot s}$."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2018/2018_frq1_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2018/2018_frq1_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Calculate the mass $m$ of the cart. For the time period from $0.50\\,\\mathrm{s}$ to $0.75\\,\\mathrm{s}$, the force $F$ the elastic cord exerts on the cart is given as a function of time $t$ by $$F=A\\sin(\\omega t),$$ where $A=6.3\\,\\mathrm{N}$ and $\\omega=12.6\\,\\mathrm{rad/s}$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Using the given equation, show that the area under the graph above is $1.0\\,\\mathrm{N\\cdot s}$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The experiment is repeated using a different cord that exerts a larger average force on the cart. The cart starts and ends with the same speeds as those in the original experiment. Will the area for the graph of force as a function of time for the new cord be greater than, less than, or equal to the area for that of the original cord? - [ ] Greater than - [ ] Less than - [ ] Equal to Justify your answer. The elastic cord from the original experiment can be modeled as an ideal spring with force constant $k$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Derive an expression for the maximum change in length $x_{\\max}$ for the cord. Express your answer in terms of $m$, $k$, $v_0$, and physical constants, as appropriate. The student performs several trials of the experiment. For the first trial, the cart is empty. In each succeeding trial, a block is added to the cart. In all trials, the cart has an initial speed of $2.0\\,\\mathrm{m/s}$ to the right, the cart rebounds to the left with a speed of $2.0\\,\\mathrm{m/s}$, and the maximum change in length of the elastic cord is measured. The total mass $M$ of the cart and the maximum change in length of the cord in each trial are recorded in the table below. | Total mass of cart $M$ (kg) | $x_{\\max}$ (m) | |---:|---:| | 0.25 | 0.142 | | 0.75 | 0.253 | | 1.25 | 0.349 | | 1.75 | 0.431 | | 2.25 | 0.465 |"
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Indicate below which quantities should be graphed to yield a straight line with a slope that could be used to calculate a numerical value for the force constant of the elastic cord $k$. Vertical axis: Horizontal axis: Use the remaining columns in the table on the previous page, as needed, to record any quantities that you indicated that are not given."
+      },
+      {
+        "type": "part",
+        "label": "(f)",
+        "text": "Plot the data points for the quantities indicated in part (e) on the graph below. Clearly scale and label all axes, including units as appropriate. Draw a straight line that best represents the data."
+      },
+      {
+        "type": "part",
+        "label": "(g)",
+        "text": "Use the best-fit line to calculate the force constant $k$ of the elastic cord."
+      }
+    ]
   },
   {
     "question_id": "2018_FRQ2",
@@ -2919,7 +3806,73 @@
         "2018_FRQ2 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Prompt leakage from adjacent questions and scoring worksheet pages is excluded."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The variable $x$ represents the position of particle A in a two-particle system. Particle B remains at rest. The graph above shows the potential energy $U(x)$ of the system as a function of position $x$ of particle A, which has mass $0.40\\,\\mathrm{kg}$. Particle A is released from rest at position $x=2.0\\,\\mathrm{m}$. Assume positive to be toward the right."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2018/2018_frq2_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Calculate the speed of particle A when it reaches position $x=14.0\\,\\mathrm{m}$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "i. Calculate the magnitude of the acceleration of particle A when it reaches position $x=3.0\\,\\mathrm{m}$. ii. What is the direction of the acceleration of particle A when it reaches position $x=3.0\\,\\mathrm{m}$? - [ ] Left - [ ] Right"
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Determine the magnitude of the acceleration of particle A when it reaches position $x=7.0\\,\\mathrm{m}$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Particle A is again released from rest at position $x=2.0\\,\\mathrm{m}$. i. Calculate the elapsed time for particle A to travel from position $x=2.0\\,\\mathrm{m}$ to position $x=6.0\\,\\mathrm{m}$. ii. Calculate the elapsed time for particle A to travel from position $x=6.0\\,\\mathrm{m}$ to position $x=8.0\\,\\mathrm{m}$. iii. Calculate the elapsed time for particle A to travel from position $x=8.0\\,\\mathrm{m}$ to position $x=14.0\\,\\mathrm{m}$."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Particle A is now placed at position $x=7.0\\,\\mathrm{m}$. In order for particle A to reach position $x=16.0\\,\\mathrm{m}$ and be moving at a speed of $1.0\\,\\mathrm{m/s}$, what initial speed should particle A be given at its new initial position of $x=7.0\\,\\mathrm{m}$?"
+      },
+      {
+        "type": "part",
+        "label": "(f)",
+        "text": "On the grid below, carefully draw a graph of the force $F$ acting on particle A as a function of $x$ for the range $0<x<16\\,\\mathrm{m}$."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2018/2018_frq2_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2018/2018_frq2_img03.png"
+        ],
+        "used_by_parts": []
+      }
+    ]
   },
   {
     "question_id": "2018_FRQ3",
@@ -3081,7 +4034,88 @@
         "2018_FRQ3 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Prompt leakage from adjacent questions and scoring worksheet pages is excluded."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A cylinder of mass $M$ and radius $R$ is released from rest at the top of an inclined plane, as shown above. The cylinder rolls without slipping down the incline. The rotational inertia of the cylinder is $MR^2/2$."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2018/2018_frq3_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Derive an expression for the angular momentum of the cylinder about its center of mass when it has rolled a vertical distance $h$. Express your answer in terms of $M$, $R$, $h$, and physical constants, as appropriate."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Is the angular momentum of the cylinder conserved as the cylinder rolls down the vertical distance $h$? - [ ] Yes - [ ] No Justify your answer. A child's toy is composed of 3 narrow cylinders attached around a common axis through their centers, as shown above. The central cylinder has mass $M$ and radius $R$. Each of the two outer cylinders has mass $M$ and radius $2R$."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2018/2018_frq3_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Derive an expression for the rotational inertia of the toy around its center. Express your answer in terms of $M$, $R$, and physical constants, as appropriate. The toy is placed on a narrow track that is inclined at an angle $\\theta$ above the horizontal. Only the central cylinder is in contact with the track, as shown above. The toy rolls without slipping down the track."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2018/2018_frq3_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "i. On the dot below, which represents the toy, draw and label the forces, not components, that act on the toy. The dashed line is parallel to the narrow track. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot. ii. Derive an expression for the linear acceleration of the toy as it rolls down the track. Express your answer in terms of $M$, $R$, $\\theta$, and physical constants, as appropriate. iii. Determine the force of friction exerted on the toy as it rolls down the track. Express your answer in terms of $M$, $R$, $\\theta$, and physical constants, as appropriate."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "The toy reaches the bottom of the incline and rolls at constant speed $v$ along a horizontal section of the track, as shown above. Derive an expression for the total kinetic energy of the toy while it is rolling. Express your answer in terms of $M$, $R$, $v$, and physical constants, as appropriate."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 4",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2018/2018_frq3_img04.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 5",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2018/2018_frq3_img05.png"
+        ],
+        "used_by_parts": []
+      }
+    ]
   },
   {
     "question_id": "2019_FRQ1",
@@ -3244,7 +4278,78 @@
         "2019_FRQ1 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Prompt leakage from neighboring questions, learning-objective pages, and scoring worksheets is excluded."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A projectile is launched from the back of a cart of mass $m$ that is held at rest, as shown above. At time $t=0$, the projectile leaves the cart with speed $v_0$ at an angle $\\theta$ above the horizontal. The projectile lands at point $P$. Assume that the starting height of the projectile above the ground is negligible compared to the maximum height reached by the projectile and the horizontal distance traveled."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq1_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Derive an expression for the time $t_P$ at which the projectile reaches point $P$. Express your answer in terms of $v_0$, $\\theta$, and physical constants, as appropriate."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "On the axes below, sketch the horizontal component $v_x$ and the vertical component $v_y$ of the velocity of the projectile as a function of time $t$ from $t=0$ until $t=t_P$. Explicitly label the vertical intercepts with algebraic expressions. The projectile is again launched from the same position, but with the cart traveling to the right with speed $v_1$ relative to the ground, as shown above. The projectile again leaves the cart with speed $v_0$ relative to the cart at an angle $\\theta$ above the horizontal, and the projectile lands at point $Q$, which is a horizontal distance $D$ from the launching point. Express your answers in terms of $v_0$, $\\theta$, and physical constants, as appropriate."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq1_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq1_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Give a physical reason why the projectile lands at point $Q$, which is not as far from the launch position as point $P$ is, and explain how that physical reason affects the flight of the projectile."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Derive an expression for $v_1$. Express your answer in terms of $v_0$, $\\theta$, $D$, and physical constants, as appropriate. After the launch, the cart's speed is $v_2$. Beginning at time $t=0$, the cart experiences a braking force $F=-bv$, where $b$ is a positive constant with units of $\\mathrm{kg/s}$ and $v$ is the speed of the cart. Express your answers in terms of $m$, $b$, $v_2$, and physical constants, as appropriate."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "i. Using Newton's second law, write but do not solve a differential equation that represents the motion of the cart while it experiences the braking force. ii. Show that the speed $v(t)$ of the cart as a function of time is given by $$v(t)=v_2e^{-bt/m}.$$ iii. Derive an expression for the distance the cart travels from $t=0$ until the time it comes to a stop."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 4",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq1_img04.png"
+        ],
+        "used_by_parts": []
+      }
+    ]
   },
   {
     "question_id": "2019_FRQ2",
@@ -3408,7 +4513,83 @@
         "2019_FRQ2 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Prompt leakage from neighboring questions, learning-objective pages, and scoring worksheets is excluded."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A thin uniform disk of mass $M$ and radius $R$ has a string wrapped around its edge and attached to the ceiling. The bottom of the disk is at a height $3R$ above the floor, as shown above. The disk is released from rest. The rotational inertia of a disk around its center is $I=\\frac12MR^2$."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq2_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the circle below that represents the disk, draw and label the forces, not components, that act on the disk. Each force must be represented by a distinct arrow starting on, and pointing away from, the disk, beginning at the point where the force is exerted on the disk. The dot is at the center of the disk."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "When released from rest, the disk falls and the string unwinds. The force the string exerts on the disk is $F_T$, and the gravitational force exerted on the disk is $F_g$. Which expression correctly relates $F_T$ and $F_g$ as the disk falls? - [ ] $F_T<F_g$ - [ ] $F_T=F_g$ - [ ] $F_T>F_g$ Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Express all answers in terms of $M$, $R$, and physical constants, as appropriate. i. Derive an expression for the acceleration $a$ of the disk as it falls. ii. Derive an expression for the time $\\Delta t$ that it takes the disk to reach the ground. iii. Derive an expression for the rotational kinetic energy $K_{rotation}$ of the disk at the instant it reaches the ground."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "A very narrow wedge is cut out of the thin uniform disk of mass $M$, as shown above. If $r$ is the distance from the tip of the wedge, then the linear mass density of the wedge can be expressed as $$\\lambda(r)=\\frac{Mr}{25R^2}.$$ i. Using integral calculus, derive an expression for the rotational inertia of the wedge around its tip. ii. Derive an expression for the rotational inertia of the modified disk, the disk after the narrow wedge is cut out, around its original center."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq2_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq2_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 4",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq2_img04.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 5",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq2_img05.png"
+        ],
+        "used_by_parts": []
+      }
+    ]
   },
   {
     "question_id": "2019_FRQ3",
@@ -3572,6 +4753,67 @@
         "2019_FRQ3 prompt and rubric are verified Markdown plus LaTeX reconstructed from visible PDF pages.",
         "Prompt leakage from neighboring questions, learning-objective pages, and scoring worksheets is excluded."
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Three blocks are connected by strings that pass over pulleys of negligible mass. Block B is on a level, horizontal surface of negligible friction. Block A is on top of block B. String 1 connects blocks A and B. The coefficients of static and kinetic friction between blocks A and B are $\\mu_s$ and $\\mu_k$, respectively. Block C is hanging over the end of the table and is attached to block B by string 2, as shown above. The masses of blocks A, B, and C are $m_A$, $m_B$, and $m_C$, respectively. When block C is released, the system remains at rest."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq3_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq3_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "i. On the dot below, which represents block A, draw and label the forces, not components, that act on block A. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot. ii. On the dot below, which represents block B, draw and label the forces, not components, that act on block B. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Derive an expression for the maximum value for $m_C$ at which the blocks will remain at rest. Express all algebraic answers in terms of $\\mu_s$, $\\mu_k$, $m_A$, $m_B$, $m_C$, and physical constants, as appropriate. The setup is modified, as shown in the figure above. Block A and one of the pulleys are removed, and block B remains on the table. There is still negligible friction between block B and the table. A lump of clay is added to block B. The students use Newton's second law to derive an equation for the acceleration $a_C$ of block C. The acceleration is given by $$a_C=\\frac{m_Cg}{m_{tot}},$$ where $m_{tot}$ is the combined mass of the clay and the two blocks. Students use the setup shown above to experimentally determine the acceleration $g$ due to gravity. In each trial, a student moves a small amount of clay from block B to block C and then releases the blocks from rest, recording the new values of $m_C$ and $a_C$. The total mass of the clay and the two blocks is $m_{tot}=5.0\\,\\mathrm{kg}$. The graph below shows $a_C$ as a function of $m_C$, where $m_C$ is now the combined mass of block C and the mass of clay added to block C."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-mechanics/2019/2019_frq3_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "i. Draw a best-fit line to the data points in the graph above. ii. Use the best-fit line from part (c)(i) to calculate an experimental value for the acceleration $g$ due to gravity."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "If the mass of the pulley in part (c) is significant, would the experimental value of $g$ be greater than, less than, or equal to the value calculated in part (c)(ii)? - [ ] Greater than - [ ] Less than - [ ] Equal to Justify your answer. A different group of students repeats the experiment, but instead of moving clay from block B to block C, they just remove a small amount of clay from block B and set it aside, away from the setup. The equation $a_C=m_Cg/m_{tot}$ still applies to the new experiment."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "In order to provide a straight-line graph that can be used to determine an experimental value for $g$, what two quantities should the students now graph? Check all that apply. - [ ] $a_C$ vs. $1/m_{tot}$ - [ ] $a_C$ vs. $m_{tot}$ - [ ] $a_C$ vs. $m_C/m_{tot}$ - [ ] $a_C$ vs. $m_C$ - [ ] $m_C$ vs. $m_{tot}$ - [ ] $m_C$ vs. $1/m_{tot}$ Justify your answer."
+      }
+    ]
   }
 ]

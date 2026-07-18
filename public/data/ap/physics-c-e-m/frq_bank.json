@@ -1483,7 +1483,68 @@
       ],
       "classification_version": "physics_c_em_frq_draft_v1",
       "primary_unit": "U8"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A rod of length $L$ lies along the $x$-axis with its left end at the origin, as shown in the figure. The rod has a nonuniform linear charge density $\\lambda=\\alpha x$, where $\\alpha$ is a positive constant."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-e-m/2016/2016_frq1_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-e-m/2016/2016_frq1_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Determine the units of the constant $\\alpha$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Derive an expression for the total charge on the rod. Express your answer in terms of $\\alpha$, $L$, and physical constants, as appropriate. The rod is replaced with one of the same length but with a uniform positive linear charge density $\\lambda_0$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Show that the electric field at point $A$, which is a distance $b$ to the left of the rod, has a magnitude of $E=\\frac{\\lambda_0 L}{4\\pi\\epsilon_0 b(b+L)}$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "A proton is placed at point $A$, at position $(-b,0)$, near the positively charged rod and released from rest. (i) Sketch a graph of the horizontal component of the acceleration of the proton $a_x$ as a function of position $x$ for the region in which the proton travels after it is released. Sketch any asymptote, but do not indicate its value. (ii) Sketch a graph of the horizontal component of the velocity of the proton $v_x$ as a function of position $x$ for the region in which the proton travels after it is released. Sketch any asymptote, but do not indicate its value. (iii) Instead of a proton, an alpha particle with twice the charge and four times the mass of a proton is now placed at point $A$. Is the magnitude of the initial acceleration of the alpha particle greater than, less than, or equal to the magnitude of the initial acceleration of the proton from part (d)(i)?"
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-e-m/2016/2016_frq1_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Using the equation from part (c), show that the magnitude of the electric field at a point on the $x$-axis very far away from the rod is approximately equal to the electric field due to a point charge of magnitude $Q=\\lambda_0 L$ located at the origin."
+      }
+    ]
   },
   {
     "question_id": "2016_FRQ2",
@@ -1594,7 +1655,53 @@
       ],
       "classification_version": "physics_c_em_frq_draft_v1",
       "primary_unit": "U11"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A circuit consists of a variable DC power supply, an ammeter, a switch, and a resistor of unknown resistance $R_0$ connected in series with a test space into which different circuit elements can be placed. To determine $R_0$, a wire of negligible resistance is placed in the test space. The power supply is set at several potential differences, and the current is measured. | $\\epsilon$ (V) | 2.00 | 4.00 | 6.00 | 8.00 | |---:|---:|---:|---:|---:| | Current (mA) | 0.146 | 0.310 | 0.433 | 0.577 |"
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-e-m/2016/2016_frq2_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-e-m/2016/2016_frq2_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Indicate which quantities should be graphed to yield a straight line whose slope can be used to calculate $R_0$. Include horizontal and vertical axes."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Plot the straight-line data points on the graph. Clearly scale and label all axes, including units, if appropriate. Draw a straight line that best represents the data."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Using your straight line, calculate an experimental value for $R_0$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The power supply is set to $4.00\\ \\mathrm{V}$ and an uncharged air-filled capacitor is placed in the test space. The switch is closed at $t=0$, and the capacitor is allowed to fully charge. (i) On the axes shown, sketch the current $I$ through the ammeter as a function of time $t$. Explicitly label intercepts, asymptotes, maxima, or minima with numerical values or algebraic expressions, as appropriate. (ii) The time constant is $0.045\\ \\mathrm{s}$ and the capacitor is charged to $4\\ \\mathrm{V}$. Calculate the energy stored in the capacitor. (iii) The graph shows the charge $Q$ on the capacitor as a function of time $t$. The capacitor is discharged, a dielectric with dielectric constant $\\kappa=2$ is inserted, and the same charging procedure is repeated. On the graph, sketch the curve showing $Q$ for the dielectric-filled capacitor as a function of $t$."
+      }
+    ]
   },
   {
     "question_id": "2016_FRQ3",
@@ -1711,7 +1818,73 @@
       ],
       "classification_version": "physics_c_em_frq_draft_v1",
       "primary_unit": "U13"
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "An ideal battery is connected to three resistors, an ideal inductor, and two switches, as shown in the circuit. Both switches are initially open. Switch $S_2$ is then closed."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-e-m/2016/2016_frq3_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-e-m/2016/2016_frq3_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Calculate the voltage across resistor $R_2$. Switch $S_1$ is then closed."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Calculate the magnitude of the rate of change of the current through the inductor immediately after switch $S_1$ is closed."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "At time $t$ after switch $S_1$ is closed, the instantaneous current through resistor $R_2$ is measured to be $0.020\\ \\mathrm{A}$. (i) Calculate the current through resistor $R_3$ at time $t$. (ii) Calculate the energy stored in the inductor at time $t$. After a long time, the currents reach a steady value. Switch $S_2$ is then opened."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Calculate the current through the inductor immediately after switch $S_2$ is opened."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Write, but do not solve, a differential equation that can be used to determine the current through resistor $R_2$ at time $t$ after switch $S_2$ is opened."
+      },
+      {
+        "type": "part",
+        "label": "(f)",
+        "text": "Using the differential equation from part (e), derive an expression for the current through resistor $R_2$ as a function of time $t$ after switch $S_2$ is opened."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-c-e-m/2016/2016_frq3_img03.png"
+        ],
+        "used_by_parts": []
+      }
+    ]
   },
   {
     "question_id": "2017_FRQ1",
