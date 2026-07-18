@@ -67,6 +67,7 @@ function auditQuestion(subject, q, subjectReport) {
   const options = normalizeOptions(q.options)
   const labels = Object.keys(options).sort()
   if (labels.length === 0) return
+  const reviewed = q.option_integrity_reviewed === true
 
   if (isDiagramOptionSet(options)) {
     subjectReport.diagram_option_sets += 1
@@ -120,7 +121,7 @@ function auditQuestion(subject, q, subjectReport) {
     const hits = value.match(/\b(?:Increase|Decrease|No change|Higher|Lower|Same|Positive|Negative|Zero|Left|Right|Up|Down)\b/g)
     return (hits || []).length >= 2 || value.split('/').length >= 3
   }).length
-  if (tableLike >= 3) {
+  if (!reviewed && tableLike >= 3) {
     addWarning(subject, qid, subjectReport, 'possible_unstructured_option_table', 'Choices look like a combination table; use option_table_data when rows/columns carry meaning.')
   }
 }

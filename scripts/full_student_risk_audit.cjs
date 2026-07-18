@@ -300,7 +300,7 @@ function hasVisual(item) {
   return Boolean((item.image_paths || []).length || (item.rubric_image_paths || []).length)
 }
 
-function hasTableVisual(item) {
+function _hasTableVisual(item) {
   return (item.image_paths || []).some(imagePath => /(?:table|matrix|balance|database|graph|figure|diagram)/i.test(imagePath))
 }
 

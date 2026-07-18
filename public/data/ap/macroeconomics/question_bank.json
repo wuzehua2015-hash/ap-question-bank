@@ -3439,11 +3439,11 @@
     "year": "2014",
     "text": "If a contractionary fiscal policy is followed by an expansionary monetary policy, nominal interest rate and employment would most likely be affected in which of the following ways in the short run?\nNominal Interest Rate Employment",
     "options": {
-      "A": "Increase Increase",
-      "B": "Increase Decrease",
-      "C": "Decrease Decrease",
-      "D": "Decrease Indeterminate",
-      "E": "Indeterminate Decrease."
+      "A": "Increase / Increase",
+      "B": "Increase / Decrease",
+      "C": "Decrease / Decrease",
+      "D": "Decrease / Indeterminate",
+      "E": "Indeterminate / Decrease"
     },
     "answer": "D",
     "primary_unit": "U5",
@@ -3464,7 +3464,42 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Nominal Interest Rate",
+        "Employment"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Indeterminate"
+        ],
+        "E": [
+          "Indeterminate",
+          "Decrease"
+        ]
+      }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_table_structure",
+        "note": "Structured policy-effect choices into option_table_data."
+      }
+    ]
   },
   {
     "question_id": "2014_Q36",
@@ -9342,11 +9377,11 @@
     "year": 2017,
     "text": "In the coffee market, which of the following changes will increase the price and decrease the quantity of coffee?",
     "options": {
-      "A": "Supply: Increase / Demand: No change",
-      "B": "Supply: Increase / Demand: Decrease",
-      "C": "Supply: Decrease / Demand: Increase",
-      "D": "Supply: Decrease / Demand: Decrease",
-      "E": "Supply: No change / Demand: Increase"
+      "A": "Increase / No change",
+      "B": "Increase / Decrease",
+      "C": "Decrease / Increase",
+      "D": "Decrease / Decrease",
+      "E": "No change / Increase"
     },
     "answer": "E",
     "primary_unit": "U1",
@@ -9371,7 +9406,42 @@
       "predict",
       "analyze"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Supply",
+        "Demand"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "No change"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Decrease",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "No change",
+          "Increase"
+        ]
+      }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_table_structure",
+        "note": "Structured supply-demand change choices into option_table_data."
+      }
+    ]
   },
   {
     "question_id": "2017_Q12",
@@ -10260,11 +10330,11 @@
     "year": 2017,
     "text": "Which of the following combinations of changes in income taxes, real interest rate, and investment spending is most likely to promote economic growth?",
     "options": {
-      "A": "Income taxes: Increase / Interest Rate: Increase / Investment: Increase",
-      "B": "Income taxes: Increase / Interest Rate: Increase / Investment: Decrease",
-      "C": "Income taxes: Increase / Interest Rate: Decrease / Investment: Decrease",
-      "D": "Income taxes: Decrease / Interest Rate: Decrease / Investment: Decrease",
-      "E": "Decrease Decrease Increase"
+      "A": "Increase / Increase / Increase",
+      "B": "Increase / Increase / Decrease",
+      "C": "Increase / Decrease / Decrease",
+      "D": "Decrease / Decrease / Decrease",
+      "E": "Decrease / Decrease / Increase"
     },
     "answer": "E",
     "primary_unit": "U5",
@@ -10295,7 +10365,48 @@
       "identify"
     ],
     "requires_graph": false,
-    "classification_reasoning": "Manual progression-gate fix: Requires policy, real-interest-rate, investment, and growth-channel reasoning."
+    "classification_reasoning": "Manual progression-gate fix: Requires policy, real-interest-rate, investment, and growth-channel reasoning.",
+    "option_table_data": {
+      "headers": [
+        "Income taxes",
+        "Real interest rate",
+        "Investment spending"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "Increase",
+          "Decrease",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease",
+          "Decrease"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease",
+          "Increase"
+        ]
+      }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_table_structure",
+        "note": "Structured growth-policy combination choices into option_table_data."
+      }
+    ]
   },
   {
     "question_id": "2017_Q39",
@@ -12682,11 +12793,11 @@
     "year": "2018",
     "text": "In the short run, how would a government's budget deficit, national debt, and real output change if government spending increases with no change in taxes?",
     "options": {
-      "A": "Increase Increase Decrease",
-      "B": "Increase Decrease Increase",
-      "C": "Increase Increase Increase",
-      "D": "Decrease Decrease Increase",
-      "E": "Decrease Increase Decrease"
+      "A": "Increase / Increase / Decrease",
+      "B": "Increase / Decrease / Increase",
+      "C": "Increase / Increase / Increase",
+      "D": "Decrease / Decrease / Increase",
+      "E": "Decrease / Increase / Decrease"
     },
     "answer": "C",
     "primary_unit": "U3",
@@ -12712,7 +12823,48 @@
     "skills": [
       "predict"
     ],
-    "requires_graph": false
+    "requires_graph": false,
+    "option_table_data": {
+      "headers": [
+        "Budget deficit",
+        "National debt",
+        "Real output"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase",
+          "Decrease"
+        ],
+        "B": [
+          "Increase",
+          "Decrease",
+          "Increase"
+        ],
+        "C": [
+          "Increase",
+          "Increase",
+          "Increase"
+        ],
+        "D": [
+          "Decrease",
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Increase",
+          "Decrease"
+        ]
+      }
+    },
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_table_structure",
+        "note": "Structured fiscal-effect combination choices into option_table_data."
+      }
+    ]
   },
   {
     "question_id": "2018_Q48",

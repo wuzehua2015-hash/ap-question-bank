@@ -15122,11 +15122,11 @@
     "source": "AP Microeconomics 2016 Official Practice Exam",
     "text": "A country produces computers and rice. If resources are fully employed and there is technological progress only in the production of rice, the opportunity costs of producing computers and rice will change in which of the following ways? Opportunity Cost of Computers Opportunity Cost of Rice",
     "options": {
-      "A": "Increase Increase",
-      "B": "Increase Decrease",
-      "C": "No change Decrease",
-      "D": "Decrease Increase",
-      "E": "Decrease Decrease"
+      "A": "Increase / Increase",
+      "B": "Increase / Decrease",
+      "C": "No change / Decrease",
+      "D": "Decrease / Increase",
+      "E": "Decrease / Decrease"
     },
     "answer": "B",
     "primary_unit": "U1",
@@ -15156,7 +15156,34 @@
     "has_graph": false,
     "requires_graph": false,
     "image_paths": [],
-    "option_table_data": null,
+    "option_table_data": {
+      "headers": [
+        "Opportunity Cost of Computers",
+        "Opportunity Cost of Rice"
+      ],
+      "rows": {
+        "A": [
+          "Increase",
+          "Increase"
+        ],
+        "B": [
+          "Increase",
+          "Decrease"
+        ],
+        "C": [
+          "No change",
+          "Decrease"
+        ],
+        "D": [
+          "Decrease",
+          "Increase"
+        ],
+        "E": [
+          "Decrease",
+          "Decrease"
+        ]
+      }
+    },
     "background_data": null,
     "provenance": {
       "content_source": "2016 source PDF audited against backup/microeconomics_2026-06-25/2016_cleaned.json",
@@ -15165,7 +15192,14 @@
       "notes": []
     },
     "options_as_table": false,
-    "pure_unit": true
+    "pure_unit": true,
+    "audit_notes": [
+      {
+        "date": "2026-07-18",
+        "type": "option_table_structure",
+        "note": "Structured opportunity-cost combination choices into option_table_data."
+      }
+    ]
   },
   {
     "question_id": "2016_Q18",

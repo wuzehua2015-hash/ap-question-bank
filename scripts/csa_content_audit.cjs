@@ -152,7 +152,8 @@ function hasRecursionEvidence(text) {
   const value = String(text || '')
   if (/recurs/i.test(value)) return true
   const codeBlocks = [...value.matchAll(/```(?:java|text)?\n([\s\S]*?)```/g)].map(match => match[1]).join('\n')
-  const methodNames = [...codeBlocks.matchAll(/\b(?:public|private|protected)\s+(?:static\s+)?[\w<>\[\]]+\s+([A-Za-z_]\w*)\s*\(/g)].map(match => match[1])
+  const methodSignaturePattern = new RegExp(String.raw`\b(?:public|private|protected)\s+(?:static\s+)?[\w<>\[\]]+\s+([A-Za-z_]\w*)\s*\(`, 'g')
+  const methodNames = [...codeBlocks.matchAll(methodSignaturePattern)].map(match => match[1])
   for (const methodName of methodNames) {
     const declarationPattern = new RegExp(`\\b(?:public|private|protected)\\s+(?:static\\s+)?[\\w<>\\[\\]]+\\s+${escapeRegExp(methodName)}\\s*\\(`)
     const codeWithoutDeclaration = codeBlocks.replace(declarationPattern, ' ')
