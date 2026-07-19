@@ -14,6 +14,7 @@ function Header() {
   const currentSubjectConfig = mySubjects.find(subject => subject.id === currentSubject)
   const accountLabel = isLoggedIn ? accountLevelDisplay(accountLevel || user?.account_level || 'free', isInternalStudent) : '登录'
   const hasStudySubjects = mySubjects.length > 0
+  const subjectButtonLabel = currentSubjectConfig ? subjectDisplayName(currentSubjectConfig, 'short') : '选择科目'
   const navItems = [
     { path: '/quiz', label: '练习' },
     { path: '/exam', label: '模考' },
@@ -44,12 +45,19 @@ function Header() {
               <button
                 type="button"
                 onClick={() => setSubjectOpen(!subjectOpen)}
-                className="text-text-muted hover:text-brand"
+                className={`flex items-center gap-2 rounded-md border px-3 py-2 text-left hover:border-brand hover:text-brand ${
+                  hasStudySubjects ? 'border-border bg-white text-brand' : 'border-brand bg-white font-semibold text-brand'
+                }`}
               >
-                {currentSubjectConfig ? subjectDisplayName(currentSubjectConfig, 'short') : '选择科目'}
+                <span className="text-xs text-text-muted">{hasStudySubjects ? '当前科目' : '先选科目'}</span>
+                <span className="font-semibold">{subjectButtonLabel}</span>
+                <span aria-hidden="true" className="text-text-muted">▾</span>
               </button>
               {subjectOpen && (
-                <div className="absolute right-0 top-full mt-3 w-64 rounded-lg border border-border bg-white p-2 shadow-lg">
+                <div className="absolute right-0 top-full mt-3 w-72 rounded-lg border border-border bg-white p-2 shadow-lg">
+                  <div className="px-3 pb-2 pt-1 text-xs font-semibold text-text-muted">
+                    {hasStudySubjects ? '切换学习科目' : '开始前先选择科目'}
+                  </div>
                   {hasStudySubjects ? (
                     mySubjects.map(subject => (
                       <button
@@ -59,20 +67,21 @@ function Header() {
                           setSubject(subject.id)
                           setSubjectOpen(false)
                         }}
-                        className={`block w-full rounded-md px-3 py-2 text-left text-sm hover:bg-bg ${subject.id === currentSubject ? 'font-semibold text-brand' : 'text-text'}`}
+                        className={`flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm hover:bg-bg ${subject.id === currentSubject ? 'font-semibold text-brand' : 'text-text'}`}
                       >
-                        {subjectDisplayName(subject)}
+                        <span>{subjectDisplayName(subject)}</span>
+                        {subject.id === currentSubject && <span className="text-xs text-accent">当前</span>}
                       </button>
                     ))
                   ) : (
-                    <div className="px-3 py-2 text-sm text-text-muted">先选择学习科目</div>
+                    <div className="px-3 py-3 text-sm leading-6 text-text-muted">选择科目后，练习、模考、错题和记录都会按该科目展示。</div>
                   )}
                   <Link
                     to="/settings"
                     onClick={() => setSubjectOpen(false)}
-                    className="mt-1 block border-t border-border px-3 py-2 text-sm text-text-muted hover:text-brand"
+                    className="mt-1 block rounded-md border border-border bg-bg px-3 py-2 text-center text-sm font-semibold text-brand hover:border-brand"
                   >
-                    管理科目
+                    {hasStudySubjects ? '管理我的科目' : '去选择科目'}
                   </Link>
                 </div>
               )}
@@ -94,7 +103,17 @@ function Header() {
 
       {menuOpen && (
         <nav className="md:hidden border-t border-border bg-bg px-5 py-4">
-          <div className="mb-4 text-sm text-text-muted">{currentSubjectConfig ? subjectDisplayName(currentSubjectConfig) : '选择科目'}</div>
+          <Link
+            to="/settings"
+            onClick={() => setMenuOpen(false)}
+            className="mb-4 flex items-center justify-between rounded-md border border-border bg-white px-3 py-3 text-sm"
+          >
+            <span>
+              <span className="block text-xs text-text-muted">{hasStudySubjects ? '当前科目' : '先选科目'}</span>
+              <span className="mt-1 block font-semibold text-brand">{currentSubjectConfig ? subjectDisplayName(currentSubjectConfig) : '选择学习科目'}</span>
+            </span>
+            <span className="font-semibold text-accent">{hasStudySubjects ? '切换' : '选择'}</span>
+          </Link>
           <div className="grid grid-cols-2 gap-3 text-sm">
             <Link to="/" onClick={() => setMenuOpen(false)} className="text-text">首页</Link>
             {navItems.map(item => (
@@ -103,7 +122,7 @@ function Header() {
               </Link>
             ))}
             <Link to="/search" onClick={() => setMenuOpen(false)} className="text-text">搜题</Link>
-            <Link to="/settings" onClick={() => setMenuOpen(false)} className="text-text">科目</Link>
+            <Link to="/settings" onClick={() => setMenuOpen(false)} className="text-text">科目管理</Link>
             <Link to={isLoggedIn ? '/account' : '/login'} onClick={() => setMenuOpen(false)} className="text-text">
               {accountLabel}
             </Link>

@@ -1,29 +1,30 @@
 import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
+import { useSubject } from '../contexts/SubjectContext'
 
 const PROGRAM_GROUPS = [
   {
-    title: 'AP 已上线',
+    title: 'AP 科目训练',
     items: ['科学', '数学与计算机', '经济与社会科学'],
   },
   {
-    title: '规划扩展',
+    title: '后续内容方向',
     items: ['IB', 'A-Level', '国际竞赛'],
   },
 ]
 
-const ACCESS_LEVELS = [
+const FEATURE_CARDS = [
   {
-    title: '开放练习',
-    text: '无需账号即可体验单元 Quiz，适合先快速了解训练方式。',
+    title: '按单元练习',
+    text: '先选科目与单元，再开始一组短练习，适合日常巩固。',
   },
   {
-    title: '注册会员',
-    text: '登录后可保留做题记录与错题记录，方便持续复盘。',
+    title: '模考训练',
+    text: '按考试节奏完成在线训练，帮助学生熟悉题量与时间安排。',
   },
   {
-    title: '翎英学员',
-    text: '可使用搜题、题单、相似题训练，以及 Quiz 和 Mock PDF 下载等完整训练工具。',
+    title: '错题复盘',
+    text: '把练习结果沉淀下来，方便回看薄弱题目与训练记录。',
   },
 ]
 
@@ -31,6 +32,8 @@ const FLOW = ['选择课程与科目', '按单元训练', '查看作答结果', 
 
 function LandingPage() {
   const { isLoggedIn } = useAuth()
+  const { mySubjects } = useSubject()
+  const practicePath = mySubjects.length > 0 ? '/quiz' : '/settings'
 
   return (
     <div className="bg-bg">
@@ -42,14 +45,14 @@ function LandingPage() {
               国际课程备考训练平台
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-text-muted sm:text-lg">
-              围绕 AP 题库训练场景，提供按单元练习、模考、错题复盘与学习记录工具。平台结构面向更多课程体系扩展，后续可逐步接入 IB、A-Level 与国际竞赛内容。
+              面向国际课程学生的在线训练工具，支持按单元练习、模考训练、错题复盘与学习记录，帮助学生把日常刷题变成更稳定的备考节奏。
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                to="/quiz"
+                to={practicePath}
                 className="rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-light"
               >
-                开始开放练习
+                开始练习
               </Link>
               <Link
                 to={isLoggedIn ? '/dashboard' : '/login'}
@@ -82,11 +85,6 @@ function LandingPage() {
                   </div>
                 ))}
               </div>
-              <div className="mt-5 grid grid-cols-3 gap-3 text-center text-xs">
-                <Metric value="多科目" label="当前上线" />
-                <Metric value="持续扩展" label="题库内容" />
-                <Metric value="3" label="账号层级" />
-              </div>
             </div>
           </div>
         </div>
@@ -94,11 +92,11 @@ function LandingPage() {
 
       <section className="mx-auto max-w-6xl px-5 py-14">
         <SectionHeader
-          title="开放功能"
-          text="先完成一次真实训练，再根据学习需要登录或使用翎英学员工具。"
+          title="核心训练"
+          text="学生可以从一次单元练习开始，再逐步进入更完整的模考与复盘。"
         />
         <div className="grid gap-4 md:grid-cols-3">
-          {ACCESS_LEVELS.map(item => (
+          {FEATURE_CARDS.map(item => (
             <div key={item.title} className="rounded-md border border-border bg-white p-5">
               <h3 className="text-base font-semibold text-brand">{item.title}</h3>
               <p className="mt-3 text-sm leading-7 text-text-muted">{item.text}</p>
@@ -110,8 +108,8 @@ function LandingPage() {
       <section className="border-y border-border bg-white">
         <div className="mx-auto max-w-6xl px-5 py-14">
           <SectionHeader
-            title="课程体系覆盖"
-            text="当前以 AP 训练题库为主，底层结构预留课程体系扩展能力，不把平台锁定在单一考试体系。"
+            title="课程方向"
+            text="当前先提供 AP 科目训练内容，后续会继续增加更多国际课程与竞赛方向。"
           />
           <div className="grid gap-4 md:grid-cols-2">
             {PROGRAM_GROUPS.map(group => (
@@ -148,11 +146,11 @@ function LandingPage() {
       <section className="border-t border-border bg-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-5 px-5 py-12 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h2 className="text-2xl font-bold text-brand">开始一次开放练习</h2>
+            <h2 className="text-2xl font-bold text-brand">开始一次自由练习</h2>
             <p className="mt-2 text-sm text-text-muted">先选择科目与单元，完成一组 Quiz 后再决定是否登录保存记录。</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link to="/quiz" className="rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-light">
+            <Link to={practicePath} className="rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-light">
               进入题库
             </Link>
             <Link to="/register" className="rounded-md border border-border px-5 py-3 text-sm font-semibold text-brand hover:border-brand">
@@ -161,15 +159,6 @@ function LandingPage() {
           </div>
         </div>
       </section>
-    </div>
-  )
-}
-
-function Metric({ value, label }) {
-  return (
-    <div className="rounded-md bg-bg px-3 py-3">
-      <div className="text-lg font-bold text-brand">{value}</div>
-      <div className="mt-1 text-text-muted">{label}</div>
     </div>
   )
 }
