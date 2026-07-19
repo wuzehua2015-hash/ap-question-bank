@@ -2,14 +2,22 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { useSubject } from '../contexts/SubjectContext'
 
-const PROGRAM_GROUPS = [
+const PROGRAMS = [
   {
-    title: 'AP 科目训练',
-    items: ['科学', '数学与计算机', '经济与社会科学'],
+    name: 'AP',
+    items: ['Science', 'Math & Computer Science', 'Economics & Social Science'],
   },
   {
-    title: '后续内容方向',
-    items: ['IB', 'A-Level', '国际竞赛'],
+    name: 'IB',
+    items: ['Coming soon'],
+  },
+  {
+    name: 'A-Level',
+    items: ['Coming soon'],
+  },
+  {
+    name: '国际竞赛',
+    items: ['Coming soon'],
   },
 ]
 
@@ -70,7 +78,7 @@ function LandingPage() {
             <div className="rounded-md bg-white p-5">
               <div className="mb-5 flex items-center justify-between border-b border-border pb-4">
                 <div>
-                  <p className="text-sm font-semibold text-brand">AP 计算机科学 A</p>
+                  <p className="text-sm font-semibold text-brand">AP Computer Science A</p>
                   <p className="mt-1 text-xs text-text-muted">单元训练 · 模考 · 错题复盘</p>
                 </div>
                 <span className="rounded bg-blue-50 px-2 py-1 text-xs font-semibold text-brand">学习中</span>
@@ -109,15 +117,22 @@ function LandingPage() {
         <div className="mx-auto max-w-6xl px-5 py-14">
           <SectionHeader
             title="课程方向"
-            text="当前先提供 AP 科目训练内容，后续会继续增加更多国际课程与竞赛方向。"
+            text="覆盖国际课程与竞赛训练方向。"
           />
-          <div className="grid gap-4 md:grid-cols-2">
-            {PROGRAM_GROUPS.map(group => (
-              <div key={group.title} className="rounded-md border border-border bg-bg p-5">
-                <h3 className="text-base font-semibold text-brand">{group.title}</h3>
+          <div className="grid gap-4 md:grid-cols-4">
+            {PROGRAMS.map(program => (
+              <div key={program.name} className="rounded-md border border-border bg-bg p-5">
+                <h3 className="text-base font-semibold text-brand">{program.name}</h3>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {group.items.map(item => (
-                    <span key={item} className="rounded border border-border bg-white px-3 py-2 text-sm text-text">
+                  {program.items.map(item => (
+                    <span
+                      key={item}
+                      className={`rounded border px-3 py-2 text-sm ${
+                        item === 'Coming soon'
+                          ? 'border-dashed border-border bg-white text-text-muted'
+                          : 'border-border bg-white text-text'
+                      }`}
+                    >
                       {item}
                     </span>
                   ))}
