@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
 import { subjectDisplayName } from '../utils/displayLabels'
 
@@ -36,7 +37,7 @@ function SettingsPage() {
         <p className="mb-3 text-sm text-text-muted">科目管理</p>
         <h1 className="text-3xl font-bold tracking-tight text-brand">选择学习科目</h1>
         <p className="mt-3 max-w-2xl text-text-muted">
-          首页和顶部切换器只展示这里选择的科目。当前科目会用于练习、模考、错题和记录。
+          先选择你正在学习的科目。选择后，练习、模考、错题和记录都会按当前科目展示。
         </p>
       </div>
 
@@ -49,11 +50,19 @@ function SettingsPage() {
       <section className="mb-10 border-b border-border pb-8">
         <div className="mb-4 flex items-center justify-between gap-4">
           <h2 className="text-base font-semibold text-brand">我的科目</h2>
-          <span className="text-sm text-text-muted">{selectedSubjects.length} 个</span>
+          {selectedSubjects.length > 0 ? (
+            <Link to="/quiz" className="rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-light">
+              开始练习
+            </Link>
+          ) : (
+            <span className="text-sm text-text-muted">未选择</span>
+          )}
         </div>
 
         {selectedSubjects.length === 0 ? (
-          <div className="text-text-muted">先从下方添加一个科目。</div>
+          <div className="rounded-md border border-border bg-white px-4 py-5 text-text-muted">
+            从下方添加一个科目后，就可以开始练习。
+          </div>
         ) : (
           <div className="divide-y divide-border">
             {selectedSubjects.map(subject => {
