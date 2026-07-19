@@ -5,8 +5,9 @@ import { useSubject } from '../contexts/SubjectContext'
 import { loadFRQBank, loadMCQBank } from '../utils/questionBank'
 import { accountLevelDisplay, subjectDisplayName } from '../utils/displayLabels'
 import { getQuizHistory, getWrongQuestions } from '../utils/storage'
+import LandingPage from './LandingPage'
 
-function HomePage() {
+function HomePage({ forceDashboard = false }) {
   const { currentSubject, mySubjects, setSubject } = useSubject()
   const { isLoggedIn, isInternalStudent } = useAuth()
   const [subjectStats, setSubjectStats] = useState({})
@@ -37,6 +38,10 @@ function HomePage() {
   const currentStats = subjectStats[currentSubjectConfig?.id] || {}
   const accountLabel = isLoggedIn ? accountLevelDisplay('free', isInternalStudent) : '游客模式'
   const currentProgress = useMemo(() => buildProgressSummary(currentSubject), [currentSubject])
+
+  if (!forceDashboard && !isLoggedIn) {
+    return <LandingPage />
+  }
 
   if (mySubjects.length === 0) {
     return (

@@ -8,6 +8,7 @@ import { SubjectProvider } from './contexts/SubjectContext'
 import { AuthProvider } from './contexts/AuthContext'
 
 const HomePage = lazy(() => import('./pages/HomePage'))
+const LandingPage = lazy(() => import('./pages/LandingPage'))
 const QuizSetup = lazy(() => import('./pages/QuizSetup'))
 const ExamSetup = lazy(() => import('./pages/ExamSetup'))
 const QuizPlayer = lazy(() => import('./pages/QuizPlayer'))
@@ -43,6 +44,8 @@ function App() {
             <Suspense fallback={<PageLoading />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/landing" element={<LandingPage />} />
+                <Route path="/dashboard" element={<HomePage forceDashboard />} />
                 <Route path="/quiz" element={<RequireSubject><QuizSetup /></RequireSubject>} />
                 <Route path="/exam" element={<RequireSubject><ExamSetup /></RequireSubject>} />
                 <Route path="/play" element={<QuizPlayer />} />
