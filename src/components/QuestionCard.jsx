@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+﻿import { useEffect, useMemo, useState } from 'react'
 import { MathText } from './MathText'
 import { formatAnswer, isAnswerCorrect, isMultipleAnswerQuestion, normalizeSelectedAnswer } from '../utils/questionBank'
 import { getDiagramOptionLayout, getQuestionImagePaths, isDiagramOptionSet } from '../utils/diagramOptions'
@@ -6,8 +6,17 @@ import { getDiagramOptionLayout, getQuestionImagePaths, isDiagramOptionSet } fro
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
 function ImageWithFallback({ path }) {
-  const [src, setSrc] = useState(path.startsWith('/') ? BASE_URL + path.slice(1) : path)
+  const initialSrc = useMemo(
+    () => (path.startsWith('/') ? BASE_URL + path.slice(1) : path),
+    [path]
+  )
+  const [src, setSrc] = useState(initialSrc)
   const [hasError, setHasError] = useState(false)
+
+  useEffect(() => {
+    setSrc(initialSrc)
+    setHasError(false)
+  }, [initialSrc])
 
   if (hasError) return null
 
@@ -155,7 +164,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
   const displayImagePaths = getQuestionImagePaths(imagePaths, question.options, tableData)
 
   return (
-    <div className="bg-surface rounded-xl p-6 shadow-sm border border-border">
+    <div data-question-id={question.question_id} className="bg-surface rounded-xl p-6 shadow-sm border border-border">
       {/* Question tags */}
       <div className="flex flex-wrap gap-2 mb-3">
         <span className="bg-brand text-white text-xs px-2 py-1 rounded">{question.primary_unit}</span>
@@ -172,7 +181,7 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
       <BackgroundTable tableData={hasTableImage ? null : backgroundTable} />
 
       {displayImagePaths.map((path, i) => (
-        <ImageWithFallback key={i} path={path} />
+        <ImageWithFallback key={`${question.question_id}-${path}-${i}`} path={path} />
       ))}
 
       {/* Options */}

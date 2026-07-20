@@ -149,6 +149,7 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
     await waitForImages(client)
     const info = await collectVisibleState(client)
     checkVisibleState(`quiz:${quiz[i].question_id}`, info, errors, warnings)
+    checkExpectedQuestionImages(`quiz:${quiz[i].question_id}`, quiz[i], info, errors)
     checkSubjectRenderContract(`quiz:${quiz[i].question_id}`, quiz[i], info, errors)
     const pageText = auditComparableText(info.text)
     const pageTextCompact = compactComparableText(info.text)
@@ -213,6 +214,7 @@ async function auditMockMcqPlay(client, mcq, errors, warnings, artifacts) {
     await waitForImages(client)
     const info = await collectVisibleState(client)
     checkVisibleState(`mock-mcq:${sample[i].question_id}`, info, errors, warnings)
+    checkExpectedQuestionImages(`mock-mcq:${sample[i].question_id}`, sample[i], info, errors)
     checkSubjectRenderContract(`mock-mcq:${sample[i].question_id}`, sample[i], info, errors)
     const answers = chooseWrongAnswers(sample[i])
     for (const answer of (answers.length ? answers : ['A'])) {
@@ -296,15 +298,29 @@ async function auditTargetSearchItems(client, ids, errors, warnings, artifacts) 
 
 function selectQuizSample(mcq) {
   const selected = []
-  addByPredicate(selected, mcq, q => subjectNeedsCodeRender() && questionNeedsCodeRender(q), 2)
-  addByPredicate(selected, mcq, q => subjectNeedsMathRender() && questionNeedsMathRender(q), 4)
-  addByPredicate(selected, mcq, q => (q.image_paths || []).length > 0, 2)
-  addByPredicate(selected, mcq, q => q.option_table_data || q.background_data?.table, 4)
-  addByPredicate(selected, mcq, q => q.group_id || q.requires_group_context, 6)
-  addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 5, 7)
-  addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 4, 8)
+  const adjacentImagePair = selectAdjacentImageTransitionPair(mcq)
+  adjacentImagePair.forEach(q => addUnique(selected, q))
+  const base = selected.length
+  addByPredicate(selected, mcq, q => subjectNeedsCodeRender() && questionNeedsCodeRender(q), base + 2)
+  addByPredicate(selected, mcq, q => subjectNeedsMathRender() && questionNeedsMathRender(q), base + 4)
+  addByPredicate(selected, mcq, q => (q.image_paths || []).length > 0, base + 4)
+  addByPredicate(selected, mcq, q => q.option_table_data || q.background_data?.table, base + 6)
+  addByPredicate(selected, mcq, q => q.group_id || q.requires_group_context, base + 8)
+  addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 5, base + 9)
+  addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 4, base + 10)
   addByPredicate(selected, mcq, () => true, 8)
   return selected.slice(0, Math.min(8, Math.max(1, mcq.length)))
+}
+
+function selectAdjacentImageTransitionPair(mcq) {
+  const imageQuestions = mcq.filter(q => expectedQuestionImagePaths(q).length > 0)
+  if (imageQuestions.length < 2) return []
+  for (let i = 0; i < imageQuestions.length - 1; i += 1) {
+    const first = expectedQuestionImagePaths(imageQuestions[i]).join('|')
+    const second = expectedQuestionImagePaths(imageQuestions[i + 1]).join('|')
+    if (first && second && first !== second) return [imageQuestions[i], imageQuestions[i + 1]]
+  }
+  return imageQuestions.slice(0, 2)
 }
 
 function selectMockMcqRenderSample(mcq) {
@@ -395,6 +411,59 @@ function addByPredicate(selected, mcq, predicate, targetCount) {
     if (selected.some(item => item.question_id === q.question_id)) continue
     if (predicate(q)) selected.push(q)
   }
+}
+
+function addUnique(selected, question) {
+  if (!question) return
+  if (!selected.some(item => item.question_id === question.question_id)) selected.push(question)
+}
+
+function normalizeOptions(options) {
+  if (!options) return {}
+  if (Array.isArray(options)) {
+    const result = {}
+    for (const opt of options) {
+      const m = String(opt).match(/^\(([A-E])\)\s*/)
+      const key = m ? m[1] : String(Object.keys(result).length)
+      result[key] = String(opt).replace(/^\([A-E]\)\s*/, '')
+    }
+    return result
+  }
+  return options
+}
+
+function isDiagramOptionSet(options) {
+  const opts = normalizeOptions(options)
+  const keys = Object.keys(opts).sort()
+  return keys.length >= 4 && keys.every(key => opts[key] === `Diagram ${key}`)
+}
+
+function getDiagramOptionLayout(imagePaths = [], options) {
+  if (!isDiagramOptionSet(options)) return null
+
+  const optionCount = Object.keys(normalizeOptions(options)).length
+  if (imagePaths.length === optionCount) {
+    return imagePaths.map(imagePath => [imagePath])
+  }
+  if (imagePaths.length === optionCount + 1) {
+    return imagePaths.slice(1, optionCount + 1).map(imagePath => [imagePath])
+  }
+  if (imagePaths.length > 0 && imagePaths.length % optionCount === 0) {
+    const imagesPerOption = imagePaths.length / optionCount
+    return Array.from({ length: optionCount }, (_, idx) =>
+      imagePaths.slice(idx * imagesPerOption, (idx + 1) * imagesPerOption)
+    )
+  }
+  return null
+}
+
+function expectedQuestionImagePaths(question) {
+  const imagePaths = Array.isArray(question.image_paths) ? question.image_paths : []
+  const diagramLayout = getDiagramOptionLayout(imagePaths, question.options)
+  const optionCount = Object.keys(normalizeOptions(question.options)).length
+  return imagePaths
+    .filter(imagePath => !(question.option_table_data && /option_table/i.test(imagePath)))
+    .filter((_, index) => !(diagramLayout && (imagePaths.length === optionCount + 1 ? index > 0 : true)))
 }
 
 function chooseWrongAnswers(question) {
@@ -594,6 +663,34 @@ function checkSubjectRenderContract(page, question, info, errors) {
       expected: 'katex',
       sample: sampleText(info.text, 0),
     })
+  }
+}
+
+function checkExpectedQuestionImages(page, question, info, errors) {
+  const expected = expectedQuestionImagePaths(question)
+  if (!expected.length) return
+  const visibleSources = (info.visibleImages || []).map(image => normalizeImageSource(image.src))
+  const missing = expected.filter(imagePath => {
+    const expectedPath = normalizeImageSource(imagePath)
+    return !visibleSources.some(src => src.endsWith(expectedPath))
+  })
+  if (missing.length) {
+    errors.push({
+      page,
+      kind: 'current_question_image_not_visible',
+      question_id: question.question_id,
+      expected: missing,
+      visible: visibleSources.slice(0, 12),
+    })
+  }
+}
+
+function normalizeImageSource(value) {
+  const text = String(value || '').replace(/\\/g, '/')
+  try {
+    return new URL(text, 'http://audit.local/').pathname.replace(/^\/+/, '')
+  } catch {
+    return text.replace(/^\/+/, '').split(/[?#]/)[0]
   }
 }
 

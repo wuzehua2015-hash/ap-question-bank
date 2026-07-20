@@ -630,7 +630,7 @@ function FRQContentBlocks({ blocks, isPdf, variant }) {
           return (
             <div key={idx} style={{ ...BREAK_GUARD.BLOCK }}>
               {paths.map((path, imageIdx) => (
-                <DisplayImage key={imageIdx} path={path} variant={variant} />
+                <DisplayImage key={`${block.type || 'figure'}-${path}-${imageIdx}`} path={path} variant={variant} />
               ))}
               <FigureCaption block={block} isPdf={isPdf} />
             </div>
@@ -902,7 +902,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
   )
 
   const imageBlock = imagePaths.map((path, i) => (
-    <DisplayImage key={i} path={path} variant={variant} />
+    <DisplayImage key={`${frq.question_id || 'frq'}-${path}-${i}`} path={path} variant={variant} />
   ))
   const backgroundTableBlock = !useContentBlocks && backgroundTable && (
     <FRQBackgroundTable tableData={backgroundTable} isPdf={isPdf} />
@@ -980,7 +980,7 @@ function FRQDisplay({ frq, variant = 'web', index, showRubric = true, framed = t
       {showRubric && <RubricDisplay rubric={frq.rubric} variant={variant} />}
 
       {showRubric && rubricImagePaths.map((path, i) => (
-        <DisplayImage key={`rubric-${i}`} path={path} variant={variant} />
+        <DisplayImage key={`rubric-${path}-${i}`} path={path} variant={variant} />
       ))}
     </div>
   )

@@ -65,19 +65,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2012_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: | $t$ (minutes) | 0 | 4 | 9 | 15 | 20 | |---:|---:|---:|---:|---:|---:| | $W(t)$ (degrees Fahrenheit) | 55.0 | 57.1 | 61.8 | 67.9 | 71.0 | The temperature of water in a tub at time $t$ is modeled by a strictly increasing, twice-differentiab",
+        "Existing topic tags: U6.x Accumulation and Riemann Sums.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U6"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2012_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2012_FRQ2",
@@ -142,18 +148,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2012_FRQ2 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $R$ be the region in the first quadrant bounded by the $x$-axis and the graphs of $y=\\ln x$ and $y=5-x$, as shown in the figure above. (a) Find the area of $R$. (b) Region $R$ is the base of a solid. For the solid, each cross section pe",
+        "Existing topic tags: U8.x Area and Volume.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U8"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -185,7 +196,9 @@
         "label": "(c)",
         "text": "The horizontal line $y=k$ divides $R$ into two regions of equal area. Write, but do not solve, an equation involving one or more integrals whose solution gives the value of $k$."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2012_FRQ2 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2012_FRQ3",
@@ -255,18 +268,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2012_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f$ be the continuous function defined on $[-4,3]$ whose graph, consisting of three line segments and a semicircle centered at the origin, is given above. Let $g$ be the function given by $g(x)=\\int_1^x f(t)\\,dt$. (a) Find the values of",
+        "Existing topic tags: U6.x Accumulation Functions.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U6"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -303,7 +321,9 @@
         "label": "(d)",
         "text": "For $-4<x<3$, find all values of $x$ for which the graph of $g$ has a point of inflection. Explain your reasoning."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2012_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2012_FRQ4",
@@ -371,19 +391,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2012_FRQ4 is assigned to U3 (Differentiation: Composite, Implicit, and Inverse Functions) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The function $f$ is defined by $f(x)=\\sqrt{25-x^2}$ for $-5\\le x\\le5$. (a) Find $f'(x)$. (b) Write an equation for the line tangent to the graph of $f$ at $x=-3$. (c) Let $g$ be the function defined by $$g(x)=\\begin{cases}f(x),&-5\\le x\\le -",
+        "Existing topic tags: U3.x Differentiation and Integration.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U3"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U3",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U3 Differentiation: Composite, Implicit, and Inverse Functions. FRQ 2012_FRQ4 is assigned to U3 (Differentiation: Composite, Implicit, and Inverse Functions) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2012_FRQ5",
@@ -448,18 +474,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2012_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The rate at which a baby bird gains weight is proportional to the difference between its adult weight and its current weight. At time $t=0$, when the bird is first weighed, its weight is 20 grams. If $B(t)$ is the weight of the bird, in gra",
+        "Existing topic tags: U7.x Differential Equations.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U7"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U7",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -491,7 +522,9 @@
         "label": "(c)",
         "text": "Use separation of variables to find $y=B(t)$, the particular solution to the differential equation with initial condition $B(0)=20$."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2012_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2012_FRQ6",
@@ -561,20 +594,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2012_FRQ6 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: For $0\\le t\\le12$, a particle moves along the $x$-axis. The velocity of the particle at time $t$ is given by $v(t)=\\cos\\left(\\frac{\\pi t}{6}\\right)$. The particle is at position $x=-2$ at time $t=0$. (a) For $0\\le t\\le12$, when is the parti",
+        "Existing topic tags: U6.x Integration and Accumulation in Particle Motion.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U6"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Primary unit is U6 because the full FRQ requires accumulation by definite integrals for distance and position; U4 particle motion remains prerequisite context."
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2012_FRQ6 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ1",
@@ -643,18 +681,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2013_FRQ1 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $R$ be the shaded region in the first quadrant enclosed by the $y$-axis and the graphs of $y=1-x^3$ and $y=\\sin(x^2)$, as shown in the figure above. (a) Find the area of $R$. (b) A horizontal line, $y=k$, is drawn through the point wher",
+        "Existing topic tags: U8.x Area and Volume.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U8"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -686,7 +729,9 @@
         "label": "(c)",
         "text": "Find the volume of the solid generated when $R$ is revolved about the line $y=-3$."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2013_FRQ1 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ2",
@@ -758,19 +803,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2013_FRQ2 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The penguin population on an island is modeled by a differentiable function $P$ of time $t$, where $P'(t)$ is the number of penguins per year and $t$ is measured in years, for $0\\le t\\le40$. There are $100,000$ penguins on the island at tim",
+        "Existing topic tags: U8.x Rates, Accumulation, and Optimization.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U8"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2013_FRQ2 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ3",
@@ -844,18 +895,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2013_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The twice-differentiable function $W$ models the volume of water in a reservoir at time $t$, where $W(t)$ is measured in gigaliters (GL) and $t$ is measured in days. The table above gives values of $W'(t)$ sampled at various times during $0",
+        "Existing topic tags: U6.x Tables, Riemann Sums, and Related Rates.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U6"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -892,7 +948,9 @@
         "label": "(d)",
         "text": "The equation $A=0.3W^{2/3}$ gives the relationship between the area $A$, in square kilometers, of the surface of the reservoir, and the volume of water $W(t)$, in gigaliters, in the reservoir. Find the instantaneous rate of change of $A$, in square kilometers per day, with respect to $t$ when $t=30$ days."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2013_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ4",
@@ -959,19 +1017,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2013_FRQ4 is assigned to U5 (Analytical Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f$ be the function given by $f(x)=(x^2-2x-1)e^x$. (a) Find $\\displaystyle\\lim_{x\\to\\infty}f(x)$ and $\\displaystyle\\lim_{x\\to-\\infty}f(x)$. (b) Find the intervals on which $f$ is increasing. Show the analysis that leads to your answer. ",
+        "Existing topic tags: U5.x Analytical Applications of Derivatives.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U5"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U5",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U5 Analytical Applications of Differentiation. FRQ 2013_FRQ4 is assigned to U5 (Analytical Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ5",
@@ -1045,18 +1109,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2013_FRQ5 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The graph of the continuous function $f$, consisting of three line segments and a semicircle, is shown above. Let $g$ be the function given by $g(x)=\\displaystyle\\int_{-2}^x f(t)\\,dt$. (a) Find $g(-6)$ and $g(3)$. (b) Find $g'(0)$. (c) Find",
+        "Existing topic tags: U6.x Accumulation Functions from Graphs.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U6"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -1093,7 +1162,9 @@
         "label": "(d)",
         "text": "Find all values of $x$ on the open interval $-6<x<3$ for which the graph of $g$ has a point of inflection. Explain your reasoning."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2013_FRQ5 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ6",
@@ -1170,19 +1241,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2013_FRQ6 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f$ be a function with $f(2)=-8$ such that for all points $(x,y)$ on the graph of $f$, the slope is given by $\\dfrac{dy}{dx}=\\dfrac{3x^2}{y}$. (a) Write an equation of the line tangent to the graph of $f$ at the point where $x=2$ and us",
+        "Existing topic tags: U7.x Differential Equations.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U7"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U7",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2013_FRQ6 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ1",
@@ -1253,19 +1330,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2014_FRQ1 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: | $t$ (hours) | 0 | 0.4 | 0.8 | 1.2 | 1.6 | 2.0 | 2.4 | |---:|---:|---:|---:|---:|---:|---:|---:| | $v(t)$ (miles per hour) | 0 | 11.8 | 9.5 | 17.2 | 16.3 | 16.8 | 20.1 | Ruth rode her bicycle on a straight trail. She recorded her velocity ",
+        "Existing topic tags: U8.x Motion, Riemann Sums, and Average Value.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U8"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2014_FRQ1 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ2",
@@ -1336,19 +1419,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2014_FRQ2 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A store is having a 12-hour sale. The total number of shoppers who have entered the store $t$ hours after the sale begins is modeled by $S(t)=0.5t^4-16t^3+144t^2$ for $0\\le t\\le12$. At time $t=0$, when the sale begins, there are no shoppers",
+        "Existing topic tags: U8.x Rate Functions and Accumulation.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U8"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2014_FRQ2 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ3",
@@ -1414,19 +1503,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2014_FRQ3 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f(x)=e^{2x}$. Let $R$ be the region in the first quadrant bounded by the graph of $y=f(x)$ and the vertical line $x=1$. (a) Write an equation for the line tangent to the graph of $f$ at $x=1$. (b) Find the area of $R$. (c) Region $R$ f",
+        "Existing topic tags: U8.x Area, Tangents, and Cross Sections.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U8"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2014_FRQ3 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ4",
@@ -1499,18 +1594,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2014_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The continuous function $f$ is defined on the interval $-5\\le x\\le8$. The graph of $f$, which consists of four line segments, is shown above. Let $g$ be the function given by $g(x)=2x+\\displaystyle\\int_{-2}^x f(t)\\,dt$. (a) Find $g(0)$ and ",
+        "Existing topic tags: U6.x Accumulation Functions from Graphs.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U6"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -1547,7 +1647,9 @@
         "label": "(d)",
         "text": "The function $h$ is given by $h(x)=g(x^3+1)$. Find $h'(1)$. Show the work that leads to your answer."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2014_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ5",
@@ -1613,19 +1715,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2014_FRQ5 is assigned to U4 (Contextual Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Particle $X$ moves along the positive $x$-axis so that its position at time $t\\ge0$ is given by $x(t)=5t^3-9t^2+7$. (a) Is particle $X$ moving toward the left or toward the right at time $t=1$? Give a reason for your answer. (b) At what tim",
+        "Existing topic tags: U4.x Particle Motion and Related Rates.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U4"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U4",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U4 Contextual Applications of Differentiation. FRQ 2014_FRQ5 is assigned to U4 (Contextual Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ6",
@@ -1693,18 +1801,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2014_FRQ6 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Consider the differential equation $\\dfrac{dy}{dx}=\\left(1-\\dfrac2{x^2}\\right)(y-1)$, where $x\\ne0$. Let $y=f(x)$ be the particular solution to the differential equation with initial condition $f(1)=2$. (a) Find the slope of the line tangen",
+        "Existing topic tags: U7.x Slope Fields and Differential Equations.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U7"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U7",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -1736,7 +1849,9 @@
         "label": "(c)",
         "text": "Find the particular solution $y=f(x)$ to the differential equation $\\dfrac{dy}{dx}=\\left(1-\\dfrac2{x^2}\\right)(y-1)$ with initial condition $f(1)=2$."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2014_FRQ6 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ1",
@@ -1809,18 +1924,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2015_FRQ1 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: At time $t=0$ minutes, a tank contains $100$ liters of water. The piecewise-linear graph above shows the rate $R(t)$, in liters per minute, at which water is pumped into the tank during a $55$-minute period. (a) Find $R'(45)$. Using appropr",
+        "Existing topic tags: U8.x Rates, Accumulation, and Average Value.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U8"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -1857,7 +1977,9 @@
         "label": "(d)",
         "text": "Using the functions $R$ and $D$, determine whether the amount of water in the tank is increasing or decreasing at time $t=45$ minutes. Justify your answer."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2015_FRQ1 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ2",
@@ -1930,18 +2052,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2015_FRQ2 is assigned to U3 (Differentiation: Composite, Implicit, and Inverse Functions) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The graph of the equation $x^2=-2+y+5\\cos y$ is shown above for $y\\le11$. It is known that $\\dfrac{dy}{dx}=\\dfrac{2x}{1-5\\sin y}$. The $x$-coordinate of point $P$ shown on the graph is $2$. (a) Write an equation for the line tangent to the ",
+        "Existing topic tags: U3.x Implicit Differentiation.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U3"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U3",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -1978,7 +2105,9 @@
         "label": "(d)",
         "text": "Find the value of $\\dfrac{d^2y}{dx^2}$ at point $P$."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U3 Differentiation: Composite, Implicit, and Inverse Functions. FRQ 2015_FRQ2 is assigned to U3 (Differentiation: Composite, Implicit, and Inverse Functions) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ3",
@@ -2049,19 +2178,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2015_FRQ3 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: | $t$ (seconds) | 0 | 3 | 5 | 8 | 12 | |---:|---:|---:|---:|---:|---:| | $k(t)$ (feet per second) | 0 | 5 | 10 | 20 | 24 | Kathleen skates on a straight track. She starts from rest at the starting line at time $t=0$. For $0<t\\le12$ seconds,",
+        "Existing topic tags: U8.x Motion and Accumulation from Tables.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U8"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2015_FRQ3 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ4",
@@ -2129,18 +2264,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2015_FRQ4 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Consider the differential equation $\\dfrac{dy}{dx}=\\dfrac{x(y-1)}4$. (a) On the axes provided, sketch a slope field for the given differential equation at the twelve points indicated. (b) Let $y=f(x)$ be the particular solution to the diffe",
+        "Existing topic tags: U7.x Slope Fields and Differential Equations.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U7"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U7",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -2172,7 +2312,9 @@
         "label": "(c)",
         "text": "Find the particular solution $y=f(x)$ to the differential equation with the initial condition $f(1)=3$."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2015_FRQ4 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ5",
@@ -2240,18 +2382,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2015_FRQ5 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $R$ be the region in the first quadrant enclosed by the graphs of $g(x)=\\sqrt{x}$ and $h(x)=\\dfrac{x}{3}$, as shown in the figure above. (a) Find the area of region $R$. (b) Write, but do not evaluate, an expression involving one or mor",
+        "Existing topic tags: U8.x Area Between Curves and Volume.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U8"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -2283,7 +2430,9 @@
         "label": "(c)",
         "text": "Find the maximum vertical distance between the graph of $g$ and the graph of $h$ between $x=0$ and $x=16$. Justify your answer."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2015_FRQ5 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ6",
@@ -2354,19 +2503,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2015_FRQ6 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $g(x)=4(x+1)^{-2/3}$ and let $f$ be the function defined by $f(x)=\\displaystyle\\int_0^x g(t)\\,dt$ for $x\\ge0$. (a) Find $f(26)$. (b) Determine the concavity of the graph of $y=f(x)$ for $x>0$. Give a reason for your answer. (c) Let $P$ ",
+        "Existing topic tags: U6.x Accumulation Functions and Taylor Polynomials.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U6"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2015_FRQ6 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ1",
@@ -2437,19 +2592,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2016_FRQ1 is assigned to U5 (Analytical Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A company produces and sells chili powder. The company's weekly profit on the sale of $x$ kilograms of chili powder is modeled by the function $P$ given by $$P(x)=48x+1.4x^2-0.05x^{2.8}-270,$$ where $P(x)$ is in dollars and $0\\le x\\le80$. (",
+        "Existing topic tags: U5.x Optimization, Rates, and Accumulation.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U5"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U5",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U5 Analytical Applications of Differentiation. FRQ 2016_FRQ1 is assigned to U5 (Analytical Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ2",
@@ -2524,18 +2685,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2016_FRQ2 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: | $t$ (weeks) | 0 | 3 | 6 | 10 | 12 | |---:|---:|---:|---:|---:|---:| | $G(t)$ (games per week) | 160 | 450 | 900 | 2100 | 2400 | A store tracks the sales of one of its popular board games over a $12$-week period. The rate at which games ar",
+        "Existing topic tags: U6.x Rates, Tables, Riemann Sums, and Accumulation.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U6"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -2572,7 +2738,9 @@
         "label": "(d)",
         "text": "Another salesperson believes the best model for the rate at which games will be sold in the $8$ weeks between time $t=12$ and $t=20$ is $M(t)=2400e^{-0.01(t-12)^2}$ games per week. Based on this model, how many total games, to the nearest whole number, will be sold during this period?"
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2016_FRQ2 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ3",
@@ -2645,18 +2813,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2016_FRQ3 is assigned to U5 (Analytical Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The function $f$ is defined on the interval $-5\\le x\\le c$, where $c>0$ and $f(c)=0$. The graph of $f$, which consists of three line segments and a quarter of a circle with center $(-3,0)$ and radius $2$, is shown in the figure above. (a) F",
+        "Existing topic tags: U5.x Graph Analysis, Average Value, and Chain Rule.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U5"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U5",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -2693,7 +2866,9 @@
         "label": "(d)",
         "text": "Assume $c>3$. The function $h$ is defined by $h(x)=f\\left(\\dfrac{x}{2}\\right)$. Find $h'(6)$ in terms of $c$."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U5 Analytical Applications of Differentiation. FRQ 2016_FRQ3 is assigned to U5 (Analytical Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ4",
@@ -2761,18 +2936,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2016_FRQ4 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $S$ be the shaded region in the first quadrant bounded above by the horizontal line $y=3$, below by the graph of $y=3\\sin x$, and on the left by the vertical line $x=k$, where $0<k<\\dfrac{\\pi}{2}$, as shown in the figure above. (a) Find",
+        "Existing topic tags: U8.x Area Between Curves and Volume.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U8"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -2804,7 +2984,9 @@
         "label": "(c)",
         "text": "Region $S$ is revolved about the horizontal line $y=5$ to form a solid. Write, but do not evaluate, an expression involving one or more integrals that gives the volume of the solid when $k=\\dfrac\\pi4$."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2016_FRQ4 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ5",
@@ -2870,19 +3052,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2016_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: For $0\\le t\\le24$ hours, the temperature inside a refrigerator in a kitchen is given by the function $W$ that satisfies the differential equation $$\\frac{dW}{dt}=\\frac{3\\cos t}{2W}.$$ $W(t)$ is measured in degrees Celsius, and $t$ is measur",
+        "Existing topic tags: U7.x Differential Equations and Modeling.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U7"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U7",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2016_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ6",
@@ -2949,19 +3137,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2016_FRQ6 is assigned to U1 (Limits and Continuity) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f$ be the function defined by $$f(x)=\\begin{cases}10-2x-x^2,&x\\le1,\\\\3+4e^{x-1},&x>1.\\end{cases}$$ (a) Is $f$ continuous at $x=1$? Why or why not? (b) Find the absolute minimum value and the absolute maximum value of $f$ on the closed ",
+        "Existing topic tags: U1.x Piecewise Functions, Continuity, Extrema, and Integrals.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U1"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U1",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U1 Limits and Continuity. FRQ 2016_FRQ6 is assigned to U1 (Limits and Continuity) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ1",
@@ -3032,19 +3226,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2017_FRQ1 is assigned to U4 (Contextual Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A particle moves along the $x$-axis so that its velocity at time $t$ is given by $$v(t)=\\frac{t^6-13t^4+12}{10t^3+3}.$$ At time $t=0$, the initial position of the particle is $x=7$. (a) Find the acceleration of the particle at time $t=5.1$.",
+        "Existing topic tags: U4.x Motion with Velocity and Acceleration.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U4"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U4",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U4 Contextual Applications of Differentiation. FRQ 2017_FRQ1 is assigned to U4 (Contextual Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ2",
@@ -3117,18 +3317,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2017_FRQ2 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: During the time interval $0\\le t\\le4.5$ hours, water flows into tank A at a rate of $$a(t)=(2t-5)+5e^{2\\sin t}$$ liters per hour. During the same time interval, water flows into tank B at a rate of $b(t)$ liters per hour. Both tanks are emp",
+        "Existing topic tags: U6.x Accumulation from Rates and Graphs.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U6"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -3165,7 +3370,9 @@
         "label": "(d)",
         "text": "During the time interval $2.7\\le t\\le4.5$ hours, the rate at which water flows into tank B is modeled by $$w(t)=21-\\frac{30t}{(t-8)^2}$$ liters per hour. Is the difference $w(t)-a(t)$ increasing or decreasing at time $t=3.5$? Show the work that leads to your answer."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2017_FRQ2 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ3",
@@ -3238,18 +3445,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2017_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The graph of the function $f$, consisting of three line segments and a quarter of a circle, is shown above. Let $g$ be the function defined by $$g(x)=\\int_1^x f(t)\\,dt.$$ (a) Find the average rate of change of $g$ from $x=-5$ to $x=5$. (b) ",
+        "Existing topic tags: U6.x Accumulation Functions and Graph Analysis.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U6"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -3286,7 +3498,9 @@
         "label": "(d)",
         "text": "Find all $x$-values in the interval $-5<x<5$ at which $g$ has a critical point. Classify each critical point as the location of a local minimum, a local maximum, or neither. Justify your answers."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2017_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ4",
@@ -3357,19 +3571,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2017_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: | $x$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | |---:|---:|---:|---:|---:|---:|---:|---:| | $f'(x)$ | 4 | 3.5 | 2 | 0.8 | 1.7 | 5.8 | 7 | The function $f$ satisfies $f(0)=20$. The first derivative of $f$ satisfies the inequality $0\\le f'(x)\\le7$ for al",
+        "Existing topic tags: U6.x FTC, Riemann Sums, and L'Hospital's Rule.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U6"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2017_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ5",
@@ -3437,18 +3657,23 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2017_FRQ5 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $R$ be the region in the first quadrant enclosed by the graph of $f(x)=\\sqrt{\\cos x}$, the graph of $g(x)=e^x$, and the vertical line $x=\\dfrac\\pi2$, as shown in the figure above. (a) Write, but do not evaluate, an integral expression t",
+        "Existing topic tags: U8.x Area Between Curves and Volumes.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U8"
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "content_blocks": [
       {
@@ -3480,7 +3705,9 @@
         "label": "(c)",
         "text": "Region $R$ is the base of a solid whose cross sections perpendicular to the $x$-axis are semicircles with diameters on the $xy$-plane. Write, but do not evaluate, an integral expression that gives the volume of this solid."
       }
-    ]
+    ],
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2017_FRQ5 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ6",
@@ -3546,18 +3773,24 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "AP Calculus AB structured transcription and delivery audit passed.",
-        "Classification uses AP Calculus AB Source Pack units U1-U8."
+        "FRQ 2017_FRQ6 is assigned to U4 (Contextual Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: For $0\\le t\\le6$ seconds, a screen saver on a computer screen shows two circles that start as dots and expand outward. (a) At the instant that the first circle has a radius of $9$ centimeters, the radius is increasing at a rate of $\\dfrac32",
+        "Existing topic tags: U4.x Related Rates and Accumulation.",
+        "Subject calculus-ab passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calc_ab_structured_v1",
-      "primary_unit": "U4"
-    }
+      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "primary_unit": "U4",
+      "authority": "AP Calculus AB Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U4 Contextual Applications of Differentiation. FRQ 2017_FRQ6 is assigned to U4 (Contextual Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   }
 ]

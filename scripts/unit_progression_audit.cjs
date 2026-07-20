@@ -181,6 +181,7 @@ function auditQuestion(subject, file, q, validUnits, cases) {
   }
 
   if (reviewed && normalizeUnitCode(reviewed.expected_primary_unit) === primary) return findings
+  if (hasOfficialProgressionReview(q, primary)) return findings
   if (BLOCKING_ONLY && !FAIL_ON_FINDINGS) return findings
 
   const pNum = unitNumber(primary)
@@ -199,6 +200,16 @@ function auditQuestion(subject, file, q, validUnits, cases) {
   }
 
   return findings
+}
+
+function hasOfficialProgressionReview(q, primary) {
+  const classification = q.classification || {}
+  if (normalizeUnitCode(classification.primary_unit) !== primary) return false
+  if (classification.review_status !== 'reviewed') return false
+  const version = String(classification.classification_version || '')
+  const authority = String(classification.authority || '')
+  return /official-progression|official.*unit|student-progression/i.test(version) ||
+    /Course and Exam Description|official/i.test(authority)
 }
 
 function isLikelyDistractorOnly(q, pattern) {
