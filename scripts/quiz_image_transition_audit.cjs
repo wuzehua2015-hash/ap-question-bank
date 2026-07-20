@@ -78,6 +78,7 @@ async function runSubject(client, subject, pair, results, errors) {
   await navigate(client, routeUrl('/'))
   await evaluate(client, seedSessionScript(subject.id, pair))
   await navigate(client, routeUrl('/play'))
+  await waitForQuestionId(client, pair[0].question_id)
   await waitForImages(client)
 
   const first = await collectQuestionImages(client)
