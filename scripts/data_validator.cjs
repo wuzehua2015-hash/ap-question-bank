@@ -331,6 +331,9 @@ function validate(filePath, options = {}) {
             }
           }
         }
+        if (Array.isArray(headers) && textEndsWithTableHeaders(text, headers)) {
+          errors.push(`${qid}: option_table_data headers duplicated at end of question text`)
+        }
       }
     } else if (!isFRQ && structuredTableHeaderPatterns.some(pattern => pattern.test(text))) {
       errors.push(`${qid}: text contains structured option-table headers but missing option_table_data`)
@@ -482,6 +485,15 @@ function validate(filePath, options = {}) {
   }
   
   return { errors, warnings, passed: errors.length === 0 }
+}
+
+function textEndsWithTableHeaders(text, headers) {
+  if (!Array.isArray(headers) || headers.length === 0) return false
+  const normalize = value => String(value || '').replace(/\s+/g, ' ').trim()
+  const normalizedText = normalize(text)
+  const normalizedHeaders = headers.map(normalize).filter(Boolean)
+  if (!normalizedText || normalizedHeaders.length !== headers.length) return false
+  return normalizedText.endsWith(normalizedHeaders.join(' '))
 }
 
 const filePath = process.argv[2]

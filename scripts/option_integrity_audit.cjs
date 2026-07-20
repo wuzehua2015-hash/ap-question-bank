@@ -136,6 +136,16 @@ function auditOptionTable(subject, q, labels, subjectReport) {
     return
   }
 
+  if (textEndsWithTableHeaders(q.text || q.question_text || q.prompt || '', headers)) {
+    addError(
+      subject,
+      qid,
+      subjectReport,
+      'option_table_headers_duplicated_in_prompt',
+      'Structured option-table headers must be rendered from option_table_data only, not duplicated at the end of the prompt.',
+    )
+  }
+
   for (const label of labels) {
     if (!Object.prototype.hasOwnProperty.call(rows, label)) {
       addError(subject, qid, subjectReport, 'option_table_missing_row', `option_table_data is missing row ${label}.`)
@@ -158,6 +168,15 @@ function auditOptionTable(subject, q, labels, subjectReport) {
       addError(subject, qid, subjectReport, 'duplicate_option_table_row', `Rows ${duplicateLabels.join(', ')} are identical: ${value.slice(0, 120)}`)
     }
   }
+}
+
+function textEndsWithTableHeaders(text, headers) {
+  if (!Array.isArray(headers) || headers.length === 0) return false
+  const normalizedText = normalizeExact(text)
+  const normalizedHeaders = headers.map(normalizeExact).filter(Boolean)
+  if (!normalizedText || normalizedHeaders.length !== headers.length) return false
+  const headerSuffix = normalizedHeaders.join(' ')
+  return normalizedText.endsWith(headerSuffix)
 }
 
 function normalizeOptions(options) {
