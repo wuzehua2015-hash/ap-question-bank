@@ -7,12 +7,13 @@ const { spawn } = require('child_process')
 const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 const WORKSPACE = path.join(ROOT, '.workspace', 'browser-render-audit')
-const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
+const DEFAULT_URL = 'http://127.0.0.1:4174/'
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject || 'physics-c-e-m'
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
 const headless = args.headless !== 'false'
 const port = Number(args.port || 9333)
+const accountMode = args.account || 'internal'
 
 fs.mkdirSync(WORKSPACE, { recursive: true })
 
@@ -64,7 +65,7 @@ async function main() {
     await client.send('Runtime.enable')
     await setViewport(client, 1440, 1400)
     await client.send('Page.addScriptToEvaluateOnNewDocument', {
-      source: `localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});`,
+      source: seedAuditStorageScript(subjectId),
     })
 
     const selectedMcq = selectAuditMcq(mcq)
@@ -325,6 +326,7 @@ async function auditQuizPdf(client, questions, errors, warnings, artifacts) {
   await waitForImages(client)
   const info = await collectPageInfo(client, 'quiz-pdf')
   checkPageInfo(info, errors, warnings)
+  checkPremiumGate(info, 'quiz-pdf', errors)
   const expectedTables = questions.filter(q => q.option_table_data).length
   if (info.tableCount < expectedTables) {
     errors.push({ page: 'quiz-pdf', kind: 'missing_option_tables', expectedTables, actualTables: info.tableCount })
@@ -341,6 +343,7 @@ async function auditMockPdf(client, mcq, frq, errors, warnings, artifacts) {
   await waitForImages(client)
   const info = await collectPageInfo(client, 'mock-pdf')
   checkPageInfo(info, errors, warnings)
+  checkPremiumGate(info, 'mock-pdf', errors)
   if (!RUBRIC_TEXT_PATTERN.test(info.text)) {
     errors.push({ page: 'mock-pdf', kind: 'rubric_not_visible' })
   }
@@ -383,10 +386,11 @@ async function auditScorePage(client, mcq, frq, errors, warnings, artifacts) {
   await screenshot(client, `${subjectId}-score-rubric.png`, artifacts)
 }
 
-function routeUrl(hash) {
-  const cleanHash = hash.startsWith('#') ? hash : `#${hash}`
-  const separator = cleanHash.includes('?') ? '&' : '?'
-  return `${baseUrl}${cleanHash}${separator}audit=${Date.now()}`
+function routeUrl(route) {
+  const cleanRoute = String(route || '/').replace(/^#/, '')
+  const path = cleanRoute.startsWith('/') ? cleanRoute.slice(1) : cleanRoute
+  const separator = path.includes('?') ? '&' : '?'
+  return `${baseUrl}${path}${separator}audit=${Date.now()}`
 }
 
 async function scrollToText(client, re) {
@@ -446,11 +450,56 @@ async function seedQuizSession(client, mcq, frq, info) {
   await evaluate(client, `
     sessionStorage.clear();
     localStorage.setItem('currentSubject', ${JSON.stringify(subjectId)});
+    localStorage.setItem('defaultSubject', ${JSON.stringify(subjectId)});
+    localStorage.setItem('mySubjects', JSON.stringify([${JSON.stringify(subjectId)}]));
     sessionStorage.setItem('currentQuiz', ${JSON.stringify(JSON.stringify(mcq))});
     sessionStorage.setItem('currentFRQ', ${JSON.stringify(JSON.stringify(frq))});
     sessionStorage.setItem('quizConfig', ${JSON.stringify(JSON.stringify(config))});
     sessionStorage.setItem('quizInfo', ${JSON.stringify(JSON.stringify(quizInfo))});
   `)
+}
+
+function seedAuditStorageScript(id) {
+  return `(() => {
+    const subjectId = ${JSON.stringify(id)};
+    const accountMode = ${JSON.stringify(accountMode)};
+    localStorage.setItem('currentSubject', subjectId);
+    localStorage.setItem('defaultSubject', subjectId);
+    localStorage.setItem('mySubjects', JSON.stringify([subjectId]));
+    if (accountMode !== 'visitor') {
+      localStorage.setItem('lynkeduSessionToken', 'browser-render-audit-token');
+    } else {
+      localStorage.removeItem('lynkeduSessionToken');
+    }
+    if (!window.__lynkBrowserRenderFetchPatched) {
+      const originalFetch = window.fetch.bind(window);
+      window.fetch = (input, init) => {
+        const url = typeof input === 'string' ? input : (input && input.url) || '';
+        const path = url.startsWith(location.origin) ? url.slice(location.origin.length) : url;
+        if (accountMode !== 'visitor' && path === '/api/me') {
+          const accountLevel = accountMode === 'internal' ? 'internal' : 'free';
+          const entitlements = accountMode === 'internal' ? [{ feature_key: 'full_access' }] : [];
+          return Promise.resolve(new Response(JSON.stringify({
+            user: {
+              id: 'browser-render-audit-user',
+              email: 'browser-render-audit@lynkedu.local',
+              display_name: 'Browser Render Audit',
+              account_level: accountLevel,
+            },
+            entitlements,
+          }), { status: 200, headers: { 'Content-Type': 'application/json' } }));
+        }
+        if (accountMode !== 'visitor' && path === '/api/progress') {
+          return Promise.resolve(new Response(JSON.stringify({ snapshot: {} }), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' },
+          }));
+        }
+        return originalFetch(input, init);
+      };
+      window.__lynkBrowserRenderFetchPatched = true;
+    }
+  })()`
 }
 
 async function collectPageInfo(client, page) {
@@ -491,6 +540,12 @@ function checkPageInfo(info, errors, warnings) {
   if (info.bodyHeight < 200) warnings.push({ page: info.page, kind: 'short_body', bodyHeight: info.bodyHeight })
 }
 
+function checkPremiumGate(info, page, errors) {
+  if (/翎英学员功能|翎英学员开放|登录\s*\/\s*注册|Mock Exam PDF 下载|Quiz PDF 下载/i.test(info.text || '')) {
+    errors.push({ page, kind: 'premium_gate_visible_in_internal_audit' })
+  }
+}
+
 function sampleMatch(text, re) {
   const match = re.exec(text)
   if (!match) return ''
@@ -501,4 +556,3 @@ function sampleMatch(text, re) {
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
-

@@ -1,11 +1,12 @@
-﻿import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCurrentQuiz, getCurrentFRQ, getQuizInfo } from '../utils/quizSession'
 import { exportToPdf, PdfContainer } from '../utils/pdfExport.jsx'
-import { BREAK_GUARD } from '../utils/pdfBreakGuard'
 import QuestionDisplay from '../components/QuestionDisplay'
 import FRQDisplay, { RubricDisplay } from '../components/FRQDisplay'
 import { useSubject } from '../contexts/SubjectContext'
+import PremiumGate from '../components/PremiumGate'
+import { subjectDisplayName } from '../utils/displayLabels'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
@@ -72,8 +73,8 @@ function MockPdfPage() {
     if (!pdfRef.current) return
     setExporting(true)
     try {
-      const date = new Date().toISOString().split('T')[0]
-      await exportToPdf(pdfRef.current, `LynkEdu-MockExam-${date}.pdf`, { segmented: true })
+      const stamp = formatPdfTimestamp(new Date())
+      await exportToPdf(pdfRef.current, `LynkEdu-MockExam-${stamp}.pdf`, { segmented: true })
     } finally {
       setExporting(false)
     }
@@ -105,13 +106,18 @@ function MockPdfPage() {
 
   const sessionSubjectId = quizInfo?.subject || quizInfo?.config?.subject
   const sessionSubjectConfig = subjects?.find(subject => subject.id === sessionSubjectId)
-  const subjectName = sessionSubjectConfig?.name || currentSubjectConfig?.name || 'AP 题库'
+  const subjectName = sessionSubjectConfig
+    ? subjectDisplayName(sessionSubjectConfig)
+    : currentSubjectConfig
+    ? subjectDisplayName(currentSubjectConfig)
+    : 'AP 题库'
   const totalMcq = mcqs.length
   const totalFrq = frqs.length
   const totalFrqPoints = frqs.reduce((sum, f) => sum + (f.rubric?.total_points || 0), 0)
   const frqMinutes = formatMinutes(quizInfo?.frqTimeLimit)
 
   return (
+    <PremiumGate title="Mock Exam PDF 下载">
     <div className="max-w-4xl mx-auto px-4 py-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-brand">模考 PDF 导出</h1>
@@ -307,8 +313,21 @@ function MockPdfPage() {
         ))}
       </PdfContainer>
     </div>
+    </PremiumGate>
   )
 }
 
-export default MockPdfPage
+function formatPdfTimestamp(date) {
+  const pad = value => String(value).padStart(2, '0')
+  return [
+    date.getFullYear(),
+    pad(date.getMonth() + 1),
+    pad(date.getDate()),
+  ].join('-') + '-' + [
+    pad(date.getHours()),
+    pad(date.getMinutes()),
+    pad(date.getSeconds()),
+  ].join('')
+}
 
+export default MockPdfPage

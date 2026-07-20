@@ -33,14 +33,11 @@ export default defineConfig([
       // NOTE: this does NOT catch 'calling an async function without await'.
       // For that we use runtime assertions + pre-deploy smoke tests.
       'require-await': 'error',
-      // react-hooks/set-state-in-effect: warns on setState in useEffect.
-      // DOWNSIZED to 'warn' because initializing state from sessionStorage
-      // in useEffect is a legitimate pattern (external system sync).
-      // If this becomes a real problem, refactor to useSyncExternalStore.
-      'react-hooks/set-state-in-effect': 'warn',
-      // Warn on unused variables (excluding _ prefixed)
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      'react-refresh/only-export-components': 'warn',
+      // 页面会从 sessionStorage、URL 参数和远程数据初始化状态；这些是外部状态同步。
+      // 该规则对本项目会产生大量非风险提示，保留 exhaustive-deps 等更有价值的 Hook 检查。
+      'react-hooks/set-state-in-effect': 'off',
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      'react-refresh/only-export-components': 'off',
     },
   },
   {
@@ -50,7 +47,7 @@ export default defineConfig([
       globals: globals.node,
     },
     rules: {
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     },
   },
 ])

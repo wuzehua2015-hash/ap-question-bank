@@ -1,4 +1,4 @@
-import { createId, getEntitlements, isValidEmail, json, normalizeEmail, readJson, requireDb, sha256 } from '../../_shared/auth.js'
+import { createId, createSession, getEntitlements, isValidEmail, json, normalizeEmail, publicUser, readJson, requireDb, sha256 } from '../../_shared/auth.js'
 
 export async function onRequestPost({ request, env }) {
   try {
@@ -37,13 +37,11 @@ export async function onRequestPost({ request, env }) {
       await db.prepare('UPDATE users SET last_login_at = datetime(\'now\'), updated_at = datetime(\'now\') WHERE id = ?').bind(user.id).run()
     }
 
-    const sessionToken = createId('sess')
-    const tokenHash = await sha256(sessionToken)
-    await db.prepare(`
-      INSERT INTO sessions (id, user_id, token_hash, created_at, expires_at)
-      VALUES (?, ?, ?, datetime('now'), datetime('now', '+30 days'))
-    `).bind(createId('session'), user.id, tokenHash).run()
-
+    if (!user.email_verified_at) {
+      await db.prepare('UPDATE users SET email_verified_at = datetime(\'now\'), updated_at = datetime(\'now\') WHERE id = ?').bind(user.id).run().catch(() => {})
+      user = await db.prepare('SELECT * FROM users WHERE id = ? LIMIT 1').bind(user.id).first()
+    }
+    const sessionToken = await createSession(env, user.id)
     const entitlements = await getEntitlements(env, user.id)
     return json({
       sessionToken,
@@ -52,15 +50,5 @@ export async function onRequestPost({ request, env }) {
     })
   } catch (error) {
     return json({ error: error.message || '登录失败。' }, 500)
-  }
-}
-
-function publicUser(user) {
-  return {
-    id: user.id,
-    email: user.email,
-    display_name: user.display_name,
-    account_level: user.account_level,
-    created_at: user.created_at,
   }
 }

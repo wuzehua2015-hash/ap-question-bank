@@ -70,8 +70,16 @@
       "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2014_FRQ1 is assigned to U4 (Linear Momentum) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The figure above represents two carts, with magnets attached, that make up a system. The mass of one cart and magnet is $1\\,\\mathrm{kg}$ and the mass of the other is $5\\,\\mathrm{kg}$. The carts are initially at rest on a frictionless track.",
+        "Student-visible media are preserved with 2 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
@@ -106,7 +114,50 @@
           "review_note": "2014_FRQ1 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The figure above represents two carts, with magnets attached, that make up a system. The mass of one cart and magnet is $1\\,\\mathrm{kg}$ and the mass of the other is $5\\,\\mathrm{kg}$. The carts are initially at rest on a frictionless track. They are released from rest and exert a repulsive force on each other. The track is not quite horizontal, with the right side slightly lower than the left side. The speeds of the carts are measured over a $10\\,\\mathrm{s}$ interval. The graph below shows the momentum of the two carts as a function of time for this interval as they move along the $x$-axis."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2014/2014_p044_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2014/2014_p044_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Based on the graph, were the measurements started at the instant the carts were released? Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Calculate the magnitude of the external force exerted on the system."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Suppose the experiment is repeated with different carts, so that the masses of cart plus magnet are $2\\,\\mathrm{kg}$ and $4\\,\\mathrm{kg}$. Would your answer to part (b) be different with the new masses? Justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U4 Linear Momentum. FRQ 2014_FRQ1 is assigned to U4 (Linear Momentum) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ2",
@@ -205,8 +256,16 @@
       "primary_unit": "U7",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2014_FRQ2 is assigned to U7 (Oscillations) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A student hangs a $0.125\\,\\mathrm{kg}$ object on a spring, sets it into oscillation, and obtains the data for the position and velocity of the object as a function of time shown in the graphs below. (a) On the grid below, sketch the potenti",
+        "Student-visible media are preserved with 3 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
@@ -252,7 +311,65 @@
           "review_note": "2014_FRQ2 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A student hangs a $0.125\\,\\mathrm{kg}$ object on a spring, sets it into oscillation, and obtains the data for the position and velocity of the object as a function of time shown in the graphs below."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2014/2014_p046_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2014/2014_p046_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the grid below, sketch the potential energy of the object-spring-Earth system as a function of time. Explicitly label any intercepts, asymptotes, maxima, or minima with numerical values, as appropriate."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2014/2014_p046_img04.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "On the axes below, sketch the acceleration of the object as a function of time. Explicitly label any intercepts, asymptotes, maxima, or minima with numerical values, as appropriate. Next the student is given a rubber band and asked to determine whether the relationship between the restoring force exerted by the rubber band and the amount it is stretched is the same as that of an ideal spring."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Describe an experimental procedure that the student could use to collect the necessary data, including all the equipment the student would need."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "How should the student analyze the data to determine whether the relationship between the restoring force exerted by the rubber band and the amount it is stretched is the same as that of an ideal spring? What evidence from the analysis would be used to make the determination?"
+      }
+    ],
+    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2014_FRQ2 is assigned to U7 (Oscillations) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ3",
@@ -349,8 +466,16 @@
       "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2014_FRQ3 is assigned to U2 (Force and Translational Dynamics) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: In a physics lab, students will compare the two circuits shown above. In one circuit, lightbulbs A and B will be connected to a battery in series. In the other circuit, lightbulbs C and D will be connected to an identical battery in paralle",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
@@ -374,7 +499,40 @@
           "review_note": "2014_FRQ3 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "In a physics lab, students will compare the two circuits shown above. In one circuit, lightbulbs A and B will be connected to a battery in series. In the other circuit, lightbulbs C and D will be connected to an identical battery in parallel. All four lightbulbs are identical. Student 1 predicts that the bulbs will be brighter in the series arrangement, while Student 2 disagrees and predicts that the bulbs will be brighter in the parallel arrangement. Their arguments are as follows. Student 1: \"Bulbs A and B will be brighter than C and D because in the series circuit, each bulb gets all the current coming out of the battery. But in the parallel circuit each bulb gets only half the current.\" Student 2: \"But you're not taking into account that bulb A uses up some of the current before it reaches bulb B, making the bulbs dimmer in the series circuit. And in the parallel circuit, the full voltage of the battery is across each bulb, so it's as if the other bulb weren't even there. So bulbs C and D will be brighter.\""
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2014/2014_p048_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "For part (a), ignore whether the students' predictions are correct or incorrect. Do not simply repeat the students' arguments as your answers. i. Which aspects of Student 1's reasoning, if any, are correct? Explain your answer. ii. Which aspects of Student 1's reasoning, if any, are incorrect? Explain your answer. iii. Which aspects of Student 2's reasoning, if any, are correct? Explain your answer. iv. Which aspects of Student 2's reasoning, if any, are incorrect? Explain your answer. Together the students write the following equations to describe the two circuits. Series arrangement: Equation 1: $I_S=I_A=I_B$ Equation 2: $\\Delta V-I_AR_A-I_BR_B=0$ Parallel arrangement: Equation 3: $I_P=I_C+I_D$ Equation 4: $\\Delta V-I_CR_C=\\Delta V-I_DR_D=0$"
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "i. Indicate all of the equations above that support Student 1's reasoning, and explain how each equation provides support. ii. Indicate all of the equations above that support Student 2's reasoning, and explain how each equation provides support."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Resolve the two lines of reasoning about the two circuits to conclude which arrangement will have brighter bulbs. Use the equations above and any other equations that you need, and explain how the equations support your conclusion."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U2 Force and Translational Dynamics. FRQ 2014_FRQ3 is assigned to U2 (Force and Translational Dynamics) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ4",
@@ -443,8 +601,16 @@
       "primary_unit": "U7",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2014_FRQ4 is assigned to U7 (Oscillations) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A string is held taut, with each of its ends fixed to an oscillator that creates wave pulses on the string. The figure above shows identical pulses at a particular instant when they are traveling toward each other on the string. The pulses ",
+        "Student-visible media are preserved with 3 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
@@ -490,7 +656,60 @@
           "review_note": "2014_FRQ4 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A string is held taut, with each of its ends fixed to an oscillator that creates wave pulses on the string. The figure above shows identical pulses at a particular instant when they are traveling toward each other on the string. The pulses have wavelength $\\lambda$ and amplitude $A$, and are equidistant from point $P$."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2014/2014_p050_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the figure below, the dashed line at zero displacement represents the string with no pulses. On the figure, draw the shape of the string at the instant when the pulses overlap by $1/3$ of the length of each pulse."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2014/2014_p050_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2014/2014_p050_img04.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "On the axes below, sketch a graph of displacement as a function of time for point $P$, from time $t=0$ when the pulses just begin to overlap until $t=t_1$ when they once again do not overlap."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Next the oscillators are adjusted to create continuous waves of wavelength $\\lambda$, instead of the wave pulses shown. A standing wave is created on the string. What can be inferred about the length of the string? Justify your answer. Equations may be part of your reasoning, but equations alone are not sufficient justification."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2014_FRQ4 is assigned to U7 (Oscillations) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ5",
@@ -562,8 +781,16 @@
       "primary_unit": "U3",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2014_FRQ5 is assigned to U3 (Work, Energy, and Power) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The figure above shows part of a system consisting of a block at the top of an inclined plane that rests on a table, which is located on Earth. The block and plane are at rest when the block is released. In trial 1 there is no friction betw",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2014.pdf",
@@ -587,7 +814,25 @@
           "review_note": "2014_FRQ5 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The figure above shows part of a system consisting of a block at the top of an inclined plane that rests on a table, which is located on Earth. The block and plane are at rest when the block is released. In trial 1 there is no friction between the block and the plane or between the plane and the table. In trial 2 the plane is fixed to the table so it cannot move, but there is still no friction between the block and the plane. Indicate whether the speed of the block relative to the table when the block reaches the bottom of the plane is greater in trial 1 or trial 2. Justify your answer in a clear, coherent, paragraph-length explanation."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2014/2014_p051_img02.png"
+        ],
+        "used_by_parts": []
+      }
+    ],
+    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2014_FRQ5 is assigned to U3 (Work, Energy, and Power) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ1",
@@ -659,8 +904,16 @@
       "primary_unit": "U3",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2015_FRQ1 is assigned to U3 (Work, Energy, and Power) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Cart A has mass $M$ and is released from rest at a height $2H$ on a ramp making an angle $2\\theta$ with the horizontal, as shown above. Cart B has mass $2M$ and is released from rest at a height $H$ on a ramp making an angle $\\theta$ with t",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
@@ -684,7 +937,35 @@
           "review_note": "2015_FRQ1 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Cart A has mass $M$ and is released from rest at a height $2H$ on a ramp making an angle $2\\theta$ with the horizontal, as shown above. Cart B has mass $2M$ and is released from rest at a height $H$ on a ramp making an angle $\\theta$ with the horizontal. The carts roll toward each other, have a head-on collision on the horizontal portion of the ramp, and stick together. The masses of the carts' wheels are negligible, as are any frictional or drag forces."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2015/2015_p043_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Indicate whether the carts remain at rest, move to the left, or move to the right after the collision. Explain how you arrived at your answer."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Consider the time interval from when the two carts are released until just after they collide. i. For the system consisting of the two carts and Earth, indicate whether the total mechanical energy increases, decreases, or remains the same. Justify your answer. ii. For the system consisting of only the two carts, indicate whether the total mechanical energy increases, decreases, or remains the same. Justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2015_FRQ1 is assigned to U3 (Work, Energy, and Power) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ2",
@@ -782,8 +1063,16 @@
       "primary_unit": "U1",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2015_FRQ2 is assigned to U1 (Kinematics) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A car is stopped at a traffic light. The light turns green, and at time $t=0$ the car starts moving and travels with a constant acceleration. At that instant a truck traveling at constant speed $v_t$ is alongside the car, with the front of ",
+        "Student-visible media are preserved with 2 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
@@ -818,7 +1107,55 @@
           "review_note": "2015_FRQ2 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A car is stopped at a traffic light. The light turns green, and at time $t=0$ the car starts moving and travels with a constant acceleration. At that instant a truck traveling at constant speed $v_t$ is alongside the car, with the front of each vehicle at position $x=0$, as shown above. The truck passes the car, but the car later catches up to the truck in front of a house, such that at time $t_D$ the front of each vehicle is at position $x=D$."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2015/2015_p045_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the axes below, sketch and label graphs of the velocity of the car and the velocity of the truck as a function of time. Indicate any important velocities or times."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2015/2015_p045_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Two students discuss how the speed of the car compares to the speed of the truck when both vehicles are in front of the house. i. Which aspects of Student 1's reasoning, if any, are correct? Support your answer in terms of relevant features of your graphs in part (a). ii. Which aspects of Student 2's reasoning, if any, are correct? Support your answer in terms of relevant features of your graphs in part (a)."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Derive an expression for the acceleration of the car. Express your answer in terms of $D$ and $v_t$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Determine the time at which the speed of the car is equal to the speed $v_t$ of the truck. Express your answer in terms of $t_D$. Justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U1 Kinematics. FRQ 2015_FRQ2 is assigned to U1 (Kinematics) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ3",
@@ -908,8 +1245,15 @@
       "primary_unit": "U7",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2015_FRQ3 is assigned to U7 (Oscillations) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: You are given a long length of string and an oscillator that can shake one end of the string at any desired frequency. The oscillator has a display that indicates the frequency. You are asked to design an experiment to study how the velocit",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
@@ -938,7 +1282,9 @@
           ]
         ]
       }
-    }
+    },
+    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2015_FRQ3 is assigned to U7 (Oscillations) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ4",
@@ -1005,8 +1351,16 @@
       "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2015_FRQ4 is assigned to U2 (Force and Translational Dynamics) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The circuit shown above contains two resistors, an ideal battery, and a switch. The resistance of resistor $R_1$ is less than the resistance of resistor $R_2$. (a) Indicate whether the current through resistor $R_2$ when the switch is open ",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
@@ -1030,7 +1384,35 @@
           "review_note": "2015_FRQ4 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The circuit shown above contains two resistors, an ideal battery, and a switch. The resistance of resistor $R_1$ is less than the resistance of resistor $R_2$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2015/2015_p049_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Indicate whether the current through resistor $R_2$ when the switch is open is greater than, less than, or equal to the current through resistor $R_2$ when the switch is closed. Briefly explain how you arrived at your answer."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Closing the switch creates a short circuit. Indicate whether the absolute value of the potential difference between points A and B when the switch is open is greater than, less than, or equal to the absolute value of the potential difference when the switch is closed. Explain your reasoning in a clear, coherent paragraph-length explanation that may also contain equations and/or drawings. Address the conditions before and after the switch is closed."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U2 Force and Translational Dynamics. FRQ 2015_FRQ4 is assigned to U2 (Force and Translational Dynamics) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ5",
@@ -1102,8 +1484,16 @@
       "primary_unit": "U3",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2015_FRQ5 is assigned to U3 (Work, Energy, and Power) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A toy car coasts along the curved track shown above. The car has initial speed $v_A$ when it is at point A at the top of the track, and the car leaves the track at point B with speed $v_B$ at an angle $\\theta$ above the horizontal. Assume t",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2015.pdf",
@@ -1127,7 +1517,35 @@
           "review_note": "2015_FRQ5 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A toy car coasts along the curved track shown above. The car has initial speed $v_A$ when it is at point A at the top of the track, and the car leaves the track at point B with speed $v_B$ at an angle $\\theta$ above the horizontal. Assume that the rotational kinetic energy of the car's wheels and energy losses due to friction are both negligible."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2015/2015_p050_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Suppose the toy car is released from rest at point A, so $v_A=0$. i. After the car leaves the track and reaches the highest point in its trajectory it will be at a different height than it was at point A. Briefly explain why this is so. ii. Determine the speed of the car when it is at the highest point in its trajectory after leaving the track, in terms of $v_B$ and $\\theta$. Briefly explain how you arrived at your answer."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Suppose the toy car is given an initial push so that it has nonzero speed at point A. Determine the speed $v_A$ of the car at point A such that the highest point in its trajectory after leaving the track is the same as its height at point A. Express your answer in terms of $v_B$ and $\\theta$. Explain how you arrived at your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2015_FRQ5 is assigned to U3 (Work, Energy, and Power) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ1",
@@ -1194,8 +1612,16 @@
       "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2017_FRQ1 is assigned to U2 (Force and Translational Dynamics) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A student assembles a circuit with four resistors connected to a $15\\,\\mathrm{V}$ battery, as shown above. Let $I_1$ be the current through resistor $R_1$, $I_2$ be the current through resistor $R_2$, and so on. The ranking of the resistanc",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
@@ -1219,7 +1645,40 @@
           "review_note": "2017_FRQ1 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A student assembles a circuit with four resistors connected to a $15\\,\\mathrm{V}$ battery, as shown above. Let $I_1$ be the current through resistor $R_1$, $I_2$ be the current through resistor $R_2$, and so on. The ranking of the resistances of the resistors is $R_4>R_3>R_2>R_1$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2017/2017_p044_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Rank the four currents $I_1$ through $I_4$ in order from greatest to least. If any of the currents are the same, indicate that explicitly. Briefly explain your reasoning."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "The student connects a separate voltmeter across each resistor. Let $\\Delta V_1$, $\\Delta V_2$, $\\Delta V_3$, and $\\Delta V_4$ be the voltmeter readings across resistors $R_1$, $R_2$, $R_3$, and $R_4$, respectively. The student measures $\\Delta V_1=1\\,\\mathrm{V}$ and $\\Delta V_4=9\\,\\mathrm{V}$. Based on these measurements, determine $\\Delta V_2$ and $\\Delta V_3$. Briefly explain your reasoning."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The student now connects a wire from point A to point B. When this wire is connected, does the current $I_1$ in resistor $R_1$ increase, decrease, or stay the same? Select one and briefly explain your reasoning."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U2 Force and Translational Dynamics. FRQ 2017_FRQ1 is assigned to U2 (Force and Translational Dynamics) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ2",
@@ -1316,8 +1775,16 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2017_FRQ2 is assigned to U5 (Torque and Rotational Dynamics) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A disk-shaped platform has a known rotational inertia. The platform is mounted on a fixed axle and rotates in a horizontal plane, as shown above. A student wishes to determine the frictional torque exerted on the platform by the axle as the",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
@@ -1341,7 +1808,45 @@
           "review_note": "2017_FRQ2 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A disk-shaped platform has a known rotational inertia. The platform is mounted on a fixed axle and rotates in a horizontal plane, as shown above. A student wishes to determine the frictional torque exerted on the platform by the axle as the platform rotates. The student has access to equipment that would usually be found in a school physics laboratory."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2017/2017_p046_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe an experimental procedure the student could use to collect the data needed to find the frictional torque exerted on the platform while it rotates. i. What quantities would be measured? ii. What equipment would be used for the measurements, and how would that equipment be used? iii. Describe the overall procedure to be used, including any steps necessary to reduce experimental uncertainty. Give enough detail so that another student could replicate the experiment."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Describe how the data from the measurements could be analyzed to determine the frictional torque exerted on the rotating platform. It is often assumed that the frictional force between two surfaces is independent of their relative speed. However, the details of the axle's construction are unknown, and it is possible that the frictional torque for the axle depends on the platform's angular speed."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Does the experiment described in parts (a) and (b) depend on the assumption that the frictional torque is independent of the platform's angular speed? Select Yes or No. Either answer may be correct, depending on the experimental design. If yes, describe which part of your analysis depends on this assumption. If no, explain how your analysis does not depend on this assumption."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Briefly describe how the experimental procedure described in parts (a) and (b) could be modified to determine whether the frictional torque stays constant as the angular speed changes. If no modification is necessary, state that explicitly. In either case, describe how the data could be analyzed to determine whether the frictional torque stays constant as the angular speed changes."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Torque and Rotational Dynamics. FRQ 2017_FRQ2 is assigned to U5 (Torque and Rotational Dynamics) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ3",
@@ -1409,8 +1914,16 @@
       "primary_unit": "U3",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2017_FRQ3 is assigned to U3 (Work, Energy, and Power) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Food scientists have created a new oil. At room temperature, the oil is a liquid. As the oil gets colder, however, it stiffens into a sticky gel. To explore the properties of the oil, the scientists fill a container with the oil to a height",
+        "Student-visible media are preserved with 2 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
@@ -1445,7 +1958,55 @@
           "review_note": "2017_FRQ3 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Food scientists have created a new oil. At room temperature, the oil is a liquid. As the oil gets colder, however, it stiffens into a sticky gel. To explore the properties of the oil, the scientists fill a container with the oil to a height $D$, as shown in the figure above on the left. They drop a small steel ball of mass $M$ from rest at the top of the oil. Using video to capture the ball's motion, the scientists calculate $E_{lost}$, the mechanical energy lost by the ball-Earth system from the time the ball enters the oil to the time just before the ball strikes the bottom of the container. The scientists also define the stiffness $S$ of the oil as a quantity proportional to the force required to move a rod through the oil at a standard constant speed. The scientists calculate $E_{lost}$ and $S$ at several different temperatures. The graph above on the right shows $E_{lost}$ as a function of $S$ for the calculated data points and a best-fit curve."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2017/2017_p048_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2017/2017_p049_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Give a physical reason why the curve in the graph would not reach the vertical $E_{lost}$ axis even if the scientists had taken data over a broader range of temperatures."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "As $S$ increases, $E_{lost}$ approaches a maximum value labeled $E_{max}$ on the graph above. Write an equation for $E_{max}$ in terms of $M$, $D$, and physical constants, as appropriate. Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "One scientist writes $E_{lost}=CS^2$, where $C$ is a constant with appropriate units. Give two reasons why the equation cannot be correct."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The scientists write the equation $t=ZS$, where $Z$ is a constant with appropriate units, for the time $t$ the ball takes to fall through the oil. Is this equation plausible? Select Plausible or Not plausible and briefly explain. (e) $\\Delta K$ is the change in kinetic energy of the ball between the time it is released from rest and the time just before the ball strikes the bottom of the container. On the axes below, sketch $\\Delta K$ as a function of $S$."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2017_FRQ3 is assigned to U3 (Work, Energy, and Power) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ4",
@@ -1517,8 +2078,16 @@
       "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2017_FRQ4 is assigned to U4 (Linear Momentum) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: An archer tests various arrowheads by shooting arrows at a pumpkin that is suspended from a tree branch by a rope, as shown to the right. When struck head-on by the arrow, the pumpkin swings upward on the rope. The maximum angle $\\theta$ th",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
@@ -1542,7 +2111,35 @@
           "review_note": "2017_FRQ4 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "An archer tests various arrowheads by shooting arrows at a pumpkin that is suspended from a tree branch by a rope, as shown to the right. When struck head-on by the arrow, the pumpkin swings upward on the rope. The maximum angle $\\theta$ that the rope makes with the vertical is different for each arrowhead that the archer tests. Each arrow, including its arrowhead, has the same mass $m$ and is shot with the same velocity $v_0$ toward the right. The arrowheads are made of different materials and behave differently when they strike the pumpkin. - Embedded arrow: Strikes the pumpkin and remains embedded, while the pumpkin swings to angle $\\theta_{emb}$. - Pass arrow: Passes all the way through the pumpkin and continues traveling away from the archer, while the pumpkin swings to angle $\\theta_{pass}$. - Bounce arrow: Bounces off the pumpkin back toward the archer, while the pumpkin swings to angle $\\theta_{bounce}$."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Rank the three angles $\\theta_{emb}$, $\\theta_{pass}$, and $\\theta_{bounce}$ from greatest to least. Use 1 for the greatest angle, 2 for the next greatest, and so on. If any two or all three angles are the same, use the same number."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "In a clear, coherent, paragraph-length response that may also contain figures and/or equations, justify your ranking."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2017/2017_p050_img01.png"
+        ],
+        "used_by_parts": []
+      }
+    ],
+    "classification_reasoning": "Official progression review: U4 Linear Momentum. FRQ 2017_FRQ4 is assigned to U4 (Linear Momentum) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ5",
@@ -1616,8 +2213,16 @@
       "primary_unit": "U7",
       "secondary_units": [],
       "confidence": 0.85,
-      "evidence": "Structured from visual PDF review and official scoring guideline text.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2017_FRQ5 is assigned to U7 (Oscillations) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The right end of a long, flexible string is attached to a fixed point on a wall. The left end of the string is held by a student. The student creates a symmetric wave pulse traveling to the right, as shown in Figure 1 above. When the pulse ",
+        "Student-visible media are preserved with 3 image reference(s).",
+        "Subject physics-1 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-1-official-progression-2026-07-19",
+      "authority": "AP Physics 1: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-1/01-exams/AP Physics 1 2017.pdf",
@@ -1663,6 +2268,59 @@
           "review_note": "2017_FRQ5 Physics 1 FRQ image is a prompt figure, graph, or grid required by the item."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The right end of a long, flexible string is attached to a fixed point on a wall. The left end of the string is held by a student. The student creates a symmetric wave pulse traveling to the right, as shown in Figure 1 above. When the pulse reaches the wall, it inverts as it reflects from the wall, as shown in Figure 2 above. The figure below represents what the string looks like at the instant the peak of the pulse reaches the wall; at this instant the string is horizontal everywhere."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2017/2017_p051_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2017/2017_p051_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-1/2017/2017_p051_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "At the instant shown above, does the wave pulse carry energy? Select Yes or No and briefly explain."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "The student then creates a second symmetric wave pulse traveling to the right on the same string. The amplitude of the second pulse is half the amplitude of the original pulse. Which pulse, if either, travels at a higher speed? Select the higher-amplitude pulse, the lower-amplitude pulse, or neither; both pulses travel at the same speed. Briefly explain."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The figure below shows an idealized wave pulse traveling to the right. i. Consider the instant when the center of the pulse reaches the wall, which is also the instant when the right half of the pulse has reflected from the wall but the left half has not. On the grid below, sketch what the string looks like at that instant. ii. Now consider an instant sometime after the entire pulse has reflected from the wall and is moving to the left. On the grid below, sketch what the string looks like at that instant."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2017_FRQ5 is assigned to U7 (Oscillations) under AP Physics 1: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   }
 ]

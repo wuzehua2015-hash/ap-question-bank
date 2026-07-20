@@ -25,6 +25,21 @@ body {
 .option-btn {
   @apply w-full text-left p-4 rounded-lg border-2 transition-all duration-200;
   @apply border-border bg-surface hover:border-brand-light hover:bg-blue-50;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  line-height: 1.55;
+}
+
+.option-label {
+  flex: 0 0 auto;
+  font-weight: 700;
+  margin-right: 0.15rem;
+}
+
+.option-content {
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .option-btn.selected {
@@ -37,6 +52,22 @@ body {
 
 .option-btn.incorrect {
   @apply border-error bg-red-50;
+}
+
+.admin-input {
+  @apply w-full rounded-md border border-border bg-white px-3 py-2.5 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-blue-100;
+}
+
+.admin-primary {
+  @apply rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-light disabled:opacity-50;
+}
+
+.admin-secondary {
+  @apply rounded-md border border-border bg-white px-3 py-2 text-sm font-medium text-text hover:border-brand hover:text-brand;
+}
+
+.admin-danger {
+  @apply rounded-md border border-red-200 bg-red-50 px-4 py-2.5 text-sm font-semibold text-error hover:bg-red-100;
 }
 
 .math-markdown-table-wrap {
@@ -86,6 +117,89 @@ body {
   flex: 0 0 auto;
   border: 1.5px solid currentColor;
   background: transparent;
+}
+
+.math-code-block {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: #f8fafc;
+  color: #111827;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  white-space: pre;
+}
+
+.math-inline-code {
+  display: inline-block;
+  padding: 0.08rem 0.28rem;
+  border: 1px solid #dbe3ef;
+  border-radius: 0.25rem;
+  background: #f8fafc;
+  color: #111827;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.92em;
+  line-height: 1.35;
+}
+
+.math-roman-option {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  gap: 0.5rem;
+  align-items: start;
+  margin: 0.35rem 0;
+  line-height: 1.55;
+}
+
+.math-roman-label {
+  font-weight: 700;
+  color: var(--color-brand);
+  font-variant-numeric: tabular-nums;
+}
+
+.math-roman-content {
+  min-width: 0;
+}
+
+.question-group-context {
+  margin: 0 0 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: #f8fafc;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.question-group-context .math-code-block {
+  margin-bottom: 0;
+}
+
+.question-image-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0.75rem 0 1rem;
+}
+
+.question-image {
+  display: block;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .question-image {
+    max-width: none;
+    min-width: 560px;
+    max-height: none !important;
+    height: auto !important;
+  }
 }
 
 .katex {

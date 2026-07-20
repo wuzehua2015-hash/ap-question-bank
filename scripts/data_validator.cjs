@@ -64,6 +64,7 @@ function validate(filePath, options = {}) {
     { name: 'raw HTML entity', pattern: /&(quot|apos|amp|lt|gt|#34|#39|#x22|#x27);/i },
     { name: 'visible mojibake marker', pattern: /[\u9234\u95b3\u6d7c\u640e\u94ff\u74a7\u9354\u68f0\u7ecc\u93bc\u9429\u9366\u936a\u5a34]/ },
     { name: 'mojibake Chinese/UI marker', pattern: /[\u9354\u68f0\u9429\u9366\u936a\u95c1\u95b3\u6d7c\u93bc\u940f\u7035]/ },
+    { name: 'Latin-1 OCR formula artifact', pattern: /[\u00C6\u00A8]/ },
     { name: 'replacement character', pattern: /\uFFFD/ },
   ]
   
@@ -356,6 +357,59 @@ function validate(filePath, options = {}) {
       }
       if (/[^\n][ \t]+[a-d]\.\s+(?:Describe|Explain|Define|Identify|Select|Calculate|Determine|Draw|State|Compare|Justify|Discuss|Evaluate|Provide|Write|For|Using)\b/.test(q.text || '')) {
         errors.push(`${qid}: FRQ subpart marker appears inline; expected a line break before a./b./c./d.`)
+      }
+      if (/Figure\s+\d+\.[^\n]{0,400}\([A-C]\)[^\n]{0,160}\([ivx]+\)\s+(?:Describe|Explain|Identify|Predict|Provide|Justify|Calculate|Determine)\b/i.test(q.text || '')) {
+        errors.push(`${qid}: FRQ figure subcaption appears glued to a roman-numeral prompt; expected separate figure caption and part lines`)
+      }
+      if (Array.isArray(q.content_blocks) && q.content_blocks.length > 0) {
+        const topImages = new Set(Array.isArray(q.image_paths) ? q.image_paths : [])
+        const anchoredImages = []
+        const partLabels = new Set()
+        for (const [blockIndex, block] of q.content_blocks.entries()) {
+          if (!block || typeof block !== 'object') {
+            errors.push(`${qid}: content_blocks[${blockIndex}] must be an object`)
+            continue
+          }
+          if (!['paragraph', 'part', 'figure', 'table'].includes(block.type)) {
+            errors.push(`${qid}: content_blocks[${blockIndex}] has unsupported type ${block.type || 'missing'}`)
+          }
+          if (block.type === 'figure') {
+            const paths = Array.isArray(block.image_paths) ? block.image_paths : []
+            if (paths.length === 0) {
+              errors.push(`${qid}: figure content block ${blockIndex} missing image_paths`)
+            }
+            for (const imagePath of paths) anchoredImages.push(imagePath)
+          }
+          if (block.type === 'table' && (!block.table || !Array.isArray(block.table.headers) || !Array.isArray(block.table.rows))) {
+            errors.push(`${qid}: table content block ${blockIndex} missing table.headers/table.rows`)
+          }
+          if (block.type === 'part' && (!block.label || !block.text)) {
+            errors.push(`${qid}: part content block ${blockIndex} missing label or text`)
+          }
+          if (block.type === 'part' && block.label) {
+            if (partLabels.has(block.label)) {
+              errors.push(`${qid}: duplicate part label in content_blocks: ${block.label}`)
+            }
+            partLabels.add(block.label)
+          }
+          if (block.type === 'part' && /^[A-D]\.\s+/.test(block.text || '')) {
+            errors.push(`${qid}: part content block ${blockIndex} appears to include an uppercase part marker in text`)
+          }
+          if (block.type === 'paragraph' && !block.text) {
+            errors.push(`${qid}: paragraph content block ${blockIndex} missing text`)
+          }
+        }
+        for (const imagePath of anchoredImages) {
+          if (!topImages.has(imagePath)) {
+            errors.push(`${qid}: anchored figure image ${imagePath} is missing from top-level image_paths`)
+          }
+        }
+      } else if (
+        Array.isArray(q.image_paths) &&
+        q.image_paths.length > 0 &&
+        q.display_mode !== 'official_images_first'
+      ) {
+        errors.push(`${qid}: FRQ has image_paths but no content_blocks; non-official-image FRQ media must be anchored in reading order`)
       }
       const rubricText = JSON.stringify(q.rubric || {})
       for (const { name, pattern } of frqRubricArtifactPatterns) {

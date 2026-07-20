@@ -9,7 +9,7 @@ function ExamSetup() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const { currentSubject, setSubject } = useSubject()
-  const { isLoggedIn } = useAuth()
+  const { isLoggedIn, isInternalStudent } = useAuth()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [preview, setPreview] = useState(null)
@@ -53,7 +53,7 @@ function ExamSetup() {
         },
       })
     } catch (err) {
-      setError('加载失败：' + (err.message || '请检查网络'))
+      setError(`加载失败：${err.message || '请检查网络或题库配置'}`)
     } finally {
       setLoading(false)
     }
@@ -67,6 +67,10 @@ function ExamSetup() {
 
   const exportPdf = () => {
     if (!preview) return
+    if (!isInternalStudent) {
+      navigate(isLoggedIn ? '/account' : `/login?returnTo=${encodeURIComponent('/exam')}&reason=lynk-student`)
+      return
+    }
     startMockExam(preview)
     navigate('/mock-pdf')
   }
@@ -93,18 +97,18 @@ function ExamSetup() {
 
         {!preview ? (
           <>
-          {!isLoggedIn && (
-            <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-800 text-sm">
-              登录 / 注册后可以生成 Mock Exam，并保存考试记录。
-            </div>
-          )}
-          <button
-            onClick={generate}
-            disabled={loading}
-            className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50"
-          >
-            {loading ? '生成中...' : isLoggedIn ? '生成 Mock Exam' : '登录 / 注册后生成 Mock Exam'}
-          </button>
+            {!isLoggedIn && (
+              <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-800 text-sm">
+                登录 / 注册后可以生成 Mock Exam，并保存考试记录。
+              </div>
+            )}
+            <button
+              onClick={generate}
+              disabled={loading}
+              className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50"
+            >
+              {loading ? '生成中...' : isLoggedIn ? '生成 Mock Exam' : '登录 / 注册后生成 Mock Exam'}
+            </button>
           </>
         ) : (
           <div className="space-y-4">
@@ -122,7 +126,7 @@ function ExamSetup() {
                 onClick={exportPdf}
                 className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors"
               >
-                导出 PDF
+                {isInternalStudent ? '导出 PDF' : '翎英学员下载 PDF'}
               </button>
             </div>
             <button

@@ -1,10 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
 import { useSubject } from '../contexts/SubjectContext'
-import { loadMCQBank, loadFRQBank } from '../utils/questionBank'
+import { loadFRQBank, loadMCQBank } from '../utils/questionBank'
+import { accountLevelDisplay, subjectDisplayName } from '../utils/displayLabels'
+import { getQuizHistory, getWrongQuestions } from '../utils/storage'
+import LandingPage from './LandingPage'
 
-function HomePage() {
+function HomePage({ forceDashboard = false }) {
   const { currentSubject, mySubjects, setSubject } = useSubject()
+  const { isLoggedIn, isInternalStudent } = useAuth()
   const [subjectStats, setSubjectStats] = useState({})
 
   useEffect(() => {
@@ -13,14 +18,10 @@ function HomePage() {
       for (const subject of mySubjects) {
         try {
           const mcqData = await loadMCQBank(subject.id)
-          let frqCount = 0
-          if (subject.hasFRQ) {
-            const frqData = await loadFRQBank(subject.id).catch(() => [])
-            frqCount = frqData?.length || 0
-          }
+          const frqData = subject.hasFRQ ? await loadFRQBank(subject.id).catch(() => []) : []
           stats[subject.id] = {
             mcqCount: mcqData.length,
-            frqCount,
+            frqCount: frqData.length,
             hasFRQ: subject.hasFRQ,
           }
         } catch {
@@ -33,89 +34,100 @@ function HomePage() {
     loadStats()
   }, [mySubjects])
 
+  const currentSubjectConfig = mySubjects.find(subject => subject.id === currentSubject) || mySubjects[0]
+  const currentStats = subjectStats[currentSubjectConfig?.id] || {}
+  const accountLabel = isLoggedIn ? accountLevelDisplay('free', isInternalStudent) : '游客模式'
+  const currentProgress = useMemo(() => buildProgressSummary(currentSubject), [currentSubject])
+
+  if (!forceDashboard && !isLoggedIn) {
+    return <LandingPage />
+  }
+
   if (mySubjects.length === 0) {
     return (
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <section className="bg-surface border border-border rounded-lg p-8">
-          <h1 className="text-2xl font-bold text-brand mb-3">选择你的学习科目</h1>
-          <p className="text-text-muted mb-6">
-            先选择正在学习的 AP 科目。首页和顶部科目切换器只展示你已选择的科目。
-          </p>
-          <Link
-            to="/settings"
-            className="inline-flex items-center bg-accent hover:bg-accent-light text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
-          >
-            去设置
-          </Link>
-        </section>
+      <div className="max-w-3xl mx-auto px-5 py-20">
+        <p className="text-sm font-medium text-text-muted mb-3">开始学习</p>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-brand mb-5">选择正在学习的科目</h1>
+        <p className="text-base leading-7 text-text-muted mb-8">
+          选择后，首页只保留与你有关的科目和入口。
+        </p>
+        <Link
+          to="/settings"
+          className="inline-flex rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-light"
+        >
+          选择科目
+        </Link>
       </div>
     )
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
-      <section className="mb-10 sm:mb-16">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-6">
-          <h1 className="text-2xl font-bold text-brand">我的科目</h1>
-          <Link
-            to="/settings"
-            className="inline-flex items-center justify-center border border-border bg-surface hover:bg-gray-50 text-text text-sm font-medium px-4 py-2 rounded-lg transition-colors"
-          >
-            管理科目
+    <div className="max-w-5xl mx-auto px-5 py-12 sm:py-16">
+      <section className="mb-14">
+        <div className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-text-muted">
+          <span>{accountLabel}</span>
+          <Dot />
+          <Link to="/settings" className="hover:text-brand">管理科目</Link>
+          <Dot />
+          <Link to={isLoggedIn ? '/account' : '/login'} className="hover:text-brand">
+            {isLoggedIn ? '账号设置' : '登录同步'}
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-brand mb-5">
+          {currentSubjectConfig ? subjectDisplayName(currentSubjectConfig) : 'AP 题库'}
+        </h1>
+
+        <p className="max-w-2xl text-lg leading-8 text-text-muted mb-7">
+          {currentProgress.lead}
+        </p>
+
+        <div className="mb-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-text-muted">
+          <span>{currentStats.mcqCount || '...'} MCQ</span>
+          {currentStats.hasFRQ && <span>{currentStats.frqCount || 0} FRQ</span>}
+          <span>{mySubjects.length} 个学习科目</span>
+          {currentProgress.lastScore && <span>上次 {currentProgress.lastScore}</span>}
+          {currentProgress.wrongCount > 0 && <span>{currentProgress.wrongCount} 道错题</span>}
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          <Link to="/quiz" className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-light">
+            {currentProgress.primaryLabel}
+          </Link>
+          <Link to="/exam" className="rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-light">
+            模拟考试
+          </Link>
+          <Link to={currentProgress.wrongCount > 0 ? '/mistakes' : '/history'} className="rounded-md px-4 py-3 text-sm font-medium text-text-muted hover:text-brand">
+            {currentProgress.secondaryLabel}
+          </Link>
+        </div>
+      </section>
+
+      <section className="border-t border-border pt-8">
+        <div className="mb-5 flex items-center justify-between gap-4">
+          <h2 className="text-base font-semibold text-brand">我的科目</h2>
+          <Link to="/settings" className="text-sm text-text-muted hover:text-brand">调整</Link>
+        </div>
+
+        <div className="divide-y divide-border">
           {mySubjects.map(subject => {
             const stats = subjectStats[subject.id] || {}
             const isActive = subject.id === currentSubject
-
             return (
-              <div
-                key={subject.id}
-                className={`bg-surface rounded-lg p-5 sm:p-6 shadow-sm border transition-all ${isActive ? 'border-accent ring-1 ring-accent/20' : 'border-border hover:shadow-md'}`}
-              >
-                <div className="flex items-start justify-between gap-3 mb-4">
-                  <h2 className="text-lg font-bold text-text leading-snug">{subject.name}</h2>
-                  {isActive && (
-                    <span className="shrink-0 text-xs bg-accent/10 text-accent px-2 py-0.5 rounded-full">当前</span>
-                  )}
-                </div>
-
-                <div className="flex gap-4 mb-4 text-sm text-text-muted">
-                  <div>{stats.mcqCount || '...'} MCQ</div>
-                  {stats.hasFRQ && <div>{stats.frqCount || 0} FRQ</div>}
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  <Link
-                    to="/quiz"
-                    onClick={() => setSubject(subject.id)}
-                    className="inline-flex items-center bg-accent hover:bg-accent-light text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
-                  >
-                    专项练习
-                  </Link>
-                  <Link
-                    to="/exam"
-                    onClick={() => setSubject(subject.id)}
-                    className="inline-flex items-center bg-brand hover:bg-brand-light text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
-                  >
-                    模拟考试
-                  </Link>
-                  <Link
-                    to="/search"
-                    onClick={() => setSubject(subject.id)}
-                    className="inline-flex items-center bg-surface border border-border hover:bg-gray-50 text-text text-sm font-medium px-4 py-2 rounded-lg transition-colors"
-                  >
-                    搜索
-                  </Link>
-                  <Link
-                    to="/mistakes"
-                    onClick={() => setSubject(subject.id)}
-                    className="inline-flex items-center bg-surface border border-border hover:bg-gray-50 text-text text-sm font-medium px-4 py-2 rounded-lg transition-colors"
-                  >
-                    错题
-                  </Link>
+              <div key={subject.id} className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
+                <button
+                  type="button"
+                  onClick={() => setSubject(subject.id)}
+                  className="text-left"
+                >
+                  <span className={`block font-semibold ${isActive ? 'text-brand' : 'text-text'}`}>{subjectDisplayName(subject)}</span>
+                  <span className="mt-1 block text-sm text-text-muted">
+                    {stats.mcqCount || '...'} MCQ{stats.hasFRQ ? ` · ${stats.frqCount || 0} FRQ` : ''}
+                  </span>
+                </button>
+                <div className="flex gap-4 text-sm">
+                  <Link to="/quiz" onClick={() => setSubject(subject.id)} className="text-accent hover:underline">练习</Link>
+                  <Link to="/exam" onClick={() => setSubject(subject.id)} className="text-brand hover:underline">模考</Link>
                 </div>
               </div>
             )
@@ -123,20 +135,47 @@ function HomePage() {
         </div>
       </section>
 
-      <section>
-        <h2 className="text-xl font-bold text-brand mb-4">快捷入口</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Link to="/history" className="bg-surface rounded-lg p-5 sm:p-6 shadow-sm border border-border hover:shadow-md transition-shadow flex items-center gap-4">
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-xl">H</div>
-            <div>
-              <div className="text-lg font-semibold text-text">学习记录</div>
-              <div className="text-sm text-text-muted">查看正确率趋势和单元表现。</div>
-            </div>
-          </Link>
-        </div>
+      <section className="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-border pt-8 text-sm">
+        <Link to="/mistakes" className="text-text-muted hover:text-brand">错题本</Link>
+        <Link to="/history" className="text-text-muted hover:text-brand">学习记录</Link>
+        <Link to="/search" className="text-text-muted hover:text-brand">搜题与题单</Link>
       </section>
     </div>
   )
+}
+
+function Dot() {
+  return <span className="h-1 w-1 rounded-full bg-border" />
+}
+
+function buildProgressSummary(subject) {
+  const quizHistory = getQuizHistory(subject)
+  const wrongQuestions = getWrongQuestions(subject)
+  const lastQuiz = quizHistory[quizHistory.length - 1]
+  const wrongCount = wrongQuestions.length
+
+  if (lastQuiz) {
+    const score = Number(lastQuiz.score)
+    const total = Number(lastQuiz.total)
+    const lastScore = Number.isFinite(score) && Number.isFinite(total) && total > 0
+      ? `${score}/${total}`
+      : null
+    return {
+      lead: wrongCount > 0 ? '先复盘错题，再继续新的专项练习。' : '继续保持节奏，可以直接开始下一组专项练习。',
+      primaryLabel: '继续练习',
+      secondaryLabel: wrongCount > 0 ? '复盘错题' : '学习记录',
+      lastScore,
+      wrongCount,
+    }
+  }
+
+  return {
+    lead: '先做专项练习，再用模拟考试检查完整状态。',
+    primaryLabel: '专项练习',
+    secondaryLabel: '学习记录',
+    lastScore: null,
+    wrongCount,
+  }
 }
 
 export default HomePage

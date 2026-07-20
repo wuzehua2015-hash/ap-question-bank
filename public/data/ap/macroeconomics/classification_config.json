@@ -1,24 +1,24 @@
 {
   "subject": "AP Macroeconomics",
-  "version": "2019 CED",
+  "version": "Fall 2026 CED",
   "classification_standard": "A student who has completed ONLY this unit should be able to answer this question.",
   "exam_structure": {
     "total_mcq": 60,
     "frq_count": 3,
     "unit_weighting": {
-      "U1": "5–10%",
-      "U2": "12–17%",
-      "U3": "17–27%",
-      "U4": "18–23%",
-      "U5": "20–30%",
-      "U6": "10–13%"
+      "U1": "5-10%",
+      "U2": "12-17%",
+      "U3": "17-27%",
+      "U4": "18-23%",
+      "U5": "20-30%",
+      "U6": "10-13%"
     }
   },
   "units": [
     {
       "code": "U1",
       "name": "Basic Economic Concepts",
-      "weighting": "5–10%",
+      "weighting": "5-10%",
       "core_concepts": [
         "Scarcity",
         "Opportunity cost",
@@ -61,7 +61,7 @@
     {
       "code": "U2",
       "name": "Economic Indicators and the Business Cycle",
-      "weighting": "12–17%",
+      "weighting": "12-17%",
       "core_concepts": [
         "Gross Domestic Product (GDP)",
         "Real GDP vs Nominal GDP",
@@ -104,7 +104,7 @@
     {
       "code": "U3",
       "name": "National Income and Price Determination",
-      "weighting": "17–27%",
+      "weighting": "17-27%",
       "core_concepts": [
         "Aggregate Demand (AD)",
         "Components of AD (C, I, G, NX)",
@@ -164,7 +164,7 @@
     {
       "code": "U4",
       "name": "Financial Sector",
-      "weighting": "18–23%",
+      "weighting": "18-23%",
       "core_concepts": [
         "Money functions",
         "Money demand (transaction, precautionary, speculative)",
@@ -219,7 +219,7 @@
     {
       "code": "U5",
       "name": "Long-Run Consequences of Stabilization Policies",
-      "weighting": "20–30%",
+      "weighting": "20-30%",
       "core_concepts": [
         "Fiscal + monetary policy COMBINATIONS",
         "Stabilization policy",
@@ -269,8 +269,8 @@
     },
     {
       "code": "U6",
-      "name": "Open Economy—International Trade and Finance",
-      "weighting": "10–13%",
+      "name": "Open Economy-International Trade and Finance",
+      "weighting": "10-13%",
       "core_concepts": [
         "Exchange rates",
         "Foreign exchange market",
@@ -352,5 +352,12 @@
     "ALWAYS distinguish SRPC (U3) from LRPC (U5)",
     "ALWAYS distinguish LRAS in equilibrium (U3) from LRAS in growth (U5)",
     "ALWAYS distinguish fiscal policy alone (U3) from fiscal-monetary combination (U5)"
-  ]
+  ],
+  "unit_classification_authority": {
+    "official_framework": "AP Macroeconomics Course and Exam Description",
+    "official_url": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "official_version": "Fall 2026, V.1",
+    "policy": "Official exam and subject framework materials are the only authority for unit classification.",
+    "student_progression_rule": "A question belongs to the earliest official unit after which a student can answer it using that unit and prior units only."
+  }
 }

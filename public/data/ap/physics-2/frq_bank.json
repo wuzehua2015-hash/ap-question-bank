@@ -56,8 +56,16 @@
       "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2014_FRQ1 is assigned to U2 (Thermodynamics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 1. (10 points, suggested time 20 minutes) Three samples of a gas, X, Y, and Z, are prepared. Each sample contains the same number of molecules, but the samples are at different temperatures. The temperature of sample X is TX , the temperatu",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2014_Practice_Exam_FLibrary.pdf",
@@ -80,7 +88,45 @@
           "review_note": "2014_FRQ1 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "1. (10 points, suggested time 20 minutes) Three samples of a gas, X, Y, and Z, are prepared. Each sample contains the same number of molecules, but the samples are at different temperatures. The temperature of sample X is TX , the temperature of sample Y is lower than that of sample X, and the temperature of sample Z is lower than that of sample Y $T_X > T_Y > T_Z$ ."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "The graph below shows the distribution of the speeds of the molecules in sample Y. On the graph, sketch and label possible distributions for sample X and sample Z. 41 The three samples with initial temperatures $T_X > T_Y > T_Z$ are placed in thermal contact, with sample Z in the middle, as shown below, and the samples are insulated from their surroundings. The samples can exchange thermal energy but not gas molecules. The samples eventually reach equilibrium, with a final temperature greater than TY ."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2014/2014_p041_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "In a few sentences, describe the change over time in the average kinetic energy of the molecules of each sample, from initial contact until they reach equilibrium. Explain how these changes relate to the energy flow between the pairs of samples that are in contact. Sample X Sample Y Sample Z"
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Indicate whether the net entropy of sample X increases, decreases, or remains the same as a result of the process of reaching equilibrium. Increases Decreases Remains the same Justify your answer at the microscopic level."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "For the three-sample system, indicate whether the entropy of the system increases, decreases, or remains the same. Increases Decreases Remains the same Justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U2 Thermodynamics. FRQ 2014_FRQ1 is assigned to U2 (Thermodynamics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ2",
@@ -140,8 +186,16 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2014_FRQ2 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 2. (12 points, suggested time 25 minutes) Students are given some resistors with various resistances, a battery with internal resistance, and an ammeter. They are asked to determine the emf e and internal resistance r of the battery using j",
+        "Student-visible media are preserved with 2 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2014_Practice_Exam_FLibrary.pdf",
@@ -175,7 +229,50 @@
           "review_note": "2014_FRQ2 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "2. (12 points, suggested time 25 minutes) Students are given some resistors with various resistances, a battery with internal resistance, and an ammeter. They are asked to determine the emf e and internal resistance r of the battery using just this equipment. Working with the circuit shown above, they insert each resistor into the circuit and measure the current I in the circuit each time they insert a resistor. From their data, the students generate a graph of 1 I as a function of the resistance R of each resistor, as shown above."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2014/2014_p043_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2014/2014_p043_img03.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "i. Write an algebraic equation describing the circuit that includes e , R, r, and I. ii. Use your equation and the graph to calculate the emf of the battery and the internal resistance of the battery. 43 The students are now given a voltmeter and a new resistor X to use with the resistors, battery, and ammeter they already have. They are asked to determine whether resistor X is ohmic."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "i. Using standard symbols for circuit elements, as in the previously shown circuit, draw a diagram of a circuit that the students could use to determine whether resistor X is ohmic, including the appropriate placement of the meters. Clearly label your diagram. ii. Describe the procedure you would use with your circuit to get enough data to determine whether resistor X is ohmic. iii. What would you graph using your data, and what would you look for on your graph to determine whether resistor X is ohmic?"
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Would your procedure or data analysis in part (b) need to be different if the internal resistance of the battery was nonohmic? Justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Magnetism and Electromagnetic Induction. FRQ 2014_FRQ2 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ3",
@@ -236,8 +333,16 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2014_FRQ3 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 3. (12 points, suggested time 25 minutes) A particle with unknown mass and charge is projected into the apparatus shown above. The particle moves with constant speed $v$ as it passes undeflected through a pair of parallel plates, as shown a",
+        "Student-visible media are preserved with 5 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2014_Practice_Exam_FLibrary.pdf",
@@ -304,7 +409,90 @@
           "review_note": "2014_FRQ3 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "3. (12 points, suggested time 25 minutes) A particle with unknown mass and charge is projected into the apparatus shown above. The particle moves with constant speed $v$ as it passes undeflected through a pair of parallel plates, as shown above. The plates are separated by a distance $d$, and a constant potential difference $V$ is maintained between them. A uniform magnetic field of magnitude $B$ directed into the page exists both in the region between the plates and in the region to the right of the plates that is enclosed by the dashed lines. In the region to the right of the plates, the particle's path is circular with radius $r$. Assume the effects of gravity are negligible compared to other forces."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2014/2014_p042_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2014/2014_p045_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Explain why the particle moves through the parallel plates undeflected in terms of the forces exerted on the particle."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "What is the sign of the charge on the particle? Justify your answer. A magnetic field of $0.30\\,\\mathrm{T}$ is applied with the plate separation at $5.0\\times10^{-3}\\,\\mathrm{m}$. Singly ionized particles with various speeds enter the region between the plates, and only those with speed $2.0\\times10^{6}\\,\\mathrm{m/s}$ are undeflected as they pass between the plates. These particles then reach the collector plate a distance of $0.42\\,\\mathrm{m}$ below the point at which they left the region between the parallel plates."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Based on your explanation in part (a), derive an algebraic expression for the potential difference that must be applied to produce the motion of the undeflected particles. Use that expression to calculate the numerical value of the potential difference."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "By analyzing the circular part of the motion, derive an algebraic expression for the mass of the particles. Use that expression to calculate a numerical value for the mass."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "A scientist wants to use the apparatus to separate singly ionized atoms of $^{12}\\mathrm{C}$ and $^{14}\\mathrm{C}$ in order to use the $^{14}\\mathrm{C}$ in radiocarbon dating. Describe how the motion of the two isotopes of carbon in both regions of the apparatus could be used to separate the isotopes."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2014/2014_p047_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 4",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2014/2014_p048_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 5",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2014/2014_p048_img03.png"
+        ],
+        "used_by_parts": []
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Magnetism and Electromagnetic Induction. FRQ 2014_FRQ3 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ4",
@@ -364,8 +552,16 @@
       "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2014_FRQ4 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 4. (10 points, suggested time 20 minutes) The figures above labeled X, Y, and Z represent plane waves of the same wavelength incident on barriers that have openings of different sizes. Also shown are the shapes of the wave fronts beyond the",
+        "Student-visible media are preserved with 2 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2014_Practice_Exam_FLibrary.pdf",
@@ -399,7 +595,50 @@
           "review_note": "2014_FRQ4 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "4. (10 points, suggested time 20 minutes) The figures above labeled X, Y, and Z represent plane waves of the same wavelength incident on barriers that have openings of different sizes. Also shown are the shapes of the wave fronts beyond the barriers."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2014/2014_frq4_wave_barriers.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "One model of waves treats every point on a wave front as a point source. Give a clear, coherent, paragraph- length description of how this model can be used to explain the shape of the wave fronts beyond the barriers. 47 The figure above represents another plane wave incident on a barrier with two identical openings, creating an interference pattern on the wall. Some positions in the pattern on the wall are labeled."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2014/2014_frq4_interference.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "In a few sentences, describe how the point-source model described in part (a) and the figure above can be used to explain the formation of the interference pattern on the wall."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "On the axes below, sketch the intensity of the waves that are incident on the wall. The labels correspond to the positions noted in the figure above."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Geometric and Physical Optics. FRQ 2014_FRQ4 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ1",
@@ -456,8 +695,16 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2016_FRQ1 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 1. (10 points, suggested time 20 minutes) The figure above shows two metal spheres that are far apart compared to their size and that are held in place. The spheres are connected by wires to either side of switch S. Initially, the switch is",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP Physics 2 2016.pdf",
@@ -480,7 +727,40 @@
           "review_note": "2016_FRQ1 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "1. (10 points, suggested time 20 minutes) The figure above shows two metal spheres that are far apart compared to their size and that are held in place. The spheres are connected by wires to either side of switch S. Initially, the switch is open. Sphere 1 has mass m1 , radius r1 , and a net positive charge and radius r < r 2 1 +Q0 . Sphere 2 has mass m2 and is initially uncharged. The switch is then closed. Afterward, sphere 1 has a charge Q1 and is at potential V1 , and the electric field strength just outside its surface is E1 . The corresponding values for sphere 2 are Q2 , V2 , and E2 . Neglect air resistance and gravitational interactions."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2016/2016_p043_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "i. Indicate whetherV1 is larger than, smaller than, or equal to V2 . Briefly explain your reasoning using appropriate physics principles and/or mathematical models. ii. Indicate whether Q1 is larger than, smaller than, or equal to Q2 . Briefly explain your reasoning using appropriate physics principles and/or mathematical models. -6- iii. Indicate whether E1 is larger than, smaller than, or equal to E2 . Show how you arrived at your answer using appropriate physics principles and/or mathematical models."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "The distance between the centers of sphere 1 and sphere 2 is D. The switch is now opened, the wires are disconnected from the spheres, and the spheres are released, all without changing the charges on the spheres. Write but do NOT solve equations that could be used to determine the velocities v1 and v2 of the spheres a long time after they are released, in terms of m1 , m2 , Q1 , Q2 , D, and physical constants, as appropriate."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The spheres are now returned to their original locations. Sphere 1 once again has initial net charge +Q0 , and sphere 2 is initially uncharged. The switch is again closed and then reopened. Sphere 3, an uncharged metal sphere of radius r > r > r 3 1 2 on an insulating handle, is now brought into contact with sphere 2. Sphere 3 is then moved away. i. Indicate the sign of the final charge on each sphere. ii. Rank the absolute value of the final charge on each of the three spheres. Explain how you arrived at this answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Magnetism and Electromagnetic Induction. FRQ 2016_FRQ1 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ2",
@@ -552,8 +832,16 @@
       "primary_unit": "U1",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2016_FRQ2 is assigned to U1 (Fluids) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 2. (12 points, suggested time 25 minutes) Water flows at a speed $v$ of $2.00\\,\\mathrm{m/s}$ through a hose of radius $3\\,\\mathrm{cm}$ and into a large empty rectangular pool. The pool has a level bottom and measures $10.0\\,\\mathrm{m}$ long",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP Physics 2 2016.pdf",
@@ -576,7 +864,50 @@
           "review_note": "2016_FRQ2 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "2. (12 points, suggested time 25 minutes) Water flows at a speed $v$ of $2.00\\,\\mathrm{m/s}$ through a hose of radius $3\\,\\mathrm{cm}$ and into a large empty rectangular pool. The pool has a level bottom and measures $10.0\\,\\mathrm{m}$ long by $8.00\\,\\mathrm{m}$ wide. The density of water is $1.00\\times10^{3}\\,\\mathrm{kg/m^3}$ and atmospheric pressure is $1.01\\times10^{5}\\,\\mathrm{Pa}$. Express all numerical answers to the following parts to at least three significant figures."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2016/2016_p045_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Calculate the total pressure exerted downward on the bottom of the pool after the water has been running for 3 hours."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "A small ball is floating in the water as the pool fills. Indicate whether the buoyant force on the floating ball increases, decreases, or stays the same as the amount of water in the pool increases. Briefly explain your reasoning."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "A person gets impatient because it is taking too long to fill the pool. The person attaches a nozzle to the end of the hose that reduces the radius of the opening to $1.5\\,\\mathrm{cm}$. Assume the speed of the water in the hose before it reaches the nozzle remains at $2.00\\,\\mathrm{m/s}$. The person claims that the water now comes out of the nozzle faster than it did from the hose without the nozzle and therefore the pool will fill faster. i. Do you agree that the pool will fill faster? Explain your reasoning in terms of conservation principles. ii. Calculate the speed of the water as it leaves the nozzle. Explain how your calculation is consistent with the conservation principles used in part (c)(i)."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "When the water in the pool is $1.50\\,\\mathrm{m}$ deep, the hose is turned off. A person who is $1.80\\,\\mathrm{m}$ tall then floats in the pool. i. Is the net downward force exerted on the bottom of the pool now greater than, less than, or the same as it was before the person got into the pool? Explain your reasoning in terms of the forces exerted on the person. ii. Would your answer to part (d)(i) be different if the person was standing on the bottom of the pool? Explain your reasoning."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Consider the total pressure exerted by the water on the sides of the pool near the bottom of the pool. When the person floats in the pool, is this pressure greater than, less than, or the same as it was before the person got into the pool? Explain your reasoning."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U1 Fluids. FRQ 2016_FRQ2 is assigned to U1 (Fluids) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ3",
@@ -655,8 +986,16 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2016_FRQ3 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 3. (12 points, suggested time 25 minutes) Students observe that a graphite rod gets hot when there is an electric potential difference DV applied across it that causes an electric current I in it. The graphite rod is placed in an apparatus ",
+        "Student-visible media are preserved with 4 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP Physics 2 2016.pdf",
@@ -712,7 +1051,70 @@
           "review_note": "2016_FRQ3 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "3. (12 points, suggested time 25 minutes) Students observe that a graphite rod gets hot when there is an electric potential difference DV applied across it that causes an electric current I in it. The graphite rod is placed in an apparatus that consists of a clear plastic container with a lid, as shown above. The lid is equipped with electrical connectors and an opening that can be sealed around an inserted sensor. The graphite rod is connected to the electrical connectors by wires and sealed inside the container so that all the energy emitted by the rod goes into heating the air in the container. The teacher tells the students that in this situation the change in the internal energy of the air is equal to (5 2) NkB DT , where N is the number of molecules and T is the temperature, and the air can be treated as an ideal gas."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2016/2016_p047_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Derive an expression for the temperature change of the air as a function of time t as a result of the electrical energy dissipated by the rod and delivered to the air in the container. Express your answer in terms of I, DV , N, and physical constants, as appropriate. Assume that the temperature of the graphite rod remains constant while the air is being heated. -10- -11-"
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "i. On the axes below, sketch a line or curve you predict will represent a plot of the pressure of the air in the container as a function of time. Clearly label the sketch as R1 . Explain why your graph has this shape. ii. The rod is now replaced by a second graphite rod that has twice the length but the same radius. The potential difference across the new rod is the same as that across the original rod. On the axes in part (d)(i), sketch a line or curve you predict will represent a plot of the pressure of the air in the container as a function of time for the second rod. Clearly label the sketch as R2 . Compare this graph to the graph from part (d)(i) and explain why it is the same or different. -12- -13-"
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2016/2016_p048_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2016/2016_p049_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 4",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2016/2016_p051_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Another group of students performing this experiment notices a gap in the seal of the container opening and thinks that some gas has leaked out of the container. If this is true, how would this group’s graph of air temperature as a function of electrical energy compare to the graph you drew in part (c) ?"
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Magnetism and Electromagnetic Induction. FRQ 2016_FRQ3 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ4",
@@ -792,13 +1194,22 @@
       "primary_unit": "U7",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2016_FRQ4 is assigned to U7 (Quantum, Atomic, and Nuclear Physics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 4. (10 points, suggested time 20 minutes) The picture above appears in a magazine with a caption indicating that the picture represents electron diffraction by atoms in a crystal. The picture was created by directing a beam of electrons thr",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP Physics 2 2016.pdf",
       "structured_method": "physics2_frq_draft_v1"
-    }
+    },
+    "classification_reasoning": "Official progression review: U7 Quantum, Atomic, and Nuclear Physics. FRQ 2016_FRQ4 is assigned to U7 (Quantum, Atomic, and Nuclear Physics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ1",
@@ -873,8 +1284,16 @@
       "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2017_FRQ1 is assigned to U2 (Thermodynamics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 1. (10 points, suggested time 20 minutes) 200 kg PHYSICS 2 Section II 4 Questions Time—90 minutes Directions: Questions 1 and 4 are short free-response questions that require about 20 minutes each to answer and are worth 10 points each. Que",
+        "Student-visible media are preserved with 2 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP Physics 2 2017.pdf",
@@ -908,7 +1327,45 @@
           "review_note": "2017_FRQ1 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "1. (10 points, suggested time 20 minutes) 200 kg PHYSICS 2 Section II 4 Questions Time—90 minutes Directions: Questions 1 and 4 are short free-response questions that require about 20 minutes each to answer and are worth 10 points each. Questions 2 and 3 are long free-response questions that require about 25 minutes each to answer and are worth 12 points each. Show your work for each part in the space provided after that part. A team of engineering students is testing their newly designed raft in the pool where the diving team practices. The raft must hold a 730 kg steel cube with edges of length 45.0 cm without sinking. Assume the 3 1000 kg m density of water in the pool is ."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2017/2017_p052_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2017/2017_p052_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "The students use a crane to gently place the cube on the raft but accidentally place it off center. The cube remains on the raft for a few moments and then the raft tilts, causing the cube to slide off and sink to the bottom of the pool. The raft remains floating in the pool. In a coherent paragraph-length response, indicate whether the water level in the pool when the cube is on the bottom of the pool is higher than, lower than, or the same as when the cube is on the raft, and explain your reasoning. For both cases, assume that there is no motion of the water. -6-"
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "The bottom of the pool is 5 m below the surface of the water. The crane is now used to lift the cube out of the pool. The cube is lifted upward at a slow and constant speed, so all drag forces are negligible. i. Predict how the force exerted by the crane on the cube when the bottom of the cube is at a depth of 2.0 m compares to the force exerted by the crane on the cube when the bottom of the cube is at a depth of 4.0 m. Explain your reasoning. ii. On the black square below, which represents the cube, draw and label the forces (not components) that are exerted on the cube while the crane is lifting it and the bottom of the cube is 4 m below the surface of the water. Each force must be represented by a distinct arrow starting on, and pointing away from, the black square. The lengths of the arrows should approximately demonstrate the net force on the cube. iii. Calculate the force exerted by the crane on the cube when the bottom of the cube is 4 m below the surface of the water."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U2 Thermodynamics. FRQ 2017_FRQ1 is assigned to U2 (Thermodynamics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ2",
@@ -968,8 +1425,16 @@
       "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2017_FRQ2 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 2. (12 points, suggested time 25 minutes) A student gives the following description of a thermodynamic cycle through which a sample of an ideal monatomic gas is taken. \"Initially, the gas has a volume of $1.0\\times10^{-3}\\,\\mathrm{m^3}$ and",
+        "Student-visible media are preserved with 2 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP Physics 2 2017.pdf",
@@ -1003,7 +1468,50 @@
           "review_note": "2017_FRQ2 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "2. (12 points, suggested time 25 minutes) A student gives the following description of a thermodynamic cycle through which a sample of an ideal monatomic gas is taken. \"Initially, the gas has a volume of $1.0\\times10^{-3}\\,\\mathrm{m^3}$ and a pressure of $1.0\\times10^{5}\\,\\mathrm{Pa}$. The gas is in a closed cylinder that has a movable piston on one end. Call the initial state of the gas state A. Process AB takes the gas at constant pressure from state A to state B, where B has three times the volume of state A. The gas is then compressed isothermally until it is back to its initial volume, reaching state C. Finally, a single process CA returns the gas to its initial state A.\""
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2017/2017_p045_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2017/2017_p046_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "i. On the axes below, plot states A, B, and C, and sketch a graph of pressure $P$ as a function of volume $V$ for cycle ABCA. Label states A, B, and C, and label the axes with numerical values. ii. Let the temperature for state A be $T_0$. In terms of $T_0$, determine the temperature for state B. iii. Compare the temperature at state C to the temperature at state A. Explain how your comparison is consistent with your graph above."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "i. Briefly describe an experimental procedure that would take the gas from state C to state A. ii. Relate the temperature of the gas to the microscopic processes involved in the energy transfer as the gas goes from state C to state A for the procedure you described in part (b)(i)."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "i. Use the student's verbal description or your graph in part (a)(i) to calculate a numerical value for the work done on the gas in process AB. ii. The magnitude of the change in internal energy for process AB is $\\Delta U=300\\,\\mathrm{J}$. Calculate a numerical value for the energy added to or removed from the gas by heating in process AB."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Geometric and Physical Optics. FRQ 2017_FRQ2 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ3",
@@ -1092,8 +1600,16 @@
       "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2017_FRQ3 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 3. (12 points, suggested time 25 minutes) Students use an optical bench, a lamp, a converging lens, and a screen to study image formation. They keep the lens at the 60 cm mark on the optical bench and adjust the lamp and screen until a clea",
+        "Student-visible media are preserved with 4 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP Physics 2 2017.pdf",
@@ -1180,7 +1696,80 @@
           "review_note": "2017_FRQ3 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "3. (12 points, suggested time 25 minutes) Students use an optical bench, a lamp, a converging lens, and a screen to study image formation. They keep the lens at the 60 cm mark on the optical bench and adjust the lamp and screen until a clear image is formed on the screen. The table below shows their data for the object and image distances. | Trial | 1 | 2 | 3 | 4 | 5 | |---:|---:|---:|---:|---:|---:| | Object distance $s_o$ (cm) | 55 | 45 | 35 | 30 | 25 | | Image distance $s_i$ (cm) | 21.3 | 23.8 | 28.5 | 32.5 | 43 |"
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2017/2017_p048_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the figure below, representing the optical bench, draw and label the screen, lens, and lamp in correct positions for trial 1."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2017/2017_p049_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "What quantities could be plotted to create a linear graph that could be used to calculate the focal length of the lens? Justify your answer. Use the empty rows of the table above to record any values you need to calculate."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2017/2017_p050_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 4",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2017/2017_p053_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(c)(i)",
+        "text": "On the axes below, plot data for the quantities you indicated in part (b). Label and scale the axes."
+      },
+      {
+        "type": "part",
+        "label": "(c)(ii)",
+        "text": "Use your graph to calculate the focal length of the lens. Show your calculations."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The students are now given a converging mirror of focal length 15 cm to replace the lens and asked to make measurements that would allow them to verify the focal length of the mirror. Describe a procedure that would result in creation of a real image from which the focal length could be determined. On the figure below, representing the optical bench, draw and label the screen, lamp, and mirror in appropriate positions. Indicate what measurements should be made and how they could be used to calculate the focal length."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Geometric and Physical Optics. FRQ 2017_FRQ3 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ4",
@@ -1260,8 +1849,16 @@
       "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2017_FRQ4 is assigned to U4 (Electric Circuits) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 4. (10 points, suggested time 20 minutes) An uncharged air-filled capacitor has square plates of side $L$ whose separation can be varied. The initial plate separation is $d_1$, which is comparable to $L$. The capacitor is connected to a bat",
+        "Student-visible media are preserved with 2 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP Physics 2 2017.pdf",
@@ -1295,7 +1892,50 @@
           "review_note": "2017_FRQ4 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "4. (10 points, suggested time 20 minutes) An uncharged air-filled capacitor has square plates of side $L$ whose separation can be varied. The initial plate separation is $d_1$, which is comparable to $L$. The capacitor is connected to a battery with potential difference $V_0$ and a switch $S$, as shown above. Assume the dielectric constant of the air is 1.0."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2017/2017_p052_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "The switch is closed and remains closed for a long time. (i) On the diagram below, draw a vector at each dot to represent the electric field created by the charge on the capacitor plates. (ii) The plates are now moved to a new separation $d_2 \\ll d_1$ and allowed to reach equilibrium. Calculate the magnitude of the charge on each plate of the capacitor in terms of $V_0$, $L$, $d_2$, and physical constants, as appropriate."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2017/2017_p053_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "The plates are pulled apart to a separation of $2d_2$, where $2d_2 \\ll d_1$. (i) Suppose the switch remains closed while the plates are pulled apart. Compare the magnitude of the new electric field between the plates when their separation is $2d_2$ to the magnitude of the field for plate separation $d_2$. Support your comparison using appropriate physics principles. (ii) Suppose the switch is opened before the plates are pulled apart. Compare the magnitude of the new electric field between the plates when their separation is $2d_2$ to the magnitude of the field for plate separation $d_2$. Support your claim using appropriate physics principles."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The new circuit shown below is now assembled. The plates of the original capacitor, $C_1$, are at separation $d_2$. A second capacitor, $C_2$, with square plates of side $2L$ and plate separation $d_2$, is connected in parallel with the original capacitor. Both capacitors are initially uncharged. The switch is closed and the circuit reaches equilibrium. Let $Q_0$ be the magnitude of the charge on each plate of capacitor $C_1$ in the previous circuit, as determined in part (a)(ii). In terms of $Q_0$, calculate the magnitude of the charge on each plate of the two capacitors in the new circuit."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U4 Electric Circuits. FRQ 2017_FRQ4 is assigned to U4 (Electric Circuits) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2019_FRQ1",
@@ -1306,7 +1946,7 @@
     "question_number": 1,
     "question_type": "FRQ",
     "type": "FRQ",
-    "text": "1. (10 points, suggested time 20 minutes)\nA group of students is asked to design a heater for an indoor swimming pool using an electrically insulated\ncurrent-carrying wire. The energy from the wire heats the water. The heater should deliver 10 kilowatts of power to\nthe water in the pool.\n(a) The students use wire that has a cross-sectional area of 1.3 times 10 to the negative 5 power, meters squared\n and a resistivity of\n 3\n.0 times 10 to the negative 6 power, ohm meters\n.\nThey have access to a 240 volt power supply. Calculate the length of the wire needed to construct the heater.\n(b) The wire is completely submerged in the water, and the heater is turned on. After a while, both the water and\nthe air above it are noticeably warmer.\ni. Identify and describe both the primary process that transfers energy through the wire’s electrical\ninsulation and the primary process that transfers energy through the water.\n\n-6-\nh\ne figure presents a bl\nank space, with two headings. The heading on the left is “Electrical Insulation.” The heading on the right is “Water.”\n\nii. The door to the pool area is open, and the air outside is colder than the air in the pool area. The heater\nmust remain on to maintain a constant water temperature that is greater than the air temperature in the\npool area. Explain how the first and second laws of thermodynamics can be applied to show that this\nmust occur.\nThe door to the pool area is then closed so that energy transfer and air transfer into and out of the area are\nnegligible. After some time the air in the pool area becomes warmer.\n(c) On the graph below, sketch the thermodynamic process that the air in the pool area undergoes as it becomes\nwarmer. Compare the amount Q of energy transferred to the air by heating to the change delta U in the air’s\ninternal energy.\nThe\n\nfigure presents the\n first q u\nadrant of a coordinate plane, with the origin labeled O. The coordinate plane is under the heading “Sketch the Process.” The horizontal axis is labeled “Volume,” and the vertical axis is labeled “Pressure.” A blank space is shown to the right of the axes, under the heading “Compare Q and delta U.”\n(d) When the temperature of the room is 276 Kelvin , the air pressure is\n\n1.0 times 10 to the fifth power, pascals\n . Calculate the force exerted by\nthe air in the room on a door that measures 2.0 meters by 0.90 meter when the temperature of the room is 310 Kelvin .",
+    "text": "1. (10 points, suggested time 20 minutes)\nA group of students is asked to design a heater for an indoor swimming pool using an electrically insulated current-carrying wire. The energy from the wire heats the water. The heater should deliver 10 kilowatts of power to the water in the pool.\n\n(a) The students use wire that has a cross-sectional area of $1.3\\times 10^{-5}\\,\\mathrm{m^2}$ and a resistivity of $3.0\\times 10^{-6}\\,\\Omega\\cdot\\mathrm{m}$. They have access to a $240\\,\\mathrm{V}$ power supply. Calculate the length of the wire needed to construct the heater.\n\n(b) The wire is completely submerged in the water, and the heater is turned on. After a while, both the water and the air above it are noticeably warmer.\n(i) Identify and describe both the primary process that transfers energy through the wire's electrical insulation and the primary process that transfers energy through the water.\n(ii) The door to the pool area is open, and the air outside is colder than the air in the pool area. The heater must remain on to maintain a constant water temperature that is greater than the air temperature in the pool area. Explain how the first and second laws of thermodynamics can be applied to show that this must occur.\nThe door to the pool area is then closed so that energy transfer and air transfer into and out of the area are negligible. After some time the air in the pool area becomes warmer.\n\n(c) On the graph below, sketch the thermodynamic process that the air in the pool area undergoes as it becomes warmer. Compare the amount $Q$ of energy transferred to the air by heating to the change $\\Delta U$ in the air's internal energy.\n\n(d) When the temperature of the room is $276\\,\\mathrm{K}$, the air pressure is $1.0\\times 10^5\\,\\mathrm{Pa}$. Calculate the force exerted by the air in the room on a door that measures $2.0\\,\\mathrm{m}$ by $0.90\\,\\mathrm{m}$ when the temperature of the room is $310\\,\\mathrm{K}$.",
     "answer": "",
     "points": 10,
     "image_paths": [
@@ -1354,8 +1994,16 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2019_FRQ1 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 1. (10 points, suggested time 20 minutes) A group of students is asked to design a heater for an indoor swimming pool using an electrically insulated current-carrying wire. The energy from the wire heats the water. The heater should deliver",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2019_Full_Exam_Aliyun.pdf",
@@ -1378,7 +2026,45 @@
           "review_note": "2019_FRQ1 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "1. (10 points, suggested time 20 minutes) A group of students is asked to design a heater for an indoor swimming pool using an electrically insulated current-carrying wire. The energy from the wire heats the water. The heater should deliver 10 kilowatts of power to the water in the pool."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "The students use wire that has a cross-sectional area of $1.3\\times 10^{-5}\\,\\mathrm{m^2}$ and a resistivity of $3.0\\times 10^{-6}\\,\\Omega\\cdot\\mathrm{m}$. They have access to a $240\\,\\mathrm{V}$ power supply. Calculate the length of the wire needed to construct the heater."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "The wire is completely submerged in the water, and the heater is turned on. After a while, both the water and the air above it are noticeably warmer. (i) Identify and describe both the primary process that transfers energy through the wire's electrical insulation and the primary process that transfers energy through the water. (ii) The door to the pool area is open, and the air outside is colder than the air in the pool area. The heater must remain on to maintain a constant water temperature that is greater than the air temperature in the pool area. Explain how the first and second laws of thermodynamics can be applied to show that this must occur. The door to the pool area is then closed so that energy transfer and air transfer into and out of the area are negligible. After some time the air in the pool area becomes warmer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "On the graph below, sketch the thermodynamic process that the air in the pool area undergoes as it becomes warmer. Compare the amount $Q$ of energy transferred to the air by heating to the change $\\Delta U$ in the air's internal energy."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Provided figure",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2019/2019_p040_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "When the temperature of the room is $276\\,\\mathrm{K}$, the air pressure is $1.0\\times 10^5\\,\\mathrm{Pa}$. Calculate the force exerted by the air in the room on a door that measures $2.0\\,\\mathrm{m}$ by $0.90\\,\\mathrm{m}$ when the temperature of the room is $310\\,\\mathrm{K}$."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Magnetism and Electromagnetic Induction. FRQ 2019_FRQ1 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2019_FRQ2",
@@ -1442,8 +2128,16 @@
       "primary_unit": "U3",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2019_FRQ2 is assigned to U3 (Electric Force, Field, and Potential) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 2. (12 points, suggested time 25 minutes) Students use a lightbulb, a screen, and a meterstick to determine the focal length of a concave mirror from a graph. (a)(i) Describe a procedure that could be used to collect appropriate data and th",
+        "Student-visible media are preserved with 3 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2019_Full_Exam_Aliyun.pdf",
@@ -1488,7 +2182,75 @@
           "review_note": "2019_FRQ2 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "2. (12 points, suggested time 25 minutes) Students use a lightbulb, a screen, and a meterstick to determine the focal length of a concave mirror from a graph."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2019/2019_p041_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)(i)",
+        "text": "Describe a procedure that could be used to collect appropriate data and the measurements to be taken. Label the axes below with the quantities to be graphed. Draw a clearly labeled diagram of the experimental setup. Describe the procedure and indicate the quantities to be measured."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2019/2019_p042_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2019/2019_p042_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)(ii)",
+        "text": "Describe how the focal length can be determined from the graph."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "The figure below represents one arrangement of a concave mirror and an object. The dot represents the focal point of the mirror and the arrow represents the object. Draw a ray diagram to illustrate the formation of the image that includes at least two rays and the resulting image."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Some students take the concave mirror outside and hold it with the concave side facing the Sun. The students want to locate the image of the Sun. They measure the temperature of the air in front of the mirror along the principal axis and graph the air temperature as a function of distance from the mirror. The graph below is their best-fit curve to the data."
+      },
+      {
+        "type": "part",
+        "label": "(c)(i)",
+        "text": "Based on the curve, at what distance from the mirror would you expect to find the image of the Sun?"
+      },
+      {
+        "type": "part",
+        "label": "(c)(ii)",
+        "text": "Use a relevant equation to explain how your response to part (c)(i) relates to the focal length of the mirror."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U3 Electric Force, Field, and Potential. FRQ 2019_FRQ2 is assigned to U3 (Electric Force, Field, and Potential) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2019_FRQ3",
@@ -1552,8 +2314,16 @@
       "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2019_FRQ3 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 3. (12 points, suggested time 25 minutes) Two insulating spheres with mass m and charge positive $Q_{0}$ are near Earth’s surface, suspended vertically from identical light, stiff rods with pivots at the top, as shown in Figure 1. The spher",
+        "Student-visible media are preserved with 4 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2019_Full_Exam_Aliyun.pdf",
@@ -1609,7 +2379,65 @@
           "review_note": "2019_FRQ3 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "3. (12 points, suggested time 25 minutes) Two insulating spheres with mass m and charge positive $Q_{0}$ are near Earth’s surface, suspended vertically from identical light, stiff rods with pivots at the top, as shown in Figure 1. The spheres are initially far apart. The pivots are locked so the rods remain vertical while the spheres are moved together by external forces until the spheres are a distance $r_{2}$ from each other, as shown in Figure 2. Finally, the pivots are held a distance $r_{2}$ apart and unlocked, and the rods are allowed to swing out until the spheres momentarily come to rest a distance $r_{3}$ apart, as shown in Figure 3. The pivots are always at the same height."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2019/2019_p043_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2019/2019_p044_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2019/2019_p044_img02.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 4",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2019/2019_p046_img01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Consider the system that includes only the two spheres, with Earth external to the system. i. Write an expression for the work done moving the spheres horizontally from far apart to a separation of $r_{2}$ . Express your answer in terms of $Q_{0}$ , $r_{2}$ , and physical constants, as appropriate. ii. The total energy of the two-sphere system (with Earth still external to the system) changes as the system goes from the configuration in Figure 2 to the configuration in Figure 3. Explain how the energy changes in terms of the forces exerted on the system."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Now consider the system that contains both Earth and the two spheres. What is the work done on this new system for the changes in sphere position described in parts (a)(i) and (ii) ? Explain your reasoning. -10- The figure pre sents a blank space, with two headings. The heading on the left is “Part (a)(i).” The heading on the right is “Part (a)(ii).”"
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Geometric and Physical Optics. FRQ 2019_FRQ3 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2019_FRQ4",
@@ -1668,8 +2496,16 @@
       "primary_unit": "U7",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2019_FRQ4 is assigned to U7 (Quantum, Atomic, and Nuclear Physics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 4. (10 points, suggested time 20 minutes) A uranium-231 nucleus can decay into an alpha particle and a thorium-227 nucleus. (a) Nuclei in a 500 gram sample of uranium-231 undergo this decay. The amount of uranium-231 remaining is measured a",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP_Physics_2_2019_Full_Exam_Aliyun.pdf",
@@ -1723,7 +2559,40 @@
           "review_note": "2019_FRQ4 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "4. (10 points, suggested time 20 minutes) A uranium-231 nucleus can decay into an alpha particle and a thorium-227 nucleus."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Nuclei in a 500 gram sample of uranium-231 undergo this decay. The amount of uranium-231 remaining is measured at the same time every day for a period of eight days. The table below shows the data obtained. Amount of uranium-231 in grams 500 424 359 305 258 219 186 157 134 Time (days) 0 1 2 3 4 5 6 7 8 According to the data, what is the approximate half-life of uranium-231 ?"
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Alpha Path",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2019/2019_frq4_alpha_path.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "One uranium-231 nucleus decays. The uranium nucleus has a mass of 3.835609 times 10 to the negative 25 power, kilograms and is moving in the negative x-direction with a kinetic energy of 2.5 times 10 to the negative 13 power, joules before the decay. The thorium nucleus has a mass of 3.769064 times 10 to the negative 25 power, kilograms , and the alpha particle has a mass of 0.066447 times 10 to the negative 25 power, kilograms . i. Calculate the velocity of the center of mass of the two decay products immediately after the decay. Be sure to specify the direction of the velocity. ii. Calculate the amount of energy released in the decay of the uranium-231 nucleus. -12-"
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "An alpha particle is moving to the left with speed $v_{0}$ when it enters a region containing a uniform magnetic field of known magnitude B directed out of the page. The figure above shows the path of the alpha particle through the region. In a coherent paragraph-length response, explain how the charge-to-mass ratio and sign of the charge of the alpha particle can be verified by using the effect of the magnetic field on the path of the particle. Equations or diagrams that support your written description may be included."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U7 Quantum, Atomic, and Nuclear Physics. FRQ 2019_FRQ4 is assigned to U7 (Quantum, Atomic, and Nuclear Physics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2023_FRQ1",
@@ -1783,8 +2652,16 @@
       "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2023_FRQ1 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 1. (10 points, suggested time 20 minutes) A rectangular tank with a mirrored bottom is filled with water (index of refraction $n_w$). A beam of light passes from air (index of refraction $n_a$) into the water at angle $\\theta_i$ from the no",
+        "Student-visible media are preserved with 4 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2023_FRQ_Official.pdf",
@@ -1841,7 +2718,85 @@
           "review_note": "2023_FRQ1 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "1. (10 points, suggested time 20 minutes) A rectangular tank with a mirrored bottom is filled with water (index of refraction $n_w$). A beam of light passes from air (index of refraction $n_a$) into the water at angle $\\theta_i$ from the normal, as shown in Figure 1. Index of refraction $n_w$ is greater than index of refraction $n_a$."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2023/2023_frq1_figure1_and_response.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2023/2023_frq1_figure2_models.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "On the following diagram, sketch the entire path of the beam as the beam enters, travels through, and then exits the water. Sugar is then added to the water, resulting in a mixture that has a different index of refraction than water. A student considers two models, Model A and Model B, for how the sugar mixes with water. The models are shown in Figure 2. Model A: The sugar is uniformly mixed throughout the water, resulting in a mixture with index of refraction $n_m$ such that $n_m>n_w$. Model B: Layers are formed of varying concentrations of sugar in the water. There are three distinct layers of equal volume. The top layer is only water (index of refraction $n_w$). The middle layer has the same concentration of sugar as the mixture in Model A (index of refraction $n_m$). The bottom layer has the highest concentration of sugar (index of refraction $n_b$)."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2023/2023_frq1_angle_table.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 4",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2023/2023_frq1_exit_distance_models.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Consider Model A. Briefly describe how the observed wavelength of light changes, if at all, as the beam travels from air into the mixture."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Relevant angles between the beam and the normal for the various layers present in models A and B are defined in the following table. | Angle | Description | |---|---| | $\\theta_i$ | Incident angle of the beam in air | | $\\theta_1$ | Angle the beam makes with the normal in the mixture in Model A | | $\\theta_2$ | Angle the beam makes with the normal in the top layer in Model B | | $\\theta_3$ | Angle the beam makes with the normal in the middle layer in Model B | | $\\theta_4$ | Angle the beam makes with the normal in the bottom layer in Model B |"
+      },
+      {
+        "type": "part",
+        "label": "(c)(i)",
+        "text": "Determine an expression for $\\theta_4$ in terms of $\\theta_i$, $n_a$, and $n_b$."
+      },
+      {
+        "type": "part",
+        "label": "(c)(ii)",
+        "text": "Rank the angles from greatest to least, with 1 being greatest. If two angles are the same value, give them the same ranking: $\\theta_1$, $\\theta_2$, $\\theta_3$, $\\theta_4$. Briefly explain your reasoning using appropriate physics principles and/or mathematical models. For the original tank filled with water, the beam is observed to exit the surface of the water a horizontal distance $d_w$ from the entry point. For models A and B, the horizontal distances are $d_A$ and $d_B$, respectively."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Determine whether $d_A$ and $d_B$ are each greater than, less than, or equal to $d_w$. It is not necessary to compare $d_A$ to $d_B$. Briefly justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Geometric and Physical Optics. FRQ 2023_FRQ1 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2023_FRQ2",
@@ -1930,8 +2885,16 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2023_FRQ2 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 2. (12 points, suggested time 25 minutes) Students are given an unknown circuit component that is connected in series to a resistor with known resistance $500\\,\\Omega$. (a) The students are asked to experimentally determine whether the comp",
+        "Student-visible media are preserved with 3 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2023_FRQ_Official.pdf",
@@ -1977,7 +2940,85 @@
           "review_note": "2023_FRQ2 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "2. (12 points, suggested time 25 minutes) Students are given an unknown circuit component that is connected in series to a resistor with known resistance $500\\,\\Omega$."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2023/2023_frq2_component_diagram.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "The students are asked to experimentally determine whether the component is a resistor or an uncharged capacitor."
+      },
+      {
+        "type": "part",
+        "label": "(a)(i)",
+        "text": "Complete the following diagram to show how to use standard circuit equipment to determine whether the component is a resistor or an uncharged capacitor."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2023/2023_frq2_circuit_and_data.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2023/2023_frq2_graph_grid.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)(ii)",
+        "text": "Describe an experimental procedure to determine whether the component is a resistor or an uncharged capacitor. Refer to the circuit equipment in the diagram drawn in part (a)(i)."
+      },
+      {
+        "type": "part",
+        "label": "(a)(iii)",
+        "text": "What results would the students expect if the component is an uncharged capacitor? Support your answer in terms of potential difference and charge. The students conduct a different experiment to determine the emf $\\mathcal{E}$ of a battery that is not ideal and has internal resistance $r=30\\,\\Omega$. The battery is connected to a variable resistor in a circuit, as shown. The students measure the current $I$ through the circuit for different values of resistance $R_{var}$ of the variable resistor that is connected to the battery. The following table contains the data collected. | $I$ (A) | $R_{var}$ ($\\Omega$) | |---:|---:| | 0.087 | 200 | | 0.060 | 300 | | 0.042 | 450 | | 0.027 | 700 | | 0.016 | 1200 |"
+      },
+      {
+        "type": "part",
+        "label": "(b)(i)",
+        "text": "Write an equation describing the circuit in terms of $\\mathcal{E}$, $I$, $r$, and $R_{var}$."
+      },
+      {
+        "type": "part",
+        "label": "(b)(ii)",
+        "text": "Which quantities could be graphed to yield a straight line that could be used to calculate a numerical value for the emf $\\mathcal{E}$ of the battery? Indicate the horizontal-axis and vertical-axis quantities."
+      },
+      {
+        "type": "part",
+        "label": "(b)(iii)",
+        "text": "Plot the data points for the quantities indicated in part (b)(ii) on the following graph. Clearly scale and label all axes, including units. Draw a straight line that best represents the data. You may use the blank columns in the table for any quantities you graph other than the given data."
+      },
+      {
+        "type": "part",
+        "label": "(b)(iv)",
+        "text": "Using the graph from part (b)(iii), determine the emf $\\mathcal{E}$ of the battery."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Magnetism and Electromagnetic Induction. FRQ 2023_FRQ2 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2023_FRQ3",
@@ -2036,8 +3077,16 @@
       "primary_unit": "U1",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2023_FRQ3 is assigned to U1 (Fluids) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 3. (12 points, suggested time 25 minutes) Tank X is a large cylindrical tank that is partially filled with water, as shown in Figure 1. The bottom of Tank X is connected to a short horizontal pipe. A valve that is initially closed can be op",
+        "Student-visible media are preserved with 3 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2023_FRQ_Official.pdf",
@@ -2066,7 +3115,60 @@
           "crop_type": "figure"
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "3. (12 points, suggested time 25 minutes) Tank X is a large cylindrical tank that is partially filled with water, as shown in Figure 1. The bottom of Tank X is connected to a short horizontal pipe. A valve that is initially closed can be opened to allow water to flow through the pipe and exit through the other end of the pipe."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2023/2023_frq3_figure1_tank_x.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2023/2023_frq3_figure2_tank_y.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Two blocks, A and B, have identical dimensions and are placed in the tank. Both blocks float at rest and are partially submerged in the water. i. The water and air can be modeled as consisting of individual particles that are in continuous random motion. In terms of interactions with both water and air particles, explain why there is an upward buoyant force exerted on each block. ii. The valve is then opened, and water flows out through the pipe. The surface of the water moves downward. When Block A touches the bottom of Tank X, Block B is still above the bottom of Tank X. Which block has a greater density? Briefly explain your reasoning. Tank Y is a large tank with the top open to the air, as shown in Figure 2. The bottom of Tank Y is connected to a short horizontal pipe of radius r with a closed valve. Tank Y is filled with water to height h0 above the horizontal pipe. Tank Y is specially designed so that when the valve is opened, the surface of the water moves downward at constant speed vs."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2023/2023_frq3_figure3_tank_z.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "At time t = 0, the valve is opened. i. Derive the relationship between the speed vp at which water exits the pipe and the changing height h of the surface of the water above the pipe to show that $v_p = \\sqrt{2gh + v_s^2}$. ii. Derive the relationship between vp and the changing radius R of the top surface of the water to show that $R^2 v_s = r^2 v_p$. iii. When the radius R of the tank is sufficiently greater than r, the speed vp can be approximated as vp = 2gh . Justify this claim. Tank Z is a large tank whose top is open to the air and is shaped as shown in Figure 3. The bottom of Tank Z is connected to a short horizontal pipe with a closed valve. Tank is filled with water to a height Z h0 above the horizontal pipe. At time t = 0, the valve of Tank Z is opened."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Does the speed vs at which the surface of the water moves downward increase, decrease, or remain the same over time as water exits the other end of the pipe? Justify your answer by using or referencing equations from both part (b)(i) and part (b)(ii)."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U1 Fluids. FRQ 2023_FRQ3 is assigned to U1 (Fluids) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2023_FRQ4",
@@ -2146,14 +3248,23 @@
       "primary_unit": "U3",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2023_FRQ4 is assigned to U3 (Electric Force, Field, and Potential) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 4. (10 points, suggested time 20 minutes) Particles A and B each have positive charge +Q and are held fixed at two vertices of an equilateral triangle of side length d, as shown. Point P is located equidistant from each vertex of the triang",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2023_FRQ_Official.pdf",
       "scoring_guideline_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2023_Scoring_Guidelines_Official.pdf",
       "structured_method": "physics2_official_frq_draft_v1"
-    }
+    },
+    "classification_reasoning": "Official progression review: U3 Electric Force, Field, and Potential. FRQ 2023_FRQ4 is assigned to U3 (Electric Force, Field, and Potential) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2024_FRQ1",
@@ -2208,8 +3319,15 @@
       "primary_unit": "U7",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2024_FRQ1 is assigned to U7 (Quantum, Atomic, and Nuclear Physics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 1. (10 points, suggested time 20 minutes) In each trial of a photoelectric experiment, a scientist uses a device to shine light of a single frequency on two different metals, 1 and 2. The device can emit light with frequency $f_A$, $f_B$, o",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2024_FRQ_Official.pdf",
@@ -2264,7 +3382,9 @@
           ]
         ]
       }
-    }
+    },
+    "classification_reasoning": "Official progression review: U7 Quantum, Atomic, and Nuclear Physics. FRQ 2024_FRQ1 is assigned to U7 (Quantum, Atomic, and Nuclear Physics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2024_FRQ2",
@@ -2356,8 +3476,16 @@
       "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2024_FRQ2 is assigned to U2 (Thermodynamics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 2. (12 points, suggested time 25 minutes) In Experiment 1, shown in Figure 1, a sample of an ideal gas is contained in an insulated, sealed chamber with thin, rigid walls. The chamber contains a heater and sensors that measure the temperatu",
+        "Student-visible media are preserved with 6 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2024_FRQ_Official.pdf",
@@ -2441,7 +3569,95 @@
           ]
         ]
       }
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "2. (12 points, suggested time 25 minutes) In Experiment 1, shown in Figure 1, a sample of an ideal gas is contained in an insulated, sealed chamber with thin, rigid walls. The chamber contains a heater and sensors that measure the temperature and pressure of the gas. A student is asked to design an experiment to determine the number N of molecules of the gas contained in the chamber."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2024/2024_frq2_figure1_gas_chamber.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2024/2024_frq2_pv_axes.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Describe a procedure for collecting data that would allow the student to determine an experimental value for N . Provide enough detail so that a student could replicate the experiment, including any steps necessary to reduce experimental uncertainty."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "i. On the following axes, sketch a curve or line to represent the expected relationship between the pressure P and the volume V of the gas while the heater is on. Draw an arrow on the curve or line to represent the direction of the resulting thermal process. ii. On the following axes, sketch a curve or line to represent the expected relationship between the internal energy U and the volume V of the gas while the heater is on. Draw an arrow on the curve or line to represent the direction of the resulting thermal process. iii. Briefly justify why the curve or line drawn in part (b)(ii) has the shape that you sketched. In Experiment 2, shown in Figure 2, a liquid-filled container that is completely wrapped with a material of uniform thickness 0.01 m is inside the sealed chamber that is filled with an ideal gas. The material has a total area of 0.06 m2 in contact with the gas. The heater is turned on. As the temperature TG of the gas increases, the following data for the temperature TL of the liquid and the rate Q t Δ of energy transfer are collected. T K G ( ) T K L ( ) Q t J s ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ Δ 295 295 0.0 371 303 26.3 425 308 43.1 475 313 60.0 528 323 75.0"
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2024/2024_frq2_uv_axes.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 4",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2024/2024_frq2_figure2_container.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 5",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2024/2024_frq2_temperature_table.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 6",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2024/2024_frq2_graph_grid.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The student is asked to determine an experimental value of the thermal conductivity k of the material used to wrap the container inside the sealed chamber. i. Indicate what measured and/or calculated quantities could be graphed to yield a straight line that could be used to calculate an experimental value for the thermal conductivity k of the material. Use the blank columns in the table to list any calculated quantities you graph in addition to the data provided. Vertical Axis: Horizontal Axis: ii. Plot the data points for the quantities indicated in part (c)(i) on the graph provided. Clearly scale and label all axes, including units, as appropriate. iii. Draw the best-fit line for the data graphed in part (c)(ii)."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Using the best-fit line, calculate an experimental value for k."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U2 Thermodynamics. FRQ 2024_FRQ2 is assigned to U2 (Thermodynamics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2024_FRQ3",
@@ -2500,8 +3716,16 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2024_FRQ3 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 3. (12 points, suggested time 25 minutes) A circuit consists of an ideal battery of emf Ɛ and four identical resistors R1, R2, R3, and R4, each of resistance R, as shown in Figure 1. (a) For parts (a)(i) and (a)(ii), express your answers in",
+        "Student-visible media are preserved with 3 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2024_FRQ_Official.pdf",
@@ -2530,7 +3754,65 @@
           "crop_type": "figure_or_response_grid"
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "3. (12 points, suggested time 25 minutes) A circuit consists of an ideal battery of emf Ɛ and four identical resistors R1, R2, R3, and R4, each of resistance R, as shown in Figure 1."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2024/2024_frq3_figure1_circuit.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2024/2024_frq3_figure2_bar_chart.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2024/2024_frq3_figure3_nonideal_circuit.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "For parts (a)(i) and (a)(ii), express your answers in terms of numerical values, Ɛ, and R only. i. Derive an expression for the current I1 in Resistor R1. ii. Derive an expression for the current I3 in Resistor R3."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "The partially completed bar chart in Figure 2 shows a bar that represents the absolute value V Δ of the potential difference across the ideal battery. • In Figure 2, draw a bar to represent V Δ across each resistor, relative to the emf Ɛ of the ideal battery. • The height of each bar should be proportional to the value of V Δ represented by that bar. If V Δ is zero, write a “0” in that column. A student claims that the rate at which energy is dissipated (power) by the circuit can be expressed as P R 3 5 2 Ɛ = ."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "State whether the expression for P is correct or incorrect. Justify your answer by referring to the derivations from part (a) or the bar chart from part (b). When the ideal battery is connected in the original circuit, the rate at which energy is dissipated by Resistor R1 is Poriginal. The ideal battery is now replaced with a nonideal battery of emf Ɛ and internal resistance r to form the new circuit shown in Figure 3. The rate at which energy is dissipated by Resistor R1 in the new circuit is Pnew."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Indicate whether P new is greater than, less than, or equal to P original. $P_{new} > P_{original}$ $P_{new} < P_{original}$ $P_{new} = P_{original}$ Briefly justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Magnetism and Electromagnetic Induction. FRQ 2024_FRQ3 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2024_FRQ4",
@@ -2588,8 +3870,16 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2024_FRQ4 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 4. (10 points, suggested time 20 minutes) Two particles, 1 and 2, have different mass and charge as described by the following. • Particle 1 has mass M and negative charge Q −. • Particle 2 has mass M 2 and positive charge Q 2 + . In separa",
+        "Student-visible media are preserved with 2 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2024_FRQ_Official.pdf",
@@ -2612,7 +3902,55 @@
           "crop_type": "figure_or_response_grid"
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "4. (10 points, suggested time 20 minutes) Two particles, 1 and 2, have different mass and charge as described by the following. • Particle 1 has mass M and negative charge Q −. • Particle 2 has mass M 2 and positive charge Q 2 + . In separate trials, a device is used to accelerate each particle in the y −-direction from rest through a potential difference of absolute value V Δ . The polarity of the potential difference can be adjusted so that a particle with either positive charge or negative charge can be accelerated in the y −-direction by the device. Gravitational effects are negligible. After moving through the potential difference, particles 1 and 2 exit the device with kinetic energies K1 and K2, respectively."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Calculate the ratio K K 2 1 . After exiting the device, the particles enter a large region of constant uniform magnetic field of magnitude B 0 that is directed in the z + -direction (out of the page), as shown in Figure 1. Each particle is moving in the y −-direction when entering the region, and each particle is moving in the y + -direction when exiting the region."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2024/2024_frq4_figure1_field.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2024/2024_frq4_figure2_path_diagram.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "i. Determine an expression for the speed of Particle 2 in the region. Express your answer in terms of M , K2, and physical constants, as appropriate. ii. Derive an expression for the horizontal distance x Δ between the locations where Particle 2 enters and leaves the region. Express your answer in terms of M , Q, K2, B0, and physical constants, as appropriate."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "On the following diagram in Figure 2, sketch and clearly label the paths of both particles 1 and 2 in the region."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "A uniform electric field is added to the region such that Particle 1 of negative charge Q − travels with constant speed in a straight line through the region. Determine the direction of the electric field."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Magnetism and Electromagnetic Induction. FRQ 2024_FRQ4 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2025_FRQ1",
@@ -2671,8 +4009,16 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2025_FRQ1 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 1. Very long Wire 1 carries current I in the direction x- + along the line y 0 = . Very long Wire 2 carries current I in the direction x- + along the line y d = + . Point P is located along Wire 1 at the origin, as shown in Figure 1. The di",
+        "Student-visible media are preserved with 3 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2025_FRQ_Official.pdf",
@@ -2718,7 +4064,45 @@
           "review_note": "2025_FRQ1 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "1. Very long Wire 1 carries current I in the direction x- + along the line y 0 = . Very long Wire 2 carries current I in the direction x- + along the line y d = + . Point P is located along Wire 1 at the origin, as shown in Figure 1. The diameters of the wires are small compared to the distance between the wires. Both wires are in the xy-plane. Figure 1 A. i. Complete the following tasks in figures 2 and 3. Use either arrows or the symbols shown in the box above the figures for your response. Indicate the direction of the magnetic field from Wire 2 at Point P in Figure 2. Indicate the direction of the magnetic force that is exerted on Wire 1 by Wire 2 in Figure 3. ii. Very long Wire 3 carrying current 2I in the direction x- + is placed in the xy-plane along the line y y3 = . The net magnetic force exerted on Wire 1 by the currents in wires 2 and 3 is zero. Derive an expression for y3 in terms of d. Begin your derivation by writing a fundamental physics principle or an equation from the reference information. B. Wire 3 is moved very far away from wires 1 and 2. A circular conducting loop in the xy-plane is initially held at rest below Wire 1. The loop is then moved at a constant speed in the direction y- , as shown in Figure 4. Figure 4 Indicate whether there is a clockwise induced current in the loop, a counterclockwise induced current in the loop, or no induced current in the loop. Clockwise Counterclockwise There is no induced current in the loop. Justify your answer."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2025/2025_frq1_figure1_wires.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2025/2025_frq1_figures2_3_response_boxes.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 3",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2025/2025_frq1_figure4_loop.png"
+        ],
+        "used_by_parts": []
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Magnetism and Electromagnetic Induction. FRQ 2025_FRQ1 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2025_FRQ2",
@@ -2776,8 +4160,16 @@
       "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2025_FRQ2 is assigned to U2 (Thermodynamics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 2. A sample of a monatomic ideal gas is sealed in a thermally conducting container by a movable piston of mass M and area A. The container is in a large water bath that is held at a constant temperature T0. The piston is free to move with n",
+        "Student-visible media are preserved with 2 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2025_FRQ_Official.pdf",
@@ -2812,7 +4204,35 @@
           "review_note": "2025_FRQ2 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "2. A sample of a monatomic ideal gas is sealed in a thermally conducting container by a movable piston of mass M and area A. The container is in a large water bath that is held at a constant temperature T0. The piston is free to move with negligible friction. At the instant shown, the gas is in thermal equilibrium with the water bath, the piston is at rest, and the gas occupies volume V0. The pressure of the air above the piston is Patm. A. On the dot shown, representing the piston, draw and label the forces that are exerted on the piston. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot. B. Derive an expression for the internal energy of the gas in terms of M, A, V0, Patm, and physical constants, as appropriate. Begin your derivation by writing a fundamental physics principle or an equation from the reference information. C. A block, also of mass M, is placed on the piston at time $t=t_0$ and is slowly lowered. The piston comes to rest at $t=t_f$ when the block is completely released. On the axes provided, sketch the expected relationship between the pressure P and volume V of the gas for the thermodynamic process that the gas undergoes during time interval $t_0 \\le t \\le t_f$. Draw an arrow on your sketch to represent the direction of the thermodynamic process. D. With the block still on the piston, the temperature of the water bath is changed to a new constant temperature Tnew. The gas occupies the original volume V0 when the sample of gas and the water bath come to thermal equilibrium. Indicate whether Tnew is greater than, less than, or equal to T0. $T_{new}>T_0$ $T_{new}<T_0$ $T_{new}=T_0$ Briefly justify your answer by referencing at least one feature of your answers to parts A, B, or C."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2025/2025_frq2_container_piston.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2025/2025_frq2_pv_axes.png"
+        ],
+        "used_by_parts": []
+      }
+    ],
+    "classification_reasoning": "Official progression review: U2 Thermodynamics. FRQ 2025_FRQ2 is assigned to U2 (Thermodynamics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2025_FRQ3",
@@ -2870,8 +4290,16 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2025_FRQ3 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 3. In Experiment 1, a student is given a resistor of unknown resistance and an air-filled parallel- plate capacitor of unknown capacitance. The student is asked to predict the expected time constant x of a circuit if these two circuit eleme",
+        "Student-visible media are preserved with 2 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2025_FRQ_Official.pdf",
@@ -2937,7 +4365,35 @@
           "review_note": "2025_FRQ3 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "3. In Experiment 1, a student is given a resistor of unknown resistance and an air-filled parallel- plate capacitor of unknown capacitance. The student is asked to predict the expected time constant x of a circuit if these two circuit elements were connected in series with a battery. The student has access to a battery of known emf, a switch, an ammeter, a ruler, and wires, as shown in Figure 1. The plates of the capacitor are square, and the separation between the plates is small compared to the dimensions of the plates. The capacitor is initially uncharged. Assume that the dielectric constant of air is 1. Figure 1 A. Describe a procedure for collecting data that would allow the student to determine the expected time constant x. In your description, include the measurements to be made. Include any steps necessary to reduce experimental uncertainty. B. Describe how the collected data could be analyzed to determine x. Include references to appropriate equations and to relationships between measured and known quantities. C. In Experiment 2, the student is asked to determine the capacitance C of a new parallel- plate capacitor. For each trial, the absolute value V T of the potential difference across the capacitor is varied and the charge q stored on one plate of the fully charged capacitor is measured. Table 1 contains the data collected. Table 1 ( ) V V T C q 10 × 10 _ i 3.0 2.4 5.0 4.2 7.2 5.6 8.0 6.6 10.0 8.0 i. Indicate two quantities, either measured quantities from Table 1 or additional calculated quantities, that could be graphed to produce a straight line that could be used to determine C. Vertical axis: Horizontal axis: ii. On the grid provided, create a graph of the quantities indicated in part C (i). Use Table 2 to record the measured or calculated quantities that you will plot. Clearly label the axes, including units as appropriate. Plot the points you recorded in Table 2. iii. Draw a best-fit line for the data graphed in part C (ii). D. Using the best-fit line that you drew in part C (iii), calculate an experimental value for capacitance C."
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 1",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2025/2025_frq3_figure1_equipment.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "figure",
+        "figure_id": "Figure 2",
+        "caption": null,
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2025/2025_frq3_graph_grid.png"
+        ],
+        "used_by_parts": []
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Magnetism and Electromagnetic Induction. FRQ 2025_FRQ3 is assigned to U5 (Magnetism and Electromagnetic Induction) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2025_FRQ4",
@@ -2994,8 +4450,16 @@
       "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Physics 2 FRQ classified by keyword and checked by year gate.",
-      "review_status": "reviewed"
+      "evidence": [
+        "FRQ 2025_FRQ4 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: 4. Two narrow slits are a distance d apart. A screen is a distance L from the midpoint of the slits, where L d & . When a laser emits monochromatic light toward the slits, a pattern of narrow bright and dark bands is observed on the screen.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "physics-2-official-progression-2026-07-19",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2025_FRQ_Official.pdf",
@@ -3019,6 +4483,24 @@
           "review_note": "2025_FRQ4 Physics 2 FRQ image is a required prompt figure, graph, table, or response grid."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "4. Two narrow slits are a distance d apart. A screen is a distance L from the midpoint of the slits, where L d & . When a laser emits monochromatic light toward the slits, a pattern of narrow bright and dark bands is observed on the screen. The centers of bright bands A and B are indicated. Three additional bright bands, including the central bright band, are observed on the screen between bands A and B, as shown. A student claims that the distance between the center of Band A and the center of the central bright band is smaller when using a laser that emits violet light than when using a laser that emits red light. A. Indicate whether the student’s claim is correct or incorrect. Without manipulating equations, justify your answer by referencing the difference in path length traveled by the light from each slit to the center of Band A. B. Derive an expression for the distance between the centers of bands A and B when light of frequency f is emitted toward the slits. Express your answer in terms of d, L, f, and physical constants, as appropriate. Begin your derivation by writing a fundamental physics principle or an equation from the reference information. C. Indicate whether the expression you derived in part B is or is not consistent with your answer from part A. Briefly justify your answer."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Slit Screen",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/physics-2/2025/2025_frq4_slit_screen.png"
+        ],
+        "used_by_parts": []
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Geometric and Physical Optics. FRQ 2025_FRQ4 is assigned to U6 (Geometric and Physical Optics) under AP Physics 2: Algebra-Based Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   }
 ]

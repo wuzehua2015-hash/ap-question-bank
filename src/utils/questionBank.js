@@ -73,6 +73,8 @@ export function adaptMCQ(raw) {
     group_role: raw.group_role || null,
     group_context: raw.group_context || null,
     requires_group_context: !!raw.requires_group_context,
+    publish_status: raw.publish_status || 'ready',
+    student_visible: raw.student_visible !== false,
   }
 }
 
@@ -119,11 +121,17 @@ export function adaptFRQ(raw) {
     requires_graph: raw.requires_graph || false,
     rubric: rubric,
     background_data: raw.background_data || null,
+    publish_status: raw.publish_status || 'ready',
+    student_visible: raw.student_visible !== false,
   }
 }
 
 function isPlayableMCQ(q) {
-  return q.scoring_status !== 'not_scored' && !!q.answer && Object.keys(q.options || {}).length > 0
+  return q.student_visible !== false && q.publish_status !== 'blocked' && q.scoring_status !== 'not_scored' && !!q.answer && Object.keys(q.options || {}).length > 0
+}
+
+function isPlayableFRQ(q) {
+  return q.student_visible !== false && q.publish_status !== 'blocked'
 }
 
 function questionOrder(q) {
@@ -146,9 +154,9 @@ function makeQuestionBuckets(questions) {
 }
 
 function bucketPrimaryUnit(bucket) {
-  const counts = {}
-  for (const q of bucket) counts[q.primary_unit] = (counts[q.primary_unit] || 0) + 1
-  return Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] || bucket[0]?.primary_unit
+  const units = [...new Set(bucket.map(q => q.primary_unit).filter(Boolean))]
+  if (units.length === 1) return units[0]
+  return null
 }
 
 function bucketSource(bucket) {
@@ -186,7 +194,7 @@ function filterBucketsByQuizScope(buckets, config) {
     return buckets.filter(bucket => bucket.every(q => allowedUnits.has(q.primary_unit)))
   }
   if (config.unit && config.unit !== 'all') {
-    return buckets.filter(bucket => bucket.some(q => q.primary_unit === config.unit))
+    return buckets.filter(bucket => bucket.every(q => q.primary_unit === config.unit))
   }
   return buckets
 }
@@ -213,7 +221,7 @@ export async function loadMCQBank(subjectId = 'macro') {
   if (!res.ok) throw new Error(`Failed to load MCQ bank for ${subjectId}: ${res.status}`)
   const data = await res.json()
   // Normalize source versions to the internal frontend model.
-  cache.mcq[subjectId] = data.map(adaptMCQ)
+  cache.mcq[subjectId] = data.map(adaptMCQ).filter(q => q.student_visible !== false && q.publish_status !== 'blocked')
   return cache.mcq[subjectId]
 }
 
@@ -225,7 +233,7 @@ export async function loadFRQBank(subjectId = 'macro') {
   if (!res.ok) throw new Error(`Failed to load FRQ bank for ${subjectId}: ${res.status}`)
   const data = await res.json()
   // Normalize source versions to the internal frontend model.
-  cache.frq[subjectId] = data.map(adaptFRQ)
+  cache.frq[subjectId] = data.map(adaptFRQ).filter(isPlayableFRQ)
   return cache.frq[subjectId]
 }
 
@@ -357,21 +365,26 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
 
   if (configTotal > 0) {
     const selectedIds = new Set()
+    const shortages = []
     for (const [unit, count] of Object.entries(unitDistribution)) {
       const unitBuckets = makeQuestionBuckets(playableQuestions)
         .filter(bucket => bucketPrimaryUnit(bucket) === unit && bucket.every(q => !selectedIds.has(q.question_id)))
         .sort(() => Math.random() - 0.5)
       const chosen = flattenBucketsToLimit(unitBuckets, count, { exact: true })
+      if (chosen.length < count) {
+        shortages.push({ unit, requested: count, selected: chosen.length })
+      }
       for (const q of chosen) {
         selectedIds.add(q.question_id)
         mcq.push(q)
       }
     }
 
-    if (mcq.length < mockConfig.totalMCQ) {
-      const remainingBuckets = makeQuestionBuckets(playableQuestions.filter(q => !selectedIds.has(q.question_id)))
-        .sort(() => Math.random() - 0.5)
-      mcq.push(...flattenBucketsToLimit(remainingBuckets, mockConfig.totalMCQ - mcq.length, { exact: true }))
+    if (shortages.length > 0 || mcq.length !== mockConfig.totalMCQ) {
+      const detail = shortages
+        .map(item => `${item.unit}: requested ${item.requested}, selected ${item.selected}`)
+        .join('; ')
+      throw new Error(`Mock exam unit capacity is insufficient for ${subjectId}. ${detail}`)
     }
   } else {
     const buckets = makeQuestionBuckets(playableQuestions).sort(() => Math.random() - 0.5)

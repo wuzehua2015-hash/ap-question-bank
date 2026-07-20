@@ -35,10 +35,51 @@ export function requestLoginCode(email) {
   })
 }
 
+export function registerAccount({ email, password, displayName, inviteCode }) {
+  return apiRequest('/api/auth/register', {
+    method: 'POST',
+    body: JSON.stringify({ email, password, displayName, inviteCode }),
+  })
+}
+
+export function loginWithPassword(email, password) {
+  return apiRequest('/api/auth/login', {
+    method: 'POST',
+    body: JSON.stringify({ email, password }),
+  })
+}
+
 export function verifyLoginCode(email, code) {
   return apiRequest('/api/auth/verify-code', {
     method: 'POST',
     body: JSON.stringify({ email, code }),
+  })
+}
+
+export function verifyEmail(code) {
+  return apiRequest('/api/auth/verify-email', {
+    method: 'POST',
+    body: JSON.stringify({ code }),
+  })
+}
+
+export function requestEmailVerification() {
+  return apiRequest('/api/auth/request-email-verification', {
+    method: 'POST',
+  })
+}
+
+export function requestPasswordReset(email) {
+  return apiRequest('/api/auth/request-password-reset', {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+  })
+}
+
+export function resetPassword({ email, code, password }) {
+  return apiRequest('/api/auth/reset-password', {
+    method: 'POST',
+    body: JSON.stringify({ email, code, password }),
   })
 }
 
@@ -54,5 +95,25 @@ export function saveProgress(snapshot) {
   return apiRequest('/api/progress', {
     method: 'POST',
     body: JSON.stringify({ snapshot }),
+  })
+}
+
+export function updateProfile(displayName) {
+  return apiRequest('/api/account/profile', {
+    method: 'POST',
+    body: JSON.stringify({ displayName }),
+  })
+}
+
+export function changePassword({ currentPassword, newPassword }) {
+  return apiRequest('/api/account/password', {
+    method: 'POST',
+    body: JSON.stringify({ currentPassword, newPassword }),
+  })
+}
+
+export function logoutOtherSessions() {
+  return apiRequest('/api/account/sessions', {
+    method: 'DELETE',
   })
 }

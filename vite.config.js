@@ -4,5 +4,18 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/ap-question-bank/',
+  base: '/',
+  build: {
+    rolldownOptions: {
+      checks: {
+        pluginTimings: false,
+      },
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/html2canvas')) return 'pdf-html2canvas'
+          if (id.includes('node_modules/jspdf')) return 'pdf-jspdf'
+        },
+      },
+    },
+  },
 })

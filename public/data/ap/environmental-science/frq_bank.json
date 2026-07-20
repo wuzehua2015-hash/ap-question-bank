@@ -24,8 +24,16 @@
       "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.7,
-      "evidence": "Keyword classification from APES FRQ prompt and guideline.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2008_FRQ1 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Read the following article from the Fremont Examiner and answer the questions that follow. (a) Discuss ONE environmental benefit and ONE economic benefit to the city of Fremont that would result from Fremont having its own sanitary landfill",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject environmental-science passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "environmental-science-official-progression-2026-07-19",
+      "authority": "AP Environmental Science Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 10,
@@ -65,7 +73,7 @@
         {
           "page": 26,
           "bbox": [
-            48.0,
+            48,
             198.5,
             564.1,
             501.1
@@ -85,7 +93,7 @@
           "source_block": {
             "page": 26,
             "bbox": [
-              48.0,
+              48,
               198.5,
               564.1,
               501.1
@@ -97,7 +105,45 @@
           "review_note": "2008_FRQ1 APES FRQ visual is a local figure or graph crop required by the prompt."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Read the following article from the Fremont Examiner and answer the questions that follow."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Image01",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/environmental-science/2008/2008_frq1_p026_image01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Discuss ONE environmental benefit and ONE economic benefit to the city of Fremont that would result from Fremont having its own sanitary landfill within its city limits."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Discuss TWO practical methods of maximizing the effectiveness, safety, and aesthetic appeal of the new sanitary landfill."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Assuming that a landfill will be developed within city limits, indicate which tract (A, B, or C) should be the site of the landfill. The two remaining tracts will be preserved for turtle habitat. Provide ONE economic justification for your choice and ONE environmental justification for your choice."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Identify ONE United States law or international treaty that could apply to this land-use decision, and explain how the law or treaty could be applied."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U9 Global Change. FRQ 2008_FRQ1 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2008_FRQ2",
@@ -124,8 +170,16 @@
       "primary_unit": "U8",
       "secondary_units": [],
       "confidence": 0.7,
-      "evidence": "Keyword classification from APES FRQ prompt and guideline.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2008_FRQ2 is assigned to U8 (Aquatic and Terrestrial Pollution) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Auric Miners, Inc., won a contract to mine gold from the terrain represented in the diagram above. The terrain can be divided into 20 rectangular blocks, each with a volume of 200 cubic meters. Site analysis has revealed the average gold co",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject environmental-science passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "environmental-science-official-progression-2026-07-19",
+      "authority": "AP Environmental Science Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 10,
@@ -203,7 +257,50 @@
           "review_note": "2008_FRQ2 APES FRQ visual is a local figure or graph crop required by the prompt."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Auric Miners, Inc., won a contract to mine gold from the terrain represented in the diagram above. The terrain can be divided into 20 rectangular blocks, each with a volume of 200 cubic meters. Site analysis has revealed the average gold content of each block, as designated by the different patterns shown in the legend."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Image01",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/environmental-science/2008/2008_frq2_p027_image01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Calculate the volume of gold, in cubic meters, that can be mined from the excavation of all 20 blocks. Show all work."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Calculate the percent of gold in the total excavation. Show all work."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "If the total cost of excavating and extracting the gold is $1,520,000, calculate the price that the gold must be sold for, in dollars per gram, in order for the mine to break even. (The density of gold is 19 g/cm3.)"
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Describe TWO potential uses for the mine waste that will be produced during the extraction of the gold from the excavated material."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Describe TWO environmental problems that are likely to develop at the mine site after the gold has been extracted and the mine is abandoned."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U8 Aquatic and Terrestrial Pollution. FRQ 2008_FRQ2 is assigned to U8 (Aquatic and Terrestrial Pollution) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2008_FRQ3",
@@ -228,8 +325,15 @@
       "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.7,
-      "evidence": "Keyword classification from APES FRQ prompt and guideline.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2008_FRQ3 is assigned to U6 (Energy Resources and Consumption) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Studies indicate that between the present and 2050, substantial growth in population and energy consumption will occur both in less developed countries (LDCs) like India and China and in more developed countries (MDCs) like the United State",
+        "Subject environmental-science passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "environmental-science-official-progression-2026-07-19",
+      "authority": "AP Environmental Science Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 10,
@@ -310,7 +414,9 @@
           ]
         ]
       }
-    }
+    },
+    "classification_reasoning": "Official progression review: U6 Energy Resources and Consumption. FRQ 2008_FRQ3 is assigned to U6 (Energy Resources and Consumption) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2008_FRQ4",
@@ -335,8 +441,15 @@
       "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.7,
-      "evidence": "Keyword classification from APES FRQ prompt and guideline.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2008_FRQ4 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Matter is continually recycled between the biotic and abiotic components of Earth’s ecosystems in biogeochemical cycles. The various cycles differ from one another in several key aspects of their storage, conversion, and modes of transport.",
+        "Subject environmental-science passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "environmental-science-official-progression-2026-07-19",
+      "authority": "AP Environmental Science Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 10,
@@ -373,7 +486,9 @@
       "source_pdf": "subjects\\AP\\Environmental-Science\\01-exams\\AP_Environmental_Science_2008_Full_Exam.pdf",
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
-    }
+    },
+    "classification_reasoning": "Official progression review: U9 Global Change. FRQ 2008_FRQ4 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ1",
@@ -400,8 +515,16 @@
       "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.7,
-      "evidence": "Keyword classification from APES FRQ prompt and guideline.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2016_FRQ1 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Read the following article from the Fremont New Tribune. (a) Diseases can devastate populations; however, most diseases do not drive their host to extinction. Provide one explanation for why diseases seldom cause extinction. (b) Dr. Serach ",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject environmental-science passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "environmental-science-official-progression-2026-07-19",
+      "authority": "AP Environmental Science Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 10,
@@ -485,7 +608,50 @@
           "review_note": "2016_FRQ1 APES FRQ visual is a local figure or graph crop required by the prompt."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Read the following article from the Fremont New Tribune."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Image01",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/environmental-science/2016/2016_frq1_p041_image01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Diseases can devastate populations; however, most diseases do not drive their host to extinction. Provide one explanation for why diseases seldom cause extinction."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Dr. Serach suggests that even if the impact of WNS on little brown bat populations can be reduced and the extinction of the species avoided, the bat populations are likely to remain alarmingly small. (i) Describe TWO threats (other than WNS) to the survival of the bat species if the total number of bats becomes very small. (ii) If the little brown bat species does not become extinct and can potentially recover, the rate of recovery is likely to be slow. Discuss one aspect of bat biology that might slow the recovery of little brown bat populations to pre-WNS numbers."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Bats are found in ecosystems around the world. Describe TWO ways in which other organisms in an ecosystem could be affected by a decline in a bat population."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The Eastern deciduous forest in which the little brown bats live is an important ecosystem. Identify TWO ecosystem services that forests provide, and explain how each service benefits human society. WNS is an emerging disease in bats. Humans are also subject to emerging diseases, such as Ebola. A recent study suggests that the number of emerging infectious diseases affecting human populations has been steadily increasing in recent decades."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Provide a likely reason for the increase in emerging infectious diseases affecting human populations. Include an explanation for the reason you provided."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U9 Global Change. FRQ 2016_FRQ1 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ2",
@@ -510,8 +676,15 @@
       "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.7,
-      "evidence": "Keyword classification from APES FRQ prompt and guideline.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2016_FRQ2 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Iron ores are rocks from which metallic iron can be extracted for steel production. This process involves several steps. Iron ore is first mined and then turned into pig iron in a blast furnace, and some rock waste such as silicon dioxide i",
+        "Subject environmental-science passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "environmental-science-official-progression-2026-07-19",
+      "authority": "AP Environmental Science Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 10,
@@ -605,7 +778,9 @@
           ]
         ]
       }
-    }
+    },
+    "classification_reasoning": "Official progression review: U9 Global Change. FRQ 2016_FRQ2 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ3",
@@ -632,8 +807,16 @@
       "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.7,
-      "evidence": "Keyword classification from APES FRQ prompt and guideline.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2016_FRQ3 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Municipal solid waste (MSW) is the trash collected from households and businesses. The graph below shows MSW generation in the United States from 1960 to 2012. (a) Use the data provided in the graph above to respond to the following. (i) Ex",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject environmental-science passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "environmental-science-official-progression-2026-07-19",
+      "authority": "AP Environmental Science Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 10,
@@ -697,7 +880,7 @@
         {
           "page": 44,
           "bbox": [
-            110.0,
+            110,
             98.9,
             502.1,
             309.2
@@ -717,7 +900,7 @@
           "source_block": {
             "page": 44,
             "bbox": [
-              110.0,
+              110,
               98.9,
               502.1,
               309.2
@@ -729,7 +912,50 @@
           "review_note": "2016_FRQ3 APES FRQ visual is a local figure or graph crop required by the prompt."
         }
       ]
-    }
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Municipal solid waste (MSW) is the trash collected from households and businesses. The graph below shows MSW generation in the United States from 1960 to 2012."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Image01",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/environmental-science/2016/2016_frq3_p044_image01.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Use the data provided in the graph above to respond to the following. (i) Explain one probable cause (other than increased composting) for the change in per capita waste generation from 2000 to 2012. (ii) Calculate the percent increase in total MSW generation from 1980 to 2012."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Two ways of managing MSW are incineration and disposal in landfills. (i) Identify one disadvantage of waste incineration. (ii) Identify one disadvantage of waste disposal in landfills. Trash incineration is one way to generate electricity from MSW. Electricity can also be generated from waste buried in landfills."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Describe the specific steps of a process used to produce electricity from waste buried in a landfill."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Many landfills do not accept used tires. As a result, the tires are often dumped in poorly regulated piles. Describe one human health problem associated with piles of discarded tires."
+      },
+      {
+        "type": "part",
+        "label": "(e)",
+        "text": "Composting is one way to reduce the amount of waste that enters a landfill. (i) Other than reducing the volume of waste, identify one advantage of composting. (ii) Identify one disadvantage of composting."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U9 Global Change. FRQ 2016_FRQ3 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ4",
@@ -754,8 +980,15 @@
       "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.7,
-      "evidence": "Keyword classification from APES FRQ prompt and guideline.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2016_FRQ4 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Soil is a complex mixture of living organisms and organic material, along with minerals and other abiotic components. Soils help sustain life and support ecosystem functions. (a) Describe how TWO climate factors affect the rate of soil form",
+        "Subject environmental-science passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "environmental-science-official-progression-2026-07-19",
+      "authority": "AP Environmental Science Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 10,
@@ -816,6 +1049,8 @@
       "source_pdf": "subjects\\AP\\Environmental-Science\\01-exams\\AP_Environmental_Science_2016_Full_Exam.pdf",
       "structured_method": "apes_pipeline_v2_layout_bbox",
       "image_sources": []
-    }
+    },
+    "classification_reasoning": "Official progression review: U9 Global Change. FRQ 2016_FRQ4 is assigned to U9 (Global Change) under AP Environmental Science Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   }
 ]

@@ -90,7 +90,9 @@ for (const subject of subjects.filter(item => item.active && item.visibility !==
       push(localErrors, subject, q, 'text_artifact', 'contains known split-word or literal newline artifact')
     }
 
-    if (/\b(?:database|sample portion|following scale|table below|shown below)\b/i.test(promptText) && !hasStructuredContent(q) && !hasVisual(q)) {
+    const tableLikeReference = /\b(?:sample portion|following scale|table below|shown below)\b/i.test(promptText) ||
+      (/\bdatabase\b/i.test(promptText) && /\b(?:records?|sample portion|stores information|stored|shown below|following information)\b/i.test(promptText))
+    if (tableLikeReference && !hasStructuredContent(q) && !hasVisual(q)) {
       push(localWarnings, subject, q, 'possible_flattened_structure', 'mentions a table/database/scale but has no structured table or visual asset')
     }
 

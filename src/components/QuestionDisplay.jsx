@@ -26,12 +26,15 @@ function DisplayImage({ path, variant }) {
   }
 
   return (
-    <img
-      src={imgUrl}
-      alt=""
-      className="max-w-full max-h-[560px] mx-auto mb-4 rounded-lg border border-border"
-      onError={() => {}}
-    />
+    <div className="question-image-wrap">
+      <img
+        data-pdf-segment="true"
+        src={imgUrl}
+        alt=""
+        className="question-image max-w-full max-h-[560px] mx-auto rounded-lg border border-border"
+        onError={() => {}}
+      />
+    </div>
   )
 }
 
@@ -41,7 +44,7 @@ function DisplayOptions({ options, variant }) {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '12px' }}>
         {Object.entries(opts).map(([key, text]) => (
-          <div key={key} style={{ fontSize: '14px', color: '#374151', lineHeight: 1.5 }}>
+          <div key={key} data-pdf-segment="true" style={{ fontSize: '14px', color: '#374151', lineHeight: 1.5 }}>
             <span style={{ fontWeight: 'bold', marginRight: '4px' }}>{key}.</span>
             <MathText text={text} forceInlineLatex />
           </div>
@@ -54,8 +57,10 @@ function DisplayOptions({ options, variant }) {
     <div className="space-y-3 mt-4">
       {Object.entries(opts).map(([key, text]) => (
         <div key={key} className="text-base sm:text-sm text-text min-h-[48px] flex items-center">
-          <span className="font-bold mr-2">{key}.</span>
-          <MathText text={text} forceInlineLatex />
+          <span className="option-label">{key}.</span>
+          <span className="option-content">
+            <MathText text={text} forceInlineLatex />
+          </span>
         </div>
       ))}
     </div>
@@ -86,6 +91,7 @@ function DisplayDiagramOptionImages({ imagePaths, options, variant }) {
         return (
           <div
             key={`${key}-${paths.join('|')}`}
+            data-pdf-segment={isPdf ? 'true' : undefined}
             className={isPdf ? '' : 'rounded-lg border border-border bg-white p-3'}
             style={isPdf ? { border: '1px solid #d1d5db', borderRadius: '6px', padding: '8px' } : {}}
           >
@@ -120,6 +126,35 @@ function DisplayDiagramOptionImages({ imagePaths, options, variant }) {
   )
 }
 
+function DisplayGroupContext({ text, variant }) {
+  if (!text) return null
+
+  if (variant === 'pdf') {
+    return (
+      <div data-pdf-segment="true" style={{
+        fontSize: '14px',
+        color: '#374151',
+        lineHeight: 1.55,
+        marginBottom: '12px',
+        padding: '10px 12px',
+        border: '1px solid #d1d5db',
+        borderRadius: '6px',
+        background: '#f8fafc',
+        pageBreakInside: 'avoid',
+        breakInside: 'avoid',
+      }}>
+        <MathText text={text} as="div" />
+      </div>
+    )
+  }
+
+  return (
+    <div className="question-group-context">
+      <MathText text={text} as="div" />
+    </div>
+  )
+}
+
 function DisplayTableOptions({ tableData, variant }) {
   const { headers, rows } = tableData
   const numCols = headers.length
@@ -132,7 +167,7 @@ function DisplayTableOptions({ tableData, variant }) {
 
   if (variant === 'pdf') {
     return (
-      <div style={{
+      <div data-pdf-segment="true" style={{
         marginTop: '12px',
         border: '1px solid #d1d5db',
         borderRadius: '4px',
@@ -212,7 +247,7 @@ function DisplayBackgroundTable({ tableData, variant }) {
 
   if (variant === 'pdf') {
     return (
-      <div style={{
+      <div data-pdf-segment="true" style={{
         margin: '12px 0',
         border: '1px solid #d1d5db',
         borderRadius: '4px',
@@ -293,14 +328,16 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
         </div>
       )}
 
+      <DisplayGroupContext text={question.group_context} variant={variant} />
+
       {/* Question text */}
       {isPdf ? (
-        <div style={{ fontSize: '16px', fontWeight: '500', color: '#1f2937', marginBottom: '12px', lineHeight: 1.6 }}>
-          <MathText text={question.text || question.question_text} />
+        <div data-pdf-segment="true" style={{ fontSize: '16px', fontWeight: '500', color: '#1f2937', marginBottom: '12px', lineHeight: 1.6 }}>
+          <MathText text={question.text || question.question_text} as="div" />
         </div>
       ) : (
         <h3 className="text-lg font-medium text-text mb-4 leading-relaxed">
-          <MathText text={question.text || question.question_text} />
+          <MathText text={question.text || question.question_text} as="div" />
         </h3>
       )}
 
@@ -308,7 +345,7 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
       <DisplayBackgroundTable tableData={hasTableImage ? null : backgroundTable} variant={variant} />
 
       {displayImagePaths.map((path, i) => (
-        <DisplayImage key={i} path={path} variant={variant} />
+        <DisplayImage key={`${question.question_id || 'question'}-${path}-${i}`} path={path} variant={variant} />
       ))}
 
       {/* Options */}
@@ -339,5 +376,4 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
 }
 
 export default QuestionDisplay
-
 

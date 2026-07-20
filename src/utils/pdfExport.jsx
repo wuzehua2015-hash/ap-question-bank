@@ -1,5 +1,4 @@
 import { WatermarkLayer } from './pdfWatermarkSystem'
-import html2pdf from 'html2pdf.js'
 import html2canvas from 'html2canvas'
 import { jsPDF } from 'jspdf'
 
@@ -34,17 +33,21 @@ export async function exportToPdf(element, filename, options = {}) {
     return
   }
 
-  const opt = {
-    ...PDF_EXPORT_OPTIONS,
-    filename,
-  }
-  await html2pdf().set(opt).from(element).save()
+  await exportSingleCanvasPdf(element, filename)
 }
 
 async function exportSegmentedPdf(element, filename) {
-  const segments = Array.from(element.querySelectorAll('[data-pdf-segment="true"]'))
+  const allSegments = Array.from(element.querySelectorAll('[data-pdf-segment="true"]'))
+  const nestedSegments = allSegments.filter(segment => {
+    const parentSegment = segment.parentElement?.closest('[data-pdf-segment="true"]')
+    return parentSegment && element.contains(parentSegment)
+  })
+  if (nestedSegments.length) {
+    console.warn(`PDF export ignored ${nestedSegments.length} nested segment marker(s).`)
+  }
+  const segments = allSegments.filter(segment => !segment.querySelector('[data-pdf-segment="true"]'))
   if (!segments.length) {
-    await html2pdf().set({ ...PDF_EXPORT_OPTIONS, filename }).from(element).save()
+    await exportSingleCanvasPdf(element, filename, html2canvas, jsPDF)
     return
   }
 
@@ -80,7 +83,7 @@ async function exportSegmentedPdf(element, filename) {
       y = margin
     }
 
-    const canvas = await renderSegmentCanvas(segment, element, exportState)
+    const canvas = await renderSegmentCanvas(segment, element, exportState, html2canvas)
 
     await new Promise(resolve => setTimeout(resolve, 0))
 
@@ -106,7 +109,7 @@ async function exportSegmentedPdf(element, filename) {
       hasContent = true
     }
 
-    const sliceHeightPx = Math.floor((contentHeight * canvas.width) / contentWidth)
+    const sliceHeightPx = Math.floor(((contentHeight - 8) * canvas.width) / contentWidth)
     let sourceY = 0
     while (sourceY < canvas.height) {
       const currentSliceHeight = Math.min(sliceHeightPx, canvas.height - sourceY)
@@ -130,8 +133,6 @@ async function exportSegmentedPdf(element, filename) {
       sourceY += currentSliceHeight
       if (sourceY < canvas.height) pdf.addPage()
     }
-    y = pageHeight - margin
-
     await new Promise(resolve => setTimeout(resolve, 0))
   }
 
@@ -141,7 +142,49 @@ async function exportSegmentedPdf(element, filename) {
   exportState.finishedAt = new Date().toISOString()
 }
 
-async function renderSegmentCanvas(segment, element, exportState) {
+async function exportSingleCanvasPdf(element, filename, html2canvasLoader, jsPDFLoader) {
+  const renderer = html2canvasLoader || html2canvas
+  const PdfWriter = jsPDFLoader || jsPDF
+  const margin = 10
+  const pdf = new PdfWriter({ unit: 'mm', format: 'a4', orientation: 'portrait', compress: true })
+  const pageWidth = pdf.internal.pageSize.getWidth()
+  const pageHeight = pdf.internal.pageSize.getHeight()
+  const contentWidth = pageWidth - margin * 2
+  const contentHeight = pageHeight - margin * 2
+  const canvas = await withTimeout(renderer(element, {
+    ...PDF_EXPORT_OPTIONS.html2canvas,
+    backgroundColor: '#ffffff',
+    windowWidth: element.scrollWidth,
+    windowHeight: Math.max(element.scrollHeight, document.documentElement.scrollHeight),
+  }), 15000, 'PDF render timed out')
+  const sliceHeightPx = Math.floor(((contentHeight - 8) * canvas.width) / contentWidth)
+  let sourceY = 0
+  while (sourceY < canvas.height) {
+    const currentSliceHeight = Math.min(sliceHeightPx, canvas.height - sourceY)
+    const slice = document.createElement('canvas')
+    slice.width = canvas.width
+    slice.height = currentSliceHeight
+    const ctx = slice.getContext('2d')
+    ctx.drawImage(
+      canvas,
+      0,
+      sourceY,
+      canvas.width,
+      currentSliceHeight,
+      0,
+      0,
+      canvas.width,
+      currentSliceHeight,
+    )
+    const sliceHeightMm = (currentSliceHeight * contentWidth) / canvas.width
+    if (sourceY > 0) pdf.addPage()
+    pdf.addImage(slice.toDataURL('image/jpeg', 0.95), 'JPEG', margin, margin, contentWidth, sliceHeightMm)
+    sourceY += currentSliceHeight
+  }
+  pdf.save(filename)
+}
+
+async function renderSegmentCanvas(segment, element, exportState, html2canvas) {
   const previousPaddingBottom = segment.style.paddingBottom
   const previousOverflow = segment.style.overflow
   segment.style.paddingBottom = `${readPx(previousPaddingBottom) + 18}px`
@@ -151,6 +194,7 @@ async function renderSegmentCanvas(segment, element, exportState) {
       ...PDF_EXPORT_OPTIONS.html2canvas,
       backgroundColor: '#ffffff',
       windowWidth: element.scrollWidth,
+      windowHeight: Math.max(segment.scrollHeight, element.scrollHeight, document.documentElement.scrollHeight),
     })
   const timeoutTask = new Promise(resolve => {
     window.setTimeout(() => resolve(null), 12000)
@@ -165,6 +209,16 @@ async function renderSegmentCanvas(segment, element, exportState) {
     segment.style.paddingBottom = previousPaddingBottom
     segment.style.overflow = previousOverflow
   }
+}
+
+function withTimeout(promise, timeoutMs, message) {
+  let timeoutId
+  const timeout = new Promise((_, reject) => {
+    timeoutId = window.setTimeout(() => reject(new Error(message)), timeoutMs)
+  })
+  return Promise.race([promise, timeout]).finally(() => {
+    window.clearTimeout(timeoutId)
+  })
 }
 
 function readPx(value) {

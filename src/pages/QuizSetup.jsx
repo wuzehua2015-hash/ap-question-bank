@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
+import { useAuth } from '../contexts/AuthContext'
 import { loadMCQBank, getSubjectUnits, generateQuiz } from '../utils/questionBank'
 import { startQuiz } from '../utils/quizSession'
+import { unitDisplayName } from '../utils/displayLabels'
 
 function QuizSetup() {
   const navigate = useNavigate()
   const { currentSubject } = useSubject()
+  const { isLoggedIn, isInternalStudent } = useAuth()
   const [unit, setUnit] = useState('all')
   const [count, setCount] = useState(10)
   const [excludeDone, setExcludeDone] = useState(false)
@@ -80,6 +83,10 @@ function QuizSetup() {
 
   const exportPdf = () => {
     if (!preview) return
+    if (!isInternalStudent) {
+      navigate(isLoggedIn ? '/account' : `/login?returnTo=${encodeURIComponent('/quiz')}&reason=lynk-student`)
+      return
+    }
     startQuiz(preview)
     navigate('/quiz-pdf')
   }
@@ -98,7 +105,7 @@ function QuizSetup() {
             <option value="all">全部可练单元</option>
             {units.map(item => (
               <option key={item.id} value={item.id}>
-                {item.id}: {item.name}（{item.questionCount} 题）
+                {unitDisplayName(item, currentSubject)}（{item.questionCount} 题）
               </option>
             ))}
           </select>
@@ -156,7 +163,7 @@ function QuizSetup() {
                 onClick={exportPdf}
                 className="flex-1 bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors"
               >
-                导出 PDF
+                {isInternalStudent ? '导出 PDF' : '翎英学员下载 PDF'}
               </button>
             </div>
             <button

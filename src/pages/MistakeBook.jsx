@@ -7,13 +7,25 @@ import {
 } from '../utils/storage'
 import { startWrongQuiz, startCustomQuiz } from '../utils/quizSession'
 import SimilarQuestionsBlock from '../components/SimilarQuestionsBlock'
-import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
+import { getQuestionImagePaths } from '../utils/diagramOptions'
+import LoginGate from '../components/LoginGate'
+import { useAuth } from '../contexts/AuthContext'
+import { difficultyDisplayName, unitDisplayName } from '../utils/displayLabels'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
 function MistakeBook() {
+  return (
+    <LoginGate title="错题本">
+      <MistakeBookContent />
+    </LoginGate>
+  )
+}
+
+function MistakeBookContent() {
   const navigate = useNavigate()
   const { currentSubject } = useSubject()
+  const { isLoggedIn, isInternalStudent } = useAuth()
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(true)
   const [unitFilter, setUnitFilter] = useState('all')
@@ -69,6 +81,10 @@ function MistakeBook() {
 
   const exportWrongPdf = () => {
     if (wrongQuestions.length === 0) return
+    if (!isInternalStudent) {
+      navigate(isLoggedIn ? '/account' : `/login?returnTo=${encodeURIComponent('/mistakes')}&reason=lynk-student`)
+      return
+    }
     const shuffled = [...wrongQuestions].sort(() => Math.random() - 0.5)
     const selected = shuffled.slice(0, Math.min(30, shuffled.length))
     startWrongQuiz({
@@ -123,7 +139,7 @@ function MistakeBook() {
               onClick={exportWrongPdf}
               className="border border-brand text-brand hover:bg-brand hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
             >
-              📄 导出 PDF
+              {isInternalStudent ? '导出 PDF' : '翎英学员下载 PDF'}
             </button>
           )}
           {wrongQuestions.length > 0 && (
@@ -158,7 +174,7 @@ function MistakeBook() {
       <div className="mb-4">
         <select value={unitFilter} onChange={e => setUnitFilter(e.target.value)} className="p-2 border border-border rounded bg-bg text-sm">
           <option value="all">全部单元</option>
-          {units.map(u => <option key={u.id} value={u.id}>{u.id}: {u.name}</option>)}
+          {units.map(u => <option key={u.id} value={u.id}>{unitDisplayName(u, currentSubject)}</option>)}
         </select>
       </div>
 
@@ -177,14 +193,13 @@ function MistakeBook() {
           const totalAttempts = hist ? hist.correct_count + hist.wrong_count : 0
           const correctRate = totalAttempts > 0 ? Math.round((hist.correct_count / totalAttempts) * 100) : null
           const visibleImages = getQuestionImagePaths(q.image_paths || [], q.options, q.option_table_data)
-          const diagramOptionLayout = getDiagramOptionLayout(q.image_paths || [], q.options)
           return (
             <div key={q.question_id} className="bg-surface rounded-xl border border-border overflow-hidden">
               <div className="p-4 hover:bg-gray-50 transition-colors">
                 <div className="flex flex-wrap gap-2 mb-2">
                   <span className="bg-brand text-white text-xs px-2 py-1 rounded">{q.primary_unit}</span>
                   <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">{q.year}</span>
-                  {q.difficulty && <span className={`text-xs px-2 py-1 rounded ${q.difficulty === 'Hard' ? 'bg-red-100 text-red-700' : q.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'}`}>{q.difficulty}</span>}
+                  {q.difficulty && <span className={`text-xs px-2 py-1 rounded ${q.difficulty === 'Hard' ? 'bg-red-100 text-red-700' : q.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'}`}>{difficultyDisplayName(q.difficulty)}</span>}
                   {correctRate !== null && (
                     <span className={`text-xs px-2 py-1 rounded ${correctRate >= 70 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
                       正确率 {correctRate}%
@@ -249,11 +264,13 @@ function MistakeBook() {
                       重新练习
                     </button>
                   </div>
-                  <SimilarQuestionsBlock
-                    questionId={q.question_id}
-                    allQuestions={questions}
-                    count={3}
-                  />
+                  {isInternalStudent && (
+                    <SimilarQuestionsBlock
+                      questionId={q.question_id}
+                      allQuestions={questions}
+                      count={3}
+                    />
+                  )}
                 </div>
               )}
             </div>

@@ -81,6 +81,36 @@ export function setQuizHistory(subject = 'macro', value) {
   setSubjectItem(subject, 'quizHistory', value)
 }
 
+export function getQuestionSets(subject = 'macro') {
+  return getSubjectItem(subject, 'questionSets', { default: [] })
+}
+
+export function setQuestionSets(subject = 'macro', value) {
+  setSubjectItem(subject, 'questionSets', value && typeof value === 'object' ? value : { default: [] })
+}
+
+export function addQuestionToDefaultSet(subject = 'macro', questionId) {
+  if (!questionId) return []
+  const sets = getQuestionSets(subject)
+  const current = Array.isArray(sets.default) ? sets.default : []
+  const next = [...new Set([...current, questionId])]
+  setQuestionSets(subject, { ...sets, default: next })
+  return next
+}
+
+export function removeQuestionFromDefaultSet(subject = 'macro', questionId) {
+  const sets = getQuestionSets(subject)
+  const current = Array.isArray(sets.default) ? sets.default : []
+  const next = current.filter(id => id !== questionId)
+  setQuestionSets(subject, { ...sets, default: next })
+  return next
+}
+
+export function clearDefaultQuestionSet(subject = 'macro') {
+  const sets = getQuestionSets(subject)
+  setQuestionSets(subject, { ...sets, default: [] })
+}
+
 export function recordQuizResult(subject, { quizId, questionIds, wrongQuestionIds, score, total, unit, timestamp = Date.now() }) {
   const done = new Set(getDoneQuestions(subject))
   questionIds.forEach(id => done.add(id))
@@ -164,12 +194,13 @@ export function clearSubjectData(subject) {
   for (const key of LEGACY_KEYS) {
     removeSubjectItem(subject, key)
   }
+  removeSubjectItem(subject, 'questionSets')
 }
 
 export function collectLocalProgressSnapshot() {
   const subjects = {}
   for (const key of Object.keys(localStorage)) {
-    const matched = key.match(/^(.+)_(doneQuestions|wrongQuestions|questionHistory|quizHistory)$/)
+    const matched = key.match(/^(.+)_(doneQuestions|wrongQuestions|questionHistory|quizHistory|questionSets)$/)
     if (!matched) continue
     const [, subject, dataKey] = matched
     if (!subjects[subject]) subjects[subject] = {}
@@ -215,14 +246,31 @@ export function mergeProgressSnapshot(snapshot) {
     const localQuizHistory = getQuizHistory(subject)
     const incomingQuizHistory = Array.isArray(data.quizHistory) ? data.quizHistory : []
     setSubjectItem(subject, 'quizHistory', mergeQuizHistory(localQuizHistory, incomingQuizHistory))
+
+    const localQuestionSets = getQuestionSets(subject)
+    const incomingQuestionSets = data.questionSets && typeof data.questionSets === 'object' ? data.questionSets : {}
+    setSubjectItem(subject, 'questionSets', mergeQuestionSets(localQuestionSets, incomingQuestionSets))
   })
 
   notifyStorageChange({ scope: 'merge' })
 }
 
 function defaultValueForDataKey(dataKey) {
+  if (dataKey === 'questionSets') return { default: [] }
   if (dataKey === 'questionHistory') return {}
   return []
+}
+
+function mergeQuestionSets(localSets, incomingSets) {
+  const merged = { ...(incomingSets || {}), ...(localSets || {}) }
+  const names = new Set([...Object.keys(incomingSets || {}), ...Object.keys(localSets || {})])
+  names.forEach(name => {
+    const incoming = Array.isArray(incomingSets?.[name]) ? incomingSets[name] : []
+    const local = Array.isArray(localSets?.[name]) ? localSets[name] : []
+    merged[name] = [...new Set([...incoming, ...local].map(String).filter(Boolean))]
+  })
+  if (!Array.isArray(merged.default)) merged.default = []
+  return merged
 }
 
 function mergeQuestionHistory(localHistory, incomingHistory) {

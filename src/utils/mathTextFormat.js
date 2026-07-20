@@ -41,7 +41,12 @@ function renderLatex(source, displayMode) {
 function renderLatexSegments(text, options = {}) {
   const { forceInlineLatex = false } = options
   const restoredHtml = []
-  const protectedText = String(text).replace(/<\/?(?:sub|sup)>|&lt;(\/?(?:sub|sup))&gt;/gi, (raw, escapedTag) => {
+  let protectedText = String(text).replace(/`([^`\n]+?)`/g, (_, code) => {
+    const token = `@@HTML_TAG_${restoredHtml.length}@@`
+    restoredHtml.push(`<code class="math-inline-code">${escapeHtml(code)}</code>`)
+    return token
+  })
+  protectedText = protectedText.replace(/<\/?(?:sub|sup)>|&lt;(\/?(?:sub|sup))&gt;/gi, (raw, escapedTag) => {
     const tag = escapedTag || raw.slice(1, -1)
     const token = `@@HTML_TAG_${restoredHtml.length}@@`
     restoredHtml.push(`<${tag.toLowerCase()}>`)
@@ -185,10 +190,33 @@ function renderTextWithMarkdownTables(text, options = {}) {
       flushBuffer()
       parts.push(table.html)
       i = table.nextIndex
+    } else if (hasInlineRomanOptions(lines[i])) {
+      flushBuffer()
+      for (const option of splitInlineRomanOptions(lines[i])) {
+        parts.push(`<div class="math-roman-option"><span class="math-roman-label">${option.label}.</span><span class="math-roman-content">${renderLatexSegments(option.content, { ...options, forceInlineLatex: true })}</span></div>`)
+      }
+      i += 1
+    } else if (/^\s*```/.test(lines[i])) {
+      flushBuffer()
+      const fence = lines[i].trim()
+      const language = fence.replace(/^```/, '').trim() || 'text'
+      const codeLines = []
+      i += 1
+      while (i < lines.length && !/^\s*```\s*$/.test(lines[i])) {
+        codeLines.push(lines[i])
+        i += 1
+      }
+      if (i < lines.length) i += 1
+      parts.push(renderCodeBlock(codeLines.join('\n'), language))
     } else if (/^\s*- \[ \]\s+/.test(lines[i])) {
       flushBuffer()
       const label = lines[i].replace(/^\s*- \[ \]\s+/, '').trim()
       parts.push(`<div class="math-check-option"><span class="math-check-box"></span>${renderLatexSegments(label, { ...options, forceInlineLatex: true })}</div>`)
+      i += 1
+    } else if (/^\s*(?:I|II|III|IV|V)\.\s*\S/.test(lines[i])) {
+      flushBuffer()
+      const match = lines[i].match(/^\s*((?:I|II|III|IV|V))\.\s*(.+)$/)
+      parts.push(`<div class="math-roman-option"><span class="math-roman-label">${match[1]}.</span><span class="math-roman-content">${renderLatexSegments(match[2], { ...options, forceInlineLatex: true })}</span></div>`)
       i += 1
     } else {
       buffer.push(lines[i])
@@ -198,6 +226,29 @@ function renderTextWithMarkdownTables(text, options = {}) {
 
   flushBuffer()
   return parts.join('')
+}
+
+function hasInlineRomanOptions(line) {
+  return /^\s*I\.\s+\S/.test(line) && /\s+II\.\s+\S/.test(line)
+}
+
+function splitInlineRomanOptions(line) {
+  const parts = []
+  const pattern = /\b(I|II|III|IV|V)\.\s*/g
+  const matches = [...String(line).matchAll(pattern)]
+  for (let i = 0; i < matches.length; i += 1) {
+    const label = matches[i][1]
+    const start = matches[i].index + matches[i][0].length
+    const end = i + 1 < matches.length ? matches[i + 1].index : line.length
+    const content = line.slice(start, end).trim()
+    if (content) parts.push({ label, content })
+  }
+  return parts
+}
+
+function renderCodeBlock(code, language) {
+  const langClass = language ? ` language-${escapeHtml(language.toLowerCase())}` : ''
+  return `<pre class="math-code-block${langClass}"><code>${escapeHtml(code).replace(/\n$/, '')}</code></pre>`
 }
 
 function normalizeLegacyMathText(text) {

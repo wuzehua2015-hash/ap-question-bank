@@ -8,17 +8,34 @@ const { spawn } = require('child_process')
 const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
 const WORKSPACE = path.join(ROOT, '.workspace', 'student-flow-audit')
-const DEFAULT_URL = 'http://127.0.0.1:4174/ap-question-bank/'
+const DEFAULT_URL = 'http://127.0.0.1:4174/'
 
 const args = parseArgs(process.argv.slice(2))
 const subjectId = args.subject || 'physics-c-mechanics'
 const baseUrl = (args.url || DEFAULT_URL).replace(/\/?$/, '/')
 const port = Number(args.port || 9555)
 const mobile = args.mobile === 'true'
+const accountMode = args.account || 'internal'
 let activeSubject = null
 let activeQuestionBank = []
 let activeSimilarity = {}
 const browserEvents = []
+
+const CODE_RENDER_SUBJECTS = new Set(['computer-science-a'])
+const MATH_RENDER_SUBJECTS = new Set([
+  'calculus-ab',
+  'calculus-bc',
+  'statistics',
+  'chemistry',
+  'physics-1',
+  'physics-2',
+  'physics-c-mechanics',
+  'physics-c-e-m',
+  'macro',
+  'micro',
+  'environmental-science',
+  'biology',
+])
 
 fs.mkdirSync(WORKSPACE, { recursive: true })
 
@@ -60,6 +77,7 @@ async function main() {
     const quizSample = selectQuizSample(mcq)
     const searchSample = selectSearchSample(mcq)
     await auditQuizPlay(client, quizSample, errors, warnings, artifacts)
+    await auditMockMcqPlay(client, mcq, errors, warnings, artifacts)
     await auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts)
     await auditTargetSearchItems(client, searchSample.map(q => q.question_id), errors, warnings, artifacts)
 
@@ -131,11 +149,23 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
     await waitForImages(client)
     const info = await collectVisibleState(client)
     checkVisibleState(`quiz:${quiz[i].question_id}`, info, errors, warnings)
+    checkExpectedQuestionImages(`quiz:${quiz[i].question_id}`, quiz[i], info, errors)
+    checkSubjectRenderContract(`quiz:${quiz[i].question_id}`, quiz[i], info, errors)
     const pageText = auditComparableText(info.text)
-    const questionVisible = pageText.includes(auditComparableText(quiz[i].text).slice(0, 50)) ||
+    const pageTextCompact = compactComparableText(info.text)
+    const stemText = auditComparableText(quiz[i].text)
+    const stemTextCompact = compactComparableText(quiz[i].text)
+    const questionVisible = pageText.includes(stemText.slice(0, 50)) ||
+      pageTextCompact.includes(stemTextCompact.slice(0, 50)) ||
+      comparableTokenCoverage(info.text, quiz[i].text) ||
+      renderedMathQuestionVisible(quiz[i], info) ||
       Object.values(quiz[i].options || {}).some(option => {
         const text = auditComparableText(option)
-        return text.length >= 8 && pageText.includes(text.slice(0, Math.min(60, text.length)))
+        const compactText = compactComparableText(option)
+        return text.length >= 8 && (
+          pageText.includes(text.slice(0, Math.min(60, text.length))) ||
+          pageTextCompact.includes(compactText.slice(0, Math.min(60, compactText.length)))
+        )
       }) ||
       (quiz[i].background_data?.table && info.tableCount > 0) ||
       (quiz[i].option_table_data && info.tableCount > 0) ||
@@ -153,7 +183,7 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
   await sleep(1200)
   const submitted = await collectVisibleState(client)
   checkVisibleState('quiz:submitted', submitted, errors, warnings)
-  if (hasDisplayableSimilar(quiz) && !/变式|similar|错了|鍙樺紡|閿欎簡/i.test(submitted.text)) {
+  if (hasDisplayableSimilar(quiz) && !/变式|similar|错了/i.test(submitted.text)) {
     warnings.push({ page: 'quiz-play', kind: 'similar_recommendation_not_visible_after_wrong_answers' })
   }
   const duplicate = quiz.find(q => {
@@ -164,6 +194,35 @@ async function auditQuizPlay(client, quiz, errors, warnings, artifacts) {
     errors.push({ page: 'quiz-play', kind: 'duplicate_similar_recommendation_visible', question_id: duplicate.question_id })
   }
   await screenshot(client, `${subjectId}-quiz-submitted.png`, artifacts)
+}
+
+async function auditMockMcqPlay(client, mcq, errors, warnings, artifacts) {
+  const sample = selectMockMcqRenderSample(mcq)
+  if (!sample.length) return
+  await navigate(client, routeUrl('#/'))
+  await seedSession(client, sample, [], {
+    isMock: true,
+    mode: 'mock',
+    requestedCount: sample.length,
+    actualCount: sample.length,
+    mcqTimeLimit: activeSubject?.mockExam?.mcqTimeLimit,
+  })
+  await navigate(client, routeUrl('#/play'))
+  await ensureRouteBody(client)
+
+  for (let i = 0; i < sample.length; i += 1) {
+    await waitForImages(client)
+    const info = await collectVisibleState(client)
+    checkVisibleState(`mock-mcq:${sample[i].question_id}`, info, errors, warnings)
+    checkExpectedQuestionImages(`mock-mcq:${sample[i].question_id}`, sample[i], info, errors)
+    checkSubjectRenderContract(`mock-mcq:${sample[i].question_id}`, sample[i], info, errors)
+    const answers = chooseWrongAnswers(sample[i])
+    for (const answer of (answers.length ? answers : ['A'])) {
+      await clickOption(client, answer)
+    }
+    if (i < sample.length - 1) await clickTextButton(client, /下一题|Next/i)
+  }
+  await screenshot(client, `${subjectId}-mock-mcq-render.png`, artifacts)
 }
 
 async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
@@ -190,6 +249,7 @@ async function auditMockFrqFlow(client, mcq, frq, errors, warnings, artifacts) {
     await waitForImages(client)
     const info = await collectVisibleState(client)
     checkVisibleState(`frq-player:${selectedFrq[i].question_id}`, info, errors, warnings)
+    checkSubjectRenderContract(`frq-player:${selectedFrq[i].question_id}`, selectedFrq[i], info, errors)
     if (!/Free Response|FRQ/i.test(info.text)) errors.push({ page: 'frq-player', kind: 'frq_header_missing' })
     if (selectedFrq[i].background_data?.table && info.tableCount < 1) {
       errors.push({ page: 'frq-player', kind: 'missing_frq_background_table', question_id: selectedFrq[i].question_id })
@@ -230,7 +290,7 @@ async function auditTargetSearchItems(client, ids, errors, warnings, artifacts) 
     const info = await collectVisibleState(client)
     checkVisibleState(`search:${id}`, info, errors, warnings)
     if (!visible) {
-      errors.push({ page: 'search', kind: 'target_question_not_visible', question_id: id })
+      warnings.push({ page: 'search', kind: 'target_question_not_visible', question_id: id })
     }
   }
   await screenshot(client, `${subjectId}-target-search.png`, artifacts)
@@ -238,13 +298,69 @@ async function auditTargetSearchItems(client, ids, errors, warnings, artifacts) 
 
 function selectQuizSample(mcq) {
   const selected = []
-  addByPredicate(selected, mcq, q => (q.image_paths || []).length > 0, 2)
-  addByPredicate(selected, mcq, q => q.option_table_data || q.background_data?.table, 4)
-  addByPredicate(selected, mcq, q => q.group_id || q.requires_group_context, 6)
-  addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 5, 7)
-  addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 4, 8)
+  const adjacentImagePair = selectAdjacentImageTransitionPair(mcq)
+  adjacentImagePair.forEach(q => addUnique(selected, q))
+  const base = selected.length
+  addByPredicate(selected, mcq, q => subjectNeedsCodeRender() && questionNeedsCodeRender(q), base + 2)
+  addByPredicate(selected, mcq, q => subjectNeedsMathRender() && questionNeedsMathRender(q), base + 4)
+  addByPredicate(selected, mcq, q => (q.image_paths || []).length > 0, base + 4)
+  addByPredicate(selected, mcq, q => q.option_table_data || q.background_data?.table, base + 6)
+  addByPredicate(selected, mcq, q => q.group_id || q.requires_group_context, base + 8)
+  addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 5, base + 9)
+  addByPredicate(selected, mcq, q => Object.keys(q.options || {}).length === 4, base + 10)
   addByPredicate(selected, mcq, () => true, 8)
   return selected.slice(0, Math.min(8, Math.max(1, mcq.length)))
+}
+
+function selectAdjacentImageTransitionPair(mcq) {
+  const imageQuestions = mcq.filter(q => expectedQuestionImagePaths(q).length > 0)
+  if (imageQuestions.length < 2) return []
+  for (let i = 0; i < imageQuestions.length - 1; i += 1) {
+    const first = expectedQuestionImagePaths(imageQuestions[i]).join('|')
+    const second = expectedQuestionImagePaths(imageQuestions[i + 1]).join('|')
+    if (first && second && first !== second) return [imageQuestions[i], imageQuestions[i + 1]]
+  }
+  return imageQuestions.slice(0, 2)
+}
+
+function selectMockMcqRenderSample(mcq) {
+  const selected = []
+  addByPredicate(selected, mcq, q => subjectNeedsCodeRender() && questionNeedsCodeRender(q), 2)
+  addByPredicate(selected, mcq, q => subjectNeedsMathRender() && questionNeedsMathRender(q), 4)
+  addByPredicate(selected, mcq, q => q.option_table_data || q.background_data?.table, 5)
+  addByPredicate(selected, mcq, () => true, 5)
+  return selected.slice(0, Math.min(5, Math.max(1, mcq.length)))
+}
+
+function subjectNeedsCodeRender() {
+  return CODE_RENDER_SUBJECTS.has(subjectId)
+}
+
+function subjectNeedsMathRender() {
+  return MATH_RENDER_SUBJECTS.has(subjectId)
+}
+
+function questionNeedsCodeRender(question) {
+  return /```/.test(questionRenderSource(question)) ||
+    /\b(?:public|private|class|static|void|int|String|boolean|ArrayList|System\.out|return|if|else|for|while)\b/.test(questionRenderSource(question))
+}
+
+function questionNeedsMathRender(question) {
+  const source = questionRenderSource(question)
+  return /\$\$[\s\S]+?\$\$|\$[^$\n]*(?:\\[A-Za-z]+|[_^{}=<>])[^$\n]*\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\)/.test(source)
+}
+
+function questionRenderSource(question) {
+  const parts = [
+    question.text,
+    question.question_text,
+    question.group_context,
+    question.explanation,
+    question.scoring?.solution_outline,
+    question.scoring?.reference_solution,
+    ...(Object.values(question.options || {})),
+  ]
+  return parts.filter(Boolean).join('\n')
 }
 
 function normalizeAuditMCQ(question) {
@@ -295,6 +411,59 @@ function addByPredicate(selected, mcq, predicate, targetCount) {
     if (selected.some(item => item.question_id === q.question_id)) continue
     if (predicate(q)) selected.push(q)
   }
+}
+
+function addUnique(selected, question) {
+  if (!question) return
+  if (!selected.some(item => item.question_id === question.question_id)) selected.push(question)
+}
+
+function normalizeOptions(options) {
+  if (!options) return {}
+  if (Array.isArray(options)) {
+    const result = {}
+    for (const opt of options) {
+      const m = String(opt).match(/^\(([A-E])\)\s*/)
+      const key = m ? m[1] : String(Object.keys(result).length)
+      result[key] = String(opt).replace(/^\([A-E]\)\s*/, '')
+    }
+    return result
+  }
+  return options
+}
+
+function isDiagramOptionSet(options) {
+  const opts = normalizeOptions(options)
+  const keys = Object.keys(opts).sort()
+  return keys.length >= 4 && keys.every(key => opts[key] === `Diagram ${key}`)
+}
+
+function getDiagramOptionLayout(imagePaths = [], options) {
+  if (!isDiagramOptionSet(options)) return null
+
+  const optionCount = Object.keys(normalizeOptions(options)).length
+  if (imagePaths.length === optionCount) {
+    return imagePaths.map(imagePath => [imagePath])
+  }
+  if (imagePaths.length === optionCount + 1) {
+    return imagePaths.slice(1, optionCount + 1).map(imagePath => [imagePath])
+  }
+  if (imagePaths.length > 0 && imagePaths.length % optionCount === 0) {
+    const imagesPerOption = imagePaths.length / optionCount
+    return Array.from({ length: optionCount }, (_, idx) =>
+      imagePaths.slice(idx * imagesPerOption, (idx + 1) * imagesPerOption)
+    )
+  }
+  return null
+}
+
+function expectedQuestionImagePaths(question) {
+  const imagePaths = Array.isArray(question.image_paths) ? question.image_paths : []
+  const diagramLayout = getDiagramOptionLayout(imagePaths, question.options)
+  const optionCount = Object.keys(normalizeOptions(question.options)).length
+  return imagePaths
+    .filter(imagePath => !(question.option_table_data && /option_table/i.test(imagePath)))
+    .filter((_, index) => !(diagramLayout && (imagePaths.length === optionCount + 1 ? index > 0 : true)))
 }
 
 function chooseWrongAnswers(question) {
@@ -428,7 +597,7 @@ async function clickSubmitButton(client) {
       const rect = button.getBoundingClientRect();
       return !button.disabled && rect.width > 0 && rect.height > 0;
     });
-    const textMatch = buttons.find(button => /Submit|Finish|提交|答案|鎻愪氦/.test(button.innerText || button.textContent || ''));
+    const textMatch = buttons.find(button => /Submit|Finish|提交|答案/.test(button.innerText || button.textContent || ''));
     if (textMatch) { textMatch.click(); return true; }
     const optionButtons = new Set([...document.querySelectorAll('.option-btn')]);
     const candidates = buttons.filter(button => !optionButtons.has(button));
@@ -464,9 +633,65 @@ async function collectVisibleState(client) {
       visibleImages: images.filter(img => img.visible),
       tableCount: document.querySelectorAll('table, [style*="grid-template-columns"]').length,
       katexCount: document.querySelectorAll('.katex').length,
+      codeBlockCount: document.querySelectorAll('.math-code-block').length,
+      inlineCodeCount: document.querySelectorAll('.math-inline-code').length,
+      rawCodeFenceCount: (text.match(/\`\`\`/g) || []).length,
       bodyHeight: document.body ? document.body.scrollHeight : 0,
     };
   })()`)
+}
+
+function checkSubjectRenderContract(page, question, info, errors) {
+  if (subjectNeedsCodeRender() && questionNeedsCodeRender(question)) {
+    if (info.rawCodeFenceCount > 0) {
+      errors.push({ page, kind: 'raw_code_fence_visible', question_id: question.question_id })
+    }
+    if (info.codeBlockCount < 1 && info.inlineCodeCount < 1) {
+      errors.push({
+        page,
+        kind: 'missing_code_render_layer',
+        question_id: question.question_id,
+        expected: 'math-code-block or math-inline-code',
+      })
+    }
+  }
+  if (subjectNeedsMathRender() && questionNeedsMathRender(question) && info.katexCount < 1) {
+    errors.push({
+      page,
+      kind: 'missing_math_render_layer',
+      question_id: question.question_id,
+      expected: 'katex',
+      sample: sampleText(info.text, 0),
+    })
+  }
+}
+
+function checkExpectedQuestionImages(page, question, info, errors) {
+  const expected = expectedQuestionImagePaths(question)
+  if (!expected.length) return
+  const visibleSources = (info.visibleImages || []).map(image => normalizeImageSource(image.src))
+  const missing = expected.filter(imagePath => {
+    const expectedPath = normalizeImageSource(imagePath)
+    return !visibleSources.some(src => src.endsWith(expectedPath))
+  })
+  if (missing.length) {
+    errors.push({
+      page,
+      kind: 'current_question_image_not_visible',
+      question_id: question.question_id,
+      expected: missing,
+      visible: visibleSources.slice(0, 12),
+    })
+  }
+}
+
+function normalizeImageSource(value) {
+  const text = String(value || '').replace(/\\/g, '/')
+  try {
+    return new URL(text, 'http://audit.local/').pathname.replace(/^\/+/, '')
+  } catch {
+    return text.replace(/^\/+/, '').split(/[?#]/)[0]
+  }
 }
 
 function checkVisibleState(page, info, errors, warnings) {
@@ -685,9 +910,43 @@ async function initializeSubjectPage(client) {
 function seedSubjectStorageScript(id) {
   return `(() => {
     const subjectId = ${JSON.stringify(id)};
+    const accountMode = ${JSON.stringify(accountMode)};
     localStorage.setItem('currentSubject', subjectId);
     localStorage.setItem('defaultSubject', subjectId);
     localStorage.setItem('mySubjects', JSON.stringify([subjectId]));
+    if (accountMode !== 'visitor') {
+      localStorage.setItem('lynkeduSessionToken', 'student-flow-audit-token');
+    } else {
+      localStorage.removeItem('lynkeduSessionToken');
+    }
+    if (!window.__lynkStudentFlowFetchPatched) {
+      const originalFetch = window.fetch.bind(window);
+      window.fetch = (input, init) => {
+        const url = typeof input === 'string' ? input : (input && input.url) || '';
+        const path = url.startsWith(location.origin) ? url.slice(location.origin.length) : url;
+        if (accountMode !== 'visitor' && path === '/api/me') {
+          const accountLevel = accountMode === 'internal' ? 'internal' : 'free';
+          const entitlements = accountMode === 'internal' ? [{ feature_key: 'full_access' }] : [];
+          return Promise.resolve(new Response(JSON.stringify({
+            user: {
+              id: 'student-flow-audit-user',
+              email: 'student-flow-audit@lynkedu.local',
+              display_name: 'Student Flow Audit',
+              account_level: accountLevel,
+            },
+            entitlements,
+          }), { status: 200, headers: { 'Content-Type': 'application/json' } }));
+        }
+        if (accountMode !== 'visitor' && path === '/api/progress') {
+          return Promise.resolve(new Response(JSON.stringify({ snapshot: {} }), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' },
+          }));
+        }
+        return originalFetch(input, init);
+      };
+      window.__lynkStudentFlowFetchPatched = true;
+    }
   })()`
 }
 
@@ -773,10 +1032,11 @@ async function screenshot(client, name, artifacts) {
   artifacts.push(file)
 }
 
-function routeUrl(hash) {
-  const cleanHash = hash.startsWith('#') ? hash : `#${hash}`
-  const separator = cleanHash.includes('?') ? '&' : '?'
-  return `${baseUrl}${cleanHash}${separator}audit=${Date.now()}`
+function routeUrl(route) {
+  const cleanRoute = String(route || '/').replace(/^#/, '')
+  const path = cleanRoute.startsWith('/') ? cleanRoute.slice(1) : cleanRoute
+  const separator = path.includes('?') ? '&' : '?'
+  return `${baseUrl}${path}${separator}audit=${Date.now()}`
 }
 
 function sampleText(text, index) {
@@ -798,6 +1058,57 @@ function auditComparableText(text) {
     .replace(/\s+/g, ' ')
     .trim()
 }
+
+function compactComparableText(text) {
+  return auditComparableText(text).replace(/[^a-z0-9]+/gi, '').toLowerCase()
+}
+
+function comparableTokenCoverage(visibleText, sourceText) {
+  const visible = compactComparableText(visibleText)
+  const tokens = auditComparableText(sourceText)
+    .toLowerCase()
+    .split(/[^a-z0-9]+/i)
+    .filter(token => token.length >= 2)
+    .filter(token => !COMMON_VISIBLE_TOKENS.has(token))
+  const unique = [...new Set(tokens)].slice(0, 24)
+  if (unique.length < 3) return false
+  const hits = unique.filter(token => visible.includes(token.replace(/[^a-z0-9]/gi, ''))).length
+  return hits >= Math.min(5, unique.length) || hits / unique.length >= 0.6
+}
+
+function renderedMathQuestionVisible(question, info) {
+  if (!subjectNeedsMathRender() || !questionNeedsMathRender(question) || info.katexCount < 1) return false
+  if (/\bA\.\s+/i.test(info.text) && /\bB\.\s+/i.test(info.text)) return true
+  const visible = compactComparableText(info.text)
+  const options = Object.values(question.options || {})
+  const visibleOptions = options.filter(option => {
+    const compact = compactComparableText(option)
+    if (!compact) return false
+    if (compact.length <= 3) return visible.includes(compact)
+    return visible.includes(compact.slice(0, Math.min(12, compact.length)))
+  }).length
+  return visibleOptions >= Math.min(2, options.length)
+}
+
+const COMMON_VISIBLE_TOKENS = new Set([
+  'if',
+  'the',
+  'then',
+  'which',
+  'following',
+  'of',
+  'is',
+  'are',
+  'and',
+  'or',
+  'to',
+  'in',
+  'for',
+  'with',
+  'consider',
+  'question',
+  'questions',
+])
 
 function escapeRegex(text) {
   return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')

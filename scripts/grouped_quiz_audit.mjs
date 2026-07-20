@@ -58,7 +58,7 @@ function flattenBucketsToLimit(buckets, limit, { exact = false } = {}) {
 function generateQuizLocal(questions, { unit = 'all', count = 10 } = {}) {
   let pool = questions.filter(q => q.scoring_status !== 'not_scored' && q.answer && Object.keys(q.options || {}).length > 0)
   let buckets = makeQuestionBuckets(pool)
-  if (unit !== 'all') buckets = buckets.filter(bucket => bucket.some(q => q.primary_unit === unit))
+  if (unit !== 'all') buckets = buckets.filter(bucket => bucket.every(q => q.primary_unit === unit))
   const available = buckets.reduce((sum, bucket) => sum + bucket.length, 0)
   buckets = buckets.sort(() => Math.random() - 0.5)
   return flattenBucketsToLimit(buckets, Math.min(count, available), { exact: false })
@@ -96,6 +96,22 @@ function assertCompleteGroups(subjectId, label, questions, errors) {
   }
 }
 
+function assertUnitQuizGroupScope(subjectId, unit, questions, errors) {
+  if (unit === 'all') return
+  const selectedGroups = new Map()
+  for (const q of questions) {
+    if (!q.group_id) continue
+    if (!selectedGroups.has(q.group_id)) selectedGroups.set(q.group_id, [])
+    selectedGroups.get(q.group_id).push(q)
+  }
+  for (const [groupId, groupRows] of selectedGroups) {
+    const units = [...new Set(groupRows.map(q => q.primary_unit).filter(Boolean))]
+    if (units.length !== 1 || units[0] !== unit) {
+      errors.push(`${subjectId} quiz:${unit}: selected mixed-scope group ${groupId} with units ${units.join(', ') || '(none)'}`)
+    }
+  }
+}
+
 const subjectsConfig = readJson('data/subjects.json')
 const subjects = subjectsConfig.subjects.filter(subject => subject.active)
 const errors = []
@@ -109,6 +125,7 @@ for (const subject of subjects) {
     for (let i = 0; i < 20; i += 1) {
       const quiz = generateQuizLocal(mcq, { unit, count: Math.min(15, mcq.length) })
       assertCompleteGroups(subject.id, `quiz:${unit}:${i}`, quiz, errors)
+      assertUnitQuizGroupScope(subject.id, unit, quiz, errors)
     }
   }
 

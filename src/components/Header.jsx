@@ -1,128 +1,132 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { useSubject } from '../contexts/SubjectContext'
 import { useAuth } from '../contexts/AuthContext'
+import { useSubject } from '../contexts/SubjectContext'
+import { accountLevelDisplay, subjectDisplayName } from '../utils/displayLabels'
 
 function Header() {
   const location = useLocation()
   const { currentSubject, mySubjects, setSubject } = useSubject()
-  const { isLoggedIn, isInternalStudent, user } = useAuth()
+  const { isLoggedIn, isInternalStudent, user, accountLevel } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false)
-  const [subjectDropdownOpen, setSubjectDropdownOpen] = useState(false)
+  const [subjectOpen, setSubjectOpen] = useState(false)
 
-  const currentSubjectConfig = mySubjects.find(s => s.id === currentSubject)
-
-  const items = [
-    { path: '/', label: '首页' },
-    { path: '/quiz', label: '专项练习' },
-    { path: '/exam', label: '模拟考试' },
-    { path: '/search', label: '搜索' },
-    { path: '/mistakes', label: '错题本' },
+  const currentSubjectConfig = mySubjects.find(subject => subject.id === currentSubject)
+  const accountLabel = isLoggedIn ? accountLevelDisplay(accountLevel || user?.account_level || 'free', isInternalStudent) : '登录'
+  const hasStudySubjects = mySubjects.length > 0
+  const subjectButtonLabel = currentSubjectConfig ? subjectDisplayName(currentSubjectConfig, 'short') : '选择科目'
+  const navItems = [
+    { path: '/quiz', label: '练习' },
+    { path: '/exam', label: '模考' },
+    { path: '/mistakes', label: '错题' },
     { path: '/history', label: '记录' },
-    { path: '/settings', label: '设置' },
-    { path: isLoggedIn ? '/account' : '/login', label: isLoggedIn ? '账号' : '登录' },
   ]
 
-  const isActive = (path) => location.pathname === path
-
   return (
-    <header className="bg-brand text-white shadow-lg">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="text-xl font-bold tracking-tight">翎英教育 LynkEdu</Link>
+    <header className="sticky top-0 z-40 border-b border-border bg-bg/95 backdrop-blur">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="h-14 flex items-center justify-between gap-4">
+          <Link to="/" className="font-bold tracking-tight text-brand">翎英教育 LynkEdu</Link>
 
-        <nav className="hidden md:flex items-center gap-6">
-          <div className="relative">
-            <button
-              onClick={() => mySubjects.length > 1 && setSubjectDropdownOpen(!subjectDropdownOpen)}
-              className={`flex items-center gap-1 text-sm font-medium px-3 py-1.5 rounded-md transition-colors ${mySubjects.length > 1 ? 'hover:bg-white/10 cursor-pointer' : 'cursor-default'}`}
-            >
-              {currentSubjectConfig?.shortName || '选择科目'}
-              {mySubjects.length > 1 && (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              )}
-            </button>
+          <nav className="hidden md:flex items-center gap-6 text-sm">
+            {navItems.map(item => (
+              <Link
+                key={item.path}
+                to={hasStudySubjects ? item.path : '/settings'}
+                className={location.pathname === item.path ? 'font-semibold text-brand' : 'text-text-muted hover:text-brand'}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
 
-            {subjectDropdownOpen && mySubjects.length > 1 && (
-              <div className="absolute top-full left-0 mt-1 bg-white text-gray-800 rounded-md shadow-lg border border-gray-200 py-1 min-w-[220px] z-50">
-                {mySubjects.map(subject => (
-                  <button
-                    key={subject.id}
-                    onClick={() => {
-                      setSubject(subject.id)
-                      setSubjectDropdownOpen(false)
-                    }}
-                    className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${subject.id === currentSubject ? 'bg-gray-50 font-medium' : ''}`}
+          <div className="hidden md:flex items-center gap-4 text-sm">
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setSubjectOpen(!subjectOpen)}
+                className={`flex items-center gap-2 rounded-md border px-3 py-2 text-left hover:border-brand hover:text-brand ${
+                  hasStudySubjects ? 'border-border bg-white text-brand' : 'border-brand bg-white font-semibold text-brand'
+                }`}
+              >
+                <span className="text-xs text-text-muted">{hasStudySubjects ? '当前科目' : '先选科目'}</span>
+                <span className="font-semibold">{subjectButtonLabel}</span>
+                <span aria-hidden="true" className="text-text-muted">▾</span>
+              </button>
+              {subjectOpen && (
+                <div className="absolute right-0 top-full mt-3 w-72 rounded-lg border border-border bg-white p-2 shadow-lg">
+                  <div className="px-3 pb-2 pt-1 text-xs font-semibold text-text-muted">
+                    {hasStudySubjects ? '切换学习科目' : '开始前先选择科目'}
+                  </div>
+                  {hasStudySubjects ? (
+                    mySubjects.map(subject => (
+                      <button
+                        key={subject.id}
+                        type="button"
+                        onClick={() => {
+                          setSubject(subject.id)
+                          setSubjectOpen(false)
+                        }}
+                        className={`flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm hover:bg-bg ${subject.id === currentSubject ? 'font-semibold text-brand' : 'text-text'}`}
+                      >
+                        <span>{subjectDisplayName(subject)}</span>
+                        {subject.id === currentSubject && <span className="text-xs text-accent">当前</span>}
+                      </button>
+                    ))
+                  ) : (
+                    <div className="px-3 py-3 text-sm leading-6 text-text-muted">选择科目后，练习、模考、错题和记录都会按该科目展示。</div>
+                  )}
+                  <Link
+                    to="/settings"
+                    onClick={() => setSubjectOpen(false)}
+                    className="mt-1 block rounded-md border border-border bg-bg px-3 py-2 text-center text-sm font-semibold text-brand hover:border-brand"
                   >
-                    {subject.name}
-                  </button>
-                ))}
-                <Link
-                  to="/settings"
-                  onClick={() => setSubjectDropdownOpen(false)}
-                  className="block px-4 py-2 text-sm text-accent hover:bg-gray-100 border-t border-gray-100"
-                >
-                  管理科目
-                </Link>
-              </div>
-            )}
+                    {hasStudySubjects ? '管理我的科目' : '去选择科目'}
+                  </Link>
+                </div>
+              )}
+            </div>
+            <Link to={isLoggedIn ? '/account' : '/login'} className="text-text-muted hover:text-brand" title={user?.email}>
+              {accountLabel}
+            </Link>
           </div>
 
-          <div className="w-px h-5 bg-white/20" />
-
-          {items.map(item => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`text-sm font-medium transition-colors ${isActive(item.path) ? 'text-accent-light' : 'text-white/80 hover:text-white'}`}
-            >
-              {item.label}
-            </Link>
-          ))}
-
-          {isLoggedIn && (
-            <Link
-              to="/account"
-              className="text-xs font-medium bg-white/10 text-white px-2.5 py-1 rounded-full hover:bg-white/15 transition-colors"
-              title={user?.email}
-            >
-              {isInternalStudent ? '内部学生' : '免费账号'}
-            </Link>
-          )}
-        </nav>
-
-        <button
-          className="md:hidden p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="菜单"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {menuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+          <button
+            type="button"
+            className="md:hidden text-sm font-medium text-brand"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            菜单
+          </button>
+        </div>
       </div>
 
       {menuOpen && (
-        <nav className="md:hidden border-t border-white/20">
-          <div className="px-4 py-3 border-b border-white/10">
-            <span className="text-xs text-white/60 uppercase tracking-wider">当前科目</span>
-            <div className="text-sm font-medium mt-1">{currentSubjectConfig?.name || '选择科目'}</div>
-          </div>
-          {items.map(item => (
-            <Link
-              key={item.path}
-              to={item.path}
-              onClick={() => setMenuOpen(false)}
-              className={`block px-4 py-3 text-sm font-medium transition-colors border-b border-white/10 ${isActive(item.path) ? 'bg-white/10 text-accent-light' : 'text-white/80 hover:bg-white/5 hover:text-white'}`}
-            >
-              {item.label}
+        <nav className="md:hidden border-t border-border bg-bg px-5 py-4">
+          <Link
+            to="/settings"
+            onClick={() => setMenuOpen(false)}
+            className="mb-4 flex items-center justify-between rounded-md border border-border bg-white px-3 py-3 text-sm"
+          >
+            <span>
+              <span className="block text-xs text-text-muted">{hasStudySubjects ? '当前科目' : '先选科目'}</span>
+              <span className="mt-1 block font-semibold text-brand">{currentSubjectConfig ? subjectDisplayName(currentSubjectConfig) : '选择学习科目'}</span>
+            </span>
+            <span className="font-semibold text-accent">{hasStudySubjects ? '切换' : '选择'}</span>
+          </Link>
+          <div className="grid grid-cols-2 gap-3 text-sm">
+            <Link to="/" onClick={() => setMenuOpen(false)} className="text-text">首页</Link>
+            {navItems.map(item => (
+              <Link key={item.path} to={hasStudySubjects ? item.path : '/settings'} onClick={() => setMenuOpen(false)} className="text-text">
+                {item.label}
+              </Link>
+            ))}
+            <Link to="/search" onClick={() => setMenuOpen(false)} className="text-text">搜题</Link>
+            <Link to="/settings" onClick={() => setMenuOpen(false)} className="text-text">科目管理</Link>
+            <Link to={isLoggedIn ? '/account' : '/login'} onClick={() => setMenuOpen(false)} className="text-text">
+              {accountLabel}
             </Link>
-          ))}
+          </div>
         </nav>
       )}
     </header>

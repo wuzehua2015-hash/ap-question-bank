@@ -2,16 +2,21 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import {
   fetchMe,
   fetchProgress,
+  loginWithPassword as loginWithPasswordApi,
+  requestEmailVerification as requestEmailVerificationApi,
   requestLoginCode as requestLoginCodeApi,
+  registerAccount as registerAccountApi,
   saveProgress,
   setSessionToken,
   verifyLoginCode as verifyLoginCodeApi,
+  verifyEmail as verifyEmailApi,
 } from '../utils/accountApi'
 import {
   collectLocalProgressSnapshot,
   mergeProgressSnapshot,
   STORAGE_SYNC_EVENT,
 } from '../utils/storage'
+import { hasLynkStudentAccess } from '../utils/featureAccess'
 
 const AuthContext = createContext({
   status: 'loading',
@@ -20,8 +25,13 @@ const AuthContext = createContext({
   accountLevel: 'visitor',
   isLoggedIn: false,
   isInternalStudent: false,
+  isLynkStudent: false,
+  requestEmailVerification: async () => {},
   requestLoginCode: async () => {},
+  registerAccount: async () => {},
+  loginWithPassword: async () => {},
   verifyLoginCode: async () => {},
+  verifyEmail: async () => {},
   logout: () => {},
   syncNow: async () => {},
 })
@@ -95,13 +105,36 @@ export function AuthProvider({ children }) {
     return requestLoginCodeApi(email)
   }, [])
 
-  const verifyLoginCode = useCallback(async (email, code) => {
-    const accountData = await verifyLoginCodeApi(email, code)
+  const requestEmailVerification = useCallback(() => {
+    return requestEmailVerificationApi()
+  }, [])
+
+  const finishAuthenticated = useCallback(async (accountData) => {
     setSessionToken(accountData.sessionToken)
     applyAccountData(accountData)
     const progressData = await fetchProgress().catch(() => null)
     if (progressData?.snapshot) mergeProgressSnapshot(progressData.snapshot)
     await saveProgress(collectLocalProgressSnapshot()).catch(() => {})
+    return accountData
+  }, [applyAccountData])
+
+  const registerAccount = useCallback((payload) => {
+    return registerAccountApi(payload).then(finishAuthenticated)
+  }, [finishAuthenticated])
+
+  const loginWithPassword = useCallback((email, password) => {
+    return loginWithPasswordApi(email, password).then(finishAuthenticated)
+  }, [finishAuthenticated])
+
+  const verifyLoginCode = useCallback(async (email, code) => {
+    const accountData = await verifyLoginCodeApi(email, code)
+    return finishAuthenticated(accountData)
+  }, [finishAuthenticated])
+
+  const verifyEmail = useCallback(async (code) => {
+    await verifyEmailApi(code)
+    const accountData = await fetchMe()
+    applyAccountData(accountData)
     return accountData
   }, [applyAccountData])
 
@@ -113,7 +146,7 @@ export function AuthProvider({ children }) {
   }, [])
 
   const accountLevel = user?.account_level || (user ? 'free' : 'visitor')
-  const isInternalStudent = accountLevel === 'internal' || entitlements.some(item => item.feature_key === 'full_access')
+  const isInternalStudent = hasLynkStudentAccess({ accountLevel, entitlements })
 
   const value = useMemo(() => ({
     status,
@@ -122,11 +155,16 @@ export function AuthProvider({ children }) {
     accountLevel,
     isLoggedIn: Boolean(user),
     isInternalStudent,
+    isLynkStudent: isInternalStudent,
+    requestEmailVerification,
     requestLoginCode,
+    registerAccount,
+    loginWithPassword,
     verifyLoginCode,
+    verifyEmail,
     logout,
     syncNow,
-  }), [accountLevel, entitlements, isInternalStudent, logout, requestLoginCode, status, syncNow, user, verifyLoginCode])
+  }), [accountLevel, entitlements, isInternalStudent, loginWithPassword, logout, registerAccount, requestEmailVerification, requestLoginCode, status, syncNow, user, verifyEmail, verifyLoginCode])
 
   return (
     <AuthContext.Provider value={value}>

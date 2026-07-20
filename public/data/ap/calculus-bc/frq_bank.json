@@ -60,18 +60,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2008_FRQ1 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The rate at which raw sewage enters a treatment tank is given by $E(t)=850+715\\cos\\left(\\frac{\\pi t^2}{9}\\right)$ gallons per hour for $0\\le t\\le4$ hours. Treated sewage is removed from the tank at the constant rate of $645$ gallons per hou",
+        "Existing topic tags: 8.x Applications of Integration.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2008_FRQ1 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2008_FRQ2",
@@ -139,18 +146,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2008_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A particle moving along a curve in the $xy$-plane has position $(x(t),y(t))$ at time $t>0$, where $\\frac{dx}{dt}=6-3\\sqrt t$ and $\\frac{dy}{dt}=t e^{-t}$. At time $t=3$, the particle is at the point $(5,4)$. (a) Find the speed of the partic",
+        "Existing topic tags: 9.x Parametric Motion.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U9",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U9 Parametric Equations, Polar Coordinates, and Vector-Valued Functions. FRQ 2008_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2008_FRQ3",
@@ -218,18 +232,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2008_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The temperature, in degrees Celsius ($^\\circ\\mathrm C$), of an oven being heated is modeled by an increasing differentiable function $H$ of time $t$, where $t$ is measured in minutes. The table below gives the temperature as recorded every ",
+        "Existing topic tags: 6.x Riemann Sums and Rate Interpretation.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2008_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2008_FRQ4",
@@ -299,18 +320,62 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2008_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f$ be the function given by $f(x)=(\\ln x)(\\sin x)$. The figure above shows the graph of $f$ for $0<x\\le2\\pi$. The function $g$ is defined by $g(x)=\\int_1^x f(t)\\,dt$ for $0<x\\le2\\pi$. (a) Find $g(1)$ and $g\\prime(1)$. (b) On what inter",
+        "Existing topic tags: 6.x Accumulation Functions from Graphs.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Let $f$ be the function given by $f(x)=(\\ln x)(\\sin x)$. The figure above shows the graph of $f$ for $0<x\\le2\\pi$. The function $g$ is defined by $g(x)=\\int_1^x f(t)\\,dt$ for $0<x\\le2\\pi$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph F",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2008/2008_FRQ4_graph_f.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find $g(1)$ and $g\\prime(1)$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "On what intervals, if any, is $g$ increasing? Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "For $0<x\\le2\\pi$, find the value of $x$ at which $g$ has an absolute minimum. Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "For $0<x<2\\pi$, is there a value of $x$ at which the graph of $g$ is tangent to the $x$-axis? Explain why or why not."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2008_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2008_FRQ5",
@@ -373,18 +438,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2008_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f$ be the function satisfying $f\\prime(x)=4x-2xf(x)$ for all real numbers $x$, with $f(0)=5$ and $\\lim_{x\\to\\infty}f(x)=2$. (a) Find the value of $\\int_0^\\infty(4x-2xf(x))\\,dx$. Show the work that leads to your answer. (b) Use Euler's ",
+        "Existing topic tags: 7.x Differential Equations.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U7",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2008_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2008_FRQ6",
@@ -452,18 +524,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2008_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The function $g$ is continuous for all real numbers $x$ and is defined by $g(x)=\\frac{\\cos(2x)-1}{x^2}$ for $x e0$. (a) Use L'Hospital's Rule to find the value of $g(0)$. Show the work that leads to your answer. (b) Let $f$ be the function ",
+        "Existing topic tags: 10.x Taylor Series.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U10",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U10 Infinite Sequences and Series. FRQ 2008_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2012_FRQ1",
@@ -533,18 +612,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2012_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The temperature of water in a tub at time $t$ is modeled by a strictly increasing, twice-differentiable function $W$, where $W(t)$ is measured in degrees Fahrenheit and $t$ is measured in minutes. At time $t=0$, the temperature of the water",
+        "Existing topic tags: 6.x Definite Integrals and Accumulation.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2012_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2012_FRQ2",
@@ -613,18 +699,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2012_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: For $t\\ge 0$, a particle is moving along a curve so that its position at time $t$ is $(x(t),y(t))$. At time $t=2$, the particle is at position $(1,5)$. It is known that $\\frac{dx}{dt}=\\frac{\\sqrt{t+2}}{e^t}$ and $\\frac{dy}{dt}=\\sin^2 t$. (a",
+        "Existing topic tags: 9.x Parametric Motion.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U9",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U9 Parametric Equations, Polar Coordinates, and Vector-Valued Functions. FRQ 2012_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2012_FRQ3",
@@ -694,18 +787,62 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2012_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f$ be the continuous function defined on $[-4,3]$ whose graph, consisting of three line segments and a semicircle centered at the origin, is given above. Let $g$ be the function given by $g(x)=\\int_1^x f(t)\\,dt$. (a) Find the values of",
+        "Existing topic tags: 6.x Accumulation Functions from Graphs.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Let $f$ be the continuous function defined on $[-4,3]$ whose graph, consisting of three line segments and a semicircle centered at the origin, is given above. Let $g$ be the function given by $g(x)=\\int_1^x f(t)\\,dt$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2012/2012_FRQ3_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the values of $g(2)$ and $g(-2)$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "For each of $g'(-3)$ and $g''(-3)$, find the value or state that it does not exist."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find the $x$-coordinate of each point at which the graph of $g$ has a horizontal tangent line. For each of these points, determine whether $g$ has a relative minimum, relative maximum, or neither a minimum nor a maximum at the point. Justify your answers."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "For $-4<x<3$, find all values of $x$ for which the graph of $g$ has a point of inflection. Explain your reasoning."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2012_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2012_FRQ4",
@@ -780,14 +917,23 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": "Primary unit is U10 because the full FRQ requires writing and using a second-degree Taylor polynomial; earlier approximation/integration work is prerequisite.",
+      "evidence": [
+        "FRQ 2012_FRQ4 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The function $f$ is twice differentiable for $x>0$ with $f(1)=15$ and $f''(1)=20$. Values of $f'$, the derivative of $f$, are given for selected values of $x$ in the table below. | $x$ | 1 | 1.1 | 1.2 | 1.3 | 1.4 | |---:|---:|---:|---:|---:",
+        "Existing topic tags: 8.x Approximation and Euler's Method, 10.x Taylor Polynomial.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U10",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Primary unit is U10 because the full FRQ requires writing and using a second-degree Taylor polynomial; earlier approximation/integration work is prerequisite."
+    "classification_reasoning": "Official progression review: U10 Infinite Sequences and Series. FRQ 2012_FRQ4 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2012_FRQ5",
@@ -853,18 +999,57 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2012_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The rate at which a baby bird gains weight is proportional to the difference between its adult weight and its current weight. At time $t=0$, when the bird is first weighed, its weight is 20 grams. If $B(t)$ is the weight of the bird, in gra",
+        "Existing topic tags: 7.x Differential Equations.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U7",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The rate at which a baby bird gains weight is proportional to the difference between its adult weight and its current weight. At time $t=0$, when the bird is first weighed, its weight is 20 grams. If $B(t)$ is the weight of the bird, in grams, at time $t$ days after it is first weighed, then \\[\\frac{dB}{dt}=\\frac15(100-B).\\] Let $y=B(t)$ be the solution to the differential equation above with initial condition $B(0)=20$."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Is the bird gaining weight faster when it weighs 40 grams or when it weighs 70 grams? Explain your reasoning."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find $\\frac{d^2B}{dt^2}$ in terms of $B$. Use $\\frac{d^2B}{dt^2}$ to explain why the graph of $B$ cannot resemble the following graph."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Reference Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2012/2012_FRQ5_reference_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Use separation of variables to find $y=B(t)$, the particular solution to the differential equation with initial condition $B(0)=20$."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2012_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2012_FRQ6",
@@ -925,18 +1110,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2012_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The function $g$ has derivatives of all orders, and the Maclaurin series for $g$ is \\[\\sum_{n=0}^{\\infty}(-1)^n\\frac{x^{2n+1}}{2n+3}=\\frac{x}{3}-\\frac{x^3}{5}+\\frac{x^5}{7}-\\cdots.\\] (a) Using the ratio test, determine the interval of conve",
+        "Existing topic tags: 10.x Power Series.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U10",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U10 Infinite Sequences and Series. FRQ 2012_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ1",
@@ -1029,18 +1221,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2013_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: On a certain workday, the rate, in tons per hour, at which unprocessed gravel arrives at a gravel processing plant is modeled by $G(t)=90+45\\cos\\left(\\dfrac{t^2}{18}\\right)$, where $t$ is measured in hours and $0\\le t\\le 8$. At the beginnin",
+        "Existing topic tags: 6.x Accumulation and rates in context.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2013_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ2",
@@ -1131,18 +1330,57 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2013_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The graphs of the polar curves $r=3$ and $r=4-2\\sin\\theta$ are shown in the figure above. The curves intersect when $\\theta=\\dfrac{\\pi}{6}$ and $\\theta=\\dfrac{5\\pi}{6}$. (a) Let $S$ be the shaded region that is inside the graph of $r=3$ and",
+        "Existing topic tags: 9.x Polar curves and polar motion.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U9",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The graphs of the polar curves $r=3$ and $r=4-2\\sin\\theta$ are shown in the figure above. The curves intersect when $\\theta=\\dfrac{\\pi}{6}$ and $\\theta=\\dfrac{5\\pi}{6}$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Polar Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2013/2013_FRQ2_polar_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Let $S$ be the shaded region that is inside the graph of $r=3$ and also inside the graph of $r=4-2\\sin\\theta$. Find the area of $S$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "A particle moves along the polar curve $r=4-2\\sin\\theta$ so that at time $t$ seconds, $\\theta=t^2$. Find the time $t$ in the interval $1\\le t\\le 2$ for which the $x$-coordinate of the particle's position is $-1$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "For the particle described in part (b), find the position vector in terms of $t$. Find the velocity vector at time $t=1.5$."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U9 Parametric Equations, Polar Coordinates, and Vector-Valued Functions. FRQ 2013_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ3",
@@ -1235,18 +1473,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2013_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Hot water is dripping through a coffeemaker, filling a large cup with coffee. The amount of coffee in the cup at time $t$, $0\\le t\\le6$, is given by a differentiable function $C$, where $t$ is measured in minutes. Selected values of $C(t)$,",
+        "Existing topic tags: 6.x Numerical integration and rates in context.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2013_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ4",
@@ -1337,18 +1582,62 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2013_FRQ4 is assigned to U5 (Analytical Applications of Differentiation) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The figure above shows the graph of $f'$, the derivative of a twice-differentiable function $f$, on the closed interval $0\\le x\\le8$. The graph of $f'$ has horizontal tangent lines at $x=1$, $x=3$, and $x=5$. The areas of the regions betwee",
+        "Existing topic tags: 5.x Derivative relationships, extrema, and concavity.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U5",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The figure above shows the graph of $f'$, the derivative of a twice-differentiable function $f$, on the closed interval $0\\le x\\le8$. The graph of $f'$ has horizontal tangent lines at $x=1$, $x=3$, and $x=5$. The areas of the regions between the graph of $f'$ and the $x$-axis are labeled in the figure. The function $f$ is defined for all real numbers and satisfies $f(8)=4$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph Fprime",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2013/2013_FRQ4_graph_fprime.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find all values of $x$ on the open interval $0<x<8$ for which the function $f$ has a local minimum. Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Determine the absolute minimum value of $f$ on the closed interval $0\\le x\\le8$. Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "On what open intervals contained in $0<x<8$ is the graph of $f$ both concave down and increasing? Explain your reasoning."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The function $g$ is defined by $g(x)=(f(x))^3$. If $f(3)=-\\dfrac52$, find the slope of the line tangent to the graph of $g$ at $x=3$."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U5 Analytical Applications of Differentiation. FRQ 2013_FRQ4 is assigned to U5 (Analytical Applications of Differentiation) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ5",
@@ -1442,18 +1731,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2013_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Consider the differential equation $\\dfrac{dy}{dx}=y^2(2x+2)$. Let $y=f(x)$ be the particular solution to the differential equation with initial condition $f(0)=-1$. (a) Find $\\displaystyle\\lim_{x\\to0}\\dfrac{f(x)+1}{\\sin x}$. Show the work ",
+        "Existing topic tags: 7.x Differential equations and Euler's method.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U7",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2013_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2013_FRQ6",
@@ -1541,18 +1837,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2013_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A function $f$ has derivatives of all orders at $x=0$. Let $P_n(x)$ denote the $n$th-degree Taylor polynomial for $f$ about $x=0$. (a) It is known that $f(0)=-4$ and that $P_1\\left(\\dfrac12\\right)=-3$. Show that $f'(0)=2$. (b) It is known t",
+        "Existing topic tags: 10.x Taylor polynomials and derivatives.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U10",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U10 Infinite Sequences and Series. FRQ 2013_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ1",
@@ -1623,18 +1926,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2014_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Ruth rode her bicycle on a straight trail. She recorded her velocity $v(t)$, in miles per hour, for selected values of $t$ over the interval $0\\le t\\le 2.4$ hours, as shown in the table above. For $0<t\\le 2.4$, $v(t)>0$. | $t$ (hours) | $0$",
+        "Existing topic tags: 6.x Accumulation, Riemann Sums, and Average Value.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2014_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ2",
@@ -1702,18 +2012,57 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2014_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Consider the polar curve defined by the function $r(\\theta)=\\theta\\cos\\theta$, where $0\\le \\theta\\le \\frac{3\\pi}{2}$. The derivative of $r$ is given by $\\frac{dr}{d\\theta}=\\cos\\theta-\\theta\\sin\\theta$. The figure above shows the graph of $r",
+        "Existing topic tags: 9.x Polar Area, Distance, and Tangent Slope.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U9",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Consider the polar curve defined by the function $r(\\theta)=\\theta\\cos\\theta$, where $0\\le \\theta\\le \\frac{3\\pi}{2}$. The derivative of $r$ is given by $\\frac{dr}{d\\theta}=\\cos\\theta-\\theta\\sin\\theta$. The figure above shows the graph of $r$ for $0\\le \\theta\\le \\frac{3\\pi}{2}$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Polar Curve",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2014/2014_FRQ2_polar_curve.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the area of the region enclosed by the inner loop of the curve."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "For $0\\le \\theta\\le \\frac{3\\pi}{2}$, find the greatest distance from any point on the graph of $r$ to the origin. Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "There is a point on the curve at which the slope of the line tangent to the curve is $\\frac{2}{2-\\pi}$. At this point, $\\frac{dy}{d\\theta}=\\frac12$. Find $\\frac{dx}{d\\theta}$ at this point."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U9 Parametric Equations, Polar Coordinates, and Vector-Valued Functions. FRQ 2014_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ3",
@@ -1782,18 +2131,57 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2014_FRQ3 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f(x)=e^{2x}$. Let $R$ be the region in the first quadrant bounded by the graph of $y=f(x)$ and the vertical line $x=1$, as shown in the figure above. (a) Write an equation for the line tangent to the graph of $f$ at $x=1$. (b) Find the",
+        "Existing topic tags: 8.x Area and Volume with Cross Sections.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Let $f(x)=e^{2x}$. Let $R$ be the region in the first quadrant bounded by the graph of $y=f(x)$ and the vertical line $x=1$, as shown in the figure above."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Region R",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2014/2014_FRQ3_region_R.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Write an equation for the line tangent to the graph of $f$ at $x=1$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find the area of $R$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Region $R$ forms the base of a solid whose cross sections perpendicular to the $y$-axis are squares. Write, but do not evaluate, an expression involving one or more integrals that gives the volume of the solid."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2014_FRQ3 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ4",
@@ -1867,18 +2255,62 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2014_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The continuous function $f$ is defined on the interval $-5\\le x\\le 8$. The graph of $f$, which consists of four line segments, is shown in the figure above. Let $g$ be the function given by $g(x)=2x+\\int_{-2}^{x}f(t)\\,dt$. (a) Find $g(0)$ a",
+        "Existing topic tags: 6.x Accumulation Functions and Graph Analysis.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The continuous function $f$ is defined on the interval $-5\\le x\\le 8$. The graph of $f$, which consists of four line segments, is shown in the figure above. Let $g$ be the function given by $g(x)=2x+\\int_{-2}^{x}f(t)\\,dt$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph F",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2014/2014_FRQ4_graph_f.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find $g(0)$ and $g(-5)$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find $g'(x)$ in terms of $f(x)$. For each of $g''(4)$ and $g''(-2)$, find the value or state that it does not exist."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "On what intervals, if any, is the graph of $g$ concave down? Give a reason for your answer."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "The function $h$ is given by $h(x)=g(x^3+1)$. Find $h'(1)$. Show the work that leads to your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2014_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ5",
@@ -1945,18 +2377,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2014_FRQ5 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A toy train moves along a straight track set up on a table. The position $x(t)$ of the train at time $t$ seconds is measured in centimeters from the center of the track. At time $t=1$, the train is $6$ centimeters to the left of the center,",
+        "Existing topic tags: 8.x Particle Motion and Parametric Distance.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2014_FRQ5 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2014_FRQ6",
@@ -2020,18 +2459,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2014_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $a_n=\\frac{1}{n\\ln n}$ for $n\\ge3$. (a) Let $f$ be the function given by $f(x)=\\frac{1}{x\\ln x}$. For $x\\ge3$, $f$ is continuous, decreasing, and positive. Use the integral test to show that $\\sum_{n=3}^{\\infty}a_n$ diverges. (b) Consid",
+        "Existing topic tags: 10.x Series Convergence Tests and Power Series.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U10",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U10 Infinite Sequences and Series. FRQ 2014_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ1",
@@ -2104,18 +2550,62 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2015_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: At time $t=0$ minutes, a tank contains $100$ liters of water. The piecewise-linear graph above shows the rate $R(t)$, in liters per minute, at which water is pumped into the tank during a $55$-minute period. (a) Find $R'(45)$. Using appropr",
+        "Existing topic tags: 6.x Accumulation and Net Change from Rates.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "At time $t=0$ minutes, a tank contains $100$ liters of water. The piecewise-linear graph above shows the rate $R(t)$, in liters per minute, at which water is pumped into the tank during a $55$-minute period."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Rate Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2015/2015_FRQ1_rate_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find $R'(45)$. Using appropriate units, explain the meaning of your answer in the context of this problem."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "How many liters of water have been pumped into the tank from time $t=0$ to time $t=55$ minutes? Show the work that leads to your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "At time $t=10$ minutes, water begins draining from the tank at a rate modeled by the function $D$, where $D(t)=10e^{(\\sin t)/10}$ liters per minute. Water continues to drain at this rate until time $t=55$ minutes. How many liters of water are in the tank at time $t=55$ minutes?"
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Using the functions $R$ and $D$, determine whether the amount of water in the tank is increasing or decreasing at time $t=45$ minutes. Justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2015_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ2",
@@ -2182,18 +2672,57 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2015_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The figure above shows the graph of the polar equation $r=2+\\sin(4\\theta)+\\cos(\\theta)$ for $0\\le \\theta \\le \\frac{\\pi}{2}$. The derivative of $r$ with respect to $\\theta$ is given by $r'(\\theta)=4\\cos(4\\theta)-\\sin(\\theta)$. (a) Find the a",
+        "Existing topic tags: 9.x Polar Area and Extrema.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U9",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The figure above shows the graph of the polar equation $r=2+\\sin(4\\theta)+\\cos(\\theta)$ for $0\\le \\theta \\le \\frac{\\pi}{2}$. The derivative of $r$ with respect to $\\theta$ is given by $r'(\\theta)=4\\cos(4\\theta)-\\sin(\\theta)$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Polar Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2015/2015_FRQ2_polar_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the area of the region bounded by the graph of $r$ and the lines $\\theta=0$ and $\\theta=\\frac{\\pi}{2}$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find the area of the region in the first quadrant that is outside the graph of $r=2+\\sin(4\\theta)+\\cos(\\theta)$ but inside the graph of the circle of radius $2$ centered at the origin."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find the value of $\\theta$ in the interval $0\\le \\theta \\le \\frac{\\pi}{2}$ that corresponds to the point on the curve $r=2+\\sin(4\\theta)+\\cos(\\theta)$ with greatest distance from the origin. Justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U9 Parametric Equations, Polar Coordinates, and Vector-Valued Functions. FRQ 2015_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ3",
@@ -2264,18 +2793,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2015_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Kathleen skates on a straight track. She starts from rest at the starting line at time $t=0$. For $0<t\\le 12$ seconds, Kathleen's velocity $k$, measured in feet per second, is differentiable and increasing. Values of $k(t)$ at various times",
+        "Existing topic tags: 6.x Riemann Sums and Accumulation.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2015_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ4",
@@ -2338,18 +2874,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2015_FRQ4 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: In a national park, the population of mountain lions grows over time. At time $t=0$, where $t$ is measured in years, the population is found to be $20$ mountain lions. (a) One zoologist suggests a population model $P$ that satisfies the dif",
+        "Existing topic tags: 7.x Differential Equations and Logistic Models.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U7",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2015_FRQ4 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ5",
@@ -2417,18 +2960,57 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2015_FRQ5 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $R$ be the region in the first quadrant enclosed by the graphs of $g(x)=\\sqrt{x}$ and $h(x)=\\frac{x}{3}$, as shown in the figure above. (a) Find the area of region $R$. (b) Write, but do not evaluate, an expression involving one or more",
+        "Existing topic tags: 8.x Area and Volume with Applications of Integration.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "Let $R$ be the region in the first quadrant enclosed by the graphs of $g(x)=\\sqrt{x}$ and $h(x)=\\frac{x}{3}$, as shown in the figure above."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Region R",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2015/2015_FRQ5_region_R.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the area of region $R$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Write, but do not evaluate, an expression involving one or more integrals that gives the volume of the solid generated when $R$ is revolved about the horizontal line $y=4$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find the maximum vertical distance between the graph of $g$ and the graph of $h$ between $x=0$ and $x=16$. Justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2015_FRQ5 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ6",
@@ -2492,18 +3074,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2015_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The Maclaurin series for a function $f$ is given by $\\frac{x}{3}+\\frac{x^2}{4}+\\frac{x^3}{5}+\\cdots+\\frac{x^n}{n+2}+\\cdots$. (a) Use the ratio test to find the interval of convergence of the Maclaurin series for $f$. (b) Let $g$ be the func",
+        "Existing topic tags: 10.x Power Series and Error Bounds.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U10",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U10 Infinite Sequences and Series. FRQ 2015_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ1",
@@ -2571,18 +3160,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2016_FRQ1 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The curve $C$ in the $xy$-plane is given parametrically by $(x(t),y(t))$, where $\\frac{dx}{dt}=t\\sin\\left(\\frac{2t}{3}\\right)$ and $\\frac{dy}{dt}=\\cos\\left(\\frac{t^2}{4}\\right)$ for $1\\le t\\le 6$. (a) Find the slope of the line tangent to t",
+        "Existing topic tags: 9.x Parametric Motion and Curves.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U9",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U9 Parametric Equations, Polar Coordinates, and Vector-Valued Functions. FRQ 2016_FRQ1 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ2",
@@ -2651,18 +3247,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2016_FRQ2 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A store tracks the sales of one of its popular board games over a 12-week period. The rate at which games are being sold is modeled by the differentiable function $G$, where $G(t)$ is measured in games per week and $t$ is measured in weeks ",
+        "Existing topic tags: 8.x Applications of Integration.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2016_FRQ2 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ3",
@@ -2732,18 +3335,62 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2016_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The function $f$ is defined on the interval $-5\\le x\\le c$, where $c>0$ and $f(c)=0$. The graph of $f$, which consists of three line segments and a quarter of a circle with center $(-3,0)$ and radius $2$, is shown in the figure above. (a) F",
+        "Existing topic tags: 6.x Accumulation Functions from Graphs.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The function $f$ is defined on the interval $-5\\le x\\le c$, where $c>0$ and $f(c)=0$. The graph of $f$, which consists of three line segments and a quarter of a circle with center $(-3,0)$ and radius $2$, is shown in the figure above."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2016/2016_FRQ3_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the average rate of change of $f$ over the interval $[-5,0]$. Show the computations that lead to your answer."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "For $-5\\le x\\le c$, let $g$ be the function defined by $g(x)=\\int_{-1}^{x}f(t)\\,dt$. Find the $x$-coordinate of each point of inflection of the graph of $g$. Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find the value of $c$ for which the average value of $f$ over the interval $-5\\le x\\le c$ is $\\frac12$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Assume $c>3$. The function $h$ is defined by $h(x)=f\\left(\\frac{x}{2}\\right)$. Find $h'(6)$ in terms of $c$."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2016_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ4",
@@ -2807,18 +3454,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2016_FRQ4 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $R$ be the region bounded above by the graph of $y=e^{-x}$, below by the $x$-axis, on the left by the $y$-axis, and on the right by the vertical line $x=m$, where $m>0$ is a constant. (a) Find the area of $R$ in terms of $m$. (b) Region",
+        "Existing topic tags: 8.x Area, Volume, and Improper Integrals.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U8",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2016_FRQ4 is assigned to U8 (Applications of Integration) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ5",
@@ -2882,18 +3536,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2016_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: For $0\\le t\\le 24$ hours, the temperature inside a refrigerator in a kitchen is given by the function $W$ that satisfies the differential equation $\\frac{dW}{dt}=\\frac{3\\cos t}{2W}$. $W(t)$ is measured in degrees Celsius ($^\\circ\\mathrm{C}$",
+        "Existing topic tags: 7.x Differential Equations.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U7",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2016_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2016_FRQ6",
@@ -2961,18 +3622,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2016_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f$ be a function that has derivatives of all orders for all real numbers, and let $3-6(x-1)^2+5(x-1)^3-2(x-1)^4$ be the fourth-degree Taylor polynomial for the function $f$ about $x=1$. (a) Find $f'''(1)$. (b) Does the graph of $f$ hav",
+        "Existing topic tags: 10.x Taylor Polynomials.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U10",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U10 Infinite Sequences and Series. FRQ 2016_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ1",
@@ -3066,18 +3734,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2017_FRQ1 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: For $0\\le t\\le 8$, a particle moving in the $xy$-plane has position vector $\\langle x(t),y(t)\\rangle=\\langle \\sin(2t),t^2-t\\rangle$, where $x(t)$ and $y(t)$ are measured in meters and $t$ is measured in seconds. (a) Find the speed of the pa",
+        "Existing topic tags: 9.x Parametric Motion and Curves.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U9",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U9 Parametric Equations, Polar Coordinates, and Vector-Valued Functions. FRQ 2017_FRQ1 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ2",
@@ -3174,18 +3849,62 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2017_FRQ2 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: During the time interval $0\\le t\\le 4.5$ hours, water flows into tank $A$ at a rate of $a(t)=(2t-5)+5e^{2\\sin t}$ liters per hour. During the same time interval, water flows into tank $B$ at a rate of $b(t)$ liters per hour. Both tanks are ",
+        "Existing topic tags: 6.x Accumulation, Definite Integrals, and Rates in Context.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "During the time interval $0\\le t\\le 4.5$ hours, water flows into tank $A$ at a rate of $a(t)=(2t-5)+5e^{2\\sin t}$ liters per hour. During the same time interval, water flows into tank $B$ at a rate of $b(t)$ liters per hour. Both tanks are empty at time $t=0$. The graphs of $y=a(t)$ and $y=b(t)$, shown in the figure above, intersect at $t=k$ and $t=2.416$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Rates Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2017/2017_FRQ2_rates_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "How much water will be in tank $A$ at time $t=4.5$?"
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "During the time interval $0\\le t\\le k$ hours, water flows into tank $B$ at a constant rate of $20.5$ liters per hour. What is the difference between the amount of water in tank $A$ and the amount of water in tank $B$ at time $t=k$?"
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The area of the region bounded by the graphs of $y=a(t)$ and $y=b(t)$ for $k\\le t\\le 2.416$ is $14.470$. How much water is in tank $B$ at time $t=2.416$?"
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "During the time interval $2.7\\le t\\le 4.5$ hours, the rate at which water flows into tank $B$ is modeled by $w(t)=21-\\frac{30t}{(t-8)^2}$ liters per hour. Is the difference $w(t)-a(t)$ increasing or decreasing at time $t=3.5$? Show the work that leads to your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2017_FRQ2 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ3",
@@ -3272,18 +3991,62 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2017_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The graph of the function $f$, consisting of three line segments and a quarter of a circle, is shown above. Let $g$ be the function defined by $g(x)=\\int_1^x f(t)\\,dt$. (a) Find the average rate of change of $g$ from $x=-5$ to $x=5$. (b) Fi",
+        "Existing topic tags: 6.x Accumulation Functions and the Fundamental Theorem of Calculus.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The graph of the function $f$, consisting of three line segments and a quarter of a circle, is shown above. Let $g$ be the function defined by $g(x)=\\int_1^x f(t)\\,dt$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph F",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2017/2017_FRQ3_graph_f.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the average rate of change of $g$ from $x=-5$ to $x=5$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find the instantaneous rate of change of $g$ with respect to $x$ at $x=3$, or state that it does not exist."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "On what open intervals, if any, is the graph of $g$ concave up? Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Find all $x$-values in the interval $-5<x<5$ at which $g$ has a critical point. Classify each critical point as the location of a local minimum, a local maximum, or neither. Justify your answers."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2017_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ4",
@@ -3380,18 +4143,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2017_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The function $f$ satisfies $f(0)=20$. The first derivative of $f$ satisfies the inequality $0\\le f'(x)\\le 7$ for all $x$ in the closed interval $[0,6]$. Selected values of $f'$ are shown in the table below. The function $f$ has a continuous",
+        "Existing topic tags: 6.x Definite Integrals and the Fundamental Theorem of Calculus.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2017_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ5",
@@ -3484,14 +4254,23 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": "Primary unit is U10 because the full FRQ requires a second-degree Taylor polynomial and Lagrange error bound; differential equations are prerequisite context.",
+      "evidence": [
+        "FRQ 2017_FRQ5 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Consider the differential equation $\\frac{dy}{dx}=-1+\\frac{y^2}{x}$. (a) Show that $\\frac{d^2y}{dx^2}=\\frac{2y^3-y^2-2xy}{x^2}$. (b) Let $y=g(x)$ be the particular solution to the differential equation $\\frac{dy}{dx}=-1+\\frac{y^2}{x}$ with ",
+        "Existing topic tags: 7.x Differential Equations and Taylor Polynomials.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U10",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Primary unit is U10 because the full FRQ requires a second-degree Taylor polynomial and Lagrange error bound; differential equations are prerequisite context."
+    "classification_reasoning": "Official progression review: U10 Infinite Sequences and Series. FRQ 2017_FRQ5 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2017_FRQ6",
@@ -3580,18 +4359,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2017_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f$ be the function defined by $f(x)=\\frac{1}{x^2+9}$. (a) Evaluate the improper integral $\\int_3^{\\infty} f(x)\\,dx$, or show that the integral diverges. (b) Determine whether the series $\\sum_{n=3}^{\\infty}f(n)$ converges or diverges. ",
+        "Existing topic tags: 10.x Infinite Series and Convergence Tests.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U10",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U10 Infinite Sequences and Series. FRQ 2017_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2018_FRQ1",
@@ -3663,18 +4449,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2018_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Grain is being added to a silo. At time $t=0$, the silo is empty. The rate at which grain is being added is modeled by the differentiable function $g$, where $g(t)$ is measured in cubic feet per minute for $0\\le t\\le 8$ minutes. Selected va",
+        "Existing topic tags: 6.x Accumulation, Riemann Sums, and Rate Interpretation.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2018_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2018_FRQ2",
@@ -3748,18 +4541,62 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2018_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A particle moving in the $xy$-plane has position $(x(t),y(t))$ at time $t\\ge 0$, where $\\frac{dx}{dt}=\\cos(t^2)$ and $\\frac{dy}{dt}=e^t\\sin(t^2)$. At time $t=0$, the particle is at position $(1,2)$. The figure above shows the path of the pa",
+        "Existing topic tags: 9.x Parametric Motion.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U9",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A particle moving in the $xy$-plane has position $(x(t),y(t))$ at time $t\\ge 0$, where $\\frac{dx}{dt}=\\cos(t^2)$ and $\\frac{dy}{dt}=e^t\\sin(t^2)$. At time $t=0$, the particle is at position $(1,2)$. The figure above shows the path of the particle for $0\\le t\\le 2$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Particle Path",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2018/2018_FRQ2_particle_path.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the position of the particle at time $t=2$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find the slope of the line tangent to the particle's path at time $t=2$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find the speed of the particle at time $t=2$. Find the acceleration vector of the particle at time $t=2$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Consider a rectangle with vertices at points $(0,0)$, $(x(t),0)$, $(x(t),y(t))$, and $(0,y(t))$ at time $t\\ge0$. For $0\\le t\\le2$, at what time $t$ is the perimeter of the rectangle a maximum? Justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U9 Parametric Equations, Polar Coordinates, and Vector-Valued Functions. FRQ 2018_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2018_FRQ3",
@@ -3832,18 +4669,62 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2018_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The function $g$ is defined on the closed interval $[-4,8]$. The graph of $g$ consists of two linear pieces and a semicircle, as shown in the figure above. Let $f$ be the function defined by $f(x)=3x+\\int_0^x g(t)\\,dt$. (a) Find $f(7)$ and ",
+        "Existing topic tags: 6.x Accumulation Functions from Graphs.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The function $g$ is defined on the closed interval $[-4,8]$. The graph of $g$ consists of two linear pieces and a semicircle, as shown in the figure above. Let $f$ be the function defined by $f(x)=3x+\\int_0^x g(t)\\,dt$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph G Clean",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2018/2018_FRQ3_graph_g_clean.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find $f(7)$ and $f'(7)$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find the value of $x$ in the closed interval $[-4,3]$ at which $f$ attains its maximum value. Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "For each of $\\lim_{x\\to0^-}g'(x)$ and $\\lim_{x\\to0^+}g'(x)$, find the value or state that it does not exist."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Find $\\lim_{x\\to-2}\\frac{f(x)+7}{3x+6}$."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2018_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2018_FRQ4",
@@ -3915,18 +4796,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2018_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $g$ be the function that satisfies $g(0)=0$ and whose derivative satisfies $g'(x)=2|x|$. (a) Find expressions for $g(x)$ and $g''(x)$. (b) Find the $x$-coordinate, if any, of each point of inflection of the graph of $y=g(x)$. Explain yo",
+        "Existing topic tags: 6.x Integrals, Arc Length, and Integration by Parts.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2018_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2018_FRQ5",
@@ -3999,18 +4887,62 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2018_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: During a chemical reaction, the function $y=f(t)$ models the amount of a substance present, in grams, at time $t$ seconds. At the start of the reaction $(t=0)$, there are $10$ grams of the substance present. The function $y=f(t)$ satisfies ",
+        "Existing topic tags: 7.x Differential Equations.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U7",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "During a chemical reaction, the function $y=f(t)$ models the amount of a substance present, in grams, at time $t$ seconds. At the start of the reaction $(t=0)$, there are $10$ grams of the substance present. The function $y=f(t)$ satisfies the differential equation $\\frac{dy}{dt}=-0.02y^2$."
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Use the line tangent to the graph of $y=f(t)$ at $t=0$ to approximate the amount of the substance remaining at time $t=2$ seconds."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Candidate Graph",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2018/2018_FRQ5_candidate_graph.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Using the given differential equation, determine whether the graph of $f$ could resemble the following graph. Give a reason for your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find an expression for $y=f(t)$ by solving the differential equation $\\frac{dy}{dt}=-0.02y^2$ with the initial condition $f(0)=10$."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Determine whether the amount of the substance is changing at an increasing or a decreasing rate. Explain your reasoning."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2018_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2018_FRQ6",
@@ -4078,18 +5010,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2018_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f$ be a function having derivatives of all orders for all real numbers. Selected values of $f$ and its first four derivatives are shown in the table below. | $x$ | $f(x)$ | $f'(x)$ | $f''(x)$ | $f'''(x)$ | $f^{(4)}(x)$ | |---:|---:|---",
+        "Existing topic tags: 10.x Taylor Polynomials and Error Bounds.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U10",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U10 Infinite Sequences and Series. FRQ 2018_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2019_FRQ1",
@@ -4188,18 +5127,25 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2019_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The rate at which cars enter a parking lot is modeled by $E(t)=30+5(t-2)(t-5)e^{-0.2t}$. The rate at which cars leave the parking lot is modeled by the differentiable function $L$. Selected values of $L(t)$ are given in the table below. Bot",
+        "Existing topic tags: CHA-4.D Using Accumulation Functions and Definite Integrals in Applied Contexts.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2019_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2019_FRQ2",
@@ -4300,18 +5246,62 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2019_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A laser is a device that produces a beam of light. A design, shown above, is etched onto a flat piece of metal using a moving laser. The position of the laser at time $t$ seconds is represented by $(x(t),y(t))$ in the $xy$-plane. Both $x$ a",
+        "Existing topic tags: FUN-8.B Solving Motion Problems Using Parametric and Vector-Valued Functions.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U9",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "A laser is a device that produces a beam of light. A design, shown above, is etched onto a flat piece of metal using a moving laser. The position of the laser at time $t$ seconds is represented by $(x(t),y(t))$ in the $xy$-plane. Both $x$ and $y$ are measured in centimeters, and $t$ is measured in seconds. The laser starts at position $(0,0)$ at time $t=0$, and the design takes $3.1$ seconds to complete. For $0\\le t\\le 3.1$, $\\frac{dx}{dt}=3\\cos(t^2)$ and $\\frac{dy}{dt}=4\\cos(2.5t)$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Laser Design",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2019/2019_FRQ2_laser_design.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find the speed of the laser at time $t=3$ seconds."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find the total distance traveled by the laser from time $t=1$ to time $t=3$ seconds."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "The laser is farthest to the right at time $t=1.253$ seconds. Find the $x$-coordinate of the laser's rightmost position."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "What is the difference between the $y$-coordinates of the laser's highest position and lowest position for $0\\le t\\le 3.1$? Justify your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U9 Parametric Equations, Polar Coordinates, and Vector-Valued Functions. FRQ 2019_FRQ2 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2019_FRQ3",
@@ -4416,18 +5406,25 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2019_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Let $f$ be the function defined by $$f(x)= \\begin{cases} \\sqrt{9-x^2}, & -3\\le x\\le 0,\\\\ -x+3\\cos\\left(\\frac{\\pi x}{2}\\right), & 0<x\\le 4. \\end{cases}$$ (a) Find the average rate of change of $f$ on the interval $-3\\le x\\le 4$. (b) Write an",
+        "Existing topic tags: FUN-6.A Average Value of a Function on an Interval, FUN-4.A Applying Derivatives to Analyze Functions.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2019_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2019_FRQ4",
@@ -4534,18 +5531,57 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2019_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The continuous function $f$ is defined for $-4\\le x\\le 4$. The graph of $f$, shown above, consists of two line segments and portions of three parabolas. The graph has horizontal tangents at $x=-\\dfrac12$, $x=\\dfrac12$, and $x=\\dfrac52$. It ",
+        "Existing topic tags: FUN-6.C Accumulation Functions, FUN-4.A Using Derivatives to Analyze Functions.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U6",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The continuous function $f$ is defined for $-4\\le x\\le 4$. The graph of $f$, shown above, consists of two line segments and portions of three parabolas. The graph has horizontal tangents at $x=-\\dfrac12$, $x=\\dfrac12$, and $x=\\dfrac52$. It is known that $f(x)=-x^2+5x-4$ for $1\\le x\\le 4$. The areas of regions $A$ and $B$ bounded by the graph of $f$ and the $x$-axis are $3$ and $5$, respectively. Let $g$ be the function defined by $g(x)=\\int_{-4}^{x} f(t)\\,dt$."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Graph F Reconstructed",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2019/2019_FRQ4_graph_f_reconstructed.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Find $g(0)$ and $g(4)$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Find the absolute minimum value of $g$ on the closed interval $[-4,4]$. Justify your answer."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "Find all intervals on which the graph of $g$ is concave down. Give a reason for your answer."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2019_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2019_FRQ5",
@@ -4653,18 +5689,62 @@
     },
     "pure_unit": false,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2019_FRQ5 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The graph of the curve $C$, given by $4x^2+3y^2+6y=9$, is shown in the figure above. (a) Show that $\\dfrac{dy}{dx}=\\dfrac{-4x}{3(y+1)}$. (b) Using the information from part (a), find $\\dfrac{d^2y}{dx^2}$ in terms of $x$ and $y$. (c) In pola",
+        "Existing topic tags: FUN-8.C Calculus of Polar Curves, FUN-3.C Implicit Differentiation.",
+        "Student-visible media are preserved with 1 image reference(s).",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U9",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "content_blocks": [
+      {
+        "type": "paragraph",
+        "text": "The graph of the curve $C$, given by $4x^2+3y^2+6y=9$, is shown in the figure above."
+      },
+      {
+        "type": "figure",
+        "figure_id": null,
+        "caption": "Curve C Reconstructed",
+        "subcaptions": [],
+        "image_paths": [
+          "images/ap/calculus-bc/2019/2019_FRQ5_curve_C_reconstructed.png"
+        ],
+        "used_by_parts": []
+      },
+      {
+        "type": "part",
+        "label": "(a)",
+        "text": "Show that $\\dfrac{dy}{dx}=\\dfrac{-4x}{3(y+1)}$."
+      },
+      {
+        "type": "part",
+        "label": "(b)",
+        "text": "Using the information from part (a), find $\\dfrac{d^2y}{dx^2}$ in terms of $x$ and $y$."
+      },
+      {
+        "type": "part",
+        "label": "(c)",
+        "text": "In polar coordinates, the curve $C$ is given by $r=\\dfrac{3}{2+\\sin\\theta}$ for $0\\le\\theta\\le 2\\pi$. Find $\\dfrac{dr}{d\\theta}$. As $\\theta$ increases, on what intervals is the distance between the origin and the point $(r,\\theta)$ increasing? Give a reason for your answer."
+      },
+      {
+        "type": "part",
+        "label": "(d)",
+        "text": "Let $S$ be the region inside curve $C$, as defined in part (c), but outside the curve $r=2$. Write, but do not evaluate, an integral expression for the area of $S$."
+      }
+    ],
+    "classification_reasoning": "Official progression review: U9 Parametric Equations, Polar Coordinates, and Vector-Valued Functions. FRQ 2019_FRQ5 is assigned to U9 (Parametric Equations, Polar Coordinates, and Vector-Valued Functions) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2019_FRQ6",
@@ -4767,17 +5847,24 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "structured_sample_reviewed",
+      "review_status": "reviewed",
       "confidence": "medium",
       "evidence": [
-        "2008, 2012, 2013, 2014, 2015, 2016, 2017, 2018, and 2019 manual transcription and delivery audits passed.",
-        "Classification is provisional until all BC years are stable."
+        "FRQ 2019_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Consider the series $\\displaystyle \\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}(x-3)^n}{5^n\\cdot n^p}$, where $p$ is a constant and $p>0$. (a) For $p=3$ and $x=8$, does the series converge absolutely, converge conditionally, or diverge? Explain your",
+        "Existing topic tags: LIM-7.A Convergence Tests for Infinite Series, LIM-7.C Alternating Series Error Bound.",
+        "Subject calculus-bc passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Calculus-BC/docs/source_pack.json"
       ],
-      "classification_version": "calc_bc_structured_v2"
-    }
+      "classification_version": "calculus-bc-official-progression-2026-07-19",
+      "primary_unit": "U10",
+      "authority": "AP Calculus BC Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
+    },
+    "classification_reasoning": "Official progression review: U10 Infinite Sequences and Series. FRQ 2019_FRQ6 is assigned to U10 (Infinite Sequences and Series) under AP Calculus BC Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   }
 ]

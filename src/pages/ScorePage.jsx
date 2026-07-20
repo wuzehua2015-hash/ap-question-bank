@@ -5,8 +5,10 @@ import { MathText } from '../components/MathText'
 import FRQDisplay from '../components/FRQDisplay'
 import { PdfContainer, exportToPdf } from '../utils/pdfExport.jsx'
 import { useSubject } from '../contexts/SubjectContext'
+import { useAuth } from '../contexts/AuthContext'
 import { formatAnswer, isAnswerCorrect } from '../utils/questionBank'
 import { getDiagramOptionLayout, getQuestionImagePaths } from '../utils/diagramOptions'
+import { subjectDisplayName, unitDisplayName } from '../utils/displayLabels'
 
 function ScoreBackgroundTable({ tableData }) {
   if (!tableData?.headers?.length || !tableData?.rows?.length) return null
@@ -56,7 +58,8 @@ function ScoreBackgroundTable({ tableData }) {
 function ScorePage() {
   const navigate = useNavigate()
   const { currentSubjectConfig } = useSubject()
-  const subjectName = currentSubjectConfig?.name || 'AP Microeconomics'
+  const { isLoggedIn, isInternalStudent } = useAuth()
+  const subjectName = currentSubjectConfig ? subjectDisplayName(currentSubjectConfig) : 'AP 题库'
   const pdfRef = useRef(null)
   const [quiz, setQuiz] = useState([])
   const [answers, setAnswers] = useState({})
@@ -112,6 +115,10 @@ function ScorePage() {
 
   const exportPDF = async () => {
     if (!pdfRef.current) return
+    if (!isInternalStudent) {
+      navigate(isLoggedIn ? '/account' : `/login?returnTo=${encodeURIComponent('/score')}&reason=lynk-student`)
+      return
+    }
     setExporting(true)
     try {
       const filename = `LynkEdu-Mock-Exam-Report-${new Date().toISOString().split('T')[0]}.pdf`
@@ -131,7 +138,7 @@ function ScorePage() {
 
   const unitName = (unit) => {
     const found = currentSubjectConfig?.units?.find(u => u.id === unit)
-    return found?.name || unit
+    return found ? unitDisplayName(found, currentSubjectConfig, { includeId: false }) : unit
   }
 
   if (loading) {
@@ -151,7 +158,7 @@ function ScorePage() {
           disabled={exporting}
           className="bg-accent hover:bg-accent-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
         >
-          {exporting ? '生成中...' : '导出 PDF 成绩单'}
+          {exporting ? '生成中...' : isInternalStudent ? '导出 PDF 成绩单' : '翎英学员下载成绩单'}
         </button>
       </div>
 
@@ -319,14 +326,15 @@ function ScorePage() {
                   </p>
                   <ScoreBackgroundTable tableData={q.background_data?.table} />
                   {visibleImages.length > 0 && (
-                    <div style={{ marginBottom: '12px' }}>
+                    <div className="question-image-wrap">
                       {visibleImages
                         .map((imgPath, i) => (
                           <img
                             key={i}
                             src={import.meta.env.BASE_URL + imgPath.replace(/^\//, '')}
                             alt=""
-                            style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '4px' }}
+                            className="question-image"
+                            style={{ maxHeight: '300px', borderRadius: '4px' }}
                           />
                         ))}
                     </div>

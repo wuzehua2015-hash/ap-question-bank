@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+﻿import { useEffect, useMemo, useState } from 'react'
 import { MathText } from './MathText'
 import { formatAnswer, isAnswerCorrect, isMultipleAnswerQuestion, normalizeSelectedAnswer } from '../utils/questionBank'
 import { getDiagramOptionLayout, getQuestionImagePaths, isDiagramOptionSet } from '../utils/diagramOptions'
@@ -6,27 +6,38 @@ import { getDiagramOptionLayout, getQuestionImagePaths, isDiagramOptionSet } fro
 const BASE_URL = import.meta.env.BASE_URL || '/'
 
 function ImageWithFallback({ path }) {
-  const [src, setSrc] = useState(path.startsWith('/') ? BASE_URL + path.slice(1) : path)
+  const initialSrc = useMemo(
+    () => (path.startsWith('/') ? BASE_URL + path.slice(1) : path),
+    [path]
+  )
+  const [src, setSrc] = useState(initialSrc)
   const [hasError, setHasError] = useState(false)
+
+  useEffect(() => {
+    setSrc(initialSrc)
+    setHasError(false)
+  }, [initialSrc])
 
   if (hasError) return null
 
   return (
-    <img
-      src={src}
-      alt=""
-      className="max-w-full max-h-[560px] mx-auto mb-4 rounded-lg border border-border"
-      onError={() => {
-        const originalPath = path.startsWith('/') ? path : '/' + path
-        if (src !== originalPath) {
-          console.log('Image fallback:', originalPath)
-          setSrc(originalPath)
-        } else {
-          console.error('Image failed completely:', path)
-          setHasError(true)
-        }
-      }}
-    />
+    <div className="question-image-wrap">
+      <img
+        src={src}
+        alt=""
+        className="question-image max-w-full max-h-[560px] mx-auto rounded-lg border border-border"
+        onError={() => {
+          const originalPath = path.startsWith('/') ? path : '/' + path
+          if (src !== originalPath) {
+            console.log('Image fallback:', originalPath)
+            setSrc(originalPath)
+          } else {
+            console.error('Image failed completely:', path)
+            setHasError(true)
+          }
+        }}
+      />
+    </div>
   )
 }
 
@@ -57,6 +68,15 @@ function BackgroundTable({ tableData }) {
           ))}
         </div>
       ))}
+    </div>
+  )
+}
+
+function GroupContext({ text }) {
+  if (!text) return null
+  return (
+    <div className="question-group-context">
+      <MathText text={text} as="div" />
     </div>
   )
 }
@@ -144,22 +164,24 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
   const displayImagePaths = getQuestionImagePaths(imagePaths, question.options, tableData)
 
   return (
-    <div className="bg-surface rounded-xl p-6 shadow-sm border border-border">
+    <div data-question-id={question.question_id} className="bg-surface rounded-xl p-6 shadow-sm border border-border">
       {/* Question tags */}
       <div className="flex flex-wrap gap-2 mb-3">
         <span className="bg-brand text-white text-xs px-2 py-1 rounded">{question.primary_unit}</span>
       </div>
 
+      <GroupContext text={question.group_context} />
+
       {/* Question text */}
-      <h3 className="text-lg font-medium text-text mb-4 leading-relaxed">
-        <MathText text={question.text || question.question_text} />
-      </h3>
+      <div className="text-lg font-medium text-text mb-4 leading-relaxed">
+        <MathText text={question.text || question.question_text} as="div" />
+      </div>
 
       {/* Images */}
       <BackgroundTable tableData={hasTableImage ? null : backgroundTable} />
 
       {displayImagePaths.map((path, i) => (
-        <ImageWithFallback key={i} path={path} />
+        <ImageWithFallback key={`${question.question_id}-${path}-${i}`} path={path} />
       ))}
 
       {/* Options */}
@@ -207,8 +229,10 @@ function QuestionCard({ question, selectedAnswer, phase, onSelect }) {
                     {isSelected ? '✓' : ''}
                   </span>
                 )}
-                <span className="font-bold mr-2">{key}.</span>
-                <MathText text={text} forceInlineLatex />
+                <span className="option-label">{key}.</span>
+                <span className="option-content">
+                  <MathText text={text} forceInlineLatex />
+                </span>
                 {showCorrect && <span className="ml-2 text-success text-sm">✓ 正确</span>}
                 {showIncorrect && <span className="ml-2 text-error text-sm">✗ 你的答案</span>}
               </button>

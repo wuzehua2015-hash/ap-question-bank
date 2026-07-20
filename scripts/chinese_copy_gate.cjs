@@ -12,6 +12,8 @@ const files = [
   'src/components/FRQDisplay.jsx',
   'src/pages/HomePage.jsx',
   'src/pages/LoginPage.jsx',
+  'src/pages/RegisterPage.jsx',
+  'src/pages/ResetPasswordPage.jsx',
   'src/pages/AccountPage.jsx',
   'src/pages/SettingsPage.jsx',
   'src/pages/QuizPlayer.jsx',
@@ -29,6 +31,8 @@ const requiredChineseFiles = [
   'src/components/Header.jsx',
   'src/pages/HomePage.jsx',
   'src/pages/LoginPage.jsx',
+  'src/pages/RegisterPage.jsx',
+  'src/pages/ResetPasswordPage.jsx',
   'src/pages/AccountPage.jsx',
   'src/pages/SettingsPage.jsx',
   'src/pages/QuizPlayer.jsx',
@@ -38,7 +42,7 @@ const requiredChineseFiles = [
 
 const mojibakePattern = /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7\u9354\u68f0\u93bc\u7edb\u95ff\u59dd\u7035\u6d93\u93c4\u935a\u9a9e\u95c5\u5bb8\u6ccc\u6d60\u9429\u5997\u6ad2\u704f\uFFFD]/
 const chinesePattern = /[\u4e00-\u9fff]/
-const internalStatusPattern = /(已认证|认证|releaseStatus|visibility|certified|content-risk|public launch|公开状态|内部状态)/
+const internalStatusPattern = /(已认证|认证|releaseStatus|visibility|certified|content-risk|public launch|公开状态|内部状态|内部学生|免费账号|普通账号)/
 const englishCoreCopy = [
   /\bStart Mock Exam\b/,
   /\bDownload PDF\b/,
@@ -51,6 +55,11 @@ const englishCoreCopy = [
   /\bNext Question\b/,
   /\bView Results\b/,
 ]
+const rawSubjectRenderPattern = /\{(?:currentSubjectConfig|sessionSubjectConfig|subject)\?\?\.\s*(?:name|shortName)\}|\{(?:currentSubjectConfig|sessionSubjectConfig|subject)\.(?:name|shortName)\}/
+const rawUnitRenderPattern = /\{(?:unit|u|item)\.(?:name|title)\}/
+const allowedRawLabelFiles = new Set([
+  'src/utils/displayLabels.js',
+])
 
 for (const rel of files) {
   const text = fs.readFileSync(path.join(ROOT, rel), 'utf8')
@@ -65,6 +74,12 @@ for (const rel of files) {
       errors.push(`${rel}: contains English core student UI phrase ${pattern}`)
       break
     }
+  }
+  if (!allowedRawLabelFiles.has(rel) && rawSubjectRenderPattern.test(text)) {
+    errors.push(`${rel}: renders raw subject name/shortName instead of displayLabels mapping`)
+  }
+  if (!allowedRawLabelFiles.has(rel) && rawUnitRenderPattern.test(text)) {
+    errors.push(`${rel}: renders raw unit name/title instead of displayLabels mapping`)
   }
 }
 

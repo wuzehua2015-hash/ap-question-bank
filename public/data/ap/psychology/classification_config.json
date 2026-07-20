@@ -1,111 +1,47 @@
 {
   "subject": "AP Psychology",
-  "version": "ap_psychology_legacy_9_unit_v1",
-  "framework_note": "The local 2012 and 2018 PDFs use the legacy paper AP Psychology exam format: 100 MCQ and 2 FRQ. The current AP Central page describes a redesigned digital exam and is not used as the primary classification framework for these legacy exams.",
+  "version": "ap_psychology_official_5_unit_2026_v1",
+  "framework_note": "AP Psychology uses the current official five-unit course framework. Legacy released questions are mapped to the earliest official unit for which a student has enough course knowledge; research methods and statistics are treated as cross-unit course skills and placed at the earliest viable stage when no later content is required.",
   "units": [
     {
       "id": "U1",
-      "name": "Scientific Foundations of Psychology",
-      "exam_weight": "10-14%",
-      "topics": [
-        "history and approaches",
-        "research methods",
-        "experimental design",
-        "descriptive statistics",
-        "inferential statistics",
-        "ethics in psychological research"
-      ],
-      "common_terms": [
-        "random assignment",
-        "random sample",
-        "correlation",
-        "experiment",
-        "operational definition",
-        "mean",
-        "median",
-        "mode",
-        "standard deviation",
-        "ethics"
-      ]
-    },
-    {
-      "id": "U2",
       "name": "Biological Bases of Behavior",
-      "exam_weight": "8-10%",
+      "exam_weight": "15-25%",
       "topics": [
+        "biological psychology",
         "neural communication",
         "brain structures",
         "nervous system",
         "endocrine system",
         "genetics and behavior",
-        "sleep and consciousness",
-        "drugs and psychoactive substances"
+        "sensation and perception",
+        "consciousness",
+        "psychoactive drugs",
+        "research methods as a course skill"
       ],
       "common_terms": [
         "neuron",
         "neurotransmitter",
+        "brain",
         "amygdala",
         "hypothalamus",
-        "cerebellum",
-        "limbic system",
-        "sympathetic nervous system",
-        "parasympathetic nervous system",
-        "endocrine"
-      ]
-    },
-    {
-      "id": "U3",
-      "name": "Sensation and Perception",
-      "exam_weight": "6-8%",
-      "topics": [
-        "thresholds",
-        "sensory adaptation",
-        "vision",
-        "hearing",
-        "perceptual organization",
-        "depth perception",
-        "attention"
-      ],
-      "common_terms": [
-        "absolute threshold",
-        "difference threshold",
-        "signal detection",
-        "sensory adaptation",
         "retina",
         "cochlea",
-        "gestalt",
-        "depth cue",
-        "selective attention"
+        "sensation",
+        "perception",
+        "sleep",
+        "drug",
+        "experiment",
+        "correlation",
+        "random assignment",
+        "random sample",
+        "standard deviation"
       ]
     },
     {
-      "id": "U4",
-      "name": "Learning",
-      "exam_weight": "7-9%",
-      "topics": [
-        "classical conditioning",
-        "operant conditioning",
-        "observational learning",
-        "reinforcement",
-        "punishment",
-        "learning applications"
-      ],
-      "common_terms": [
-        "classical conditioning",
-        "operant conditioning",
-        "reinforcement",
-        "punishment",
-        "shaping",
-        "extinction",
-        "spontaneous recovery",
-        "modeling",
-        "observational learning"
-      ]
-    },
-    {
-      "id": "U5",
-      "name": "Cognitive Psychology",
-      "exam_weight": "13-17%",
+      "id": "U2",
+      "name": "Cognition",
+      "exam_weight": "15-25%",
       "topics": [
         "memory",
         "thinking",
@@ -116,121 +52,95 @@
         "cognitive biases"
       ],
       "common_terms": [
-        "working memory",
-        "long-term memory",
+        "memory",
         "encoding",
         "retrieval",
         "schema",
         "heuristic",
         "algorithm",
-        "availability heuristic",
-        "representativeness heuristic",
-        "IQ",
+        "language",
+        "intelligence",
         "validity",
         "reliability"
       ]
     },
     {
-      "id": "U6",
-      "name": "Developmental Psychology",
-      "exam_weight": "7-9%",
+      "id": "U3",
+      "name": "Development and Learning",
+      "exam_weight": "15-25%",
       "topics": [
-        "prenatal development",
+        "classical conditioning",
+        "operant conditioning",
+        "observational learning",
+        "developmental psychology",
         "attachment",
         "cognitive development",
-        "moral development",
-        "social development",
-        "adolescence and adulthood"
+        "moral development"
       ],
       "common_terms": [
+        "classical conditioning",
+        "operant conditioning",
+        "reinforcement",
+        "punishment",
+        "observational learning",
+        "modeling",
         "Piaget",
-        "schema",
-        "assimilation",
-        "accommodation",
-        "object permanence",
         "Kohlberg",
         "Erikson",
-        "attachment",
-        "stranger anxiety"
+        "attachment"
       ]
     },
     {
-      "id": "U7",
-      "name": "Motivation, Emotion, and Personality",
-      "exam_weight": "11-15%",
+      "id": "U4",
+      "name": "Social Psychology and Personality",
+      "exam_weight": "15-25%",
       "topics": [
         "motivation",
-        "hunger and drives",
-        "emotion theories",
-        "stress",
+        "emotion",
         "personality theories",
-        "assessment of personality"
-      ],
-      "common_terms": [
-        "drive reduction",
-        "incentive",
-        "Maslow",
-        "James-Lange",
-        "Cannon-Bard",
-        "Schachter-Singer",
-        "Big Five",
-        "psychoanalytic",
-        "trait theory",
-        "self-efficacy"
-      ]
-    },
-    {
-      "id": "U8",
-      "name": "Clinical Psychology",
-      "exam_weight": "12-16%",
-      "topics": [
-        "psychological disorders",
-        "diagnosis",
-        "anxiety disorders",
-        "mood disorders",
-        "schizophrenia",
-        "personality disorders",
-        "treatment and therapy"
-      ],
-      "common_terms": [
-        "DSM",
-        "anxiety",
-        "depression",
-        "bipolar",
-        "schizophrenia",
-        "phobia",
-        "obsessive-compulsive",
-        "cognitive therapy",
-        "behavior therapy",
-        "psychoanalysis",
-        "antidepressant"
-      ]
-    },
-    {
-      "id": "U9",
-      "name": "Social Psychology",
-      "exam_weight": "8-10%",
-      "topics": [
-        "attribution",
         "attitudes",
+        "attribution",
         "conformity",
         "obedience",
         "group behavior",
-        "prejudice",
-        "interpersonal attraction",
-        "aggression and altruism"
+        "interpersonal attraction"
       ],
       "common_terms": [
-        "fundamental attribution error",
-        "central route persuasion",
-        "peripheral route persuasion",
-        "cognitive dissonance",
+        "motivation",
+        "emotion",
+        "personality",
+        "trait",
+        "attribution",
         "conformity",
         "obedience",
-        "groupthink",
-        "social facilitation",
-        "bystander effect",
-        "stereotype"
+        "group",
+        "prejudice",
+        "bystander"
+      ]
+    },
+    {
+      "id": "U5",
+      "name": "Mental and Physical Health",
+      "exam_weight": "15-25%",
+      "topics": [
+        "stress",
+        "health psychology",
+        "psychological disorders",
+        "diagnosis",
+        "treatment and therapy",
+        "biomedical therapy"
+      ],
+      "common_terms": [
+        "stress",
+        "coping",
+        "DSM",
+        "disorder",
+        "anxiety",
+        "depression",
+        "schizophrenia",
+        "therapy",
+        "treatment",
+        "antidepressant"
       ]
     }
   ],
@@ -266,5 +176,14 @@
       "year": 2025,
       "set": "set_2"
     }
-  ]
+  ],
+  "subject_id": "psychology",
+  "unit_classification_authority": {
+    "official_framework": "AP Psychology Course and Exam Description",
+    "official_url": "https://apcentral.collegeboard.org/courses/ap-psychology",
+    "policy": "Official exam and subject framework materials are the only authority for unit classification.",
+    "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
+  },
+  "source": "AP Psychology Course and Exam Description; legacy released questions migrated to official five-unit framework",
+  "review_status": "machine_reviewed_with_rule_based_semantic_pass"
 }
