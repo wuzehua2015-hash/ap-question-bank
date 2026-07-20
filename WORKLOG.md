@@ -399,3 +399,13 @@
 - Added `scripts/global_sop_gate.cjs` and wired it into `npm run validate` through `validate:sop`.
 - The gate verifies that global SOP, structured prompt contract, unit classification standard, expansion ledger, project status, and work log remain present and contain the required markers.
 - Updated `PROJECT_STATUS.md` so global expansion/new-item delivery rules are visible from the project status entry point.
+
+# 2026-07-20 - Quiz Image Transition Production Fix
+
+- Fixed online Quiz image refresh: stateful question images now reset their internal source/error state when `path` changes, and question image keys include `question_id` plus image path.
+- Added focused browser audit `npm run audit:quiz-image-transition`, which seeds adjacent image-bearing MCQs, clicks the real next-question control, and verifies the second question shows its own image without retaining the previous question image.
+- Strengthened `scripts/student_flow_audit.cjs` so regular student-flow samples include adjacent image questions when available and check current question image visibility.
+- Validation passed locally: `npm run lint`, `npm run validate`, `npm run build`, macro mobile student-flow, local all-subject image-transition audit.
+- Synced source to GitHub `main` through stable API fallback. Remote tree matches local tree.
+- Deployed production through Cloudflare Pages project `lynkedu-ap-question-bank`: `https://ad92b4af.lynkedu-ap-question-bank.pages.dev`.
+- Verified real production domain `https://lynkedu.com`: macro image-transition audit passed with 0 errors, then all 16 active subjects passed with 0 errors.
