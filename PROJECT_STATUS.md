@@ -225,3 +225,15 @@ The site has entered productization for public launch:
   - resend email verification returned `delivery: "email"` and D1 logged provider status 200;
   - admin grant, cancellation, and restore are present in `admin_audit_logs`.
 - Source mirror note: latest admin-console source tree is synced to GitHub branch `prod-mock-pdf-fix` through stable API fallback. Use `npm run stable:status` for the live tree-match check; API fallback creates a remote commit id different from local Git history while preserving the same tree.
+
+## 2026-07-20 Student Production Deploy
+
+- GitHub source mirror is not the production closeout by itself. The live student site is Cloudflare Pages project `lynkedu-ap-question-bank`; production closeout requires direct Cloudflare Pages deployment plus `https://lynkedu.com` verification.
+- Deployed student site to Cloudflare Pages:
+  - Pages URL: `https://ad92b4af.lynkedu-ap-question-bank.pages.dev`;
+  - production domain refreshed to `/assets/index-DKzXJdq6.js`;
+  - production `QuizPlayer` chunk `/assets/QuizPlayer-La5mfC82.js` contains the `data-question-id` marker used by browser audits.
+- Production verification passed on `https://lynkedu.com`:
+  - `npm run audit:quiz-image-transition -- --subject macro --mobile true --url https://lynkedu.com/ --port 9674`: 0 errors;
+  - `npm run audit:quiz-image-transition -- --mobile true --url https://lynkedu.com/ --port 9675`: 16 subjects, 0 errors.
+- Deployment workflow rule: after GitHub source sync, still run `npx wrangler pages deploy dist --project-name lynkedu-ap-question-bank --branch main` for the student site, then verify the custom domain. Do not treat GitHub Pages status as evidence that `lynkedu.com` is current.
