@@ -8512,25 +8512,25 @@
     "answer_type": "single",
     "scoring_status": "scored",
     "image_paths": [],
-    "primary_unit": "U6",
-    "unit": "U6",
+    "primary_unit": "U10",
+    "unit": "U10",
     "unit_name": "Array",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U6",
+      "primary_unit": "U10",
       "secondary_units": [],
       "confidence": 0.78,
       "evidence": [
-        "MCQ ap_bowl_2018_Q37 is assigned to U6 (Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: Which of the following is (are) true? I. Insertion sort takes longer when the array is sorted in ascending order and you want it sorted in descending order. II. Mergesort uses recursion. III. Selection sort takes less time to execute if the",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "ap_bowl_2018_Q37 is assigned to U10 (Recursion) because solving it requires Recursion.",
+        "The item asks whether mergesort uses recursion, so the required solving knowledge includes recursion rather than only array traversal.",
+        "Previous reviewed status was rechecked under the classification-accuracy hard-boundary gate."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "classification_version": "classification-accuracy-contract-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "official topic framework plus required-knowledge progression contract"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\network_sources\\ap_bowl\\ap_bowl_2018_exam.pdf",
@@ -8539,8 +8539,22 @@
       "source_credit": "Barbara Ericson / Georgia Tech AP CSA Practice Exam 2018"
     },
     "rubric_image_paths": [],
-    "classification_reasoning": "Official progression review: U6 Array. MCQ ap_bowl_2018_Q37 is assigned to U6 (Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Official progression review: U10 Recursion. ap_bowl_2018_Q37 requires Recursion under the current official course framework; by the student progression rule, the item is answerable after U10 and prior units, not earlier.",
+    "unit_classification": "official-progression-reviewed",
+    "classification_accuracy": {
+      "version": "required-knowledge-v1",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U10",
+          "topic_code": "10",
+          "topic_name": "Recursion",
+          "reason": "The item asks whether mergesort uses recursion, so the required solving knowledge includes recursion rather than only array traversal."
+        }
+      ],
+      "why_not_earlier_unit": "Earlier units do not include Recursion as required solving knowledge.",
+      "review_status": "topic_reviewed"
+    }
   },
   {
     "question_id": "ap_bowl_2018_Q38",

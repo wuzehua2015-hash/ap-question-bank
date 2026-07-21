@@ -24,6 +24,7 @@ const MANUAL_OVERRIDES = {
   'question_bank.json|2012_Q07': ['U5', 'Hyperinflation from money growth used to finance deficits is U5 money growth/inflation and government deficits.'],
   'question_bank.json|2012_Q08': ['U4', 'Investment demand response to the real interest rate belongs with financial-sector interest-rate reasoning.'],
   'question_bank.json|2012_Q13': ['U2', 'Circular flow of income and production is Topic 2.1.'],
+  'question_bank.json|2012_Q15': ['U5', 'Current official Topic 5.2 places the Phillips Curve in Unit 5.'],
   'question_bank.json|2012_Q17': ['U3', 'Aggregate demand shift caused by income taxes is fiscal-policy/AD reasoning.'],
   'question_bank.json|2012_Q23': ['U4', 'Expansionary monetary policy transmission is U4.'],
   'question_bank.json|2012_Q27': ['U2', 'Official unemployment classification is Unit 2.'],
@@ -39,6 +40,7 @@ const MANUAL_OVERRIDES = {
   'question_bank.json|2014_Q12': ['U2', 'Circular flow model is Topic 2.1.'],
   'question_bank.json|2014_Q20': ['U3', 'Expansionary fiscal policy to close an output gap is Unit 3.'],
   'question_bank.json|2014_Q23': ['U5', 'Potential GDP decrease from net capital loss is long-run growth/productive-capacity reasoning.'],
+  'question_bank.json|2014_Q30': ['U5', 'Current official Topic 5.2 places the Phillips Curve in Unit 5.'],
   'question_bank.json|2014_Q38': ['U5', 'Per-capita real GDP growth differences from human capital are Unit 5.'],
   'question_bank.json|2014_Q39': ['U3', 'Demand-pull inflation in AD-AS short-run/long-run adjustment is Unit 3.'],
   'question_bank.json|2014_Q46': ['U4', 'Federal Reserve open-market response is monetary policy, Unit 4.'],
@@ -49,7 +51,7 @@ const MANUAL_OVERRIDES = {
   'question_bank.json|2014_Q56': ['U5', 'Phillips curve item requires SRPC and vertical LRPC long-run reasoning, Unit 5.'],
   'question_bank.json|2014_Q57': ['U2', 'Recession identification is Unit 2, even though the visual uses a PPC.'],
   'question_bank.json|2014_Q58': ['U5', 'Correctly anticipated inflation and long-run neutrality require Unit 5.'],
-  'question_bank.json|2015_Q17': ['U3', 'Short-run Phillips curve trade-off is Unit 3.'],
+  'question_bank.json|2015_Q17': ['U5', 'Current official Topic 5.2 places the Phillips Curve in Unit 5.'],
   'question_bank.json|2015_Q28': ['U5', 'Coordinated fiscal and monetary policy to reduce inflation is Unit 5.'],
   'question_bank.json|2015_Q30': ['U2', 'Real GDP definition is Unit 2.'],
   'question_bank.json|2015_Q34': ['U5', 'National debt definition is Unit 5.'],
@@ -65,10 +67,12 @@ const MANUAL_OVERRIDES = {
   'question_bank.json|2016_Q12': ['U6', 'Expansionary monetary policy with exchange-rate outcome requires Unit 6.'],
   'question_bank.json|2016_Q13': ['U2', 'GDP calculation from macroeconomic data is Unit 2.'],
   'question_bank.json|2016_Q24': ['U5', 'Long-run Phillips curve implication is Unit 5.'],
+  'question_bank.json|2016_Q27': ['U5', 'Current official Topic 5.2 places the Phillips Curve in Unit 5.'],
   'question_bank.json|2016_Q26': ['U4', 'Government borrowing effect on short-run interest rates uses loanable-funds/interest-rate reasoning.'],
   'question_bank.json|2016_Q28': ['U3', 'Investment change and multiplier effect on GDP is Unit 3.'],
   'question_bank.json|2016_Q53': ['U4', 'Expected real interest-rate definition is Unit 4.'],
   'question_bank.json|2017_Q07': ['U4', 'Government borrowing effect on bond prices and interest-rate channel is Unit 4.'],
+  'question_bank.json|2017_Q17': ['U5', 'Current official Topic 5.2 places the Phillips Curve in Unit 5.'],
   'question_bank.json|2017_Q23': ['U5', 'Fully anticipated money-supply expansion in the long run is Unit 5.'],
   'question_bank.json|2017_Q26': ['U1', 'Comparative advantage in free trade is Unit 1.'],
   'question_bank.json|2017_Q28': ['U3', 'Tax decrease effect on nominal GDP is fiscal-policy/AD reasoning.'],
@@ -100,7 +104,7 @@ const MANUAL_OVERRIDES = {
   'question_bank.json|2019_Q20': ['U4', 'Nominal and real interest rates with expected inflation are Unit 4.'],
   'question_bank.json|2019_Q25': ['U4', 'Opportunity cost of holding currency is forgone interest, Unit 4.'],
   'question_bank.json|2019_Q33': ['U5', 'Expected inflation and natural-rate adjustment are Unit 5.'],
-  'question_bank.json|2019_Q38': ['U3', 'Short-run Phillips curve trade-off is Unit 3.'],
+  'question_bank.json|2019_Q38': ['U5', 'Current official Topic 5.2 places the Phillips Curve in Unit 5.'],
   'question_bank.json|2019_Q39': ['U4', 'Fixed-rate loan outcome from actual versus expected inflation is Unit 4.'],
   'question_bank.json|2019_Q52': ['U3', 'Long-run self-adjustment from unemployment above natural rate is Unit 3.'],
   'question_bank.json|2019_Q56': ['U5', 'Fiscal contraction plus monetary expansion is policy mix, Unit 5.'],
@@ -131,7 +135,7 @@ const UNIT_RULES = [
     unit: 'U5',
     name: 'Long-Run Consequences of Stabilization Policies',
     patterns: [
-      /\b(crowding out|long[- ]run phillips|LRPC|long[- ]run aggregate supply|LRAS shifts?|potential output growth|economic growth|productivity|human capital|physical capital|technology|technological progress|supply[- ]side|rational expectations|adaptive expectations|expected inflation|inflationary expectations|government budget surplus|government budget deficit|national debt|budget deficit|budget surplus|money growth and inflation)\b/i,
+      /\b(Phillips curve|short[- ]run phillips|long[- ]run phillips|SRPC|LRPC|crowding out|long[- ]run aggregate supply|LRAS shifts?|potential output growth|economic growth|productivity|human capital|physical capital|technology|technological progress|supply[- ]side|rational expectations|adaptive expectations|expected inflation|inflationary expectations|government budget surplus|government budget deficit|national debt|budget deficit|budget surplus|money growth and inflation)\b/i,
       /\b(fiscal policy|government spending|tax(?:es)?)\b[\s\S]{0,160}\b(monetary policy|central bank|Federal Reserve|money supply|buy bonds|sell bonds|open market)\b/i,
       /\b(monetary policy|central bank|Federal Reserve|money supply|buy bonds|sell bonds|open market)\b[\s\S]{0,160}\b(fiscal policy|government spending|tax(?:es)?)\b/i,
     ],
@@ -147,7 +151,7 @@ const UNIT_RULES = [
     unit: 'U3',
     name: 'National Income and Price Determination',
     patterns: [
-      /\b(aggregate demand|aggregate supply|AD[-–]AS|SRAS|LRAS|price level|short[- ]run equilibrium|recessionary gap|inflationary gap|self[- ]adjustment|fiscal policy|government expenditures?|government spending|tax multiplier|spending multiplier|marginal propensity to consume|MPC|marginal propensity to save|MPS|automatic stabilizers?|short[- ]run phillips|SRPC|stagflation|demand[- ]pull|cost[- ]push)\b/i,
+      /\b(aggregate demand|aggregate supply|AD[-–]AS|SRAS|LRAS|price level|short[- ]run equilibrium|recessionary gap|inflationary gap|self[- ]adjustment|fiscal policy|government expenditures?|government spending|tax multiplier|spending multiplier|marginal propensity to consume|MPC|marginal propensity to save|MPS|automatic stabilizers?|stagflation|demand[- ]pull|cost[- ]push)\b/i,
     ],
   },
   {
@@ -168,9 +172,9 @@ const UNIT_RULES = [
 
 const LATER_BOUNDARIES = [
   ['U2', /\b(unemployment|unemployed|GDP|gross domestic product|CPI|consumer price index|business cycle|circular flow)\b/i, 'U2 economic indicators or circular flow evidence'],
-  ['U3', /\b(aggregate demand|aggregate supply|AD[-–]AS|SRAS|LRAS|fiscal policy|multiplier|price level|Phillips curve)\b/i, 'U3 AD-AS, fiscal policy, multiplier, or SRPC evidence'],
+  ['U3', /\b(aggregate demand|aggregate supply|AD[-–]AS|SRAS|LRAS|fiscal policy|multiplier|price level)\b/i, 'U3 AD-AS, fiscal policy, or multiplier evidence'],
   ['U4', /\b(money|bank|reserves?|Federal Reserve|central bank|monetary policy|interest rate|loanable funds|M1|M2|bond)\b/i, 'U4 financial sector evidence'],
-  ['U5', /\b(crowding out|long[- ]run|economic growth|productivity|national debt|budget deficit|policy mix|expected inflation)\b/i, 'U5 long-run, debt, growth, or policy-mix evidence'],
+  ['U5', /\b(Phillips curve|short[- ]run phillips|long[- ]run phillips|SRPC|LRPC|crowding out|long[- ]run|economic growth|productivity|national debt|budget deficit|policy mix|expected inflation)\b/i, 'U5 Phillips Curve, long-run, debt, growth, or policy-mix evidence'],
   ['U6', /\b(exchange rate|foreign exchange|current account|financial account|net exports?|tariff|quota|trade)\b/i, 'U6 open-economy evidence'],
 ]
 

@@ -714,7 +714,7 @@
       "E": "smaller labor-force participation rates"
     },
     "answer": "A",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [
       "U2"
     ],
@@ -729,7 +729,7 @@
     "image_paths": [],
     "source": "AP Macro 2012 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Official progression review: U3 National Income and Price Determination. MCQ 2012_Q15 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. 2012_Q15 requires The Phillips Curve under the current official course framework; by the student progression rule, the item is answerable after U5 and prior units, not earlier.",
     "difficulty_source": "inferred",
     "difficulty_score": 6,
     "skills": [
@@ -739,17 +739,30 @@
     "requires_graph": false,
     "unit_classification": "official-progression-reviewed",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "classification-accuracy-contract-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "MCQ 2012_Q15 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: According to the short-run Phillips curve, lower inflation rates are associated with",
-        "Existing topic tags: unemployment, unemployment rate, inflation, inflation rate.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "2012_Q15 is assigned to U5 (Long-Run Consequences of Stabilization Policies) because solving it requires The Phillips Curve.",
+        "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2.",
+        "Previous reviewed status was rechecked under the classification-accuracy hard-boundary gate."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "official topic framework plus required-knowledge progression contract"
+    },
+    "classification_accuracy": {
+      "version": "required-knowledge-v1",
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2."
+        }
+      ],
+      "why_not_earlier_unit": "Earlier units do not include The Phillips Curve as required solving knowledge.",
+      "review_status": "topic_reviewed"
     }
   },
   {
@@ -4501,7 +4514,7 @@
       "E": "an increase in aggregate supply"
     },
     "answer": "D",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "aggregate demand",
@@ -4512,7 +4525,7 @@
     "image_paths": [],
     "source": "AP Macro 2014 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U3 National Income and Price Determination. MCQ 2014_Q30 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. 2014_Q30 requires The Phillips Curve under the current official course framework; by the student progression rule, the item is answerable after U5 and prior units, not earlier.",
     "difficulty_source": "inferred",
     "difficulty_score": 7,
     "skills": [
@@ -4522,17 +4535,30 @@
     "requires_graph": false,
     "unit_classification": "official-progression-reviewed",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "classification-accuracy-contract-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "MCQ 2014_Q30 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A rightward shift of the short-run Phillips curve is most likely due to",
-        "Existing topic tags: aggregate demand, aggregate supply.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "2014_Q30 is assigned to U5 (Long-Run Consequences of Stabilization Policies) because solving it requires The Phillips Curve.",
+        "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2.",
+        "Previous reviewed status was rechecked under the classification-accuracy hard-boundary gate."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "official topic framework plus required-knowledge progression contract"
+    },
+    "classification_accuracy": {
+      "version": "required-knowledge-v1",
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2."
+        }
+      ],
+      "why_not_earlier_unit": "Earlier units do not include The Phillips Curve as required solving knowledge.",
+      "review_status": "topic_reviewed"
     }
   },
   {
@@ -6964,7 +6990,7 @@
       "E": "the natural rate of unemployment is unattainable"
     },
     "answer": "A",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "money supply",
@@ -6976,7 +7002,7 @@
     "image_paths": [],
     "source": "AP Macro 2015 Official Practice Exam",
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U3 National Income and Price Determination. MCQ 2015_Q17 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. 2015_Q17 requires The Phillips Curve under the current official course framework; by the student progression rule, the item is answerable after U5 and prior units, not earlier.",
     "difficulty_source": "inferred",
     "difficulty_score": 7,
     "skills": [
@@ -6986,17 +7012,30 @@
     "requires_graph": false,
     "unit_classification": "official-progression-reviewed",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "classification-accuracy-contract-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "MCQ 2015_Q17 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: The short-run Phillips curve shows that",
-        "Existing topic tags: money supply, phillips curve, short-run phillips curve.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "2015_Q17 is assigned to U5 (Long-Run Consequences of Stabilization Policies) because solving it requires The Phillips Curve.",
+        "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2.",
+        "Previous reviewed status was rechecked under the classification-accuracy hard-boundary gate."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "official topic framework plus required-knowledge progression contract"
+    },
+    "classification_accuracy": {
+      "version": "required-knowledge-v1",
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2."
+        }
+      ],
+      "why_not_earlier_unit": "Earlier units do not include The Phillips Curve as required solving knowledge.",
+      "review_status": "topic_reviewed"
     }
   },
   {
@@ -10504,7 +10543,7 @@
       "E": "how expectations change as the rate of inflation increases and the unemployment rate decreases"
     },
     "answer": "B",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [
       "U4",
       "U2"
@@ -10520,7 +10559,7 @@
     "image_paths": [],
     "source": "AP Macro 2016 Official Practice Exam",
     "pure_unit": false,
-    "classification_reasoning": "Official progression review: U3 National Income and Price Determination. MCQ 2016_Q27 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. 2016_Q27 requires The Phillips Curve under the current official course framework; by the student progression rule, the item is answerable after U5 and prior units, not earlier.",
     "difficulty_source": "official_stats",
     "difficulty_score": 7,
     "percent_correct": 76,
@@ -10530,17 +10569,30 @@
     "requires_graph": false,
     "unit_classification": "official-progression-reviewed",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "classification-accuracy-contract-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "MCQ 2016_Q27 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: The short-run Phillips curve shows",
-        "Existing topic tags: unemployment, unemployment rate, inflation, natural rate of unemployment.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "2016_Q27 is assigned to U5 (Long-Run Consequences of Stabilization Policies) because solving it requires The Phillips Curve.",
+        "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2.",
+        "Previous reviewed status was rechecked under the classification-accuracy hard-boundary gate."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "official topic framework plus required-knowledge progression contract"
+    },
+    "classification_accuracy": {
+      "version": "required-knowledge-v1",
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2."
+        }
+      ],
+      "why_not_earlier_unit": "Earlier units do not include The Phillips Curve as required solving knowledge.",
+      "review_status": "topic_reviewed"
     }
   },
   {
@@ -13179,7 +13231,7 @@
       "E": "An increase in the labor-force participation rate"
     },
     "answer": "A",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [],
     "difficulty": "Medium",
@@ -13197,20 +13249,33 @@
       "analyze"
     ],
     "requires_graph": true,
-    "classification_reasoning": "Official progression review: U3 National Income and Price Determination. MCQ 2017_Q17 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. 2017_Q17 requires The Phillips Curve under the current official course framework; by the student progression rule, the item is answerable after U5 and prior units, not earlier.",
     "unit_classification": "official-progression-reviewed",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "classification-accuracy-contract-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "MCQ 2017_Q17 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: Which of the following would cause a movement from point S to point R on the short-run Phillips curve above?",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "2017_Q17 is assigned to U5 (Long-Run Consequences of Stabilization Policies) because solving it requires The Phillips Curve.",
+        "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2.",
+        "Previous reviewed status was rechecked under the classification-accuracy hard-boundary gate."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "official topic framework plus required-knowledge progression contract"
+    },
+    "classification_accuracy": {
+      "version": "required-knowledge-v1",
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2."
+        }
+      ],
+      "why_not_earlier_unit": "Earlier units do not include The Phillips Curve as required solving knowledge.",
+      "review_status": "topic_reviewed"
     }
   },
   {
@@ -14530,7 +14595,7 @@
       "E": "a leftward shift of the aggregate demand curve"
     },
     "answer": "B",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [
       "U4",
       "U2"
@@ -14549,19 +14614,33 @@
       "analyze"
     ],
     "requires_graph": false,
-    "classification_reasoning": "Official progression review: U3 National Income and Price Determination. MCQ 2017_Q45 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. 2017_Q45 requires The Phillips Curve under current AP Macroeconomics Topic 5.2 because the answer choices distinguish movements and shifts of the short-run Phillips curve; by the student progression rule, it is answerable after U5 and prior units, not earlier.",
     "unit_classification": "official-progression-reviewed",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "classification-accuracy-contract-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "MCQ 2017_Q45 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: An increase in both the inflation rate and the unemployment rate can be illustrated by",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "2017_Q45 is assigned to U5 because solving it requires The Phillips Curve.",
+        "The correct option depends on identifying a rightward shift of the short-run Phillips curve.",
+        "Current AP Macroeconomics CED places The Phillips Curve in Unit 5 Topic 5.2."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "official topic framework plus required-knowledge progression contract"
+    },
+    "classification_accuracy": {
+      "version": "required-knowledge-v1",
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "The answer choices require Phillips Curve movement/shift reasoning."
+        }
+      ],
+      "why_not_earlier_unit": "Earlier units do not include The Phillips Curve as required solving knowledge in the current official framework.",
+      "review_status": "topic_reviewed"
     }
   },
   {
@@ -19955,7 +20034,7 @@
       "E": "interest rates and investment"
     },
     "answer": "C",
-    "primary_unit": "U3",
+    "primary_unit": "U5",
     "secondary_units": [],
     "topics": [
       "phillips curve",
@@ -19967,7 +20046,7 @@
     "image_paths": [],
     "source": "AP Macro 2019 Official Practice Exam | AP Macro 2022 Exam (Practice Set 3)",
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U3 National Income and Price Determination. MCQ 2019_Q38 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. 2019_Q38 requires The Phillips Curve under the current official course framework; by the student progression rule, the item is answerable after U5 and prior units, not earlier.",
     "difficulty_source": "official_stats",
     "difficulty_score": 9,
     "percent_correct": 85,
@@ -19977,17 +20056,30 @@
     "requires_graph": false,
     "unit_classification": "official-progression-reviewed",
     "classification": {
-      "primary_unit": "U3",
+      "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "classification-accuracy-contract-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "MCQ 2019_Q38 is assigned to U3 (National Income and Price Determination) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: The short-run Phillips curve implies there is a trade-off between",
-        "Existing topic tags: phillips curve, short-run phillips curve, investment.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "2019_Q38 is assigned to U5 (Long-Run Consequences of Stabilization Policies) because solving it requires The Phillips Curve.",
+        "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2.",
+        "Previous reviewed status was rechecked under the classification-accuracy hard-boundary gate."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "official topic framework plus required-knowledge progression contract"
+    },
+    "classification_accuracy": {
+      "version": "required-knowledge-v1",
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "Current AP Macroeconomics CED places Phillips Curve reasoning in Unit 5 Topic 5.2."
+        }
+      ],
+      "why_not_earlier_unit": "Earlier units do not include The Phillips Curve as required solving knowledge.",
+      "review_status": "topic_reviewed"
     }
   },
   {
