@@ -239,3 +239,13 @@ The site has entered productization for public launch:
   - `npm run audit:quiz-image-transition -- --subject macro --mobile true --url https://lynkedu.com/ --port 9674`: 0 errors;
   - `npm run audit:quiz-image-transition -- --mobile true --url https://lynkedu.com/ --port 9675`: 16 subjects, 0 errors.
 - Deployment workflow rule: after GitHub source sync, still run `npx wrangler pages deploy dist --project-name lynkedu-ap-question-bank --branch main` for the student site, then verify the custom domain. Do not treat GitHub Pages status as evidence that `lynkedu.com` is current.
+
+## 2026-07-21 Classification Accuracy Deployment
+
+- Local commit: `a6f25b5 Add classification accuracy contract gate`.
+- Remote sync: `npm run stable:status` confirms remote branch `prod-mock-pdf-fix` tree `ddccfc2a031e99bfe49f6de583432f3fdfb704b0` matches local HEAD tree; remote commit id is `f05a0ab9e75df5e5e135144a0212f836edeee498` because the stable API path creates a different commit object.
+- Cloudflare Pages student deployment: `https://32233839.lynkedu-ap-question-bank.pages.dev`.
+- Production data verification on `https://lynkedu.com` passed:
+  - Macro `2012_Q15`, `2014_Q30`, `2015_Q17`, `2016_Q27`, `2017_Q17`, `2017_Q45`, and `2019_Q38` return `primary_unit: U5` with required topic `5.2`.
+  - CSA `ap_bowl_2018_Q37` returns `primary_unit: U10`.
+  - Macro `classification_config.json` returns Unit 5 topics `5.1` through `5.7`, including `5.2 The Phillips Curve`.
