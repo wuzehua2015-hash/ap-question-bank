@@ -49,7 +49,7 @@ for (const subject of subjects) {
       bad_evidence_text: 0,
     }
     for (const item of rows) {
-      if (!item || item.not_scored || item.primary_unit === 'not_applicable') continue
+      if (!visible(item)) continue
       report.totals.items += 1
       subjectReport.items += 1
       fileReport.items += 1
@@ -112,6 +112,15 @@ function addFinding(subjectReport, fileReport, subjectId, file, questionId, prim
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'))
+}
+
+function visible(item) {
+  return item &&
+    !item.not_scored &&
+    item.primary_unit !== 'not_applicable' &&
+    item.student_visible !== false &&
+    item.publish_status !== 'blocked' &&
+    item.scoring_status !== 'not_scored'
 }
 
 function parseArgs(argv) {

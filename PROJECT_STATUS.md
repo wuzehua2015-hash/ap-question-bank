@@ -1,6 +1,6 @@
 # LynkEdu AP Question Bank Project Status
 
-Last updated: 2026-07-18
+Last updated: 2026-07-21
 
 ## Current Production
 
@@ -62,6 +62,8 @@ Student-facing copy must use `翎英学员`, not internal certification/release 
 
 Content-capacity status: 2026-07-16 capacity reinforcement cleared the pre-launch capacity audit for all 16 active subjects. Biology, CSP, APES, Physics 1, and Physics 2 now have at least 250 MCQ each and no sparse units under the current capacity audit.
 
+Topic-classification status: 2026-07-21 all 16 active AP subjects now have item-level official topic evidence for every student-visible scored item. Current student-visible scored set is 5349/5349 topic-level, 0 unit-level-only. Items outside the current official learning path are blocked from student flows rather than force-classified: Calculus AB 1, Physics 1 25, Physics 2 56, Physics C Mechanics 5.
+
 ## Student Account System
 
 - Primary login: email + password.
@@ -118,6 +120,7 @@ Content-capacity status: 2026-07-16 capacity reinforcement cleared the pre-launc
 - Any new subject, source expansion, item batch, or major diagnosis must follow the lifecycle in `GLOBAL_QUESTION_BANK_SOP.md`: source approval, subject risk discovery, reconstruction, unit review, student-surface verification, local publish, deployment verification, SSoT update, and remote tree sync.
 - A count increase is not completion. Completion requires accepted/rejected/deferred source decisions, subject-specific rendering checks, learning-sequence unit review, full validation/build, student-path evidence, and closeout notes.
 - Unit classification authority: every subject's `primary_unit` decisions must use official exam and official subject-framework materials as the only authority. For AP, use the current official Course and Exam Description/course framework plus official released/sample questions and official scoring guidelines where relevant. Third-party maps, existing labels, generated topics, and keyword scans are review aids only; they cannot justify final classification.
+- Completion of all-subject classification work requires all active student-visible scored items to pass `validate:classification-coverage`, `validate:classification-accuracy`, subject-specific unit gates, `validate:topic-level-completion`, `validate:student-progression`, and `validate:classification-evidence`. `unit_level_only` must be 0 before claiming completion.
 - Official framework gate: `npm run validate:official-units` is part of `npm run validate`. It checks all 16 active subjects' `classification_config.json` unit sequences against the registered official AP framework contract and requires explicit `unit_classification_authority` metadata.
 - Classification accuracy contract: `npm run validate:classification-accuracy` is part of `npm run validate`. It checks hard concept-boundary regressions across active subjects, validates item-level `required_topics`/`classification_accuracy` evidence when present, and reports subjects that still have unit-level authority but no topic-level official map. Current coverage debt after the 2026-07-21 update: 13 active subjects still need full official topic-map backfill; this is not a content pass claim.
 - Macro official-topic correction: current AP Macroeconomics framework places The Phillips Curve in Unit 5 Topic 5.2. Local rules and data must not classify SRPC/Phillips Curve items as U3 under the current framework unless a future official CED changes the topic map.

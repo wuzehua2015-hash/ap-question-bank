@@ -7,6 +7,7 @@ const subjects = JSON.parse(fs.readFileSync(subjectsPath, 'utf8')).subjects || [
 
 const errors = []
 const warnings = []
+const notes = []
 
 const allowedSparseUnits = {
   'computer-science-principles': {
@@ -91,7 +92,7 @@ for (const subject of subjects.filter(item => item.active && item.visibility !==
     const share = largest[1] / total
     if (share > 0.55) {
       if (allowedHighConcentration[subject.id]?.[largest[0]]) {
-        warnings.push(`${subject.id}: unit ${largest[0]} has unusually high MCQ concentration (${Math.round(share * 100)}%); ${allowedHighConcentration[subject.id][largest[0]]}`)
+        notes.push(`${subject.id}: unit ${largest[0]} has unusually high MCQ concentration (${Math.round(share * 100)}%); ${allowedHighConcentration[subject.id][largest[0]]}`)
       } else {
         errors.push(`${subject.id}: unit ${largest[0]} has unusually high MCQ concentration (${Math.round(share * 100)}%)`)
       }
@@ -122,10 +123,11 @@ for (const subject of subjects.filter(item => item.active && item.visibility !==
 }
 
 if (errors.length || warnings.length) {
-  console.log(`Unit distribution contract: ${errors.length} error(s), ${warnings.length} warning(s)`)
+  console.log(`Unit distribution contract: ${errors.length} error(s), ${warnings.length} warning(s), ${notes.length} note(s)`)
   for (const error of errors) console.log(`ERROR: ${error}`)
   for (const warning of warnings) console.log(`WARNING: ${warning}`)
+  for (const note of notes) console.log(`NOTE: ${note}`)
 }
 
 if (errors.length) process.exit(1)
-console.log(`Unit distribution contract passed with ${warnings.length} warning(s).`)
+console.log(`Unit distribution contract passed with ${warnings.length} warning(s), ${notes.length} note(s).`)

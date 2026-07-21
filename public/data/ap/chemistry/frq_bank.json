@@ -12,9 +12,9 @@
     "points": 10,
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U7",
-    "unit": "U7",
-    "unit_name": "Equilibrium",
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Chemical Reactions",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -77,16 +77,14 @@
       ]
     },
     "classification": {
-      "primary_unit": "U7",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U7 Equilibrium. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: A student is given the task of determining the $I^-$ content of tablets that contain $KI$ and an inert, water-soluble sugar as a filler. A tablet is dissolved in $50.0\\,\\mathrm{mL}$ of distilled water, and an excess of $0.20\\,\\mathrm{M}\\ Pb",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The iodide tablet analysis requires precipitation stoichiometry and percent composition; equilibrium context is not required."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -136,22 +134,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U7 Equilibrium. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U4 Chemical Reactions. Manual official-progression review: The iodide tablet analysis requires precipitation stoichiometry and percent composition; equilibrium context is not required.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Equilibrium",
-          "reason": "Prompt evidence: A student is given the task of determining the $I^-$ content of tablets that contain $KI$ and an inert, water-soluble sugar as a filler. A tablet is dissolved in $50.0\\,\\mathrm{mL}$ of distilled water, and an excess of $0.20\\,\\mathrm{M}\\ Pb Prior official-progression review assigned the full item to U7 Equilibrium."
+          "unit": "U4",
+          "topic_code": "4.5",
+          "topic_name": "Stoichiometry",
+          "reason": "Manual official-progression review: The iodide tablet analysis requires precipitation stoichiometry and percent composition; equilibrium context is not required."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Equilibrium is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Equilibrium. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Chemical Reactions is required by the full item.",
+      "classification_reasoning": "Official progression review: U4 Chemical Reactions. Manual official-progression review: The iodide tablet analysis requires precipitation stoichiometry and percent composition; equilibrium context is not required.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -237,12 +235,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: $CH_3CH_2COOH(aq)+H_2O(l)\\rightleftharpoons CH_3CH_2COO^-(aq)+H_3O^+(aq)$ Propanoic acid, $CH_3CH_2COOH$, is a carboxylic acid that reacts with water according to the equation above. At $25^\\circ\\mathrm{C}$ the pH of a $50.0\\,\\mathrm{mL}$ s",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Acid-base titrations require Unit 8.5."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -292,22 +288,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U8 Acids and Bases. Acid-base titrations require Unit 8.5.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: $CH_3CH_2COOH(aq)+H_2O(l)\\rightleftharpoons CH_3CH_2COO^-(aq)+H_3O^+(aq)$ Propanoic acid, $CH_3CH_2COOH$, is a carboxylic acid that reacts with water according to the equation above. At $25^\\circ\\mathrm{C}$ the pH of a $50.0\\,\\mathrm{mL}$ s Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "topic_code": "8.5",
+          "topic_name": "Acid-Base Titrations",
+          "reason": "Acid-base titrations require Unit 8.5."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Acids and Bases is required by the full item.",
+      "classification_reasoning": "Official progression review: U8 Acids and Bases. Acid-base titrations require Unit 8.5.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -396,13 +392,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U9 Thermodynamics and Electrochemistry. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: A student is given a standard galvanic cell, represented above, that has a Cu electrode and a Sn electrode. As current flows through the cell, the student determines that the Cu electrode increases in mass and the Sn electrode decreases in ",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Nonstandard cell potential requires Unit 9.10."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -503,22 +496,22 @@
         "text": "In another experiment, the student places a new Sn electrode into a fresh solution of $1.0\\,\\mathrm{M}\\ Cu(NO_3)_2$. | Half-Reaction | $E^\\circ$ (V) | |---|---:| | $Cu^+ + e^-\\rightarrow Cu(s)$ | 0.52 | | $Cu^{2+}+2e^-\\rightarrow Cu(s)$ | 0.34 | | $Sn^{4+}+2e^-\\rightarrow Sn^{2+}$ | 0.15 | | $Sn^{2+}+2e^-\\rightarrow Sn(s)$ | -0.14 | i. Using information from the table above, write a net-ionic equation for the reaction between the Sn electrode and the $Cu(NO_3)_2$ solution that would be thermodynamically favorable. Justify that the reaction is thermodynamically favorable. ii. Calculate the value of $\\Delta G^\\circ$ for the reaction. Include units with your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Nonstandard cell potential requires Unit 9.10.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
-          "topic_name": "Thermodynamics and Electrochemistry",
-          "reason": "Prompt evidence: A student is given a standard galvanic cell, represented above, that has a Cu electrode and a Sn electrode. As current flows through the cell, the student determines that the Cu electrode increases in mass and the Sn electrode decreases in  Prior official-progression review assigned the full item to U9 Thermodynamics and Electrochemistry."
+          "topic_code": "9.10",
+          "topic_name": "Cell Potential Under Nonstandard Conditions",
+          "reason": "Nonstandard cell potential requires Unit 9.10."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Nonstandard cell potential requires Unit 9.10.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -537,9 +530,9 @@
       "images/ap/chemistry/2014/2014_p063_img01.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U8",
-    "unit": "U8",
-    "unit_name": "Acids and Bases",
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Equilibrium",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -572,17 +565,14 @@
       ]
     },
     "classification": {
-      "primary_unit": "U8",
+      "primary_unit": "U7",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: $CaCO_3(s)\\rightleftharpoons CaO(s)+CO_2(g)$ When heated, calcium carbonate decomposes according to the equation above. In a study of the decomposition of calcium carbonate, a student added a $50.0\\,\\mathrm{g}$ sample of powdered $CaCO_3(s)",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full decomposition FRQ requires equilibrium calculations for calcium carbonate decomposition."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -668,22 +658,22 @@
         "text": "Are there sufficient data obtained in the experiments to determine the value of the equilibrium constant, $K_p$, for the decomposition of $CaCO_3(s)$ at $1100\\,\\mathrm{K}$? Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U7 Equilibrium. Manual official-progression review: The full decomposition FRQ requires equilibrium calculations for calcium carbonate decomposition.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: $CaCO_3(s)\\rightleftharpoons CaO(s)+CO_2(g)$ When heated, calcium carbonate decomposes according to the equation above. In a study of the decomposition of calcium carbonate, a student added a $50.0\\,\\mathrm{g}$ sample of powdered $CaCO_3(s) Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "unit": "U7",
+          "topic_code": "7.3",
+          "topic_name": "Reaction Quotient and Equilibrium Constant",
+          "reason": "Manual official-progression review: The full decomposition FRQ requires equilibrium calculations for calcium carbonate decomposition."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Equilibrium is required by the full item.",
+      "classification_reasoning": "Official progression review: U7 Equilibrium. Manual official-progression review: The full decomposition FRQ requires equilibrium calculations for calcium carbonate decomposition.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -700,9 +690,9 @@
     "points": 4,
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U8",
-    "unit": "U8",
-    "unit_name": "Acids and Bases",
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "Compound Structure and Properties",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -735,16 +725,14 @@
       ]
     },
     "classification": {
-      "primary_unit": "U8",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: Some binary compounds that form between fluorine and various nonmetals are listed in the table below. | Nonmetal | Formula of Fluoride Compound | |---|---| | C | $CF_4$ | | N | $NF_3$ | | O | $OF_2$ | A student examines the data and poses t",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full FRQ requires molecular structure and geometry of binary fluorides."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -794,22 +782,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U2 Compound Structure and Properties. Manual official-progression review: The full FRQ requires molecular structure and geometry of binary fluorides.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: Some binary compounds that form between fluorine and various nonmetals are listed in the table below. | Nonmetal | Formula of Fluoride Compound | |---|---| | C | $CF_4$ | | N | $NF_3$ | | O | $OF_2$ | A student examines the data and poses t Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "unit": "U2",
+          "topic_code": "2.7",
+          "topic_name": "VSEPR and Hybridization",
+          "reason": "Manual official-progression review: The full FRQ requires molecular structure and geometry of binary fluorides."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Compound Structure and Properties is required by the full item.",
+      "classification_reasoning": "Official progression review: U2 Compound Structure and Properties. Manual official-progression review: The full FRQ requires molecular structure and geometry of binary fluorides.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -829,9 +817,9 @@
       "images/ap/chemistry/2014/2014_p067_img02.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U8",
-    "unit": "U8",
-    "unit_name": "Acids and Bases",
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Properties of Substances and Mixtures",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -864,17 +852,14 @@
       ]
     },
     "classification": {
-      "primary_unit": "U8",
+      "primary_unit": "U3",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: A student places a mixture of plastic beads consisting of polypropylene (PP) and polyvinyl chloride (PVC) in a $1.0\\,\\mathrm{L}$ beaker containing distilled water. After stirring the contents of the beaker vigorously, the student observes t",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full FRQ uses density/solid properties and mixture separation of polymer beads."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -965,22 +950,22 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Manual official-progression review: The full FRQ uses density/solid properties and mixture separation of polymer beads.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: A student places a mixture of plastic beads consisting of polypropylene (PP) and polyvinyl chloride (PVC) in a $1.0\\,\\mathrm{L}$ beaker containing distilled water. After stirring the contents of the beaker vigorously, the student observes t Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "unit": "U3",
+          "topic_code": "3.2",
+          "topic_name": "Properties of Solids",
+          "reason": "Manual official-progression review: The full FRQ uses density/solid properties and mixture separation of polymer beads."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Properties of Substances and Mixtures is required by the full item.",
+      "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Manual official-progression review: The full FRQ uses density/solid properties and mixture separation of polymer beads.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -999,9 +984,9 @@
       "images/ap/chemistry/2014/2014_p069_img01.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U7",
-    "unit": "U7",
-    "unit_name": "Equilibrium",
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Kinetics",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -1034,17 +1019,14 @@
       ]
     },
     "classification": {
-      "primary_unit": "U7",
+      "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U7 Equilibrium. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: The half-life, $t_{1/2}$, of the catalyzed isomerization of cis-2-butene gas to produce trans-2-butene gas, represented above, was measured under various conditions, as shown in the table below. | Trial | Initial pressure of cis-2-butene (t",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: Half-life data for isomerization require integrated-rate-law and concentration-time reasoning."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -1130,22 +1112,22 @@
         "text": "The half-life of the reaction in trial 4 is less than the half-life in trial 1. Explain why, in terms of activation energy."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Equilibrium. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U5 Kinetics. Manual official-progression review: Half-life data for isomerization require integrated-rate-law and concentration-time reasoning.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Equilibrium",
-          "reason": "Prompt evidence: The half-life, $t_{1/2}$, of the catalyzed isomerization of cis-2-butene gas to produce trans-2-butene gas, represented above, was measured under various conditions, as shown in the table below. | Trial | Initial pressure of cis-2-butene (t Prior official-progression review assigned the full item to U7 Equilibrium."
+          "unit": "U5",
+          "topic_code": "5.3",
+          "topic_name": "Concentration Changes over Time",
+          "reason": "Manual official-progression review: Half-life data for isomerization require integrated-rate-law and concentration-time reasoning."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Equilibrium is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Equilibrium. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Kinetics is required by the full item.",
+      "classification_reasoning": "Official progression review: U5 Kinetics. Manual official-progression review: Half-life data for isomerization require integrated-rate-law and concentration-time reasoning.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1231,12 +1213,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U9 Thermodynamics and Electrochemistry. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: A student uses a galvanic cell to determine the concentration of ethanol, $C_2H_5OH$, in an aqueous solution. The cell is based on the half-cell reactions represented in the table below. | Half-reaction | $E^\\circ$ (V) | |---|---:| | $2CO_2",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Galvanic cells require Unit 9.8."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -1285,22 +1265,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Galvanic cells require Unit 9.8.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
-          "topic_name": "Thermodynamics and Electrochemistry",
-          "reason": "Prompt evidence: A student uses a galvanic cell to determine the concentration of ethanol, $C_2H_5OH$, in an aqueous solution. The cell is based on the half-cell reactions represented in the table below. | Half-reaction | $E^\\circ$ (V) | |---|---:| | $2CO_2 Prior official-progression review assigned the full item to U9 Thermodynamics and Electrochemistry."
+          "topic_code": "9.8",
+          "topic_name": "Galvanic Cells",
+          "reason": "Galvanic cells require Unit 9.8."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Galvanic cells require Unit 9.8.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1318,7 +1298,7 @@
     "image_paths": [],
     "rubric_image_paths": [],
     "primary_unit": "U8",
-    "unit": "U4",
+    "unit": "U8",
     "unit_name": "Acids and Bases",
     "secondary_units": [],
     "pure_unit": true,
@@ -1386,12 +1366,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: Answer the following questions about $Fe$ and $Al$ compounds. (a) $Fe_2O_3(s)$ and $Al_2O_3(s)$ have similar chemical properties; some similarities are due to the oxides having similar lattice energies. Give two reasons why the lattice ener",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full FRQ combines lattice or solubility-equilibrium reasoning with acid-base effects on metal hydroxides."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -1440,22 +1418,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U8 Acids and Bases. Manual official-progression review: The full FRQ combines lattice or solubility-equilibrium reasoning with acid-base effects on metal hydroxides.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: Answer the following questions about $Fe$ and $Al$ compounds. (a) $Fe_2O_3(s)$ and $Al_2O_3(s)$ have similar chemical properties; some similarities are due to the oxides having similar lattice energies. Give two reasons why the lattice ener Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "topic_code": "8.11",
+          "topic_name": "pH and Solubility",
+          "reason": "Manual official-progression review: The full FRQ combines lattice or solubility-equilibrium reasoning with acid-base effects on metal hydroxides."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Acids and Bases is required by the full item.",
+      "classification_reasoning": "Official progression review: U8 Acids and Bases. Manual official-progression review: The full FRQ combines lattice or solubility-equilibrium reasoning with acid-base effects on metal hydroxides.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1543,13 +1521,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U6 Thermochemistry. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: The structures of two compounds commonly found in food, lauric acid, $C_{12}H_{24}O_2$, and sucrose, $C_{12}H_{22}O_{11}$, are shown above. (a) Which compound, lauric acid or sucrose, is more soluble in water? Justify your answer in terms o",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full FRQ includes intermolecular forces and bond-enthalpy comparison, with Unit 6 as latest required unit."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -1634,22 +1609,22 @@
         "text": "The experiment is repeated using a $1.5\\,\\mathrm{g}$ sample of sucrose. The combustion reaction for sucrose in air is represented below. $C_{12}H_{22}O_{11}(s)+12O_2(g)\\rightarrow12CO_2(g)+11H_2O(g)$ i. Even though $\\Delta G^\\circ$ for the combustion of sucrose in air is $-5837\\,\\mathrm{kJ/mol_{rxn}}$, the combustion reaction does not take place unless it is ignited. Explain. ii. Predict the sign of $\\Delta S^\\circ$ for the reaction and justify your prediction."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U6 Thermochemistry. Manual official-progression review: The full FRQ includes intermolecular forces and bond-enthalpy comparison, with Unit 6 as latest required unit.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": null,
-          "topic_name": "Thermochemistry",
-          "reason": "Prompt evidence: The structures of two compounds commonly found in food, lauric acid, $C_{12}H_{24}O_2$, and sucrose, $C_{12}H_{22}O_{11}$, are shown above. (a) Which compound, lauric acid or sucrose, is more soluble in water? Justify your answer in terms o Prior official-progression review assigned the full item to U6 Thermochemistry."
+          "topic_code": "6.7",
+          "topic_name": "Bond Enthalpies",
+          "reason": "Manual official-progression review: The full FRQ includes intermolecular forces and bond-enthalpy comparison, with Unit 6 as latest required unit."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Thermochemistry is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U6 Thermochemistry. Manual official-progression review: The full FRQ includes intermolecular forces and bond-enthalpy comparison, with Unit 6 as latest required unit.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1707,13 +1682,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U3 Properties of Substances and Mixtures. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: The boiling points, dipole moments, and polarizabilities of three hydrogen halides are given in the table below. | Molecule | Boiling Point (K) | Dipole Moment (D) | Polarizability ($10^{-24}\\,\\mathrm{cm^3}$) | |---|---:|---:|---:| | $HCl$ ",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: Hydrogen-halide boiling points, dipoles, and polarizability require intermolecular-force reasoning."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -1793,22 +1765,22 @@
         "text": "A representation of five molecules of $HBr$ in the liquid state is shown in box 1 below. In box 2, draw a representation of the five molecules of $HBr$ after complete vaporization has occurred."
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Manual official-progression review: Hydrogen-halide boiling points, dipoles, and polarizability require intermolecular-force reasoning.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U3",
-          "topic_code": null,
-          "topic_name": "Properties of Substances and Mixtures",
-          "reason": "Prompt evidence: The boiling points, dipole moments, and polarizabilities of three hydrogen halides are given in the table below. | Molecule | Boiling Point (K) | Dipole Moment (D) | Polarizability ($10^{-24}\\,\\mathrm{cm^3}$) | |---|---:|---:|---:| | $HCl$  Prior official-progression review assigned the full item to U3 Properties of Substances and Mixtures."
+          "topic_code": "3.1",
+          "topic_name": "Intermolecular Forces",
+          "reason": "Manual official-progression review: Hydrogen-halide boiling points, dipoles, and polarizability require intermolecular-force reasoning."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Properties of Substances and Mixtures is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Properties of Substances and Mixtures is required by the full item.",
+      "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Manual official-progression review: Hydrogen-halide boiling points, dipoles, and polarizability require intermolecular-force reasoning.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1828,7 +1800,7 @@
     ],
     "rubric_image_paths": [],
     "primary_unit": "U7",
-    "unit": "U2",
+    "unit": "U7",
     "unit_name": "Equilibrium",
     "secondary_units": [],
     "pure_unit": true,
@@ -1866,13 +1838,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U7 Equilibrium. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: Answer the following questions about two isomers, methyl methanoate and ethanoic acid. The molecular formula of the compounds is $C_2H_4O_2$. (a) Complete the Lewis electron-dot diagram of methyl methanoate in the box below. Show all valenc",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full FRQ requires calculating an equilibrium pressure and Kp for a reversible gas reaction."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -1921,7 +1890,7 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U7 Equilibrium. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U7 Equilibrium. Manual official-progression review: The full FRQ requires calculating an equilibrium pressure and Kp for a reversible gas reaction.",
     "content_blocks": [
       {
         "type": "paragraph",
@@ -1954,15 +1923,15 @@
       "required_topics": [
         {
           "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Equilibrium",
-          "reason": "Prompt evidence: Answer the following questions about two isomers, methyl methanoate and ethanoic acid. The molecular formula of the compounds is $C_2H_4O_2$. (a) Complete the Lewis electron-dot diagram of methyl methanoate in the box below. Show all valenc Prior official-progression review assigned the full item to U7 Equilibrium."
+          "topic_code": "7.4",
+          "topic_name": "Calculating the Equilibrium Constant",
+          "reason": "Manual official-progression review: The full FRQ requires calculating an equilibrium pressure and Kp for a reversible gas reaction."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Equilibrium is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Equilibrium. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Equilibrium is required by the full item.",
+      "classification_reasoning": "Official progression review: U7 Equilibrium. Manual official-progression review: The full FRQ requires calculating an equilibrium pressure and Kp for a reversible gas reaction.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2020,13 +1989,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U1 Atomic Structure and Properties. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: The complete photoelectron spectrum of an unknown element is shown above. The frequency ranges of different regions of the electromagnetic spectrum are given in the table below. | Region | Frequency Range ($s^{-1}$) | |---|---:| | Infrared ",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full FRQ centers on photoelectron spectrum interpretation."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -2106,22 +2072,22 @@
         "text": "Write the ground-state electron configuration of the unknown element."
       }
     ],
-    "classification_reasoning": "Official progression review: U1 Atomic Structure and Properties. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U1 Atomic Structure and Properties. Manual official-progression review: The full FRQ centers on photoelectron spectrum interpretation.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U1",
-          "topic_code": null,
-          "topic_name": "Atomic Structure and Properties",
-          "reason": "Prompt evidence: The complete photoelectron spectrum of an unknown element is shown above. The frequency ranges of different regions of the electromagnetic spectrum are given in the table below. | Region | Frequency Range ($s^{-1}$) | |---|---:| | Infrared  Prior official-progression review assigned the full item to U1 Atomic Structure and Properties."
+          "topic_code": "1.6",
+          "topic_name": "Photoelectron Spectroscopy",
+          "reason": "Manual official-progression review: The full FRQ centers on photoelectron spectrum interpretation."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "This is first-unit material; no earlier unit exists.",
-      "classification_reasoning": "Official progression review: U1 Atomic Structure and Properties. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "This is Unit 1 material; no earlier unit exists.",
+      "classification_reasoning": "Official progression review: U1 Atomic Structure and Properties. Manual official-progression review: The full FRQ centers on photoelectron spectrum interpretation.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2177,12 +2143,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: $HC_9H_7O_4(aq)+H_2O(l)\\rightleftharpoons H_3O^+(aq)+C_9H_7O_4^-(aq)$ The molecular formula of acetylsalicylic acid, also known as aspirin, is $HC_9H_7O_4$. The dissociation of $HC_9H_7O_4(aq)$ is represented above. The pH of $0.0100\\,\\math",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "pH and pOH of strong acids and bases require Unit 8.2."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -2231,22 +2195,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U8 Acids and Bases. pH and pOH of strong acids and bases require Unit 8.2.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: $HC_9H_7O_4(aq)+H_2O(l)\\rightleftharpoons H_3O^+(aq)+C_9H_7O_4^-(aq)$ The molecular formula of acetylsalicylic acid, also known as aspirin, is $HC_9H_7O_4$. The dissociation of $HC_9H_7O_4(aq)$ is represented above. The pH of $0.0100\\,\\math Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "topic_code": "8.2",
+          "topic_name": "pH and pOH of Strong Acids and Bases",
+          "reason": "pH and pOH of strong acids and bases require Unit 8.2."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Acids and Bases is required by the full item.",
+      "classification_reasoning": "Official progression review: U8 Acids and Bases. pH and pOH of strong acids and bases require Unit 8.2.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2332,12 +2296,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U9 Thermodynamics and Electrochemistry. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: $CaO(s)+H_2O(l)\\rightarrow Ca(OH)_2(s)$, $\\Delta H^\\circ_{rxn}=-63.7\\,\\mathrm{kJ/mol_{rxn}}$ Calcium oxide, $CaO(s)$, has been proposed as a substance that can be used to heat water quickly for portable heating packs or for cooking. (a) A s",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Entropy change requires Unit 9.2."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -2380,22 +2342,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Entropy change requires Unit 9.2.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
-          "topic_name": "Thermodynamics and Electrochemistry",
-          "reason": "Prompt evidence: $CaO(s)+H_2O(l)\\rightarrow Ca(OH)_2(s)$, $\\Delta H^\\circ_{rxn}=-63.7\\,\\mathrm{kJ/mol_{rxn}}$ Calcium oxide, $CaO(s)$, has been proposed as a substance that can be used to heat water quickly for portable heating packs or for cooking. (a) A s Prior official-progression review assigned the full item to U9 Thermodynamics and Electrochemistry."
+          "topic_code": "9.2",
+          "topic_name": "Absolute Entropy and Entropy Change",
+          "reason": "Entropy change requires Unit 9.2."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Entropy change requires Unit 9.2.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2481,12 +2443,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: $2NaHCO_3(s)\\rightarrow Na_2CO_3(s)+CO_2(g)+H_2O(g)$ $NaHCO_3(s)$ decomposes upon heating to produce $Na_2CO_3(s)$ and two gaseous products. (a) A student claims that the reaction is an oxidation-reduction reaction because the oxidation num",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "pH and pOH of strong acids and bases require Unit 8.2."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -2529,22 +2489,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U8 Acids and Bases. pH and pOH of strong acids and bases require Unit 8.2.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: $2NaHCO_3(s)\\rightarrow Na_2CO_3(s)+CO_2(g)+H_2O(g)$ $NaHCO_3(s)$ decomposes upon heating to produce $Na_2CO_3(s)$ and two gaseous products. (a) A student claims that the reaction is an oxidation-reduction reaction because the oxidation num Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "topic_code": "8.2",
+          "topic_name": "pH and pOH of Strong Acids and Bases",
+          "reason": "pH and pOH of strong acids and bases require Unit 8.2."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Acids and Bases is required by the full item.",
+      "classification_reasoning": "Official progression review: U8 Acids and Bases. pH and pOH of strong acids and bases require Unit 8.2.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2632,13 +2592,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: $H_3BO_3(aq)+4HF(g)\\rightarrow H_3O^+(aq)+BF_4^-(aq)+2H_2O(l)$ Tetrafluoroboric acid is a strong acid with the formula $HBF_4$. It can be prepared by reacting the weak acid $H_3BO_3$ (molar mass $61.83\\,\\mathrm{g/mol}$) with $HF$. (a) To pr",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Weak acid and base equilibria require Unit 8.3."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -2717,22 +2674,22 @@
         "text": "At equilibrium the forward and reverse reaction rates are equal. Calculate $k_r$."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U8 Acids and Bases. Weak acid and base equilibria require Unit 8.3.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: $H_3BO_3(aq)+4HF(g)\\rightarrow H_3O^+(aq)+BF_4^-(aq)+2H_2O(l)$ Tetrafluoroboric acid is a strong acid with the formula $HBF_4$. It can be prepared by reacting the weak acid $H_3BO_3$ (molar mass $61.83\\,\\mathrm{g/mol}$) with $HF$. (a) To pr Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "topic_code": "8.3",
+          "topic_name": "Weak Acid and Base Equilibria",
+          "reason": "Weak acid and base equilibria require Unit 8.3."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Acids and Bases is required by the full item.",
+      "classification_reasoning": "Official progression review: U8 Acids and Bases. Weak acid and base equilibria require Unit 8.3.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2751,9 +2708,9 @@
       "images/ap/chemistry/2016/2016_p060_img01.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U8",
-    "unit": "U8",
-    "unit_name": "Acids and Bases",
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "Compound Structure and Properties",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -2786,17 +2743,14 @@
       ]
     },
     "classification": {
-      "primary_unit": "U8",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: White gold is a common alloy of gold and palladium. The atomic radii are listed below. | Element | Atomic Radius (pm) | |---|---:| | Au | 135 | | Pd | 140 | (a) A ring is made from an alloy that is 75 mole percent gold and 25 mole percent p",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The alloy FRQ requires metallic/alloy particle representations and composition reasoning."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -2865,22 +2819,22 @@
         "text": "A student hypothesizes that placing the ring in a $1.0\\,\\mathrm{M}$ solution of $Rh(NO_3)_3(aq)$ will deposit $Rh$ metal on the ring. Based on the table below, calculate $E^\\circ$ for reactions that may occur between ions in solution and atoms in the ring, and indicate whether the student's hypothesis is correct. | Half-Reaction | $E^\\circ$ (V) | |---|---:| | $Au^{3+}(aq)+3e^-\\rightarrow Au(s)$ | 1.50 | | $Pd^{2+}(aq)+2e^-\\rightarrow Pd(s)$ | 0.92 | | $Rh^{3+}(aq)+3e^-\\rightarrow Rh(s)$ | 0.76 |"
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U2 Compound Structure and Properties. Manual official-progression review: The alloy FRQ requires metallic/alloy particle representations and composition reasoning.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: White gold is a common alloy of gold and palladium. The atomic radii are listed below. | Element | Atomic Radius (pm) | |---|---:| | Au | 135 | | Pd | 140 | (a) A ring is made from an alloy that is 75 mole percent gold and 25 mole percent p Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "unit": "U2",
+          "topic_code": "2.4",
+          "topic_name": "Structure of Metals and Alloys",
+          "reason": "Manual official-progression review: The alloy FRQ requires metallic/alloy particle representations and composition reasoning."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Compound Structure and Properties is required by the full item.",
+      "classification_reasoning": "Official progression review: U2 Compound Structure and Properties. Manual official-progression review: The alloy FRQ requires metallic/alloy particle representations and composition reasoning.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2936,12 +2890,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: The first ionization energies for Na and K are given in the table below. Na metal reacts vigorously with water to form hydrogen gas and a metal hydroxide. K metal also reacts vigorously, producing a violet-colored flame. | Element | First I",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "pH and pOH of strong acids and bases require Unit 8.2."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -2984,22 +2936,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U8 Acids and Bases. pH and pOH of strong acids and bases require Unit 8.2.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: The first ionization energies for Na and K are given in the table below. Na metal reacts vigorously with water to form hydrogen gas and a metal hydroxide. K metal also reacts vigorously, producing a violet-colored flame. | Element | First I Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "topic_code": "8.2",
+          "topic_name": "pH and pOH of Strong Acids and Bases",
+          "reason": "pH and pOH of strong acids and bases require Unit 8.2."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Acids and Bases is required by the full item.",
+      "classification_reasoning": "Official progression review: U8 Acids and Bases. pH and pOH of strong acids and bases require Unit 8.2.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3057,13 +3009,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: Propanoic acid, $C_2H_5COOH$, is an organic acid that is a liquid at room temperature. (a) An incomplete Lewis diagram for propanoic acid is provided below. Complete the diagram, showing how the remaining atoms in the molecule are arranged ",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Acid-base introduction requires Unit 8.1."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -3137,22 +3086,22 @@
         "text": "Propanoic acid has a lower boiling point than butanoic acid, $C_3H_7COOH$. i. Identify all types of intermolecular forces present among molecules in propanoic acid. ii. Which type of intermolecular force identified in part (c)(i) is most responsible for the difference in boiling points of the two acids?"
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U8 Acids and Bases. Acid-base introduction requires Unit 8.1.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: Propanoic acid, $C_2H_5COOH$, is an organic acid that is a liquid at room temperature. (a) An incomplete Lewis diagram for propanoic acid is provided below. Complete the diagram, showing how the remaining atoms in the molecule are arranged  Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Acid-base introduction requires Unit 8.1."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Acids and Bases is required by the full item.",
+      "classification_reasoning": "Official progression review: U8 Acids and Bases. Acid-base introduction requires Unit 8.1.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3171,9 +3120,9 @@
       "images/ap/chemistry/2016/2016_p066_img01.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U8",
-    "unit": "U8",
-    "unit_name": "Acids and Bases",
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Properties of Substances and Mixtures",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -3206,17 +3155,14 @@
       ]
     },
     "classification": {
-      "primary_unit": "U8",
+      "primary_unit": "U3",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: A student has $100.0\\,\\mathrm{mL}$ of $0.400\\,\\mathrm{M}$ $CuSO_4(aq)$ and is asked to make $100.0\\,\\mathrm{mL}$ of $0.150\\,\\mathrm{M}$ $CuSO_4(aq)$ for a spectrophotometry experiment. Available equipment includes a centigram balance, weigh",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The spectrophotometry preparation task requires solution dilution and Beer-Lambert measurement reasoning."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -3290,22 +3236,22 @@
         "text": "The student wants to select a wavelength for the analysis of $Cu^{2+}$ that gives the greatest sensitivity and minimizes interference from $Co^{2+}$. Which wavelength should the student use? Justify your choice."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Manual official-progression review: The spectrophotometry preparation task requires solution dilution and Beer-Lambert measurement reasoning.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: A student has $100.0\\,\\mathrm{mL}$ of $0.400\\,\\mathrm{M}$ $CuSO_4(aq)$ and is asked to make $100.0\\,\\mathrm{mL}$ of $0.150\\,\\mathrm{M}$ $CuSO_4(aq)$ for a spectrophotometry experiment. Available equipment includes a centigram balance, weigh Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "unit": "U3",
+          "topic_code": "3.13",
+          "topic_name": "Beer-Lambert Law",
+          "reason": "Manual official-progression review: The spectrophotometry preparation task requires solution dilution and Beer-Lambert measurement reasoning."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Properties of Substances and Mixtures is required by the full item.",
+      "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Manual official-progression review: The spectrophotometry preparation task requires solution dilution and Beer-Lambert measurement reasoning.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3394,13 +3340,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U5 Kinetics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: Elemental sulfur can exist as molecules with the formula $S_8$. The $S_8$ molecule is represented by the incomplete Lewis diagram above. (a) The diagram of $S_8$ shows only bonding pairs of electrons. How many lone pairs of electrons does e",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full FRQ includes Lewis-structure work and mechanism or rate-law reasoning, with Unit 5 as latest required unit."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -3503,22 +3446,22 @@
         "text": "Using particle-level reasoning, provide TWO explanations that help to account for the fact that the reaction rate is slower in trial 4."
       }
     ],
-    "classification_reasoning": "Official progression review: U5 Kinetics. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U5 Kinetics. Manual official-progression review: The full FRQ includes Lewis-structure work and mechanism or rate-law reasoning, with Unit 5 as latest required unit.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U5",
-          "topic_code": null,
-          "topic_name": "Kinetics",
-          "reason": "Prompt evidence: Elemental sulfur can exist as molecules with the formula $S_8$. The $S_8$ molecule is represented by the incomplete Lewis diagram above. (a) The diagram of $S_8$ shows only bonding pairs of electrons. How many lone pairs of electrons does e Prior official-progression review assigned the full item to U5 Kinetics."
+          "topic_code": "5.8",
+          "topic_name": "Reaction Mechanism and Rate Law",
+          "reason": "Manual official-progression review: The full FRQ includes Lewis-structure work and mechanism or rate-law reasoning, with Unit 5 as latest required unit."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Kinetics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U5 Kinetics. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Kinetics is required by the full item.",
+      "classification_reasoning": "Official progression review: U5 Kinetics. Manual official-progression review: The full FRQ includes Lewis-structure work and mechanism or rate-law reasoning, with Unit 5 as latest required unit.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3604,12 +3547,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U3 Properties of Substances and Mixtures. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: Answer the following questions relating to $HCl$, $CH_3Cl$, and $CH_3Br$. (a) $HCl(g)$ can be prepared by the reaction of concentrated $H_2SO_4(aq)$ with $NaCl(s)$, as represented by the following equation. $H_2SO_4(aq)+2NaCl(s)\\rightarrow2",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full FRQ combines reaction context with gas-law behavior of prepared hydrogen chloride."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -3656,22 +3597,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Manual official-progression review: The full FRQ combines reaction context with gas-law behavior of prepared hydrogen chloride.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U3",
-          "topic_code": null,
-          "topic_name": "Properties of Substances and Mixtures",
-          "reason": "Prompt evidence: Answer the following questions relating to $HCl$, $CH_3Cl$, and $CH_3Br$. (a) $HCl(g)$ can be prepared by the reaction of concentrated $H_2SO_4(aq)$ with $NaCl(s)$, as represented by the following equation. $H_2SO_4(aq)+2NaCl(s)\\rightarrow2 Prior official-progression review assigned the full item to U3 Properties of Substances and Mixtures."
+          "topic_code": "3.4",
+          "topic_name": "Ideal Gas Law",
+          "reason": "Manual official-progression review: The full FRQ combines reaction context with gas-law behavior of prepared hydrogen chloride."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Properties of Substances and Mixtures is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Properties of Substances and Mixtures is required by the full item.",
+      "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Manual official-progression review: The full FRQ combines reaction context with gas-law behavior of prepared hydrogen chloride.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3759,13 +3700,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U9 Thermodynamics and Electrochemistry. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: $3Cu^+(aq)+Au^{3+}(aq)\\rightarrow3Cu^{2+}(aq)+Au(s)$ A student studying the reaction represented above constructs a voltaic cell as shown in the diagram below. The cell contains an $Au(s)$ electrode in a beaker containing $1.00\\,\\mathrm{M}$",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Cell potential and free energy require Unit 9.9."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -3863,22 +3801,22 @@
         "text": "The student predicts that the cell voltage will increase after the precipitate forms. Do you agree with the student's prediction? Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Cell potential and free energy require Unit 9.9.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
-          "topic_name": "Thermodynamics and Electrochemistry",
-          "reason": "Prompt evidence: $3Cu^+(aq)+Au^{3+}(aq)\\rightarrow3Cu^{2+}(aq)+Au(s)$ A student studying the reaction represented above constructs a voltaic cell as shown in the diagram below. The cell contains an $Au(s)$ electrode in a beaker containing $1.00\\,\\mathrm{M}$ Prior official-progression review assigned the full item to U9 Thermodynamics and Electrochemistry."
+          "topic_code": "9.9",
+          "topic_name": "Cell Potential and Free Energy",
+          "reason": "Cell potential and free energy require Unit 9.9."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Cell potential and free energy require Unit 9.9.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3936,13 +3874,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U3 Properties of Substances and Mixtures. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: To spectrophotometrically determine the mass percent of cobalt in an ore containing cobalt and some inert materials, solutions with known molar concentration of $Co^{2+}$ are prepared and the absorbance of each solution is measured at the w",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The cobalt ore analysis requires spectrophotometry and Beer-Lambert calibration reasoning."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -4020,22 +3955,22 @@
         "text": "Calculate the mass percent of $Co$ in the $0.630\\,\\mathrm{g}$ sample of the ore."
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Manual official-progression review: The cobalt ore analysis requires spectrophotometry and Beer-Lambert calibration reasoning.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U3",
-          "topic_code": null,
-          "topic_name": "Properties of Substances and Mixtures",
-          "reason": "Prompt evidence: To spectrophotometrically determine the mass percent of cobalt in an ore containing cobalt and some inert materials, solutions with known molar concentration of $Co^{2+}$ are prepared and the absorbance of each solution is measured at the w Prior official-progression review assigned the full item to U3 Properties of Substances and Mixtures."
+          "topic_code": "3.13",
+          "topic_name": "Beer-Lambert Law",
+          "reason": "Manual official-progression review: The cobalt ore analysis requires spectrophotometry and Beer-Lambert calibration reasoning."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Properties of Substances and Mixtures is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Properties of Substances and Mixtures is required by the full item.",
+      "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Manual official-progression review: The cobalt ore analysis requires spectrophotometry and Beer-Lambert calibration reasoning.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4052,9 +3987,9 @@
     "points": 4,
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U6",
-    "unit": "U6",
-    "unit_name": "Thermochemistry",
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Thermodynamics and Electrochemistry",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -4087,16 +4022,14 @@
       ]
     },
     "classification": {
-      "primary_unit": "U6",
+      "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U6 Thermochemistry. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: $3Ag(s)+4HNO_3(aq)\\rightarrow3AgNO_3(aq)+NO(g)+2H_2O(l)$ A student investigates the reaction between $Ag(s)$ and $HNO_3(aq)$ represented by the equation above. (a) Predict the sign of the entropy change, $\\Delta S^\\circ$, for the reaction. ",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full silver and nitric acid FRQ includes entropy reasoning and redox context; Unit 9 is the latest required unit."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -4143,22 +4076,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Manual official-progression review: The full silver and nitric acid FRQ includes entropy reasoning and redox context; Unit 9 is the latest required unit.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U6",
-          "topic_code": null,
-          "topic_name": "Thermochemistry",
-          "reason": "Prompt evidence: $3Ag(s)+4HNO_3(aq)\\rightarrow3AgNO_3(aq)+NO(g)+2H_2O(l)$ A student investigates the reaction between $Ag(s)$ and $HNO_3(aq)$ represented by the equation above. (a) Predict the sign of the entropy change, $\\Delta S^\\circ$, for the reaction.  Prior official-progression review assigned the full item to U6 Thermochemistry."
+          "unit": "U9",
+          "topic_code": "9.2",
+          "topic_name": "Absolute Entropy and Entropy Change",
+          "reason": "Manual official-progression review: The full silver and nitric acid FRQ includes entropy reasoning and redox context; Unit 9 is the latest required unit."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Thermochemistry is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Manual official-progression review: The full silver and nitric acid FRQ includes entropy reasoning and redox context; Unit 9 is the latest required unit.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4214,12 +4147,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U6 Thermochemistry. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: A student is asked to determine what mass of butane, $C_4H_{10}(g)$, needs to burn in order to raise the temperature of a $1650\\,\\mathrm{g}$ beaker of sand by $180.0^\\circ\\mathrm{C}$. The student is provided with the equipment shown below. ",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Enthalpy of reaction requires Unit 6.6."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -4266,22 +4197,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U6 Thermochemistry. Enthalpy of reaction requires Unit 6.6.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": null,
-          "topic_name": "Thermochemistry",
-          "reason": "Prompt evidence: A student is asked to determine what mass of butane, $C_4H_{10}(g)$, needs to burn in order to raise the temperature of a $1650\\,\\mathrm{g}$ beaker of sand by $180.0^\\circ\\mathrm{C}$. The student is provided with the equipment shown below.  Prior official-progression review assigned the full item to U6 Thermochemistry."
+          "topic_code": "6.6",
+          "topic_name": "Introduction to Enthalpy of Reaction",
+          "reason": "Enthalpy of reaction requires Unit 6.6."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Thermochemistry is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U6 Thermochemistry. Enthalpy of reaction requires Unit 6.6.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4337,12 +4268,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: A student prepares three solutions, X, Y, and Z, as described in the table below. | Solution | Preparation | |---|---| | X | $100\\,\\mathrm{mL}$ of $0.10\\,\\mathrm{M}$ $NaOH(aq)$ is mixed with $100\\,\\mathrm{mL}$ of $0.10\\,\\mathrm{M}$ $HBr(aq)",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "pH and pOH of strong acids and bases require Unit 8.2."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -4389,22 +4318,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U8 Acids and Bases. pH and pOH of strong acids and bases require Unit 8.2.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: A student prepares three solutions, X, Y, and Z, as described in the table below. | Solution | Preparation | |---|---| | X | $100\\,\\mathrm{mL}$ of $0.10\\,\\mathrm{M}$ $NaOH(aq)$ is mixed with $100\\,\\mathrm{mL}$ of $0.10\\,\\mathrm{M}$ $HBr(aq) Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "topic_code": "8.2",
+          "topic_name": "pH and pOH of Strong Acids and Bases",
+          "reason": "pH and pOH of strong acids and bases require Unit 8.2."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Acids and Bases is required by the full item.",
+      "classification_reasoning": "Official progression review: U8 Acids and Bases. pH and pOH of strong acids and bases require Unit 8.2.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4424,9 +4353,9 @@
       "images/ap/chemistry/2019/2019_p043_img02.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U8",
-    "unit": "U8",
-    "unit_name": "Acids and Bases",
+    "primary_unit": "U6",
+    "unit": "U6",
+    "unit_name": "Thermochemistry",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -4489,17 +4418,14 @@
       ]
     },
     "classification": {
-      "primary_unit": "U8",
+      "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: $C_2H_5OH(l)+3O_2(g)\\rightarrow2CO_2(g)+3H_2O(g)$, $\\Delta H^\\circ_{comb}=-1270\\,\\mathrm{kJ/mol_{rxn}}$ Ethanol, $C_2H_5OH$, will combust in air according to the equation above. (a) Is $O_2(g)$ oxidized in the reaction, or is it reduced? Ju",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full combustion FRQ includes redox identification and enthalpy/thermochemical reasoning, with U6 as latest required unit."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -4615,22 +4541,22 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U6 Thermochemistry. Manual official-progression review: The full combustion FRQ includes redox identification and enthalpy/thermochemical reasoning, with U6 as latest required unit.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: $C_2H_5OH(l)+3O_2(g)\\rightarrow2CO_2(g)+3H_2O(g)$, $\\Delta H^\\circ_{comb}=-1270\\,\\mathrm{kJ/mol_{rxn}}$ Ethanol, $C_2H_5OH$, will combust in air according to the equation above. (a) Is $O_2(g)$ oxidized in the reaction, or is it reduced? Ju Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "unit": "U6",
+          "topic_code": "6.6",
+          "topic_name": "Introduction to Enthalpy of Reaction",
+          "reason": "Manual official-progression review: The full combustion FRQ includes redox identification and enthalpy/thermochemical reasoning, with U6 as latest required unit."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U6 Thermochemistry. Manual official-progression review: The full combustion FRQ includes redox identification and enthalpy/thermochemical reasoning, with U6 as latest required unit.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4651,9 +4577,9 @@
       "images/ap/chemistry/2019/2019_p047_img01.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U8",
-    "unit": "U8",
-    "unit_name": "Acids and Bases",
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Thermodynamics and Electrochemistry",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -4716,17 +4642,14 @@
       ]
     },
     "classification": {
-      "primary_unit": "U8",
+      "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: $2H_2O_2(aq)\\rightarrow2H_2O(l)+O_2(g)$ Hydrogen peroxide, $H_2O_2$, decomposes according to the equation above. This reaction is thermodynamically favorable at room temperature. (a) A particulate representation of the reactants is shown be",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: The full hydrogen-peroxide FRQ combines thermodynamic favorability with reaction and rate reasoning; Unit 9 is the latest required unit."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -4852,22 +4775,22 @@
         "text": "The hydrogen peroxide used in this experiment can be prepared by the reaction of solid ammonium peroxydisulfate, $(NH_4)_2S_2O_8$, with water. The products are hydrogen peroxide, $H_2O_2$, and ammonium bisulfate, $NH_4HSO_4$. Write the balanced equation for the reaction."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Manual official-progression review: The full hydrogen-peroxide FRQ combines thermodynamic favorability with reaction and rate reasoning; Unit 9 is the latest required unit.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: $2H_2O_2(aq)\\rightarrow2H_2O(l)+O_2(g)$ Hydrogen peroxide, $H_2O_2$, decomposes according to the equation above. This reaction is thermodynamically favorable at room temperature. (a) A particulate representation of the reactants is shown be Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "unit": "U9",
+          "topic_code": "9.3",
+          "topic_name": "Gibbs Free Energy and Thermodynamic Favorability",
+          "reason": "Manual official-progression review: The full hydrogen-peroxide FRQ combines thermodynamic favorability with reaction and rate reasoning; Unit 9 is the latest required unit."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Manual official-progression review: The full hydrogen-peroxide FRQ combines thermodynamic favorability with reaction and rate reasoning; Unit 9 is the latest required unit.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4955,13 +4878,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U9 Thermodynamics and Electrochemistry. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: Sulfur trioxide, $SO_3$, is commercially produced on a massive scale for use in manufacturing. It is also produced as a by-product of burning fossil fuels and is an air pollutant involved in the formation of acid rain. (a) In the box below,",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Thermodynamic and kinetic control require Unit 9.4."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -5057,22 +4977,22 @@
         "text": "Use the information above to answer the following. i. Write the expression for the equilibrium constant, $K_p$, for the reaction. ii. Determine the value of $K_p$ for the reaction."
       }
     ],
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Thermodynamic and kinetic control require Unit 9.4.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
-          "topic_name": "Thermodynamics and Electrochemistry",
-          "reason": "Prompt evidence: Sulfur trioxide, $SO_3$, is commercially produced on a massive scale for use in manufacturing. It is also produced as a by-product of burning fossil fuels and is an air pollutant involved in the formation of acid rain. (a) In the box below, Prior official-progression review assigned the full item to U9 Thermodynamics and Electrochemistry."
+          "topic_code": "9.4",
+          "topic_name": "Thermodynamic and Kinetic Control",
+          "reason": "Thermodynamic and kinetic control require Unit 9.4."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Thermodynamic and kinetic control require Unit 9.4.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -5130,13 +5050,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: $HClO(aq)+H_2O(l)\\rightleftharpoons H_3O^+(aq)+ClO^-(aq)$ The reaction between hypochlorous acid and water is represented above. (a) Identify one of the conjugate acid-base pairs in the reaction. (b) Shown in the graph below is the titratio",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Buffer properties require Unit 8.8."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -5222,22 +5139,22 @@
         "text": "A student proposes creating a buffer by dissolving $0.010\\,\\mathrm{mol}$ of $NaClO_4(s)$ in $100.\\,\\mathrm{mL}$ of $0.100\\,\\mathrm{M}\\ HClO_4$. Explain why the resulting solution would not be a buffer."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U8 Acids and Bases. Buffer properties require Unit 8.8.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: $HClO(aq)+H_2O(l)\\rightleftharpoons H_3O^+(aq)+ClO^-(aq)$ The reaction between hypochlorous acid and water is represented above. (a) Identify one of the conjugate acid-base pairs in the reaction. (b) Shown in the graph below is the titratio Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "topic_code": "8.8",
+          "topic_name": "Properties of Buffers",
+          "reason": "Buffer properties require Unit 8.8."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Acids and Bases is required by the full item.",
+      "classification_reasoning": "Official progression review: U8 Acids and Bases. Buffer properties require Unit 8.8.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -5293,12 +5210,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U9 Thermodynamics and Electrochemistry. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: In human cells a compound known as NADH is involved in a reaction that generates an electrical potential. The reaction is based on the two half-reactions shown in the table below. The balanced equation for the overall reaction is shown belo",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Gibbs free energy and thermodynamic favorability require Unit 9.3."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -5353,22 +5268,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Gibbs free energy and thermodynamic favorability require Unit 9.3.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
-          "topic_name": "Thermodynamics and Electrochemistry",
-          "reason": "Prompt evidence: In human cells a compound known as NADH is involved in a reaction that generates an electrical potential. The reaction is based on the two half-reactions shown in the table below. The balanced equation for the overall reaction is shown belo Prior official-progression review assigned the full item to U9 Thermodynamics and Electrochemistry."
+          "topic_code": "9.3",
+          "topic_name": "Gibbs Free Energy and Thermodynamic Favorability",
+          "reason": "Gibbs free energy and thermodynamic favorability require Unit 9.3."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Gibbs free energy and thermodynamic favorability require Unit 9.3.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -5424,12 +5339,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U6 Thermochemistry. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: Some building materials contain small capsules filled with paraffin wax to improve the insulating properties of the materials. The melting and freezing of paraffin inside the capsules in the material helps to regulate temperature. Paraffin ",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Energy of phase changes requires Unit 6.5."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -5484,22 +5397,22 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U6 Thermochemistry. Energy of phase changes requires Unit 6.5.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": null,
-          "topic_name": "Thermochemistry",
-          "reason": "Prompt evidence: Some building materials contain small capsules filled with paraffin wax to improve the insulating properties of the materials. The melting and freezing of paraffin inside the capsules in the material helps to regulate temperature. Paraffin  Prior official-progression review assigned the full item to U6 Thermochemistry."
+          "topic_code": "6.5",
+          "topic_name": "Energy of Phase Changes",
+          "reason": "Energy of phase changes requires Unit 6.5."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Thermochemistry is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Thermochemistry is required by the full item.",
+      "classification_reasoning": "Official progression review: U6 Thermochemistry. Energy of phase changes requires Unit 6.5.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -5557,13 +5470,10 @@
       "secondary_units": [],
       "confidence": 0.35,
       "evidence": [
-        "Current official framework: U8 Acids and Bases. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: A student is given a solution of phenol red of unknown concentration. Solutions of phenol red are bright pink under basic conditions. (a) The student uses a pH probe and determines that the pH of the solution is 11.20. Calculate the hydroge",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "pH and pOH of strong acids and bases require Unit 8.2."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "chemistry-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -5654,22 +5564,22 @@
         "text": "If the student measured the absorbance of the solution at a wavelength of $650\\,\\mathrm{nm}$, would the absorbance be greater than, less than, or equal to the absorbance of the solution at $559\\,\\mathrm{nm}$? Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Official progression review: U8 Acids and Bases. pH and pOH of strong acids and bases require Unit 8.2.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Chemistry Course and Exam Description",
       "required_topics": [
         {
           "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Acids and Bases",
-          "reason": "Prompt evidence: A student is given a solution of phenol red of unknown concentration. Solutions of phenol red are bright pink under basic conditions. (a) The student uses a pH probe and determines that the pH of the solution is 11.20. Calculate the hydroge Prior official-progression review assigned the full item to U8 Acids and Bases."
+          "topic_code": "8.2",
+          "topic_name": "pH and pOH of Strong Acids and Bases",
+          "reason": "pH and pOH of strong acids and bases require Unit 8.2."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Acids and Bases is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-      "review_method": "chemistry prior official item review bridged into the per-item classification_accuracy contract",
+      "why_not_earlier_unit": "Acids and Bases is required by the full item.",
+      "classification_reasoning": "Official progression review: U8 Acids and Bases. pH and pOH of strong acids and bases require Unit 8.2.",
+      "review_method": "Chemistry item review against the official AP Chemistry topic sequence; shared group context included",
       "reviewed_at": "2026-07-21"
     }
   }

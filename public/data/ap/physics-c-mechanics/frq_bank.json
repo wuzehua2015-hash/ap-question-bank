@@ -18,8 +18,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U7.frq",
-        "name": "Oscillations"
+        "code": "7.3",
+        "name": "Representing and Analyzing Simple Harmonic Motion"
       }
     ],
     "skills": [
@@ -112,18 +112,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2012_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: Experiment 1. A block of mass $0.30\\,\\mathrm{kg}$ is placed on a frictionless table and is attached to one end of a horizontal spring of spring constant $k$, as shown above. The other end of the spring is attached to a fixed wall. The block",
-        "Existing topic tags: U7.frq Oscillations.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -196,22 +190,22 @@
         "text": "Draw a sketch of $v$ versus $t$ in this case. Assume that there is a negligible change in the period and that the positive direction is still to the right."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2012_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Oscillations",
-          "reason": "Prompt evidence: Experiment 1. A block of mass $0.30\\,\\mathrm{kg}$ is placed on a frictionless table and is attached to one end of a horizontal spring of spring constant $k$, as shown above. The other end of the spring is attached to a fixed wall. The block Prior official-progression review assigned the full item to U7 Oscillations."
+          "topic_code": "7.3",
+          "topic_name": "Representing and Analyzing Simple Harmonic Motion",
+          "reason": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Oscillations is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2012_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 7; earlier units alone are insufficient.",
+      "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -228,14 +222,14 @@
     "text": "You are to perform an experiment investigating the conservation of mechanical energy involving a transformation from initial gravitational potential energy to translational kinetic energy.\n\n(a) You are given the equipment listed below, all the supports required to hold the equipment, and a lab table. On the list below, indicate each piece of equipment you would use by checking the line next to each item.\n\n- [ ] Track\n- [ ] Meterstick\n- [ ] Set of objects of different masses\n- [ ] Cart\n- [ ] Electronic balance\n- [ ] Lightweight low-friction pulley\n- [ ] String\n- [ ] Stopwatch\n\n(b) Outline a procedure for performing the experiment. Include a diagram of your experimental setup. Label the equipment in your diagram. Also include a description of the measurements you would make and a symbol for each measurement.\n\n(c) Give a detailed account of the calculations of gravitational potential energy and translational kinetic energy both before and after the transformation, in terms of the quantities measured in part (b).\n\n(d) After your first trial, your calculations show that the energy increased during the experiment. Assuming you made no mathematical errors, give a reasonable explanation for this result.\n\n(e) On all other trials, your calculations show that the energy decreased during the experiment. Assuming you made no mathematical errors, give a reasonable physical explanation for the fact that the average energy you determined decreased. Include references to conservative and nonconservative forces, as appropriate.",
     "answer": "",
     "points": 15,
-    "primary_unit": "U3",
-    "unit": "U3",
-    "unit_name": "Work, Energy, and Power",
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Torque and Rotational Dynamics",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U3.frq",
-        "name": "Work, Energy, and Power"
+        "code": "5.6",
+        "name": "Newton?s Second Law for Rotation"
       }
     ],
     "skills": [
@@ -328,19 +322,13 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2012_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: You are to perform an experiment investigating the conservation of mechanical energy involving a transformation from initial gravitational potential energy to translational kinetic energy. (a) You are given the equipment listed below, all t",
-        "Existing topic tags: U3.frq Work, Energy, and Power.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
-      "primary_unit": "U3",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "U5",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -411,22 +399,22 @@
         "text": "On all other trials, your calculations show that the energy decreased during the experiment. Assuming you made no mathematical errors, give a reasonable physical explanation for the fact that the average energy you determined decreased. Include references to conservative and nonconservative forces, as appropriate."
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2012_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U3",
-          "topic_code": null,
-          "topic_name": "Work, Energy, and Power",
-          "reason": "Prompt evidence: You are to perform an experiment investigating the conservation of mechanical energy involving a transformation from initial gravitational potential energy to translational kinetic energy. (a) You are given the equipment listed below, all t Prior official-progression review assigned the full item to U3 Work, Energy, and Power."
+          "unit": "U5",
+          "topic_code": "5.6",
+          "topic_name": "Newton?s Second Law for Rotation",
+          "reason": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Work, Energy, and Power is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2012_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 5; earlier units alone are insufficient.",
+      "classification_reasoning": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -449,8 +437,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U6.frq",
-        "name": "Energy and Momentum of Rotating Systems"
+        "code": "6.4",
+        "name": "Conservation of Angular Momentum"
       }
     ],
     "skills": [
@@ -556,18 +544,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2012_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A ring of mass $M$, radius $R$, and rotational inertia $MR^2$ is initially sliding on a frictionless surface at constant velocity $v_0$ to the right, as shown above. At time $t=0$ it encounters a surface with coefficient of friction $\\mu$ a",
-        "Existing topic tags: U6.frq Energy and Momentum of Rotating Systems.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U6",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -630,22 +612,22 @@
         "text": "Derive an expression for the distance $L$."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2012_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": null,
-          "topic_name": "Energy and Momentum of Rotating Systems",
-          "reason": "Prompt evidence: A ring of mass $M$, radius $R$, and rotational inertia $MR^2$ is initially sliding on a frictionless surface at constant velocity $v_0$ to the right, as shown above. At time $t=0$ it encounters a surface with coefficient of friction $\\mu$ a Prior official-progression review assigned the full item to U6 Energy and Momentum of Rotating Systems."
+          "topic_code": "6.4",
+          "topic_name": "Conservation of Angular Momentum",
+          "reason": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Energy and Momentum of Rotating Systems is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2012_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 6; earlier units alone are insufficient.",
+      "classification_reasoning": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -668,8 +650,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U2.frq",
-        "name": "Force and Translational Dynamics"
+        "code": "2.5",
+        "name": "Newton?s Second Law"
       }
     ],
     "skills": [
@@ -752,18 +734,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2013_FRQ1 is assigned to U2 (Force and Translational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A ball of mass $m$ and cross-sectional area $A$ is released from rest near the surface of Earth. The ball experiences a resistive force due to the air that is proportional to the ball's velocity, $F_R=bAv$, where $b$ is a positive constant.",
-        "Existing topic tags: U2.frq Force and Translational Dynamics.",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Force and translational dynamics require Unit 2. Latest required official topic: 2.5 Newton?s Second Law.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U2",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -840,22 +816,22 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U2 Force and Translational Dynamics. FRQ 2013_FRQ1 is assigned to U2 (Force and Translational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Force and translational dynamics require Unit 2. Latest required official topic: 2.5 Newton?s Second Law.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U2",
-          "topic_code": null,
-          "topic_name": "Force and Translational Dynamics",
-          "reason": "Prompt evidence: A ball of mass $m$ and cross-sectional area $A$ is released from rest near the surface of Earth. The ball experiences a resistive force due to the air that is proportional to the ball's velocity, $F_R=bAv$, where $b$ is a positive constant. Prior official-progression review assigned the full item to U2 Force and Translational Dynamics."
+          "topic_code": "2.5",
+          "topic_name": "Newton?s Second Law",
+          "reason": "Force and translational dynamics require Unit 2. Latest required official topic: 2.5 Newton?s Second Law."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Force and Translational Dynamics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U2 Force and Translational Dynamics. FRQ 2013_FRQ1 is assigned to U2 (Force and Translational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 2; earlier units alone are insufficient.",
+      "classification_reasoning": "Force and translational dynamics require Unit 2. Latest required official topic: 2.5 Newton?s Second Law.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -878,8 +854,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U7.frq",
-        "name": "Oscillations"
+        "code": "7.3",
+        "name": "Representing and Analyzing Simple Harmonic Motion"
       }
     ],
     "skills": [
@@ -965,17 +941,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2013_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A $0.30\\,\\mathrm{kg}$ cart moving at $2.0\\,\\mathrm{m/s}$ to the right collides with a $0.10\\,\\mathrm{kg}$ cart, initially moving at $3.0\\,\\mathrm{m/s}$ to the left. After the collision, the $0.10\\,\\mathrm{kg}$ cart moves to the right with a",
-        "Existing topic tags: U7.frq Oscillations.",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -995,22 +966,22 @@
         "Official page images are used only for verification and focused visual assets, not as rubric text replacements."
       ]
     },
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2013_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Oscillations",
-          "reason": "Prompt evidence: A $0.30\\,\\mathrm{kg}$ cart moving at $2.0\\,\\mathrm{m/s}$ to the right collides with a $0.10\\,\\mathrm{kg}$ cart, initially moving at $3.0\\,\\mathrm{m/s}$ to the left. After the collision, the $0.10\\,\\mathrm{kg}$ cart moves to the right with a Prior official-progression review assigned the full item to U7 Oscillations."
+          "topic_code": "7.3",
+          "topic_name": "Representing and Analyzing Simple Harmonic Motion",
+          "reason": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Oscillations is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2013_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 7; earlier units alone are insufficient.",
+      "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1033,8 +1004,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U6.frq",
-        "name": "Energy and Momentum of Rotating Systems"
+        "code": "6.4",
+        "name": "Conservation of Angular Momentum"
       }
     ],
     "skills": [
@@ -1116,18 +1087,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2013_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A solid disk of radius $0.10\\,\\mathrm{m}$ is mounted on a vertical axis. A string of negligible mass is wrapped around the rim of the disk, passes over a small, lightweight, frictionless pulley as shown above, and is tied to a block of mass",
-        "Existing topic tags: U6.frq Energy and Momentum of Rotating Systems.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U6",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -1195,22 +1160,22 @@
         "text": "The disk is removed and replaced with a hoop of the same mass and radius, but with all of its mass concentrated near the rim of the hoop and connected to the axis by lightweight spokes. The experiment is then repeated. Is the angular acceleration of the hoop greater than, less than, or the same as that of the solid disk? - [ ] Greater than - [ ] Less than - [ ] The same Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2013_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": null,
-          "topic_name": "Energy and Momentum of Rotating Systems",
-          "reason": "Prompt evidence: A solid disk of radius $0.10\\,\\mathrm{m}$ is mounted on a vertical axis. A string of negligible mass is wrapped around the rim of the disk, passes over a small, lightweight, frictionless pulley as shown above, and is tied to a block of mass Prior official-progression review assigned the full item to U6 Energy and Momentum of Rotating Systems."
+          "topic_code": "6.4",
+          "topic_name": "Conservation of Angular Momentum",
+          "reason": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Energy and Momentum of Rotating Systems is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2013_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 6; earlier units alone are insufficient.",
+      "classification_reasoning": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1227,14 +1192,14 @@
     "text": "Experiment 1: A block of mass $1.5\\,\\mathrm{kg}$ is placed on a long board. You are to design an experiment to determine the coefficient of static friction between the block and the board.\n\n(a)\n\n  i. From the following list of available equipment, check those additional items you would use for the purpose of determining the coefficient of static friction.\n\n- [ ] Ruler\n- [ ] Spring scale\n- [ ] String\n- [ ] Meterstick\n- [ ] Pulley\n- [ ] Protractor\n- [ ] Photogate\n- [ ] Stopwatch\n- [ ] Mass hanger\n- [ ] Clamps and supports\n- [ ] Objects of various known masses\n\n  ii. Sketch a diagram of your experimental setup and label the pieces of equipment that would be used.\n\n  iii. Outline the experimental procedure you would use, including a list of quantities you would measure. For each quantity, identify the equipment you would use to make the measurement.\n\n(b) Explain how to use the measurements described in part (a) to calculate the coefficient of static friction. Include a free-body diagram in your explanation that shows all forces, not components, acting on the block while the measurements are being made.\n\nExperiment 2: In a second experiment, the coefficient of kinetic friction between the block and the board is determined to be $0.10$. The board is now inclined at an angle of $25^\\circ$ above the horizontal. The block is released from rest at the top of the incline and slides $2.0\\,\\mathrm{m}$ down the incline.\n\n(c) Calculate the work done by kinetic friction as the block slides down the incline.\n\n(d) The mass of the block is now increased without changing the coefficient of kinetic friction, and experiment 2 is repeated. How does each of the following change?\n\n  i. The magnitude of the frictional force\n\n- [ ] Increases\n- [ ] Decreases\n- [ ] Remains the same\n\n  ii. The magnitude of the velocity of the block as it reaches the bottom of the incline\n\n- [ ] Increases\n- [ ] Decreases\n- [ ] Remains the same\n\n  iii. The kinetic energy of the block at the bottom of the incline\n\n- [ ] Increases\n- [ ] Decreases\n- [ ] Remains the same",
     "answer": "",
     "points": 15,
-    "primary_unit": "U7",
-    "unit": "U7",
-    "unit_name": "Oscillations",
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Torque and Rotational Dynamics",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U7.frq",
-        "name": "Oscillations"
+        "code": "5.6",
+        "name": "Newton?s Second Law for Rotation"
       }
     ],
     "skills": [
@@ -1342,18 +1307,13 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2014_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: Experiment 1: A block of mass $1.5\\,\\mathrm{kg}$ is placed on a long board. You are to design an experiment to determine the coefficient of static friction between the block and the board. (a) i. From the following list of available equipme",
-        "Existing topic tags: U7.frq Oscillations.",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
-      "primary_unit": "U7",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "U5",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -1373,22 +1333,22 @@
         "Official page images were used only as internal verification evidence and are not substitutes for rubric text."
       ]
     },
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2014_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Oscillations",
-          "reason": "Prompt evidence: Experiment 1: A block of mass $1.5\\,\\mathrm{kg}$ is placed on a long board. You are to design an experiment to determine the coefficient of static friction between the block and the board. (a) i. From the following list of available equipme Prior official-progression review assigned the full item to U7 Oscillations."
+          "unit": "U5",
+          "topic_code": "5.6",
+          "topic_name": "Newton?s Second Law for Rotation",
+          "reason": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Oscillations is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2014_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 5; earlier units alone are insufficient.",
+      "classification_reasoning": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1411,8 +1371,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U3.frq",
-        "name": "Work, Energy, and Power"
+        "code": "3.4",
+        "name": "Conservation of Energy"
       }
     ],
     "skills": [
@@ -1495,18 +1455,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2014_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A satellite of mass $m$ is in a stable circular orbit around Earth at a distance $R_1$ from the center of Earth. The mass of Earth is $M_E$. (a) Derive an expression for the following in terms of $m$, $R_1$, $M_E$, and fundamental constants",
-        "Existing topic tags: U3.frq Work, Energy, and Power.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U3",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -1557,22 +1511,22 @@
         "text": "If the total distance $S$ is equal to $3R_1$, derive an expression for $F_0$ in terms of $M_E$, $R_1$, $m$, and fundamental constants, as appropriate."
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2014_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U3",
-          "topic_code": null,
-          "topic_name": "Work, Energy, and Power",
-          "reason": "Prompt evidence: A satellite of mass $m$ is in a stable circular orbit around Earth at a distance $R_1$ from the center of Earth. The mass of Earth is $M_E$. (a) Derive an expression for the following in terms of $m$, $R_1$, $M_E$, and fundamental constants Prior official-progression review assigned the full item to U3 Work, Energy, and Power."
+          "topic_code": "3.4",
+          "topic_name": "Conservation of Energy",
+          "reason": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Work, Energy, and Power is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2014_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 3; earlier units alone are insufficient.",
+      "classification_reasoning": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1595,8 +1549,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U7.frq",
-        "name": "Oscillations"
+        "code": "7.3",
+        "name": "Representing and Analyzing Simple Harmonic Motion"
       }
     ],
     "skills": [
@@ -1687,18 +1641,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2014_FRQ3 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A uniform disk of mass $M$ and radius $R$ is suspended vertically from a pivot on its edge so that it is free to swing without friction, as shown in Figure 1 above. The disk is raised to an initial angular displacement $\\theta_0$ with respe",
-        "Existing topic tags: U7.frq Oscillations.",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -1779,22 +1727,22 @@
         "text": "Suppose the disk is replaced with another uniform disk with twice the radius, and the pivot point is again on the edge of the disk. How will the period of small-amplitude oscillations be affected by the new disk? - [ ] It will increase. - [ ] It will decrease. - [ ] It will remain the same. - [ ] There is not enough information to determine the period. Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2014_FRQ3 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Oscillations",
-          "reason": "Prompt evidence: A uniform disk of mass $M$ and radius $R$ is suspended vertically from a pivot on its edge so that it is free to swing without friction, as shown in Figure 1 above. The disk is raised to an initial angular displacement $\\theta_0$ with respe Prior official-progression review assigned the full item to U7 Oscillations."
+          "topic_code": "7.3",
+          "topic_name": "Representing and Analyzing Simple Harmonic Motion",
+          "reason": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Oscillations is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2014_FRQ3 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 7; earlier units alone are insufficient.",
+      "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1811,14 +1759,14 @@
     "text": "A new sports car is undergoing acceleration tests to determine its specifications. The following data on speed $v$ versus time $t$ are recorded for the car as it accelerates from rest along a straight track.\n\n| $t$ (s) | 0 | 2 | 4 | 6 | 8 | 10 |\n|---:|---:|---:|---:|---:|---:|---:|\n| $v$ (m/s) | 0 | 14 | 23 | 30 | 35 | 39 |\n\n(a) On the axes below, plot $v$ as a function of $t$ and sketch a curve that best represents the data.\n\n(b) Answer each of the following for the time period $t=0\\,\\mathrm{s}$ to $t=10\\,\\mathrm{s}$.\n\n  i. Does the speed of the car increase, decrease, or stay the same?\n\n- [ ] Increase\n- [ ] Decrease\n- [ ] Stay the same\n\nJustify your answer.\n\n  ii. Does the acceleration of the car increase, decrease, or stay the same?\n\n- [ ] Increase\n- [ ] Decrease\n- [ ] Stay the same\n\nJustify your answer.\n\n(c) Explain how you would use your graph in part (a) to find the distance traveled by the car between $t=2\\,\\mathrm{s}$ and $t=8\\,\\mathrm{s}$.\n\nThe equation for the speed $v$ of the car as a function of time $t$ found from the graph is\n\n$$v(t)=-0.3t^2+7t,$$\n\nwhere $v$ is in $\\mathrm{m/s}$ and $t$ is in seconds.\n\n(d) Derive an expression for the acceleration of the car $a(t)$ as a function of time $t$.\n\n(e) Calculate the position of the car as a function of time, $x(t)$, assuming that the car starts from rest at the origin of a coordinate system.\n\n(f) Calculate the distance traveled by the car between $t=2\\,\\mathrm{s}$ and $t=8\\,\\mathrm{s}$.",
     "answer": "",
     "points": 15,
-    "primary_unit": "U1",
-    "unit": "U1",
-    "unit_name": "Kinematics",
+    "primary_unit": "U7",
+    "unit": "U7",
+    "unit_name": "Oscillations",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U1.frq",
-        "name": "Kinematics"
+        "code": "7.3",
+        "name": "Representing and Analyzing Simple Harmonic Motion"
       }
     ],
     "skills": [
@@ -1920,19 +1868,13 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2015_FRQ1 is assigned to U1 (Kinematics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A new sports car is undergoing acceleration tests to determine its specifications. The following data on speed $v$ versus time $t$ are recorded for the car as it accelerates from rest along a straight track. | $t$ (s) | 0 | 2 | 4 | 6 | 8 | ",
-        "Existing topic tags: U1.frq Kinematics.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
-      "primary_unit": "U1",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -1997,22 +1939,22 @@
         "text": "Calculate the distance traveled by the car between $t=2\\,\\mathrm{s}$ and $t=8\\,\\mathrm{s}$."
       }
     ],
-    "classification_reasoning": "Official progression review: U1 Kinematics. FRQ 2015_FRQ1 is assigned to U1 (Kinematics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U1",
-          "topic_code": null,
-          "topic_name": "Kinematics",
-          "reason": "Prompt evidence: A new sports car is undergoing acceleration tests to determine its specifications. The following data on speed $v$ versus time $t$ are recorded for the car as it accelerates from rest along a straight track. | $t$ (s) | 0 | 2 | 4 | 6 | 8 |  Prior official-progression review assigned the full item to U1 Kinematics."
+          "unit": "U7",
+          "topic_code": "7.3",
+          "topic_name": "Representing and Analyzing Simple Harmonic Motion",
+          "reason": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "This is first-unit material; no earlier unit exists.",
-      "classification_reasoning": "Official progression review: U1 Kinematics. FRQ 2015_FRQ1 is assigned to U1 (Kinematics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 7; earlier units alone are insufficient.",
+      "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2029,14 +1971,14 @@
     "text": "The model of a roller coaster shown above consists of a ramp and a circular loop. A small block of mass $M$ starts from height $H$ with speed $v=0$ and slides without friction down the ramp and around the inside of the loop of radius $H/2$. Position $P$ is a point on the loop at an angle $\\theta$ with the horizontal, as shown above. Express all algebraic answers in terms of $M$, $H$, $\\theta$, and fundamental constants, as appropriate.\n\n(a) Derive an expression for the speed of the block at position $P$.\n\n(b) On the following diagram, draw and label vectors to represent the forces, not components, on the block when it is at position $P$. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot at position $P$.\n\n(c) Derive an expression for the magnitude of the force exerted by the loop on the block when it is at position $P$. If you need to draw anything other than what you have shown in part (b) to assist in your solution, use the space below. Do not add anything to the figure in part (b).\n\n(d) Calculate the angle $\\theta_L$, in degrees, at which the block leaves the loop.\n\n(e) The small block is replaced with a small sphere that also starts at height $H$. Now there is enough friction to allow the sphere to roll down the ramp without slipping. Identify how the new angle $\\theta_n$ at which the sphere leaves the loop compares with the angle $\\theta_L$ calculated in part (d).\n\n- [ ] $\\theta_n<\\theta_L$\n- [ ] $\\theta_n=\\theta_L$\n- [ ] $\\theta_n>\\theta_L$\n\nExplain your reasoning.",
     "answer": "",
     "points": 15,
-    "primary_unit": "U6",
-    "unit": "U6",
-    "unit_name": "Energy and Momentum of Rotating Systems",
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Linear Momentum",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U6.frq",
-        "name": "Energy and Momentum of Rotating Systems"
+        "code": "4.3",
+        "name": "Conservation of Linear Momentum"
       }
     ],
     "skills": [
@@ -2125,19 +2067,13 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2015_FRQ2 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: The model of a roller coaster shown above consists of a ramp and a circular loop. A small block of mass $M$ starts from height $H$ with speed $v=0$ and slides without friction down the ramp and around the inside of the loop of radius $H/2$.",
-        "Existing topic tags: U6.frq Energy and Momentum of Rotating Systems.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Linear momentum requires Unit 4. Latest required official topic: 4.3 Conservation of Linear Momentum.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
-      "primary_unit": "U6",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "U4",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -2207,22 +2143,22 @@
         "text": "The small block is replaced with a small sphere that also starts at height $H$. Now there is enough friction to allow the sphere to roll down the ramp without slipping. Identify how the new angle $\\theta_n$ at which the sphere leaves the loop compares with the angle $\\theta_L$ calculated in part (d). - [ ] $\\theta_n<\\theta_L$ - [ ] $\\theta_n=\\theta_L$ - [ ] $\\theta_n>\\theta_L$ Explain your reasoning."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2015_FRQ2 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Linear momentum requires Unit 4. Latest required official topic: 4.3 Conservation of Linear Momentum.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U6",
-          "topic_code": null,
-          "topic_name": "Energy and Momentum of Rotating Systems",
-          "reason": "Prompt evidence: The model of a roller coaster shown above consists of a ramp and a circular loop. A small block of mass $M$ starts from height $H$ with speed $v=0$ and slides without friction down the ramp and around the inside of the loop of radius $H/2$. Prior official-progression review assigned the full item to U6 Energy and Momentum of Rotating Systems."
+          "unit": "U4",
+          "topic_code": "4.3",
+          "topic_name": "Conservation of Linear Momentum",
+          "reason": "Linear momentum requires Unit 4. Latest required official topic: 4.3 Conservation of Linear Momentum."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Energy and Momentum of Rotating Systems is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2015_FRQ2 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 4; earlier units alone are insufficient.",
+      "classification_reasoning": "Linear momentum requires Unit 4. Latest required official topic: 4.3 Conservation of Linear Momentum.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2245,8 +2181,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U5.frq",
-        "name": "Torque and Rotational Dynamics"
+        "code": "5.6",
+        "name": "Newton?s Second Law for Rotation"
       }
     ],
     "skills": [
@@ -2341,18 +2277,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2015_FRQ3 is assigned to U5 (Torque and Rotational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A uniform, rigid, thin board that is $2.4\\,\\mathrm{m}$ long and weighs $200\\,\\mathrm{N}$ is attached to a post by a pivot at point $P$ and hangs over the edge of a building, as shown above. A crate weighing $400\\,\\mathrm{N}$ is attached to ",
-        "Existing topic tags: U5.frq Torque and Rotational Dynamics.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U5",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -2408,22 +2338,22 @@
         "text": "Suppose that the wire breaks and the board begins to pivot about point $P$. Calculate each of the following. i. The magnitude of the initial angular acceleration of the board-crate system ii. The magnitude of the initial linear acceleration of the left end of the board"
       }
     ],
-    "classification_reasoning": "Official progression review: U5 Torque and Rotational Dynamics. FRQ 2015_FRQ3 is assigned to U5 (Torque and Rotational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U5",
-          "topic_code": null,
-          "topic_name": "Torque and Rotational Dynamics",
-          "reason": "Prompt evidence: A uniform, rigid, thin board that is $2.4\\,\\mathrm{m}$ long and weighs $200\\,\\mathrm{N}$ is attached to a post by a pivot at point $P$ and hangs over the edge of a building, as shown above. A crate weighing $400\\,\\mathrm{N}$ is attached to  Prior official-progression review assigned the full item to U5 Torque and Rotational Dynamics."
+          "topic_code": "5.6",
+          "topic_name": "Newton?s Second Law for Rotation",
+          "reason": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Torque and Rotational Dynamics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U5 Torque and Rotational Dynamics. FRQ 2015_FRQ3 is assigned to U5 (Torque and Rotational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 5; earlier units alone are insufficient.",
+      "classification_reasoning": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2440,14 +2370,14 @@
     "text": "A block of mass $m_B$ is being pulled up a ramp by a hanging object of mass $m_H$, as shown in the figure above. The blocks are attached to each other by a light string that passes over a pulley of negligible mass and friction. Both the block and the hanging object are moving at constant speed, and the angle of the ramp with the horizontal is $\\theta$. The coefficient of kinetic friction between the block and the ramp is $\\mu_k$.\n\n(a) On the dots below, which represent the block and the hanging object, draw and label the forces, not components, that act on the block and the hanging object. Each force must be represented by a distinct arrow starting on, and pointing away from, the appropriate dot.\n\n(b) Derive an expression for the mass $m_H$ of the hanging object. Express your answer in terms of $m_B$, $\\theta$, $\\mu_k$, and physical constants, as appropriate. If you need to draw anything other than what you have shown in part (a) to assist in your solution, use the space below. Do not add anything to the figure in part (a).\n\nIt is determined that $m_B=2.0\\,\\mathrm{kg}$, $\\theta=30^\\circ$, and $\\mu_k=0.10$. While the block is moving up the ramp and the hanging object is moving downward, the string is suddenly cut.\n\n(c)\n\n  i. Calculate the magnitude of the acceleration of the block immediately after the string is cut.\n\n  ii. What is the direction of the acceleration of the block immediately after the string is cut?\n\n- [ ] Up the ramp\n- [ ] Down the ramp\n- [ ] No direction, because the acceleration is zero\n\n  iii. Determine the magnitude of the acceleration of the hanging object immediately after the string is cut.\n\n(d) Assume the block is moving up the ramp at $2.0\\,\\mathrm{m/s}$ when the string is cut. Calculate how far the block travels up the ramp from the time the string is cut until the block stops, assuming there is sufficient distance on the ramp.",
     "answer": "",
     "points": 15,
-    "primary_unit": "U3",
-    "unit": "U3",
-    "unit_name": "Work, Energy, and Power",
+    "primary_unit": "U5",
+    "unit": "U5",
+    "unit_name": "Torque and Rotational Dynamics",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U3.frq",
-        "name": "Work, Energy, and Power"
+        "code": "5.6",
+        "name": "Newton?s Second Law for Rotation"
       }
     ],
     "skills": [
@@ -2546,19 +2476,13 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2016_FRQ1 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A block of mass $m_B$ is being pulled up a ramp by a hanging object of mass $m_H$, as shown in the figure above. The blocks are attached to each other by a light string that passes over a pulley of negligible mass and friction. Both the blo",
-        "Existing topic tags: U3.frq Work, Energy, and Power.",
-        "Student-visible media are preserved with 4 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
-      "primary_unit": "U3",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "U5",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -2643,22 +2567,22 @@
         "text": "Assume the block is moving up the ramp at $2.0\\,\\mathrm{m/s}$ when the string is cut. Calculate how far the block travels up the ramp from the time the string is cut until the block stops, assuming there is sufficient distance on the ramp."
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2016_FRQ1 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U3",
-          "topic_code": null,
-          "topic_name": "Work, Energy, and Power",
-          "reason": "Prompt evidence: A block of mass $m_B$ is being pulled up a ramp by a hanging object of mass $m_H$, as shown in the figure above. The blocks are attached to each other by a light string that passes over a pulley of negligible mass and friction. Both the blo Prior official-progression review assigned the full item to U3 Work, Energy, and Power."
+          "unit": "U5",
+          "topic_code": "5.6",
+          "topic_name": "Newton?s Second Law for Rotation",
+          "reason": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Work, Energy, and Power is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2016_FRQ1 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 5; earlier units alone are insufficient.",
+      "classification_reasoning": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2681,8 +2605,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U7.frq",
-        "name": "Oscillations"
+        "code": "7.3",
+        "name": "Representing and Analyzing Simple Harmonic Motion"
       }
     ],
     "skills": [
@@ -2787,18 +2711,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2016_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: An experiment is performed on a frictionless surface consisting of a horizontal section and a ramp inclined at a $20^\\circ$ angle. Block A of mass $3.0\\,\\mathrm{kg}$ rests on the horizontal section against but not attached to an ideal sprin",
-        "Existing topic tags: U7.frq Oscillations.",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -2881,22 +2799,22 @@
         "text": "i. Calculate the magnitude of the impulse exerted on block A by block B. ii. In what direction, if any, is the impulse exerted on block A by block B? - [ ] Up the ramp - [ ] Down the ramp - [ ] Undefined, because the impulse is zero"
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2016_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Oscillations",
-          "reason": "Prompt evidence: An experiment is performed on a frictionless surface consisting of a horizontal section and a ramp inclined at a $20^\\circ$ angle. Block A of mass $3.0\\,\\mathrm{kg}$ rests on the horizontal section against but not attached to an ideal sprin Prior official-progression review assigned the full item to U7 Oscillations."
+          "topic_code": "7.3",
+          "topic_name": "Representing and Analyzing Simple Harmonic Motion",
+          "reason": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Oscillations is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2016_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 7; earlier units alone are insufficient.",
+      "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2919,8 +2837,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U7.frq",
-        "name": "Oscillations"
+        "code": "7.3",
+        "name": "Representing and Analyzing Simple Harmonic Motion"
       }
     ],
     "skills": [
@@ -3016,18 +2934,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2016_FRQ3 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A uniform rod of mass $M$ and length $L$ is pivoted at a point a distance $L/3$ from the top end, as shown above. The rod is pulled back so that it makes a small angle with the vertical and is then released. (a) Using integral calculus, sho",
-        "Existing topic tags: U7.frq Oscillations.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -3089,22 +3001,22 @@
         "text": "Using your straight line, determine an experimental value for $g$."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2016_FRQ3 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Oscillations",
-          "reason": "Prompt evidence: A uniform rod of mass $M$ and length $L$ is pivoted at a point a distance $L/3$ from the top end, as shown above. The rod is pulled back so that it makes a small angle with the vertical and is then released. (a) Using integral calculus, sho Prior official-progression review assigned the full item to U7 Oscillations."
+          "topic_code": "7.3",
+          "topic_name": "Representing and Analyzing Simple Harmonic Motion",
+          "reason": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Oscillations is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2016_FRQ3 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 7; earlier units alone are insufficient.",
+      "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3127,8 +3039,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U7.frq",
-        "name": "Oscillations"
+        "code": "7.3",
+        "name": "Representing and Analyzing Simple Harmonic Motion"
       }
     ],
     "skills": [
@@ -3243,18 +3155,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2017_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A spring of negligible mass and spring constant $50\\,\\mathrm{N/m}$ is hung vertically, as shown above in the figure on the left. A block of mass $1.0\\,\\mathrm{kg}$ is attached to the spring and slowly lowered a distance $x_0$ until it hangs",
-        "Existing topic tags: U7.frq Oscillations.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -3332,22 +3238,22 @@
         "text": "The collision is repeated using a rubber ball with the same mass as the ball of clay. The rubber ball is launched vertically with the same speed $v_0$. The collision between the rubber ball and the block is elastic. Will the speed of the block immediately after colliding with the rubber ball be greater than, less than, or equal to the speed of the block you calculated in part (d)(i)? - [ ] Greater than - [ ] Less than - [ ] Equal to Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2017_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Oscillations",
-          "reason": "Prompt evidence: A spring of negligible mass and spring constant $50\\,\\mathrm{N/m}$ is hung vertically, as shown above in the figure on the left. A block of mass $1.0\\,\\mathrm{kg}$ is attached to the spring and slowly lowered a distance $x_0$ until it hangs Prior official-progression review assigned the full item to U7 Oscillations."
+          "topic_code": "7.3",
+          "topic_name": "Representing and Analyzing Simple Harmonic Motion",
+          "reason": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Oscillations is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2017_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 7; earlier units alone are insufficient.",
+      "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3370,8 +3276,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U7.frq",
-        "name": "Oscillations"
+        "code": "7.3",
+        "name": "Representing and Analyzing Simple Harmonic Motion"
       }
     ],
     "skills": [
@@ -3488,18 +3394,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2017_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A cart of mass $M$ is on a level, horizontal track. The cart is attached to one end of an ideal spring, and the other end of the spring is attached to a vertical support. The spring has spring constant $k$. The cart is pulled to the right, ",
-        "Existing topic tags: U7.frq Oscillations.",
-        "Student-visible media are preserved with 4 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -3592,22 +3492,22 @@
         "text": "The experiment is repeated, but in a second set of trials, the cart is pulled back a distance $D$, where $D>d$. Describe any changes that will occur for the straight line on the graph in part (d). Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2017_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Oscillations",
-          "reason": "Prompt evidence: A cart of mass $M$ is on a level, horizontal track. The cart is attached to one end of an ideal spring, and the other end of the spring is attached to a vertical support. The spring has spring constant $k$. The cart is pulled to the right,  Prior official-progression review assigned the full item to U7 Oscillations."
+          "topic_code": "7.3",
+          "topic_name": "Representing and Analyzing Simple Harmonic Motion",
+          "reason": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Oscillations is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2017_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 7; earlier units alone are insufficient.",
+      "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3630,8 +3530,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U6.frq",
-        "name": "Energy and Momentum of Rotating Systems"
+        "code": "6.4",
+        "name": "Conservation of Angular Momentum"
       }
     ],
     "skills": [
@@ -3733,18 +3633,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2017_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A sphere of mass $m$ and radius $r$ is released from rest at the top of a curved track of height $H$. The sphere travels down the curved track and around a loop of radius $R$. The sphere rolls without slipping during the entire motion. Poin",
-        "Existing topic tags: U6.frq Energy and Momentum of Rotating Systems.",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U6",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -3828,22 +3722,22 @@
         "text": "Calculate the maximum height above the bottom of the loop that the sphere will reach."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2017_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": null,
-          "topic_name": "Energy and Momentum of Rotating Systems",
-          "reason": "Prompt evidence: A sphere of mass $m$ and radius $r$ is released from rest at the top of a curved track of height $H$. The sphere travels down the curved track and around a loop of radius $R$. The sphere rolls without slipping during the entire motion. Poin Prior official-progression review assigned the full item to U6 Energy and Momentum of Rotating Systems."
+          "topic_code": "6.4",
+          "topic_name": "Conservation of Angular Momentum",
+          "reason": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Energy and Momentum of Rotating Systems is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2017_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 6; earlier units alone are insufficient.",
+      "classification_reasoning": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3866,8 +3760,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U7.frq",
-        "name": "Oscillations"
+        "code": "7.3",
+        "name": "Representing and Analyzing Simple Harmonic Motion"
       }
     ],
     "skills": [
@@ -3976,18 +3870,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2018_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A student sets up an experiment with a cart on a level horizontal track. The cart is attached with an elastic cord to a force sensor that is fixed in place on the left end of the track. A motion sensor is at the right end of the track, as s",
-        "Existing topic tags: U7.frq Oscillations.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -4070,22 +3958,22 @@
         "text": "Use the best-fit line to calculate the force constant $k$ of the elastic cord."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2018_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Oscillations",
-          "reason": "Prompt evidence: A student sets up an experiment with a cart on a level horizontal track. The cart is attached with an elastic cord to a force sensor that is fixed in place on the left end of the track. A motion sensor is at the right end of the track, as s Prior official-progression review assigned the full item to U7 Oscillations."
+          "topic_code": "7.3",
+          "topic_name": "Representing and Analyzing Simple Harmonic Motion",
+          "reason": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Oscillations is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2018_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 7; earlier units alone are insufficient.",
+      "classification_reasoning": "Oscillations and waves require the latest mechanics wave/oscillation unit. Latest required official topic: 7.3 Representing and Analyzing Simple Harmonic Motion.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4108,8 +3996,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U3.frq",
-        "name": "Work, Energy, and Power"
+        "code": "3.4",
+        "name": "Conservation of Energy"
       }
     ],
     "skills": [
@@ -4233,18 +4121,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2018_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: The variable $x$ represents the position of particle A in a two-particle system. Particle B remains at rest. The graph above shows the potential energy $U(x)$ of the system as a function of position $x$ of particle A, which has mass $0.40\\,",
-        "Existing topic tags: U3.frq Work, Energy, and Power.",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U3",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -4333,22 +4215,22 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2018_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U3",
-          "topic_code": null,
-          "topic_name": "Work, Energy, and Power",
-          "reason": "Prompt evidence: The variable $x$ represents the position of particle A in a two-particle system. Particle B remains at rest. The graph above shows the potential energy $U(x)$ of the system as a function of position $x$ of particle A, which has mass $0.40\\, Prior official-progression review assigned the full item to U3 Work, Energy, and Power."
+          "topic_code": "3.4",
+          "topic_name": "Conservation of Energy",
+          "reason": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Work, Energy, and Power is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2018_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 3; earlier units alone are insufficient.",
+      "classification_reasoning": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4371,8 +4253,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U6.frq",
-        "name": "Energy and Momentum of Rotating Systems"
+        "code": "6.4",
+        "name": "Conservation of Angular Momentum"
       }
     ],
     "skills": [
@@ -4484,18 +4366,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2018_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A cylinder of mass $M$ and radius $R$ is released from rest at the top of an inclined plane, as shown above. The cylinder rolls without slipping down the incline. The rotational inertia of the cylinder is $MR^2/2$. (a) Derive an expression ",
-        "Existing topic tags: U6.frq Energy and Momentum of Rotating Systems.",
-        "Student-visible media are preserved with 5 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U6",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -4600,22 +4476,22 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2018_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": null,
-          "topic_name": "Energy and Momentum of Rotating Systems",
-          "reason": "Prompt evidence: A cylinder of mass $M$ and radius $R$ is released from rest at the top of an inclined plane, as shown above. The cylinder rolls without slipping down the incline. The rotational inertia of the cylinder is $MR^2/2$. (a) Derive an expression  Prior official-progression review assigned the full item to U6 Energy and Momentum of Rotating Systems."
+          "topic_code": "6.4",
+          "topic_name": "Conservation of Angular Momentum",
+          "reason": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Energy and Momentum of Rotating Systems is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2018_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 6; earlier units alone are insufficient.",
+      "classification_reasoning": "Energy and momentum of rotating systems require Unit 6. Latest required official topic: 6.4 Conservation of Angular Momentum.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4638,8 +4514,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U3.frq",
-        "name": "Work, Energy, and Power"
+        "code": "3.4",
+        "name": "Conservation of Energy"
       }
     ],
     "skills": [
@@ -4753,18 +4629,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2019_FRQ1 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A projectile is launched from the back of a cart of mass $m$ that is held at rest, as shown above. At time $t=0$, the projectile leaves the cart with speed $v_0$ at an angle $\\theta$ above the horizontal. The projectile lands at point $P$. ",
-        "Existing topic tags: U3.frq Work, Energy, and Power.",
-        "Student-visible media are preserved with 4 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U3",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -4858,22 +4728,22 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2019_FRQ1 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U3",
-          "topic_code": null,
-          "topic_name": "Work, Energy, and Power",
-          "reason": "Prompt evidence: A projectile is launched from the back of a cart of mass $m$ that is held at rest, as shown above. At time $t=0$, the projectile leaves the cart with speed $v_0$ at an angle $\\theta$ above the horizontal. The projectile lands at point $P$.  Prior official-progression review assigned the full item to U3 Work, Energy, and Power."
+          "topic_code": "3.4",
+          "topic_name": "Conservation of Energy",
+          "reason": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Work, Energy, and Power is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2019_FRQ1 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 3; earlier units alone are insufficient.",
+      "classification_reasoning": "Work, energy, and power require Unit 3. Latest required official topic: 3.4 Conservation of Energy.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4890,9 +4760,9 @@
     "text": "A thin uniform disk of mass $M$ and radius $R$ has a string wrapped around its edge and attached to the ceiling. The bottom of the disk is at a height $3R$ above the floor, as shown above. The disk is released from rest. The rotational inertia of a disk around its center is $I=\\frac12MR^2$.\n\n(a) On the circle below that represents the disk, draw and label the forces, not components, that act on the disk. Each force must be represented by a distinct arrow starting on, and pointing away from, the disk, beginning at the point where the force is exerted on the disk. The dot is at the center of the disk.\n\n(b) When released from rest, the disk falls and the string unwinds. The force the string exerts on the disk is $F_T$, and the gravitational force exerted on the disk is $F_g$. Which expression correctly relates $F_T$ and $F_g$ as the disk falls?\n\n- [ ] $F_T<F_g$\n- [ ] $F_T=F_g$\n- [ ] $F_T>F_g$\n\nJustify your answer.\n\n(c) Express all answers in terms of $M$, $R$, and physical constants, as appropriate.\n\n  i. Derive an expression for the acceleration $a$ of the disk as it falls.\n\n  ii. Derive an expression for the time $\\Delta t$ that it takes the disk to reach the ground.\n\n  iii. Derive an expression for the rotational kinetic energy $K_{rotation}$ of the disk at the instant it reaches the ground.\n\n(d) A very narrow wedge is cut out of the thin uniform disk of mass $M$, as shown above. If $r$ is the distance from the tip of the wedge, then the linear mass density of the wedge can be expressed as\n\n$$\\lambda(r)=\\frac{Mr}{25R^2}.$$\n\n  i. Using integral calculus, derive an expression for the rotational inertia of the wedge around its tip.\n\n  ii. Derive an expression for the rotational inertia of the modified disk, the disk after the narrow wedge is cut out, around its original center.",
     "answer": "",
     "points": 15,
-    "primary_unit": "U7",
-    "unit": "U7",
-    "unit_name": "Oscillations",
+    "primary_unit": "not_applicable",
+    "unit": "not_applicable",
+    "unit_name": "Outside current official unit progression",
     "secondary_units": [],
     "topics": [
       {
@@ -5010,21 +4880,15 @@
     },
     "pure_unit": true,
     "classification": {
-      "review_status": "reviewed",
+      "review_status": "blocked",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2019_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A thin uniform disk of mass $M$ and radius $R$ has a string wrapped around its edge and attached to the ceiling. The bottom of the disk is at a height $3R$ above the floor, as shown above. The disk is released from rest. The rotational iner",
-        "Existing topic tags: U7.frq Oscillations.",
-        "Student-visible media are preserved with 5 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Fluid mechanics is not in this Mechanics course map.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
-      "primary_unit": "U7",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "not_applicable",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -5122,24 +4986,20 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2019_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Fluid mechanics is not in this Mechanics course map.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "required_topics": [
-        {
-          "unit": "U7",
-          "topic_code": null,
-          "topic_name": "Oscillations",
-          "reason": "Prompt evidence: A thin uniform disk of mass $M$ and radius $R$ has a string wrapped around its edge and attached to the ceiling. The bottom of the disk is at a height $3R$ above the floor, as shown above. The disk is released from rest. The rotational iner Prior official-progression review assigned the full item to U7 Oscillations."
-        }
-      ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Oscillations is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2019_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "required_topics": [],
+      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
+      "why_not_earlier_unit": "Fluid mechanics is not in this Mechanics course map.",
+      "classification_reasoning": "Fluid mechanics is not in this Mechanics course map.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "previous_primary_unit": "U7",
+    "student_visible": false,
+    "publish_status": "blocked"
   },
   {
     "question_id": "2019_FRQ3",
@@ -5160,8 +5020,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U5.frq",
-        "name": "Torque and Rotational Dynamics"
+        "code": "5.6",
+        "name": "Newton?s Second Law for Rotation"
       }
     ],
     "skills": [
@@ -5274,18 +5134,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2019_FRQ3 is assigned to U5 (Torque and Rotational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: Three blocks are connected by strings that pass over pulleys of negligible mass. Block B is on a level, horizontal surface of negligible friction. Block A is on top of block B. String 1 connects blocks A and B. The coefficients of static an",
-        "Existing topic tags: U5.frq Torque and Rotational Dynamics.",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-c-mechanics passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U5",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -5371,22 +5225,22 @@
         "text": "In order to provide a straight-line graph that can be used to determine an experimental value for $g$, what two quantities should the students now graph? Check all that apply. - [ ] $a_C$ vs. $1/m_{tot}$ - [ ] $a_C$ vs. $m_{tot}$ - [ ] $a_C$ vs. $m_C/m_{tot}$ - [ ] $a_C$ vs. $m_C$ - [ ] $m_C$ vs. $m_{tot}$ - [ ] $m_C$ vs. $1/m_{tot}$ Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U5 Torque and Rotational Dynamics. FRQ 2019_FRQ3 is assigned to U5 (Torque and Rotational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Mechanics Course and Exam Description",
       "required_topics": [
         {
           "unit": "U5",
-          "topic_code": null,
-          "topic_name": "Torque and Rotational Dynamics",
-          "reason": "Prompt evidence: Three blocks are connected by strings that pass over pulleys of negligible mass. Block B is on a level, horizontal surface of negligible friction. Block A is on top of block B. String 1 connects blocks A and B. The coefficients of static an Prior official-progression review assigned the full item to U5 Torque and Rotational Dynamics."
+          "topic_code": "5.6",
+          "topic_name": "Newton?s Second Law for Rotation",
+          "reason": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Torque and Rotational Dynamics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U5 Torque and Rotational Dynamics. FRQ 2019_FRQ3 is assigned to U5 (Torque and Rotational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-mechanics prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 5; earlier units alone are insufficient.",
+      "classification_reasoning": "Torque and rotational dynamics require Unit 5. Latest required official topic: 5.6 Newton?s Second Law for Rotation.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   }
