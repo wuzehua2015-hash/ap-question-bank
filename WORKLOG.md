@@ -481,3 +481,8 @@
   - `npm run validate:student-risk`: 16 subjects, 5349 items, P0/P1/P2 all 0.
   - `npm run validate`: passed.
   - `npm run build`: passed.
+- Source sync and production deployment:
+  - Local commit `abe9fa8 Complete topic-level unit classification`.
+  - Stable API remote commit `0ce0057b284647a3cfc0ee811a3f48eb1cbeb35c`; remote tree matched local HEAD tree `c8201bc146071d8f63ae4c1270f2cdc4fdd0afc7`.
+  - Cloudflare Pages deployment: `https://d42c8aed.lynkedu-ap-question-bank.pages.dev`.
+  - Real production browser verification on `https://lynkedu.com/`: title `翎英教育题库`, active subjects 16, production bundle `/assets/index-Dbek1AmI.js`, topic-level student-visible scored items 5349/5349, unit-level-only 0.
