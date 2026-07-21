@@ -36,7 +36,12 @@ Every new, expanded, or repaired item must include or be produced from item-leve
 
 Keyword scans, old source labels, generated topic names, and previous `reviewed` flags can identify review candidates, but they cannot certify the final unit. A `reviewed` item is still subject to hard concept-boundary checks.
 
-`npm run validate:classification-coverage` enforces that every student-visible item has `classification_accuracy.required_topics`. `npm run validate:classification-accuracy` then enforces that those topics belong to the current official topic map and that `primary_unit` equals the latest required topic unit. A broad `reviewed` flag is not enough.
+`npm run validate:classification-coverage` enforces that every student-visible item has `classification_accuracy.required_topics`. `npm run validate:classification-accuracy` then enforces that those topics belong to the current official topic map when a topic code is present and that `primary_unit` equals the latest required topic unit. A broad `reviewed` flag is not enough.
+
+Evidence has two quality levels:
+
+- Topic-level evidence: `required_topics` includes an official topic code from the subject's current official topic map. This is the target standard for newly added, repaired, or high-risk items.
+- Unit-level bridge evidence: `required_topics` records the official unit and prior reviewed prompt evidence, but no official topic code. This may preserve legacy reviewed content through the contract, but it is not proof that topic-level review is complete. A subject cannot be described as fully topic-level reviewed while any active item remains in this bridge state.
 
 Cross-unit signals are review candidates only. Automated scans must use the stem, shared stimulus, table/figure captions, and the correct-answer path; wrong-option-only concepts cannot raise the unit. If a signal points to a different unit, the item must either be corrected or retain its current unit with a concrete reviewer rationale explaining why the signal is background, output, or non-solving context.
 
@@ -63,6 +68,7 @@ Passing the browser flow alone is never enough. A question can be clickable and 
 7. Confirm the decision against the official subject framework before writing the unit label.
 8. If an item is corrected, update related indexes and add a short `classification_reasoning` that states the official-framework and progression-gate reason.
 9. Add corrected examples and confirmed false alarms to `scripts/unit_progression_reviewed_cases.json` so future validation catches regressions and does not bury real issues in repeated noise.
+10. If a legacy item is only bridged from prior reviewed evidence, record it as unit-level bridge evidence and keep it eligible for future topic-level backfill. Do not describe that bridge operation as a fresh all-item reclassification.
 
 ## Framework Metadata
 

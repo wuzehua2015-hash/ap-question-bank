@@ -1,6 +1,6 @@
 # Global Question Bank SOP
 
-Last updated: 2026-07-17
+Last updated: 2026-07-21
 
 This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and publishing question-bank content across AP subjects and future A-Level, IB, and competition subjects. Older subject notes remain useful evidence, but this SOP is the entry contract.
 
@@ -12,6 +12,7 @@ This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and pu
 - Unit classification follows official learning order. `primary_unit` is the latest official unit a student must have completed to answer the item, not a keyword label.
 - Official exam and subject framework materials are the only authority for unit classification. Third-party maps, existing labels, generated topic names, or keyword tables can suggest review candidates but cannot justify the final unit.
 - Every student-visible item must carry item-level required-learning evidence in `classification_accuracy.required_topics`. Subject-level topic maps, old `reviewed` flags, broad student-flow gates, and successful rendering are not substitutes for per-item evidence.
+- Bridging prior official review evidence into `classification_accuracy` is a compatibility step, not fresh reclassification. It may satisfy the data contract only when prior official-progression evidence exists, and it must leave topic-level backfill status visible.
 - Grouped items stay together. Shared context, figures, tables, and code must be represented once as `group_context` or equivalent structured fields, and every member must render that context.
 - Cross-unit grouped MCQ buckets are not unit-Quiz eligible. A single-unit Quiz may include a grouped bucket only when every member has that same `primary_unit`; cumulative/all-subject/Mock flows may include the bucket only as a complete group.
 - Rebuild pipelines must preserve reviewed per-item metadata such as visual, rendering, answerability, and classification review fields unless the pipeline explicitly regenerates and revalidates that field.
@@ -121,6 +122,7 @@ For every new or changed item:
   - `classification_reasoning` that refers to the official framework boundary, not a third-party course map.
 - Automated candidate scans may use the stem, shared stimulus, tables/figure captions, and the correct-answer path to find conflicts. They cannot decide the final unit by themselves, and wrong-option-only concepts cannot raise the unit.
 - Treat `reviewed` status as metadata only. It never exempts an item from hard concept-boundary checks.
+- Distinguish topic-level evidence from unit-level bridge evidence. Newly added, repaired, or high-risk items require topic-level evidence whenever the official topic map exists. Legacy bridge evidence cannot be used to claim a subject has been freshly reclassified item by item.
 - For grouped questions, do not allow a member to appear in an earlier cumulative scope than its shared context and group members allow.
 - For single-unit Quiz, grouped buckets must be filtered by `every(member.primary_unit === selectedUnit)`, never by "any member matches selected unit".
 - For cumulative progression scopes, grouped buckets must be filtered by `every(member.primary_unit in learnedUnits)`.
@@ -186,6 +188,12 @@ npm run audit:expansion-closeout -- --subject=<subject-id> --status=partial|comp
 ```
 
 Add subject-specific commands such as `npm run audit:csa` whenever they exist.
+
+Current subject-specific classification gates include:
+
+- `npm run validate:macro-units`
+- `npm run validate:micro-units`
+- `npm run validate:csa-units`
 
 ## Full-Diagnosis SOP
 
