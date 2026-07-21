@@ -263,4 +263,15 @@ The site has entered productization for public launch:
   - `npm run validate`: all gates passed; only the documented CSA U4 concentration warning remains in `validate:unit-distribution`.
   - `npm run build`: passed.
   - Real browser local student check on isolated preview port 4291: student home renders Chinese-first; first-visit Start Practice routes to subject settings; Settings shows 16 addable subjects; CSA Quiz uses 4 current units; generated CSA Quiz enters `/play` and displays code content with option labels and content on the same visual line.
-- Deployment is pending in this entry until remote sync and Cloudflare production verification are completed.
+- Remote sync:
+  - Local commit `ca0fec2 Backfill official topic maps and current unit frameworks`.
+  - Stable API remote commit `f5a7bad9be5f53c328e66b9d3363a64d587b6ab4`.
+  - `npm run stable:status` confirmed local and remote tree `37c1546edc5d323610acb06e1cd28e6f78be2ad6` match.
+- Cloudflare Pages student deployment: `https://1ac2bfcb.lynkedu-ap-question-bank.pages.dev`.
+- Production verification on `https://lynkedu.com` passed:
+  - HTML title returns `翎英教育题库`.
+  - `subjects.json` returns 16 active subjects.
+  - CSA units are U1-U4 current framework; Statistics units are U1-U5 current framework; Physics 2 units are U9-U15 current framework.
+  - Student-visible old-unit residuals are 0 for CSA legacy U5-U10, Statistics legacy U6-U9, and Physics 2 legacy U1-U7.
+  - Physics 2 retains 21 legacy Fluids MCQ records as blocked/internal only.
+  - Real browser production check: home renders Chinese-first and `/quiz` with CSA loads from production `/data/subjects.json` and `/data/ap/computer-science-a/question_bank.json`, showing U1-U4 with current unit names.
