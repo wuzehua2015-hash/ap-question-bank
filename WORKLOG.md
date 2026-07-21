@@ -434,3 +434,27 @@
   - Remote tree verified in sync by `npm run stable:status`: local/remote tree `ddccfc2a031e99bfe49f6de583432f3fdfb704b0`; remote commit `f05a0ab9e75df5e5e135144a0212f836edeee498`.
   - Cloudflare Pages deployed student site to `https://32233839.lynkedu-ap-question-bank.pages.dev`.
   - Production `https://lynkedu.com` data verified for the seven Macro Phillips Curve U5/Topic 5.2 items, CSA `ap_bowl_2018_Q37` U10, and Macro Unit 5 topics `5.1` through `5.7`.
+
+# 2026-07-21 - Official Topic Maps And Current Framework Migration
+
+- Downloaded and archived current official CED/framework PDFs under `.workspace/official_ced_pdfs/` for Biology, Chemistry, CSA, CSP, Calculus, Statistics, US Government, APES, Physics 1, Physics 2, Physics C Mechanics, and Physics C E&M.
+- Added topic-level official maps to all 16 active subjects; `validate:classification-accuracy` now reports topic-map coverage debt 0.
+- Migrated CSA from the legacy 10-unit structure to the Effective Fall 2025 4-unit structure:
+  - old U1/U2 -> new U1;
+  - old U3/U4 -> new U2;
+  - old U5 -> new U3;
+  - old U6/U7/U8/U9/U10 -> new U4.
+- Migrated Statistics from the legacy 9-unit structure to the Effective Fall 2026 5-unit structure and updated reviewed regression cases to the new unit numbering.
+- Migrated Physics 2 to the Effective Fall 2024 U9-U15 framework and blocked legacy Fluids items from every student-visible path.
+- Updated gates:
+  - `data_validator.cjs`, `student_progression_audit.cjs`, `unit_progression_audit.cjs`, and `full_student_risk_audit.cjs` now consistently ignore `student_visible: false` / `publish_status: blocked` records for student-facing release checks.
+  - `official_unit_authority_audit.cjs`, `classification_accuracy_contract_audit.cjs`, `unit_distribution_contract_audit.cjs`, `unit_progression_audit.cjs`, and `csa_content_audit.cjs` were aligned with the new official frameworks.
+- Fixed `index.html` title bytes to UTF-8 Chinese title after detecting a source-level browser-title/SEO metadata risk.
+- Verification passed:
+  - `npm run validate:official-units`
+  - `npm run validate:classification-accuracy`
+  - `npm run validate:student-progression`
+  - `npm run validate:data`
+  - `npm run validate`
+  - `npm run build`
+  - real-browser local student path on port 4291: home, first-visit subject settings, 16-subject availability, CSA unit list, CSA Quiz generation, CSA `/play` code rendering.

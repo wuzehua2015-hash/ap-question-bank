@@ -4,23 +4,173 @@
   "units": [
     {
       "code": "U1",
-      "name": "Creative Development"
+      "name": "Creative Development",
+      "topics": [
+        {
+          "code": "1.1",
+          "name": "Collaboration"
+        },
+        {
+          "code": "1.2",
+          "name": "Program Function and Purpose"
+        },
+        {
+          "code": "1.3",
+          "name": "Program Design and Development"
+        },
+        {
+          "code": "1.4",
+          "name": "Identifying and Correcting Errors"
+        }
+      ]
     },
     {
       "code": "U2",
-      "name": "Data"
+      "name": "Data",
+      "topics": [
+        {
+          "code": "2.1",
+          "name": "Binary Numbers"
+        },
+        {
+          "code": "2.2",
+          "name": "Data Compression"
+        },
+        {
+          "code": "2.3",
+          "name": "Extracting Information from Data"
+        },
+        {
+          "code": "2.4",
+          "name": "Using Programs with Data"
+        }
+      ]
     },
     {
       "code": "U3",
-      "name": "Algorithms and Programming"
+      "name": "Algorithms and Programming",
+      "topics": [
+        {
+          "code": "3.1",
+          "name": "Variables and Assignments"
+        },
+        {
+          "code": "3.2",
+          "name": "Data Abstraction"
+        },
+        {
+          "code": "3.3",
+          "name": "Mathematical Expressions"
+        },
+        {
+          "code": "3.4",
+          "name": "Strings"
+        },
+        {
+          "code": "3.5",
+          "name": "Boolean Expressions"
+        },
+        {
+          "code": "3.6",
+          "name": "Conditionals"
+        },
+        {
+          "code": "3.7",
+          "name": "Nested Conditionals"
+        },
+        {
+          "code": "3.8",
+          "name": "Iteration"
+        },
+        {
+          "code": "3.9",
+          "name": "Developing Algorithms"
+        },
+        {
+          "code": "3.10",
+          "name": "Lists"
+        },
+        {
+          "code": "3.11",
+          "name": "Binary Search"
+        },
+        {
+          "code": "3.12",
+          "name": "Calling Procedures"
+        },
+        {
+          "code": "3.13",
+          "name": "Developing Procedures"
+        },
+        {
+          "code": "3.14",
+          "name": "Libraries"
+        },
+        {
+          "code": "3.15",
+          "name": "Random Values"
+        },
+        {
+          "code": "3.16",
+          "name": "Simulations"
+        },
+        {
+          "code": "3.17",
+          "name": "Algorithmic Efficiency"
+        },
+        {
+          "code": "3.18",
+          "name": "Undecidable Problems"
+        }
+      ]
     },
     {
       "code": "U4",
-      "name": "Computer Systems and Networks"
+      "name": "Computer Systems and Networks",
+      "topics": [
+        {
+          "code": "4.1",
+          "name": "The Internet"
+        },
+        {
+          "code": "4.2",
+          "name": "Fault Tolerance"
+        },
+        {
+          "code": "4.3",
+          "name": "Parallel and Distributed Computing"
+        }
+      ]
     },
     {
       "code": "U5",
-      "name": "Impact of Computing"
+      "name": "Impact of Computing",
+      "topics": [
+        {
+          "code": "5.1",
+          "name": "Beneficial and Harmful Effects"
+        },
+        {
+          "code": "5.2",
+          "name": "Digital Divide"
+        },
+        {
+          "code": "5.3",
+          "name": "Computing Bias"
+        },
+        {
+          "code": "5.4",
+          "name": "Crowdsourcing"
+        },
+        {
+          "code": "5.5",
+          "name": "Legal and Ethical Concerns"
+        },
+        {
+          "code": "5.6",
+          "name": "Safe Computing"
+        }
+      ]
     }
   ],
   "included_sources": [
@@ -93,5 +243,6 @@
     "official_url": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles",
     "policy": "Official exam and subject framework materials are the only authority for unit classification.",
     "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
-  }
+  },
+  "topic_map_status": "official_topic_map_added_2026_07_21"
 }

@@ -5,42 +5,406 @@
     {
       "code": "U1",
       "name": "Limits and Continuity",
-      "exam_weight_percent_range": "10-12"
+      "exam_weight_percent_range": "10-12",
+      "topics": [
+        {
+          "code": "1.1",
+          "name": "Introducing Calculus: Can Change Occur at an Instant?"
+        },
+        {
+          "code": "1.2",
+          "name": "Defining Limits and Using Limit Notation"
+        },
+        {
+          "code": "1.3",
+          "name": "Estimating Limit Values from Graphs"
+        },
+        {
+          "code": "1.4",
+          "name": "Estimating Limit Values from Tables"
+        },
+        {
+          "code": "1.5",
+          "name": "Determining Limits Using Algebraic Properties of Limits"
+        },
+        {
+          "code": "1.6",
+          "name": "Determining Limits Using Algebraic Manipulation"
+        },
+        {
+          "code": "1.7",
+          "name": "Selecting Procedures for Determining Limits"
+        },
+        {
+          "code": "1.8",
+          "name": "Determining Limits Using the Squeeze Theorem"
+        },
+        {
+          "code": "1.9",
+          "name": "Connecting Multiple Representations of Limits"
+        },
+        {
+          "code": "1.10",
+          "name": "Exploring Types of Discontinuities"
+        },
+        {
+          "code": "1.11",
+          "name": "Defining Continuity at a Point"
+        },
+        {
+          "code": "1.12",
+          "name": "Confirming Continuity over an Interval"
+        },
+        {
+          "code": "1.13",
+          "name": "Removing Discontinuities"
+        },
+        {
+          "code": "1.14",
+          "name": "Connecting Infinite Limits and Vertical Asymptotes"
+        },
+        {
+          "code": "1.15",
+          "name": "Connecting Limits at Infinity and Horizontal Asymptotes"
+        },
+        {
+          "code": "1.16",
+          "name": "Working with the Intermediate Value Theorem"
+        }
+      ]
     },
     {
       "code": "U2",
       "name": "Differentiation: Definition and Fundamental Properties",
-      "exam_weight_percent_range": "10-12"
+      "exam_weight_percent_range": "10-12",
+      "topics": [
+        {
+          "code": "2.1",
+          "name": "Defining Average and Instantaneous Rates of Change at a Point"
+        },
+        {
+          "code": "2.2",
+          "name": "Defining the Derivative of a Function and Using Derivative Notation"
+        },
+        {
+          "code": "2.3",
+          "name": "Estimating Derivatives of a Function at a Point"
+        },
+        {
+          "code": "2.4",
+          "name": "Connecting Differentiability and Continuity"
+        },
+        {
+          "code": "2.5",
+          "name": "Applying the Power Rule"
+        },
+        {
+          "code": "2.6",
+          "name": "Derivative Rules: Constant, Sum, Difference, and Constant Multiple"
+        },
+        {
+          "code": "2.7",
+          "name": "Derivatives of cos x, sin x, e^x, and ln x"
+        },
+        {
+          "code": "2.8",
+          "name": "The Product Rule"
+        },
+        {
+          "code": "2.9",
+          "name": "The Quotient Rule"
+        },
+        {
+          "code": "2.10",
+          "name": "Finding the Derivatives of Tangent, Cotangent, Secant, and Cosecant Functions"
+        }
+      ]
     },
     {
       "code": "U3",
       "name": "Differentiation: Composite, Implicit, and Inverse Functions",
-      "exam_weight_percent_range": "9-13"
+      "exam_weight_percent_range": "9-13",
+      "topics": [
+        {
+          "code": "3.1",
+          "name": "The Chain Rule"
+        },
+        {
+          "code": "3.2",
+          "name": "Implicit Differentiation"
+        },
+        {
+          "code": "3.3",
+          "name": "Differentiating Inverse Functions"
+        },
+        {
+          "code": "3.4",
+          "name": "Differentiating Inverse Trigonometric Functions"
+        },
+        {
+          "code": "3.5",
+          "name": "Selecting Procedures for Calculating Derivatives"
+        },
+        {
+          "code": "3.6",
+          "name": "Calculating Higher-Order Derivatives"
+        }
+      ]
     },
     {
       "code": "U4",
       "name": "Contextual Applications of Differentiation",
-      "exam_weight_percent_range": "10-15"
+      "exam_weight_percent_range": "10-15",
+      "topics": [
+        {
+          "code": "4.1",
+          "name": "Interpreting the Meaning of the Derivative in Context"
+        },
+        {
+          "code": "4.2",
+          "name": "Straight-Line Motion: Connecting Position, Velocity, and Acceleration"
+        },
+        {
+          "code": "4.3",
+          "name": "Rates of Change in Applied Contexts Other Than Motion"
+        },
+        {
+          "code": "4.4",
+          "name": "Introduction to Related Rates"
+        },
+        {
+          "code": "4.5",
+          "name": "Solving Related Rates Problems"
+        },
+        {
+          "code": "4.6",
+          "name": "Approximating Values of a Function Using Local Linearity and Linearization"
+        },
+        {
+          "code": "4.7",
+          "name": "Using L?Hospital?s Rule for Determining Limits of Indeterminate Forms"
+        }
+      ]
     },
     {
       "code": "U5",
       "name": "Analytical Applications of Differentiation",
-      "exam_weight_percent_range": "15-18"
+      "exam_weight_percent_range": "15-18",
+      "topics": [
+        {
+          "code": "5.1",
+          "name": "Using the Mean Value Theorem"
+        },
+        {
+          "code": "5.2",
+          "name": "Extreme Value Theorem, Global Versus Local Extrema, and Critical Points"
+        },
+        {
+          "code": "5.3",
+          "name": "Determining Intervals on Which a Function Is Increasing or Decreasing"
+        },
+        {
+          "code": "5.4",
+          "name": "Using the First Derivative Test to Determine Relative Extrema"
+        },
+        {
+          "code": "5.5",
+          "name": "Using the Candidates Test to Determine Absolute Extrema"
+        },
+        {
+          "code": "5.6",
+          "name": "Determining Concavity of Functions over Their Domains"
+        },
+        {
+          "code": "5.7",
+          "name": "Using the Second Derivative Test to Determine Extrema"
+        },
+        {
+          "code": "5.8",
+          "name": "Sketching Graphs of Functions and Their Derivatives"
+        },
+        {
+          "code": "5.9",
+          "name": "Connecting a Function, Its First Derivative, and Its Second Derivative"
+        },
+        {
+          "code": "5.10",
+          "name": "Introduction to Optimization Problems"
+        },
+        {
+          "code": "5.11",
+          "name": "Solving Optimization Problems"
+        },
+        {
+          "code": "5.12",
+          "name": "Exploring Behaviors of Implicit Relations"
+        }
+      ]
     },
     {
       "code": "U6",
       "name": "Integration and Accumulation of Change",
-      "exam_weight_percent_range": "17-20"
+      "exam_weight_percent_range": "17-20",
+      "topics": [
+        {
+          "code": "6.1",
+          "name": "Exploring Accumulations of Change"
+        },
+        {
+          "code": "6.2",
+          "name": "Approximating Areas with Riemann Sums"
+        },
+        {
+          "code": "6.3",
+          "name": "Riemann Sums, Summation Notation, and Definite Integral Notation"
+        },
+        {
+          "code": "6.4",
+          "name": "The Fundamental Theorem of Calculus and Accumulation Functions"
+        },
+        {
+          "code": "6.5",
+          "name": "Interpreting the Behavior of Accumulation Functions"
+        },
+        {
+          "code": "6.6",
+          "name": "Applying Properties of Definite Integrals"
+        },
+        {
+          "code": "6.7",
+          "name": "The Fundamental Theorem of Calculus and Definite Integrals"
+        },
+        {
+          "code": "6.8",
+          "name": "Finding Antiderivatives and Indefinite Integrals"
+        },
+        {
+          "code": "6.9",
+          "name": "Integrating Using Substitution"
+        },
+        {
+          "code": "6.10",
+          "name": "Integrating Functions Using Long Division and Completing the Square"
+        },
+        {
+          "code": "6.11",
+          "name": "Integrating Using Integration by Parts"
+        },
+        {
+          "code": "6.12",
+          "name": "Integrating Using Linear Partial Fractions"
+        },
+        {
+          "code": "6.13",
+          "name": "Evaluating Improper Integrals"
+        },
+        {
+          "code": "6.14",
+          "name": "Selecting Techniques for Antidifferentiation"
+        }
+      ]
     },
     {
       "code": "U7",
       "name": "Differential Equations",
-      "exam_weight_percent_range": "6-12"
+      "exam_weight_percent_range": "6-12",
+      "topics": [
+        {
+          "code": "7.1",
+          "name": "Modeling Situations with Differential Equations"
+        },
+        {
+          "code": "7.2",
+          "name": "Verifying Solutions for Differential Equations"
+        },
+        {
+          "code": "7.3",
+          "name": "Sketching Slope Fields"
+        },
+        {
+          "code": "7.4",
+          "name": "Reasoning Using Slope Fields"
+        },
+        {
+          "code": "7.5",
+          "name": "Approximating Solutions Using Euler?s Method"
+        },
+        {
+          "code": "7.6",
+          "name": "Finding General Solutions Using Separation of Variables"
+        },
+        {
+          "code": "7.7",
+          "name": "Finding Particular Solutions Using Initial Conditions and Separation of Variables"
+        },
+        {
+          "code": "7.8",
+          "name": "Exponential Models with Differential Equations"
+        },
+        {
+          "code": "7.9",
+          "name": "Logistic Models with Differential Equations"
+        }
+      ]
     },
     {
       "code": "U8",
       "name": "Applications of Integration",
-      "exam_weight_percent_range": "10-15"
+      "exam_weight_percent_range": "10-15",
+      "topics": [
+        {
+          "code": "8.1",
+          "name": "Finding the Average Value of a Function on an Interval"
+        },
+        {
+          "code": "8.2",
+          "name": "Connecting Position, Velocity, and Acceleration of Functions Using Integrals"
+        },
+        {
+          "code": "8.3",
+          "name": "Using Accumulation Functions and Definite Integrals in Applied Contexts"
+        },
+        {
+          "code": "8.4",
+          "name": "Finding the Area Between Curves Expressed as Functions of x"
+        },
+        {
+          "code": "8.5",
+          "name": "Finding the Area Between Curves Expressed as Functions of y"
+        },
+        {
+          "code": "8.6",
+          "name": "Finding the Area Between Curves That Intersect at More Than Two Points"
+        },
+        {
+          "code": "8.7",
+          "name": "Volumes with Cross Sections: Squares and Rectangles"
+        },
+        {
+          "code": "8.8",
+          "name": "Volumes with Cross Sections: Triangles and Semicircles"
+        },
+        {
+          "code": "8.9",
+          "name": "Volume with Disc Method: Revolving Around the x- or y-Axis"
+        },
+        {
+          "code": "8.10",
+          "name": "Volume with Disc Method: Revolving Around Other Axes"
+        },
+        {
+          "code": "8.11",
+          "name": "Volume with Washer Method: Revolving Around the x- or y-Axis"
+        },
+        {
+          "code": "8.12",
+          "name": "Volume with Washer Method: Revolving Around Other Axes"
+        },
+        {
+          "code": "8.13",
+          "name": "The Arc Length of a Smooth, Planar Curve and Distance Traveled"
+        }
+      ]
     }
   ],
   "skills": [
@@ -75,5 +439,6 @@
     "official_url": "https://apcentral.collegeboard.org/courses/ap-calculus-ab",
     "policy": "Official exam and subject framework materials are the only authority for unit classification.",
     "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
-  }
+  },
+  "topic_map_status": "official_topic_map_added_2026_07_21"
 }

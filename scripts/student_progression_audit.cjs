@@ -198,6 +198,8 @@ function adaptMCQ(raw) {
     question_number: raw.question_number || raw.question_num || 0,
     source: raw.source || '',
     group_id: raw.group_id || null,
+    student_visible: raw.student_visible,
+    publish_status: raw.publish_status || '',
   }
 }
 
@@ -222,7 +224,11 @@ function normalizeOptionsToObject(options) {
 }
 
 function isPlayableMCQ(q) {
-  return q.scoring_status !== 'not_scored' && !!q.answer && Object.keys(q.options || {}).length > 0
+  return q.scoring_status !== 'not_scored' &&
+    q.student_visible !== false &&
+    q.publish_status !== 'blocked' &&
+    !!q.answer &&
+    Object.keys(q.options || {}).length > 0
 }
 
 function questionOrder(q) {

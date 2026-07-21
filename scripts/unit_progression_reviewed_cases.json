@@ -775,22 +775,22 @@
       "subject": "statistics",
       "file": "frq_bank.json",
       "question_id": "2008_FRQ5",
-      "expected_primary_unit": "U7",
-      "reason": "Manual progression-gate fix: Complete response uses a t-test comparing means and interpretation of mean differences with study design limits."
+      "expected_primary_unit": "U4",
+      "reason": "Fall 2026 framework migration: complete response uses a t-test comparing means and interpretation of mean differences with study design limits; inference for means is U4."
     },
     {
       "subject": "statistics",
       "file": "question_bank.json",
       "question_id": "2016_Q27",
-      "expected_primary_unit": "U4",
-      "reason": "Manual progression-gate fix: Requires probability calculation for a compound random selection."
+      "expected_primary_unit": "U2",
+      "reason": "Fall 2026 framework migration: requires probability calculation for a compound random selection; probability and random variables are U2."
     },
     {
       "subject": "statistics",
       "file": "question_bank.json",
       "question_id": "2016_Q28",
-      "expected_primary_unit": "U9",
-      "reason": "The item requires inference for regression slope, not only interpreting a scatterplot."
+      "expected_primary_unit": "U5",
+      "reason": "Fall 2026 framework migration: the item requires inference for regression slope, which belongs to regression analysis U5."
     },
     {
       "subject": "statistics",
@@ -803,8 +803,8 @@
       "subject": "statistics",
       "file": "question_bank.json",
       "question_id": "2017_Q31",
-      "expected_primary_unit": "U2",
-      "reason": "Reviewed: the item interprets residual plot behavior for a fitted regression; random assignment is context, not the tested method."
+      "expected_primary_unit": "U5",
+      "reason": "Fall 2026 framework migration: the item interprets residual plot behavior for a fitted regression; random assignment is context, not the tested method."
     },
     {
       "subject": "us-government-politics",

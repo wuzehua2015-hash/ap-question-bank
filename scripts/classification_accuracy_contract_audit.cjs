@@ -43,16 +43,16 @@ const hardBoundaryRules = [
   {
     id: 'csa_arraylist_u7',
     subjectDirs: ['computer-science-a'],
-    minUnit: 'U7',
+    minUnit: 'U4',
     pattern: /\bArrayList\b/i,
-    reason: 'AP CSA ArrayList items require Unit 7 unless the term is only non-solving background.',
+    reason: 'Effective Fall 2025 AP CSA places ArrayList topics in Unit 4 Data Collections unless the term is only non-solving background.',
   },
   {
     id: 'csa_recursion_u10',
     subjectDirs: ['computer-science-a'],
-    minUnit: 'U10',
+    minUnit: 'U4',
     pattern: /\b(recursion|recursive|self[- ]call)\b/i,
-    reason: 'AP CSA recursion items require Unit 10 unless the term is only non-solving background.',
+    reason: 'Effective Fall 2025 AP CSA places recursion topics in Unit 4 Data Collections unless the term is only non-solving background.',
   },
 ]
 

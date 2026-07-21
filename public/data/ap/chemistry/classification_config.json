@@ -4,39 +4,421 @@
   "units": [
     {
       "code": "U1",
-      "name": "Atomic Structure and Properties"
+      "name": "Atomic Structure and Properties",
+      "topics": [
+        {
+          "code": "1.1",
+          "name": "Moles and Molar Mass"
+        },
+        {
+          "code": "1.2",
+          "name": "Mass Spectra of Elements"
+        },
+        {
+          "code": "1.3",
+          "name": "Elemental Composition of Pure Substances"
+        },
+        {
+          "code": "1.4",
+          "name": "Composition of Mixtures"
+        },
+        {
+          "code": "1.5",
+          "name": "Atomic Structure and Electron Configuration"
+        },
+        {
+          "code": "1.6",
+          "name": "Photoelectron Spectroscopy"
+        },
+        {
+          "code": "1.7",
+          "name": "Periodic Trends"
+        },
+        {
+          "code": "1.8",
+          "name": "Valence Electrons and Ionic Compounds"
+        }
+      ]
     },
     {
       "code": "U2",
-      "name": "Molecular and Ionic Compound Structure and Properties"
+      "name": "Compound Structure and Properties",
+      "topics": [
+        {
+          "code": "2.1",
+          "name": "Types of Chemical Bonds"
+        },
+        {
+          "code": "2.2",
+          "name": "Intramolecular Force and Potential Energy"
+        },
+        {
+          "code": "2.3",
+          "name": "Structure of Ionic Solids"
+        },
+        {
+          "code": "2.4",
+          "name": "Structure of Metals and Alloys"
+        },
+        {
+          "code": "2.5",
+          "name": "Lewis Diagrams"
+        },
+        {
+          "code": "2.6",
+          "name": "Resonance and Formal Charge"
+        },
+        {
+          "code": "2.7",
+          "name": "VSEPR and Hybridization"
+        }
+      ]
     },
     {
       "code": "U3",
-      "name": "Intermolecular Forces and Properties"
+      "name": "Properties of Substances and Mixtures",
+      "topics": [
+        {
+          "code": "3.1",
+          "name": "Intermolecular Forces"
+        },
+        {
+          "code": "3.2",
+          "name": "Properties of Solids"
+        },
+        {
+          "code": "3.3",
+          "name": "Solids, Liquids, and Gases"
+        },
+        {
+          "code": "3.4",
+          "name": "Ideal Gas Law"
+        },
+        {
+          "code": "3.5",
+          "name": "Kinetic Molecular Theory"
+        },
+        {
+          "code": "3.6",
+          "name": "Deviation from Ideal Gas Law"
+        },
+        {
+          "code": "3.7",
+          "name": "Solutions and Mixtures"
+        },
+        {
+          "code": "3.8",
+          "name": "Representations of Solutions"
+        },
+        {
+          "code": "3.9",
+          "name": "Separation of Solutions and Mixtures Chromatography"
+        },
+        {
+          "code": "3.10",
+          "name": "Solubility"
+        },
+        {
+          "code": "3.11",
+          "name": "Spectroscopy and the Electromagnetic Spectrum"
+        },
+        {
+          "code": "3.12",
+          "name": "Properties of Photons"
+        },
+        {
+          "code": "3.13",
+          "name": "Beer-Lambert Law"
+        }
+      ]
     },
     {
       "code": "U4",
-      "name": "Chemical Reactions"
+      "name": "Chemical Reactions",
+      "topics": [
+        {
+          "code": "4.1",
+          "name": "Introduction for Reactions"
+        },
+        {
+          "code": "4.2",
+          "name": "Net Ionic Equations"
+        },
+        {
+          "code": "4.3",
+          "name": "Representations of Reactions"
+        },
+        {
+          "code": "4.4",
+          "name": "Physical and Chemical Changes"
+        },
+        {
+          "code": "4.5",
+          "name": "Stoichiometry"
+        },
+        {
+          "code": "4.6",
+          "name": "Introduction to Titration"
+        },
+        {
+          "code": "4.7",
+          "name": "Types of Chemical Reactions"
+        },
+        {
+          "code": "4.8",
+          "name": "Introduction to Acid-Base Reactions"
+        },
+        {
+          "code": "4.9",
+          "name": "Oxidation-Reduction Reactions"
+        }
+      ]
     },
     {
       "code": "U5",
-      "name": "Kinetics"
+      "name": "Kinetics",
+      "topics": [
+        {
+          "code": "5.1",
+          "name": "Reaction Rates"
+        },
+        {
+          "code": "5.2",
+          "name": "Introduction to Rate Law"
+        },
+        {
+          "code": "5.3",
+          "name": "Concentration Changes over Time"
+        },
+        {
+          "code": "5.4",
+          "name": "Elementary Reactions"
+        },
+        {
+          "code": "5.5",
+          "name": "Collision Model"
+        },
+        {
+          "code": "5.6",
+          "name": "Reaction Energy Profile"
+        },
+        {
+          "code": "5.7",
+          "name": "Introduction to Reaction Mechanisms"
+        },
+        {
+          "code": "5.8",
+          "name": "Reaction Mechanism and Rate Law"
+        },
+        {
+          "code": "5.9",
+          "name": "Pre-Equilibrium Approximation"
+        },
+        {
+          "code": "5.10",
+          "name": "Multistep Reaction Energy Profile"
+        },
+        {
+          "code": "5.11",
+          "name": "Catalysis"
+        }
+      ]
     },
     {
       "code": "U6",
-      "name": "Thermodynamics"
+      "name": "Thermochemistry",
+      "topics": [
+        {
+          "code": "6.1",
+          "name": "Endothermic and Exothermic Processes"
+        },
+        {
+          "code": "6.2",
+          "name": "Energy Diagrams"
+        },
+        {
+          "code": "6.3",
+          "name": "Heat Transfer and Thermal Equilibrium"
+        },
+        {
+          "code": "6.4",
+          "name": "Heat Capacity and Calorimetry"
+        },
+        {
+          "code": "6.5",
+          "name": "Energy of Phase Changes"
+        },
+        {
+          "code": "6.6",
+          "name": "Introduction to Enthalpy of Reaction"
+        },
+        {
+          "code": "6.7",
+          "name": "Bond Enthalpies"
+        },
+        {
+          "code": "6.8",
+          "name": "Enthalpy of Formation"
+        },
+        {
+          "code": "6.9",
+          "name": "Hess?s Law"
+        }
+      ]
     },
     {
       "code": "U7",
-      "name": "Equilibrium"
+      "name": "Equilibrium",
+      "topics": [
+        {
+          "code": "7.1",
+          "name": "Introduction to Equilibrium"
+        },
+        {
+          "code": "7.2",
+          "name": "Direction of Reversible Reactions"
+        },
+        {
+          "code": "7.3",
+          "name": "Reaction Quotient and Equilibrium Constant"
+        },
+        {
+          "code": "7.4",
+          "name": "Calculating the Equilibrium Constant"
+        },
+        {
+          "code": "7.5",
+          "name": "Magnitude of the Equilibrium Constant"
+        },
+        {
+          "code": "7.6",
+          "name": "Properties of the Equilibrium Constant"
+        },
+        {
+          "code": "7.7",
+          "name": "Calculating Equilibrium Concentrations"
+        },
+        {
+          "code": "7.8",
+          "name": "Representations of Equilibrium"
+        },
+        {
+          "code": "7.9",
+          "name": "Introduction to Le Chatelier?s Principle"
+        },
+        {
+          "code": "7.10",
+          "name": "Reaction Quotient and Le Chatelier?s Principle"
+        },
+        {
+          "code": "7.11",
+          "name": "Introduction to Solubility Equilibria"
+        },
+        {
+          "code": "7.12",
+          "name": "Common-Ion Effect"
+        }
+      ]
     },
     {
       "code": "U8",
-      "name": "Acids and Bases"
+      "name": "Acids and Bases",
+      "topics": [
+        {
+          "code": "8.1",
+          "name": "Introduction to Acids and Bases"
+        },
+        {
+          "code": "8.2",
+          "name": "pH and pOH of Strong Acids and Bases"
+        },
+        {
+          "code": "8.3",
+          "name": "Weak Acid and Base Equilibria"
+        },
+        {
+          "code": "8.4",
+          "name": "Acid-Base Reactions and Buffers"
+        },
+        {
+          "code": "8.5",
+          "name": "Acid-Base Titrations"
+        },
+        {
+          "code": "8.6",
+          "name": "Molecular Structure of Acids and Bases"
+        },
+        {
+          "code": "8.7",
+          "name": "pH and pKa"
+        },
+        {
+          "code": "8.8",
+          "name": "Properties of Buffers"
+        },
+        {
+          "code": "8.9",
+          "name": "Henderson-Hasselbalch Equation"
+        },
+        {
+          "code": "8.10",
+          "name": "Buffer Capacity"
+        },
+        {
+          "code": "8.11",
+          "name": "pH and Solubility"
+        }
+      ]
     },
     {
       "code": "U9",
-      "name": "Applications of Thermodynamics"
+      "name": "Thermodynamics and Electrochemistry",
+      "topics": [
+        {
+          "code": "9.1",
+          "name": "Introduction to Entropy"
+        },
+        {
+          "code": "9.2",
+          "name": "Absolute Entropy and Entropy Change"
+        },
+        {
+          "code": "9.3",
+          "name": "Gibbs Free Energy and Thermodynamic Favorability"
+        },
+        {
+          "code": "9.4",
+          "name": "Thermodynamic and Kinetic Control"
+        },
+        {
+          "code": "9.5",
+          "name": "Free Energy and Equilibrium"
+        },
+        {
+          "code": "9.6",
+          "name": "Free Energy of Dissolution"
+        },
+        {
+          "code": "9.7",
+          "name": "Coupled Reactions"
+        },
+        {
+          "code": "9.8",
+          "name": "Galvanic Cells"
+        },
+        {
+          "code": "9.9",
+          "name": "Cell Potential and Free Energy"
+        },
+        {
+          "code": "9.10",
+          "name": "Cell Potential Under Nonstandard Conditions"
+        },
+        {
+          "code": "9.11",
+          "name": "Electrolysis and Faraday?s Law"
+        }
+      ]
     }
   ],
   "published_years": [
@@ -55,5 +437,6 @@
     "official_url": "https://apcentral.collegeboard.org/courses/ap-chemistry",
     "policy": "Official exam and subject framework materials are the only authority for unit classification.",
     "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
-  }
+  },
+  "topic_map_status": "official_topic_map_added_2026_07_21"
 }

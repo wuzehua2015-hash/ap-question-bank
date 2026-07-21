@@ -12,25 +12,25 @@
     "text": "This question involves reasoning about one-dimensional and two-dimensional arrays of integers. You will write three static methods in a single enclosing class named `DiverseArray`.\n\nPart (a): Write method `arraySum`, which returns the sum of the entries in a one-dimensional `int` array.\n\n```java\n/** Returns the sum of the entries in the one-dimensional array arr. */\npublic static int arraySum(int[] arr)\n```\n\nFor example, if `arr1` contains `{1, 3, 2, 7, 3}`, then `arraySum(arr1)` returns `16`.\n\nPart (b): Write method `rowSums`, which returns a one-dimensional array containing the sum of each row in a two-dimensional array.\n\n```java\n/** Returns a one-dimensional array in which each entry is the sum of\n *  the corresponding row in the two-dimensional array arr2D.\n */\npublic static int[] rowSums(int[][] arr2D)\n```\n\nPart (c): Write method `isDiverse`, which returns `true` if no two rows in `arr2D` have the same sum and returns `false` otherwise.\n\n```java\n/** Returns true if all rows in arr2D have different row sums;\n *  false otherwise.\n */\npublic static boolean isDiverse(int[][] arr2D)\n```",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U8",
-    "unit": "U8",
-    "unit_name": "2D Array",
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Data Collections",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U8",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "FRQ 2015_FRQ1 is assigned to U8 (2D Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: This question involves reasoning about one-dimensional and two-dimensional arrays of integers. You will write three static methods in a single enclosing class named `DiverseArray`. Part (a): Write method `arraySum`, which returns the sum of",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -59,7 +59,7 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 56
     },
-    "classification_reasoning": "Official progression review: U8 2D Array. FRQ 2015_FRQ1 is assigned to U8 (2D Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   },
   {
@@ -75,25 +75,25 @@
     "text": "Consider a guessing game in which a player tries to guess a `HiddenWord`. The hidden word and each guess contain only capital letters and have the same known length. After a guess is made, the player receives a hint.\n\nFor each position in the guess, the corresponding hint character is determined as follows.\n\n| If the letter in the guess is... | The hint character is... |\n|---|---|\n| also in the same position in the hidden word | that matching letter |\n| also in the hidden word, but in a different position | `+` |\n| not in the hidden word | `*` |\n\nThe `HiddenWord` is passed to the constructor. The class contains a method `getHint`, which takes a guess and returns the hint string.\n\nFor example, suppose the variable `puzzle` is declared as follows.\n\n```java\nHiddenWord puzzle = new HiddenWord(\"HARPS\");\n```\n\n| Call | String returned |\n|---|---|\n| `puzzle.getHint(\"AAAAA\")` | `+A+++` |\n| `puzzle.getHint(\"HELLO\")` | `H****` |\n| `puzzle.getHint(\"HEART\")` | `H*++*` |\n| `puzzle.getHint(\"HARMS\")` | `HAR*S` |\n| `puzzle.getHint(\"HARPS\")` | `HARPS` |\n\nWrite the complete `HiddenWord` class, including any necessary instance variables, the constructor, and the method `getHint`. You may assume that the length of the guess is the same as the length of the hidden word.",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U5",
-    "unit": "U5",
-    "unit_name": "Writing Classes",
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Class Creation",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U5",
+      "primary_unit": "U3",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "FRQ 2015_FRQ2 is assigned to U5 (Writing Classes) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U3 Class Creation. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: Consider a guessing game in which a player tries to guess a `HiddenWord`. The hidden word and each guess contain only capital letters and have the same known length. After a guess is made, the player receives a hint. For each position in th",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -117,7 +117,7 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 62
     },
-    "classification_reasoning": "Official progression review: U5 Writing Classes. FRQ 2015_FRQ2 is assigned to U5 (Writing Classes) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U3 Class Creation. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   },
   {
@@ -133,25 +133,25 @@
     "text": "This question uses a sparse array representation. A sparse array stores only nonzero values, along with each value's row and column indexes.\n\n```java\npublic class SparseArrayEntry\n{\n  private int row;\n  private int col;\n  private int value;\n\n  public SparseArrayEntry(int r, int c, int v)\n  {\n    row = r;\n    col = c;\n    value = v;\n  }\n\n  public int getRow() { return row; }\n  public int getCol() { return col; }\n  public int getValue() { return value; }\n}\n\npublic class SparseArray\n{\n  private int numRows;\n  private int numCols;\n  private List<SparseArrayEntry> entries;\n\n  public SparseArray()\n  {\n    entries = new ArrayList<SparseArrayEntry>();\n  }\n\n  public int getNumRows() { return numRows; }\n  public int getNumCols() { return numCols; }\n\n  public int getValueAt(int row, int col)\n  {\n    /* to be implemented in part (a) */\n  }\n\n  public void removeColumn(int col)\n  {\n    /* to be implemented in part (b) */\n  }\n}\n```\n\nIn the sample array, `numRows` is `6`, `numCols` is `5`, and the nonzero entries are `(row 1, col 4, value 4)`, `(row 2, col 0, value 1)`, `(row 3, col 1, value -9)`, and `(row 1, col 1, value 5)`.\n\nPart (a): Write method `getValueAt`. The method returns the value at the given row and column. If no entry in `entries` has the specified row and column, the method returns `0`.\n\nPart (b): Write method `removeColumn`. After removing the specified column, entries in that column are removed, entries in columns to the right are replaced by entries whose column index is one less, and `numCols` is decremented.",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U7",
-    "unit": "U7",
-    "unit_name": "ArrayList",
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Data Collections",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U7",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "FRQ 2015_FRQ3 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: This question uses a sparse array representation. A sparse array stores only nonzero values, along with each value's row and column indexes. ```java public class SparseArrayEntry { private int row; private int col; private int value; public",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -175,7 +175,7 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 64
     },
-    "classification_reasoning": "Official progression review: U7 ArrayList. FRQ 2015_FRQ3 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   },
   {
@@ -191,25 +191,25 @@
     "text": "This question involves designing an interface, writing a class that implements the interface, and writing a method that uses the interface.\n\nPart (a): A number group represents a group of integers. Write an interface named `NumberGroup` with exactly one method, `contains`, that determines whether a given integer is in the group.\n\nPart (b): Write a class named `Range` that implements `NumberGroup`. A `Range` object represents all integers from a minimum value through a maximum value, inclusive.\n\n```java\nNumberGroup range1 = new Range(-3, 2);\n```\n\nThe declaration above represents the integers `-3, -2, -1, 0, 1, 2`.\n\nPart (c): The `MultipleGroups` class represents a collection of `NumberGroup` objects and contains the instance variable below.\n\n```java\nprivate List<NumberGroup> groupList;\n```\n\nWrite the `contains` method for `MultipleGroups`. The method returns `true` if at least one group in `groupList` contains the parameter value and returns `false` otherwise.\n\n```java\npublic boolean contains(int num)\n```",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U9",
-    "unit": "U9",
-    "unit_name": "Inheritance",
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Data Collections",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U9",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "FRQ 2015_FRQ4 is assigned to U9 (Inheritance) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: This question involves designing an interface, writing a class that implements the interface, and writing a method that uses the interface. Part (a): A number group represents a group of integers. Write an interface named `NumberGroup` with",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -238,7 +238,7 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 72
     },
-    "classification_reasoning": "Official progression review: U9 Inheritance. FRQ 2015_FRQ4 is assigned to U9 (Inheritance) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   },
   {
@@ -254,25 +254,25 @@
     "text": "Consider the following partial declaration for a `WordScrambler` class. The constructor takes an even-length array of `String` objects and initializes `scrambledWords`.\n\n```java\npublic class WordScrambler\n{\n  private String[] scrambledWords;\n\n  /** @param wordArr an array of String objects\n   *  Precondition: wordArr.length is even\n   */\n  public WordScrambler(String[] wordArr)\n  {\n    scrambledWords = mixedWords(wordArr);\n  }\n\n  /** @param word1 a String of characters\n   *  @param word2 a String of characters\n   *  @return a String that contains the first half of word1 and\n   *          the second half of word2\n   */\n  private String recombine(String word1, String word2)\n  {\n    /* to be implemented in part (a) */\n  }\n\n  /** @param words an array of String objects\n   *  Precondition: words.length is even\n   *  @return an array of String objects created by recombining pairs of strings\n   */\n  private String[] mixedWords(String[] words)\n  {\n    /* to be implemented in part (b) */\n  }\n}\n```\n\nPart (a): Write `recombine`. The method takes the first half of `word1`, takes the second half of `word2`, concatenates the two halves, and returns the new string. If a word has an odd number of letters, the second half contains the extra letter.\n\n| `word1` | `word2` | `recombine(word1, word2)` |\n|---|---|---|\n| `\"apple\"` | `\"pear\"` | `\"apar\"` |\n| `\"pear\"` | `\"apple\"` | `\"peple\"` |\n\nPart (b): Write `mixedWords`. The method creates and returns a new array by processing strings in adjacent pairs. For each pair `w1`, `w2`, the returned array should contain `recombine(w1, w2)` followed by `recombine(w2, w1)`. The returned array must have the same length as `words`.",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U6",
-    "unit": "U6",
-    "unit_name": "Array",
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Data Collections",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U6",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "FRQ gridworld_FRQ1 is assigned to U6 (Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: Consider the following partial declaration for a `WordScrambler` class. The constructor takes an even-length array of `String` objects and initializes `scrambledWords`. ```java public class WordScrambler { private String[] scrambledWords; /",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -296,7 +296,7 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 45
     },
-    "classification_reasoning": "Official progression review: U6 Array. FRQ gridworld_FRQ1 is assigned to U6 (Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   },
   {
@@ -312,25 +312,25 @@
     "text": "An array of positive integer values has the mountain property if its values increase until a peak is reached and then decrease. The `Mountain` class contains helper methods and two methods that you will implement.\n\n```java\npublic class Mountain\n{\n  /** @param array an array of positive integer values\n   *  @param stop the last index to check\n   *  Precondition: 0 <= stop < array.length\n   *  @return true if array[j] < array[j + 1] for all 0 <= j < stop;\n   *          false otherwise\n   */\n  public static boolean isIncreasing(int[] array, int stop)\n  {\n    /* implementation not shown */\n  }\n\n  /** @param array an array of positive integer values\n   *  @param start the first index to check\n   *  Precondition: 0 <= start < array.length - 1\n   *  @return true if array[j] > array[j + 1] for all\n   *          start <= j < array.length - 1; false otherwise\n   */\n  public static boolean isDecreasing(int[] array, int start)\n  {\n    /* implementation not shown */\n  }\n\n  public static int getPeakIndex(int[] array)\n  {\n    /* to be implemented in part (a) */\n  }\n\n  public static boolean isMountain(int[] array)\n  {\n    /* to be implemented in part (b) */\n  }\n}\n```\n\nPart (a): Write `getPeakIndex`. A peak is an element whose value is greater than the value immediately before it and greater than the value immediately after it. The method returns the index of the first peak found, or `-1` if no peak exists.\n\nExamples:\n\n| Array | `getPeakIndex` result |\n|---|---:|\n| `{11, 22, 33, 22, 11}` | `2` |\n| `{11, 22, 11, 22, 11}` | `1` |\n| `{11, 22, 33, 55, 77}` | `-1` |\n\nPart (b): Write `isMountain`. The method should use `getPeakIndex`, `isIncreasing`, and `isDecreasing` to determine whether the array has the mountain property. An array with no peak is not a mountain.",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U6",
-    "unit": "U6",
-    "unit_name": "Array",
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Data Collections",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U6",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "FRQ gridworld_FRQ2 is assigned to U6 (Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: An array of positive integer values has the mountain property if its values increase until a peak is reached and then decrease. The `Mountain` class contains helper methods and two methods that you will implement. ```java public class Mount",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -354,7 +354,7 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 47
     },
-    "classification_reasoning": "Official progression review: U6 Array. FRQ gridworld_FRQ2 is assigned to U6 (Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   },
   {
@@ -370,25 +370,25 @@
     "text": "This question involves reasoning about the GridWorld case study. A `Grub` is a `Critter` that chooses a direction, considers locations up to a maximum distance in that direction, and then selects a move location.\n\n```java\npublic class Grub extends Critter\n{\n  private int maxDistance;\n\n  public Grub(int distance)\n  {\n    maxDistance = distance;\n  }\n\n  public int getRandomDirection()\n  {\n    /* to be implemented in part (a) */\n  }\n\n  public ArrayList<Location> getMoveLocations()\n  {\n    /* to be implemented in part (b) */\n  }\n\n  public Location selectMoveLocation(ArrayList<Location> locs)\n  {\n    /* to be implemented in part (c) */\n  }\n}\n```\n\nPart (a): Write `getRandomDirection`, returning one of the eight direction constants from `Location`.\n\nPart (b): Write `getMoveLocations`, returning all valid locations from one step through `maxDistance` steps away in a randomly selected direction. The method must not change the state of any actors.\n\nPart (c): Write `selectMoveLocation`. If `locs` is empty, return the current location. Otherwise select a random location from `locs`. Return that location if it is empty or contains a `Flower`; return `null` if it contains any other actor.",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U9",
-    "unit": "U9",
-    "unit_name": "Inheritance",
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Data Collections",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U9",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "FRQ gridworld_FRQ3 is assigned to U9 (Inheritance) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: This question involves reasoning about the GridWorld case study. A `Grub` is a `Critter` that chooses a direction, considers locations up to a maximum distance in that direction, and then selects a move location. ```java public class Grub e",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -417,7 +417,7 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 50
     },
-    "classification_reasoning": "Official progression review: U9 Inheritance. FRQ gridworld_FRQ3 is assigned to U9 (Inheritance) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   },
   {
@@ -433,25 +433,25 @@
     "text": "A school district stores standardized test score statistics using `ScoreInfo` objects.\n\n```java\npublic class ScoreInfo\n{\n  private int score;\n  private int numStudents;\n\n  public ScoreInfo(int aScore)\n  {\n    score = aScore;\n    numStudents = 1;\n  }\n\n  public void increment()\n  {\n    numStudents++;\n  }\n\n  public int getScore()\n  {\n    return score;\n  }\n\n  public int getFrequency()\n  {\n    return numStudents;\n  }\n}\n\npublic class Stats\n{\n  private ArrayList<ScoreInfo> scoreList;\n\n  public boolean record(int score)\n  {\n    /* to be implemented in part (a) */\n  }\n\n  public void recordScores(int[] stuScores)\n  {\n    /* to be implemented in part (b) */\n  }\n}\n```\n\nThe list `scoreList` is kept in increasing score order, and no two `ScoreInfo` objects contain the same score.\n\nPart (a): Write `record`. If `score` is already represented in `scoreList`, increment that `ScoreInfo` object's frequency and return `false`. Otherwise insert a new `ScoreInfo` object in the correct sorted position and return `true`.\n\nPart (b): Write `recordScores`, which records every score in `stuScores` by using `record`.",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U7",
-    "unit": "U7",
-    "unit_name": "ArrayList",
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Data Collections",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U7",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "FRQ gridworld_FRQ4 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: A school district stores standardized test score statistics using `ScoreInfo` objects. ```java public class ScoreInfo { private int score; private int numStudents; public ScoreInfo(int aScore) { score = aScore; numStudents = 1; } public voi",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -475,7 +475,7 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 53
     },
-    "classification_reasoning": "Official progression review: U7 ArrayList. FRQ gridworld_FRQ4 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   },
   {
@@ -491,25 +491,25 @@
     "text": "This question involves the `MessageBuilder` class, which is used to generate a message based on a starting word. The class has instance variables `message` and `numWords`, a helper method `getNextWord(String s)`, a constructor to implement, and a method `getAbbreviation` to implement.\n\n```java\npublic class MessageBuilder\n{\n  private String message;\n  private int numWords;\n\n  /**\n   * Builds a message starting with the word specified by the parameter and\n   * counts the number of words in the message.\n   */\n  public MessageBuilder(String startingWord)\n  { /* to be implemented in part (a) */ }\n\n  /**\n   * Returns a word to follow the word specified by the parameter or null\n   * if there are no remaining words.\n   * Precondition: s is a single word with no spaces.\n   */\n  public String getNextWord(String s)\n  { /* implementation not shown */ }\n\n  /**\n   * Returns an abbreviation for message.\n   * Preconditions: each word in message is separated by a single space.\n   * Postcondition: message is unchanged.\n   */\n  public String getAbbreviation()\n  { /* to be implemented in part (b) */ }\n}\n```\n\nPart (a): Write the `MessageBuilder` constructor. It must use `getNextWord` to build the message beginning with `startingWord`, store the completed message in `message`, and store the word count in `numWords`.\n\nPart (b): Write `getAbbreviation`, which returns a string consisting of the first letter of each word in `message`. For example, if `message` is `\"as soon as possible\"`, the method returns `\"asap\"`.",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U4",
-    "unit": "U4",
-    "unit_name": "Iteration",
+    "primary_unit": "U2",
+    "unit": "U2",
+    "unit_name": "Selection and Iteration",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U4",
+      "primary_unit": "U2",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Methods and Control Structures ced_2025_FRQ1 is assigned to U4 (Iteration) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U2 Selection and Iteration. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: This question involves the `MessageBuilder` class, which is used to generate a message based on a starting word. The class has instance variables `message` and `numWords`, a helper method `getNextWord(String s)`, a constructor to implement,",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 7,
@@ -559,7 +559,7 @@
       "source_page": 168,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Official progression review: U4 Iteration. Methods and Control Structures ced_2025_FRQ1 is assigned to U4 (Iteration) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U2 Selection and Iteration. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   },
   {
@@ -575,25 +575,25 @@
     "text": "Write the complete `CupcakeMachine` class. A `CupcakeMachine` object represents an automated cupcake vending machine.\n\nThe constructor has two parameters: an `int` for the number of cupcakes initially stocked and a `double` for the cost per cupcake. The `takeOrder(int quantity)` method determines whether an order can be filled.\n\nIf the order can be filled, `takeOrder` decreases the available cupcake count, assigns the next order number, and returns a string in the form `\"Order number 1, cost $3.5\"`. If there are not enough cupcakes, it returns `\"Order cannot be filled\"`, leaves the cupcake count unchanged, and does not advance the order number.\n\nSample behavior:\n\n| Statement | Return value |\n|---|---|\n| `CupcakeMachine c1 = new CupcakeMachine(10, 1.75);` | |\n| `c1.takeOrder(2);` | `\"Order number 1, cost $3.5\"` |\n| `c1.takeOrder(3);` | `\"Order number 2, cost $5.25\"` |\n| `c1.takeOrder(10);` | `\"Order cannot be filled\"` |\n| `c1.takeOrder(1);` | `\"Order number 3, cost $1.75\"` |",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U5",
-    "unit": "U5",
-    "unit_name": "Writing Classes",
+    "primary_unit": "U3",
+    "unit": "U3",
+    "unit_name": "Class Creation",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U5",
+      "primary_unit": "U3",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Class Design ced_2025_FRQ2 is assigned to U5 (Writing Classes) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U3 Class Creation. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: Write the complete `CupcakeMachine` class. A `CupcakeMachine` object represents an automated cupcake vending machine. The constructor has two parameters: an `int` for the number of cupcakes initially stocked and a `double` for the cost per ",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 7,
@@ -643,7 +643,7 @@
       "source_page": 171,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Official progression review: U5 Writing Classes. Class Design ced_2025_FRQ2 is assigned to U5 (Writing Classes) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U3 Class Creation. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   },
   {
@@ -659,25 +659,25 @@
     "text": "The `ItemInfo` class stores information about an item at a store.\n\n```java\npublic class ItemInfo\n{\n  public String getName()\n  { /* implementation not shown */ }\n\n  public double getCost()\n  { /* implementation not shown */ }\n\n  public boolean isAvailable()\n  { /* implementation not shown */ }\n}\n```\n\nThe `ItemInventory` class maintains an `ArrayList<ItemInfo>` named `inventory`.\n\n```java\npublic class ItemInventory\n{\n  /** The list of all items at the store */\n  private ArrayList<ItemInfo> inventory;\n\n  /**\n   * Returns the average cost of the available items whose cost is between\n   * lower and upper, inclusive.\n   * Precondition: lower <= upper\n   *               At least one available element of inventory has a cost\n   *               between lower and upper, inclusive.\n   *               No elements of inventory are null.\n   */\n  public double averageWithinRange(double lower, double upper)\n  { /* to be implemented */ }\n}\n```\n\nWrite `averageWithinRange`, which returns the average cost of the available items in `inventory` whose cost is between `lower` and `upper`, inclusive.",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U7",
-    "unit": "U7",
-    "unit_name": "ArrayList",
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Data Collections",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U7",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Data Analysis with ArrayList ced_2025_FRQ3 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: The `ItemInfo` class stores information about an item at a store. ```java public class ItemInfo { public String getName() { /* implementation not shown */ } public double getCost() { /* implementation not shown */ } public boolean isAvailab",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 5,
@@ -717,7 +717,7 @@
       "source_page": 173,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Official progression review: U7 ArrayList. Data Analysis with ArrayList ced_2025_FRQ3 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   },
   {
@@ -733,25 +733,25 @@
     "text": "The `Appointment` class is used to store information about scheduled appointments.\n\n```java\npublic class Appointment\n{\n  public String getStatus()\n  { /* implementation not shown */ }\n\n  public int getRoomNumber()\n  { /* implementation not shown */ }\n}\n```\n\nThe `Schedule` class maintains a two-dimensional array of appointments.\n\n```java\npublic class Schedule\n{\n  private Appointment[][] sched;\n\n  /**\n   * Returns the index of a column containing the fewest occurrences of target.\n   * Preconditions: sched is not null and no elements of sched are null.\n   *                sched has at least one row and at least one column.\n   */\n  public int columnWithFewest(String target)\n  { /* to be implemented */ }\n}\n```\n\nWrite `columnWithFewest`. The method returns the index of a column in `sched` that contains the fewest occurrences of `target`. If multiple columns have the fewest number of occurrences, any of their indices may be returned.",
     "image_paths": [],
     "rubric_image_paths": [],
-    "primary_unit": "U8",
-    "unit": "U8",
-    "unit_name": "2D Array",
+    "primary_unit": "U4",
+    "unit": "U4",
+    "unit_name": "Data Collections",
     "secondary_units": [],
     "pure_unit": true,
     "difficulty": "medium",
     "classification": {
-      "primary_unit": "U8",
+      "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "2D Array ced_2025_FRQ4 is assigned to U8 (2D Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
         "Prompt evidence: The `Appointment` class is used to store information about scheduled appointments. ```java public class Appointment { public String getStatus() { /* implementation not shown */ } public int getRoomNumber() { /* implementation not shown */ }",
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "computer-science-a-official-progression-2026-07-19",
-      "authority": "AP Computer Science A Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 6,
@@ -796,7 +796,7 @@
       "source_page": 175,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Official progression review: U8 2D Array. 2D Array ced_2025_FRQ4 is assigned to U8 (2D Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
     "unit_classification": "official-progression-reviewed"
   }
 ]

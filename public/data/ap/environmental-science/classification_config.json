@@ -4,39 +4,453 @@
   "units": [
     {
       "code": "U1",
-      "name": "The Living World: Ecosystems"
+      "name": "The Living World: Ecosystems",
+      "topics": [
+        {
+          "code": "1.1",
+          "name": "Introduction to Ecosystems"
+        },
+        {
+          "code": "1.2",
+          "name": "Terrestrial Biomes"
+        },
+        {
+          "code": "1.3",
+          "name": "Aquatic Biomes"
+        },
+        {
+          "code": "1.4",
+          "name": "The Carbon Cycle"
+        },
+        {
+          "code": "1.5",
+          "name": "The Nitrogen Cycle"
+        },
+        {
+          "code": "1.6",
+          "name": "The Phosphorus Cycle"
+        },
+        {
+          "code": "1.7",
+          "name": "The Hydrologic Cycle"
+        },
+        {
+          "code": "1.8",
+          "name": "Primary Productivity"
+        },
+        {
+          "code": "1.9",
+          "name": "Trophic Levels"
+        },
+        {
+          "code": "1.10",
+          "name": "Energy Flow and the 10% Rule"
+        },
+        {
+          "code": "1.11",
+          "name": "Food Chains and Food Webs"
+        }
+      ]
     },
     {
       "code": "U2",
-      "name": "The Living World: Biodiversity"
+      "name": "The Living World: Biodiversity",
+      "topics": [
+        {
+          "code": "2.1",
+          "name": "Introduction to Biodiversity"
+        },
+        {
+          "code": "2.2",
+          "name": "Ecosystem Services"
+        },
+        {
+          "code": "2.3",
+          "name": "Island Biogeography"
+        },
+        {
+          "code": "2.4",
+          "name": "Ecological Tolerance"
+        },
+        {
+          "code": "2.5",
+          "name": "Natural Disruptions to Ecosystems"
+        },
+        {
+          "code": "2.6",
+          "name": "Adaptations"
+        },
+        {
+          "code": "2.7",
+          "name": "Ecological Succession"
+        }
+      ]
     },
     {
       "code": "U3",
-      "name": "Populations"
+      "name": "Populations",
+      "topics": [
+        {
+          "code": "3.1",
+          "name": "Generalist and Specialist Species"
+        },
+        {
+          "code": "3.2",
+          "name": "K-Selected and r-Selected Species"
+        },
+        {
+          "code": "3.3",
+          "name": "Survivorship Curves"
+        },
+        {
+          "code": "3.4",
+          "name": "Carrying Capacity"
+        },
+        {
+          "code": "3.5",
+          "name": "Population Growth and Resource Availability"
+        },
+        {
+          "code": "3.6",
+          "name": "Age Structure Diagrams"
+        },
+        {
+          "code": "3.7",
+          "name": "Total Fertility Rate"
+        },
+        {
+          "code": "3.8",
+          "name": "Human Population Dynamics"
+        },
+        {
+          "code": "3.9",
+          "name": "Demographic Transition"
+        }
+      ]
     },
     {
       "code": "U4",
-      "name": "Earth Systems and Resources"
+      "name": "Earth Systems and Resources",
+      "topics": [
+        {
+          "code": "4.1",
+          "name": "Plate Tectonics"
+        },
+        {
+          "code": "4.2",
+          "name": "Soil Formation and Erosion"
+        },
+        {
+          "code": "4.3",
+          "name": "Soil Composition and Properties"
+        },
+        {
+          "code": "4.4",
+          "name": "Earth?s Atmosphere"
+        },
+        {
+          "code": "4.5",
+          "name": "Global Wind Patterns"
+        },
+        {
+          "code": "4.6",
+          "name": "Watersheds"
+        },
+        {
+          "code": "4.7",
+          "name": "Solar Radiation and Earth?s Seasons"
+        },
+        {
+          "code": "4.8",
+          "name": "Earth?s Geography and Climate"
+        },
+        {
+          "code": "4.9",
+          "name": "El Ni?o and La Ni?a"
+        }
+      ]
     },
     {
       "code": "U5",
-      "name": "Land and Water Use"
+      "name": "Land and Water Use",
+      "topics": [
+        {
+          "code": "5.1",
+          "name": "The Tragedy of the Commons"
+        },
+        {
+          "code": "5.2",
+          "name": "Clearcutting"
+        },
+        {
+          "code": "5.3",
+          "name": "The Green Revolution"
+        },
+        {
+          "code": "5.4",
+          "name": "Impacts of Agricultural Practices"
+        },
+        {
+          "code": "5.5",
+          "name": "Irrigation Methods"
+        },
+        {
+          "code": "5.6",
+          "name": "Pest Control Methods"
+        },
+        {
+          "code": "5.7",
+          "name": "Meat Production Methods"
+        },
+        {
+          "code": "5.8",
+          "name": "Impacts of Overfishing"
+        },
+        {
+          "code": "5.9",
+          "name": "Impacts of Mining"
+        },
+        {
+          "code": "5.10",
+          "name": "Impacts of Urbanization"
+        },
+        {
+          "code": "5.11",
+          "name": "Ecological Footprints"
+        },
+        {
+          "code": "5.12",
+          "name": "Introduction to Sustainability"
+        },
+        {
+          "code": "5.13",
+          "name": "Methods to Reduce Urban Runoff"
+        },
+        {
+          "code": "5.14",
+          "name": "Integrated Pest Management"
+        },
+        {
+          "code": "5.15",
+          "name": "Sustainable Agriculture"
+        },
+        {
+          "code": "5.16",
+          "name": "Aquaculture"
+        },
+        {
+          "code": "5.17",
+          "name": "Sustainable Forestry"
+        }
+      ]
     },
     {
       "code": "U6",
-      "name": "Energy Resources and Consumption"
+      "name": "Energy Resources and Consumption",
+      "topics": [
+        {
+          "code": "6.1",
+          "name": "Renewable and Nonrenewable Resources"
+        },
+        {
+          "code": "6.2",
+          "name": "Global Energy Consumption"
+        },
+        {
+          "code": "6.3",
+          "name": "Fuel Types and Uses"
+        },
+        {
+          "code": "6.4",
+          "name": "Distribution of Natural Energy Resources"
+        },
+        {
+          "code": "6.5",
+          "name": "Fossil Fuels"
+        },
+        {
+          "code": "6.6",
+          "name": "Nuclear Power"
+        },
+        {
+          "code": "6.7",
+          "name": "Energy from Biomass"
+        },
+        {
+          "code": "6.8",
+          "name": "Solar Energy"
+        },
+        {
+          "code": "6.9",
+          "name": "Hydroelectric Power"
+        },
+        {
+          "code": "6.10",
+          "name": "Geothermal Energy"
+        },
+        {
+          "code": "6.11",
+          "name": "Hydrogen Fuel Cell"
+        },
+        {
+          "code": "6.12",
+          "name": "Wind Energy"
+        },
+        {
+          "code": "6.13",
+          "name": "Energy Conservation"
+        }
+      ]
     },
     {
       "code": "U7",
-      "name": "Atmospheric Pollution"
+      "name": "Atmospheric Pollution",
+      "topics": [
+        {
+          "code": "7.1",
+          "name": "Introduction to Air Pollution"
+        },
+        {
+          "code": "7.2",
+          "name": "Photochemical Smog"
+        },
+        {
+          "code": "7.3",
+          "name": "Thermal Inversion"
+        },
+        {
+          "code": "7.4",
+          "name": "Atmospheric CO2 and Particulates"
+        },
+        {
+          "code": "7.5",
+          "name": "Indoor Air Pollutants"
+        },
+        {
+          "code": "7.6",
+          "name": "Reduction of Air Pollutants"
+        },
+        {
+          "code": "7.7",
+          "name": "Acid Rain"
+        },
+        {
+          "code": "7.8",
+          "name": "Noise Pollution"
+        }
+      ]
     },
     {
       "code": "U8",
-      "name": "Aquatic and Terrestrial Pollution"
+      "name": "Aquatic and Terrestrial Pollution",
+      "topics": [
+        {
+          "code": "8.1",
+          "name": "Sources of Pollution"
+        },
+        {
+          "code": "8.2",
+          "name": "Human Impacts on Ecosystems"
+        },
+        {
+          "code": "8.3",
+          "name": "Endocrine Disruptors"
+        },
+        {
+          "code": "8.4",
+          "name": "Human Impacts on Wetlands and Mangroves"
+        },
+        {
+          "code": "8.5",
+          "name": "Eutrophication"
+        },
+        {
+          "code": "8.6",
+          "name": "Thermal Pollution"
+        },
+        {
+          "code": "8.7",
+          "name": "Persistent Organic Pollutants"
+        },
+        {
+          "code": "8.8",
+          "name": "Bioaccumulation and Biomagnification"
+        },
+        {
+          "code": "8.9",
+          "name": "Solid Waste Disposal"
+        },
+        {
+          "code": "8.10",
+          "name": "Waste Reduction Methods"
+        },
+        {
+          "code": "8.11",
+          "name": "Sewage Treatment"
+        },
+        {
+          "code": "8.12",
+          "name": "Lethal Dose 50%"
+        },
+        {
+          "code": "8.13",
+          "name": "Dose Response Curve"
+        },
+        {
+          "code": "8.14",
+          "name": "Pollution and Human Health"
+        },
+        {
+          "code": "8.15",
+          "name": "Pathogens and Infectious Diseases"
+        }
+      ]
     },
     {
       "code": "U9",
-      "name": "Global Change"
+      "name": "Global Change",
+      "topics": [
+        {
+          "code": "9.1",
+          "name": "Stratospheric Ozone Depletion"
+        },
+        {
+          "code": "9.2",
+          "name": "Reducing Ozone Depletion"
+        },
+        {
+          "code": "9.3",
+          "name": "The Greenhouse Effect"
+        },
+        {
+          "code": "9.4",
+          "name": "Increases in the Greenhouse Gases"
+        },
+        {
+          "code": "9.5",
+          "name": "Global Climate Change"
+        },
+        {
+          "code": "9.6",
+          "name": "Ocean Warming"
+        },
+        {
+          "code": "9.7",
+          "name": "Ocean Acidification"
+        },
+        {
+          "code": "9.8",
+          "name": "Invasive Species"
+        },
+        {
+          "code": "9.9",
+          "name": "Endangered Species"
+        },
+        {
+          "code": "9.10",
+          "name": "Human Impacts on Biodiversity"
+        }
+      ]
     }
   ],
   "published_years": [
@@ -69,5 +483,6 @@
     "official_url": "https://apcentral.collegeboard.org/courses/ap-environmental-science",
     "policy": "Official exam and subject framework materials are the only authority for unit classification.",
     "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
-  }
+  },
+  "topic_map_status": "official_topic_map_added_2026_07_21"
 }

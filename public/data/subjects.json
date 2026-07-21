@@ -18,7 +18,7 @@
         },
         {
           "id": "U2",
-          "name": "Cell Structure and Function"
+          "name": "Cells"
         },
         {
           "id": "U3",
@@ -162,11 +162,11 @@
         },
         {
           "id": "U2",
-          "name": "Molecular and Ionic Compound Structure and Properties"
+          "name": "Compound Structure and Properties"
         },
         {
           "id": "U3",
-          "name": "Intermolecular Forces and Properties"
+          "name": "Properties of Substances and Mixtures"
         },
         {
           "id": "U4",
@@ -178,7 +178,7 @@
         },
         {
           "id": "U6",
-          "name": "Thermodynamics"
+          "name": "Thermochemistry"
         },
         {
           "id": "U7",
@@ -190,7 +190,7 @@
         },
         {
           "id": "U9",
-          "name": "Applications of Thermodynamics"
+          "name": "Thermodynamics and Electrochemistry"
         }
       ],
       "mockExam": {
@@ -221,47 +221,23 @@
       "frqBank": "ap/computer-science-a/frq_bank.json",
       "similarityIndex": "ap/computer-science-a/similarity_index.json",
       "classificationConfig": "ap/computer-science-a/classification_config.json",
-      "dataVersion": "csa-2015-gridworld-2014sample-ced2025-apbowl2018-csawesome-lynkeduu1-v4",
+      "dataVersion": "csa-fall-2025-official-4-unit-v1",
       "units": [
         {
           "id": "U1",
-          "name": "Primitive Types"
+          "name": "Using Objects and Methods"
         },
         {
           "id": "U2",
-          "name": "Using Objects"
+          "name": "Selection and Iteration"
         },
         {
           "id": "U3",
-          "name": "Boolean Expressions and if Statements"
+          "name": "Class Creation"
         },
         {
           "id": "U4",
-          "name": "Iteration"
-        },
-        {
-          "id": "U5",
-          "name": "Writing Classes"
-        },
-        {
-          "id": "U6",
-          "name": "Array"
-        },
-        {
-          "id": "U7",
-          "name": "ArrayList"
-        },
-        {
-          "id": "U8",
-          "name": "2D Array"
-        },
-        {
-          "id": "U9",
-          "name": "Inheritance"
-        },
-        {
-          "id": "U10",
-          "name": "Recursion"
+          "name": "Data Collections"
         }
       ],
       "mockExam": {
@@ -270,16 +246,10 @@
         "mcqTimeLimit": 5400,
         "frqTimeLimit": 5400,
         "unitDistribution": {
-          "U1": 2,
-          "U2": 2,
-          "U3": 3,
-          "U4": 4,
-          "U5": 6,
-          "U6": 9,
-          "U7": 3,
-          "U8": 4,
-          "U9": 4,
-          "U10": 5
+          "U1": 8,
+          "U2": 12,
+          "U3": 6,
+          "U4": 16
         }
       },
       "releaseStatus": "certified",
@@ -506,43 +476,27 @@
       "frqBank": "ap/statistics/frq_bank.json",
       "similarityIndex": "ap/statistics/similarity_index.json",
       "classificationConfig": "ap/statistics/classification_config.json",
-      "dataVersion": "local-2008-2017-v1",
+      "dataVersion": "statistics-fall-2026-official-5-unit-v1",
       "units": [
         {
           "id": "U1",
-          "name": "Exploring One-Variable Data"
+          "name": "Exploring One-Variable Data and Collecting Data"
         },
         {
           "id": "U2",
-          "name": "Exploring Two-Variable Data"
-        },
-        {
-          "id": "U3",
-          "name": "Collecting Data"
-        },
-        {
-          "id": "U4",
           "name": "Probability, Random Variables, and Probability Distributions"
         },
         {
-          "id": "U5",
-          "name": "Sampling Distributions"
-        },
-        {
-          "id": "U6",
+          "id": "U3",
           "name": "Inference for Categorical Data: Proportions"
         },
         {
-          "id": "U7",
+          "id": "U4",
           "name": "Inference for Quantitative Data: Means"
         },
         {
-          "id": "U8",
-          "name": "Inference for Categorical Data: Chi-Square"
-        },
-        {
-          "id": "U9",
-          "name": "Inference for Quantitative Data: Slopes"
+          "id": "U5",
+          "name": "Regression Analysis"
         }
       ],
       "mockExam": {
@@ -551,15 +505,11 @@
         "mcqTimeLimit": 5400,
         "frqTimeLimit": 5400,
         "unitDistribution": {
-          "U1": 8,
-          "U2": 2,
-          "U3": 5,
+          "U1": 10,
+          "U2": 8,
+          "U3": 8,
           "U4": 6,
-          "U5": 4,
-          "U6": 5,
-          "U7": 5,
-          "U8": 2,
-          "U9": 3
+          "U5": 8
         }
       }
     },
@@ -829,35 +779,35 @@
       "frqBank": "ap/physics-2/frq_bank.json",
       "similarityIndex": "ap/physics-2/similarity_index.json",
       "classificationConfig": "ap/physics-2/classification_config.json",
-      "dataVersion": "structured-2014-2016-2017-2019-frq-2023-2025-v1",
+      "dataVersion": "physics-2-fall-2024-official-u9-u15-v1",
       "units": [
         {
-          "id": "U1",
-          "name": "Fluids"
-        },
-        {
-          "id": "U2",
+          "id": "U9",
           "name": "Thermodynamics"
         },
         {
-          "id": "U3",
+          "id": "U10",
           "name": "Electric Force, Field, and Potential"
         },
         {
-          "id": "U4",
+          "id": "U11",
           "name": "Electric Circuits"
         },
         {
-          "id": "U5",
+          "id": "U12",
           "name": "Magnetism and Electromagnetic Induction"
         },
         {
-          "id": "U6",
-          "name": "Geometric and Physical Optics"
+          "id": "U13",
+          "name": "Geometric Optics"
         },
         {
-          "id": "U7",
-          "name": "Quantum, Atomic, and Nuclear Physics"
+          "id": "U14",
+          "name": "Waves, Sound, and Physical Optics"
+        },
+        {
+          "id": "U15",
+          "name": "Modern Physics"
         }
       ],
       "mockExam": {
@@ -866,13 +816,13 @@
         "mcqTimeLimit": 4800,
         "frqTimeLimit": 6000,
         "unitDistribution": {
-          "U1": 3,
-          "U2": 5,
-          "U3": 8,
-          "U4": 5,
-          "U5": 4,
-          "U6": 8,
-          "U7": 7
+          "U9": 6,
+          "U10": 8,
+          "U11": 6,
+          "U12": 5,
+          "U13": 5,
+          "U14": 5,
+          "U15": 5
         }
       },
       "readiness": {

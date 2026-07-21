@@ -1,46 +1,242 @@
 {
   "subject": "AP Computer Science A",
-  "version": "csa_2015_gridworld_2014sample_ced2025_apbowl2018_csawesome_lynkeduu1_v4",
+  "version": "csa_fall_2025_official_4_unit_migration_2026_07_21",
   "units": [
     {
       "code": "U1",
-      "name": "Primitive Types"
+      "name": "Using Objects and Methods",
+      "topics": [
+        {
+          "code": "1.1",
+          "name": "Introduction to Algorithms, Programming, and Compilers"
+        },
+        {
+          "code": "1.2",
+          "name": "Variables and Data Types"
+        },
+        {
+          "code": "1.3",
+          "name": "Expressions and Output"
+        },
+        {
+          "code": "1.4",
+          "name": "Assignment Statements and Input"
+        },
+        {
+          "code": "1.5",
+          "name": "Casting and Range of Variables"
+        },
+        {
+          "code": "1.6",
+          "name": "Compound Assignment Operators"
+        },
+        {
+          "code": "1.7",
+          "name": "Application Program Interface (API) and Libraries"
+        },
+        {
+          "code": "1.8",
+          "name": "Documentation with Comments"
+        },
+        {
+          "code": "1.9",
+          "name": "Method Signatures"
+        },
+        {
+          "code": "1.10",
+          "name": "Calling Class Methods"
+        },
+        {
+          "code": "1.11",
+          "name": "Math Class"
+        },
+        {
+          "code": "1.12",
+          "name": "Objects: Instances of Classes"
+        },
+        {
+          "code": "1.13",
+          "name": "Object Creation and Storage (Instantiation)"
+        },
+        {
+          "code": "1.14",
+          "name": "Calling Instance Methods"
+        },
+        {
+          "code": "1.15",
+          "name": "String Manipulation"
+        }
+      ]
     },
     {
       "code": "U2",
-      "name": "Using Objects"
+      "name": "Selection and Iteration",
+      "topics": [
+        {
+          "code": "2.1",
+          "name": "Algorithms with Selection and Repetition"
+        },
+        {
+          "code": "2.2",
+          "name": "Boolean Expressions"
+        },
+        {
+          "code": "2.3",
+          "name": "if Statements"
+        },
+        {
+          "code": "2.4",
+          "name": "Nested if Statements"
+        },
+        {
+          "code": "2.5",
+          "name": "Compound Boolean Expressions"
+        },
+        {
+          "code": "2.6",
+          "name": "Comparing Boolean Expressions"
+        },
+        {
+          "code": "2.7",
+          "name": "while Loops"
+        },
+        {
+          "code": "2.8",
+          "name": "for Loops"
+        },
+        {
+          "code": "2.9",
+          "name": "Implementing Selection and Iteration Algorithms"
+        },
+        {
+          "code": "2.10",
+          "name": "Implementing String Algorithms"
+        },
+        {
+          "code": "2.11",
+          "name": "Nested Iteration"
+        },
+        {
+          "code": "2.12",
+          "name": "Informal Run-Time Analysis"
+        }
+      ]
     },
     {
       "code": "U3",
-      "name": "Boolean Expressions and if Statements"
+      "name": "Class Creation",
+      "topics": [
+        {
+          "code": "3.1",
+          "name": "Abstraction and Program Design"
+        },
+        {
+          "code": "3.2",
+          "name": "Impact of Program Design"
+        },
+        {
+          "code": "3.3",
+          "name": "Anatomy of a Class"
+        },
+        {
+          "code": "3.4",
+          "name": "Constructors"
+        },
+        {
+          "code": "3.5",
+          "name": "Methods: How to Write Them"
+        },
+        {
+          "code": "3.6",
+          "name": "Methods: Passing and Returning References of an Object"
+        },
+        {
+          "code": "3.7",
+          "name": "Class Variables and Methods"
+        },
+        {
+          "code": "3.8",
+          "name": "Scope and Access"
+        },
+        {
+          "code": "3.9",
+          "name": "this Keyword"
+        }
+      ]
     },
     {
       "code": "U4",
-      "name": "Iteration"
-    },
-    {
-      "code": "U5",
-      "name": "Writing Classes"
-    },
-    {
-      "code": "U6",
-      "name": "Array"
-    },
-    {
-      "code": "U7",
-      "name": "ArrayList"
-    },
-    {
-      "code": "U8",
-      "name": "2D Array"
-    },
-    {
-      "code": "U9",
-      "name": "Inheritance"
-    },
-    {
-      "code": "U10",
-      "name": "Recursion"
+      "name": "Data Collections",
+      "topics": [
+        {
+          "code": "4.1",
+          "name": "Ethical and Social Issues Around Data Collection"
+        },
+        {
+          "code": "4.2",
+          "name": "Introduction to Using Data Sets"
+        },
+        {
+          "code": "4.3",
+          "name": "Array Creation and Access"
+        },
+        {
+          "code": "4.4",
+          "name": "Array Traversals"
+        },
+        {
+          "code": "4.5",
+          "name": "Implementing Array Algorithms"
+        },
+        {
+          "code": "4.6",
+          "name": "Using Text Files"
+        },
+        {
+          "code": "4.7",
+          "name": "Wrapper Classes"
+        },
+        {
+          "code": "4.8",
+          "name": "ArrayList Methods"
+        },
+        {
+          "code": "4.9",
+          "name": "ArrayList Traversals"
+        },
+        {
+          "code": "4.10",
+          "name": "Implementing ArrayList Algorithms"
+        },
+        {
+          "code": "4.11",
+          "name": "2D Array Creation and Access"
+        },
+        {
+          "code": "4.12",
+          "name": "2D Array Traversals"
+        },
+        {
+          "code": "4.13",
+          "name": "Implementing 2D Array Algorithms"
+        },
+        {
+          "code": "4.14",
+          "name": "Searching Algorithms"
+        },
+        {
+          "code": "4.15",
+          "name": "Sorting Algorithms"
+        },
+        {
+          "code": "4.16",
+          "name": "Recursion"
+        },
+        {
+          "code": "4.17",
+          "name": "Recursive Searching and Sorting"
+        }
+      ]
     }
   ],
   "included_sources": [
@@ -121,16 +317,10 @@
     "mcq_time_limit": 5400,
     "frq_time_limit": 5400,
     "unit_distribution": {
-      "U1": 2,
-      "U2": 2,
-      "U3": 3,
-      "U4": 4,
-      "U5": 6,
-      "U6": 9,
-      "U7": 3,
-      "U8": 4,
-      "U9": 4,
-      "U10": 5
+      "U1": 8,
+      "U2": 12,
+      "U3": 6,
+      "U4": 16
     }
   },
   "notes": [
@@ -140,12 +330,13 @@
     "2025 current CED sample questions are included as official current-source content; CED MCQ options are A-D and are intentionally not padded to A-E.",
     "2018 AP Bowl / Georgia Tech practice questions are included as public practice content after answer, duplicate, Java-version, code rendering, and unit review; two items were excluded before publish.",
     "CSAwesome / Runestone open-curriculum practice questions are included with GFDL 1.3 source metadata and source credit after structured RST, answer, image, duplicate, and unit review.",
-    "A small LynkEdu-owned U1 original batch is included to improve Primitive Types coverage without misclassifying later-unit items."
+    "A small LynkEdu-owned U1 original batch is included to improve Primitive Types coverage without misclassifying later-unit items.",
+    "2026-07-21: migrated from legacy 10-unit AP CSA sequence to the official Effective Fall 2025 four-unit course framework. Old U1/U2 -> new U1; old U3/U4 -> new U2; old U5 -> new U3; old U6-U10 -> new U4."
   ],
   "unit_classification_authority": {
-    "official_framework": "AP Computer Science A Course and Exam Description",
+    "official_framework": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
     "official_url": "https://apcentral.collegeboard.org/courses/ap-computer-science-a",
     "policy": "Official exam and subject framework materials are the only authority for unit classification.",
-    "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
+    "student_progression_rule": "A question belongs to the earliest official Fall 2025 unit after which a student can answer it using that unit and prior units only."
   }
 }
