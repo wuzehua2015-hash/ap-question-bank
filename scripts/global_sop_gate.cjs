@@ -27,7 +27,7 @@ const requiredDocs = [
   },
   {
     path: 'docs/UNIT_CLASSIFICATION_STANDARD.md',
-    patterns: [/Core Rule/i, /latest unit/i, /Student-Logic Definition/i, /validate:units/i],
+    patterns: [/Core Rule/i, /latest unit/i, /Required-Knowledge Contract/i, /validate:classification-accuracy/i, /Student-Logic Definition/i, /validate:units/i],
   },
   {
     path: 'docs/QUESTION_POOL_EXPANSION_2026-07-13.md',
@@ -65,6 +65,7 @@ const requiredScripts = [
   'validate:groups',
   'validate:subject-risk',
   'validate:units',
+  'validate:classification-accuracy',
   'validate:student-progression',
   'validate:regression',
   'audit:capacity',
@@ -78,6 +79,10 @@ for (const name of requiredScripts) {
 
 if (scripts.validate && !/validate:sop/.test(scripts.validate)) {
   errors.push('package.json: validate must include validate:sop')
+}
+
+if (scripts.validate && !/validate:classification-accuracy/.test(scripts.validate)) {
+  errors.push('package.json: validate must include validate:classification-accuracy')
 }
 
 if (errors.length) {

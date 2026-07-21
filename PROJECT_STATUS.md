@@ -119,6 +119,8 @@ Content-capacity status: 2026-07-16 capacity reinforcement cleared the pre-launc
 - A count increase is not completion. Completion requires accepted/rejected/deferred source decisions, subject-specific rendering checks, learning-sequence unit review, full validation/build, student-path evidence, and closeout notes.
 - Unit classification authority: every subject's `primary_unit` decisions must use official exam and official subject-framework materials as the only authority. For AP, use the current official Course and Exam Description/course framework plus official released/sample questions and official scoring guidelines where relevant. Third-party maps, existing labels, generated topics, and keyword scans are review aids only; they cannot justify final classification.
 - Official framework gate: `npm run validate:official-units` is part of `npm run validate`. It checks all 16 active subjects' `classification_config.json` unit sequences against the registered official AP framework contract and requires explicit `unit_classification_authority` metadata.
+- Classification accuracy contract: `npm run validate:classification-accuracy` is part of `npm run validate`. It checks hard concept-boundary regressions across active subjects, validates item-level `required_topics`/`classification_accuracy` evidence when present, and reports subjects that still have unit-level authority but no topic-level official map. Current coverage debt after the 2026-07-21 update: 13 active subjects still need full official topic-map backfill; this is not a content pass claim.
+- Macro official-topic correction: current AP Macroeconomics framework places The Phillips Curve in Unit 5 Topic 5.2. Local rules and data must not classify SRPC/Phillips Curve items as U3 under the current framework unless a future official CED changes the topic map.
 - Psychology framework migration: AP Psychology has been migrated from the legacy 9-unit sequence to the current official 5-unit sequence. Legacy released questions are remapped to the earliest official unit after which a student can answer with prior knowledge available; pure research-method/statistics items are treated as cross-unit course skills and assigned to the earliest viable stage rather than preserving a non-official standalone unit.
 
 ## Question Pool Expansion Queue
@@ -225,3 +227,15 @@ The site has entered productization for public launch:
   - resend email verification returned `delivery: "email"` and D1 logged provider status 200;
   - admin grant, cancellation, and restore are present in `admin_audit_logs`.
 - Source mirror note: latest admin-console source tree is synced to GitHub branch `prod-mock-pdf-fix` through stable API fallback. Use `npm run stable:status` for the live tree-match check; API fallback creates a remote commit id different from local Git history while preserving the same tree.
+
+## 2026-07-20 Student Production Deploy
+
+- GitHub source mirror is not the production closeout by itself. The live student site is Cloudflare Pages project `lynkedu-ap-question-bank`; production closeout requires direct Cloudflare Pages deployment plus `https://lynkedu.com` verification.
+- Deployed student site to Cloudflare Pages:
+  - Pages URL: `https://ad92b4af.lynkedu-ap-question-bank.pages.dev`;
+  - production domain refreshed to `/assets/index-DKzXJdq6.js`;
+  - production `QuizPlayer` chunk `/assets/QuizPlayer-La5mfC82.js` contains the `data-question-id` marker used by browser audits.
+- Production verification passed on `https://lynkedu.com`:
+  - `npm run audit:quiz-image-transition -- --subject macro --mobile true --url https://lynkedu.com/ --port 9674`: 0 errors;
+  - `npm run audit:quiz-image-transition -- --mobile true --url https://lynkedu.com/ --port 9675`: 16 subjects, 0 errors.
+- Deployment workflow rule: after GitHub source sync, still run `npx wrangler pages deploy dist --project-name lynkedu-ap-question-bank --branch main` for the student site, then verify the custom domain. Do not treat GitHub Pages status as evidence that `lynkedu.com` is current.

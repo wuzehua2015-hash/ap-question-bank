@@ -79,6 +79,17 @@ const advisoryRules = {
   ],
 }
 
+const blockingConceptRules = {
+  macroeconomics: [
+    late('U5', /\b(long[- ]run phillips|LRPC|no trade[- ]offs? between inflation and unemployment|no trade[- ]offs? between unemployment and inflation|vertical in the long run|downward sloping in the short run, but is vertical in the long run|correctly anticipate|fully anticipated|inflationary expectations)\b/i, 'Long-run Phillips curve, anticipated-inflation adjustment, and no long-run inflation-unemployment tradeoff require U5.'),
+    late('U3', /\b(short[- ]run phillips curve|SRPC|trade[- ]off between inflation and unemployment|trade[- ]off between unemployment and inflation)\b/i, 'Short-run Phillips curve tradeoff requires U3.'),
+  ],
+  microeconomics: [
+    late('U3', /\b(accounting profits?|economic profits?|implicit costs?|explicit costs?|normal profits?)\b/i, 'Accounting profit, economic profit, explicit cost, implicit cost, and normal profit belong to Unit 3 Types of Profit.'),
+    late('U2', /\b(substitution effect|income effect|normal good|inferior good)\b/i, 'Income/substitution effects and normal/inferior-good demand reasoning belong to Unit 2 demand under the current AP Microeconomics framework.'),
+  ],
+}
+
 function calculusRules(isBC) {
   const rules = [
     late('U2', /\b(derivative|differentiat|tangent line|slope of|instantaneous rate)\b/i, 'Basic differentiation is U2.'),
@@ -180,7 +191,11 @@ function auditQuestion(subject, file, q, validUnits, cases) {
     ))
   }
 
+  const blockingConceptFindings = conceptBoundaryFindings(subject, file, q, primary)
+  if (blockingConceptFindings.length) findings.push(...blockingConceptFindings)
+
   if (reviewed && normalizeUnitCode(reviewed.expected_primary_unit) === primary) return findings
+  if (hasOfficialProgressionReview(q, primary)) return findings
   if (BLOCKING_ONLY && !FAIL_ON_FINDINGS) return findings
 
   const pNum = unitNumber(primary)
@@ -199,6 +214,48 @@ function auditQuestion(subject, file, q, validUnits, cases) {
   }
 
   return findings
+}
+
+function conceptBoundaryFindings(subject, file, q, primary) {
+  const findings = []
+  const pNum = unitNumber(primary)
+  if (!pNum) return findings
+  const text = `${stemText(q)} ${correctAnswerText(q)} ${optionTableText(q)}`
+  for (const rule of blockingConceptRules[subject] || []) {
+    const targetNum = unitNumber(rule.unit)
+    if (!targetNum || targetNum <= pNum) continue
+    if (rule.pattern.test(text)) {
+      findings.push(makeFinding(subject, file, q, 'blocking', 'official_concept_boundary_regression', `${rule.unit}: ${rule.reason}`))
+    }
+  }
+  return findings
+}
+
+function correctAnswerText(q) {
+  if (!q.options || typeof q.options !== 'object') return ''
+  return String(q.answer || q.correct_answer || '')
+    .split(',')
+    .map(label => q.options[label.trim()] || '')
+    .join(' ')
+}
+
+function optionTableText(q) {
+  const table = q.option_table_data
+  if (!table || !Array.isArray(table.headers) || !table.rows) return ''
+  return [
+    table.headers.join(' '),
+    ...Object.values(table.rows).flat().map(value => String(value || '')),
+  ].join(' ')
+}
+
+function hasOfficialProgressionReview(q, primary) {
+  const classification = q.classification || {}
+  if (normalizeUnitCode(classification.primary_unit) !== primary) return false
+  if (classification.review_status !== 'reviewed') return false
+  const version = String(classification.classification_version || '')
+  const authority = String(classification.authority || '')
+  return /official-progression|official.*unit|student-progression/i.test(version) ||
+    /Course and Exam Description|official/i.test(authority)
 }
 
 function isLikelyDistractorOnly(q, pattern) {

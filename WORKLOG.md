@@ -399,3 +399,33 @@
 - Added `scripts/global_sop_gate.cjs` and wired it into `npm run validate` through `validate:sop`.
 - The gate verifies that global SOP, structured prompt contract, unit classification standard, expansion ledger, project status, and work log remain present and contain the required markers.
 - Updated `PROJECT_STATUS.md` so global expansion/new-item delivery rules are visible from the project status entry point.
+
+# 2026-07-20 - Quiz Image Transition Production Fix
+
+- Fixed online Quiz image refresh: stateful question images now reset their internal source/error state when `path` changes, and question image keys include `question_id` plus image path.
+- Added focused browser audit `npm run audit:quiz-image-transition`, which seeds adjacent image-bearing MCQs, clicks the real next-question control, and verifies the second question shows its own image without retaining the previous question image.
+- Strengthened `scripts/student_flow_audit.cjs` so regular student-flow samples include adjacent image questions when available and check current question image visibility.
+- Validation passed locally: `npm run lint`, `npm run validate`, `npm run build`, macro mobile student-flow, local all-subject image-transition audit.
+- Synced source to GitHub `main` through stable API fallback. Remote tree matches local tree.
+- Deployed production through Cloudflare Pages project `lynkedu-ap-question-bank`: `https://ad92b4af.lynkedu-ap-question-bank.pages.dev`.
+- Verified real production domain `https://lynkedu.com`: macro image-transition audit passed with 0 errors, then all 16 active subjects passed with 0 errors.
+
+# 2026-07-21 - Classification Accuracy Contract Gate
+
+- Added `scripts/classification_accuracy_contract_audit.cjs` and wired `validate:classification-accuracy` into `npm run validate`.
+- Updated `scripts/global_sop_gate.cjs`, `docs/UNIT_CLASSIFICATION_STANDARD.md`, and `docs/GLOBAL_QUESTION_BANK_SOP.md` so classification accuracy is now an executable contract, not only a written rule.
+- New contract checks:
+  - hard concept-boundary regressions ignore prior `reviewed` status;
+  - item-level `classification_accuracy` / `required_topics` evidence must match the latest required unit when present;
+  - official topic-map coverage debt is reported separately from blocking data errors;
+  - hard-boundary checks use the prompt plus correct answer path, so wrong-option-only concepts do not automatically raise `primary_unit`.
+- Corrected AP Macroeconomics local framework and data under current official topic placement:
+  - Phillips Curve is Unit 5 Topic 5.2, including SRPC and LRPC items.
+  - Reclassified Macro `2012_Q15`, `2014_Q30`, `2015_Q17`, `2016_Q27`, `2017_Q17`, `2017_Q45`, and `2019_Q38` to U5 with topic-level evidence.
+  - Added the Macro topic map skeleton to `classification_config.json`, including Unit 5 Topic 5.7.
+- Corrected CSA `ap_bowl_2018_Q37` to U10 because the required answer path includes mergesort recursion knowledge.
+- Validation passed:
+  - `npm run validate:classification-accuracy`: 16 subjects, 5472 active scored items, topic-map coverage debt 13, blocking errors 0.
+  - `npm run validate:macro-units`: 460 macro items, blocking 0.
+  - `npm run validate`: all gates passed.
+  - `npm run build`: production build passed.

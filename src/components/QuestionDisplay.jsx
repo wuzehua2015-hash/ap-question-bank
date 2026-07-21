@@ -345,7 +345,7 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
       <DisplayBackgroundTable tableData={hasTableImage ? null : backgroundTable} variant={variant} />
 
       {displayImagePaths.map((path, i) => (
-        <DisplayImage key={i} path={path} variant={variant} />
+        <DisplayImage key={`${question.question_id || 'question'}-${path}-${i}`} path={path} variant={variant} />
       ))}
 
       {/* Options */}
@@ -376,5 +376,4 @@ function QuestionDisplay({ question, variant = 'web', showAnswer = false, index:
 }
 
 export default QuestionDisplay
-
 

@@ -109,10 +109,16 @@ Classification must follow `docs/UNIT_CLASSIFICATION_STANDARD.md`.
 For every new or changed item:
 
 - Confirm the current official subject framework and unit sequence before classification.
+- Confirm whether the subject already has a topic-level official map in `classification_config.json`. If not, create the needed topic map slice before accepting the batch, or record a coverage-debt finding and keep the batch out of publication until a reviewer can map it.
 - Read the full item, options, shared context, and any visual.
 - Determine the latest unit required to solve it with all prior units available.
 - Ignore keyword-only evidence if the concept is only a label, distractor, or background.
-- Record `classification_reasoning` when the item is newly added, repaired, or previously risky; the reasoning must refer to the official framework boundary, not a third-party course map.
+- Record required-solving evidence when the item is newly added, repaired, or previously risky:
+  - official authority source;
+  - `required_topics` with unit, topic code when available, topic name, and reason;
+  - `why_not_earlier_unit` for later-unit placement;
+  - `classification_reasoning` that refers to the official framework boundary, not a third-party course map.
+- Treat `reviewed` status as metadata only. It never exempts an item from hard concept-boundary checks.
 - For grouped questions, do not allow a member to appear in an earlier cumulative scope than its shared context and group members allow.
 - For single-unit Quiz, grouped buckets must be filtered by `every(member.primary_unit === selectedUnit)`, never by "any member matches selected unit".
 - For cumulative progression scopes, grouped buckets must be filtered by `every(member.primary_unit in learnedUnits)`.
@@ -120,6 +126,7 @@ For every new or changed item:
 Required gates:
 
 - `npm run validate:official-units`
+- `npm run validate:classification-accuracy`
 - `npm run audit:units`
 - `npm run validate:units`
 - `npm run validate:student-progression`

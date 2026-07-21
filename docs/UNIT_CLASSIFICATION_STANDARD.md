@@ -23,6 +23,21 @@ Every new, expanded, or repaired item must be classified using:
 
 When official curriculum structure changes, affected subjects require a classification review before publication. Historical or legacy unit labels remain historical evidence only and must not override the current official framework.
 
+## Required-Knowledge Contract
+
+Unit labels are valid only when they can be traced to required solving knowledge in the current official topic framework.
+
+Every new, expanded, or repaired item must include or be produced from item-level classification evidence with this meaning:
+
+- `required_topics`: the official topic or topics needed to solve the item, with unit, topic code when available, topic name, and a short reason.
+- `primary_unit`: the latest unit among those required topics.
+- `why_not_earlier_unit`: a concrete explanation for any item placed later than the first unit.
+- `classification_accuracy.authority`: the official framework source used for the decision.
+
+Keyword scans, old source labels, generated topic names, and previous `reviewed` flags can identify review candidates, but they cannot certify the final unit. A `reviewed` item is still subject to hard concept-boundary checks.
+
+`npm run validate:classification-accuracy` enforces the executable part of this contract. It blocks known concept-boundary regressions across active subjects, validates item-level `required_topics` when present, and reports topic-map coverage debt for subjects whose `classification_config.json` does not yet carry a topic-level official map. Use `--strict-topics` only during planned topic-map backfill, because the current launch data still contains subjects with unit-level authority but incomplete topic maps.
+
 ## Student-Logic Definition
 
 Student-logic audit means answering this question for every active subject: if a student has learned through unit `Uk`, are all questions shown at that stage answerable with `U1..Uk`, and are later-unit concepts excluded unless they are only background, labels, or distractors?
@@ -30,7 +45,8 @@ Student-logic audit means answering this question for every active subject: if a
 The audit has two required layers:
 
 1. Unit-classification contract: `npm run validate:student-progression` first runs `unit_progression_audit.cjs --fail-on-findings`. Any later-unit signal must be either corrected in the data or recorded in `scripts/unit_progression_reviewed_cases.json` with a concrete progression reason.
-2. Student-path contract: after unit labels pass, `student_progression_audit.cjs` walks cumulative scopes, grouped buckets, sampling, quiz submission, reports, and similar-practice paths.
+2. Classification-accuracy contract: `npm run validate:classification-accuracy` checks hard concept boundaries and item-level required-topic evidence. This gate cannot be skipped by `classification.review_status = "reviewed"`.
+3. Student-path contract: after unit labels pass, `student_progression_audit.cjs` walks cumulative scopes, grouped buckets, sampling, quiz submission, reports, and similar-practice paths.
 
 Passing the browser flow alone is never enough. A question can be clickable and still be assigned to the wrong learning stage.
 

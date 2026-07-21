@@ -154,9 +154,9 @@ function makeQuestionBuckets(questions) {
 }
 
 function bucketPrimaryUnit(bucket) {
-  const counts = {}
-  for (const q of bucket) counts[q.primary_unit] = (counts[q.primary_unit] || 0) + 1
-  return Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] || bucket[0]?.primary_unit
+  const units = [...new Set(bucket.map(q => q.primary_unit).filter(Boolean))]
+  if (units.length === 1) return units[0]
+  return null
 }
 
 function bucketSource(bucket) {
@@ -365,21 +365,26 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
 
   if (configTotal > 0) {
     const selectedIds = new Set()
+    const shortages = []
     for (const [unit, count] of Object.entries(unitDistribution)) {
       const unitBuckets = makeQuestionBuckets(playableQuestions)
         .filter(bucket => bucketPrimaryUnit(bucket) === unit && bucket.every(q => !selectedIds.has(q.question_id)))
         .sort(() => Math.random() - 0.5)
       const chosen = flattenBucketsToLimit(unitBuckets, count, { exact: true })
+      if (chosen.length < count) {
+        shortages.push({ unit, requested: count, selected: chosen.length })
+      }
       for (const q of chosen) {
         selectedIds.add(q.question_id)
         mcq.push(q)
       }
     }
 
-    if (mcq.length < mockConfig.totalMCQ) {
-      const remainingBuckets = makeQuestionBuckets(playableQuestions.filter(q => !selectedIds.has(q.question_id)))
-        .sort(() => Math.random() - 0.5)
-      mcq.push(...flattenBucketsToLimit(remainingBuckets, mockConfig.totalMCQ - mcq.length, { exact: true }))
+    if (shortages.length > 0 || mcq.length !== mockConfig.totalMCQ) {
+      const detail = shortages
+        .map(item => `${item.unit}: requested ${item.requested}, selected ${item.selected}`)
+        .join('; ')
+      throw new Error(`Mock exam unit capacity is insufficient for ${subjectId}. ${detail}`)
     }
   } else {
     const buckets = makeQuestionBuckets(playableQuestions).sort(() => Math.random() - 0.5)

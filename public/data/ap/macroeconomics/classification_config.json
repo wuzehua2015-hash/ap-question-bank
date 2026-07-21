@@ -1,24 +1,38 @@
 {
   "subject": "AP Macroeconomics",
-  "version": "2019 CED",
+  "version": "Fall 2026 CED",
   "classification_standard": "A student who has completed ONLY this unit should be able to answer this question.",
   "exam_structure": {
     "total_mcq": 60,
     "frq_count": 3,
     "unit_weighting": {
-      "U1": "5–10%",
-      "U2": "12–17%",
-      "U3": "17–27%",
-      "U4": "18–23%",
-      "U5": "20–30%",
-      "U6": "10–13%"
+      "U1": "5-10%",
+      "U2": "12-17%",
+      "U3": "17-27%",
+      "U4": "18-23%",
+      "U5": "20-30%",
+      "U6": "10-13%"
     }
   },
   "units": [
     {
       "code": "U1",
       "name": "Basic Economic Concepts",
-      "weighting": "5–10%",
+      "weighting": "5-10%",
+      "topics": [
+        {
+          "code": "1.1",
+          "name": "Scarcity"
+        },
+        {
+          "code": "1.2",
+          "name": "Opportunity Cost and the Production Possibilities Curve"
+        },
+        {
+          "code": "1.3",
+          "name": "Comparative Advantage and Gains from Trade"
+        }
+      ],
       "core_concepts": [
         "Scarcity",
         "Opportunity cost",
@@ -61,7 +75,37 @@
     {
       "code": "U2",
       "name": "Economic Indicators and the Business Cycle",
-      "weighting": "12–17%",
+      "weighting": "12-17%",
+      "topics": [
+        {
+          "code": "2.1",
+          "name": "Circular Flow and GDP"
+        },
+        {
+          "code": "2.2",
+          "name": "Limitations of GDP"
+        },
+        {
+          "code": "2.3",
+          "name": "Unemployment"
+        },
+        {
+          "code": "2.4",
+          "name": "Price Indices and Inflation"
+        },
+        {
+          "code": "2.5",
+          "name": "Costs of Inflation"
+        },
+        {
+          "code": "2.6",
+          "name": "Real v. Nominal GDP"
+        },
+        {
+          "code": "2.7",
+          "name": "Business Cycles"
+        }
+      ],
       "core_concepts": [
         "Gross Domestic Product (GDP)",
         "Real GDP vs Nominal GDP",
@@ -104,7 +148,41 @@
     {
       "code": "U3",
       "name": "National Income and Price Determination",
-      "weighting": "17–27%",
+      "weighting": "17-27%",
+      "topics": [
+        {
+          "code": "3.1",
+          "name": "Aggregate Demand (AD)"
+        },
+        {
+          "code": "3.2",
+          "name": "Multipliers"
+        },
+        {
+          "code": "3.3",
+          "name": "Short-Run Aggregate Supply (SRAS)"
+        },
+        {
+          "code": "3.4",
+          "name": "Long-Run Aggregate Supply (LRAS)"
+        },
+        {
+          "code": "3.5",
+          "name": "Equilibrium in the Aggregate Demand-Aggregate Supply Model"
+        },
+        {
+          "code": "3.6",
+          "name": "Changes in the AD-AS Model in the Short Run"
+        },
+        {
+          "code": "3.7",
+          "name": "Long-Run Self-Adjustment"
+        },
+        {
+          "code": "3.8",
+          "name": "Fiscal Policy"
+        }
+      ],
       "core_concepts": [
         "Aggregate Demand (AD)",
         "Components of AD (C, I, G, NX)",
@@ -117,7 +195,6 @@
         "Spending multiplier",
         "Tax multiplier",
         "Automatic stabilizers",
-        "Short-run Phillips curve (SRPC)",
         "Stagflation",
         "Inflationary gap",
         "Recessionary gap"
@@ -132,6 +209,8 @@
         "Interest rate determination (as a market)",
         "Long-run economic growth (production function, technology, human capital)",
         "Crowding out",
+        "Phillips curve",
+        "Short-run Phillips curve (SRPC)",
         "Long-run Phillips curve (LRPC)",
         "Fiscal + monetary policy combinations",
         "Supply-side economics",
@@ -140,7 +219,7 @@
       "distinguishing_features": [
         "AD-AS is THE core model",
         "Fiscal policy ONLY (no monetary policy tools)",
-        "Short-run focus (SRPC, not LRPC)",
+        "Short-run focus for AD-AS and fiscal policy; Phillips Curve is classified under Unit 5 in the current official topic framework",
         "Multiplier effects are short-run (AD shifts)"
       ],
       "boundary_rules": [
@@ -148,15 +227,13 @@
         "Monetary terms in CORRECT ANSWER or question stem → U4 or U5 (core concept)",
         "Fiscal policy + interest rate effect in AD-AS context → U3 (monetary is side effect)",
         "Fiscal policy + interest rate in loanable funds context → U4 (loanable funds market)",
-        "SRPC = U3 (short-run Phillips curve taught in U3)",
-        "LRPC = U5 (long-run Phillips curve taught in U5)",
+        "Phillips Curve, including short-run Phillips curve and long-run Phillips curve, = U5 under current official Topic 5.2",
         "LRAS in AD-AS equilibrium = U3 (taught as part of AD-AS model)",
         "LRAS shifting outward (growth) = U5 (economic growth context)"
       ],
       "example_questions": [
         "AD shifts right from increased consumer confidence → U3",
         "Government spending multiplier calculation → U3",
-        "SRPC shows trade-off between unemployment and inflation → U3",
         "Stagflation cause and effect → U3",
         "Automatic stabilizer during recession → U3"
       ]
@@ -164,7 +241,37 @@
     {
       "code": "U4",
       "name": "Financial Sector",
-      "weighting": "18–23%",
+      "weighting": "18-23%",
+      "topics": [
+        {
+          "code": "4.1",
+          "name": "Financial Assets"
+        },
+        {
+          "code": "4.2",
+          "name": "Nominal v. Real Interest Rates"
+        },
+        {
+          "code": "4.3",
+          "name": "Definition, Measurement, and Functions of Money"
+        },
+        {
+          "code": "4.4",
+          "name": "Banking and the Expansion of the Money Supply"
+        },
+        {
+          "code": "4.5",
+          "name": "The Money Market"
+        },
+        {
+          "code": "4.6",
+          "name": "Monetary Policy"
+        },
+        {
+          "code": "4.7",
+          "name": "The Loanable Funds Market"
+        }
+      ],
       "core_concepts": [
         "Money functions",
         "Money demand (transaction, precautionary, speculative)",
@@ -219,7 +326,37 @@
     {
       "code": "U5",
       "name": "Long-Run Consequences of Stabilization Policies",
-      "weighting": "20–30%",
+      "weighting": "20-30%",
+      "topics": [
+        {
+          "code": "5.1",
+          "name": "Fiscal and Monetary Policy Actions in the Short Run"
+        },
+        {
+          "code": "5.2",
+          "name": "The Phillips Curve"
+        },
+        {
+          "code": "5.3",
+          "name": "Money Growth and Inflation"
+        },
+        {
+          "code": "5.4",
+          "name": "Government Deficits and the National Debt"
+        },
+        {
+          "code": "5.5",
+          "name": "Crowding Out"
+        },
+        {
+          "code": "5.6",
+          "name": "Economic Growth"
+        },
+        {
+          "code": "5.7",
+          "name": "Public Policy and Economic Growth"
+        }
+      ],
       "core_concepts": [
         "Fiscal + monetary policy COMBINATIONS",
         "Stabilization policy",
@@ -255,7 +392,7 @@
         "EXPLICIT combination of fiscal + monetary actions → U5 (e.g., 'govt spending increases while central bank sells bonds')",
         "Long-run growth (PPF outward, LRAS shifting from productivity) → U5",
         "Crowding out → U5 (explicitly taught in U5)",
-        "LRPC → U5 (vertical at natural rate)",
+        "Phillips Curve, including SRPC and LRPC → U5",
         "Supply-side policy → U5",
         "Economic convergence → U5"
       ],
@@ -263,14 +400,41 @@
         "Which fiscal-monetary combo corrects recession without inflation? → U5",
         "Human capital investment shifts production function → U5",
         "Crowding out from large budget deficit → U5",
+        "SRPC shows short-run trade-off between unemployment and inflation → U5",
         "LRPC is vertical at natural rate → U5",
         "Policy mix to reduce inflation without recession → U5"
       ]
     },
     {
       "code": "U6",
-      "name": "Open Economy—International Trade and Finance",
-      "weighting": "10–13%",
+      "name": "Open Economy-International Trade and Finance",
+      "weighting": "10-13%",
+      "topics": [
+        {
+          "code": "6.1",
+          "name": "Balance of Payments Accounts"
+        },
+        {
+          "code": "6.2",
+          "name": "Exchange Rates"
+        },
+        {
+          "code": "6.3",
+          "name": "The Foreign Exchange Market"
+        },
+        {
+          "code": "6.4",
+          "name": "Effect of Changes in Policies and Economic Conditions on the Foreign Exchange Market"
+        },
+        {
+          "code": "6.5",
+          "name": "Changes in the Foreign Exchange Market and Net Exports"
+        },
+        {
+          "code": "6.6",
+          "name": "Real Interest Rates and International Capital Flows"
+        }
+      ],
       "core_concepts": [
         "Exchange rates",
         "Foreign exchange market",
@@ -328,7 +492,7 @@
     },
     {
       "situation": "Phillips curve mentioned",
-      "rule": "Short-run Phillips curve (SRPC) → U3. Long-run Phillips curve (LRPC) → U5."
+      "rule": "Current AP Macroeconomics framework places Phillips Curve under Unit 5 Topic 5.2. Short-run and long-run Phillips Curve items are U5 unless a future official CED changes the topic map."
     },
     {
       "situation": "Government spending + central bank action in same question",
@@ -349,14 +513,15 @@
     "Do NOT let distractors (wrong options) determine the unit",
     "Do NOT ignore context: the same concept (e.g., interest rates) can be U3 or U4 depending on context",
     "ALWAYS check: would a student who only studied this unit know this concept?",
-    "ALWAYS distinguish SRPC (U3) from LRPC (U5)",
+    "ALWAYS classify Phillips Curve items, including SRPC and LRPC, under current official Unit 5 Topic 5.2 unless a future official CED changes the topic map",
     "ALWAYS distinguish LRAS in equilibrium (U3) from LRAS in growth (U5)",
     "ALWAYS distinguish fiscal policy alone (U3) from fiscal-monetary combination (U5)"
   ],
   "unit_classification_authority": {
     "official_framework": "AP Macroeconomics Course and Exam Description",
     "official_url": "https://apcentral.collegeboard.org/courses/ap-macroeconomics",
+    "official_version": "Fall 2026, V.1",
     "policy": "Official exam and subject framework materials are the only authority for unit classification.",
-    "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
+    "student_progression_rule": "A question belongs to the earliest official unit after which a student can answer it using that unit and prior units only."
   }
 }

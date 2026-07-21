@@ -53,7 +53,7 @@ function ExamSetup() {
         },
       })
     } catch (err) {
-      setError('加载失败：' + (err.message || '请检查网络'))
+      setError(`加载失败：${err.message || '请检查网络或题库配置'}`)
     } finally {
       setLoading(false)
     }
@@ -97,18 +97,18 @@ function ExamSetup() {
 
         {!preview ? (
           <>
-          {!isLoggedIn && (
-            <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-800 text-sm">
-              登录 / 注册后可以生成 Mock Exam，并保存考试记录。
-            </div>
-          )}
-          <button
-            onClick={generate}
-            disabled={loading}
-            className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50"
-          >
-            {loading ? '生成中...' : isLoggedIn ? '生成 Mock Exam' : '登录 / 注册后生成 Mock Exam'}
-          </button>
+            {!isLoggedIn && (
+              <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg text-blue-800 text-sm">
+                登录 / 注册后可以生成 Mock Exam，并保存考试记录。
+              </div>
+            )}
+            <button
+              onClick={generate}
+              disabled={loading}
+              className="w-full bg-brand hover:bg-brand-light text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-50"
+            >
+              {loading ? '生成中...' : isLoggedIn ? '生成 Mock Exam' : '登录 / 注册后生成 Mock Exam'}
+            </button>
           </>
         ) : (
           <div className="space-y-4">

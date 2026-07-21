@@ -22,8 +22,15 @@
       "primary_unit": "U8",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2015_FRQ1 is assigned to U8 (2D Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: This question involves reasoning about one-dimensional and two-dimensional arrays of integers. You will write three static methods in a single enclosing class named `DiverseArray`. Part (a): Write method `arraySum`, which returns the sum of",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 9,
@@ -51,7 +58,9 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 56
-    }
+    },
+    "classification_reasoning": "Official progression review: U8 2D Array. FRQ 2015_FRQ1 is assigned to U8 (2D Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ2",
@@ -76,8 +85,15 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2015_FRQ2 is assigned to U5 (Writing Classes) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Consider a guessing game in which a player tries to guess a `HiddenWord`. The hidden word and each guess contain only capital letters and have the same known length. After a guess is made, the player receives a hint. For each position in th",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 9,
@@ -100,7 +116,9 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 62
-    }
+    },
+    "classification_reasoning": "Official progression review: U5 Writing Classes. FRQ 2015_FRQ2 is assigned to U5 (Writing Classes) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ3",
@@ -125,8 +143,15 @@
       "primary_unit": "U7",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2015_FRQ3 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: This question uses a sparse array representation. A sparse array stores only nonzero values, along with each value's row and column indexes. ```java public class SparseArrayEntry { private int row; private int col; private int value; public",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 9,
@@ -149,7 +174,9 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 64
-    }
+    },
+    "classification_reasoning": "Official progression review: U7 ArrayList. FRQ 2015_FRQ3 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "2015_FRQ4",
@@ -174,8 +201,15 @@
       "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ 2015_FRQ4 is assigned to U9 (Inheritance) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: This question involves designing an interface, writing a class that implements the interface, and writing a method that uses the interface. Part (a): A number group represents a group of integers. Write an interface named `NumberGroup` with",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 9,
@@ -203,7 +237,9 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 72
-    }
+    },
+    "classification_reasoning": "Official progression review: U9 Inheritance. FRQ 2015_FRQ4 is assigned to U9 (Inheritance) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "gridworld_FRQ1",
@@ -228,8 +264,15 @@
       "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ gridworld_FRQ1 is assigned to U6 (Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Consider the following partial declaration for a `WordScrambler` class. The constructor takes an even-length array of `String` objects and initializes `scrambledWords`. ```java public class WordScrambler { private String[] scrambledWords; /",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 9,
@@ -252,7 +295,9 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 45
-    }
+    },
+    "classification_reasoning": "Official progression review: U6 Array. FRQ gridworld_FRQ1 is assigned to U6 (Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "gridworld_FRQ2",
@@ -277,8 +322,15 @@
       "primary_unit": "U6",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ gridworld_FRQ2 is assigned to U6 (Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: An array of positive integer values has the mountain property if its values increase until a peak is reached and then decrease. The `Mountain` class contains helper methods and two methods that you will implement. ```java public class Mount",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 9,
@@ -301,7 +353,9 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 47
-    }
+    },
+    "classification_reasoning": "Official progression review: U6 Array. FRQ gridworld_FRQ2 is assigned to U6 (Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "gridworld_FRQ3",
@@ -326,8 +380,15 @@
       "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ gridworld_FRQ3 is assigned to U9 (Inheritance) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: This question involves reasoning about the GridWorld case study. A `Grub` is a `Critter` that chooses a direction, considers locations up to a maximum distance in that direction, and then selects a move location. ```java public class Grub e",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 9,
@@ -355,7 +416,9 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 50
-    }
+    },
+    "classification_reasoning": "Official progression review: U9 Inheritance. FRQ gridworld_FRQ3 is assigned to U9 (Inheritance) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "gridworld_FRQ4",
@@ -380,8 +443,15 @@
       "primary_unit": "U7",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA FRQ reconstruction from official prompt/scoring structure.",
-      "review_status": "machine_reviewed"
+      "evidence": [
+        "FRQ gridworld_FRQ4 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: A school district stores standardized test score statistics using `ScoreInfo` objects. ```java public class ScoreInfo { private int score; private int numStudents; public ScoreInfo(int aScore) { score = aScore; numStudents = 1; } public voi",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 9,
@@ -404,7 +474,9 @@
     "provenance": {
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 53
-    }
+    },
+    "classification_reasoning": "Official progression review: U7 ArrayList. FRQ gridworld_FRQ4 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "ced_2025_FRQ1",
@@ -429,8 +501,15 @@
       "primary_unit": "U4",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA CED FRQ mapping by required learning sequence and task type.",
-      "review_status": "human_reviewed"
+      "evidence": [
+        "Methods and Control Structures ced_2025_FRQ1 is assigned to U4 (Iteration) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: This question involves the `MessageBuilder` class, which is used to generate a message based on a starting word. The class has instance variables `message` and `numWords`, a helper method `getNextWord(String s)`, a constructor to implement,",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 7,
@@ -479,7 +558,9 @@
       "source_pdf": "backups/真题/AP/Official_Resources/ap-computer-science-a-course-and-exam-description.pdf",
       "source_page": 168,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
-    }
+    },
+    "classification_reasoning": "Official progression review: U4 Iteration. Methods and Control Structures ced_2025_FRQ1 is assigned to U4 (Iteration) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "ced_2025_FRQ2",
@@ -504,8 +585,15 @@
       "primary_unit": "U5",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA CED FRQ mapping by required learning sequence and task type.",
-      "review_status": "human_reviewed"
+      "evidence": [
+        "Class Design ced_2025_FRQ2 is assigned to U5 (Writing Classes) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: Write the complete `CupcakeMachine` class. A `CupcakeMachine` object represents an automated cupcake vending machine. The constructor has two parameters: an `int` for the number of cupcakes initially stocked and a `double` for the cost per ",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 7,
@@ -554,7 +642,9 @@
       "source_pdf": "backups/真题/AP/Official_Resources/ap-computer-science-a-course-and-exam-description.pdf",
       "source_page": 171,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
-    }
+    },
+    "classification_reasoning": "Official progression review: U5 Writing Classes. Class Design ced_2025_FRQ2 is assigned to U5 (Writing Classes) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "ced_2025_FRQ3",
@@ -579,8 +669,15 @@
       "primary_unit": "U7",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA CED FRQ mapping by required learning sequence and task type.",
-      "review_status": "human_reviewed"
+      "evidence": [
+        "Data Analysis with ArrayList ced_2025_FRQ3 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The `ItemInfo` class stores information about an item at a store. ```java public class ItemInfo { public String getName() { /* implementation not shown */ } public double getCost() { /* implementation not shown */ } public boolean isAvailab",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 5,
@@ -619,7 +716,9 @@
       "source_pdf": "backups/真题/AP/Official_Resources/ap-computer-science-a-course-and-exam-description.pdf",
       "source_page": 173,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
-    }
+    },
+    "classification_reasoning": "Official progression review: U7 ArrayList. Data Analysis with ArrayList ced_2025_FRQ3 is assigned to U7 (ArrayList) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   },
   {
     "question_id": "ced_2025_FRQ4",
@@ -644,8 +743,15 @@
       "primary_unit": "U8",
       "secondary_units": [],
       "confidence": 0.95,
-      "evidence": "Manual CSA CED FRQ mapping by required learning sequence and task type.",
-      "review_status": "human_reviewed"
+      "evidence": [
+        "2D Array ced_2025_FRQ4 is assigned to U8 (2D Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+        "Prompt evidence: The `Appointment` class is used to store information about scheduled appointments. ```java public class Appointment { public String getStatus() { /* implementation not shown */ } public int getRoomNumber() { /* implementation not shown */ }",
+        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ],
+      "review_status": "reviewed",
+      "classification_version": "computer-science-a-official-progression-2026-07-19",
+      "authority": "AP Computer Science A Course and Exam Description",
+      "review_method": "official unit framework plus student progression audit"
     },
     "rubric": {
       "total_points": 6,
@@ -689,6 +795,8 @@
       "source_pdf": "backups/真题/AP/Official_Resources/ap-computer-science-a-course-and-exam-description.pdf",
       "source_page": 175,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
-    }
+    },
+    "classification_reasoning": "Official progression review: U8 2D Array. 2D Array ced_2025_FRQ4 is assigned to U8 (2D Array) under AP Computer Science A Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "unit_classification": "official-progression-reviewed"
   }
 ]
