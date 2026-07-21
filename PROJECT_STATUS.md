@@ -34,8 +34,8 @@ Direct production paths such as `/register`, `/login`, `/account`, and `/search`
 ## Git State
 
 - Working branch: `prod-mock-pdf-fix`
-- Latest local code deployed to Pages: all-subject topic-level unit classification, local commit `abe9fa8 Complete topic-level unit classification`.
-- GitHub sync status at last update: stable-push API fallback synced local HEAD tree `c8201bc146071d8f63ae4c1270f2cdc4fdd0afc7` to remote branch `prod-mock-pdf-fix` at remote commit `0ce0057b284647a3cfc0ee811a3f48eb1cbeb35c`; main remains a separate remote history.
+- Latest code/data commit deployed to Pages: `abe9fa8 Complete topic-level unit classification`.
+- GitHub sync status at last update: stable-push API fallback synced the local tree to remote branch `prod-mock-pdf-fix`; `npm run stable:status` is the source of truth for the latest remote commit/tree because the fallback creates API commits even when normal git push is rejected by branch-history divergence. Main remains a separate remote history.
 
 ## Product Access Tiers
 
