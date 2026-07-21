@@ -458,3 +458,8 @@
   - `npm run validate`
   - `npm run build`
   - real-browser local student path on port 4291: home, first-visit subject settings, 16-subject availability, CSA unit list, CSA Quiz generation, CSA `/play` code rendering.
+- Source sync and production deployment:
+  - Local commit `ca0fec2 Backfill official topic maps and current unit frameworks`.
+  - Stable API remote commit `f5a7bad9be5f53c328e66b9d3363a64d587b6ab4`; remote tree matched local tree `37c1546edc5d323610acb06e1cd28e6f78be2ad6`.
+  - Cloudflare Pages deployment: `https://1ac2bfcb.lynkedu-ap-question-bank.pages.dev`.
+  - Production `https://lynkedu.com` verified for title, 16 active subjects, CSA U1-U4, Statistics U1-U5, Physics 2 U9-U15, 0 student-visible legacy-unit residuals for migrated frameworks, and real-browser CSA Quiz setup loading production data.
