@@ -123,10 +123,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -196,8 +196,25 @@
         "text": "Draw a sketch of $v$ versus $t$ in this case. Assume that there is a negligible change in the period and that the positive direction is still to the right."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2012_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Defining Simple Harmonic Motion",
+          "reason": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Oscillations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2012_FRQ2",
@@ -323,10 +340,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U3",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -395,8 +412,25 @@
         "text": "On all other trials, your calculations show that the energy decreased during the experiment. Assuming you made no mathematical errors, give a reasonable physical explanation for the fact that the average energy you determined decreased. Include references to conservative and nonconservative forces, as appropriate."
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2012_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.2",
+          "topic_name": "Work",
+          "reason": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Work, Energy, and Power is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+      "classification_reasoning": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2012_FRQ3",
@@ -535,10 +569,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -598,8 +632,25 @@
         "text": "Derive an expression for the distance $L$."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2012_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Rotational Kinetic Energy",
+          "reason": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Energy and Momentum of Rotating Systems is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2013_FRQ1",
@@ -715,10 +766,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U2",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -792,8 +843,25 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U2 Force and Translational Dynamics. FRQ 2013_FRQ1 is assigned to U2 (Force and Translational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Force and Translational Dynamics boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.1",
+          "topic_name": "Systems and Center of Mass",
+          "reason": "Full item reviewed against the current official Force and Translational Dynamics boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Force and Translational Dynamics is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Force and Translational Dynamics boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Force and Translational Dynamics boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2013_FRQ2",
@@ -911,10 +979,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -931,8 +999,25 @@
         "Official page images are used only for verification and focused visual assets, not as rubric text replacements."
       ]
     },
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2013_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Defining Simple Harmonic Motion",
+          "reason": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Oscillations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2013_FRQ3",
@@ -1047,10 +1132,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -1115,8 +1200,25 @@
         "text": "The disk is removed and replaced with a hoop of the same mass and radius, but with all of its mass concentrated near the rim of the hoop and connected to the axis by lightweight spokes. The experiment is then repeated. Is the angular acceleration of the hoop greater than, less than, or the same as that of the solid disk? - [ ] Greater than - [ ] Less than - [ ] The same Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2013_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Rotational Kinetic Energy",
+          "reason": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Energy and Momentum of Rotating Systems is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ1",
@@ -1256,10 +1358,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -1277,8 +1379,25 @@
         "Official page images were used only as internal verification evidence and are not substitutes for rubric text."
       ]
     },
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2014_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Defining Simple Harmonic Motion",
+          "reason": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Oscillations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ2",
@@ -1394,10 +1513,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U3",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -1445,8 +1564,25 @@
         "text": "If the total distance $S$ is equal to $3R_1$, derive an expression for $F_0$ in terms of $M_E$, $R_1$, $m$, and fundamental constants, as appropriate."
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2014_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.2",
+          "topic_name": "Work",
+          "reason": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Work, Energy, and Power is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+      "classification_reasoning": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2014_FRQ3",
@@ -1570,10 +1706,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -1651,8 +1787,25 @@
         "text": "Suppose the disk is replaced with another uniform disk with twice the radius, and the pivot point is again on the edge of the disk. How will the period of small-amplitude oscillations be affected by the new disk? - [ ] It will increase. - [ ] It will decrease. - [ ] It will remain the same. - [ ] There is not enough information to determine the period. Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2014_FRQ3 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Defining Simple Harmonic Motion",
+          "reason": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Oscillations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ1",
@@ -1787,10 +1940,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U1",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -1853,8 +2006,25 @@
         "text": "Calculate the distance traveled by the car between $t=2\\,\\mathrm{s}$ and $t=8\\,\\mathrm{s}$."
       }
     ],
-    "classification_reasoning": "Official progression review: U1 Kinematics. FRQ 2015_FRQ1 is assigned to U1 (Kinematics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Kinematics boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U1",
+          "topic_code": "1.1",
+          "topic_name": "Scalars and Vectors",
+          "reason": "Full item reviewed against the current official Kinematics boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "This is the first official unit, so no earlier-unit exclusion is needed.",
+      "classification_reasoning": "Full item reviewed against the current official Kinematics boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ2",
@@ -1976,10 +2146,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -2047,8 +2217,25 @@
         "text": "The small block is replaced with a small sphere that also starts at height $H$. Now there is enough friction to allow the sphere to roll down the ramp without slipping. Identify how the new angle $\\theta_n$ at which the sphere leaves the loop compares with the angle $\\theta_L$ calculated in part (d). - [ ] $\\theta_n<\\theta_L$ - [ ] $\\theta_n=\\theta_L$ - [ ] $\\theta_n>\\theta_L$ Explain your reasoning."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2015_FRQ2 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Rotational Kinetic Energy",
+          "reason": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Energy and Momentum of Rotating Systems is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ3",
@@ -2176,10 +2363,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U5",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -2232,8 +2419,25 @@
         "text": "Suppose that the wire breaks and the board begins to pivot about point $P$. Calculate each of the following. i. The magnitude of the initial angular acceleration of the board-crate system ii. The magnitude of the initial linear acceleration of the left end of the board"
       }
     ],
-    "classification_reasoning": "Official progression review: U5 Torque and Rotational Dynamics. FRQ 2015_FRQ3 is assigned to U5 (Torque and Rotational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Torque and Rotational Dynamics\" was checked against the current official topic map and requires Torque.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.3",
+          "topic_name": "Torque",
+          "reason": "Existing item topic \"Torque and Rotational Dynamics\" was checked against the current official topic map and requires Torque."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Torque and Rotational Dynamics is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Torque and Rotational Dynamics\" was checked against the current official topic map and requires Torque.",
+      "classification_reasoning": "Existing item topic \"Torque and Rotational Dynamics\" was checked against the current official topic map and requires Torque.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2016_FRQ1",
@@ -2365,10 +2569,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U3",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -2451,8 +2655,25 @@
         "text": "Assume the block is moving up the ramp at $2.0\\,\\mathrm{m/s}$ when the string is cut. Calculate how far the block travels up the ramp from the time the string is cut until the block stops, assuming there is sufficient distance on the ramp."
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2016_FRQ1 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.2",
+          "topic_name": "Work",
+          "reason": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Work, Energy, and Power is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+      "classification_reasoning": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2016_FRQ2",
@@ -2590,10 +2811,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -2673,8 +2894,25 @@
         "text": "i. Calculate the magnitude of the impulse exerted on block A by block B. ii. In what direction, if any, is the impulse exerted on block A by block B? - [ ] Up the ramp - [ ] Down the ramp - [ ] Undefined, because the impulse is zero"
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2016_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Defining Simple Harmonic Motion",
+          "reason": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Oscillations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ3",
@@ -2803,10 +3041,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -2865,8 +3103,25 @@
         "text": "Using your straight line, determine an experimental value for $g$."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2016_FRQ3 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Defining Simple Harmonic Motion",
+          "reason": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Oscillations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2017_FRQ1",
@@ -3014,10 +3269,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -3092,8 +3347,25 @@
         "text": "The collision is repeated using a rubber ball with the same mass as the ball of clay. The rubber ball is launched vertically with the same speed $v_0$. The collision between the rubber ball and the block is elastic. Will the speed of the block immediately after colliding with the rubber ball be greater than, less than, or equal to the speed of the block you calculated in part (d)(i)? - [ ] Greater than - [ ] Less than - [ ] Equal to Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2017_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Defining Simple Harmonic Motion",
+          "reason": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Oscillations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2017_FRQ2",
@@ -3243,10 +3515,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -3336,8 +3608,25 @@
         "text": "The experiment is repeated, but in a second set of trials, the cart is pulled back a distance $D$, where $D>d$. Describe any changes that will occur for the straight line on the graph in part (d). Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2017_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Defining Simple Harmonic Motion",
+          "reason": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Oscillations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2017_FRQ3",
@@ -3472,10 +3761,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -3556,8 +3845,25 @@
         "text": "Calculate the maximum height above the bottom of the loop that the sphere will reach."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2017_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Rotational Kinetic Energy",
+          "reason": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Energy and Momentum of Rotating Systems is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2018_FRQ1",
@@ -3699,10 +4005,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -3782,8 +4088,25 @@
         "text": "Use the best-fit line to calculate the force constant $k$ of the elastic cord."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2018_FRQ1 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Defining Simple Harmonic Motion",
+          "reason": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Oscillations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2018_FRQ2",
@@ -3940,10 +4263,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U3",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -4029,8 +4352,25 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2018_FRQ2 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.2",
+          "topic_name": "Work",
+          "reason": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Work, Energy, and Power is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+      "classification_reasoning": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2018_FRQ3",
@@ -4175,10 +4515,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -4280,8 +4620,25 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Energy and Momentum of Rotating Systems. FRQ 2018_FRQ3 is assigned to U6 (Energy and Momentum of Rotating Systems) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Rotational Kinetic Energy",
+          "reason": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Energy and Momentum of Rotating Systems is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Energy and Momentum of Rotating Systems boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2019_FRQ1",
@@ -4428,10 +4785,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U3",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -4522,8 +4879,25 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Work, Energy, and Power. FRQ 2019_FRQ1 is assigned to U3 (Work, Energy, and Power) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.2",
+          "topic_name": "Work",
+          "reason": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Work, Energy, and Power is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+      "classification_reasoning": "Existing item topic \"Work, Energy, and Power\" was checked against the current official topic map and requires Work.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2019_FRQ2",
@@ -4671,10 +5045,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -4770,8 +5144,25 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Oscillations. FRQ 2019_FRQ2 is assigned to U7 (Oscillations) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Defining Simple Harmonic Motion",
+          "reason": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Oscillations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Oscillations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2019_FRQ3",
@@ -4917,10 +5308,10 @@
       "source_refs": [
         "subjects/AP/Physics-C-Mechanics/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-mechanics-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U5",
       "authority": "AP Physics C: Mechanics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "verification": {
       "status": "verified_text_latex",
@@ -5003,7 +5394,24 @@
         "text": "In order to provide a straight-line graph that can be used to determine an experimental value for $g$, what two quantities should the students now graph? Check all that apply. - [ ] $a_C$ vs. $1/m_{tot}$ - [ ] $a_C$ vs. $m_{tot}$ - [ ] $a_C$ vs. $m_C/m_{tot}$ - [ ] $a_C$ vs. $m_C$ - [ ] $m_C$ vs. $m_{tot}$ - [ ] $m_C$ vs. $1/m_{tot}$ Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U5 Torque and Rotational Dynamics. FRQ 2019_FRQ3 is assigned to U5 (Torque and Rotational Dynamics) under AP Physics C: Mechanics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Torque and Rotational Dynamics\" was checked against the current official topic map and requires Torque.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Physics C: Mechanics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.3",
+          "topic_name": "Torque",
+          "reason": "Existing item topic \"Torque and Rotational Dynamics\" was checked against the current official topic map and requires Torque."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Torque and Rotational Dynamics is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Torque and Rotational Dynamics\" was checked against the current official topic map and requires Torque.",
+      "classification_reasoning": "Existing item topic \"Torque and Rotational Dynamics\" was checked against the current official topic map and requires Torque.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   }
 ]

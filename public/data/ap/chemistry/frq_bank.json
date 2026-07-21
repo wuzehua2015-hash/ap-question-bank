@@ -86,9 +86,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
@@ -136,8 +136,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U7 Equilibrium. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Introduction to Equilibrium",
+          "reason": "Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Equilibrium is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ2",
@@ -226,9 +243,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
@@ -276,8 +293,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ3",
@@ -370,9 +404,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
@@ -471,8 +505,25 @@
         "text": "In another experiment, the student places a new Sn electrode into a fresh solution of $1.0\\,\\mathrm{M}\\ Cu(NO_3)_2$. | Half-Reaction | $E^\\circ$ (V) | |---|---:| | $Cu^+ + e^-\\rightarrow Cu(s)$ | 0.52 | | $Cu^{2+}+2e^-\\rightarrow Cu(s)$ | 0.34 | | $Sn^{4+}+2e^-\\rightarrow Sn^{2+}$ | 0.15 | | $Sn^{2+}+2e^-\\rightarrow Sn(s)$ | -0.14 | i. Using information from the table above, write a net-ionic equation for the reaction between the Sn electrode and the $Cu(NO_3)_2$ solution that would be thermodynamically favorable. Justify that the reaction is thermodynamically favorable. ii. Calculate the value of $\\Delta G^\\circ$ for the reaction. Include units with your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U9",
+          "topic_code": "9.1",
+          "topic_name": "Introduction to Entropy",
+          "reason": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ4",
@@ -534,9 +585,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
@@ -620,8 +671,25 @@
         "text": "Are there sufficient data obtained in the experiments to determine the value of the equilibrium constant, $K_p$, for the decomposition of $CaCO_3(s)$ at $1100\\,\\mathrm{K}$? Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ5",
@@ -680,9 +748,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
@@ -730,8 +798,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ6",
@@ -794,9 +879,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
@@ -885,8 +970,25 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ7",
@@ -948,9 +1050,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP_Chemistry_2014_Full_Exam.pdf",
@@ -1034,8 +1136,25 @@
         "text": "The half-life of the reaction in trial 4 is less than the half-life in trial 1. Explain why, in terms of activation energy."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Equilibrium. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Introduction to Equilibrium",
+          "reason": "Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Equilibrium is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ1",
@@ -1124,9 +1243,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
@@ -1173,8 +1292,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U9",
+          "topic_code": "9.1",
+          "topic_name": "Introduction to Entropy",
+          "reason": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ2",
@@ -1190,7 +1326,7 @@
     "image_paths": [],
     "rubric_image_paths": [],
     "primary_unit": "U8",
-    "unit": "U4",
+    "unit": "U8",
     "unit_name": "Acids and Bases",
     "secondary_units": [],
     "pure_unit": true,
@@ -1263,9 +1399,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
@@ -1312,8 +1448,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ3",
@@ -1405,9 +1558,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
@@ -1490,8 +1643,25 @@
         "text": "The experiment is repeated using a $1.5\\,\\mathrm{g}$ sample of sucrose. The combustion reaction for sucrose in air is represented below. $C_{12}H_{22}O_{11}(s)+12O_2(g)\\rightarrow12CO_2(g)+11H_2O(g)$ i. Even though $\\Delta G^\\circ$ for the combustion of sucrose in air is $-5837\\,\\mathrm{kJ/mol_{rxn}}$, the combustion reaction does not take place unless it is ignited. Explain. ii. Predict the sign of $\\Delta S^\\circ$ for the reaction and justify your prediction."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Endothermic and Exothermic Processes",
+          "reason": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Thermochemistry is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ4",
@@ -1553,9 +1723,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
@@ -1633,8 +1803,25 @@
         "text": "A representation of five molecules of $HBr$ in the liquid state is shown in box 1 below. In box 2, draw a representation of the five molecules of $HBr$ after complete vaporization has occurred."
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.1",
+          "topic_name": "Intermolecular Forces",
+          "reason": "Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Properties of Substances and Mixtures is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ5",
@@ -1652,7 +1839,7 @@
     ],
     "rubric_image_paths": [],
     "primary_unit": "U7",
-    "unit": "U2",
+    "unit": "U7",
     "unit_name": "Equilibrium",
     "secondary_units": [],
     "pure_unit": true,
@@ -1696,9 +1883,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
@@ -1745,7 +1932,7 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U7 Equilibrium. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
     "content_blocks": [
       {
         "type": "paragraph",
@@ -1772,7 +1959,24 @@
         "text": "Assume that when equilibrium has been reached, $50.\\%$ of the ethanoic acid molecules have reacted. i. Calculate the total pressure in the vessel at equilibrium at $450\\,\\mathrm{K}$. ii. Calculate $K_p$ for the reaction at $450\\,\\mathrm{K}$."
       }
     ],
-    "unit_classification": "official-progression-reviewed"
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Introduction to Equilibrium",
+          "reason": "Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Equilibrium is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Equilibrium boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ6",
@@ -1834,9 +2038,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
@@ -1914,8 +2118,25 @@
         "text": "Write the ground-state electron configuration of the unknown element."
       }
     ],
-    "classification_reasoning": "Official progression review: U1 Atomic Structure and Properties. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Atomic Structure and Properties boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U1",
+          "topic_code": "1.1",
+          "topic_name": "Moles and Molar Mass",
+          "reason": "Full item reviewed against the current official Atomic Structure and Properties boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "This is the first official unit, so no earlier-unit exclusion is needed.",
+      "classification_reasoning": "Full item reviewed against the current official Atomic Structure and Properties boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ7",
@@ -1974,9 +2195,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2015.pdf",
@@ -2023,8 +2244,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ1",
@@ -2113,9 +2351,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
@@ -2156,8 +2394,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U9",
+          "topic_code": "9.1",
+          "topic_name": "Introduction to Entropy",
+          "reason": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ2",
@@ -2246,9 +2501,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
@@ -2289,8 +2544,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ3",
@@ -2382,9 +2654,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
@@ -2461,8 +2733,25 @@
         "text": "At equilibrium the forward and reverse reaction rates are equal. Calculate $k_r$."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ4",
@@ -2524,9 +2813,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
@@ -2593,8 +2882,25 @@
         "text": "A student hypothesizes that placing the ring in a $1.0\\,\\mathrm{M}$ solution of $Rh(NO_3)_3(aq)$ will deposit $Rh$ metal on the ring. Based on the table below, calculate $E^\\circ$ for reactions that may occur between ions in solution and atoms in the ring, and indicate whether the student's hypothesis is correct. | Half-Reaction | $E^\\circ$ (V) | |---|---:| | $Au^{3+}(aq)+3e^-\\rightarrow Au(s)$ | 1.50 | | $Pd^{2+}(aq)+2e^-\\rightarrow Pd(s)$ | 0.92 | | $Rh^{3+}(aq)+3e^-\\rightarrow Rh(s)$ | 0.76 |"
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ5",
@@ -2653,9 +2959,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
@@ -2696,8 +3002,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ6",
@@ -2759,9 +3082,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
@@ -2833,8 +3156,25 @@
         "text": "Propanoic acid has a lower boiling point than butanoic acid, $C_3H_7COOH$. i. Identify all types of intermolecular forces present among molecules in propanoic acid. ii. Which type of intermolecular force identified in part (c)(i) is most responsible for the difference in boiling points of the two acids?"
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ7",
@@ -2896,9 +3236,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2016.pdf",
@@ -2970,8 +3310,25 @@
         "text": "The student wants to select a wavelength for the analysis of $Cu^{2+}$ that gives the greatest sensitivity and minimizes interference from $Co^{2+}$. Which wavelength should the student use? Justify your choice."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2018_FRQ1",
@@ -3064,9 +3421,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
@@ -3167,8 +3524,25 @@
         "text": "Using particle-level reasoning, provide TWO explanations that help to account for the fact that the reaction rate is slower in trial 4."
       }
     ],
-    "classification_reasoning": "Official progression review: U5 Kinetics. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Kinetics boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.1",
+          "topic_name": "Reaction Rates",
+          "reason": "Full item reviewed against the current official Kinetics boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Kinetics is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Kinetics boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Kinetics boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2018_FRQ2",
@@ -3257,9 +3631,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
@@ -3304,8 +3678,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.1",
+          "topic_name": "Intermolecular Forces",
+          "reason": "Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Properties of Substances and Mixtures is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2018_FRQ3",
@@ -3397,9 +3788,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
@@ -3495,8 +3886,25 @@
         "text": "The student predicts that the cell voltage will increase after the precipitate forms. Do you agree with the student's prediction? Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U9",
+          "topic_code": "9.1",
+          "topic_name": "Introduction to Entropy",
+          "reason": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2018_FRQ4",
@@ -3558,9 +3966,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
@@ -3636,8 +4044,25 @@
         "text": "Calculate the mass percent of $Co$ in the $0.630\\,\\mathrm{g}$ sample of the ore."
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Properties of Substances and Mixtures. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.1",
+          "topic_name": "Intermolecular Forces",
+          "reason": "Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Properties of Substances and Mixtures is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Properties of Substances and Mixtures boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2018_FRQ5",
@@ -3696,9 +4121,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
@@ -3743,8 +4168,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Endothermic and Exothermic Processes",
+          "reason": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Thermochemistry is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2018_FRQ6",
@@ -3803,9 +4245,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
@@ -3850,8 +4292,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Endothermic and Exothermic Processes",
+          "reason": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Thermochemistry is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2018_FRQ7",
@@ -3910,9 +4369,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2018.pdf",
@@ -3957,8 +4416,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2019_FRQ1",
@@ -4051,9 +4527,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
@@ -4167,8 +4643,25 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2019_FRQ2",
@@ -4262,9 +4755,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
@@ -4388,8 +4881,25 @@
         "text": "The hydrogen peroxide used in this experiment can be prepared by the reaction of solid ammonium peroxydisulfate, $(NH_4)_2S_2O_8$, with water. The products are hydrogen peroxide, $H_2O_2$, and ammonium bisulfate, $NH_4HSO_4$. Write the balanced equation for the reaction."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2019_FRQ3",
@@ -4481,9 +4991,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
@@ -4577,8 +5087,25 @@
         "text": "Use the information above to answer the following. i. Write the expression for the equilibrium constant, $K_p$, for the reaction. ii. Determine the value of $K_p$ for the reaction."
       }
     ],
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U9",
+          "topic_code": "9.1",
+          "topic_name": "Introduction to Entropy",
+          "reason": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2019_FRQ4",
@@ -4640,9 +5167,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
@@ -4726,8 +5253,25 @@
         "text": "A student proposes creating a buffer by dissolving $0.010\\,\\mathrm{mol}$ of $NaClO_4(s)$ in $100.\\,\\mathrm{mL}$ of $0.100\\,\\mathrm{M}\\ HClO_4$. Explain why the resulting solution would not be a buffer."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2019_FRQ5",
@@ -4786,9 +5330,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
@@ -4841,8 +5385,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U9 Thermodynamics and Electrochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U9",
+          "topic_code": "9.1",
+          "topic_name": "Introduction to Entropy",
+          "reason": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Thermodynamics and Electrochemistry is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Thermodynamics and Electrochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2019_FRQ6",
@@ -4901,9 +5462,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
@@ -4956,8 +5517,25 @@
       ],
       "override": true
     },
-    "classification_reasoning": "Official progression review: U6 Thermochemistry. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Endothermic and Exothermic Processes",
+          "reason": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Thermochemistry is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Thermochemistry boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2019_FRQ7",
@@ -5019,9 +5597,9 @@
         "Subject chemistry passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "chemistry-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Chemistry Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "provenance": {
       "source_pdf": "subjects/AP/Chemistry/01-exams/AP Chem 2019.pdf",
@@ -5110,7 +5688,24 @@
         "text": "If the student measured the absorbance of the solution at a wavelength of $650\\,\\mathrm{nm}$, would the absorbance be greater than, less than, or equal to the absorbance of the solution at $559\\,\\mathrm{nm}$? Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Acids and Bases. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Chemistry Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Introduction to Acids and Bases",
+          "reason": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Acids and Bases is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Acids and Bases boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   }
 ]

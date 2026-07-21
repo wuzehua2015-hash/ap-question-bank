@@ -77,13 +77,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2012_FRQ1 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Integration and Accumulation of Change",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Exploring Accumulations of Change",
+          "reason": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Integration and Accumulation of Change is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2012_FRQ2",
@@ -161,10 +180,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U8",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -197,8 +216,27 @@
         "text": "The horizontal line $y=k$ divides $R$ into two regions of equal area. Write, but do not solve, an equation involving one or more integrals whose solution gives the value of $k$."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2012_FRQ2 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U8",
+    "unit_name": "Applications of Integration",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Finding the Average Value of a Function on an Interval",
+          "reason": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Applications of Integration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2012_FRQ3",
@@ -281,10 +319,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -322,8 +360,27 @@
         "text": "For $-4<x<3$, find all values of $x$ for which the graph of $g$ has a point of inflection. Explain your reasoning."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2012_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Accumulation Functions\" was checked against the current official topic map and requires The Fundamental Theorem of Calculus and Accumulation Functions.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Integration and Accumulation of Change",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.4",
+          "topic_name": "The Fundamental Theorem of Calculus and Accumulation Functions",
+          "reason": "Existing item topic \"Accumulation Functions\" was checked against the current official topic map and requires The Fundamental Theorem of Calculus and Accumulation Functions."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Integration and Accumulation of Change is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Accumulation Functions\" was checked against the current official topic map and requires The Fundamental Theorem of Calculus and Accumulation Functions.",
+      "classification_reasoning": "Existing item topic \"Accumulation Functions\" was checked against the current official topic map and requires The Fundamental Theorem of Calculus and Accumulation Functions.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2012_FRQ4",
@@ -403,13 +460,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U3",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U3 Differentiation: Composite, Implicit, and Inverse Functions. FRQ 2012_FRQ4 is assigned to U3 (Differentiation: Composite, Implicit, and Inverse Functions) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Differentiation: Composite, Implicit, and Inverse Functions boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U3",
+    "unit_name": "Differentiation: Composite, Implicit, and Inverse Functions",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.1",
+          "topic_name": "The Chain Rule",
+          "reason": "Full item reviewed against the current official Differentiation: Composite, Implicit, and Inverse Functions boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Differentiation: Composite, Implicit, and Inverse Functions is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Differentiation: Composite, Implicit, and Inverse Functions boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Differentiation: Composite, Implicit, and Inverse Functions boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2012_FRQ5",
@@ -487,10 +563,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -523,8 +599,27 @@
         "text": "Use separation of variables to find $y=B(t)$, the particular solution to the differential equation with initial condition $B(0)=20$."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2012_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Differential Equations\" was checked against the current official topic map and requires Modeling Situations with Differential Equations.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U7",
+    "unit_name": "Differential Equations",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Modeling Situations with Differential Equations",
+          "reason": "Existing item topic \"Differential Equations\" was checked against the current official topic map and requires Modeling Situations with Differential Equations."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Differential Equations is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Differential Equations\" was checked against the current official topic map and requires Modeling Situations with Differential Equations.",
+      "classification_reasoning": "Existing item topic \"Differential Equations\" was checked against the current official topic map and requires Modeling Situations with Differential Equations.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2012_FRQ6",
@@ -606,13 +701,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2012_FRQ6 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Integration and Accumulation of Change",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Exploring Accumulations of Change",
+          "reason": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Integration and Accumulation of Change is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2013_FRQ1",
@@ -694,10 +808,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U8",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -730,8 +844,27 @@
         "text": "Find the volume of the solid generated when $R$ is revolved about the line $y=-3$."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2013_FRQ1 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U8",
+    "unit_name": "Applications of Integration",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Finding the Average Value of a Function on an Interval",
+          "reason": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Applications of Integration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2013_FRQ2",
@@ -815,13 +948,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U8",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2013_FRQ2 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U8",
+    "unit_name": "Applications of Integration",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Finding the Average Value of a Function on an Interval",
+          "reason": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Applications of Integration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2013_FRQ3",
@@ -908,10 +1060,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -949,8 +1101,27 @@
         "text": "The equation $A=0.3W^{2/3}$ gives the relationship between the area $A$, in square kilometers, of the surface of the reservoir, and the volume of water $W(t)$, in gigaliters, in the reservoir. Find the instantaneous rate of change of $A$, in square kilometers per day, with respect to $t$ when $t=30$ days."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2013_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Integration and Accumulation of Change",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Exploring Accumulations of Change",
+          "reason": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Integration and Accumulation of Change is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2013_FRQ4",
@@ -1029,13 +1200,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U5",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U5 Analytical Applications of Differentiation. FRQ 2013_FRQ4 is assigned to U5 (Analytical Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U5",
+    "unit_name": "Analytical Applications of Differentiation",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.1",
+          "topic_name": "Using the Mean Value Theorem",
+          "reason": "Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Analytical Applications of Differentiation is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2013_FRQ5",
@@ -1122,10 +1312,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -1163,8 +1353,27 @@
         "text": "Find all values of $x$ on the open interval $-6<x<3$ for which the graph of $g$ has a point of inflection. Explain your reasoning."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2013_FRQ5 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Integration and Accumulation of Change",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Exploring Accumulations of Change",
+          "reason": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Integration and Accumulation of Change is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2013_FRQ6",
@@ -1253,13 +1462,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2013_FRQ6 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Differential Equations\" was checked against the current official topic map and requires Modeling Situations with Differential Equations.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U7",
+    "unit_name": "Differential Equations",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Modeling Situations with Differential Equations",
+          "reason": "Existing item topic \"Differential Equations\" was checked against the current official topic map and requires Modeling Situations with Differential Equations."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Differential Equations is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Differential Equations\" was checked against the current official topic map and requires Modeling Situations with Differential Equations.",
+      "classification_reasoning": "Existing item topic \"Differential Equations\" was checked against the current official topic map and requires Modeling Situations with Differential Equations.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2014_FRQ1",
@@ -1342,13 +1570,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U8",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2014_FRQ1 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U8",
+    "unit_name": "Applications of Integration",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Finding the Average Value of a Function on an Interval",
+          "reason": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Applications of Integration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ2",
@@ -1431,13 +1678,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U8",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2014_FRQ2 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U8",
+    "unit_name": "Applications of Integration",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Finding the Average Value of a Function on an Interval",
+          "reason": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Applications of Integration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ3",
@@ -1515,13 +1781,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U8",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2014_FRQ3 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U8",
+    "unit_name": "Applications of Integration",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Finding the Average Value of a Function on an Interval",
+          "reason": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Applications of Integration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ4",
@@ -1607,10 +1892,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -1648,8 +1933,27 @@
         "text": "The function $h$ is given by $h(x)=g(x^3+1)$. Find $h'(1)$. Show the work that leads to your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2014_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Integration and Accumulation of Change",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Exploring Accumulations of Change",
+          "reason": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Integration and Accumulation of Change is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ5",
@@ -1727,13 +2031,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U4",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U4 Contextual Applications of Differentiation. FRQ 2014_FRQ5 is assigned to U4 (Contextual Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U4",
+    "unit_name": "Contextual Applications of Differentiation",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.1",
+          "topic_name": "Interpreting the Meaning of the Derivative in Context",
+          "reason": "Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Contextual Applications of Differentiation is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2014_FRQ6",
@@ -1814,10 +2137,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -1850,8 +2173,27 @@
         "text": "Find the particular solution $y=f(x)$ to the differential equation $\\dfrac{dy}{dx}=\\left(1-\\dfrac2{x^2}\\right)(y-1)$ with initial condition $f(1)=2$."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2014_FRQ6 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U7",
+    "unit_name": "Differential Equations",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Modeling Situations with Differential Equations",
+          "reason": "Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Differential Equations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ1",
@@ -1937,10 +2279,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U8",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -1978,8 +2320,27 @@
         "text": "Using the functions $R$ and $D$, determine whether the amount of water in the tank is increasing or decreasing at time $t=45$ minutes. Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2015_FRQ1 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U8",
+    "unit_name": "Applications of Integration",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Finding the Average Value of a Function on an Interval",
+          "reason": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Applications of Integration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ2",
@@ -2065,10 +2426,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U3",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -2106,8 +2467,27 @@
         "text": "Find the value of $\\dfrac{d^2y}{dx^2}$ at point $P$."
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Differentiation: Composite, Implicit, and Inverse Functions. FRQ 2015_FRQ2 is assigned to U3 (Differentiation: Composite, Implicit, and Inverse Functions) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Implicit Differentiation\" was checked against the current official topic map and requires Implicit Differentiation.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U3",
+    "unit_name": "Differentiation: Composite, Implicit, and Inverse Functions",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.2",
+          "topic_name": "Implicit Differentiation",
+          "reason": "Existing item topic \"Implicit Differentiation\" was checked against the current official topic map and requires Implicit Differentiation."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Differentiation: Composite, Implicit, and Inverse Functions is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Implicit Differentiation\" was checked against the current official topic map and requires Implicit Differentiation.",
+      "classification_reasoning": "Existing item topic \"Implicit Differentiation\" was checked against the current official topic map and requires Implicit Differentiation.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2015_FRQ3",
@@ -2190,13 +2570,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U8",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2015_FRQ3 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U8",
+    "unit_name": "Applications of Integration",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Finding the Average Value of a Function on an Interval",
+          "reason": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Applications of Integration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ4",
@@ -2277,10 +2676,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -2313,8 +2712,27 @@
         "text": "Find the particular solution $y=f(x)$ to the differential equation with the initial condition $f(1)=3$."
       }
     ],
-    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2015_FRQ4 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U7",
+    "unit_name": "Differential Equations",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Modeling Situations with Differential Equations",
+          "reason": "Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Differential Equations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ5",
@@ -2395,10 +2813,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U8",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -2431,8 +2849,27 @@
         "text": "Find the maximum vertical distance between the graph of $g$ and the graph of $h$ between $x=0$ and $x=16$. Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2015_FRQ5 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U8",
+    "unit_name": "Applications of Integration",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Finding the Average Value of a Function on an Interval",
+          "reason": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Applications of Integration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2015_FRQ6",
@@ -2515,13 +2952,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2015_FRQ6 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Integration and Accumulation of Change",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Exploring Accumulations of Change",
+          "reason": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Integration and Accumulation of Change is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ1",
@@ -2604,13 +3060,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U5",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U5 Analytical Applications of Differentiation. FRQ 2016_FRQ1 is assigned to U5 (Analytical Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U5",
+    "unit_name": "Analytical Applications of Differentiation",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.1",
+          "topic_name": "Using the Mean Value Theorem",
+          "reason": "Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Analytical Applications of Differentiation is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ2",
@@ -2698,10 +3173,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -2739,8 +3214,27 @@
         "text": "Another salesperson believes the best model for the rate at which games will be sold in the $8$ weeks between time $t=12$ and $t=20$ is $M(t)=2400e^{-0.01(t-12)^2}$ games per week. Based on this model, how many total games, to the nearest whole number, will be sold during this period?"
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2016_FRQ2 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Integration and Accumulation of Change",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Exploring Accumulations of Change",
+          "reason": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Integration and Accumulation of Change is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ3",
@@ -2826,10 +3320,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U5",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -2867,8 +3361,27 @@
         "text": "Assume $c>3$. The function $h$ is defined by $h(x)=f\\left(\\dfrac{x}{2}\\right)$. Find $h'(6)$ in terms of $c$."
       }
     ],
-    "classification_reasoning": "Official progression review: U5 Analytical Applications of Differentiation. FRQ 2016_FRQ3 is assigned to U5 (Analytical Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U5",
+    "unit_name": "Analytical Applications of Differentiation",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.1",
+          "topic_name": "Using the Mean Value Theorem",
+          "reason": "Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Analytical Applications of Differentiation is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Analytical Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ4",
@@ -2949,10 +3462,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U8",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -2985,8 +3498,27 @@
         "text": "Region $S$ is revolved about the horizontal line $y=5$ to form a solid. Write, but do not evaluate, an expression involving one or more integrals that gives the volume of the solid when $k=\\dfrac\\pi4$."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2016_FRQ4 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U8",
+    "unit_name": "Applications of Integration",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Finding the Average Value of a Function on an Interval",
+          "reason": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Applications of Integration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ5",
@@ -3064,13 +3596,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U7",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U7 Differential Equations. FRQ 2016_FRQ5 is assigned to U7 (Differential Equations) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U7",
+    "unit_name": "Differential Equations",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U7",
+          "topic_code": "7.1",
+          "topic_name": "Modeling Situations with Differential Equations",
+          "reason": "Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Differential Equations is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Differential Equations boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2016_FRQ6",
@@ -3149,13 +3700,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U1",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U1 Limits and Continuity. FRQ 2016_FRQ6 is assigned to U1 (Limits and Continuity) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Limits and Continuity boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U1",
+    "unit_name": "Limits and Continuity",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U1",
+          "topic_code": "1.1",
+          "topic_name": "Introducing Calculus: Can Change Occur at an Instant?",
+          "reason": "Full item reviewed against the current official Limits and Continuity boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "This is the first official unit, so no earlier-unit exclusion is needed.",
+      "classification_reasoning": "Full item reviewed against the current official Limits and Continuity boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2017_FRQ1",
@@ -3238,13 +3808,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U4",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U4 Contextual Applications of Differentiation. FRQ 2017_FRQ1 is assigned to U4 (Contextual Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U4",
+    "unit_name": "Contextual Applications of Differentiation",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.1",
+          "topic_name": "Interpreting the Meaning of the Derivative in Context",
+          "reason": "Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Contextual Applications of Differentiation is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2017_FRQ2",
@@ -3330,10 +3919,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -3371,8 +3960,27 @@
         "text": "During the time interval $2.7\\le t\\le4.5$ hours, the rate at which water flows into tank B is modeled by $$w(t)=21-\\frac{30t}{(t-8)^2}$$ liters per hour. Is the difference $w(t)-a(t)$ increasing or decreasing at time $t=3.5$? Show the work that leads to your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2017_FRQ2 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Integration and Accumulation of Change",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Exploring Accumulations of Change",
+          "reason": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Integration and Accumulation of Change is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2017_FRQ3",
@@ -3458,10 +4066,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -3499,8 +4107,27 @@
         "text": "Find all $x$-values in the interval $-5<x<5$ at which $g$ has a critical point. Classify each critical point as the location of a local minimum, a local maximum, or neither. Justify your answers."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2017_FRQ3 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Integration and Accumulation of Change",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Exploring Accumulations of Change",
+          "reason": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Integration and Accumulation of Change is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2017_FRQ4",
@@ -3583,13 +4210,32 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U6",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U6 Integration and Accumulation of Change. FRQ 2017_FRQ4 is assigned to U6 (Integration and Accumulation of Change) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Integration and Accumulation of Change",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.1",
+          "topic_name": "Exploring Accumulations of Change",
+          "reason": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Integration and Accumulation of Change is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Integration and Accumulation of Change boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2017_FRQ5",
@@ -3670,10 +4316,10 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U8",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "content_blocks": [
       {
@@ -3706,8 +4352,27 @@
         "text": "Region $R$ is the base of a solid whose cross sections perpendicular to the $x$-axis are semicircles with diameters on the $xy$-plane. Write, but do not evaluate, an integral expression that gives the volume of this solid."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Applications of Integration. FRQ 2017_FRQ5 is assigned to U8 (Applications of Integration) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U8",
+    "unit_name": "Applications of Integration",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U8",
+          "topic_code": "8.1",
+          "topic_name": "Finding the Average Value of a Function on an Interval",
+          "reason": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Applications of Integration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Applications of Integration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   },
   {
     "question_id": "2017_FRQ6",
@@ -3785,12 +4450,31 @@
       "source_refs": [
         "subjects/AP/Calculus-AB/docs/source_pack.json"
       ],
-      "classification_version": "calculus-ab-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "primary_unit": "U4",
       "authority": "AP Calculus AB Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
-    "classification_reasoning": "Official progression review: U4 Contextual Applications of Differentiation. FRQ 2017_FRQ6 is assigned to U4 (Contextual Applications of Differentiation) under AP Calculus AB Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U4",
+    "unit_name": "Contextual Applications of Differentiation",
+    "classification_accuracy": {
+      "authority": "AP Calculus AB Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.1",
+          "topic_name": "Interpreting the Meaning of the Derivative in Context",
+          "reason": "Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Contextual Applications of Differentiation is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Contextual Applications of Differentiation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium"
+    }
   }
 ]

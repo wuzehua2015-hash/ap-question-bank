@@ -56,18 +56,44 @@
         }
       ]
     },
-    "classification_reasoning": "Official progression review: U1 Creative Development. FRQ 2024_S1_FRQ1 is assigned to U1 (Creative Development) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U1",
       "review_status": "reviewed",
-      "classification_version": "computer-science-principles-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science Principles Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit",
+      "review_method": "per-item official topic review plus subject boundary rules",
       "evidence": [
         "FRQ 2024_S1_FRQ1 is assigned to U1 (Creative Development) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: Programs accept input to achieve their intended functionality. Describe at least one valid input to your program and what your program does with that input.",
         "Subject computer-science-principles passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ]
+    },
+    "classification_accuracy": {
+      "authority": "AP Computer Science Principles Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U1",
+          "topic_code": "1.1",
+          "topic_name": "Collaboration",
+          "reason": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "This is the first official unit, so no earlier-unit exclusion is needed.",
+      "classification_reasoning": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U3",
+          "signal_topic_code": "3.1",
+          "reason": "Solving requires algorithms and programming.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
       ]
     }
   },
@@ -154,19 +180,36 @@
         }
       ]
     },
-    "classification_reasoning": "Official progression review: U3 Algorithms and Programming. FRQ 2024_S1_FRQ2 is assigned to U3 (Algorithms and Programming) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires algorithms and programming.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U3",
       "review_status": "reviewed",
-      "classification_version": "computer-science-principles-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science Principles Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit",
+      "review_method": "per-item official topic review plus subject boundary rules",
       "evidence": [
         "FRQ 2024_S1_FRQ2 is assigned to U3 (Algorithms and Programming) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: Refer to your Personalized Project Reference when answering this question. A. Consider the first iteration statement included in the Procedure section of your Personalized Project Reference. Describe what is being accomplished by the code i",
         "Subject computer-science-principles passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ]
+    },
+    "classification_accuracy": {
+      "authority": "AP Computer Science Principles Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.1",
+          "topic_name": "Variables and Assignments",
+          "reason": "Solving requires algorithms and programming."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Algorithms and Programming is the earliest official unit that teaches the required solving knowledge: Solving requires algorithms and programming.",
+      "classification_reasoning": "Solving requires algorithms and programming.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -226,18 +269,44 @@
         }
       ]
     },
-    "classification_reasoning": "Official progression review: U1 Creative Development. FRQ 2024_S2_FRQ1 is assigned to U1 (Creative Development) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U1",
       "review_status": "reviewed",
-      "classification_version": "computer-science-principles-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science Principles Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit",
+      "review_method": "per-item official topic review plus subject boundary rules",
       "evidence": [
         "FRQ 2024_S2_FRQ1 is assigned to U1 (Creative Development) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: Identify the expected group of users of your program. Explain how your program addresses at least one concern or interest of the users you identified.",
         "Subject computer-science-principles passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ]
+    },
+    "classification_accuracy": {
+      "authority": "AP Computer Science Principles Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U1",
+          "topic_code": "1.1",
+          "topic_name": "Collaboration",
+          "reason": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "This is the first official unit, so no earlier-unit exclusion is needed.",
+      "classification_reasoning": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U3",
+          "signal_topic_code": "3.1",
+          "reason": "Solving requires algorithms and programming.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
       ]
     }
   },
@@ -324,19 +393,36 @@
         }
       ]
     },
-    "classification_reasoning": "Official progression review: U3 Algorithms and Programming. FRQ 2024_S2_FRQ2 is assigned to U3 (Algorithms and Programming) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires algorithms and programming.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U3",
       "review_status": "reviewed",
-      "classification_version": "computer-science-principles-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science Principles Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit",
+      "review_method": "per-item official topic review plus subject boundary rules",
       "evidence": [
         "FRQ 2024_S2_FRQ2 is assigned to U3 (Algorithms and Programming) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: Refer to your Personalized Project Reference when answering this question. A. Consider the first conditional statement included in the Procedure section of your Personalized Project Reference. Describe your conditional statement, including ",
         "Subject computer-science-principles passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ]
+    },
+    "classification_accuracy": {
+      "authority": "AP Computer Science Principles Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.1",
+          "topic_name": "Variables and Assignments",
+          "reason": "Solving requires algorithms and programming."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Algorithms and Programming is the earliest official unit that teaches the required solving knowledge: Solving requires algorithms and programming.",
+      "classification_reasoning": "Solving requires algorithms and programming.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -396,18 +482,44 @@
         }
       ]
     },
-    "classification_reasoning": "Official progression review: U1 Creative Development. FRQ 2025_S1_FRQ1 is assigned to U1 (Creative Development) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U1",
       "review_status": "reviewed",
-      "classification_version": "computer-science-principles-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science Principles Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit",
+      "review_method": "per-item official topic review plus subject boundary rules",
       "evidence": [
         "FRQ 2025_S1_FRQ1 is assigned to U1 (Creative Development) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: Identify an example output of your program. Explain how this output shows an aspect of your program's functionality.",
         "Subject computer-science-principles passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ]
+    },
+    "classification_accuracy": {
+      "authority": "AP Computer Science Principles Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U1",
+          "topic_code": "1.1",
+          "topic_name": "Collaboration",
+          "reason": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "This is the first official unit, so no earlier-unit exclusion is needed.",
+      "classification_reasoning": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U3",
+          "signal_topic_code": "3.1",
+          "reason": "Solving requires algorithms and programming.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
       ]
     }
   },
@@ -494,19 +606,36 @@
         }
       ]
     },
-    "classification_reasoning": "Official progression review: U3 Algorithms and Programming. FRQ 2025_S1_FRQ2 is assigned to U3 (Algorithms and Programming) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires algorithms and programming.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U3",
       "review_status": "reviewed",
-      "classification_version": "computer-science-principles-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science Principles Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit",
+      "review_method": "per-item official topic review plus subject boundary rules",
       "evidence": [
         "FRQ 2025_S1_FRQ2 is assigned to U3 (Algorithms and Programming) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: Refer to your Personalized Project Reference when answering this question. A. Consider the first selection statement included in the Procedure section of your Personalized Project Reference. Identify the Boolean expression in this selection",
         "Subject computer-science-principles passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ]
+    },
+    "classification_accuracy": {
+      "authority": "AP Computer Science Principles Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.1",
+          "topic_name": "Variables and Assignments",
+          "reason": "Solving requires algorithms and programming."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Algorithms and Programming is the earliest official unit that teaches the required solving knowledge: Solving requires algorithms and programming.",
+      "classification_reasoning": "Solving requires algorithms and programming.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -566,18 +695,44 @@
         }
       ]
     },
-    "classification_reasoning": "Official progression review: U1 Creative Development. FRQ 2025_S2_FRQ1 is assigned to U1 (Creative Development) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U1",
       "review_status": "reviewed",
-      "classification_version": "computer-science-principles-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science Principles Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit",
+      "review_method": "per-item official topic review plus subject boundary rules",
       "evidence": [
         "FRQ 2025_S2_FRQ1 is assigned to U1 (Creative Development) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: Identify an unexpected or invalid input that a user could provide to your program. Describe the behavior of your program after it receives this input. If it is not possible for your program to accept an unexpected or invalid input, explain ",
         "Subject computer-science-principles passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+      ]
+    },
+    "classification_accuracy": {
+      "authority": "AP Computer Science Principles Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U1",
+          "topic_code": "1.1",
+          "topic_name": "Collaboration",
+          "reason": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "This is the first official unit, so no earlier-unit exclusion is needed.",
+      "classification_reasoning": "Full item reviewed against the current official Creative Development boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U3",
+          "signal_topic_code": "3.1",
+          "reason": "Solving requires algorithms and programming.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
       ]
     }
   },
@@ -664,19 +819,36 @@
         }
       ]
     },
-    "classification_reasoning": "Official progression review: U3 Algorithms and Programming. FRQ 2025_S2_FRQ2 is assigned to U3 (Algorithms and Programming) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires algorithms and programming.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U3",
       "review_status": "reviewed",
-      "classification_version": "computer-science-principles-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science Principles Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit",
+      "review_method": "per-item official topic review plus subject boundary rules",
       "evidence": [
         "FRQ 2025_S2_FRQ2 is assigned to U3 (Algorithms and Programming) under AP Computer Science Principles Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: Refer to your Personalized Project Reference when answering this question. A. Consider the first selection statement included in the Procedure section of your Personalized Project Reference. Identify the Boolean expression in this selection",
         "Subject computer-science-principles passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ]
+    },
+    "classification_accuracy": {
+      "authority": "AP Computer Science Principles Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.1",
+          "topic_name": "Variables and Assignments",
+          "reason": "Solving requires algorithms and programming."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Algorithms and Programming is the earliest official unit that teaches the required solving knowledge: Solving requires algorithms and programming.",
+      "classification_reasoning": "Solving requires algorithms and programming.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   }
 ]
