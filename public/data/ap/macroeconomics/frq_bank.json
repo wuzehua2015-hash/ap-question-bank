@@ -104,39 +104,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires monetary policy plus current-account and exchange-rate effects.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2012_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 1. Assume that the country of Rankinland is currently in recession. (a) Assume that Rankinland produces only food and clothing. Draw a correctly labeled production possibilities curve for Rankinland. Show a point that could represent the cu",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires monetary policy plus current-account and exchange-rate effects."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": "6.3",
-          "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "topic_code": "6.1",
+          "topic_name": "Balance of Payments Accounts",
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires monetary policy plus current-account and exchange-rate effects."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires monetary policy plus current-account and exchange-rate effects.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -231,40 +227,35 @@
         "text": "Assume that the next day John withdraws from Mi Tierra Bank an amount that exceeds the bank’s excess reserves. Assuming that no loans are called in, how can Mi Tierra Bank cover its required reserves?"
       }
     ],
-    "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2012_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 2. The following is a simplified balance sh eet for Mi Tierra Bank in the United States. (a) What is the reserve requirement? (b) Assume that Luis withdraws $5,000 in cash from his checking account at Mi Tierra Bank. (i) By how much will Mi",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Stem/correct-answer evidence fits U4 (Financial Sector)."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U4",
     "unit_name": "Financial Sector",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.6",
-          "topic_name": "Monetary Policy",
-          "reason": "Solving requires monetary-policy tools or central-bank action."
+          "topic_code": "4.5",
+          "topic_name": "The Money Market",
+          "reason": "Stem/correct-answer evidence fits U4 (Financial Sector)."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Solving requires monetary-policy tools or central-bank action.",
-      "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -334,48 +325,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires AD-AS export shock plus investment effects on LRAS.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2012_FRQ3 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 3. Assume the economy of Andersonland is in a long-run equilibrium with full employment. In the short run, nominal wages are fixed. (a) Draw a correctly labeled graph of short-run aggregate supply, long-run aggregate supply, and aggregate d",
-        "Existing topic tags: AD-AS, Exports, Real Wages, LRAS.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires AD-AS export shock plus investment effects on LRAS."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U5",
     "unit_name": "Long-Run Consequences of Stabilization Policies",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U5",
-          "topic_code": "5.1",
-          "topic_name": "Fiscal and Monetary Policy Actions in the Short Run",
-          "reason": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+          "topic_code": "5.3",
+          "topic_name": "Money Growth and Inflation",
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires AD-AS export shock plus investment effects on LRAS."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "medium",
-      "review_flags": [
-        {
-          "kind": "cross_unit_signal",
-          "signal_unit": "U6",
-          "signal_topic_code": "6.3",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning.",
-          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
-        }
-      ]
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires AD-AS export shock plus investment effects on LRAS.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -467,39 +445,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires AD-AS, monetary policy, capital flows, and exchange-rate reasoning.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2014_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 1. Assume that the economy of country Alpha is operating at the full-employment equilibrium. (a) Using a correctly labeled graph of aggregate dema nd, short-run aggregate supply, and long-run aggregate supply, show the equilibrium, labeling",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires AD-AS, monetary policy, capital flows, and exchange-rate reasoning."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
           "topic_code": "6.3",
           "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires AD-AS, monetary policy, capital flows, and exchange-rate reasoning."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires AD-AS, monetary policy, capital flows, and exchange-rate reasoning.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -604,40 +578,35 @@
         "text": "What will happen to the price of bonds as a result of the central bank’s purchase of government securities described in part (d) ?"
       }
     ],
-    "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2014_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 2. The simplified T-account (balance sh eet) for Zenith Bank in the country of Everland is shown below. Assume the reserve requirement in Everland is 20 percent. (a) Calculate the maximum amount by which Zenith Bank can increase its loans. ",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Stem/correct-answer evidence fits U4 (Financial Sector)."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U4",
     "unit_name": "Financial Sector",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U4",
           "topic_code": "4.6",
           "topic_name": "Monetary Policy",
-          "reason": "Solving requires monetary-policy tools or central-bank action."
+          "reason": "Stem/correct-answer evidence fits U4 (Financial Sector)."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Solving requires monetary-policy tools or central-bank action.",
-      "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -705,7 +674,7 @@
     "image_paths": [
       "/images/ap/macroeconomics/frq/2014_FRQ3.png"
     ],
-    "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Complete scoring requires long-run Phillips curve and long-run adjustment reasoning.",
     "content_blocks": [
       {
         "type": "paragraph",
@@ -742,39 +711,34 @@
         "text": "If the actual unemployment rate equals the natural rate of 6 percent, is there cyclical unemployment in Country X?"
       }
     ],
-    "unit_classification": "official-required-topics-reviewed",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2014_FRQ3 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 3. Unemployment is an economic probl em that a nation frequently faces. (a) Using the data from the table above, calculate the unemployment rate, as a percentage, for Country X. (b) Assume that the natural rate of une mplo yment for Country",
-        "Existing topic tags: GDP, Inflation, Unemployment, Business Cycle.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Complete scoring requires long-run Phillips curve and long-run adjustment reasoning."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U5",
     "unit_name": "Long-Run Consequences of Stabilization Policies",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U5",
           "topic_code": "5.2",
           "topic_name": "The Phillips Curve",
-          "reason": "Solving requires the current official Phillips Curve topic."
+          "reason": "Reviewed case: Complete scoring requires long-run Phillips curve and long-run adjustment reasoning."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Solving requires the current official Phillips Curve topic.",
-      "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Complete scoring requires long-run Phillips curve and long-run adjustment reasoning.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -877,39 +841,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires AD-AS, loanable funds, growth, and foreign-exchange effects.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2015_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 1. Assume that a country’s economy is in long-run equilibrium. (a) Using a correctly labeled graph of aggregate dema nd, short-run aggregate supply, and long-run aggregate supply, show the short-run equilibrium price level, labeled PL1, and",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires AD-AS, loanable funds, growth, and foreign-exchange effects."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
           "topic_code": "6.3",
           "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires AD-AS, loanable funds, growth, and foreign-exchange effects."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires AD-AS, loanable funds, growth, and foreign-exchange effects.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -978,39 +938,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2015_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 2. Kathy deposits $10,000 cash into her checking account at First Federal Bank. The required reserve ratio is 20 percent. (a) Calculate the maximum possible change in First Federal’s loans as a result of Kathy’s deposit. (b) After all adjus",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Stem/correct-answer evidence fits U4 (Financial Sector)."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U4",
     "unit_name": "Financial Sector",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.6",
-          "topic_name": "Monetary Policy",
-          "reason": "Solving requires monetary-policy tools or central-bank action."
+          "topic_code": "4.5",
+          "topic_name": "The Money Market",
+          "reason": "Stem/correct-answer evidence fits U4 (Financial Sector)."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Solving requires monetary-policy tools or central-bank action.",
-      "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -1085,39 +1041,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires Phillips curve and fiscal multiplier reasoning.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2015_FRQ3 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 3. The economy in Country X is in a recession, with real gross domestic product (GDP) $100 billion below full-employment output. (a) Draw one correctly labeled graph of the short -run and long-run Phillips curves, labeling the current equil",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires Phillips curve and fiscal multiplier reasoning."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U5",
     "unit_name": "Long-Run Consequences of Stabilization Policies",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U5",
           "topic_code": "5.2",
           "topic_name": "The Phillips Curve",
-          "reason": "Solving requires the current official Phillips Curve topic."
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires Phillips curve and fiscal multiplier reasoning."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Solving requires the current official Phillips Curve topic.",
-      "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires Phillips curve and fiscal multiplier reasoning.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -1210,39 +1162,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance).",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2016_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 1. The economy of Zarland is operating below the fu ll-employment level of output with a balanced budget. (a) Draw a correctly labeled graph of short- run aggregate supply, long-run aggregate supply, and aggregate demand, and show each of t",
-        "Existing topic tags: Exchange Rates, International Trade, Balance of Payments, Net Exports.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance)."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
           "topic_code": "6.3",
           "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "reason": "Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance)."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance).",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -1317,39 +1265,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires Phillips curve, fiscal policy, and loanable-funds effects.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2016_FRQ2 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 2. Assume that the current unemployment rate in Count ry A is lower than the natural rate of unemployment. (a) Draw a single correctly labeled graph with both the long-run Philli ps curve and the short-run Phillips curve. Label the current ",
-        "Existing topic tags: Aggregate Demand, Aggregate Supply, Fiscal Policy, Multiplier.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires Phillips curve, fiscal policy, and loanable-funds effects."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U5",
     "unit_name": "Long-Run Consequences of Stabilization Policies",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U5",
           "topic_code": "5.2",
           "topic_name": "The Phillips Curve",
-          "reason": "Solving requires the current official Phillips Curve topic."
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires Phillips curve, fiscal policy, and loanable-funds effects."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Solving requires the current official Phillips Curve topic.",
-      "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires Phillips curve, fiscal policy, and loanable-funds effects.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -1457,49 +1401,35 @@
         "text": "If the Bank of Uchenna is not mee ting its reserve requirement, what action can it take to meet the reserve requirement without calling in loans or selling property?"
       }
     ],
-    "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Definition, Measurement, and Functions of Money.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2016_FRQ3 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 3. The Bank of Uchenna has the following balance sheet. Assume that the reserve requirement ratio is 20 percent. (a) Calculate the dollar value of the reserves that the Bank of Uchenna is required to hold. (b) Given the current reserves, ca",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Stem/correct-answer evidence fits U4 (Financial Sector)."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U4",
     "unit_name": "Financial Sector",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.3",
-          "topic_name": "Definition, Measurement, and Functions of Money",
-          "reason": "Existing item topic \"Money\" was checked against the current official topic map and requires Definition, Measurement, and Functions of Money."
+          "topic_code": "4.5",
+          "topic_name": "The Money Market",
+          "reason": "Stem/correct-answer evidence fits U4 (Financial Sector)."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Money\" was checked against the current official topic map and requires Definition, Measurement, and Functions of Money.",
-      "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Definition, Measurement, and Functions of Money.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high",
-      "review_flags": [
-        {
-          "kind": "cross_unit_signal",
-          "signal_unit": "U6",
-          "signal_topic_code": "6.3",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning.",
-          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
-        }
-      ]
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -1591,48 +1521,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires long-run adjustment plus monetary-policy stabilization.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2017_FRQ1 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 1. Assume that a country’s economy is in a short-run equilibrium and the actual unemployment rate is lower than the natural rate of unemployment. (a) Using a correctly labeled graph of the long-run aggregate supply curve, short-run aggregat",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires long-run adjustment plus monetary-policy stabilization."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U5",
     "unit_name": "Long-Run Consequences of Stabilization Policies",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U5",
-          "topic_code": "5.3",
-          "topic_name": "Money Growth and Inflation",
-          "reason": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation."
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires long-run adjustment plus monetary-policy stabilization."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
-      "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high",
-      "review_flags": [
-        {
-          "kind": "cross_unit_signal",
-          "signal_unit": "U4",
-          "signal_topic_code": "4.6",
-          "reason": "Solving requires monetary-policy tools or central-bank action.",
-          "resolution": "Resolved by retaining the current primary_unit: the signal is an earlier prerequisite or surface feature, while the item requires the later official unit recorded in required_topics."
-        }
-      ]
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires long-run adjustment plus monetary-policy stabilization.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -1733,40 +1650,35 @@
         "text": "Assuming that Raymond Bank and ot her banks now lend out all excess reserves, calculate the maximum possible change in the following. (i) Demand deposits throughout the banking Total reserves throughout the banking Suppose that the country’s central bank purchases $1,000 of Raymond Bank’s holdings of government securities as part of its open-market operations. Do Raymond Bank’s required reserves initially increase, decrease, or remain the same as a result of the central bank’s purchase? Explain."
       }
     ],
-    "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2017_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 2. The following is the balance sheet for Raymond Bank, one of many commercial banks in a country. Assume a 10 percent reserve requirement. (a) Calculate Raymond Ba nk’s required reserves. (b) Calculate the maximum amount of additional lo a",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Stem/correct-answer evidence fits U4 (Financial Sector)."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U4",
     "unit_name": "Financial Sector",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U4",
           "topic_code": "4.6",
           "topic_name": "Monetary Policy",
-          "reason": "Solving requires monetary-policy tools or central-bank action."
+          "reason": "Stem/correct-answer evidence fits U4 (Financial Sector)."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Solving requires monetary-policy tools or central-bank action.",
-      "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -1840,39 +1752,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires exchange rates, net exports, and current/financial-account reasoning.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2017_FRQ3 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 3. Singapore and Japan are trading partners. The Japanese economy is operating at full employment, and Japan's current account balance is zero. (a) Assume the exchange rate between the Singapore dollar (SGD) and the Japanese yen (JPY) chang",
-        "Existing topic tags: Aggregate Demand, Aggregate Supply, Fiscal Policy, Multiplier.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires exchange rates, net exports, and current/financial-account reasoning."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": "6.3",
-          "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "topic_code": "6.1",
+          "topic_name": "Balance of Payments Accounts",
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires exchange rates, net exports, and current/financial-account reasoning."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires exchange rates, net exports, and current/financial-account reasoning.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -1967,48 +1875,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires monetary policy, loanable funds, and potential-output growth effects.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2018_FRQ1 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 1. Assume a country's economy is currently in recession. (a) Draw a correctly labeled graph of the long-run aggregate supply, short-run aggregate supply, and aggregate demand curves, and show each of the following. (i) Current real output, ",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires monetary policy, loanable funds, and potential-output growth effects."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U5",
     "unit_name": "Long-Run Consequences of Stabilization Policies",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U5",
           "topic_code": "5.3",
           "topic_name": "Money Growth and Inflation",
-          "reason": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation."
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires monetary policy, loanable funds, and potential-output growth effects."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
-      "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high",
-      "review_flags": [
-        {
-          "kind": "cross_unit_signal",
-          "signal_unit": "U4",
-          "signal_topic_code": "4.6",
-          "reason": "Solving requires monetary-policy tools or central-bank action.",
-          "resolution": "Resolved by retaining the current primary_unit: the signal is an earlier prerequisite or surface feature, while the item requires the later official unit recorded in required_topics."
-        }
-      ]
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires monetary policy, loanable funds, and potential-output growth effects.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -2082,39 +1977,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance).",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2018_FRQ2 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 2. The exchange rate between the Australian dollar and the Indian rupee is determined in a flexible foreign exchange market. (a) Assume India is currently in recession. What fiscal policy action could the Indian government take to eliminate",
-        "Existing topic tags: Exchange Rates, International Trade, Balance of Payments, Net Exports.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance)."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": "6.3",
-          "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "topic_code": "6.2",
+          "topic_name": "Exchange Rates",
+          "reason": "Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance)."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance).",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -2216,49 +2107,35 @@
         "text": "The GDP deflator for Pattiland in 2015 was 110. In 2016 was Pattiland experiencing inflation or deflation, or is there insufficient information to determine Pattiland's economic condition? Explain. ( d) Calculate the unemployment rate in Pattiland."
       }
     ],
-    "classification_reasoning": "Existing item topic \"GDP\" was checked against the current official topic map and requires Circular Flow and GDP.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. Reviewed case: Reviewed: the FRQ requires GDP, GDP deflator, and unemployment calculations; economic growth appears in the introductory list only.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U2",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2018_FRQ3 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 3. Gross domestic product (GDP), unemployment, inflation, and economic growth are key measures of a country's economic performance. The following statistics are from the country of Pattiland in 2016; dollar values are measured in 2016 dolla",
-        "Existing topic tags: GDP, Inflation, Unemployment, Business Cycle.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Reviewed: the FRQ requires GDP, GDP deflator, and unemployment calculations; economic growth appears in the introductory list only."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U2",
     "unit_name": "Economic Indicators and the Business Cycle",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U2",
           "topic_code": "2.1",
           "topic_name": "Circular Flow and GDP",
-          "reason": "Existing item topic \"GDP\" was checked against the current official topic map and requires Circular Flow and GDP."
+          "reason": "Reviewed case: Reviewed: the FRQ requires GDP, GDP deflator, and unemployment calculations; economic growth appears in the introductory list only."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge: Existing item topic \"GDP\" was checked against the current official topic map and requires Circular Flow and GDP.",
-      "classification_reasoning": "Existing item topic \"GDP\" was checked against the current official topic map and requires Circular Flow and GDP.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high",
-      "review_flags": [
-        {
-          "kind": "cross_unit_signal",
-          "signal_unit": "U6",
-          "signal_topic_code": "6.3",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning.",
-          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
-        }
-      ]
+      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. Reviewed case: Reviewed: the FRQ requires GDP, GDP deflator, and unemployment calculations; economic growth appears in the introductory list only.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -2353,39 +2230,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires monetary expansion, Phillips curve movement, currency value, and net exports.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2019_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 1. Assume that a country’s economy is currently in recession. (a) Draw a correctly labeled graph of the long-run and short-run Phillips curves. Label the current equilibrium as point Z. (b) Assume banks in the country hold no excess reserve",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires monetary expansion, Phillips curve movement, currency value, and net exports."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": "6.3",
-          "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "topic_code": "6.5",
+          "topic_name": "Changes in the Foreign Exchange Market and Net Exports",
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires monetary expansion, Phillips curve movement, currency value, and net exports."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires monetary expansion, Phillips curve movement, currency value, and net exports.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -2450,39 +2323,35 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Manual official-progression review: Complete response needs loanable funds, exchange rates, and central-bank foreign-exchange actions.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2019_FRQ2 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 2. Suppose that the United States government implements a fiscal policy that increases the budget surplus. (a) Draw a correctly labeled graph of the loanable funds market and show the effect of the increase in the budget surplus on the equi",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: Complete response needs loanable funds, exchange rates, and central-bank foreign-exchange actions."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": "6.3",
-          "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "topic_code": "6.1",
+          "topic_name": "Balance of Payments Accounts",
+          "reason": "Manual official-progression review: Complete response needs loanable funds, exchange rates, and central-bank foreign-exchange actions."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Manual official-progression review: Complete response needs loanable funds, exchange rates, and central-bank foreign-exchange actions.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -2573,39 +2442,35 @@
         ]
       }
     },
-    "classification_reasoning": "Solving requires GDP or circular-flow measurement.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. Manual official-progression review: Complete response is GDP, GDP deflator, CPI, and real-wage calculations.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U2",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2019_FRQ3 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 3. The table above shows data for the economy of Fruitland, which produces two goods, apples and oranges. (a) Calculate the nominal gross domestic for year 2. (b) Using year 1 as the base year, calculate real GDP for year 2. (c) Calculate t",
-        "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: Complete response is GDP, GDP deflator, CPI, and real-wage calculations."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U2",
     "unit_name": "Economic Indicators and the Business Cycle",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U2",
           "topic_code": "2.1",
           "topic_name": "Circular Flow and GDP",
-          "reason": "Solving requires GDP or circular-flow measurement."
+          "reason": "Manual official-progression review: Complete response is GDP, GDP deflator, CPI, and real-wage calculations."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge: Solving requires GDP or circular-flow measurement.",
-      "classification_reasoning": "Solving requires GDP or circular-flow measurement.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. Manual official-progression review: Complete response is GDP, GDP deflator, CPI, and real-wage calculations.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -2672,47 +2537,35 @@
     },
     "requires_graph": false,
     "pure_unit": false,
-    "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires monetary-policy stabilization and long-run self-correction.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2023_FRQ1_S1 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 1. Assume that a country's economy is in a short-run equilibrium and the actual unemployment rate is lower than the natural rate of unemployment. (a) Using a correctly labeled graph of the long-run aggregate supply curve, short-run aggregat",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires monetary-policy stabilization and long-run self-correction."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U5",
     "unit_name": "Long-Run Consequences of Stabilization Policies",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U5",
-          "topic_code": "5.1",
-          "topic_name": "Fiscal and Monetary Policy Actions in the Short Run",
-          "reason": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires monetary-policy stabilization and long-run self-correction."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "medium",
-      "review_flags": [
-        {
-          "kind": "cross_unit_signal",
-          "signal_unit": "U4",
-          "signal_topic_code": "4.6",
-          "reason": "Solving requires monetary-policy tools or central-bank action.",
-          "resolution": "Resolved by retaining the current primary_unit: the signal is an earlier prerequisite or surface feature, while the item requires the later official unit recorded in required_topics."
-        }
-      ]
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires monetary-policy stabilization and long-run self-correction.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -2795,39 +2648,35 @@
         "text": "Suppose that the country's central bank purchases $1,000 of Raymond Bank's holdings of government securities as part of its open-market operations. Do Raymond Bank's required reserves initially increase, decrease, or remain the same as a result of the central bank's purchase? Explain"
       }
     ],
-    "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2023_FRQ2_S1 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 2. The following is the balance sheet for Raymond Bank, one of many commercial banks in a country in which the banking system has limited reserves. Assume a 10 percent reserve requirement. (a) Calculate Raymond Bank's required reserves. Sho",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Stem/correct-answer evidence fits U4 (Financial Sector)."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U4",
     "unit_name": "Financial Sector",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U4",
           "topic_code": "4.6",
           "topic_name": "Monetary Policy",
-          "reason": "Solving requires monetary-policy tools or central-bank action."
+          "reason": "Stem/correct-answer evidence fits U4 (Financial Sector)."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Solving requires monetary-policy tools or central-bank action.",
-      "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U4 Financial Sector. Stem/correct-answer evidence fits U4 (Financial Sector).",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -2879,38 +2728,35 @@
     },
     "requires_graph": false,
     "pure_unit": false,
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance).",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2023_FRQ3_S1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 3. Singapore and Japan are trading partners. The Japanese economy is operating at full employment, and Japan's current account balance is zero. (a) Assume the exchange rate between the Singapore dollar (SGD) and the Japanese yen (JPY) chang",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance)."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": "6.3",
-          "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "topic_code": "6.1",
+          "topic_name": "Balance of Payments Accounts",
+          "reason": "Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance)."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance).",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -2982,47 +2828,35 @@
     },
     "requires_graph": false,
     "pure_unit": false,
-    "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires monetary policy, loanable funds, and potential-output growth effects.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2023_FRQ1_S2 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 1. Assume a country's economy is currently in recession. (a) Draw a correctly labeled graph of the long-run aggregate supply, short-run aggregate supply, and aggregate demand curves, and show each of the following. (i) Current real output, ",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires monetary policy, loanable funds, and potential-output growth effects."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U5",
     "unit_name": "Long-Run Consequences of Stabilization Policies",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U5",
-          "topic_code": "5.1",
-          "topic_name": "Fiscal and Monetary Policy Actions in the Short Run",
-          "reason": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+          "topic_code": "5.3",
+          "topic_name": "Money Growth and Inflation",
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires monetary policy, loanable funds, and potential-output growth effects."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "medium",
-      "review_flags": [
-        {
-          "kind": "cross_unit_signal",
-          "signal_unit": "U4",
-          "signal_topic_code": "4.6",
-          "reason": "Solving requires monetary-policy tools or central-bank action.",
-          "resolution": "Resolved by retaining the current primary_unit: the signal is an earlier prerequisite or surface feature, while the item requires the later official unit recorded in required_topics."
-        }
-      ]
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. Reviewed case: Manual progression-gate fix: Complete response requires monetary policy, loanable funds, and potential-output growth effects.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -3073,38 +2907,35 @@
     },
     "requires_graph": false,
     "pure_unit": false,
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance).",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2023_FRQ2_S2 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 2. The exchange rate between the Australian dollar and the Indian rupee is determined in a flexible foreign exchange market. (a) Assume India is currently in recession. What fiscal policy action could the Indian government take to eliminate",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance)."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": "6.3",
-          "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "topic_code": "6.2",
+          "topic_name": "Exchange Rates",
+          "reason": "Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance)."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Stem/correct-answer evidence fits U6 (Open Economy-International Trade and Finance).",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -3192,48 +3023,35 @@
         "text": "Calculate the unemployment rate in Pattiland. Show your work"
       }
     ],
-    "classification_reasoning": "Full item reviewed against the current official Economic Indicators and the Business Cycle boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. Reviewed case: Reviewed: duplicate set of the Pattiland FRQ requires indicators calculations, not long-run growth modeling.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U2",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2023_FRQ3_S2 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 3. Gross domestic product (GDP), unemployment, inflation, and economic growth are key measures of a country's economic performance. The following statistics are from the country of Pattiland in 2016; dollar values are measured in 2016 dolla",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Reviewed: duplicate set of the Pattiland FRQ requires indicators calculations, not long-run growth modeling."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U2",
     "unit_name": "Economic Indicators and the Business Cycle",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U2",
           "topic_code": "2.1",
           "topic_name": "Circular Flow and GDP",
-          "reason": "Full item reviewed against the current official Economic Indicators and the Business Cycle boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+          "reason": "Reviewed case: Reviewed: duplicate set of the Pattiland FRQ requires indicators calculations, not long-run growth modeling."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Economic Indicators and the Business Cycle boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "classification_reasoning": "Full item reviewed against the current official Economic Indicators and the Business Cycle boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "medium",
-      "review_flags": [
-        {
-          "kind": "cross_unit_signal",
-          "signal_unit": "U6",
-          "signal_topic_code": "6.3",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning.",
-          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
-        }
-      ]
+      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. Reviewed case: Reviewed: duplicate set of the Pattiland FRQ requires indicators calculations, not long-run growth modeling.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -3305,38 +3123,35 @@
     },
     "requires_graph": false,
     "pure_unit": false,
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires monetary expansion, Phillips curve movement, currency value, and net exports.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2023_FRQ1_S3 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 1. Assume that a country's economy is currently in recession. (a) Draw a correctly labeled graph of the long-run and short-run Phillips curves. Label the current equilibrium as point Z. (b) Assume the banking system has limited reserves, ba",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Reviewed case: Manual progression-gate fix: Complete response requires monetary expansion, Phillips curve movement, currency value, and net exports."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": "6.3",
-          "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "topic_code": "6.5",
+          "topic_name": "Changes in the Foreign Exchange Market and Net Exports",
+          "reason": "Reviewed case: Manual progression-gate fix: Complete response requires monetary expansion, Phillips curve movement, currency value, and net exports."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Reviewed case: Manual progression-gate fix: Complete response requires monetary expansion, Phillips curve movement, currency value, and net exports.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -3380,38 +3195,35 @@
     },
     "requires_graph": false,
     "pure_unit": true,
-    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Manual official-progression review: Complete response needs loanable funds, exchange rates, and central-bank offset actions.",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2023_FRQ2_S3 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 2. Suppose that the United States government implements a fiscal policy that increases the budget surplus. (a) Draw a correctly labeled graph of the loanable funds market and show the effect of the increase in the budget surplus on the equi",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Manual official-progression review: Complete response needs loanable funds, exchange rates, and central-bank offset actions."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U6",
     "unit_name": "Open Economy-International Trade and Finance",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U6",
-          "topic_code": "6.3",
-          "topic_name": "The Foreign Exchange Market",
-          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+          "topic_code": "6.1",
+          "topic_name": "Balance of Payments Accounts",
+          "reason": "Manual official-progression review: Complete response needs loanable funds, exchange rates, and central-bank offset actions."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
-      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. Manual official-progression review: Complete response needs loanable funds, exchange rates, and central-bank offset actions.",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -3499,39 +3311,35 @@
         "text": "Suppose apple and orange pickers received a 2 percent increase in their wages. Based on your answer to part (d), would real wages of apple and orange pickers increase, decrease, or stay the same from year 1 to year 2? Explain"
       }
     ],
-    "classification_reasoning": "Solving requires inflation measurement or costs.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. Stem/correct-answer evidence fits U2 (Economic Indicators and the Business Cycle).",
+    "unit_classification": "official-progression-reviewed",
     "classification": {
       "primary_unit": "U2",
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "macro-official-progression-2026-07-19",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
-        "FRQ 2023_FRQ3_S3 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: 3. The table above shows data for the economy of Fruitland, which produces two goods, apples and oranges. (a) Calculate the nominal gross domestic product (GDP) for year 2. Show your work. (b) Using year 1 as the base year, calculate real G",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Stem/correct-answer evidence fits U2 (Economic Indicators and the Business Cycle)."
       ],
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official unit framework plus student progression audit"
     },
     "unit": "U2",
     "unit_name": "Economic Indicators and the Business Cycle",
     "classification_accuracy": {
-      "authority": "AP Macroeconomics Course and Exam Description",
+      "authority": "AP Macroeconomics Course and Exam Description, Fall 2026 CED",
       "required_topics": [
         {
           "unit": "U2",
-          "topic_code": "2.4",
-          "topic_name": "Price Indices and Inflation",
-          "reason": "Solving requires inflation measurement or costs."
+          "topic_code": "2.1",
+          "topic_name": "Circular Flow and GDP",
+          "reason": "Stem/correct-answer evidence fits U2 (Economic Indicators and the Business Cycle)."
         }
       ],
       "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge: Solving requires inflation measurement or costs.",
-      "classification_reasoning": "Solving requires inflation measurement or costs.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge for the correct-answer path.",
+      "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. Stem/correct-answer evidence fits U2 (Economic Indicators and the Business Cycle).",
+      "review_method": "full AP Macroeconomics item review against the current official topic sequence",
+      "reviewed_at": "2026-07-21"
     }
   }
 ]

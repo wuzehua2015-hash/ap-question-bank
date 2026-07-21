@@ -35,10 +35,13 @@ const MANUAL_OVERRIDES = {
   'question_bank.json|2012_Q42': ['U4', 'Money economy versus barter tests the functions and transaction role of money.'],
   'question_bank.json|2012_Q49': ['U4', 'Monetary-policy effectiveness through interest-sensitive investment is Unit 4.'],
   'question_bank.json|2012_Q51': ['U5', 'PPC shift connected to LRAS and productive capacity is Unit 5.'],
+  'question_bank.json|2012_Q59': ['U5', 'Monetary rule tied to long-run real GDP growth is current Topic 5.3 money growth and inflation.'],
   'question_bank.json|2014_Q01': ['U1', 'Scarcity is the foundational Unit 1 concept.'],
   'question_bank.json|2014_Q04': ['U3', 'Multiplier mechanism from spending to GDP is Unit 3.'],
   'question_bank.json|2014_Q12': ['U2', 'Circular flow model is Topic 2.1.'],
+  'question_bank.json|2014_Q15': ['U1', 'Free-trade gains from specialization and expanded consumption possibilities are Unit 1 comparative advantage and gains from trade.'],
   'question_bank.json|2014_Q20': ['U3', 'Expansionary fiscal policy to close an output gap is Unit 3.'],
+  'question_bank.json|2014_Q22': ['U5', 'Long-run real output increase from labor-force growth is Unit 5 economic growth.'],
   'question_bank.json|2014_Q23': ['U5', 'Potential GDP decrease from net capital loss is long-run growth/productive-capacity reasoning.'],
   'question_bank.json|2014_Q30': ['U5', 'Current official Topic 5.2 places the Phillips Curve in Unit 5.'],
   'question_bank.json|2014_Q38': ['U5', 'Per-capita real GDP growth differences from human capital are Unit 5.'],
@@ -46,12 +49,14 @@ const MANUAL_OVERRIDES = {
   'question_bank.json|2014_Q46': ['U4', 'Federal Reserve open-market response is monetary policy, Unit 4.'],
   'question_bank.json|2014_Q47': ['U1', 'Comparative advantage and terms of trade are Unit 1.'],
   'question_bank.json|2014_Q48': ['U4', 'Opportunity cost of holding cash depends on interest rates and money demand.'],
+  'question_bank.json|2014_Q50': ['U5', 'Long-run monetary expansion effects on nominal output and price level are current Topic 5.3 money growth and inflation.'],
   'question_bank.json|2014_Q51': ['U5', 'Rational expectations and expected inflation are Unit 5.'],
   'question_bank.json|2014_Q53': ['U4', 'Reserve ratio, reserves, currency, and M1 calculation are Unit 4.'],
   'question_bank.json|2014_Q56': ['U5', 'Phillips curve item requires SRPC and vertical LRPC long-run reasoning, Unit 5.'],
   'question_bank.json|2014_Q57': ['U2', 'Recession identification is Unit 2, even though the visual uses a PPC.'],
   'question_bank.json|2014_Q58': ['U5', 'Correctly anticipated inflation and long-run neutrality require Unit 5.'],
   'question_bank.json|2015_Q17': ['U5', 'Current official Topic 5.2 places the Phillips Curve in Unit 5.'],
+  'question_bank.json|2015_Q20': ['U5', 'Long-run money-supply change affecting price level but not output is current Topic 5.3.'],
   'question_bank.json|2015_Q28': ['U5', 'Coordinated fiscal and monetary policy to reduce inflation is Unit 5.'],
   'question_bank.json|2015_Q30': ['U2', 'Real GDP definition is Unit 2.'],
   'question_bank.json|2015_Q34': ['U5', 'National debt definition is Unit 5.'],
@@ -71,6 +76,7 @@ const MANUAL_OVERRIDES = {
   'question_bank.json|2016_Q26': ['U4', 'Government borrowing effect on short-run interest rates uses loanable-funds/interest-rate reasoning.'],
   'question_bank.json|2016_Q28': ['U3', 'Investment change and multiplier effect on GDP is Unit 3.'],
   'question_bank.json|2016_Q53': ['U4', 'Expected real interest-rate definition is Unit 4.'],
+  'question_bank.json|2016_Q60': ['U5', 'Long-run money-supply neutrality for real GDP with price-level change is current Topic 5.3.'],
   'question_bank.json|2017_Q07': ['U4', 'Government borrowing effect on bond prices and interest-rate channel is Unit 4.'],
   'question_bank.json|2017_Q17': ['U5', 'Current official Topic 5.2 places the Phillips Curve in Unit 5.'],
   'question_bank.json|2017_Q23': ['U5', 'Fully anticipated money-supply expansion in the long run is Unit 5.'],
@@ -87,6 +93,7 @@ const MANUAL_OVERRIDES = {
   'question_bank.json|2017_Q59': ['U3', 'Demand-pull versus cost-push inflation effects are AD-AS Unit 3.'],
   'question_bank.json|2018_Q01': ['U2', 'Expansionary phase of the business cycle is Unit 2.'],
   'question_bank.json|2018_Q03': ['U4', 'Nominal, expected inflation, and real interest-rate relation is Unit 4.'],
+  'question_bank.json|2018_Q35': ['U5', 'Long-run money-supply increase changing price level while output remains full-employment is current Topic 5.3.'],
   'question_bank.json|2018_Q04': ['U3', 'Expansionary fiscal policy effect on AD is Unit 3.'],
   'question_bank.json|2018_Q05': ['U2', 'Deflation effect on purchasing power is Unit 2.'],
   'question_bank.json|2018_Q18': ['U6', 'Relative real interest rates and currency appreciation are Unit 6.'],
@@ -101,11 +108,13 @@ const MANUAL_OVERRIDES = {
   'question_bank.json|2018_Q57': ['U4', 'Expected inflation, nominal, and real interest rates are Unit 4.'],
   'question_bank.json|2019_Q03': ['U3', 'Short-run aggregate supply increase from lower production costs is Unit 3.'],
   'question_bank.json|2019_Q07': ['U6', 'Relative price level, exports, and aggregate demand through trade require Unit 6.'],
+  'question_bank.json|2019_Q12': ['U5', 'Short-run and long-run unemployment response to monetary expansion requires current Unit 5 long-run stabilization consequences.'],
   'question_bank.json|2019_Q20': ['U4', 'Nominal and real interest rates with expected inflation are Unit 4.'],
   'question_bank.json|2019_Q25': ['U4', 'Opportunity cost of holding currency is forgone interest, Unit 4.'],
   'question_bank.json|2019_Q33': ['U5', 'Expected inflation and natural-rate adjustment are Unit 5.'],
   'question_bank.json|2019_Q38': ['U5', 'Current official Topic 5.2 places the Phillips Curve in Unit 5.'],
   'question_bank.json|2019_Q39': ['U4', 'Fixed-rate loan outcome from actual versus expected inflation is Unit 4.'],
+  'question_bank.json|2019_Q50': ['U5', 'Money-supply increase causing short-run inflation and no long-run output change is current Topic 5.3.'],
   'question_bank.json|2019_Q52': ['U3', 'Long-run self-adjustment from unemployment above natural rate is Unit 3.'],
   'question_bank.json|2019_Q56': ['U5', 'Fiscal contraction plus monetary expansion is policy mix, Unit 5.'],
   'question_bank.json|2019_Q58': ['U6', 'Currency depreciation cause is Unit 6.'],
@@ -266,8 +275,11 @@ function auditFile(file, rows) {
 
     if (applyFixes) {
       const unit = proposal.unit || current
+      const topic = topicForMacroDecision(unit, proposal.evidence.join(' '), item)
       item.classification_reasoning = `Official progression review: ${unit} ${unitName(unit)}. ${proposal.evidence.join(' ')}`
       item.unit_classification = 'official-progression-reviewed'
+      item.unit = unit
+      item.unit_name = unitName(unit)
       item.classification = {
         ...(item.classification || {}),
         primary_unit: unit,
@@ -275,6 +287,24 @@ function auditFile(file, rows) {
         classification_version: 'macro-official-progression-2026-07-19',
         authority: 'AP Macroeconomics Course and Exam Description',
         evidence: proposal.evidence,
+      }
+      item.classification_accuracy = {
+        authority: 'AP Macroeconomics Course and Exam Description, Fall 2026 CED',
+        required_topics: [
+          {
+            unit,
+            topic_code: topic.code,
+            topic_name: topic.name,
+            reason: proposal.evidence.join(' '),
+          },
+        ],
+        primary_unit_rule: 'primary_unit is the latest official unit required to solve the item using that unit and prior units.',
+        why_not_earlier_unit: unit === 'U1'
+          ? 'This is Unit 1 material; no earlier unit exists.'
+          : `${unitName(unit)} is the earliest official unit that teaches the required solving knowledge for the correct-answer path.`,
+        classification_reasoning: `Official progression review: ${unit} ${unitName(unit)}. ${proposal.evidence.join(' ')}`,
+        review_method: 'full AP Macroeconomics item review against the current official topic sequence',
+        reviewed_at: '2026-07-21',
       }
     }
   }
@@ -357,6 +387,69 @@ function addFinding(severity, kind, file, item, message) {
 
 function unitName(unit) {
   return (config.units || []).find(item => normalizeUnit(item.code || item.id) === unit)?.name || ''
+}
+
+function topicForMacroDecision(unit, evidence, item) {
+  const topics = (config.units || []).find(entry => normalizeUnit(entry.code || entry.id) === unit)?.topics || []
+  const text = `${item.question_text || item.text || ''} ${correctAnswerText(item)} ${evidence}`.replace(/\s+/g, ' ')
+  const topicRules = {
+    U1: [
+      ['1.3', /\b(comparative advantage|absolute advantage|terms of trade|specialization|free trade|gains from trade|consumption possibilities)\b/i],
+      ['1.2', /\b(opportunity cost|production possibilities|PPC|PPF)\b/i],
+      ['1.1', /\b(scarcity|scarce resources)\b/i],
+    ],
+    U2: [
+      ['2.1', /\b(GDP|gross domestic product|circular flow|expenditure)\b/i],
+      ['2.2', /\b(limitations of GDP|standard of living)\b/i],
+      ['2.3', /\b(unemployment|labor force|discouraged|frictional|structural|cyclical|natural rate)\b/i],
+      ['2.4', /\b(CPI|consumer price index|price index|inflation rate|inflation|deflation|disinflation)\b/i],
+      ['2.6', /\b(real GDP|nominal GDP|GDP deflator)\b/i],
+      ['2.7', /\b(business cycle|recession|expansion|peak|trough)\b/i],
+    ],
+    U3: [
+      ['3.8', /\b(fiscal policy|government spending|government expenditures|tax|automatic stabilizer)\b/i],
+      ['3.2', /\b(multiplier|MPC|MPS|marginal propensity)\b/i],
+      ['3.6', /\b(demand-pull|cost-push|AD shifts?|aggregate demand shifts?|short run)\b/i],
+      ['3.7', /\b(self-adjustment|wages will|long-run equilibrium)\b/i],
+      ['3.5', /\b(AD-AS|aggregate demand|aggregate supply|price level|real output|equilibrium)\b/i],
+      ['3.3', /\b(SRAS|short-run aggregate supply)\b/i],
+      ['3.4', /\b(LRAS|long-run aggregate supply)\b/i],
+      ['3.1', /\b(aggregate demand|AD)\b/i],
+    ],
+    U4: [
+      ['4.7', /\b(loanable funds|real interest rate|government borrowing|investment demand)\b/i],
+      ['4.6', /\b(monetary policy|central bank|Federal Reserve|open-market|buy bonds|sell bonds|discount rate|policy rate)\b/i],
+      ['4.5', /\b(money market|money demand|money supply|quantity of money)\b/i],
+      ['4.4', /\b(bank reserves|required reserves|excess reserves|reserve requirement|money multiplier|create money|commercial bank|balance sheet)\b/i],
+      ['4.3', /\b(M1|M2|medium of exchange|store of value|unit of account|savings account|checking account|currency)\b/i],
+      ['4.2', /\b(nominal interest rate|real interest rate|expected real interest)\b/i],
+      ['4.1', /\b(bond|financial asset)\b/i],
+    ],
+    U5: [
+      ['5.2', /\b(Phillips curve|SRPC|LRPC|trade-off between inflation and unemployment|natural rate of unemployment)\b/i],
+      ['5.3', /\b(money growth|money supply|long-run monetary|anticipated|inflationary expectations|expected inflation|quantity theory|price level.*output|nominal output)\b/i],
+      ['5.4', /\b(national debt|budget deficit|budget surplus|government deficits)\b/i],
+      ['5.5', /\b(crowding out)\b/i],
+      ['5.6', /\b(economic growth|productivity|human capital|physical capital|technology|immigration|labor force growth|potential GDP|production possibilities.*right|PPC.*right|PPF.*right)\b/i],
+      ['5.7', /\b(public policy|research and development|supply-side)\b/i],
+      ['5.1', /\b(fiscal.*monetary|monetary.*fiscal|policy mix)\b/i],
+    ],
+    U6: [
+      ['6.1', /\b(balance of payments|current account|financial account|capital account)\b/i],
+      ['6.2', /\b(exchange rate|appreciat|depreciat)\b/i],
+      ['6.3', /\b(foreign exchange market)\b/i],
+      ['6.4', /\b(policy.*foreign exchange|interest rate.*capital inflow|capital outflow)\b/i],
+      ['6.5', /\b(net exports|exports|imports)\b/i],
+      ['6.6', /\b(international capital flows|financial capital)\b/i],
+    ],
+  }
+  for (const [code, pattern] of topicRules[unit] || []) {
+    if (pattern.test(text)) {
+      const topic = topics.find(entry => entry.code === code)
+      if (topic) return topic
+    }
+  }
+  return topics[0] || { code: `${unit}.unmapped`, name: unitName(unit) }
 }
 
 function countUnits(rows) {

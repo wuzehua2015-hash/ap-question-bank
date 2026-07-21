@@ -23,14 +23,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: This question involves reasoning about one-dimensional and two-dimensional arrays of integers. You will write three static methods in a single enclosing class named `DiverseArray`. Part (a): Write method `arraySum`, which returns the sum of",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Implementing 2D array algorithms requires Unit 4.13."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -59,24 +57,23 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 56
     },
-    "classification_reasoning": "Solving requires array or data-collection traversal.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Implementing 2D array algorithms requires Unit 4.13.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.3",
-          "topic_name": "Array Creation and Access",
-          "reason": "Solving requires array or data-collection traversal."
+          "topic_code": "4.13",
+          "topic_name": "Implementing 2D Array Algorithms",
+          "reason": "Implementing 2D array algorithms requires Unit 4.13."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires array or data-collection traversal.",
-      "classification_reasoning": "Solving requires array or data-collection traversal.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U4 Data Collections. Implementing 2D array algorithms requires Unit 4.13.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -103,14 +100,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U3 Class Creation. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: Consider a guessing game in which a player tries to guess a `HiddenWord`. The hidden word and each guess contain only capital letters and have the same known length. After a guess is made, the player receives a hint. For each position in th",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Writing methods requires Unit 3.5."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -134,33 +129,23 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 62
     },
-    "classification_reasoning": "Full item reviewed against the current official Class Creation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U3 Class Creation. Writing methods requires Unit 3.5.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
         {
           "unit": "U3",
-          "topic_code": "3.1",
-          "topic_name": "Abstraction and Program Design",
-          "reason": "Full item reviewed against the current official Class Creation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+          "topic_code": "3.5",
+          "topic_name": "Methods: How to Write Them",
+          "reason": "Writing methods requires Unit 3.5."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Class Creation is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Class Creation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "classification_reasoning": "Full item reviewed against the current official Class Creation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "medium",
-      "review_flags": [
-        {
-          "kind": "cross_unit_signal",
-          "signal_unit": "U4",
-          "signal_topic_code": "4.3",
-          "reason": "Solving requires array or data-collection traversal.",
-          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
-        }
-      ]
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Class Creation is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U3 Class Creation. Writing methods requires Unit 3.5.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -187,14 +172,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: This question uses a sparse array representation. A sparse array stores only nonzero values, along with each value's row and column indexes. ```java public class SparseArrayEntry { private int row; private int col; private int value; public",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "ArrayList methods require Unit 4.8."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -218,24 +201,23 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 64
     },
-    "classification_reasoning": "Solving requires data collections with ArrayList.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Data Collections. ArrayList methods require Unit 4.8.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.7",
-          "topic_name": "Wrapper Classes",
-          "reason": "Solving requires data collections with ArrayList."
+          "topic_code": "4.8",
+          "topic_name": "ArrayList Methods",
+          "reason": "ArrayList methods require Unit 4.8."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires data collections with ArrayList.",
-      "classification_reasoning": "Solving requires data collections with ArrayList.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U4 Data Collections. ArrayList methods require Unit 4.8.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -262,14 +244,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: This question involves designing an interface, writing a class that implements the interface, and writing a method that uses the interface. Part (a): A number group represents a group of integers. Write an interface named `NumberGroup` with",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Implementing ArrayList algorithms requires Unit 4.10."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -298,24 +278,23 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 72
     },
-    "classification_reasoning": "Solving requires data collections with ArrayList.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Implementing ArrayList algorithms requires Unit 4.10.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.7",
-          "topic_name": "Wrapper Classes",
-          "reason": "Solving requires data collections with ArrayList."
+          "topic_code": "4.10",
+          "topic_name": "Implementing ArrayList Algorithms",
+          "reason": "Implementing ArrayList algorithms requires Unit 4.10."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires data collections with ArrayList.",
-      "classification_reasoning": "Solving requires data collections with ArrayList.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U4 Data Collections. Implementing ArrayList algorithms requires Unit 4.10.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -342,14 +321,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: Consider the following partial declaration for a `WordScrambler` class. The constructor takes an even-length array of `String` objects and initializes `scrambledWords`. ```java public class WordScrambler { private String[] scrambledWords; /",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Array traversal requires Unit 4.4."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -373,24 +350,23 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 45
     },
-    "classification_reasoning": "Solving requires array or data-collection traversal.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Array traversal requires Unit 4.4.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.3",
-          "topic_name": "Array Creation and Access",
-          "reason": "Solving requires array or data-collection traversal."
+          "topic_code": "4.4",
+          "topic_name": "Array Traversals",
+          "reason": "Array traversal requires Unit 4.4."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires array or data-collection traversal.",
-      "classification_reasoning": "Solving requires array or data-collection traversal.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U4 Data Collections. Array traversal requires Unit 4.4.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -417,14 +393,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: An array of positive integer values has the mountain property if its values increase until a peak is reached and then decrease. The `Mountain` class contains helper methods and two methods that you will implement. ```java public class Mount",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Wrapper classes require Unit 4.7."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -448,24 +422,23 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 47
     },
-    "classification_reasoning": "Solving requires array or data-collection traversal.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Wrapper classes require Unit 4.7.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.3",
-          "topic_name": "Array Creation and Access",
-          "reason": "Solving requires array or data-collection traversal."
+          "topic_code": "4.7",
+          "topic_name": "Wrapper Classes",
+          "reason": "Wrapper classes require Unit 4.7."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires array or data-collection traversal.",
-      "classification_reasoning": "Solving requires array or data-collection traversal.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U4 Data Collections. Wrapper classes require Unit 4.7.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -492,14 +465,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: This question involves reasoning about the GridWorld case study. A `Grub` is a `Critter` that chooses a direction, considers locations up to a maximum distance in that direction, and then selects a move location. ```java public class Grub e",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "ArrayList methods require Unit 4.8."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -528,24 +499,23 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 50
     },
-    "classification_reasoning": "Solving requires data collections with ArrayList.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Data Collections. ArrayList methods require Unit 4.8.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.7",
-          "topic_name": "Wrapper Classes",
-          "reason": "Solving requires data collections with ArrayList."
+          "topic_code": "4.8",
+          "topic_name": "ArrayList Methods",
+          "reason": "ArrayList methods require Unit 4.8."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires data collections with ArrayList.",
-      "classification_reasoning": "Solving requires data collections with ArrayList.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U4 Data Collections. ArrayList methods require Unit 4.8.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -572,14 +542,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: A school district stores standardized test score statistics using `ScoreInfo` objects. ```java public class ScoreInfo { private int score; private int numStudents; public ScoreInfo(int aScore) { score = aScore; numStudents = 1; } public voi",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "ArrayList methods require Unit 4.8."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 9,
@@ -603,24 +571,23 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 53
     },
-    "classification_reasoning": "Solving requires data collections with ArrayList.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Data Collections. ArrayList methods require Unit 4.8.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.7",
-          "topic_name": "Wrapper Classes",
-          "reason": "Solving requires data collections with ArrayList."
+          "topic_code": "4.8",
+          "topic_name": "ArrayList Methods",
+          "reason": "ArrayList methods require Unit 4.8."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires data collections with ArrayList.",
-      "classification_reasoning": "Solving requires data collections with ArrayList.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U4 Data Collections. ArrayList methods require Unit 4.8.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -647,14 +614,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U2 Selection and Iteration. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: This question involves the `MessageBuilder` class, which is used to generate a message based on a starting word. The class has instance variables `message` and `numWords`, a helper method `getNextWord(String s)`, a constructor to implement,",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Rule conflict retained for manual CSA review."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 7,
@@ -704,8 +669,8 @@
       "source_page": 168,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Full item reviewed against the current official Selection and Iteration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U2 Selection and Iteration. Rule conflict retained for manual CSA review.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
@@ -713,24 +678,14 @@
           "unit": "U2",
           "topic_code": "2.1",
           "topic_name": "Algorithms with Selection and Repetition",
-          "reason": "Full item reviewed against the current official Selection and Iteration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+          "reason": "Rule conflict retained for manual CSA review."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Selection and Iteration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Selection and Iteration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "classification_reasoning": "Full item reviewed against the current official Selection and Iteration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "medium",
-      "review_flags": [
-        {
-          "kind": "cross_unit_signal",
-          "signal_unit": "U3",
-          "signal_topic_code": "3.1",
-          "reason": "Solving requires class creation or object-oriented design.",
-          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
-        }
-      ]
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Selection and Iteration is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U2 Selection and Iteration. Rule conflict retained for manual CSA review.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -757,14 +712,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U3 Class Creation. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: Write the complete `CupcakeMachine` class. A `CupcakeMachine` object represents an automated cupcake vending machine. The constructor has two parameters: an `int` for the number of cupcakes initially stocked and a `double` for the cost per ",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Rule conflict retained for manual CSA review."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 7,
@@ -814,8 +767,8 @@
       "source_page": 171,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Solving requires class creation or object-oriented design.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U3 Class Creation. Rule conflict retained for manual CSA review.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
@@ -823,15 +776,14 @@
           "unit": "U3",
           "topic_code": "3.1",
           "topic_name": "Abstraction and Program Design",
-          "reason": "Solving requires class creation or object-oriented design."
+          "reason": "Rule conflict retained for manual CSA review."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Class Creation is the earliest official unit that teaches the required solving knowledge: Solving requires class creation or object-oriented design.",
-      "classification_reasoning": "Solving requires class creation or object-oriented design.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Class Creation is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U3 Class Creation. Rule conflict retained for manual CSA review.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -858,14 +810,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: The `ItemInfo` class stores information about an item at a store. ```java public class ItemInfo { public String getName() { /* implementation not shown */ } public double getCost() { /* implementation not shown */ } public boolean isAvailab",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Implementing ArrayList algorithms requires Unit 4.10."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 5,
@@ -905,24 +855,23 @@
       "source_page": 173,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Solving requires data collections with ArrayList.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Implementing ArrayList algorithms requires Unit 4.10.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.7",
-          "topic_name": "Wrapper Classes",
-          "reason": "Solving requires data collections with ArrayList."
+          "topic_code": "4.10",
+          "topic_name": "Implementing ArrayList Algorithms",
+          "reason": "Implementing ArrayList algorithms requires Unit 4.10."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires data collections with ArrayList.",
-      "classification_reasoning": "Solving requires data collections with ArrayList.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U4 Data Collections. Implementing ArrayList algorithms requires Unit 4.10.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   },
   {
@@ -949,14 +898,12 @@
       "secondary_units": [],
       "confidence": 0.95,
       "evidence": [
-        "Current official framework: U4 Data Collections. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: The `Appointment` class is used to store information about scheduled appointments. ```java public class Appointment { public String getStatus() { /* implementation not shown */ } public int getRoomNumber() { /* implementation not shown */ }",
-        "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
+        "Implementing 2D array algorithms requires Unit 4.13."
       ],
       "review_status": "reviewed",
-      "classification_version": "per-item-official-progression-2026-07-21",
+      "classification_version": "csa-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "per-item official topic review plus subject boundary rules"
+      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
     },
     "rubric": {
       "total_points": 6,
@@ -1001,24 +948,23 @@
       "source_page": 175,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Solving requires array or data-collection traversal.",
-    "unit_classification": "official-required-topics-reviewed",
+    "classification_reasoning": "Official progression review: U4 Data Collections. Implementing 2D array algorithms requires Unit 4.13.",
+    "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
       "required_topics": [
         {
           "unit": "U4",
-          "topic_code": "4.3",
-          "topic_name": "Array Creation and Access",
-          "reason": "Solving requires array or data-collection traversal."
+          "topic_code": "4.13",
+          "topic_name": "Implementing 2D Array Algorithms",
+          "reason": "Implementing 2D array algorithms requires Unit 4.13."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
-      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires array or data-collection traversal.",
-      "classification_reasoning": "Solving requires array or data-collection traversal.",
-      "review_method": "per-item official topic review plus subject boundary rules",
-      "reviewed_at": "2026-07-21",
-      "confidence": "high"
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is required by the full item, including any shared group context.",
+      "classification_reasoning": "Official progression review: U4 Data Collections. Implementing 2D array algorithms requires Unit 4.13.",
+      "review_method": "CSA item review against the Effective Fall 2025 official four-unit sequence; shared group context included",
+      "reviewed_at": "2026-07-21"
     }
   }
 ]
