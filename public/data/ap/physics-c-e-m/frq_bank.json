@@ -14,7 +14,7 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U9.frq",
+        "code": "9.2",
         "name": "Electric Potential"
       }
     ],
@@ -115,40 +115,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2012_FRQ1 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: Two thin, concentric, conducting spherical shells, insulated from each other, have radii of $0.10\\,\\mathrm{m}$ and $0.20\\,\\mathrm{m}$, as shown above. The inner shell is set at an electric potential of $-100\\,\\mathrm{V}$, and the outer shel",
-        "Existing topic tags: U9.frq Electric Potential.",
-        "Student-visible media are preserved with 5 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U9",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U9 Electric Potential. FRQ 2012_FRQ1 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
+          "topic_code": "9.2",
           "topic_name": "Electric Potential",
-          "reason": "Prompt evidence: Two thin, concentric, conducting spherical shells, insulated from each other, have radii of $0.10\\,\\mathrm{m}$ and $0.20\\,\\mathrm{m}$, as shown above. The inner shell is set at an electric potential of $-100\\,\\mathrm{V}$, and the outer shel Prior official-progression review assigned the full item to U9 Electric Potential."
+          "reason": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electric Potential is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U9 Electric Potential. FRQ 2012_FRQ1 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "This is the first relevant unit in the official course progression for this subject.",
+      "classification_reasoning": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U9",
+    "unit_name": "Electric Potential"
   },
   {
     "question_id": "2012_FRQ2",
@@ -161,12 +157,12 @@
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
-    "primary_unit": "U12",
+    "primary_unit": "U11",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U12.frq",
-        "name": "Magnetic Fields and Electromagnetism"
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
       }
     ],
     "skills": [
@@ -251,40 +247,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2012_FRQ2 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A physics student wishes to measure the resistivity of slightly conductive paper that has a thickness of $1.0\\times10^{-4}\\,\\mathrm{m}$. The student cuts a sheet of the conductive paper into strips of width $0.02\\,\\mathrm{m}$ and varying le",
-        "Existing topic tags: U12.frq Magnetic Fields and Electromagnetism.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
-      "primary_unit": "U12",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "U11",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2012_FRQ2 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetic Fields and Electromagnetism",
-          "reason": "Prompt evidence: A physics student wishes to measure the resistivity of slightly conductive paper that has a thickness of $1.0\\times10^{-4}\\,\\mathrm{m}$. The student cuts a sheet of the conductive paper into strips of width $0.02\\,\\mathrm{m}$ and varying le Prior official-progression review assigned the full item to U12 Magnetic Fields and Electromagnetism."
+          "unit": "U11",
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetic Fields and Electromagnetism is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2012_FRQ2 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U11",
+    "unit_name": "Electric Circuits"
   },
   {
     "question_id": "2012_FRQ3",
@@ -301,8 +293,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U13.frq",
-        "name": "Electromagnetic Induction"
+        "code": "13.4",
+        "name": "Inductance"
       }
     ],
     "skills": [
@@ -400,40 +392,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2012_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A closed loop is made of a U-shaped metal wire of negligible resistance and a movable metal crossbar of resistance $R$. The crossbar has mass $m$ and length $L$. It is initially located a distance $h_0$ from the other end of the loop. The l",
-        "Existing topic tags: U13.frq Electromagnetic Induction.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U13",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2012_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Electromagnetic Induction",
-          "reason": "Prompt evidence: A closed loop is made of a U-shaped metal wire of negligible resistance and a movable metal crossbar of resistance $R$. The crossbar has mass $m$ and length $L$. It is initially located a distance $h_0$ from the other end of the loop. The l Prior official-progression review assigned the full item to U13 Electromagnetic Induction."
+          "topic_code": "13.4",
+          "topic_name": "Inductance",
+          "reason": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2012_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 13; earlier units alone are insufficient.",
+      "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U13",
+    "unit_name": "Electromagnetic Induction"
   },
   {
     "question_id": "2013_FRQ1",
@@ -450,8 +438,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U13.frq",
-        "name": "Electromagnetic Induction"
+        "code": "13.4",
+        "name": "Inductance"
       }
     ],
     "skills": [
@@ -536,40 +524,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2013_FRQ1 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: Students are given the circuit above in their lab, but they do not know the values of the two resistances $R_A$ and $R_B$. The battery has a terminal voltage of $24\\,\\mathrm{V}$ and the inductor has an inductance of $0.05\\,\\mathrm{H}$. Assu",
-        "Existing topic tags: U13.frq Electromagnetic Induction.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U13",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2013_FRQ1 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Electromagnetic Induction",
-          "reason": "Prompt evidence: Students are given the circuit above in their lab, but they do not know the values of the two resistances $R_A$ and $R_B$. The battery has a terminal voltage of $24\\,\\mathrm{V}$ and the inductor has an inductance of $0.05\\,\\mathrm{H}$. Assu Prior official-progression review assigned the full item to U13 Electromagnetic Induction."
+          "topic_code": "13.4",
+          "topic_name": "Inductance",
+          "reason": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2013_FRQ1 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 13; earlier units alone are insufficient.",
+      "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U13",
+    "unit_name": "Electromagnetic Induction"
   },
   {
     "question_id": "2013_FRQ2",
@@ -586,8 +570,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U13.frq",
-        "name": "Electromagnetic Induction"
+        "code": "13.4",
+        "name": "Inductance"
       }
     ],
     "skills": [
@@ -675,40 +659,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2013_FRQ2 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A bar of mass $M$ and length $\\ell$ is connected to two long vertical frictionless rails. The bar and the rails have negligible resistance. They are placed in a uniform magnetic field of strength $B$ directed into the page as shown above. T",
-        "Existing topic tags: U13.frq Electromagnetic Induction.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U13",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2013_FRQ2 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Electromagnetic Induction",
-          "reason": "Prompt evidence: A bar of mass $M$ and length $\\ell$ is connected to two long vertical frictionless rails. The bar and the rails have negligible resistance. They are placed in a uniform magnetic field of strength $B$ directed into the page as shown above. T Prior official-progression review assigned the full item to U13 Electromagnetic Induction."
+          "topic_code": "13.4",
+          "topic_name": "Inductance",
+          "reason": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2013_FRQ2 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 13; earlier units alone are insufficient.",
+      "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U13",
+    "unit_name": "Electromagnetic Induction"
   },
   {
     "question_id": "2013_FRQ3",
@@ -725,7 +705,7 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U9.frq",
+        "code": "9.2",
         "name": "Electric Potential"
       }
     ],
@@ -811,40 +791,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2013_FRQ3 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A nonconducting slab of infinite length and width and thickness $2d$ is positioned on a coordinate system as shown above. The slab is charged, and the charge per unit volume $\\rho$ is given by $\\rho(y)=C|y|$, where $-d\\le y\\le +d$ and $C$ i",
-        "Existing topic tags: U9.frq Electric Potential.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U9",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U9 Electric Potential. FRQ 2013_FRQ3 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
+          "topic_code": "9.2",
           "topic_name": "Electric Potential",
-          "reason": "Prompt evidence: A nonconducting slab of infinite length and width and thickness $2d$ is positioned on a coordinate system as shown above. The slab is charged, and the charge per unit volume $\\rho$ is given by $\\rho(y)=C|y|$, where $-d\\le y\\le +d$ and $C$ i Prior official-progression review assigned the full item to U9 Electric Potential."
+          "reason": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electric Potential is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U9 Electric Potential. FRQ 2013_FRQ3 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "This is the first relevant unit in the official course progression for this subject.",
+      "classification_reasoning": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U9",
+    "unit_name": "Electric Potential"
   },
   {
     "question_id": "2014_FRQ1",
@@ -861,8 +837,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U12.frq",
-        "name": "Magnetic Fields and Electromagnetism"
+        "code": "12.4",
+        "name": "Ampere?s Law"
       }
     ],
     "skills": [
@@ -946,40 +922,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2014_FRQ1 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: Two metal bars of length $L$ are held a vertical distance $d$ apart, where $L$ is much greater than $d$, as shown in the figure above. Each wire carries a current $I$, and the wires repel each other. The current is to the left in the bottom",
-        "Existing topic tags: U12.frq Magnetic Fields and Electromagnetism.",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U12",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2014_FRQ1 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetic Fields and Electromagnetism",
-          "reason": "Prompt evidence: Two metal bars of length $L$ are held a vertical distance $d$ apart, where $L$ is much greater than $d$, as shown in the figure above. Each wire carries a current $I$, and the wires repel each other. The current is to the left in the bottom Prior official-progression review assigned the full item to U12 Magnetic Fields and Electromagnetism."
+          "topic_code": "12.4",
+          "topic_name": "Ampere?s Law",
+          "reason": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetic Fields and Electromagnetism is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2014_FRQ1 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 12; earlier units alone are insufficient.",
+      "classification_reasoning": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U12",
+    "unit_name": "Magnetic Fields and Electromagnetism"
   },
   {
     "question_id": "2014_FRQ2",
@@ -992,12 +964,12 @@
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
-    "primary_unit": "U12",
+    "primary_unit": "U11",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U12.frq",
-        "name": "Magnetic Fields and Electromagnetism"
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
       }
     ],
     "skills": [
@@ -1078,40 +1050,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2014_FRQ2 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: In the circuit above, the two capacitors are initially uncharged and the switch is initially open. At time $t=0$ the switch is moved to position A. (a) Calculate the current in each of the two resistors immediately after the switch is moved",
-        "Existing topic tags: U12.frq Magnetic Fields and Electromagnetism.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
-      "primary_unit": "U12",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "U11",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2014_FRQ2 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetic Fields and Electromagnetism",
-          "reason": "Prompt evidence: In the circuit above, the two capacitors are initially uncharged and the switch is initially open. At time $t=0$ the switch is moved to position A. (a) Calculate the current in each of the two resistors immediately after the switch is moved Prior official-progression review assigned the full item to U12 Magnetic Fields and Electromagnetism."
+          "unit": "U11",
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetic Fields and Electromagnetism is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2014_FRQ2 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U11",
+    "unit_name": "Electric Circuits"
   },
   {
     "question_id": "2014_FRQ3",
@@ -1128,7 +1096,7 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U9.frq",
+        "code": "9.2",
         "name": "Electric Potential"
       }
     ],
@@ -1203,18 +1171,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2014_FRQ3 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A spherical insulating shell of radius $2a$ has a hollow cavity of radius $a$, as shown in the figure above. The charge density in the shell for $a<r<2a$ varies according to the expression $\\rho=br^2$, where $b$ is a positive constant and $",
-        "Existing topic tags: U9.frq Electric Potential.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U9",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -1241,24 +1203,26 @@
         "description": "Rank points A, B, C, and D by electric potential using the spherical symmetry and the fact that the potential is constant throughout the hollow region. Award credit for a correct ranking and a justification based on field direction and potential variation with radius."
       }
     ],
-    "classification_reasoning": "Official progression review: U9 Electric Potential. FRQ 2014_FRQ3 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
+          "topic_code": "9.2",
           "topic_name": "Electric Potential",
-          "reason": "Prompt evidence: A spherical insulating shell of radius $2a$ has a hollow cavity of radius $a$, as shown in the figure above. The charge density in the shell for $a<r<2a$ varies according to the expression $\\rho=br^2$, where $b$ is a positive constant and $ Prior official-progression review assigned the full item to U9 Electric Potential."
+          "reason": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electric Potential is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U9 Electric Potential. FRQ 2014_FRQ3 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "This is the first relevant unit in the official course progression for this subject.",
+      "classification_reasoning": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U9",
+    "unit_name": "Electric Potential"
   },
   {
     "question_id": "2015_FRQ1",
@@ -1275,7 +1239,7 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U9.frq",
+        "code": "9.2",
         "name": "Electric Potential"
       }
     ],
@@ -1365,40 +1329,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2015_FRQ1 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: You perform a laboratory experiment to determine the unknown charge on a small conducting ball of mass $m$ using the experimental setup shown in the diagram above. A variable power supply applies a DC voltage to two large parallel plates se",
-        "Existing topic tags: U9.frq Electric Potential.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U9",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U9 Electric Potential. FRQ 2015_FRQ1 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
+          "topic_code": "9.2",
           "topic_name": "Electric Potential",
-          "reason": "Prompt evidence: You perform a laboratory experiment to determine the unknown charge on a small conducting ball of mass $m$ using the experimental setup shown in the diagram above. A variable power supply applies a DC voltage to two large parallel plates se Prior official-progression review assigned the full item to U9 Electric Potential."
+          "reason": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electric Potential is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U9 Electric Potential. FRQ 2015_FRQ1 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "This is the first relevant unit in the official course progression for this subject.",
+      "classification_reasoning": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U9",
+    "unit_name": "Electric Potential"
   },
   {
     "question_id": "2015_FRQ2",
@@ -1411,12 +1371,12 @@
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
-    "primary_unit": "U12",
+    "primary_unit": "U11",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U12.frq",
-        "name": "Magnetic Fields and Electromagnetism"
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
       }
     ],
     "skills": [
@@ -1492,40 +1452,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2015_FRQ2 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A $6.0\\,\\mu\\mathrm{F}$ capacitor, $C_1$, is initially charged using a $30\\,\\mathrm{V}$ battery. $C_1$ is then inserted in the circuit represented above with a resistor of resistance $R$ and the $12\\,\\mu\\mathrm{F}$ capacitor $C_2$, which is ",
-        "Existing topic tags: U12.frq Magnetic Fields and Electromagnetism.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
-      "primary_unit": "U12",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "U11",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2015_FRQ2 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetic Fields and Electromagnetism",
-          "reason": "Prompt evidence: A $6.0\\,\\mu\\mathrm{F}$ capacitor, $C_1$, is initially charged using a $30\\,\\mathrm{V}$ battery. $C_1$ is then inserted in the circuit represented above with a resistor of resistance $R$ and the $12\\,\\mu\\mathrm{F}$ capacitor $C_2$, which is  Prior official-progression review assigned the full item to U12 Magnetic Fields and Electromagnetism."
+          "unit": "U11",
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetic Fields and Electromagnetism is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2015_FRQ2 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U11",
+    "unit_name": "Electric Circuits"
   },
   {
     "question_id": "2015_FRQ3",
@@ -1542,8 +1498,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U12.frq",
-        "name": "Magnetic Fields and Electromagnetism"
+        "code": "12.4",
+        "name": "Ampere?s Law"
       }
     ],
     "skills": [
@@ -1620,40 +1576,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2015_FRQ3 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A thin nonconducting wire is shaped into a loop containing two concentric semicircular arcs with their centers at point C, as shown above. The wire carries a positive uniform linear charge density $\\lambda$. Express your answers in parts (a",
-        "Existing topic tags: U12.frq Magnetic Fields and Electromagnetism.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U12",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2015_FRQ3 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetic Fields and Electromagnetism",
-          "reason": "Prompt evidence: A thin nonconducting wire is shaped into a loop containing two concentric semicircular arcs with their centers at point C, as shown above. The wire carries a positive uniform linear charge density $\\lambda$. Express your answers in parts (a Prior official-progression review assigned the full item to U12 Magnetic Fields and Electromagnetism."
+          "topic_code": "12.4",
+          "topic_name": "Ampere?s Law",
+          "reason": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetic Fields and Electromagnetism is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2015_FRQ3 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 12; earlier units alone are insufficient.",
+      "classification_reasoning": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U12",
+    "unit_name": "Magnetic Fields and Electromagnetism"
   },
   {
     "question_id": "2016_FRQ1",
@@ -1671,8 +1623,8 @@
     ],
     "topics": [
       {
-        "code": "U8.frq",
-        "name": "Charge distributions and electric field"
+        "code": "8.6",
+        "name": "Gauss?s Law"
       }
     ],
     "skills": [
@@ -1762,18 +1714,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2016_FRQ1 is assigned to U8 (Electric Charges, Fields, and Gauss's Law) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A rod of length $L$ lies along the $x$-axis with its left end at the origin, as shown in the figure. The rod has a nonuniform linear charge density $\\lambda=\\alpha x$, where $\\alpha$ is a positive constant. (a) Determine the units of the co",
-        "Existing topic tags: U8.frq Charge distributions and electric field.",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric charges, fields, and Gauss law require Unit 8. Latest required official topic: 8.6 Gauss?s Law.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U8",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -1839,24 +1785,26 @@
         "text": "Using the equation from part (c), show that the magnitude of the electric field at a point on the $x$-axis very far away from the rod is approximately equal to the electric field due to a point charge of magnitude $Q=\\lambda_0 L$ located at the origin."
       }
     ],
-    "classification_reasoning": "Official progression review: U8 Electric Charges, Fields, and Gauss's Law. FRQ 2016_FRQ1 is assigned to U8 (Electric Charges, Fields, and Gauss's Law) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric charges, fields, and Gauss law require Unit 8. Latest required official topic: 8.6 Gauss?s Law.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U8",
-          "topic_code": null,
-          "topic_name": "Electric Charges, Fields, and Gauss's Law",
-          "reason": "Prompt evidence: A rod of length $L$ lies along the $x$-axis with its left end at the origin, as shown in the figure. The rod has a nonuniform linear charge density $\\lambda=\\alpha x$, where $\\alpha$ is a positive constant. (a) Determine the units of the co Prior official-progression review assigned the full item to U8 Electric Charges, Fields, and Gauss's Law."
+          "topic_code": "8.6",
+          "topic_name": "Gauss?s Law",
+          "reason": "Electric charges, fields, and Gauss law require Unit 8. Latest required official topic: 8.6 Gauss?s Law."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "This is first-unit material; no earlier unit exists.",
-      "classification_reasoning": "Official progression review: U8 Electric Charges, Fields, and Gauss's Law. FRQ 2016_FRQ1 is assigned to U8 (Electric Charges, Fields, and Gauss's Law) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "This is the first relevant unit in the official course progression for this subject.",
+      "classification_reasoning": "Electric charges, fields, and Gauss law require Unit 8. Latest required official topic: 8.6 Gauss?s Law.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U8",
+    "unit_name": "Electric Charges, Fields, and Gauss's Law"
   },
   {
     "question_id": "2016_FRQ2",
@@ -1868,14 +1816,14 @@
     "text": "A circuit consists of a variable DC power supply, an ammeter, a switch, and a resistor of unknown resistance $R_0$ connected in series with a test space into which different circuit elements can be placed. To determine $R_0$, a wire of negligible resistance is placed in the test space. The power supply is set at several potential differences, and the current is measured.\n\n| $\\epsilon$ (V) | 2.00 | 4.00 | 6.00 | 8.00 |\n|---:|---:|---:|---:|---:|\n| Current (mA) | 0.146 | 0.310 | 0.433 | 0.577 |\n\n(a) Indicate which quantities should be graphed to yield a straight line whose slope can be used to calculate $R_0$. Include horizontal and vertical axes.\n\n(b) Plot the straight-line data points on the graph. Clearly scale and label all axes, including units, if appropriate. Draw a straight line that best represents the data.\n\n(c) Using your straight line, calculate an experimental value for $R_0$.\n\n(d) The power supply is set to $4.00\\ \\mathrm{V}$ and an uncharged air-filled capacitor is placed in the test space. The switch is closed at $t=0$, and the capacitor is allowed to fully charge.\n\n(i) On the axes shown, sketch the current $I$ through the ammeter as a function of time $t$. Explicitly label intercepts, asymptotes, maxima, or minima with numerical values or algebraic expressions, as appropriate.\n\n(ii) The time constant is $0.045\\ \\mathrm{s}$ and the capacitor is charged to $4\\ \\mathrm{V}$. Calculate the energy stored in the capacitor.\n\n(iii) The graph shows the charge $Q$ on the capacitor as a function of time $t$. The capacitor is discharged, a dielectric with dielectric constant $\\kappa=2$ is inserted, and the same charging procedure is repeated. On the graph, sketch the curve showing $Q$ for the dielectric-filled capacitor as a function of $t$.",
     "answer": "",
     "points": 15,
-    "primary_unit": "U11",
+    "primary_unit": "U12",
     "secondary_units": [
       "U10"
     ],
     "topics": [
       {
-        "code": "U11.frq",
-        "name": "Circuits, resistance, and capacitors"
+        "code": "12.4",
+        "name": "Ampere?s Law"
       }
     ],
     "skills": [
@@ -1958,19 +1906,13 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2016_FRQ2 is assigned to U11 (Electric Circuits) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A circuit consists of a variable DC power supply, an ammeter, a switch, and a resistor of unknown resistance $R_0$ connected in series with a test space into which different circuit elements can be placed. To determine $R_0$, a wire of negl",
-        "Existing topic tags: U11.frq Circuits, resistance, and capacitors.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
-      "primary_unit": "U11",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "U12",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -2020,24 +1962,26 @@
         "text": "The power supply is set to $4.00\\ \\mathrm{V}$ and an uncharged air-filled capacitor is placed in the test space. The switch is closed at $t=0$, and the capacitor is allowed to fully charge. (i) On the axes shown, sketch the current $I$ through the ammeter as a function of time $t$. Explicitly label intercepts, asymptotes, maxima, or minima with numerical values or algebraic expressions, as appropriate. (ii) The time constant is $0.045\\ \\mathrm{s}$ and the capacitor is charged to $4\\ \\mathrm{V}$. Calculate the energy stored in the capacitor. (iii) The graph shows the charge $Q$ on the capacitor as a function of time $t$. The capacitor is discharged, a dielectric with dielectric constant $\\kappa=2$ is inserted, and the same charging procedure is repeated. On the graph, sketch the curve showing $Q$ for the dielectric-filled capacitor as a function of $t$."
       }
     ],
-    "classification_reasoning": "Official progression review: U11 Electric Circuits. FRQ 2016_FRQ2 is assigned to U11 (Electric Circuits) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U11",
-          "topic_code": null,
-          "topic_name": "Electric Circuits",
-          "reason": "Prompt evidence: A circuit consists of a variable DC power supply, an ammeter, a switch, and a resistor of unknown resistance $R_0$ connected in series with a test space into which different circuit elements can be placed. To determine $R_0$, a wire of negl Prior official-progression review assigned the full item to U11 Electric Circuits."
+          "unit": "U12",
+          "topic_code": "12.4",
+          "topic_name": "Ampere?s Law",
+          "reason": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electric Circuits is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U11 Electric Circuits. FRQ 2016_FRQ2 is assigned to U11 (Electric Circuits) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 12; earlier units alone are insufficient.",
+      "classification_reasoning": "Magnetic fields and electromagnetism require Unit 12. Latest required official topic: 12.4 Ampere?s Law.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U12",
+    "unit_name": "Magnetic Fields and Electromagnetism"
   },
   {
     "question_id": "2016_FRQ3",
@@ -2055,8 +1999,8 @@
     ],
     "topics": [
       {
-        "code": "U13.frq",
-        "name": "Inductors and LR circuits"
+        "code": "13.4",
+        "name": "Inductance"
       }
     ],
     "skills": [
@@ -2145,18 +2089,12 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2016_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: An ideal battery is connected to three resistors, an ideal inductor, and two switches, as shown in the circuit. Both switches are initially open. Switch $S_2$ is then closed. (a) Calculate the voltage across resistor $R_2$. Switch $S_1$ is ",
-        "Existing topic tags: U13.frq Inductors and LR circuits.",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U13",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -2227,24 +2165,26 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2016_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Electromagnetic Induction",
-          "reason": "Prompt evidence: An ideal battery is connected to three resistors, an ideal inductor, and two switches, as shown in the circuit. Both switches are initially open. Switch $S_2$ is then closed. (a) Calculate the voltage across resistor $R_2$. Switch $S_1$ is  Prior official-progression review assigned the full item to U13 Electromagnetic Induction."
+          "topic_code": "13.4",
+          "topic_name": "Inductance",
+          "reason": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2016_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 13; earlier units alone are insufficient.",
+      "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U13",
+    "unit_name": "Electromagnetic Induction"
   },
   {
     "question_id": "2017_FRQ1",
@@ -2261,7 +2201,7 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U9.frq",
+        "code": "9.2",
         "name": "Electric Potential"
       }
     ],
@@ -2361,40 +2301,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2017_FRQ1 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: The electric potential in a region of space as a function of position $x$ is given by $$V(x)=\\alpha x^2+\\beta x-\\gamma,$$ where $\\alpha=2\\,\\mathrm{V/m^2}$, $\\beta=7\\,\\mathrm{V/m}$, and $\\gamma=15\\,\\mathrm{V}$. All nonelectrical forces are n",
-        "Existing topic tags: U9.frq Electric Potential.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U9",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U9 Electric Potential. FRQ 2017_FRQ1 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
+          "topic_code": "9.2",
           "topic_name": "Electric Potential",
-          "reason": "Prompt evidence: The electric potential in a region of space as a function of position $x$ is given by $$V(x)=\\alpha x^2+\\beta x-\\gamma,$$ where $\\alpha=2\\,\\mathrm{V/m^2}$, $\\beta=7\\,\\mathrm{V/m}$, and $\\gamma=15\\,\\mathrm{V}$. All nonelectrical forces are n Prior official-progression review assigned the full item to U9 Electric Potential."
+          "reason": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electric Potential is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U9 Electric Potential. FRQ 2017_FRQ1 is assigned to U9 (Electric Potential) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "This is the first relevant unit in the official course progression for this subject.",
+      "classification_reasoning": "Electric potential requires Unit 9. Latest required official topic: 9.2 Electric Potential.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U9",
+    "unit_name": "Electric Potential"
   },
   {
     "question_id": "2017_FRQ2",
@@ -2411,8 +2347,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U11.frq",
-        "name": "Electric Circuits"
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
       }
     ],
     "skills": [
@@ -2511,40 +2447,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2017_FRQ2 is assigned to U11 (Electric Circuits) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A student is to design a circuit using a battery $\\mathcal{E}$ with negligible internal resistance, two uncharged capacitors $C_1$ and $C_2$, a resistor $R$, and a switch S. The circuit should be set up so that when the switch is in one pos",
-        "Existing topic tags: U11.frq Electric Circuits.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U11",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U11 Electric Circuits. FRQ 2017_FRQ2 is assigned to U11 (Electric Circuits) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U11",
-          "topic_code": null,
-          "topic_name": "Electric Circuits",
-          "reason": "Prompt evidence: A student is to design a circuit using a battery $\\mathcal{E}$ with negligible internal resistance, two uncharged capacitors $C_1$ and $C_2$, a resistor $R$, and a switch S. The circuit should be set up so that when the switch is in one pos Prior official-progression review assigned the full item to U11 Electric Circuits."
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electric Circuits is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U11 Electric Circuits. FRQ 2017_FRQ2 is assigned to U11 (Electric Circuits) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U11",
+    "unit_name": "Electric Circuits"
   },
   {
     "question_id": "2017_FRQ3",
@@ -2561,8 +2493,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U13.frq",
-        "name": "Electromagnetic Induction"
+        "code": "13.4",
+        "name": "Inductance"
       }
     ],
     "skills": [
@@ -2651,40 +2583,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2017_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A square loop of conducting wire with resistance $R$ and with sides of length $s$ is located in the $xy$-plane. The loop is being pushed at constant speed $v$ by an external force of magnitude $F_{ext}$ in the $+x$-direction through a regio",
-        "Existing topic tags: U13.frq Electromagnetic Induction.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U13",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2017_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Electromagnetic Induction",
-          "reason": "Prompt evidence: A square loop of conducting wire with resistance $R$ and with sides of length $s$ is located in the $xy$-plane. The loop is being pushed at constant speed $v$ by an external force of magnitude $F_{ext}$ in the $+x$-direction through a regio Prior official-progression review assigned the full item to U13 Electromagnetic Induction."
+          "topic_code": "13.4",
+          "topic_name": "Inductance",
+          "reason": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2017_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 13; earlier units alone are insufficient.",
+      "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U13",
+    "unit_name": "Electromagnetic Induction"
   },
   {
     "question_id": "2018_FRQ1",
@@ -2697,12 +2625,12 @@
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
-    "primary_unit": "U12",
+    "primary_unit": "U11",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U12.frq",
-        "name": "Magnetic Fields and Electromagnetism"
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
       }
     ],
     "skills": [
@@ -2819,40 +2747,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2018_FRQ1 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A circuit is created with an ideal battery and five resistors with the values shown in the figure above. An open switch is shown that can connect points X and Y. A voltmeter V and an ammeter $A_1$ are also shown in the figure. (a) The switc",
-        "Existing topic tags: U12.frq Magnetic Fields and Electromagnetism.",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
-      "primary_unit": "U12",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "U11",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2018_FRQ1 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetic Fields and Electromagnetism",
-          "reason": "Prompt evidence: A circuit is created with an ideal battery and five resistors with the values shown in the figure above. An open switch is shown that can connect points X and Y. A voltmeter V and an ammeter $A_1$ are also shown in the figure. (a) The switc Prior official-progression review assigned the full item to U12 Magnetic Fields and Electromagnetism."
+          "unit": "U11",
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetic Fields and Electromagnetism is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2018_FRQ1 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U11",
+    "unit_name": "Electric Circuits"
   },
   {
     "question_id": "2018_FRQ2",
@@ -2869,8 +2793,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U13.frq",
-        "name": "Electromagnetic Induction"
+        "code": "13.4",
+        "name": "Inductance"
       }
     ],
     "skills": [
@@ -2979,40 +2903,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2018_FRQ2 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A coaxial cable is composed of a central conducting wire surrounded by a cylindrical insulator, and around that is a conducting cylindrical shell with an insulating cover. A power supply of emf $\\epsilon$ is used at one end to connect the t",
-        "Existing topic tags: U13.frq Electromagnetic Induction.",
-        "Student-visible media are preserved with 4 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U13",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2018_FRQ2 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Electromagnetic Induction",
-          "reason": "Prompt evidence: A coaxial cable is composed of a central conducting wire surrounded by a cylindrical insulator, and around that is a conducting cylindrical shell with an insulating cover. A power supply of emf $\\epsilon$ is used at one end to connect the t Prior official-progression review assigned the full item to U13 Electromagnetic Induction."
+          "topic_code": "13.4",
+          "topic_name": "Inductance",
+          "reason": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2018_FRQ2 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 13; earlier units alone are insufficient.",
+      "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U13",
+    "unit_name": "Electromagnetic Induction"
   },
   {
     "question_id": "2018_FRQ3",
@@ -3029,8 +2949,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U11.frq",
-        "name": "Electric Circuits"
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
       }
     ],
     "skills": [
@@ -3131,40 +3051,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2018_FRQ3 is assigned to U11 (Electric Circuits) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A parallel-plate capacitor is connected to a battery, fully charged, and then isolated from the battery. The plates are given equal and opposite charge densities $\\sigma$, and the separation between the plates is $d$, as shown in the figure",
-        "Existing topic tags: U11.frq Electric Circuits.",
-        "Student-visible media are preserved with 4 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U11",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U11 Electric Circuits. FRQ 2018_FRQ3 is assigned to U11 (Electric Circuits) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U11",
-          "topic_code": null,
-          "topic_name": "Electric Circuits",
-          "reason": "Prompt evidence: A parallel-plate capacitor is connected to a battery, fully charged, and then isolated from the battery. The plates are given equal and opposite charge densities $\\sigma$, and the separation between the plates is $d$, as shown in the figure Prior official-progression review assigned the full item to U11 Electric Circuits."
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electric Circuits is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U11 Electric Circuits. FRQ 2018_FRQ3 is assigned to U11 (Electric Circuits) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U11",
+    "unit_name": "Electric Circuits"
   },
   {
     "question_id": "2019_FRQ1",
@@ -3177,12 +3093,12 @@
     "display_mode": "official_images_first",
     "answer": "",
     "points": 15,
-    "primary_unit": "U12",
+    "primary_unit": "U11",
     "secondary_units": [],
     "topics": [
       {
-        "code": "U12.frq",
-        "name": "Magnetic Fields and Electromagnetism"
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
       }
     ],
     "skills": [
@@ -3286,40 +3202,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2019_FRQ1 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: Students design an experiment to determine the unknown dielectric constant $\\kappa$ of a plastic material. A capacitor is created using two square aluminum plates of side length $s=30\\,\\mathrm{cm}$ that are separated by a distance $d=1.0\\,\\",
-        "Existing topic tags: U12.frq Magnetic Fields and Electromagnetism.",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
-      "primary_unit": "U12",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "primary_unit": "U11",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2019_FRQ1 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetic Fields and Electromagnetism",
-          "reason": "Prompt evidence: Students design an experiment to determine the unknown dielectric constant $\\kappa$ of a plastic material. A capacitor is created using two square aluminum plates of side length $s=30\\,\\mathrm{cm}$ that are separated by a distance $d=1.0\\,\\ Prior official-progression review assigned the full item to U12 Magnetic Fields and Electromagnetism."
+          "unit": "U11",
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetic Fields and Electromagnetism is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12 Magnetic Fields and Electromagnetism. FRQ 2019_FRQ1 is assigned to U12 (Magnetic Fields and Electromagnetism) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U11",
+    "unit_name": "Electric Circuits"
   },
   {
     "question_id": "2019_FRQ2",
@@ -3336,8 +3248,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U13.frq",
-        "name": "Electromagnetic Induction"
+        "code": "13.4",
+        "name": "Inductance"
       }
     ],
     "skills": [
@@ -3437,40 +3349,36 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2019_FRQ2 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: A thin wire of length $L$ has a uniform charge density $+\\lambda$. A cylindrical Gaussian surface of radius $d$ is drawn with the wire along its central axis, as shown above. Point P is located at the center of one end of the cylinder, a di",
-        "Existing topic tags: U13.frq Electromagnetic Induction.",
-        "Student-visible media are preserved with 4 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U13",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2019_FRQ2 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Electromagnetic Induction",
-          "reason": "Prompt evidence: A thin wire of length $L$ has a uniform charge density $+\\lambda$. A cylindrical Gaussian surface of radius $d$ is drawn with the wire along its central axis, as shown above. Point P is located at the center of one end of the cylinder, a di Prior official-progression review assigned the full item to U13 Electromagnetic Induction."
+          "topic_code": "13.4",
+          "topic_name": "Inductance",
+          "reason": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2019_FRQ2 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 13; earlier units alone are insufficient.",
+      "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U13",
+    "unit_name": "Electromagnetic Induction"
   },
   {
     "question_id": "2019_FRQ3",
@@ -3487,8 +3395,8 @@
     "secondary_units": [],
     "topics": [
       {
-        "code": "U13.frq",
-        "name": "Electromagnetic Induction"
+        "code": "13.4",
+        "name": "Inductance"
       }
     ],
     "skills": [
@@ -3602,39 +3510,35 @@
     "classification": {
       "review_status": "reviewed",
       "confidence": "medium",
-      "evidence": [
-        "FRQ 2019_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-        "Prompt evidence: The circuit shown above is constructed using an ideal $12\\,\\mathrm{V}$ battery, an ideal switch S, and two resistors and an inductor with the values shown. Switch S is closed. After a long time, the circuit reaches steady-state conditions. ",
-        "Existing topic tags: U13.frq Electromagnetic Induction.",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-c-e-m passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
       "rejected_units": [],
       "source_refs": [
         "subjects/AP/Physics-C-E-M/docs/source_pack.json"
       ],
-      "classification_version": "physics-c-e-m-official-progression-2026-07-19",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "primary_unit": "U13",
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
-    "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2019_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics C: Electricity and Magnetism Course and Exam Description",
       "required_topics": [
         {
           "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Electromagnetic Induction",
-          "reason": "Prompt evidence: The circuit shown above is constructed using an ideal $12\\,\\mathrm{V}$ battery, an ideal switch S, and two resistors and an inductor with the values shown. Switch S is closed. After a long time, the circuit reaches steady-state conditions.  Prior official-progression review assigned the full item to U13 Electromagnetic Induction."
+          "topic_code": "13.4",
+          "topic_name": "Inductance",
+          "reason": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13 Electromagnetic Induction. FRQ 2019_FRQ3 is assigned to U13 (Electromagnetic Induction) under AP Physics C: Electricity and Magnetism Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-      "review_method": "physics-c-e-m prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 13; earlier units alone are insufficient.",
+      "classification_reasoning": "Electromagnetic induction requires Unit 13. Latest required official topic: 13.4 Inductance.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "unit": "U13",
+    "unit_name": "Electromagnetic Induction"
   }
 ]

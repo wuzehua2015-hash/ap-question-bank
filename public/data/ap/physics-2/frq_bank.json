@@ -22,7 +22,12 @@
     "unit_name": "Thermodynamics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "9.4",
+        "name": "The First Law of Thermodynamics"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -56,15 +61,10 @@
       "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U9 Thermodynamics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 1. (10 points, suggested time 20 minutes) Three samples of a gas, X, Y, and Z, are prepared. Each sample contains the same number of molecules, but the samples are at different temperatures. The temperature of sample X is TX , the temperatu",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -125,22 +125,22 @@
         "text": "For the three-sample system, indicate whether the entropy of the system increases, decreases, or remains the same. Increases Decreases Remains the same Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U9. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U9 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U9",
-          "topic_code": null,
-          "topic_name": "Thermodynamics",
-          "reason": "Prompt evidence: 1. (10 points, suggested time 20 minutes) Three samples of a gas, X, Y, and Z, are prepared. Each sample contains the same number of molecules, but the samples are at different temperatures. The temperature of sample X is TX , the temperatu Prior official-progression review assigned the full item to U9 Thermodynamics."
+          "topic_code": "9.4",
+          "topic_name": "The First Law of Thermodynamics",
+          "reason": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "This is first-unit material; no earlier unit exists.",
-      "classification_reasoning": "Official progression review: U9. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U9 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "This is the first relevant unit in the official course progression for this subject.",
+      "classification_reasoning": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -163,12 +163,17 @@
     "rubric_image_paths": [
       "images/ap/physics-2/2014/2014_p101_img02.png"
     ],
-    "primary_unit": "U12",
-    "unit": "U12",
-    "unit_name": "Magnetism and Electromagnetic Induction",
+    "primary_unit": "U11",
+    "unit": "U11",
+    "unit_name": "Electric Circuits",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -199,18 +204,13 @@
       "official_text": "Question 2\nTiming\nThe student should spend approximately 25 minutes on\nthis question.\nEssential Knowledge\n4.E.5 The values of currents and electric potential\ndifferences in an electric circuit are determined by the\nproperties and arrangement of the individual circuit\nelements such as sources of emf, resistors, and capacitors.\n5.B.9 Kirchhoff’s loop rule describes conservation of energy\nin electrical circuits. The application of Kirchhoff’s laws to\ncircuits is introduced in Physics 1 and further developed in\nPhysics 2 in the context of more complex circuits, including\nthose with capacitors.\nScience Practices\n6.4 The student can make claims and predictions about\nnatural phenomena based on scientific theories and models.\n2.2 The student can apply mathematical routines to\nquantities that describe natural phenomena.\n4.2 The student can design a plan for collecting data to\nanswer a particular scientific question.\n5.1 The student can analyze data to identify patterns\nor relationships.\n1.5 The student can re-express key elements of natural\nphenomena across multiple representations in the domain.\nLearning Objectives\n4.E.5.2 The student is able to make and justify a\nqualitative prediction of the effect of a change in values or\narrangements of one or two circuit elements on currents\nand potential differences in a circuit containing a small\nnumber of sources of emf, resistors, capacitors, and switches\nin series and/or parallel.\n4.E.5.3 The student is able to plan data collection strategies\nand perform data analysis to examine the values of currents\nand potential differences in an electric circuit that is\nmodified by changing or rearranging circuit elements,\nincluding sources of emf, resistors, and capacitors.\n5.B.9.6 The student is able to mathematically express the\nchanges in electric potential energy of a loop in a multi-\nloop electrical circuit and justify this expression using the\nprinciple of the conservation of energy.\n5.B.9.7 The student is able to refine and analyze a scientific\nquestion for an experiment using Kirchhoff’s loop rule for\ncircuits that includes determination of internal resistance of\nthe battery and analysis of a non-ohmic resistor.\n5.B.9.8 The student is able to translate between graphical\nand symbolic representations of experimental data\ndescribing relationships among power, current, and\npotential difference across a resistor.\nCharacteristics of a\nSTRONG Response\nPart(a)(i) The student is able to write the correct equation\nwith all the required variables.\nPart(a)(ii) The student is able to\n• connect the slope of the line to 1 e\n• pick two points from the line of best fit to calculate the\nslope of the line\n• use the y-intercept of the line to determine the battery’s\ninternal resistance\n• or substitute data from the graph to set up two equations\nand solve those equations for r and e.\nPart (b)(i) The student is able to\n• draw a circuit that would allow the potential difference\nacross X to be varied\n• connect the ammeter and voltmeter correctly in the circuit\nthat would allow the current and potential difference to be\nmeasured across resistor X.\nPart(b)(ii) The student is able to\n• describe a procedure that correctly varies the potential\ndifference across resistor X\n• indicate that the current and potential difference of\nresistor X are being measured for more than one trial.\nPart (b)(iii) The student is able to\n• indicate that current and potential difference of resistor X\nare the quantities being graphed\n• indicate that if resistor X is ohmic then the graph would be\nlinear(a straight line).\nPart (c) The student is able to\n• indicate that the procedure changes the external resistance\nto X and it does not matter how it changes (ohmic or not)\nbecause the measurements are for X by itself.\nCharacteristics of a\nGOOD Response\nPart(a)(i) The student is able to write the correct equation\nwith all the required variables.\nPart (a)(ii) The student is able to use the data from\nthe graph in an attempt to calculate the emf and\ninternal resistance of the circuit. The student\nattempts to calculate the slope of the line but does not\nunderstand the connection.\nPart(b)(i) The student is able to\n• draw a circuit that would allow the potential difference\nacross X to be varied\n• connect the ammeter or voltmeter in the circuit that\nwould allow the current and potential difference to be\nmeasured across resistor X.\nPart(b)(ii) The student is able to describe a procedure that\nvaries potential difference but does not make more than\none trial or does not collect the data necessary to determine\nwhether X is ohmic or not.\nPart(b)(iii) The student is able to indicate that current and\npotential difference are being graphed but does not indicate\nthat the data would yield a linear relationship.\nPart(c) The student is able to indicate the circuit does not\nhave to be different but does not know why.\nCharacteristics of a\nWEAK Response\nPart(a)(i) The student is able write Ohm’s law but does\nnot know how to incorporate internal resistance into\nthe equation.\nPart(a)(ii) The student attempts to use data from the graph\nbut may only use one point which is substituted into the\nequation from part(a)(i).\nPart (b)(i) The student redraws the circuit from the prompt\nand inserts an ammeter and voltmeter into the circuit.\nPart(b)(ii) The student attempts to describe a procedure\nusing their circuit but they are unable to vary the potential\ndifference. The student does not indicate that they need the\npotential difference and current for resistor X.\nPart(b)(iii) The student indicates quantities to graph,\ntypically indicating voltage and resistance.\nPart (c) The student does not know how the internal\nresistance affects the overall resistance with regard to being\nohmic or not. The student fails to realize that the internal\nresistance and resistor R are external to resistor X."
     },
     "classification": {
-      "primary_unit": "U12",
+      "primary_unit": "U11",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U12 Magnetism and Electromagnetic Induction. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 2. (12 points, suggested time 25 minutes) Students are given some resistors with various resistances, a battery with internal resistance, and an ammeter. They are asked to determine the emf e and internal resistance r of the battery using j",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -287,22 +287,22 @@
         "text": "Would your procedure or data analysis in part (b) need to be different if the internal resistance of the battery was nonohmic? Justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetism and Electromagnetic Induction",
-          "reason": "Prompt evidence: 2. (12 points, suggested time 25 minutes) Students are given some resistors with various resistances, a battery with internal resistance, and an ammeter. They are asked to determine the emf e and internal resistance r of the battery using j Prior official-progression review assigned the full item to U12 Magnetism and Electromagnetic Induction."
+          "unit": "U11",
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetism and Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -331,7 +331,12 @@
     "unit_name": "Magnetism and Electromagnetic Induction",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "12.4",
+        "name": "Electromagnetic Induction"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -365,15 +370,10 @@
       "primary_unit": "U12",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U12 Magnetism and Electromagnetic Induction. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 3. (12 points, suggested time 25 minutes) A particle with unknown mass and charge is projected into the apparatus shown above. The particle moves with constant speed $v$ as it passes undeflected through a pair of parallel plates, as shown a",
-        "Student-visible media are preserved with 5 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -523,22 +523,22 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetism and Electromagnetic Induction",
-          "reason": "Prompt evidence: 3. (12 points, suggested time 25 minutes) A particle with unknown mass and charge is projected into the apparatus shown above. The particle moves with constant speed $v$ as it passes undeflected through a pair of parallel plates, as shown a Prior official-progression review assigned the full item to U12 Magnetism and Electromagnetic Induction."
+          "topic_code": "12.4",
+          "topic_name": "Electromagnetic Induction",
+          "reason": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetism and Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 12; earlier units alone are insufficient.",
+      "classification_reasoning": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -566,7 +566,12 @@
     "unit_name": "Waves, Sound, and Physical Optics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "14.8",
+        "name": "Double-Slit Interference"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -600,15 +605,10 @@
       "primary_unit": "U14",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U14 Waves, Sound, and Physical Optics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 4. (10 points, suggested time 20 minutes) The figures above labeled X, Y, and Z represent plane waves of the same wavelength incident on barriers that have openings of different sizes. Also shown are the shapes of the wave fronts beyond the",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -685,22 +685,22 @@
         "text": "On the axes below, sketch the intensity of the waves that are incident on the wall. The labels correspond to the positions noted in the figure above."
       }
     ],
-    "classification_reasoning": "Official progression review: U14. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U14 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U14",
-          "topic_code": null,
-          "topic_name": "Waves, Sound, and Physical Optics",
-          "reason": "Prompt evidence: 4. (10 points, suggested time 20 minutes) The figures above labeled X, Y, and Z represent plane waves of the same wavelength incident on barriers that have openings of different sizes. Also shown are the shapes of the wave fronts beyond the Prior official-progression review assigned the full item to U14 Waves, Sound, and Physical Optics."
+          "topic_code": "14.8",
+          "topic_name": "Double-Slit Interference",
+          "reason": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Waves, Sound, and Physical Optics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U14. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U14 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 14; earlier units alone are insufficient.",
+      "classification_reasoning": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -720,12 +720,17 @@
       "images/ap/physics-2/2016/2016_p043_img01.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U12",
-    "unit": "U12",
-    "unit_name": "Magnetism and Electromagnetic Induction",
+    "primary_unit": "U11",
+    "unit": "U11",
+    "unit_name": "Electric Circuits",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -756,18 +761,13 @@
       "official_text": "Question 1\n10 points total\nDistribution\nof points\n\n(a)\n\ni)\n1 point\n\nFor indicating that 1\nV = 2\nV and giving a correct explanation\n1 point\nExamples:\n\nWhen the switch is closed, charge flows to eliminate the initial potential\ndifference between the spheres.\n\nThere is no source of potential besides the spheres, and they are now effectively\none conductor.\n\nii)\n2 points\n\nFor using the fact that 1\nV = 2\nV (or whatever relationship was indicated in part i)\n1 point\nFor equating the expressions for potential,\n1\n1\n2\nkQ r\nkQ\nr\n= 2 , and indicating that since\n1\n2\nr_r\n>\n,\n1\n2\nQ_Q\n>\n(or logic consistent with answer to part i)\n1 point\nAlternate Solution\nAlternate points\nFor indicating that the larger sphere has more surface area\n1 point\nFor indicating that a greater surface area will hold more charge\n1 point\niii) 1 point\nFor combining\n2\nE\nkQ r\n=\nand V\nkQ r\n=\nand using 1\n2\nV_V\n=\nand 1\n2\nr_r\n>\nto show that\n1\n2\nE_E\n<\n(or logic consistent with answer to part i)\n1 point\nAlternate solution\nAlternate points\nSince the fields are just outside the spheres,\n0\nE_s e\nª\n. Letting 1\n2\nr\ncr\n=\n, we have\n1\n2\nQ\ncQ\n=\n. Then\n(\n)2\n2\n1\n1\n1\n2\n2\n2\n4\n4\nQ_r\ncQ\ncr\nc_s\np_p\ns\n=\n=\n=\n. So σ1 < σ 2 and\n1\n2\nE_E\n<\n.\n1 point\n(b)\n3 points\nFor any indication that when the spheres are released, the electric potential energy is\nconverted into kinetic energy of the spheres\n1 point\nFor any indication that momentum of the spheres must be conserved\n1 point\nFor both correct equations\n1 point\n2\n1\n2\n1 1\n2 2\n1\n1\n2\n2\nkQ Q_D\nm v_m v\n=\n+\n2\n1 1\n2 2\n0\nm v_m v\n=\n+\nor\n1 1\n2 2\nm v_m v\n="
     },
     "classification": {
-      "primary_unit": "U12",
+      "primary_unit": "U11",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U12 Magnetism and Electromagnetic Induction. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 1. (10 points, suggested time 20 minutes) The figure above shows two metal spheres that are far apart compared to their size and that are held in place. The spheres are connected by wires to either side of switch S. Initially, the switch is",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -823,22 +823,22 @@
         "text": "The spheres are now returned to their original locations. Sphere 1 once again has initial net charge +Q0 , and sphere 2 is initially uncharged. The switch is again closed and then reopened. Sphere 3, an uncharged metal sphere of radius r > r > r 3 1 2 on an insulating handle, is now brought into contact with sphere 2. Sphere 3 is then moved away. i. Indicate the sign of the final charge on each sphere. ii. Rank the absolute value of the final charge on each of the three spheres. Explain how you arrived at this answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetism and Electromagnetic Induction",
-          "reason": "Prompt evidence: 1. (10 points, suggested time 20 minutes) The figure above shows two metal spheres that are far apart compared to their size and that are held in place. The spheres are connected by wires to either side of switch S. Initially, the switch is Prior official-progression review assigned the full item to U12 Magnetism and Electromagnetic Induction."
+          "unit": "U11",
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetism and Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1015,9 +1015,9 @@
       "images/ap/physics-2/2016/2016_p062_img01.png",
       "images/ap/physics-2/2016/2016_p062_img04.png"
     ],
-    "primary_unit": "U12",
-    "unit": "U12",
-    "unit_name": "Magnetism and Electromagnetic Induction",
+    "primary_unit": "not_applicable",
+    "unit": "not_applicable",
+    "unit_name": "Outside current official unit progression",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -1066,18 +1066,13 @@
       "official_text": "Question 3\n12 points total\nDistribution\nof points\n(a)\n2 points\nFor electrical energy input E_D\ncorrectly expressed in terms of a combination of\n, , and\nV I_t\nD_1 point\nE_I Vt\nD\n= D\n\nFor equating the electrical energy input to the energy of the gas expressed in terms of\ntemperature, and an attempt to solve for T_D\n\n1 point\n5 2\nB_I\nVt\nNk\nT_D\nD\n= 2\n5\nB_T\nVI t\nNk\nD_D\n\n=\n(b)\n4 points\nFor a valid description of the setup and procedure, including a diagram\n1 point\nFor measuring current and potential difference, with symbols defined as needed\n1 point\nFor measuring the temperature change of the air, with a symbol defined as needed\n1 point\nFor a description of how the measurements will be used to calculate the energy\n1 point\n(c)\n1 point\nFor a line with a positive slope and a positive temperature intercept (the line would not\nextend to the origin, because the air would initially be at ambient temperature)\n1 point"
     },
     "classification": {
-      "primary_unit": "U12",
+      "primary_unit": "not_applicable",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U12 Magnetism and Electromagnetic Induction. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 3. (12 points, suggested time 25 minutes) Students observe that a graphite rod gets hot when there is an electric potential difference DV applied across it that causes an electric current I in it. The graphite rod is placed in an apparatus ",
-        "Student-visible media are preserved with 4 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
-      "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_status": "blocked",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -1196,24 +1191,20 @@
         "text": "Another group of students performing this experiment notices a gap in the seal of the container opening and thinks that some gas has leaked out of the container. If this is true, how would this group’s graph of air temperature as a function of electrical energy compare to the graph you drew in part (c) ?"
       }
     ],
-    "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
+    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
-      "required_topics": [
-        {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetism and Electromagnetic Induction",
-          "reason": "Prompt evidence: 3. (12 points, suggested time 25 minutes) Students observe that a graphite rod gets hot when there is an electric potential difference DV applied across it that causes an electric current I in it. The graphite rod is placed in an apparatus  Prior official-progression review assigned the full item to U12 Magnetism and Electromagnetic Induction."
-        }
-      ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetism and Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "required_topics": [],
+      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
+      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "previous_primary_unit": "U12",
+    "student_visible": false,
+    "publish_status": "blocked"
   },
   {
     "question_id": "2016_FRQ4",
@@ -1234,7 +1225,12 @@
     "unit_name": "Modern Physics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "15.5",
+        "name": "The Photoelectric Effect"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -1293,36 +1289,32 @@
       "primary_unit": "U15",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U15 Modern Physics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 4. (10 points, suggested time 20 minutes) The picture above appears in a magazine with a caption indicating that the picture represents electron diffraction by atoms in a crystal. The picture was created by directing a beam of electrons thr",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Modern physics requires Unit 15. Latest required official topic: 15.5 The Photoelectric Effect.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
       "source_pdf": "subjects\\AP\\Physics-2\\01-exams\\AP Physics 2 2016.pdf",
       "structured_method": "physics2_frq_draft_v1"
     },
-    "classification_reasoning": "Official progression review: U15. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U15 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Modern physics requires Unit 15. Latest required official topic: 15.5 The Photoelectric Effect.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U15",
-          "topic_code": null,
-          "topic_name": "Modern Physics",
-          "reason": "Prompt evidence: 4. (10 points, suggested time 20 minutes) The picture above appears in a magazine with a caption indicating that the picture represents electron diffraction by atoms in a crystal. The picture was created by directing a beam of electrons thr Prior official-progression review assigned the full item to U15 Modern Physics."
+          "topic_code": "15.5",
+          "topic_name": "The Photoelectric Effect",
+          "reason": "Modern physics requires Unit 15. Latest required official topic: 15.5 The Photoelectric Effect."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Modern Physics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U15. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U15 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 15; earlier units alone are insufficient.",
+      "classification_reasoning": "Modern physics requires Unit 15. Latest required official topic: 15.5 The Photoelectric Effect.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1345,9 +1337,9 @@
     "rubric_image_paths": [
       "images/ap/physics-2/2017/2017_p059_img01.png"
     ],
-    "primary_unit": "U9",
-    "unit": "U9",
-    "unit_name": "Thermodynamics",
+    "primary_unit": "not_applicable",
+    "unit": "not_applicable",
+    "unit_name": "Outside current official unit progression",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -1396,18 +1388,13 @@
       "official_text": "Question 1\n10 points total\nDistribution\nof points\n\n(a)\n5 points\nFor indicating that a floating object displaces its weight in water\n1 point\nFor indicating that a submerged object displaces its volume in water\n1 point\nFor justifying with correct reasoning that the volume of displaced water required to\nmake the cube float is much greater than the cube’s volume\nExamples: Noting that the density of the block is much greater than that of water;\nnoting that when the cube is on the bottom the buoyant force is less than the\nweight because of the normal force\n1 point\nFor predicting that the water level is lower when the block is submerged (or higher\nwhen the block is floating) given some attempt to explain the concepts listed above\n1 point\nFor a logical, relevant, and internally consistent response that addresses the required\nargument or question asked, and follows the guidelines described in the published\nrequirements for the paragraph-length response\n1 point\n(b)\ni)\n1 point\nFor indicating that the tension is the same at any depth with a correct reference to the\nbuoyant force\nExample: The volume of water displaced remains the same so the buoyant force remains\nthe same. The weight of the cube does not change, so the force exerted by the crane\nis unchanged.\n1 point"
     },
     "classification": {
-      "primary_unit": "U9",
+      "primary_unit": "not_applicable",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U9 Thermodynamics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 1. (10 points, suggested time 20 minutes) 200 kg PHYSICS 2 Section II 4 Questions Time—90 minutes Directions: Questions 1 and 4 are short free-response questions that require about 20 minutes each to answer and are worth 10 points each. Que",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
-      "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_status": "blocked",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -1479,24 +1466,20 @@
         "text": "The bottom of the pool is 5 m below the surface of the water. The crane is now used to lift the cube out of the pool. The cube is lifted upward at a slow and constant speed, so all drag forces are negligible. i. Predict how the force exerted by the crane on the cube when the bottom of the cube is at a depth of 2.0 m compares to the force exerted by the crane on the cube when the bottom of the cube is at a depth of 4.0 m. Explain your reasoning. ii. On the black square below, which represents the cube, draw and label the forces (not components) that are exerted on the cube while the crane is lifting it and the bottom of the cube is 4 m below the surface of the water. Each force must be represented by a distinct arrow starting on, and pointing away from, the black square. The lengths of the arrows should approximately demonstrate the net force on the cube. iii. Calculate the force exerted by the crane on the cube when the bottom of the cube is 4 m below the surface of the water."
       }
     ],
-    "classification_reasoning": "Official progression review: U9. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U9 and prior official Physics 2 units.",
+    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
-      "required_topics": [
-        {
-          "unit": "U9",
-          "topic_code": null,
-          "topic_name": "Thermodynamics",
-          "reason": "Prompt evidence: 1. (10 points, suggested time 20 minutes) 200 kg PHYSICS 2 Section II 4 Questions Time—90 minutes Directions: Questions 1 and 4 are short free-response questions that require about 20 minutes each to answer and are worth 10 points each. Que Prior official-progression review assigned the full item to U9 Thermodynamics."
-        }
-      ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "This is first-unit material; no earlier unit exists.",
-      "classification_reasoning": "Official progression review: U9. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U9 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "required_topics": [],
+      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
+      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "previous_primary_unit": "U9",
+    "student_visible": false,
+    "publish_status": "blocked"
   },
   {
     "question_id": "2017_FRQ2",
@@ -1517,9 +1500,9 @@
     "rubric_image_paths": [
       "images/ap/physics-2/2017/2017_p060_img01.png"
     ],
-    "primary_unit": "U13",
-    "unit": "U13",
-    "unit_name": "Geometric Optics",
+    "primary_unit": "not_applicable",
+    "unit": "not_applicable",
+    "unit_name": "Outside current official unit progression",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -1553,18 +1536,13 @@
       "official_text": "Question 2\n12 points total\nDistribution\nof points\n\n(a)\ni)\n3 points\nFor a straight line at constant pressure from A to B to the correct final volume, which\nmust be labeled 3\n1 point\nFor an isotherm from B to C ending at the right final pressure, which must be labeled 3;\ncurve must be obviously concave up\n1 point\nFor a straight line from C to A at constant volume, with state A labeled (1, 1)\n1 point\nii)\n1 point\nUsing the ideal gas law:\n\n0\nA A_P V\nnRT\n\n3\nB_B\nA_A\nP V_P\nV_0\n3\nB\nnRT\nnRT\nFor the correct answer\n1 point\n\n0\n3\nB_T\n\nT\niii)\n1 point\nFor a correct comparison of the temperatures or correctly indicating\n0\n3\nor\nB_C\nA_T\nT_T\n\n3T or a value consistent with the answer to part (a)(i) or (ii)\nAND making a reference to the isotherm or the values of P and V at points C and A_1 point\nExamples:\n\n0\n3\nC_T\nT since it is on an isotherm with point B, as shown by the graph.\nOn the graph, C has the same volume and 3 times the pressure as A. By the ideal gas\nlaw it thus has a temperature 3 times that of A.\nA_B\nC_1 2 3 4\n4\n3\n2\n1"
     },
     "classification": {
-      "primary_unit": "U13",
+      "primary_unit": "not_applicable",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U13 Geometric Optics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 2. (12 points, suggested time 25 minutes) A student gives the following description of a thermodynamic cycle through which a sample of an ideal monatomic gas is taken. \"Initially, the gas has a volume of $1.0\\times10^{-3}\\,\\mathrm{m^3}$ and",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
-      "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_status": "blocked",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -1641,24 +1619,20 @@
         "text": "i. Use the student's verbal description or your graph in part (a)(i) to calculate a numerical value for the work done on the gas in process AB. ii. The magnitude of the change in internal energy for process AB is $\\Delta U=300\\,\\mathrm{J}$. Calculate a numerical value for the energy added to or removed from the gas by heating in process AB."
       }
     ],
-    "classification_reasoning": "Official progression review: U13. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U13 and prior official Physics 2 units.",
+    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
-      "required_topics": [
-        {
-          "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Geometric Optics",
-          "reason": "Prompt evidence: 2. (12 points, suggested time 25 minutes) A student gives the following description of a thermodynamic cycle through which a sample of an ideal monatomic gas is taken. \"Initially, the gas has a volume of $1.0\\times10^{-3}\\,\\mathrm{m^3}$ and Prior official-progression review assigned the full item to U13 Geometric Optics."
-        }
-      ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Geometric Optics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U13 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "required_topics": [],
+      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
+      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "previous_primary_unit": "U13",
+    "student_visible": false,
+    "publish_status": "blocked"
   },
   {
     "question_id": "2017_FRQ3",
@@ -1693,7 +1667,12 @@
     "unit_name": "Geometric Optics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "13.4",
+        "name": "Images Formed by Lenses"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -1747,15 +1726,10 @@
       "primary_unit": "U13",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U13 Geometric Optics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 3. (12 points, suggested time 25 minutes) Students use an optical bench, a lamp, a converging lens, and a screen to study image formation. They keep the lens at the 60 cm mark on the optical bench and adjust the lamp and screen until a clea",
-        "Student-visible media are preserved with 4 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Geometric optics require Unit 13. Latest required official topic: 13.4 Images Formed by Lenses.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -1915,22 +1889,22 @@
         "text": "The students are now given a converging mirror of focal length 15 cm to replace the lens and asked to make measurements that would allow them to verify the focal length of the mirror. Describe a procedure that would result in creation of a real image from which the focal length could be determined. On the figure below, representing the optical bench, draw and label the screen, lamp, and mirror in appropriate positions. Indicate what measurements should be made and how they could be used to calculate the focal length."
       }
     ],
-    "classification_reasoning": "Official progression review: U13. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U13 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Geometric optics require Unit 13. Latest required official topic: 13.4 Images Formed by Lenses.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Geometric Optics",
-          "reason": "Prompt evidence: 3. (12 points, suggested time 25 minutes) Students use an optical bench, a lamp, a converging lens, and a screen to study image formation. They keep the lens at the 60 cm mark on the optical bench and adjust the lamp and screen until a clea Prior official-progression review assigned the full item to U13 Geometric Optics."
+          "topic_code": "13.4",
+          "topic_name": "Images Formed by Lenses",
+          "reason": "Geometric optics require Unit 13. Latest required official topic: 13.4 Images Formed by Lenses."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Geometric Optics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U13 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 13; earlier units alone are insufficient.",
+      "classification_reasoning": "Geometric optics require Unit 13. Latest required official topic: 13.4 Images Formed by Lenses.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -1958,7 +1932,12 @@
     "unit_name": "Electric Circuits",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -2012,15 +1991,10 @@
       "primary_unit": "U11",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U11 Electric Circuits. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 4. (10 points, suggested time 20 minutes) An uncharged air-filled capacitor has square plates of side $L$ whose separation can be varied. The initial plate separation is $d_1$, which is comparable to $L$. The capacitor is connected to a bat",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -2097,22 +2071,22 @@
         "text": "The new circuit shown below is now assembled. The plates of the original capacitor, $C_1$, are at separation $d_2$. A second capacitor, $C_2$, with square plates of side $2L$ and plate separation $d_2$, is connected in parallel with the original capacitor. Both capacitors are initially uncharged. The switch is closed and the circuit reaches equilibrium. Let $Q_0$ be the magnitude of the charge on each plate of capacitor $C_1$ in the previous circuit, as determined in part (a)(ii). In terms of $Q_0$, calculate the magnitude of the charge on each plate of the two capacitors in the new circuit."
       }
     ],
-    "classification_reasoning": "Official progression review: U11. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U11 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U11",
-          "topic_code": null,
-          "topic_name": "Electric Circuits",
-          "reason": "Prompt evidence: 4. (10 points, suggested time 20 minutes) An uncharged air-filled capacitor has square plates of side $L$ whose separation can be varied. The initial plate separation is $d_1$, which is comparable to $L$. The capacitor is connected to a bat Prior official-progression review assigned the full item to U11 Electric Circuits."
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electric Circuits is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U11. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U11 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2134,9 +2108,9 @@
     "rubric_image_paths": [
       "images/ap/physics-2/2019/2019_p073_img01.png"
     ],
-    "primary_unit": "U12",
-    "unit": "U12",
-    "unit_name": "Magnetism and Electromagnetic Induction",
+    "primary_unit": "not_applicable",
+    "unit": "not_applicable",
+    "unit_name": "Outside current official unit progression",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -2170,18 +2144,13 @@
       "official_text": "Question 1\n10 points total\nDistribution\nof points\n\nA group of students is asked to design a heater for an indoor swimming pool using an electrically insulated\ncurrent-carrying wire. The energy from the wire heats the water. The heater should deliver 10 kilowatts of power\nto the water in the pool.\n\n(a)\nLO 4.E.4.1, SP 2.2\n2 points\n\nThe students use wire that has a cross-sectional area of\n\n1\n.3\nti\nme\ns\n10 to the negative 5 power, meters squared\nand a resistivity of\n\n3\n.0\nti\nm_e\ns\n10 to the negative 6 power, ohm meters\nΩ\n.\nThey have access to a 240 volt power supply. Calculate the length of the wire needed to construct the heater.\n\nFor applying a complete set of relevant equations that allow the length l to be\ncalculated from the given quantities, and either combining them algebraically or\nsequentially substituting values\n\n1 point\nFor correct substitutions of power, area, resistivity, and potential difference (all four\nvalues)\n\nde\nl\nta V equals I R\n,\n\nR\n\nequals, rho times l, over A_A ,\nP_e quals I times delta V\n\nCombining equations method:\n\nl_e q_u\na ls, delta V squared times A, over rho times P_l\ne q\nua\nl_s\n,\n\no_p\ne_n par\nent\nhe\nsi\ns,\n24\n0\nvol\nts ,\nc_l\no_s\ne\n\nparenthesis, squared, times, (1.3 times 10 to the negative 5 power, meters squared, )divided by, (3.0 times 10 to the negative 6 power, ohm meters, )times, (1.0 times 10 to the fourth power, watts, )l eq\nuals 25 meters\n\nSequential substitution method:\n\nI e\nqu al s P o\nver\nd_e\nl_t\na_V\n,\nwhich equals, 1.0 times 10 to the fourth power, watts, over 240 volts, which equals 42 amps\n\nR eq uals\nV over I, which equals 240 volts over 42 amps, which equals 5.7 ohms\n\nl_e\nq_u\na_l\ns R_A o\nve\nr\nrho\n,\nw_h\nic h_e\nq_u\na_l\ns\n,\n5.7 ohms, times 1.3 times 10 to the negative 5 power, meters squared, divided by 3.0 times 10 to the negative 6 power, ohm meters\n\nl eq\nuals 25 meters\n\n1 point"
     },
     "classification": {
-      "primary_unit": "U12",
+      "primary_unit": "not_applicable",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U12 Magnetism and Electromagnetic Induction. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 1. (10 points, suggested time 20 minutes) A group of students is asked to design a heater for an indoor swimming pool using an electrically insulated current-carrying wire. The energy from the wire heats the water. The heater should deliver",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
-      "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_status": "blocked",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -2242,24 +2211,20 @@
         "text": "When the temperature of the room is $276\\,\\mathrm{K}$, the air pressure is $1.0\\times 10^5\\,\\mathrm{Pa}$. Calculate the force exerted by the air in the room on a door that measures $2.0\\,\\mathrm{m}$ by $0.90\\,\\mathrm{m}$ when the temperature of the room is $310\\,\\mathrm{K}$."
       }
     ],
-    "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
+    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
-      "required_topics": [
-        {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetism and Electromagnetic Induction",
-          "reason": "Prompt evidence: 1. (10 points, suggested time 20 minutes) A group of students is asked to design a heater for an indoor swimming pool using an electrically insulated current-carrying wire. The energy from the wire heats the water. The heater should deliver Prior official-progression review assigned the full item to U12 Magnetism and Electromagnetic Induction."
-        }
-      ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetism and Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "required_topics": [],
+      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
+      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "previous_primary_unit": "U12",
+    "student_visible": false,
+    "publish_status": "blocked"
   },
   {
     "question_id": "2019_FRQ2",
@@ -2284,12 +2249,17 @@
       "images/ap/physics-2/2019/2019_p076_img01.png",
       "images/ap/physics-2/2019/2019_p077_img01.png"
     ],
-    "primary_unit": "U10",
-    "unit": "U10",
-    "unit_name": "Electric Force, Field, and Potential",
+    "primary_unit": "U13",
+    "unit": "U13",
+    "unit_name": "Geometric Optics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "13.4",
+        "name": "Images Formed by Lenses"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -2320,18 +2290,13 @@
       "official_text": "Question 2\n12 points total\nDistribution\nof points\n\n(a)\n\nStudents use a lightbulb, a screen, and a meterstick to determine the focal length of a concave mirror\nfrom a graph.\n\ni)\nLO 6.E.4.1, SP 4.1; LO 6.E.4.2, SP 1.4\n5 points\n\nDescribe a procedure that could be used to collect appropriate data and the measurements to be taken.\n•\nLabel the axes below with the quantities to be graphed.\n•\nDraw a clearly labeled diagram of the experimental setup.\n•\nDescribe the procedure and indicate the quantities to be measured.\n\nFor labeling axes with appropriate quantities:\n1\nover s_o and\n1 over s_i , or\n\ns_o and s_i\n\n1 point\nFor a diagram with correct arrangement of all three items: object and screen on the same\nside of mirror, facing the concave surface\n\n1 point\nFor getting a sharp image on the screen\n\n1 point\nFor measuring object and image distance\n\n1 point\nFor using several object distances\n\n1 point"
     },
     "classification": {
-      "primary_unit": "U10",
+      "primary_unit": "U13",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U10 Electric Force, Field, and Potential. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 2. (12 points, suggested time 25 minutes) Students use a lightbulb, a screen, and a meterstick to determine the focal length of a concave mirror from a graph. (a)(i) Describe a procedure that could be used to collect appropriate data and th",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Geometric optics require Unit 13. Latest required official topic: 13.4 Images Formed by Lenses.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -2444,22 +2409,22 @@
         "text": "Use a relevant equation to explain how your response to part (c)(i) relates to the focal length of the mirror."
       }
     ],
-    "classification_reasoning": "Official progression review: U10. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U10 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Geometric optics require Unit 13. Latest required official topic: 13.4 Images Formed by Lenses.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U10",
-          "topic_code": null,
-          "topic_name": "Electric Force, Field, and Potential",
-          "reason": "Prompt evidence: 2. (12 points, suggested time 25 minutes) Students use a lightbulb, a screen, and a meterstick to determine the focal length of a concave mirror from a graph. (a)(i) Describe a procedure that could be used to collect appropriate data and th Prior official-progression review assigned the full item to U10 Electric Force, Field, and Potential."
+          "unit": "U13",
+          "topic_code": "13.4",
+          "topic_name": "Images Formed by Lenses",
+          "reason": "Geometric optics require Unit 13. Latest required official topic: 13.4 Images Formed by Lenses."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electric Force, Field, and Potential is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U10. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U10 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 13; earlier units alone are insufficient.",
+      "classification_reasoning": "Geometric optics require Unit 13. Latest required official topic: 13.4 Images Formed by Lenses.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2486,12 +2451,17 @@
       "images/ap/physics-2/2019/2019_p081_img01.png",
       "images/ap/physics-2/2019/2019_p082_img01.png"
     ],
-    "primary_unit": "U13",
-    "unit": "U13",
-    "unit_name": "Geometric Optics",
+    "primary_unit": "U10",
+    "unit": "U10",
+    "unit_name": "Electric Force, Field, and Potential",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "10.6",
+        "name": "Capacitors"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -2522,18 +2492,13 @@
       "official_text": "Question 3\n12 points total\nDistribution\nof points\n\n(a)\n\nConsider the system that includes only the two spheres, with Earth external to the system.\n\ni)\nLO 5.B.4.1, SP 6.4\n2 points\n\nWrite an expression for the work done moving the spheres horizontally from far apart to a separation\nof r_2 . Express your answer in terms of\n\nQ_0 , r_2 , and physical constants, as appropriate.\n\nFor recognizing that the work equals the change in potential energy\n\nW equals delta U_U\n\nW\nequ a_l\ns_q times delta V, which equals, k times lowercase q, times lowercase q, over r_1 point\nFor a correct expression\n\nW_e\nqu\na\nls, k times Q_0, , squared, over r_2\n\n1 point\nii)\nLO 5.B.5.4, SP 6.4\n2 points\n\nThe total energy of the two-sphere system (with Earth still external to the system) changes as the system\ngoes from the configuration in Figure 2 to the configuration in Figure 3. Explain how the energy changes\nin terms of the forces exerted on the system.\n\nFor indicating that the total energy decreases with some attempt to explain\n\n1 point\nFor any indication that an external force does negative work the system\n\n1 point\nExample explanation: The gravitational force exerted by Earth does negative work on\nthe two-sphere system as the spheres rise, decreasing the energy of the system.\n\nClaim: The total energy decreases.\nEvidence: The spheres are at a higher position in Figure 3 than in Figure 2.\nReasoning: The spheres move opposite to the direction of the external force of gravity,\nso Earth does negative work on them."
     },
     "classification": {
-      "primary_unit": "U13",
+      "primary_unit": "U10",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U13 Geometric Optics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 3. (12 points, suggested time 25 minutes) Two insulating spheres with mass m and charge positive $Q_{0}$ are near Earth’s surface, suspended vertically from identical light, stiff rods with pivots at the top, as shown in Figure 1. The spher",
-        "Student-visible media are preserved with 4 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric force, field, and potential require Unit 10. Latest required official topic: 10.6 Capacitors.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -2647,22 +2612,22 @@
         "text": "Now consider the system that contains both Earth and the two spheres. What is the work done on this new system for the changes in sphere position described in parts (a)(i) and (ii) ? Explain your reasoning. -10- The figure pre sents a blank space, with two headings. The heading on the left is “Part (a)(i).” The heading on the right is “Part (a)(ii).”"
       }
     ],
-    "classification_reasoning": "Official progression review: U13. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U13 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric force, field, and potential require Unit 10. Latest required official topic: 10.6 Capacitors.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Geometric Optics",
-          "reason": "Prompt evidence: 3. (12 points, suggested time 25 minutes) Two insulating spheres with mass m and charge positive $Q_{0}$ are near Earth’s surface, suspended vertically from identical light, stiff rods with pivots at the top, as shown in Figure 1. The spher Prior official-progression review assigned the full item to U13 Geometric Optics."
+          "unit": "U10",
+          "topic_code": "10.6",
+          "topic_name": "Capacitors",
+          "reason": "Electric force, field, and potential require Unit 10. Latest required official topic: 10.6 Capacitors."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Geometric Optics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U13 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 10; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric force, field, and potential require Unit 10. Latest required official topic: 10.6 Capacitors.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2689,7 +2654,12 @@
     "unit_name": "Modern Physics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "15.7",
+        "name": "Fission, Fusion, and Nuclear Decay"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -2723,15 +2693,10 @@
       "primary_unit": "U15",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U15 Modern Physics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 4. (10 points, suggested time 20 minutes) A uranium-231 nucleus can decay into an alpha particle and a thorium-227 nucleus. (a) Nuclei in a 500 gram sample of uranium-231 undergo this decay. The amount of uranium-231 remaining is measured a",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Nuclear physics requires Unit 15. Latest required official topic: 15.7 Fission, Fusion, and Nuclear Decay.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -2818,22 +2783,22 @@
         "text": "An alpha particle is moving to the left with speed $v_{0}$ when it enters a region containing a uniform magnetic field of known magnitude B directed out of the page. The figure above shows the path of the alpha particle through the region. In a coherent paragraph-length response, explain how the charge-to-mass ratio and sign of the charge of the alpha particle can be verified by using the effect of the magnetic field on the path of the particle. Equations or diagrams that support your written description may be included."
       }
     ],
-    "classification_reasoning": "Official progression review: U15. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U15 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Nuclear physics requires Unit 15. Latest required official topic: 15.7 Fission, Fusion, and Nuclear Decay.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U15",
-          "topic_code": null,
-          "topic_name": "Modern Physics",
-          "reason": "Prompt evidence: 4. (10 points, suggested time 20 minutes) A uranium-231 nucleus can decay into an alpha particle and a thorium-227 nucleus. (a) Nuclei in a 500 gram sample of uranium-231 undergo this decay. The amount of uranium-231 remaining is measured a Prior official-progression review assigned the full item to U15 Modern Physics."
+          "topic_code": "15.7",
+          "topic_name": "Fission, Fusion, and Nuclear Decay",
+          "reason": "Nuclear physics requires Unit 15. Latest required official topic: 15.7 Fission, Fusion, and Nuclear Decay."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Modern Physics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U15. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U15 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 15; earlier units alone are insufficient.",
+      "classification_reasoning": "Nuclear physics requires Unit 15. Latest required official topic: 15.7 Fission, Fusion, and Nuclear Decay.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -2861,7 +2826,12 @@
     "unit_name": "Waves, Sound, and Physical Optics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "14.8",
+        "name": "Double-Slit Interference"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -2895,15 +2865,10 @@
       "primary_unit": "U14",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U14 Waves, Sound, and Physical Optics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 1. (10 points, suggested time 20 minutes) A rectangular tank with a mirrored bottom is filled with water (index of refraction $n_w$). A beam of light passes from air (index of refraction $n_a$) into the water at angle $\\theta_i$ from the no",
-        "Student-visible media are preserved with 4 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -3038,22 +3003,22 @@
         "text": "Determine whether $d_A$ and $d_B$ are each greater than, less than, or equal to $d_w$. It is not necessary to compare $d_A$ to $d_B$. Briefly justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U14. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U14 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U14",
-          "topic_code": null,
-          "topic_name": "Waves, Sound, and Physical Optics",
-          "reason": "Prompt evidence: 1. (10 points, suggested time 20 minutes) A rectangular tank with a mirrored bottom is filled with water (index of refraction $n_w$). A beam of light passes from air (index of refraction $n_a$) into the water at angle $\\theta_i$ from the no Prior official-progression review assigned the full item to U14 Waves, Sound, and Physical Optics."
+          "topic_code": "14.8",
+          "topic_name": "Double-Slit Interference",
+          "reason": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Waves, Sound, and Physical Optics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U14. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U14 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 14; earlier units alone are insufficient.",
+      "classification_reasoning": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3075,12 +3040,17 @@
       "images/ap/physics-2/2023/2023_frq2_graph_grid.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U12",
-    "unit": "U12",
-    "unit_name": "Magnetism and Electromagnetic Induction",
+    "primary_unit": "U11",
+    "unit": "U11",
+    "unit_name": "Electric Circuits",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -3141,18 +3111,13 @@
       "official_text": "Question 2: Experimental Design\n12 points\n\n(a)(i)\nFor a diagram including a source of potential difference (e.g., battery, power supply) that is in\na complete circuit that results in a current in the unknown circuit component\n1 point\nFor a diagram including a measurement device that is appropriately connected in the circuit\n(e.g., voltmeter, ammeter)\nScoring Note: A lightbulb that is connected in series with the circuit component is an\nacceptable alternative for an ammeter.\n1 point\n\n(a)(ii) For describing a procedure that includes a measurement of one of the following:\n•\nThe potential difference across the circuit component\n•\nThe current in the circuit\n•\nThe potential difference across the known resistor\n1 point\nFor taking measurements at two different times after the circuit is closed or taking one\nmeasurement a long time after the circuit is closed, consistent with the procedure described\n1 point\n\n(a)(iii) For describing a correct result of the experiment that indicates the current in the circuit\ndecreases to zero over time or that the charge of the plates of the capacitor increases over time\n1 point\nFor describing a correct result of the experiment that indicates that the electric potential\ndifference across the capacitor increases from zero over time\n1 point\n\nTotal for part (a)\n6 points\n(b)(i) For an equation that correctly applies the loop rule\n\n1 point\n(b)(ii) For indicating appropriate quantities that, when graphed, result in a linear graph that allow\nstudents to determine emf ε\n\n1 point\n(b)(iii) For including numerical values on both axes with a linear scale and labeling the axes with\nappropriate labels and units\n1 point\nFor a graph in which data are plotted within at least half of the grid area\n1 point\n\n2023 College Board\nFor drawing a best-fit line that approximates the trend of the data\n\n1 point\n\n2023 College Board\n(b)(iv) For correctly using the graph to determine an experimental value for emf ε , including\ncorrect units, between 18.0 V and 22.0 V\nExample Solutions\nI as a function of\nvar\n1\nr_R\n+\n\n(\n)\n(\n)\n(\n)\n(\n)\nvar\nvar\nvar\nvar\nvar\n1\n1\n0\n0\n1\n1\n30\nSlope\n0.08 A_0.04 A_0.004\n0.002\n20 V\nIr\nIR\nI r_R\nI r_R\nI_r\nR_I\nR_y\nx\nε\nε\nε\nε\nε\nε\nε\nε\nε\n−\n−\n−\n−\n=\n−\n+\n=\n+\n=\n\n=\n\n+\n\n=\n\nΩ+\n\n=\n∆\n=\n∆\n−\n≈\nΩ\n−\nΩ\n≈\n\nOR\nvar\nIR\nas a function of I\nvar\nvar\nvar\n0\n-intercept\n20 V\nIr\nIR\nIr\nIR\nIR\nIr\ny\nε\nε\nε\nε\nε\n−\n−\n=\n−\n=\n= −\n+\n=\n≈\n\n1 point\nTotal for part (b)\n6 points\nTotal for"
     },
     "classification": {
-      "primary_unit": "U12",
+      "primary_unit": "U11",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U12 Magnetism and Electromagnetic Induction. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 2. (12 points, suggested time 25 minutes) Students are given an unknown circuit component that is connected in series to a resistor with known resistance $500\\,\\Omega$. (a) The students are asked to experimentally determine whether the comp",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -3276,22 +3241,22 @@
         "text": "Using the graph from part (b)(iii), determine the emf $\\mathcal{E}$ of the battery."
       }
     ],
-    "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetism and Electromagnetic Induction",
-          "reason": "Prompt evidence: 2. (12 points, suggested time 25 minutes) Students are given an unknown circuit component that is connected in series to a resistor with known resistance $500\\,\\Omega$. (a) The students are asked to experimentally determine whether the comp Prior official-progression review assigned the full item to U12 Magnetism and Electromagnetic Induction."
+          "unit": "U11",
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetism and Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3467,7 +3432,12 @@
     "unit_name": "Electric Force, Field, and Potential",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "10.6",
+        "name": "Capacitors"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -3526,14 +3496,10 @@
       "primary_unit": "U10",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U10 Electric Force, Field, and Potential. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 4. (10 points, suggested time 20 minutes) Particles A and B each have positive charge +Q and are held fixed at two vertices of an equilateral triangle of side length d, as shown. Point P is located equidistant from each vertex of the triang",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric force, field, and potential require Unit 10. Latest required official topic: 10.6 Capacitors.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -3541,22 +3507,22 @@
       "scoring_guideline_pdf": "subjects/AP/Physics-2/01-exams/AP_Physics_2_2023_Scoring_Guidelines_Official.pdf",
       "structured_method": "physics2_official_frq_draft_v1"
     },
-    "classification_reasoning": "Official progression review: U10. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U10 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric force, field, and potential require Unit 10. Latest required official topic: 10.6 Capacitors.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U10",
-          "topic_code": null,
-          "topic_name": "Electric Force, Field, and Potential",
-          "reason": "Prompt evidence: 4. (10 points, suggested time 20 minutes) Particles A and B each have positive charge +Q and are held fixed at two vertices of an equilateral triangle of side length d, as shown. Point P is located equidistant from each vertex of the triang Prior official-progression review assigned the full item to U10 Electric Force, Field, and Potential."
+          "topic_code": "10.6",
+          "topic_name": "Capacitors",
+          "reason": "Electric force, field, and potential require Unit 10. Latest required official topic: 10.6 Capacitors."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Electric Force, Field, and Potential is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U10. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U10 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 10; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric force, field, and potential require Unit 10. Latest required official topic: 10.6 Capacitors.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3579,7 +3545,12 @@
     "unit_name": "Modern Physics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "15.5",
+        "name": "The Photoelectric Effect"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -3613,14 +3584,10 @@
       "primary_unit": "U15",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U15 Modern Physics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 1. (10 points, suggested time 20 minutes) In each trial of a photoelectric experiment, a scientist uses a device to shine light of a single frequency on two different metals, 1 and 2. The device can emit light with frequency $f_A$, $f_B$, o",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Modern physics requires Unit 15. Latest required official topic: 15.5 The Photoelectric Effect.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -3677,22 +3644,22 @@
         ]
       }
     },
-    "classification_reasoning": "Official progression review: U15. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U15 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Modern physics requires Unit 15. Latest required official topic: 15.5 The Photoelectric Effect.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U15",
-          "topic_code": null,
-          "topic_name": "Modern Physics",
-          "reason": "Prompt evidence: 1. (10 points, suggested time 20 minutes) In each trial of a photoelectric experiment, a scientist uses a device to shine light of a single frequency on two different metals, 1 and 2. The device can emit light with frequency $f_A$, $f_B$, o Prior official-progression review assigned the full item to U15 Modern Physics."
+          "topic_code": "15.5",
+          "topic_name": "The Photoelectric Effect",
+          "reason": "Modern physics requires Unit 15. Latest required official topic: 15.5 The Photoelectric Effect."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Modern Physics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U15. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U15 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 15; earlier units alone are insufficient.",
+      "classification_reasoning": "Modern physics requires Unit 15. Latest required official topic: 15.5 The Photoelectric Effect.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -3717,9 +3684,9 @@
       "images/ap/physics-2/2024/2024_frq2_graph_grid.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U9",
-    "unit": "U9",
-    "unit_name": "Thermodynamics",
+    "primary_unit": "not_applicable",
+    "unit": "not_applicable",
+    "unit_name": "Outside current official unit progression",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -3783,18 +3750,13 @@
       "official_text": "Question 2: Experimental Design\n12 points\n(a)\nFor indicating measurements that could be used to determine the volume of the gas\nScoring Note: Responses that include the volume of the heater may earn full credit.\n1 point\nFor indicating that the sensors should be used to record the temperature and pressure of the\ngas\n1 point\nFor indicating that multiple different temperature and pressure measurements should be\nrecorded\n1 point\n\nTotal for part (a)\n3 points\n(b)(i)\nFor sketching an upward vertical line that never touches the horizontal or vertical axes\n1 point\n\n(b)(ii)\nFor sketching an upward vertical line that never touches the horizontal or vertical axes\n1 point\n\n1 point\n\nTotal for part (b)\n3 points\n(c)(i)\nFor indicating quantities that can be plotted on the graph to calculate an experimental value\nfor k_1 point\n\n(c)(ii)\nFor labeling the axes correctly (including units) with a linear scale such that the data fill\nhalf the area of the graph\n1 point\nFor plotting the data points correctly\n1 point\n\n2024 College Board\n(c)(iii)\nFor drawing a straight line that approximates the trend of the data\n1 point\n\n4 points\n(d)\nFor correctly relating the slope of the straight line of the graph to the equation\nQ\nkA T_t\nL\n∆\n=\n∆\n1 point\n\nFor calculating an experimental value for k that is approximately equal to\nJ_0.06 s K m\n⋅\n⋅\n1 point\n\nTotal for part (d)\n2 points\nTotal for"
     },
     "classification": {
-      "primary_unit": "U9",
+      "primary_unit": "not_applicable",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U9 Thermodynamics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 2. (12 points, suggested time 25 minutes) In Experiment 1, shown in Figure 1, a sample of an ideal gas is contained in an insulated, sealed chamber with thin, rigid walls. The chamber contains a heater and sensors that measure the temperatu",
-        "Student-visible media are preserved with 6 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
-      "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_status": "blocked",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -3966,24 +3928,20 @@
         "text": "Using the best-fit line, calculate an experimental value for k."
       }
     ],
-    "classification_reasoning": "Official progression review: U9. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U9 and prior official Physics 2 units.",
+    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
-      "required_topics": [
-        {
-          "unit": "U9",
-          "topic_code": null,
-          "topic_name": "Thermodynamics",
-          "reason": "Prompt evidence: 2. (12 points, suggested time 25 minutes) In Experiment 1, shown in Figure 1, a sample of an ideal gas is contained in an insulated, sealed chamber with thin, rigid walls. The chamber contains a heater and sensors that measure the temperatu Prior official-progression review assigned the full item to U9 Thermodynamics."
-        }
-      ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "This is first-unit material; no earlier unit exists.",
-      "classification_reasoning": "Official progression review: U9. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U9 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "required_topics": [],
+      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
+      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "previous_primary_unit": "U9",
+    "student_visible": false,
+    "publish_status": "blocked"
   },
   {
     "question_id": "2024_FRQ3",
@@ -4003,12 +3961,17 @@
       "images/ap/physics-2/2024/2024_frq3_figure3_nonideal_circuit.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U12",
-    "unit": "U12",
-    "unit_name": "Magnetism and Electromagnetic Induction",
+    "primary_unit": "U11",
+    "unit": "U11",
+    "unit_name": "Electric Circuits",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -4039,18 +4002,13 @@
       "official_text": "Question 3: Quantitative/Qualitative Translation\n12 points\n(a)(i)\nFor correctly determining the total resistance\ntotal\nR\nof the circuit\n1 point\n\nFor a multi-step derivation that includes correct substitutions of and\ntotal\nR\ninto the\nequation that describes Ohm’s law, consistent with the first point of part (a)(i)\n1 point\n\n(a)(ii)\nFor applying a result of Kirchhoff’s law and/or Ohm’s law that relates the current in R3 to\none of the following:\n•\nThe current in or potential difference across\n1\nR\n•\nThe current in or potential difference across\n2\nR\n•\nThe potential difference across\n3\nR_1 point\n\nFor a correct expression from a multi-step derivation that is consistent with the final\nexpression in part (a)(i)\n1 point\n\nTotal for part (a)\n4 points\n\n2024 College Board\n(b)\nFor drawing a bar that indicates that the potential difference across\n3\nR is nonzero and is\nequal to the potential difference across\n4\nR_1 point\nFor drawing a bar that indicates that the potential difference across\n2\nR is nonzero and is\nequal to the sum of the potential differences across\n3\nR and\n4\nR_1 point\nFor drawing all bars correctly\n1 point\n\n3 points\n\n2024 College Board\n(c)\nFor indicating that the equation is correct or incorrect, consistent with the derivations in\npart (a) or the bar chart from part (b), with an attempt at a relevant justification\n1 point\nFor a justification that correctly relates P to at least one of the following:\n•\nThe potential difference across the battery\n•\nThe current in the battery\n•\n1\nR ,\n2\nR ,\n3\nR , and\n4\nR_1 point\nFor a justification that relates the equation\n2\n3\n5\nP_R\n=\n\nto at least one of the following:\n•\nThe bar chart from the response in part (b)\n•\nThe derivations in the responses to parts (a)(i) and (a)(ii)\nScoring Note: The justification must be consistent with the derivations in part (a) or the bar\nchart from part (b).\n1 point\n\nTotal for part (c)\n3 points\n(d)\nFor selecting that\nnew\noriginal\nP_P\n<\nwith an attempt at a relevant justification\n1 point\nFor a correct justification that indicates at least one of the following:\n•\nThe current in\n1\nR is less in the new circuit than in the original circuit\n•\nThe potential difference across\n1\nR is less in the new circuit than in the original circuit\n1 point\n\nTotal for part (d)\n2 points\nTotal for"
     },
     "classification": {
-      "primary_unit": "U12",
+      "primary_unit": "U11",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U12 Magnetism and Electromagnetic Induction. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 3. (12 points, suggested time 25 minutes) A circuit consists of an ideal battery of emf Ɛ and four identical resistors R1, R2, R3, and R4, each of resistance R, as shown in Figure 1. (a) For parts (a)(i) and (a)(ii), express your answers in",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -4137,22 +4095,22 @@
         "text": "Indicate whether P new is greater than, less than, or equal to P original. $P_{new} > P_{original}$ $P_{new} < P_{original}$ $P_{new} = P_{original}$ Briefly justify your answer."
       }
     ],
-    "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetism and Electromagnetic Induction",
-          "reason": "Prompt evidence: 3. (12 points, suggested time 25 minutes) A circuit consists of an ideal battery of emf Ɛ and four identical resistors R1, R2, R3, and R4, each of resistance R, as shown in Figure 1. (a) For parts (a)(i) and (a)(ii), express your answers in Prior official-progression review assigned the full item to U12 Magnetism and Electromagnetic Induction."
+          "unit": "U11",
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetism and Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4178,7 +4136,12 @@
     "unit_name": "Magnetism and Electromagnetic Induction",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "12.4",
+        "name": "Electromagnetic Induction"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -4212,15 +4175,10 @@
       "primary_unit": "U12",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U12 Magnetism and Electromagnetic Induction. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 4. (10 points, suggested time 20 minutes) Two particles, 1 and 2, have different mass and charge as described by the following. • Particle 1 has mass M and negative charge Q −. • Particle 2 has mass M 2 and positive charge Q 2 + . In separa",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -4291,22 +4249,22 @@
         "text": "A uniform electric field is added to the region such that Particle 1 of negative charge Q − travels with constant speed in a straight line through the region. Determine the direction of the electric field."
       }
     ],
-    "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetism and Electromagnetic Induction",
-          "reason": "Prompt evidence: 4. (10 points, suggested time 20 minutes) Two particles, 1 and 2, have different mass and charge as described by the following. • Particle 1 has mass M and negative charge Q −. • Particle 2 has mass M 2 and positive charge Q 2 + . In separa Prior official-progression review assigned the full item to U12 Magnetism and Electromagnetic Induction."
+          "topic_code": "12.4",
+          "topic_name": "Electromagnetic Induction",
+          "reason": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetism and Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 12; earlier units alone are insufficient.",
+      "classification_reasoning": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4333,7 +4291,12 @@
     "unit_name": "Magnetism and Electromagnetic Induction",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "12.4",
+        "name": "Electromagnetic Induction"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -4367,15 +4330,10 @@
       "primary_unit": "U12",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U12 Magnetism and Electromagnetic Induction. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 1. Very long Wire 1 carries current I in the direction x- + along the line y 0 = . Very long Wire 2 carries current I in the direction x- + along the line y d = + . Point P is located along Wire 1 at the origin, as shown in Figure 1. The di",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -4459,22 +4417,22 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
           "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetism and Electromagnetic Induction",
-          "reason": "Prompt evidence: 1. Very long Wire 1 carries current I in the direction x- + along the line y 0 = . Very long Wire 2 carries current I in the direction x- + along the line y d = + . Point P is located along Wire 1 at the origin, as shown in Figure 1. The di Prior official-progression review assigned the full item to U12 Magnetism and Electromagnetic Induction."
+          "topic_code": "12.4",
+          "topic_name": "Electromagnetic Induction",
+          "reason": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetism and Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 12; earlier units alone are insufficient.",
+      "classification_reasoning": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4495,9 +4453,9 @@
       "images/ap/physics-2/2025/2025_frq2_pv_axes.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U9",
-    "unit": "U9",
-    "unit_name": "Thermodynamics",
+    "primary_unit": "not_applicable",
+    "unit": "not_applicable",
+    "unit_name": "Outside current official unit progression",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -4531,18 +4489,13 @@
       "official_text": "Official scoring guideline summary:\n\nQuestion 2: Translation Between Representations, 12 points.\n\n(A) Award points for drawing and labeling the downward gravitational force $F_g$, the downward atmospheric force $F_{atm}$, and the upward force from the gas $F_{gas}$ on the piston.\n\n(B) Award points for using $PV=Nk_BT$ or $U=\\frac{3}{2}PV$, deriving the gas pressure from force balance, such as $P=P_{atm}+Mg/A$, and giving a consistent expression for internal energy, such as $U=\\frac{3}{2}(P_{atm}+Mg/A)V_0$.\n\n(C) Award points for a pressure-volume curve that moves from larger volume/lower pressure to smaller volume/higher pressure, is concave up for the isothermal compression, and includes the correct process direction arrow.\n\n(D) The correct selection is $T_{new}>T_0$. Award points for selecting the greater temperature and justifying it using the added block, increased required gas pressure, and the gas returning to the original volume."
     },
     "classification": {
-      "primary_unit": "U9",
+      "primary_unit": "not_applicable",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U9 Thermodynamics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 2. A sample of a monatomic ideal gas is sealed in a thermally conducting container by a movable piston of mass M and area A. The container is in a large water bath that is held at a constant temperature T0. The piston is free to move with n",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
-      "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_status": "blocked",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -4605,24 +4558,20 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U9. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U9 and prior official Physics 2 units.",
+    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
-      "required_topics": [
-        {
-          "unit": "U9",
-          "topic_code": null,
-          "topic_name": "Thermodynamics",
-          "reason": "Prompt evidence: 2. A sample of a monatomic ideal gas is sealed in a thermally conducting container by a movable piston of mass M and area A. The container is in a large water bath that is held at a constant temperature T0. The piston is free to move with n Prior official-progression review assigned the full item to U9 Thermodynamics."
-        }
-      ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "This is first-unit material; no earlier unit exists.",
-      "classification_reasoning": "Official progression review: U9. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U9 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "required_topics": [],
+      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
+      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "previous_primary_unit": "U9",
+    "student_visible": false,
+    "publish_status": "blocked"
   },
   {
     "question_id": "2025_FRQ3",
@@ -4641,12 +4590,17 @@
       "images/ap/physics-2/2025/2025_frq3_graph_grid.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U12",
-    "unit": "U12",
-    "unit_name": "Magnetism and Electromagnetic Induction",
+    "primary_unit": "U11",
+    "unit": "U11",
+    "unit_name": "Electric Circuits",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -4677,18 +4631,13 @@
       "official_text": "Question 3: Experimental Design and Analysis (LAB)\n10 points\n\nA\nFor a procedure that includes both of the following measurements:\nPoint A1\n•\nThe dimensions of the capacitor\n•\nA current\n\nFor a procedure that indicates an appropriate method of reducing experimental\nuncertainty (e.g., Repeat the procedure multiple times.)\nPoint A2\n\nScoring Note: Any response that correctly identifies the functional dependence\nbetween varied quantities earns this point, regardless of any coefficients that contain\nnumbers or physical/fundamental constants, or which axis is chosen to graph each of\nthose quantities.\n\nScoring Notes:\n•\nIf the slope of the plotted data points is equal to the quantity that is supposed to\nbe determined, a correct, isolated final value earns points D1 and D2.\n•\nIf the slope of the plotted data points is not equal to the quantity that is\nsupposed to be determined, a correct, isolated final value earns point D2 only."
     },
     "classification": {
-      "primary_unit": "U12",
+      "primary_unit": "U11",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U12 Magnetism and Electromagnetic Induction. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 3. In Experiment 1, a student is given a resistor of unknown resistance and an air-filled parallel- plate capacitor of unknown capacitance. The student is asked to predict the expected time constant x of a circuit if these two circuit eleme",
-        "Student-visible media are preserved with 2 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -4782,22 +4731,22 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U12",
-          "topic_code": null,
-          "topic_name": "Magnetism and Electromagnetic Induction",
-          "reason": "Prompt evidence: 3. In Experiment 1, a student is given a resistor of unknown resistance and an air-filled parallel- plate capacitor of unknown capacitance. The student is asked to predict the expected time constant x of a circuit if these two circuit eleme Prior official-progression review assigned the full item to U12 Magnetism and Electromagnetic Induction."
+          "unit": "U11",
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Magnetism and Electromagnetic Induction is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U12. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U12 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   },
@@ -4817,12 +4766,17 @@
       "images/ap/physics-2/2025/2025_frq4_slit_screen.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U13",
-    "unit": "U13",
-    "unit_name": "Geometric Optics",
+    "primary_unit": "U14",
+    "unit": "U14",
+    "unit_name": "Waves, Sound, and Physical Optics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "14.8",
+        "name": "Double-Slit Interference"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -4853,18 +4807,13 @@
       "official_text": "Question 4: Qualitative Quantitative Translation (QQT)\n8 points\n\nA\nFor indicating one of the following:\nPoint A1\n•\nThe claim is correct if a justification is not provided.\n•\nAn indication about the claim that is consistent with the justification provided.\n\nFor a correct comparison of one of the following:\nPoint A2\n•\nThe wavelength of violet light is shorter than the wavelength of red light.\n•\nThe frequency of violet light is greater than the frequency of red light.\n\nFor indicating that a shorter wavelength corresponds to a shorter path length difference,\nresulting in a shorter distance between the center of Band A and the center of the central\nbright band\nPoint A3\n\nFor a substitution of\nc_f for λ\nPoint B2\n\nFor correctly relating ymax to the orders of bands A and B\n(e.g., 2(\n)\nmax, 2\nmax, 0\n( )\n2\n2 cL\ny_d\ny_f\n\n−\n=\n\n)\nPoint B3\nScoring Note: A correct, isolated, final expression earns points B2 and B3.\n\n2025 College Board\n\nFor correctly indicating that the expression derived in part B is or is not consistent with\nthe answer provided in part A\nPoint C1\n\nFor a justification that includes the consistent functional dependence between the\nspacing between bright bands on the screen and the frequency or wavelength of light\nPoint C2"
     },
     "classification": {
-      "primary_unit": "U13",
+      "primary_unit": "U14",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U13 Geometric Optics. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 4. Two narrow slits are a distance d apart. A screen is a distance L from the midpoint of the slits, where L d & . When a laser emits monochromatic light toward the slits, a pattern of narrow bright and dark bands is observed on the screen.",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
+      "evidence": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
       "review_status": "reviewed",
-      "classification_version": "physics-2-fall-2024-official-u9-u15-migration-2026-07-21",
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
     "provenance": {
@@ -4906,22 +4855,22 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Official progression review: U13. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U13 and prior official Physics 2 units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
-      "authority": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [
         {
-          "unit": "U13",
-          "topic_code": null,
-          "topic_name": "Geometric Optics",
-          "reason": "Prompt evidence: 4. Two narrow slits are a distance d apart. A screen is a distance L from the midpoint of the slits, where L d & . When a laser emits monochromatic light toward the slits, a pattern of narrow bright and dark bands is observed on the screen. Prior official-progression review assigned the full item to U13 Geometric Optics."
+          "unit": "U14",
+          "topic_code": "14.8",
+          "topic_name": "Double-Slit Interference",
+          "reason": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference."
         }
       ],
-      "primary_unit_rule": "primary_unit is the latest official unit required to solve the full item using that unit and prior units.",
-      "why_not_earlier_unit": "Geometric Optics is the latest official unit required by the prior reviewed answer path.",
-      "classification_reasoning": "Official progression review: U13. Item migrated to the Effective Fall 2024 AP Physics 2 framework; by the student progression rule, it belongs to U13 and prior official Physics 2 units.",
-      "review_method": "physics-2 prior official item review bridged into the per-item classification_accuracy contract",
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 14; earlier units alone are insufficient.",
+      "classification_reasoning": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
+      "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     }
   }

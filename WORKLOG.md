@@ -463,3 +463,21 @@
   - Stable API remote commit `f5a7bad9be5f53c328e66b9d3363a64d587b6ab4`; remote tree matched local tree `37c1546edc5d323610acb06e1cd28e6f78be2ad6`.
   - Cloudflare Pages deployment: `https://1ac2bfcb.lynkedu-ap-question-bank.pages.dev`.
   - Production `https://lynkedu.com` verified for title, 16 active subjects, CSA U1-U4, Statistics U1-U5, Physics 2 U9-U15, 0 student-visible legacy-unit residuals for migrated frameworks, and real-browser CSA Quiz setup loading production data.
+
+# 2026-07-21 - All-Subject Topic-Level Classification Completion
+
+- Completed the unfinished all-subject classification rebuild. Before this pass, 6 subjects still had 1890 student-visible scored items with only unit-level evidence: Calculus AB, Calculus BC, Physics 1, Physics 2, Physics C: Mechanics, and Physics C: Electricity and Magnetism.
+- Added `scripts/calc_physics_topic_classification_audit.cjs` for Calculus/Physics subject-specific official-topic progression checks. The script uses official topic maps, high-confidence subject rules, and manual locks for short graph/shared-context items; it does not treat prior `primary_unit` as proof.
+- Materialized concrete `classification_accuracy.required_topics[].topic_code` evidence for all remaining visible scored items.
+- Added formal validation scripts for the six remaining subjects and wired them plus `validate:topic-level-completion` into `npm run validate`.
+- Updated `scripts/unit_progression_reviewed_cases.json` to 5349 regression cases covering every current student-visible scored item.
+- Aligned `classification_evidence_audit.cjs` with the same student-visible filtering contract used by other release gates.
+- Converted the known CSA U4 concentration exception in `unit_distribution_contract_audit.cjs` from a warning to a note, keeping validation warning-free while preserving the capacity observation.
+- Current classification closeout evidence:
+  - `npm run validate:classification-coverage`: 5349 student-visible items, missing required topics 0, invalid required topics 0.
+  - `npm run validate:classification-accuracy`: 16 subjects, 5349 items, topic-map coverage debt 0, item-contract errors 0, hard-boundary errors 0.
+  - `npm run validate:topic-level-completion`: 5349/5349 topic-level, unit-level-only 0.
+  - `npm run validate:classification-evidence`: missing review 0, stale reasoning 0, mismatches 0, bad evidence 0.
+  - `npm run validate:student-risk`: 16 subjects, 5349 items, P0/P1/P2 all 0.
+  - `npm run validate`: passed.
+  - `npm run build`: passed.

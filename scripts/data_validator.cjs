@@ -429,6 +429,7 @@ function validate(filePath, options = {}) {
   }
   if (subjectId === 'physics-c-mechanics') for (const q of data) {
     const qid = q.question_id || 'UNKNOWN'
+    if (q.student_visible === false || q.publish_status === 'blocked') continue
     const text = q.text || q.question_text || ''
     const match = text.match(/^Questions\s+(\d+)-(\d+)/i)
     if (!match) continue
@@ -447,6 +448,7 @@ function validate(filePath, options = {}) {
   }
   for (const q of data) {
     const qid = q.question_id || 'UNKNOWN'
+    if (q.student_visible === false || q.publish_status === 'blocked') continue
     if (!q.group_id) continue
     if (!Array.isArray(q.group_members) || q.group_members.length < 2) {
       errors.push(`${qid}: group_id present but group_members is missing or too small`)
