@@ -28,9 +28,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 9,
@@ -59,8 +59,25 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 56
     },
-    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires array or data-collection traversal.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.3",
+          "topic_name": "Array Creation and Access",
+          "reason": "Solving requires array or data-collection traversal."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires array or data-collection traversal.",
+      "classification_reasoning": "Solving requires array or data-collection traversal.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2015_FRQ2",
@@ -91,9 +108,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 9,
@@ -117,8 +134,34 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 62
     },
-    "classification_reasoning": "Official progression review: U3 Class Creation. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Class Creation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.1",
+          "topic_name": "Abstraction and Program Design",
+          "reason": "Full item reviewed against the current official Class Creation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Class Creation is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Class Creation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Class Creation boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U4",
+          "signal_topic_code": "4.3",
+          "reason": "Solving requires array or data-collection traversal.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
+    }
   },
   {
     "question_id": "2015_FRQ3",
@@ -149,9 +192,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 9,
@@ -175,8 +218,25 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 64
     },
-    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires data collections with ArrayList.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.7",
+          "topic_name": "Wrapper Classes",
+          "reason": "Solving requires data collections with ArrayList."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires data collections with ArrayList.",
+      "classification_reasoning": "Solving requires data collections with ArrayList.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2015_FRQ4",
@@ -207,9 +267,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 9,
@@ -238,8 +298,25 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_2015_Full_Exam.pdf",
       "source_page": 72
     },
-    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires data collections with ArrayList.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.7",
+          "topic_name": "Wrapper Classes",
+          "reason": "Solving requires data collections with ArrayList."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires data collections with ArrayList.",
+      "classification_reasoning": "Solving requires data collections with ArrayList.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "gridworld_FRQ1",
@@ -270,9 +347,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 9,
@@ -296,8 +373,25 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 45
     },
-    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires array or data-collection traversal.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.3",
+          "topic_name": "Array Creation and Access",
+          "reason": "Solving requires array or data-collection traversal."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires array or data-collection traversal.",
+      "classification_reasoning": "Solving requires array or data-collection traversal.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "gridworld_FRQ2",
@@ -328,9 +422,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 9,
@@ -354,8 +448,25 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 47
     },
-    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires array or data-collection traversal.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.3",
+          "topic_name": "Array Creation and Access",
+          "reason": "Solving requires array or data-collection traversal."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires array or data-collection traversal.",
+      "classification_reasoning": "Solving requires array or data-collection traversal.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "gridworld_FRQ3",
@@ -386,9 +497,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 9,
@@ -417,8 +528,25 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 50
     },
-    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires data collections with ArrayList.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.7",
+          "topic_name": "Wrapper Classes",
+          "reason": "Solving requires data collections with ArrayList."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires data collections with ArrayList.",
+      "classification_reasoning": "Solving requires data collections with ArrayList.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "gridworld_FRQ4",
@@ -449,9 +577,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 9,
@@ -475,8 +603,25 @@
       "source_pdf": "subjects\\AP\\Computer-Science-A\\01-exams\\AP_Computer_Science_A_Gridworld_Full_Exam.pdf",
       "source_page": 53
     },
-    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires data collections with ArrayList.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.7",
+          "topic_name": "Wrapper Classes",
+          "reason": "Solving requires data collections with ArrayList."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires data collections with ArrayList.",
+      "classification_reasoning": "Solving requires data collections with ArrayList.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "ced_2025_FRQ1",
@@ -507,9 +652,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 7,
@@ -559,8 +704,34 @@
       "source_page": 168,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Official progression review: U2 Selection and Iteration. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Full item reviewed against the current official Selection and Iteration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.1",
+          "topic_name": "Algorithms with Selection and Repetition",
+          "reason": "Full item reviewed against the current official Selection and Iteration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Selection and Iteration is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Selection and Iteration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Selection and Iteration boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U3",
+          "signal_topic_code": "3.1",
+          "reason": "Solving requires class creation or object-oriented design.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
+    }
   },
   {
     "question_id": "ced_2025_FRQ2",
@@ -591,9 +762,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 7,
@@ -643,8 +814,25 @@
       "source_page": 171,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Official progression review: U3 Class Creation. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires class creation or object-oriented design.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.1",
+          "topic_name": "Abstraction and Program Design",
+          "reason": "Solving requires class creation or object-oriented design."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Class Creation is the earliest official unit that teaches the required solving knowledge: Solving requires class creation or object-oriented design.",
+      "classification_reasoning": "Solving requires class creation or object-oriented design.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "ced_2025_FRQ3",
@@ -675,9 +863,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 5,
@@ -717,8 +905,25 @@
       "source_page": 173,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires data collections with ArrayList.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.7",
+          "topic_name": "Wrapper Classes",
+          "reason": "Solving requires data collections with ArrayList."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires data collections with ArrayList.",
+      "classification_reasoning": "Solving requires data collections with ArrayList.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "ced_2025_FRQ4",
@@ -749,9 +954,9 @@
         "Subject computer-science-a passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
       "review_status": "reviewed",
-      "classification_version": "csa-fall-2025-official-4-unit-migration-2026-07-21",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
-      "review_method": "official Fall 2025 course framework unit migration plus existing item review evidence"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "rubric": {
       "total_points": 6,
@@ -796,7 +1001,24 @@
       "source_page": 175,
       "source_note": "2025 AP Computer Science A Course and Exam Description sample FRQ and scoring guidelines."
     },
-    "classification_reasoning": "Official progression review: U4 Data Collections. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires array or data-collection traversal.",
+    "unit_classification": "official-required-topics-reviewed",
+    "classification_accuracy": {
+      "authority": "AP Computer Science A Course and Exam Description, Effective Fall 2025",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.3",
+          "topic_name": "Array Creation and Access",
+          "reason": "Solving requires array or data-collection traversal."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Data Collections is the earliest official unit that teaches the required solving knowledge: Solving requires array or data-collection traversal.",
+      "classification_reasoning": "Solving requires array or data-collection traversal.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   }
 ]

@@ -104,12 +104,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2012_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2012_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -117,7 +117,26 @@
         "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -212,12 +231,12 @@
         "text": "Assume that the next day John withdraws from Mi Tierra Bank an amount that exceeds the bank’s excess reserves. Assuming that no loans are called in, how can Mi Tierra Bank cover its required reserves?"
       }
     ],
-    "classification_reasoning": "Official progression review: U4 Financial Sector. FRQ 2012_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2012_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -226,7 +245,26 @@
         "Student-visible media are preserved with 1 image reference(s).",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U4",
+    "unit_name": "Financial Sector",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.6",
+          "topic_name": "Monetary Policy",
+          "reason": "Solving requires monetary-policy tools or central-bank action."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Solving requires monetary-policy tools or central-bank action.",
+      "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -296,12 +334,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. FRQ 2012_FRQ3 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2012_FRQ3 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -309,7 +347,35 @@
         "Existing topic tags: AD-AS, Exports, Real Wages, LRAS.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U5",
+    "unit_name": "Long-Run Consequences of Stabilization Policies",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.1",
+          "topic_name": "Fiscal and Monetary Policy Actions in the Short Run",
+          "reason": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U6",
+          "signal_topic_code": "6.3",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
     }
   },
   {
@@ -401,12 +467,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2014_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2014_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -414,7 +480,26 @@
         "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -519,12 +604,12 @@
         "text": "What will happen to the price of bonds as a result of the central bank’s purchase of government securities described in part (d) ?"
       }
     ],
-    "classification_reasoning": "Official progression review: U4 Financial Sector. FRQ 2014_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2014_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -533,7 +618,26 @@
         "Student-visible media are preserved with 1 image reference(s).",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U4",
+    "unit_name": "Financial Sector",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.6",
+          "topic_name": "Monetary Policy",
+          "reason": "Solving requires monetary-policy tools or central-bank action."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Solving requires monetary-policy tools or central-bank action.",
+      "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -601,7 +705,7 @@
     "image_paths": [
       "/images/ap/macroeconomics/frq/2014_FRQ3.png"
     ],
-    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. FRQ 2014_FRQ3 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
     "content_blocks": [
       {
         "type": "paragraph",
@@ -638,11 +742,11 @@
         "text": "If the actual unemployment rate equals the natural rate of 6 percent, is there cyclical unemployment in Country X?"
       }
     ],
-    "unit_classification": "official-progression-reviewed",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2014_FRQ3 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -651,7 +755,26 @@
         "Student-visible media are preserved with 1 image reference(s).",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U5",
+    "unit_name": "Long-Run Consequences of Stabilization Policies",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "Solving requires the current official Phillips Curve topic."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Solving requires the current official Phillips Curve topic.",
+      "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -754,12 +877,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2015_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2015_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -767,7 +890,26 @@
         "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -836,12 +978,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U4 Financial Sector. FRQ 2015_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2015_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -849,7 +991,26 @@
         "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U4",
+    "unit_name": "Financial Sector",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.6",
+          "topic_name": "Monetary Policy",
+          "reason": "Solving requires monetary-policy tools or central-bank action."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Solving requires monetary-policy tools or central-bank action.",
+      "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -924,12 +1085,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. FRQ 2015_FRQ3 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2015_FRQ3 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -937,7 +1098,26 @@
         "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U5",
+    "unit_name": "Long-Run Consequences of Stabilization Policies",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "Solving requires the current official Phillips Curve topic."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Solving requires the current official Phillips Curve topic.",
+      "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -1030,12 +1210,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2016_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2016_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -1043,7 +1223,26 @@
         "Existing topic tags: Exchange Rates, International Trade, Balance of Payments, Net Exports.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -1118,12 +1317,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. FRQ 2016_FRQ2 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2016_FRQ2 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -1131,7 +1330,26 @@
         "Existing topic tags: Aggregate Demand, Aggregate Supply, Fiscal Policy, Multiplier.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U5",
+    "unit_name": "Long-Run Consequences of Stabilization Policies",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.2",
+          "topic_name": "The Phillips Curve",
+          "reason": "Solving requires the current official Phillips Curve topic."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Solving requires the current official Phillips Curve topic.",
+      "classification_reasoning": "Solving requires the current official Phillips Curve topic.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -1239,12 +1457,12 @@
         "text": "If the Bank of Uchenna is not mee ting its reserve requirement, what action can it take to meet the reserve requirement without calling in loans or selling property?"
       }
     ],
-    "classification_reasoning": "Official progression review: U4 Financial Sector. FRQ 2016_FRQ3 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Definition, Measurement, and Functions of Money.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2016_FRQ3 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -1253,7 +1471,35 @@
         "Student-visible media are preserved with 1 image reference(s).",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U4",
+    "unit_name": "Financial Sector",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.3",
+          "topic_name": "Definition, Measurement, and Functions of Money",
+          "reason": "Existing item topic \"Money\" was checked against the current official topic map and requires Definition, Measurement, and Functions of Money."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Money\" was checked against the current official topic map and requires Definition, Measurement, and Functions of Money.",
+      "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Definition, Measurement, and Functions of Money.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U6",
+          "signal_topic_code": "6.3",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
     }
   },
   {
@@ -1345,12 +1591,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. FRQ 2017_FRQ1 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2017_FRQ1 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -1358,7 +1604,35 @@
         "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U5",
+    "unit_name": "Long-Run Consequences of Stabilization Policies",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.3",
+          "topic_name": "Money Growth and Inflation",
+          "reason": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
+      "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U4",
+          "signal_topic_code": "4.6",
+          "reason": "Solving requires monetary-policy tools or central-bank action.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal is an earlier prerequisite or surface feature, while the item requires the later official unit recorded in required_topics."
+        }
+      ]
     }
   },
   {
@@ -1459,12 +1733,12 @@
         "text": "Assuming that Raymond Bank and ot her banks now lend out all excess reserves, calculate the maximum possible change in the following. (i) Demand deposits throughout the banking Total reserves throughout the banking Suppose that the country’s central bank purchases $1,000 of Raymond Bank’s holdings of government securities as part of its open-market operations. Do Raymond Bank’s required reserves initially increase, decrease, or remain the same as a result of the central bank’s purchase? Explain."
       }
     ],
-    "classification_reasoning": "Official progression review: U4 Financial Sector. FRQ 2017_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2017_FRQ2 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -1473,7 +1747,26 @@
         "Student-visible media are preserved with 1 image reference(s).",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U4",
+    "unit_name": "Financial Sector",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.6",
+          "topic_name": "Monetary Policy",
+          "reason": "Solving requires monetary-policy tools or central-bank action."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Solving requires monetary-policy tools or central-bank action.",
+      "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -1547,12 +1840,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2017_FRQ3 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2017_FRQ3 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -1560,7 +1853,26 @@
         "Existing topic tags: Aggregate Demand, Aggregate Supply, Fiscal Policy, Multiplier.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -1655,12 +1967,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. FRQ 2018_FRQ1 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2018_FRQ1 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -1668,7 +1980,35 @@
         "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U5",
+    "unit_name": "Long-Run Consequences of Stabilization Policies",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.3",
+          "topic_name": "Money Growth and Inflation",
+          "reason": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
+      "classification_reasoning": "Existing item topic \"Money\" was checked against the current official topic map and requires Money Growth and Inflation.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U4",
+          "signal_topic_code": "4.6",
+          "reason": "Solving requires monetary-policy tools or central-bank action.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal is an earlier prerequisite or surface feature, while the item requires the later official unit recorded in required_topics."
+        }
+      ]
     }
   },
   {
@@ -1742,12 +2082,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2018_FRQ2 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2018_FRQ2 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -1755,7 +2095,26 @@
         "Existing topic tags: Exchange Rates, International Trade, Balance of Payments, Net Exports.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -1857,12 +2216,12 @@
         "text": "The GDP deflator for Pattiland in 2015 was 110. In 2016 was Pattiland experiencing inflation or deflation, or is there insufficient information to determine Pattiland's economic condition? Explain. ( d) Calculate the unemployment rate in Pattiland."
       }
     ],
-    "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. FRQ 2018_FRQ3 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Existing item topic \"GDP\" was checked against the current official topic map and requires Circular Flow and GDP.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U2",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2018_FRQ3 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -1871,7 +2230,35 @@
         "Student-visible media are preserved with 1 image reference(s).",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U2",
+    "unit_name": "Economic Indicators and the Business Cycle",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.1",
+          "topic_name": "Circular Flow and GDP",
+          "reason": "Existing item topic \"GDP\" was checked against the current official topic map and requires Circular Flow and GDP."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge: Existing item topic \"GDP\" was checked against the current official topic map and requires Circular Flow and GDP.",
+      "classification_reasoning": "Existing item topic \"GDP\" was checked against the current official topic map and requires Circular Flow and GDP.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U6",
+          "signal_topic_code": "6.3",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
     }
   },
   {
@@ -1966,12 +2353,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2019_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2019_FRQ1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -1979,7 +2366,26 @@
         "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -2044,12 +2450,12 @@
     ],
     "requires_graph": false,
     "image_paths": [],
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2019_FRQ2 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2019_FRQ2 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -2057,7 +2463,26 @@
         "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -2148,12 +2573,12 @@
         ]
       }
     },
-    "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. FRQ 2019_FRQ3 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires GDP or circular-flow measurement.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U2",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2019_FRQ3 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -2161,7 +2586,26 @@
         "Existing topic tags: Money, Monetary Policy, Interest Rates, Loanable Funds.",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U2",
+    "unit_name": "Economic Indicators and the Business Cycle",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.1",
+          "topic_name": "Circular Flow and GDP",
+          "reason": "Solving requires GDP or circular-flow measurement."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge: Solving requires GDP or circular-flow measurement.",
+      "classification_reasoning": "Solving requires GDP or circular-flow measurement.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -2228,19 +2672,47 @@
     },
     "requires_graph": false,
     "pure_unit": false,
-    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. FRQ 2023_FRQ1_S1 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2023_FRQ1_S1 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: 1. Assume that a country's economy is in a short-run equilibrium and the actual unemployment rate is lower than the natural rate of unemployment. (a) Using a correctly labeled graph of the long-run aggregate supply curve, short-run aggregat",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U5",
+    "unit_name": "Long-Run Consequences of Stabilization Policies",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.1",
+          "topic_name": "Fiscal and Monetary Policy Actions in the Short Run",
+          "reason": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U4",
+          "signal_topic_code": "4.6",
+          "reason": "Solving requires monetary-policy tools or central-bank action.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal is an earlier prerequisite or surface feature, while the item requires the later official unit recorded in required_topics."
+        }
+      ]
     }
   },
   {
@@ -2323,12 +2795,12 @@
         "text": "Suppose that the country's central bank purchases $1,000 of Raymond Bank's holdings of government securities as part of its open-market operations. Do Raymond Bank's required reserves initially increase, decrease, or remain the same as a result of the central bank's purchase? Explain"
       }
     ],
-    "classification_reasoning": "Official progression review: U4 Financial Sector. FRQ 2023_FRQ2_S1 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U4",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2023_FRQ2_S1 is assigned to U4 (Financial Sector) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -2336,7 +2808,26 @@
         "Student-visible media are preserved with 1 image reference(s).",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U4",
+    "unit_name": "Financial Sector",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.6",
+          "topic_name": "Monetary Policy",
+          "reason": "Solving requires monetary-policy tools or central-bank action."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Financial Sector is the earliest official unit that teaches the required solving knowledge: Solving requires monetary-policy tools or central-bank action.",
+      "classification_reasoning": "Solving requires monetary-policy tools or central-bank action.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -2388,19 +2879,38 @@
     },
     "requires_graph": false,
     "pure_unit": false,
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2023_FRQ3_S1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2023_FRQ3_S1 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: 3. Singapore and Japan are trading partners. The Japanese economy is operating at full employment, and Japan's current account balance is zero. (a) Assume the exchange rate between the Singapore dollar (SGD) and the Japanese yen (JPY) chang",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -2472,19 +2982,47 @@
     },
     "requires_graph": false,
     "pure_unit": false,
-    "classification_reasoning": "Official progression review: U5 Long-Run Consequences of Stabilization Policies. FRQ 2023_FRQ1_S2 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U5",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2023_FRQ1_S2 is assigned to U5 (Long-Run Consequences of Stabilization Policies) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: 1. Assume a country's economy is currently in recession. (a) Draw a correctly labeled graph of the long-run aggregate supply, short-run aggregate supply, and aggregate demand curves, and show each of the following. (i) Current real output, ",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U5",
+    "unit_name": "Long-Run Consequences of Stabilization Policies",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.1",
+          "topic_name": "Fiscal and Monetary Policy Actions in the Short Run",
+          "reason": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Long-Run Consequences of Stabilization Policies is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Long-Run Consequences of Stabilization Policies boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U4",
+          "signal_topic_code": "4.6",
+          "reason": "Solving requires monetary-policy tools or central-bank action.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal is an earlier prerequisite or surface feature, while the item requires the later official unit recorded in required_topics."
+        }
+      ]
     }
   },
   {
@@ -2535,19 +3073,38 @@
     },
     "requires_graph": false,
     "pure_unit": false,
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2023_FRQ2_S2 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2023_FRQ2_S2 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: 2. The exchange rate between the Australian dollar and the Indian rupee is determined in a flexible foreign exchange market. (a) Assume India is currently in recession. What fiscal policy action could the Indian government take to eliminate",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -2635,12 +3192,12 @@
         "text": "Calculate the unemployment rate in Pattiland. Show your work"
       }
     ],
-    "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. FRQ 2023_FRQ3_S2 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Full item reviewed against the current official Economic Indicators and the Business Cycle boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U2",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2023_FRQ3_S2 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -2648,7 +3205,35 @@
         "Student-visible media are preserved with 1 image reference(s).",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U2",
+    "unit_name": "Economic Indicators and the Business Cycle",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.1",
+          "topic_name": "Circular Flow and GDP",
+          "reason": "Full item reviewed against the current official Economic Indicators and the Business Cycle boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge: Full item reviewed against the current official Economic Indicators and the Business Cycle boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "classification_reasoning": "Full item reviewed against the current official Economic Indicators and the Business Cycle boundary; solving depends on this unit and earlier prerequisites, with no later-unit concept required by the correct response.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "medium",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U6",
+          "signal_topic_code": "6.3",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
     }
   },
   {
@@ -2720,19 +3305,38 @@
     },
     "requires_graph": false,
     "pure_unit": false,
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2023_FRQ1_S3 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2023_FRQ1_S3 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: 1. Assume that a country's economy is currently in recession. (a) Draw a correctly labeled graph of the long-run and short-run Phillips curves. Label the current equilibrium as point Z. (b) Assume the banking system has limited reserves, ba",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -2776,19 +3380,38 @@
     },
     "requires_graph": false,
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U6 Open Economy-International Trade and Finance. FRQ 2023_FRQ2_S3 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U6",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2023_FRQ2_S3 is assigned to U6 (Open Economy-International Trade and Finance) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
         "Prompt evidence: 2. Suppose that the United States government implements a fiscal policy that increases the budget surplus. (a) Draw a correctly labeled graph of the loanable funds market and show the effect of the increase in the budget surplus on the equi",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U6",
+    "unit_name": "Open Economy-International Trade and Finance",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.3",
+          "topic_name": "The Foreign Exchange Market",
+          "reason": "Solving requires open-economy trade or foreign-exchange reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Open Economy-International Trade and Finance is the earliest official unit that teaches the required solving knowledge: Solving requires open-economy trade or foreign-exchange reasoning.",
+      "classification_reasoning": "Solving requires open-economy trade or foreign-exchange reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   },
   {
@@ -2876,12 +3499,12 @@
         "text": "Suppose apple and orange pickers received a 2 percent increase in their wages. Based on your answer to part (d), would real wages of apple and orange pickers increase, decrease, or stay the same from year 1 to year 2? Explain"
       }
     ],
-    "classification_reasoning": "Official progression review: U2 Economic Indicators and the Business Cycle. FRQ 2023_FRQ3_S3 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Solving requires inflation measurement or costs.",
+    "unit_classification": "official-required-topics-reviewed",
     "classification": {
       "primary_unit": "U2",
       "review_status": "reviewed",
-      "classification_version": "macro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Macroeconomics Course and Exam Description",
       "evidence": [
         "FRQ 2023_FRQ3_S3 is assigned to U2 (Economic Indicators and the Business Cycle) under AP Macroeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
@@ -2889,7 +3512,26 @@
         "Student-visible media are preserved with 1 image reference(s).",
         "Subject macro passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
       ],
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
+    },
+    "unit": "U2",
+    "unit_name": "Economic Indicators and the Business Cycle",
+    "classification_accuracy": {
+      "authority": "AP Macroeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.4",
+          "topic_name": "Price Indices and Inflation",
+          "reason": "Solving requires inflation measurement or costs."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Economic Indicators and the Business Cycle is the earliest official unit that teaches the required solving knowledge: Solving requires inflation measurement or costs.",
+      "classification_reasoning": "Solving requires inflation measurement or costs.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
     }
   }
 ]

@@ -45,9 +45,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U4.topics.4.2"
       ],
       "primary_unit": "U4",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "image_paths": [],
@@ -132,8 +132,36 @@
       ]
     },
     "pure_unit": false,
-    "classification_reasoning": "Official progression review: U4 Imperfect Competition. FRQ 2012_FRQ1 is assigned to U4 (Imperfect Competition) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U4",
+    "unit_name": "Imperfect Competition",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.2",
+          "topic_name": "Monopoly",
+          "reason": "Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Imperfect Competition is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly.",
+      "classification_reasoning": "Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U6",
+          "signal_topic_code": "6.4",
+          "reason": "Solving requires government intervention or policy reasoning.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
+    }
   },
   {
     "question_id": "2012_FRQ2",
@@ -175,9 +203,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U1.topics.1.6"
       ],
       "primary_unit": "U2",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "image_paths": [
@@ -243,7 +271,7 @@
       ]
     },
     "pure_unit": false,
-    "classification_reasoning": "Official progression review: U2 Supply and Demand. FRQ 2012_FRQ2 is assigned to U2 (Supply and Demand) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice.",
     "content_blocks": [
       {
         "type": "paragraph",
@@ -280,7 +308,26 @@
         "text": "Suppose that when the price of toy cars increases by 10 percent, Theresa buys 5 percent fewer toy cars and 4 percent less of a different toy, blocks. Calculate the cross-price elasticity for toy cars and blocks and indicate if it is positive or negative."
       }
     ],
-    "unit_classification": "official-progression-reviewed"
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U2",
+    "unit_name": "Supply and Demand",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.5",
+          "topic_name": "Other Elasticities",
+          "reason": "Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Supply and Demand is the earliest official unit that teaches the required solving knowledge: Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice.",
+      "classification_reasoning": "Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2012_FRQ3",
@@ -328,9 +375,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U2.topics.2.9"
       ],
       "primary_unit": "U2",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": true,
     "image_paths": [
@@ -419,8 +466,36 @@
         "text": "Given the world price of $2, what per-unit tariff maximizes the sum of Loriland's domestic consumer surplus and producer surplus?"
       }
     ],
-    "classification_reasoning": "Official progression review: U2 Supply and Demand. FRQ 2012_FRQ3 is assigned to U2 (Supply and Demand) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"International Trade and Public Policy\" was checked against the current official topic map and requires International Trade and Public Policy.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U2",
+    "unit_name": "Supply and Demand",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.9",
+          "topic_name": "International Trade and Public Policy",
+          "reason": "Existing item topic \"International Trade and Public Policy\" was checked against the current official topic map and requires International Trade and Public Policy."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Supply and Demand is the earliest official unit that teaches the required solving knowledge: Existing item topic \"International Trade and Public Policy\" was checked against the current official topic map and requires International Trade and Public Policy.",
+      "classification_reasoning": "Existing item topic \"International Trade and Public Policy\" was checked against the current official topic map and requires International Trade and Public Policy.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U3",
+          "signal_topic_code": "3.7",
+          "reason": "Solving requires the perfect-competition model.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
+    }
   },
   {
     "question_id": "2013_FRQ1",
@@ -464,9 +539,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U4.topics.4.4"
       ],
       "primary_unit": "U3",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "image_paths": [],
@@ -542,8 +617,36 @@
       ]
     },
     "pure_unit": false,
-    "classification_reasoning": "Official progression review: U3 Production, Cost, and the Perfect Competition Model. FRQ 2013_FRQ1 is assigned to U3 (Production, Cost, and the Perfect Competition Model) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Perfect Competition\" was checked against the current official topic map and requires Perfect Competition.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U3",
+    "unit_name": "Production, Cost, and the Perfect Competition Model",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.7",
+          "topic_name": "Perfect Competition",
+          "reason": "Existing item topic \"Perfect Competition\" was checked against the current official topic map and requires Perfect Competition."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Production, Cost, and the Perfect Competition Model is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Perfect Competition\" was checked against the current official topic map and requires Perfect Competition.",
+      "classification_reasoning": "Existing item topic \"Perfect Competition\" was checked against the current official topic map and requires Perfect Competition.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U4",
+          "signal_topic_code": "4.4",
+          "reason": "Solving requires monopolistic-competition reasoning.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
+    }
   },
   {
     "question_id": "2013_FRQ2",
@@ -580,9 +683,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U4.topics.4.5"
       ],
       "primary_unit": "U4",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "image_paths": [
@@ -682,8 +785,27 @@
         "text": "In the Nash equilibrium, what are the daily profits for Attaburger and Beefsteak?"
       }
     ],
-    "classification_reasoning": "Official progression review: U4 Imperfect Competition. FRQ 2013_FRQ2 is assigned to U4 (Imperfect Competition) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires oligopoly or game-theory reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U4",
+    "unit_name": "Imperfect Competition",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.5",
+          "topic_name": "Oligopoly and Game Theory",
+          "reason": "Solving requires oligopoly or game-theory reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Imperfect Competition is the earliest official unit that teaches the required solving knowledge: Solving requires oligopoly or game-theory reasoning.",
+      "classification_reasoning": "Solving requires oligopoly or game-theory reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2013_FRQ3",
@@ -732,9 +854,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U3.topics.3.6"
       ],
       "primary_unit": "U3",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "image_paths": [
@@ -839,8 +961,27 @@
         "text": "What is the long-run equilibrium price for umbrellas?"
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Production, Cost, and the Perfect Competition Model. FRQ 2013_FRQ3 is assigned to U3 (Production, Cost, and the Perfect Competition Model) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires the perfect-competition model.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U3",
+    "unit_name": "Production, Cost, and the Perfect Competition Model",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.7",
+          "topic_name": "Perfect Competition",
+          "reason": "Solving requires the perfect-competition model."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Production, Cost, and the Perfect Competition Model is the earliest official unit that teaches the required solving knowledge: Solving requires the perfect-competition model.",
+      "classification_reasoning": "Solving requires the perfect-competition model.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2014_FRQ1",
@@ -884,9 +1025,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U6.topics.6.2"
       ],
       "primary_unit": "U6",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "image_paths": [],
@@ -959,8 +1100,27 @@
       ]
     },
     "pure_unit": false,
-    "classification_reasoning": "Official progression review: U6 Market Failure and the Role of Government. FRQ 2014_FRQ1 is assigned to U6 (Market Failure and the Role of Government) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires externality or social efficiency reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Market Failure and the Role of Government",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.2",
+          "topic_name": "Externalities",
+          "reason": "Solving requires externality or social efficiency reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Market Failure and the Role of Government is the earliest official unit that teaches the required solving knowledge: Solving requires externality or social efficiency reasoning.",
+      "classification_reasoning": "Solving requires externality or social efficiency reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2014_FRQ2",
@@ -1005,9 +1165,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U2.topics.2.8"
       ],
       "primary_unit": "U2",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": true,
     "image_paths": [
@@ -1124,8 +1284,36 @@
         "text": "Program 4: The government successfully markets corn as an export. (i) Explain how increasing exports can achieve a market price of $11. (ii) Calculate the producer surplus when the government successfully raises the price of corn to $11 by marketing it as an export. Show your work."
       }
     ],
-    "classification_reasoning": "Official progression review: U2 Supply and Demand. FRQ 2014_FRQ2 is assigned to U2 (Supply and Demand) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Price Elasticity of Demand\" was checked against the current official topic map and requires Price Elasticity of Demand.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U2",
+    "unit_name": "Supply and Demand",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.3",
+          "topic_name": "Price Elasticity of Demand",
+          "reason": "Existing item topic \"Price Elasticity of Demand\" was checked against the current official topic map and requires Price Elasticity of Demand."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Supply and Demand is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Price Elasticity of Demand\" was checked against the current official topic map and requires Price Elasticity of Demand.",
+      "classification_reasoning": "Existing item topic \"Price Elasticity of Demand\" was checked against the current official topic map and requires Price Elasticity of Demand.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U6",
+          "signal_topic_code": "6.4",
+          "reason": "Solving requires government intervention or policy reasoning.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
+    }
   },
   {
     "question_id": "2014_FRQ3",
@@ -1169,9 +1357,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U3.topics.3.1"
       ],
       "primary_unit": "U5",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "image_paths": [
@@ -1284,8 +1472,27 @@
         "text": "If the demand for cookies increases, will Schmitt's Bakery hire more, fewer, or the same number of workers? Explain."
       }
     ],
-    "classification_reasoning": "Official progression review: U5 Factor Markets. FRQ 2014_FRQ3 is assigned to U5 (Factor Markets) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires factor-market profit-maximizing behavior.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U5",
+    "unit_name": "Factor Markets",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.3",
+          "topic_name": "Profit-Maximizing Behavior in Perfectly Competitive Factor Markets",
+          "reason": "Solving requires factor-market profit-maximizing behavior."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Factor Markets is the earliest official unit that teaches the required solving knowledge: Solving requires factor-market profit-maximizing behavior.",
+      "classification_reasoning": "Solving requires factor-market profit-maximizing behavior.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2015_FRQ1",
@@ -1321,9 +1528,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U4"
       ],
       "primary_unit": "U4",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "requires_graph": false,
@@ -1392,8 +1599,27 @@
       "rubric_text_source": "AP Micro 2015.pdf scoring guideline page(s) 54"
     },
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U4 Imperfect Competition. FRQ 2015_FRQ1 is assigned to U4 (Imperfect Competition) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires monopolistic-competition reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U4",
+    "unit_name": "Imperfect Competition",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.4",
+          "topic_name": "Monopolistic Competition",
+          "reason": "Solving requires monopolistic-competition reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Imperfect Competition is the earliest official unit that teaches the required solving knowledge: Solving requires monopolistic-competition reasoning.",
+      "classification_reasoning": "Solving requires monopolistic-competition reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2015_FRQ2",
@@ -1429,9 +1655,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U2"
       ],
       "primary_unit": "U2",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "requires_graph": false,
@@ -1506,8 +1732,36 @@
       "rubric_text_source": "AP Micro 2015.pdf scoring guideline page(s) 55"
     },
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U2 Supply and Demand. FRQ 2015_FRQ2 is assigned to U2 (Supply and Demand) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"The Effects of Government Intervention in Markets\" was checked against the current official topic map and requires The Effects of Government Intervention in Markets.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U2",
+    "unit_name": "Supply and Demand",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.8",
+          "topic_name": "The Effects of Government Intervention in Markets",
+          "reason": "Existing item topic \"The Effects of Government Intervention in Markets\" was checked against the current official topic map and requires The Effects of Government Intervention in Markets."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Supply and Demand is the earliest official unit that teaches the required solving knowledge: Existing item topic \"The Effects of Government Intervention in Markets\" was checked against the current official topic map and requires The Effects of Government Intervention in Markets.",
+      "classification_reasoning": "Existing item topic \"The Effects of Government Intervention in Markets\" was checked against the current official topic map and requires The Effects of Government Intervention in Markets.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U6",
+          "signal_topic_code": "6.4",
+          "reason": "Solving requires government intervention or policy reasoning.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
+    }
   },
   {
     "question_id": "2015_FRQ3",
@@ -1544,9 +1798,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U5"
       ],
       "primary_unit": "U5",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "requires_graph": false,
@@ -1696,8 +1950,27 @@
         "text": "Suppose Coldbox hires workers from a monopsonistic labor market. Would the wage be higher, lower, or equal to the equilibrium wage in a perfectly competitive labor market?"
       }
     ],
-    "classification_reasoning": "Official progression review: U5 Factor Markets. FRQ 2015_FRQ3 is assigned to U5 (Factor Markets) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires factor-market profit-maximizing behavior.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U5",
+    "unit_name": "Factor Markets",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.3",
+          "topic_name": "Profit-Maximizing Behavior in Perfectly Competitive Factor Markets",
+          "reason": "Solving requires factor-market profit-maximizing behavior."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Factor Markets is the earliest official unit that teaches the required solving knowledge: Solving requires factor-market profit-maximizing behavior.",
+      "classification_reasoning": "Solving requires factor-market profit-maximizing behavior.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2016_FRQ1",
@@ -1733,9 +2006,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U4"
       ],
       "primary_unit": "U4",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "requires_graph": false,
@@ -1804,8 +2077,36 @@
       "rubric_text_source": "AP Micro 2016.pdf scoring guideline page(s) 54"
     },
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U4 Imperfect Competition. FRQ 2016_FRQ1 is assigned to U4 (Imperfect Competition) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U4",
+    "unit_name": "Imperfect Competition",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.2",
+          "topic_name": "Monopoly",
+          "reason": "Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Imperfect Competition is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly.",
+      "classification_reasoning": "Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U6",
+          "signal_topic_code": "6.4",
+          "reason": "Solving requires government intervention or policy reasoning.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
+    }
   },
   {
     "question_id": "2016_FRQ2",
@@ -1842,9 +2143,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U1"
       ],
       "primary_unit": "U2",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "requires_graph": false,
@@ -1953,7 +2254,7 @@
       "rubric_text_source": "AP Micro 2016.pdf scoring guideline page(s) 55"
     },
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U2 Supply and Demand. FRQ 2016_FRQ2 is assigned to U2 (Supply and Demand) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
+    "classification_reasoning": "Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice.",
     "content_blocks": [
       {
         "type": "paragraph",
@@ -1990,7 +2291,26 @@
         "text": "Calculate the income elasticity of demand when a 10 percent increase in income causes demand for volleyballs to fall by 5 percent, and state whether volleyballs are normal or inferior. Explain."
       }
     ],
-    "unit_classification": "official-progression-reviewed"
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U2",
+    "unit_name": "Supply and Demand",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.5",
+          "topic_name": "Other Elasticities",
+          "reason": "Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Supply and Demand is the earliest official unit that teaches the required solving knowledge: Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice.",
+      "classification_reasoning": "Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2016_FRQ3",
@@ -2026,9 +2346,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U5"
       ],
       "primary_unit": "U5",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "has_graph": false,
     "requires_graph": false,
@@ -2085,8 +2405,27 @@
       "rubric_text_source": "AP Micro 2016.pdf scoring guideline page(s) 56"
     },
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U5 Factor Markets. FRQ 2016_FRQ3 is assigned to U5 (Factor Markets) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires factor-market profit-maximizing behavior.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U5",
+    "unit_name": "Factor Markets",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U5",
+          "topic_code": "5.3",
+          "topic_name": "Profit-Maximizing Behavior in Perfectly Competitive Factor Markets",
+          "reason": "Solving requires factor-market profit-maximizing behavior."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Factor Markets is the earliest official unit that teaches the required solving knowledge: Solving requires factor-market profit-maximizing behavior.",
+      "classification_reasoning": "Solving requires factor-market profit-maximizing behavior.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2017_FRQ1",
@@ -2193,13 +2532,41 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U4"
       ],
       "primary_unit": "U4",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U4 Imperfect Competition. FRQ 2017_FRQ1 is assigned to U4 (Imperfect Competition) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U4",
+    "unit_name": "Imperfect Competition",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.2",
+          "topic_name": "Monopoly",
+          "reason": "Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Imperfect Competition is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly.",
+      "classification_reasoning": "Existing item topic \"Monopoly\" was checked against the current official topic map and requires Monopoly.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U3",
+          "signal_topic_code": "3.4",
+          "reason": "Solving requires types of profit and cost accounting.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal is an earlier prerequisite or surface feature, while the item requires the later official unit recorded in required_topics."
+        }
+      ]
+    }
   },
   {
     "question_id": "2017_FRQ2",
@@ -2313,9 +2680,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U3"
       ],
       "primary_unit": "U3",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "pure_unit": true,
     "content_blocks": [
@@ -2359,8 +2726,27 @@
         "text": "Brody also produces saxophones at a loss in a perfectly competitive market. Draw a correctly labeled graph for Brody's firm showing the following at a market price of $200. (i) Brody's profit-maximizing quantity of saxophones (ii) Brody's loss, completely shaded"
       }
     ],
-    "classification_reasoning": "Official progression review: U3 Production, Cost, and the Perfect Competition Model. FRQ 2017_FRQ2 is assigned to U3 (Production, Cost, and the Perfect Competition Model) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires the perfect-competition model.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U3",
+    "unit_name": "Production, Cost, and the Perfect Competition Model",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.7",
+          "topic_name": "Perfect Competition",
+          "reason": "Solving requires the perfect-competition model."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Production, Cost, and the Perfect Competition Model is the earliest official unit that teaches the required solving knowledge: Solving requires the perfect-competition model.",
+      "classification_reasoning": "Solving requires the perfect-competition model.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2017_FRQ3",
@@ -2456,9 +2842,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U2"
       ],
       "primary_unit": "U2",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "pure_unit": true,
     "content_blocks": [
@@ -2492,8 +2878,27 @@
         "text": "Now suppose the government imposes a per-unit tax of $1 on producers. (i) What happens to total revenue received by producers after they pay the tax to the government? Explain. (ii) Will producer surplus increase, decrease, or stay the same? (iii) Will total surplus increase, decrease, or stay the same? Explain."
       }
     ],
-    "classification_reasoning": "Official progression review: U2 Supply and Demand. FRQ 2017_FRQ3 is assigned to U2 (Supply and Demand) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires supply-demand equilibrium changes.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U2",
+    "unit_name": "Supply and Demand",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.7",
+          "topic_name": "Market Disequilibrium and Changes in Equilibrium",
+          "reason": "Solving requires supply-demand equilibrium changes."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Supply and Demand is the earliest official unit that teaches the required solving knowledge: Solving requires supply-demand equilibrium changes.",
+      "classification_reasoning": "Solving requires supply-demand equilibrium changes.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2018_FRQ1",
@@ -2593,13 +2998,32 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U3"
       ],
       "primary_unit": "U3",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U3 Production, Cost, and the Perfect Competition Model. FRQ 2018_FRQ1 is assigned to U3 (Production, Cost, and the Perfect Competition Model) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires the perfect-competition model.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U3",
+    "unit_name": "Production, Cost, and the Perfect Competition Model",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U3",
+          "topic_code": "3.7",
+          "topic_name": "Perfect Competition",
+          "reason": "Solving requires the perfect-competition model."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Production, Cost, and the Perfect Competition Model is the earliest official unit that teaches the required solving knowledge: Solving requires the perfect-competition model.",
+      "classification_reasoning": "Solving requires the perfect-competition model.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2018_FRQ2",
@@ -2702,9 +3126,9 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U6"
       ],
       "primary_unit": "U6",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "pure_unit": true,
     "content_blocks": [
@@ -2743,8 +3167,27 @@
         "text": "Zhao opposes the $15 per-unit tax analyzed above in part (c) and instead proposes a policy of no government intervention. If economic advisers are only interested in maximizing social welfare, would they support the policy of no government intervention? Explain."
       }
     ],
-    "classification_reasoning": "Official progression review: U6 Market Failure and the Role of Government. FRQ 2018_FRQ2 is assigned to U6 (Market Failure and the Role of Government) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires externality or social efficiency reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U6",
+    "unit_name": "Market Failure and the Role of Government",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U6",
+          "topic_code": "6.2",
+          "topic_name": "Externalities",
+          "reason": "Solving requires externality or social efficiency reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Market Failure and the Role of Government is the earliest official unit that teaches the required solving knowledge: Solving requires externality or social efficiency reasoning.",
+      "classification_reasoning": "Solving requires externality or social efficiency reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2018_FRQ3",
@@ -2850,13 +3293,41 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U2"
       ],
       "primary_unit": "U2",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U2 Supply and Demand. FRQ 2018_FRQ3 is assigned to U2 (Supply and Demand) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Existing item topic \"Market Equilibrium and Consumer and Producer Surplus\" was checked against the current official topic map and requires Market Equilibrium and Consumer and Producer Surplus.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U2",
+    "unit_name": "Supply and Demand",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.6",
+          "topic_name": "Market Equilibrium and Consumer and Producer Surplus",
+          "reason": "Existing item topic \"Market Equilibrium and Consumer and Producer Surplus\" was checked against the current official topic map and requires Market Equilibrium and Consumer and Producer Surplus."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Supply and Demand is the earliest official unit that teaches the required solving knowledge: Existing item topic \"Market Equilibrium and Consumer and Producer Surplus\" was checked against the current official topic map and requires Market Equilibrium and Consumer and Producer Surplus.",
+      "classification_reasoning": "Existing item topic \"Market Equilibrium and Consumer and Producer Surplus\" was checked against the current official topic map and requires Market Equilibrium and Consumer and Producer Surplus.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high",
+      "review_flags": [
+        {
+          "kind": "cross_unit_signal",
+          "signal_unit": "U6",
+          "signal_topic_code": "6.4",
+          "reason": "Solving requires government intervention or policy reasoning.",
+          "resolution": "Resolved by retaining the current primary_unit: the signal appears as background/output/context and is not required to solve the correct-answer path."
+        }
+      ]
+    }
   },
   {
     "question_id": "2019_FRQ1",
@@ -2948,13 +3419,32 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U4"
       ],
       "primary_unit": "U4",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U4 Imperfect Competition. FRQ 2019_FRQ1 is assigned to U4 (Imperfect Competition) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires monopoly or imperfect-competition reasoning.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U4",
+    "unit_name": "Imperfect Competition",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U4",
+          "topic_code": "4.2",
+          "topic_name": "Monopoly",
+          "reason": "Solving requires monopoly or imperfect-competition reasoning."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Imperfect Competition is the earliest official unit that teaches the required solving knowledge: Solving requires monopoly or imperfect-competition reasoning.",
+      "classification_reasoning": "Solving requires monopoly or imperfect-competition reasoning.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2019_FRQ2",
@@ -3051,13 +3541,32 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U2"
       ],
       "primary_unit": "U2",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U2 Supply and Demand. FRQ 2019_FRQ2 is assigned to U2 (Supply and Demand) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U2",
+    "unit_name": "Supply and Demand",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.5",
+          "topic_name": "Other Elasticities",
+          "reason": "Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Supply and Demand is the earliest official unit that teaches the required solving knowledge: Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice.",
+      "classification_reasoning": "Solving requires demand determinants, related goods, or elasticity beyond basic marginal choice.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   },
   {
     "question_id": "2019_FRQ3",
@@ -3142,12 +3651,31 @@
         "subjects/AP/Microeconomics/docs/source_pack.json#units.U2"
       ],
       "primary_unit": "U2",
-      "classification_version": "micro-official-progression-2026-07-19",
+      "classification_version": "per-item-official-progression-2026-07-21",
       "authority": "AP Microeconomics Course and Exam Description",
-      "review_method": "official unit framework plus student progression audit"
+      "review_method": "per-item official topic review plus subject boundary rules"
     },
     "pure_unit": true,
-    "classification_reasoning": "Official progression review: U2 Supply and Demand. FRQ 2019_FRQ3 is assigned to U2 (Supply and Demand) under AP Microeconomics Course and Exam Description; by the student progression rule, the item is answerable after this unit and prior units.",
-    "unit_classification": "official-progression-reviewed"
+    "classification_reasoning": "Solving requires supply-demand equilibrium changes.",
+    "unit_classification": "official-required-topics-reviewed",
+    "unit": "U2",
+    "unit_name": "Supply and Demand",
+    "classification_accuracy": {
+      "authority": "AP Microeconomics Course and Exam Description",
+      "required_topics": [
+        {
+          "unit": "U2",
+          "topic_code": "2.7",
+          "topic_name": "Market Disequilibrium and Changes in Equilibrium",
+          "reason": "Solving requires supply-demand equilibrium changes."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official unit required to solve the item using that unit and prior units.",
+      "why_not_earlier_unit": "Supply and Demand is the earliest official unit that teaches the required solving knowledge: Solving requires supply-demand equilibrium changes.",
+      "classification_reasoning": "Solving requires supply-demand equilibrium changes.",
+      "review_method": "per-item official topic review plus subject boundary rules",
+      "reviewed_at": "2026-07-21",
+      "confidence": "high"
+    }
   }
 ]

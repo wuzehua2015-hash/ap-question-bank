@@ -11,6 +11,7 @@ This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and pu
 - Every subject gets its own risk discovery. Generic extraction cannot certify a subject with code, formulas, tables, diagrams, grouped stimuli, visual answer choices, FRQ rubrics, or unusual option layouts.
 - Unit classification follows official learning order. `primary_unit` is the latest official unit a student must have completed to answer the item, not a keyword label.
 - Official exam and subject framework materials are the only authority for unit classification. Third-party maps, existing labels, generated topic names, or keyword tables can suggest review candidates but cannot justify the final unit.
+- Every student-visible item must carry item-level required-learning evidence in `classification_accuracy.required_topics`. Subject-level topic maps, old `reviewed` flags, broad student-flow gates, and successful rendering are not substitutes for per-item evidence.
 - Grouped items stay together. Shared context, figures, tables, and code must be represented once as `group_context` or equivalent structured fields, and every member must render that context.
 - Cross-unit grouped MCQ buckets are not unit-Quiz eligible. A single-unit Quiz may include a grouped bucket only when every member has that same `primary_unit`; cumulative/all-subject/Mock flows may include the bucket only as a complete group.
 - Rebuild pipelines must preserve reviewed per-item metadata such as visual, rendering, answerability, and classification review fields unless the pipeline explicitly regenerates and revalidates that field.
@@ -118,6 +119,7 @@ For every new or changed item:
   - `required_topics` with unit, topic code when available, topic name, and reason;
   - `why_not_earlier_unit` for later-unit placement;
   - `classification_reasoning` that refers to the official framework boundary, not a third-party course map.
+- Automated candidate scans may use the stem, shared stimulus, tables/figure captions, and the correct-answer path to find conflicts. They cannot decide the final unit by themselves, and wrong-option-only concepts cannot raise the unit.
 - Treat `reviewed` status as metadata only. It never exempts an item from hard concept-boundary checks.
 - For grouped questions, do not allow a member to appear in an earlier cumulative scope than its shared context and group members allow.
 - For single-unit Quiz, grouped buckets must be filtered by `every(member.primary_unit === selectedUnit)`, never by "any member matches selected unit".
@@ -126,6 +128,7 @@ For every new or changed item:
 Required gates:
 
 - `npm run validate:official-units`
+- `npm run validate:classification-coverage`
 - `npm run validate:classification-accuracy`
 - `npm run audit:units`
 - `npm run validate:units`

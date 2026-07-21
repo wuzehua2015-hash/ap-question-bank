@@ -36,7 +36,9 @@ Every new, expanded, or repaired item must include or be produced from item-leve
 
 Keyword scans, old source labels, generated topic names, and previous `reviewed` flags can identify review candidates, but they cannot certify the final unit. A `reviewed` item is still subject to hard concept-boundary checks.
 
-`npm run validate:classification-accuracy` enforces the executable part of this contract. It blocks known concept-boundary regressions across active subjects, validates item-level `required_topics` when present, and reports topic-map coverage debt for subjects whose `classification_config.json` does not yet carry a topic-level official map. Use `--strict-topics` only during planned topic-map backfill, because the current launch data still contains subjects with unit-level authority but incomplete topic maps.
+`npm run validate:classification-coverage` enforces that every student-visible item has `classification_accuracy.required_topics`. `npm run validate:classification-accuracy` then enforces that those topics belong to the current official topic map and that `primary_unit` equals the latest required topic unit. A broad `reviewed` flag is not enough.
+
+Cross-unit signals are review candidates only. Automated scans must use the stem, shared stimulus, table/figure captions, and the correct-answer path; wrong-option-only concepts cannot raise the unit. If a signal points to a different unit, the item must either be corrected or retain its current unit with a concrete reviewer rationale explaining why the signal is background, output, or non-solving context.
 
 ## Student-Logic Definition
 
