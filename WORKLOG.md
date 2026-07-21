@@ -429,3 +429,8 @@
   - `npm run validate:macro-units`: 460 macro items, blocking 0.
   - `npm run validate`: all gates passed.
   - `npm run build`: production build passed.
+- Source sync and deployment:
+  - Local commit `a6f25b5 Add classification accuracy contract gate`.
+  - Remote tree verified in sync by `npm run stable:status`: local/remote tree `ddccfc2a031e99bfe49f6de583432f3fdfb704b0`; remote commit `f05a0ab9e75df5e5e135144a0212f836edeee498`.
+  - Cloudflare Pages deployed student site to `https://32233839.lynkedu-ap-question-bank.pages.dev`.
+  - Production `https://lynkedu.com` data verified for the seven Macro Phillips Curve U5/Topic 5.2 items, CSA `ap_bowl_2018_Q37` U10, and Macro Unit 5 topics `5.1` through `5.7`.
