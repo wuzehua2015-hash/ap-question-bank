@@ -188,6 +188,10 @@ function validate(filePath, options = {}) {
   for (const q of data) {
     const qid = q.question_id || 'UNKNOWN'
     const isNotScored = q.scoring_status === 'not_scored'
+    const isStudentVisible = q.student_visible !== false && q.publish_status !== 'blocked'
+    if (!isStudentVisible) {
+      continue
+    }
     if (isNotScored) {
       errors.push(`${qid}: unscored/not_scored items must be excluded before publishing`)
     }

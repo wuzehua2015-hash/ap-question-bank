@@ -75,6 +75,15 @@ The unit sequence in that file must match the official framework used by `script
 
 If a current official framework moves a former standalone topic into cross-unit course skills, assign items by the earliest official stage at which a student has enough course knowledge to answer. Record that rule in the subject's `framework_note`; do not create a non-official extra unit just to preserve old labels.
 
+When an official framework changes its unit sequence, the migration is not complete until all of the following are true:
+
+- `subjects.json`, the subject `classification_config.json`, display labels, mock distribution, subject-specific gates, reviewed-case regression files, and item-level `unit_name` metadata all use the current framework.
+- Historical reasoning strings that cite obsolete unit numbers or unit names are rewritten or isolated as non-student-facing legacy notes.
+- Current-framework topic maps exist for every active unit.
+- Student-visible items use only current official unit IDs.
+- Legacy items outside the current framework are either reclassified to the current framework or blocked from every student-facing path with `student_visible: false` and `publish_status: blocked`.
+- Every student-facing gate filters blocked/internal records before checking units, capacity, rendering, risk, or student progression.
+
 ## Student Progression Simulation
 
 The student progression check is required because unit labels are not just metadata. They control what a student sees after completing each unit.

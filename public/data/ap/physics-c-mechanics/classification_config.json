@@ -4,31 +4,209 @@
   "units": [
     {
       "code": "U1",
-      "name": "Kinematics"
+      "name": "Kinematics",
+      "topics": [
+        {
+          "code": "1.1",
+          "name": "Scalars and Vectors"
+        },
+        {
+          "code": "1.2",
+          "name": "Displacement, Velocity, and Acceleration"
+        },
+        {
+          "code": "1.3",
+          "name": "Representing Motion"
+        },
+        {
+          "code": "1.4",
+          "name": "Reference Frames and Relative Motion"
+        },
+        {
+          "code": "1.5",
+          "name": "Motion in Two or Three Dimensions"
+        }
+      ]
     },
     {
       "code": "U2",
-      "name": "Force and Translational Dynamics"
+      "name": "Force and Translational Dynamics",
+      "topics": [
+        {
+          "code": "2.1",
+          "name": "Systems and Center of Mass"
+        },
+        {
+          "code": "2.2",
+          "name": "Forces and Free-Body Diagrams"
+        },
+        {
+          "code": "2.3",
+          "name": "Newton?s Third Law"
+        },
+        {
+          "code": "2.4",
+          "name": "Newton?s First Law"
+        },
+        {
+          "code": "2.5",
+          "name": "Newton?s Second Law"
+        },
+        {
+          "code": "2.6",
+          "name": "Gravitational Force"
+        },
+        {
+          "code": "2.7",
+          "name": "Kinetic and Static Friction"
+        },
+        {
+          "code": "2.8",
+          "name": "Spring Forces"
+        },
+        {
+          "code": "2.9",
+          "name": "Resistive Forces"
+        },
+        {
+          "code": "2.10",
+          "name": "Circular Motion"
+        }
+      ]
     },
     {
       "code": "U3",
-      "name": "Work, Energy, and Power"
+      "name": "Work, Energy, and Power",
+      "topics": [
+        {
+          "code": "3.1",
+          "name": "Translational Kinetic Energy"
+        },
+        {
+          "code": "3.2",
+          "name": "Work"
+        },
+        {
+          "code": "3.3",
+          "name": "Potential Energy"
+        },
+        {
+          "code": "3.4",
+          "name": "Conservation of Energy"
+        },
+        {
+          "code": "3.5",
+          "name": "Power"
+        }
+      ]
     },
     {
       "code": "U4",
-      "name": "Linear Momentum"
+      "name": "Linear Momentum",
+      "topics": [
+        {
+          "code": "4.1",
+          "name": "Linear Momentum"
+        },
+        {
+          "code": "4.2",
+          "name": "Change in Momentum and Impulse"
+        },
+        {
+          "code": "4.3",
+          "name": "Conservation of Linear Momentum"
+        },
+        {
+          "code": "4.4",
+          "name": "Elastic and Inelastic Collisions"
+        }
+      ]
     },
     {
       "code": "U5",
-      "name": "Torque and Rotational Dynamics"
+      "name": "Torque and Rotational Dynamics",
+      "topics": [
+        {
+          "code": "5.1",
+          "name": "Rotational Kinematics"
+        },
+        {
+          "code": "5.2",
+          "name": "Connecting Linear and Rotational Motion"
+        },
+        {
+          "code": "5.3",
+          "name": "Torque"
+        },
+        {
+          "code": "5.4",
+          "name": "Rotational Inertia"
+        },
+        {
+          "code": "5.5",
+          "name": "Rotational Equilibrium"
+        },
+        {
+          "code": "5.6",
+          "name": "Newton?s Second Law for Rotation"
+        }
+      ]
     },
     {
       "code": "U6",
-      "name": "Energy and Momentum of Rotating Systems"
+      "name": "Energy and Momentum of Rotating Systems",
+      "topics": [
+        {
+          "code": "6.1",
+          "name": "Rotational Kinetic Energy"
+        },
+        {
+          "code": "6.2",
+          "name": "Torque and Work"
+        },
+        {
+          "code": "6.3",
+          "name": "Angular Momentum"
+        },
+        {
+          "code": "6.4",
+          "name": "Conservation of Angular Momentum"
+        },
+        {
+          "code": "6.5",
+          "name": "Rolling"
+        },
+        {
+          "code": "6.6",
+          "name": "Motion of Orbiting Satellites"
+        }
+      ]
     },
     {
       "code": "U7",
-      "name": "Oscillations"
+      "name": "Oscillations",
+      "topics": [
+        {
+          "code": "7.1",
+          "name": "Defining Simple Harmonic Motion"
+        },
+        {
+          "code": "7.2",
+          "name": "Frequency and Period of Simple Harmonic Motion"
+        },
+        {
+          "code": "7.3",
+          "name": "Representing and Analyzing Simple Harmonic Motion"
+        },
+        {
+          "code": "7.4",
+          "name": "Energy of Simple Harmonic Oscillators"
+        },
+        {
+          "code": "7.5",
+          "name": "Simple and Physical Pendulums"
+        }
+      ]
     }
   ],
   "published_years": [
@@ -65,5 +243,6 @@
     "official_url": "https://apcentral.collegeboard.org/courses/ap-physics-c-mechanics",
     "policy": "Official exam and subject framework materials are the only authority for unit classification.",
     "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
-  }
+  },
+  "topic_map_status": "official_topic_map_added_2026_07_21"
 }

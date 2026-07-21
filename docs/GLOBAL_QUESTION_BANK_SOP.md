@@ -147,6 +147,9 @@ For every source batch or renderer-affecting change:
 - Use the correct production router path for the deployed app. The current Cloudflare root-domain student app uses normal paths such as `/quiz`, `/register`, `/account`, and `/search`; do not use legacy `/#/...` paths for launch evidence.
 - Use a fresh build and isolated preview port for local evidence.
 - Production deployment must be followed by `lynkedu.com` verification.
+- If a local preview port already serves an older student or admin build, do not reuse it as evidence. Start an isolated preview with `--strictPort`, confirm the page title and route, and verify that `/data/subjects.json` is loaded from the same origin.
+- Student-facing gates must filter out internal blocked records consistently: any item with `student_visible: false`, `publish_status: blocked`, or `scoring_status: not_scored` is an internal record and must not participate in Quiz, Mock, Search, PDF, recommendation, student-flow, student-progression, data-validation, or student-risk release checks.
+- Keeping blocked internal records is allowed only when every student-facing loader and gate excludes them. A blocked record with an obsolete unit is acceptable as historical inventory, but it cannot appear in student-visible counts or release ledgers.
 
 The check must include DOM/text evidence for structured content, not only screenshots.
 
@@ -220,6 +223,7 @@ Every new subject must explicitly answer these questions:
 - Does unit classification need special boundary rules under that official framework?
 - Are official sources enough, or is approved external expansion required?
 - What student-path checks are mandatory for this subject?
+- Has the official framework changed since the source material was published, and do any legacy units need migration or student-visible blocking?
 
 If any answer is "unknown", the subject stays in `risk_discovered` and cannot move to publication.
 

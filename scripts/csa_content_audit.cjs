@@ -76,8 +76,8 @@ for (const q of questions) {
   if (/\b(?:I|II|III|IV|V)\.[^\s`\n]/.test(visiblePrompt)) {
     errors.push(`${q.question_id}: roman-numeral candidate line lacks spacing after the label`)
   }
-  if (q.primary_unit === 'U10' && !hasRecursionEvidence(visiblePrompt)) {
-    errors.push(`${q.question_id}: U10 classification lacks recursion evidence in prompt or code`)
+  if (hasRecursionEvidence(visiblePrompt) && q.primary_unit !== 'U4') {
+    errors.push(`${q.question_id}: recursion evidence must classify to U4 Data Collections under the Fall 2025 CSA framework`)
   }
   if (q.source_set === 'ap_bowl_gt_practice') {
     if (!q.provenance?.source_credit || !/Georgia Tech|Barbara Ericson/i.test(q.provenance.source_credit)) {
@@ -155,7 +155,7 @@ function hasRecursionEvidence(text) {
   const methodSignaturePattern = new RegExp(String.raw`\b(?:public|private|protected)\s+(?:static\s+)?[\w<>\[\]]+\s+([A-Za-z_]\w*)\s*\(`, 'g')
   const methodNames = [...codeBlocks.matchAll(methodSignaturePattern)].map(match => match[1])
   for (const methodName of methodNames) {
-    const declarationPattern = new RegExp(`\\b(?:public|private|protected)\\s+(?:static\\s+)?[\\w<>\\[\\]]+\\s+${escapeRegExp(methodName)}\\s*\\(`)
+    const declarationPattern = new RegExp(`\\b(?:public|private|protected)\\s+(?:static\\s+)?[\\w<>\\[\\]]+\\s+${escapeRegExp(methodName)}\\s*\\(`, 'g')
     const codeWithoutDeclaration = codeBlocks.replace(declarationPattern, ' ')
     if (new RegExp(`\\b${escapeRegExp(methodName)}\\s*\\(`).test(codeWithoutDeclaration)) return true
   }

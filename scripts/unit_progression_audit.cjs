@@ -62,14 +62,10 @@ const advisoryRules = {
     late('U13', /\b(induction|Faraday|Lenz|flux|emf|induced current)\b/i, 'Electromagnetic induction is U13.'),
   ],
   statistics: [
-    late('U2', /\b(scatterplot|correlation|least[- ]squares|regression|residual|linear model)\b/i, 'Two-variable data and regression context are U2 unless inference for slope is required.'),
-    late('U3', /\b(random assignment|experiment|observational study|sampling method|stratified sampling|cluster random sample|simple random sample|type of sample|selection bias|census|blocking|matched pairs)\b/i, 'Collecting-data design is U3.'),
-    late('U4', /\b(random variable|binomial|geometric|expected value|compound random selection)\b/i, 'Probability and random variables are U4.'),
-    late('U5', /\b(sampling distribution|central limit theorem|standard error)\b/i, 'Sampling distributions are U5.'),
-    late('U6', /\b(confidence interval|hypothesis test|significance test|p-value|test statistic|reject the null)\b/i, 'Inference for proportions starts at U6.'),
-    late('U7', /\b(t[- ]interval|t[- ]test|matched pairs t|paired t|confidence interval for (?:a |the )?mean|test (?:for|of) (?:a |the )?mean)\b/i, 'Inference for means is U7 when inference is required.'),
-    late('U8', /\b(chi-square|goodness of fit|homogeneity|independence)\b/i, 'Chi-square inference is U8.'),
-    late('U9', /\b(confidence interval.+slope|slope.+confidence interval|test.+slope|slope.+test|regression.+inference|least[- ]squares regression line.+confidence interval)\b/i, 'Inference for regression slopes is U9.'),
+    late('U2', /\b(random variable|binomial|geometric|expected value|compound random selection|sampling distribution|central limit theorem|standard error)\b/i, 'Probability, random variables, and sampling distributions are U2 in the Fall 2026 framework.'),
+    late('U3', /\b(confidence interval|hypothesis test|significance test|p-value|test statistic|reject the null|sample proportion|population proportion|chi-square|goodness of fit|homogeneity|independence)\b/i, 'Categorical inference, proportions, and chi-square are U3 in the Fall 2026 framework.'),
+    late('U4', /\b(t[- ]interval|t[- ]test|matched pairs t|paired t|confidence interval for (?:a |the )?mean|test (?:for|of) (?:a |the )?mean|sample mean|population mean)\b/i, 'Inference for means is U4 in the Fall 2026 framework.'),
+    late('U5', /\b(scatterplot|correlation|least[- ]squares|regression|residual|linear model|confidence interval.+slope|slope.+confidence interval|test.+slope|slope.+test|regression.+inference)\b/i, 'Regression analysis is U5 in the Fall 2026 framework.'),
   ],
   'us-government-politics': [
     late('U2', /\b(Congress|president|bureaucracy|federal courts|Supreme Court|checks and balances|impeachment|veto|judicial review)\b/i, 'Branches and institutions are U2.'),
@@ -133,6 +129,10 @@ function stemText(q) {
 function fullText(q) {
   const options = q.options && typeof q.options === 'object' ? Object.values(q.options).join(' ') : ''
   return `${stemText(q)} ${options}`
+}
+
+function isStudentVisibleQuestion(q) {
+  return q && q.not_scored !== true && q.student_visible !== false && q.publish_status !== 'blocked'
 }
 
 function loadJson(filePath) {
@@ -309,7 +309,7 @@ function main() {
       if (!fs.existsSync(filePath)) continue
       const data = loadJson(filePath)
       for (const q of data) {
-        if (!q || q.not_scored || q.primary_unit === 'not_applicable') continue
+        if (!isStudentVisibleQuestion(q) || q.primary_unit === 'not_applicable') continue
         checked += 1
         findings.push(...auditQuestion(subject, file, q, validUnits, cases))
       }

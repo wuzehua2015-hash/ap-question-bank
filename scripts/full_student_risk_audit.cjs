@@ -95,8 +95,8 @@ for (const subject of activeSubjects) {
     addFinding(subjectResult, subject, null, 'P0', 'missing_unit_authority', 'Subject classification config is missing explicit official authority metadata.')
   }
 
-  const mcq = readJson(path.join(PUBLIC, 'data', subject.questionBank))
-  const frq = subject.frqBank ? readJson(path.join(PUBLIC, 'data', subject.frqBank)) : []
+  const mcq = readJson(path.join(PUBLIC, 'data', subject.questionBank)).filter(isStudentVisibleItem)
+  const frq = subject.frqBank ? readJson(path.join(PUBLIC, 'data', subject.frqBank)).filter(isStudentVisibleItem) : []
   subjectResult.mcq = mcq.length
   subjectResult.frq = frq.length
   report.totals.mcq += mcq.length
@@ -203,6 +203,13 @@ function auditItem(subjectResult, subject, item, type, validUnits) {
     finding_count: itemFindings.length,
     findings: itemFindings,
   }) + '\n')
+}
+
+function isStudentVisibleItem(item) {
+  return item &&
+    item.scoring_status !== 'not_scored' &&
+    item.student_visible !== false &&
+    item.publish_status !== 'blocked'
 }
 
 function auditMcqShape(subject, item, itemFindings) {

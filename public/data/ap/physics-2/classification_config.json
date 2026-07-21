@@ -1,34 +1,232 @@
 {
   "subject": "AP Physics 2: Algebra-Based",
-  "version": "ap_physics_2_2014_2016_2017_2019_2023_2025_v1",
+  "version": "physics_2_fall_2024_official_u9_u15_migration_2026_07_21",
   "units": [
     {
-      "code": "U1",
-      "name": "Fluids"
+      "code": "U9",
+      "name": "Thermodynamics",
+      "topics": [
+        {
+          "code": "9.1",
+          "name": "Kinetic Theory of Gases"
+        },
+        {
+          "code": "9.2",
+          "name": "The Ideal Gas Law"
+        },
+        {
+          "code": "9.3",
+          "name": "Thermal Energy"
+        },
+        {
+          "code": "9.4",
+          "name": "The First Law of Thermodynamics"
+        },
+        {
+          "code": "9.5",
+          "name": "Specific Heat and Thermal Conductivity"
+        },
+        {
+          "code": "9.6",
+          "name": "Entropy and the Second Law of Thermodynamics"
+        }
+      ]
     },
     {
-      "code": "U2",
-      "name": "Thermodynamics"
+      "code": "U10",
+      "name": "Electric Force, Field, and Potential",
+      "topics": [
+        {
+          "code": "10.1",
+          "name": "Electric Charge and Electric Force"
+        },
+        {
+          "code": "10.2",
+          "name": "Conservation of Electric Charge and the Process of Charging"
+        },
+        {
+          "code": "10.3",
+          "name": "Electric Fields"
+        },
+        {
+          "code": "10.4",
+          "name": "Electric Potential"
+        },
+        {
+          "code": "10.5",
+          "name": "Electric Potential Due to Point Charges and Uniform Fields"
+        },
+        {
+          "code": "10.6",
+          "name": "Capacitors"
+        },
+        {
+          "code": "10.7",
+          "name": "Conservation of Electric Energy"
+        }
+      ]
     },
     {
-      "code": "U3",
-      "name": "Electric Force, Field, and Potential"
+      "code": "U11",
+      "name": "Electric Circuits",
+      "topics": [
+        {
+          "code": "11.1",
+          "name": "Electric Current"
+        },
+        {
+          "code": "11.2",
+          "name": "Simple Circuits"
+        },
+        {
+          "code": "11.3",
+          "name": "Resistance, Resistivity, and Ohm?s Law"
+        },
+        {
+          "code": "11.4",
+          "name": "Electric Power"
+        },
+        {
+          "code": "11.5",
+          "name": "Compound Direct Current Circuits"
+        },
+        {
+          "code": "11.6",
+          "name": "Kirchhoff?s Loop Rule"
+        },
+        {
+          "code": "11.7",
+          "name": "Kirchhoff?s Junction Rule"
+        },
+        {
+          "code": "11.8",
+          "name": "Resistor-Capacitor (RC) Circuits"
+        }
+      ]
     },
     {
-      "code": "U4",
-      "name": "Electric Circuits"
+      "code": "U12",
+      "name": "Magnetism and Electromagnetic Induction",
+      "topics": [
+        {
+          "code": "12.1",
+          "name": "Magnetic Fields"
+        },
+        {
+          "code": "12.2",
+          "name": "Magnetism and Moving Charges"
+        },
+        {
+          "code": "12.3",
+          "name": "Magnetism and Current-Carrying Wires"
+        },
+        {
+          "code": "12.4",
+          "name": "Electromagnetic Induction"
+        }
+      ]
     },
     {
-      "code": "U5",
-      "name": "Magnetism and Electromagnetic Induction"
+      "code": "U13",
+      "name": "Geometric Optics",
+      "topics": [
+        {
+          "code": "13.1",
+          "name": "Reflection"
+        },
+        {
+          "code": "13.2",
+          "name": "Images Formed by Mirrors"
+        },
+        {
+          "code": "13.3",
+          "name": "Refraction"
+        },
+        {
+          "code": "13.4",
+          "name": "Images Formed by Lenses"
+        }
+      ]
     },
     {
-      "code": "U6",
-      "name": "Geometric and Physical Optics"
+      "code": "U14",
+      "name": "Waves, Sound, and Physical Optics",
+      "topics": [
+        {
+          "code": "14.1",
+          "name": "Properties of Wave Pulses"
+        },
+        {
+          "code": "14.2",
+          "name": "Periodic Waves"
+        },
+        {
+          "code": "14.3",
+          "name": "Boundary Behavior of Waves"
+        },
+        {
+          "code": "14.4",
+          "name": "Electromagnetic Waves"
+        },
+        {
+          "code": "14.5",
+          "name": "The Doppler Effect"
+        },
+        {
+          "code": "14.6",
+          "name": "Wave Interference"
+        },
+        {
+          "code": "14.7",
+          "name": "Diffraction"
+        },
+        {
+          "code": "14.8",
+          "name": "Double-Slit Interference"
+        },
+        {
+          "code": "14.9",
+          "name": "Thin-Film Interference"
+        }
+      ]
     },
     {
-      "code": "U7",
-      "name": "Quantum, Atomic, and Nuclear Physics"
+      "code": "U15",
+      "name": "Modern Physics",
+      "topics": [
+        {
+          "code": "15.1",
+          "name": "Quantum Theory"
+        },
+        {
+          "code": "15.2",
+          "name": "The Bohr Model of the Atom"
+        },
+        {
+          "code": "15.3",
+          "name": "Emission and Absorption Spectra"
+        },
+        {
+          "code": "15.4",
+          "name": "Blackbody Radiation"
+        },
+        {
+          "code": "15.5",
+          "name": "The Photoelectric Effect"
+        },
+        {
+          "code": "15.6",
+          "name": "Compton Scattering"
+        },
+        {
+          "code": "15.7",
+          "name": "Fission, Fusion, and Nuclear Decay"
+        },
+        {
+          "code": "15.8",
+          "name": "Types of Radioactive Decay"
+        }
+      ]
     }
   ],
   "published_mcq_years": [
@@ -52,13 +250,13 @@
     "mcq_time_limit": 4800,
     "frq_time_limit": 6000,
     "unit_distribution": {
-      "U1": 3,
-      "U2": 5,
-      "U3": 8,
-      "U4": 5,
-      "U5": 4,
-      "U6": 8,
-      "U7": 7
+      "U9": 6,
+      "U10": 8,
+      "U11": 6,
+      "U12": 5,
+      "U13": 5,
+      "U14": 5,
+      "U15": 5
     }
   },
   "notes": [
@@ -67,9 +265,10 @@
     "Student-facing prompts and rubrics are structured text; diagrams, graphs, and tables are attached as images or table_data."
   ],
   "unit_classification_authority": {
-    "official_framework": "AP Physics 2: Algebra-Based Course and Exam Description",
+    "official_framework": "AP Physics 2 Course and Exam Description, Effective Fall 2024",
     "official_url": "https://apcentral.collegeboard.org/courses/ap-physics-2",
     "policy": "Official exam and subject framework materials are the only authority for unit classification.",
-    "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
-  }
+    "student_progression_rule": "A question belongs to the earliest official AP Physics 2 unit after which a student can answer it using that unit and prior official Physics 2 units only."
+  },
+  "framework_note": "Effective Fall 2024 AP Physics 2 starts at Unit 9 and no longer includes Fluids. Legacy Fluids items are blocked from Physics 2 student surfaces pending Physics 1 transfer/review."
 }

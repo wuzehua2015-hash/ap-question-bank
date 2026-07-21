@@ -249,3 +249,18 @@ The site has entered productization for public launch:
   - Macro `2012_Q15`, `2014_Q30`, `2015_Q17`, `2016_Q27`, `2017_Q17`, `2017_Q45`, and `2019_Q38` return `primary_unit: U5` with required topic `5.2`.
   - CSA `ap_bowl_2018_Q37` returns `primary_unit: U10`.
   - Macro `classification_config.json` returns Unit 5 topics `5.1` through `5.7`, including `5.2 The Phillips Curve`.
+
+## 2026-07-21 Official Framework Backfill And Student-Visible Gate Hardening
+
+- Active subject count remains 16. Every active subject now has an official topic map in `classification_config.json`.
+- Current-framework migrations completed locally:
+  - AP Computer Science A migrated to the Effective Fall 2025 4-unit framework: U1 Using Objects and Methods, U2 Selection and Iteration, U3 Class Creation, U4 Data Collections.
+  - AP Statistics migrated to the Effective Fall 2026 5-unit framework: U1 Exploring One-Variable Data and Collecting Data, U2 Probability/Random Variables/Distributions, U3 Categorical Inference, U4 Quantitative Inference for Means, U5 Regression Analysis.
+  - AP Physics 2 migrated to the Effective Fall 2024 U9-U15 sequence. Legacy Fluids items are retained only as internal blocked records with `student_visible: false` and `publish_status: blocked`.
+- Validation scripts were hardened so student-facing release gates check only student-visible items. Blocked/internal records must not appear in Quiz, Mock, Search, PDF, recommendation, or student-risk outputs.
+- Metadata cleanup completed for recently migrated subjects: `unit_name`, classification evidence text, and reviewed cases no longer preserve obsolete student-facing unit names.
+- Local verification passed:
+  - `npm run validate`: all gates passed; only the documented CSA U4 concentration warning remains in `validate:unit-distribution`.
+  - `npm run build`: passed.
+  - Real browser local student check on isolated preview port 4291: student home renders Chinese-first; first-visit Start Practice routes to subject settings; Settings shows 16 addable subjects; CSA Quiz uses 4 current units; generated CSA Quiz enters `/play` and displays code content with option labels and content on the same visual line.
+- Deployment is pending in this entry until remote sync and Cloudflare production verification are completed.

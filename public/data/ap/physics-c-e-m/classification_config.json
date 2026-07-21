@@ -4,27 +4,163 @@
   "units": [
     {
       "code": "U8",
-      "name": "Electric Charges, Fields, and Gauss's Law"
+      "name": "Electric Charges, Fields, and Gauss's Law",
+      "topics": [
+        {
+          "code": "8.1",
+          "name": "Electric Charge and Electric Force"
+        },
+        {
+          "code": "8.2",
+          "name": "Conservation of Electric Charge"
+        },
+        {
+          "code": "8.3",
+          "name": "Electric Fields"
+        },
+        {
+          "code": "8.4",
+          "name": "Electric Fields of Charge Distributions"
+        },
+        {
+          "code": "8.5",
+          "name": "Electric Flux"
+        },
+        {
+          "code": "8.6",
+          "name": "Gauss?s Law"
+        }
+      ]
     },
     {
       "code": "U9",
-      "name": "Electric Potential"
+      "name": "Electric Potential",
+      "topics": [
+        {
+          "code": "9.1",
+          "name": "Electric Potential Energy"
+        },
+        {
+          "code": "9.2",
+          "name": "Electric Potential"
+        },
+        {
+          "code": "9.3",
+          "name": "Conservation of Electric Energy"
+        }
+      ]
     },
     {
       "code": "U10",
-      "name": "Conductors and Capacitors"
+      "name": "Conductors and Capacitors",
+      "topics": [
+        {
+          "code": "10.1",
+          "name": "Electrostatics with Conductors"
+        },
+        {
+          "code": "10.2",
+          "name": "Redistribution of Charge between Conductors"
+        },
+        {
+          "code": "10.3",
+          "name": "Capacitors"
+        },
+        {
+          "code": "10.4",
+          "name": "Dielectrics"
+        }
+      ]
     },
     {
       "code": "U11",
-      "name": "Electric Circuits"
+      "name": "Electric Circuits",
+      "topics": [
+        {
+          "code": "11.1",
+          "name": "Electric Current"
+        },
+        {
+          "code": "11.2",
+          "name": "Simple Circuits"
+        },
+        {
+          "code": "11.3",
+          "name": "Resistance, Resistivity, and Ohm?s Law"
+        },
+        {
+          "code": "11.4",
+          "name": "Electric Power"
+        },
+        {
+          "code": "11.5",
+          "name": "Compound Direct Current Circuits"
+        },
+        {
+          "code": "11.6",
+          "name": "Kirchhoff?s Loop Rule"
+        },
+        {
+          "code": "11.7",
+          "name": "Kirchhoff?s Junction Rule"
+        },
+        {
+          "code": "11.8",
+          "name": "Resistor-Capacitor Circuits"
+        }
+      ]
     },
     {
       "code": "U12",
-      "name": "Magnetic Fields and Electromagnetism"
+      "name": "Magnetic Fields and Electromagnetism",
+      "topics": [
+        {
+          "code": "12.1",
+          "name": "Magnetic Fields"
+        },
+        {
+          "code": "12.2",
+          "name": "Magnetism and Moving Charges"
+        },
+        {
+          "code": "12.3",
+          "name": "Magnetic Fields of Current-Carrying Wires"
+        },
+        {
+          "code": "12.4",
+          "name": "Ampere?s Law"
+        }
+      ]
     },
     {
       "code": "U13",
-      "name": "Electromagnetic Induction"
+      "name": "Electromagnetic Induction",
+      "topics": [
+        {
+          "code": "13.1",
+          "name": "Magnetic Flux"
+        },
+        {
+          "code": "13.2",
+          "name": "Electromagnetic Induction"
+        },
+        {
+          "code": "13.3",
+          "name": "Induced Currents and Magnetic Forces"
+        },
+        {
+          "code": "13.4",
+          "name": "Inductance"
+        },
+        {
+          "code": "13.5",
+          "name": "Circuits with Resistors and Capacitors"
+        },
+        {
+          "code": "13.6",
+          "name": "Circuits with Inductors"
+        }
+      ]
     }
   ],
   "published_years": [
@@ -46,5 +182,6 @@
     "official_url": "https://apcentral.collegeboard.org/courses/ap-physics-c-electricity-and-magnetism",
     "policy": "Official exam and subject framework materials are the only authority for unit classification.",
     "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
-  }
+  },
+  "topic_map_status": "official_topic_map_added_2026_07_21"
 }

@@ -3,35 +3,291 @@
   "units": [
     {
       "id": "U1",
-      "name": "Chemistry of Life"
+      "name": "Chemistry of Life",
+      "topics": [
+        {
+          "code": "1.1",
+          "name": "Structure of Water and Hydrogen Bonding"
+        },
+        {
+          "code": "1.2",
+          "name": "Elements of Life"
+        },
+        {
+          "code": "1.3",
+          "name": "Introduction to Biological Macromolecules"
+        },
+        {
+          "code": "1.4",
+          "name": "Carbohydrates"
+        },
+        {
+          "code": "1.5",
+          "name": "Lipids"
+        },
+        {
+          "code": "1.6",
+          "name": "Nucleic Acids"
+        },
+        {
+          "code": "1.7",
+          "name": "Proteins"
+        }
+      ]
     },
     {
       "id": "U2",
-      "name": "Cell Structure and Function"
+      "name": "Cells",
+      "topics": [
+        {
+          "code": "2.1",
+          "name": "Cell Structure and Function"
+        },
+        {
+          "code": "2.2",
+          "name": "Cell Size"
+        },
+        {
+          "code": "2.3",
+          "name": "Plasma Membrane"
+        },
+        {
+          "code": "2.4",
+          "name": "Membrane Permeability"
+        },
+        {
+          "code": "2.5",
+          "name": "Membrane Transport"
+        },
+        {
+          "code": "2.6",
+          "name": "Facilitated Diffusion"
+        },
+        {
+          "code": "2.7",
+          "name": "Tonicity and Osmoregulation"
+        },
+        {
+          "code": "2.8",
+          "name": "Mechanisms of Transport"
+        },
+        {
+          "code": "2.9",
+          "name": "Cell Compartmentalization"
+        },
+        {
+          "code": "2.10",
+          "name": "Origins of Cell Compartmentalization"
+        }
+      ]
     },
     {
       "id": "U3",
-      "name": "Cellular Energetics"
+      "name": "Cellular Energetics",
+      "topics": [
+        {
+          "code": "3.1",
+          "name": "Enzymes"
+        },
+        {
+          "code": "3.2",
+          "name": "Environmental Impacts on Enzyme Function"
+        },
+        {
+          "code": "3.3",
+          "name": "Cellular Energy"
+        },
+        {
+          "code": "3.4",
+          "name": "Photosynthesis"
+        },
+        {
+          "code": "3.5",
+          "name": "Cellular Respiration"
+        }
+      ]
     },
     {
       "id": "U4",
-      "name": "Cell Communication and Cell Cycle"
+      "name": "Cell Communication and Cell Cycle",
+      "topics": [
+        {
+          "code": "4.1",
+          "name": "Cell Communication"
+        },
+        {
+          "code": "4.2",
+          "name": "Introduction to Signal Transduction"
+        },
+        {
+          "code": "4.3",
+          "name": "Signal Transduction"
+        },
+        {
+          "code": "4.4",
+          "name": "Feedback"
+        },
+        {
+          "code": "4.5",
+          "name": "Cell Cycle"
+        },
+        {
+          "code": "4.6",
+          "name": "Regulation of Cell Cycle"
+        }
+      ]
     },
     {
       "id": "U5",
-      "name": "Heredity"
+      "name": "Heredity",
+      "topics": [
+        {
+          "code": "5.1",
+          "name": "Meiosis"
+        },
+        {
+          "code": "5.2",
+          "name": "Meiosis and Genetic Diversity"
+        },
+        {
+          "code": "5.3",
+          "name": "Mendelian Genetics"
+        },
+        {
+          "code": "5.4",
+          "name": "Non-Mendelian Genetics"
+        },
+        {
+          "code": "5.5",
+          "name": "Environmental Effects on Phenotype"
+        }
+      ]
     },
     {
       "id": "U6",
-      "name": "Gene Expression and Regulation"
+      "name": "Gene Expression and Regulation",
+      "topics": [
+        {
+          "code": "6.1",
+          "name": "DNA and RNA Structure"
+        },
+        {
+          "code": "6.2",
+          "name": "DNA Replication"
+        },
+        {
+          "code": "6.3",
+          "name": "Transcription and RNA Processing"
+        },
+        {
+          "code": "6.4",
+          "name": "Translation"
+        },
+        {
+          "code": "6.5",
+          "name": "Regulation of Gene Expression"
+        },
+        {
+          "code": "6.6",
+          "name": "Gene Expression and Cell Specialization"
+        },
+        {
+          "code": "6.7",
+          "name": "Mutations"
+        },
+        {
+          "code": "6.8",
+          "name": "Biotechnology"
+        }
+      ]
     },
     {
       "id": "U7",
-      "name": "Natural Selection"
+      "name": "Natural Selection",
+      "topics": [
+        {
+          "code": "7.1",
+          "name": "Introduction to Natural Selection"
+        },
+        {
+          "code": "7.2",
+          "name": "Natural Selection"
+        },
+        {
+          "code": "7.3",
+          "name": "Artificial Selection"
+        },
+        {
+          "code": "7.4",
+          "name": "Population Genetics"
+        },
+        {
+          "code": "7.5",
+          "name": "Hardy-Weinberg Equilibrium"
+        },
+        {
+          "code": "7.6",
+          "name": "Evidence of Evolution"
+        },
+        {
+          "code": "7.7",
+          "name": "Common Ancestry"
+        },
+        {
+          "code": "7.8",
+          "name": "Continuing Evolution"
+        },
+        {
+          "code": "7.9",
+          "name": "Phylogeny"
+        },
+        {
+          "code": "7.10",
+          "name": "Speciation"
+        },
+        {
+          "code": "7.11",
+          "name": "Variations in Populations"
+        },
+        {
+          "code": "7.12",
+          "name": "Origins of Life on Earth"
+        }
+      ]
     },
     {
       "id": "U8",
-      "name": "Ecology"
+      "name": "Ecology",
+      "topics": [
+        {
+          "code": "8.1",
+          "name": "Responses to the Environment"
+        },
+        {
+          "code": "8.2",
+          "name": "Energy Flow Through Ecosystems"
+        },
+        {
+          "code": "8.3",
+          "name": "Population Ecology"
+        },
+        {
+          "code": "8.4",
+          "name": "Effect of Density on Populations"
+        },
+        {
+          "code": "8.5",
+          "name": "Community Ecology"
+        },
+        {
+          "code": "8.6",
+          "name": "Biodiversity"
+        },
+        {
+          "code": "8.7",
+          "name": "Disruptions in Ecosystems"
+        }
+      ]
     }
   ],
   "source": "AP Biology Course and Exam Description; keyword-classified release baseline",
@@ -41,5 +297,6 @@
     "official_url": "https://apcentral.collegeboard.org/courses/ap-biology",
     "policy": "Official exam and subject framework materials are the only authority for unit classification.",
     "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
-  }
+  },
+  "topic_map_status": "official_topic_map_added_2026_07_21"
 }

@@ -1,42 +1,256 @@
 {
   "subject": "AP Statistics",
-  "version": "ap_statistics_legacy_9_unit_v1",
+  "version": "statistics_fall_2026_official_5_unit_migration_2026_07_21",
   "units": [
     {
       "code": "U1",
-      "name": "Exploring One-Variable Data"
+      "name": "Exploring One-Variable Data and Collecting Data",
+      "topics": [
+        {
+          "code": "1.1",
+          "name": "Introducing Statistics: What Can We Learn from Data?"
+        },
+        {
+          "code": "1.2",
+          "name": "Variables"
+        },
+        {
+          "code": "1.3",
+          "name": "Tabular Representation and Summary Statistics for One Categorical Variable"
+        },
+        {
+          "code": "1.4",
+          "name": "Graphical Representations for One Categorical Variable"
+        },
+        {
+          "code": "1.5",
+          "name": "Graphical Representations for One Quantitative Variable"
+        },
+        {
+          "code": "1.6",
+          "name": "Descriptions for One Quantitative Variable Distributions"
+        },
+        {
+          "code": "1.7",
+          "name": "Summary Statistics for One Quantitative Variable"
+        },
+        {
+          "code": "1.8",
+          "name": "Graphical Representations for Comparing Distributions"
+        },
+        {
+          "code": "1.9",
+          "name": "Comparisons of the Distributions of One Quantitative Variable"
+        },
+        {
+          "code": "1.10",
+          "name": "The Investigative Question"
+        },
+        {
+          "code": "1.11",
+          "name": "Random Sampling"
+        },
+        {
+          "code": "1.12",
+          "name": "Potential Problems with Sampling"
+        },
+        {
+          "code": "1.13",
+          "name": "Experimental Design"
+        }
+      ]
     },
     {
       "code": "U2",
-      "name": "Exploring Two-Variable Data"
+      "name": "Probability, Random Variables, and Probability Distributions",
+      "topics": [
+        {
+          "code": "2.1",
+          "name": "Tabular and Graphical Representations for the Distributions of Two Categorical Variables"
+        },
+        {
+          "code": "2.2",
+          "name": "Summary Statistics for Two Categorical Variables"
+        },
+        {
+          "code": "2.3",
+          "name": "Estimating Probabilities Using Simulation"
+        },
+        {
+          "code": "2.4",
+          "name": "Introduction to Probability"
+        },
+        {
+          "code": "2.5",
+          "name": "Mutually Exclusive Events"
+        },
+        {
+          "code": "2.6",
+          "name": "Conditional Probability"
+        },
+        {
+          "code": "2.7",
+          "name": "Independent Events and Unions of Events"
+        },
+        {
+          "code": "2.8",
+          "name": "Introduction to Random Variables"
+        },
+        {
+          "code": "2.9",
+          "name": "Parameters of Random Variables"
+        },
+        {
+          "code": "2.10",
+          "name": "The Binomial Distribution"
+        },
+        {
+          "code": "2.11",
+          "name": "The Normal Distribution"
+        },
+        {
+          "code": "2.12",
+          "name": "Sampling Distributions"
+        }
+      ]
     },
     {
       "code": "U3",
-      "name": "Collecting Data"
+      "name": "Inference for Categorical Data: Proportions",
+      "topics": [
+        {
+          "code": "3.1",
+          "name": "Estimators"
+        },
+        {
+          "code": "3.2",
+          "name": "Sampling Distributions for Sample Proportions"
+        },
+        {
+          "code": "3.3",
+          "name": "Constructing a Confidence Interval for a Population Proportion"
+        },
+        {
+          "code": "3.4",
+          "name": "Justifying a Claim Based on a Confidence Interval for a Population Proportion"
+        },
+        {
+          "code": "3.5",
+          "name": "Setting Up a Test for a Population Proportion"
+        },
+        {
+          "code": "3.6",
+          "name": "p-Values"
+        },
+        {
+          "code": "3.7",
+          "name": "Carrying Out a Test for a Population Proportion"
+        },
+        {
+          "code": "3.8",
+          "name": "Potential Errors When Performing Tests"
+        },
+        {
+          "code": "3.9",
+          "name": "Sampling Distributions for the Difference Between Sample Proportions"
+        },
+        {
+          "code": "3.10",
+          "name": "Constructing a Confidence Interval for the Difference Between Two Population Proportions"
+        },
+        {
+          "code": "3.11",
+          "name": "Justifying a Claim Based on a Confidence Interval for the Difference Between Two Population Proportions"
+        },
+        {
+          "code": "3.12",
+          "name": "Setting Up a Test for the Difference Between Two Population Proportions"
+        },
+        {
+          "code": "3.13",
+          "name": "Carrying Out a Test for the Difference Between Two Population Proportions"
+        },
+        {
+          "code": "3.14",
+          "name": "Setting Up a Chi-Square Test for Homogeneity or Independence"
+        },
+        {
+          "code": "3.15",
+          "name": "Carrying Out a Chi-Square Test for Homogeneity or Independence"
+        }
+      ]
     },
     {
       "code": "U4",
-      "name": "Probability, Random Variables, and Probability Distributions"
+      "name": "Inference for Quantitative Data: Means",
+      "topics": [
+        {
+          "code": "4.1",
+          "name": "Sampling Distributions for Sample Means"
+        },
+        {
+          "code": "4.2",
+          "name": "Constructing a Confidence Interval for a Population Mean or Population Mean Difference"
+        },
+        {
+          "code": "4.3",
+          "name": "Justifying a Claim Based on a Confidence Interval for a Population Mean or Population Mean Difference"
+        },
+        {
+          "code": "4.4",
+          "name": "Setting Up a Test for a Population Mean"
+        },
+        {
+          "code": "4.5",
+          "name": "Carrying Out a Test for a Population Mean"
+        },
+        {
+          "code": "4.6",
+          "name": "Sampling Distributions for the Difference Between Sample Means"
+        },
+        {
+          "code": "4.7",
+          "name": "Constructing a Confidence Interval for the Difference Between Two Population Means"
+        },
+        {
+          "code": "4.8",
+          "name": "Justifying a Claim Based on a Confidence Interval for the Difference Between Two Population Means"
+        },
+        {
+          "code": "4.9",
+          "name": "Setting Up a Test for the Difference Between Two Population Means"
+        },
+        {
+          "code": "4.10",
+          "name": "Carrying Out a Test for the Difference Between Two Population Means"
+        }
+      ]
     },
     {
       "code": "U5",
-      "name": "Sampling Distributions"
-    },
-    {
-      "code": "U6",
-      "name": "Inference for Categorical Data: Proportions"
-    },
-    {
-      "code": "U7",
-      "name": "Inference for Quantitative Data: Means"
-    },
-    {
-      "code": "U8",
-      "name": "Inference for Categorical Data: Chi-Square"
-    },
-    {
-      "code": "U9",
-      "name": "Inference for Quantitative Data: Slopes"
+      "name": "Regression Analysis",
+      "topics": [
+        {
+          "code": "5.1",
+          "name": "Graphical Representations Between Two Quantitative Variables"
+        },
+        {
+          "code": "5.2",
+          "name": "Correlation"
+        },
+        {
+          "code": "5.3",
+          "name": "Linear Regression Models"
+        },
+        {
+          "code": "5.4",
+          "name": "Residuals"
+        },
+        {
+          "code": "5.5",
+          "name": "Least-Squares Regression"
+        }
+      ]
     }
   ],
   "published_years": [
@@ -49,9 +263,10 @@
     2017
   ],
   "unit_classification_authority": {
-    "official_framework": "AP Statistics Course and Exam Description",
+    "official_framework": "AP Statistics Course and Exam Description, Effective Fall 2026",
     "official_url": "https://apcentral.collegeboard.org/courses/ap-statistics",
     "policy": "Official exam and subject framework materials are the only authority for unit classification.",
-    "student_progression_rule": "A question belongs to the earliest unit after which a student can answer it using that unit and prior units only."
-  }
+    "student_progression_rule": "A question belongs to the earliest official Fall 2026 unit after which a student can answer it using that unit and prior units only."
+  },
+  "framework_note": "Effective Fall 2026 AP Statistics uses five official units; legacy nine-unit labels were migrated by required statistical knowledge."
 }

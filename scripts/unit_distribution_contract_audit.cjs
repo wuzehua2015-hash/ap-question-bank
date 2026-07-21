@@ -14,6 +14,12 @@ const allowedSparseUnits = {
   },
 }
 
+const allowedHighConcentration = {
+  'computer-science-a': {
+    U4: 'Effective Fall 2025 CSA Unit 4 Data Collections consolidates arrays, ArrayList, 2D arrays, searching, sorting, and recursion; source-bank concentration is allowed while Mock distribution remains official-weight aligned.',
+  },
+}
+
 function readJson(relativePath) {
   return JSON.parse(fs.readFileSync(path.join(root, 'public', 'data', relativePath), 'utf8'))
 }
@@ -46,6 +52,7 @@ for (const subject of subjects.filter(item => item.active && item.visibility !==
   const unitQuizCounts = new Map(units.map(unit => [unit.id, 0]))
 
   for (const row of rows) {
+    if (row.student_visible === false || row.publish_status === 'blocked') continue
     const unit = row.primary_unit || row.primaryUnit
     if (!unit) {
       errors.push(`${subject.id}: question ${row.question_id || row.id || '(unknown)'} has no primary unit`)
@@ -59,6 +66,7 @@ for (const subject of subjects.filter(item => item.active && item.visibility !==
   }
 
   for (const bucket of makeQuestionBuckets(rows)) {
+    if (bucket.some(row => row.student_visible === false || row.publish_status === 'blocked')) continue
     const bucketUnits = [...new Set(bucket.map(row => row.primary_unit || row.primaryUnit).filter(Boolean))]
     if (bucketUnits.length === 1 && unitIds.has(bucketUnits[0])) {
       unitQuizCounts.set(bucketUnits[0], (unitQuizCounts.get(bucketUnits[0]) || 0) + bucket.length)
@@ -82,7 +90,11 @@ for (const subject of subjects.filter(item => item.active && item.visibility !==
   if (largest && total > 0) {
     const share = largest[1] / total
     if (share > 0.55) {
-      errors.push(`${subject.id}: unit ${largest[0]} has unusually high MCQ concentration (${Math.round(share * 100)}%)`)
+      if (allowedHighConcentration[subject.id]?.[largest[0]]) {
+        warnings.push(`${subject.id}: unit ${largest[0]} has unusually high MCQ concentration (${Math.round(share * 100)}%); ${allowedHighConcentration[subject.id][largest[0]]}`)
+      } else {
+        errors.push(`${subject.id}: unit ${largest[0]} has unusually high MCQ concentration (${Math.round(share * 100)}%)`)
+      }
     } else if (share > 0.42) {
       warnings.push(`${subject.id}: unit ${largest[0]} has high MCQ concentration (${Math.round(share * 100)}%)`)
     }
