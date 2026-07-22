@@ -45,6 +45,16 @@ Evidence has two quality levels:
 
 Cross-unit signals are review candidates only. Automated scans must use the stem, shared stimulus, table/figure captions, and the correct-answer path; wrong-option-only concepts cannot raise the unit. If a signal points to a different unit, the item must either be corrected or retain its current unit with a concrete reviewer rationale explaining why the signal is background, output, or non-solving context.
 
+Items hidden from student surfaces are not exempt from classification review. If an item is blocked because it is said to be outside the current official framework, the blocker must be supported by the same required-knowledge logic as a visible item: the prompt/shared stimulus must require content outside the current official unit map. A legacy source unit, stale `classification_reasoning`, old `primary_unit`, or a broad keyword such as pressure/density/charge in an answer choice is not enough.
+
+For official-framework migrations, every blocked/hidden scored item must pass a reverse review:
+
+- First test whether the stem/shared context maps to any current official topic.
+- Only then test whether the item is truly outside the current framework.
+- Use prompt and shared context as primary evidence; answer choices can support a decision only when they are part of the correct-answer path.
+- If current-framework evidence exists, restore the item to the student path and update `classification_accuracy.required_topics`.
+- If the item remains blocked, record a specific current-framework exclusion reason, not a copied legacy unit label.
+
 ## Student-Logic Definition
 
 Student-logic audit means answering this question for every active subject: if a student has learned through unit `Uk`, are all questions shown at that stage answerable with `U1..Uk`, and are later-unit concepts excluded unless they are only background, labels, or distractors?
@@ -69,6 +79,7 @@ Passing the browser flow alone is never enough. A question can be clickable and 
 8. If an item is corrected, update related indexes and add a short `classification_reasoning` that states the official-framework and progression-gate reason.
 9. Add corrected examples and confirmed false alarms to `scripts/unit_progression_reviewed_cases.json` so future validation catches regressions and does not bury real issues in repeated noise.
 10. If a legacy item is only bridged from prior reviewed evidence, record it as unit-level bridge evidence and keep it eligible for future topic-level backfill. Do not describe that bridge operation as a fresh all-item reclassification.
+11. When a subject has blocked/hidden scored inventory, run that subject's reverse-hidden classification mode before closeout. The gate must be able to find items that were incorrectly removed from the student path.
 
 ## Framework Metadata
 

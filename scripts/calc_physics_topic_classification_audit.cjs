@@ -7,6 +7,7 @@ const AP_ROOT = path.join(ROOT, 'public', 'data', 'ap')
 const OUT_DIR = path.join(ROOT, '.workspace', 'calc-physics-topic-classification-audit')
 const applyFixes = process.argv.includes('--apply')
 const failOnFindings = process.argv.includes('--fail-on-findings')
+const reviewBlocked = process.argv.includes('--review-blocked')
 const subjectArg = process.argv.find(arg => arg.startsWith('--subject='))?.split('=')[1]
 
 const SUBJECTS = {
@@ -21,6 +22,8 @@ const SUBJECTS = {
 const MANUAL = {
   'physics-1|2017_Q35': ['4.3', 'Astronauts and container exchange momentum in an isolated system; the item requires conservation of linear momentum.'],
   'physics-2|2016_Q25': ['10.6', 'Charged spheres move to a new equilibrium under electrostatic interactions; the latest required topic is electric force, field, and potential.'],
+  'physics-2|2014_Q29': ['9.1', 'Pressure difference on a sealed gas container requires gas pressure as a thermodynamic quantity.'],
+  'physics-2|2019_FRQ1': ['11.4', 'The heater design requires electric power in a resistive wire; thermodynamic transfer is earlier Physics 2 content, so the latest required unit is electric circuits.'],
   'physics-2|2017_Q03': ['10.1', 'The proton interaction asks attraction/repulsion from charge sign and electrostatic force.'],
   'physics-2|2017_Q23': ['10.1', 'The graph linearization uses Coulomb force dependence on separation.'],
   'physics-2|2019_Q23': ['15.3', 'Energy-level absorption of visible light requires emission and absorption spectra.'],
@@ -73,7 +76,8 @@ function auditSubject(subject) {
     if (!fs.existsSync(filePath)) continue
     const rows = readJson(filePath)
     for (const item of rows) {
-      if (!visible(item)) continue
+      const isHiddenFromStudent = !visible(item)
+      if (isHiddenFromStudent && (!reviewBlocked || item.scoring_status === 'not_scored')) continue
       subjectStats.checked += 1
       report.totals.checked += 1
       const decision = classify(meta, item)
@@ -113,7 +117,7 @@ function auditSubject(subject) {
 
 function classify(meta, item) {
   const text = itemText(item)
-  const manual = MANUAL[`${meta.subject}|${item.question_id}`]
+  const manual = MANUAL[`${meta.subject}|${item.question_id || item.id || item.frq_id}`]
   if (manual) return { code: manual[0], unit: `U${manual[0].split('.')[0]}`, reason: `Manual official-progression review: ${manual[1]}` }
   if (meta.family === 'calc-ab') return classifyCalc(item, text, false)
   if (meta.family === 'calc-bc') return classifyCalc(item, text, true)
@@ -251,18 +255,28 @@ function classifyMechanics(item, text, allowFluids) {
 }
 
 function classifyPhysics2(item, text) {
+  const primaryText = itemPrimaryText(item)
   const rules = [
     d('15.7', /\b(nuclear|decay|alpha particle|beta|fusion|fission|half-life|uranium|thorium|radioactive)\b/i, 'Nuclear physics requires Unit 15.'),
     d('15.5', /\b(photoelectric|photon|electron diffraction|bohr|energy[- ]level|emission spectrum|absorption spectrum|blackbody|compton|quantum|wave function|probability of finding the particle|law of conservation of electric charge)\b/i, 'Modern physics requires Unit 15.'),
     d('14.8', /\b(double[- ]slit|thin[- ]film|diffraction|interference|standing wave|sound|doppler|electromagnetic wave|wave pulses?|periodic wave|mechanical wave|transverse|wavelength|frequency)\b/i, 'Waves and physical optics require Unit 14.'),
-    d('13.4', /\b(lens|mirror|focal length|image distance|object distance|refraction|reflection|optical bench|index of refraction|ray|apparent positions?|pool)\b/i, 'Geometric optics require Unit 13.'),
-    d('12.4', /\b(magnetic|magnet|compass|bar magnets?|induction|induced current|magnetic flux|right-hand|current-carrying wire)\b/i, 'Magnetism and electromagnetic induction require Unit 12.'),
+    d('13.4', /\b(lens|mirror|focal length|image distance|object distance|refraction|reflection|optical bench|index of refraction|ray|apparent positions?)\b/i, 'Geometric optics require Unit 13.'),
+    d('12.4', /\b(magnetic|magnet|compass|bar magnets?|induction|induced current|magnetic flux|right-hand)\b/i, 'Magnetism and electromagnetic induction require Unit 12.'),
     d('11.6', /\b(circuit|resistor|battery|current|resistance|ohm|kirchhoff|ammeter|voltmeter|rc circuit|bulb|bulbs|potential differences .* bulbs)\b/i, 'Electric circuits require Unit 11.'),
     d('10.6', /\b(capacitor|electric field|electric potential|electric force|electrostatic force|test charge|point charge|positive charge|free protons|charged objects?|charging|uncharged spheres?|uncharged conducting spheres?|uncharged insulating rod|conductor|sphere.*charge|coulomb|parallel plates)\b/i, 'Electric force, field, and potential require Unit 10.'),
-    d('9.4', /\b(ideal gas|gas as it goes|internal energy of the gas|thermodynamic|thermal|temperature|heat|entropy|first law|second law|specific heat|conductivity|radiation|conduction|convection)\b/i, 'Thermodynamics requires Unit 9.'),
+    d('9.4', /\b(ideal gas|gas as it goes|internal energy of the gas|thermodynamic|thermal|temperature|heat|entropy|first law|second law|specific heat|conductivity|radiation|conduction|convection|pressure .* volume|pressure as a function of volume|absolute temperature|movable piston)\b/i, 'Thermodynamics requires Unit 9.'),
   ]
-  if (/\b(fluid|pressure|density|buoyant|pipe|water flows|flow rate|bernoulli|submerged)\b/i.test(text)) return { notApplicable: true, reason: 'Fluid mechanics is not in the current Physics 2 U9-U15 course map.' }
-  return firstRule(text, rules) || classifyPhysicsLabel(item, 'physics-2') || { reason: 'No high-confidence Physics 2 topic evidence.' }
+  if (isPhysics2LegacyFluid(primaryText)) return { notApplicable: true, reason: 'Legacy fluids content is outside the current Physics 2 U9-U15 course map.' }
+  const currentFrameworkDecision = firstRule(primaryText, rules) || firstRule(text, rules)
+  if (currentFrameworkDecision) return currentFrameworkDecision
+  const labelDecision = classifyPhysicsLabel(item, 'physics-2')
+  if (labelDecision && !labelDecision.notApplicable) return labelDecision
+  if (isPhysics2LegacyFluid(text) || (labelDecision && labelDecision.notApplicable)) return { notApplicable: true, reason: 'Legacy fluids content is outside the current Physics 2 U9-U15 course map.' }
+  return { reason: 'No high-confidence Physics 2 topic evidence.' }
+}
+
+function isPhysics2LegacyFluid(text) {
+  return /\b(fluid|buoyant|buoyancy|bernoulli|flow rate|water flows|water flowing|water exits|stream[s]? of water|pipe widens|horizontal cylindrical pipe|horizontal pipe|pipes?|submerged|floating object|raft|displaced fluid|reservoirs?|hose|tank .* water|liquid .* prism|pressure .* depth|gauge pressure at the bottom)\b/i.test(text)
 }
 
 function classifyEM(item, text) {
@@ -365,6 +379,10 @@ function applyDecision(item, topic, decision, meta) {
     review_method: 'subject-specific official topic progression audit',
     reviewed_at: '2026-07-21',
   }
+  if (item.scoring_status !== 'not_scored') {
+    item.student_visible = true
+    item.publish_status = 'published'
+  }
 }
 
 function markNotApplicable(item, decision, meta) {
@@ -396,6 +414,11 @@ function markNotApplicable(item, decision, meta) {
 
 function itemText(item) {
   const parts = [item.text, item.stem, item.prompt, item.answer, item.explanation, item.rubric, JSON.stringify(item.options || ''), JSON.stringify(item.topics || '')]
+  return parts.filter(Boolean).join(' ').replace(/\s+/g, ' ')
+}
+
+function itemPrimaryText(item) {
+  const parts = [item.text, item.stem, item.prompt, item.explanation, item.rubric, JSON.stringify(item.topics || '')]
   return parts.filter(Boolean).join(' ').replace(/\s+/g, ' ')
 }
 

@@ -106,6 +106,19 @@ AP Computer Science A now includes the current official CED sample questions as 
 CSA expansion must continue to use structured Java/code/table rendering rather than prompt screenshots. The mandatory CSA post-pipeline check is `npm run audit:csa`, in addition to full `npm run validate`, build, render, student-flow, and capacity audits.
 
 The 2009 scanned released exam remains a deferred candidate until its Java code, options, answer key, FRQ prompts, and scoring rows are reconstructed from the scanned source.
+
+## 2026-07-22: Reverse-Hidden Classification Gate
+
+When a scored item is hidden or blocked from student surfaces, that state must be reviewed as a first-class classification decision. A subject closeout is not complete if validation only checks visible items while hidden scored inventory may still map to current official topics.
+
+For framework migrations, use this decision order:
+
+1. Check prompt/shared-context evidence against current official topics.
+2. Restore any item that maps to current official topics.
+3. Block only items whose required solving knowledge is outside the current official framework or otherwise not deliverable.
+4. Do not let stale labels, old `classification_reasoning`, or wrong-option-only concepts determine either blocking or unit placement.
+
+Physics 2 now enforces this through `validate:physics-2-units`, which runs `calc_physics_topic_classification_audit.cjs --review-blocked`.
 # 2026-07-13 - CSA Expansion Source Policy
 
 - CSA expansion completion may include open-curriculum and LynkEdu-owned original practice content, but every non-official source must be labeled as practice, carry source provenance, and keep license/credit metadata where applicable.
