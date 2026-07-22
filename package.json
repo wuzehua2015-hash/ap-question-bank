@@ -56,7 +56,7 @@
     "validate:calculus-ab-units": "node scripts/calc_physics_topic_classification_audit.cjs --subject=calculus-ab --fail-on-findings",
     "validate:calculus-bc-units": "node scripts/calc_physics_topic_classification_audit.cjs --subject=calculus-bc --fail-on-findings",
     "validate:physics-1-units": "node scripts/calc_physics_topic_classification_audit.cjs --subject=physics-1 --fail-on-findings",
-    "validate:physics-2-units": "node scripts/calc_physics_topic_classification_audit.cjs --subject=physics-2 --fail-on-findings",
+    "validate:physics-2-units": "node scripts/calc_physics_topic_classification_audit.cjs --subject=physics-2 --review-blocked --fail-on-findings",
     "validate:physics-c-mechanics-units": "node scripts/calc_physics_topic_classification_audit.cjs --subject=physics-c-mechanics --fail-on-findings",
     "validate:physics-c-e-m-units": "node scripts/calc_physics_topic_classification_audit.cjs --subject=physics-c-e-m --fail-on-findings",
     "validate:classification-evidence": "node scripts/classification_evidence_audit.cjs --fail-on-findings",

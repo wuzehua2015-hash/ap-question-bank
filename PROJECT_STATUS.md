@@ -1,13 +1,13 @@
 # LynkEdu AP Question Bank Project Status
 
-Last updated: 2026-07-21
+Last updated: 2026-07-22
 
 ## Current Production
 
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Latest Pages deployment URL observed: `https://d42c8aed.lynkedu-ap-question-bank.pages.dev`
+- Latest Pages deployment URL observed: `https://3e28b971.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
   - JS: `/assets/index-Dbek1AmI.js`
   - CSS: `/assets/index--ag2Ebom.css`
@@ -62,7 +62,7 @@ Student-facing copy must use `翎英学员`, not internal certification/release 
 
 Content-capacity status: 2026-07-16 capacity reinforcement cleared the pre-launch capacity audit for all 16 active subjects. Biology, CSP, APES, Physics 1, and Physics 2 now have at least 250 MCQ each and no sparse units under the current capacity audit.
 
-Topic-classification status: 2026-07-21 all 16 active AP subjects now have item-level official topic evidence for every student-visible scored item. Current student-visible scored set is 5349/5349 topic-level, 0 unit-level-only. Items outside the current official learning path are blocked from student flows rather than force-classified: Calculus AB 1, Physics 1 25, Physics 2 56, Physics C Mechanics 5.
+Topic-classification status: 2026-07-22 all 16 active AP subjects have item-level official topic evidence for every student-visible scored item. Current student-visible scored set is 5379/5379 topic-level, 0 unit-level-only. Items outside the current official learning path are blocked from student flows rather than force-classified: Biology 36, Calculus AB 1, Physics 1 25, Physics 2 26, Physics C Mechanics 5, US Government 5. Physics 2 now has a reverse-hidden classification gate for blocked scored inventory after correcting stale Fluids migration overblocking.
 
 ## Student Account System
 

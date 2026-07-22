@@ -142,7 +142,9 @@
       "classification_reasoning": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2014_FRQ2",
@@ -304,7 +306,9 @@
       "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2014_FRQ3",
@@ -540,7 +544,9 @@
       "classification_reasoning": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2014_FRQ4",
@@ -702,7 +708,9 @@
       "classification_reasoning": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2016_FRQ1",
@@ -840,7 +848,9 @@
       "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2016_FRQ2",
@@ -858,9 +868,9 @@
       "images/ap/physics-2/2016/2016_p045_img01.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U1",
-    "unit": "U1",
-    "unit_name": "Fluids",
+    "primary_unit": "not_applicable",
+    "unit": "not_applicable",
+    "unit_name": "Outside current official unit progression",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -909,17 +919,12 @@
       "official_text": "Official scoring guideline summary:\n\nQuestion 2: 12 points total.\n\n(a) Award points for identifying the volume of water delivered as $V=A_{hose}vt$, combining that volume with the pool area to determine the water height, and using $P_{tot}=P_{atm}+\\rho gh$ to calculate the total pressure. The accepted numerical answer is about $1.09\\times10^5\\,\\mathrm{Pa}$.\n\n(b) Award the point for stating that the buoyant force on the floating ball remains constant, with justification based on constant displaced water volume or force equilibrium.\n\n(c)(i) Award the point for explaining that the pool fills at the same rate because the volume flow rate is unchanged by conservation of mass, $A_1v_1=A_2v_2$.\n\n(c)(ii) Award points for using continuity to find the faster nozzle speed and for explaining that the smaller nozzle area offsets the higher speed, so the fill time remains unchanged."
     },
     "classification": {
-      "primary_unit": "U1",
+      "primary_unit": "not_applicable",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U1 Fluids. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 2. (12 points, suggested time 25 minutes) Water flows at a speed $v$ of $2.00\\,\\mathrm{m/s}$ through a hose of radius $3\\,\\mathrm{cm}$ and into a large empty rectangular pool. The pool has a level bottom and measures $10.0\\,\\mathrm{m}$ long",
-        "Student-visible media are preserved with 1 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
-      "review_status": "reviewed",
-      "classification_version": "physics-2-official-progression-2026-07-19",
+      "evidence": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
+      "review_status": "blocked",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -986,11 +991,21 @@
         "text": "Consider the total pressure exerted by the water on the sides of the pool near the bottom of the pool. When the person floats in the pool, is this pressure greater than, less than, or the same as it was before the person got into the pool? Explain your reasoning."
       }
     ],
-    "classification_reasoning": "Official progression review: U1 Fluids. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
     "unit_classification": "official-progression-reviewed",
     "publish_status": "blocked",
     "student_visible": false,
-    "block_reason": "Physics 2 current framework no longer includes Fluids; hold for Physics 1 review or retired-source archive."
+    "block_reason": "Physics 2 current framework no longer includes Fluids; hold for Physics 1 review or retired-source archive.",
+    "previous_primary_unit": "not_applicable",
+    "classification_accuracy": {
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "required_topics": [],
+      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
+      "why_not_earlier_unit": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
+      "classification_reasoning": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
+      "review_method": "subject-specific official topic progression audit",
+      "reviewed_at": "2026-07-21"
+    }
   },
   {
     "question_id": "2016_FRQ3",
@@ -1015,12 +1030,17 @@
       "images/ap/physics-2/2016/2016_p062_img01.png",
       "images/ap/physics-2/2016/2016_p062_img04.png"
     ],
-    "primary_unit": "not_applicable",
-    "unit": "not_applicable",
-    "unit_name": "Outside current official unit progression",
+    "primary_unit": "U11",
+    "unit": "U11",
+    "unit_name": "Electric Circuits",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "11.6",
+        "name": "Kirchhoff?s Loop Rule"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -1066,11 +1086,11 @@
       "official_text": "Question 3\n12 points total\nDistribution\nof points\n(a)\n2 points\nFor electrical energy input E_D\ncorrectly expressed in terms of a combination of\n, , and\nV I_t\nD_1 point\nE_I Vt\nD\n= D\n\nFor equating the electrical energy input to the energy of the gas expressed in terms of\ntemperature, and an attempt to solve for T_D\n\n1 point\n5 2\nB_I\nVt\nNk\nT_D\nD\n= 2\n5\nB_T\nVI t\nNk\nD_D\n\n=\n(b)\n4 points\nFor a valid description of the setup and procedure, including a diagram\n1 point\nFor measuring current and potential difference, with symbols defined as needed\n1 point\nFor measuring the temperature change of the air, with a symbol defined as needed\n1 point\nFor a description of how the measurements will be used to calculate the energy\n1 point\n(c)\n1 point\nFor a line with a positive slope and a positive temperature intercept (the line would not\nextend to the origin, because the air would initially be at ambient temperature)\n1 point"
     },
     "classification": {
-      "primary_unit": "not_applicable",
+      "primary_unit": "U11",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-      "review_status": "blocked",
+      "evidence": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+      "review_status": "reviewed",
       "classification_version": "official_topic_progression_v2_2026_07_21",
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -1191,20 +1211,27 @@
         "text": "Another group of students performing this experiment notices a gap in the seal of the container opening and thinks that some gas has leaked out of the container. If this is true, how would this group’s graph of air temperature as a function of electrical energy compare to the graph you drew in part (c) ?"
       }
     ],
-    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
-      "required_topics": [],
-      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
-      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "required_topics": [
+        {
+          "unit": "U11",
+          "topic_code": "11.6",
+          "topic_name": "Kirchhoff?s Loop Rule",
+          "reason": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     },
     "previous_primary_unit": "U12",
-    "student_visible": false,
-    "publish_status": "blocked"
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2016_FRQ4",
@@ -1316,7 +1343,9 @@
       "classification_reasoning": "Modern physics requires Unit 15. Latest required official topic: 15.5 The Photoelectric Effect.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2017_FRQ1",
@@ -1391,7 +1420,7 @@
       "primary_unit": "not_applicable",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "evidence": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
       "review_status": "blocked",
       "classification_version": "official_topic_progression_v2_2026_07_21",
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
@@ -1466,18 +1495,18 @@
         "text": "The bottom of the pool is 5 m below the surface of the water. The crane is now used to lift the cube out of the pool. The cube is lifted upward at a slow and constant speed, so all drag forces are negligible. i. Predict how the force exerted by the crane on the cube when the bottom of the cube is at a depth of 2.0 m compares to the force exerted by the crane on the cube when the bottom of the cube is at a depth of 4.0 m. Explain your reasoning. ii. On the black square below, which represents the cube, draw and label the forces (not components) that are exerted on the cube while the crane is lifting it and the bottom of the cube is 4 m below the surface of the water. Each force must be represented by a distinct arrow starting on, and pointing away from, the black square. The lengths of the arrows should approximately demonstrate the net force on the cube. iii. Calculate the force exerted by the crane on the cube when the bottom of the cube is 4 m below the surface of the water."
       }
     ],
-    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+    "classification_reasoning": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
     "unit_classification": "official-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "required_topics": [],
       "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
-      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "why_not_earlier_unit": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
+      "classification_reasoning": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     },
-    "previous_primary_unit": "U9",
+    "previous_primary_unit": "not_applicable",
     "student_visible": false,
     "publish_status": "blocked"
   },
@@ -1500,12 +1529,17 @@
     "rubric_image_paths": [
       "images/ap/physics-2/2017/2017_p060_img01.png"
     ],
-    "primary_unit": "not_applicable",
-    "unit": "not_applicable",
-    "unit_name": "Outside current official unit progression",
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Thermodynamics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "9.4",
+        "name": "The First Law of Thermodynamics"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -1536,11 +1570,11 @@
       "official_text": "Question 2\n12 points total\nDistribution\nof points\n\n(a)\ni)\n3 points\nFor a straight line at constant pressure from A to B to the correct final volume, which\nmust be labeled 3\n1 point\nFor an isotherm from B to C ending at the right final pressure, which must be labeled 3;\ncurve must be obviously concave up\n1 point\nFor a straight line from C to A at constant volume, with state A labeled (1, 1)\n1 point\nii)\n1 point\nUsing the ideal gas law:\n\n0\nA A_P V\nnRT\n\n3\nB_B\nA_A\nP V_P\nV_0\n3\nB\nnRT\nnRT\nFor the correct answer\n1 point\n\n0\n3\nB_T\n\nT\niii)\n1 point\nFor a correct comparison of the temperatures or correctly indicating\n0\n3\nor\nB_C\nA_T\nT_T\n\n3T or a value consistent with the answer to part (a)(i) or (ii)\nAND making a reference to the isotherm or the values of P and V at points C and A_1 point\nExamples:\n\n0\n3\nC_T\nT since it is on an isotherm with point B, as shown by the graph.\nOn the graph, C has the same volume and 3 times the pressure as A. By the ideal gas\nlaw it thus has a temperature 3 times that of A.\nA_B\nC_1 2 3 4\n4\n3\n2\n1"
     },
     "classification": {
-      "primary_unit": "not_applicable",
+      "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-      "review_status": "blocked",
+      "evidence": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
+      "review_status": "reviewed",
       "classification_version": "official_topic_progression_v2_2026_07_21",
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -1619,20 +1653,27 @@
         "text": "i. Use the student's verbal description or your graph in part (a)(i) to calculate a numerical value for the work done on the gas in process AB. ii. The magnitude of the change in internal energy for process AB is $\\Delta U=300\\,\\mathrm{J}$. Calculate a numerical value for the energy added to or removed from the gas by heating in process AB."
       }
     ],
-    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
-      "required_topics": [],
-      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
-      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "required_topics": [
+        {
+          "unit": "U9",
+          "topic_code": "9.4",
+          "topic_name": "The First Law of Thermodynamics",
+          "reason": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "This is the first relevant unit in the official course progression for this subject.",
+      "classification_reasoning": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     },
     "previous_primary_unit": "U13",
-    "student_visible": false,
-    "publish_status": "blocked"
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2017_FRQ3",
@@ -1906,7 +1947,9 @@
       "classification_reasoning": "Geometric optics require Unit 13. Latest required official topic: 13.4 Images Formed by Lenses.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2017_FRQ4",
@@ -2088,7 +2131,9 @@
       "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2019_FRQ1",
@@ -2108,12 +2153,17 @@
     "rubric_image_paths": [
       "images/ap/physics-2/2019/2019_p073_img01.png"
     ],
-    "primary_unit": "not_applicable",
-    "unit": "not_applicable",
-    "unit_name": "Outside current official unit progression",
+    "primary_unit": "U11",
+    "unit": "U11",
+    "unit_name": "Electric Circuits",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "11.4",
+        "name": "Electric Power"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -2144,11 +2194,11 @@
       "official_text": "Question 1\n10 points total\nDistribution\nof points\n\nA group of students is asked to design a heater for an indoor swimming pool using an electrically insulated\ncurrent-carrying wire. The energy from the wire heats the water. The heater should deliver 10 kilowatts of power\nto the water in the pool.\n\n(a)\nLO 4.E.4.1, SP 2.2\n2 points\n\nThe students use wire that has a cross-sectional area of\n\n1\n.3\nti\nme\ns\n10 to the negative 5 power, meters squared\nand a resistivity of\n\n3\n.0\nti\nm_e\ns\n10 to the negative 6 power, ohm meters\nΩ\n.\nThey have access to a 240 volt power supply. Calculate the length of the wire needed to construct the heater.\n\nFor applying a complete set of relevant equations that allow the length l to be\ncalculated from the given quantities, and either combining them algebraically or\nsequentially substituting values\n\n1 point\nFor correct substitutions of power, area, resistivity, and potential difference (all four\nvalues)\n\nde\nl\nta V equals I R\n,\n\nR\n\nequals, rho times l, over A_A ,\nP_e quals I times delta V\n\nCombining equations method:\n\nl_e q_u\na ls, delta V squared times A, over rho times P_l\ne q\nua\nl_s\n,\n\no_p\ne_n par\nent\nhe\nsi\ns,\n24\n0\nvol\nts ,\nc_l\no_s\ne\n\nparenthesis, squared, times, (1.3 times 10 to the negative 5 power, meters squared, )divided by, (3.0 times 10 to the negative 6 power, ohm meters, )times, (1.0 times 10 to the fourth power, watts, )l eq\nuals 25 meters\n\nSequential substitution method:\n\nI e\nqu al s P o\nver\nd_e\nl_t\na_V\n,\nwhich equals, 1.0 times 10 to the fourth power, watts, over 240 volts, which equals 42 amps\n\nR eq uals\nV over I, which equals 240 volts over 42 amps, which equals 5.7 ohms\n\nl_e\nq_u\na_l\ns R_A o\nve\nr\nrho\n,\nw_h\nic h_e\nq_u\na_l\ns\n,\n5.7 ohms, times 1.3 times 10 to the negative 5 power, meters squared, divided by 3.0 times 10 to the negative 6 power, ohm meters\n\nl eq\nuals 25 meters\n\n1 point"
     },
     "classification": {
-      "primary_unit": "not_applicable",
+      "primary_unit": "U11",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-      "review_status": "blocked",
+      "evidence": "Manual official-progression review: The heater design requires electric power in a resistive wire; thermodynamic transfer is earlier Physics 2 content, so the latest required unit is electric circuits. Latest required official topic: 11.4 Electric Power.",
+      "review_status": "reviewed",
       "classification_version": "official_topic_progression_v2_2026_07_21",
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -2211,20 +2261,27 @@
         "text": "When the temperature of the room is $276\\,\\mathrm{K}$, the air pressure is $1.0\\times 10^5\\,\\mathrm{Pa}$. Calculate the force exerted by the air in the room on a door that measures $2.0\\,\\mathrm{m}$ by $0.90\\,\\mathrm{m}$ when the temperature of the room is $310\\,\\mathrm{K}$."
       }
     ],
-    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Manual official-progression review: The heater design requires electric power in a resistive wire; thermodynamic transfer is earlier Physics 2 content, so the latest required unit is electric circuits. Latest required official topic: 11.4 Electric Power.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
-      "required_topics": [],
-      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
-      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "required_topics": [
+        {
+          "unit": "U11",
+          "topic_code": "11.4",
+          "topic_name": "Electric Power",
+          "reason": "Manual official-progression review: The heater design requires electric power in a resistive wire; thermodynamic transfer is earlier Physics 2 content, so the latest required unit is electric circuits. Latest required official topic: 11.4 Electric Power."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "The answer path requires Unit 11; earlier units alone are insufficient.",
+      "classification_reasoning": "Manual official-progression review: The heater design requires electric power in a resistive wire; thermodynamic transfer is earlier Physics 2 content, so the latest required unit is electric circuits. Latest required official topic: 11.4 Electric Power.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     },
     "previous_primary_unit": "U12",
-    "student_visible": false,
-    "publish_status": "blocked"
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2019_FRQ2",
@@ -2426,7 +2483,9 @@
       "classification_reasoning": "Geometric optics require Unit 13. Latest required official topic: 13.4 Images Formed by Lenses.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2019_FRQ3",
@@ -2629,7 +2688,9 @@
       "classification_reasoning": "Electric force, field, and potential require Unit 10. Latest required official topic: 10.6 Capacitors.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2019_FRQ4",
@@ -2800,7 +2861,9 @@
       "classification_reasoning": "Nuclear physics requires Unit 15. Latest required official topic: 15.7 Fission, Fusion, and Nuclear Decay.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2023_FRQ1",
@@ -2821,9 +2884,9 @@
       "images/ap/physics-2/2023/2023_frq1_exit_distance_models.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U14",
-    "unit": "U14",
-    "unit_name": "Waves, Sound, and Physical Optics",
+    "primary_unit": "not_applicable",
+    "unit": "not_applicable",
+    "unit_name": "Outside current official unit progression",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [
@@ -2862,11 +2925,11 @@
       "official_text": "Question 1: Short Answer 10 points\n\n(a)\nFor drawing a straight-line path from the entry point to the bottom of the tank with an angle\nfrom the normal that is less than\niθ\n1 point\nFor drawing a continuous path that is symmetric about a vertical axis that intersects the mirror\nat the location where the beam of light is incident upon the mirror\n1 point\n\n2 points\n(b)\nFor indicating that the wavelength of light decreases without any incorrect statements\n1 point\n\nTotal for part (b)\n1 point\n(c)(i)\nFor a correct application of Snell’s law for two media boundaries\nScoring Note: If a test taker correctly applies Snell’s law for air and the bottom layer, this\npoint can be earned.\n\n1 point\n\n2023 College Board\n\n(c)(ii) For indicating that\n4\nθ alone is the smallest angle\n1 point\nFor indicating that\n2\nθ alone is the largest angle\n1 point\nFor indicating that 1\n3\nθ\nθ\n= 1 point\nFor an explanation that correctly relates the index of refraction to an angle\n1 point\n\nTotal for part (c)\n5 points\n(d)\nFor indicating that both\nA_d and\nB_d are less than\nw_d , with an attempt at a relevant explanation\n1 point\nFor correctly indicating that the horizontal distance traveled decreases with increasing\nrefraction toward the normal\n1 point\n\nTotal for part (d)\n2 points\nTotal for"
     },
     "classification": {
-      "primary_unit": "U14",
+      "primary_unit": "not_applicable",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
-      "review_status": "reviewed",
+      "evidence": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
+      "review_status": "blocked",
       "classification_version": "official_topic_progression_v2_2026_07_21",
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -3003,24 +3066,20 @@
         "text": "Determine whether $d_A$ and $d_B$ are each greater than, less than, or equal to $d_w$. It is not necessary to compare $d_A$ to $d_B$. Briefly justify your answer."
       }
     ],
-    "classification_reasoning": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
+    "classification_reasoning": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
     "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
-      "required_topics": [
-        {
-          "unit": "U14",
-          "topic_code": "14.8",
-          "topic_name": "Double-Slit Interference",
-          "reason": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference."
-        }
-      ],
-      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
-      "why_not_earlier_unit": "The answer path requires Unit 14; earlier units alone are insufficient.",
-      "classification_reasoning": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
+      "required_topics": [],
+      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
+      "why_not_earlier_unit": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
+      "classification_reasoning": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "previous_primary_unit": "not_applicable",
+    "student_visible": false,
+    "publish_status": "blocked"
   },
   {
     "question_id": "2023_FRQ2",
@@ -3258,7 +3317,9 @@
       "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2023_FRQ3",
@@ -3278,9 +3339,9 @@
       "images/ap/physics-2/2023/2023_frq3_figure3_tank_z.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "U1",
-    "unit": "U1",
-    "unit_name": "Fluids",
+    "primary_unit": "not_applicable",
+    "unit": "not_applicable",
+    "unit_name": "Outside current official unit progression",
     "secondary_units": [],
     "pure_unit": true,
     "topics": [],
@@ -3314,17 +3375,12 @@
       "official_text": "Question 3: Quantitative/Qualitative Translation\n12 points\n\n(a)(i)\nFor a statement that collisions from the water particles exert upward forces on the block and\ncollisions from the air particles exert downward forces on the block\n1 point\nFor a statement indicating that the force from the water is greater than the force from the air\n1 point\n\n(a)(ii) For indicating that Block A has a greater density than Block B because Block A displaces a\nlarger volume of water, thus the buoyant force on Block A is greater than the buoyant force\non Block B_1 point\n\nTotal for part (a)\n3 points\n(b)(i)\nFor using Bernoulli’s equation to derive the relationship between\np_v and h_1 point\nFor indicating that\n2\n1\nP_P\n= 1 point\n\nFor correct substitutions of the heights and speeds\n1 point\n\n(b)(ii) For using the continuity equation to derive the relationship between\np_v and R_1 point\nFor correct substitutions for the expressions of areas and speeds\n1 point\n\n2023 College Board\n\n(b)(iii) For using conservation principles to justify that when R_r\n\n, then\ns_p\nv_v\n\n1 point\nFor indicating a very small value of sv will have a negligible effect on\np_v\n1 point\n\nTotal for part (b)\n7 points\n(c)\nFor correctly relating the decrease in\np_v to the decrease in the height of the surface of the\nwater h_1 point\nFor correctly relating the decrease in sv to the increase in radius R_1 point\n\nTotal for part (c)\n2 points\nTotal for"
     },
     "classification": {
-      "primary_unit": "U1",
+      "primary_unit": "not_applicable",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": [
-        "Current official framework: U1 Fluids. Student progression rule: latest required unit including earlier prerequisites.",
-        "Prompt evidence: 3. (12 points, suggested time 25 minutes) Tank X is a large cylindrical tank that is partially filled with water, as shown in Figure 1. The bottom of Tank X is connected to a short horizontal pipe. A valve that is initially closed can be op",
-        "Student-visible media are preserved with 3 image reference(s).",
-        "Subject physics-2 passed official-unit sequence, student-progression, unit-distribution, option/group, and student-risk gates before evidence materialization."
-      ],
-      "review_status": "reviewed",
-      "classification_version": "physics-2-official-progression-2026-07-19",
+      "evidence": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
+      "review_status": "blocked",
+      "classification_version": "official_topic_progression_v2_2026_07_21",
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
     },
@@ -3407,11 +3463,21 @@
         "text": "Does the speed vs at which the surface of the water moves downward increase, decrease, or remain the same over time as water exits the other end of the pipe? Justify your answer by using or referencing equations from both part (b)(i) and part (b)(ii)."
       }
     ],
-    "classification_reasoning": "Official progression review: U1 Fluids. Primary unit is the latest current-framework unit a student must complete to answer the item, including earlier prerequisites.",
+    "classification_reasoning": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
     "unit_classification": "official-progression-reviewed",
     "publish_status": "blocked",
     "student_visible": false,
-    "block_reason": "Physics 2 current framework no longer includes Fluids; hold for Physics 1 review or retired-source archive."
+    "block_reason": "Physics 2 current framework no longer includes Fluids; hold for Physics 1 review or retired-source archive.",
+    "previous_primary_unit": "not_applicable",
+    "classification_accuracy": {
+      "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
+      "required_topics": [],
+      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
+      "why_not_earlier_unit": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
+      "classification_reasoning": "Legacy fluids content is outside the current Physics 2 U9-U15 course map.",
+      "review_method": "subject-specific official topic progression audit",
+      "reviewed_at": "2026-07-21"
+    }
   },
   {
     "question_id": "2023_FRQ4",
@@ -3524,7 +3590,9 @@
       "classification_reasoning": "Electric force, field, and potential require Unit 10. Latest required official topic: 10.6 Capacitors.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2024_FRQ1",
@@ -3661,7 +3729,9 @@
       "classification_reasoning": "Modern physics requires Unit 15. Latest required official topic: 15.5 The Photoelectric Effect.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2024_FRQ2",
@@ -3684,12 +3754,17 @@
       "images/ap/physics-2/2024/2024_frq2_graph_grid.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "not_applicable",
-    "unit": "not_applicable",
-    "unit_name": "Outside current official unit progression",
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Thermodynamics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "9.4",
+        "name": "The First Law of Thermodynamics"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -3750,11 +3825,11 @@
       "official_text": "Question 2: Experimental Design\n12 points\n(a)\nFor indicating measurements that could be used to determine the volume of the gas\nScoring Note: Responses that include the volume of the heater may earn full credit.\n1 point\nFor indicating that the sensors should be used to record the temperature and pressure of the\ngas\n1 point\nFor indicating that multiple different temperature and pressure measurements should be\nrecorded\n1 point\n\nTotal for part (a)\n3 points\n(b)(i)\nFor sketching an upward vertical line that never touches the horizontal or vertical axes\n1 point\n\n(b)(ii)\nFor sketching an upward vertical line that never touches the horizontal or vertical axes\n1 point\n\n1 point\n\nTotal for part (b)\n3 points\n(c)(i)\nFor indicating quantities that can be plotted on the graph to calculate an experimental value\nfor k_1 point\n\n(c)(ii)\nFor labeling the axes correctly (including units) with a linear scale such that the data fill\nhalf the area of the graph\n1 point\nFor plotting the data points correctly\n1 point\n\n2024 College Board\n(c)(iii)\nFor drawing a straight line that approximates the trend of the data\n1 point\n\n4 points\n(d)\nFor correctly relating the slope of the straight line of the graph to the equation\nQ\nkA T_t\nL\n∆\n=\n∆\n1 point\n\nFor calculating an experimental value for k that is approximately equal to\nJ_0.06 s K m\n⋅\n⋅\n1 point\n\nTotal for part (d)\n2 points\nTotal for"
     },
     "classification": {
-      "primary_unit": "not_applicable",
+      "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-      "review_status": "blocked",
+      "evidence": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
+      "review_status": "reviewed",
       "classification_version": "official_topic_progression_v2_2026_07_21",
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -3928,20 +4003,27 @@
         "text": "Using the best-fit line, calculate an experimental value for k."
       }
     ],
-    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
-      "required_topics": [],
-      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
-      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "required_topics": [
+        {
+          "unit": "U9",
+          "topic_code": "9.4",
+          "topic_name": "The First Law of Thermodynamics",
+          "reason": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "This is the first relevant unit in the official course progression for this subject.",
+      "classification_reasoning": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     },
     "previous_primary_unit": "U9",
-    "student_visible": false,
-    "publish_status": "blocked"
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2024_FRQ3",
@@ -4112,7 +4194,9 @@
       "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2024_FRQ4",
@@ -4266,7 +4350,9 @@
       "classification_reasoning": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2025_FRQ1",
@@ -4434,7 +4520,9 @@
       "classification_reasoning": "Magnetism and electromagnetic induction require Unit 12. Latest required official topic: 12.4 Electromagnetic Induction.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2025_FRQ2",
@@ -4453,12 +4541,17 @@
       "images/ap/physics-2/2025/2025_frq2_pv_axes.png"
     ],
     "rubric_image_paths": [],
-    "primary_unit": "not_applicable",
-    "unit": "not_applicable",
-    "unit_name": "Outside current official unit progression",
+    "primary_unit": "U9",
+    "unit": "U9",
+    "unit_name": "Thermodynamics",
     "secondary_units": [],
     "pure_unit": true,
-    "topics": [],
+    "topics": [
+      {
+        "code": "9.4",
+        "name": "The First Law of Thermodynamics"
+      }
+    ],
     "skills": [],
     "difficulty": "medium",
     "rubric": {
@@ -4489,11 +4582,11 @@
       "official_text": "Official scoring guideline summary:\n\nQuestion 2: Translation Between Representations, 12 points.\n\n(A) Award points for drawing and labeling the downward gravitational force $F_g$, the downward atmospheric force $F_{atm}$, and the upward force from the gas $F_{gas}$ on the piston.\n\n(B) Award points for using $PV=Nk_BT$ or $U=\\frac{3}{2}PV$, deriving the gas pressure from force balance, such as $P=P_{atm}+Mg/A$, and giving a consistent expression for internal energy, such as $U=\\frac{3}{2}(P_{atm}+Mg/A)V_0$.\n\n(C) Award points for a pressure-volume curve that moves from larger volume/lower pressure to smaller volume/higher pressure, is concave up for the isothermal compression, and includes the correct process direction arrow.\n\n(D) The correct selection is $T_{new}>T_0$. Award points for selecting the greater temperature and justifying it using the added block, increased required gas pressure, and the gas returning to the original volume."
     },
     "classification": {
-      "primary_unit": "not_applicable",
+      "primary_unit": "U9",
       "secondary_units": [],
       "confidence": 0.65,
-      "evidence": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-      "review_status": "blocked",
+      "evidence": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
+      "review_status": "reviewed",
       "classification_version": "official_topic_progression_v2_2026_07_21",
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
       "review_method": "official unit framework plus student progression audit"
@@ -4558,20 +4651,27 @@
         "used_by_parts": []
       }
     ],
-    "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-    "unit_classification": "official-progression-reviewed",
+    "classification_reasoning": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
+    "unit_classification": "official-topic-progression-reviewed",
     "classification_accuracy": {
       "authority": "AP Physics 2: Algebra-Based Course and Exam Description",
-      "required_topics": [],
-      "primary_unit_rule": "Items outside the current official course map are not used in student unit-progression flows.",
-      "why_not_earlier_unit": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
-      "classification_reasoning": "Fluid mechanics is not in the current Physics 2 U9-U15 course map.",
+      "required_topics": [
+        {
+          "unit": "U9",
+          "topic_code": "9.4",
+          "topic_name": "The First Law of Thermodynamics",
+          "reason": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics."
+        }
+      ],
+      "primary_unit_rule": "primary_unit is the latest official topic/unit a student must complete to answer the whole item using that topic/unit and prior official content.",
+      "why_not_earlier_unit": "This is the first relevant unit in the official course progression for this subject.",
+      "classification_reasoning": "Thermodynamics requires Unit 9. Latest required official topic: 9.4 The First Law of Thermodynamics.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
     },
     "previous_primary_unit": "U9",
-    "student_visible": false,
-    "publish_status": "blocked"
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2025_FRQ3",
@@ -4748,7 +4848,9 @@
       "classification_reasoning": "Electric circuits require Unit 11. Latest required official topic: 11.6 Kirchhoff?s Loop Rule.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   },
   {
     "question_id": "2025_FRQ4",
@@ -4872,6 +4974,8 @@
       "classification_reasoning": "Waves and physical optics require Unit 14. Latest required official topic: 14.8 Double-Slit Interference.",
       "review_method": "subject-specific official topic progression audit",
       "reviewed_at": "2026-07-21"
-    }
+    },
+    "student_visible": true,
+    "publish_status": "published"
   }
 ]

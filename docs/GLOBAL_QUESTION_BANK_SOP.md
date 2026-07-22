@@ -155,6 +155,7 @@ For every source batch or renderer-affecting change:
 - If a local preview port already serves an older student or admin build, do not reuse it as evidence. Start an isolated preview with `--strictPort`, confirm the page title and route, and verify that `/data/subjects.json` is loaded from the same origin.
 - Student-facing gates must filter out internal blocked records consistently: any item with `student_visible: false`, `publish_status: blocked`, or `scoring_status: not_scored` is an internal record and must not participate in Quiz, Mock, Search, PDF, recommendation, student-flow, student-progression, data-validation, or student-risk release checks.
 - Keeping blocked internal records is allowed only when every student-facing loader and gate excludes them. A blocked record with an obsolete unit is acceptable as historical inventory, but it cannot appear in student-visible counts or release ledgers.
+- Hiding a scored item is itself a classification decision. For any subject with hidden/blocked scored inventory, closeout must include a reverse-hidden review that proves each hidden item is truly outside the current official framework or otherwise not deliverable. This review must prioritize stem/shared-context evidence over answer-choice distractors and must restore any item that maps to a current official topic.
 
 The check must include DOM/text evidence for structured content, not only screenshots.
 
@@ -235,6 +236,7 @@ Every new subject must explicitly answer these questions:
 - Are official sources enough, or is approved external expansion required?
 - What student-path checks are mandatory for this subject?
 - Has the official framework changed since the source material was published, and do any legacy units need migration or student-visible blocking?
+- If legacy units are blocked, what reverse-hidden gate proves that current-framework items were not removed by stale labels or broad keyword rules?
 
 If any answer is "unknown", the subject stays in `risk_discovered` and cannot move to publication.
 

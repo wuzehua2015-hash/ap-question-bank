@@ -486,3 +486,25 @@
   - Stable API remote commit `0ce0057b284647a3cfc0ee811a3f48eb1cbeb35c`; remote tree matched local HEAD tree `c8201bc146071d8f63ae4c1270f2cdc4fdd0afc7`.
   - Cloudflare Pages deployment: `https://d42c8aed.lynkedu-ap-question-bank.pages.dev`.
   - Real production browser verification on `https://lynkedu.com/`: title `翎英教育题库`, active subjects 16, production bundle `/assets/index-Dbek1AmI.js`, topic-level student-visible scored items 5349/5349, unit-level-only 0.
+
+# 2026-07-22 - Physics 2 Reverse-Hidden Classification Repair
+
+- Investigated the high Physics 2 post-classification loss rate.
+- Root cause: the Fall 2024 Physics 2 U9-U15 migration correctly removed legacy Fluids content, but the audit only checked student-visible items and missed hidden scored items that still mapped to current official topics. Stale Fluids reasoning and broad option-text signals incorrectly removed thermodynamics, optics, modern physics, and circuit items.
+- Repaired `scripts/calc_physics_topic_classification_audit.cjs`:
+  - added `--review-blocked`;
+  - made `validate:physics-2-units` review blocked scored Physics 2 inventory;
+  - prioritizes stem/shared-context evidence over answer-choice distractors;
+  - restores current-framework items with explicit `student_visible: true`, `publish_status: published`, and topic-level evidence.
+- Restored Physics 2 student-visible scored items from 220 to 250; blocked count dropped from 56 to 26. Remaining blocked Physics 2 items are legacy Fluids/current-framework-outside records.
+- Cleaned actual content pollution in Physics 2 `2017_Q15` option D and corrected two stale reviewed-case baselines (`2017_Q15`, `lynkedu_2026_physics_2_capacity_Q004`).
+- Updated `docs/UNIT_CLASSIFICATION_STANDARD.md`, `docs/GLOBAL_QUESTION_BANK_SOP.md`, and main-session memory with the reverse-hidden review rule.
+- Verification passed:
+  - `npm run validate:physics-2-units`
+  - `npm run validate:classification-coverage`
+  - `npm run validate:classification-accuracy`
+  - `npm run validate:student-progression`
+  - `npm run validate`
+  - `npm run build`
+- Deployed production through Cloudflare Pages: `https://3e28b971.lynkedu-ap-question-bank.pages.dev`.
+- Production `https://lynkedu.com` data check: Physics 2 MCQ 248, FRQ 28, scored 276, student-visible 250, blocked 26; `2017_Q15` option D is clean.
