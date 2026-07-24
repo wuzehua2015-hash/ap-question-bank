@@ -349,4 +349,9 @@ The site has entered productization for public launch:
   - `npm run validate`: passed.
   - `npm run build`: passed.
   - `npm run audit:ib-math-aa:student-surface -- --url http://127.0.0.1:4323/ --port 9791`: 4 cases, 0 errors.
-- Pending for closeout: commit, stable remote sync, Cloudflare Pages deploy, and production `https://lynkedu.com` curriculum-surface verification.
+- Production closeout completed:
+  - Local commit and stable remote sync completed; final verification uses `npm run stable:status`.
+  - Cloudflare Pages deployment: `https://a99ffd73.lynkedu-ap-question-bank.pages.dev`.
+  - Production data check on `https://lynkedu.com`: AP 16, IB 2, SL paper bank 60, HL paper bank 90, active subjects 18.
+  - Production curriculum-surface audit passed: `npm run audit:curriculum-surface -- --url https://lynkedu.com/ --port 9794`, errors 0.
+  - Production IB Math AA audit passed: `npm run audit:ib-math-aa:student-surface -- --url https://lynkedu.com/ --port 9795`, 4 cases, 0 errors.
