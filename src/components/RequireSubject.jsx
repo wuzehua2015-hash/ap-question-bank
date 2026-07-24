@@ -18,7 +18,7 @@ function RequireSubject({ children }) {
         <p className="text-sm font-medium text-text-muted mb-3">选择科目</p>
         <h1 className="text-3xl font-bold tracking-tight text-brand mb-5">先添加一个学习科目</h1>
         <p className="text-base leading-7 text-text-muted mb-8">
-          选择后，练习、模考、错题本和学习记录都会按当前科目展示。
+          选择后，练习、Mock Exam、错题本和学习记录都会按当前科目展示。
         </p>
         <Link
           to="/settings"

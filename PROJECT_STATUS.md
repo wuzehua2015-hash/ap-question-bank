@@ -330,3 +330,23 @@ The site has entered productization for public launch:
   - Production `https://lynkedu.com/data/subjects.json`: 18 active subjects, including `ib-math-aa-sl` and `ib-math-aa-hl` with `assessmentModel: "ib-paper"`.
   - Production paper banks: SL 60 items; HL 90 items with P1/P2/P3 coverage.
   - Production student-surface audit passed: `npm run audit:ib-math-aa:student-surface -- --url https://lynkedu.com/ --port 9783`, 4 cases, 0 errors.
+
+## 2026-07-24 Curriculum-Aware Subject Management
+
+- Student subject management now treats curriculum as the first-level learning scope.
+- Active student-facing subjects remain 18:
+  - AP: 16 subjects under `curriculum: "ap"` and `assessmentModel: "ap-mcq-frq"`;
+  - IB: `ib-math-aa-sl` and `ib-math-aa-hl` under `curriculum: "ib"` and `assessmentModel: "ib-paper"`.
+- `SubjectContext` and `storage` now persist `currentCurriculum` alongside `currentSubject`, `defaultSubject`, and `mySubjects`.
+- Home, Header, and Settings use `curriculumSubjects` so AP and IB do not appear in one mixed switcher or one mixed home list.
+- Settings presents curriculum families first: AP, IB, A-Level, and international competitions. A-Level and competitions remain Coming soon until student-visible subjects are ready.
+- Added reusable checks:
+  - `npm run validate:curriculum-partition`
+  - `npm run audit:curriculum-surface -- --url <fresh-preview-or-production-url> --port <port>`
+- Local verification passed:
+  - `npm run validate:curriculum-partition`: 18 active subjects across 2 curricula.
+  - `npm run audit:curriculum-surface -- --url http://127.0.0.1:4321/ --port 9790`: errors 0.
+  - `npm run validate`: passed.
+  - `npm run build`: passed.
+  - `npm run audit:ib-math-aa:student-surface -- --url http://127.0.0.1:4323/ --port 9791`: 4 cases, 0 errors.
+- Pending for closeout: commit, stable remote sync, Cloudflare Pages deploy, and production `https://lynkedu.com` curriculum-surface verification.
