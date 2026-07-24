@@ -559,3 +559,9 @@
   - `npm run audit:ib-math-aa:student-surface -- --url http://127.0.0.1:4177/ --port 9780`: 4 cases, 0 errors.
   - `npm run build`: passed; production bundle includes `PaperPracticeSetup` and `PaperPracticePlayer`.
 - Pending for final上线: remote source sync, Cloudflare Pages deployment, and production browser/data verification on `https://lynkedu.com`.
+- Final production closeout:
+  - Local content commit `4261b3a Add IB Math AA paper practice launch candidate`.
+  - Stable remote API commit `b7d92e00e04e5e9fcdab5abc8016e3c2a42ccb43`; `npm run stable:status` confirmed remote tree `1783f1d494c5f61d995914e58159a083fc82389a` matches local.
+  - Cloudflare Pages deployment `https://13ee85ea.lynkedu-ap-question-bank.pages.dev`.
+  - Production data checks on `https://lynkedu.com` passed: active subjects 18, IB SL/HL active, SL paper bank 60, HL paper bank 90, HL P1/P2/P3 present.
+  - Production student-surface check passed after hardening HTTPS/load-wait support in `scripts/ib_math_aa_student_surface_audit.cjs`: `npm run audit:ib-math-aa:student-surface -- --url https://lynkedu.com/ --port 9783`, 4 cases, 0 errors.

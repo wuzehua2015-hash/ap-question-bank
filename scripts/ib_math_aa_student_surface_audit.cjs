@@ -2,6 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const http = require('http')
+const https = require('https')
 const { spawn } = require('child_process')
 
 const ROOT = path.resolve(__dirname, '..')
@@ -65,6 +66,7 @@ async function runCase(client, subjectId, viewport, errors) {
   await evaluate(client, seedSubjectScript(subjectId))
   await navigate(client, routeUrl('/paper-practice'))
   await waitForText(client, /Paper\s*训练|题目数量/)
+  await waitForText(client, /当前筛选可用\s+\d+\s+题|无法加载|仍处于来源审批/)
 
   const setupInfo = await collectInfo(client)
   checkCommon(subjectId, viewport.name, 'setup', setupInfo, errors)
@@ -79,7 +81,13 @@ async function runCase(client, subjectId, viewport, errors) {
   const clicked = await clickButton(client, /开始练习/)
   if (!clicked) {
     errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'setup', kind: 'start_button_missing' })
-    return { subject_id: subjectId, viewport: viewport.name, started: false }
+    return {
+      subject_id: subjectId,
+      viewport: viewport.name,
+      started: false,
+      setup_sample: setupInfo.text.slice(0, 800),
+      setup_url: setupInfo.url,
+    }
   }
 
   await waitForText(client, /第\s+1\s+\/\s+3\s+题/)
@@ -197,10 +205,10 @@ async function collectInfo(client) {
 async function waitForText(client, pattern) {
   const source = String(pattern.source)
   const flags = String(pattern.flags)
-  for (let i = 0; i < 50; i += 1) {
+  for (let i = 0; i < 100; i += 1) {
     const found = await evaluate(client, `(() => new RegExp(${JSON.stringify(source)}, ${JSON.stringify(flags)}).test(document.body?.innerText || ''))()`).catch(() => false)
     if (found) return true
-    await sleep(150)
+    await sleep(200)
   }
   return false
 }
@@ -272,7 +280,8 @@ async function ensurePreview(url) {
 
 function httpOk(url) {
   return new Promise(resolve => {
-    const req = http.get(url, res => {
+    const transport = url.startsWith('https:') ? https : http
+    const req = transport.get(url, res => {
       res.resume()
       resolve(res.statusCode >= 200 && res.statusCode < 500)
     })

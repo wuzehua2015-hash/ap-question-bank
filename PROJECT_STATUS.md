@@ -323,3 +323,10 @@ The site has entered productization for public launch:
   - `npm run audit:ib-math-aa:student-surface -- --url http://127.0.0.1:4177/ --port 9780`
   - `npm run build`
 - Production deployment is still required for final上线 closeout: source sync, Cloudflare Pages deployment, and `https://lynkedu.com` production verification must be completed after this local launch candidate.
+- Final production closeout completed:
+  - Local content commit: `4261b3a Add IB Math AA paper practice launch candidate`.
+  - Stable remote API commit: `b7d92e00e04e5e9fcdab5abc8016e3c2a42ccb43`; remote tree matched local tree `1783f1d494c5f61d995914e58159a083fc82389a`.
+  - Cloudflare Pages deployment: `https://13ee85ea.lynkedu-ap-question-bank.pages.dev`.
+  - Production `https://lynkedu.com/data/subjects.json`: 18 active subjects, including `ib-math-aa-sl` and `ib-math-aa-hl` with `assessmentModel: "ib-paper"`.
+  - Production paper banks: SL 60 items; HL 90 items with P1/P2/P3 coverage.
+  - Production student-surface audit passed: `npm run audit:ib-math-aa:student-surface -- --url https://lynkedu.com/ --port 9783`, 4 cases, 0 errors.
