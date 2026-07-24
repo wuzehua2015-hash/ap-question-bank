@@ -186,6 +186,15 @@ export function setDefaultSubject(subject) {
   notifyStorageChange({ scope: 'settings', key: 'defaultSubject' })
 }
 
+export function getCurrentCurriculum() {
+  return localStorage.getItem('currentCurriculum') || 'ap'
+}
+
+export function setCurrentCurriculum(curriculum) {
+  localStorage.setItem('currentCurriculum', curriculum || 'ap')
+  notifyStorageChange({ scope: 'settings', key: 'currentCurriculum' })
+}
+
 export function listStorageKeys() {
   return Object.keys(localStorage)
 }
@@ -213,6 +222,7 @@ export function collectLocalProgressSnapshot() {
     settings: {
       currentSubject: getCurrentSubject(),
       defaultSubject: getDefaultSubject(),
+      currentCurriculum: getCurrentCurriculum(),
       mySubjects: getMySubjects(),
     },
     subjects,
@@ -231,6 +241,9 @@ export function mergeProgressSnapshot(snapshot) {
   }
   if (settings.currentSubject && !localStorage.getItem('currentSubject')) {
     localStorage.setItem('currentSubject', String(settings.currentSubject))
+  }
+  if (settings.currentCurriculum && !localStorage.getItem('currentCurriculum')) {
+    localStorage.setItem('currentCurriculum', String(settings.currentCurriculum))
   }
 
   Object.entries(snapshot.subjects || {}).forEach(([subject, data]) => {

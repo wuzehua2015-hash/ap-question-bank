@@ -106,7 +106,7 @@ function HomePage({ forceDashboard = false }) {
           </Link>
           {!isIBPaperSubject && (
             <Link to="/exam" className="rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-light">
-              模拟考试
+              Mock Exam
             </Link>
           )}
           <Link to={currentProgress.wrongCount > 0 ? '/mistakes' : '/history'} className="rounded-md px-4 py-3 text-sm font-medium text-text-muted hover:text-brand">
@@ -141,7 +141,7 @@ function HomePage({ forceDashboard = false }) {
                   <Link to={subject.assessmentModel === 'ib-paper' ? '/paper-practice' : '/quiz'} onClick={() => setSubject(subject.id)} className="text-accent hover:underline">
                     {subject.assessmentModel === 'ib-paper' ? 'Paper 训练' : '练习'}
                   </Link>
-                  {subject.assessmentModel !== 'ib-paper' && <Link to="/exam" onClick={() => setSubject(subject.id)} className="text-brand hover:underline">模考</Link>}
+                  {subject.assessmentModel !== 'ib-paper' && <Link to="/exam" onClick={() => setSubject(subject.id)} className="text-brand hover:underline">Mock Exam</Link>}
                 </div>
               </div>
             )
@@ -184,7 +184,7 @@ function buildProgressSummary(subject) {
   }
 
   return {
-    lead: '先做专项练习，再用模拟考试检查完整状态。',
+    lead: '先做专项练习，再用 Mock Exam 检查完整状态。',
     primaryLabel: '专项练习',
     secondaryLabel: '学习记录',
     lastScore: null,

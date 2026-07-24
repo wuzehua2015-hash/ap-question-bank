@@ -57,8 +57,9 @@ async function main() {
   console.log(`Cases: ${cases.length}; Errors: ${errors.length}`)
   if (errors.length) {
     console.error(JSON.stringify(errors.slice(0, 20), null, 2))
-    process.exitCode = 1
+    process.exit(1)
   }
+  process.exit(0)
 }
 
 async function runCase(client, subjectId, viewport, errors) {

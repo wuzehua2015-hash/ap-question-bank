@@ -565,3 +565,26 @@
   - Cloudflare Pages deployment `https://13ee85ea.lynkedu-ap-question-bank.pages.dev`.
   - Production data checks on `https://lynkedu.com` passed: active subjects 18, IB SL/HL active, SL paper bank 60, HL paper bank 90, HL P1/P2/P3 present.
   - Production student-surface check passed after hardening HTTPS/load-wait support in `scripts/ib_math_aa_student_surface_audit.cjs`: `npm run audit:ib-math-aa:student-surface -- --url https://lynkedu.com/ --port 9783`, 4 cases, 0 errors.
+
+# 2026-07-24 - Curriculum-Aware Subject Management
+
+- Reworked student subject scope from a flat `mySubjects` list into a curriculum-aware model.
+- `currentCurriculum` is now persisted and synced in the same settings snapshot as `currentSubject`, `defaultSubject`, and `mySubjects`.
+- AP and IB are separated at the state layer:
+  - selecting an AP subject keeps the student in AP;
+  - selecting an IB subject keeps the student in IB;
+  - Home and Header only show selected subjects from the current curriculum;
+  - Settings first chooses curriculum, then manages only that curriculum's subjects.
+- A-Level and international competitions are visible as future curriculum families but cannot be selected until student-facing subjects exist.
+- Repaired student-facing copy on Header, Home, Settings, RequireSubject, and loading state so this flow is Chinese-first while preserving official subject names and stable product terms.
+- Added/updated reusable gates:
+  - `scripts/curriculum_subject_partition_audit.cjs`
+  - `scripts/curriculum_surface_audit.cjs`
+  - `validate:curriculum-partition`
+  - `audit:curriculum-surface`
+- Verification passed:
+  - `npm run validate:curriculum-partition`
+  - `npm run audit:curriculum-surface -- --url http://127.0.0.1:4321/ --port 9790`
+  - `npm run validate`
+  - `npm run build`
+  - `npm run audit:ib-math-aa:student-surface -- --url http://127.0.0.1:4323/ --port 9791`

@@ -220,6 +220,15 @@ For IB Math AA, AP MCQ/FRQ assumptions are invalid. Closeout must use the IB pap
 - student-surface QA must include `/paper-practice` and `/paper-play`, not AP Quiz/Mock-only routes;
 - closeout must run `npm run audit:ib-math-aa:student-surface -- --url <fresh-preview-or-production-url> --port <port>` for desktop and mobile evidence.
 
+For all multi-curriculum releases, subject management is a product contract, not only a data label:
+
+- every student-visible subject must declare `curriculum` and `assessmentModel`;
+- `currentCurriculum` is the first-level student learning scope and must be persisted with the student's selected subjects;
+- Home, Header, Settings, direct practice routes, and future account sync must not mix AP and IB subjects in one visible switcher or one visible home list;
+- adding A-Level, IB, competition, or any future curriculum requires a curriculum-specific assessment model, route decision, renderer decision, and student-surface audit before publication;
+- closeout must run `npm run validate:curriculum-partition` and a real-browser `npm run audit:curriculum-surface -- --url <fresh-preview-or-production-url> --port <port>`;
+- audit reports must verify both directions: AP view does not show IB subjects, and IB view does not show AP subjects.
+
 ## Full-Diagnosis SOP
 
 Use this before launch, after major renderer changes, after source expansion, or whenever repeated defects appear.
