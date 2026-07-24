@@ -508,3 +508,54 @@
   - `npm run build`
 - Deployed production through Cloudflare Pages: `https://3e28b971.lynkedu-ap-question-bank.pages.dev`.
 - Production `https://lynkedu.com` data check: Physics 2 MCQ 248, FRQ 28, scored 276, student-visible 250, blocked 26; `2017_Q15` option D is clean.
+
+# 2026-07-24 - IB Math AA Platform Foundation
+
+- Established the first non-AP assessment-model boundary for IB Math AA.
+- Updated `docs/IB_MATH_AA_ONBOARDING_PLAN.md` and `subjects/IB/Group-5-Mathematics/docs/MATH_AA_SOURCE_INVENTORY.md` with the current local source inventory and source approval decisions.
+- Updated `docs/GLOBAL_QUESTION_BANK_SOP.md` with the non-AP assessment-model SOP and the IB Math requirements: SL/HL, paper, calculator status, marks, subpart marks, timezone, syllabus version, and markscheme pairing.
+- Added candidate IB data files:
+  - `public/data/ib/math-aa/classification_config.json`
+  - `public/data/ib/math-aa/source_inventory.json`
+  - `public/data/ib/math-aa-sl/paper_bank.json`
+  - `public/data/ib/math-aa-hl/paper_bank.json`
+- Updated `public/data/subjects.json`:
+  - all existing AP subjects now carry `curriculum: "ap"` and `assessmentModel: "ap-mcq-frq"`;
+  - `ib-math-aa-sl` and `ib-math-aa-hl` were added as inactive candidate subjects with `assessmentModel: "ib-paper"`.
+- Updated `public/data/curriculums.json` to represent AP, IB, A-Level, and international competitions as curriculum families instead of embedding a legacy AP-only subset.
+- Added `scripts/assessment_model_contract_audit.cjs`; `npm run validate` now includes `validate:assessment-models`.
+- Updated `src/utils/questionBank.js` so AP MCQ/FRQ loaders and mock generation do not silently accept IB paper subjects. Added `loadPaperBank` for IB paper-bank data.
+- Updated `scripts/data_validator.cjs` so candidate non-AP subjects are skipped by AP data validation and covered by assessment-model-specific gates.
+- Verification passed:
+  - `npm run validate:assessment-models`
+  - `npm run validate:sop`
+  - `npm run validate:data`
+  - `npm run validate`
+  - `npm run build`
+- Not deployed in this step. No IB questions are student-visible yet.
+
+# 2026-07-24 - IB Math AA SL/HL Launch Candidate Build
+
+- Promoted IB Math AA from inactive candidate foundation to active student-facing SL/HL subjects while keeping AP baseline unchanged at 16 active AP subjects.
+- Added owned original Math AA practice banks:
+  - `ib-math-aa-sl`: 60 items;
+  - `ib-math-aa-hl`: 90 items.
+- Added IB paper-practice frontend and session model:
+  - `src/pages/PaperPracticeSetup.jsx`
+  - `src/pages/PaperPracticePlayer.jsx`
+  - `src/components/IBPaperQuestionDisplay.jsx`
+  - `loadPaperBank`, `startPaperPractice`, and `getCurrentPaper`.
+- Updated global gates for non-AP models:
+  - `validate:assessment-models`
+  - `validate:ib-math-aa`
+  - classification coverage/evidence/student-risk support for IB `paperBank` items.
+- Found and fixed a release-quality gap: `scripts/chinese_copy_gate.cjs` did not cover the new IB pages. It now checks `PaperPracticeSetup`, `PaperPracticePlayer`, and `IBPaperQuestionDisplay`.
+- Added reusable IB student-surface audit:
+  - `scripts/ib_math_aa_student_surface_audit.cjs`
+  - npm script `audit:ib-math-aa:student-surface`
+  - It validates SL/HL desktop/mobile Paper training, formula rendering, solution/markscheme display, next-question navigation, broken images, encoding damage, and raw formula residue outside KaTeX output.
+- Local closeout evidence:
+  - `npm run validate`: passed; 18 subjects, 5529 student-visible items, P0/P1/P2 all 0.
+  - `npm run audit:ib-math-aa:student-surface -- --url http://127.0.0.1:4177/ --port 9780`: 4 cases, 0 errors.
+  - `npm run build`: passed; production bundle includes `PaperPracticeSetup` and `PaperPracticePlayer`.
+- Pending for final上线: remote source sync, Cloudflare Pages deployment, and production browser/data verification on `https://lynkedu.com`.

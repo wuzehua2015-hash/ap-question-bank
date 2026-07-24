@@ -4,40 +4,45 @@
       "id": "ap",
       "name": "AP",
       "full_name": "Advanced Placement",
-      "subjects": [
-        {
-          "id": "macroeconomics",
-          "name": "Macroeconomics",
-          "short_name": "Macro",
-          "data_path": "ap/macroeconomics",
-          "has_mcq": true,
-          "has_frq": true,
-          "units": [
-            {"id": "U1", "name": "Basic Economic Concepts"},
-            {"id": "U2", "name": "Economic Indicators and the Business Cycle"},
-            {"id": "U3", "name": "National Income and Price Determination"},
-            {"id": "U4", "name": "Financial Sector"},
-            {"id": "U5", "name": "Long-Run Consequences of Stabilization Policies"},
-            {"id": "U6", "name": "Open Economy—International Trade and Finance"}
-          ]
-        },
-        {
-          "id": "microeconomics",
-          "name": "Microeconomics",
-          "short_name": "Micro",
-          "data_path": "ap/microeconomics",
-          "has_mcq": true,
-          "has_frq": true,
-          "units": [
-            {"id": "U1", "name": "Basic Economic Concepts"},
-            {"id": "U2", "name": "Supply and Demand"},
-            {"id": "U3", "name": "Production, Cost, and the Perfect Competition Model"},
-            {"id": "U4", "name": "Imperfect Competition"},
-            {"id": "U5", "name": "Factor Markets"},
-            {"id": "U6", "name": "Market Failure and the Role of Government"}
-          ]
-        }
+      "status": "active",
+      "assessment_models": [
+        "ap-mcq-frq"
+      ],
+      "subject_filter": {
+        "field": "curriculum",
+        "value": "ap"
+      }
+    },
+    {
+      "id": "ib",
+      "name": "IB",
+      "full_name": "International Baccalaureate",
+      "status": "candidate",
+      "assessment_models": [
+        "ib-paper"
+      ],
+      "subject_filter": {
+        "field": "curriculum",
+        "value": "ib"
+      },
+      "candidate_subjects": [
+        "ib-math-aa-sl",
+        "ib-math-aa-hl"
       ]
+    },
+    {
+      "id": "a-level",
+      "name": "A-Level",
+      "full_name": "A-Level",
+      "status": "coming_soon",
+      "assessment_models": []
+    },
+    {
+      "id": "competition",
+      "name": "International Competitions",
+      "full_name": "International Competitions",
+      "status": "coming_soon",
+      "assessment_models": []
     }
   ]
 }

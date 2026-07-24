@@ -37,7 +37,7 @@ function hasUsefulContext(q) {
   )
 }
 
-for (const subject of subjects.filter(item => item.active && item.visibility !== 'internal')) {
+for (const subject of subjects.filter(item => item.active && item.visibility !== 'internal' && (item.assessmentModel || 'ap-mcq-frq') === 'ap-mcq-frq')) {
   const rows = readJson(subject.questionBank)
   const byId = new Map(rows.map(row => [row.question_id || row.id, row]))
   const byGroup = new Map()

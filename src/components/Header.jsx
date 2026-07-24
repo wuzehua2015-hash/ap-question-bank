@@ -12,12 +12,13 @@ function Header() {
   const [subjectOpen, setSubjectOpen] = useState(false)
 
   const currentSubjectConfig = mySubjects.find(subject => subject.id === currentSubject)
+  const isIBPaperSubject = currentSubjectConfig?.assessmentModel === 'ib-paper'
   const accountLabel = isLoggedIn ? accountLevelDisplay(accountLevel || user?.account_level || 'free', isInternalStudent) : '登录'
   const hasStudySubjects = mySubjects.length > 0
   const subjectButtonLabel = currentSubjectConfig ? subjectDisplayName(currentSubjectConfig, 'short') : '选择科目'
   const navItems = [
-    { path: '/quiz', label: '练习' },
-    { path: '/exam', label: '模考' },
+    { path: isIBPaperSubject ? '/paper-practice' : '/quiz', label: isIBPaperSubject ? 'Paper 训练' : '练习' },
+    ...isIBPaperSubject ? [] : [{ path: '/exam', label: '模考' }],
     { path: '/mistakes', label: '错题' },
     { path: '/history', label: '记录' },
   ]

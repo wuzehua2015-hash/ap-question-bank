@@ -30,7 +30,8 @@ const reviewStream = fs.createWriteStream(REVIEW_PATH, { encoding: 'utf8' })
 
 for (const subject of subjects) {
   const cfg = readJson(path.join(PUBLIC, 'data', subject.classificationConfig))
-  const unitMap = new Map((cfg.units || []).map(unit => [unit.code || unit.id, unit.name || unit.title || unit.code || unit.id]))
+  const frameworkUnits = cfg.units || cfg.topic_areas || []
+  const unitMap = new Map(frameworkUnits.map(unit => [unit.code || unit.id, unit.name || unit.title || unit.code || unit.id]))
   const topicMap = new Map()
   for (const unit of cfg.units || []) {
     for (const topic of unit.topics || []) {
@@ -38,6 +39,10 @@ for (const subject of subjects) {
         topicMap.set(String(topic.code), { unit: unit.code || unit.id, name: topic.name || topic.title || String(topic.code) })
       }
     }
+  }
+  for (const topic of cfg.topic_areas || []) {
+    const code = topic.code || topic.id
+    if (code) topicMap.set(String(code), { unit: String(code), name: topic.name || topic.title || String(code) })
   }
 
   const subjectReport = {
@@ -50,7 +55,7 @@ for (const subject of subjects) {
     invalid_required_topics: 0,
   }
 
-  for (const fileKey of ['questionBank', 'frqBank']) {
+  for (const fileKey of ['questionBank', 'frqBank', 'paperBank']) {
     if (!subject[fileKey]) continue
     const rel = subject[fileKey]
     const items = readJson(path.join(PUBLIC, 'data', rel))
@@ -69,8 +74,8 @@ for (const subject of subjects) {
 
       let invalid = false
       for (const topic of requiredTopics) {
-        const unit = topic.unit || topic.primary_unit
         const code = topic.topic_code || topic.code || topic.id
+        const unit = topic.unit || topic.primary_unit || (subject.assessmentModel === 'ib-paper' ? code : null)
         if (!unitMap.has(unit)) invalid = true
         if (code && topicMap.has(String(code)) && topicMap.get(String(code)).unit !== unit) invalid = true
       }

@@ -151,6 +151,13 @@ const OFFICIAL_FRAMEWORKS = {
     'American Political Ideologies and Beliefs',
     'Political Participation',
   ]),
+  'ib-math-aa': official('IB Diploma Programme Mathematics: analysis and approaches guide, first assessment 2021', 'https://ibo.org/programmes/diploma-programme/curriculum/mathematics/', [
+    'Number and algebra',
+    'Functions',
+    'Geometry and trigonometry',
+    'Statistics and probability',
+    'Calculus',
+  ]),
 }
 
 fs.mkdirSync(OUT_DIR, { recursive: true })
@@ -163,7 +170,9 @@ const findings = []
 for (const subject of activeSubjects) {
   const configRel = subject.classificationConfig
   const configPath = path.join(PUBLIC, 'data', configRel)
-  const subjectDir = configRel.match(/^ap\/([^/]+)\//)?.[1] || subject.id
+  const subjectDir = subject.curriculum === 'ib' && subject.course === 'math-aa'
+    ? 'ib-math-aa'
+    : configRel.match(/^ap\/([^/]+)\//)?.[1] || subject.id
   const expected = OFFICIAL_FRAMEWORKS[subjectDir]
   const item = {
     subject_id: subject.id,
@@ -190,7 +199,8 @@ for (const subject of activeSubjects) {
   }
 
   const config = readJson(configPath)
-  const units = (config.units || []).map((unit, index) => ({
+  const frameworkUnits = config.units || config.topic_areas || []
+  const units = frameworkUnits.map((unit, index) => ({
     code: normalizeUnitCode(unit.id || unit.code || unit.unit || `U${index + 1}`),
     name: unit.name || unit.title || '',
   }))
@@ -222,7 +232,7 @@ for (const subject of activeSubjects) {
   }
 
   const authority = config.unit_classification_authority || {}
-  if (!authority.official_framework || !authority.official_url) {
+  if (!authority.official_framework || (!authority.official_url && !Array.isArray(authority.authority_urls))) {
     findings.push({
       severity: 'warning',
       subject_id: subject.id,

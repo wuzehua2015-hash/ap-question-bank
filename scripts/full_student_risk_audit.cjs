@@ -66,6 +66,7 @@ const report = {
   totals: {
     mcq: 0,
     frq: 0,
+    paper: 0,
     items: 0,
     p0: 0,
     p1: 0,
@@ -83,24 +84,32 @@ for (const subject of activeSubjects) {
     subject_id: subject.id,
     mcq: 0,
     frq: 0,
+    paper: 0,
     p0: 0,
     p1: 0,
     p2: 0,
     unit_counts: {},
   }
-  const validUnits = new Set((subject.units || []).map(unit => unit.id))
   const config = readJson(path.join(PUBLIC, 'data', subject.classificationConfig))
+  const validUnits = new Set(
+    subject.assessmentModel === 'ib-paper'
+      ? (config.topic_areas || []).map(topic => topic.id || topic.code)
+      : (subject.units || []).map(unit => unit.id)
+  )
   const authority = config.unit_classification_authority || {}
-  if (!authority.official_framework || !authority.official_url) {
+  if (!authority.official_framework || (!authority.official_url && !Array.isArray(authority.authority_urls))) {
     addFinding(subjectResult, subject, null, 'P0', 'missing_unit_authority', 'Subject classification config is missing explicit official authority metadata.')
   }
 
-  const mcq = readJson(path.join(PUBLIC, 'data', subject.questionBank)).filter(isStudentVisibleItem)
+  const mcq = subject.questionBank ? readJson(path.join(PUBLIC, 'data', subject.questionBank)).filter(isStudentVisibleItem) : []
   const frq = subject.frqBank ? readJson(path.join(PUBLIC, 'data', subject.frqBank)).filter(isStudentVisibleItem) : []
+  const paper = subject.paperBank ? readJson(path.join(PUBLIC, 'data', subject.paperBank)).filter(isStudentVisibleItem) : []
   subjectResult.mcq = mcq.length
   subjectResult.frq = frq.length
+  subjectResult.paper = paper.length
   report.totals.mcq += mcq.length
   report.totals.frq += frq.length
+  report.totals.paper += paper.length
 
   for (const item of mcq) {
     auditItem(subjectResult, subject, item, 'MCQ', validUnits)
@@ -110,12 +119,17 @@ for (const subject of activeSubjects) {
     auditItem(subjectResult, subject, item, 'FRQ', validUnits)
     subjectResult.unit_counts[item.primary_unit || '(missing)'] = (subjectResult.unit_counts[item.primary_unit || '(missing)'] || 0) + 1
   }
+  for (const item of paper) {
+    const normalizedItem = { ...item, primary_unit: item.topic_area }
+    auditItem(subjectResult, subject, normalizedItem, 'PAPER', validUnits)
+    subjectResult.unit_counts[normalizedItem.primary_unit || '(missing)'] = (subjectResult.unit_counts[normalizedItem.primary_unit || '(missing)'] || 0) + 1
+  }
 
   report.by_subject.push(subjectResult)
 }
 
 itemStream.end()
-report.totals.items = report.totals.mcq + report.totals.frq
+report.totals.items = report.totals.mcq + report.totals.frq + report.totals.paper
 fs.writeFileSync(OUT_PATH, JSON.stringify(report, null, 2) + '\n')
 fs.writeFileSync(P1_REVIEW_PATH, JSON.stringify(p1ReviewPack, null, 2) + '\n')
 
@@ -291,12 +305,17 @@ function finding(subject, item, severity, kind, message, textSample = '') {
 
 function itemText(item) {
   const optionText = item.options && typeof item.options === 'object' ? Object.values(item.options).join('\n') : ''
+  const partText = Array.isArray(item.parts) ? item.parts.map(part => `${part.label || ''} ${part.text || ''} ${part.scheme || ''}`).join('\n') : ''
+  const markschemeText = Array.isArray(item.markscheme?.rows) ? item.markscheme.rows.map(row => row.text || '').join('\n') : ''
   return normalizeVisibleText([
     item.question_id,
     item.group_context,
     item.text,
     item.question_text,
+    partText,
     optionText,
+    item.solution?.outline,
+    markschemeText,
     item.rubric_text,
     item.background_data?.caption,
     item.background_data?.table?.title,

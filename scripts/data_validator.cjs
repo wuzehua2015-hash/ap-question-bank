@@ -10,6 +10,15 @@ function validateAllSubjects() {
   let allWarnings = 0
   
   for (const subject of subjects) {
+    const assessmentModel = subject.assessmentModel || 'ap-mcq-frq'
+    if (assessmentModel !== 'ap-mcq-frq') {
+      if (subject.active) {
+        console.log(`SKIP: ${subject.id}: non-AP data is validated by assessment-model-specific gates (${assessmentModel})`)
+      } else {
+        console.log(`SKIP: ${subject.id}: candidate non-AP subject (${assessmentModel})`)
+      }
+      continue
+    }
     const qbPath = path.resolve('public/data', subject.questionBank)
     if (!fs.existsSync(qbPath)) {
       const msg = `${subject.id}: missing question bank: ${subject.questionBank}`

@@ -36,7 +36,7 @@ for (const subject of subjects) {
     bad_evidence_text: 0,
     files: [],
   }
-  for (const fileKey of ['questionBank', 'frqBank']) {
+  for (const fileKey of ['questionBank', 'frqBank', 'paperBank']) {
     if (!subject[fileKey]) continue
     const file = subject[fileKey]
     const rows = readJson(path.join(PUBLIC, 'data', file))
@@ -55,13 +55,15 @@ for (const subject of subjects) {
       fileReport.items += 1
       const id = item.question_id || item.id || '(missing-id)'
       const classification = item.classification || {}
-      const reviewed = classification.review_status === 'reviewed' &&
-        classification.primary_unit === item.primary_unit &&
-        (Array.isArray(classification.evidence) ? classification.evidence.length > 0 : Boolean(classification.evidence))
+      const reviewed = subject.assessmentModel === 'ib-paper'
+        ? hasIBEvidence(item)
+        : classification.review_status === 'reviewed' &&
+          classification.primary_unit === item.primary_unit &&
+          (Array.isArray(classification.evidence) ? classification.evidence.length > 0 : Boolean(classification.evidence))
       if (!reviewed) {
         addFinding(subjectReport, fileReport, subject.id, file, id, item.primary_unit, 'missing_review', 'Item lacks per-question official progression review evidence.')
       }
-      if (classification.primary_unit && classification.primary_unit !== item.primary_unit) {
+      if (subject.assessmentModel !== 'ib-paper' && classification.primary_unit && classification.primary_unit !== item.primary_unit) {
         addFinding(subjectReport, fileReport, subject.id, file, id, item.primary_unit, 'classification_mismatch', 'classification.primary_unit does not match root primary_unit.')
       }
       if (stalePattern.test(item.classification_reasoning || '') || stalePattern.test(classification.classification_version || '')) {
@@ -121,6 +123,17 @@ function visible(item) {
     item.student_visible !== false &&
     item.publish_status !== 'blocked' &&
     item.scoring_status !== 'not_scored'
+}
+
+function hasIBEvidence(item) {
+  return Boolean(
+    item.topic_area &&
+    item.why_not_earlier_topic &&
+    Array.isArray(item.required_topics) &&
+    item.required_topics.length > 0 &&
+    item.publication_review?.classification_basis &&
+    item.publication_review?.content_rights
+  )
 }
 
 function parseArgs(argv) {

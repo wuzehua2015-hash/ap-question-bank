@@ -61,6 +61,8 @@ const scripts = pkg.scripts || {}
 const requiredScripts = [
   'validate',
   'validate:data',
+  'validate:assessment-models',
+  'validate:ib-math-aa',
   'validate:images',
   'validate:groups',
   'validate:subject-risk',
@@ -79,6 +81,14 @@ for (const name of requiredScripts) {
 
 if (scripts.validate && !/validate:sop/.test(scripts.validate)) {
   errors.push('package.json: validate must include validate:sop')
+}
+
+if (scripts.validate && !/validate:assessment-models/.test(scripts.validate)) {
+  errors.push('package.json: validate must include validate:assessment-models')
+}
+
+if (scripts.validate && !/validate:ib-math-aa/.test(scripts.validate)) {
+  errors.push('package.json: validate must include validate:ib-math-aa')
 }
 
 if (scripts.validate && !/validate:classification-accuracy/.test(scripts.validate)) {

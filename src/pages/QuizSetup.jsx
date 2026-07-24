@@ -8,7 +8,7 @@ import { unitDisplayName } from '../utils/displayLabels'
 
 function QuizSetup() {
   const navigate = useNavigate()
-  const { currentSubject } = useSubject()
+  const { currentSubject, currentSubjectConfig } = useSubject()
   const { isLoggedIn, isInternalStudent } = useAuth()
   const [unit, setUnit] = useState('all')
   const [count, setCount] = useState(10)
@@ -19,6 +19,10 @@ function QuizSetup() {
   const [units, setUnits] = useState([])
 
   useEffect(() => {
+    if (currentSubjectConfig?.assessmentModel === 'ib-paper') {
+      navigate('/paper-practice', { replace: true })
+      return
+    }
     let cancelled = false
     async function loadUnits() {
       try {
@@ -46,7 +50,7 @@ function QuizSetup() {
     }
     loadUnits()
     return () => { cancelled = true }
-  }, [currentSubject])
+  }, [currentSubject, currentSubjectConfig, navigate])
 
   const generate = async () => {
     setLoading(true)

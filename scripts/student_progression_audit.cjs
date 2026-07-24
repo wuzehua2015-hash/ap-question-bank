@@ -22,7 +22,9 @@ main().catch(error => {
 
 async function main() {
   const subjectsConfig = readJson(path.join(PUBLIC, 'data', 'subjects.json'))
-  const subjects = subjectsConfig.subjects.filter(subject => subject.active && (!subjectFilter || subjectFilter.has(subject.id)))
+  const subjects = subjectsConfig.subjects
+    .filter(subject => subject.active && (subject.assessmentModel || 'ap-mcq-frq') === 'ap-mcq-frq')
+    .filter(subject => !subjectFilter || subjectFilter.has(subject.id))
   const report = {
     generated_at: new Date().toISOString(),
     run_browser_paths: runBrowser,

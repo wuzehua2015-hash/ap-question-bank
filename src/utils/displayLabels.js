@@ -15,6 +15,8 @@ const SUBJECT_LABELS = {
   statistics: { full: 'AP Statistics', short: 'Stats' },
   'us-government-politics': { full: 'AP United States Government and Politics', short: 'AP Gov' },
   'environmental-science': { full: 'AP Environmental Science', short: 'Environmental Science' },
+  'ib-math-aa-sl': { full: 'IB Mathematics: Analysis and Approaches SL', short: 'Math AA SL' },
+  'ib-math-aa-hl': { full: 'IB Mathematics: Analysis and Approaches HL', short: 'Math AA HL' },
 }
 
 const UNIT_LABELS = {

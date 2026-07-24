@@ -5,6 +5,7 @@
 const KEYS = {
   CURRENT_QUIZ: 'currentQuiz',
   CURRENT_FRQ: 'currentFRQ',
+  CURRENT_PAPER: 'currentPaper',
   QUIZ_CONFIG: 'quizConfig',
   QUIZ_INFO: 'quizInfo',
   MCQ_ANSWERS: 'mcqAnswers',
@@ -72,6 +73,17 @@ export function startSimilarQuiz({ questions, config, info }) {
   }))
 }
 
+export function startPaperPractice({ items, config, info }) {
+  clearAll()
+  sessionStorage.setItem(KEYS.CURRENT_PAPER, JSON.stringify(items))
+  sessionStorage.setItem(KEYS.QUIZ_CONFIG, JSON.stringify(config))
+  sessionStorage.setItem(KEYS.QUIZ_INFO, JSON.stringify({
+    ...info,
+    isMock: false,
+    mode: 'ib-paper',
+  }))
+}
+
 // ── Readers ──
 
 export function getCurrentQuiz() {
@@ -81,6 +93,11 @@ export function getCurrentQuiz() {
 
 export function getCurrentFRQ() {
   const raw = sessionStorage.getItem(KEYS.CURRENT_FRQ)
+  return raw ? JSON.parse(raw) : null
+}
+
+export function getCurrentPaper() {
+  const raw = sessionStorage.getItem(KEYS.CURRENT_PAPER)
   return raw ? JSON.parse(raw) : null
 }
 

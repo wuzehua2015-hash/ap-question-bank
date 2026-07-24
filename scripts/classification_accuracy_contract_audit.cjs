@@ -101,6 +101,58 @@ for (const subject of activeSubjects) {
     continue
   }
 
+  if (subject.assessmentModel === 'ib-paper') {
+    const topics = config.topic_areas || []
+    for (const topic of topics) {
+      const code = String(topic.id || topic.code || '').trim()
+      if (!code) {
+        addFinding('error', subject, subjectDir, null, 'topic_without_code', `${subject.id} has a Math AA topic without a code.`)
+        report.totals.topic_map_errors += 1
+        subjectReport.findings += 1
+        continue
+      }
+      topicMap.set(code, { unit: code, name: topic.name || code })
+      subjectReport.topics += 1
+    }
+    subjectReport.units = subjectReport.topics
+    subjectReport.topic_map_status = subjectReport.topics > 0 ? 'present' : 'coverage_debt'
+    if (subjectReport.topics === 0) {
+      report.totals.topic_map_debt += 1
+      addFinding(strictTopics ? 'error' : 'warning', subject, subjectDir, null, 'official_topic_map_coverage_debt', `${subject.id} has no Math AA topic map.`)
+    }
+
+    const bankPath = path.join(PUBLIC, 'data', subject.paperBank || '')
+    const bank = fs.existsSync(bankPath) ? readJson(bankPath) : []
+    for (const item of Array.isArray(bank) ? bank : []) {
+      if (!item || item.student_visible === false || item.publish_status === 'blocked') continue
+      subjectReport.items += 1
+      report.totals.items += 1
+      const qid = item.question_id || item.id || '(missing id)'
+      const topicArea = String(item.topic_area || '').trim()
+      if (!topicMap.has(topicArea)) {
+        addItemContractFinding(subject, subjectDir, qid, topicArea, 'invalid_ib_topic_area', `topic_area must be one of ${[...topicMap.keys()].join(', ')}.`)
+        subjectReport.item_contract_errors += 1
+        subjectReport.findings += 1
+      }
+      const requiredTopics = Array.isArray(item.required_topics) ? item.required_topics : []
+      if (!requiredTopics.length) {
+        addItemContractFinding(subject, subjectDir, qid, topicArea, 'missing_required_topics', 'IB paper item must record required_topics.')
+        subjectReport.item_contract_errors += 1
+        subjectReport.findings += 1
+      }
+      for (const required of requiredTopics) {
+        const code = String(required.topic_code || required.code || '').trim()
+        if (!topicMap.has(code)) {
+          addItemContractFinding(subject, subjectDir, qid, topicArea, 'invalid_required_topic', `required topic ${code || '(missing)'} is not in the Math AA topic map.`)
+          subjectReport.item_contract_errors += 1
+          subjectReport.findings += 1
+        }
+      }
+    }
+    report.subjects.push(subjectReport)
+    continue
+  }
+
   for (const [index, unit] of (config.units || []).entries()) {
     const code = normalizeUnitCode(unit.code || unit.id || unit.unit || `U${index + 1}`)
     unitMap.set(code, unit.name || unit.title || code)

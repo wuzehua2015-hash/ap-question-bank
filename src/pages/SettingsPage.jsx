@@ -31,6 +31,14 @@ function SettingsPage() {
     updateMySubjects(mySubjectIds.filter(id => id !== subjectId))
   }
 
+  const subjectMeta = (subject) => {
+    if (subject.assessmentModel === 'ib-paper') {
+      const papers = subject.paperPractice?.papers?.map(paperItem => paperItem.id).join(' / ') || 'Paper'
+      return `${papers} 训练`
+    }
+    return `${subject.mockExam?.totalMCQ || 0} MCQ 模考${subject.hasFRQ ? ` · ${subject.mockExam?.frqCount || 0} FRQ 模考` : ''}`
+  }
+
   return (
     <div className="max-w-5xl mx-auto px-5 py-12 sm:py-16">
       <div className="mb-10">
@@ -109,7 +117,7 @@ function SettingsPage() {
                 <div>
                   <div className="font-semibold text-text">{subjectDisplayName(subject)}</div>
                   <div className="mt-1 text-sm text-text-muted">
-                    {subject.mockExam?.totalMCQ || 0} MCQ 模考{subject.hasFRQ ? ` · ${subject.mockExam?.frqCount || 0} FRQ 模考` : ''}
+                    {subjectMeta(subject)}
                   </div>
                 </div>
                 <div className="flex gap-4 text-sm">

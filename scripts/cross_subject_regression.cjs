@@ -89,6 +89,10 @@ async function main() {
   const subjects = readJson('public/data/subjects.json')
   for (const subject of subjects.subjects || []) {
     if (!subject.active) continue
+    if (subject.assessmentModel === 'ib-paper') {
+      assert(subject.paperBank && subject.paperPractice?.papers?.length, `${subject.id} IB paper subject must have paperBank and paperPractice papers.`)
+      continue
+    }
     const mockExam = subject.mockExam || {}
     const total = Object.values(mockExam.unitDistribution || {}).reduce((sum, value) => sum + Number(value || 0), 0)
     assert(total === Number(mockExam.totalMCQ), `${subject.id} unitDistribution must sum to totalMCQ.`)

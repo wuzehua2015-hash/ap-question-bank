@@ -145,6 +145,7 @@ function subjectDirs() {
     const subjects = Array.isArray(payload) ? payload : (payload.subjects || [])
     return subjects
       .filter(s => s.active !== false)
+      .filter(s => (s.assessmentModel || 'ap-mcq-frq') === 'ap-mcq-frq')
       .map(s => {
         const cfg = s.classificationConfig || ''
         const match = cfg.match(/^ap\/([^/]+)\//)
