@@ -113,7 +113,7 @@ function assertUnitQuizGroupScope(subjectId, unit, questions, errors) {
 }
 
 const subjectsConfig = readJson('data/subjects.json')
-const subjects = subjectsConfig.subjects.filter(subject => subject.active)
+const subjects = subjectsConfig.subjects.filter(subject => subject.active && (subject.assessmentModel || 'ap-mcq-frq') === 'ap-mcq-frq')
 const errors = []
 
 for (const subject of subjects) {

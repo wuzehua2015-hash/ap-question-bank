@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useNavigate, useSearchParams } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import PremiumGate from '../components/PremiumGate'
 import QuestionDisplay from '../components/QuestionDisplay'
 import { MathText } from '../components/MathText'
@@ -53,6 +53,13 @@ function SearchWorkbench() {
   useEffect(() => {
     let cancelled = false
     setLoading(true)
+    if (currentSubjectConfig?.assessmentModel === 'ib-paper') {
+      setQuestions([])
+      setUnits([])
+      setSetIds([])
+      setLoading(false)
+      return () => { cancelled = true }
+    }
     Promise.all([loadMCQBank(currentSubject), getSubjectUnits(currentSubject)])
       .then(([bank, subjectUnits]) => {
         if (cancelled) return
@@ -70,7 +77,7 @@ function SearchWorkbench() {
         if (!cancelled) setLoading(false)
       })
     return () => { cancelled = true }
-  }, [currentSubject, searchParams])
+  }, [currentSubject, currentSubjectConfig?.assessmentModel, searchParams])
 
   const doneIds = useMemo(() => new Set(getDoneQuestions(currentSubject)), [currentSubject])
   const wrongIds = useMemo(() => new Set(getWrongQuestions(currentSubject)), [currentSubject])
@@ -153,6 +160,23 @@ function SearchWorkbench() {
     } finally {
       setBusySimilarId(null)
     }
+  }
+
+  if (currentSubjectConfig?.assessmentModel === 'ib-paper') {
+    return (
+      <div className="mx-auto max-w-3xl px-5 py-12">
+        <h1 className="text-2xl font-bold text-brand">Paper 题库</h1>
+        <p className="mt-3 leading-7 text-text-muted">
+          {subjectDisplayName(currentSubjectConfig)} 使用 IB Paper 训练模型。当前版本先开放按 Paper 与 topic area 筛选的训练入口，Paper 搜索与题单会按 IB 结构单独接入。
+        </p>
+        <Link
+          to="/paper-practice"
+          className="mt-6 inline-flex rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-light"
+        >
+          进入 Paper 训练
+        </Link>
+      </div>
+    )
   }
 
   if (loading) {

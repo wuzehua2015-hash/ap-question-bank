@@ -1,0 +1,54 @@
+{
+  "subject": "IB Mathematics: Analysis and Approaches",
+  "curriculum": "ib",
+  "course": "math-aa",
+  "assessment_model": "ib-paper",
+  "syllabus_version": "first-assessment-2021",
+  "unit_classification_authority": {
+    "official_framework": "IB Diploma Programme Mathematics: analysis and approaches guide, first assessment 2021",
+    "policy": "IB Math AA classification uses the official syllabus topic sequence and SL/HL scope. Third-party topic maps and filename labels can suggest review candidates only.",
+    "authority_urls": [
+      "https://ibo.org/programmes/diploma-programme/curriculum/mathematics/",
+      "https://ibo.org/university-admission/latest-curriculum-updates/dp-mathematics-analysis-and-approaches-updates/"
+    ]
+  },
+  "topic_areas": [
+    {
+      "id": "T1",
+      "name": "Number and algebra",
+      "scope": "SL_HL"
+    },
+    {
+      "id": "T2",
+      "name": "Functions",
+      "scope": "SL_HL"
+    },
+    {
+      "id": "T3",
+      "name": "Geometry and trigonometry",
+      "scope": "SL_HL"
+    },
+    {
+      "id": "T4",
+      "name": "Statistics and probability",
+      "scope": "SL_HL"
+    },
+    {
+      "id": "T5",
+      "name": "Calculus",
+      "scope": "SL_HL"
+    }
+  ],
+  "classification_contract": {
+    "rule": "Assign each item to the latest official Math AA topic required by the solution path, with all earlier topics available.",
+    "sl_hl_rule": "HL-only content is never eligible for an SL subject or SL paper-practice flow.",
+    "paper_rule": "Paper metadata is not a topic classification substitute. Paper, level, marks, and calculator status must be validated independently.",
+    "required_item_fields": [
+      "required_topics",
+      "why_not_earlier_topic",
+      "level_scope",
+      "source_paper_path",
+      "source_markscheme_path"
+    ]
+  }
+}

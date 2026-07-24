@@ -10,6 +10,8 @@ import { AuthProvider } from './contexts/AuthContext'
 const HomePage = lazy(() => import('./pages/HomePage'))
 const LandingPage = lazy(() => import('./pages/LandingPage'))
 const QuizSetup = lazy(() => import('./pages/QuizSetup'))
+const PaperPracticeSetup = lazy(() => import('./pages/PaperPracticeSetup'))
+const PaperPracticePlayer = lazy(() => import('./pages/PaperPracticePlayer'))
 const ExamSetup = lazy(() => import('./pages/ExamSetup'))
 const QuizPlayer = lazy(() => import('./pages/QuizPlayer'))
 const FRQPlayer = lazy(() => import('./pages/FRQPlayer'))
@@ -47,6 +49,8 @@ function App() {
                 <Route path="/landing" element={<LandingPage />} />
                 <Route path="/dashboard" element={<HomePage forceDashboard />} />
                 <Route path="/quiz" element={<RequireSubject><QuizSetup /></RequireSubject>} />
+                <Route path="/paper-practice" element={<RequireSubject><PaperPracticeSetup /></RequireSubject>} />
+                <Route path="/paper-play" element={<PaperPracticePlayer />} />
                 <Route path="/exam" element={<RequireSubject><ExamSetup /></RequireSubject>} />
                 <Route path="/play" element={<QuizPlayer />} />
                 <Route path="/frq" element={<FRQPlayer />} />

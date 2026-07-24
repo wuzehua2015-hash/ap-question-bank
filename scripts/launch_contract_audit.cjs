@@ -50,28 +50,51 @@ function readText(relativePath) {
 const subjectsConfig = readJson('public/data/subjects.json')
 const subjects = subjectsConfig?.subjects || []
 const activeSubjects = subjects.filter(subject => subject.active && subject.visibility !== 'internal')
+const activeAPSubjects = activeSubjects.filter(subject => (subject.curriculum || 'ap') === 'ap')
 const activeIds = activeSubjects.map(subject => subject.id)
+const activeAPIds = activeAPSubjects.map(subject => subject.id)
 
 for (const id of expectedActiveSubjects) {
-  if (!activeIds.includes(id)) {
+  if (!activeAPIds.includes(id)) {
     errors.push(`Expected active subject is missing: ${id}`)
   }
 }
 
-for (const id of activeIds) {
+for (const id of activeAPIds) {
   if (!expectedActiveSubjects.includes(id)) {
-    errors.push(`Unexpected active subject in launch set: ${id}`)
+    errors.push(`Unexpected active AP subject in launch set: ${id}`)
   }
   if (blockedSubjects.has(id)) {
     errors.push(`Subject must not be active: ${id}`)
   }
 }
 
-if (activeIds.length !== expectedActiveSubjects.length) {
-  errors.push(`Expected ${expectedActiveSubjects.length} active launch subjects, found ${activeIds.length}`)
+if (activeAPIds.length !== expectedActiveSubjects.length) {
+  errors.push(`Expected ${expectedActiveSubjects.length} active AP launch subjects, found ${activeAPIds.length}`)
 }
 
 for (const subject of activeSubjects) {
+  const assessmentModel = subject.assessmentModel || 'ap-mcq-frq'
+  if (assessmentModel === 'ib-paper') {
+    if (!subject.paperBank) {
+      errors.push(`${subject.id}: IB subject missing paperBank path`)
+    } else if (fileExists(subject.paperBank, `${subject.id} paperBank`)) {
+      const bank = readJson(path.join('public/data', subject.paperBank))
+      if (!Array.isArray(bank) || bank.length === 0) {
+        errors.push(`${subject.id}: paperBank is empty or not an array`)
+      }
+    }
+    if (!subject.classificationConfig) {
+      errors.push(`${subject.id}: IB subject missing classificationConfig`)
+    } else {
+      fileExists(subject.classificationConfig, `${subject.id} classificationConfig`)
+    }
+    if (!subject.paperPractice?.papers?.length) {
+      errors.push(`${subject.id}: IB subject missing paperPractice.papers`)
+    }
+    continue
+  }
+
   if (!subject.questionBank) {
     errors.push(`${subject.id}: missing questionBank path`)
   } else if (fileExists(subject.questionBank, `${subject.id} questionBank`)) {
@@ -151,4 +174,4 @@ if (errors.length) {
   process.exit(1)
 }
 
-console.log(`Launch contract audit passed: ${activeIds.length} active subjects.`)
+console.log(`Launch contract audit passed: ${activeAPIds.length} active AP subjects and ${activeIds.length - activeAPIds.length} active non-AP subjects.`)

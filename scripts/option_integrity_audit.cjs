@@ -10,7 +10,9 @@ const OUT_PATH = path.join(OUT_DIR, 'summary.json')
 fs.mkdirSync(OUT_DIR, { recursive: true })
 
 const subjectsPayload = readJson(path.join(PUBLIC, 'data', 'subjects.json'))
-const subjects = (subjectsPayload.subjects || subjectsPayload).filter(subject => subject.active !== false)
+const subjects = (subjectsPayload.subjects || subjectsPayload)
+  .filter(subject => subject.active !== false)
+  .filter(subject => (subject.assessmentModel || 'ap-mcq-frq') === 'ap-mcq-frq')
 
 const errors = []
 const warnings = []

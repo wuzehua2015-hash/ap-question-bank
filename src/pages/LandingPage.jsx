@@ -9,7 +9,7 @@ const PROGRAMS = [
   },
   {
     name: 'IB',
-    items: ['Coming soon'],
+    items: ['Mathematics AA SL', 'Mathematics AA HL'],
   },
   {
     name: 'A-Level',

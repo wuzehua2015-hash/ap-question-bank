@@ -1,0 +1,44 @@
+{
+  "curriculum": "ib",
+  "course": "math-aa",
+  "generated_at": "2026-07-24",
+  "primary_root": "subjects/IB/Group-5-Mathematics/01-exams/Maths AA",
+  "backup_root": "backups/真题/IB/Group 5 - Mathematics/Maths AA",
+  "status": "candidate_inventory",
+  "counts": {
+    "total_pdf_files": 113,
+    "HL": {
+      "paper": 34,
+      "markscheme": 35
+    },
+    "SL": {
+      "paper": 24,
+      "markscheme": 20
+    }
+  },
+  "pairing_gaps": {
+    "papers_without_markscheme": [
+      "Standard/2022-May/Paper 1/MathsAA_SL_P1_2022_May_TZ2.pdf",
+      "Standard/2023-Nov/Paper 1/MathsAA_SL_P1_2023_Nov_TZ2.pdf",
+      "Standard/2023-Nov/Paper 2/MathsAA_SL_P2_2023_Nov_TZ2.pdf",
+      "Standard/2024-May/Paper 2/MathsAA_SL_P2_2024_May_TZ1.pdf"
+    ],
+    "markschemes_without_paper": [
+      "Higher/2021-May/Markscheme/MathsAA_HL_P1_2021_May_TZ2_MS.pdf"
+    ]
+  },
+  "duplicate_class": {
+    "status": "deferred_until_canonical_copy_selected",
+    "notes": "2023-May HL and SL contain _2 duplicate copies across paper and markscheme files."
+  },
+  "approval_policy": {
+    "accepted_candidate": "Current Math AA 2021-first-assessment paper and markscheme pairs with verified level, paper, session, timezone, and readable pages.",
+    "deferred": "Files without matched paper/markscheme, duplicate copies before canonical selection, and 2024-May SL P2 until its markscheme is added.",
+    "out_of_scope": [
+      "Maths AI",
+      "Maths (Old Syllabus)",
+      "Maths Studies (Old Syllabus)",
+      "Further Maths (Old Syllabus)"
+    ]
+  }
+}

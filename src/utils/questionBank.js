@@ -5,6 +5,7 @@ const cache = {
   subjects: null,
   mcq: {},
   frq: {},
+  paper: {},
   similarityIndex: {}
 }
 
@@ -38,6 +39,14 @@ export async function getSubjectUnits(subjectId) {
 export async function getMockExamConfig(subjectId = 'macro') {
   const cfg = await loadSubjectConfig(subjectId)
   return cfg.mockExam
+}
+
+export function isAPAssessmentModel(cfg) {
+  return (cfg?.assessmentModel || 'ap-mcq-frq') === 'ap-mcq-frq'
+}
+
+export function isIBPaperAssessmentModel(cfg) {
+  return cfg?.assessmentModel === 'ib-paper'
 }
 
 // Question Bank Loading (by subject)
@@ -217,6 +226,9 @@ function normalizeOptionsToObject(options) {
 export async function loadMCQBank(subjectId = 'macro') {
   if (cache.mcq[subjectId]) return cache.mcq[subjectId]
   const cfg = await loadSubjectConfig(subjectId)
+  if (!isAPAssessmentModel(cfg)) {
+    throw new Error(`${subjectId} uses ${cfg.assessmentModel}; load the paper bank instead of the AP MCQ bank.`)
+  }
   const res = await fetch(`${BASE_URL}data/${cfg.questionBank}`)
   if (!res.ok) throw new Error(`Failed to load MCQ bank for ${subjectId}: ${res.status}`)
   const data = await res.json()
@@ -228,6 +240,9 @@ export async function loadMCQBank(subjectId = 'macro') {
 export async function loadFRQBank(subjectId = 'macro') {
   if (cache.frq[subjectId]) return cache.frq[subjectId]
   const cfg = await loadSubjectConfig(subjectId)
+  if (!isAPAssessmentModel(cfg)) {
+    return null
+  }
   if (!cfg.hasFRQ) return null
   const res = await fetch(`${BASE_URL}data/${cfg.frqBank}`)
   if (!res.ok) throw new Error(`Failed to load FRQ bank for ${subjectId}: ${res.status}`)
@@ -235,6 +250,25 @@ export async function loadFRQBank(subjectId = 'macro') {
   // Normalize source versions to the internal frontend model.
   cache.frq[subjectId] = data.map(adaptFRQ).filter(isPlayableFRQ)
   return cache.frq[subjectId]
+}
+
+export async function loadPaperBank(subjectId) {
+  if (cache.paper[subjectId]) return cache.paper[subjectId]
+  const cfg = await loadSubjectConfig(subjectId)
+  if (!isIBPaperAssessmentModel(cfg)) {
+    throw new Error(`${subjectId} does not use the IB paper assessment model.`)
+  }
+  if (!cfg.paperBank) {
+    cache.paper[subjectId] = []
+    return []
+  }
+  const res = await fetch(`${BASE_URL}data/${cfg.paperBank}`)
+  if (!res.ok) throw new Error(`Failed to load paper bank for ${subjectId}: ${res.status}`)
+  const data = await res.json()
+  cache.paper[subjectId] = Array.isArray(data)
+    ? data.filter(item => item.student_visible !== false && item.publish_status !== 'blocked')
+    : []
+  return cache.paper[subjectId]
 }
 
 // Similarity Index Loading
@@ -353,6 +387,10 @@ function normalizeSource(source) {
 // Mock Exam Generation
 
 export async function generateMockExam(questions, frqQuestions, subjectId = 'macro') {
+  const subjectConfig = await loadSubjectConfig(subjectId)
+  if (!isAPAssessmentModel(subjectConfig)) {
+    throw new Error(`${subjectId} uses ${subjectConfig.assessmentModel}; AP mock generation is not valid for this subject.`)
+  }
   const mockConfig = await getMockExamConfig(subjectId)
   const playableQuestions = questions.filter(isPlayableMCQ)
 
@@ -423,5 +461,4 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
     isMock: true,
   }
 }
-
 

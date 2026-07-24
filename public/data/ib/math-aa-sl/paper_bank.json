@@ -1,0 +1,5642 @@
+[
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p1_01",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 1,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $3$ and common difference $4$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=3+(n-1)4=4n+-1$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>180$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=3+(n-1)4=4n+-1$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p2_02",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 2,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $4$ and common difference $5$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=4+(n-1)5=5n+-1$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>200$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=4+(n-1)5=5n+-1$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p1_03",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 3,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $5$ and common difference $6$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=5+(n-1)6=6n+-1$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>220$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=5+(n-1)6=6n+-1$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p2_04",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 4,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $6$ and common difference $3$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=6+(n-1)3=3n+3$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>240$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=6+(n-1)3=3n+3$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p1_05",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 5,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $7$ and common difference $4$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=7+(n-1)4=4n+3$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>260$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=7+(n-1)4=4n+3$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p2_06",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 6,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $8$ and common difference $5$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=8+(n-1)5=5n+3$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>160$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=8+(n-1)5=5n+3$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p1_07",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 7,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $9$ and common difference $6$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=9+(n-1)6=6n+3$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>180$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=9+(n-1)6=6n+3$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p2_08",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 8,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $10$ and common difference $3$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=10+(n-1)3=3n+7$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>200$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=10+(n-1)3=3n+7$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p1_09",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 9,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $11$ and common difference $4$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=11+(n-1)4=4n+7$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>220$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=11+(n-1)4=4n+7$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p2_10",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 10,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $12$ and common difference $5$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=12+(n-1)5=5n+7$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>240$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=12+(n-1)5=5n+7$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p1_11",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 11,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $13$ and common difference $6$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=13+(n-1)6=6n+7$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>260$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=13+(n-1)6=6n+7$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t1_p2_12",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 12,
+    "title": "Arithmetic sequence and partial sum",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T1",
+    "topic_name": "Number and algebra",
+    "subtopic_code": "SL-1-sequences",
+    "required_topics": [
+      {
+        "topic_code": "T1",
+        "topic_name": "Number and algebra",
+        "subtopic_code": "SL-1-sequences"
+      }
+    ],
+    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "An arithmetic sequence has first term $14$ and common difference $3$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for the $n$th term $u_n$.",
+        "scheme": "$u_n=14+(n-1)3=3n+11$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the smallest value of $n$ for which $S_n>160$.",
+        "scheme": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+      }
+    ],
+    "solution": {
+      "outline": "Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$u_n=14+(n-1)3=3n+11$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p1_01",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 13,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-4x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-2)^2-3$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(2,-3)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-2)^2=3$, so $x=2\\pm\\sqrt{3}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-2)^2-3$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(2,-3)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-2)^2=3$, so $x=2\\pm\\sqrt{3}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p2_02",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 14,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-6x+5$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-3)^2-4$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(3,-4)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-3)^2=4$, so $x=3\\pm\\sqrt{4}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-3)^2-4$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(3,-4)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-3)^2=4$, so $x=3\\pm\\sqrt{4}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p1_03",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 15,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-8x+11$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-4)^2-5$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(4,-5)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-4)^2=5$, so $x=4\\pm\\sqrt{5}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-4)^2-5$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(4,-5)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-4)^2=5$, so $x=4\\pm\\sqrt{5}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p2_04",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 16,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-10x+23$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-5)^2-2$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(5,-2)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-5)^2=2$, so $x=5\\pm\\sqrt{2}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-5)^2-2$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(5,-2)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-5)^2=2$, so $x=5\\pm\\sqrt{2}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p1_05",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 17,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-2x+-2$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-1)^2-3$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(1,-3)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-1)^2=3$, so $x=1\\pm\\sqrt{3}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-1)^2-3$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(1,-3)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-1)^2=3$, so $x=1\\pm\\sqrt{3}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p2_06",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 18,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-4x+0$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-2)^2-4$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(2,-4)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-2)^2=4$, so $x=2\\pm\\sqrt{4}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-2)^2-4$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(2,-4)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-2)^2=4$, so $x=2\\pm\\sqrt{4}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p1_07",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 19,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-6x+4$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-3)^2-5$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(3,-5)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-3)^2=5$, so $x=3\\pm\\sqrt{5}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-3)^2-5$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(3,-5)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-3)^2=5$, so $x=3\\pm\\sqrt{5}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p2_08",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 20,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-8x+14$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-4)^2-2$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(4,-2)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-4)^2=2$, so $x=4\\pm\\sqrt{2}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-4)^2-2$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(4,-2)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-4)^2=2$, so $x=4\\pm\\sqrt{2}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p1_09",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 21,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-10x+22$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-5)^2-3$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(5,-3)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-5)^2=3$, so $x=5\\pm\\sqrt{3}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-5)^2-3$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(5,-3)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-5)^2=3$, so $x=5\\pm\\sqrt{3}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p2_10",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 22,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-2x+-3$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-1)^2-4$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(1,-4)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-1)^2=4$, so $x=1\\pm\\sqrt{4}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-1)^2-4$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(1,-4)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-1)^2=4$, so $x=1\\pm\\sqrt{4}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p1_11",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 23,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-4x+-1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-2)^2-5$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(2,-5)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-2)^2=5$, so $x=2\\pm\\sqrt{5}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-2)^2-5$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(2,-5)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-2)^2=5$, so $x=2\\pm\\sqrt{5}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t2_p2_12",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 24,
+    "title": "Quadratic function features",
+    "marks": 6,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      },
+      {
+        "label": "c",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T2",
+    "topic_name": "Functions",
+    "subtopic_code": "SL-2-functions",
+    "required_topics": [
+      {
+        "topic_code": "T2",
+        "topic_name": "Functions",
+        "subtopic_code": "SL-2-functions"
+      }
+    ],
+    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The function $f$ is defined by $f(x)=x^2-6x+7$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write $f(x)$ in the form $(x-h)^2+k$.",
+        "scheme": "Complete the square to obtain $(x-3)^2-2$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "State the coordinates of the vertex of the graph of $y=f(x)$.",
+        "scheme": "The vertex is $(3,-2)$."
+      },
+      {
+        "label": "c",
+        "marks": 2,
+        "text": "Solve $f(x)=0$.",
+        "scheme": "$(x-3)^2=2$, so $x=3\\pm\\sqrt{2}$."
+      }
+    ],
+    "solution": {
+      "outline": "Complete the square, then read the vertex and solve the equation from the squared form."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "Complete the square to obtain $(x-3)^2-2$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "The vertex is $(3,-2)$."
+        },
+        {
+          "part": "c",
+          "marks": 2,
+          "text": "$(x-3)^2=2$, so $x=3\\pm\\sqrt{2}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p1_01",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 25,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=35^{\\circ}$, angle $B=90^{\\circ}$, and $AB=7$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 35^{\\circ}$.",
+        "scheme": "$BC=7\\tan 35^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=7/\\cos 35^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=7\\tan 35^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=7/\\cos 35^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p2_02",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 26,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=40^{\\circ}$, angle $B=90^{\\circ}$, and $AB=8$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 40^{\\circ}$.",
+        "scheme": "$BC=8\\tan 40^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=8/\\cos 40^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=8\\tan 40^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=8/\\cos 40^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p1_03",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 27,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=45^{\\circ}$, angle $B=90^{\\circ}$, and $AB=9$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 45^{\\circ}$.",
+        "scheme": "$BC=9\\tan 45^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=9/\\cos 45^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=9\\tan 45^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=9/\\cos 45^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p2_04",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 28,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=50^{\\circ}$, angle $B=90^{\\circ}$, and $AB=10$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 50^{\\circ}$.",
+        "scheme": "$BC=10\\tan 50^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=10/\\cos 50^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=10\\tan 50^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=10/\\cos 50^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p1_05",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 29,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=55^{\\circ}$, angle $B=90^{\\circ}$, and $AB=11$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 55^{\\circ}$.",
+        "scheme": "$BC=11\\tan 55^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=11/\\cos 55^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=11\\tan 55^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=11/\\cos 55^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p2_06",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 30,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=60^{\\circ}$, angle $B=90^{\\circ}$, and $AB=12$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 60^{\\circ}$.",
+        "scheme": "$BC=12\\tan 60^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=12/\\cos 60^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=12\\tan 60^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=12/\\cos 60^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p1_07",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 31,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=65^{\\circ}$, angle $B=90^{\\circ}$, and $AB=6$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 65^{\\circ}$.",
+        "scheme": "$BC=6\\tan 65^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=6/\\cos 65^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=6\\tan 65^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=6/\\cos 65^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p2_08",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 32,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=70^{\\circ}$, angle $B=90^{\\circ}$, and $AB=7$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 70^{\\circ}$.",
+        "scheme": "$BC=7\\tan 70^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=7/\\cos 70^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=7\\tan 70^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=7/\\cos 70^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p1_09",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 33,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=75^{\\circ}$, angle $B=90^{\\circ}$, and $AB=8$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 75^{\\circ}$.",
+        "scheme": "$BC=8\\tan 75^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=8/\\cos 75^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=8\\tan 75^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=8/\\cos 75^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p2_10",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 34,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=30^{\\circ}$, angle $B=90^{\\circ}$, and $AB=9$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 30^{\\circ}$.",
+        "scheme": "$BC=9\\tan 30^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=9/\\cos 30^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=9\\tan 30^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=9/\\cos 30^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p1_11",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 35,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=35^{\\circ}$, angle $B=90^{\\circ}$, and $AB=10$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 35^{\\circ}$.",
+        "scheme": "$BC=10\\tan 35^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=10/\\cos 35^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=10\\tan 35^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=10/\\cos 35^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t3_p2_12",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 36,
+    "title": "Right-triangle trigonometry",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T3",
+    "topic_name": "Geometry and trigonometry",
+    "subtopic_code": "SL-3-trigonometry",
+    "required_topics": [
+      {
+        "topic_code": "T3",
+        "topic_name": "Geometry and trigonometry",
+        "subtopic_code": "SL-3-trigonometry"
+      }
+    ],
+    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "In triangle $ABC$, angle $A=40^{\\circ}$, angle $B=90^{\\circ}$, and $AB=11$ cm.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Write an expression for $BC$ in terms of $\\tan 40^{\\circ}$.",
+        "scheme": "$BC=11\\tan 40^{\\circ}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $AC$ to three significant figures.",
+        "scheme": "Use $\\cos A=AB/AC$, so $AC=11/\\cos 40^{\\circ}$."
+      }
+    ],
+    "solution": {
+      "outline": "Identify opposite, adjacent, and hypotenuse relative to angle $A$, then use standard trigonometric ratios."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$BC=11\\tan 40^{\\circ}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "Use $\\cos A=AB/AC$, so $AC=11/\\cos 40^{\\circ}$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p1_01",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 37,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=9$ and $p=0.40$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{9}{3}(0.40)^3(1-0.40)^{6}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=9\\times 0.40$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{9}{3}(0.40)^3(1-0.40)^{6}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=9\\times 0.40$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p2_02",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 38,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=10$ and $p=0.35$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{10}{3}(0.35)^3(1-0.35)^{7}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=10\\times 0.35$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{10}{3}(0.35)^3(1-0.35)^{7}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=10\\times 0.35$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p1_03",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 39,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=11$ and $p=0.40$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{11}{3}(0.40)^3(1-0.40)^{8}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=11\\times 0.40$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{11}{3}(0.40)^3(1-0.40)^{8}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=11\\times 0.40$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p2_04",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 40,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=12$ and $p=0.35$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{12}{3}(0.35)^3(1-0.35)^{9}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=12\\times 0.35$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{12}{3}(0.35)^3(1-0.35)^{9}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=12\\times 0.35$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p1_05",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 41,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=8$ and $p=0.40$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{8}{3}(0.40)^3(1-0.40)^{5}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=8\\times 0.40$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{8}{3}(0.40)^3(1-0.40)^{5}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=8\\times 0.40$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p2_06",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 42,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=9$ and $p=0.35$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{9}{3}(0.35)^3(1-0.35)^{6}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=9\\times 0.35$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{9}{3}(0.35)^3(1-0.35)^{6}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=9\\times 0.35$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p1_07",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 43,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=10$ and $p=0.40$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{10}{3}(0.40)^3(1-0.40)^{7}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=10\\times 0.40$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{10}{3}(0.40)^3(1-0.40)^{7}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=10\\times 0.40$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p2_08",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 44,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=11$ and $p=0.35$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{11}{3}(0.35)^3(1-0.35)^{8}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=11\\times 0.35$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{11}{3}(0.35)^3(1-0.35)^{8}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=11\\times 0.35$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p1_09",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 45,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=12$ and $p=0.40$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{12}{3}(0.40)^3(1-0.40)^{9}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=12\\times 0.40$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{12}{3}(0.40)^3(1-0.40)^{9}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=12\\times 0.40$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p2_10",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 46,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=8$ and $p=0.35$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{8}{3}(0.35)^3(1-0.35)^{5}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=8\\times 0.35$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{8}{3}(0.35)^3(1-0.35)^{5}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=8\\times 0.35$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p1_11",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 47,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=9$ and $p=0.40$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{9}{3}(0.40)^3(1-0.40)^{6}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=9\\times 0.40$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{9}{3}(0.40)^3(1-0.40)^{6}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=9\\times 0.40$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t4_p2_12",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 48,
+    "title": "Binomial distribution",
+    "marks": 4,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 2
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T4",
+    "topic_name": "Statistics and probability",
+    "subtopic_code": "SL-4-binomial",
+    "required_topics": [
+      {
+        "topic_code": "T4",
+        "topic_name": "Statistics and probability",
+        "subtopic_code": "SL-4-binomial"
+      }
+    ],
+    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "A random variable $X$ follows a binomial distribution with $n=10$ and $p=0.35$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find an expression for $P(X=3)$.",
+        "scheme": "$P(X=3)=\\binom{10}{3}(0.35)^3(1-0.35)^{7}$."
+      },
+      {
+        "label": "b",
+        "marks": 2,
+        "text": "Find $E(X)$.",
+        "scheme": "$E(X)=np=10\\times 0.35$."
+      }
+    ],
+    "solution": {
+      "outline": "Use the binomial probability formula and the expected-value formula $E(X)=np$."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$P(X=3)=\\binom{10}{3}(0.35)^3(1-0.35)^{7}$."
+        },
+        {
+          "part": "b",
+          "marks": 2,
+          "text": "$E(X)=np=10\\times 0.35$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p1_01",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 49,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-3x^2+2x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-6x+2$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-6x+2$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p2_02",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 50,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-4x^2+3x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-8x+3$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-8x+3$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p1_03",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 51,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-5x^2+4x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-10x+4$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-10x+4$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p2_04",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 52,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-6x^2+1x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-12x+1$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-12x+1$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p1_05",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 53,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-2x^2+2x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-4x+2$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-4x+2$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p2_06",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 54,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-3x^2+3x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-6x+3$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-6x+3$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p1_07",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 55,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-4x^2+4x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-8x+4$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-8x+4$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p2_08",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 56,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-5x^2+1x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-10x+1$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-10x+1$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p1_09",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 57,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-6x^2+2x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-12x+2$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-12x+2$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p2_10",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 58,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-2x^2+3x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-4x+3$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-4x+3$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p1_11",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P1",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 59,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": false,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-3x^2+4x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-6x+4$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-6x+4$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  },
+  {
+    "question_id": "lynkedu_math_aa_sl_t5_p2_12",
+    "curriculum": "ib",
+    "course": "math-aa",
+    "level": "SL",
+    "paper": "P2",
+    "session": "LynkEdu-Original-2026",
+    "timezone": "TZ0",
+    "question_number": 60,
+    "title": "Differentiation and tangent line",
+    "marks": 5,
+    "part_marks": [
+      {
+        "label": "a",
+        "marks": 2
+      },
+      {
+        "label": "b",
+        "marks": 3
+      }
+    ],
+    "calculator_allowed": true,
+    "syllabus_version": "first-assessment-2021",
+    "topic_area": "T5",
+    "topic_name": "Calculus",
+    "subtopic_code": "SL-5-differentiation",
+    "required_topics": [
+      {
+        "topic_code": "T5",
+        "topic_name": "Calculus",
+        "subtopic_code": "SL-5-differentiation"
+      }
+    ],
+    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "level_scope": "SL scope",
+    "text": "The curve $C$ has equation $y=x^3-4x^2+1x+1$.",
+    "parts": [
+      {
+        "label": "a",
+        "marks": 2,
+        "text": "Find $\\frac{dy}{dx}$.",
+        "scheme": "$\\frac{dy}{dx}=3x^2-8x+1$."
+      },
+      {
+        "label": "b",
+        "marks": 3,
+        "text": "Find the equation of the tangent to $C$ at $x=1$.",
+        "scheme": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+      }
+    ],
+    "solution": {
+      "outline": "Differentiate term by term, evaluate the derivative and function value at $x=1$, and write the tangent equation."
+    },
+    "markscheme": {
+      "rows": [
+        {
+          "part": "a",
+          "marks": 2,
+          "text": "$\\frac{dy}{dx}=3x^2-8x+1$."
+        },
+        {
+          "part": "b",
+          "marks": 3,
+          "text": "Find the gradient at $x=1$ and the point on $C$, then use $y-y_1=m(x-x_1)$."
+        }
+      ]
+    },
+    "source": {
+      "type": "lynkedu_owned_original",
+      "source_set": "lynkedu_owned_math_aa_20260724",
+      "paper_id": "lynkedu-owned-math-aa-style-practice-2026",
+      "paper_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "markscheme_path": "subjects/IB/Group-5-Mathematics/02-data/lynkedu_owned_math_aa_20260724/SOURCE_LEDGER.md",
+      "rights_status": "owned-original"
+    },
+    "publication_review": {
+      "content_rights": "owned-original",
+      "formula_rendering": "reviewed",
+      "marks_contract": "reviewed",
+      "classification_basis": "official Math AA topic area, first assessment 2021",
+      "student_surface": "requires automated browser closeout after build"
+    },
+    "render_contract": {
+      "math_katex_required": true,
+      "figure_required": false,
+      "table_required": false,
+      "paper3_investigation_style": false
+    },
+    "publish_status": "ready",
+    "student_visible": true
+  }
+]

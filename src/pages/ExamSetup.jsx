@@ -8,7 +8,7 @@ import { startMockExam } from '../utils/quizSession'
 function ExamSetup() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
-  const { currentSubject, setSubject } = useSubject()
+  const { currentSubject, currentSubjectConfig, setSubject } = useSubject()
   const { isLoggedIn, isInternalStudent } = useAuth()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -29,6 +29,10 @@ function ExamSetup() {
   }, [currentSubject, searchParams, setSubject])
 
   const generate = async () => {
+    if (currentSubjectConfig?.assessmentModel === 'ib-paper') {
+      navigate('/paper-practice')
+      return
+    }
     if (!isLoggedIn) {
       navigate(`/login?returnTo=${encodeURIComponent('/exam')}&reason=mock-exam`)
       return

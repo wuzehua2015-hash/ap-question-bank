@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { useSubject } from '../contexts/SubjectContext'
-import { loadFRQBank, loadMCQBank } from '../utils/questionBank'
+import { loadFRQBank, loadMCQBank, loadPaperBank } from '../utils/questionBank'
 import { accountLevelDisplay, subjectDisplayName } from '../utils/displayLabels'
 import { getQuizHistory, getWrongQuestions } from '../utils/storage'
 import LandingPage from './LandingPage'
@@ -17,6 +17,15 @@ function HomePage({ forceDashboard = false }) {
       const stats = {}
       for (const subject of mySubjects) {
         try {
+          if (subject.assessmentModel === 'ib-paper') {
+            const paperData = await loadPaperBank(subject.id)
+            stats[subject.id] = {
+              paperCount: paperData.length,
+              hasFRQ: false,
+              assessmentModel: 'ib-paper',
+            }
+            continue
+          }
           const mcqData = await loadMCQBank(subject.id)
           const frqData = subject.hasFRQ ? await loadFRQBank(subject.id).catch(() => []) : []
           stats[subject.id] = {
@@ -36,6 +45,7 @@ function HomePage({ forceDashboard = false }) {
 
   const currentSubjectConfig = mySubjects.find(subject => subject.id === currentSubject) || mySubjects[0]
   const currentStats = subjectStats[currentSubjectConfig?.id] || {}
+  const isIBPaperSubject = currentSubjectConfig?.assessmentModel === 'ib-paper'
   const accountLabel = isLoggedIn ? accountLevelDisplay('free', isInternalStudent) : '游客模式'
   const currentProgress = useMemo(() => buildProgressSummary(currentSubject), [currentSubject])
 
@@ -83,20 +93,22 @@ function HomePage({ forceDashboard = false }) {
         </p>
 
         <div className="mb-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-text-muted">
-          <span>{currentStats.mcqCount || '...'} MCQ</span>
-          {currentStats.hasFRQ && <span>{currentStats.frqCount || 0} FRQ</span>}
+          {isIBPaperSubject ? <span>{currentStats.paperCount ?? '...'} paper questions</span> : <span>{currentStats.mcqCount || '...'} MCQ</span>}
+          {!isIBPaperSubject && currentStats.hasFRQ && <span>{currentStats.frqCount || 0} FRQ</span>}
           <span>{mySubjects.length} 个学习科目</span>
           {currentProgress.lastScore && <span>上次 {currentProgress.lastScore}</span>}
           {currentProgress.wrongCount > 0 && <span>{currentProgress.wrongCount} 道错题</span>}
         </div>
 
         <div className="flex flex-wrap gap-3">
-          <Link to="/quiz" className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-light">
-            {currentProgress.primaryLabel}
+          <Link to={isIBPaperSubject ? '/paper-practice' : '/quiz'} className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-light">
+            {isIBPaperSubject ? 'Paper 训练' : currentProgress.primaryLabel}
           </Link>
-          <Link to="/exam" className="rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-light">
-            模拟考试
-          </Link>
+          {!isIBPaperSubject && (
+            <Link to="/exam" className="rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-light">
+              模拟考试
+            </Link>
+          )}
           <Link to={currentProgress.wrongCount > 0 ? '/mistakes' : '/history'} className="rounded-md px-4 py-3 text-sm font-medium text-text-muted hover:text-brand">
             {currentProgress.secondaryLabel}
           </Link>
@@ -122,12 +134,14 @@ function HomePage({ forceDashboard = false }) {
                 >
                   <span className={`block font-semibold ${isActive ? 'text-brand' : 'text-text'}`}>{subjectDisplayName(subject)}</span>
                   <span className="mt-1 block text-sm text-text-muted">
-                    {stats.mcqCount || '...'} MCQ{stats.hasFRQ ? ` · ${stats.frqCount || 0} FRQ` : ''}
+                    {subject.assessmentModel === 'ib-paper' ? `${stats.paperCount ?? '...'} paper questions` : `${stats.mcqCount || '...'} MCQ${stats.hasFRQ ? ` · ${stats.frqCount || 0} FRQ` : ''}`}
                   </span>
                 </button>
                 <div className="flex gap-4 text-sm">
-                  <Link to="/quiz" onClick={() => setSubject(subject.id)} className="text-accent hover:underline">练习</Link>
-                  <Link to="/exam" onClick={() => setSubject(subject.id)} className="text-brand hover:underline">模考</Link>
+                  <Link to={subject.assessmentModel === 'ib-paper' ? '/paper-practice' : '/quiz'} onClick={() => setSubject(subject.id)} className="text-accent hover:underline">
+                    {subject.assessmentModel === 'ib-paper' ? 'Paper 训练' : '练习'}
+                  </Link>
+                  {subject.assessmentModel !== 'ib-paper' && <Link to="/exam" onClick={() => setSubject(subject.id)} className="text-brand hover:underline">模考</Link>}
                 </div>
               </div>
             )

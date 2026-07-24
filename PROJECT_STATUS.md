@@ -278,3 +278,48 @@ The site has entered productization for public launch:
   - Student-visible old-unit residuals are 0 for CSA legacy U5-U10, Statistics legacy U6-U9, and Physics 2 legacy U1-U7.
   - Physics 2 retains 21 legacy Fluids MCQ records as blocked/internal only.
   - Real browser production check: home renders Chinese-first and `/quiz` with CSA loads from production `/data/subjects.json` and `/data/ap/computer-science-a/question_bank.json`, showing U1-U4 with current unit names.
+
+## 2026-07-24 IB Math AA Candidate Platform Foundation
+
+- Added non-AP assessment-model support without changing the active AP launch set.
+- Active student-visible subject count remains 16. `ib-math-aa-sl` and `ib-math-aa-hl` exist only as `active:false` / `visibility:"candidate"` records.
+- Added explicit `curriculum:"ap"` and `assessmentModel:"ap-mcq-frq"` metadata to existing AP subject records.
+- Added IB candidate records:
+  - `IB Mathematics: Analysis and Approaches SL`
+  - `IB Mathematics: Analysis and Approaches HL`
+- Added candidate data roots:
+  - `public/data/ib/math-aa/classification_config.json`
+  - `public/data/ib/math-aa/source_inventory.json`
+  - `public/data/ib/math-aa-sl/paper_bank.json`
+  - `public/data/ib/math-aa-hl/paper_bank.json`
+- Added `scripts/assessment_model_contract_audit.cjs` and wired it into `npm run validate` as `validate:assessment-models`.
+- `src/utils/questionBank.js` now separates AP MCQ/FRQ loading from IB paper-bank loading and rejects AP mock generation for non-AP assessment models.
+- Verification passed:
+  - `npm run validate:assessment-models`
+  - `npm run validate:sop`
+  - `npm run validate:data`
+  - `npm run validate`
+  - `npm run build`
+- This is platform foundation only. Math AA is not published until canonical source selection, pilot extraction, Math AA paper-practice UI, student-surface QA, and production deployment pass.
+
+## 2026-07-24 IB Math AA SL/HL Student-Visible Launch Candidate
+
+- IB Math AA now uses a separate IB paper-practice model, not the AP MCQ/FRQ flow.
+- Active student-facing subjects now total 18:
+  - 16 AP subjects remain active under `assessmentModel: "ap-mcq-frq"`;
+  - `ib-math-aa-sl` and `ib-math-aa-hl` are active under `assessmentModel: "ib-paper"`.
+- Published Math AA practice inventory is LynkEdu-owned original practice content:
+  - SL: `public/data/ib/math-aa-sl/paper_bank.json`, 60 paper-style items;
+  - HL: `public/data/ib/math-aa-hl/paper_bank.json`, 90 paper-style items.
+- Local official IB paper/markscheme inventory remains internal source-context only unless explicit publication permission is confirmed. Do not copy official IB prompt or markscheme text into the student bank without source approval.
+- New student surfaces:
+  - `/paper-practice` for Paper/topic/count selection;
+  - `/paper-play` for IB paper-style question display, subparts, formula rendering, solution, and markscheme rows.
+- New reusable evidence command:
+  - `npm run audit:ib-math-aa:student-surface -- --url <fresh-preview-or-production-url> --port <port>`
+  - It runs SL/HL across desktop and mobile, starts Paper training, checks formula rendering, shows solution/markscheme, advances to the next item, and blocks visible encoding damage or raw formula residue outside KaTeX output.
+- Local verification passed:
+  - `npm run validate`
+  - `npm run audit:ib-math-aa:student-surface -- --url http://127.0.0.1:4177/ --port 9780`
+  - `npm run build`
+- Production deployment is still required for final上线 closeout: source sync, Cloudflare Pages deployment, and `https://lynkedu.com` production verification must be completed after this local launch candidate.

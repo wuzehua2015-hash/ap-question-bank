@@ -9,6 +9,7 @@ This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and pu
 - Quality beats count. A target such as "add 100-200 MCQ" is not complete until every accepted item passes source approval, reconstruction, unit classification, student rendering, and release checks.
 - The student surface is the truth. Data that exists in JSON but is not visible in Quiz, Search/review, Mock, FRQ, or PDF is not delivered.
 - Every subject gets its own risk discovery. Generic extraction cannot certify a subject with code, formulas, tables, diagrams, grouped stimuli, visual answer choices, FRQ rubrics, or unusual option layouts.
+- New curriculum families must define their assessment model before any item import. AP `MCQ/FRQ` is only one model; IB, A-Level, and competition subjects may be paper/marks/level/component driven and must not be forced into AP fields.
 - Unit classification follows official learning order. `primary_unit` is the latest official unit a student must have completed to answer the item, not a keyword label.
 - Official exam and subject framework materials are the only authority for unit classification. Third-party maps, existing labels, generated topic names, or keyword tables can suggest review candidates but cannot justify the final unit.
 - Every student-visible item must carry item-level required-learning evidence in `classification_accuracy.required_topics`. Subject-level topic maps, old `reviewed` flags, broad student-flow gates, and successful rendering are not substitutes for per-item evidence.
@@ -103,6 +104,18 @@ Subject-specific examples:
 - Economics: graph/table distinction, balance-sheet image precision, normal-form tables.
 - CSP: algorithm blocks, database/list/table structures, visual options.
 - Math/Physics/Statistics: formula rendering, graph precision, tables, and PDF pagination.
+- IB Mathematics: level (`SL`/`HL`), paper (`P1`/`P2`/`P3`), calculator status, marks, subpart marks, timezone, syllabus version, and markscheme pairing are required delivery fields.
+
+## Non-AP Assessment Model SOP
+
+Before adding a non-AP subject:
+
+- Decide the student-facing subject split. For example, IB Math AA is two student-facing subjects, `IB Mathematics: Analysis and Approaches SL` and `IB Mathematics: Analysis and Approaches HL`, not one AP-style subject.
+- Define the assessment components that control practice and mock generation: paper, component, level, marks, time, calculator mode, optional choices, and timezone/session where relevant.
+- Define the official syllabus/topic authority and version. Add `syllabus_version` to every item where the curriculum has a known revision cycle.
+- Record source pair requirements. If a subject uses markschemes, a paper without a matched markscheme is deferred unless a reliable scoring source is separately approved.
+- Design student surfaces before importing content: topic practice, paper practice, full mock, review/search, scoring display, and PDF export.
+- Add validators that fail when AP-only assumptions are used for a non-AP subject.
 
 ## Unit Classification SOP
 
@@ -130,6 +143,7 @@ For every new or changed item:
 Required gates:
 
 - `npm run validate:official-units`
+- `npm run validate:assessment-models`
 - `npm run validate:classification-coverage`
 - `npm run validate:classification-accuracy`
 - `npm run audit:units`
@@ -195,6 +209,16 @@ Current subject-specific classification gates include:
 - `npm run validate:macro-units`
 - `npm run validate:micro-units`
 - `npm run validate:csa-units`
+- `npm run validate:ib-math-aa`
+
+For IB Math AA, AP MCQ/FRQ assumptions are invalid. Closeout must use the IB paper-practice model:
+
+- subject metadata must set `curriculum: "ib"` and `assessmentModel: "ib-paper"`;
+- SL and HL must be separate student-facing subject IDs when both are offered;
+- paper banks must record level, paper, marks, subpart marks, calculator status, session/timezone, required official topic area, source decision, solution, and markscheme rows;
+- official IB paper/markscheme files may be used for internal structure/source inventory only unless publication permission is confirmed;
+- student-surface QA must include `/paper-practice` and `/paper-play`, not AP Quiz/Mock-only routes;
+- closeout must run `npm run audit:ib-math-aa:student-surface -- --url <fresh-preview-or-production-url> --port <port>` for desktop and mobile evidence.
 
 ## Full-Diagnosis SOP
 

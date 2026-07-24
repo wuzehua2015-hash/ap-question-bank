@@ -19,7 +19,9 @@ function readJson(relPath) {
 function itemText(q) {
   const options = q.options && typeof q.options === 'object' ? Object.values(q.options).join(' ') : ''
   const rubric = q.rubric ? JSON.stringify(q.rubric) : ''
-  return [q.text, q.question_text, q.prompt, q.group_context, options, rubric].filter(Boolean).join('\n')
+  const parts = Array.isArray(q.parts) ? q.parts.map(part => `${part.text || ''} ${part.scheme || ''}`).join('\n') : ''
+  const markscheme = Array.isArray(q.markscheme?.rows) ? q.markscheme.rows.map(row => row.text || '').join('\n') : ''
+  return [q.text, q.question_text, q.prompt, q.group_context, parts, q.solution?.outline, markscheme, options, rubric].filter(Boolean).join('\n')
 }
 
 function hasStructuredTable(q) {
@@ -75,9 +77,14 @@ function rubricDuplicates(q) {
 }
 
 for (const subject of subjects.filter(item => item.active && item.visibility !== 'internal')) {
-  const mcq = readJson(subject.questionBank)
+  const mcq = subject.questionBank ? readJson(subject.questionBank) : []
   const frq = subject.frqBank ? readJson(subject.frqBank) : []
-  const rows = [...mcq.map(q => ({ ...q, __kind: 'MCQ' })), ...frq.map(q => ({ ...q, __kind: 'FRQ' }))]
+  const paper = subject.paperBank ? readJson(subject.paperBank) : []
+  const rows = [
+    ...mcq.map(q => ({ ...q, __kind: 'MCQ' })),
+    ...frq.map(q => ({ ...q, __kind: 'FRQ' })),
+    ...paper.map(q => ({ ...q, __kind: 'PAPER' })),
+  ]
   const localErrors = []
   const localWarnings = []
 
@@ -142,6 +149,7 @@ for (const subject of subjects.filter(item => item.active && item.visibility !==
     subject_id: subject.id,
     mcq_count: mcq.length,
     frq_count: frq.length,
+    paper_count: paper.length,
     errors: localErrors,
     warnings: localWarnings,
   })

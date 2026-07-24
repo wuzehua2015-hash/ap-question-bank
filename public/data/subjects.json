@@ -70,7 +70,9 @@
         "p1": 0,
         "contentRiskCodes": [],
         "mechanismCodes": []
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "calculus-bc",
@@ -142,7 +144,9 @@
           "U9": 5,
           "U10": 5
         }
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "chemistry",
@@ -209,7 +213,9 @@
           "U8": 5,
           "U9": 4
         }
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "computer-science-a",
@@ -261,7 +267,9 @@
         "p1": 0,
         "contentRiskCodes": [],
         "mechanismCodes": []
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "macro",
@@ -313,7 +321,9 @@
           "U5": 15,
           "U6": 7
         }
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "micro",
@@ -365,7 +375,9 @@
           "U5": 7,
           "U6": 6
         }
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "physics-c-e-m",
@@ -417,7 +429,9 @@
           "U12": 6,
           "U13": 5
         }
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "psychology",
@@ -464,7 +478,9 @@
           "U4": 19,
           "U5": 17
         }
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "statistics",
@@ -511,7 +527,9 @@
           "U4": 6,
           "U5": 8
         }
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "us-government-politics",
@@ -558,7 +576,9 @@
           "U4": 8,
           "U5": 11
         }
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "computer-science-principles",
@@ -616,7 +636,9 @@
         "p1": 0,
         "contentRiskCodes": [],
         "mechanismCodes": []
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "environmental-science",
@@ -693,7 +715,9 @@
         "p1": 0,
         "contentRiskCodes": [],
         "mechanismCodes": []
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "physics-1",
@@ -765,7 +789,9 @@
         "p1": 0,
         "contentRiskCodes": [],
         "mechanismCodes": []
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "physics-2",
@@ -832,7 +858,9 @@
         "p1": 0,
         "contentRiskCodes": [],
         "mechanismCodes": []
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "calculus-ab",
@@ -894,7 +922,9 @@
           "U7": 4,
           "U8": 5
         }
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
     },
     {
       "id": "physics-c-mechanics",
@@ -951,7 +981,147 @@
           "U6": 1,
           "U7": 5
         }
-      }
+      },
+      "curriculum": "ap",
+      "assessmentModel": "ap-mcq-frq"
+    },
+    {
+      "id": "ib-math-aa-sl",
+      "name": "IB Mathematics: Analysis and Approaches SL",
+      "shortName": "Math AA SL",
+      "curriculum": "ib",
+      "course": "math-aa",
+      "level": "SL",
+      "assessmentModel": "ib-paper",
+      "active": true,
+      "visibility": "public",
+      "paperBank": "ib/math-aa-sl/paper_bank.json",
+      "classificationConfig": "ib/math-aa/classification_config.json",
+      "sourceInventory": "ib/math-aa/source_inventory.json",
+      "dataVersion": "math-aa-first-assessment-2021-owned-original-v1",
+      "syllabusVersion": "first-assessment-2021",
+      "topicAreas": [
+        {
+          "id": "T1",
+          "name": "Number and algebra"
+        },
+        {
+          "id": "T2",
+          "name": "Functions"
+        },
+        {
+          "id": "T3",
+          "name": "Geometry and trigonometry"
+        },
+        {
+          "id": "T4",
+          "name": "Statistics and probability"
+        },
+        {
+          "id": "T5",
+          "name": "Calculus"
+        }
+      ],
+      "paperPractice": {
+        "papers": [
+          {
+            "id": "P1",
+            "name": "Paper 1",
+            "calculatorAllowed": false
+          },
+          {
+            "id": "P2",
+            "name": "Paper 2",
+            "calculatorAllowed": true
+          }
+        ]
+      },
+      "mockExam": {
+        "assessmentModel": "ib-paper",
+        "status": "paper_practice_only",
+        "note": "IB Math AA uses paper-based practice; AP Mock Exam generation is not used."
+      },
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-24",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
+      },
+      "releaseStatus": "certified"
+    },
+    {
+      "id": "ib-math-aa-hl",
+      "name": "IB Mathematics: Analysis and Approaches HL",
+      "shortName": "Math AA HL",
+      "curriculum": "ib",
+      "course": "math-aa",
+      "level": "HL",
+      "assessmentModel": "ib-paper",
+      "active": true,
+      "visibility": "public",
+      "paperBank": "ib/math-aa-hl/paper_bank.json",
+      "classificationConfig": "ib/math-aa/classification_config.json",
+      "sourceInventory": "ib/math-aa/source_inventory.json",
+      "dataVersion": "math-aa-first-assessment-2021-owned-original-v1",
+      "syllabusVersion": "first-assessment-2021",
+      "topicAreas": [
+        {
+          "id": "T1",
+          "name": "Number and algebra"
+        },
+        {
+          "id": "T2",
+          "name": "Functions"
+        },
+        {
+          "id": "T3",
+          "name": "Geometry and trigonometry"
+        },
+        {
+          "id": "T4",
+          "name": "Statistics and probability"
+        },
+        {
+          "id": "T5",
+          "name": "Calculus"
+        }
+      ],
+      "paperPractice": {
+        "papers": [
+          {
+            "id": "P1",
+            "name": "Paper 1",
+            "calculatorAllowed": false
+          },
+          {
+            "id": "P2",
+            "name": "Paper 2",
+            "calculatorAllowed": true
+          },
+          {
+            "id": "P3",
+            "name": "Paper 3",
+            "calculatorAllowed": null,
+            "requiresSourceVerification": true
+          }
+        ]
+      },
+      "mockExam": {
+        "assessmentModel": "ib-paper",
+        "status": "paper_practice_only",
+        "note": "IB Math AA uses paper-based practice; AP Mock Exam generation is not used."
+      },
+      "readiness": {
+        "status": "green",
+        "updatedAt": "2026-07-24",
+        "p0": 0,
+        "p1": 0,
+        "contentRiskCodes": [],
+        "mechanismCodes": []
+      },
+      "releaseStatus": "certified"
     }
   ]
 }
