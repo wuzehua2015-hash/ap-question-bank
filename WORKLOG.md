@@ -588,3 +588,10 @@
   - `npm run validate`
   - `npm run build`
   - `npm run audit:ib-math-aa:student-surface -- --url http://127.0.0.1:4323/ --port 9791`
+- Production closeout passed:
+  - Cloudflare Pages deployment `https://a99ffd73.lynkedu-ap-question-bank.pages.dev`
+  - `https://lynkedu.com/data/subjects.json`: AP 16, IB 2, active subjects 18
+  - `https://lynkedu.com/data/ib/math-aa-sl/paper_bank.json`: 60 items
+  - `https://lynkedu.com/data/ib/math-aa-hl/paper_bank.json`: 90 items
+  - `npm run audit:curriculum-surface -- --url https://lynkedu.com/ --port 9794`: errors 0
+  - `npm run audit:ib-math-aa:student-surface -- --url https://lynkedu.com/ --port 9795`: 4 cases, 0 errors

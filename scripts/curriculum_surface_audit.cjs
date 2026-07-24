@@ -41,7 +41,7 @@ async function main() {
     })()`)
 
     await navigate(client, '/settings')
-    await waitForText(client, /AP Macroeconomics|AP/)
+    await waitForText(client, /AP Macroeconomics/)
     let info = await collectInfo(client)
     observations.push({ step: 'ap-settings-with-mixed-storage', sample: info.text.slice(0, 500) })
     if (!/AP Macroeconomics/.test(info.text)) errors.push('AP settings should show AP subjects')
@@ -64,6 +64,7 @@ async function main() {
     if (/AP Macroeconomics|AP Microeconomics/.test(info.text)) errors.push('Home leaked AP subjects after IB selection')
 
     await navigate(client, '/settings')
+    await waitForText(client, /IB Mathematics: Analysis and Approaches/)
     if (!await clickCurriculumTab(client, 'AP')) errors.push('AP curriculum tab not clickable')
     await waitForText(client, /AP Macroeconomics/)
     info = await collectInfo(client)
@@ -113,8 +114,9 @@ async function clickCurriculumTab(client, label) {
       return !button.disabled && rect.width > 0 && rect.height > 0;
     });
     const target = buttons.find(button => {
-      const first = button.querySelector('span');
-      return (first?.innerText || first?.textContent || '').trim() === ${JSON.stringify(label)};
+      const text = (button.innerText || button.textContent || '').trim();
+      const firstLine = text.split(/\\n+/)[0].trim();
+      return firstLine === ${JSON.stringify(label)};
     });
     if (!target) return false;
     target.click();
