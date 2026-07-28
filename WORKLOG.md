@@ -605,4 +605,10 @@
 - Expanded `classification_config.json` with the reviewed subtopic registry used by validation.
 - Regenerated and reviewed all 150 items, then restored SL/HL to public certified status.
 - Verification passed: rebuild, full validate, production build, local desktop/mobile IB student-surface audit, and curriculum partition/surface audit.
-- Pending at this log point: commit, stable remote source sync, Cloudflare Pages deployment, and production custom-domain checks.
+- Closeout completed:
+  - local commit `611e743`;
+  - stable remote API commit `12fa74621ede8c3b81703e30595023e5c8a14f89`, remote tree matched local;
+  - Cloudflare Pages deployment `https://30f35ee7.lynkedu-ap-question-bank.pages.dev`;
+  - production data confirmed 18 active subjects, SL 60 and HL 90 reviewed items, clean signed-number output, and T1-T5 HL Paper 3 coverage;
+  - production IB student-surface audit passed 4 cases / 0 errors;
+  - production curriculum-surface audit passed with 0 errors.

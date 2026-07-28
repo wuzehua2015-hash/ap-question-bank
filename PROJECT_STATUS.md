@@ -371,4 +371,10 @@ The site has entered productization for public launch:
   - `npm run build`: passed.
   - local IB student-surface audit: 4 desktop/mobile SL/HL cases, 0 errors.
   - local curriculum-surface audit: 0 errors.
-- Production deployment and custom-domain verification are the remaining steps for this checkpoint.
+- Production closeout completed:
+  - local commit `611e743 Review and repair IB Math AA owned bank`;
+  - stable remote API commit `12fa74621ede8c3b81703e30595023e5c8a14f89`, with remote tree matching local tree `6ae9c5f50f4c980696a84a8f55ebc1e24a599665`;
+  - Cloudflare Pages deployment `https://30f35ee7.lynkedu-ap-question-bank.pages.dev`;
+  - production data: 18 active subjects, SL 60/60 reviewed, HL 90/90 reviewed, malformed signed-number findings 0, and two HL Paper 3 items in each T1-T5 topic area;
+  - production IB student-surface audit: 4 cases / 0 errors;
+  - production curriculum-surface audit: 0 errors.
