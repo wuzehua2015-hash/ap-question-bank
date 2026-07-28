@@ -402,3 +402,10 @@ The site has entered productization for public launch:
   - production custom-domain data: v3 active/public/certified, SL 60, HL 90, ledger 150, item reviews 150, 28 required knowledge points, 14 current primary Quiz buckets, missing evidence 0, and internal exact duplicates 0;
   - production student-surface audit selected `AA-1.2.2` for SL and HL-only `AA-5.11.3` for HL across desktop/mobile: 4 cases / 0 errors;
   - production curriculum-surface audit: 0 errors.
+
+### Student-facing mathematics practice correction
+
+- T1-T5 remain internal curriculum structure only and are no longer shown as student practice selectors or question badges.
+- Math AA practice is now knowledge-point-first: the student must choose a concrete knowledge point before starting; there is no broad “all knowledge points” default.
+- Paper remains an optional format filter, while the actual question bucket is determined only by `primary_knowledge_point`.
+- Local desktop/mobile student-surface audit confirmed that T1-T5 are absent and SL `AA-1.2.2` / HL `AA-5.11.3` produce matching questions with 0 errors.

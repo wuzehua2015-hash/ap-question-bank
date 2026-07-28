@@ -25,7 +25,6 @@ export default function IBPaperQuestionDisplay({ item, showSolution = false }) {
   return (
     <article className="rounded-xl border border-border bg-surface p-5 shadow-sm">
       <div className="mb-3 flex flex-wrap items-center gap-2 text-xs">
-        <span className="rounded bg-brand px-2 py-1 font-semibold text-white">{item.topic_area || 'Math AA'}</span>
         {primaryPoint && <span className="rounded bg-blue-100 px-2 py-1 font-semibold text-blue-900">{primaryPoint.code} · {primaryPoint.name}</span>}
         <span className="text-text-muted">{metaLabel(item)}</span>
       </div>

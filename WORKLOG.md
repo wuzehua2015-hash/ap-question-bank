@@ -630,3 +630,11 @@
   - production data confirmed 150 item reviews, 150 ledger rows, 28 required knowledge points, 14 primary Quiz buckets, no missing evidence, and no exact duplicates inside either bank;
   - production knowledge-point student-surface audit passed 4 cases / 0 errors;
   - production curriculum-surface audit passed with 0 errors.
+
+# 2026-07-28 - Knowledge-Point-First Math Practice UI
+
+- Removed T1-T5 from the Math AA student practice selector and question badge.
+- Made knowledge-point selection mandatory before practice can start; removed the all-knowledge-points default.
+- Kept Paper as an optional delivery-format filter, but question selection now uses only the selected primary knowledge point.
+- Updated browser evidence to block visible T1-T5 codes and verify exact SL/HL knowledge-point selection on desktop/mobile.
+- Local lint, full validate, build, and four-case Math AA student-surface audit passed.

@@ -67,24 +67,28 @@ async function runCase(client, subjectId, viewport, errors) {
   await evaluate(client, seedSubjectScript(subjectId))
   await navigate(client, routeUrl('/paper-practice'))
   await waitForText(client, /Paper\s*训练|题目数量/)
-  await waitForText(client, /当前筛选可用\s+\d+\s+题|无法加载|仍处于来源审批/)
+  await waitForText(client, /请先选择一个知识点|无法加载|仍处于来源审批/)
 
   const setupInfo = await collectInfo(client)
   checkCommon(subjectId, viewport.name, 'setup', setupInfo, errors)
   if (!/IB Mathematics: Analysis and Approaches/.test(setupInfo.text)) {
     errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'setup', kind: 'subject_name_missing' })
   }
-  if (!/当前筛选可用\s+\d+\s+题/.test(setupInfo.text)) {
-    errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'setup', kind: 'available_count_missing' })
+  if (!/请先选择一个知识点/.test(setupInfo.text)) {
+    errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'setup', kind: 'knowledge_point_required_prompt_missing' })
   }
   if (!/知识点/.test(setupInfo.text) || !/AA-\d/.test(setupInfo.text)) {
     errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'setup', kind: 'knowledge_point_filter_missing' })
+  }
+  if (/\bT[1-5]\b/.test(setupInfo.text)) {
+    errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'setup', kind: 'internal_topic_code_visible' })
   }
 
   const selectedKnowledgePoint = await selectKnowledgePoint(client, subjectId === 'ib-math-aa-hl' ? 'AA-5.11.3' : 'AA-1.2.2')
   if (!selectedKnowledgePoint?.code) {
     errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'setup', kind: 'knowledge_point_not_selectable' })
   }
+  await waitForText(client, /当前知识点可用\s+\d+\s+题/)
   await setPracticeCount(client, 3)
   const clicked = await clickButton(client, /开始练习/)
   if (!clicked) {
@@ -110,6 +114,9 @@ async function runCase(client, subjectId, viewport, errors) {
   }
   if (selectedKnowledgePoint?.code && !firstInfo.text.includes(selectedKnowledgePoint.code)) {
     errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'player:first', kind: 'selected_knowledge_point_not_shown', expected: selectedKnowledgePoint.code })
+  }
+  if (/\bT[1-5]\b/.test(firstInfo.text)) {
+    errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'player:first', kind: 'internal_topic_code_visible' })
   }
 
   await clickButton(client, /查看解析/)
