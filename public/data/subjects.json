@@ -997,8 +997,9 @@
       "visibility": "public",
       "paperBank": "ib/math-aa-sl/paper_bank.json",
       "classificationConfig": "ib/math-aa/classification_config.json",
+      "classificationLedger": "ib/math-aa/item_classification_ledger.json",
       "sourceInventory": "ib/math-aa/source_inventory.json",
-      "dataVersion": "math-aa-first-assessment-2021-owned-original-v2-reviewed",
+      "dataVersion": "math-aa-first-assessment-2021-owned-original-v3-item-knowledge-points",
       "syllabusVersion": "first-assessment-2021",
       "topicAreas": [
         {
@@ -1023,6 +1024,8 @@
         }
       ],
       "paperPractice": {
+        "classificationFilter": "primary_knowledge_point",
+        "knowledgePointRequired": true,
         "papers": [
           {
             "id": "P1",
@@ -1063,8 +1066,9 @@
       "visibility": "public",
       "paperBank": "ib/math-aa-hl/paper_bank.json",
       "classificationConfig": "ib/math-aa/classification_config.json",
+      "classificationLedger": "ib/math-aa/item_classification_ledger.json",
       "sourceInventory": "ib/math-aa/source_inventory.json",
-      "dataVersion": "math-aa-first-assessment-2021-owned-original-v2-reviewed",
+      "dataVersion": "math-aa-first-assessment-2021-owned-original-v3-item-knowledge-points",
       "syllabusVersion": "first-assessment-2021",
       "topicAreas": [
         {
@@ -1089,6 +1093,8 @@
         }
       ],
       "paperPractice": {
+        "classificationFilter": "primary_knowledge_point",
+        "knowledgePointRequired": true,
         "papers": [
           {
             "id": "P1",

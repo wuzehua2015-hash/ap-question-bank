@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
+const { classifyItem, reviewBasisHash } = require('./lib/ib_math_aa_knowledge_classifier.cjs')
 
 const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
@@ -128,6 +129,15 @@ function visible(item) {
 
 function hasIBEvidence(item) {
   if (ibTemplateReasoningPattern.test(item.why_not_earlier_topic || '')) return false
+  const knowledge = item.knowledge_point_classification || {}
+  let inferred
+  try {
+    inferred = classifyItem(item)
+  } catch {
+    return false
+  }
+  const storedCodes = (knowledge.required_knowledge_points || []).map(point => point.code).sort()
+  const inferredCodes = inferred.required_knowledge_points.map(point => point.code).sort()
   return Boolean(
     item.topic_area &&
     item.why_not_earlier_topic &&
@@ -135,14 +145,13 @@ function hasIBEvidence(item) {
     item.required_topics.length > 0 &&
     item.publication_review?.classification_basis &&
     item.publication_review?.content_rights &&
-    item.classification_review?.review_status === 'reviewed' &&
-    item.classification_review?.reviewer !== 'generator' &&
-    typeof item.classification_review?.solving_path === 'string' &&
-    item.classification_review.solving_path.length >= 80 &&
-    typeof item.classification_review?.why_not_earlier_topic === 'string' &&
-    item.classification_review.why_not_earlier_topic.length >= 80 &&
-    Array.isArray(item.classification_review?.official_subtopics) &&
-    item.classification_review.official_subtopics.length > 0
+    knowledge.review_status === 'item-reviewed' &&
+    knowledge.reviewer !== 'generator' &&
+    knowledge.review_basis_sha256 === reviewBasisHash(item) &&
+    knowledge.primary_knowledge_point?.code === inferred.primary_knowledge_point.code &&
+    JSON.stringify(storedCodes) === JSON.stringify(inferredCodes) &&
+    Array.isArray(knowledge.evidence) && knowledge.evidence.length > 0 &&
+    Array.isArray(knowledge.solving_path_steps) && knowledge.solving_path_steps.length > 0
   )
 }
 

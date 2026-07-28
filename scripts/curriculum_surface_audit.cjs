@@ -126,21 +126,6 @@ async function clickCurriculumTab(client, label) {
   return clicked
 }
 
-async function clickByText(client, pattern) {
-  const clicked = await evaluate(client, `(() => {
-    const re = new RegExp(${JSON.stringify(pattern.source)}, ${JSON.stringify(pattern.flags)});
-    const el = [...document.querySelectorAll('button,a')].find(item => {
-      const rect = item.getBoundingClientRect();
-      return !item.disabled && rect.width > 0 && rect.height > 0 && re.test((item.innerText || item.textContent || '').trim());
-    });
-    if (!el) return false;
-    el.click();
-    return true;
-  })()`)
-  await sleep(500)
-  return clicked
-}
-
 async function collectInfo(client) {
   return evaluate(client, `(() => ({ url: location.href, text: document.body?.innerText || '' }))()`)
 }

@@ -18,13 +18,23 @@ export default function IBPaperQuestionDisplay({ item, showSolution = false }) {
   const parts = Array.isArray(item.parts) ? item.parts : []
   const solution = item.solution || {}
   const markscheme = item.markscheme || {}
+  const knowledge = item.knowledge_point_classification || {}
+  const primaryPoint = knowledge.primary_knowledge_point
+  const requiredPoints = Array.isArray(knowledge.required_knowledge_points) ? knowledge.required_knowledge_points : []
 
   return (
     <article className="rounded-xl border border-border bg-surface p-5 shadow-sm">
       <div className="mb-3 flex flex-wrap items-center gap-2 text-xs">
         <span className="rounded bg-brand px-2 py-1 font-semibold text-white">{item.topic_area || 'Math AA'}</span>
+        {primaryPoint && <span className="rounded bg-blue-100 px-2 py-1 font-semibold text-blue-900">{primaryPoint.code} · {primaryPoint.name}</span>}
         <span className="text-text-muted">{metaLabel(item)}</span>
       </div>
+
+      {requiredPoints.length > 1 && (
+        <div className="mb-4 text-xs text-text-muted">
+          本题所需知识点：{requiredPoints.map(point => `${point.code} ${point.name}`).join('；')}
+        </div>
+      )}
 
       <h2 className="mb-4 text-lg font-semibold text-text">
         Question {item.question_number}

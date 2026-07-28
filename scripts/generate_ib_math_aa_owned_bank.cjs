@@ -154,8 +154,8 @@ function makeSL(topic, i, paper, n) {
     })
   }
   if (topic.id === 'T4') {
-    const nTrials = 8 + (i % 5)
-    const prob = i % 2 === 0 ? '0.35' : '0.40'
+    const nTrials = 8 + i
+    const prob = ((25 + i) / 100).toFixed(2)
     return item({
       id, level: 'SL', paper, topic, subtopic: SUBTOPICS.SL_BINOMIAL, n,
       title: 'Binomial distribution',
@@ -184,7 +184,7 @@ function makeSL(topic, i, paper, n) {
 function makeHL(topic, i, paper, n) {
   const id = `lynkedu_math_aa_hl_${topic.id.toLowerCase()}_${paper.toLowerCase()}_${String(i).padStart(2, '0')}`
   if (topic.id === 'T1') {
-    const r = 2 + (i % 4)
+    const r = 2 + i
     return item({
       id, level: 'HL', paper, topic, subtopic: SUBTOPICS.HL_COMPLEX, n, hlOnly: true,
       title: 'Complex numbers in polar form',
@@ -197,7 +197,7 @@ function makeHL(topic, i, paper, n) {
     })
   }
   if (topic.id === 'T2') {
-    const a = 2 + (i % 5)
+    const a = 1 + i
     return item({
       id, level: 'HL', paper, topic, subtopic: SUBTOPICS.HL_INVERSE, n, hlOnly: true,
       title: 'Inverse function and domain',
@@ -210,13 +210,17 @@ function makeHL(topic, i, paper, n) {
     })
   }
   if (topic.id === 'T3') {
+    const baseX = 1 + i
+    const dirZ = 2 + i
+    const pointAtTwo = [baseX + 4, 0, -1 + 2 * dirZ]
+    const pointAtThree = [baseX + 6, -1, -1 + 3 * dirZ]
     return item({
       id, level: 'HL', paper, topic, subtopic: SUBTOPICS.HL_VECTORS, n, hlOnly: true,
       title: 'Vector line in three dimensions',
-      text: `A line $L$ has vector equation $\\mathbf{r}=\\begin{pmatrix}1\\\\2\\\\-1\\end{pmatrix}+\\lambda\\begin{pmatrix}2\\\\-1\\\\3\\end{pmatrix}$.`,
+      text: `A line $L$ has vector equation $\\mathbf{r}=\\begin{pmatrix}${baseX}\\\\2\\\\-1\\end{pmatrix}+\\lambda\\begin{pmatrix}2\\\\-1\\\\${dirZ}\\end{pmatrix}$.`,
       parts: [
-        { label: 'a', marks: 2, text: `Find the point on $L$ when $\\lambda=2$.`, scheme: `Substitute $\\lambda=2$ to get $(5,0,5)$.` },
-        { label: 'b', marks: 3, text: `Determine whether the point $(7,-1,8)$ lies on $L$.`, scheme: `Solve component equations; each gives $\\lambda=3$, so the point lies on $L$.` },
+        { label: 'a', marks: 2, text: `Find the point on $L$ when $\\lambda=2$.`, scheme: `Substitute $\\lambda=2$ to get $(${pointAtTwo.join(',')})$.` },
+        { label: 'b', marks: 3, text: `Determine whether the point $(${pointAtThree.join(',')})$ lies on $L$.`, scheme: `Solve component equations; each gives $\\lambda=3$, so the point lies on $L$.` },
       ],
       solution: `Use the parameter in the vector equation and check consistency across all three components.`,
     })
@@ -235,7 +239,7 @@ function makeHL(topic, i, paper, n) {
       solution: `Use $Z=\\frac{X-\\mu}{\\sigma}$, then describe the probability as a proportion in context.`,
     })
   }
-  const k = 1 + (i % 4)
+  const k = i
   return item({
     id, level: 'HL', paper, topic, subtopic: SUBTOPICS.HL_DIFFERENTIAL_EQUATIONS, n, hlOnly: true,
     title: 'Separable differential equation',

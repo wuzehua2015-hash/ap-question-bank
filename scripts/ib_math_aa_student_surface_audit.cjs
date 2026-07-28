@@ -77,7 +77,14 @@ async function runCase(client, subjectId, viewport, errors) {
   if (!/当前筛选可用\s+\d+\s+题/.test(setupInfo.text)) {
     errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'setup', kind: 'available_count_missing' })
   }
+  if (!/知识点/.test(setupInfo.text) || !/AA-\d/.test(setupInfo.text)) {
+    errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'setup', kind: 'knowledge_point_filter_missing' })
+  }
 
+  const selectedKnowledgePoint = await selectKnowledgePoint(client, subjectId === 'ib-math-aa-hl' ? 'AA-5.11.3' : 'AA-1.2.2')
+  if (!selectedKnowledgePoint?.code) {
+    errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'setup', kind: 'knowledge_point_not_selectable' })
+  }
   await setPracticeCount(client, 3)
   const clicked = await clickButton(client, /开始练习/)
   if (!clicked) {
@@ -100,6 +107,9 @@ async function runCase(client, subjectId, viewport, errors) {
   }
   if (firstInfo.katexCount < 1) {
     errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'player:first', kind: 'math_not_rendered' })
+  }
+  if (selectedKnowledgePoint?.code && !firstInfo.text.includes(selectedKnowledgePoint.code)) {
+    errors.push({ subject_id: subjectId, viewport: viewport.name, page: 'player:first', kind: 'selected_knowledge_point_not_shown', expected: selectedKnowledgePoint.code })
   }
 
   await clickButton(client, /查看解析/)
@@ -125,6 +135,7 @@ async function runCase(client, subjectId, viewport, errors) {
     setup_chars: setupInfo.text.length,
     first_katex: firstInfo.katexCount,
     second_katex: secondInfo.katexCount,
+    selected_knowledge_point: selectedKnowledgePoint,
     started: true,
   }
 }
@@ -163,6 +174,22 @@ async function setPracticeCount(client, count) {
     input.dispatchEvent(new Event('change', { bubbles: true }));
     return true;
   })()`)
+}
+
+async function selectKnowledgePoint(client, preferredCode) {
+  const selected = await evaluate(client, `(() => {
+    const selects = [...document.querySelectorAll('select')];
+    const select = selects.find(element => [...element.options].some(option => /^AA-\\d/.test(option.value)));
+    if (!select) return null;
+    const option = [...select.options].find(candidate => candidate.value === ${JSON.stringify(preferredCode)}) ||
+      [...select.options].find(candidate => /^AA-\\d/.test(candidate.value));
+    if (!option) return null;
+    select.value = option.value;
+    select.dispatchEvent(new Event('change', { bubbles: true }));
+    return { code: option.value, label: option.textContent || '' };
+  })()`)
+  await sleep(500)
+  return selected
 }
 
 async function clickButton(client, pattern) {

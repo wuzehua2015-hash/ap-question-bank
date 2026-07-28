@@ -212,7 +212,7 @@ function makeDecision(item, unitMap, topicIndex, authority, unit, topicCode, rea
   }
 }
 
-function pickRule(subjectDir, text, item) {
+function pickRule(subjectDir, text, _item) {
   const t = ` ${text} `
   const rules = SUBJECT_RULES[subjectDir] || []
   const matches = rules.filter(rule => rule.pattern.test(t))
