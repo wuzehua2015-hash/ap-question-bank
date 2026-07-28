@@ -623,4 +623,10 @@
 - Fixed duplicate parameter cycles in generated SL binomial and HL complex/inverse/vector/differential-equation items.
 - Added knowledge-point filtering and display to IB Paper practice; browser audit now selects a concrete SL point and a distinct HL-only point.
 - Verification at this log point: `npm run validate:ib-math-aa`, classification evidence, curriculum partition, full `npm run validate`, `npm run lint`, `npm run build`, local IB student-surface and curriculum-surface checks all passed.
-- Pending: v3 commit, stable source sync, production deployment, and fresh production checks.
+- V3 closeout completed:
+  - local commit `d27bac1`;
+  - stable remote API commit `3a6af7a2038e93f55c836b78b84baf3fc63b108c`, source tree matched local;
+  - Cloudflare Pages deployment `https://0a516618.lynkedu-ap-question-bank.pages.dev`;
+  - production data confirmed 150 item reviews, 150 ledger rows, 28 required knowledge points, 14 primary Quiz buckets, no missing evidence, and no exact duplicates inside either bank;
+  - production knowledge-point student-surface audit passed 4 cases / 0 errors;
+  - production curriculum-surface audit passed with 0 errors.
