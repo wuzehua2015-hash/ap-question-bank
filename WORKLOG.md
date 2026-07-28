@@ -595,3 +595,14 @@
   - `https://lynkedu.com/data/ib/math-aa-hl/paper_bank.json`: 90 items
   - `npm run audit:curriculum-surface -- --url https://lynkedu.com/ --port 9794`: errors 0
   - `npm run audit:ib-math-aa:student-surface -- --url https://lynkedu.com/ --port 9795`: 4 cases, 0 errors
+
+# 2026-07-28 - IB Math AA Semantic Review And Paper 3 Repair
+
+- Continued from the unfinished 2026-07-27 quality-gate changes that temporarily returned Math AA SL/HL to candidate status.
+- Hardened `validate_ib_math_aa.cjs` and `classification_evidence_audit.cjs` so public generated items require a reviewed solving path and a configured syllabus subtopic.
+- Added `scripts/review_ib_math_aa_owned_bank.cjs` as a separate post-generation review pass.
+- Updated `generate_ib_math_aa_owned_bank.cjs` to use stable reviewed subtopic codes, clean signed-number formatting, and topic-specific HL Paper 3 tasks.
+- Expanded `classification_config.json` with the reviewed subtopic registry used by validation.
+- Regenerated and reviewed all 150 items, then restored SL/HL to public certified status.
+- Verification passed: rebuild, full validate, production build, local desktop/mobile IB student-surface audit, and curriculum partition/surface audit.
+- Pending at this log point: commit, stable remote source sync, Cloudflare Pages deployment, and production custom-domain checks.

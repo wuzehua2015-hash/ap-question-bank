@@ -11,6 +11,7 @@ const args = parseArgs(process.argv.slice(2))
 const failOnFindings = args['fail-on-findings'] === 'true' || process.argv.includes('--fail-on-findings')
 
 const stalePattern = /score=|Matched:|Default to|keyword|legacy|inferred/i
+const ibTemplateReasoningPattern = /is the earliest Math AA topic area that contains the required solving method for this original item/i
 const subjects = readJson(path.join(PUBLIC, 'data', 'subjects.json')).subjects.filter(subject => subject.active !== false)
 const report = {
   generated_at: new Date().toISOString(),
@@ -126,13 +127,22 @@ function visible(item) {
 }
 
 function hasIBEvidence(item) {
+  if (ibTemplateReasoningPattern.test(item.why_not_earlier_topic || '')) return false
   return Boolean(
     item.topic_area &&
     item.why_not_earlier_topic &&
     Array.isArray(item.required_topics) &&
     item.required_topics.length > 0 &&
     item.publication_review?.classification_basis &&
-    item.publication_review?.content_rights
+    item.publication_review?.content_rights &&
+    item.classification_review?.review_status === 'reviewed' &&
+    item.classification_review?.reviewer !== 'generator' &&
+    typeof item.classification_review?.solving_path === 'string' &&
+    item.classification_review.solving_path.length >= 80 &&
+    typeof item.classification_review?.why_not_earlier_topic === 'string' &&
+    item.classification_review.why_not_earlier_topic.length >= 80 &&
+    Array.isArray(item.classification_review?.official_subtopics) &&
+    item.classification_review.official_subtopics.length > 0
   )
 }
 

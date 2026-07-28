@@ -119,6 +119,18 @@ For framework migrations, use this decision order:
 4. Do not let stale labels, old `classification_reasoning`, or wrong-option-only concepts determine either blocking or unit placement.
 
 Physics 2 now enforces this through `validate:physics-2-units`, which runs `calc_physics_topic_classification_audit.cjs --review-blocked`.
+
+## 2026-07-28: Generated Math AA Banks Require Separate Semantic Review
+
+Owned-original generation is not publication evidence by itself. A generated Math AA item may become student-visible only after a separate review pass records the visible solving path, maps the item to a subtopic registered in `classification_config.json`, and explains why an earlier topic area is insufficient.
+
+HL Paper 3 topic labels must follow the actual investigation method. One generic derivative task cannot be duplicated under T1-T4 labels merely to create even topic counts.
+
+The reproducible publication path is:
+
+`npm run rebuild:ib-math-aa:owned`
+
+If that review or validation fails, Math AA SL/HL return to candidate status until the content is repaired and all release checks pass.
 # 2026-07-13 - CSA Expansion Source Policy
 
 - CSA expansion completion may include open-curriculum and LynkEdu-owned original practice content, but every non-official source must be labeled as practice, carry source provenance, and keep license/credit metadata where applicable.
