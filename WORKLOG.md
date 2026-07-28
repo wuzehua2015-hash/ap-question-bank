@@ -638,3 +638,4 @@
 - Kept Paper as an optional delivery-format filter, but question selection now uses only the selected primary knowledge point.
 - Updated browser evidence to block visible T1-T5 codes and verify exact SL/HL knowledge-point selection on desktop/mobile.
 - Local lint, full validate, build, and four-case Math AA student-surface audit passed.
+- Synced and deployed: local commit `c9dca90`, remote API commit `35e1f4482bc29312e08834ed1336787025b12600`, Pages deployment `https://75d97dc0.lynkedu-ap-question-bank.pages.dev`; production audit passed 4 cases / 0 errors.
