@@ -395,4 +395,10 @@ The site has entered productization for public launch:
 - IB Paper practice now filters by `primary_knowledge_point`, shows knowledge-point counts, stores the selected point in the session, and displays the primary/all-required knowledge points on the question surface.
 - Hardened student-surface evidence selects a real knowledge point and verifies that the generated question displays that exact code on desktop and mobile.
 - Current local evidence: IB validation 0/0, full validate passed, lint passed, build passed, local knowledge-point student-surface audit 4 cases/0 errors, curriculum-surface audit 0 errors.
-- Production deployment is pending for v3 and must not reuse the earlier v2 production evidence.
+- V3 production closeout completed:
+  - local commit `d27bac1 Add true item-level IB knowledge classification`;
+  - stable remote API commit `3a6af7a2038e93f55c836b78b84baf3fc63b108c`, remote tree matched local tree `e6e27cf9e2e99f20f0dfdc463b67a24d1309348e`;
+  - Cloudflare Pages deployment `https://0a516618.lynkedu-ap-question-bank.pages.dev`;
+  - production custom-domain data: v3 active/public/certified, SL 60, HL 90, ledger 150, item reviews 150, 28 required knowledge points, 14 current primary Quiz buckets, missing evidence 0, and internal exact duplicates 0;
+  - production student-surface audit selected `AA-1.2.2` for SL and HL-only `AA-5.11.3` for HL across desktop/mobile: 4 cases / 0 errors;
+  - production curriculum-surface audit: 0 errors.
