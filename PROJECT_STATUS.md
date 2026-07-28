@@ -409,3 +409,4 @@ The site has entered productization for public launch:
 - Math AA practice is now knowledge-point-first: the student must choose a concrete knowledge point before starting; there is no broad “all knowledge points” default.
 - Paper remains an optional format filter, while the actual question bucket is determined only by `primary_knowledge_point`.
 - Local desktop/mobile student-surface audit confirmed that T1-T5 are absent and SL `AA-1.2.2` / HL `AA-5.11.3` produce matching questions with 0 errors.
+- Production closeout: local commit `c9dca90`, remote API commit `35e1f4482bc29312e08834ed1336787025b12600`, Cloudflare Pages `https://75d97dc0.lynkedu-ap-question-bank.pages.dev`; production desktop/mobile audit passed 4 cases / 0 errors.
