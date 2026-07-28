@@ -355,3 +355,20 @@ The site has entered productization for public launch:
   - Production data check on `https://lynkedu.com`: AP 16, IB 2, SL paper bank 60, HL paper bank 90, active subjects 18.
   - Production curriculum-surface audit passed: `npm run audit:curriculum-surface -- --url https://lynkedu.com/ --port 9794`, errors 0.
   - Production IB Math AA audit passed: `npm run audit:ib-math-aa:student-surface -- --url https://lynkedu.com/ --port 9795`, 4 cases, 0 errors.
+
+## 2026-07-28 IB Math AA Semantic Review Closeout
+
+- Reopened the 150 owned-original Math AA items after finding that the first bank used repeated topic-level classification wording and that HL Paper 3 reused one calculus-shaped template under multiple topic labels.
+- Added a separate post-generation semantic review step: `npm run review:ib-math-aa:owned`.
+- Added the reproducible closeout command: `npm run rebuild:ib-math-aa:owned`.
+- Every SL 60 / HL 90 item now records a reviewed visible solving path, a specific why-not-earlier-topic explanation, and a configured Math AA syllabus subtopic.
+- Rebuilt HL Paper 3 into five topic-aligned investigation archetypes for T1-T5 instead of relabeling one generic model.
+- Fixed generated signed-number formatting such as `+-1`.
+- Restored both Math AA subjects to `active + public + certified` with data version `owned-original-v2-reviewed` only after the hardened gates passed.
+- Local closeout evidence:
+  - `npm run rebuild:ib-math-aa:owned`: 0 errors / 0 warnings.
+  - `npm run validate`: passed; 18 active subjects, 5529 student-visible items, classification and student-risk findings 0.
+  - `npm run build`: passed.
+  - local IB student-surface audit: 4 desktop/mobile SL/HL cases, 0 errors.
+  - local curriculum-surface audit: 0 errors.
+- Production deployment and custom-domain verification are the remaining steps for this checkpoint.

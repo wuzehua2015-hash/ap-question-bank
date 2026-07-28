@@ -7,6 +7,8 @@ const DATA_ROOT = path.join(ROOT, 'public', 'data')
 const SUBJECTS = JSON.parse(fs.readFileSync(path.join(DATA_ROOT, 'subjects.json'), 'utf8')).subjects || []
 const errors = []
 const warnings = []
+const reviewTemplatePattern = /is the earliest Math AA topic area that contains the required solving method for this original item/i
+const generatedSeedSourcePattern = /lynkedu_owned_math_aa_20260724|owned-original-math-aa-style-practice-2026/i
 
 function readJson(relPath) {
   return JSON.parse(fs.readFileSync(path.join(DATA_ROOT, relPath), 'utf8'))
@@ -23,13 +25,18 @@ const minPublishedCounts = {
 }
 
 for (const subject of ibSubjects) {
+  const isStudentVisible = subject.active !== false && subject.visibility !== 'internal' && subject.visibility !== 'candidate'
   if (subject.assessmentModel !== 'ib-paper') errors.push(`${subject.id}: expected assessmentModel=ib-paper`)
   if (!['SL', 'HL'].includes(subject.level)) errors.push(`${subject.id}: invalid level ${subject.level}`)
   if (!subject.paperBank) errors.push(`${subject.id}: missing paperBank`)
   if (!subject.classificationConfig) errors.push(`${subject.id}: missing classificationConfig`)
   const bank = subject.paperBank ? readJson(subject.paperBank) : []
+  const classificationConfig = subject.classificationConfig ? readJson(subject.classificationConfig) : null
+  const officialSubtopics = new Set((classificationConfig?.topic_areas || []).flatMap(topic => (
+    (topic.reviewed_subtopics || []).map(subtopic => subtopic.code)
+  )))
   if (!Array.isArray(bank)) errors.push(`${subject.id}: paperBank must be an array`)
-  if (subject.active !== false && Array.isArray(bank) && bank.length < minPublishedCounts[subject.level]) {
+  if (isStudentVisible && Array.isArray(bank) && bank.length < minPublishedCounts[subject.level]) {
     errors.push(`${subject.id}: active Math AA bank has ${bank.length} items, expected at least ${minPublishedCounts[subject.level]}`)
   }
   const topicCounts = new Map()
@@ -45,6 +52,7 @@ for (const subject of ibSubjects) {
     if (!['P1', 'P2', 'P3'].includes(item.paper)) errors.push(`${subject.id}/${qid}: invalid paper ${item.paper}`)
     if (item.paper === 'P1' && item.calculator_allowed !== false) errors.push(`${subject.id}/${qid}: P1 must set calculator_allowed=false`)
     if (item.paper === 'P2' && item.calculator_allowed !== true) errors.push(`${subject.id}/${qid}: P2 must set calculator_allowed=true`)
+    if (item.paper === 'P3' && item.calculator_allowed !== true) errors.push(`${subject.id}/${qid}: P3 must set calculator_allowed=true`)
     if (!Number.isFinite(Number(item.marks)) || Number(item.marks) <= 0) errors.push(`${subject.id}/${qid}: invalid marks`)
     if (!Array.isArray(item.required_topics) || item.required_topics.length === 0) errors.push(`${subject.id}/${qid}: missing required_topics`)
     if (!item.source?.paper_path || !item.source?.markscheme_path) errors.push(`${subject.id}/${qid}: missing paired source paths`)
@@ -62,6 +70,31 @@ for (const subject of ibSubjects) {
       errors.push(`${subject.id}/${qid}: markscheme rows must match parts`)
     }
     if (!item.why_not_earlier_topic || !item.level_scope) errors.push(`${subject.id}/${qid}: missing classification reasoning`)
+    const templateReasoning = reviewTemplatePattern.test(item.why_not_earlier_topic || '')
+    const generatedSeedSource = generatedSeedSourcePattern.test(JSON.stringify(item.source || {}))
+    const hasItemLevelReview = item.classification_review?.review_status === 'reviewed' &&
+      item.classification_review?.reviewer !== 'generator' &&
+      typeof item.classification_review?.solving_path === 'string' &&
+      item.classification_review.solving_path.length >= 80 &&
+      typeof item.classification_review?.why_not_earlier_topic === 'string' &&
+      item.classification_review.why_not_earlier_topic.length >= 80 &&
+      Array.isArray(item.classification_review?.official_subtopics) &&
+      item.classification_review.official_subtopics.length > 0
+    const requiredTopicsHaveOfficialSubtopic = (item.required_topics || []).every(topic => (
+      typeof topic.subtopic_code === 'string' && officialSubtopics.has(topic.subtopic_code)
+    ))
+    if (isStudentVisible && templateReasoning) {
+      errors.push(`${subject.id}/${qid}: public Math AA item has template classification reasoning`)
+    }
+    if (isStudentVisible && generatedSeedSource && !hasItemLevelReview) {
+      errors.push(`${subject.id}/${qid}: generated seed item is public without independent item-level solving-path review`)
+    }
+    if (isStudentVisible && !requiredTopicsHaveOfficialSubtopic) {
+      errors.push(`${subject.id}/${qid}: public Math AA item lacks official subtopic-level required_topics`)
+    }
+    if (!isStudentVisible && (templateReasoning || (generatedSeedSource && !hasItemLevelReview) || !requiredTopicsHaveOfficialSubtopic)) {
+      warnings.push(`${subject.id}/${qid}: candidate item requires item-level solving-path review before publication`)
+    }
     topicCounts.set(item.topic_area, (topicCounts.get(item.topic_area) || 0) + 1)
     paperCounts.set(item.paper, (paperCounts.get(item.paper) || 0) + 1)
     if (/International Baccalaureate Organization|All rights reserved|Unauthorized copying|Do not open this examination paper/i.test(item.text || '')) {
@@ -69,8 +102,8 @@ for (const subject of ibSubjects) {
     }
     if ((item.text || '').length < 40) warnings.push(`${subject.id}/${qid}: visible prompt is short`)
   }
-  if (subject.active !== false && bank.length === 0) errors.push(`${subject.id}: active Math AA subject has empty paper bank`)
-  if (subject.active !== false) {
+  if (isStudentVisible && bank.length === 0) errors.push(`${subject.id}: active Math AA subject has empty paper bank`)
+  if (isStudentVisible) {
     for (const topic of ['T1', 'T2', 'T3', 'T4', 'T5']) {
       if (!topicCounts.has(topic)) errors.push(`${subject.id}: active Math AA bank missing topic ${topic}`)
     }

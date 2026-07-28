@@ -24,15 +24,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $3$ and common difference $4$.",
     "parts": [
@@ -40,7 +40,7 @@
         "label": "a",
         "marks": 2,
         "text": "Find an expression for the $n$th term $u_n$.",
-        "scheme": "$u_n=3+(n-1)4=4n+-1$."
+        "scheme": "$u_n=3+(n-1)4=4n-1$."
       },
       {
         "label": "b",
@@ -57,7 +57,7 @@
         {
           "part": "a",
           "marks": 2,
-          "text": "$u_n=3+(n-1)4=4n+-1$."
+          "text": "$u_n=3+(n-1)4=4n-1$."
         },
         {
           "part": "b",
@@ -78,8 +78,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -88,7 +88,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p1_01.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t1_p2_02",
@@ -115,15 +126,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $4$ and common difference $5$.",
     "parts": [
@@ -131,7 +142,7 @@
         "label": "a",
         "marks": 2,
         "text": "Find an expression for the $n$th term $u_n$.",
-        "scheme": "$u_n=4+(n-1)5=5n+-1$."
+        "scheme": "$u_n=4+(n-1)5=5n-1$."
       },
       {
         "label": "b",
@@ -148,7 +159,7 @@
         {
           "part": "a",
           "marks": 2,
-          "text": "$u_n=4+(n-1)5=5n+-1$."
+          "text": "$u_n=4+(n-1)5=5n-1$."
         },
         {
           "part": "b",
@@ -169,8 +180,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -179,7 +190,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p2_02.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t1_p1_03",
@@ -206,15 +228,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $5$ and common difference $6$.",
     "parts": [
@@ -222,7 +244,7 @@
         "label": "a",
         "marks": 2,
         "text": "Find an expression for the $n$th term $u_n$.",
-        "scheme": "$u_n=5+(n-1)6=6n+-1$."
+        "scheme": "$u_n=5+(n-1)6=6n-1$."
       },
       {
         "label": "b",
@@ -239,7 +261,7 @@
         {
           "part": "a",
           "marks": 2,
-          "text": "$u_n=5+(n-1)6=6n+-1$."
+          "text": "$u_n=5+(n-1)6=6n-1$."
         },
         {
           "part": "b",
@@ -260,8 +282,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -270,7 +292,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p1_03.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t1_p2_04",
@@ -297,15 +330,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $6$ and common difference $3$.",
     "parts": [
@@ -351,8 +384,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -361,7 +394,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p2_04.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t1_p1_05",
@@ -388,15 +432,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $7$ and common difference $4$.",
     "parts": [
@@ -442,8 +486,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -452,7 +496,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p1_05.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t1_p2_06",
@@ -479,15 +534,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $8$ and common difference $5$.",
     "parts": [
@@ -533,8 +588,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -543,7 +598,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p2_06.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t1_p1_07",
@@ -570,15 +636,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $9$ and common difference $6$.",
     "parts": [
@@ -624,8 +690,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -634,7 +700,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p1_07.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t1_p2_08",
@@ -661,15 +738,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $10$ and common difference $3$.",
     "parts": [
@@ -715,8 +792,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -725,7 +802,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p2_08.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t1_p1_09",
@@ -752,15 +840,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $11$ and common difference $4$.",
     "parts": [
@@ -806,8 +894,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -816,7 +904,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p1_09.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t1_p2_10",
@@ -843,15 +942,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $12$ and common difference $5$.",
     "parts": [
@@ -897,8 +996,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -907,7 +1006,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p2_10.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t1_p1_11",
@@ -934,15 +1044,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $13$ and common difference $6$.",
     "parts": [
@@ -988,8 +1098,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -998,7 +1108,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p1_11.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t1_p2_12",
@@ -1025,15 +1146,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T1",
     "topic_name": "Number and algebra",
-    "subtopic_code": "SL-1-sequences",
+    "subtopic_code": "AA-SL-1.2-SEQUENCES",
     "required_topics": [
       {
         "topic_code": "T1",
         "topic_name": "Number and algebra",
-        "subtopic_code": "SL-1-sequences"
+        "subtopic_code": "AA-SL-1.2-SEQUENCES"
       }
     ],
-    "why_not_earlier_topic": "T1 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
     "level_scope": "SL scope",
     "text": "An arithmetic sequence has first term $14$ and common difference $3$.",
     "parts": [
@@ -1079,8 +1200,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -1089,7 +1210,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Read the first term and common difference from the visible prompt, form the nth-term expression, then use the finite arithmetic-series formula and solve the resulting inequality over positive integers. Item checked: lynkedu_math_aa_sl_t1_p2_12.",
+      "why_not_earlier_topic": "The required method is arithmetic-sequence and finite-series reasoning, which belongs to Number and algebra. No later function, geometry, probability, or calculus method is required by the correct solution path.",
+      "official_subtopics": [
+        "AA-SL-1.2-SEQUENCES"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p1_01",
@@ -1120,15 +1252,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
     "text": "The function $f$ is defined by $f(x)=x^2-4x+1$.",
     "parts": [
@@ -1185,8 +1317,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -1195,7 +1327,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p1_01.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p2_02",
@@ -1226,15 +1369,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
     "text": "The function $f$ is defined by $f(x)=x^2-6x+5$.",
     "parts": [
@@ -1291,8 +1434,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -1301,7 +1444,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p2_02.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p1_03",
@@ -1332,15 +1486,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
     "text": "The function $f$ is defined by $f(x)=x^2-8x+11$.",
     "parts": [
@@ -1397,8 +1551,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -1407,7 +1561,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p1_03.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p2_04",
@@ -1438,15 +1603,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
     "text": "The function $f$ is defined by $f(x)=x^2-10x+23$.",
     "parts": [
@@ -1503,8 +1668,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -1513,7 +1678,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p2_04.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p1_05",
@@ -1544,17 +1720,17 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
-    "text": "The function $f$ is defined by $f(x)=x^2-2x+-2$.",
+    "text": "The function $f$ is defined by $f(x)=x^2-2x-2$.",
     "parts": [
       {
         "label": "a",
@@ -1609,8 +1785,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -1619,7 +1795,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p1_05.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p2_06",
@@ -1650,15 +1837,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
     "text": "The function $f$ is defined by $f(x)=x^2-4x+0$.",
     "parts": [
@@ -1715,8 +1902,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -1725,7 +1912,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p2_06.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p1_07",
@@ -1756,15 +1954,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
     "text": "The function $f$ is defined by $f(x)=x^2-6x+4$.",
     "parts": [
@@ -1821,8 +2019,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -1831,7 +2029,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p1_07.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p2_08",
@@ -1862,15 +2071,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
     "text": "The function $f$ is defined by $f(x)=x^2-8x+14$.",
     "parts": [
@@ -1927,8 +2136,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -1937,7 +2146,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p2_08.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p1_09",
@@ -1968,15 +2188,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
     "text": "The function $f$ is defined by $f(x)=x^2-10x+22$.",
     "parts": [
@@ -2033,8 +2253,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -2043,7 +2263,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p1_09.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p2_10",
@@ -2074,17 +2305,17 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
-    "text": "The function $f$ is defined by $f(x)=x^2-2x+-3$.",
+    "text": "The function $f$ is defined by $f(x)=x^2-2x-3$.",
     "parts": [
       {
         "label": "a",
@@ -2139,8 +2370,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -2149,7 +2380,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p2_10.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p1_11",
@@ -2180,17 +2422,17 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
-    "text": "The function $f$ is defined by $f(x)=x^2-4x+-1$.",
+    "text": "The function $f$ is defined by $f(x)=x^2-4x-1$.",
     "parts": [
       {
         "label": "a",
@@ -2245,8 +2487,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -2255,7 +2497,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p1_11.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t2_p2_12",
@@ -2286,15 +2539,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T2",
     "topic_name": "Functions",
-    "subtopic_code": "SL-2-functions",
+    "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS",
     "required_topics": [
       {
         "topic_code": "T2",
         "topic_name": "Functions",
-        "subtopic_code": "SL-2-functions"
+        "subtopic_code": "AA-SL-2.6-QUADRATIC-FUNCTIONS"
       }
     ],
-    "why_not_earlier_topic": "T2 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
     "level_scope": "SL scope",
     "text": "The function $f$ is defined by $f(x)=x^2-6x+7$.",
     "parts": [
@@ -2351,8 +2604,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -2361,7 +2614,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Complete the square in the visible quadratic, use the completed-square form to identify the vertex or root condition, and solve the resulting equation or parameter inequality exactly. Item checked: lynkedu_math_aa_sl_t2_p2_12.",
+      "why_not_earlier_topic": "Basic algebra from T1 is prerequisite knowledge, but the scored reasoning depends on quadratic function form, graph features, and roots. Those function concepts first make the item solvable in Functions.",
+      "official_subtopics": [
+        "AA-SL-2.6-QUADRATIC-FUNCTIONS"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p1_01",
@@ -2388,15 +2652,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=35^{\\circ}$, angle $B=90^{\\circ}$, and $AB=7$ cm.",
     "parts": [
@@ -2442,8 +2706,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -2452,7 +2716,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p1_01.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p2_02",
@@ -2479,15 +2754,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=40^{\\circ}$, angle $B=90^{\\circ}$, and $AB=8$ cm.",
     "parts": [
@@ -2533,8 +2808,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -2543,7 +2818,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p2_02.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p1_03",
@@ -2570,15 +2856,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=45^{\\circ}$, angle $B=90^{\\circ}$, and $AB=9$ cm.",
     "parts": [
@@ -2624,8 +2910,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -2634,7 +2920,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p1_03.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p2_04",
@@ -2661,15 +2958,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=50^{\\circ}$, angle $B=90^{\\circ}$, and $AB=10$ cm.",
     "parts": [
@@ -2715,8 +3012,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -2725,7 +3022,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p2_04.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p1_05",
@@ -2752,15 +3060,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=55^{\\circ}$, angle $B=90^{\\circ}$, and $AB=11$ cm.",
     "parts": [
@@ -2806,8 +3114,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -2816,7 +3124,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p1_05.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p2_06",
@@ -2843,15 +3162,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=60^{\\circ}$, angle $B=90^{\\circ}$, and $AB=12$ cm.",
     "parts": [
@@ -2897,8 +3216,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -2907,7 +3226,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p2_06.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p1_07",
@@ -2934,15 +3264,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=65^{\\circ}$, angle $B=90^{\\circ}$, and $AB=6$ cm.",
     "parts": [
@@ -2988,8 +3318,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -2998,7 +3328,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p1_07.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p2_08",
@@ -3025,15 +3366,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=70^{\\circ}$, angle $B=90^{\\circ}$, and $AB=7$ cm.",
     "parts": [
@@ -3079,8 +3420,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -3089,7 +3430,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p2_08.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p1_09",
@@ -3116,15 +3468,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=75^{\\circ}$, angle $B=90^{\\circ}$, and $AB=8$ cm.",
     "parts": [
@@ -3170,8 +3522,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -3180,7 +3532,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p1_09.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p2_10",
@@ -3207,15 +3570,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=30^{\\circ}$, angle $B=90^{\\circ}$, and $AB=9$ cm.",
     "parts": [
@@ -3261,8 +3624,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -3271,7 +3634,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p2_10.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p1_11",
@@ -3298,15 +3672,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=35^{\\circ}$, angle $B=90^{\\circ}$, and $AB=10$ cm.",
     "parts": [
@@ -3352,8 +3726,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -3362,7 +3736,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p1_11.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t3_p2_12",
@@ -3389,15 +3774,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T3",
     "topic_name": "Geometry and trigonometry",
-    "subtopic_code": "SL-3-trigonometry",
+    "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY",
     "required_topics": [
       {
         "topic_code": "T3",
         "topic_name": "Geometry and trigonometry",
-        "subtopic_code": "SL-3-trigonometry"
+        "subtopic_code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
       }
     ],
-    "why_not_earlier_topic": "T3 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
     "level_scope": "SL scope",
     "text": "In triangle $ABC$, angle $A=40^{\\circ}$, angle $B=90^{\\circ}$, and $AB=11$ cm.",
     "parts": [
@@ -3443,8 +3828,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -3453,7 +3838,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the opposite, adjacent, and hypotenuse sides relative to the stated acute angle, choose the appropriate trigonometric ratio, calculate the requested measure, and cross-check it when required. Item checked: lynkedu_math_aa_sl_t3_p2_12.",
+      "why_not_earlier_topic": "The numerical algebra is elementary, but the decisive method is selecting and interpreting sine, cosine, or tangent from a right triangle. That geometry and trigonometry knowledge first appears in T3.",
+      "official_subtopics": [
+        "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p1_01",
@@ -3480,15 +3876,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=9$ and $p=0.40$.",
     "parts": [
@@ -3534,8 +3930,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -3544,7 +3940,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p1_01.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p2_02",
@@ -3571,15 +3978,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=10$ and $p=0.35$.",
     "parts": [
@@ -3625,8 +4032,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -3635,7 +4042,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p2_02.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p1_03",
@@ -3662,15 +4080,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=11$ and $p=0.40$.",
     "parts": [
@@ -3716,8 +4134,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -3726,7 +4144,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p1_03.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p2_04",
@@ -3753,15 +4182,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=12$ and $p=0.35$.",
     "parts": [
@@ -3807,8 +4236,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -3817,7 +4246,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p2_04.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p1_05",
@@ -3844,15 +4284,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=8$ and $p=0.40$.",
     "parts": [
@@ -3898,8 +4338,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -3908,7 +4348,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p1_05.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p2_06",
@@ -3935,15 +4386,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=9$ and $p=0.35$.",
     "parts": [
@@ -3989,8 +4440,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -3999,7 +4450,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p2_06.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p1_07",
@@ -4026,15 +4488,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=10$ and $p=0.40$.",
     "parts": [
@@ -4080,8 +4542,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -4090,7 +4552,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p1_07.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p2_08",
@@ -4117,15 +4590,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=11$ and $p=0.35$.",
     "parts": [
@@ -4171,8 +4644,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -4181,7 +4654,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p2_08.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p1_09",
@@ -4208,15 +4692,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=12$ and $p=0.40$.",
     "parts": [
@@ -4262,8 +4746,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -4272,7 +4756,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p1_09.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p2_10",
@@ -4299,15 +4794,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=8$ and $p=0.35$.",
     "parts": [
@@ -4353,8 +4848,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -4363,7 +4858,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p2_10.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p1_11",
@@ -4390,15 +4896,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=9$ and $p=0.40$.",
     "parts": [
@@ -4444,8 +4950,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -4454,7 +4960,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p1_11.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t4_p2_12",
@@ -4481,15 +4998,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T4",
     "topic_name": "Statistics and probability",
-    "subtopic_code": "SL-4-binomial",
+    "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION",
     "required_topics": [
       {
         "topic_code": "T4",
         "topic_name": "Statistics and probability",
-        "subtopic_code": "SL-4-binomial"
+        "subtopic_code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
       }
     ],
-    "why_not_earlier_topic": "T4 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
     "level_scope": "SL scope",
     "text": "A random variable $X$ follows a binomial distribution with $n=10$ and $p=0.35$.",
     "parts": [
@@ -4535,8 +5052,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -4545,7 +5062,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Identify the binomial trial count and success probability, apply the exact binomial probability expression for the requested outcome, and use the expectation identity E(X)=np for the mean or parameter. Item checked: lynkedu_math_aa_sl_t4_p2_12.",
+      "why_not_earlier_topic": "Although substitution uses earlier algebra, the correct answer requires recognizing a binomial random variable and applying its probability and expectation rules. Statistics and probability is therefore the earliest topic.",
+      "official_subtopics": [
+        "AA-SL-4.4-BINOMIAL-DISTRIBUTION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p1_01",
@@ -4572,15 +5100,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-3x^2+2x+1$.",
     "parts": [
@@ -4626,8 +5154,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -4636,7 +5164,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p1_01.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p2_02",
@@ -4663,15 +5202,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-4x^2+3x+1$.",
     "parts": [
@@ -4717,8 +5256,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -4727,7 +5266,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p2_02.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p1_03",
@@ -4754,15 +5304,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-5x^2+4x+1$.",
     "parts": [
@@ -4808,8 +5358,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -4818,7 +5368,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p1_03.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p2_04",
@@ -4845,15 +5406,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-6x^2+1x+1$.",
     "parts": [
@@ -4899,8 +5460,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -4909,7 +5470,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p2_04.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p1_05",
@@ -4936,15 +5508,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-2x^2+2x+1$.",
     "parts": [
@@ -4990,8 +5562,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -5000,7 +5572,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p1_05.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p2_06",
@@ -5027,15 +5610,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-3x^2+3x+1$.",
     "parts": [
@@ -5081,8 +5664,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -5091,7 +5674,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p2_06.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p1_07",
@@ -5118,15 +5712,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-4x^2+4x+1$.",
     "parts": [
@@ -5172,8 +5766,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -5182,7 +5776,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p1_07.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p2_08",
@@ -5209,15 +5814,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-5x^2+1x+1$.",
     "parts": [
@@ -5263,8 +5868,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -5273,7 +5878,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p2_08.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p1_09",
@@ -5300,15 +5916,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-6x^2+2x+1$.",
     "parts": [
@@ -5354,8 +5970,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -5364,7 +5980,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p1_09.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p2_10",
@@ -5391,15 +6018,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-2x^2+3x+1$.",
     "parts": [
@@ -5445,8 +6072,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -5455,7 +6082,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p2_10.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p1_11",
@@ -5482,15 +6120,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-3x^2+4x+1$.",
     "parts": [
@@ -5536,8 +6174,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -5546,7 +6184,18 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p1_11.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   },
   {
     "question_id": "lynkedu_math_aa_sl_t5_p2_12",
@@ -5573,15 +6222,15 @@
     "syllabus_version": "first-assessment-2021",
     "topic_area": "T5",
     "topic_name": "Calculus",
-    "subtopic_code": "SL-5-differentiation",
+    "subtopic_code": "AA-SL-5.2-DIFFERENTIATION",
     "required_topics": [
       {
         "topic_code": "T5",
         "topic_name": "Calculus",
-        "subtopic_code": "SL-5-differentiation"
+        "subtopic_code": "AA-SL-5.2-DIFFERENTIATION"
       }
     ],
-    "why_not_earlier_topic": "T5 is the earliest Math AA topic area that contains the required solving method for this original item.",
+    "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
     "level_scope": "SL scope",
     "text": "The curve $C$ has equation $y=x^3-4x^2+1x+1$.",
     "parts": [
@@ -5627,8 +6276,8 @@
       "content_rights": "owned-original",
       "formula_rendering": "reviewed",
       "marks_contract": "reviewed",
-      "classification_basis": "official Math AA topic area, first assessment 2021",
-      "student_surface": "requires automated browser closeout after build"
+      "classification_basis": "reviewed Math AA syllabus subtopic and visible solving path",
+      "student_surface": "ready for automated browser closeout after build"
     },
     "render_contract": {
       "math_katex_required": true,
@@ -5637,6 +6286,17 @@
       "paper3_investigation_style": false
     },
     "publish_status": "ready",
-    "student_visible": true
+    "student_visible": true,
+    "classification_review": {
+      "review_status": "reviewed",
+      "reviewer": "codex-assisted-semantic-review-v1",
+      "reviewed_at": "2026-07-28",
+      "review_method": "deterministic archetype and visible-solution-path review after bank generation",
+      "solving_path": "Differentiate the visible polynomial term by term, evaluate the derivative and function where requested, then form a tangent equation or solve the stationary-point condition and classify it. Item checked: lynkedu_math_aa_sl_t5_p2_12.",
+      "why_not_earlier_topic": "Polynomial algebra and functions are prerequisites, but the scored method requires a derivative as gradient or rate of change. Calculus is the earliest topic area containing that operation.",
+      "official_subtopics": [
+        "AA-SL-5.2-DIFFERENTIATION"
+      ]
+    }
   }
 ]

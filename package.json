@@ -41,6 +41,8 @@
     "validate:curriculum-partition": "node scripts/curriculum_subject_partition_audit.cjs",
     "audit:ib-math-aa:inventory": "python scripts/build_ib_math_aa_inventory.py",
     "build:ib-math-aa:owned": "node scripts/generate_ib_math_aa_owned_bank.cjs",
+    "review:ib-math-aa:owned": "node scripts/review_ib_math_aa_owned_bank.cjs",
+    "rebuild:ib-math-aa:owned": "npm run build:ib-math-aa:owned && npm run review:ib-math-aa:owned && npm run validate:ib-math-aa",
     "validate:ib-math-aa": "node scripts/validate_ib_math_aa.cjs",
     "validate:sop": "node scripts/global_sop_gate.cjs",
     "audit:units": "node scripts/unit_progression_audit.cjs --write-report",

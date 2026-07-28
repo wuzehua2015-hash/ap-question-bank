@@ -16,27 +16,47 @@
     {
       "id": "T1",
       "name": "Number and algebra",
-      "scope": "SL_HL"
+      "scope": "SL_HL",
+      "reviewed_subtopics": [
+        { "code": "AA-SL-1.2-SEQUENCES", "name": "Arithmetic sequences and series", "scope": "SL_HL" },
+        { "code": "AA-HL-1.12-COMPLEX-NUMBERS", "name": "Complex numbers and De Moivre's theorem", "scope": "HL" }
+      ]
     },
     {
       "id": "T2",
       "name": "Functions",
-      "scope": "SL_HL"
+      "scope": "SL_HL",
+      "reviewed_subtopics": [
+        { "code": "AA-SL-2.6-QUADRATIC-FUNCTIONS", "name": "Quadratic functions, roots and vertex form", "scope": "SL_HL" },
+        { "code": "AA-HL-2.2-INVERSE-FUNCTIONS", "name": "Inverse functions with domain and range", "scope": "HL" }
+      ]
     },
     {
       "id": "T3",
       "name": "Geometry and trigonometry",
-      "scope": "SL_HL"
+      "scope": "SL_HL",
+      "reviewed_subtopics": [
+        { "code": "AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY", "name": "Right-triangle trigonometry", "scope": "SL_HL" },
+        { "code": "AA-HL-3.12-VECTORS", "name": "Vector equations of lines in three dimensions", "scope": "HL" }
+      ]
     },
     {
       "id": "T4",
       "name": "Statistics and probability",
-      "scope": "SL_HL"
+      "scope": "SL_HL",
+      "reviewed_subtopics": [
+        { "code": "AA-SL-4.4-BINOMIAL-DISTRIBUTION", "name": "Binomial distribution and expectation", "scope": "SL_HL" },
+        { "code": "AA-HL-4.9-NORMAL-DISTRIBUTION", "name": "Normal distribution and standardization", "scope": "HL" }
+      ]
     },
     {
       "id": "T5",
       "name": "Calculus",
-      "scope": "SL_HL"
+      "scope": "SL_HL",
+      "reviewed_subtopics": [
+        { "code": "AA-SL-5.2-DIFFERENTIATION", "name": "Differentiation, tangents and stationary points", "scope": "SL_HL" },
+        { "code": "AA-HL-5.11-DIFFERENTIAL-EQUATIONS", "name": "Separable differential equations", "scope": "HL" }
+      ]
     }
   ],
   "classification_contract": {
@@ -49,6 +69,7 @@
       "level_scope",
       "source_paper_path",
       "source_markscheme_path"
-    ]
+    ],
+    "review_rule": "Published owned-original items must pass a separate deterministic semantic review that records the visible solving path, rejects generator placeholder reasoning, and maps every required subtopic to this configuration."
   }
 }

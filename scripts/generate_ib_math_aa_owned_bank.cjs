@@ -15,6 +15,23 @@ const TOPICS = [
   { id: 'T5', name: 'Calculus' },
 ]
 
+const SUBTOPICS = {
+  SL_SEQUENCE: 'AA-SL-1.2-SEQUENCES',
+  SL_QUADRATIC: 'AA-SL-2.6-QUADRATIC-FUNCTIONS',
+  SL_RIGHT_TRIANGLE: 'AA-SL-3.3-RIGHT-TRIANGLE-TRIGONOMETRY',
+  SL_BINOMIAL: 'AA-SL-4.4-BINOMIAL-DISTRIBUTION',
+  SL_DIFFERENTIATION: 'AA-SL-5.2-DIFFERENTIATION',
+  HL_COMPLEX: 'AA-HL-1.12-COMPLEX-NUMBERS',
+  HL_INVERSE: 'AA-HL-2.2-INVERSE-FUNCTIONS',
+  HL_VECTORS: 'AA-HL-3.12-VECTORS',
+  HL_NORMAL: 'AA-HL-4.9-NORMAL-DISTRIBUTION',
+  HL_DIFFERENTIAL_EQUATIONS: 'AA-HL-5.11-DIFFERENTIAL-EQUATIONS',
+}
+
+function signedTerm(value) {
+  return value < 0 ? `-${Math.abs(value)}` : `+${value}`
+}
+
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true })
 }
@@ -52,7 +69,7 @@ function item({
     topic_name: topic.name,
     subtopic_code: subtopic,
     required_topics: [{ topic_code: topic.id, topic_name: topic.name, subtopic_code: subtopic }],
-    why_not_earlier_topic: `${topic.id} is the earliest Math AA topic area that contains the required solving method for this original item.`,
+    why_not_earlier_topic: 'Pending post-generation item-level solving-path review.',
     level_scope: hlOnly ? 'HL-only' : level === 'shared' ? 'SL/HL shared' : `${level} scope`,
     text,
     parts,
@@ -97,11 +114,11 @@ function makeSL(topic, i, paper, n) {
     const d = 3 + (i % 4)
     const k = 8 + (i % 6)
     return item({
-      id, level: 'SL', paper, topic, subtopic: 'SL-1-sequences', n,
+      id, level: 'SL', paper, topic, subtopic: SUBTOPICS.SL_SEQUENCE, n,
       title: 'Arithmetic sequence and partial sum',
       text: `An arithmetic sequence has first term $${a}$ and common difference $${d}$.`,
       parts: [
-        { label: 'a', marks: 2, text: `Find an expression for the $n$th term $u_n$.`, scheme: `$u_n=${a}+(n-1)${d}=${d}n+${a - d}$.` },
+        { label: 'a', marks: 2, text: `Find an expression for the $n$th term $u_n$.`, scheme: `$u_n=${a}+(n-1)${d}=${d}n${signedTerm(a - d)}$.` },
         { label: 'b', marks: 3, text: `Find the smallest value of $n$ for which $S_n>${k * 20}$.`, scheme: `Use $S_n=\\frac{n}{2}(2a+(n-1)d)$ and solve the resulting quadratic inequality.` },
       ],
       solution: `Use the arithmetic sequence formula $u_n=a+(n-1)d$ and the partial-sum formula $S_n=\\frac{n}{2}(2a+(n-1)d)$.`,
@@ -111,9 +128,9 @@ function makeSL(topic, i, paper, n) {
     const p = 1 + (i % 5)
     const q = 2 + (i % 4)
     return item({
-      id, level: 'SL', paper, topic, subtopic: 'SL-2-functions', n,
+      id, level: 'SL', paper, topic, subtopic: SUBTOPICS.SL_QUADRATIC, n,
       title: 'Quadratic function features',
-      text: `The function $f$ is defined by $f(x)=x^2-${2 * p}x+${p * p - q}$.`,
+      text: `The function $f$ is defined by $f(x)=x^2-${2 * p}x${signedTerm(p * p - q)}$.`,
       parts: [
         { label: 'a', marks: 2, text: `Write $f(x)$ in the form $(x-h)^2+k$.`, scheme: `Complete the square to obtain $(x-${p})^2-${q}$.` },
         { label: 'b', marks: 2, text: `State the coordinates of the vertex of the graph of $y=f(x)$.`, scheme: `The vertex is $(${p},-${q})$.` },
@@ -126,7 +143,7 @@ function makeSL(topic, i, paper, n) {
     const angle = 30 + 5 * (i % 10)
     const side = 6 + (i % 7)
     return item({
-      id, level: 'SL', paper, topic, subtopic: 'SL-3-trigonometry', n,
+      id, level: 'SL', paper, topic, subtopic: SUBTOPICS.SL_RIGHT_TRIANGLE, n,
       title: 'Right-triangle trigonometry',
       text: `In triangle $ABC$, angle $A=${angle}^{\\circ}$, angle $B=90^{\\circ}$, and $AB=${side}$ cm.`,
       parts: [
@@ -140,7 +157,7 @@ function makeSL(topic, i, paper, n) {
     const nTrials = 8 + (i % 5)
     const prob = i % 2 === 0 ? '0.35' : '0.40'
     return item({
-      id, level: 'SL', paper, topic, subtopic: 'SL-4-binomial', n,
+      id, level: 'SL', paper, topic, subtopic: SUBTOPICS.SL_BINOMIAL, n,
       title: 'Binomial distribution',
       text: `A random variable $X$ follows a binomial distribution with $n=${nTrials}$ and $p=${prob}$.`,
       parts: [
@@ -153,7 +170,7 @@ function makeSL(topic, i, paper, n) {
   const c = 2 + (i % 5)
   const r = 1 + (i % 4)
   return item({
-    id, level: 'SL', paper, topic, subtopic: 'SL-5-differentiation', n,
+    id, level: 'SL', paper, topic, subtopic: SUBTOPICS.SL_DIFFERENTIATION, n,
     title: 'Differentiation and tangent line',
     text: `The curve $C$ has equation $y=x^3-${c}x^2+${r}x+1$.`,
     parts: [
@@ -169,7 +186,7 @@ function makeHL(topic, i, paper, n) {
   if (topic.id === 'T1') {
     const r = 2 + (i % 4)
     return item({
-      id, level: 'HL', paper, topic, subtopic: 'HL-1-complex-numbers', n, hlOnly: true,
+      id, level: 'HL', paper, topic, subtopic: SUBTOPICS.HL_COMPLEX, n, hlOnly: true,
       title: 'Complex numbers in polar form',
       text: `Let $z=${r}(\\cos \\theta+i\\sin \\theta)$, where $0<\\theta<\\pi$. Suppose $z^3$ has argument $\\frac{\\pi}{2}$.`,
       parts: [
@@ -182,7 +199,7 @@ function makeHL(topic, i, paper, n) {
   if (topic.id === 'T2') {
     const a = 2 + (i % 5)
     return item({
-      id, level: 'HL', paper, topic, subtopic: 'HL-2-function-inverse', n, hlOnly: true,
+      id, level: 'HL', paper, topic, subtopic: SUBTOPICS.HL_INVERSE, n, hlOnly: true,
       title: 'Inverse function and domain',
       text: `The function $f$ is defined by $f(x)=\\ln(x-${a})+1$, for $x>${a}$.`,
       parts: [
@@ -194,7 +211,7 @@ function makeHL(topic, i, paper, n) {
   }
   if (topic.id === 'T3') {
     return item({
-      id, level: 'HL', paper, topic, subtopic: 'HL-3-vectors', n, hlOnly: true,
+      id, level: 'HL', paper, topic, subtopic: SUBTOPICS.HL_VECTORS, n, hlOnly: true,
       title: 'Vector line in three dimensions',
       text: `A line $L$ has vector equation $\\mathbf{r}=\\begin{pmatrix}1\\\\2\\\\-1\\end{pmatrix}+\\lambda\\begin{pmatrix}2\\\\-1\\\\3\\end{pmatrix}$.`,
       parts: [
@@ -208,7 +225,7 @@ function makeHL(topic, i, paper, n) {
     const mean = 50 + i
     const sd = 6 + (i % 4)
     return item({
-      id, level: 'HL', paper, topic, subtopic: 'HL-4-normal-distribution', n, hlOnly: true,
+      id, level: 'HL', paper, topic, subtopic: SUBTOPICS.HL_NORMAL, n, hlOnly: true,
       title: 'Normal distribution standardization',
       text: `The random variable $X$ is normally distributed with mean $${mean}$ and standard deviation $${sd}$.`,
       parts: [
@@ -220,7 +237,7 @@ function makeHL(topic, i, paper, n) {
   }
   const k = 1 + (i % 4)
   return item({
-    id, level: 'HL', paper, topic, subtopic: 'HL-5-differential-equations', n, hlOnly: true,
+    id, level: 'HL', paper, topic, subtopic: SUBTOPICS.HL_DIFFERENTIAL_EQUATIONS, n, hlOnly: true,
     title: 'Separable differential equation',
     text: `A differentiable function $y$ satisfies $\\frac{dy}{dx}=${k}y$ and $y(0)=3$.`,
     parts: [
@@ -234,23 +251,68 @@ function makeHL(topic, i, paper, n) {
 function makeHLPaper3(topic, i, n) {
   const a = 2 + (i % 4)
   const b = 3 + (i % 5)
-  return item({
+  const common = {
     id: `lynkedu_math_aa_hl_${topic.id.toLowerCase()}_p3_${String(i).padStart(2, '0')}`,
-    level: 'HL',
-    paper: 'P3',
-    topic,
-    subtopic: `HL-P3-${topic.id}`,
-    n,
-    hlOnly: true,
-    paper3: true,
-    title: 'Short investigation',
-    text: `This original Paper 3 style task asks you to investigate a parameterized model connected to ${topic.name}. Let $a=${a}$ and $b=${b}$.`,
+    level: 'HL', paper: 'P3', topic, n, hlOnly: true, paper3: true,
+  }
+  if (topic.id === 'T1') {
+    return item({
+      ...common, subtopic: SUBTOPICS.SL_SEQUENCE, title: 'Sequence model investigation',
+      text: `A model uses the arithmetic sequence $u_n=${a}+${b}(n-1)$ and its partial sums $S_n$.`,
+      parts: [
+        { label: 'a', marks: 2, text: 'Find $u_8$.', scheme: `$u_8=${a}+7(${b})=${a + 7 * b}$.` },
+        { label: 'b', marks: 3, text: 'Derive an expression for $S_n$ in terms of $n$.', scheme: `$S_n=\\frac{n}{2}\\left(2(${a})+(n-1)${b}\\right)$.` },
+        { label: 'c', marks: 3, text: `Determine the least $n$ for which $S_n>${20 * (a + b)}$.`, scheme: 'Substitute the sum formula, solve the quadratic inequality, and take the least positive integer satisfying it.' },
+      ],
+      solution: 'Use the arithmetic-term formula, derive the finite arithmetic-series sum, then solve the resulting inequality over positive integers.',
+    })
+  }
+  if (topic.id === 'T2') {
+    return item({
+      ...common, subtopic: SUBTOPICS.SL_QUADRATIC, title: 'Parameterized quadratic investigation',
+      text: `Consider the family $f_k(x)=x^2-${2 * a}x+k$, where $k$ is a real parameter.`,
+      parts: [
+        { label: 'a', marks: 2, text: 'Write $f_k(x)$ in completed-square form.', scheme: `$f_k(x)=(x-${a})^2+k-${a * a}$.` },
+        { label: 'b', marks: 3, text: 'Find the values of $k$ for which the equation $f_k(x)=0$ has two distinct real roots.', scheme: `Two distinct roots require $k-${a * a}<0$, so $k<${a * a}$.` },
+        { label: 'c', marks: 3, text: `For $k=${a * a - b}$, find the two roots.`, scheme: `$(x-${a})^2=${b}$, hence $x=${a}\\pm\\sqrt{${b}}$.` },
+      ],
+      solution: 'Complete the square, connect the vertex height to the number of real roots, and solve the selected member of the family.',
+    })
+  }
+  if (topic.id === 'T3') {
+    return item({
+      ...common, subtopic: SUBTOPICS.SL_RIGHT_TRIANGLE, title: 'Trigonometric model investigation',
+      text: `A right triangle has one acute angle $\\theta$, adjacent side ${a} and opposite side ${b}.`,
+      parts: [
+        { label: 'a', marks: 2, text: 'Show that $\\tan\\theta=\\frac{b}{a}$.', scheme: `By definition, $\\tan\\theta=\\frac{\\text{opposite}}{\\text{adjacent}}=\\frac{${b}}{${a}}$.` },
+        { label: 'b', marks: 3, text: 'Find $\\theta$ in degrees to three significant figures.', scheme: `$\\theta=\\tan^{-1}\\left(\\frac{${b}}{${a}}\\right)$.` },
+        { label: 'c', marks: 3, text: 'Find the hypotenuse and verify the result using $\\cos\\theta$.', scheme: `The hypotenuse is $\\sqrt{${a * a + b * b}}$; verify that $\\cos\\theta=${a}/\\sqrt{${a * a + b * b}}$.` },
+      ],
+      solution: 'Build the tangent ratio from the side definitions, determine the angle with the inverse tangent, then cross-check the hypotenuse using Pythagoras and cosine.',
+    })
+  }
+  if (topic.id === 'T4') {
+    const trials = a + b
+    return item({
+      ...common, subtopic: SUBTOPICS.SL_BINOMIAL, title: 'Binomial model investigation',
+      text: `Let $X\\sim\\mathrm{B}(${trials},p)$ and suppose $E(X)=${a}$.`,
+      parts: [
+        { label: 'a', marks: 2, text: 'Find $p$.', scheme: `Since $E(X)=np$, $p=\\frac{${a}}{${trials}}$.` },
+        { label: 'b', marks: 3, text: 'Write an exact expression for $P(X=2)$.', scheme: `$P(X=2)=\\binom{${trials}}{2}\\left(\\frac{${a}}{${trials}}\\right)^2\\left(\\frac{${b}}{${trials}}\\right)^{${trials - 2}}$.` },
+        { label: 'c', marks: 3, text: 'Explain how increasing $p$ while keeping the number of trials fixed changes the mean.', scheme: 'Because $E(X)=np$, the mean increases linearly with $p$ when $n$ is fixed.' },
+      ],
+      solution: 'Recover the probability parameter from the binomial mean, substitute it into the probability formula, and interpret the parameter sensitivity through $E(X)=np$.',
+    })
+  }
+  return item({
+    ...common, subtopic: SUBTOPICS.SL_DIFFERENTIATION, title: 'Stationary-point investigation',
+    text: `Consider the family of quadratic models $g(t)=${a}t^2-${b}t+1$, where $t$ is a real variable.`,
     parts: [
-      { label: 'a', marks: 2, text: `Calculate the value of $a^2+b^2$.`, scheme: `$a^2+b^2=${a * a + b * b}$.` },
-      { label: 'b', marks: 3, text: `Define $g(t)=at^2-bt+1$. Find $g'(t)$ and state what information the derivative gives about the model.`, scheme: `$g'(t)=${2 * a}t-${b}$. The derivative gives the instantaneous rate of change of the model.` },
-      { label: 'c', marks: 3, text: `Find the value of $t$ for which $g'(t)=0$ and interpret it as a stationary point candidate.`, scheme: `Solve ${2 * a}t-${b}=0$, so $t=\\frac{${b}}{${2 * a}}$.` },
+      { label: 'a', marks: 2, text: "Find $g'(t)$.", scheme: `$g'(t)=${2 * a}t-${b}$.` },
+      { label: 'b', marks: 3, text: "Find the stationary point's $t$-coordinate.", scheme: `Solve ${2 * a}t-${b}=0$, so $t=\\frac{${b}}{${2 * a}}$.` },
+      { label: 'c', marks: 3, text: 'Determine whether the stationary point is a maximum or minimum and justify your answer.', scheme: `$g''(t)=${2 * a}>0$, so the stationary point is a minimum.` },
     ],
-    solution: `Compute the parameter expression, differentiate the quadratic model, and solve the derivative equation. The work mirrors the compact multi-part reasoning expected in an HL Paper 3 style item.`,
+    solution: 'Differentiate the quadratic, solve the first-derivative equation, and use the positive second derivative to classify the stationary point.',
   })
 }
 
