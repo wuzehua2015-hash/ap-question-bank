@@ -16,8 +16,7 @@ export default function PaperPracticeSetup() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [paper, setPaper] = useState('all')
-  const [topic, setTopic] = useState('all')
-  const [knowledgePoint, setKnowledgePoint] = useState('all')
+  const [knowledgePoint, setKnowledgePoint] = useState('')
   const [count, setCount] = useState(6)
 
   useEffect(() => {
@@ -38,12 +37,10 @@ export default function PaperPracticeSetup() {
   }, [currentSubject])
 
   const papers = useMemo(() => unique(items, 'paper').sort(), [items])
-  const topics = useMemo(() => unique(items, 'topic_area').sort(), [items])
   const knowledgePoints = useMemo(() => {
     const counts = new Map()
     for (const item of items) {
       if (paper !== 'all' && item.paper !== paper) continue
-      if (topic !== 'all' && item.topic_area !== topic) continue
       const point = item.knowledge_point_classification?.primary_knowledge_point
       if (!point?.code || !point?.name) continue
       const current = counts.get(point.code) || { ...point, count: 0 }
@@ -51,21 +48,20 @@ export default function PaperPracticeSetup() {
       counts.set(point.code, current)
     }
     return [...counts.values()].sort((a, b) => a.code.localeCompare(b.code, undefined, { numeric: true }))
-  }, [items, paper, topic])
+  }, [items, paper])
   const filtered = useMemo(() => {
     return items.filter(item => (
       (paper === 'all' || item.paper === paper) &&
-      (topic === 'all' || item.topic_area === topic) &&
-      (knowledgePoint === 'all' || item.knowledge_point_classification?.primary_knowledge_point?.code === knowledgePoint)
+      knowledgePoint !== '' && item.knowledge_point_classification?.primary_knowledge_point?.code === knowledgePoint
     ))
-  }, [items, paper, topic, knowledgePoint])
+  }, [items, paper, knowledgePoint])
 
   const start = () => {
     const selected = [...filtered].sort(() => Math.random() - 0.5).slice(0, Math.min(count, filtered.length))
     startPaperPractice({
       items: selected,
-      config: { type: 'ib-paper-practice', subject: currentSubject, paper, topic, knowledgePoint },
-      info: { requestedCount: count, actualCount: selected.length, paper, topic, knowledgePoint },
+      config: { type: 'ib-paper-practice', subject: currentSubject, paper, knowledgePoint },
+      info: { requestedCount: count, actualCount: selected.length, paper, knowledgePoint },
     })
     navigate('/paper-play')
   }
@@ -99,29 +95,21 @@ export default function PaperPracticeSetup() {
           <div className="space-y-5">
             <div>
               <label className="mb-2 block text-sm font-semibold text-brand">Paper</label>
-              <select value={paper} onChange={event => { setPaper(event.target.value); setKnowledgePoint('all') }} className="w-full rounded-lg border border-border bg-bg p-2">
+              <select value={paper} onChange={event => { setPaper(event.target.value); setKnowledgePoint('') }} className="w-full rounded-lg border border-border bg-bg p-2">
                 <option value="all">All papers</option>
                 {papers.map(value => <option key={value} value={value}>{value}</option>)}
               </select>
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-semibold text-brand">主题单元</label>
-              <select value={topic} onChange={event => { setTopic(event.target.value); setKnowledgePoint('all') }} className="w-full rounded-lg border border-border bg-bg p-2">
-                <option value="all">全部主题单元</option>
-                {topics.map(value => <option key={value} value={value}>{value}</option>)}
-              </select>
-            </div>
-
-            <div>
               <label className="mb-2 block text-sm font-semibold text-brand">知识点</label>
               <select value={knowledgePoint} onChange={event => setKnowledgePoint(event.target.value)} className="w-full rounded-lg border border-border bg-bg p-2">
-                <option value="all">全部知识点</option>
+                <option value="">请选择知识点</option>
                 {knowledgePoints.map(point => (
                   <option key={point.code} value={point.code}>{point.code} · {point.name}（{point.count} 题）</option>
                 ))}
               </select>
-              <p className="mt-2 text-xs text-text-muted">按完成整道题所需的最晚知识点精确组题；不会因题干中偶然出现某个词而混入。</p>
+              <p className="mt-2 text-xs text-text-muted">数学练习直接按完成整道题所需的主知识点组题。</p>
             </div>
 
             <div>
@@ -129,8 +117,8 @@ export default function PaperPracticeSetup() {
               <input type="number" min={1} max={20} value={count} onChange={event => setCount(Number(event.target.value) || 1)} className="w-full rounded-lg border border-border bg-bg p-2" />
             </div>
 
-            <div className="text-sm text-text-muted">当前筛选可用 {filtered.length} 题。</div>
-            <button onClick={start} disabled={filtered.length === 0} className="w-full rounded-lg bg-accent py-3 font-semibold text-white hover:bg-accent-light disabled:opacity-50">
+            <div className="text-sm text-text-muted">{knowledgePoint ? `当前知识点可用 ${filtered.length} 题。` : '请先选择一个知识点。'}</div>
+            <button onClick={start} disabled={!knowledgePoint || filtered.length === 0} className="w-full rounded-lg bg-accent py-3 font-semibold text-white hover:bg-accent-light disabled:opacity-50">
               开始练习
             </button>
           </div>
