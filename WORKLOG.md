@@ -612,3 +612,15 @@
   - production data confirmed 18 active subjects, SL 60 and HL 90 reviewed items, clean signed-number output, and T1-T5 HL Paper 3 coverage;
   - production IB student-surface audit passed 4 cases / 0 errors;
   - production curriculum-surface audit passed with 0 errors.
+
+# 2026-07-28 - IB Math AA True Item-Level Knowledge-Point Correction
+
+- User rejected archetype-level classification as incomplete and required exact knowledge-point selection in unit practice.
+- Corrected the completion definition: repeated template reasoning is not per-item semantic classification even when the topic result is plausible.
+- Replaced `review_ib_math_aa_owned_bank.cjs` with content-derived `classify_ib_math_aa_knowledge_points.cjs` plus `lib/ib_math_aa_knowledge_classifier.cjs`.
+- The classifier does not use stored topic/subtopic labels as input. It derives classification from prompt, all parts, solution, and markscheme text.
+- Added 150-row classification ledger, content fingerprints, primary/required knowledge points, evidence, solving steps, stale-review checks, catalog checks, and exact-duplicate blocking.
+- Fixed duplicate parameter cycles in generated SL binomial and HL complex/inverse/vector/differential-equation items.
+- Added knowledge-point filtering and display to IB Paper practice; browser audit now selects a concrete SL point and a distinct HL-only point.
+- Verification at this log point: `npm run validate:ib-math-aa`, classification evidence, curriculum partition, full `npm run validate`, `npm run lint`, `npm run build`, local IB student-surface and curriculum-surface checks all passed.
+- Pending: v3 commit, stable source sync, production deployment, and fresh production checks.

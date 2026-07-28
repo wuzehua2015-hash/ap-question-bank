@@ -131,6 +131,16 @@ The reproducible publication path is:
 `npm run rebuild:ib-math-aa:owned`
 
 If that review or validation fails, Math AA SL/HL return to candidate status until the content is repaired and all release checks pass.
+
+## 2026-07-28: Knowledge-Point Classification Must Be Content-Derived
+
+The earlier archetype review is not accepted as full item-level classification. For Math AA and future curricula, a publication-grade classification must be derived from the visible prompt, every scored subpart, and the correct solution path without using the stored unit/topic label as the deciding input.
+
+Each item must have a content fingerprint, primary knowledge point, all required knowledge points, visible evidence, and ordered solving steps. Any prompt, solution, or markscheme change invalidates the fingerprint and requires reclassification.
+
+Unit or Paper practice must filter on the primary knowledge point. A term appearing incidentally in a prompt or non-primary dependency cannot place the item into that knowledge-point Quiz bucket.
+
+Exact prompt-and-solution duplicates inside one bank are release-blocking. Parameter changes count as distinct items only when the resulting visible problem is actually different.
 # 2026-07-13 - CSA Expansion Source Policy
 
 - CSA expansion completion may include open-curriculum and LynkEdu-owned original practice content, but every non-official source must be labeled as practice, carry source provenance, and keep license/credit metadata where applicable.

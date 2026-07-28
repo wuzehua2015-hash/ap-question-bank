@@ -17,6 +17,7 @@ export default function PaperPracticeSetup() {
   const [error, setError] = useState('')
   const [paper, setPaper] = useState('all')
   const [topic, setTopic] = useState('all')
+  const [knowledgePoint, setKnowledgePoint] = useState('all')
   const [count, setCount] = useState(6)
 
   useEffect(() => {
@@ -38,16 +39,33 @@ export default function PaperPracticeSetup() {
 
   const papers = useMemo(() => unique(items, 'paper').sort(), [items])
   const topics = useMemo(() => unique(items, 'topic_area').sort(), [items])
-  const filtered = useMemo(() => {
-    return items.filter(item => (paper === 'all' || item.paper === paper) && (topic === 'all' || item.topic_area === topic))
+  const knowledgePoints = useMemo(() => {
+    const counts = new Map()
+    for (const item of items) {
+      if (paper !== 'all' && item.paper !== paper) continue
+      if (topic !== 'all' && item.topic_area !== topic) continue
+      const point = item.knowledge_point_classification?.primary_knowledge_point
+      if (!point?.code || !point?.name) continue
+      const current = counts.get(point.code) || { ...point, count: 0 }
+      current.count += 1
+      counts.set(point.code, current)
+    }
+    return [...counts.values()].sort((a, b) => a.code.localeCompare(b.code, undefined, { numeric: true }))
   }, [items, paper, topic])
+  const filtered = useMemo(() => {
+    return items.filter(item => (
+      (paper === 'all' || item.paper === paper) &&
+      (topic === 'all' || item.topic_area === topic) &&
+      (knowledgePoint === 'all' || item.knowledge_point_classification?.primary_knowledge_point?.code === knowledgePoint)
+    ))
+  }, [items, paper, topic, knowledgePoint])
 
   const start = () => {
     const selected = [...filtered].sort(() => Math.random() - 0.5).slice(0, Math.min(count, filtered.length))
     startPaperPractice({
       items: selected,
-      config: { type: 'ib-paper-practice', subject: currentSubject, paper, topic },
-      info: { requestedCount: count, actualCount: selected.length, paper, topic },
+      config: { type: 'ib-paper-practice', subject: currentSubject, paper, topic, knowledgePoint },
+      info: { requestedCount: count, actualCount: selected.length, paper, topic, knowledgePoint },
     })
     navigate('/paper-play')
   }
@@ -81,18 +99,29 @@ export default function PaperPracticeSetup() {
           <div className="space-y-5">
             <div>
               <label className="mb-2 block text-sm font-semibold text-brand">Paper</label>
-              <select value={paper} onChange={event => setPaper(event.target.value)} className="w-full rounded-lg border border-border bg-bg p-2">
+              <select value={paper} onChange={event => { setPaper(event.target.value); setKnowledgePoint('all') }} className="w-full rounded-lg border border-border bg-bg p-2">
                 <option value="all">All papers</option>
                 {papers.map(value => <option key={value} value={value}>{value}</option>)}
               </select>
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-semibold text-brand">Topic area</label>
-              <select value={topic} onChange={event => setTopic(event.target.value)} className="w-full rounded-lg border border-border bg-bg p-2">
-                <option value="all">All topics</option>
+              <label className="mb-2 block text-sm font-semibold text-brand">主题单元</label>
+              <select value={topic} onChange={event => { setTopic(event.target.value); setKnowledgePoint('all') }} className="w-full rounded-lg border border-border bg-bg p-2">
+                <option value="all">全部主题单元</option>
                 {topics.map(value => <option key={value} value={value}>{value}</option>)}
               </select>
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-brand">知识点</label>
+              <select value={knowledgePoint} onChange={event => setKnowledgePoint(event.target.value)} className="w-full rounded-lg border border-border bg-bg p-2">
+                <option value="all">全部知识点</option>
+                {knowledgePoints.map(point => (
+                  <option key={point.code} value={point.code}>{point.code} · {point.name}（{point.count} 题）</option>
+                ))}
+              </select>
+              <p className="mt-2 text-xs text-text-muted">按完成整道题所需的最晚知识点精确组题；不会因题干中偶然出现某个词而混入。</p>
             </div>
 
             <div>

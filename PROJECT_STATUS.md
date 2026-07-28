@@ -378,3 +378,21 @@ The site has entered productization for public launch:
   - production data: 18 active subjects, SL 60/60 reviewed, HL 90/90 reviewed, malformed signed-number findings 0, and two HL Paper 3 items in each T1-T5 topic area;
   - production IB student-surface audit: 4 cases / 0 errors;
   - production curriculum-surface audit: 0 errors.
+
+## 2026-07-28 IB Math AA Item-Level Knowledge-Point Rebuild (Supersedes v2)
+
+- The earlier v2 closeout above is no longer accepted as semantic completion. It reviewed repeated archetypes but did not independently derive every item classification from the complete visible solution path, and the practice setup could not filter by knowledge point.
+- Math AA SL/HL were returned to candidate status while this correction was implemented. They may be public only under the v3 item-knowledge-point contract.
+- The v3 classifier ignores stored T1-T5/subtopic labels when deciding classification. It reads the visible prompt, every subpart, solution outline, and correct markscheme path, then rewrites topic, subtopic, primary knowledge point, and all required knowledge points from that content.
+- Every item now carries:
+  - a SHA-256 review-basis fingerprint covering prompt, subparts, solution, and markscheme;
+  - one primary knowledge point representing the latest knowledge needed to complete all scored steps;
+  - all required knowledge points;
+  - item-specific visible evidence and ordered solving steps.
+- Added the explicit 150-row ledger `public/data/ib/math-aa/item_classification_ledger.json`. Ledger count, IDs, fingerprints, primary points, and required points must match the banks exactly.
+- Added 28 registered knowledge points across T1-T5 and SL/HL scope.
+- Exact prompt-and-solution duplicates inside either bank are now release-blocking. Generator parameter cycles and repeated HL vector/differential-equation items were corrected.
+- IB Paper practice now filters by `primary_knowledge_point`, shows knowledge-point counts, stores the selected point in the session, and displays the primary/all-required knowledge points on the question surface.
+- Hardened student-surface evidence selects a real knowledge point and verifies that the generated question displays that exact code on desktop and mobile.
+- Current local evidence: IB validation 0/0, full validate passed, lint passed, build passed, local knowledge-point student-surface audit 4 cases/0 errors, curriculum-surface audit 0 errors.
+- Production deployment is pending for v3 and must not reuse the earlier v2 production evidence.

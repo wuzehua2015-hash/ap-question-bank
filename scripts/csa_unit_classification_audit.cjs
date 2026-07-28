@@ -120,7 +120,6 @@ function classify(item) {
     addFinding('review', 'auto-rule-review', item, `Rule suggested ${decision.unit} ${decision.code}, but no manual decision exists; retained current classification pending CSA subject review. ${decision.reason}`)
     return currentDecision(item, 'Rule conflict retained for manual CSA review.')
   }
-  const current = normalizeUnit(item.primary_unit)
   addFinding('review', 'auto-rule-review', item, 'No CSA rule matched; retained current unit and queued for manual review.')
   return currentDecision(item, 'No stronger rule matched; retained for manual CSA review.')
 }

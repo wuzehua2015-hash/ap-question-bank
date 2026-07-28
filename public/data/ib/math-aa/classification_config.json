@@ -59,6 +59,36 @@
       ]
     }
   ],
+  "knowledge_points": [
+    { "code": "AA-1.2.1", "name": "等差数列通项", "topic": "T1", "scope": "SL_HL" },
+    { "code": "AA-1.2.2", "name": "等差数列前 n 项和与阈值", "topic": "T1", "scope": "SL_HL" },
+    { "code": "AA-1.12.1", "name": "复数极形式与棣莫弗定理的辐角", "topic": "T1", "scope": "HL" },
+    { "code": "AA-1.12.2", "name": "复数幂的模", "topic": "T1", "scope": "HL" },
+    { "code": "AA-2.6.1", "name": "二次函数配方", "topic": "T2", "scope": "SL_HL" },
+    { "code": "AA-2.6.2", "name": "由顶点式确定顶点", "topic": "T2", "scope": "SL_HL" },
+    { "code": "AA-2.6.3", "name": "二次方程精确根", "topic": "T2", "scope": "SL_HL" },
+    { "code": "AA-2.6.4", "name": "参数与实根个数", "topic": "T2", "scope": "SL_HL" },
+    { "code": "AA-2.2.1", "name": "反函数的代数求法", "topic": "T2", "scope": "HL" },
+    { "code": "AA-2.2.2", "name": "反函数的定义域和值域", "topic": "T2", "scope": "HL" },
+    { "code": "AA-3.3.1", "name": "直角三角形三角比选择", "topic": "T3", "scope": "SL_HL" },
+    { "code": "AA-3.3.2", "name": "反三角函数求角", "topic": "T3", "scope": "SL_HL" },
+    { "code": "AA-3.3.3", "name": "利用三角比求边长", "topic": "T3", "scope": "SL_HL" },
+    { "code": "AA-3.3.4", "name": "勾股定理与三角比交叉验证", "topic": "T3", "scope": "SL_HL" },
+    { "code": "AA-3.12.1", "name": "三维向量直线参数代入", "topic": "T3", "scope": "HL" },
+    { "code": "AA-3.12.2", "name": "三维点是否在向量直线上", "topic": "T3", "scope": "HL" },
+    { "code": "AA-4.4.1", "name": "二项分布恰好事件概率", "topic": "T4", "scope": "SL_HL" },
+    { "code": "AA-4.4.2", "name": "二项分布期望 E(X)=np", "topic": "T4", "scope": "SL_HL" },
+    { "code": "AA-4.4.3", "name": "二项分布参数对均值的影响", "topic": "T4", "scope": "SL_HL" },
+    { "code": "AA-4.9.1", "name": "正态分布标准化", "topic": "T4", "scope": "HL" },
+    { "code": "AA-4.9.2", "name": "正态概率的情境解释", "topic": "T4", "scope": "HL" },
+    { "code": "AA-5.2.1", "name": "多项式逐项求导", "topic": "T5", "scope": "SL_HL" },
+    { "code": "AA-5.2.2", "name": "切线斜率与切线方程", "topic": "T5", "scope": "SL_HL" },
+    { "code": "AA-5.2.3", "name": "驻点的一阶导数条件", "topic": "T5", "scope": "SL_HL" },
+    { "code": "AA-5.2.4", "name": "二阶导数判定极值类型", "topic": "T5", "scope": "SL_HL" },
+    { "code": "AA-5.11.1", "name": "可分离变量微分方程", "topic": "T5", "scope": "HL" },
+    { "code": "AA-5.11.2", "name": "初值条件确定积分常数", "topic": "T5", "scope": "HL" },
+    { "code": "AA-5.11.3", "name": "微分方程解的代入求值", "topic": "T5", "scope": "HL" }
+  ],
   "classification_contract": {
     "rule": "Assign each item to the latest official Math AA topic required by the solution path, with all earlier topics available.",
     "sl_hl_rule": "HL-only content is never eligible for an SL subject or SL paper-practice flow.",
@@ -69,6 +99,13 @@
       "level_scope",
       "source_paper_path",
       "source_markscheme_path"
+    ],
+    "required_knowledge_point_fields": [
+      "knowledge_point_classification.review_basis_sha256",
+      "knowledge_point_classification.primary_knowledge_point",
+      "knowledge_point_classification.required_knowledge_points",
+      "knowledge_point_classification.evidence",
+      "knowledge_point_classification.solving_path_steps"
     ],
     "review_rule": "Published owned-original items must pass a separate deterministic semantic review that records the visible solving path, rejects generator placeholder reasoning, and maps every required subtopic to this configuration."
   }
