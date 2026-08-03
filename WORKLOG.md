@@ -2577,3 +2577,11 @@
 - Found production D1 missing the IB Learning/Mock/upload tables. Applied remote D1 migrations `0004` through `0007` to `lynkedu-question-bank`, then confirmed all expected tables exist and `attempt_mark_point_results` has `mark_value` plus `knowledge_point_codes_json`.
 - Ran a production authenticated API audit with marked test account. Passed registration/login, `/api/me`, Mock eligibility, Mock creation, Mock detail, timer start/pause, typed answer creation, attempt detail, attempt confirmation, learning attempt list, upload-batch list, and Mock list. Mock evidence: SL Mock created with 2 papers and 18 questions.
 - Remaining blocker: Cloudflare R2 is not enabled for the account. `wrangler r2 bucket list` fails with code `10042`, and production upload-batch creation returns `503 answer_storage_unavailable`. Next action is external Cloudflare setup: enable R2, create/bind private answer bucket as `ANSWER_ASSETS` for the Pages production environment, redeploy if needed, then rerun the production upload asset + complete audit.
+
+# 2026-08-03 - IB Math AA Remote Source Sync
+
+- Committed staged IB Math AA delivery files as `8fdac2e` and removed a source-code audit marker comment in `0b22b4e`.
+- Re-ran quality gates before sync: `npm run validate` passed; `npm run build` passed and included the full prebuild validation run.
+- `npm run stable:push` first failed because normal Git push was non-fast-forward and the API snapshot path hit a GitHub large-blob request failure. Created local snapshot commit `c08a890` from the current local tree with both remote `prod-mock-pdf-fix` and local delivery HEAD as parents, then pushed normally.
+- `npm run stable:status` now reports local HEAD `c08a890e4e0f64c60c2b131eccc3f823c14a5e3d`, remote HEAD `c08a890e4e0f64c60c2b131eccc3f823c14a5e3d`, and matching tree `ce76ab8c7acd3fe4d0897796bbf73584907778d3`.
+- Full IB Math AA completion remains pending only on Cloudflare R2 enablement and `ANSWER_ASSETS` production binding, followed by upload asset + complete production audit.
