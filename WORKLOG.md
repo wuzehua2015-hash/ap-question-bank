@@ -2585,3 +2585,10 @@
 - `npm run stable:push` first failed because normal Git push was non-fast-forward and the API snapshot path hit a GitHub large-blob request failure. Created local snapshot commit `c08a890` from the current local tree with both remote `prod-mock-pdf-fix` and local delivery HEAD as parents, then pushed normally.
 - `npm run stable:status` now reports local HEAD `c08a890e4e0f64c60c2b131eccc3f823c14a5e3d`, remote HEAD `c08a890e4e0f64c60c2b131eccc3f823c14a5e3d`, and matching tree `ce76ab8c7acd3fe4d0897796bbf73584907778d3`.
 - Full IB Math AA completion remains pending only on Cloudflare R2 enablement and `ANSWER_ASSETS` production binding, followed by upload asset + complete production audit.
+
+# 2026-08-03 - IB Math AA Production Closeout Gate
+
+- Added the reusable production closeout command `npm run audit:ib-math-aa:production-release -- --url https://lynkedu.com/`.
+- The command checks public IB release data, SL/HL production bank counts, remote D1 learning schema, mark-point columns, R2 availability, production browser student surface, production curriculum surface, production registration, and answer upload configuration. If R2 is available, it continues into upload asset plus complete-path verification with a tiny PNG and a visible IB Math AA question mapping.
+- Latest full run completed 9 checks with exactly 1 failing check: Cloudflare R2 availability returned code `10042`. Positive checks passed for public data, bank counts, D1 schema, browser production audits, registration, and expected upload-unavailable response.
+- `npm run validate` passed after adding the script and package command.

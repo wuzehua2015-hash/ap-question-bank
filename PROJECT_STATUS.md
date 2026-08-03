@@ -1328,3 +1328,10 @@ The site has entered productization for public launch:
 - `npm run build` passed after re-running full prebuild validation; production assets generated successfully.
 - `npm run stable:push` could not use the API snapshot path because GitHub rejected a large blob request. A local fast-forward snapshot commit was created instead with local content tree `ce76ab8c7acd3fe4d0897796bbf73584907778d3`, preserving both remote HEAD and local delivery commit as parents.
 - Remote sync completed: `prod-mock-pdf-fix` now points to `c08a890e4e0f64c60c2b131eccc3f823c14a5e3d`; `npm run stable:status` confirms remote tree matches local HEAD tree.
+
+## 2026-08-03 IB Math AA Production Closeout Gate
+
+- Added `scripts/ib_math_aa_production_release_audit.cjs` and npm command `audit:ib-math-aa:production-release`.
+- Full production closeout audit command: `npm run audit:ib-math-aa:production-release -- --url https://lynkedu.com/`.
+- Latest run completed 9 checks with 1 failure: public release data passed, SL/HL production counts matched (SL 162 total / 149 visible / 13 hidden; HL 271 total / 235 visible / 36 hidden), remote D1 learning tables passed, mark-point columns passed, IB student browser audit passed, curriculum browser audit passed, production account registration passed, and upload configuration returned the expected `503 answer_storage_unavailable` while R2 is not enabled.
+- The only failing check is `r2-account-enabled` with Cloudflare code `10042`. Once R2 is enabled and `ANSWER_ASSETS` is bound to production, rerun the same command; the script will continue into upload asset plus complete-path verification.

@@ -25,6 +25,7 @@
     "audit:student-flow": "node scripts/student_flow_audit.cjs",
     "audit:quiz-image-transition": "node scripts/quiz_image_transition_audit.cjs",
     "audit:ib-math-aa:student-surface": "node scripts/ib_math_aa_student_surface_audit.cjs",
+    "audit:ib-math-aa:production-release": "node scripts/ib_math_aa_production_release_audit.cjs",
     "audit:curriculum-surface": "node scripts/curriculum_surface_audit.cjs",
     "audit:student-progression": "node scripts/unit_progression_audit.cjs --write-report --fail-on-findings && node scripts/student_progression_audit.cjs",
     "audit:full": "npm run validate && npm run build && npm run audit:render:all",
