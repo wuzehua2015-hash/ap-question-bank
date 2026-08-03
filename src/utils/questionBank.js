@@ -1,7 +1,5 @@
 ﻿const BASE_URL = import.meta.env.BASE_URL || '/'
 
-// Only an isolated local audit build may expose reviewed IB candidates.
-// Normal and production builds keep this false and preserve the public gate.
 export const IB_CANDIDATE_AUDIT = import.meta.env.VITE_IB_CANDIDATE_AUDIT === 'true'
 
 export function isIbCandidateAuditSubject(subject) {
