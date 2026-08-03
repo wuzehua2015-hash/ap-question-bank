@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import RequireSubject from './components/RequireSubject'
+import LoginGate from './components/LoginGate'
 
 import { SubjectProvider } from './contexts/SubjectContext'
 import { AuthProvider } from './contexts/AuthContext'
@@ -12,6 +13,11 @@ const LandingPage = lazy(() => import('./pages/LandingPage'))
 const QuizSetup = lazy(() => import('./pages/QuizSetup'))
 const PaperPracticeSetup = lazy(() => import('./pages/PaperPracticeSetup'))
 const PaperPracticePlayer = lazy(() => import('./pages/PaperPracticePlayer'))
+const IBMockSetup = lazy(() => import('./pages/IBMockSetup'))
+const IBMockDetail = lazy(() => import('./pages/IBMockDetail'))
+const IBMockPaper = lazy(() => import('./pages/IBMockPaper'))
+const LearningCenter = lazy(() => import('./pages/LearningCenter'))
+const AttemptReview = lazy(() => import('./pages/AttemptReview'))
 const ExamSetup = lazy(() => import('./pages/ExamSetup'))
 const QuizPlayer = lazy(() => import('./pages/QuizPlayer'))
 const FRQPlayer = lazy(() => import('./pages/FRQPlayer'))
@@ -51,6 +57,11 @@ function App() {
                 <Route path="/quiz" element={<RequireSubject><QuizSetup /></RequireSubject>} />
                 <Route path="/paper-practice" element={<RequireSubject><PaperPracticeSetup /></RequireSubject>} />
                 <Route path="/paper-play" element={<PaperPracticePlayer />} />
+                <Route path="/ib-mock" element={<LoginGate title="IB Mock Exam"><RequireSubject><IBMockSetup /></RequireSubject></LoginGate>} />
+                <Route path="/ib-mock/:id" element={<LoginGate title="IB Mock Exam"><IBMockDetail /></LoginGate>} />
+                <Route path="/ib-mock/:id/:paper" element={<LoginGate title="IB Mock Exam"><IBMockPaper /></LoginGate>} />
+                <Route path="/learning-center" element={<LoginGate title="学习中心"><LearningCenter /></LoginGate>} />
+                <Route path="/learning-attempt/:id" element={<LoginGate title="作答核对"><AttemptReview /></LoginGate>} />
                 <Route path="/exam" element={<RequireSubject><ExamSetup /></RequireSubject>} />
                 <Route path="/play" element={<QuizPlayer />} />
                 <Route path="/frq" element={<FRQPlayer />} />

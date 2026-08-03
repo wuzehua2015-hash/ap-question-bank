@@ -8,6 +8,14 @@ const errors = []
 
 const requiredDocs = [
   {
+    path: 'docs/QUESTION_SOURCE_POLICY.md',
+    patterns: [/Hard rule/i, /New-question admission/i, /Historical content/i, /validate:question-source/i],
+  },
+  {
+    path: 'docs/IB_MATH_AA_DELIVERY_STANDARD.md',
+    patterns: [/Real-exam source contract/i, /Item completeness/i, /Student workflows/i, /Required release checks/i, /Stop conditions/i],
+  },
+  {
     path: 'docs/GLOBAL_QUESTION_BANK_SOP.md',
     patterns: [
       /Source Approval SOP/i,
@@ -24,6 +32,10 @@ const requiredDocs = [
   {
     path: 'docs/STRUCTURED_PROMPT_DELIVERY_CONTRACT.md',
     patterns: [/group_context/i, /student prompt/i, /CSA Rules/i],
+  },
+  {
+    path: 'docs/STRUCTURED_QUESTION_DELIVERY_STANDARD.md',
+    patterns: [/One delivery form/i, /Required item content/i, /Forbidden substitutions/i, /States and counting/i, /validate:structured-delivery/i],
   },
   {
     path: 'docs/UNIT_CLASSIFICATION_STANDARD.md',
@@ -61,6 +73,8 @@ const scripts = pkg.scripts || {}
 const requiredScripts = [
   'validate',
   'validate:data',
+  'validate:question-source',
+  'validate:structured-delivery',
   'validate:assessment-models',
   'validate:ib-math-aa',
   'validate:images',
@@ -81,6 +95,14 @@ for (const name of requiredScripts) {
 
 if (scripts.validate && !/validate:sop/.test(scripts.validate)) {
   errors.push('package.json: validate must include validate:sop')
+}
+
+if (scripts.validate && !/validate:question-source/.test(scripts.validate)) {
+  errors.push('package.json: validate must include validate:question-source')
+}
+
+if (scripts.validate && !/validate:structured-delivery/.test(scripts.validate)) {
+  errors.push('package.json: validate must include validate:structured-delivery')
 }
 
 if (scripts.validate && !/validate:assessment-models/.test(scripts.validate)) {

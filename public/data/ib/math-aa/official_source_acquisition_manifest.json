@@ -1,0 +1,121 @@
+{
+  "curriculum": "ib",
+  "course": "math-aa",
+  "updated_at": "2026-07-28",
+  "objective": "Expand the verified internal official-source inventory across multiple examination years without weakening pair, deduplication, classification or publication gates.",
+  "current_inventory": {
+    "canonical_pairs": 49,
+    "pdf_files": 124,
+    "represented_exam_sessions": ["2021-May", "2021-Nov", "2022-May", "2022-Nov", "2023-May", "2023-Nov"],
+    "newest_represented_session": "2023-Nov"
+  },
+  "priority_a_complete_existing_partial_pairs": [
+    {
+      "base_id": "MathsAA_HL_P1_2021_May_TZ2",
+      "have": "markscheme",
+      "need": "paper"
+    },
+    {
+      "base_id": "MathsAA_SL_P1_2022_May_TZ2",
+      "have": "paper",
+      "need": "markscheme"
+    },
+    {
+      "base_id": "MathsAA_SL_P1_2023_Nov_TZ2",
+      "have": "paper",
+      "need": "markscheme"
+    },
+    {
+      "base_id": "MathsAA_SL_P2_2023_Nov_TZ2",
+      "have": "paper",
+      "need": "markscheme"
+    }
+  ],
+  "priority_b_new_session_packs": [
+    {
+      "session": "2024-May",
+      "source": "Follett Titlewave official examination paper and markscheme products",
+      "catalog_status": "individual Math AA products confirmed; full-session pack to acquire if available",
+      "local_overlap": "one unpaired SL P2 TZ1 paper only"
+    },
+    {
+      "session": "2024-Nov",
+      "source": "Follett Titlewave official examination paper and markscheme pack",
+      "catalog_status": "full-session pack and individual Math AA products confirmed",
+      "local_overlap": "none"
+    },
+    {
+      "session": "2025-May",
+      "source": "Follett Titlewave official examination paper and markscheme pack",
+      "catalog_status": "digital full-session pack and individual Math AA products confirmed",
+      "local_overlap": "none"
+    },
+    {
+      "session": "2025-Nov",
+      "source": "Follett Titlewave official examination paper and markscheme pack",
+      "catalog_status": "digital full-session pack and individual Math AA products confirmed",
+      "local_overlap": "none"
+    }
+  ],
+  "required_acceptance_gates": [
+    "paper and markscheme must form an exact level, session, paper and timezone pair",
+    "every acquired file must have SHA-256, byte size and page count recorded",
+    "all pages must render and representative formula, figure and markscheme pages must be visually checked",
+    "exact file and normalized content duplicates must be rejected",
+    "every question must be classified from the visible prompt, all scored subparts and correct markscheme path",
+    "student-visible use requires the recorded organization authorization, exact source registration and complete transcription verification"
+  ],
+  "external_access": {
+    "titlewave_signed_in": false,
+    "questionbank_signed_in": false,
+    "purchase_completed": false,
+    "files_acquired": false,
+    "purchase_route_allowed": false,
+    "status": "free_sources_only_by_product_decision"
+  },
+  "free_source_audit": {
+    "official_free_multi_year_exam_sets_found": 0,
+    "accepted": [
+      {
+        "source": "IB official Mathematics: Analysis and Approaches specimen packet",
+        "scope": "SL P1/P2 and HL P1/P2/P3 with markschemes",
+        "status": "already_verified_and_added_to_internal_source_inventory"
+      }
+    ],
+    "reference_only": [
+      {
+        "source": "MarkScheme.app",
+        "reason": "the site states that the IB specimen and sample papers are the only fully official free papers; later-year labels do not provide a verified reusable official file set"
+      },
+      {
+        "source": "RevisionDojo predicted papers",
+        "reason": "original exam-style practice may be useful as a format reference, but no permission for incorporation into this question bank was verified"
+      },
+      {
+        "source": "Christos Nikolaidis free mathematics resources",
+        "reason": "free access was identified, but no explicit reuse licence for question-bank incorporation was verified"
+      }
+    ],
+    "excluded": [
+      {
+        "source_class": "third-party file hosts, document-sharing pages and public-drive copies of IB examination files",
+        "reason": "origin and republication status are not sufficiently verified"
+      },
+      {
+        "source_class": "search-result claims of Creative Commons coverage attached to IB papers",
+        "reason": "the licence claim was not shown to cover the IB examination content itself"
+      }
+    ],
+    "next_action": "Do not create substitute questions. The user confirmed organization authorization for complete placement on 2026-07-29; proceed only through exact real-paper transcription, paired markscheme extraction, visual verification, knowledge-point classification and per-question registry admission."
+  },
+  "student_use_authorization": {
+    "status": "confirmed",
+    "rights_status": "licensed_permission",
+    "student_use_status": "approved_for_structured_student_use",
+    "permission_basis": "user_confirmed_organization_authorization",
+    "approved_by": "user-confirmed",
+    "approved_at": "2026-07-29",
+    "scope": "complete local IB Mathematics AA papers and paired markschemes",
+    "record_limit": "No contract number, supplier term or additional licence detail is asserted."
+  }
+}

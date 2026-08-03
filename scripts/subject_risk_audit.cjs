@@ -17,6 +17,15 @@ function readJson(relPath) {
 }
 
 function itemText(q) {
+  if (q.curriculum === 'ib' && q.course === 'math-aa' && q.content) {
+    const blocks = []
+    for (const block of q.content.stem_blocks || []) blocks.push(blockText(block))
+    for (const part of q.content.parts || []) {
+      blocks.push(part.label || '')
+      for (const block of part.blocks || []) blocks.push(blockText(block))
+    }
+    return [blocks.join('\n'), q.solution?.outline].filter(Boolean).join('\n')
+  }
   const options = q.options && typeof q.options === 'object' ? Object.values(q.options).join(' ') : ''
   const rubric = q.rubric ? JSON.stringify(q.rubric) : ''
   const parts = Array.isArray(q.parts) ? q.parts.map(part => `${part.text || ''} ${part.scheme || ''}`).join('\n') : ''
@@ -27,7 +36,7 @@ function itemText(q) {
 function hasStructuredTable(q) {
   const text = itemText(q)
   const hasMarkdownTable = /\|[^\n]+\|\s*\n\s*\|?\s*:?-{3,}:?\s*\|/.test(text)
-  return Boolean(q.background_data?.table || q.background_data?.tables || q.tables || q.table || q.option_table_data || hasMarkdownTable)
+  return Boolean(q.background_data?.table || q.background_data?.tables || q.tables || q.table || q.option_table_data || hasStructuredBlockType(q, 'table') || hasMarkdownTable)
 }
 
 function hasStructuredContent(q) {
@@ -36,7 +45,32 @@ function hasStructuredContent(q) {
 }
 
 function hasVisual(q) {
-  return Array.isArray(q.image_paths) && q.image_paths.length > 0
+  return Boolean((Array.isArray(q.image_paths) && q.image_paths.length > 0) || hasStructuredBlockType(q, 'figure'))
+}
+
+function blockText(block) {
+  if (!block) return ''
+  if (block.type === 'table') {
+    const columns = Array.isArray(block.columns) ? block.columns.join(' | ') : ''
+    const rows = Array.isArray(block.rows)
+      ? block.rows.map(row => Array.isArray(row) ? row.join(' | ') : Object.values(row || {}).join(' | ')).join('\n')
+      : ''
+    return [block.caption, columns, rows].filter(Boolean).join('\n')
+  }
+  return String(block.text || block.caption || block.alt || '')
+}
+
+function hasStructuredBlockType(q, type) {
+  const stemBlocks = q.content?.stem_blocks || []
+  const partBlocks = (q.content?.parts || []).flatMap(part => part.blocks || [])
+  return [...stemBlocks, ...partBlocks].some(block => block?.type === type)
+}
+
+function isStudentVisibleItem(q) {
+  return q &&
+    q.scoring_status !== 'not_scored' &&
+    q.student_visible !== false &&
+    q.publish_status !== 'blocked'
 }
 
 function push(list, subject, q, kind, message) {
@@ -77,9 +111,9 @@ function rubricDuplicates(q) {
 }
 
 for (const subject of subjects.filter(item => item.active && item.visibility !== 'internal')) {
-  const mcq = subject.questionBank ? readJson(subject.questionBank) : []
-  const frq = subject.frqBank ? readJson(subject.frqBank) : []
-  const paper = subject.paperBank ? readJson(subject.paperBank) : []
+  const mcq = subject.questionBank ? readJson(subject.questionBank).filter(isStudentVisibleItem) : []
+  const frq = subject.frqBank ? readJson(subject.frqBank).filter(isStudentVisibleItem) : []
+  const paper = subject.paperBank ? readJson(subject.paperBank).filter(isStudentVisibleItem) : []
   const rows = [
     ...mcq.map(q => ({ ...q, __kind: 'MCQ' })),
     ...frq.map(q => ({ ...q, __kind: 'FRQ' })),

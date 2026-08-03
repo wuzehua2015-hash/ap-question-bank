@@ -79,6 +79,7 @@ export function startPaperPractice({ items, config, info }) {
   sessionStorage.setItem(KEYS.QUIZ_CONFIG, JSON.stringify(config))
   sessionStorage.setItem(KEYS.QUIZ_INFO, JSON.stringify({
     ...info,
+    sourceId: info?.sourceId || `quiz_${crypto.randomUUID()}`,
     isMock: false,
     mode: 'ib-paper',
   }))

@@ -12,7 +12,7 @@ Official exam and subject framework materials are the only authority for unit cl
 
 For AP subjects, classification must be derived from the current official Course and Exam Description, official exam format/course framework, official released questions, official sample questions, and official scoring guidelines where applicable. Third-party course maps, textbook chapters, online lessons, existing question-bank labels, AI-generated topic names, and keyword tables may help find review candidates, but they cannot justify the final `primary_unit`.
 
-If a source item is non-official practice or LynkEdu-owned original content, it may still enter the question bank only after the reviewer maps its required solving knowledge to the official framework. The item's source does not define the unit; the official framework does.
+Unit classification never grants source admission. A student-visible item must first pass `docs/QUESTION_SOURCE_POLICY.md`; self-written or template-generated questions are not permitted. For admitted real-source items, the source still does not define the unit; required solving knowledge must be mapped to the official framework.
 
 Every new, expanded, or repaired item must be classified using:
 

@@ -17,18 +17,14 @@
       "id": "ib",
       "name": "IB",
       "full_name": "International Baccalaureate",
-      "status": "candidate",
+      "status": "active",
       "assessment_models": [
         "ib-paper"
       ],
       "subject_filter": {
         "field": "curriculum",
         "value": "ib"
-      },
-      "candidate_subjects": [
-        "ib-math-aa-sl",
-        "ib-math-aa-hl"
-      ]
+      }
     },
     {
       "id": "a-level",

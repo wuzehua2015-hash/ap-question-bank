@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSubject } from '../contexts/SubjectContext'
-import { loadPaperBank } from '../utils/questionBank'
+import { loadKnowledgeTree, loadPaperBank } from '../utils/questionBank'
 import { startPaperPractice } from '../utils/quizSession'
 import { subjectDisplayName } from '../utils/displayLabels'
 
@@ -13,6 +13,7 @@ export default function PaperPracticeSetup() {
   const navigate = useNavigate()
   const { currentSubjectConfig, currentSubject } = useSubject()
   const [items, setItems] = useState([])
+  const [knowledgeTree, setKnowledgeTree] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [paper, setPaper] = useState('all')
@@ -23,9 +24,12 @@ export default function PaperPracticeSetup() {
     let cancelled = false
     setLoading(true)
     setError('')
-    loadPaperBank(currentSubject)
-      .then(data => {
-        if (!cancelled) setItems(data)
+    Promise.all([loadPaperBank(currentSubject), loadKnowledgeTree(currentSubject)])
+      .then(([data, tree]) => {
+        if (!cancelled) {
+          setItems(data)
+          setKnowledgeTree(tree)
+        }
       })
       .catch(err => {
         if (!cancelled) setError(err.message || '无法加载 IB 题库')
@@ -37,7 +41,7 @@ export default function PaperPracticeSetup() {
   }, [currentSubject])
 
   const papers = useMemo(() => unique(items, 'paper').sort(), [items])
-  const knowledgePoints = useMemo(() => {
+  const knowledgePointGroups = useMemo(() => {
     const counts = new Map()
     for (const item of items) {
       if (paper !== 'all' && item.paper !== paper) continue
@@ -47,8 +51,27 @@ export default function PaperPracticeSetup() {
       current.count += 1
       counts.set(point.code, current)
     }
-    return [...counts.values()].sort((a, b) => a.code.localeCompare(b.code, undefined, { numeric: true }))
-  }, [items, paper])
+    if (!knowledgeTree?.topic_areas) {
+      return [{ id: 'available', name: '当前已有知识点', points: [...counts.values()] }]
+    }
+    const level = currentSubjectConfig?.level
+    return knowledgeTree.topic_areas.map(topic => ({
+      id: topic.id,
+      name: `${topic.name_zh}（${topic.name}）`,
+      points: topic.syllabus_items
+        .filter(item => level === 'HL' || item.scope !== 'HL')
+        .flatMap(item => item.knowledge_points
+          .filter(point => level === 'HL' || point.scope !== 'HL')
+          .map(point => ({
+            ...point,
+            syllabusCode: item.code,
+            syllabusName: item.name,
+            count: counts.get(point.code)?.count || 0,
+          }))),
+    }))
+  }, [items, knowledgeTree, paper, currentSubjectConfig?.level])
+  const knowledgePointCount = knowledgePointGroups.reduce((sum, group) => sum + group.points.length, 0)
+  const emptyKnowledgePointCount = knowledgePointGroups.reduce((sum, group) => sum + group.points.filter(point => point.count === 0).length, 0)
   const filtered = useMemo(() => {
     return items.filter(item => (
       (paper === 'all' || item.paper === paper) &&
@@ -105,11 +128,20 @@ export default function PaperPracticeSetup() {
               <label className="mb-2 block text-sm font-semibold text-brand">知识点</label>
               <select value={knowledgePoint} onChange={event => setKnowledgePoint(event.target.value)} className="w-full rounded-lg border border-border bg-bg p-2">
                 <option value="">请选择知识点</option>
-                {knowledgePoints.map(point => (
-                  <option key={point.code} value={point.code}>{point.code} · {point.name}（{point.count} 题）</option>
+                {knowledgePointGroups.map(group => (
+                  <optgroup key={group.id} label={group.name}>
+                    {group.points.map(point => (
+                      <option key={point.code} value={point.code} disabled={point.count === 0}>
+                        {point.code} · {point.name}（{point.count} 题）
+                      </option>
+                    ))}
+                  </optgroup>
                 ))}
               </select>
               <p className="mt-2 text-xs text-text-muted">数学练习直接按完成整道题所需的主知识点组题。</p>
+              <p className="mt-1 text-xs text-text-muted">
+                课程知识点共 {knowledgePointCount} 个；其中 {emptyKnowledgePointCount} 个当前为 0 题，仍完整列出但暂不可开始练习。
+              </p>
             </div>
 
             <div>

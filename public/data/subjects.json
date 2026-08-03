@@ -997,9 +997,12 @@
       "visibility": "public",
       "paperBank": "ib/math-aa-sl/paper_bank.json",
       "classificationConfig": "ib/math-aa/classification_config.json",
+      "knowledgeTree": "ib/math-aa/knowledge_tree.json",
+      "coverageMatrix": "ib/math-aa/coverage_matrix.json",
+      "curriculumCoverageStatus": "released_with_capacity_warnings",
       "classificationLedger": "ib/math-aa/item_classification_ledger.json",
       "sourceInventory": "ib/math-aa/source_inventory.json",
-      "dataVersion": "math-aa-first-assessment-2021-owned-original-v3-item-knowledge-points",
+      "dataVersion": "math-aa-real-source-certified-20260803",
       "syllabusVersion": "first-assessment-2021",
       "topicAreas": [
         {
@@ -1041,12 +1044,14 @@
       },
       "mockExam": {
         "assessmentModel": "ib-paper",
-        "status": "paper_practice_only",
-        "note": "IB Math AA uses paper-based practice; AP Mock Exam generation is not used."
+        "status": "ready",
+        "blueprint": "ib/math-aa/mock_blueprint.json",
+        "eligibilityManifest": "ib/math-aa/mock_question_eligibility.json",
+        "note": "Reviewed Mock structure is available for released Math AA practice."
       },
       "readiness": {
         "status": "green",
-        "updatedAt": "2026-07-28",
+        "updatedAt": "2026-08-03",
         "p0": 0,
         "p1": 0,
         "contentRiskCodes": [],
@@ -1066,9 +1071,12 @@
       "visibility": "public",
       "paperBank": "ib/math-aa-hl/paper_bank.json",
       "classificationConfig": "ib/math-aa/classification_config.json",
+      "knowledgeTree": "ib/math-aa/knowledge_tree.json",
+      "coverageMatrix": "ib/math-aa/coverage_matrix.json",
+      "curriculumCoverageStatus": "released_with_capacity_warnings",
       "classificationLedger": "ib/math-aa/item_classification_ledger.json",
       "sourceInventory": "ib/math-aa/source_inventory.json",
-      "dataVersion": "math-aa-first-assessment-2021-owned-original-v3-item-knowledge-points",
+      "dataVersion": "math-aa-real-source-certified-20260803",
       "syllabusVersion": "first-assessment-2021",
       "topicAreas": [
         {
@@ -1109,19 +1117,21 @@
           {
             "id": "P3",
             "name": "Paper 3",
-            "calculatorAllowed": null,
-            "requiresSourceVerification": true
+            "calculatorAllowed": true,
+            "requiresSourceVerification": false
           }
         ]
       },
       "mockExam": {
         "assessmentModel": "ib-paper",
-        "status": "paper_practice_only",
-        "note": "IB Math AA uses paper-based practice; AP Mock Exam generation is not used."
+        "status": "ready",
+        "blueprint": "ib/math-aa/mock_blueprint.json",
+        "eligibilityManifest": "ib/math-aa/mock_question_eligibility.json",
+        "note": "Reviewed Mock structure is available for released Math AA practice."
       },
       "readiness": {
         "status": "green",
-        "updatedAt": "2026-07-28",
+        "updatedAt": "2026-08-03",
         "p0": 0,
         "p1": 0,
         "contentRiskCodes": [],

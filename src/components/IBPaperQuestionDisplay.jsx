@@ -12,10 +12,47 @@ function metaLabel(item) {
   return `${item.level} ${item.paper} · ${item.session} ${item.timezone} · ${item.marks} marks · ${calculator}`
 }
 
+function ContentBlocks({ blocks = [] }) {
+  return (
+    <div className="space-y-3">
+      {blocks.map((block, index) => {
+        if (block.type === 'table') {
+          return (
+            <div key={`table-${index}`} className="overflow-x-auto rounded-lg border border-border bg-white">
+              {block.caption && <div className="border-b border-border px-3 py-2 text-sm font-medium text-text"><MathText text={block.caption} /></div>}
+              <table className="min-w-full border-collapse text-sm text-text">
+                <thead className="bg-bg">
+                  <tr>{(block.columns || []).map((column, columnIndex) => <th key={columnIndex} className="border-b border-border px-3 py-2 text-left font-semibold"><MathText text={column} /></th>)}</tr>
+                </thead>
+                <tbody>
+                  {(block.rows || []).map((row, rowIndex) => (
+                    <tr key={rowIndex}>{row.map((cell, cellIndex) => <td key={cellIndex} className="border-b border-border px-3 py-2 last:border-b-0"><MathText text={cell} /></td>)}</tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )
+        }
+        if (block.type === 'figure') {
+          return (
+            <figure key={`figure-${index}`} className="rounded-lg border border-border bg-white p-3">
+              {block.asset?.path && <img src={imageUrl(block.asset.path)} alt={block.alt || ''} className="mx-auto max-h-[520px] max-w-full" />}
+              {block.caption && <figcaption className="mt-2 text-center text-sm text-text-muted"><MathText text={block.caption} /></figcaption>}
+            </figure>
+          )
+        }
+        return <MathText key={`paragraph-${index}`} text={block.text || ''} as="div" />
+      })}
+    </div>
+  )
+}
+
 export default function IBPaperQuestionDisplay({ item, showSolution = false }) {
   if (!item) return null
   const figures = Array.isArray(item.figures) ? item.figures : []
-  const parts = Array.isArray(item.parts) ? item.parts : []
+  const content = item.content || {}
+  const stemBlocks = Array.isArray(content.stem_blocks) ? content.stem_blocks : []
+  const parts = Array.isArray(content.parts) && content.parts.length > 0 ? content.parts : (Array.isArray(item.parts) ? item.parts : [])
   const solution = item.solution || {}
   const markscheme = item.markscheme || {}
   const knowledge = item.knowledge_point_classification || {}
@@ -40,7 +77,7 @@ export default function IBPaperQuestionDisplay({ item, showSolution = false }) {
       </h2>
 
       <div className="prose prose-slate max-w-none text-text">
-        <MathText text={item.text} as="div" />
+        {stemBlocks.length > 0 ? <ContentBlocks blocks={stemBlocks} /> : <MathText text={item.text} as="div" />}
       </div>
 
       {figures.map((figure, index) => (
@@ -63,7 +100,7 @@ export default function IBPaperQuestionDisplay({ item, showSolution = false }) {
               <div className="mb-1 text-sm font-semibold text-brand">
                 ({part.label}) {part.marks ? `[${part.marks} marks]` : ''}
               </div>
-              <MathText text={part.text} as="div" />
+              {Array.isArray(part.blocks) && part.blocks.length > 0 ? <ContentBlocks blocks={part.blocks} /> : <MathText text={part.text} as="div" />}
             </div>
           ))}
         </div>
@@ -79,6 +116,12 @@ export default function IBPaperQuestionDisplay({ item, showSolution = false }) {
                 <div key={index} className="rounded border border-blue-100 bg-white p-2 text-sm">
                   <div className="font-semibold text-text">{row.marks ? `${row.marks} marks` : `Step ${index + 1}`}</div>
                   <MathText text={row.text} as="div" />
+                  {Array.isArray(row.figures) && row.figures.map((figure, figureIndex) => (
+                    <figure key={`${figure.path || figureIndex}`} className="mt-3 rounded border border-blue-100 bg-white p-2">
+                      {figure.path && <img src={imageUrl(figure.path)} alt={figure.alt || ''} className="mx-auto max-h-[520px] max-w-full" />}
+                      {figure.caption && <figcaption className="mt-2 text-center text-xs text-text-muted"><MathText text={figure.caption} /></figcaption>}
+                    </figure>
+                  ))}
                 </div>
               ))}
             </div>

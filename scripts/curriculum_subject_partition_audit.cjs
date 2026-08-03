@@ -24,7 +24,17 @@ const byCurriculum = active.reduce((acc, subject) => {
 }, {})
 
 if (byCurriculum.ap !== 16) errors.push(`active AP subject count must remain 16, got ${byCurriculum.ap || 0}`)
-if (byCurriculum.ib !== 2) errors.push(`active IB subject count must remain 2, got ${byCurriculum.ib || 0}`)
+const ibSubjects = subjects.filter(subject => subject.curriculum === 'ib')
+if (ibSubjects.length !== 2) errors.push(`IB subject records must remain 2, got ${ibSubjects.length}`)
+const activeIbCount = byCurriculum.ib || 0
+if (![0, 2].includes(activeIbCount)) errors.push(`IB subjects must be released or withdrawn as one SL/HL pair, got ${activeIbCount} active`)
+if (activeIbCount === 0) {
+  for (const subject of ibSubjects) {
+    if (subject.active !== false || subject.visibility !== 'candidate' || subject.releaseStatus !== 'candidate') {
+      errors.push(`${subject.id}: withdrawn IB subject must be inactive candidate content`)
+    }
+  }
+}
 
 for (const subject of active) {
   if (!subject.curriculum) errors.push(`${subject.id}: active subject missing curriculum`)

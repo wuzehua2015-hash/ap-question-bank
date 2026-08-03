@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import IBPaperQuestionDisplay from '../components/IBPaperQuestionDisplay'
-import { getCurrentPaper } from '../utils/quizSession'
+import IBManualScorePanel from '../components/IBManualScorePanel'
+import IBAnswerUploadPanel from '../components/IBAnswerUploadPanel'
+import { getCurrentPaper, getQuizConfig, getQuizInfo } from '../utils/quizSession'
 
 export default function PaperPracticePlayer() {
   const navigate = useNavigate()
   const [items, setItems] = useState([])
   const [index, setIndex] = useState(0)
   const [showSolution, setShowSolution] = useState(false)
+  const [sessionMeta, setSessionMeta] = useState(null)
 
   useEffect(() => {
     const current = getCurrentPaper()
@@ -16,6 +19,7 @@ export default function PaperPracticePlayer() {
       return
     }
     setItems(current)
+    setSessionMeta({ config: getQuizConfig(), info: getQuizInfo() })
   }, [navigate])
 
   const item = items[index]
@@ -30,6 +34,10 @@ export default function PaperPracticePlayer() {
       </div>
 
       <IBPaperQuestionDisplay item={item} showSolution={showSolution} />
+      {sessionMeta?.info?.sourceId && <IBAnswerUploadPanel subjectId={sessionMeta.config?.subject} sessionType="quiz" sourceId={sessionMeta.info.sourceId} items={[item]} defaultQuestionId={item.question_id} />}
+      {showSolution && sessionMeta?.info?.sourceId && (
+        <IBManualScorePanel item={item} subjectId={sessionMeta.config?.subject} sessionType="quiz" sourceId={sessionMeta.info.sourceId} />
+      )}
 
       <div className="mt-5 flex flex-wrap gap-3">
         <button
