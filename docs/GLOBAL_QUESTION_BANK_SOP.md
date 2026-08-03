@@ -1,6 +1,6 @@
 # Global Question Bank SOP
 
-Last updated: 2026-07-21
+Last updated: 2026-08-01
 
 This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and publishing question-bank content across AP subjects and future A-Level, IB, and competition subjects. Older subject notes remain useful evidence, but this SOP is the entry contract.
 
@@ -8,6 +8,7 @@ This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and pu
 
 - Quality beats count. A target such as "add 100-200 MCQ" is not complete until every accepted item passes source approval, reconstruction, unit classification, student rendering, and release checks.
 - The student surface is the truth. Data that exists in JSON but is not visible in Quiz, Search/review, Mock, FRQ, or PDF is not delivered.
+- Student actual usability and highest-standard delivery are the first priority above quantity, speed, automation, file existence, or a passing script. Structured question text is the only delivery form: PDFs, screenshots and crops are evidence or necessary visual attachments, never substitutes for stems, options/subparts, answers or markschemes. The binding rules are in `docs/STRUCTURED_QUESTION_DELIVERY_STANDARD.md`.
 - Every subject gets its own risk discovery. Generic extraction cannot certify a subject with code, formulas, tables, diagrams, grouped stimuli, visual answer choices, FRQ rubrics, or unusual option layouts.
 - New curriculum families must define their assessment model before any item import. AP `MCQ/FRQ` is only one model; IB, A-Level, and competition subjects may be paper/marks/level/component driven and must not be forced into AP fields.
 - Unit classification follows official learning order. `primary_unit` is the latest official unit a student must have completed to answer the item, not a keyword label.
@@ -21,6 +22,7 @@ This is the top-level SSoT for adding, expanding, rebuilding, diagnosing, and pu
 - No publication without a fresh build and student-path check. JSON validation alone is insufficient.
 - "Full" means every active student-visible item is in an item-level ledger. Sampling, screenshots, and representative browser checks are useful evidence, but they never replace the full ledger.
 - Release closeout requires `npm run validate:student-risk` with P0=0, P1=0, and P2=0 across the full active item set. Any unresolved required prompt, table, figure, code block, option structure, scoring support, or unit-classification issue must be fixed or hidden before release.
+- Release closeout also requires `npm run validate:structured-delivery` with zero errors. Source-located, screenshot-only or summary-only records contribute zero completed student-bank items.
 
 ## Global Lifecycle
 
@@ -40,13 +42,14 @@ Do not mark a goal complete before state `closed`.
 
 ## Source Approval SOP
 
-For each source batch:
+For each source batch, `docs/QUESTION_SOURCE_POLICY.md` is the higher-priority admission rule. Self-written questions, template variants, reconstructed substitutes, and capacity-filling questions are prohibited.
 
-- Identify source type: official, public practice, open curriculum, owned content, legacy released material, or scanned legacy material.
+- Identify source type: official exam, official sample, open-licensed exam, explicitly licensed exam, legacy released material, or scanned legacy material.
 - Record source credit, license/usage notes where applicable, source URL/file path, acquisition date, year, and curriculum fit.
 - Prefer 2009-and-later AP material unless a subject-specific reason supports older content.
 - Reject or defer items that are obsolete, outside current curriculum, incomplete, too noisy to reconstruct confidently, or lacking reliable answers.
-- For non-official practice sources, label `source_set` clearly and keep provenance metadata.
+- A new student-visible item must have a verified question-source fingerprint, paired answer-source fingerprint, exact exam locator, and approved student-use status in `public/data/question_source_registry.json`.
+- Internal-only material must remain blocked until student-use permission is recorded.
 - Do not mix source batches silently. Each batch needs a distinct `source_set` and source report.
 
 Required output:
@@ -92,7 +95,7 @@ An item may enter Web data only when:
 - every grouped bucket has complete `group_id`, `group_members`, `group_role`, and `group_context` metadata;
 - shared tables inside `group_context` are rendered as structured tables through `MathText`, not left as unreadable flattened text;
 - visual assets are precise and owned by the item or group;
-- no broad page image is used as a substitute for clean structure unless explicitly approved as the only faithful representation;
+- no broad page image or crop is used as a substitute for structured text/data;
 - FRQ rubrics have subject-specific solution outlines and scoring rows, without repeated template text.
 - items that cannot yet meet the above student-delivery contract must be marked `publish_status: "blocked"` and `student_visible: false`; they must not remain available to Quiz, Mock, Search/review, mistake-book, history, question-set, similar-practice, or PDF flows.
 
@@ -105,6 +108,85 @@ Subject-specific examples:
 - CSP: algorithm blocks, database/list/table structures, visual options.
 - Math/Physics/Statistics: formula rendering, graph precision, tables, and PDF pagination.
 - IB Mathematics: level (`SL`/`HL`), paper (`P1`/`P2`/`P3`), calculator status, marks, subpart marks, timezone, syllabus version, and markscheme pairing are required delivery fields.
+
+## Whole-Paper Real-Source Build SOP
+
+This is the required build method whenever a source consists of examination papers and paired answers or markschemes. It is designed to keep the reliable speed of the established AP paper workflow without allowing automation to change what a student sees.
+
+### 1. Set up a source set before touching its questions
+
+For every new year, paper family, or subject, create one source-set record containing:
+
+- official framework and assessment version;
+- every paper and paired answer/markscheme file, its SHA-256, page count, session, level/component and usage decision;
+- the paper's marks, timing, calculator or tool rule, question numbering and any optional-choice rule;
+- known risks: formulas, tables, diagrams, multi-page prompts, continued markschemes, alternative methods, follow-through rules, zero-mark conditions and answer figures;
+- a deliberately chosen sample paper/year and representative questions that cover those risks.
+
+The sample is the test for the process, not a shortcut around the rest of the source set. Its approved records become regression samples: every later process change must still preserve their displayed text, marks, answers, scoring points, source pages and assets.
+
+### 2. Program work: create review material, never student content
+
+The program may process a complete paper set in bulk to:
+
+- confirm file fingerprints, page counts, paper/markscheme pairing, numbering and total marks;
+- locate each question and all continuation pages;
+- extract text candidates, observed part labels, mark labels and possible figure/table regions;
+- create an empty review batch with the question ID, source pages, hashes, assets and required audit-field checklist;
+- compare a completed batch with its source-set inventory and report missing pages, missing pairings, repeated locators, mark-total conflicts and stale inputs.
+
+The program must not fill, rewrite, shorten, translate, infer or approve student-visible question text, answer text, markscheme text, knowledge points or scoring points. Candidate text is a reading aid only. A candidate, page image or empty batch has completed-question count zero.
+
+### 3. Human review: fill one complete item at a time inside a small batch
+
+For each item, review the rendered official question and every relevant answer/markscheme page side by side. Enter the complete official text, all parts, mathematical notation, structured tables and required figure assets. Then enter the official answer and every scoring condition, note, alternative method, follow-through condition and total mark.
+
+Classify from the full prompt and the correct scoring path against the current official framework. A keyword, an old label, or a candidate-text guess cannot decide the knowledge point. Record the exact source page, source-file hash and asset hash for every student-visible field.
+
+Before an item is accepted, one reviewer must explicitly confirm all of the following:
+
+- no question continuation page, subpart, formula, table, figure or instruction is missing;
+- no markscheme continuation, alternative method, condition, note or scoring point is missing;
+- every part total and the whole-question total reconcile with the official paper;
+- the displayed figure contains only the needed official visual material, not neighbouring questions, scoring text, page furniture or unreadable detail;
+- the answer, markscheme and classification allow a student to self-check or receive later scoring without guessing.
+
+### 4. Batch acceptance and progress tracking
+
+Use small safe batches (normally 5–10 items after the sample is proven). Every batch must have a machine-readable ledger with:
+
+- `pipeline_version`, `source_set_id`, input file hashes and candidate-output hash;
+- the ordered question IDs and the current state of each item: `queued`, `in_review`, `accepted`, `rejected`, or `deferred`;
+- reviewer, review timestamp, exact rejection/defer reason and links to all generated evidence;
+- counts for source locators, accepted structured items, exact duplicates, rejected and deferred items; and
+- the checks run and their results.
+
+Only the controlled writer may change an accepted item to `structured_reviewed`. It must support a no-write check mode so the complete batch is validated before any bank file is changed. An accepted item remains hidden until the course's release gate passes.
+
+For Math AA, `scripts/create_real_source_review_batch.cjs` creates this review-only ledger from the canonical queue. It intentionally creates no student-visible fields; the reviewer adds the final payload in a separate reviewed batch file, checks it with `scripts/install_ib_math_aa_structured_batch.cjs --check <batch-file>`, and only then runs the same command without `--check`.
+
+After every item run the lightweight data check. After every safe batch, run the subject validation chain and one student-surface check covering the content type newly added. If memory is temporarily insufficient for the browser, record that check as pending and continue reviewing; do not treat it as approval or as a reason to abandon the batch. Run browser work in one instance only and confirm its process and preview port are gone afterward.
+
+### 5. Improve safely and reuse the process
+
+When a defect is found, record the failure class, the affected source sets, the corrected rule, the validator added or changed, and the regression samples used to prove the correction. Do not silently alter a process or rewrite previously accepted records.
+
+Any new subject or year reuses this flow only after completing the adaptation checklist below. A source-set-specific renderer, parser or validator is allowed, but it must produce the same audit ledger and obey the same rule: automation prepares evidence; human review approves complete student content.
+
+### New subject / new year adaptation checklist
+
+Before bulk work, record the answers to these questions in the subject delivery standard:
+
+1. What are the exact official assessment components, timing rules, marks and question structures?
+2. Which source files form a complete question-and-answer pair, and do any answers continue across pages?
+3. Which content must be structured as text/table/formula and which official visuals must remain assets?
+4. What assessment-specific scoring details exist (for example alternative methods, follow-through, method marks, annotations, code execution or diagram requirements)?
+5. What is the official knowledge-point authority and how will prompt plus correct solution path determine the primary point?
+6. Which representative sample questions prove each risk is handled?
+7. Which student flows can use the content: practice, paper, mock, download, self-check, scoring, uploads, history and mistake review?
+8. Which new validators and browser checks are required before the first batch can be accepted?
+
+An unanswered item keeps the source set in preparation. It is not a reason to invent a convenient default.
 
 ## Non-AP Assessment Model SOP
 

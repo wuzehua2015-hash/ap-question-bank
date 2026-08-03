@@ -1,11 +1,29 @@
 ﻿const BASE_URL = import.meta.env.BASE_URL || '/'
 
+// Only an isolated local audit build may expose reviewed IB candidates.
+// Normal and production builds keep this false and preserve the public gate.
+export const IB_CANDIDATE_AUDIT = import.meta.env.VITE_IB_CANDIDATE_AUDIT === 'true'
+
+export function isIbCandidateAuditSubject(subject) {
+  return IB_CANDIDATE_AUDIT && subject?.curriculum === 'ib' && subject?.course === 'math-aa' && subject?.visibility === 'candidate'
+}
+
+function isStructuredReviewedIbItem(item) {
+  return IB_CANDIDATE_AUDIT &&
+    item?.student_visible === false &&
+    item?.publish_status === 'blocked' &&
+    item?.transcription_status === 'structured_reviewed' &&
+    item?.classification_status === 'verified_item_level' &&
+    item?.scoring_status === 'verified_mark_points'
+}
+
 // Cache: per-subject data + subjects config + similarity index
 const cache = {
   subjects: null,
   mcq: {},
   frq: {},
   paper: {},
+  knowledgeTree: {},
   similarityIndex: {}
 }
 
@@ -266,9 +284,22 @@ export async function loadPaperBank(subjectId) {
   if (!res.ok) throw new Error(`Failed to load paper bank for ${subjectId}: ${res.status}`)
   const data = await res.json()
   cache.paper[subjectId] = Array.isArray(data)
-    ? data.filter(item => item.student_visible !== false && item.publish_status !== 'blocked')
+    ? data.filter(item => (
+      (item.student_visible !== false && item.publish_status !== 'blocked') ||
+      isStructuredReviewedIbItem(item)
+    ))
     : []
   return cache.paper[subjectId]
+}
+
+export async function loadKnowledgeTree(subjectId) {
+  if (cache.knowledgeTree[subjectId]) return cache.knowledgeTree[subjectId]
+  const cfg = await loadSubjectConfig(subjectId)
+  if (!cfg.knowledgeTree) return null
+  const res = await fetch(`${BASE_URL}data/${cfg.knowledgeTree}`)
+  if (!res.ok) throw new Error(`Failed to load knowledge tree for ${subjectId}: ${res.status}`)
+  cache.knowledgeTree[subjectId] = await res.json()
+  return cache.knowledgeTree[subjectId]
 }
 
 // Similarity Index Loading
@@ -461,4 +492,3 @@ export async function generateMockExam(questions, frqQuestions, subjectId = 'mac
     isMock: true,
   }
 }
-

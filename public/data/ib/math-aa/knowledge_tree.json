@@ -1,0 +1,1302 @@
+{
+  "curriculum": "ib",
+  "course": "math-aa",
+  "syllabus_version": "first-assessment-2021",
+  "authority": {
+    "title": "IB Diploma Programme Mathematics: analysis and approaches guide",
+    "publication_date": "February 2019",
+    "source_url": "https://ibo.org/programmes/diploma-programme/curriculum/mathematics/",
+    "reference_copy_url": "https://www.ibmathematics.org/wp-content/uploads/2020/02/AA-guide.pdf",
+    "guide_sha256": "B492A8FB5FCAEFF2886D3C4A1D20425F6ED987314A95EA681038A67C7DD1DDE9",
+    "guide_pages": 100,
+    "guide_pdf_title": "Mathematics: analysis and approaches guide",
+    "guide_pdf_author": "International Baccalaureate"
+  },
+  "completion_thresholds": {
+    "minimum_primary_items_per_knowledge_point": 8,
+    "target_primary_items_per_knowledge_point": 12,
+    "rule": "Every in-scope knowledge-point leaf must meet the minimum before full-course coverage can be reported."
+  },
+  "topic_areas": [
+    {
+      "id": "T1",
+      "name": "Number and algebra",
+      "name_zh": "数与代数",
+      "syllabus_items": [
+        {
+          "code": "AA-1.1",
+          "name": "科学记数法",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.1",
+              "name": "科学记数法",
+              "topic": "T1",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-1.1",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.2",
+          "name": "等差数列与等差级数",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.2",
+              "name": "等差数列与等差级数",
+              "topic": "T1",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-1.2",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.3",
+          "name": "等比数列与等比级数",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.3",
+              "name": "等比数列与等比级数",
+              "topic": "T1",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-1.3",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.4",
+          "name": "复利、折旧与实际价值",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.4",
+              "name": "复利、折旧与实际价值",
+              "topic": "T1",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-1.4",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.5",
+          "name": "整数指数律与对数入门",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.5",
+              "name": "整数指数律与对数入门",
+              "topic": "T1",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-1.5",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.6",
+          "name": "数值与代数演绎证明",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.6",
+              "name": "数值与代数演绎证明",
+              "topic": "T1",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-1.6",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.7",
+          "name": "有理指数与对数定律",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.7",
+              "name": "有理指数与对数定律",
+              "topic": "T1",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-1.7",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.8",
+          "name": "无穷等比级数",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.8",
+              "name": "无穷等比级数",
+              "topic": "T1",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-1.8",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.9",
+          "name": "二项式定理",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.9",
+              "name": "二项式定理",
+              "topic": "T1",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-1.9",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.10",
+          "name": "计数原理与广义二项式展开",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.10",
+              "name": "计数原理与广义二项式展开",
+              "topic": "T1",
+              "scope": "HL",
+              "syllabus_code": "AA-1.10",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.11",
+          "name": "部分分式",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.11",
+              "name": "部分分式",
+              "topic": "T1",
+              "scope": "HL",
+              "syllabus_code": "AA-1.11",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.12",
+          "name": "复数的直角坐标形式与阿根图",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.12",
+              "name": "复数的直角坐标形式与阿根图",
+              "topic": "T1",
+              "scope": "HL",
+              "syllabus_code": "AA-1.12",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.13",
+          "name": "复数的极形式与欧拉形式",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.13",
+              "name": "复数的极形式与欧拉形式",
+              "topic": "T1",
+              "scope": "HL",
+              "syllabus_code": "AA-1.13",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.14",
+          "name": "共轭复根与棣莫弗定理",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.14",
+              "name": "共轭复根与棣莫弗定理",
+              "topic": "T1",
+              "scope": "HL",
+              "syllabus_code": "AA-1.14",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.15",
+          "name": "数学归纳法与反证法",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.15",
+              "name": "数学归纳法与反证法",
+              "topic": "T1",
+              "scope": "HL",
+              "syllabus_code": "AA-1.15",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-1.16",
+          "name": "三元一次方程组",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-1.16",
+              "name": "三元一次方程组",
+              "topic": "T1",
+              "scope": "HL",
+              "syllabus_code": "AA-1.16",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "name": "Functions",
+      "name_zh": "函数",
+      "syllabus_items": [
+        {
+          "code": "AA-2.1",
+          "name": "直线方程、斜率与平行垂直",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.1",
+              "name": "直线方程、斜率与平行垂直",
+              "topic": "T2",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-2.1",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.2",
+          "name": "函数、定义域、值域与反函数",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.2",
+              "name": "函数、定义域、值域与反函数",
+              "topic": "T2",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-2.2",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.3",
+          "name": "函数图像与建模表示",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.3",
+              "name": "函数图像与建模表示",
+              "topic": "T2",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-2.3",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.4",
+          "name": "图像关键特征与交点",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.4",
+              "name": "图像关键特征与交点",
+              "topic": "T2",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-2.4",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.5",
+          "name": "复合函数与反函数",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.5",
+              "name": "复合函数与反函数",
+              "topic": "T2",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-2.5",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.6",
+          "name": "二次函数的三种形式与图像",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.6",
+              "name": "二次函数的三种形式与图像",
+              "topic": "T2",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-2.6",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.7",
+          "name": "二次方程、不等式与判别式",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.7",
+              "name": "二次方程、不等式与判别式",
+              "topic": "T2",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-2.7",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.8",
+          "name": "倒数函数与有理函数渐近线",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.8",
+              "name": "倒数函数与有理函数渐近线",
+              "topic": "T2",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-2.8",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.9",
+          "name": "指数函数与对数函数",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.9",
+              "name": "指数函数与对数函数",
+              "topic": "T2",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-2.9",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.10",
+          "name": "图像法与解析法解方程",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.10",
+              "name": "图像法与解析法解方程",
+              "topic": "T2",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-2.10",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.11",
+          "name": "函数图像变换",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.11",
+              "name": "函数图像变换",
+              "topic": "T2",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-2.11",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.12",
+          "name": "多项式、因式定理与根的关系",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.12",
+              "name": "多项式、因式定理与根的关系",
+              "topic": "T2",
+              "scope": "HL",
+              "syllabus_code": "AA-2.12",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.13",
+          "name": "高阶有理函数与斜渐近线",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.13",
+              "name": "高阶有理函数与斜渐近线",
+              "topic": "T2",
+              "scope": "HL",
+              "syllabus_code": "AA-2.13",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.14",
+          "name": "奇偶函数、周期函数与受限反函数",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.14",
+              "name": "奇偶函数、周期函数与受限反函数",
+              "topic": "T2",
+              "scope": "HL",
+              "syllabus_code": "AA-2.14",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.15",
+          "name": "函数不等式",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.15",
+              "name": "函数不等式",
+              "topic": "T2",
+              "scope": "HL",
+              "syllabus_code": "AA-2.15",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-2.16",
+          "name": "绝对值、倒数与复合图像变换",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-2.16",
+              "name": "绝对值、倒数与复合图像变换",
+              "topic": "T2",
+              "scope": "HL",
+              "syllabus_code": "AA-2.16",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "name": "Geometry and trigonometry",
+      "name_zh": "几何与三角",
+      "syllabus_items": [
+        {
+          "code": "AA-3.1",
+          "name": "三维距离、中点、表面积与体积",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.1",
+              "name": "三维距离、中点、表面积与体积",
+              "topic": "T3",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-3.1",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.2",
+          "name": "正弦定理、余弦定理与三角形面积",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.2",
+              "name": "正弦定理、余弦定理与三角形面积",
+              "topic": "T3",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-3.2",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.3",
+          "name": "直角与非直角三角应用",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.3",
+              "name": "直角与非直角三角应用",
+              "topic": "T3",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-3.3",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.4",
+          "name": "弧度、弧长与扇形面积",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.4",
+              "name": "弧度、弧长与扇形面积",
+              "topic": "T3",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-3.4",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.5",
+          "name": "单位圆与精确三角值",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.5",
+              "name": "单位圆与精确三角值",
+              "topic": "T3",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-3.5",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.6",
+          "name": "勾股恒等式与二倍角公式",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.6",
+              "name": "勾股恒等式与二倍角公式",
+              "topic": "T3",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-3.6",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.7",
+          "name": "三角函数图像、周期与变换",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.7",
+              "name": "三角函数图像、周期与变换",
+              "topic": "T3",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-3.7",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.8",
+          "name": "有限区间三角方程",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.8",
+              "name": "有限区间三角方程",
+              "topic": "T3",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-3.8",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.9",
+          "name": "倒数三角函数与反三角函数",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.9",
+              "name": "倒数三角函数与反三角函数",
+              "topic": "T3",
+              "scope": "HL",
+              "syllabus_code": "AA-3.9",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.10",
+          "name": "和差角公式与正切二倍角",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.10",
+              "name": "和差角公式与正切二倍角",
+              "topic": "T3",
+              "scope": "HL",
+              "syllabus_code": "AA-3.10",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.11",
+          "name": "三角函数对称关系",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.11",
+              "name": "三角函数对称关系",
+              "topic": "T3",
+              "scope": "HL",
+              "syllabus_code": "AA-3.11",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.12",
+          "name": "向量表示与向量代数",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.12",
+              "name": "向量表示与向量代数",
+              "topic": "T3",
+              "scope": "HL",
+              "syllabus_code": "AA-3.12",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.13",
+          "name": "数量积与向量夹角",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.13",
+              "name": "数量积与向量夹角",
+              "topic": "T3",
+              "scope": "HL",
+              "syllabus_code": "AA-3.13",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.14",
+          "name": "二维和三维直线的向量方程",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.14",
+              "name": "二维和三维直线的向量方程",
+              "topic": "T3",
+              "scope": "HL",
+              "syllabus_code": "AA-3.14",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.15",
+          "name": "重合、平行、相交与异面直线",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.15",
+              "name": "重合、平行、相交与异面直线",
+              "topic": "T3",
+              "scope": "HL",
+              "syllabus_code": "AA-3.15",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.16",
+          "name": "向量积及其几何应用",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.16",
+              "name": "向量积及其几何应用",
+              "topic": "T3",
+              "scope": "HL",
+              "syllabus_code": "AA-3.16",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.17",
+          "name": "平面的向量方程与笛卡尔方程",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.17",
+              "name": "平面的向量方程与笛卡尔方程",
+              "topic": "T3",
+              "scope": "HL",
+              "syllabus_code": "AA-3.17",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-3.18",
+          "name": "直线和平面交点与夹角",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-3.18",
+              "name": "直线和平面交点与夹角",
+              "topic": "T3",
+              "scope": "HL",
+              "syllabus_code": "AA-3.18",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "name": "Statistics and probability",
+      "name_zh": "统计与概率",
+      "syllabus_items": [
+        {
+          "code": "AA-4.1",
+          "name": "总体、样本、抽样、偏差与异常值",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.1",
+              "name": "总体、样本、抽样、偏差与异常值",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.1",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.2",
+          "name": "频数表、直方图与累积频数图",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.2",
+              "name": "频数表、直方图与累积频数图",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.2",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.3",
+          "name": "集中趋势与离散程度",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.3",
+              "name": "集中趋势与离散程度",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.3",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.4",
+          "name": "线性相关与回归",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.4",
+              "name": "线性相关与回归",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.4",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.5",
+          "name": "试验、样本空间与基础概率",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.5",
+              "name": "试验、样本空间与基础概率",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.5",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.6",
+          "name": "联合事件、条件概率与树状图",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.6",
+              "name": "联合事件、条件概率与树状图",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.6",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.7",
+          "name": "离散随机变量与期望",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.7",
+              "name": "离散随机变量与期望",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.7",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.8",
+          "name": "二项分布及其均值和方差",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.8",
+              "name": "二项分布及其均值和方差",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.8",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.9",
+          "name": "正态分布与正态概率",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.9",
+              "name": "正态分布与正态概率",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.9",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.10",
+          "name": "x 对 y 回归线与预测",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.10",
+              "name": "x 对 y 回归线与预测",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.10",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.11",
+          "name": "独立事件与条件概率公式",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.11",
+              "name": "独立事件与条件概率公式",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.11",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.12",
+          "name": "正态变量标准化与逆正态",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.12",
+              "name": "正态变量标准化与逆正态",
+              "topic": "T4",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-4.12",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.13",
+          "name": "贝叶斯定理",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.13",
+              "name": "贝叶斯定理",
+              "topic": "T4",
+              "scope": "HL",
+              "syllabus_code": "AA-4.13",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-4.14",
+          "name": "随机变量方差与连续概率密度",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-4.14",
+              "name": "随机变量方差与连续概率密度",
+              "topic": "T4",
+              "scope": "HL",
+              "syllabus_code": "AA-4.14",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T5",
+      "name": "Calculus",
+      "name_zh": "微积分",
+      "syllabus_items": [
+        {
+          "code": "AA-5.1",
+          "name": "极限、导数与变化率入门",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.1",
+              "name": "极限、导数与变化率入门",
+              "topic": "T5",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-5.1",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.2",
+          "name": "增减区间与导数符号",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.2",
+              "name": "增减区间与导数符号",
+              "topic": "T5",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-5.2",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.3",
+          "name": "整数幂多项式求导",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.3",
+              "name": "整数幂多项式求导",
+              "topic": "T5",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-5.3",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.4",
+          "name": "切线与法线方程",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.4",
+              "name": "切线与法线方程",
+              "topic": "T5",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-5.4",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.5",
+          "name": "反导数、边界条件与定积分入门",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.5",
+              "name": "反导数、边界条件与定积分入门",
+              "topic": "T5",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-5.5",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.6",
+          "name": "常见函数求导、链式法则、乘积与商法则",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.6",
+              "name": "常见函数求导、链式法则、乘积与商法则",
+              "topic": "T5",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-5.6",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.7",
+          "name": "二阶导数与导函数图像关系",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.7",
+              "name": "二阶导数与导函数图像关系",
+              "topic": "T5",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-5.7",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.8",
+          "name": "极值、拐点与优化",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.8",
+              "name": "极值、拐点与优化",
+              "topic": "T5",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-5.8",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.9",
+          "name": "运动学中的位移、速度与加速度",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.9",
+              "name": "运动学中的位移、速度与加速度",
+              "topic": "T5",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-5.9",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.10",
+          "name": "不定积分、换元与逆链式法则",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.10",
+              "name": "不定积分、换元与逆链式法则",
+              "topic": "T5",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-5.10",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.11",
+          "name": "定积分、曲线面积与曲线间面积",
+          "scope": "SL_HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.11",
+              "name": "定积分、曲线面积与曲线间面积",
+              "topic": "T5",
+              "scope": "SL_HL",
+              "syllabus_code": "AA-5.11",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.12",
+          "name": "连续、可导与第一原理求导",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.12",
+              "name": "连续、可导与第一原理求导",
+              "topic": "T5",
+              "scope": "HL",
+              "syllabus_code": "AA-5.12",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.13",
+          "name": "洛必达法则与极限",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.13",
+              "name": "洛必达法则与极限",
+              "topic": "T5",
+              "scope": "HL",
+              "syllabus_code": "AA-5.13",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.14",
+          "name": "隐函数求导、相关变化率与优化",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.14",
+              "name": "隐函数求导、相关变化率与优化",
+              "topic": "T5",
+              "scope": "HL",
+              "syllabus_code": "AA-5.14",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.15",
+          "name": "扩展导数和积分公式及部分分式积分",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.15",
+              "name": "扩展导数和积分公式及部分分式积分",
+              "topic": "T5",
+              "scope": "HL",
+              "syllabus_code": "AA-5.15",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.16",
+          "name": "换元积分与分部积分",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.16",
+              "name": "换元积分与分部积分",
+              "topic": "T5",
+              "scope": "HL",
+              "syllabus_code": "AA-5.16",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.17",
+          "name": "绕坐标轴旋转体体积",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.17",
+              "name": "绕坐标轴旋转体体积",
+              "topic": "T5",
+              "scope": "HL",
+              "syllabus_code": "AA-5.17",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.18",
+          "name": "一阶微分方程与欧拉法",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.18",
+              "name": "一阶微分方程与欧拉法",
+              "topic": "T5",
+              "scope": "HL",
+              "syllabus_code": "AA-5.18",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        },
+        {
+          "code": "AA-5.19",
+          "name": "麦克劳林级数",
+          "scope": "HL",
+          "knowledge_points": [
+            {
+              "code": "AA-5.19",
+              "name": "麦克劳林级数",
+              "topic": "T5",
+              "scope": "HL",
+              "syllabus_code": "AA-5.19",
+              "authority_level": "official_syllabus_item"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

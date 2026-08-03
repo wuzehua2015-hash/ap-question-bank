@@ -1,0 +1,23 @@
+name = "lynkedu-answer-processor"
+main = "index.js"
+compatibility_date = "2026-07-29"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "lynkedu-question-bank"
+database_id = "REPLACE_WITH_DATABASE_ID"
+
+[[r2_buckets]]
+binding = "ANSWER_ASSETS"
+bucket_name = "REPLACE_WITH_PRIVATE_BUCKET"
+
+[[queues.consumers]]
+queue = "REPLACE_WITH_QUEUE_NAME"
+max_batch_size = 5
+max_batch_timeout = 5
+
+[vars]
+PUBLIC_APP_ORIGIN = "https://lynkedu.com"
+AGNES_BASE_URL = "REPLACE_WITH_PROVIDER_BASE_URL"
+AGNES_MODEL = "agnes-2.0-flash"
+

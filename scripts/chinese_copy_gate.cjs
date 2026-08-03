@@ -11,6 +11,7 @@ const files = [
   'src/components/QuestionDisplay.jsx',
   'src/components/FRQDisplay.jsx',
   'src/components/IBPaperQuestionDisplay.jsx',
+  'src/components/IBManualScorePanel.jsx',
   'src/pages/HomePage.jsx',
   'src/pages/LoginPage.jsx',
   'src/pages/RegisterPage.jsx',
@@ -28,6 +29,10 @@ const files = [
   'src/pages/HistoryPage.jsx',
   'src/pages/PaperPracticeSetup.jsx',
   'src/pages/PaperPracticePlayer.jsx',
+  'src/pages/IBMockSetup.jsx',
+  'src/pages/IBMockDetail.jsx',
+  'src/pages/IBMockPaper.jsx',
+  'src/pages/LearningCenter.jsx',
 ].filter(rel => fs.existsSync(path.join(ROOT, rel)))
 
 const requiredChineseFiles = [
@@ -43,6 +48,11 @@ const requiredChineseFiles = [
   'src/pages/MockPdfPage.jsx',
   'src/pages/PaperPracticeSetup.jsx',
   'src/pages/PaperPracticePlayer.jsx',
+  'src/components/IBManualScorePanel.jsx',
+  'src/pages/IBMockSetup.jsx',
+  'src/pages/IBMockDetail.jsx',
+  'src/pages/IBMockPaper.jsx',
+  'src/pages/LearningCenter.jsx',
 ].filter(rel => fs.existsSync(path.join(ROOT, rel)))
 
 const mojibakePattern = /[\u9225\u95b3\u6d7c\u6434\u94ff\u951c\u9484\u74a7\u9354\u68f0\u93bc\u7edb\u95ff\u59dd\u7035\u6d93\u93c4\u935a\u9a9e\u95c5\u5bb8\u6ccc\u6d60\u9429\u5997\u6ad2\u704f\uFFFD]/

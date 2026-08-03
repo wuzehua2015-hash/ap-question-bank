@@ -26,7 +26,8 @@ function Header() {
   const curriculumLabel = CURRICULUM_LABELS[currentCurriculum] || currentCurriculum || 'AP'
   const navItems = [
     { path: isIBPaperSubject ? '/paper-practice' : '/quiz', label: isIBPaperSubject ? 'Paper 训练' : '练习' },
-    ...isIBPaperSubject ? [] : [{ path: '/exam', label: 'Mock Exam' }],
+    { path: isIBPaperSubject ? '/ib-mock' : '/exam', label: 'Mock Exam' },
+    ...isIBPaperSubject && isLoggedIn ? [{ path: '/learning-center', label: '学习中心' }] : [],
     { path: '/mistakes', label: '错题' },
     { path: '/history', label: '记录' },
   ]

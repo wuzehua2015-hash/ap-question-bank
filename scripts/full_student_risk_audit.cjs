@@ -304,6 +304,14 @@ function finding(subject, item, severity, kind, message, textSample = '') {
 }
 
 function itemText(item) {
+  if (item.curriculum === 'ib' && item.course === 'math-aa' && item.content) {
+    return normalizeVisibleText([
+      item.question_id,
+      structuredContentText(item),
+      item.solution?.outline,
+      Array.isArray(item.markscheme?.rows) ? item.markscheme.rows.map(row => row.text || '').join('\n') : '',
+    ].filter(Boolean).join('\n'))
+  }
   const optionText = item.options && typeof item.options === 'object' ? Object.values(item.options).join('\n') : ''
   const partText = Array.isArray(item.parts) ? item.parts.map(part => `${part.label || ''} ${part.text || ''} ${part.scheme || ''}`).join('\n') : ''
   const markschemeText = Array.isArray(item.markscheme?.rows) ? item.markscheme.rows.map(row => row.text || '').join('\n') : ''
@@ -323,7 +331,11 @@ function itemText(item) {
 }
 
 function hasVisual(item) {
-  return Boolean((item.image_paths || []).length || (item.rubric_image_paths || []).length)
+  return Boolean(
+    (item.image_paths || []).length ||
+    (item.rubric_image_paths || []).length ||
+    hasStructuredBlockType(item, 'figure')
+  )
 }
 
 function _hasTableVisual(item) {
@@ -355,6 +367,7 @@ function hasStudentVisibleTableSupport(item, fullText) {
     item.option_table_data ||
     item.background_data?.table ||
     item.group_context ||
+    hasStructuredBlockType(item, 'table') ||
     hasVisual(item) ||
     hasMarkdownTable(fullText) ||
     hasMarkdownList(fullText)
@@ -376,11 +389,42 @@ function needsStructuredTableReview(item, fullText) {
 function needsVisualReview(subject, item, fullText) {
   const text = String(fullText || '')
   if (!FIGURE_REFERENCE_WORDS.test(text)) return false
-  if (hasVisual(item) || item.background_data?.table || item.group_context || hasMarkdownTable(text)) return false
+  if (hasVisual(item) || item.background_data?.table || item.group_context || hasStructuredBlockType(item, 'table') || hasMarkdownTable(text)) return false
   if (SUBJECT_RENDER_RULES[subject.id]?.code && hasCodeBlock(text)) return false
   if (/\bshown below\b/i.test(text) && hasMathEvidence(text)) return false
   if (/\b(?:graph of|graphs of|graph of the function|graph of f|graph of y|line tangent to|bounded by the graph|area under (?:a|the) graph|model of voting|particle model|computer model|using a model|model different real-world)\b/i.test(text)) return false
   return true
+}
+
+function structuredContentText(item) {
+  const blocks = []
+  for (const block of item.content?.stem_blocks || []) blocks.push(blockText(block))
+  for (const part of item.content?.parts || []) {
+    blocks.push(part.label || '')
+    for (const block of part.blocks || []) blocks.push(blockText(block))
+  }
+  return blocks.filter(Boolean).join('\n')
+}
+
+function blockText(block) {
+  if (!block) return ''
+  if (block.type === 'table') {
+    const columns = Array.isArray(block.columns) ? block.columns.join(' | ') : ''
+    const rows = Array.isArray(block.rows)
+      ? block.rows.map(row => Array.isArray(row) ? row.join(' | ') : Object.values(row || {}).join(' | ')).join('\n')
+      : ''
+    return [block.caption, columns, rows].filter(Boolean).join('\n')
+  }
+  if (block.type === 'figure') return [block.caption, block.alt].filter(Boolean).join('\n')
+  return String(block.text || block.caption || block.alt || '')
+}
+
+function hasStructuredBlockType(item, type) {
+  const stemBlocks = item.content?.stem_blocks || []
+  const partBlocks = (item.content?.parts || []).flatMap(part => part.blocks || [])
+  const rowFigures = (item.markscheme?.rows || []).flatMap(row => row.figures || [])
+  return [...stemBlocks, ...partBlocks].some(block => block?.type === type) ||
+    (type === 'figure' && rowFigures.length > 0)
 }
 
 function hasMathEvidence(text) {

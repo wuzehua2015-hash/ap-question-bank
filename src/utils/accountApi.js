@@ -28,6 +28,15 @@ export async function apiRequest(path, options = {}) {
   return data
 }
 
+async function apiFormRequest(path, formData) {
+  const token = getSessionToken()
+  const headers = token ? { Authorization: `Bearer ${token}` } : {}
+  const response = await fetch(path, { method: 'POST', headers, body: formData })
+  const data = await response.json().catch(() => ({}))
+  if (!response.ok) throw new Error(data.error || `请求失败：${response.status}`)
+  return data
+}
+
 export function requestLoginCode(email) {
   return apiRequest('/api/auth/request-code', {
     method: 'POST',
@@ -115,5 +124,83 @@ export function changePassword({ currentPassword, newPassword }) {
 export function logoutOtherSessions() {
   return apiRequest('/api/account/sessions', {
     method: 'DELETE',
+  })
+}
+
+export function fetchIbMockEligibility(subjectId) {
+  return apiRequest(`/api/ib/mock-exams/eligibility?subjectId=${encodeURIComponent(subjectId)}`)
+}
+
+export function fetchIbMocks({ subjectId, includeArchived = false } = {}) {
+  const params = new URLSearchParams()
+  if (subjectId) params.set('subjectId', subjectId)
+  if (includeArchived) params.set('includeArchived', 'true')
+  return apiRequest(`/api/ib/mock-exams?${params}`)
+}
+
+export function createIbMock(subjectId) {
+  return apiRequest('/api/ib/mock-exams', { method: 'POST', body: JSON.stringify({ subjectId }) })
+}
+
+export function fetchIbMock(mockId) {
+  return apiRequest(`/api/ib/mock-exams/${encodeURIComponent(mockId)}`)
+}
+
+export function updateIbMock(mockId, changes) {
+  return apiRequest(`/api/ib/mock-exams/${encodeURIComponent(mockId)}`, { method: 'PATCH', body: JSON.stringify(changes) })
+}
+
+export function updateIbMockTimer(mockId, payload, { keepalive = false } = {}) {
+  return apiRequest(`/api/ib/mock-exams/${encodeURIComponent(mockId)}/timer`, {
+    method: 'POST',
+    body: JSON.stringify(payload),
+    keepalive,
+  })
+}
+
+export function fetchQuestionAttempts({ subjectId, questionId, limit = 50 } = {}) {
+  const params = new URLSearchParams({ limit: String(limit) })
+  if (subjectId) params.set('subjectId', subjectId)
+  if (questionId) params.set('questionId', questionId)
+  return apiRequest(`/api/learning/attempts?${params}`)
+}
+
+export function createQuestionAttempt(payload) {
+  return apiRequest('/api/learning/attempts', { method: 'POST', body: JSON.stringify(payload) })
+}
+
+export function createAnswerUploadBatch(payload) {
+  return apiRequest('/api/learning/upload-batches', { method: 'POST', body: JSON.stringify(payload) })
+}
+
+export function fetchAnswerUploadBatch({ id, code } = {}) {
+  const params = new URLSearchParams()
+  if (id) params.set('id', id)
+  if (code) params.set('code', code)
+  return apiRequest(`/api/learning/upload-batches?${params}`)
+}
+
+export function uploadAnswerAsset(batchId, file, pageOrder) {
+  const form = new FormData()
+  form.append('file', file)
+  form.append('pageOrder', String(pageOrder))
+  return apiFormRequest(`/api/learning/upload-batches/${encodeURIComponent(batchId)}/assets`, form)
+}
+
+export function completeAnswerUploadBatch(batchId, mappings) {
+  return apiRequest(`/api/learning/upload-batches/${encodeURIComponent(batchId)}/complete`, {
+    method: 'POST',
+    body: JSON.stringify({ mappings }),
+  })
+}
+
+export function fetchAttemptDetail(attemptId) {
+  return apiRequest(`/api/learning/attempts/${encodeURIComponent(attemptId)}`)
+}
+
+export function confirmAttemptReview(attemptId, payload) {
+  return apiRequest(`/api/learning/attempts/${encodeURIComponent(attemptId)}`, {
+    method: 'PATCH',
+    body: JSON.stringify(payload),
   })
 }

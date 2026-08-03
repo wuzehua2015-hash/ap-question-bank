@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-const { classifyItem, reviewBasisHash } = require('./lib/ib_math_aa_knowledge_classifier.cjs')
+const { reviewBasisHash } = require('./lib/ib_math_aa_knowledge_classifier.cjs')
 
 const ROOT = path.resolve(__dirname, '..')
 const PUBLIC = path.join(ROOT, 'public')
@@ -13,6 +13,10 @@ const failOnFindings = args['fail-on-findings'] === 'true' || process.argv.inclu
 
 const stalePattern = /score=|Matched:|Default to|keyword|legacy|inferred/i
 const ibTemplateReasoningPattern = /is the earliest Math AA topic area that contains the required solving method for this original item/i
+const ibConfig = readJson(path.join(PUBLIC, 'data', 'ib', 'math-aa', 'classification_config.json'))
+const approvedIBKnowledgeCodes = new Set((ibConfig.knowledge_points || []).map(point => point.code))
+const ibLedger = readJson(path.join(PUBLIC, 'data', 'ib', 'math-aa', 'item_classification_ledger.json'))
+const ibLedgerByKey = new Map((ibLedger.items || []).map(row => [`${row.subject_id}::${row.question_id}`, row]))
 const subjects = readJson(path.join(PUBLIC, 'data', 'subjects.json')).subjects.filter(subject => subject.active !== false)
 const report = {
   generated_at: new Date().toISOString(),
@@ -58,7 +62,7 @@ for (const subject of subjects) {
       const id = item.question_id || item.id || '(missing-id)'
       const classification = item.classification || {}
       const reviewed = subject.assessmentModel === 'ib-paper'
-        ? hasIBEvidence(item)
+        ? hasIBEvidence(subject.id, item)
         : classification.review_status === 'reviewed' &&
           classification.primary_unit === item.primary_unit &&
           (Array.isArray(classification.evidence) ? classification.evidence.length > 0 : Boolean(classification.evidence))
@@ -127,18 +131,14 @@ function visible(item) {
     item.scoring_status !== 'not_scored'
 }
 
-function hasIBEvidence(item) {
+function hasIBEvidence(subjectId, item) {
   if (ibTemplateReasoningPattern.test(item.why_not_earlier_topic || '')) return false
   const knowledge = item.knowledge_point_classification || {}
-  let inferred
-  try {
-    inferred = classifyItem(item)
-  } catch {
-    return false
-  }
+  const ledgerRow = ibLedgerByKey.get(`${subjectId}::${item.question_id}`)
   const storedCodes = (knowledge.required_knowledge_points || []).map(point => point.code).sort()
-  const inferredCodes = inferred.required_knowledge_points.map(point => point.code).sort()
+  const ledgerCodes = (ledgerRow?.required_knowledge_points || []).map(point => point.code).sort()
   return Boolean(
+    ledgerRow &&
     item.topic_area &&
     item.why_not_earlier_topic &&
     Array.isArray(item.required_topics) &&
@@ -148,8 +148,11 @@ function hasIBEvidence(item) {
     knowledge.review_status === 'item-reviewed' &&
     knowledge.reviewer !== 'generator' &&
     knowledge.review_basis_sha256 === reviewBasisHash(item) &&
-    knowledge.primary_knowledge_point?.code === inferred.primary_knowledge_point.code &&
-    JSON.stringify(storedCodes) === JSON.stringify(inferredCodes) &&
+    approvedIBKnowledgeCodes.has(knowledge.primary_knowledge_point?.code) &&
+    storedCodes.length > 0 && storedCodes.every(code => approvedIBKnowledgeCodes.has(code)) &&
+    ledgerRow.review_basis_sha256 === knowledge.review_basis_sha256 &&
+    ledgerRow.primary_knowledge_point?.code === knowledge.primary_knowledge_point?.code &&
+    JSON.stringify(storedCodes) === JSON.stringify(ledgerCodes) &&
     Array.isArray(knowledge.evidence) && knowledge.evidence.length > 0 &&
     Array.isArray(knowledge.solving_path_steps) && knowledge.solving_path_steps.length > 0
   )

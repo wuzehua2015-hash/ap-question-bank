@@ -1,0 +1,101 @@
+{
+  "curriculum": "ib",
+  "course": "math-aa",
+  "updated_at": "2026-07-28",
+  "dedupe_baseline": {
+    "canonical_pair_count": 44,
+    "sessions": ["2021-May", "2021-Nov", "2022-May", "2022-Nov", "2023-May", "2023-Nov"],
+    "local_pdf_count": 113
+  },
+  "sources": [
+    {
+      "source_id": "IB-MATH-AA-SPECIMEN-FIRST-ASSESSMENT-2021",
+      "title": "Mathematics: analysis and approaches Higher level and Standard level specimen papers 1, 2 and 3",
+      "provider": "International Baccalaureate",
+      "landing_page": "https://ibo.org/programmes/diploma-programme/assessment-and-exams/sample-exam-papers/",
+      "pdf_url": "https://ibo.org/globalassets/new-structure/university-admission/pdfs/dp-mathematics-analysis-and-approaches-specimen-papers-en.pdf",
+      "landing_page_last_updated": "2026-02-19",
+      "pdf_sha256": "442EB7C812471C7EEB66BB9E88005E035E15E92F7B84809048654F35FBEDE2F4",
+      "pdf_bytes": 3160623,
+      "pdf_pages": 121,
+      "question_count": 44,
+      "local_hash_match_count": 0,
+      "local_base_id_match_count": 0,
+      "source_verification": {
+        "full_question_pages": "passed",
+        "full_markscheme_pages": "passed",
+        "formulas_and_figures_visible": "passed",
+        "text_extraction": "passed_with_formula_reconstruction_required",
+        "all_pages_rendered": "passed",
+        "content_deduplication": "passed_at_pdf_level"
+      },
+      "publication_review": {
+        "official_page_wording": "provided for information only",
+        "public_question_bank_eligible": false,
+        "status": "internal_source_only_pending_explicit_republication_permission"
+      },
+      "ingestion_status": "verified_new_source_not_yet_student_visible",
+      "components": [
+        {"base_id": "MathsAA_HL_P1_Specimen", "level": "HL", "paper": "P1", "paper_pages": "3-18", "markscheme_pages": "19-34", "question_count": 12},
+        {"base_id": "MathsAA_HL_P2_Specimen", "level": "HL", "paper": "P2", "paper_pages": "35-46", "markscheme_pages": "47-62", "question_count": 12},
+        {"base_id": "MathsAA_HL_P3_Specimen", "level": "HL", "paper": "P3", "paper_pages": "63-67", "markscheme_pages": "68-76", "question_count": 2},
+        {"base_id": "MathsAA_SL_P1_Specimen", "level": "SL", "paper": "P1", "paper_pages": "77-88", "markscheme_pages": "89-99", "question_count": 9},
+        {"base_id": "MathsAA_SL_P2_Specimen", "level": "SL", "paper": "P2", "paper_pages": "100-111", "markscheme_pages": "112-121", "question_count": 9}
+      ]
+    },
+    {
+      "source_id": "IB-MATH-AA-OFFICIAL-QUESTIONBANK",
+      "title": "IB Questionbank: DP Mathematics: Analysis and Approaches",
+      "provider": "International Baccalaureate via Follett Titlewave",
+      "landing_page": "https://questionbank.ibo.org/",
+      "catalog_checked_at": "2026-07-28",
+      "official_scope": {
+        "subject_confirmed": true,
+        "content_description": "hundreds of official examination questions, markschemes and subject reports",
+        "filters": ["examination date", "month or year", "paper", "level", "time zone", "question type"]
+      },
+      "access_review": {
+        "full_version": "paid_licence_required",
+        "demo": "time_limited_full_featured_with_limited_question_set",
+        "current_session_access": false,
+        "external_action_taken": false
+      },
+      "publication_review": {
+        "public_question_bank_eligible": false,
+        "status": "licence_and_republication_terms_must_be_reviewed_before_any_ingestion"
+      },
+      "ingestion_status": "candidate_blocked_by_missing_licensed_access"
+    },
+    {
+      "source_id": "IB-MATH-AA-TITLEWAVE-EXAM-MARKSCHEME-PACKS",
+      "title": "Official examination paper and markscheme packs and individual paper downloads",
+      "provider": "International Baccalaureate via Follett Titlewave",
+      "landing_page": "https://www.titlewave.com/search?directlogin=Y&nodeid=260832",
+      "catalog_checked_at": "2026-07-28",
+      "catalog_observations": {
+        "delivery_formats": ["digital download", "session pack", "USB flash drive"],
+        "newer_sessions_confirmed_beyond_local_inventory": ["2024-May", "2024-Nov", "2025-May", "2025-Nov"],
+        "levels_seen": ["SL", "HL"],
+        "papers_seen": ["P1", "P2", "P3"],
+        "timezones_seen": ["TZ1", "TZ2", "TZ3"],
+        "individual_products_include_paper_and_markscheme": true,
+        "catalog_result_is_not_a_complete_acquired_inventory": true
+      },
+      "dedupe_review": {
+        "local_canonical_sessions_end_at": "2023-Nov",
+        "newer_session_overlap_count": 0,
+        "content_hash_review_possible_only_after_lawful_acquisition": true
+      },
+      "access_review": {
+        "purchase_or_account_required": true,
+        "current_session_access": false,
+        "external_action_taken": false
+      },
+      "publication_review": {
+        "public_question_bank_eligible": false,
+        "status": "purchase_terms_and_republication_permission_must_be_confirmed_before_any_student_visible_use"
+      },
+      "ingestion_status": "verified_official_newer_source_catalog_not_yet_acquired"
+    }
+  ]
+}

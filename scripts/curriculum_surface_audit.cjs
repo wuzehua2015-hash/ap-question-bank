@@ -7,9 +7,11 @@ const { spawn } = require('child_process')
 
 const ROOT = path.resolve(__dirname, '..')
 const WORKSPACE = path.join(ROOT, '.workspace', 'curriculum-surface-audit')
+const AUDIT_DIST = path.join(WORKSPACE, 'dist')
 const args = parseArgs(process.argv.slice(2))
 const baseUrl = (args.url || 'http://127.0.0.1:4180/').replace(/\/?$/, '/')
 const port = Number(args.port || 9784)
+const RELEASE_MODE = process.argv.includes('--release') || args.release === 'true'
 
 fs.mkdirSync(WORKSPACE, { recursive: true })
 
@@ -19,6 +21,7 @@ main().catch(error => {
 })
 
 async function main() {
+  fs.rmSync(AUDIT_DIST, { recursive: true, force: true })
   const preview = await ensurePreview(baseUrl)
   const chrome = await launchChrome(port)
   const client = await connectChrome(port)
@@ -72,8 +75,9 @@ async function main() {
     if (/IB Mathematics: Analysis and Approaches/.test(info.text)) errors.push('IB subjects leaked after switching back to AP')
   } finally {
     await client.close().catch(() => {})
-    chrome.kill('SIGTERM')
-    if (preview?.spawned) preview.child.kill('SIGTERM')
+    await terminateProcessTree(chrome)
+    if (preview?.spawned) await terminateProcessTree(preview.child)
+    if (preview?.auditDist) fs.rmSync(preview.auditDist, { recursive: true, force: true })
   }
 
   const report = {
@@ -170,19 +174,47 @@ async function evaluate(client, expression) {
 }
 
 async function ensurePreview(url) {
-  if (await httpOk(url)) return { spawned: false }
+  if (RELEASE_MODE) {
+    if (await httpOk(url)) return { spawned: false, child: null, auditDist: null }
+    throw new Error(`Release audit URL is not responding: ${url}`)
+  }
   const previewPort = String(new URL(url).port || 4174)
-  const npmCmd = process.platform === 'win32' ? 'cmd.exe' : 'npm'
-  const npmArgs = process.platform === 'win32'
-    ? ['/d', '/s', '/c', `npm run preview -- --host 127.0.0.1 --port ${previewPort} --strictPort`]
-    : ['run', 'preview', '--', '--host', '127.0.0.1', '--port', previewPort, '--strictPort']
-  const child = spawn(npmCmd, npmArgs, { cwd: ROOT, stdio: 'ignore', windowsHide: true })
+  if (await httpOk(url)) {
+    throw new Error(`Audit preview URL is already responding before this run starts: ${url}. Use a free app port to avoid stale preview evidence.`)
+  }
+  await buildAuditDist()
+  const viteCli = path.join(ROOT, 'node_modules', 'vite', 'bin', 'vite.js')
+  const child = spawn(process.execPath, [viteCli, 'preview', '--host', '127.0.0.1', '--port', previewPort, '--strictPort', '--outDir', AUDIT_DIST], {
+    cwd: ROOT,
+    stdio: 'ignore',
+    windowsHide: true,
+    env: RELEASE_MODE ? { ...process.env } : { ...process.env, VITE_IB_CANDIDATE_AUDIT: 'true' },
+  })
   for (let i = 0; i < 30; i += 1) {
     await sleep(500)
-    if (await httpOk(url)) return { spawned: true, child }
+    if (await httpOk(url)) return { spawned: true, child, auditDist: AUDIT_DIST }
   }
-  child.kill('SIGTERM')
+  await terminateProcessTree(child)
   throw new Error(`Preview server did not start: ${url}`)
+}
+
+async function buildAuditDist() {
+  const previous = process.env.VITE_IB_CANDIDATE_AUDIT
+  if (!RELEASE_MODE) process.env.VITE_IB_CANDIDATE_AUDIT = 'true'
+  try {
+    const { build } = await import('vite')
+    await build({
+      root: ROOT,
+      mode: 'production',
+      logLevel: 'error',
+      build: { outDir: AUDIT_DIST, emptyOutDir: true },
+    })
+  } finally {
+    if (!RELEASE_MODE) {
+      if (previous === undefined) delete process.env.VITE_IB_CANDIDATE_AUDIT
+      else process.env.VITE_IB_CANDIDATE_AUDIT = previous
+    }
+  }
 }
 
 function httpOk(url) {
@@ -225,8 +257,29 @@ async function launchChrome(debugPort) {
     await sleep(300)
     if (await httpOk(`http://127.0.0.1:${debugPort}/json/version`)) return child
   }
-  child.kill('SIGTERM')
+  await terminateProcessTree(child)
   throw new Error('Chrome remote debugging did not start.')
+}
+
+function terminateProcessTree(child) {
+  if (!child?.pid || child.exitCode !== null) return Promise.resolve()
+  if (process.platform !== 'win32') {
+    child.kill('SIGTERM')
+    return Promise.resolve()
+  }
+  return new Promise(resolve => {
+    let finished = false
+    const finish = () => {
+      if (finished) return
+      finished = true
+      clearTimeout(timeout)
+      resolve()
+    }
+    const killer = spawn('taskkill.exe', ['/PID', String(child.pid), '/T', '/F'], { stdio: 'ignore', windowsHide: true })
+    const timeout = setTimeout(finish, 3000)
+    killer.once('exit', finish)
+    killer.once('error', finish)
+  })
 }
 
 function findChrome() {

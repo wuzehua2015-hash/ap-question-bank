@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-const { KNOWLEDGE_POINTS, classifyItem, reviewBasisHash } = require('./lib/ib_math_aa_knowledge_classifier.cjs')
+const { reviewBasisHash } = require('./lib/ib_math_aa_knowledge_classifier.cjs')
 
 const ROOT = path.resolve(__dirname, '..')
 const DATA_ROOT = path.join(ROOT, 'public', 'data')
@@ -9,6 +9,7 @@ const SUBJECTS = JSON.parse(fs.readFileSync(path.join(DATA_ROOT, 'subjects.json'
 const errors = []
 const warnings = []
 const reviewedItems = new Map()
+const sourceLocatedItems = new Map()
 const reviewTemplatePattern = /is the earliest Math AA topic area that contains the required solving method for this original item/i
 const generatedSeedSourcePattern = /lynkedu_owned_math_aa_20260724|owned-original-math-aa-style-practice-2026/i
 
@@ -26,12 +27,28 @@ const minPublishedCounts = {
   HL: 75,
 }
 
+const knowledgeTree = readJson('ib/math-aa/knowledge_tree.json')
+const coverageMatrix = readJson('ib/math-aa/coverage_matrix.json')
+const syllabusItems = (knowledgeTree.topic_areas || []).flatMap(topic => topic.syllabus_items || [])
+const curriculumKnowledgePoints = new Set(syllabusItems.flatMap(item => (
+  (item.knowledge_points || []).map(point => point.code)
+)))
+const canonicalKnowledgePoints = new Map(syllabusItems.flatMap(item => (
+  (item.knowledge_points || []).map(point => [point.code, { ...point, syllabus_code: item.code }])
+)))
+if ((knowledgeTree.topic_areas || []).length !== 5) errors.push('Math AA knowledge tree must contain all 5 topic areas')
+if (syllabusItems.length !== 83) errors.push(`Math AA knowledge tree has ${syllabusItems.length} syllabus items, expected 83`)
+if (!knowledgeTree.completion_thresholds?.minimum_primary_items_per_knowledge_point) {
+  errors.push('Math AA knowledge tree is missing a minimum primary-item threshold')
+}
+
 for (const subject of ibSubjects) {
   const isStudentVisible = subject.active !== false && subject.visibility !== 'internal' && subject.visibility !== 'candidate'
   if (subject.assessmentModel !== 'ib-paper') errors.push(`${subject.id}: expected assessmentModel=ib-paper`)
   if (!['SL', 'HL'].includes(subject.level)) errors.push(`${subject.id}: invalid level ${subject.level}`)
   if (!subject.paperBank) errors.push(`${subject.id}: missing paperBank`)
   if (!subject.classificationConfig) errors.push(`${subject.id}: missing classificationConfig`)
+  if (!subject.knowledgeTree || !subject.coverageMatrix) errors.push(`${subject.id}: missing knowledge tree or coverage matrix`)
   if (subject.paperPractice?.classificationFilter !== 'primary_knowledge_point' || subject.paperPractice?.knowledgePointRequired !== true) {
     errors.push(`${subject.id}: paper practice must filter by primary knowledge point`)
   }
@@ -41,6 +58,9 @@ for (const subject of ibSubjects) {
     (topic.reviewed_subtopics || []).map(subtopic => subtopic.code)
   )))
   const configuredKnowledgePoints = new Map((classificationConfig?.knowledge_points || []).map(point => [point.code, point]))
+  for (const code of configuredKnowledgePoints.keys()) {
+    if (!curriculumKnowledgePoints.has(code)) errors.push(`${subject.id}: configured knowledge point ${code} is absent from the full curriculum tree`)
+  }
   if (!Array.isArray(bank)) errors.push(`${subject.id}: paperBank must be an array`)
   if (isStudentVisible && Array.isArray(bank) && bank.length < minPublishedCounts[subject.level]) {
     errors.push(`${subject.id}: active Math AA bank has ${bank.length} items, expected at least ${minPublishedCounts[subject.level]}`)
@@ -51,8 +71,37 @@ for (const subject of ibSubjects) {
   const contentHashOwners = new Map()
   for (const item of bank) {
     const qid = item.question_id || '(missing id)'
-    if (reviewedItems.has(qid)) errors.push(`${subject.id}/${qid}: duplicate Math AA question_id across banks`)
-    reviewedItems.set(qid, item)
+    const canonicalQid = `${subject.id}::${qid}`
+    const isPendingRealSource = item.student_visible === false &&
+      item.publish_status === 'blocked' &&
+      ['pending_visual_transcription', 'source_located'].includes(item.transcription_status)
+    const isExcludedDuplicate = item.student_visible === false &&
+      item.publish_status === 'blocked' &&
+      item.transcription_status === 'excluded_exact_duplicate'
+    if (reviewedItems.has(canonicalQid)) errors.push(`${subject.id}/${qid}: duplicate Math AA question_id inside the subject`)
+    if (!isPendingRealSource && !isExcludedDuplicate) reviewedItems.set(canonicalQid, item)
+    if (isPendingRealSource) {
+      for (const key of ['question_id', 'curriculum', 'course', 'level', 'paper', 'session', 'timezone', 'marks', 'source']) {
+        if (item[key] === undefined || item[key] === null || item[key] === '') errors.push(`${subject.id}/${qid}: pending real-source item is missing ${key}`)
+      }
+      if (!Array.isArray(item.source_images) || item.source_images.length === 0) errors.push(`${subject.id}/${qid}: pending real-source item is missing question images`)
+      if (!Array.isArray(item.markscheme_images) || item.markscheme_images.length === 0) errors.push(`${subject.id}/${qid}: pending real-source item is missing markscheme images`)
+      if (!item.source?.registry_id || !item.source?.paper_sha256 || !item.source?.markscheme_sha256) {
+        errors.push(`${subject.id}/${qid}: pending real-source item is missing source registration or fingerprints`)
+      }
+      sourceLocatedItems.set(canonicalQid, item)
+      paperCounts.set(item.paper, (paperCounts.get(item.paper) || 0) + 1)
+      continue
+    }
+    if (isExcludedDuplicate) {
+      if (!item.duplicate_disposition?.duplicate_of || item.duplicate_disposition.duplicate_of === canonicalQid) {
+        errors.push(`${subject.id}/${qid}: invalid exact-duplicate disposition`)
+      }
+      if (!Array.isArray(item.source_images) || item.source_images.length === 0 || !Array.isArray(item.markscheme_images) || item.markscheme_images.length === 0) {
+        errors.push(`${subject.id}/${qid}: excluded duplicate is missing source evidence`)
+      }
+      continue
+    }
     const contentHash = reviewBasisHash(item)
     if (contentHashOwners.has(contentHash)) {
       errors.push(`${subject.id}/${qid}: exact prompt-and-solution duplicate of ${contentHashOwners.get(contentHash)}`)
@@ -81,6 +130,19 @@ for (const subject of ibSubjects) {
     }
     const partTotal = (item.parts || []).reduce((sum, part) => sum + Number(part.marks || 0), 0)
     if (partTotal !== Number(item.marks)) errors.push(`${subject.id}/${qid}: part marks sum ${partTotal}, expected ${item.marks}`)
+    const markPointsByPart = new Map()
+    for (const point of (item.markscheme?.mark_points || [])) {
+      const label = point.part_label
+      if (!markPointsByPart.has(label)) markPointsByPart.set(label, [])
+      markPointsByPart.get(label).push(point)
+    }
+    for (const part of (item.parts || [])) {
+      const points = markPointsByPart.get(part.label) || []
+      const markPointTotal = points.reduce((sum, point) => sum + Number(point.marks || 0), 0)
+      if (markPointTotal !== Number(part.marks)) {
+        errors.push(`${subject.id}/${qid}/${part.label}: mark-point marks sum ${markPointTotal}, expected ${part.marks}`)
+      }
+    }
     if (!item.solution?.outline) errors.push(`${subject.id}/${qid}: missing solution outline`)
     if (!Array.isArray(item.markscheme?.rows) || item.markscheme.rows.length !== (item.parts || []).length) {
       errors.push(`${subject.id}/${qid}: markscheme rows must match parts`)
@@ -99,33 +161,24 @@ for (const subject of ibSubjects) {
       requiredKnowledgePoints.length > 0 &&
       Array.isArray(knowledgeReview.evidence) && knowledgeReview.evidence.length > 0 &&
       Array.isArray(knowledgeReview.solving_path_steps) && knowledgeReview.solving_path_steps.length > 0
-    let inferred = null
-    try {
-      inferred = classifyItem(item)
-    } catch (error) {
-      errors.push(`${subject.id}/${qid}: ${error.message}`)
-    }
-    if (inferred) {
-      const storedCodes = requiredKnowledgePoints.map(point => point.code).sort()
-      const inferredCodes = inferred.required_knowledge_points.map(point => point.code).sort()
-      if (JSON.stringify(storedCodes) !== JSON.stringify(inferredCodes)) {
-        errors.push(`${subject.id}/${qid}: stored knowledge points do not match the visible solution path`)
-      }
-      if (knowledgeReview.primary_knowledge_point?.code !== inferred.primary_knowledge_point.code) {
-        errors.push(`${subject.id}/${qid}: primary knowledge point does not match the visible solution path`)
-      }
-      if (item.topic_area !== inferred.topic_area || item.subtopic_code !== inferred.subtopic_code) {
-        errors.push(`${subject.id}/${qid}: topic metadata does not match content-derived knowledge classification`)
-      }
-    }
     for (const point of requiredKnowledgePoints) {
       const configured = configuredKnowledgePoints.get(point.code)
-      const canonical = KNOWLEDGE_POINTS[point.code]
+      const canonical = canonicalKnowledgePoints.get(point.code)
       if (!configured || !canonical || configured.name !== canonical.name || point.name !== canonical.name) {
         errors.push(`${subject.id}/${qid}: invalid or stale knowledge point ${point.code}`)
       }
     }
     const primaryCode = knowledgeReview.primary_knowledge_point?.code
+    const primaryCanonical = canonicalKnowledgePoints.get(primaryCode)
+    if (primaryCode && !requiredKnowledgePoints.some(point => point.code === primaryCode)) {
+      errors.push(`${subject.id}/${qid}: primary knowledge point must be included in required knowledge points`)
+    }
+    if (primaryCanonical && item.topic_area !== primaryCanonical.topic) {
+      errors.push(`${subject.id}/${qid}: topic area does not match the primary knowledge point`)
+    }
+    if (primaryCanonical && item.subtopic_code !== primaryCanonical.syllabus_code) {
+      errors.push(`${subject.id}/${qid}: official syllabus item does not match the primary knowledge point`)
+    }
     if (primaryCode) primaryKnowledgePointCounts.set(primaryCode, (primaryKnowledgePointCounts.get(primaryCode) || 0) + 1)
     const requiredTopicsHaveOfficialSubtopic = (item.required_topics || []).every(topic => (
       typeof topic.subtopic_code === 'string' && officialSubtopics.has(topic.subtopic_code)
@@ -158,9 +211,21 @@ for (const subject of ibSubjects) {
       if (!paperCounts.has(paper)) errors.push(`${subject.id}: active Math AA bank missing ${paper}`)
     }
   }
-  if (primaryKnowledgePointCounts.size === 0) errors.push(`${subject.id}: no primary knowledge-point quiz buckets`)
+  if (isStudentVisible && primaryKnowledgePointCounts.size === 0) errors.push(`${subject.id}: no primary knowledge-point quiz buckets`)
   for (const [code, count] of primaryKnowledgePointCounts) {
     if (count < 2) warnings.push(`${subject.id}: primary knowledge point ${code} has only ${count} item`)
+  }
+  const levelCoverage = coverageMatrix.subjects?.[subject.level]
+  if (!levelCoverage) {
+    errors.push(`${subject.id}: coverage matrix is missing ${subject.level}`)
+  } else {
+    if (isStudentVisible && levelCoverage.bank_item_count !== bank.length) errors.push(`${subject.id}: coverage matrix bank count is stale`)
+    if (levelCoverage.full_course_coverage_complete && subject.curriculumCoverageStatus !== 'complete') {
+      errors.push(`${subject.id}: completed coverage matrix must be reflected in subject metadata`)
+    }
+    if (!levelCoverage.full_course_coverage_complete && subject.curriculumCoverageStatus === 'complete') {
+      errors.push(`${subject.id}: must not claim complete curriculum coverage while knowledge-point thresholds are unmet`)
+    }
   }
 }
 
@@ -170,19 +235,27 @@ if (!fs.existsSync(ledgerPath)) {
 } else {
   const ledger = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'))
   const ledgerRows = Array.isArray(ledger.items) ? ledger.items : []
-  if (ledger.item_count !== reviewedItems.size || ledgerRows.length !== reviewedItems.size) {
-    errors.push(`Math AA classification ledger count ${ledgerRows.length}, expected ${reviewedItems.size}`)
+  const ledgerExpectedItems = new Map([...sourceLocatedItems, ...reviewedItems])
+  if (ledger.item_count !== ledgerExpectedItems.size || ledgerRows.length !== ledgerExpectedItems.size) {
+    errors.push(`Math AA classification ledger count ${ledgerRows.length}, expected ${ledgerExpectedItems.size}`)
   }
   const ledgerIds = new Set()
   for (const row of ledgerRows) {
-    if (!row.question_id || ledgerIds.has(row.question_id)) {
+    const ledgerKey = `${row.subject_id || ''}::${row.question_id || ''}`
+    if (!row.subject_id || !row.question_id || ledgerIds.has(ledgerKey)) {
       errors.push(`Math AA classification ledger has missing or duplicate question_id ${row.question_id || '(missing)'}`)
       continue
     }
-    ledgerIds.add(row.question_id)
-    const item = reviewedItems.get(row.question_id)
+    ledgerIds.add(ledgerKey)
+    const item = ledgerExpectedItems.get(ledgerKey)
     if (!item) {
       errors.push(`Math AA classification ledger contains unknown item ${row.question_id}`)
+      continue
+    }
+    if (sourceLocatedItems.has(ledgerKey)) {
+      if (row.delivery_status !== 'source_located' || row.completion_counted !== false || row.classification_status !== 'unverified_preliminary') {
+        errors.push(`${row.question_id}: source-located ledger row incorrectly claims delivery or verified classification`)
+      }
       continue
     }
     if (row.review_basis_sha256 !== reviewBasisHash(item)) errors.push(`${row.question_id}: ledger content hash is stale`)

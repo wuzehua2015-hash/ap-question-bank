@@ -5,6 +5,7 @@ import json
 import re
 from collections import defaultdict
 from pathlib import Path
+from datetime import date
 
 from pypdf import PdfReader
 
@@ -81,13 +82,24 @@ def main() -> None:
                 "session": paper["session"],
                 "paper": paper["paper"],
                 "timezone": paper["timezone"],
-                "calculator_allowed": False if paper["paper"] == "P1" else True if paper["paper"] == "P2" else None,
+                "calculator_allowed": False if paper["paper"] == "P1" else True if paper["paper"] in {"P2", "P3"} else None,
                 "syllabus_version": "first-assessment-2021",
                 "paper_path": paper["relative_path"],
                 "markscheme_path": markscheme["relative_path"],
                 "paper_page_count": paper["page_count"],
                 "markscheme_page_count": markscheme["page_count"],
-                "source_status": "source_approved_for_structured_extraction",
+                "paper_size_bytes": paper["size_bytes"],
+                "markscheme_size_bytes": markscheme["size_bytes"],
+                "paper_sha256": paper["sha256"],
+                "markscheme_sha256": markscheme["sha256"],
+                "source_kind": "official_sample" if paper["session"] == "Specimen-2021" else "official_exam",
+                "authenticity_status": "verified_real_source",
+                "rights_status": "licensed_permission",
+                "student_use_status": "approved_for_structured_student_use",
+                "permission_basis": "user_confirmed_organization_authorization",
+                "approved_by": "user-confirmed",
+                "approved_at": "2026-07-29",
+                "source_status": "verified_approved_pair",
             })
         elif paper:
             deferred.append({
@@ -105,7 +117,7 @@ def main() -> None:
     payload = {
         "curriculum": "ib",
         "course": "math-aa",
-        "generated_at": "2026-07-24",
+        "generated_at": date.today().isoformat(),
         "source_root": SOURCE_ROOT.as_posix(),
         "canonical_pairs": canonical_pairs,
         "deferred": deferred,
@@ -118,7 +130,8 @@ def main() -> None:
         },
     }
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    with OUT_PATH.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
     print(json.dumps(payload["summary"], indent=2))
 
 

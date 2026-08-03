@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react'
-import { loadSubjects } from '../utils/questionBank'
+import { isIbCandidateAuditSubject, loadSubjects } from '../utils/questionBank'
 import {
   getCurrentSubject,
   setCurrentSubject,
@@ -27,6 +27,10 @@ const SubjectContext = createContext({
   setDefaultStudySubject: () => {},
 })
 
+function isAvailableSubject(subject) {
+  return (subject.active && subject.visibility !== 'internal') || isIbCandidateAuditSubject(subject)
+}
+
 export function SubjectProvider({ children }) {
   const [subjects, setSubjects] = useState([])
   const [loading, setLoading] = useState(true)
@@ -38,7 +42,7 @@ export function SubjectProvider({ children }) {
     loadSubjects()
       .then(data => {
         const loadedSubjects = data.subjects || []
-        const available = loadedSubjects.filter(s => s.active && s.visibility !== 'internal')
+        const available = loadedSubjects.filter(isAvailableSubject)
         const availableIds = new Set(available.map(s => s.id))
         const subjectById = new Map(available.map(subject => [subject.id, subject]))
         const storedCurrentCurriculum = getCurrentCurriculum()
@@ -80,7 +84,7 @@ export function SubjectProvider({ children }) {
   }, [])
 
   const setSubject = useCallback((id) => {
-    const availableIds = new Set(subjects.filter(s => s.active && s.visibility !== 'internal').map(s => s.id))
+    const availableIds = new Set(subjects.filter(isAvailableSubject).map(s => s.id))
     if (availableIds.size > 0 && !availableIds.has(id)) return
     const target = subjects.find(subject => subject.id === id)
     if (target?.curriculum && target.curriculum !== currentCurriculum) {
@@ -94,7 +98,7 @@ export function SubjectProvider({ children }) {
   useEffect(() => {
     const refreshFromStorage = () => {
       if (!subjects.length) return
-      const availableIds = new Set(subjects.filter(s => s.active && s.visibility !== 'internal').map(s => s.id))
+      const availableIds = new Set(subjects.filter(isAvailableSubject).map(s => s.id))
       const storedMySubjects = getMySubjects().filter(id => availableIds.has(id))
       const storedCurrent = getCurrentSubject()
       const storedCurriculum = getCurrentCurriculum()
@@ -110,7 +114,7 @@ export function SubjectProvider({ children }) {
   }, [currentCurriculum, currentSubject, subjects])
 
   const updateMySubjects = useCallback((ids) => {
-    const availableSubjects = subjects.filter(s => s.active && s.visibility !== 'internal')
+    const availableSubjects = subjects.filter(isAvailableSubject)
     const subjectById = new Map(availableSubjects.map(subject => [subject.id, subject]))
     const rawIds = [...new Set((ids || []).filter(id => subjectById.has(id)))]
     const targetCurriculum = rawIds.map(id => subjectById.get(id)?.curriculum || 'ap').find(curriculum => curriculum !== currentCurriculum)
@@ -138,7 +142,7 @@ export function SubjectProvider({ children }) {
 
   const setDefaultStudySubject = useCallback((id) => {
     if (!id) return
-    const availableSubjects = subjects.filter(s => s.active && s.visibility !== 'internal')
+    const availableSubjects = subjects.filter(isAvailableSubject)
     const target = availableSubjects.find(subject => subject.id === id)
     if (availableSubjects.length > 0 && !target) return
     const targetCurriculum = target?.curriculum || currentCurriculum || 'ap'
@@ -157,7 +161,7 @@ export function SubjectProvider({ children }) {
   }, [currentCurriculum, mySubjectIds, subjects])
 
   const setCurriculum = useCallback((curriculum) => {
-    const availableSubjects = subjects.filter(s => s.active && s.visibility !== 'internal')
+    const availableSubjects = subjects.filter(isAvailableSubject)
     const targetSubjects = availableSubjects.filter(subject => (subject.curriculum || 'ap') === curriculum)
     if (!targetSubjects.length) return
     const nextIds = mySubjectIds.filter(id => targetSubjects.some(subject => subject.id === id))
@@ -171,8 +175,8 @@ export function SubjectProvider({ children }) {
     setDefaultSubject(nextCurrent)
   }, [currentSubject, mySubjectIds, subjects])
 
-  const activeSubjects = subjects.filter(s => s.active)
-  const availableSubjects = activeSubjects.filter(s => s.visibility !== 'internal')
+  const activeSubjects = subjects.filter(s => s.active || isIbCandidateAuditSubject(s))
+  const availableSubjects = subjects.filter(isAvailableSubject)
   const curriculumSubjects = availableSubjects.filter(s => (s.curriculum || 'ap') === currentCurriculum)
   const mySubjectSet = new Set(mySubjectIds)
   const mySubjects = curriculumSubjects.filter(s => mySubjectSet.has(s.id))

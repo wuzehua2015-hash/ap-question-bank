@@ -293,3 +293,6 @@ Evidence:
 - `npm run validate`: pass.
 - `npm run build`: pass.
 - Real-browser Quiz check passed for `2014_sample_Q08` and `ap_bowl_2018_Q33` on local built preview.
+# Status: Retired Source Rules
+
+The source-admission portions of this 2026-07-13 plan are superseded by `docs/QUESTION_SOURCE_POLICY.md` and the 2026-07-29 real-source-only decision. Historical counts and observations remain useful, but no new student-visible question may be written to fill capacity. Expansion now means locating and admitting additional real-source questions with paired answers and complete source records.
