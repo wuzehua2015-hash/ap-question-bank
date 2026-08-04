@@ -1,8 +1,20 @@
 # LynkEdu AP Question Bank Project Status
 
-Last updated: 2026-08-03
+Last updated: 2026-08-04
 
-## Active Delivery Goal: IB Mathematics AA Full Release
+## IB Mathematics AA Final Release
+
+- **Status:** IB Math AA SL/HL is production-released on `https://lynkedu.com` to the AP single-subject closeout standard.
+- **Production release data:** IB curriculum status is `active`; subjects `ib-math-aa-sl` and `ib-math-aa-hl` are public/certified.
+- **Production bank counts:** SL total 162 with 149 visible and 13 blocked/hidden; HL total 271 with 235 visible and 36 blocked/hidden. Hidden items remain excluded from student flows.
+- **R2/upload closeout:** Cloudflare R2 was enabled on 2026-08-04, private bucket `lynkedu-answer-assets` was created, and Pages production binding `ANSWER_ASSETS` is configured through `wrangler.toml`.
+- **Final production release audit:** `npm run audit:ib-math-aa:production-release -- --url https://lynkedu.com/` passed with 9 checks and 0 errors. Evidence: `.workspace\ib-math-aa-production-release-audit\summary.json`, generated at `2026-08-04T00:43:40.756Z`.
+- **Build evidence:** `npm run build` passed on 2026-08-04, including the full `npm run validate` prebuild chain.
+- **Forward rule remains:** future IB Math AA new-item work must continue through standard patch JSON plus `scripts/apply_ib_math_aa_review_patch.cjs`, ready gate, installer `--check`, controlled install, full gates, and SSoT update.
+
+## Historical IB Mathematics AA Full Release Log
+
+This section is retained as a pre-release audit trail. The current status is the final release summary above.
 
 - **Target:** bring IB Math AA SL/HL fully online to the same mature single-subject delivery standard used for AP closeouts: complete real-source whole-paper intake, structured question text, official answers, complete markschemes, per-mark scoring points, official knowledge-point classification, Quiz/Paper Practice/Mock/upload/scoring/Learning Center flows, desktop and mobile student verification, full validation/build, production verification, SSoT closeout and remote sync.
 - **Course release:** closed until every release gate passes. IB Math AA must not be represented as completed or made available to students before final closeout.
@@ -79,10 +91,10 @@ Last updated: 2026-08-03
 - Production domain: `https://lynkedu.com`
 - Alternate domain: `https://www.lynkedu.com`
 - Hosting: Cloudflare Pages project `lynkedu-ap-question-bank`
-- Latest Pages deployment URL observed: `https://3e28b971.lynkedu-ap-question-bank.pages.dev`
+- Latest Pages deployment URL observed: `https://55001d73.lynkedu-ap-question-bank.pages.dev`
 - Latest deployed bundle observed on production:
-  - JS: `/assets/index-Dbek1AmI.js`
-  - CSS: `/assets/index--ag2Ebom.css`
+  - JS: `/assets/index-DIbyJgSu.js`
+  - CSS: `/assets/index-BPGBnwiM.css`
 - Current Vite base for custom root-domain deployment: `base: '/'`
 - Router: `BrowserRouter`
 
@@ -92,10 +104,10 @@ Production is currently deployed by direct Cloudflare Pages upload from the loca
 
 ```powershell
 npm run build
-npx wrangler pages deploy dist --project-name lynkedu-ap-question-bank --branch main
+npx wrangler pages deploy --branch main --commit-dirty=true
 ```
 
-This means production can load a newer build even if GitHub push fails. GitHub remains the desired source-control mirror, but it is not currently the only production publish path.
+This uses `wrangler.toml` for Pages configuration, including the production `ANSWER_ASSETS` R2 binding.
 
 Hard rule: do not deploy if `npm run build` fails. Direct Pages deployment must still be followed by production URL verification.
 
